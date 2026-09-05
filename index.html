@@ -9,6 +9,7 @@
 <title>DEVEL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root{
@@ -407,9 +408,10 @@ footer{
           <label for="empresa">No rellenes este campo</label>
           <input id="empresa" name="empresa" type="text" tabindex="-1" autocomplete="off">
         </div>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAEpkmDVpt3IXS_Mc" data-action="contacto" data-theme="auto"></div>
         <button class="btn btn--solid" type="submit" id="enviar">Enviar mensaje</button>
         <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
-        <p class="legal">Protegido por reCAPTCHA de Google: se aplican su <a href="https://policies.google.com/privacy" rel="noopener">privacidad</a> y sus <a href="https://policies.google.com/terms" rel="noopener">condiciones</a>. También me tienes en <a href="mailto:f.serrano@devel.es">f.serrano@devel.es</a> y en <a href="https://github.com/frandevel" rel="noopener">GitHub</a>.</p>
+        <p class="legal">Protegido por Cloudflare Turnstile: se aplican su <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">privacidad</a> y sus <a href="https://www.cloudflare.com/website-terms/" rel="noopener">condiciones</a>. También me tienes en <a href="mailto:f.serrano@devel.es">f.serrano@devel.es</a> y en <a href="https://github.com/frandevel" rel="noopener">GitHub</a>.</p>
       </form>
     </div>
   </section>
@@ -423,20 +425,11 @@ footer{
 </footer>
 
 <script>
-const claveSitioRecaptcha = "6Ld_jastAAAAADqAaa4kZMEHwxUqUbCm1_UST2p1";
-const recaptchaConfigurado = !claveSitioRecaptcha.startsWith("PON_AQUI");
-
-if (recaptchaConfigurado) {
-  const guion = document.createElement("script");
-  guion.src = "https://www.google.com/recaptcha/api.js?render=" + claveSitioRecaptcha;
-  guion.defer = true;
-  document.head.appendChild(guion);
-}
-
 const formulario = document.getElementById("formulario");
 const boton = document.getElementById("enviar");
 const aviso = document.getElementById("aviso");
 const textoBotonEnReposo = boton.textContent;
+const ESPERAS_POR_EL_TOKEN = 25;
 
 function mostrarAviso(texto, estado) {
   aviso.textContent = texto;
@@ -456,15 +449,18 @@ function primerCampoInvalido() {
   return null;
 }
 
-function obtenerTokenRecaptcha() {
-  if (!recaptchaConfigurado || typeof grecaptcha === "undefined") {
-    return Promise.reject(new Error("recaptcha-no-disponible"));
+function esperar(milisegundos) {
+  return new Promise((resolver) => setTimeout(resolver, milisegundos));
+}
+
+async function obtenerTokenTurnstile() {
+  if (typeof turnstile === "undefined") throw new Error("verificacion-no-disponible");
+  for (let intento = 0; intento < ESPERAS_POR_EL_TOKEN; intento++) {
+    const token = turnstile.getResponse();
+    if (token) return token;
+    await esperar(200);
   }
-  return new Promise((resolver, rechazar) => {
-    grecaptcha.ready(() => {
-      grecaptcha.execute(claveSitioRecaptcha, { action: "contacto" }).then(resolver, rechazar);
-    });
-  });
+  throw new Error("verificacion-sin-token");
 }
 
 formulario.addEventListener("submit", async (evento) => {
@@ -478,12 +474,12 @@ formulario.addEventListener("submit", async (evento) => {
   }
 
   boton.disabled = true;
-  boton.textContent = "Enviando…";
-  mostrarAviso("Comprobando que no eres un robot…", "");
+  boton.textContent = "Enviando\u2026";
+  mostrarAviso("Comprobando que no eres un robot\u2026", "");
 
   try {
-    const token = await obtenerTokenRecaptcha();
-    mostrarAviso("Enviando el mensaje…", "");
+    const token = await obtenerTokenTurnstile();
+    mostrarAviso("Enviando el mensaje\u2026", "");
 
     const respuesta = await fetch("/api/contacto", {
       method: "POST",
@@ -502,14 +498,15 @@ formulario.addEventListener("submit", async (evento) => {
     formulario.reset();
     mostrarAviso("Mensaje enviado. Te respondo en cuanto lo lea.", "ok");
   } catch (error) {
-    const sinVerificacion = error.message === "recaptcha-no-disponible";
+    const sinVerificacion = error.message.startsWith("verificacion-");
     mostrarAviso(
       sinVerificacion
-        ? "No se ha podido cargar la verificación. Escríbeme a f.serrano@devel.es."
-        : "No he podido enviar el mensaje. Inténtalo de nuevo o escríbeme a f.serrano@devel.es.",
+        ? "No se ha podido cargar la verificaci\u00f3n. Escr\u00edbeme a f.serrano@devel.es."
+        : "No he podido enviar el mensaje. Int\u00e9ntalo de nuevo o escr\u00edbeme a f.serrano@devel.es.",
       "error"
     );
   } finally {
+    if (typeof turnstile !== "undefined") turnstile.reset();
     boton.disabled = false;
     boton.textContent = textoBotonEnReposo;
   }

@@ -1,16 +1,12 @@
-const PUNTUACION_MINIMA = 0.5;
-
-async function verificarRecaptcha(token, ip) {
-  const parametros = new URLSearchParams({
-    secret: process.env.RECAPTCHA_SECRET,
-    response: token
-  });
-  if (ip) parametros.set("remoteip", ip);
-
-  const respuesta = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+async function verificarTurnstile(token, ip) {
+  const respuesta = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
     method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: parametros
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      secret: process.env.TURNSTILE_SECRET,
+      response: token,
+      remoteip: ip
+    })
   });
   return respuesta.json();
 }
@@ -52,14 +48,11 @@ export default async function handler(peticion, respuesta) {
   }
 
   try {
-    const verificacion = await verificarRecaptcha(token, peticion.headers["x-forwarded-for"]);
-    const superaElFiltro =
-      verificacion.success &&
-      verificacion.action === "contacto" &&
-      verificacion.score >= PUNTUACION_MINIMA;
+    const verificacion = await verificarTurnstile(token, peticion.headers["x-forwarded-for"]);
+    const superaElFiltro = verificacion.success && verificacion.action === "contacto";
 
     if (!superaElFiltro) {
-      console.error("Verificación reCAPTCHA no superada:", JSON.stringify(verificacion));
+      console.error("Verificación de Turnstile no superada:", JSON.stringify(verificacion));
       return respuesta.status(403).json({ error: "Verificación no superada" });
     }
 
