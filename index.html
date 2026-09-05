@@ -477,9 +477,12 @@ formulario.addEventListener("submit", async (evento) => {
   boton.textContent = "Enviando\u2026";
   mostrarAviso("Comprobando que no eres un robot\u2026", "");
 
+  let envioIntentado = false;
+
   try {
     const token = await obtenerTokenTurnstile();
     mostrarAviso("Enviando el mensaje\u2026", "");
+    envioIntentado = true;
 
     const respuesta = await fetch("/api/contacto", {
       method: "POST",
@@ -498,15 +501,16 @@ formulario.addEventListener("submit", async (evento) => {
     formulario.reset();
     mostrarAviso("Mensaje enviado. Te respondo en cuanto lo lea.", "ok");
   } catch (error) {
-    const sinVerificacion = error.message.startsWith("verificacion-");
+    const avisosPorError = {
+      "verificacion-sin-token": "Marca la casilla de verificaci\u00f3n antes de enviar.",
+      "verificacion-no-disponible": "No se ha podido cargar la verificaci\u00f3n. Escr\u00edbeme a f.serrano@devel.es."
+    };
     mostrarAviso(
-      sinVerificacion
-        ? "No se ha podido cargar la verificaci\u00f3n. Escr\u00edbeme a f.serrano@devel.es."
-        : "No he podido enviar el mensaje. Int\u00e9ntalo de nuevo o escr\u00edbeme a f.serrano@devel.es.",
+      avisosPorError[error.message] || "No he podido enviar el mensaje. Int\u00e9ntalo de nuevo o escr\u00edbeme a f.serrano@devel.es.",
       "error"
     );
   } finally {
-    if (typeof turnstile !== "undefined") turnstile.reset();
+    if (typeof turnstile !== "undefined" && envioIntentado) turnstile.reset();
     boton.disabled = false;
     boton.textContent = textoBotonEnReposo;
   }
