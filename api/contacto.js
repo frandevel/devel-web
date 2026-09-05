@@ -59,6 +59,7 @@ export default async function handler(peticion, respuesta) {
       verificacion.score >= PUNTUACION_MINIMA;
 
     if (!superaElFiltro) {
+      console.error("Verificación reCAPTCHA no superada:", JSON.stringify(verificacion));
       return respuesta.status(403).json({ error: "Verificación no superada" });
     }
 
