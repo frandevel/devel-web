@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DEVEL</title>
 <meta name="description" content="DEVEL — desarrollo de software, estrategias automáticas de trading cuantitativo y consultoría de software e IA. Valencia, España.">
 <link rel="icon" href="/devel-isotipo.png" type="image/png">
 <style>*{box-sizing:border-box}html,body{margin:0}img{max-width:100%}</style>
-<title>DEVEL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -33,6 +33,11 @@
   --body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
 
+  --tg-aspa:#265786;
+  --tg-check:#006699;
+  --tu-anillo:#0E6E62;
+  --tu-turno:#E08154;
+
   --shell:1120px;
   --step:clamp(1rem,.6rem + 1.6vw,1.6rem);
 }
@@ -45,6 +50,10 @@
     --text:#E6EEF6;
     --text-dim:#9DB4CA;
     --link:var(--accent-lift);
+    --tg-aspa:#8FB2D2;
+    --tg-check:#4FA8D8;
+    --tu-anillo:#54BFAE;
+    --tu-turno:#EFA37B;
   }
 }
 :root[data-theme="dark"]{
@@ -55,6 +64,10 @@
   --text:#E6EEF6;
   --text-dim:#9DB4CA;
   --link:var(--accent-lift);
+  --tg-aspa:#8FB2D2;
+  --tg-check:#4FA8D8;
+  --tu-anillo:#54BFAE;
+  --tu-turno:#EFA37B;
 }
 
 *{box-sizing:border-box}
@@ -204,6 +217,9 @@ section{padding-block:clamp(3.2rem,6vw,5.5rem)}
 }
 :root[data-theme="dark"] .product__name{color:#BFD3E5}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .product__name{color:#BFD3E5}}
+.product__head{display:flex;align-items:center;gap:1.05rem}
+.product__logo{width:clamp(46px,7vw,58px);aspect-ratio:1;flex:none}
+.product__logo svg{width:100%;height:100%;display:block}
 .product__kind{
   font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;
   text-transform:uppercase;color:var(--steel);
@@ -289,9 +305,6 @@ footer{
 </style>
 </head>
 <body>
-
-
-
 <header class="site">
   <div class="shell site__inner">
     <a class="brand" href="#top">
@@ -357,8 +370,20 @@ footer{
       </div>
       <div class="products">
         <article class="product product--lead">
-          <p class="product__kind">Operativa financiera</p>
-          <h3 class="product__name">Tradegun</h3>
+          <div class="product__head">
+            <span class="product__logo" aria-hidden="true">
+              <svg viewBox="0 0 120 120"><g transform="translate(-5 5)">
+                <path d="M67.85 81.85 L87.65 101.65 A9.90 9.90 0 0 0 101.65 87.65 L81.85 67.85 A9.90 9.90 0 0 0 67.85 81.85 Z" fill="none" stroke="var(--tg-aspa)" stroke-width="3.2" stroke-linejoin="round"/>
+                <path d="M38.15 67.85 L18.35 87.65 A9.90 9.90 0 0 0 32.35 101.65 L52.15 81.85 A9.90 9.90 0 0 0 38.15 67.85 Z" fill="none" stroke="var(--tg-aspa)" stroke-width="3.2" stroke-linejoin="round"/>
+                <path d="M60 60 L31.72 31.72" fill="none" stroke="var(--tg-check)" stroke-width="23" stroke-linecap="round"/>
+                <path d="M60 60 L106.67 13.33" fill="none" stroke="var(--tg-check)" stroke-width="23" stroke-linecap="round"/>
+              </g></svg>
+            </span>
+            <div>
+              <p class="product__kind">Operativa financiera</p>
+              <h3 class="product__name">Tradegun</h3>
+            </div>
+          </div>
           <p>El paraguas de nuestras herramientas de mercado: roboadvisors, indicadores y estrategias automáticas para quien opera con método y quiere dejar de depender del pulso.</p>
           <ul class="specs">
             <li>Estrategias en C# para ATAS, sobre futuros micro del CME</li>
@@ -369,8 +394,18 @@ footer{
           <span class="tag">En producción con capital propio</span>
         </article>
         <article class="product">
-          <p class="product__kind">Gestión de negocio</p>
-          <h3 class="product__name">Turnera</h3>
+          <div class="product__head">
+            <span class="product__logo" aria-hidden="true">
+              <svg viewBox="0 0 120 120">
+                <path d="M80.19 22.03 A43 43 0 1 1 39.81 22.03" fill="none" stroke="var(--tu-anillo)" stroke-width="13" stroke-linecap="round"/>
+                <path d="M51.06 17.94 A43 43 0 0 1 68.94 17.94" fill="none" stroke="var(--tu-turno)" stroke-width="13" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <div>
+              <p class="product__kind">Gestión de negocio</p>
+              <h3 class="product__name">Turnera</h3>
+            </div>
+          </div>
           <p>Agenda, ficha de cliente, bonos y cobro para negocios que atienden con cita: clínicas, centros de estética, fisioterapia y entrenadores. Encuentra el hueco y coloca ahí la cita.</p>
           <ul class="specs">
             <li>Citas, servicios, productos y caja en una sola pantalla</li>
@@ -516,6 +551,5 @@ formulario.addEventListener("submit", async (evento) => {
   }
 });
 </script>
-
 </body>
 </html>
