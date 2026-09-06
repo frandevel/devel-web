@@ -1,16 +1,35 @@
-<!doctype html>
-<html lang="es">
-<head>
+<!-- Generado por i18n/construir.mjs: no editar a mano, se pierde. -->
+<!DOCTYPE html><html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DEVEL</title>
+<title>DEVEL · Desarrollo de software, trading cuantitativo y consultoría de IA</title>
 <meta name="description" content="DEVEL — desarrollo de software, estrategias automáticas de trading cuantitativo y consultoría de software e IA. Valencia, España.">
+<link rel="canonical" href="https://devel.es/">
+<link rel="alternate" hreflang="es" href="https://devel.es/">
+<link rel="alternate" hreflang="en" href="https://devel.es/en/">
+<link rel="alternate" hreflang="de" href="https://devel.es/de/">
+<link rel="alternate" hreflang="x-default" href="https://devel.es/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DEVEL">
+<meta property="og:title" content="DEVEL · Desarrollo de software, trading cuantitativo y consultoría de IA">
+<meta property="og:description" content="Se construye en días y funciona durante años. Software a medida, estrategias automáticas y consultoría de IA desde Valencia.">
+<meta property="og:url" content="https://devel.es/">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://devel.es/devel-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DEVEL: se construye en días, funciona durante años">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DEVEL · Desarrollo de software, trading cuantitativo y consultoría de IA">
+<meta name="twitter:description" content="Se construye en días y funciona durante años. Software a medida, estrategias automáticas y consultoría de IA desde Valencia.">
+<meta name="twitter:image" content="https://devel.es/devel-og.png">
 <link rel="icon" href="/devel-isotipo.png" type="image/png">
 <style>*{box-sizing:border-box}html,body{margin:0}img{max-width:100%}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async="" defer=""></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&amp;family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
 <style>
 :root{
   --navy:#10283F;
@@ -236,10 +255,6 @@ section{padding-block:clamp(3.2rem,6vw,5.5rem)}
   background:var(--mist);border-radius:2px;transform:rotate(45deg) translateY(-1px);
 }
 .product--lead .specs li::before{background:var(--accent)}
-.product__link{
-  font-family:var(--display);font-weight:600;font-size:.95rem;
-  text-decoration:none;margin-top:.4rem;
-}
 .tag{
   align-self:flex-start;margin-top:auto;
   font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;
@@ -306,6 +321,32 @@ footer{
 .footer__inner{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:center}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ---------- selector de idioma ---------- */
+.idiomas{display:flex;align-items:center;gap:.15rem;margin-left:1.4rem;padding-left:1.4rem;
+  border-left:1px solid var(--line)}
+.idiomas__opcion{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.76rem;letter-spacing:.06em;
+  color:var(--steel);text-decoration:none;
+  padding:.3rem .45rem;border-radius:6px;
+  transition:color .16s ease,background .16s ease;
+}
+.idiomas__opcion:hover{color:var(--text);background:var(--surface)}
+.idiomas__opcion[aria-current="true"]{color:var(--text);font-weight:500}
+/* El nombre completo solo lo lee quien usa lector de pantalla: en la barra caben dos letras, no «Deutsch». */
+.idiomas__nombre{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media (max-width:560px){.idiomas{margin-left:.7rem;padding-left:.7rem}.idiomas__opcion{padding:.3rem .3rem}}
+
+
+/* En pantallas estrechas el selector es lo primero que necesita quien llega en el idioma que no es el suyo,
+   así que la barra envuelve y la navegación cede el sitio, en lugar de empujarlo fuera de la pantalla. */
+@media (max-width:640px){
+  .site__inner{flex-wrap:wrap;justify-content:flex-start;gap:.5rem 1rem}
+  .site nav{order:3;width:100%;justify-content:space-between;gap:.5rem}
+  .idiomas{margin-left:auto;padding-left:.8rem}
+}
+
 </style>
 </head>
 <body>
@@ -320,6 +361,7 @@ footer{
       <a href="#productos">Productos</a>
       <a href="#contacto">Contacto</a>
     </nav>
+    <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/" lang="es" aria-current="true">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/" lang="en">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/" lang="de">DE<span class="idiomas__nombre">Deutsch</span></a></div>
   </div>
 </header>
 
@@ -377,10 +419,10 @@ footer{
           <div class="product__head">
             <span class="product__logo" aria-hidden="true">
               <svg viewBox="0 0 120 120"><g transform="translate(-5 5)">
-                <path d="M67.85 81.85 L87.65 101.65 A9.90 9.90 0 0 0 101.65 87.65 L81.85 67.85 A9.90 9.90 0 0 0 67.85 81.85 Z" fill="none" stroke="var(--tg-aspa)" stroke-width="3.2" stroke-linejoin="round"/>
-                <path d="M38.15 67.85 L18.35 87.65 A9.90 9.90 0 0 0 32.35 101.65 L52.15 81.85 A9.90 9.90 0 0 0 38.15 67.85 Z" fill="none" stroke="var(--tg-aspa)" stroke-width="3.2" stroke-linejoin="round"/>
-                <path d="M60 60 L31.72 31.72" fill="none" stroke="var(--tg-check)" stroke-width="23" stroke-linecap="round"/>
-                <path d="M60 60 L106.67 13.33" fill="none" stroke="var(--tg-check)" stroke-width="23" stroke-linecap="round"/>
+                <path d="M67.85 81.85 L87.65 101.65 A9.90 9.90 0 0 0 101.65 87.65 L81.85 67.85 A9.90 9.90 0 0 0 67.85 81.85 Z" fill="none" stroke="var(--tg-aspa)" stroke-width="3.2" stroke-linejoin="round"></path>
+                <path d="M38.15 67.85 L18.35 87.65 A9.90 9.90 0 0 0 32.35 101.65 L52.15 81.85 A9.90 9.90 0 0 0 38.15 67.85 Z" fill="none" stroke="var(--tg-aspa)" stroke-width="3.2" stroke-linejoin="round"></path>
+                <path d="M60 60 L31.72 31.72" fill="none" stroke="var(--tg-check)" stroke-width="23" stroke-linecap="round"></path>
+                <path d="M60 60 L106.67 13.33" fill="none" stroke="var(--tg-check)" stroke-width="23" stroke-linecap="round"></path>
               </g></svg>
             </span>
             <div>
@@ -401,8 +443,8 @@ footer{
           <div class="product__head">
             <span class="product__logo" aria-hidden="true">
               <svg viewBox="0 0 120 120">
-                <path d="M80.19 22.03 A43 43 0 1 1 39.81 22.03" fill="none" stroke="var(--tu-anillo)" stroke-width="13" stroke-linecap="round"/>
-                <path d="M51.06 17.94 A43 43 0 0 1 68.94 17.94" fill="none" stroke="var(--tu-turno)" stroke-width="13" stroke-linecap="round"/>
+                <path d="M80.19 22.03 A43 43 0 1 1 39.81 22.03" fill="none" stroke="var(--tu-anillo)" stroke-width="13" stroke-linecap="round"></path>
+                <path d="M51.06 17.94 A43 43 0 0 1 68.94 17.94" fill="none" stroke="var(--tu-turno)" stroke-width="13" stroke-linecap="round"></path>
               </svg>
             </span>
             <div>
@@ -414,11 +456,10 @@ footer{
           <ul class="specs">
             <li>Citas, servicios, productos y caja en una sola pantalla</li>
             <li>Bonos de sesiones y saldo pendiente por cliente</li>
-            <li>Historia clínica y evolución por sesión, si el centro la lleva</li>
+            <li>Portal donde el propio cliente reserva su hora</li>
             <li>Una instalación por negocio, con sus datos en su casa</li>
           </ul>
           <span class="tag">Mejorando cada día</span>
-          <a class="product__link" href="/turnera">Ver Turnera por dentro →</a>
         </article>
       </div>
     </div>
@@ -431,18 +472,18 @@ footer{
         <h2>Cuéntame qué tienes entre manos.</h2>
         <p>Cuéntame el problema en dos líneas. Lo leo yo, no un buzón compartido: si encaja te digo cómo lo abordaría, y si no encaja te lo digo también.</p>
       </div>
-      <form class="card-contact" id="formulario" novalidate>
+      <form class="card-contact" id="formulario" novalidate="">
         <div class="field">
           <label for="nombre">Nombre</label>
-          <input id="nombre" name="nombre" type="text" autocomplete="name" required maxlength="80">
+          <input id="nombre" name="nombre" type="text" autocomplete="name" required="" maxlength="80">
         </div>
         <div class="field">
           <label for="correo">Correo</label>
-          <input id="correo" name="correo" type="email" autocomplete="email" required maxlength="120">
+          <input id="correo" name="correo" type="email" autocomplete="email" required="" maxlength="120">
         </div>
         <div class="field">
           <label for="mensaje">En qué puedo ayudarte</label>
-          <textarea id="mensaje" name="mensaje" rows="5" required maxlength="2000"></textarea>
+          <textarea id="mensaje" name="mensaje" rows="5" required="" maxlength="2000"></textarea>
         </div>
         <div class="trampa" aria-hidden="true">
           <label for="empresa">No rellenes este campo</label>
@@ -556,5 +597,6 @@ formulario.addEventListener("submit", async (evento) => {
   }
 });
 </script>
-</body>
-</html>
+
+
+</body></html>

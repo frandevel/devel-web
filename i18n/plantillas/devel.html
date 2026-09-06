@@ -1,30 +1,25 @@
-<!-- Generado por i18n/construir.mjs: no editar a mano, se pierde. -->
 <!DOCTYPE html><html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Software de gestión para clínicas y estética · Turnera</title>
-<meta name="description" content="Agenda por profesional, ficha con historia clínica, bonos, TPV e informes. Para clínicas, estética, fisioterapia y clubes deportivos. Sin comisión por reserva.">
-<link rel="canonical" href="https://devel.es/turnera">
-<link rel="alternate" hreflang="es" href="https://devel.es/turnera">
-<link rel="alternate" hreflang="en" href="https://devel.es/en/turnera">
-<link rel="alternate" hreflang="de" href="https://devel.es/de/turnera">
-<link rel="alternate" hreflang="x-default" href="https://devel.es/turnera">
+<title>{{ta27fc6ce}}</title>
+<meta name="description" content="{{tebde7ded}}">
+<link rel="canonical" href="https://devel.es/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DEVEL">
-<meta property="og:title" content="Turnera — Software de gestión para negocios que atienden con cita">
-<meta property="og:description" content="Agenda, ficha de cliente, bonos y cobro en una sola pantalla. Sin comisión por reserva.">
-<meta property="og:url" content="https://devel.es/turnera">
+<meta property="og:title" content="{{ta27fc6ce}}">
+<meta property="og:description" content="{{t60ec6a61}}">
+<meta property="og:url" content="https://devel.es/">
 <meta property="og:locale" content="es_ES">
-<meta property="og:image" content="https://devel.es/turnera/turnera-og.png">
+<meta property="og:image" content="https://devel.es/devel-og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Turnera: la agenda, la ficha y la caja en la misma pantalla">
+<meta property="og:image:alt" content="{{t95b1e0ac}}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Turnera — Software de gestión para negocios que atienden con cita">
-<meta name="twitter:description" content="Agenda, ficha de cliente, bonos y cobro en una sola pantalla. Sin comisión por reserva.">
-<meta name="twitter:image" content="https://devel.es/turnera/turnera-og.png">
-<link rel="icon" href="/turnera/isotipo.svg" type="image/svg+xml">
+<meta name="twitter:title" content="{{ta27fc6ce}}">
+<meta name="twitter:description" content="{{t60ec6a61}}">
+<meta name="twitter:image" content="https://devel.es/devel-og.png">
+<link rel="icon" href="/devel-isotipo.png" type="image/png">
 <style>*{box-sizing:border-box}html,body{margin:0}img{max-width:100%}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -55,7 +50,6 @@
   --tg-aspa:#265786;
   --tg-check:#006699;
   --tu-anillo:#0E6E62;
-  --tu-sobre-anillo:#FFFFFF;
   --tu-turno:#E08154;
 
   --shell:1120px;
@@ -73,7 +67,6 @@
     --tg-aspa:#8FB2D2;
     --tg-check:#4FA8D8;
     --tu-anillo:#54BFAE;
-    --tu-sobre-anillo:#06231F;
     --tu-turno:#EFA37B;
   }
 }
@@ -88,7 +81,6 @@
   --tg-aspa:#8FB2D2;
   --tg-check:#4FA8D8;
   --tu-anillo:#54BFAE;
-  --tu-sobre-anillo:#06231F;
   --tu-turno:#EFA37B;
 }
 
@@ -325,126 +317,6 @@ footer{
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
-
-/* ---------- lo propio de la pagina de Turnera ---------- */
-.hero--turnera{
-  background:
-    radial-gradient(115% 85% at 82% 14%,#12463F 0%,transparent 60%),
-    linear-gradient(168deg,#0F3B36 0%,#08211E 100%);
-}
-.hero--turnera{--tu-isotipo:#0E6E62}
-.hero--turnera h1 em{color:#7ED0BF}
-.hero--turnera .btn--solid{background:var(--tu-anillo);color:#06231F}
-.hero__lockup{
-  display:block;width:min(100%,330px);margin-bottom:1.6rem;
-  /* El fondo del hero es verde oscuro: la palabra va en claro y el aro conserva su color. */
-  --tu-anillo:#F2F8F5;
-}
-.hero__lockup svg{width:100%;height:auto;display:block}
-.hero--turnera .btn--ghost{border-color:#3E7A6F;color:#D8EDE7}
-.hero--turnera .btn--ghost:hover{border-color:#7ED0BF;color:#FFFFFF}
-.hero--turnera .eyebrow{color:#8FC7BA}
-.hero--turnera .eyebrow::before{background:var(--tu-turno)}
-.hero--turnera .lede{color:#BFDCD4}
-.hero--turnera .isotipo{width:min(100%,270px);height:auto;display:block;filter:drop-shadow(0 16px 34px rgba(0,0,0,.42))}
-@media (max-width:820px){.hero--turnera .hero__mark{display:none}}
-
-.site nav a{white-space:nowrap}
-.migas{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
-.migas a{color:var(--steel);text-decoration:none}
-.migas a:hover{color:var(--link)}
-
-.jornada{display:grid;gap:1.5rem;margin-top:2.8rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));counter-reset:paso}
-.paso{padding-top:1.5rem;border-top:2px solid var(--line)}
-.paso:first-child{border-top-color:var(--tu-anillo)}
-.paso h3{font-size:1.1rem;margin-bottom:.6rem;color:var(--brand)}
-.paso h3::before{
-  counter-increment:paso;content:counter(paso);
-  font-family:var(--mono);font-size:.72rem;color:var(--tu-anillo);
-  margin-right:.6rem;vertical-align:.15em;
-}
-.paso p{color:var(--text-dim);font-size:.97rem}
-:root[data-theme="dark"] .paso h3{color:var(--mist)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .paso h3{color:var(--mist)}}
-
-#pantallas{background:var(--surface-sunk);border-block:1px solid var(--line)}
-.pantallas{display:flex;flex-direction:column;gap:clamp(2.5rem,5vw,4rem);margin-top:2.8rem}
-.pantalla{display:grid;gap:1.2rem}
-@media (min-width:900px){
-  .pantalla{grid-template-columns:minmax(0,1fr) minmax(0,15rem);gap:2rem;align-items:start}
-  .pantalla figcaption{margin-top:0;padding-top:.4rem}
-}
-.pantalla figure{margin:0;display:contents}
-.pantalla img{
-  width:100%;height:auto;display:block;
-  border:1px solid var(--line);border-radius:12px;
-  background:var(--surface);
-  box-shadow:0 10px 30px rgba(10,30,50,.10);
-}
-:root[data-theme="dark"] .pantalla img{box-shadow:0 10px 30px rgba(0,0,0,.38)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pantalla img{box-shadow:0 10px 30px rgba(0,0,0,.38)}}
-.pantalla figcaption{margin-top:.9rem;font-size:.96rem;color:var(--text-dim);line-height:1.6}
-.pantalla b{color:var(--text);font-weight:600}
-
-/* ---------- perfiles de centro, en pestanas ---------- */
-.perfiles{margin-top:2.8rem}
-.perfiles__botones{
-  display:flex;flex-wrap:wrap;gap:.6rem;
-  border-bottom:1px solid var(--line);
-  padding-bottom:1.1rem;
-}
-.perfil__boton{
-  font-family:var(--display);font-weight:600;font-size:.95rem;
-  color:var(--text-dim);
-  background:transparent;
-  border:1px solid var(--line);border-radius:100px;
-  padding:.55rem 1.1rem;cursor:pointer;
-  transition:border-color .16s ease,color .16s ease,background .16s ease;
-}
-.perfil__boton:hover{color:var(--text);border-color:var(--steel)}
-.perfil__boton[aria-selected="true"]{
-  color:var(--tu-sobre-anillo);
-  background:var(--tu-anillo);
-  border-color:var(--tu-anillo);
-}
-.perfil{padding-top:2rem;display:grid;gap:2rem}
-@media (min-width:900px){.perfil{grid-template-columns:minmax(0,1fr) minmax(0,20rem);align-items:start}}
-.perfil[hidden]{display:none}
-.perfil h3{font-size:1.35rem;margin-bottom:.9rem;color:var(--brand)}
-:root[data-theme="dark"] .perfil h3{color:#BFD3E5}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .perfil h3{color:#BFD3E5}}
-.perfil__texto p{color:var(--text-dim);font-size:1rem}
-.perfil__texto p + p{margin-top:.9rem}
-.perfil__montaje{
-  background:var(--surface);border:1px solid var(--line);border-radius:14px;
-  padding:1.4rem 1.5rem;
-}
-.perfil__montaje h4{
-  font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--steel);margin:0 0 .9rem;font-weight:500;
-}
-.montaje{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7rem;font-size:.93rem}
-.montaje li{display:grid;grid-template-columns:auto 1fr;gap:.7rem;align-items:baseline;color:var(--text-dim)}
-.montaje li::before{
-  content:"";width:7px;height:7px;
-  background:var(--tu-turno);border-radius:2px;transform:rotate(45deg) translateY(-1px);
-}
-.montaje b{color:var(--text);font-weight:600}
-
-.abierto{display:grid;gap:1.5rem;margin-top:2.8rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.abierto .pillar:first-child{border-top-color:var(--tu-anillo)}
-
-.camino{margin-top:2.6rem;display:flex;flex-direction:column;gap:1.1rem;max-width:60ch}
-.camino li{display:flex;gap:.9rem;align-items:baseline;color:var(--text-dim);font-size:.99rem;list-style:none}
-.camino li::before{
-  content:"";width:8px;height:8px;flex:none;
-  border:2px solid var(--tu-turno);border-radius:50%;
-  transform:translateY(.45rem);
-}
-.camino b{color:var(--text);font-weight:600}
-.camino{padding:0;margin-left:0}
-
-
 /* ---------- selector de idioma ---------- */
 .idiomas{display:flex;align-items:center;gap:.15rem;margin-left:1.4rem;padding-left:1.4rem;
   border-left:1px solid var(--line)}
@@ -471,323 +343,151 @@ footer{
 }
 
 </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://devel.es/turnera#producto",
-      "name": "Turnera",
-      "applicationCategory": "BusinessApplication",
-      "applicationSubCategory": "Software de gestión de citas y clientes",
-      "operatingSystem": "Navegador web",
-      "url": "https://devel.es/turnera",
-      "image": "https://devel.es/turnera/turnera-og.png",
-      "inLanguage": ["es", "en"],
-      "description": "Software de gestión para clínicas, centros de estética, fisioterapia y clubes deportivos: agenda por profesional, ficha de cliente con historia clínica, bonos, punto de venta e informes.",
-      "featureList": [
-        "Agenda por profesional y por sala",
-        "Ficha de cliente e historia clínica",
-        "Bonos y paquetes de sesiones",
-        "Punto de venta y cobros pendientes",
-        "Clases colectivas con aforo",
-        "Informes exportables a Excel"
-      ],
-      "audience": {
-        "@type": "BusinessAudience",
-        "name": "Clínicas, centros de estética, fisioterapia, podología, veterinaria, entrenadores personales y clubes deportivos"
-      },
-      "publisher": { "@id": "https://devel.es/#organizacion" }
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://devel.es/#organizacion",
-      "name": "DEVEL",
-      "url": "https://devel.es/",
-      "email": "f.serrano@devel.es",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Valencia",
-        "addressCountry": "ES"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "DEVEL", "item": "https://devel.es/" },
-        { "@type": "ListItem", "position": 2, "name": "Turnera", "item": "https://devel.es/turnera" }
-      ]
-    }
-  ]
-}
-</script>
 </head>
 <body>
 <header class="site">
   <div class="shell site__inner">
-    <a class="brand" href="/">
-      <span class="mark" role="img" aria-label="Logotipo de DEVEL"></span>
-      <span>devel</span>
+    <a class="brand" href="#top">
+      <span class="mark" role="img" aria-label="{{t58805743}}"></span>
+      <span>{{t21a6cafa}}</span>
     </a>
     <nav>
-      <a href="#que-hace">Qué hace</a>
-      <a href="#pantallas">Pantallas</a>
-      <a href="#abierto">Tus datos</a>
-      <a href="#demo">Demo</a>
+      <a href="#que-hacemos">{{tc35d0288}}</a>
+      <a href="#productos">{{t14e2a639}}</a>
+      <a href="#contacto">{{td8a53e1f}}</a>
     </nav>
-    <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/turnera" lang="es" aria-current="true">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera" lang="en">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera" lang="de">DE<span class="idiomas__nombre">Deutsch</span></a></div>
+    <!--selector-de-idioma-->
   </div>
 </header>
 
 <main id="top">
-  <section class="hero hero--turnera">
+  <section class="hero">
     <div class="shell hero__inner">
       <div>
-        <p class="migas"><a href="/">devel</a> · producto</p>
-        <span class="hero__lockup"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374 120" role="img" aria-label="Turnera">
-<g><path d="M80.19 22.03 A43.00 43.00 0 1 1 39.81 22.03" fill="none" stroke="var(--tu-isotipo)" stroke-width="13" stroke-linecap="round"></path>
-<path d="M51.06 17.94 A43.00 43.00 0 0 1 68.94 17.94" fill="none" stroke="var(--tu-turno)" stroke-width="13" stroke-linecap="round"></path></g>
-<g transform="translate(146.00 82.00) scale(0.03027 -0.03027)"><path d="M427 0Q329 0 271.0 52.5Q213 105 213 197V892H51V1080H213V1297L460 1355V1080H666V892H460V244Q460 210 469.5 199.0Q479 188 510 188H675V0Z" fill="var(--tu-anillo)"></path></g>
-<g transform="translate(168.61 82.00) scale(0.03027 -0.03027)"><path d="M495 -25Q375 -25 293.5 29.5Q212 84 171.0 183.0Q130 282 130 413V1080H377V440Q377 309 424.0 238.0Q471 167 580 167Q652 167 710.0 204.5Q768 242 803.0 323.0Q838 404 838 535V1080H1086V0H848V254L855 209Q809 103 717.5 39.0Q626 -25 495 -25Z" fill="var(--tu-anillo)"></path></g>
-<g transform="translate(206.00 82.00) scale(0.03027 -0.03027)"><path d="M150 0V1080H387V842L378 872Q428 989 522.0 1047.0Q616 1105 722 1105Q752 1105 782.5 1100.0Q813 1095 841 1083L819 866Q758 884 700 884Q657 884 604.5 868.5Q552 853 505.0 811.0Q458 769 427.5 690.5Q397 612 397 487V0Z" fill="var(--tu-anillo)"></path></g>
-<g transform="translate(233.04 82.00) scale(0.03027 -0.03027)"><path d="M150 0V1080H387V833L380 877Q427 979 518.0 1042.0Q609 1105 739 1105Q860 1105 941.5 1050.5Q1023 996 1064.5 897.5Q1106 799 1106 667V0H858V650Q858 772 813.5 842.5Q769 913 664 913Q543 913 470.0 815.0Q397 717 397 522V0Z" fill="var(--tu-anillo)"></path></g>
-<g transform="translate(270.42 82.00) scale(0.03027 -0.03027)"><path d="M621 -25Q464 -25 343.0 44.0Q222 113 153.0 240.0Q84 367 84 540Q84 713 152.0 840.0Q220 967 340.0 1036.0Q460 1105 617 1105Q705 1105 794.5 1078.0Q884 1051 958.5 982.5Q1033 914 1079.0 793.5Q1125 673 1125 488H243V645H905L867 588Q861 709 825.5 782.5Q790 856 734.5 889.5Q679 923 611 923Q525 923 466.0 876.5Q407 830 376.5 743.5Q346 657 346 539Q346 363 415.0 263.5Q484 164 619 164Q711 164 776.0 211.0Q841 258 873 351L1103 287Q1064 182 992.0 113.0Q920 44 824.0 9.5Q728 -25 621 -25Z" fill="var(--tu-anillo)"></path></g>
-<g transform="translate(306.84 82.00) scale(0.03027 -0.03027)"><path d="M150 0V1080H387V842L378 872Q428 989 522.0 1047.0Q616 1105 722 1105Q752 1105 782.5 1100.0Q813 1095 841 1083L819 866Q758 884 700 884Q657 884 604.5 868.5Q552 853 505.0 811.0Q458 769 427.5 690.5Q397 612 397 487V0Z" fill="var(--tu-anillo)"></path></g>
-<g transform="translate(333.88 82.00) scale(0.03027 -0.03027)"><path d="M444 -25Q339 -25 255.0 13.0Q171 51 122.0 123.5Q73 196 73 297Q73 406 136.5 487.5Q200 569 324.5 614.0Q449 659 633 659H795L777 635V696Q777 812 733.0 871.0Q689 930 587 930Q490 930 438.0 879.0Q386 828 378 738L119 787Q132 876 191.5 948.0Q251 1020 354.0 1063.0Q457 1106 602 1106Q740 1106 833.0 1059.0Q926 1012 972.5 913.5Q1019 815 1019 659V244Q1019 210 1028.5 199.0Q1038 188 1069 188H1123V0H994Q896 0 841.0 52.5Q786 105 786 197V258L828 246Q814 203 787.0 156.0Q760 109 715.0 68.0Q670 27 603.5 1.0Q537 -25 444 -25ZM512 154Q587 154 647.5 189.5Q708 225 743.5 298.5Q779 372 779 484V502H637Q520 502 454.0 471.5Q388 441 361.0 396.5Q334 352 334 308Q334 270 351.5 234.5Q369 199 408.0 176.5Q447 154 512 154Z" fill="var(--tu-anillo)"></path></g>
-</svg></span>
-        <h1>La agenda, la ficha y la caja.<br><em>En la misma pantalla.</em></h1>
-        <p class="lede">Turnera es la aplicación de gestión para negocios que atienden con cita: clínicas, centros de estética, fisioterapia, podología, veterinaria y clubes deportivos. Lo que hace un mostrador en un día cabe en tres pantallas, y ninguna te obliga a salir de ella para cobrar.</p>
+        <p class="eyebrow">{{te8c50a2c}}</p>
+        <h1>{{t8f4f4569}}<br><em>{{t2ebfd613}}</em></h1>
+        <p class="lede">{{tc0c5e431}}</p>
         <div class="actions">
-          <a class="btn btn--solid" href="#demo">Pedir una demo</a>
-          <a class="btn btn--ghost" href="#pantallas">Ver cómo es</a>
+          <a class="btn btn--solid" href="#contacto">{{t0cf77054}}</a>
+          <a class="btn btn--ghost" href="#productos">{{tff0a379e}}</a>
         </div>
       </div>
       <div class="hero__mark">
-        <svg class="isotipo" viewBox="0 0 120 120" role="img" aria-label="Isotipo de Turnera">
-          <path d="M80.19 22.03 A43 43 0 1 1 39.81 22.03" fill="none" stroke="var(--tu-isotipo)" stroke-width="13" stroke-linecap="round"></path>
-          <path d="M51.06 17.94 A43 43 0 0 1 68.94 17.94" fill="none" stroke="var(--tu-turno)" stroke-width="13" stroke-linecap="round"></path>
-        </svg>
+        <span class="mark" role="img" aria-label="{{t58805743}}"></span>
       </div>
     </div>
   </section>
 
-  <section id="que-hace">
+  <section id="que-hacemos">
     <div class="shell">
       <div class="section__head">
-        <p class="eyebrow">El día de un centro</p>
-        <h2>Cuatro momentos, y ya está.</h2>
-        <p>No hay módulos que comprar ni pantallas que descubrir seis meses después. Un centro usa esto entero desde la primera semana.</p>
+        <p class="eyebrow">{{tc35d0288}}</p>
+        <h2>{{t525e14e4}}</h2>
+        <p>{{t114f1f0a}}</p>
       </div>
-      <div class="jornada">
-        <div class="paso">
-          <h3>Coger la cita</h3>
-          <p>La agenda del día por profesional o por sitio, y la semana de un profesional. Se arrastra para mover una cita y se estira para cambiar la duración. Avisa si el hueco choca con otra cita del mismo profesional o de la misma sala.</p>
-        </div>
-        <div class="paso">
-          <h3>Atender</h3>
-          <p>La ficha del cliente con sus datos, sus notas, sus bonos y todo lo que se le ha hecho. En las clínicas, además, su historia: antecedentes, casos abiertos y la evolución de cada sesión.</p>
-        </div>
-        <div class="paso">
-          <h3>Cobrar</h3>
-          <p>Un ticket con servicios y productos, con descuento, forma de pago y cambio. Si gasta una sesión de un bono, se descuenta ahí. Y si se va sin pagar, queda registrado como deuda en lugar de perderse.</p>
-        </div>
-        <div class="paso">
-          <h3>Saber cómo va</h3>
-          <p>Ocho informes —citas, clientes, cobros, caja diaria, bonos, histórico, existencias y movimientos— y todos se bajan en Excel. Lo pendiente de cobrar sale ordenado por antigüedad, que es como duele.</p>
-        </div>
+      <div class="pillars">
+        <article class="pillar">
+          <h3>{{t3abc51f4}}</h3>
+          <p>{{t1607882c}}</p>
+        </article>
+        <article class="pillar">
+          <h3>{{td94427ff}}</h3>
+          <p>{{t48d86473}}</p>
+        </article>
+        <article class="pillar">
+          <h3>{{t2eeab3f8}}</h3>
+          <p>{{tb2ae652b}}</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="pantallas">
+  <section id="productos">
     <div class="shell">
       <div class="section__head">
-        <p class="eyebrow">Pantallas</p>
-        <h2>Esto es la aplicación, sin maquillar.</h2>
-        <p>Capturas de una instalación real con datos de demostración. Ni bocetos ni maquetas.</p>
+        <p class="eyebrow">{{t14e2a639}}</p>
+        <h2>{{tfced8795}}</h2>
+        <p>{{tf5fdce00}}</p>
       </div>
-      <div class="pantallas">
-        <div class="pantalla">
-          <figure>
-            <img src="/turnera/inicio.jpg" alt="Pantalla de inicio de Turnera con la caja del día, las citas de hoy y los cobros pendientes" width="1440" height="900" loading="lazy" decoding="async">
-            <figcaption><b>Inicio.</b> Lo que hay que saber al abrir: la caja del día, las citas que quedan, lo pendiente de cobro y el stock que se acaba.</figcaption>
-          </figure>
-        </div>
-        <div class="pantalla">
-          <figure>
-            <img src="/turnera/agenda.jpg" alt="La agenda de un día repartida en columnas por profesional, con el estado de cada cita en color" width="1440" height="900" loading="lazy" decoding="async">
-            <figcaption><b>Agenda.</b> El día en columnas, una por profesional o por sala. El color dice en qué estado está cada cita sin abrirla.</figcaption>
-          </figure>
-        </div>
-        <div class="pantalla">
-          <figure>
-            <img src="/turnera/tpv.jpg" alt="El punto de venta con un ticket de dos servicios, descuento, forma de pago y cambio" width="1440" height="900" loading="lazy" decoding="async">
-            <figcaption><b>Punto de venta.</b> El ticket del cliente que está en el mostrador, con sus bonos a la vista y el cambio calculado.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="perfiles">
-    <div class="shell">
-      <div class="section__head">
-        <p class="eyebrow">Un producto</p>
-        <h2>La misma aplicación, montada a tu manera.</h2>
-        <p>No son cuatro programas ni cuatro precios. Es una casilla en la configuración y unos números en el catálogo: a partir de ahí la aplicación habla como habla tu centro.</p>
-      </div>
-
-      <div class="perfiles">
-        <div class="perfiles__botones" role="tablist" aria-label="Tipos de centro">
-          <button class="perfil__boton" role="tab" id="pestana-clinica" aria-controls="perfil-clinica" aria-selected="true">Clínica y estética</button>
-          <button class="perfil__boton" role="tab" id="pestana-entrenador" aria-controls="perfil-entrenador" aria-selected="false">Entrenador personal</button>
-          <button class="perfil__boton" role="tab" id="pestana-colectivas" aria-controls="perfil-colectivas" aria-selected="false">Spinning y clases dirigidas</button>
-          <button class="perfil__boton" role="tab" id="pestana-club" aria-controls="perfil-club" aria-selected="false">Club de pádel o tenis</button>
-        </div>
-
-        <div class="perfil" role="tabpanel" id="perfil-clinica" aria-labelledby="pestana-clinica" tabindex="0">
-          <div class="perfil__texto">
-            <h3>Clínica, estética, fisioterapia</h3>
-            <p>Una persona por cabina y una hora reservada para ella. La ficha guarda sus antecedentes, sus alergias, el caso abierto y la evolución de cada sesión, y el bono de diez tratamientos se va descontando solo conforme viene.</p>
-            <p>Es de donde viene Turnera: podología, veterinaria, dental y fisioterapia usan lo mismo.</p>
+      <div class="products">
+        <article class="product product--lead">
+          <div class="product__head">
+            <span class="product__logo" aria-hidden="true">
+              <svg viewBox="0 0 120 120"><g transform="translate(-5 5)">
+                <path d="M67.85 81.85 L87.65 101.65 A9.90 9.90 0 0 0 101.65 87.65 L81.85 67.85 A9.90 9.90 0 0 0 67.85 81.85 Z" fill="none" stroke="var(--tg-aspa)" stroke-width="3.2" stroke-linejoin="round"></path>
+                <path d="M38.15 67.85 L18.35 87.65 A9.90 9.90 0 0 0 32.35 101.65 L52.15 81.85 A9.90 9.90 0 0 0 38.15 67.85 Z" fill="none" stroke="var(--tg-aspa)" stroke-width="3.2" stroke-linejoin="round"></path>
+                <path d="M60 60 L31.72 31.72" fill="none" stroke="var(--tg-check)" stroke-width="23" stroke-linecap="round"></path>
+                <path d="M60 60 L106.67 13.33" fill="none" stroke="var(--tg-check)" stroke-width="23" stroke-linecap="round"></path>
+              </g></svg>
+            </span>
+            <div>
+              <p class="product__kind">{{td2e61488}}</p>
+              <h3 class="product__name">{{t745a7aaf}}</h3>
+            </div>
           </div>
-          <div class="perfil__montaje">
-            <h4>Cómo se monta</h4>
-            <ul class="montaje">
-              <li><span><b>Actividad:</b> clínica.</span></li>
-              <li><span><b>Recursos:</b> una cabina por sitio, capacidad 1.</span></li>
-              <li><span><b>Servicios:</b> aforo 1.</span></li>
-              <li><span><b>Y además:</b> historia clínica y casos.</span></li>
-            </ul>
+          <p>{{t7ecc1828}}</p>
+          <ul class="specs">
+            <li>{{t8d672841}}</li>
+            <li>{{tdd560d7e}}</li>
+            <li>{{t6d489c08}}</li>
+            <li>{{t2019147e}}</li>
+          </ul>
+          <span class="tag">{{t26bb4504}}</span>
+        </article>
+        <article class="product">
+          <div class="product__head">
+            <span class="product__logo" aria-hidden="true">
+              <svg viewBox="0 0 120 120">
+                <path d="M80.19 22.03 A43 43 0 1 1 39.81 22.03" fill="none" stroke="var(--tu-anillo)" stroke-width="13" stroke-linecap="round"></path>
+                <path d="M51.06 17.94 A43 43 0 0 1 68.94 17.94" fill="none" stroke="var(--tu-turno)" stroke-width="13" stroke-linecap="round"></path>
+              </svg>
+            </span>
+            <div>
+              <p class="product__kind">{{t01c060f3}}</p>
+              <h3 class="product__name">{{t178f7acd}}</h3>
+            </div>
           </div>
-        </div>
-
-        <div class="perfil" role="tabpanel" id="perfil-entrenador" aria-labelledby="pestana-entrenador" tabindex="0" hidden="">
-          <div class="perfil__texto">
-            <h3>Entrenador personal</h3>
-            <p>Uno a uno, y casi siempre por bonos: diez sesiones que se compran de golpe y se gastan a lo largo de dos meses. La ficha del alumno lleva sus notas de seguimiento y su saldo, así que sabes de un vistazo cuántas sesiones le quedan y cuándo caducan.</p>
-            <p>Si trabajas en varios sitios, cada sala es un recurso y la agenda te enseña el día entero de una vez.</p>
-          </div>
-          <div class="perfil__montaje">
-            <h4>Cómo se monta</h4>
-            <ul class="montaje">
-              <li><span><b>Actividad:</b> entrenamiento.</span></li>
-              <li><span><b>Recursos:</b> tu sala o la del gimnasio, capacidad 1.</span></li>
-              <li><span><b>Servicios:</b> aforo 1.</span></li>
-              <li><span><b>Y además:</b> bonos de sesiones con caducidad.</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="perfil" role="tabpanel" id="perfil-colectivas" aria-labelledby="pestana-colectivas" tabindex="0" hidden="">
-          <div class="perfil__texto">
-            <h3>Spinning, funcional, yoga, pilates</h3>
-            <p>La sala tiene sus plazas y la clase tiene las suyas, y manda la más pequeña: veinte bicicletas con una clase de quince son quince. La tarjeta de la clase enseña <b>12 de 15</b> sin abrirla, y dentro está la lista con quién viene, quién vino y quién no apareció.</p>
-            <p>El mismo alumno no puede estar en dos clases que se pisan, aunque en las dos queden plazas. Y una instalación que no da clases colectivas no se entera de que esto existe: sin tocar nada, una cita es de una plaza.</p>
-          </div>
-          <div class="perfil__montaje">
-            <h4>Cómo se monta</h4>
-            <ul class="montaje">
-              <li><span><b>Actividad:</b> entrenamiento.</span></li>
-              <li><span><b>Recursos:</b> la sala, con sus plazas.</span></li>
-              <li><span><b>Servicios:</b> aforo de la clase.</span></li>
-              <li><span><b>Y además:</b> lista de asistentes por clase.</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="perfil" role="tabpanel" id="perfil-club" aria-labelledby="pestana-club" tabindex="0" hidden="">
-          <div class="perfil__texto">
-            <h3>Club de pádel o tenis</h3>
-            <p>Las pistas son los recursos y el día se ve pista por pista. Conviven el alquiler suelto, la clase particular y la de grupo de cuatro, porque lo que cambia entre una y otra es un número del catálogo y no un módulo aparte.</p>
-            <p>Y lo que no vas a pagar: comisión por reserva. La cuota es la cuota, y tus alumnos son tuyos.</p>
-          </div>
-          <div class="perfil__montaje">
-            <h4>Cómo se monta</h4>
-            <ul class="montaje">
-              <li><span><b>Actividad:</b> entrenamiento.</span></li>
-              <li><span><b>Recursos:</b> una pista por pista, capacidad 4.</span></li>
-              <li><span><b>Servicios:</b> alquiler aforo 4, clase particular 1.</span></li>
-              <li><span><b>Y además:</b> vocabulario de club.</span></li>
-            </ul>
-          </div>
-        </div>
+          <p>{{t912db013}}</p>
+          <ul class="specs">
+            <li>{{td32e3e96}}</li>
+            <li>{{t7914d2b4}}</li>
+            <li>{{t5b87f602}}</li>
+            <li>{{tcdd98b72}}</li>
+          </ul>
+          <span class="tag">{{t74fc3e02}}</span>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="abierto">
-    <div class="shell">
-      <div class="section__head">
-        <p class="eyebrow">Tus datos</p>
-        <h2>Son tuyos, y eso se puede comprobar.</h2>
-        <p>Los datos de tu centro no son mi rehén. Están en una base de datos corriente, salen cuando quieras y en un formato que otro sabe leer: lo que te ate a Turnera tiene que ser que te funciona, no lo que cuesta irse.</p>
-      </div>
-      <div class="abierto">
-        <div class="pillar">
-          <h3>Sin comisión por reserva</h3>
-          <p>Se paga una cuota y ya. Ni un porcentaje de lo que cobras, ni un marketplace en medio: tus clientes son tuyos y no se los enseño a nadie.</p>
-        </div>
-        <div class="pillar">
-          <h3>Una instalación por negocio</h3>
-          <p>Cada centro tiene su base de datos, separada de las demás. Ni un cliente ni una historia se cruzan con las de otro.</p>
-        </div>
-        <div class="pillar">
-          <h3>Y si te vas, te vas</h3>
-          <p>Los informes salen en Excel y la base de datos es MySQL estándar. Nadie te retiene por lo que cuesta salir.</p>
-        </div>
-        <div class="pillar">
-          <h3>En tu idioma</h3>
-          <p>Español e inglés hoy; alemán, portugués y chino en camino. Cada persona del centro elige el suyo, y los presupuestos y avisos salen en el idioma del cliente que los recibe.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="camino">
-    <div class="shell">
-      <div class="section__head">
-        <p class="eyebrow">Lo que viene</p>
-        <h2>Lo que hay hecho y lo que aún no.</h2>
-        <p>Prefiero decirlo antes que después. Esto es lo que está en camino y todavía no puedes usar.</p>
-      </div>
-      <ul class="camino">
-        <li><span><b>Portal de reservas.</b> Que el cliente coja su hora solo, con las reglas que ponga el centro: antelación, anulación y qué pasa si no tiene bono. La parte de dentro está hecha y probada; falta la pantalla donde reserva.</span></li>
-        <li><span><b>Cobro automático de la cuota.</b> Los primeros clientes se facturan a mano.</span></li>
-        <li><span><b>El día del profesional en el móvil.</b> Su agenda y sus fichas, sin abrir el ordenador del mostrador.</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="demo">
+  <section id="contacto">
     <div class="shell contact">
       <div>
-        <p class="eyebrow">Demo</p>
-        <h2>Te la enseño y me dices.</h2>
-        <p>Cuéntame qué centro tienes y con qué te peleas ahora. Te enseño Turnera funcionando con datos de verdad y hablamos de si te sirve. Lo leo yo, no un buzón compartido.</p>
+        <p class="eyebrow">{{td8a53e1f}}</p>
+        <h2>{{t99233389}}</h2>
+        <p>{{t59fd1a32}}</p>
       </div>
       <form class="card-contact" id="formulario" novalidate="">
         <div class="field">
-          <label for="nombre">Nombre</label>
+          <label for="nombre">{{te68491e9}}</label>
           <input id="nombre" name="nombre" type="text" autocomplete="name" required="" maxlength="80">
         </div>
         <div class="field">
-          <label for="correo">Correo</label>
+          <label for="correo">{{t98f00c3e}}</label>
           <input id="correo" name="correo" type="email" autocomplete="email" required="" maxlength="120">
         </div>
         <div class="field">
-          <label for="mensaje">Qué centro tienes</label>
-          <textarea id="mensaje" name="mensaje" rows="5" required="" maxlength="2000" placeholder="Una clínica de fisioterapia con tres cabinas, ahora mismo con agenda de papel…"></textarea>
+          <label for="mensaje">{{t88748045}}</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required="" maxlength="2000"></textarea>
         </div>
         <div class="trampa" aria-hidden="true">
-          <label for="empresa">No rellenes este campo</label>
+          <label for="empresa">{{t063ac36a}}</label>
           <input id="empresa" name="empresa" type="text" tabindex="-1" autocomplete="off">
         </div>
         <div class="cf-turnstile" data-sitekey="0x4AAAAAAEpkmDVpt3IXS_Mc" data-action="contacto" data-theme="auto"></div>
-        <button class="btn btn--solid" type="submit" id="enviar">Pedir la demo</button>
+        <button class="btn btn--solid" type="submit" id="enviar">{{tb25cabb5}}</button>
         <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
-        <p class="legal">Protegido por Cloudflare Turnstile: se aplican su <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">privacidad</a> y sus <a href="https://www.cloudflare.com/website-terms/" rel="noopener">condiciones</a>. También me tienes en <a href="mailto:f.serrano@devel.es">f.serrano@devel.es</a>, y el código en <a href="https://github.com/frandevel/turnera" rel="noopener">GitHub</a>.</p>
+        <p class="legal">{{te9b9cd26}} <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">{{t1b3ab681}}</a> {{t9ef7e457}} <a href="https://www.cloudflare.com/website-terms/" rel="noopener">{{t5857d2fb}}</a>{{t1be720f4}} <a href="mailto:f.serrano@devel.es">{{tc64b6164}}</a> {{t3867c498}} <a href="https://github.com/frandevel" rel="noopener">{{t5442e2b6}}</a>.</p>
       </form>
     </div>
   </section>
@@ -795,10 +495,11 @@ footer{
 
 <footer>
   <div class="shell footer__inner">
-    <span>© 2026 DEVEL · Turnera es un producto de DEVEL</span>
-    <span><a href="/">devel.es</a></span>
+    <span>{{t967bcf49}}</span>
+    <span>{{t20f90f28}}</span>
   </div>
 </footer>
+
 <script>
 const formulario = document.getElementById("formulario");
 const boton = document.getElementById("enviar");
@@ -867,7 +568,6 @@ formulario.addEventListener("submit", async (evento) => {
         correo: document.getElementById("correo").value.trim(),
         mensaje: document.getElementById("mensaje").value.trim(),
         empresa: document.getElementById("empresa").value,
-        origen: "turnera",
         token
       })
     });
@@ -891,34 +591,6 @@ formulario.addEventListener("submit", async (evento) => {
     boton.textContent = textoBotonEnReposo;
   }
 });
-</script>
-<script>
-const pestanas = Array.from(document.querySelectorAll('#perfiles [role="tab"]'));
-
-function mostrarPerfil(pestanaElegida) {
-  for (const pestana of pestanas) {
-    const elegida = pestana === pestanaElegida;
-    pestana.setAttribute("aria-selected", String(elegida));
-    pestana.tabIndex = elegida ? 0 : -1;
-    document.getElementById(pestana.getAttribute("aria-controls")).hidden = !elegida;
-  }
-}
-
-const SALTOS_CON_EL_TECLADO = { ArrowLeft: -1, ArrowRight: 1 };
-
-for (const [posicion, pestana] of pestanas.entries()) {
-  pestana.addEventListener("click", () => mostrarPerfil(pestana));
-  pestana.addEventListener("keydown", (evento) => {
-    const salto = SALTOS_CON_EL_TECLADO[evento.key];
-    if (salto === undefined) return;
-    evento.preventDefault();
-    const siguiente = pestanas[(posicion + salto + pestanas.length) % pestanas.length];
-    mostrarPerfil(siguiente);
-    siguiente.focus();
-  });
-}
-
-if (pestanas.length > 0) mostrarPerfil(pestanas[0]);
 </script>
 
 
