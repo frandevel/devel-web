@@ -42,6 +42,7 @@
   --tg-aspa:#265786;
   --tg-check:#006699;
   --tu-anillo:#0E6E62;
+  --tu-sobre-anillo:#FFFFFF;
   --tu-turno:#E08154;
 
   --shell:1120px;
@@ -59,6 +60,7 @@
     --tg-aspa:#8FB2D2;
     --tg-check:#4FA8D8;
     --tu-anillo:#54BFAE;
+    --tu-sobre-anillo:#06231F;
     --tu-turno:#EFA37B;
   }
 }
@@ -73,6 +75,7 @@
   --tg-aspa:#8FB2D2;
   --tg-check:#4FA8D8;
   --tu-anillo:#54BFAE;
+  --tu-sobre-anillo:#06231F;
   --tu-turno:#EFA37B;
 }
 
@@ -369,22 +372,50 @@ footer{
 .pantalla figcaption{margin-top:.9rem;font-size:.96rem;color:var(--text-dim);line-height:1.6}
 .pantalla b{color:var(--text);font-weight:600}
 
-.vocabularios{display:grid;gap:1.5rem;margin-top:2.8rem}
-@media (min-width:820px){.vocabularios{grid-template-columns:1fr 1fr}}
-.vocabulario{
-  background:var(--surface);border:1px solid var(--line);border-radius:14px;
-  padding:clamp(1.5rem,3vw,2.1rem);
+/* ---------- perfiles de centro, en pestanas ---------- */
+.perfiles{margin-top:2.8rem}
+.perfiles__botones{
+  display:flex;flex-wrap:wrap;gap:.6rem;
+  border-bottom:1px solid var(--line);
+  padding-bottom:1.1rem;
 }
-.vocabulario h3{font-size:1.2rem;color:var(--brand);margin-bottom:1rem}
-:root[data-theme="dark"] .vocabulario h3{color:#BFD3E5}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .vocabulario h3{color:#BFD3E5}}
-.palabras{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
-.palabras li{
-  font-family:var(--mono);font-size:.8rem;
+.perfil__boton{
+  font-family:var(--display);font-weight:600;font-size:.95rem;
+  color:var(--text-dim);
+  background:transparent;
   border:1px solid var(--line);border-radius:100px;
-  padding:.28rem .75rem;color:var(--text-dim);
+  padding:.55rem 1.1rem;cursor:pointer;
+  transition:border-color .16s ease,color .16s ease,background .16s ease;
 }
-.vocabulario p{margin-top:1.1rem;color:var(--text-dim);font-size:.95rem}
+.perfil__boton:hover{color:var(--text);border-color:var(--steel)}
+.perfil__boton[aria-selected="true"]{
+  color:var(--tu-sobre-anillo);
+  background:var(--tu-anillo);
+  border-color:var(--tu-anillo);
+}
+.perfil{padding-top:2rem;display:grid;gap:2rem}
+@media (min-width:900px){.perfil{grid-template-columns:minmax(0,1fr) minmax(0,20rem);align-items:start}}
+.perfil[hidden]{display:none}
+.perfil h3{font-size:1.35rem;margin-bottom:.9rem;color:var(--brand)}
+:root[data-theme="dark"] .perfil h3{color:#BFD3E5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .perfil h3{color:#BFD3E5}}
+.perfil__texto p{color:var(--text-dim);font-size:1rem}
+.perfil__texto p + p{margin-top:.9rem}
+.perfil__montaje{
+  background:var(--surface);border:1px solid var(--line);border-radius:14px;
+  padding:1.4rem 1.5rem;
+}
+.perfil__montaje h4{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--steel);margin:0 0 .9rem;font-weight:500;
+}
+.montaje{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7rem;font-size:.93rem}
+.montaje li{display:grid;grid-template-columns:auto 1fr;gap:.7rem;align-items:baseline;color:var(--text-dim)}
+.montaje li::before{
+  content:"";width:7px;height:7px;
+  background:var(--tu-turno);border-radius:2px;transform:rotate(45deg) translateY(-1px);
+}
+.montaje b{color:var(--text);font-weight:600}
 
 .abierto{display:grid;gap:1.5rem;margin-top:2.8rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
 .abierto .pillar:first-child{border-top-color:var(--tu-anillo)}
@@ -507,29 +538,88 @@ footer{
     </div>
   </section>
 
-  <section id="vocabularios">
+  <section id="perfiles">
     <div class="shell">
       <div class="section__head">
         <p class="eyebrow">Un producto</p>
-        <h2>La misma aplicación habla como habla tu centro.</h2>
-        <p>No son dos programas ni dos precios. Es una casilla en la configuración, y a partir de ahí la aplicación cambia de vocabulario sin tocar un solo dato de los que ya tienes.</p>
+        <h2>La misma aplicación, montada a tu manera.</h2>
+        <p>No son cuatro programas ni cuatro precios. Es una casilla en la configuración y unos números en el catálogo: a partir de ahí la aplicación habla como habla tu centro.</p>
       </div>
-      <div class="vocabularios">
-        <div class="vocabulario">
-          <h3>Clínica, estética, fisioterapia</h3>
-          <ul class="palabras">
-            <li>cliente</li><li>profesional</li><li>cita</li><li>visita</li>
-            <li>cabina</li><li>servicio</li><li>historia clínica</li><li>caso clínico</li>
-          </ul>
-          <p>Con la parte clínica encendida: antecedentes, alergias, exploración, diagnóstico y la evolución de cada sesión.</p>
+
+      <div class="perfiles">
+        <div class="perfiles__botones" role="tablist" aria-label="Tipos de centro">
+          <button class="perfil__boton" role="tab" id="pestana-clinica" aria-controls="perfil-clinica" aria-selected="true">Clínica y estética</button>
+          <button class="perfil__boton" role="tab" id="pestana-entrenador" aria-controls="perfil-entrenador" aria-selected="false">Entrenador personal</button>
+          <button class="perfil__boton" role="tab" id="pestana-colectivas" aria-controls="perfil-colectivas" aria-selected="false">Spinning y clases dirigidas</button>
+          <button class="perfil__boton" role="tab" id="pestana-club" aria-controls="perfil-club" aria-selected="false">Club de pádel o tenis</button>
         </div>
-        <div class="vocabulario">
-          <h3>Club de pádel, tenis, entrenamiento</h3>
-          <ul class="palabras">
-            <li>alumno</li><li>entrenador</li><li>clase</li><li>sesión</li>
-            <li>pista</li><li>tipo de clase</li><li>seguimiento</li><li>programa</li>
-          </ul>
-          <p>Con clases de varios alumnos: cada pista y cada clase tienen su aforo, y la agenda enseña las plazas que quedan.</p>
+
+        <div class="perfil" role="tabpanel" id="perfil-clinica" aria-labelledby="pestana-clinica" tabindex="0">
+          <div class="perfil__texto">
+            <h3>Clínica, estética, fisioterapia</h3>
+            <p>Una persona por cabina y una hora reservada para ella. La ficha guarda sus antecedentes, sus alergias, el caso abierto y la evolución de cada sesión, y el bono de diez tratamientos se va descontando solo conforme viene.</p>
+            <p>Es de donde viene Turnera: podología, veterinaria, dental y fisioterapia usan lo mismo.</p>
+          </div>
+          <div class="perfil__montaje">
+            <h4>Cómo se monta</h4>
+            <ul class="montaje">
+              <li><span><b>Actividad:</b> clínica.</span></li>
+              <li><span><b>Recursos:</b> una cabina por sitio, capacidad 1.</span></li>
+              <li><span><b>Servicios:</b> aforo 1.</span></li>
+              <li><span><b>Y además:</b> historia clínica y casos.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="perfil" role="tabpanel" id="perfil-entrenador" aria-labelledby="pestana-entrenador" tabindex="0" hidden>
+          <div class="perfil__texto">
+            <h3>Entrenador personal</h3>
+            <p>Uno a uno, y casi siempre por bonos: diez sesiones que se compran de golpe y se gastan a lo largo de dos meses. La ficha del alumno lleva sus notas de seguimiento y su saldo, así que sabes de un vistazo cuántas sesiones le quedan y cuándo caducan.</p>
+            <p>Si trabajas en varios sitios, cada sala es un recurso y la agenda te enseña el día entero de una vez.</p>
+          </div>
+          <div class="perfil__montaje">
+            <h4>Cómo se monta</h4>
+            <ul class="montaje">
+              <li><span><b>Actividad:</b> entrenamiento.</span></li>
+              <li><span><b>Recursos:</b> tu sala o la del gimnasio, capacidad 1.</span></li>
+              <li><span><b>Servicios:</b> aforo 1.</span></li>
+              <li><span><b>Y además:</b> bonos de sesiones con caducidad.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="perfil" role="tabpanel" id="perfil-colectivas" aria-labelledby="pestana-colectivas" tabindex="0" hidden>
+          <div class="perfil__texto">
+            <h3>Spinning, funcional, yoga, pilates</h3>
+            <p>La sala tiene sus plazas y la clase tiene las suyas, y manda la más pequeña: veinte bicicletas con una clase de quince son quince. La tarjeta de la clase enseña <b>12 de 15</b> sin abrirla, y dentro está la lista con quién viene, quién vino y quién no apareció.</p>
+            <p>El mismo alumno no puede estar en dos clases que se pisan, aunque en las dos queden plazas. Y una instalación que no da clases colectivas no se entera de que esto existe: sin tocar nada, una cita es de una plaza.</p>
+          </div>
+          <div class="perfil__montaje">
+            <h4>Cómo se monta</h4>
+            <ul class="montaje">
+              <li><span><b>Actividad:</b> entrenamiento.</span></li>
+              <li><span><b>Recursos:</b> la sala, con sus plazas.</span></li>
+              <li><span><b>Servicios:</b> aforo de la clase.</span></li>
+              <li><span><b>Y además:</b> lista de asistentes por clase.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="perfil" role="tabpanel" id="perfil-club" aria-labelledby="pestana-club" tabindex="0" hidden>
+          <div class="perfil__texto">
+            <h3>Club de pádel o tenis</h3>
+            <p>Las pistas son los recursos y el día se ve pista por pista. Conviven el alquiler suelto, la clase particular y la de grupo de cuatro, porque lo que cambia entre una y otra es un número del catálogo y no un módulo aparte.</p>
+            <p>Y lo que no vas a pagar: comisión por reserva. La cuota es la cuota, y tus alumnos son tuyos.</p>
+          </div>
+          <div class="perfil__montaje">
+            <h4>Cómo se monta</h4>
+            <ul class="montaje">
+              <li><span><b>Actividad:</b> entrenamiento.</span></li>
+              <li><span><b>Recursos:</b> una pista por pista, capacidad 4.</span></li>
+              <li><span><b>Servicios:</b> alquiler aforo 4, clase particular 1.</span></li>
+              <li><span><b>Y además:</b> vocabulario de club.</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -709,6 +799,34 @@ formulario.addEventListener("submit", async (evento) => {
     boton.textContent = textoBotonEnReposo;
   }
 });
+</script>
+<script>
+const pestanas = Array.from(document.querySelectorAll('#perfiles [role="tab"]'));
+
+function mostrarPerfil(pestanaElegida) {
+  for (const pestana of pestanas) {
+    const elegida = pestana === pestanaElegida;
+    pestana.setAttribute("aria-selected", String(elegida));
+    pestana.tabIndex = elegida ? 0 : -1;
+    document.getElementById(pestana.getAttribute("aria-controls")).hidden = !elegida;
+  }
+}
+
+const SALTOS_CON_EL_TECLADO = { ArrowLeft: -1, ArrowRight: 1 };
+
+for (const [posicion, pestana] of pestanas.entries()) {
+  pestana.addEventListener("click", () => mostrarPerfil(pestana));
+  pestana.addEventListener("keydown", (evento) => {
+    const salto = SALTOS_CON_EL_TECLADO[evento.key];
+    if (salto === undefined) return;
+    evento.preventDefault();
+    const siguiente = pestanas[(posicion + salto + pestanas.length) % pestanas.length];
+    mostrarPerfil(siguiente);
+    siguiente.focus();
+  });
+}
+
+if (pestanas.length > 0) mostrarPerfil(pestanas[0]);
 </script>
 </body>
 </html>
