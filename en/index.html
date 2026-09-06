@@ -255,6 +255,12 @@ section{padding-block:clamp(3.2rem,6vw,5.5rem)}
   background:var(--mist);border-radius:2px;transform:rotate(45deg) translateY(-1px);
 }
 .product--lead .specs li::before{background:var(--accent)}
+.product__link{
+  font-family:var(--display);font-weight:600;font-size:.95rem;
+  text-decoration:none;margin-top:.4rem;
+  color:var(--link);
+}
+.product__link:hover{text-decoration:underline}
 .tag{
   align-self:flex-start;margin-top:auto;
   font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;
@@ -361,7 +367,7 @@ footer{
       <a href="#productos">Products</a>
       <a href="#contacto">Contact</a>
     </nav>
-    <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/" lang="en" aria-current="true">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/" lang="de">DE<span class="idiomas__nombre">Deutsch</span></a></div>
+    <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/en/" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/" lang="en" aria-current="true">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/" lang="de">DE<span class="idiomas__nombre">Deutsch</span></a></div>
   </div>
 </header>
 
@@ -460,6 +466,7 @@ footer{
             <li>One installation per business, with its data in its own house</li>
           </ul>
           <span class="tag">Getting better every day</span>
+          <a class="product__link" href="/en/turnera">See inside Turnera →</a>
         </article>
       </div>
     </div>

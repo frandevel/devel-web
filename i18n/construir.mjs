@@ -35,6 +35,24 @@ function selectorDeIdioma(idiomaActual, ruta) {
   return `<div class="idiomas" role="group" aria-label="Idioma / Language / Sprache">${opciones}</div>`;
 }
 
+/**
+ * Un enlace a otra página del sitio tiene que llevar al mismo idioma que la página desde la que se pulsa: desde
+ * `/de/` el enlace a Turnera va a `/de/turnera`, no a la versión en español.
+ *
+ * Se comparan las direcciones enteras, no por principio de cadena, para no tocar las de las imágenes: la ruta
+ * `/turnera` es un enlace y `/turnera/inicio.jpg` es un fichero.
+ */
+function conLosEnlacesInternosEnSuIdioma(html, idioma) {
+  if (idioma === PREDETERMINADO) return html;
+  const rutasInternas = ['', ...PAGINAS.map((pagina) => pagina.ruta)];
+  for (const ruta of rutasInternas) {
+    const original = '/' + ruta;
+    const traducida = direccionDe(idioma, ruta);
+    html = html.split('href="' + original + '"').join('href="' + traducida + '"');
+  }
+  return html;
+}
+
 function construir() {
   for (const pagina of PAGINAS) {
     const plantilla = readFileSync(pagina.plantilla, 'utf8');
@@ -57,6 +75,7 @@ function construir() {
       html = html.replace(/<meta property="og:locale" content="[^"]*">/,
         `<meta property="og:locale" content="${{ es: 'es_ES', en: 'en_GB', de: 'de_DE' }[idioma]}">`);
       html = html.replace('<!--selector-de-idioma-->', selectorDeIdioma(idioma, pagina.ruta));
+      html = conLosEnlacesInternosEnSuIdioma(html, idioma);
 
       const destino = join('..', 'sitio', direccionDe(idioma, pagina.ruta).replace(/^\//, ''), 'index.html');
       mkdirSync(dirname(destino), { recursive: true });

@@ -255,6 +255,12 @@ section{padding-block:clamp(3.2rem,6vw,5.5rem)}
   background:var(--mist);border-radius:2px;transform:rotate(45deg) translateY(-1px);
 }
 .product--lead .specs li::before{background:var(--accent)}
+.product__link{
+  font-family:var(--display);font-weight:600;font-size:.95rem;
+  text-decoration:none;margin-top:.4rem;
+  color:var(--link);
+}
+.product__link:hover{text-decoration:underline}
 .tag{
   align-self:flex-start;margin-top:auto;
   font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;
@@ -460,6 +466,7 @@ footer{
             <li>Una instalación por negocio, con sus datos en su casa</li>
           </ul>
           <span class="tag">Mejorando cada día</span>
+          <a class="product__link" href="/turnera">Ver Turnera por dentro →</a>
         </article>
       </div>
     </div>
