@@ -319,11 +319,12 @@ footer{
     radial-gradient(115% 85% at 82% 14%,#12463F 0%,transparent 60%),
     linear-gradient(168deg,#0F3B36 0%,#08211E 100%);
 }
+.hero--turnera{--tu-isotipo:#0E6E62}
 .hero--turnera h1 em{color:#7ED0BF}
 .hero--turnera .btn--solid{background:var(--tu-anillo);color:#06231F}
 .hero__lockup{
   display:block;width:min(100%,330px);margin-bottom:1.6rem;
-  /* El fondo del hero es verde oscuro, asi que el lockup va en su variante clara. */
+  /* El fondo del hero es verde oscuro: la palabra va en claro y el aro conserva su color. */
   --tu-anillo:#F2F8F5;
 }
 .hero__lockup svg{width:100%;height:auto;display:block}
@@ -454,7 +455,7 @@ footer{
       <div>
         <p class="migas"><a href="/">devel</a> · producto</p>
         <span class="hero__lockup"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374 120" role="img" aria-label="Turnera">
-<g><path d="M80.19 22.03 A43.00 43.00 0 1 1 39.81 22.03" fill="none" stroke="var(--tu-anillo)" stroke-width="13" stroke-linecap="round"/>
+<g><path d="M80.19 22.03 A43.00 43.00 0 1 1 39.81 22.03" fill="none" stroke="var(--tu-isotipo)" stroke-width="13" stroke-linecap="round"/>
 <path d="M51.06 17.94 A43.00 43.00 0 0 1 68.94 17.94" fill="none" stroke="var(--tu-turno)" stroke-width="13" stroke-linecap="round"/></g>
 <g transform="translate(146.00 82.00) scale(0.03027 -0.03027)"><path d="M427 0Q329 0 271.0 52.5Q213 105 213 197V892H51V1080H213V1297L460 1355V1080H666V892H460V244Q460 210 469.5 199.0Q479 188 510 188H675V0Z" fill="var(--tu-anillo)"/></g>
 <g transform="translate(168.61 82.00) scale(0.03027 -0.03027)"><path d="M495 -25Q375 -25 293.5 29.5Q212 84 171.0 183.0Q130 282 130 413V1080H377V440Q377 309 424.0 238.0Q471 167 580 167Q652 167 710.0 204.5Q768 242 803.0 323.0Q838 404 838 535V1080H1086V0H848V254L855 209Q809 103 717.5 39.0Q626 -25 495 -25Z" fill="var(--tu-anillo)"/></g>
@@ -473,7 +474,7 @@ footer{
       </div>
       <div class="hero__mark">
         <svg class="isotipo" viewBox="0 0 120 120" role="img" aria-label="Isotipo de Turnera">
-          <path d="M80.19 22.03 A43 43 0 1 1 39.81 22.03" fill="none" stroke="#7ED0BF" stroke-width="13" stroke-linecap="round"/>
+          <path d="M80.19 22.03 A43 43 0 1 1 39.81 22.03" fill="none" stroke="var(--tu-isotipo)" stroke-width="13" stroke-linecap="round"/>
           <path d="M51.06 17.94 A43 43 0 0 1 68.94 17.94" fill="none" stroke="var(--tu-turno)" stroke-width="13" stroke-linecap="round"/>
         </svg>
       </div>
