@@ -3,9 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DEVEL</title>
-<meta name="description" content="DEVEL — desarrollo de software, estrategias automáticas de trading cuantitativo y consultoría de software e IA. Valencia, España.">
-<link rel="icon" href="/devel-isotipo.png" type="image/png">
+<title>Turnera · Agenda, ficha y cobro para negocios que atienden con cita</title>
+<meta name="description" content="Turnera es la aplicacion de gestion para clinicas, centros de estetica, fisioterapia y clubes deportivos: agenda, ficha de cliente, bonos, cobro e informes. Software libre y sin comision por reserva.">
+<link rel="canonical" href="https://devel.es/turnera">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Turnera - Gestion para negocios que atienden con cita">
+<meta property="og:description" content="Agenda, ficha de cliente, bonos y cobro en una sola pantalla. Software libre y sin comision por reserva.">
+<meta property="og:url" content="https://devel.es/turnera">
+<meta property="og:locale" content="es_ES">
+<link rel="icon" href="isotipo.svg" type="image/svg+xml">
 <style>*{box-sizing:border-box}html,body{margin:0}img{max-width:100%}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -236,10 +242,6 @@ section{padding-block:clamp(3.2rem,6vw,5.5rem)}
   background:var(--mist);border-radius:2px;transform:rotate(45deg) translateY(-1px);
 }
 .product--lead .specs li::before{background:var(--accent)}
-.product__link{
-  font-family:var(--display);font-weight:600;font-size:.95rem;
-  text-decoration:none;margin-top:.4rem;
-}
 .tag{
   align-self:flex-start;margin-top:auto;
   font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;
@@ -306,130 +308,282 @@ footer{
 .footer__inner{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:center}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+
+/* ---------- lo propio de la pagina de Turnera ---------- */
+.hero--turnera{
+  background:
+    radial-gradient(115% 85% at 82% 14%,#12463F 0%,transparent 60%),
+    linear-gradient(168deg,#0F3B36 0%,#08211E 100%);
+}
+.hero--turnera h1 em{color:#7ED0BF}
+.hero--turnera .btn--solid{background:var(--tu-anillo);color:#06231F}
+.hero__lockup{
+  display:block;width:min(100%,330px);margin-bottom:1.6rem;
+  /* El fondo del hero es verde oscuro, asi que el lockup va en su variante clara. */
+  --tu-anillo:#F2F8F5;
+}
+.hero__lockup svg{width:100%;height:auto;display:block}
+.hero--turnera .btn--ghost{border-color:#3E7A6F;color:#D8EDE7}
+.hero--turnera .btn--ghost:hover{border-color:#7ED0BF;color:#FFFFFF}
+.hero--turnera .eyebrow{color:#8FC7BA}
+.hero--turnera .eyebrow::before{background:var(--tu-turno)}
+.hero--turnera .lede{color:#BFDCD4}
+.hero--turnera .isotipo{width:min(100%,270px);height:auto;display:block;filter:drop-shadow(0 16px 34px rgba(0,0,0,.42))}
+@media (max-width:820px){.hero--turnera .hero__mark{display:none}}
+
+.site nav a{white-space:nowrap}
+.migas{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
+.migas a{color:var(--steel);text-decoration:none}
+.migas a:hover{color:var(--link)}
+
+.jornada{display:grid;gap:1.5rem;margin-top:2.8rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));counter-reset:paso}
+.paso{padding-top:1.5rem;border-top:2px solid var(--line)}
+.paso:first-child{border-top-color:var(--tu-anillo)}
+.paso h3{font-size:1.1rem;margin-bottom:.6rem;color:var(--brand)}
+.paso h3::before{
+  counter-increment:paso;content:counter(paso);
+  font-family:var(--mono);font-size:.72rem;color:var(--tu-anillo);
+  margin-right:.6rem;vertical-align:.15em;
+}
+.paso p{color:var(--text-dim);font-size:.97rem}
+:root[data-theme="dark"] .paso h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .paso h3{color:var(--mist)}}
+
+#pantallas{background:var(--surface-sunk);border-block:1px solid var(--line)}
+.pantallas{display:flex;flex-direction:column;gap:clamp(2.5rem,5vw,4rem);margin-top:2.8rem}
+.pantalla{display:grid;gap:1.2rem}
+@media (min-width:900px){
+  .pantalla{grid-template-columns:minmax(0,1fr) minmax(0,15rem);gap:2rem;align-items:start}
+  .pantalla figcaption{margin-top:0;padding-top:.4rem}
+}
+.pantalla figure{margin:0;display:contents}
+.pantalla img{
+  width:100%;height:auto;display:block;
+  border:1px solid var(--line);border-radius:12px;
+  background:var(--surface);
+  box-shadow:0 10px 30px rgba(10,30,50,.10);
+}
+:root[data-theme="dark"] .pantalla img{box-shadow:0 10px 30px rgba(0,0,0,.38)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pantalla img{box-shadow:0 10px 30px rgba(0,0,0,.38)}}
+.pantalla figcaption{margin-top:.9rem;font-size:.96rem;color:var(--text-dim);line-height:1.6}
+.pantalla b{color:var(--text);font-weight:600}
+
+.vocabularios{display:grid;gap:1.5rem;margin-top:2.8rem}
+@media (min-width:820px){.vocabularios{grid-template-columns:1fr 1fr}}
+.vocabulario{
+  background:var(--surface);border:1px solid var(--line);border-radius:14px;
+  padding:clamp(1.5rem,3vw,2.1rem);
+}
+.vocabulario h3{font-size:1.2rem;color:var(--brand);margin-bottom:1rem}
+:root[data-theme="dark"] .vocabulario h3{color:#BFD3E5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .vocabulario h3{color:#BFD3E5}}
+.palabras{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.palabras li{
+  font-family:var(--mono);font-size:.8rem;
+  border:1px solid var(--line);border-radius:100px;
+  padding:.28rem .75rem;color:var(--text-dim);
+}
+.vocabulario p{margin-top:1.1rem;color:var(--text-dim);font-size:.95rem}
+
+.abierto{display:grid;gap:1.5rem;margin-top:2.8rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.abierto .pillar:first-child{border-top-color:var(--tu-anillo)}
+
+.camino{margin-top:2.6rem;display:flex;flex-direction:column;gap:1.1rem;max-width:60ch}
+.camino li{display:flex;gap:.9rem;align-items:baseline;color:var(--text-dim);font-size:.99rem;list-style:none}
+.camino li::before{
+  content:"";width:8px;height:8px;flex:none;
+  border:2px solid var(--tu-turno);border-radius:50%;
+  transform:translateY(.45rem);
+}
+.camino b{color:var(--text);font-weight:600}
+.camino{padding:0;margin-left:0}
+
 </style>
 </head>
 <body>
 <header class="site">
   <div class="shell site__inner">
-    <a class="brand" href="#top">
+    <a class="brand" href="/">
       <span class="mark" role="img" aria-label="Logotipo de DEVEL"></span>
       <span>devel</span>
     </a>
     <nav>
-      <a href="#que-hacemos">Qué hacemos</a>
-      <a href="#productos">Productos</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#que-hace">Qué hace</a>
+      <a href="#pantallas">Pantallas</a>
+      <a href="#abierto">Tus datos</a>
+      <a href="#demo">Demo</a>
     </nav>
   </div>
 </header>
 
 <main id="top">
-  <section class="hero">
+  <section class="hero hero--turnera">
     <div class="shell hero__inner">
       <div>
-        <p class="eyebrow">Valencia · software desde 2008</p>
-        <h1>Se construye en días.<br><em>Funciona durante años.</em></h1>
-        <p class="lede">Lo que antes costaba meses de desarrollo hoy sale en días: la IA nos ha cambiado la velocidad, no el listón. Detrás de cada entrega hay veinticinco años de ingeniería, y sistemas que siguen en marcha cuando nadie los mira.</p>
+        <p class="migas"><a href="/">devel</a> · producto</p>
+        <span class="hero__lockup"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374 120" role="img" aria-label="Turnera">
+<g><path d="M80.19 22.03 A43.00 43.00 0 1 1 39.81 22.03" fill="none" stroke="var(--tu-anillo)" stroke-width="13" stroke-linecap="round"/>
+<path d="M51.06 17.94 A43.00 43.00 0 0 1 68.94 17.94" fill="none" stroke="var(--tu-turno)" stroke-width="13" stroke-linecap="round"/></g>
+<g transform="translate(146.00 82.00) scale(0.03027 -0.03027)"><path d="M427 0Q329 0 271.0 52.5Q213 105 213 197V892H51V1080H213V1297L460 1355V1080H666V892H460V244Q460 210 469.5 199.0Q479 188 510 188H675V0Z" fill="var(--tu-anillo)"/></g>
+<g transform="translate(168.61 82.00) scale(0.03027 -0.03027)"><path d="M495 -25Q375 -25 293.5 29.5Q212 84 171.0 183.0Q130 282 130 413V1080H377V440Q377 309 424.0 238.0Q471 167 580 167Q652 167 710.0 204.5Q768 242 803.0 323.0Q838 404 838 535V1080H1086V0H848V254L855 209Q809 103 717.5 39.0Q626 -25 495 -25Z" fill="var(--tu-anillo)"/></g>
+<g transform="translate(206.00 82.00) scale(0.03027 -0.03027)"><path d="M150 0V1080H387V842L378 872Q428 989 522.0 1047.0Q616 1105 722 1105Q752 1105 782.5 1100.0Q813 1095 841 1083L819 866Q758 884 700 884Q657 884 604.5 868.5Q552 853 505.0 811.0Q458 769 427.5 690.5Q397 612 397 487V0Z" fill="var(--tu-anillo)"/></g>
+<g transform="translate(233.04 82.00) scale(0.03027 -0.03027)"><path d="M150 0V1080H387V833L380 877Q427 979 518.0 1042.0Q609 1105 739 1105Q860 1105 941.5 1050.5Q1023 996 1064.5 897.5Q1106 799 1106 667V0H858V650Q858 772 813.5 842.5Q769 913 664 913Q543 913 470.0 815.0Q397 717 397 522V0Z" fill="var(--tu-anillo)"/></g>
+<g transform="translate(270.42 82.00) scale(0.03027 -0.03027)"><path d="M621 -25Q464 -25 343.0 44.0Q222 113 153.0 240.0Q84 367 84 540Q84 713 152.0 840.0Q220 967 340.0 1036.0Q460 1105 617 1105Q705 1105 794.5 1078.0Q884 1051 958.5 982.5Q1033 914 1079.0 793.5Q1125 673 1125 488H243V645H905L867 588Q861 709 825.5 782.5Q790 856 734.5 889.5Q679 923 611 923Q525 923 466.0 876.5Q407 830 376.5 743.5Q346 657 346 539Q346 363 415.0 263.5Q484 164 619 164Q711 164 776.0 211.0Q841 258 873 351L1103 287Q1064 182 992.0 113.0Q920 44 824.0 9.5Q728 -25 621 -25Z" fill="var(--tu-anillo)"/></g>
+<g transform="translate(306.84 82.00) scale(0.03027 -0.03027)"><path d="M150 0V1080H387V842L378 872Q428 989 522.0 1047.0Q616 1105 722 1105Q752 1105 782.5 1100.0Q813 1095 841 1083L819 866Q758 884 700 884Q657 884 604.5 868.5Q552 853 505.0 811.0Q458 769 427.5 690.5Q397 612 397 487V0Z" fill="var(--tu-anillo)"/></g>
+<g transform="translate(333.88 82.00) scale(0.03027 -0.03027)"><path d="M444 -25Q339 -25 255.0 13.0Q171 51 122.0 123.5Q73 196 73 297Q73 406 136.5 487.5Q200 569 324.5 614.0Q449 659 633 659H795L777 635V696Q777 812 733.0 871.0Q689 930 587 930Q490 930 438.0 879.0Q386 828 378 738L119 787Q132 876 191.5 948.0Q251 1020 354.0 1063.0Q457 1106 602 1106Q740 1106 833.0 1059.0Q926 1012 972.5 913.5Q1019 815 1019 659V244Q1019 210 1028.5 199.0Q1038 188 1069 188H1123V0H994Q896 0 841.0 52.5Q786 105 786 197V258L828 246Q814 203 787.0 156.0Q760 109 715.0 68.0Q670 27 603.5 1.0Q537 -25 444 -25ZM512 154Q587 154 647.5 189.5Q708 225 743.5 298.5Q779 372 779 484V502H637Q520 502 454.0 471.5Q388 441 361.0 396.5Q334 352 334 308Q334 270 351.5 234.5Q369 199 408.0 176.5Q447 154 512 154Z" fill="var(--tu-anillo)"/></g>
+</svg></span>
+        <h1>La agenda, la ficha y la caja.<br><em>En la misma pantalla.</em></h1>
+        <p class="lede">Turnera es la aplicación de gestión para negocios que atienden con cita: clínicas, centros de estética, fisioterapia, podología, veterinaria y clubes deportivos. Lo que hace un mostrador en un día cabe en tres pantallas, y ninguna te obliga a salir de ella para cobrar.</p>
         <div class="actions">
-          <a class="btn btn--solid" href="#contacto">Hablemos</a>
-          <a class="btn btn--ghost" href="#productos">Ver los productos</a>
+          <a class="btn btn--solid" href="#demo">Pedir una demo</a>
+          <a class="btn btn--ghost" href="#pantallas">Ver cómo es</a>
         </div>
       </div>
       <div class="hero__mark">
-        <span class="mark" role="img" aria-label="Logotipo de DEVEL"></span>
+        <svg class="isotipo" viewBox="0 0 120 120" role="img" aria-label="Isotipo de Turnera">
+          <path d="M80.19 22.03 A43 43 0 1 1 39.81 22.03" fill="none" stroke="#7ED0BF" stroke-width="13" stroke-linecap="round"/>
+          <path d="M51.06 17.94 A43 43 0 0 1 68.94 17.94" fill="none" stroke="var(--tu-turno)" stroke-width="13" stroke-linecap="round"/>
+        </svg>
       </div>
     </div>
   </section>
 
-  <section id="que-hacemos">
+  <section id="que-hace">
     <div class="shell">
       <div class="section__head">
-        <p class="eyebrow">Qué hacemos</p>
-        <h2>Tres cosas, y las tres de verdad.</h2>
-        <p>No vendemos horas: entregamos sistemas que funcionan solos y que alguien tiene que poder mantener después.</p>
+        <p class="eyebrow">El día de un centro</p>
+        <h2>Cuatro momentos, y ya está.</h2>
+        <p>No hay módulos que comprar ni pantallas que descubrir seis meses después. Un centro usa esto entero desde la primera semana.</p>
       </div>
-      <div class="pillars">
-        <article class="pillar">
-          <h3>Estrategias automáticas</h3>
-          <p>Diseño, programación y puesta en producción de estrategias cuantitativas: reglas explícitas, gestión de riesgo escrita antes de la primera orden y validación con datos de mercado, no con curvas de ajuste.</p>
-        </article>
-        <article class="pillar">
-          <h3>Desarrollo a medida</h3>
-          <p>Aplicaciones de negocio de principio a fin, con Java y Spring en el backend y React en el frontend. Arquitectura que sobrevive al primer año y código que se lee sin manual.</p>
-        </article>
-        <article class="pillar">
-          <h3>Consultoría de software e IA</h3>
-          <p>Dónde encaja de verdad un modelo en tu proceso y dónde solo añade coste. Revisión de arquitectura, automatización de tareas y equipos que aprenden a trabajar con agentes sin depender de ellos.</p>
-        </article>
+      <div class="jornada">
+        <div class="paso">
+          <h3>Coger la cita</h3>
+          <p>La agenda del día por profesional o por sitio, y la semana de un profesional. Se arrastra para mover una cita y se estira para cambiar la duración. Avisa si el hueco choca con otra cita del mismo profesional o de la misma sala.</p>
+        </div>
+        <div class="paso">
+          <h3>Atender</h3>
+          <p>La ficha del cliente con sus datos, sus notas, sus bonos y todo lo que se le ha hecho. En las clínicas, además, su historia: antecedentes, casos abiertos y la evolución de cada sesión.</p>
+        </div>
+        <div class="paso">
+          <h3>Cobrar</h3>
+          <p>Un ticket con servicios y productos, con descuento, forma de pago y cambio. Si gasta una sesión de un bono, se descuenta ahí. Y si se va sin pagar, queda registrado como deuda en lugar de perderse.</p>
+        </div>
+        <div class="paso">
+          <h3>Saber cómo va</h3>
+          <p>Ocho informes —citas, clientes, cobros, caja diaria, bonos, histórico, existencias y movimientos— y todos se bajan en Excel. Lo pendiente de cobrar sale ordenado por antigüedad, que es como duele.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="productos">
+  <section id="pantallas">
     <div class="shell">
       <div class="section__head">
-        <p class="eyebrow">Productos</p>
-        <h2>Lo que publicamos bajo la marca.</h2>
-        <p>Dos líneas propias, nacidas de problemas que teníamos delante.</p>
+        <p class="eyebrow">Pantallas</p>
+        <h2>Esto es la aplicación, sin maquillar.</h2>
+        <p>Capturas de una instalación real con datos de demostración. Ni bocetos ni maquetas.</p>
       </div>
-      <div class="products">
-        <article class="product product--lead">
-          <div class="product__head">
-            <span class="product__logo" aria-hidden="true">
-              <svg viewBox="0 0 120 120"><g transform="translate(-5 5)">
-                <path d="M67.85 81.85 L87.65 101.65 A9.90 9.90 0 0 0 101.65 87.65 L81.85 67.85 A9.90 9.90 0 0 0 67.85 81.85 Z" fill="none" stroke="var(--tg-aspa)" stroke-width="3.2" stroke-linejoin="round"/>
-                <path d="M38.15 67.85 L18.35 87.65 A9.90 9.90 0 0 0 32.35 101.65 L52.15 81.85 A9.90 9.90 0 0 0 38.15 67.85 Z" fill="none" stroke="var(--tg-aspa)" stroke-width="3.2" stroke-linejoin="round"/>
-                <path d="M60 60 L31.72 31.72" fill="none" stroke="var(--tg-check)" stroke-width="23" stroke-linecap="round"/>
-                <path d="M60 60 L106.67 13.33" fill="none" stroke="var(--tg-check)" stroke-width="23" stroke-linecap="round"/>
-              </g></svg>
-            </span>
-            <div>
-              <p class="product__kind">Operativa financiera</p>
-              <h3 class="product__name">Tradegun</h3>
-            </div>
-          </div>
-          <p>El paraguas de nuestras herramientas de mercado: roboadvisors, indicadores y estrategias automáticas para quien opera con método y quiere dejar de depender del pulso.</p>
-          <ul class="specs">
-            <li>Estrategias en C# para ATAS, sobre futuros micro del CME</li>
-            <li>Indicadores de bloques de órdenes, rupturas y retesteos</li>
-            <li>Informes diarios de cartera y de sentimiento de mercado</li>
-            <li>Límite de pérdida diaria y tamaño de posición como parte del diseño, no como añadido</li>
-          </ul>
-          <span class="tag">En producción con capital propio</span>
-        </article>
-        <article class="product">
-          <div class="product__head">
-            <span class="product__logo" aria-hidden="true">
-              <svg viewBox="0 0 120 120">
-                <path d="M80.19 22.03 A43 43 0 1 1 39.81 22.03" fill="none" stroke="var(--tu-anillo)" stroke-width="13" stroke-linecap="round"/>
-                <path d="M51.06 17.94 A43 43 0 0 1 68.94 17.94" fill="none" stroke="var(--tu-turno)" stroke-width="13" stroke-linecap="round"/>
-              </svg>
-            </span>
-            <div>
-              <p class="product__kind">Gestión de negocio</p>
-              <h3 class="product__name">Turnera</h3>
-            </div>
-          </div>
-          <p>Agenda, ficha de cliente, bonos y cobro para negocios que atienden con cita: clínicas, centros de estética, fisioterapia y entrenadores. Encuentra el hueco y coloca ahí la cita.</p>
-          <ul class="specs">
-            <li>Citas, servicios, productos y caja en una sola pantalla</li>
-            <li>Bonos de sesiones y saldo pendiente por cliente</li>
-            <li>Historia clínica y evolución por sesión, si el centro la lleva</li>
-            <li>Una instalación por negocio, con sus datos en su casa</li>
-          </ul>
-          <span class="tag">Mejorando cada día</span>
-          <a class="product__link" href="/turnera">Ver Turnera por dentro →</a>
-        </article>
+      <div class="pantallas">
+        <div class="pantalla">
+          <figure>
+            <img src="inicio.jpg" alt="Pantalla de inicio de Turnera con la caja del día, las citas de hoy y los cobros pendientes" width="1440" height="900" loading="lazy" decoding="async">
+            <figcaption><b>Inicio.</b> Lo que hay que saber al abrir: la caja del día, las citas que quedan, lo pendiente de cobro y el stock que se acaba.</figcaption>
+          </figure>
+        </div>
+        <div class="pantalla">
+          <figure>
+            <img src="agenda.jpg" alt="La agenda de un día repartida en columnas por profesional, con el estado de cada cita en color" width="1440" height="900" loading="lazy" decoding="async">
+            <figcaption><b>Agenda.</b> El día en columnas, una por profesional o por sala. El color dice en qué estado está cada cita sin abrirla.</figcaption>
+          </figure>
+        </div>
+        <div class="pantalla">
+          <figure>
+            <img src="tpv.jpg" alt="El punto de venta con un ticket de dos servicios, descuento, forma de pago y cambio" width="1440" height="900" loading="lazy" decoding="async">
+            <figcaption><b>Punto de venta.</b> El ticket del cliente que está en el mostrador, con sus bonos a la vista y el cambio calculado.</figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contacto">
+  <section id="vocabularios">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Un producto</p>
+        <h2>La misma aplicación habla como habla tu centro.</h2>
+        <p>No son dos programas ni dos precios. Es una casilla en la configuración, y a partir de ahí la aplicación cambia de vocabulario sin tocar un solo dato de los que ya tienes.</p>
+      </div>
+      <div class="vocabularios">
+        <div class="vocabulario">
+          <h3>Clínica, estética, fisioterapia</h3>
+          <ul class="palabras">
+            <li>cliente</li><li>profesional</li><li>cita</li><li>visita</li>
+            <li>cabina</li><li>servicio</li><li>historia clínica</li><li>caso clínico</li>
+          </ul>
+          <p>Con la parte clínica encendida: antecedentes, alergias, exploración, diagnóstico y la evolución de cada sesión.</p>
+        </div>
+        <div class="vocabulario">
+          <h3>Club de pádel, tenis, entrenamiento</h3>
+          <ul class="palabras">
+            <li>alumno</li><li>entrenador</li><li>clase</li><li>sesión</li>
+            <li>pista</li><li>tipo de clase</li><li>seguimiento</li><li>programa</li>
+          </ul>
+          <p>Con clases de varios alumnos: cada pista y cada clase tienen su aforo, y la agenda enseña las plazas que quedan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="abierto">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Tus datos</p>
+        <h2>Son tuyos, y eso se puede comprobar.</h2>
+        <p>Turnera es software libre con licencia LGPL v3. El código está publicado, así que no dependes de que yo siga aquí ni de que no me dé por subir el precio.</p>
+      </div>
+      <div class="abierto">
+        <div class="pillar">
+          <h3>Sin comisión por reserva</h3>
+          <p>Se paga una cuota y ya. Ni un porcentaje de lo que cobras, ni un marketplace en medio: tus clientes son tuyos y no se los enseño a nadie.</p>
+        </div>
+        <div class="pillar">
+          <h3>Una instalación por negocio</h3>
+          <p>Cada centro tiene su base de datos, separada de las demás. Ni un cliente ni una historia se cruzan con las de otro.</p>
+        </div>
+        <div class="pillar">
+          <h3>Y si te vas, te vas</h3>
+          <p>Los informes salen en Excel y la base de datos es MySQL estándar. Nadie te retiene por lo que cuesta salir.</p>
+        </div>
+        <div class="pillar">
+          <h3>En español y en inglés</h3>
+          <p>Cada persona del centro elige el suyo, y los presupuestos y avisos salen en el idioma del cliente que los recibe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="camino">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Lo que viene</p>
+        <h2>Lo que hay hecho y lo que aún no.</h2>
+        <p>Prefiero decirlo antes que después. Esto es lo que está en camino y todavía no puedes usar.</p>
+      </div>
+      <ul class="camino">
+        <li><span><b>Portal de reservas.</b> Que el cliente coja su hora solo, con las reglas que ponga el centro: antelación, anulación y qué pasa si no tiene bono. La parte de dentro está hecha y probada; falta la pantalla donde reserva.</span></li>
+        <li><span><b>Cobro automático de la cuota.</b> Los primeros clientes se facturan a mano.</span></li>
+        <li><span><b>El día del profesional en el móvil.</b> Su agenda y sus fichas, sin abrir el ordenador del mostrador.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="demo">
     <div class="shell contact">
       <div>
-        <p class="eyebrow">Contacto</p>
-        <h2>Cuéntame qué tienes entre manos.</h2>
-        <p>Cuéntame el problema en dos líneas. Lo leo yo, no un buzón compartido: si encaja te digo cómo lo abordaría, y si no encaja te lo digo también.</p>
+        <p class="eyebrow">Demo</p>
+        <h2>Te la enseño y me dices.</h2>
+        <p>Cuéntame qué centro tienes y con qué te peleas ahora. Te enseño Turnera funcionando con datos de verdad y hablamos de si te sirve. Lo leo yo, no un buzón compartido.</p>
       </div>
       <form class="card-contact" id="formulario" novalidate>
         <div class="field">
@@ -441,17 +595,17 @@ footer{
           <input id="correo" name="correo" type="email" autocomplete="email" required maxlength="120">
         </div>
         <div class="field">
-          <label for="mensaje">En qué puedo ayudarte</label>
-          <textarea id="mensaje" name="mensaje" rows="5" required maxlength="2000"></textarea>
+          <label for="mensaje">Qué centro tienes</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required maxlength="2000" placeholder="Una clínica de fisioterapia con tres cabinas, ahora mismo con agenda de papel…"></textarea>
         </div>
         <div class="trampa" aria-hidden="true">
           <label for="empresa">No rellenes este campo</label>
           <input id="empresa" name="empresa" type="text" tabindex="-1" autocomplete="off">
         </div>
         <div class="cf-turnstile" data-sitekey="0x4AAAAAAEpkmDVpt3IXS_Mc" data-action="contacto" data-theme="auto"></div>
-        <button class="btn btn--solid" type="submit" id="enviar">Enviar mensaje</button>
+        <button class="btn btn--solid" type="submit" id="enviar">Pedir la demo</button>
         <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
-        <p class="legal">Protegido por Cloudflare Turnstile: se aplican su <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">privacidad</a> y sus <a href="https://www.cloudflare.com/website-terms/" rel="noopener">condiciones</a>. También me tienes en <a href="mailto:f.serrano@devel.es">f.serrano@devel.es</a> y en <a href="https://github.com/frandevel" rel="noopener">GitHub</a>.</p>
+        <p class="legal">Protegido por Cloudflare Turnstile: se aplican su <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">privacidad</a> y sus <a href="https://www.cloudflare.com/website-terms/" rel="noopener">condiciones</a>. También me tienes en <a href="mailto:f.serrano@devel.es">f.serrano@devel.es</a>, y el código en <a href="https://github.com/frandevel/turnera" rel="noopener">GitHub</a>.</p>
       </form>
     </div>
   </section>
@@ -459,11 +613,10 @@ footer{
 
 <footer>
   <div class="shell footer__inner">
-    <span>© 2026 DEVEL</span>
-    <span>Valencia, España</span>
+    <span>© 2026 DEVEL · Turnera es software libre con licencia LGPL v3</span>
+    <span><a href="/">devel.es</a></span>
   </div>
 </footer>
-
 <script>
 const formulario = document.getElementById("formulario");
 const boton = document.getElementById("enviar");
@@ -532,6 +685,7 @@ formulario.addEventListener("submit", async (evento) => {
         correo: document.getElementById("correo").value.trim(),
         mensaje: document.getElementById("mensaje").value.trim(),
         empresa: document.getElementById("empresa").value,
+        origen: "turnera",
         token
       })
     });

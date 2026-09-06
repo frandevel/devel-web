@@ -3,7 +3,9 @@
 Sitio estático de una página más una función serverless para el formulario de contacto.
 
 ```
-index.html          la web entera (CSS y logo incrustados)
+index.html          la portada (CSS y logo incrustados)
+turnera/            la pagina de producto de Turnera, con sus capturas
+vercel.json         turnera.es lleva a devel.es/turnera
 devel-isotipo.png   favicon
 api/contacto.js     función que valida el reCAPTCHA y envía el correo
 ```

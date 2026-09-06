@@ -11,7 +11,12 @@ async function verificarTurnstile(token, ip) {
   return respuesta.json();
 }
 
-async function enviarCorreo({ nombre, correo, mensaje }) {
+const ASUNTOS = {
+  turnera: "Demo de Turnera",
+  web: "Contacto desde devel.es"
+};
+
+async function enviarCorreo({ nombre, correo, mensaje, origen }) {
   const respuesta = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
@@ -22,7 +27,7 @@ async function enviarCorreo({ nombre, correo, mensaje }) {
       from: process.env.CORREO_REMITENTE,
       to: [process.env.CORREO_DESTINO],
       reply_to: correo,
-      subject: `Contacto desde devel.es — ${nombre}`,
+      subject: `${ASUNTOS[origen] ?? ASUNTOS.web} — ${nombre}`,
       text: `Nombre: ${nombre}\nCorreo: ${correo}\n\n${mensaje}`
     })
   });
@@ -37,7 +42,7 @@ export default async function handler(peticion, respuesta) {
     return respuesta.status(405).json({ error: "Método no permitido" });
   }
 
-  const { nombre = "", correo = "", mensaje = "", empresa = "", token = "" } = peticion.body ?? {};
+  const { nombre = "", correo = "", mensaje = "", empresa = "", token = "", origen = "web" } = peticion.body ?? {};
 
   if (empresa.trim() !== "") {
     return respuesta.status(200).json({ ok: true });
@@ -56,7 +61,7 @@ export default async function handler(peticion, respuesta) {
       return respuesta.status(403).json({ error: "Verificación no superada" });
     }
 
-    await enviarCorreo({ nombre: nombre.trim(), correo: correo.trim(), mensaje: mensaje.trim() });
+    await enviarCorreo({ nombre: nombre.trim(), correo: correo.trim(), mensaje: mensaje.trim(), origen });
     return respuesta.status(200).json({ ok: true });
   } catch (error) {
     console.error("Fallo enviando el formulario de contacto:", error);
