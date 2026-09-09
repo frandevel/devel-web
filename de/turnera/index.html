@@ -436,6 +436,45 @@ footer{
 
 
 
+/* ---------- preguntas frecuentes ---------- */
+#preguntas{background:var(--surface-sunk);border-block:1px solid var(--line)}
+.faq{margin-top:2.8rem;display:grid;gap:2.6rem 3.5rem}
+@media (min-width:900px){.faq{grid-template-columns:1fr 1fr;align-items:start}}
+.faq__columna{display:flex;flex-direction:column;gap:2.6rem}
+.faq__grupo h3{font-size:1.1rem;color:var(--brand);padding-bottom:.7rem;border-bottom:2px solid var(--tu-anillo)}
+:root[data-theme="dark"] .faq__grupo h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .faq__grupo h3{color:var(--mist)}}
+.faq__item{border-bottom:1px solid var(--line)}
+.faq__item summary{
+  list-style:none;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+  padding:.85rem 0;
+  font-family:var(--display);font-weight:600;font-size:1rem;color:var(--text);
+}
+.faq__item summary::-webkit-details-marker{display:none}
+.faq__item summary::after{
+  content:"+";flex:none;
+  font-family:var(--mono);font-size:1.1rem;line-height:1;color:var(--tu-anillo);
+  transition:transform .18s ease;
+}
+.faq__item[open] summary::after{transform:rotate(45deg)}
+.faq__item summary:hover{color:var(--link)}
+.faq__respuesta{padding-bottom:1.15rem;color:var(--text-dim);font-size:.96rem;display:flex;flex-direction:column;gap:.75rem}
+.faq__respuesta b{color:var(--text);font-weight:600}
+.faq__lista{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.45rem}
+.faq__aviso{
+  border-left:3px solid var(--tu-turno);
+  background:var(--surface);border-radius:0 8px 8px 0;
+  padding:.65rem .9rem;color:var(--text);
+}
+.faq__tabla{border-collapse:collapse;width:100%;max-width:24rem;font-size:.92rem;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.faq__tabla th,.faq__tabla td{padding:.45rem .8rem;text-align:left;border-bottom:1px solid var(--line)}
+.faq__tabla th{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);font-weight:500}
+.faq__tabla td:not(:first-child),.faq__tabla th:not(:first-child){text-align:right;font-variant-numeric:tabular-nums}
+.faq__tabla tr:last-child td{border-bottom:none}
+.faq__pie{margin-top:.5rem;font-size:1rem}
+.faq__nota{margin-top:.8rem;font-size:.82rem;color:var(--steel);max-width:60ch}
+
 /* ---------- selector de idioma ---------- */
 .idiomas{display:flex;align-items:center;gap:.15rem;margin-left:1.4rem;padding-left:1.4rem;
   border-left:1px solid var(--line)}
@@ -525,6 +564,7 @@ footer{
       <a href="#que-hace">Was es kann</a>
       <a href="#pantallas">Ansichten</a>
       <a href="#abierto">Ihre Daten</a>
+      <a href="#preguntas">FAQ</a>
       <a href="#demo">Demo</a>
     </nav>
     <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/de/turnera" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera" lang="en">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera" lang="de" aria-current="true">DE<span class="idiomas__nombre">Deutsch</span></a></div>
@@ -736,6 +776,367 @@ footer{
     </div>
   </section>
 
+  <section id="preguntas">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Häufige Fragen</p>
+        <h2>Was man uns fragt, bevor man sich entscheidet.</h2>
+        <p>Ohne Umschweife beantwortet: Preis, Einrichtung, wie Sie Ihre Daten mitbringen und was damit passiert. Fehlt Ihre Frage, stellen Sie sie unten im Formular, und wir nehmen sie hier auf.</p>
+      </div>
+
+      <div class="faq">
+
+        <div class="faq__columna">
+
+        <div class="faq__grupo">
+          <h3>Preis und Abrechnung</h3>
+
+          <details class="faq__item">
+            <summary>Was kostet es?</summary>
+            <div class="faq__respuesta">
+              <p>39 € im Monat mit zwei Ressourcen inklusive, plus 10 € je weitere Ressource. Ab zehn Ressourcen sprechen wir darüber. Auf wie viele Standorte sie verteilt sind, spielt keine Rolle.</p>
+              <table class="faq__tabla">
+                <thead><tr><th>Ihr Betrieb</th><th>Pro Monat</th><th>Pro Jahr</th></tr></thead>
+                <tbody>
+                  <tr><td>2 Ressourcen</td><td>39 €</td><td>390 €</td></tr>
+                  <tr><td>4 Ressourcen</td><td>59 €</td><td>590 €</td></tr>
+                  <tr><td>6 Ressourcen</td><td>79 €</td><td>790 €</td></tr>
+                  <tr><td>9 Ressourcen</td><td>109 €</td><td>1.090 €</td></tr>
+                </tbody>
+              </table>
+              <p>Preise ohne MwSt. Ein Jahr sind zehn Monatsbeträge: Wer im Voraus zahlt, spart zwei Monate.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Was zählt als Ressource?</summary>
+            <div class="faq__respuesta">
+              <p>Jede Lücke in Ihrem Kalender, die gleichzeitig belegt sein kann. Wenn Ihr Betrieb drei Personen gleichzeitig behandeln kann, sind das drei Ressourcen.</p>
+              <ul class="faq__lista">
+                <li>Zwei Kabinen, in denen parallel gearbeitet wird, sind zwei Ressourcen. Wechseln sich zwei Mitarbeiter in derselben Kabine ab und überschneiden sich nie, ist es eine.</li>
+                <li>Vier Boxen mit vier Physiotherapeuten gleichzeitig sind vier, auch wenn sechs Leute auf der Gehaltsliste stehen.</li>
+                <li>Sechs buchbare Plätze sind sechs. Trainer und wer am Empfang sitzt, zählen nicht.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Berechnen Sie pro Benutzer?</summary>
+            <div class="faq__respuesta">
+              <p>Nein. Benutzer sind in jeder Größe unbegrenzt, und das ist keine Großzügigkeit: Wer pro Benutzer berechnet, treibt die Leute dazu, Passwörter zu teilen, und in einem Programm mit Patientenakten muss man wissen, wer welche Akte geöffnet hat. Ein Benutzer pro Person gehört dazu, wenn das System ernst gemeint ist.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Und nach der Zahl der Kunden in meiner Datenbank?</summary>
+            <div class="faq__respuesta">
+              <p>Auch nicht. Das hieße, Ihnen zehn Jahre Arbeit in Rechnung zu stellen, und obendrein würde es Sie dazu drängen, Akten zu löschen, die Sie gesetzlich aufbewahren müssen.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Nehmen Sie einen Anteil vom Umsatz des Betriebs?</summary>
+            <div class="faq__respuesta">
+              <p>Nein. Weder vom Umsatz noch von jeder Buchung, noch von jeder Zahlung, noch von neuen Kunden, die über das Portal kommen. Ihre Kunden gehören Ihnen, und was Sie einnehmen, gehört ganz Ihnen.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Was passiert, wenn ich eine Kabine eröffne oder einen Platz schließe?</summary>
+            <div class="faq__respuesta">
+              <p>Die Ressourcen werden am Tag Ihrer Verlängerung gezählt, also gibt es keine krummen Rechnungen mitten im Monat: Eröffnen Sie am 3. eine Kabine, zahlen Sie sie ab dem nächsten Beitrag. Schließen Sie eine, gilt dasselbe umgekehrt.</p>
+              <p>Bei jährlicher Zahlung wird, wenn Sie im Laufe des Jahres wachsen, nur die Differenz für die verbleibenden Monate berechnet.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Gibt es eine Einrichtungsgebühr?</summary>
+            <div class="faq__respuesta">
+              <p>Eine Einrichtungsgebühr nicht. Es gibt eine <b>einmalige Inbetriebnahme für 150 €</b>, bei der wir Ihren Betrieb gemeinsam mit Ihnen einrichten und Sie schulen. Es sind 300 €, wenn Ihre Daten aus einem anderen Programm übernommen werden müssen, denn diese Migration machen wir selbst.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Wie wird bezahlt?</summary>
+            <div class="faq__respuesta">
+              <p>Per Karte oder Lastschrift, monatlich oder jährlich, und Sie erhalten Ihre Rechnung automatisch. Keine Überweisungen, an die man denken muss.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Gibt es eine Mindestlaufzeit?</summary>
+            <div class="faq__respuesta">
+              <p>Nein. Wer monatlich zahlt, kündigt, wann er will: Sie behalten den Zugang bis zum Ende des bereits bezahlten Monats, und es wird nichts mehr abgebucht.</p>
+              <p>Wenn Sie das Jahr im Voraus bezahlt haben und vorzeitig gehen, <b>erstatten wir, was Sie nicht genutzt haben, und rechnen die genutzten Monate zum Monatspreis ab</b>. Der Rabatt von zwei Monaten ist der Preis dafür, sich für ein Jahr zu binden, und entfällt daher, wenn das Jahr nicht vollendet wird; das Geld für die Monate, die Sie nicht nutzen, geht zurück auf Ihr Konto.</p>
+              <p>Beispiel: ein Betrieb mit 59 € im Monat zahlt 590 € für das Jahr und geht nach drei Monaten. Diese drei Monate kosten 177 €, also erstatten wir 413 €.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Ich habe zwei Standorte. Zahle ich doppelt?</summary>
+            <div class="faq__respuesta">
+              <p>Nein. <b>Die Zahl der Standorte ändert den Preis nicht: Es zählen nur die Ressourcen, egal wo sie sind.</b> Zwei Standorte mit je drei Kabinen sind eine einzige Installation mit sechs Ressourcen, und Sie zahlen 79 € im Monat, genauso viel wie ein Betrieb mit sechs Kabinen unter einem Dach.</p>
+              <p>Jede Filiale hat ihren eigenen Kalender, ihre eigene Kasse und ihre eigenen Berichte, und die Leitung sieht alles zusammen. Einen zweiten Standort zu eröffnen kostet nichts, nur weil Sie ihn eröffnen; es kostet dann, wenn Sie dadurch mehr Menschen gleichzeitig behandeln können, und das ist nur fair.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>Testen und Einrichten</h3>
+
+          <details class="faq__item">
+            <summary>Kann ich es vor dem Bezahlen ausprobieren?</summary>
+            <div class="faq__respuesta">
+              <p>Dreißig Tage, ohne Karte. Sie starten mit bereits geladenen Beispieldaten — Kunden, Leistungen, die Termine von heute —, damit Sie sehen, wie es sich gefüllt verhält, und nicht vor einem leeren Bildschirm sitzen. Wenn Sie mit echten Daten anfangen, sind sie mit einem Klick gelöscht.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Ruft mich ein Verkäufer an?</summary>
+            <div class="faq__respuesta">
+              <p>Nein. Sie testen allein, ohne dass Ihnen jemand hinterherläuft.</p>
+              <p><b>Aber bevor Sie zahlender Kunde werden, sprechen wir einmal miteinander</b>, und zwar mit Absicht: In Turnera werden Sie die Patientenakten Ihrer Patienten aufbewahren, und das macht uns rechtlich mitverantwortlich. Wir wollen wissen, wen wir freischalten, und Sie sollen wissen, mit wem Sie es zu tun haben. Es ist ein Anruf, kein Verfahren.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Wie lange dauert es, bis der Betrieb läuft?</summary>
+            <div class="faq__respuesta">
+              <p>Die Testphase: Minuten. Mit Inbetriebnahme und ohne mitzubringende Daten: ein paar Tage. Bei einer Migration aus einem anderen Programm rechnen Sie mit ein bis drei Wochen, fast ausschließlich Wartezeit, bis Ihr bisheriger Anbieter die Daten herausgibt.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Wie kündige ich, falls es dazu kommt?</summary>
+            <div class="faq__respuesta">
+              <p>Über Ihr Konto, ohne jemanden anzurufen oder einen Brief zu schreiben. Bevor etwas gelöscht wird, exportieren Sie alles, und wir erinnern Sie per E-Mail daran.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>Meine Daten aus einem anderen Programm mitbringen</h3>
+
+          <details class="faq__item">
+            <summary>Ich nutze ein anderes Programm. Können Sie übernehmen, was ich habe?</summary>
+            <div class="faq__respuesta">
+              <p>Ja, und das ist das Erste, was wir tun. Wir übernehmen Kunden, Leistungen und Preise, Produkte, Mitarbeiter, Behandlungspakete und offene Sitzungen, Termine, erledigte Besuche und Krankengeschichten. Excel- oder CSV-Tabellen reichen uns, denn das kann jedes Programm der Branche exportieren.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Und wenn sich etwas nicht übernehmen lässt?</summary>
+            <div class="faq__respuesta">
+              <p>Das passiert immer: Es gibt Felder, die es im anderen Programm nicht gibt oder die nur halb ausgefüllt sind. Deshalb <b>bekommen Sie, bevor wir irgendetwas anfassen, einen Bericht</b> darüber, was übernommen wird, was aussortiert wird und warum, und welche Akten wie Duplikate aussehen. Sie prüfen ihn, und erst dann wird wirklich importiert.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Muss ich den Betrieb am Tag der Umstellung schließen?</summary>
+            <div class="faq__respuesta">
+              <p>Nein. Wir übernehmen Ihre Daten ein paar Wochen vorher, und am Tag der Umstellung nur das, was in der Zwischenzeit passiert ist. Sie arbeiten bis zum letzten Tag in Ihrem Programm weiter.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Was kostet die Migration?</summary>
+            <div class="faq__respuesta">
+              <p>Sie ist in der Inbetriebnahme für 300 € enthalten. Keine Berechnung pro Datensatz oder pro Stunde.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Mein bisheriges Programm lässt mich nichts exportieren. Was tun?</summary>
+            <div class="faq__respuesta">
+              <p>Sie haben ein Recht auf Ihre Daten, auch wenn Ihr Anbieter keinen Knopf dafür anbietet: Das ist das <b>Recht auf Datenübertragbarkeit nach Artikel 20 der DSGVO</b>. Man beantragt es schriftlich, und der Anbieter ist verpflichtet, die Daten in einem maschinenlesbaren Format herauszugeben.</p>
+              <p class="faq__aviso"><b>Fordern Sie die Daten an, bevor Sie kündigen, nicht danach.</b> Mehrere Programme der Branche löschen die Daten wenige Monate nach der Kündigung endgültig, und ihr Vertrag sagt das auch. Erst die Daten in der Hand, dann die Kündigung.</p>
+            </div>
+          </details>
+        </div>
+
+        </div>
+
+        <div class="faq__columna">
+
+        <div class="faq__grupo">
+          <h3>Daten, Datenschutz und gesetzliche Pflichten</h3>
+
+          <details class="faq__item">
+            <summary>Wem gehören meine Daten?</summary>
+            <div class="faq__respuesta">
+              <p>Ihnen, und das ist kein Spruch. Sie können sie jederzeit vollständig aus dem Programm exportieren, ohne um Erlaubnis zu fragen, ohne zu zahlen und ohne uns Bescheid zu geben.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Wo werden sie gespeichert?</summary>
+            <div class="faq__respuesta">
+              <p>Auf Servern innerhalb der Europäischen Union. Mit Patientenakten darin ist das keine technische Vorliebe, sondern das, was Ihnen ein unangenehmes Gespräch erspart, falls jemals jemand nachfragt.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Unterschreiben wir etwas zum Datenschutz?</summary>
+            <div class="faq__respuesta">
+              <p>Ja, und das ist für uns beide Pflicht: ein <b>Auftragsverarbeitungsvertrag</b>. Sie sind der Verantwortliche für die Daten Ihrer Patienten, und wir verarbeiten sie in Ihrem Auftrag. Sie bekommen ihn zu Beginn unterschrieben, zusammen mit dem, was Sie für Ihr Verzeichnis der Verarbeitungstätigkeiten brauchen.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Kann die Person am Empfang die Patientenakten sehen?</summary>
+            <div class="faq__respuesta">
+              <p>Nein, es sei denn, Sie erlauben es ausdrücklich. Turnera unterscheidet vier Profile — Leitung, Empfang, Behandler und Leserecht —, und das des Empfangs <b>enthält klinische Daten von Haus aus nicht</b>. Sie können es freigeben, wenn es in Ihrem Betrieb sinnvoll ist, aber als Ihre Entscheidung und nicht aus Nachlässigkeit unsererseits.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Kann ich nachsehen, wer die Akte eines Patienten geöffnet hat?</summary>
+            <div class="faq__respuesta">
+              <p>Ja. Wer welche Akte wann öffnet, wird protokolliert, und die Leitung des Betriebs kann es einsehen. Das ist Ihre Pflicht als Verantwortlicher für diese Daten, also liefern wir es Ihnen lieber fertig.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Gibt es Sicherungskopien?</summary>
+            <div class="faq__respuesta">
+              <p>Täglich, mit einer Woche Verlauf und Momentaufnahmen des ganzen Servers. Und sie werden durch Wiederherstellen geprüft, denn eine Sicherung, die nie wiederhergestellt wurde, ist keine Sicherung, sondern ein Ordner.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Erfüllen Sie VeriFactu?</summary>
+            <div class="faq__respuesta">
+              <p>Wir werden es sein, bevor es Pflicht wird. Nach dem aktuellen Zeitplan gilt es für Gesellschaften ab dem 1. Januar 2027 und für Selbstständige ab dem 1. Juli 2027. Wenn es so weit ist, tragen Ihre Rechnungen ihren Prüfcode, und keine kann gelöscht oder verändert werden, ohne Spuren zu hinterlassen: Korrekturen erfolgen per Stornorechnung, wie es die Vorschrift verlangt.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Kann ich meinem Steuerberater etwas geben?</summary>
+            <div class="faq__respuesta">
+              <p>Ja. Die Berichte zu Zahlungen, Tageskasse und Bewegungen kommen als Excel oder CSV heraus, was jede Steuerkanzlei öffnen kann, mit den Zahlungen nach Zahlungsart getrennt, damit die Kasse mit dem Kartenterminal übereinstimmt. Das Ausgangsrechnungsbuch mit Nummerierung und MwSt.-Aufschlüsselung kommt mit der Anpassung an VeriFactu.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>Der Alltag</h3>
+
+          <details class="faq__item">
+            <summary>Was ist im Preis enthalten?</summary>
+            <div class="faq__respuesta">
+              <p>Alles. Es gibt keine Tarife mit beschnittenen Funktionen und keine Module, die man extra kauft: Kalender, Kundenakte, Krankengeschichte, Kasse und Kassenabschluss, Behandlungspakete und offene Posten, Produkte und Bestand, Berichte und mehrere Filialen. Und was als Nächstes kommt — das Buchungsportal, WhatsApp-Erinnerungen, die App für Behandler — kommt für alle. Mit der Größe ändert sich der Preis, nicht das, was Sie tun können.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Können Terminerinnerungen per WhatsApp verschickt werden?</summary>
+            <div class="faq__respuesta">
+              <p>Es ist auf dem Weg und das Nächste, was kommt, denn es erreicht die Leute dort, wo sie wirklich lesen. Jeder Tarif wird eine Zahl von Nachrichten pro Monat enthalten; wer mehr verschickt, zahlt sie zum Selbstkostenpreis, einzeln auf der Rechnung ausgewiesen. Es ist das Einzige, was nach Verbrauch abgerechnet wird, weil es das Einzige mit echten Kosten pro Nachricht ist.</p>
+              <p>Die Erinnerung enthält den Namen Ihres Betriebs, Datum und Uhrzeit, und der Patient kann antworten, um zu bestätigen oder abzusagen. <b>Was sie nie enthalten wird, ist die Behandlung</b>: WhatsApp erlaubt es nicht, das Datenschutzrecht rät davon ab, und es gibt keinen Umweg, der gut ausgeht.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Und per E-Mail?</summary>
+            <div class="faq__respuesta">
+              <p>Per E-Mail ja, vom ersten Tag an: Terminerinnerungen und alles, was nicht eilt, gehen so hinaus, in der Sprache des Kunden, der sie bekommt.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Können meine Kunden selbst buchen?</summary>
+            <div class="faq__respuesta">
+              <p>Genau das bauen wir gerade: ein eigenes Portal Ihres Betriebs, in dem sie sehen, was frei ist, buchen und absagen, innerhalb der Regeln, die Sie festlegen: mit wie viel Vorlauf, wer ohne Paket buchen darf, und ob jemand mit offenen Posten weiter buchen kann oder nicht.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Gibt es eine App für Behandler?</summary>
+            <div class="faq__respuesta">
+              <p>Sie ist auf dem Weg: eine abgespeckte Version fürs Handy mit dem, was an dem Tag ansteht, den Terminen und wenig mehr. Gedacht für Menschen, die im Stehen arbeiten und keinen Computer vor sich haben.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Funktioniert es mit meinem Kartenterminal?</summary>
+            <div class="faq__respuesta">
+              <p>Turnera erfasst die Zahlung und die Zahlungsart, und der Kassenbericht stimmt mit dem überein, was Ihr Terminal sagt. Wir wickeln kein Geld ab: Sie kassieren, auf Ihr Konto, mit dem Zahlungsanbieter, den Sie schon haben.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Kann ich meinem Steuerberater Zugang geben?</summary>
+            <div class="faq__respuesta">
+              <p>Es gibt ein Profil mit reinem Leserecht für Abrechnung und Berichte, ohne Zugang zu irgendetwas Klinischem. Wenn Sie einem Außenstehenden lieber keinen Zugang geben, exportieren Sie und schicken es ihm: Für viele Betriebe ist das die sauberere Lösung.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>Hilfe und Support</h3>
+
+          <details class="faq__item">
+            <summary>Wenn ich nicht weiterkomme, wen rufe ich an?</summary>
+            <div class="faq__respuesta">
+              <p>Uns, per Telefon oder E-Mail, ohne Formular und ohne Roboter. Und im Programm wird es auf jeder Ansicht einen Hilfe-Knopf geben, der die Dokumentation genau dieser Ansicht öffnet, mit einem „Schreiben Sie uns“, das schon weiß, von wo aus Sie schreiben.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Gibt es ein Handbuch?</summary>
+            <div class="faq__respuesta">
+              <p>Wir schreiben es gerade, beginnend mit dem Alltag, aus dem fast alle Fragen kommen. Es wird offen sein: Man muss kein Kunde sein, um es zu lesen, sodass Sie vor der Entscheidung hineinschauen können.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Ist eine Schulung enthalten?</summary>
+            <div class="faq__respuesta">
+              <p>Ja, in der Inbetriebnahme. Wir setzen uns mit Ihrem Team zusammen und richten es mit Ihren Leistungen, Ihren Preisen und Ihrer Arbeitsweise ein, nicht mit einem generischen Beispiel.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Und wenn ein Fehler auftaucht?</summary>
+            <div class="faq__respuesta">
+              <p>Sie sagen es uns, und wir beheben ihn. Turnera ist ein lebendiges Programm mit regelmäßig neuen Versionen, und Verbesserungen erreichen alle Kunden ohne Aufpreis und ohne ein Update, das Sie installieren müssten.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>Wer wir sind</h3>
+
+          <details class="faq__item">
+            <summary>Sind Sie ein großes Unternehmen?</summary>
+            <div class="faq__respuesta">
+              <p>Nein, und das sollten Sie wissen, bevor Sie unterschreiben. Wir sind ein kleines Team, und das hat zwei Seiten: Wenn Sie anrufen, geht jemand ans Telefon, der das Programm von innen kennt, und wenn Sie etwas Vernünftiges wünschen, kann es in Wochen erledigt sein. Dafür haben wir kein Callcenter rund um die Uhr.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Was passiert mit meinem Betrieb, wenn Ihnen etwas zustößt?</summary>
+            <div class="faq__respuesta">
+              <p>Das ist die richtige Frage. Ihre Daten lassen sich vollständig exportieren und liegen in einer gewöhnlichen Datenbank, sodass jeder Informatiker dieselbe Installation auf einem anderen Server aufsetzen kann. Sie sind nicht davon abhängig, dass es uns weiter gibt, und was Sie an Turnera bindet, muss sein, dass es für Sie funktioniert, und nicht, was ein Wechsel kosten würde.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Warum heißt es Turnera?</summary>
+            <div class="faq__respuesta">
+              <p>Von „turno“, dem spanischen Wort für Termin oder Schicht, denn das ist es, was einen Betrieb wirklich ordnet: wer kommt, wann und mit wem. Alles andere — die Akte, die Zahlung, der Bericht — hängt daran.</p>
+            </div>
+          </details>
+        </div>
+
+        </div>
+
+      </div>
+
+      <p class="faq__pie"><b>Ihre Frage ist nicht dabei?</b> <a href="#demo">Stellen Sie sie unten</a> und ein Mensch antwortet Ihnen, keine Vorlage. Ist die Frage gut, landet sie auf dieser Seite.</p>
+      <p class="faq__nota">Preise ohne MwSt. Die VeriFactu-Termine entsprechen dem im September 2026 geltenden Zeitplan und hängen von der Gesetzgebung ab; klären Sie sie mit Ihrer Steuerkanzlei.</p>
+    </div>
+  </section>
 
   <section id="demo">
     <div class="shell contact">

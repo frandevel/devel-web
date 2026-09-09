@@ -436,6 +436,45 @@ footer{
 
 
 
+/* ---------- preguntas frecuentes ---------- */
+#preguntas{background:var(--surface-sunk);border-block:1px solid var(--line)}
+.faq{margin-top:2.8rem;display:grid;gap:2.6rem 3.5rem}
+@media (min-width:900px){.faq{grid-template-columns:1fr 1fr;align-items:start}}
+.faq__columna{display:flex;flex-direction:column;gap:2.6rem}
+.faq__grupo h3{font-size:1.1rem;color:var(--brand);padding-bottom:.7rem;border-bottom:2px solid var(--tu-anillo)}
+:root[data-theme="dark"] .faq__grupo h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .faq__grupo h3{color:var(--mist)}}
+.faq__item{border-bottom:1px solid var(--line)}
+.faq__item summary{
+  list-style:none;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+  padding:.85rem 0;
+  font-family:var(--display);font-weight:600;font-size:1rem;color:var(--text);
+}
+.faq__item summary::-webkit-details-marker{display:none}
+.faq__item summary::after{
+  content:"+";flex:none;
+  font-family:var(--mono);font-size:1.1rem;line-height:1;color:var(--tu-anillo);
+  transition:transform .18s ease;
+}
+.faq__item[open] summary::after{transform:rotate(45deg)}
+.faq__item summary:hover{color:var(--link)}
+.faq__respuesta{padding-bottom:1.15rem;color:var(--text-dim);font-size:.96rem;display:flex;flex-direction:column;gap:.75rem}
+.faq__respuesta b{color:var(--text);font-weight:600}
+.faq__lista{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.45rem}
+.faq__aviso{
+  border-left:3px solid var(--tu-turno);
+  background:var(--surface);border-radius:0 8px 8px 0;
+  padding:.65rem .9rem;color:var(--text);
+}
+.faq__tabla{border-collapse:collapse;width:100%;max-width:24rem;font-size:.92rem;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.faq__tabla th,.faq__tabla td{padding:.45rem .8rem;text-align:left;border-bottom:1px solid var(--line)}
+.faq__tabla th{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);font-weight:500}
+.faq__tabla td:not(:first-child),.faq__tabla th:not(:first-child){text-align:right;font-variant-numeric:tabular-nums}
+.faq__tabla tr:last-child td{border-bottom:none}
+.faq__pie{margin-top:.5rem;font-size:1rem}
+.faq__nota{margin-top:.8rem;font-size:.82rem;color:var(--steel);max-width:60ch}
+
 /* ---------- selector de idioma ---------- */
 .idiomas{display:flex;align-items:center;gap:.15rem;margin-left:1.4rem;padding-left:1.4rem;
   border-left:1px solid var(--line)}
@@ -525,6 +564,7 @@ footer{
       <a href="#que-hace">Qué hace</a>
       <a href="#pantallas">Pantallas</a>
       <a href="#abierto">Tus datos</a>
+      <a href="#preguntas">Preguntas</a>
       <a href="#demo">Demo</a>
     </nav>
     <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/turnera" lang="es" aria-current="true">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera" lang="en">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera" lang="de">DE<span class="idiomas__nombre">Deutsch</span></a></div>
@@ -736,6 +776,367 @@ footer{
     </div>
   </section>
 
+  <section id="preguntas">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Preguntas frecuentes</p>
+        <h2>Lo que nos preguntan antes de decidirse.</h2>
+        <p>Contestado sin rodeos: precio, alta, cómo traer tus datos y qué pasa con ellos. Si falta la tuya, pídela en el formulario de abajo y la añadimos aquí.</p>
+      </div>
+
+      <div class="faq">
+
+        <div class="faq__columna">
+
+        <div class="faq__grupo">
+          <h3>Precio y facturación</h3>
+
+          <details class="faq__item">
+            <summary>¿Cuánto cuesta?</summary>
+            <div class="faq__respuesta">
+              <p>39 € al mes con dos recursos incluidos, y 10 € por cada recurso adicional. De diez recursos en adelante lo hablamos. No importa en cuántos locales los tengas repartidos.</p>
+              <table class="faq__tabla">
+                <thead><tr><th>Tu centro</th><th>Al mes</th><th>Al año</th></tr></thead>
+                <tbody>
+                  <tr><td>2 recursos</td><td>39 €</td><td>390 €</td></tr>
+                  <tr><td>4 recursos</td><td>59 €</td><td>590 €</td></tr>
+                  <tr><td>6 recursos</td><td>79 €</td><td>790 €</td></tr>
+                  <tr><td>9 recursos</td><td>109 €</td><td>1.090 €</td></tr>
+                </tbody>
+              </table>
+              <p>Precios sin IVA. El año son diez mensualidades: pagando por adelantado te ahorras dos meses.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Qué cuenta como recurso?</summary>
+            <div class="faq__respuesta">
+              <p>Cada hueco que puede estar ocupado a la vez en tu agenda. Si en tu centro se puede atender a tres personas al mismo tiempo, son tres recursos.</p>
+              <ul class="faq__lista">
+                <li>Dos cabinas donde se trabaja en paralelo son dos recursos. Si dos profesionales se turnan la misma cabina y nunca coinciden, es uno.</li>
+                <li>Cuatro boxes con cuatro fisios a la vez son cuatro, aunque en plantilla haya seis personas.</li>
+                <li>Seis pistas reservables son seis. Los monitores y quien está en recepción no cuentan.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Cobráis por usuario?</summary>
+            <div class="faq__respuesta">
+              <p>No. Los usuarios son ilimitados en cualquier tamaño, y no es generosidad: cobrar por usuario empuja a compartir contraseñas, y en un programa que guarda historias clínicas hace falta saber quién ha abierto cada ficha. Un usuario por persona es parte de que el sistema sea serio.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Y por número de clientes en mi base de datos?</summary>
+            <div class="faq__respuesta">
+              <p>Tampoco. Sería cobrarte por llevar diez años trabajando, y además te empujaría a borrar historiales que la ley te obliga a conservar.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Os lleváis un porcentaje de lo que factura el centro?</summary>
+            <div class="faq__respuesta">
+              <p>No. Ni de lo que facturas, ni de cada reserva, ni de cada cobro, ni de los clientes nuevos que entren por el portal. Tus clientes son tuyos y lo que cobras es tuyo entero.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Qué pasa si abro una cabina o cierro una pista?</summary>
+            <div class="faq__respuesta">
+              <p>El número de recursos se cuenta el día que te toca renovar, así que no hay cálculos raros a mitad de mes: si abres una cabina el día 3, empiezas a pagarla en tu siguiente cuota. Si cierras una, igual pero al revés.</p>
+              <p>Con pago anual, si creces durante el año se factura solo la diferencia por los meses que queden.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Hay cuota de alta?</summary>
+            <div class="faq__respuesta">
+              <p>Cuota de alta no. Sí hay una <b>puesta en marcha de 150 €</b>, una sola vez, en la que configuramos tu centro contigo y te formamos. Son 300 € si hay que traer tus datos desde otro programa, porque esa migración la hacemos nosotros.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Cómo se paga?</summary>
+            <div class="faq__respuesta">
+              <p>Con tarjeta o domiciliación, cada mes o cada año, y recibes tu factura automáticamente. Nada de transferencias que hay que recordar.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Hay permanencia?</summary>
+            <div class="faq__respuesta">
+              <p>No. Si pagas al mes, cancelas cuando quieras: sigues entrando hasta el final del mes que ya tienes pagado y no se te vuelve a cobrar.</p>
+              <p>Si pagaste el año por adelantado y te vas antes de tiempo, <b>te devolvemos lo que no has usado, contando los meses que sí has usado al precio mensual</b>. El descuento de dos meses es lo que se paga por comprometer un año, así que se pierde si el año no se cumple; el dinero de los meses que no vas a usar vuelve a tu cuenta.</p>
+              <p>Con un centro de 59 € al mes: pagas 590 € por el año y te vas a los tres meses. Esos tres meses cuestan 177 €, así que te devolvemos 413 €.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Tengo dos centros. ¿Pago dos veces?</summary>
+            <div class="faq__respuesta">
+              <p>No. <b>El número de centros no cambia el precio: solo cuentan los recursos, estén donde estén.</b> Dos locales con tres cabinas cada uno son una sola instalación de seis recursos, y pagas 79 € al mes, lo mismo que un centro con seis cabinas bajo el mismo techo.</p>
+              <p>Cada delegación tiene su agenda, su caja y sus informes por separado, con la dirección viéndolo todo junto. Abrir un segundo local no te cuesta nada por el hecho de abrirlo; te cuesta si al abrirlo puedes atender a más gente a la vez, que es lo razonable.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>Prueba y alta</h3>
+
+          <details class="faq__item">
+            <summary>¿Puedo probarlo antes de pagar?</summary>
+            <div class="faq__respuesta">
+              <p>Treinta días, sin tarjeta. Entras con datos de ejemplo ya cargados —clientes, servicios, citas de hoy— para que veas cómo se comporta lleno y no delante de una pantalla vacía. Cuando empieces con los de verdad, se borran de un clic.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Me va a llamar un comercial?</summary>
+            <div class="faq__respuesta">
+              <p>No. Pruebas solo, sin que nadie te persiga.</p>
+              <p><b>Pero antes de pasar a cliente de pago sí hablamos una vez</b>, y es a propósito: dentro de Turnera vas a guardar historias clínicas de tus pacientes, y eso nos convierte legalmente en responsables junto contigo. Queremos saber a quién damos de alta y que tú sepas con quién estás tratando. Es una llamada, no un proceso.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Cuánto se tarda en tener el centro funcionando?</summary>
+            <div class="faq__respuesta">
+              <p>La prueba, minutos. Con puesta en marcha y sin datos que traer, un par de días. Si hay que migrar desde otro programa, contamos entre una y tres semanas, casi todo esperando a que tu proveedor actual te entregue los datos.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Cómo me doy de baja, si llega el caso?</summary>
+            <div class="faq__respuesta">
+              <p>Desde tu cuenta, sin llamar a nadie ni escribir una carta. Antes de que se borre nada te exportas todo, y te avisamos por correo de que lo hagas.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>Traer mis datos de otro programa</h3>
+
+          <details class="faq__item">
+            <summary>Estoy en otro programa. ¿Podéis traer lo que tengo?</summary>
+            <div class="faq__respuesta">
+              <p>Sí, y es lo primero que hacemos. Traemos clientes, servicios y tarifas, productos, profesionales, bonos y sesiones pendientes, citas, visitas hechas e historia clínica. Nos vale con hojas de Excel o CSV, que es lo que todos los programas del sector saben exportar.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Y si algo no se puede traer?</summary>
+            <div class="faq__respuesta">
+              <p>Pasa siempre: hay campos que en el otro programa no existen o están a medias. Por eso, <b>antes de tocar nada te entregamos un informe</b> de qué va a entrar, qué se descarta y por qué, y qué fichas parecen duplicadas. Lo revisas tú y solo entonces se importa de verdad.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Tengo que cerrar el centro el día del cambio?</summary>
+            <div class="faq__respuesta">
+              <p>No. Traemos tus datos un par de semanas antes y el día del cambio traemos solo lo que haya pasado en medio. Sigues trabajando en tu programa hasta el último día.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Cuánto cuesta la migración?</summary>
+            <div class="faq__respuesta">
+              <p>Va dentro de la puesta en marcha de 300 €. No se cobra por registro ni por hora.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Mi programa actual no me deja exportar. ¿Qué hago?</summary>
+            <div class="faq__respuesta">
+              <p>Tienes derecho a tus datos aunque tu proveedor no te ponga un botón: es la <b>portabilidad del artículo 20 del Reglamento de Protección de Datos</b>. Se pide por escrito y están obligados a entregártelos en un formato que se pueda leer con una máquina.</p>
+              <p class="faq__aviso"><b>Pídelos antes de darte de baja, no después.</b> Varios programas del sector borran definitivamente los datos a los pocos meses de cancelar el servicio, y su contrato lo dice. Primero los datos en tu mano, luego la baja.</p>
+            </div>
+          </details>
+        </div>
+
+        </div>
+
+        <div class="faq__columna">
+
+        <div class="faq__grupo">
+          <h3>Datos, privacidad y obligaciones legales</h3>
+
+          <details class="faq__item">
+            <summary>¿De quién son mis datos?</summary>
+            <div class="faq__respuesta">
+              <p>Tuyos, y no es una frase. Puedes exportarlos enteros desde el programa cuando quieras, sin pedir permiso, sin pagar y sin avisarnos.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Dónde están alojados?</summary>
+            <div class="faq__respuesta">
+              <p>En servidores dentro de la Unión Europea. Con historias clínicas dentro eso no es una preferencia técnica: es lo que evita una conversación incómoda si algún día alguien pregunta.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Firmamos algo por el tema de protección de datos?</summary>
+            <div class="faq__respuesta">
+              <p>Sí, y es obligatorio para los dos: un <b>contrato de encargado del tratamiento</b>. Tú eres el responsable de los datos de tus pacientes y nosotros los tratamos por cuenta tuya. Te lo damos firmado al empezar, junto con lo que necesitas para tu registro de actividades.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Puede la persona de recepción ver las historias clínicas?</summary>
+            <div class="faq__respuesta">
+              <p>No, salvo que tú se lo permitas expresamente. Turnera distingue cuatro perfiles —dirección, recepción, profesional y consulta— y el de recepción <b>no incluye lo clínico de fábrica</b>. Puedes dárselo si en tu centro tiene sentido, pero como decisión tuya y no por descuido nuestro.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Puedo saber quién ha abierto la ficha de un paciente?</summary>
+            <div class="faq__respuesta">
+              <p>Sí. Queda registrado quién entra en cada ficha y cuándo, y la dirección del centro puede consultarlo. Es una obligación tuya como responsable de esos datos, así que preferimos dártelo hecho.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Hay copias de seguridad?</summary>
+            <div class="faq__respuesta">
+              <p>Diarias, con una semana de historial y copias instantáneas del servidor entero. Y se prueban restaurándolas, porque una copia que nunca se ha restaurado no es una copia: es una carpeta.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Estáis adaptados a VeriFactu?</summary>
+            <div class="faq__respuesta">
+              <p>Vamos a estarlo antes de que sea obligatorio. Según el calendario vigente, las sociedades quedan obligadas el 1 de enero de 2027 y los autónomos el 1 de julio de 2027. Cuando esté, tus facturas llevarán su código de verificación y ninguna se podrá borrar ni modificar sin dejar rastro: las correcciones se hacen con factura rectificativa, como manda la norma.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Puedo darle algo a mi asesor fiscal?</summary>
+            <div class="faq__respuesta">
+              <p>Sí. Los informes de cobros, caja diaria y movimientos salen en Excel o CSV, que es lo que cualquier asesoría sabe abrir, con los cobros separados por forma de pago para que cuadre la caja con el TPV. El libro de facturas emitidas con su numeración y su desglose de IVA llega con la adaptación a VeriFactu.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>El día a día</h3>
+
+          <details class="faq__item">
+            <summary>¿Qué entra en el precio?</summary>
+            <div class="faq__respuesta">
+              <p>Todo. No hay planes con funciones capadas ni módulos que se compran aparte: agenda, ficha de cliente, historia clínica, TPV y cierre de caja, bonos y pagos aplazados, productos y stock, informes y varias delegaciones. Y lo que vaya entrando —el portal de reservas, los avisos por WhatsApp, la app del profesional— entra para todos. Lo que cambia con el tamaño es el precio, no lo que puedes hacer.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Se pueden avisar las citas por WhatsApp?</summary>
+            <div class="faq__respuesta">
+              <p>Está en camino, y es lo siguiente que entra, porque llega por donde la gente lee de verdad. Cada plan incluirá un número de mensajes al mes; si mandas más, se cobran a lo que nos cuestan y aparece detallado en tu factura. Es lo único que se factura por uso, porque es lo único que tiene un coste real por mensaje.</p>
+              <p>El aviso llevará el nombre de tu centro, la fecha y la hora, y el paciente podrá contestar para confirmar o anular. <b>Lo que nunca llevará es el tratamiento</b>: ni WhatsApp lo permite ni la ley de protección de datos lo aconseja, y no hay forma de esquivarlo que salga bien.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Y por correo?</summary>
+            <div class="faq__respuesta">
+              <p>Por correo sí, desde el primer día: los avisos de cita y lo que no corre prisa salen por ahí, en el idioma del cliente que los recibe.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Mis clientes pueden reservar solos?</summary>
+            <div class="faq__respuesta">
+              <p>Es lo que estamos construyendo ahora: un portal propio de tu centro donde ven lo que hay libre, reservan y anulan dentro de las reglas que tú pongas: con cuánta antelación, quién puede reservar sin bono, y si alguien con deuda pendiente puede seguir reservando o no.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Hay app para el profesional?</summary>
+            <div class="faq__respuesta">
+              <p>Está en camino: una versión reducida para el móvil con lo que tiene ese día, sus citas y poco más. Pensada para quien trabaja de pie y no tiene un ordenador delante.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Funciona con mi TPV?</summary>
+            <div class="faq__respuesta">
+              <p>Turnera registra el cobro y la forma de pago, y el informe de caja te cuadra con lo que diga tu datáfono. No intermediamos el dinero: cobras tú, en tu cuenta, con la pasarela que ya tengas.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Puedo tener a la gestoría dentro?</summary>
+            <div class="faq__respuesta">
+              <p>Hay un perfil de solo lectura para facturación e informes, sin acceso a nada clínico. Si prefieres no dar acceso a alguien de fuera, exportas y se lo mandas: para muchos centros es la opción más limpia.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>Ayuda y soporte</h3>
+
+          <details class="faq__item">
+            <summary>Si me atasco, ¿a quién llamo?</summary>
+            <div class="faq__respuesta">
+              <p>A nosotros, por teléfono o por correo, sin pasar por un formulario ni por un robot. Y dentro del programa va a haber un botón de ayuda en cada pantalla que abre la documentación de esa pantalla en concreto, con un «escríbenos» que ya sabe desde dónde escribes.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Hay manual?</summary>
+            <div class="faq__respuesta">
+              <p>Lo estamos escribiendo, empezando por el día a día, que es de donde salen casi todas las dudas. Estará abierto: no hará falta ser cliente para leerlo, así que podrás echarle un ojo antes de decidirte.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿La formación está incluida?</summary>
+            <div class="faq__respuesta">
+              <p>Sí, en la puesta en marcha. Nos sentamos con tu equipo y lo montamos con tus servicios, tus tarifas y tu forma de trabajar, no con un ejemplo genérico.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Y si aparece un fallo?</summary>
+            <div class="faq__respuesta">
+              <p>Nos lo cuentas y lo arreglamos. Turnera es un programa vivo, con versiones nuevas cada poco, y las mejoras entran para todos los clientes sin coste ni actualización que tengas que instalar.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>Quiénes somos</h3>
+
+          <details class="faq__item">
+            <summary>¿Sois una empresa grande?</summary>
+            <div class="faq__respuesta">
+              <p>No, y conviene que lo sepas antes de firmar. Somos un equipo pequeño y eso tiene dos caras: cuando llames, te va a coger el teléfono alguien que conoce el programa por dentro, y cuando pidas algo razonable puede estar hecho en semanas. A cambio, no tenemos un centro de llamadas 24 horas.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Qué pasa con mi centro si a vosotros os pasa algo?</summary>
+            <div class="faq__respuesta">
+              <p>Es la pregunta correcta. Tus datos se exportan enteros y están en una base de datos corriente, así que cualquier informático puede montarte la misma instalación en otro servidor. No estás atado a que nosotros sigamos aquí, y lo que te ate a Turnera tiene que ser que te funciona, no lo que cuesta irse.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>¿Por qué se llama Turnera?</summary>
+            <div class="faq__respuesta">
+              <p>Por «turno», que es lo que de verdad organiza un centro: quién entra, cuándo y con quién. Todo lo demás —la ficha, el cobro, el informe— cuelga de ahí.</p>
+            </div>
+          </details>
+        </div>
+
+        </div>
+
+      </div>
+
+      <p class="faq__pie"><b>¿No está tu pregunta?</b> <a href="#demo">Pídela abajo</a> y te contesta una persona, no una plantilla. Si la pregunta es buena, acaba en esta página.</p>
+      <p class="faq__nota">Precios sin IVA. Las fechas de VeriFactu son las del calendario vigente a septiembre de 2026 y dependen de la normativa; consúltalas con tu asesoría.</p>
+    </div>
+  </section>
 
   <section id="demo">
     <div class="shell contact">

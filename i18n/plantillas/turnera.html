@@ -431,6 +431,45 @@ footer{
 
 
 
+/* ---------- preguntas frecuentes ---------- */
+#preguntas{background:var(--surface-sunk);border-block:1px solid var(--line)}
+.faq{margin-top:2.8rem;display:grid;gap:2.6rem 3.5rem}
+@media (min-width:900px){.faq{grid-template-columns:1fr 1fr;align-items:start}}
+.faq__columna{display:flex;flex-direction:column;gap:2.6rem}
+.faq__grupo h3{font-size:1.1rem;color:var(--brand);padding-bottom:.7rem;border-bottom:2px solid var(--tu-anillo)}
+:root[data-theme="dark"] .faq__grupo h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .faq__grupo h3{color:var(--mist)}}
+.faq__item{border-bottom:1px solid var(--line)}
+.faq__item summary{
+  list-style:none;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+  padding:.85rem 0;
+  font-family:var(--display);font-weight:600;font-size:1rem;color:var(--text);
+}
+.faq__item summary::-webkit-details-marker{display:none}
+.faq__item summary::after{
+  content:"+";flex:none;
+  font-family:var(--mono);font-size:1.1rem;line-height:1;color:var(--tu-anillo);
+  transition:transform .18s ease;
+}
+.faq__item[open] summary::after{transform:rotate(45deg)}
+.faq__item summary:hover{color:var(--link)}
+.faq__respuesta{padding-bottom:1.15rem;color:var(--text-dim);font-size:.96rem;display:flex;flex-direction:column;gap:.75rem}
+.faq__respuesta b{color:var(--text);font-weight:600}
+.faq__lista{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.45rem}
+.faq__aviso{
+  border-left:3px solid var(--tu-turno);
+  background:var(--surface);border-radius:0 8px 8px 0;
+  padding:.65rem .9rem;color:var(--text);
+}
+.faq__tabla{border-collapse:collapse;width:100%;max-width:24rem;font-size:.92rem;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.faq__tabla th,.faq__tabla td{padding:.45rem .8rem;text-align:left;border-bottom:1px solid var(--line)}
+.faq__tabla th{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);font-weight:500}
+.faq__tabla td:not(:first-child),.faq__tabla th:not(:first-child){text-align:right;font-variant-numeric:tabular-nums}
+.faq__tabla tr:last-child td{border-bottom:none}
+.faq__pie{margin-top:.5rem;font-size:1rem}
+.faq__nota{margin-top:.8rem;font-size:.82rem;color:var(--steel);max-width:60ch}
+
 /* ---------- selector de idioma ---------- */
 .idiomas{display:flex;align-items:center;gap:.15rem;margin-left:1.4rem;padding-left:1.4rem;
   border-left:1px solid var(--line)}
@@ -520,6 +559,7 @@ footer{
       <a href="#que-hace">{{t86ef57e7}}</a>
       <a href="#pantallas">{{t3b0aebdc}}</a>
       <a href="#abierto">{{tf0a9b818}}</a>
+      <a href="#preguntas">{{t1df9a6fc}}</a>
       <a href="#demo">{{te52c854d}}</a>
     </nav>
     <!--selector-de-idioma-->
@@ -731,6 +771,367 @@ footer{
     </div>
   </section>
 
+  <section id="preguntas">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">{{ta4d114c5}}</p>
+        <h2>{{t8035f216}}</h2>
+        <p>{{t9d3d3e62}}</p>
+      </div>
+
+      <div class="faq">
+
+        <div class="faq__columna">
+
+        <div class="faq__grupo">
+          <h3>{{tec2e3783}}</h3>
+
+          <details class="faq__item">
+            <summary>{{t882e7f82}}</summary>
+            <div class="faq__respuesta">
+              <p>{{ta467dd50}}</p>
+              <table class="faq__tabla">
+                <thead><tr><th>{{t65fe49ad}}</th><th>{{tdf450d80}}</th><th>{{t932c9887}}</th></tr></thead>
+                <tbody>
+                  <tr><td>{{tff81856d}}</td><td>39 €</td><td>390 €</td></tr>
+                  <tr><td>{{tef00a8a3}}</td><td>59 €</td><td>590 €</td></tr>
+                  <tr><td>{{tcc081b56}}</td><td>79 €</td><td>790 €</td></tr>
+                  <tr><td>{{tdb13f88a}}</td><td>109 €</td><td>1.090 €</td></tr>
+                </tbody>
+              </table>
+              <p>{{t73b004fc}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t8ee9d024}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t26926045}}</p>
+              <ul class="faq__lista">
+                <li>{{t63ac3236}}</li>
+                <li>{{t9aa75b45}}</li>
+                <li>{{tbc622dca}}</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t84866849}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t5d46b54f}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t8a972786}}</summary>
+            <div class="faq__respuesta">
+              <p>{{tbbbf7dda}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t963dbcba}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t94b62d9a}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{tb78c70aa}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t514a2d69}}</p>
+              <p>{{t3b8cebfa}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{tfbe0192e}}</summary>
+            <div class="faq__respuesta">
+              <p>{{tf969ab01}} <b>{{t819c516e}}</b>{{tbfcee2fd}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t399d30f8}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t54556aa7}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{tbd0a44a6}}</summary>
+            <div class="faq__respuesta">
+              <p>{{tf7372a6b}}</p>
+              <p>{{t78e2da9c}} <b>{{t89fa3971}}</b>{{tcd9fd409}}</p>
+              <p>{{tc66a29c8}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{tda3fe7ba}}</summary>
+            <div class="faq__respuesta">
+              <p>{{tb8b9f136}} <b>{{te8114992}}</b> {{teee47f40}}</p>
+              <p>{{t1edc2731}}</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>{{tbd25ef9d}}</h3>
+
+          <details class="faq__item">
+            <summary>{{t543d79e4}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t3bf1f820}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t3f555658}}</summary>
+            <div class="faq__respuesta">
+              <p>{{tc673de87}}</p>
+              <p><b>{{t23959671}}</b>{{t1a1218ee}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t1cd919b3}}</summary>
+            <div class="faq__respuesta">
+              <p>{{tee0294c8}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t81ffbb7e}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t8a2e808b}}</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>{{t361d0c10}}</h3>
+
+          <details class="faq__item">
+            <summary>{{t92d5ae0c}}</summary>
+            <div class="faq__respuesta">
+              <p>{{tc8e9c243}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t4bf5d559}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t30fd1cbd}} <b>{{t84b96566}}</b> {{t1f69ae3d}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{ta337cd5b}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t68798ac1}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t4e473ffc}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t55dbb79a}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t6e1b2867}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t9f9e948b}} <b>{{t1427d3db}}</b>{{t604887ec}}</p>
+              <p class="faq__aviso"><b>{{t23e176b0}}</b> {{tb7305e3b}}</p>
+            </div>
+          </details>
+        </div>
+
+        </div>
+
+        <div class="faq__columna">
+
+        <div class="faq__grupo">
+          <h3>{{tdc870f29}}</h3>
+
+          <details class="faq__item">
+            <summary>{{t8c230a11}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t8d36d0be}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{tabea545f}}</summary>
+            <div class="faq__respuesta">
+              <p>{{tef8ddb2e}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t8f1a717d}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t7ceb3d6c}} <b>{{t4d81f19c}}</b>{{t1533d072}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{tba0bf86a}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t4a49a4ac}} <b>{{tf94c2c63}}</b>{{t314cb1a1}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t1c2ea02e}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t2634a89f}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{tce541f75}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t88f054f5}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t7b09fc38}}</summary>
+            <div class="faq__respuesta">
+              <p>{{tc5e14ab3}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t15d3195b}}</summary>
+            <div class="faq__respuesta">
+              <p>{{tcb2842d1}}</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>{{t465ce453}}</h3>
+
+          <details class="faq__item">
+            <summary>{{t64f3112e}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t347c70fb}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t5c05aa8a}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t1133b4a8}}</p>
+              <p>{{t0692367c}} <b>{{t18d1c0ea}}</b>{{t902df6c5}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t1dc558a3}}</summary>
+            <div class="faq__respuesta">
+              <p>{{te9f5fea0}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{tca882680}}</summary>
+            <div class="faq__respuesta">
+              <p>{{ta0bffc01}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t3289b7a1}}</summary>
+            <div class="faq__respuesta">
+              <p>{{tf4742a9e}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t596cd2aa}}</summary>
+            <div class="faq__respuesta">
+              <p>{{tfaae2bac}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t3ea5ae54}}</summary>
+            <div class="faq__respuesta">
+              <p>{{ta02a4708}}</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>{{t69e60fef}}</h3>
+
+          <details class="faq__item">
+            <summary>{{t89fa49e6}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t1aaf87e2}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t1b68c61a}}</summary>
+            <div class="faq__respuesta">
+              <p>{{tbc71a702}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t59555113}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t7eca5489}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t55a541cf}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t3331faa1}}</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>{{t4c99a4f0}}</h3>
+
+          <details class="faq__item">
+            <summary>{{te45184ff}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t9055a151}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{te3e10d95}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t8276acf1}}</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>{{t2b0293c4}}</summary>
+            <div class="faq__respuesta">
+              <p>{{tafbcddcd}}</p>
+            </div>
+          </details>
+        </div>
+
+        </div>
+
+      </div>
+
+      <p class="faq__pie"><b>{{tba9580d1}}</b> <a href="#demo">{{tadde4229}}</a> {{t0f61ede1}}</p>
+      <p class="faq__nota">{{t090e2195}}</p>
+    </div>
+  </section>
 
   <section id="demo">
     <div class="shell contact">

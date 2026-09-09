@@ -436,6 +436,45 @@ footer{
 
 
 
+/* ---------- preguntas frecuentes ---------- */
+#preguntas{background:var(--surface-sunk);border-block:1px solid var(--line)}
+.faq{margin-top:2.8rem;display:grid;gap:2.6rem 3.5rem}
+@media (min-width:900px){.faq{grid-template-columns:1fr 1fr;align-items:start}}
+.faq__columna{display:flex;flex-direction:column;gap:2.6rem}
+.faq__grupo h3{font-size:1.1rem;color:var(--brand);padding-bottom:.7rem;border-bottom:2px solid var(--tu-anillo)}
+:root[data-theme="dark"] .faq__grupo h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .faq__grupo h3{color:var(--mist)}}
+.faq__item{border-bottom:1px solid var(--line)}
+.faq__item summary{
+  list-style:none;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+  padding:.85rem 0;
+  font-family:var(--display);font-weight:600;font-size:1rem;color:var(--text);
+}
+.faq__item summary::-webkit-details-marker{display:none}
+.faq__item summary::after{
+  content:"+";flex:none;
+  font-family:var(--mono);font-size:1.1rem;line-height:1;color:var(--tu-anillo);
+  transition:transform .18s ease;
+}
+.faq__item[open] summary::after{transform:rotate(45deg)}
+.faq__item summary:hover{color:var(--link)}
+.faq__respuesta{padding-bottom:1.15rem;color:var(--text-dim);font-size:.96rem;display:flex;flex-direction:column;gap:.75rem}
+.faq__respuesta b{color:var(--text);font-weight:600}
+.faq__lista{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.45rem}
+.faq__aviso{
+  border-left:3px solid var(--tu-turno);
+  background:var(--surface);border-radius:0 8px 8px 0;
+  padding:.65rem .9rem;color:var(--text);
+}
+.faq__tabla{border-collapse:collapse;width:100%;max-width:24rem;font-size:.92rem;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.faq__tabla th,.faq__tabla td{padding:.45rem .8rem;text-align:left;border-bottom:1px solid var(--line)}
+.faq__tabla th{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);font-weight:500}
+.faq__tabla td:not(:first-child),.faq__tabla th:not(:first-child){text-align:right;font-variant-numeric:tabular-nums}
+.faq__tabla tr:last-child td{border-bottom:none}
+.faq__pie{margin-top:.5rem;font-size:1rem}
+.faq__nota{margin-top:.8rem;font-size:.82rem;color:var(--steel);max-width:60ch}
+
 /* ---------- selector de idioma ---------- */
 .idiomas{display:flex;align-items:center;gap:.15rem;margin-left:1.4rem;padding-left:1.4rem;
   border-left:1px solid var(--line)}
@@ -525,6 +564,7 @@ footer{
       <a href="#que-hace">What it does</a>
       <a href="#pantallas">Screens</a>
       <a href="#abierto">Your data</a>
+      <a href="#preguntas">FAQ</a>
       <a href="#demo">Demo</a>
     </nav>
     <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/en/turnera" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera" lang="en" aria-current="true">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera" lang="de">DE<span class="idiomas__nombre">Deutsch</span></a></div>
@@ -736,6 +776,367 @@ footer{
     </div>
   </section>
 
+  <section id="preguntas">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Frequently asked questions</p>
+        <h2>What people ask before deciding.</h2>
+        <p>Answered straight: price, sign-up, how to bring your data across and what happens to it. If yours is missing, ask it in the form below and we'll add it here.</p>
+      </div>
+
+      <div class="faq">
+
+        <div class="faq__columna">
+
+        <div class="faq__grupo">
+          <h3>Price and billing</h3>
+
+          <details class="faq__item">
+            <summary>How much does it cost?</summary>
+            <div class="faq__respuesta">
+              <p>€39 a month with two resources included, and €10 for each additional resource. From ten resources up, let's talk. It doesn't matter how many premises they are spread across.</p>
+              <table class="faq__tabla">
+                <thead><tr><th>Your centre</th><th>Per month</th><th>Per year</th></tr></thead>
+                <tbody>
+                  <tr><td>2 resources</td><td>39 €</td><td>390 €</td></tr>
+                  <tr><td>4 resources</td><td>59 €</td><td>590 €</td></tr>
+                  <tr><td>6 resources</td><td>79 €</td><td>790 €</td></tr>
+                  <tr><td>9 resources</td><td>109 €</td><td>1.090 €</td></tr>
+                </tbody>
+              </table>
+              <p>Prices exclude VAT. A year is ten monthly payments: pay up front and you save two months.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>What counts as a resource?</summary>
+            <div class="faq__respuesta">
+              <p>Every slot in your diary that can be occupied at the same time. If your centre can see three people at once, that's three resources.</p>
+              <ul class="faq__lista">
+                <li>Two rooms worked in parallel are two resources. If two practitioners take turns in the same room and never overlap, it's one.</li>
+                <li>Four bays with four physios at once are four, even if there are six people on the payroll.</li>
+                <li>Six bookable courts are six. Coaches and whoever is on reception don't count.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Do you charge per user?</summary>
+            <div class="faq__respuesta">
+              <p>No. Users are unlimited at any size, and it isn't generosity: charging per user pushes people to share passwords, and in a program that stores clinical records you need to know who opened each file. One user per person is part of the system being serious.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>And by the number of clients in my database?</summary>
+            <div class="faq__respuesta">
+              <p>Neither. That would be charging you for ten years of work, and on top of that it would push you to delete records the law obliges you to keep.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Do you take a percentage of what the centre bills?</summary>
+            <div class="faq__respuesta">
+              <p>No. Not of what you bill, not of each booking, not of each payment, and not of new clients who come in through the portal. Your clients are yours and what you charge is entirely yours.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>What happens if I open a room or close a court?</summary>
+            <div class="faq__respuesta">
+              <p>Resources are counted on your renewal day, so there are no odd calculations mid-month: if you open a room on the 3rd, you start paying for it on your next fee. If you close one, the same the other way round.</p>
+              <p>On annual payment, if you grow during the year only the difference is billed for the months remaining.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Is there a sign-up fee?</summary>
+            <div class="faq__respuesta">
+              <p>No sign-up fee. There is a <b>one-off onboarding of €150</b>, in which we set up your centre with you and train you. It's €300 if your data has to be brought over from another program, because we do that migration ourselves.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>How do I pay?</summary>
+            <div class="faq__respuesta">
+              <p>By card or direct debit, monthly or yearly, and you receive your invoice automatically. No bank transfers to remember.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Is there a minimum term?</summary>
+            <div class="faq__respuesta">
+              <p>No. If you pay monthly, you cancel whenever you like: you keep access until the end of the month you've already paid for, and you're not charged again.</p>
+              <p>If you paid for the year up front and leave early, <b>we refund what you haven't used, counting the months you did use at the monthly price</b>. The two-month discount is what you pay for committing to a year, so it's lost if the year isn't completed; the money for the months you won't use goes back to your account.</p>
+              <p>Take a centre at €59 a month: you pay €590 for the year and leave after three months. Those three months cost €177, so we refund €413.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>I have two centres. Do I pay twice?</summary>
+            <div class="faq__respuesta">
+              <p>No. <b>The number of centres doesn't change the price: only the resources count, wherever they are.</b> Two premises with three rooms each are a single installation of six resources, and you pay €79 a month, the same as one centre with six rooms under one roof.</p>
+              <p>Each branch has its own diary, its own till and its own reports, with management seeing it all together. Opening a second site doesn't cost you anything for the fact of opening it; it costs you if, by opening it, you can see more people at once, which is only fair.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>Trial and sign-up</h3>
+
+          <details class="faq__item">
+            <summary>Can I try it before paying?</summary>
+            <div class="faq__respuesta">
+              <p>Thirty days, no card. You come in with sample data already loaded — clients, services, today's appointments — so you see how it behaves when full, not in front of an empty screen. When you start with real ones, they're deleted in one click.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Will a salesperson call me?</summary>
+            <div class="faq__respuesta">
+              <p>No. You try it on your own, with nobody chasing you.</p>
+              <p><b>But before you become a paying customer we do talk once</b>, and on purpose: inside Turnera you're going to keep your patients' clinical records, and that makes us legally responsible alongside you. We want to know who we're signing up, and we want you to know who you're dealing with. It's one call, not a process.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>How long until the centre is up and running?</summary>
+            <div class="faq__respuesta">
+              <p>The trial, minutes. With onboarding and no data to bring over, a couple of days. If you're migrating from another program, allow one to three weeks, almost all of it waiting for your current provider to hand over your data.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>How do I cancel, if it comes to that?</summary>
+            <div class="faq__respuesta">
+              <p>From your account, without calling anyone or writing a letter. Before anything is deleted you export everything, and we email you to remind you to do it.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>Bringing my data from another program</h3>
+
+          <details class="faq__item">
+            <summary>I'm on another program. Can you bring over what I have?</summary>
+            <div class="faq__respuesta">
+              <p>Yes, and it's the first thing we do. We bring over clients, services and prices, products, practitioners, session packs and pending sessions, appointments, completed visits and clinical history. Excel or CSV sheets are enough, which is what every program in the sector knows how to export.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>What if something can't be brought over?</summary>
+            <div class="faq__respuesta">
+              <p>It always happens: there are fields that don't exist in the other program or are half filled. That's why, <b>before touching anything we give you a report</b> of what will come in, what is discarded and why, and which records look like duplicates. You review it, and only then is the real import done.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Do I have to close the centre on switchover day?</summary>
+            <div class="faq__respuesta">
+              <p>No. We bring your data over a couple of weeks beforehand, and on switchover day we bring only what has happened in between. You keep working in your program until the last day.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>How much does the migration cost?</summary>
+            <div class="faq__respuesta">
+              <p>It's included in the €300 onboarding. No charge per record or per hour.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>My current program won't let me export. What do I do?</summary>
+            <div class="faq__respuesta">
+              <p>You have a right to your data even if your provider doesn't give you a button: it's the <b>right to portability under Article 20 of the GDPR</b>. You request it in writing and they are obliged to hand it over in a machine-readable format.</p>
+              <p class="faq__aviso"><b>Ask for it before you cancel, not after.</b> Several programs in the sector permanently delete data a few months after the service is cancelled, and their contract says so. First the data in your hands, then the cancellation.</p>
+            </div>
+          </details>
+        </div>
+
+        </div>
+
+        <div class="faq__columna">
+
+        <div class="faq__grupo">
+          <h3>Data, privacy and legal obligations</h3>
+
+          <details class="faq__item">
+            <summary>Who owns my data?</summary>
+            <div class="faq__respuesta">
+              <p>You, and it isn't a slogan. You can export all of it from the program whenever you like, without asking permission, without paying and without telling us.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Where is it hosted?</summary>
+            <div class="faq__respuesta">
+              <p>On servers inside the European Union. With clinical records inside, that isn't a technical preference: it's what saves you an awkward conversation if someone ever asks.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Do we sign anything about data protection?</summary>
+            <div class="faq__respuesta">
+              <p>Yes, and it's mandatory for both of us: a <b>data processing agreement</b>. You are the controller of your patients' data and we process it on your behalf. We give it to you signed when you start, together with what you need for your record of processing activities.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Can the person on reception see clinical records?</summary>
+            <div class="faq__respuesta">
+              <p>No, unless you expressly allow it. Turnera distinguishes four profiles — management, reception, practitioner and read-only — and the reception one <b>doesn't include clinical data out of the box</b>. You can grant it if it makes sense in your centre, but as your decision and not through carelessness on our part.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Can I find out who opened a patient's file?</summary>
+            <div class="faq__respuesta">
+              <p>Yes. Who opens each file, and when, is recorded, and the centre's management can look it up. It's your obligation as the controller of that data, so we'd rather hand it to you done.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Are there backups?</summary>
+            <div class="faq__respuesta">
+              <p>Daily, with a week of history and snapshots of the whole server. And they're tested by restoring them, because a backup that has never been restored isn't a backup: it's a folder.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Are you compliant with VeriFactu?</summary>
+            <div class="faq__respuesta">
+              <p>We will be before it becomes mandatory. Under the current calendar, companies are obliged from 1 January 2027 and the self-employed from 1 July 2027. When it's ready, your invoices will carry their verification code and none can be deleted or altered without leaving a trace: corrections are made with a credit note, as the rules require.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Can I give something to my accountant?</summary>
+            <div class="faq__respuesta">
+              <p>Yes. The payments, daily till and movements reports come out in Excel or CSV, which any accountancy can open, with payments split by payment method so the till reconciles with the card terminal. The register of issued invoices, with its numbering and VAT breakdown, arrives with the VeriFactu adaptation.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>Day to day</h3>
+
+          <details class="faq__item">
+            <summary>What's included in the price?</summary>
+            <div class="faq__respuesta">
+              <p>Everything. There are no plans with crippled features or modules bought separately: diary, client record, clinical history, point of sale and till closing, session packs and deferred payments, products and stock, reports and multiple branches. And whatever comes in next — the booking portal, WhatsApp reminders, the practitioner's app — comes in for everyone. What changes with size is the price, not what you can do.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Can appointment reminders go out by WhatsApp?</summary>
+            <div class="faq__respuesta">
+              <p>It's on the way, and it's the next thing in, because it reaches people where they actually read. Each plan will include a number of messages a month; if you send more, they're charged at what they cost us and itemised on your invoice. It's the only thing billed by usage, because it's the only thing with a real cost per message.</p>
+              <p>The reminder will carry your centre's name, the date and the time, and the patient will be able to reply to confirm or cancel. <b>What it will never carry is the treatment</b>: WhatsApp doesn't allow it, data protection law advises against it, and there's no way around it that ends well.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>And by email?</summary>
+            <div class="faq__respuesta">
+              <p>By email, yes, from day one: appointment reminders and anything that isn't urgent go out that way, in the language of the client receiving them.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Can my clients book on their own?</summary>
+            <div class="faq__respuesta">
+              <p>That's what we're building now: a portal of your centre's own where they see what's free, book and cancel within the rules you set: how far in advance, who can book without a pack, and whether someone with an outstanding debt can keep booking or not.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Is there an app for the practitioner?</summary>
+            <div class="faq__respuesta">
+              <p>It's on the way: a slimmed-down version for the phone with what they have that day, their appointments and little else. Designed for someone who works on their feet and doesn't have a computer in front of them.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Does it work with my card terminal?</summary>
+            <div class="faq__respuesta">
+              <p>Turnera records the payment and the payment method, and the till report reconciles with whatever your terminal says. We don't handle the money: you collect it, into your account, with whatever payment gateway you already have.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Can I give my accountant access?</summary>
+            <div class="faq__respuesta">
+              <p>There's a read-only profile for billing and reports, with no access to anything clinical. If you'd rather not give an outsider access, you export and send it to them: for many centres that's the cleaner option.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>Help and support</h3>
+
+          <details class="faq__item">
+            <summary>If I get stuck, who do I call?</summary>
+            <div class="faq__respuesta">
+              <p>Us, by phone or by email, without going through a form or a bot. And inside the program there's going to be a help button on every screen that opens the documentation for that specific screen, with a "write to us" that already knows where you're writing from.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Is there a manual?</summary>
+            <div class="faq__respuesta">
+              <p>We're writing it, starting with the day to day, which is where almost every question comes from. It will be open: you won't need to be a customer to read it, so you'll be able to look through it before deciding.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Is training included?</summary>
+            <div class="faq__respuesta">
+              <p>Yes, in the onboarding. We sit down with your team and set it up with your services, your prices and the way you work, not with a generic example.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>What if a bug shows up?</summary>
+            <div class="faq__respuesta">
+              <p>You tell us and we fix it. Turnera is a living program, with new versions every so often, and improvements reach every customer at no cost and with no update for you to install.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>Who we are</h3>
+
+          <details class="faq__item">
+            <summary>Are you a big company?</summary>
+            <div class="faq__respuesta">
+              <p>No, and you should know that before signing. We're a small team, and that cuts both ways: when you call, someone who knows the program from the inside picks up the phone, and when you ask for something reasonable it can be done in weeks. In exchange, we don't have a 24-hour call centre.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>What happens to my centre if something happens to you?</summary>
+            <div class="faq__respuesta">
+              <p>It's the right question. Your data exports in full and sits in an ordinary database, so any IT person can set up the same installation on another server. You're not tied to us still being here, and what ties you to Turnera has to be that it works for you, not what leaving would cost.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Why is it called Turnera?</summary>
+            <div class="faq__respuesta">
+              <p>From "turno", the Spanish word for a turn or a slot, which is what really organises a centre: who comes in, when, and with whom. Everything else — the record, the payment, the report — hangs off that.</p>
+            </div>
+          </details>
+        </div>
+
+        </div>
+
+      </div>
+
+      <p class="faq__pie"><b>Can't see your question?</b> <a href="#demo">Ask it below</a> and a person answers you, not a template. If it's a good question, it ends up on this page.</p>
+      <p class="faq__nota">Prices exclude VAT. The VeriFactu dates are those of the calendar in force in September 2026 and depend on the regulations; check them with your accountant.</p>
+    </div>
+  </section>
 
   <section id="demo">
     <div class="shell contact">
