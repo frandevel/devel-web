@@ -137,8 +137,6 @@
   "t3b8cebfa": "Bei jährlicher Zahlung wird, wenn Sie im Laufe des Jahres wachsen, nur die Differenz für die verbleibenden Monate berechnet.",
   "tfbe0192e": "Gibt es eine Einrichtungsgebühr?",
   "tf969ab01": "Eine Einrichtungsgebühr nicht. Es gibt eine",
-  "tbfcee2fd": ", bei der wir Ihren Betrieb gemeinsam mit Ihnen einrichten und Sie schulen. Es sind 300 €, wenn Ihre Daten aus einem anderen Programm übernommen werden müssen, denn diese Migration machen wir selbst.",
-  "t819c516e": "einmalige Inbetriebnahme für 150 €",
   "t399d30f8": "Wie wird bezahlt?",
   "t54556aa7": "Per Karte oder Lastschrift, monatlich oder jährlich, und Sie erhalten Ihre Rechnung automatisch. Keine Überweisungen, an die man denken muss.",
   "tbd0a44a6": "Gibt es eine Mindestlaufzeit?",
@@ -162,7 +160,6 @@
   "t1cd919b3": "Wie lange dauert es, bis der Betrieb läuft?",
   "tee0294c8": "Die Testphase: Minuten. Mit Inbetriebnahme und ohne mitzubringende Daten: ein paar Tage. Bei einer Migration aus einem anderen Programm rechnen Sie mit ein bis drei Wochen, fast ausschließlich Wartezeit, bis Ihr bisheriger Anbieter die Daten herausgibt.",
   "t81ffbb7e": "Wie kündige ich, falls es dazu kommt?",
-  "t8a2e808b": "Über Ihr Konto, ohne jemanden anzurufen oder einen Brief zu schreiben. Bevor etwas gelöscht wird, exportieren Sie alles, und wir erinnern Sie per E-Mail daran.",
   "t361d0c10": "Meine Daten aus einem anderen Programm mitbringen",
   "t92d5ae0c": "Ich nutze ein anderes Programm. Können Sie übernehmen, was ich habe?",
   "tc8e9c243": "Ja, und das ist das Erste, was wir tun. Wir übernehmen Kunden, Leistungen und Preise, Produkte, Mitarbeiter, Behandlungspakete und offene Sitzungen, Termine, erledigte Besuche und Krankengeschichten. Excel- oder CSV-Tabellen reichen uns, denn das kann jedes Programm der Branche exportieren.",
@@ -173,7 +170,6 @@
   "ta337cd5b": "Muss ich den Betrieb am Tag der Umstellung schließen?",
   "t68798ac1": "Nein. Wir übernehmen Ihre Daten ein paar Wochen vorher, und am Tag der Umstellung nur das, was in der Zwischenzeit passiert ist. Sie arbeiten bis zum letzten Tag in Ihrem Programm weiter.",
   "t4e473ffc": "Was kostet die Migration?",
-  "t55dbb79a": "Sie ist in der Inbetriebnahme für 300 € enthalten. Keine Berechnung pro Datensatz oder pro Stunde.",
   "t6e1b2867": "Mein bisheriges Programm lässt mich nichts exportieren. Was tun?",
   "t9f9e948b": "Sie haben ein Recht auf Ihre Daten, auch wenn Ihr Anbieter keinen Knopf dafür anbietet: Das ist das",
   "t604887ec": ". Man beantragt es schriftlich, und der Anbieter ist verpflichtet, die Daten in einem maschinenlesbaren Format herauszugeben.",
@@ -238,5 +234,10 @@
   "t0f61ede1": "und ein Mensch antwortet Ihnen, keine Vorlage. Ist die Frage gut, landet sie auf dieser Seite.",
   "tba9580d1": "Ihre Frage ist nicht dabei?",
   "tadde4229": "Stellen Sie sie unten",
-  "t090e2195": "Preise ohne MwSt. Die VeriFactu-Termine entsprechen dem im September 2026 geltenden Zeitplan und hängen von der Gesetzgebung ab; klären Sie sie mit Ihrer Steuerkanzlei."
+  "t090e2195": "Preise ohne MwSt. Die VeriFactu-Termine entsprechen dem im September 2026 geltenden Zeitplan und hängen von der Gesetzgebung ab; klären Sie sie mit Ihrer Steuerkanzlei.",
+  "tf5210ea2": "einmalige Inbetriebnahme: 150 €",
+  "t99c5e5d4": "wenn Sie bei null anfangen, und",
+  "te5b953f3": "wenn zusätzlich Ihre Daten aus einem anderen Programm übernommen werden müssen. Dabei richten wir Ihren Betrieb gemeinsam mit Ihnen ein, schulen Sie und übernehmen, falls nötig, die Migration.",
+  "t9c4971ac": "150 € zusätzlich zur Inbetriebnahme: 300 € insgesamt statt 150 €, einmalig. Keine Berechnung pro Datensatz oder pro Stunde, und es spielt keine Rolle, wie viele Jahre an Daten Sie mitbringen.",
+  "t260097d6": "Über Ihr Konto, mit einem Knopf: Sie müssen niemanden anrufen und keinen Brief schicken. Sie behalten den Zugang bis zum Ende des bezahlten Zeitraums, und Ihre Daten werden dann nicht sofort gelöscht: Wir schreiben Ihnen, um Sie an den vollständigen Export zu erinnern, und geben Ihnen dafür eine Frist. Erst wenn diese Frist abgelaufen ist, werden sie vom Server entfernt."
 }

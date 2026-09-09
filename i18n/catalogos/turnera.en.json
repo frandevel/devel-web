@@ -137,8 +137,6 @@
   "t3b8cebfa": "On annual payment, if you grow during the year only the difference is billed for the months remaining.",
   "tfbe0192e": "Is there a sign-up fee?",
   "tf969ab01": "No sign-up fee. There is a",
-  "tbfcee2fd": ", in which we set up your centre with you and train you. It's €300 if your data has to be brought over from another program, because we do that migration ourselves.",
-  "t819c516e": "one-off onboarding of €150",
   "t399d30f8": "How do I pay?",
   "t54556aa7": "By card or direct debit, monthly or yearly, and you receive your invoice automatically. No bank transfers to remember.",
   "tbd0a44a6": "Is there a minimum term?",
@@ -162,7 +160,6 @@
   "t1cd919b3": "How long until the centre is up and running?",
   "tee0294c8": "The trial, minutes. With onboarding and no data to bring over, a couple of days. If you're migrating from another program, allow one to three weeks, almost all of it waiting for your current provider to hand over your data.",
   "t81ffbb7e": "How do I cancel, if it comes to that?",
-  "t8a2e808b": "From your account, without calling anyone or writing a letter. Before anything is deleted you export everything, and we email you to remind you to do it.",
   "t361d0c10": "Bringing my data from another program",
   "t92d5ae0c": "I'm on another program. Can you bring over what I have?",
   "tc8e9c243": "Yes, and it's the first thing we do. We bring over clients, services and prices, products, practitioners, session packs and pending sessions, appointments, completed visits and clinical history. Excel or CSV sheets are enough, which is what every program in the sector knows how to export.",
@@ -173,7 +170,6 @@
   "ta337cd5b": "Do I have to close the centre on switchover day?",
   "t68798ac1": "No. We bring your data over a couple of weeks beforehand, and on switchover day we bring only what has happened in between. You keep working in your program until the last day.",
   "t4e473ffc": "How much does the migration cost?",
-  "t55dbb79a": "It's included in the €300 onboarding. No charge per record or per hour.",
   "t6e1b2867": "My current program won't let me export. What do I do?",
   "t9f9e948b": "You have a right to your data even if your provider doesn't give you a button: it's the",
   "t604887ec": ". You request it in writing and they are obliged to hand it over in a machine-readable format.",
@@ -238,5 +234,10 @@
   "t0f61ede1": "and a person answers you, not a template. If it's a good question, it ends up on this page.",
   "tba9580d1": "Can't see your question?",
   "tadde4229": "Ask it below",
-  "t090e2195": "Prices exclude VAT. The VeriFactu dates are those of the calendar in force in September 2026 and depend on the regulations; check them with your accountant."
+  "t090e2195": "Prices exclude VAT. The VeriFactu dates are those of the calendar in force in September 2026 and depend on the regulations; check them with your accountant.",
+  "tf5210ea2": "one-off onboarding: €150",
+  "t99c5e5d4": "if you start from scratch, and",
+  "te5b953f3": "if your data also has to be brought over from another program. In it we set up your centre with you, train you and, where needed, do the migration.",
+  "t9c4971ac": "€150 on top of the onboarding: €300 in total instead of €150, once. No charge per record or per hour, and it doesn't matter how many years of data you bring.",
+  "t260097d6": "From your account, with one button: no need to call anyone or send a letter. You keep access until the end of the period you've paid for, and your data isn't deleted at that point: we write to remind you to export all of it and give you a period to do so. Only when that period is over is it removed from the server."
 }
