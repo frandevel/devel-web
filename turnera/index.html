@@ -438,7 +438,17 @@ footer{
 
 /* ---------- preguntas frecuentes ---------- */
 #preguntas{background:var(--surface-sunk);border-block:1px solid var(--line)}
-.faq{margin-top:2.8rem;display:grid;gap:2.6rem 3.5rem}
+.faq__buscador{margin-top:2.4rem}
+.faq__buscador input{
+  width:100%;max-width:26rem;
+  padding:.7rem .9rem;
+  font:inherit;font-size:.95rem;color:var(--text);
+  background:var(--surface);border:1px solid var(--line);border-radius:8px;
+}
+.faq__buscador input:focus-visible{outline:2px solid var(--tu-anillo);outline-offset:1px;border-color:transparent}
+.faq__vacio{margin:1.4rem 0 0;color:var(--text-dim)}
+.faq[hidden],.faq__grupo[hidden],.faq__columna[hidden],.faq__item[hidden]{display:none}
+.faq{margin-top:2rem;display:grid;gap:2.6rem 3.5rem}
 @media (min-width:900px){.faq{grid-template-columns:1fr 1fr;align-items:start}}
 .faq__columna{display:flex;flex-direction:column;gap:2.6rem}
 .faq__grupo h3{font-size:1.1rem;color:var(--brand);padding-bottom:.7rem;border-bottom:2px solid var(--tu-anillo)}
@@ -784,7 +794,19 @@ footer{
         <p>Contestado sin rodeos: precio, alta, cómo traer tus datos y qué pasa con ellos. Si falta la tuya, pídela en el formulario de abajo y la añadimos aquí.</p>
       </div>
 
-      <div class="faq">
+      <div class="faq__buscador">
+        <input
+          id="faq-buscador"
+          type="search"
+          autocomplete="off"
+          placeholder="Buscar en las preguntas"
+          aria-label="Buscar en las preguntas"
+          aria-controls="faq-lista"
+        >
+      </div>
+      <p id="faq-sin-resultados" class="faq__vacio" hidden>No hay preguntas que contengan eso.</p>
+
+      <div class="faq" id="faq-lista">
 
         <div class="faq__columna">
 
@@ -1307,4 +1329,59 @@ if (pestanas.length > 0) mostrarPerfil(pestanas[0]);
 </script>
 
 
+
+  <script>
+    /*
+      El buscador del FAQ: filtra segun se escribe, sin pedir nada al servidor -- las preguntas ya estan todas
+      en la pagina, asi que buscarlas es mirar el texto que ya hay.
+
+      Se compara sin tildes y sin mayusculas, porque nadie escribe «anulación» con tilde en un buscador, y se
+      mira la pregunta *y* la respuesta: lo que la gente recuerda suele estar en el cuerpo, no en el titulo. Por
+      eso mismo, mientras hay busqueda las coincidencias salen abiertas.
+    */
+    (function () {
+      var buscador = document.getElementById('faq-buscador');
+      var vacio = document.getElementById('faq-sin-resultados');
+      if (buscador === null || vacio === null) {
+        return;
+      }
+      var preguntas = Array.prototype.slice.call(document.querySelectorAll('#faq-lista .faq__item'));
+      var grupos = Array.prototype.slice.call(document.querySelectorAll('#faq-lista .faq__grupo'));
+      var columnas = Array.prototype.slice.call(document.querySelectorAll('#faq-lista .faq__columna'));
+
+      function plano(texto) {
+        return texto.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      }
+
+      var textos = preguntas.map(function (item) { return plano(item.textContent || ''); });
+
+      function filtrar() {
+        var buscado = plano(buscador.value.trim());
+        var encontradas = 0;
+        preguntas.forEach(function (item, indice) {
+          var coincide = buscado === '' || textos[indice].indexOf(buscado) !== -1;
+          item.hidden = !coincide;
+          item.open = coincide && buscado !== '';
+          if (coincide) {
+            encontradas += 1;
+          }
+        });
+        grupos.forEach(function (grupo) {
+          grupo.hidden = grupo.querySelector('.faq__item:not([hidden])') === null;
+        });
+        columnas.forEach(function (columna) {
+          columna.hidden = columna.querySelector('.faq__item:not([hidden])') === null;
+        });
+        vacio.hidden = encontradas > 0;
+      }
+
+      buscador.addEventListener('input', filtrar);
+      buscador.addEventListener('keydown', function (evento) {
+        if (evento.key === 'Escape') {
+          buscador.value = '';
+          filtrar();
+        }
+      });
+    })();
+  </script>
 </body></html>
