@@ -447,6 +447,9 @@ footer{
 }
 .faq__buscador input:focus-visible{outline:2px solid var(--tu-anillo);outline-offset:1px;border-color:transparent}
 .faq__vacio{margin:1.4rem 0 0;color:var(--text-dim)}
+.faq__marca{background:rgba(14,110,98,.17);color:inherit;border-radius:3px;padding:0 .12em}
+:root[data-theme="dark"] .faq__marca{background:rgba(84,191,174,.26)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .faq__marca{background:rgba(84,191,174,.26)}}
 .faq[hidden],.faq__grupo[hidden],.faq__columna[hidden],.faq__item[hidden]{display:none}
 .faq{margin-top:2rem;display:grid;gap:2.6rem 3.5rem}
 @media (min-width:900px){.faq{grid-template-columns:1fr 1fr;align-items:start}}
@@ -1337,7 +1340,8 @@ if (pestanas.length > 0) mostrarPerfil(pestanas[0]);
 
       Se compara sin tildes y sin mayusculas, porque nadie escribe «anulación» con tilde en un buscador, y se
       mira la pregunta *y* la respuesta: lo que la gente recuerda suele estar en el cuerpo, no en el titulo. Por
-      eso mismo, mientras hay busqueda las coincidencias salen abiertas.
+      eso mismo, mientras hay busqueda las coincidencias salen abiertas, con lo escrito resaltado alli donde
+      aparezca, que es lo que dice de un vistazo por que esa pregunta ha salido en la lista.
     */
     (function () {
       var buscador = document.getElementById('faq-buscador');
@@ -1349,11 +1353,60 @@ if (pestanas.length > 0) mostrarPerfil(pestanas[0]);
       var grupos = Array.prototype.slice.call(document.querySelectorAll('#faq-lista .faq__grupo'));
       var columnas = Array.prototype.slice.call(document.querySelectorAll('#faq-lista .faq__columna'));
 
+      /*
+        Se pliega letra a letra, y no de una pasada sobre la cadena entera, para que el texto plano mida
+        exactamente lo mismo que el original: asi la posicion que encuentra `indexOf` sirve tal cual para cortar
+        el texto de verdad y envolver la coincidencia. Plegar de golpe descoloca los indices en cuanto aparece
+        una tilde, y el resaltado caeria una letra mas alla de donde toca.
+      */
       function plano(texto) {
-        return texto.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        var resultado = '';
+        for (var i = 0; i < texto.length; i++) {
+          var letra = texto[i].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+          resultado += letra.length === 1 ? letra : texto[i].toLowerCase();
+        }
+        return resultado;
       }
 
       var textos = preguntas.map(function (item) { return plano(item.textContent || ''); });
+
+      function quitarElResaltado(item) {
+        var marcas = Array.prototype.slice.call(item.querySelectorAll('mark.faq__marca'));
+        marcas.forEach(function (marca) {
+          marca.parentNode.replaceChild(document.createTextNode(marca.textContent), marca);
+        });
+        if (marcas.length > 0) {
+          item.normalize();
+        }
+      }
+
+      function resaltar(item, buscado) {
+        var paseo = document.createTreeWalker(item, NodeFilter.SHOW_TEXT, null);
+        var nodos = [];
+        while (paseo.nextNode()) {
+          nodos.push(paseo.currentNode);
+        }
+        nodos.forEach(function (nodo) {
+          var texto = nodo.data;
+          var posicion = plano(texto).indexOf(buscado);
+          if (posicion === -1) {
+            return;
+          }
+          var trozos = document.createDocumentFragment();
+          var desde = 0;
+          while (posicion !== -1) {
+            trozos.appendChild(document.createTextNode(texto.slice(desde, posicion)));
+            var marca = document.createElement('mark');
+            marca.className = 'faq__marca';
+            marca.textContent = texto.slice(posicion, posicion + buscado.length);
+            trozos.appendChild(marca);
+            desde = posicion + buscado.length;
+            posicion = plano(texto).indexOf(buscado, desde);
+          }
+          trozos.appendChild(document.createTextNode(texto.slice(desde)));
+          nodo.parentNode.replaceChild(trozos, nodo);
+        });
+      }
 
       function filtrar() {
         var buscado = plano(buscador.value.trim());
@@ -1362,8 +1415,12 @@ if (pestanas.length > 0) mostrarPerfil(pestanas[0]);
           var coincide = buscado === '' || textos[indice].indexOf(buscado) !== -1;
           item.hidden = !coincide;
           item.open = coincide && buscado !== '';
+          quitarElResaltado(item);
           if (coincide) {
             encontradas += 1;
+            if (buscado !== '') {
+              resaltar(item, buscado);
+            }
           }
         });
         grupos.forEach(function (grupo) {
