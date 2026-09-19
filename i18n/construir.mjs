@@ -77,7 +77,7 @@ function construir() {
       html = html.replace('<!--selector-de-idioma-->', selectorDeIdioma(idioma, pagina.ruta));
       html = conLosEnlacesInternosEnSuIdioma(html, idioma);
 
-      const destino = join('..', 'sitio', direccionDe(idioma, pagina.ruta).replace(/^\//, ''), 'index.html');
+      const destino = join('..', direccionDe(idioma, pagina.ruta).replace(/^\//, ''), 'index.html');
       mkdirSync(dirname(destino), { recursive: true });
       writeFileSync(destino, '<!-- Generado por i18n/construir.mjs: no editar a mano, se pierde. -->\n' + html);
       console.log(`  ${destino}`);
@@ -104,5 +104,5 @@ ${entradas.join('\n')}
 }
 
 construir();
-writeFileSync('../sitio/sitemap.xml', sitemap());
-console.log('  ../sitio/sitemap.xml');
+writeFileSync('../sitemap.xml', sitemap());
+console.log('  ../sitemap.xml');
