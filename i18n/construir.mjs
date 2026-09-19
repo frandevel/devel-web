@@ -74,8 +74,12 @@ function construir() {
         `<meta property="og:url" content="${SITIO}${direccionDe(idioma, pagina.ruta)}">`);
       html = html.replace(/<meta property="og:locale" content="[^"]*">/,
         `<meta property="og:locale" content="${{ es: 'es_ES', en: 'en_GB', de: 'de_DE' }[idioma]}">`);
-      html = html.replace('<!--selector-de-idioma-->', selectorDeIdioma(idioma, pagina.ruta));
+      // El selector se pone despues de traducir los enlaces, y no antes: es el unico sitio de la pagina donde
+      // un enlace a /turnera tiene que seguir llevando al espanol estando en la version alemana, que es
+      // justo lo que hace el selector. Al reves, la traduccion se lo llevaba por delante y el boton ES
+      // devolvia a la misma pagina en la que ya estabas.
       html = conLosEnlacesInternosEnSuIdioma(html, idioma);
+      html = html.replace('<!--selector-de-idioma-->', selectorDeIdioma(idioma, pagina.ruta));
 
       const destino = join('..', direccionDe(idioma, pagina.ruta).replace(/^\//, ''), 'index.html');
       mkdirSync(dirname(destino), { recursive: true });
