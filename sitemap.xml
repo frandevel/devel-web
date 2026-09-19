@@ -42,4 +42,25 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera"/>
   </url>
+  <url>
+    <loc>https://devel.es/turnera/manual</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/manual"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/manual"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/manual"/>
+  </url>
+  <url>
+    <loc>https://devel.es/en/turnera/manual</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/manual"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/manual"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/manual"/>
+  </url>
+  <url>
+    <loc>https://devel.es/de/turnera/manual</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/manual"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/manual"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/manual"/>
+  </url>
 </urlset>

@@ -7,7 +7,8 @@ const SITIO = 'https://devel.es';
 
 const PAGINAS = [
   { plantilla: 'plantillas/devel.html',   catalogo: 'devel',   ruta: '' },
-  { plantilla: 'plantillas/turnera.html', catalogo: 'turnera', ruta: 'turnera' }
+  { plantilla: 'plantillas/turnera.html', catalogo: 'turnera', ruta: 'turnera' },
+  { plantilla: 'plantillas/manual.html',  catalogo: 'manual',  ruta: 'turnera/manual' }
 ];
 
 /** La dirección de una página en un idioma: el predeterminado va en la raíz y los demás bajo su prefijo. */
@@ -75,9 +76,9 @@ function construir() {
       html = html.replace(/<meta property="og:locale" content="[^"]*">/,
         `<meta property="og:locale" content="${{ es: 'es_ES', en: 'en_GB', de: 'de_DE' }[idioma]}">`);
       // El selector se pone despues de traducir los enlaces, y no antes: es el unico sitio de la pagina donde
-      // un enlace a /turnera tiene que seguir llevando al espanol estando en la version alemana, que es
+      // un enlace a `/turnera` tiene que seguir llevando al espanol estando en la version alemana, que es
       // justo lo que hace el selector. Al reves, la traduccion se lo llevaba por delante y el boton ES
-      // devolvia a la misma pagina en la que ya estabas.
+      // devolvia a la misma pagina.
       html = conLosEnlacesInternosEnSuIdioma(html, idioma);
       html = html.replace('<!--selector-de-idioma-->', selectorDeIdioma(idioma, pagina.ruta));
 

@@ -1,0 +1,1127 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Manual de uso · Turnera</title>
+<meta name="description" content="Cómo se usa Turnera en el día a día de un centro: la agenda, la ficha del cliente, los bonos, el cobro, la aparatología y los informes.">
+<link rel="canonical" href="https://devel.es/turnera/manual">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DEVEL">
+<meta property="og:title" content="Manual de uso de Turnera">
+<meta property="og:description" content="Citar, cobrar y saber qué pasó. Escrito para quien está en el mostrador, no para quien programa.">
+<meta property="og:url" content="https://devel.es/turnera/manual">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://devel.es/turnera/turnera-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Turnera: la agenda, la ficha y la caja en la misma pantalla">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Manual de uso de Turnera">
+<meta name="twitter:description" content="Citar, cobrar y saber qué pasó. Escrito para quien está en el mostrador, no para quien programa.">
+<meta name="twitter:image" content="https://devel.es/turnera/turnera-og.png">
+<link rel="icon" href="/turnera/isotipo.svg" type="image/svg+xml">
+<style>*{box-sizing:border-box}html,body{margin:0}img{max-width:100%}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --navy:#10283F;
+  --brand:#265786;
+  --accent:#006699;
+  --accent-lift:#3E9BC8;
+  --steel:#6789AB;
+  --mist:#A8BCCF;
+  --haze:#D4DDE7;
+
+  --bg:#F6F8FB;
+  --surface:#FFFFFF;
+  --surface-sunk:#EDF2F7;
+  --line:#DCE5EE;
+  --text:#152C42;
+  --text-dim:#4F6883;
+  --link:var(--accent);
+
+  --display:"Quicksand",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --tg-aspa:#265786;
+  --tg-check:#006699;
+  --tu-anillo:#0E6E62;
+  --tu-sobre-anillo:#FFFFFF;
+  --tu-turno:#E08154;
+
+  --shell:1120px;
+  --step:clamp(1rem,.6rem + 1.6vw,1.6rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B1B2B;
+    --surface:#10283F;
+    --surface-sunk:#0E2337;
+    --line:#1E3D5B;
+    --text:#E6EEF6;
+    --text-dim:#9DB4CA;
+    --link:var(--accent-lift);
+    --tg-aspa:#8FB2D2;
+    --tg-check:#4FA8D8;
+    --tu-anillo:#54BFAE;
+    --tu-sobre-anillo:#06231F;
+    --tu-turno:#EFA37B;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B1B2B;
+  --surface:#10283F;
+  --surface-sunk:#0E2337;
+  --line:#1E3D5B;
+  --text:#E6EEF6;
+  --text-dim:#9DB4CA;
+  --link:var(--accent-lift);
+  --tg-aspa:#8FB2D2;
+  --tg-check:#4FA8D8;
+  --tu-anillo:#54BFAE;
+  --tu-sobre-anillo:#06231F;
+  --tu-turno:#EFA37B;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:var(--display);font-weight:600;text-wrap:balance;margin:0;line-height:1.12;letter-spacing:-.01em}
+p{margin:0}
+a{color:var(--link)}
+:focus-visible{outline:2px solid var(--accent-lift);outline-offset:3px;border-radius:4px}
+
+.shell{width:min(100% - 2.5rem,var(--shell));margin-inline:auto}
+
+.eyebrow{
+  font-family:var(--mono);
+  font-size:.72rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--steel);
+  display:flex;align-items:center;gap:.7rem;
+}
+.eyebrow::before{
+  content:"";width:9px;height:9px;flex:none;
+  background:var(--accent);
+  border-radius:3px;
+  transform:rotate(45deg);
+}
+
+/* ---------- cabecera ---------- */
+.site{
+  position:sticky;top:0;z-index:20;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.site__inner{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding-block:.85rem}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit}
+.mark{background-image:url("data:image/png;base64,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");background-size:contain;background-position:center;background-repeat:no-repeat}
+.brand .mark{width:32px;height:32px;flex:none}
+.brand span{font-family:var(--display);font-weight:700;font-size:1.35rem;letter-spacing:.01em;color:var(--brand)}
+:root[data-theme="dark"] .brand span{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand span{color:var(--mist)}}
+.site nav{display:flex;gap:1.8rem;font-size:.94rem}
+.site nav a{color:var(--text-dim);text-decoration:none}
+.site nav a:hover{color:var(--link)}
+@media (max-width:640px){
+  .site__inner{gap:1rem}
+  .brand span:not(.mark){display:none}
+  .site nav{gap:1.15rem;font-size:.85rem}
+}
+
+/* ---------- hero ---------- */
+.hero{
+  background:
+    radial-gradient(120% 90% at 88% 12%,#1C4468 0%,transparent 58%),
+    linear-gradient(168deg,#10283F 0%,#0A1B2B 100%);
+  color:#E8F0F8;
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+}
+.hero__inner{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  align-items:center;
+  gap:clamp(2rem,5vw,4.5rem);
+  padding-block:clamp(3.5rem,7vw,6rem);
+}
+.hero .eyebrow{color:var(--mist)}
+.hero h1{
+  font-size:clamp(2.3rem,1.4rem + 3.4vw,3.9rem);
+  margin-top:1.1rem;
+  color:#FFFFFF;
+}
+.hero h1 em{font-style:normal;color:var(--accent-lift)}
+.lede{
+  margin-top:1.4rem;
+  font-size:1.09rem;
+  color:#C3D5E6;
+  max-width:34em;
+  font-weight:300;
+}
+.actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.4rem}
+.btn{
+  display:inline-flex;align-items:center;
+  padding:.78rem 1.5rem;
+  border-radius:9px;
+  font-family:var(--display);font-weight:600;font-size:.98rem;
+  text-decoration:none;
+  border:1px solid transparent;
+  transition:background .18s ease,border-color .18s ease,transform .18s ease;
+}
+.btn--solid{background:var(--accent);color:#FFFFFF}
+.btn--solid:hover{background:#0578AE}
+.btn--ghost{border-color:#3C6486;color:#D6E4F0}
+.btn--ghost:hover{border-color:var(--accent-lift);color:#FFFFFF}
+.hero__mark{display:flex;justify-content:center}
+.hero__mark .mark{width:min(100%,290px);aspect-ratio:1;filter:drop-shadow(0 16px 34px rgba(0,0,0,.45))}
+@media (max-width:820px){
+  .hero__inner{grid-template-columns:1fr}
+  .hero__mark{order:-1;justify-content:flex-start}
+  .hero__mark .mark{width:150px}
+}
+
+/* ---------- secciones ---------- */
+section{padding-block:clamp(3.2rem,6vw,5.5rem)}
+.section__head{max-width:44ch}
+.section__head h2{font-size:clamp(1.7rem,1.2rem + 1.6vw,2.4rem);margin-top:1rem}
+.section__head p{margin-top:.9rem;color:var(--text-dim)}
+
+.pillars{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(255px,1fr));
+  gap:1.5rem;
+  margin-top:2.8rem;
+}
+.pillar{
+  padding-top:1.5rem;
+  border-top:2px solid var(--line);
+}
+.pillar h3{font-size:1.14rem;margin-bottom:.6rem;color:var(--brand)}
+:root[data-theme="dark"] .pillar h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pillar h3{color:var(--mist)}}
+.pillar p{color:var(--text-dim);font-size:.97rem}
+.pillar:first-child{border-top-color:var(--accent)}
+
+/* ---------- productos ---------- */
+#productos{background:var(--surface-sunk);border-block:1px solid var(--line)}
+.products{display:grid;gap:1.5rem;margin-top:2.8rem}
+@media (min-width:900px){.products{grid-template-columns:1.25fr 1fr}}
+.product{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:clamp(1.6rem,3vw,2.3rem);
+  display:flex;flex-direction:column;gap:1rem;
+}
+.product__name{
+  font-family:var(--display);font-weight:700;
+  font-size:1.6rem;letter-spacing:-.01em;
+  color:var(--brand);
+}
+:root[data-theme="dark"] .product__name{color:#BFD3E5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .product__name{color:#BFD3E5}}
+.product__head{display:flex;align-items:center;gap:1.05rem}
+.product__logo{width:clamp(46px,7vw,58px);aspect-ratio:1;flex:none}
+.product__logo svg{width:100%;height:100%;display:block}
+.product__kind{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--steel);
+}
+.product p{color:var(--text-dim);font-size:.99rem}
+.specs{
+  list-style:none;margin:0;padding:0;
+  display:flex;flex-direction:column;gap:.55rem;
+  font-size:.93rem;
+}
+.specs li{display:flex;gap:.7rem;align-items:baseline;color:var(--text-dim)}
+.specs li::before{
+  content:"";width:7px;height:7px;flex:none;
+  background:var(--mist);border-radius:2px;transform:rotate(45deg) translateY(-1px);
+}
+.product--lead .specs li::before{background:var(--accent)}
+.tag{
+  align-self:flex-start;margin-top:auto;
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;
+  color:var(--accent);
+  border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);
+  border-radius:100px;padding:.3rem .8rem;
+}
+:root[data-theme="dark"] .tag{color:var(--accent-lift);border-color:#2C5C7E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tag{color:var(--accent-lift);border-color:#2C5C7E}}
+
+/* ---------- contacto ---------- */
+.contact{
+  display:grid;gap:2.5rem;
+  grid-template-columns:minmax(0,1fr);
+  align-items:start;
+}
+@media (min-width:820px){.contact{grid-template-columns:1.1fr .9fr}}
+.contact h2{font-size:clamp(1.7rem,1.2rem + 1.6vw,2.4rem);margin-top:1rem}
+.contact p{margin-top:.9rem;color:var(--text-dim);max-width:38ch}
+.card-contact{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:clamp(1.5rem,3vw,2rem);
+  display:flex;flex-direction:column;gap:1.4rem;
+}
+.field{display:flex;flex-direction:column;gap:.45rem}
+.field label{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel)}
+.field input,.field textarea{
+  font-family:inherit;font-size:1rem;color:var(--text);
+  background:var(--bg);
+  border:1px solid var(--line);
+  border-radius:9px;
+  padding:.7rem .85rem;
+  width:100%;
+  transition:border-color .16s ease,box-shadow .16s ease;
+}
+.field textarea{resize:vertical;min-height:7rem;line-height:1.55}
+.field input:focus,.field textarea:focus{
+  outline:none;
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent);
+}
+.field input[aria-invalid="true"],.field textarea[aria-invalid="true"]{border-color:#C0453C}
+.trampa{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+#formulario .btn{align-self:flex-start;margin-top:.6rem;cursor:pointer;font-size:1rem}
+#formulario .btn[disabled]{opacity:.62;cursor:progress}
+.aviso{font-size:.92rem;min-height:1.2rem}
+.aviso[data-estado="error"]{color:#C0453C}
+.aviso[data-estado="ok"]{color:#1C7A5E}
+:root[data-theme="dark"] .aviso[data-estado="error"]{color:#F09189}
+:root[data-theme="dark"] .aviso[data-estado="ok"]{color:#66C6A6}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .aviso[data-estado="error"]{color:#F09189}
+  :root:not([data-theme="light"]) .aviso[data-estado="ok"]{color:#66C6A6}
+}
+.legal{font-size:.78rem;line-height:1.5;color:var(--steel);margin-top:.2rem}
+
+footer{
+  border-top:1px solid var(--line);
+  padding-block:2rem;
+  font-size:.86rem;color:var(--text-dim);
+}
+.footer__inner{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:center}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+
+/* ---------- lo propio de la pagina de Turnera ---------- */
+.hero--turnera{
+  background:
+    radial-gradient(115% 85% at 82% 14%,#12463F 0%,transparent 60%),
+    linear-gradient(168deg,#0F3B36 0%,#08211E 100%);
+}
+.hero--turnera{--tu-isotipo:#0E6E62}
+.hero--turnera h1 em{color:#7ED0BF}
+.hero--turnera .btn--solid{background:var(--tu-anillo);color:#06231F}
+.hero__lockup{
+  display:block;width:min(100%,330px);margin-bottom:1.6rem;
+  /* El fondo del hero es verde oscuro: la palabra va en claro y el aro conserva su color. */
+  --tu-anillo:#F2F8F5;
+}
+.hero__lockup svg{width:100%;height:auto;display:block}
+.hero--turnera .btn--ghost{border-color:#3E7A6F;color:#D8EDE7}
+.hero--turnera .btn--ghost:hover{border-color:#7ED0BF;color:#FFFFFF}
+.hero--turnera .eyebrow{color:#8FC7BA}
+.hero--turnera .eyebrow::before{background:var(--tu-turno)}
+.hero--turnera .lede{color:#BFDCD4}
+.hero--turnera .isotipo{width:min(100%,270px);height:auto;display:block;filter:drop-shadow(0 16px 34px rgba(0,0,0,.42))}
+@media (max-width:820px){.hero--turnera .hero__mark{display:none}}
+
+.site nav a{white-space:nowrap}
+.migas{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
+.migas a{color:var(--steel);text-decoration:none}
+.migas a:hover{color:var(--link)}
+
+.jornada{display:grid;gap:1.5rem;margin-top:2.8rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));counter-reset:paso}
+.paso{padding-top:1.5rem;border-top:2px solid var(--line)}
+.paso:first-child{border-top-color:var(--tu-anillo)}
+.paso h3{font-size:1.1rem;margin-bottom:.6rem;color:var(--brand)}
+.paso h3::before{
+  counter-increment:paso;content:counter(paso);
+  font-family:var(--mono);font-size:.72rem;color:var(--tu-anillo);
+  margin-right:.6rem;vertical-align:.15em;
+}
+.paso p{color:var(--text-dim);font-size:.97rem}
+:root[data-theme="dark"] .paso h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .paso h3{color:var(--mist)}}
+
+#pantallas{background:var(--surface-sunk);border-block:1px solid var(--line)}
+.pantallas{display:flex;flex-direction:column;gap:clamp(2.5rem,5vw,4rem);margin-top:2.8rem}
+.pantalla{display:grid;gap:1.2rem}
+@media (min-width:900px){
+  .pantalla{grid-template-columns:minmax(0,1fr) minmax(0,15rem);gap:2rem;align-items:start}
+  .pantalla figcaption{margin-top:0;padding-top:.4rem}
+}
+.pantalla figure{margin:0;display:contents}
+.pantalla img{
+  width:100%;height:auto;display:block;
+  border:1px solid var(--line);border-radius:12px;
+  background:var(--surface);
+  box-shadow:0 10px 30px rgba(10,30,50,.10);
+}
+:root[data-theme="dark"] .pantalla img{box-shadow:0 10px 30px rgba(0,0,0,.38)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pantalla img{box-shadow:0 10px 30px rgba(0,0,0,.38)}}
+.pantalla figcaption{margin-top:.9rem;font-size:.96rem;color:var(--text-dim);line-height:1.6}
+.pantalla b{color:var(--text);font-weight:600}
+
+/* ---------- perfiles de centro, en pestanas ---------- */
+.perfiles{margin-top:2.8rem}
+.perfiles__botones{
+  display:flex;flex-wrap:wrap;gap:.6rem;
+  border-bottom:1px solid var(--line);
+  padding-bottom:1.1rem;
+}
+.perfil__boton{
+  font-family:var(--display);font-weight:600;font-size:.95rem;
+  color:var(--text-dim);
+  background:transparent;
+  border:1px solid var(--line);border-radius:100px;
+  padding:.55rem 1.1rem;cursor:pointer;
+  transition:border-color .16s ease,color .16s ease,background .16s ease;
+}
+.perfil__boton:hover{color:var(--text);border-color:var(--steel)}
+.perfil__boton[aria-selected="true"]{
+  color:var(--tu-sobre-anillo);
+  background:var(--tu-anillo);
+  border-color:var(--tu-anillo);
+}
+.perfil{padding-top:2rem;display:grid;gap:2rem}
+@media (min-width:900px){.perfil{grid-template-columns:minmax(0,1fr) minmax(0,20rem);align-items:start}}
+.perfil[hidden]{display:none}
+.perfil h3{font-size:1.35rem;margin-bottom:.9rem;color:var(--brand)}
+:root[data-theme="dark"] .perfil h3{color:#BFD3E5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .perfil h3{color:#BFD3E5}}
+.perfil__texto p{color:var(--text-dim);font-size:1rem}
+.perfil__texto p + p{margin-top:.9rem}
+.perfil__montaje{
+  background:var(--surface);border:1px solid var(--line);border-radius:14px;
+  padding:1.4rem 1.5rem;
+}
+.perfil__montaje h4{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--steel);margin:0 0 .9rem;font-weight:500;
+}
+.montaje{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7rem;font-size:.93rem}
+.montaje li{display:grid;grid-template-columns:auto 1fr;gap:.7rem;align-items:baseline;color:var(--text-dim)}
+.montaje li::before{
+  content:"";width:7px;height:7px;
+  background:var(--tu-turno);border-radius:2px;transform:rotate(45deg) translateY(-1px);
+}
+.montaje b{color:var(--text);font-weight:600}
+
+.abierto{display:grid;gap:1.5rem;margin-top:2.8rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.abierto .pillar:first-child{border-top-color:var(--tu-anillo)}
+
+
+
+/* ---------- preguntas frecuentes ---------- */
+#preguntas{background:var(--surface-sunk);border-block:1px solid var(--line)}
+.faq{margin-top:2.8rem;display:grid;gap:2.6rem 3.5rem}
+@media (min-width:900px){.faq{grid-template-columns:1fr 1fr;align-items:start}}
+.faq__columna{display:flex;flex-direction:column;gap:2.6rem}
+.faq__grupo h3{font-size:1.1rem;color:var(--brand);padding-bottom:.7rem;border-bottom:2px solid var(--tu-anillo)}
+:root[data-theme="dark"] .faq__grupo h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .faq__grupo h3{color:var(--mist)}}
+.faq__item{border-bottom:1px solid var(--line)}
+.faq__item summary{
+  list-style:none;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+  padding:.85rem 0;
+  font-family:var(--display);font-weight:600;font-size:1rem;color:var(--text);
+}
+.faq__item summary::-webkit-details-marker{display:none}
+.faq__item summary::after{
+  content:"+";flex:none;
+  font-family:var(--mono);font-size:1.1rem;line-height:1;color:var(--tu-anillo);
+  transition:transform .18s ease;
+}
+.faq__item[open] summary::after{transform:rotate(45deg)}
+.faq__item summary:hover{color:var(--link)}
+.faq__respuesta{padding-bottom:1.15rem;color:var(--text-dim);font-size:.96rem;display:flex;flex-direction:column;gap:.75rem}
+.faq__respuesta b{color:var(--text);font-weight:600}
+.faq__lista{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.45rem}
+.faq__aviso{
+  border-left:3px solid var(--tu-turno);
+  background:var(--surface);border-radius:0 8px 8px 0;
+  padding:.65rem .9rem;color:var(--text);
+}
+.faq__tabla{border-collapse:collapse;width:100%;max-width:24rem;font-size:.92rem;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.faq__tabla th,.faq__tabla td{padding:.45rem .8rem;text-align:left;border-bottom:1px solid var(--line)}
+.faq__tabla th{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);font-weight:500}
+.faq__tabla td:not(:first-child),.faq__tabla th:not(:first-child){text-align:right;font-variant-numeric:tabular-nums}
+.faq__tabla tr:last-child td{border-bottom:none}
+.faq__pie{margin-top:.5rem;font-size:1rem}
+.faq__nota{margin-top:.8rem;font-size:.82rem;color:var(--steel);max-width:60ch}
+
+/* ---------- selector de idioma ---------- */
+.idiomas{display:flex;align-items:center;gap:.15rem;margin-left:1.4rem;padding-left:1.4rem;
+  border-left:1px solid var(--line)}
+.idiomas__opcion{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.76rem;letter-spacing:.06em;
+  color:var(--steel);text-decoration:none;
+  padding:.3rem .45rem;border-radius:6px;
+  transition:color .16s ease,background .16s ease;
+}
+.idiomas__opcion:hover{color:var(--text);background:var(--surface)}
+.idiomas__opcion[aria-current="true"]{color:var(--text);font-weight:500}
+/* El nombre completo solo lo lee quien usa lector de pantalla: en la barra caben dos letras, no «Deutsch». */
+.idiomas__nombre{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media (max-width:560px){.idiomas{margin-left:.7rem;padding-left:.7rem}.idiomas__opcion{padding:.3rem .3rem}}
+
+
+/* En pantallas estrechas el selector es lo primero que necesita quien llega en el idioma que no es el suyo,
+   así que la barra envuelve y la navegación cede el sitio, en lugar de empujarlo fuera de la pantalla. */
+@media (max-width:640px){
+  .site__inner{flex-wrap:wrap;justify-content:flex-start;gap:.5rem 1rem}
+  .site nav{order:3;width:100%;justify-content:space-between;gap:.5rem}
+  .idiomas{margin-left:auto;padding-left:.8rem}
+}
+
+/* ---- el manual ------------------------------------------------------- */
+:root{
+  --aviso:#8A5A00;
+  --aviso-fondo:#FDF6E3;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --aviso:#E0B463; --aviso-fondo:#241D0F; }
+}
+:root[data-theme="dark"]{ --aviso:#E0B463; --aviso-fondo:#241D0F; }
+
+.manual{display:grid;grid-template-columns:17rem 1fr;gap:2.4rem;align-items:start;padding:2rem 0 4rem}
+
+/* El indice se queda a la vista: un manual se consulta a saltos, no se lee de arriba abajo. */
+.indice{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow-y:auto;
+  padding:1.2rem 1rem;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+.indice h2{font-family:var(--display);font-size:1rem;margin:0 0 .2rem;color:var(--text)}
+.indice p{margin:0 0 .9rem;font-size:.78rem;color:var(--text-dim)}
+.indice ol{list-style:none;margin:0;padding:0}
+.indice li{margin:0}
+.indice a{display:block;padding:.3rem .5rem;border-radius:8px;color:var(--text);text-decoration:none;font-size:.88rem}
+.indice a:hover{background:var(--surface-sunk);color:var(--link)}
+.indice .sub{padding-left:1.4rem;font-size:.82rem;color:var(--text-dim)}
+
+.contenido{min-width:0;max-width:52rem}
+.contenido h1{font-size:clamp(1.8rem,1.4rem + 1.4vw,2.4rem);margin:0 0 .3rem}
+.entradilla{margin:0 0 2rem;color:var(--text-dim);font-size:1.02rem}
+.contenido section{scroll-margin-top:5rem;padding-top:1.6rem;border-top:1px solid var(--line);margin-top:2.2rem}
+.contenido section:first-of-type{border-top:0;margin-top:0}
+.contenido h2{font-size:1.38rem;margin:0 0 .8rem}
+.contenido h3{font-size:1.04rem;margin:1.7rem 0 .5rem}
+.contenido p{margin:0 0 .9rem;line-height:1.65}
+.contenido ul,.contenido ol.pasos{margin:0 0 1rem;padding-left:1.3rem}
+.contenido li{margin-bottom:.35rem;line-height:1.6}
+.contenido strong{color:var(--text);font-weight:600}
+.contenido code{padding:.08em .35em;border-radius:5px;background:var(--surface-sunk);border:1px solid var(--line);
+  font-family:var(--mono);font-size:.86em}
+
+/* Lo que hay que saber antes de pulsar, no despues. */
+.ojo{margin:1.1rem 0;padding:.75rem 1rem;border-left:3px solid var(--aviso);border-radius:0 10px 10px 0;
+  background:var(--aviso-fondo);font-size:.94rem}
+.ojo strong{color:var(--aviso)}
+.ojo p:last-child{margin-bottom:0}
+
+.tarjeta{margin:1.1rem 0;padding:.9rem 1.1rem;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.tarjeta p:last-child,.tarjeta ul:last-child{margin-bottom:0}
+
+.tabla-envoltorio{overflow-x:auto;margin:1.1rem 0}
+.contenido table{width:100%;border-collapse:collapse;font-size:.93rem}
+.contenido th,.contenido td{padding:.55rem .65rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.contenido th{font-family:var(--display);font-weight:600;color:var(--text);white-space:nowrap}
+
+.ruta{display:inline-block;margin-bottom:1rem;padding:.2rem .65rem;border-radius:999px;background:var(--surface-sunk);
+  border:1px solid var(--line);font-size:.82rem;color:var(--text-dim);font-family:var(--mono)}
+
+@media (max-width:900px){
+  .manual{grid-template-columns:1fr;gap:1.4rem}
+  .indice{position:static;max-height:42vh}
+}
+@media print{
+  .site,.indice,footer{display:none}
+  .manual{grid-template-columns:1fr;padding:0}
+  .contenido section{break-inside:avoid-page}
+}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="shell site__inner">
+    <a class="brand" href="/">
+      <span class="mark" role="img" aria-label="Logotipo de DEVEL"></span>
+      <span>devel</span>
+    </a>
+    <nav>
+      <a href="/turnera">Turnera</a>
+      <a href="/turnera/manual" aria-current="page">Manual</a>
+    </nav>
+    <!--selector-de-idioma-->
+  </div>
+</header>
+
+<main id="top" class="shell manual">
+<nav class="indice">
+  <h2>Manual de Turnera</h2>
+  <p>Actualizado el 19 de septiembre de 2026</p>
+  <ol>
+    <li><a href="#empezar">1. Entrar y orientarse</a></li>
+    <li><a href="#agenda">2. La agenda</a></li>
+    <li><a href="#agenda-citas" class="sub">Poner, mover y anular citas</a></li>
+    <li><a href="#agenda-senales" class="sub">Lo que dice cada tarjeta</a></li>
+    <li><a href="#agenda-cerrar" class="sub">Cerrar ratos</a></li>
+    <li><a href="#agenda-imprimir" class="sub">Imprimir la agenda</a></li>
+    <li><a href="#clientes">3. Clientes</a></li>
+    <li><a href="#cobrar">4. Cobrar</a></li>
+    <li><a href="#cobrar-tpv" class="sub">El TPV</a></li>
+    <li><a href="#cobrar-partido" class="sub">Pagar con dos formas</a></li>
+    <li><a href="#cobrar-deudas" class="sub">Cobros pendientes</a></li>
+    <li><a href="#bonos">5. Bonos</a></li>
+    <li><a href="#aparatos">6. Aparatología</a></li>
+    <li><a href="#aparatos-alta" class="sub">Dar de alta un aparato</a></li>
+    <li><a href="#aparatos-sesion" class="sub">Anotar la sesión</a></li>
+    <li><a href="#portal">7. El portal de reservas</a></li>
+    <li><a href="#informes">8. Informes y cierre de caja</a></li>
+    <li><a href="#ajustes">9. Ajustes del centro</a></li>
+    <li><a href="#historia">10. La historia clínica</a></li>
+    <li><a href="#problemas">11. Cuando algo no sale</a></li>
+  </ol>
+</nav>
+<div class="contenido">
+<h1>Manual de Turnera</h1>
+<p class="entradilla">
+  Cómo se usa Turnera en el día a día de un centro: citar, cobrar, y saber qué pasó. Está escrito para quien está
+  en el mostrador, no para quien programa.
+</p>
+
+<section id="empezar">
+  <h2>1. Entrar y orientarse</h2>
+
+  <p>
+    Turnera se abre en el navegador, con la dirección del centro y el usuario y la contraseña que os hayan dado.
+    No hay nada que instalar y funciona igual en el ordenador del mostrador, en una tableta o en el móvil.
+  </p>
+
+  <p>
+    <strong>Cada persona tiene su usuario.</strong> No es burocracia: la aplicación guarda quién hizo cada cosa, y
+    con un usuario compartido esa información deja de valer para nada. Además, cada usuario ve sólo lo suyo — la
+    recepcionista no tiene por qué entrar en la historia clínica, y el fisioterapeuta no tiene por qué ver la caja.
+  </p>
+
+  <h3>El menú de la izquierda</h3>
+  <p>
+    Arriba, sin título, está lo que se toca cada día: <strong>Inicio</strong>, <strong>Agenda</strong>,
+    <strong>TPV</strong>, <strong>Cobros pendientes</strong> y <strong>Clientes</strong>. Debajo, agrupado, lo que
+    se configura de vez en cuando (catálogo, stock, profesionales) y lo que sólo se consulta (informes y ajustes).
+  </p>
+  <p>
+    Si a usted le falta alguna de esas entradas no es un fallo: es que su usuario no tiene ese permiso. Quien
+    administra el centro puede dárselo.
+  </p>
+
+  <h3>Inicio</h3>
+  <p>
+    La pantalla de inicio resume el día: las citas que quedan, lo que se ha cobrado, lo que está pendiente de
+    cobro y los cumpleaños. Cada bloque es un atajo — se pulsa y se llega a la pantalla que lo explica.
+  </p>
+</section>
+
+<section id="agenda">
+  <h2>2. La agenda</h2>
+  <span class="ruta">Menú → Agenda</span>
+
+  <p>
+    Es la pantalla donde se pasa el día. Se puede mirar de tres maneras, y el botón de arriba a la izquierda
+    cambia entre ellas:
+  </p>
+
+  <div class="tabla-envoltorio">
+  <table>
+    <tr><th>Vista</th><th>Una columna por</th><th>Para qué sirve</th></tr>
+    <tr>
+      <td><strong>Día por profesional</strong></td>
+      <td>Cada profesional</td>
+      <td>La de siempre: quién atiende a quién hoy. Es la que sale al entrar.</td>
+    </tr>
+    <tr>
+      <td><strong>Día por cabina</strong></td>
+      <td>Cada cabina, pista o sala</td>
+      <td>Cuando lo que se reparte es el sitio y no la persona.</td>
+    </tr>
+    <tr>
+      <td><strong>Semana por profesional</strong></td>
+      <td>Cada día de la semana</td>
+      <td>Para dar cita a alguien que pregunta «¿qué tenéis la semana que viene?».</td>
+    </tr>
+  </table>
+  </div>
+
+  <p>
+    La vista elegida se recuerda: al volver mañana estará como la dejó.
+  </p>
+
+  <h3 id="agenda-citas">Poner, mover y anular citas</h3>
+
+  <ul>
+    <li><strong>Poner una cita:</strong> pulse el hueco libre donde quiere que caiga. Se abre la ficha con la hora
+      y el profesional ya puestos; sólo falta el cliente y el servicio.</li>
+    <li><strong>Abrir una cita:</strong> púlsela.</li>
+    <li><strong>Moverla:</strong> arrástrela. Si la suelta en otra columna cambia también de profesional o de
+      cabina, según la vista en la que esté.</li>
+    <li><strong>Cambiar cuánto dura:</strong> arrastre el borde de abajo.</li>
+    <li><strong>Anularla:</strong> ábrala y pulse <em>Anular</em>. Puede escribir el motivo, y conviene: al mes
+      siguiente, en el informe de anulaciones, ese motivo es lo único que explica qué pasó.</li>
+  </ul>
+
+  <div class="ojo">
+    <p><strong>Anular no se deshace.</strong> Una cita anulada se queda a la vista, tachada, pero no se puede
+      recuperar: hay que crearla otra vez. Y marcar a alguien como <em>No vino</em> también anula la cita, así que
+      no lo use para «no ha llegado todavía».</p>
+  </div>
+
+  <p>
+    Si intenta poner dos citas a la vez en la misma cabina o con el mismo profesional, la aplicación no la deja y
+    le dice con cuál choca. Es la única cosa que impide de verdad: el resto son avisos.
+  </p>
+
+  <h3 id="agenda-senales">Lo que dice cada tarjeta</h3>
+
+  <p>
+    El color de la tarjeta es el estado de la cita — esperando, en curso, atendida, no vino — y la leyenda de
+    debajo del título los explica. Encima de eso hay cuatro señales:
+  </p>
+
+  <div class="tabla-envoltorio">
+  <table>
+    <tr><th>Señal</th><th>Qué significa</th></tr>
+    <tr>
+      <td><strong>Barra naranja</strong> en el borde izquierdo, con una estrella junto al nombre</td>
+      <td><strong>Primera visita de esa persona en el centro.</strong> No es una marca que alguien tenga que poner:
+        se calcula sola mirando si tiene alguna cita anterior.</td>
+    </tr>
+    <tr>
+      <td><strong>Icono de vale</strong> con un número, abajo a la derecha</td>
+      <td>El cliente tiene bono, y ese número son las sesiones que le quedan. <strong>Pase el ratón por encima</strong>
+        y se despliega de qué bono es cada una y cuándo caduca.</td>
+    </tr>
+    <tr><td><strong>Visto verde</strong></td><td>La cita está confirmada.</td></tr>
+    <tr><td><strong>Icono de euro</strong></td><td>Esa cita ya ha pasado por caja.</td></tr>
+  </table>
+  </div>
+
+  <h3 id="agenda-cerrar">Cerrar ratos de la agenda</h3>
+  <span class="ruta">Agenda → Cerrar un rato</span>
+
+  <p>
+    Un festivo, unas vacaciones, una cabina en mantenimiento o un aparato estropeado. Se elige el día, la franja,
+    a qué afecta — a todo el centro, a una cabina o a una persona — y el motivo.
+  </p>
+
+  <p>
+    El rato cerrado sale rayado en la rejilla, con el motivo escrito encima. <strong>El motivo no es obligatorio
+    pero merece la pena ponerlo</strong>: dentro de dos semanas nadie se va a acordar de por qué ese jueves está
+    cerrado, y acaba en una llamada de teléfono.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Cerrar no es prohibir.</strong> En el portal de reservas el hueco cerrado desaparece y el cliente no
+      lo ve. En el mostrador, en cambio, se avisa y se deja seguir: si la cabina se libera antes de lo previsto,
+      usted lo sabe y el programa no.</p>
+  </div>
+
+  <h3 id="agenda-imprimir">Imprimir la agenda</h3>
+  <span class="ruta">Agenda → Imprimir</span>
+
+  <p>
+    Saca el día en PDF, un profesional por hoja, con la hora, el cliente, su teléfono, la cabina, el servicio y
+    las observaciones. Las primeras visitas salen marcadas también en el papel.
+  </p>
+  <p>
+    Pulsando el botón sale el centro entero. Desplegando la flechita se elige a una sola persona. Es lo que se
+    imprime por la mañana para que cada uno tenga su día encima de la camilla y para que, si se va la luz, el
+    centro siga funcionando.
+  </p>
+</section>
+
+<section id="clientes">
+  <h2>3. Clientes</h2>
+  <span class="ruta">Menú → Clientes</span>
+
+  <p>
+    El buscador de arriba busca por nombre, apellidos, teléfono o NIF. No hace falta escribirlo entero.
+  </p>
+
+  <p>
+    En la ficha de un cliente están sus datos, su historial de visitas, sus bonos y sus notas.
+    <strong>El teléfono y el correo son enlaces</strong>: al pulsarlos se abre el marcador o el programa de correo,
+    sin copiar ni pegar nada.
+  </p>
+
+  <h3>Fichas repetidas</h3>
+  <p>
+    Pasa en todos los centros: la misma persona dada de alta dos veces, con el apellido mal escrito una de ellas.
+    Turnera permite <strong>fusionar</strong> las dos fichas, y al hacerlo se lleva a la buena todo lo de la otra:
+    citas, visitas, bonos e historia clínica. No se pierde nada.
+  </p>
+
+  <div class="ojo">
+    <p><strong>La fusión no se deshace.</strong> Antes de confirmarla, compruebe en la pantalla que la ficha que se
+      queda es la correcta.</p>
+  </div>
+</section>
+
+<section id="cobrar">
+  <h2>4. Cobrar</h2>
+
+  <h3 id="cobrar-tpv">El TPV</h3>
+  <span class="ruta">Menú → TPV</span>
+
+  <p>
+    Se elige el cliente y el profesional, y a partir de ahí se van añadiendo servicios y productos al ticket. El
+    descuento es un porcentaje sobre el total, y la forma de pago sale de la lista de las que el centro tiene
+    activas.
+  </p>
+
+  <p>
+    <strong>El camino corto es desde la agenda.</strong> Abra la cita y pulse <em>Cobrar</em>: el TPV se abre con el
+    cliente, el profesional y los servicios de esa cita ya puestos. Sólo hay que decir cómo paga. Y al cobrar, la
+    cita queda marcada como cobrada — es el icono de euro de la rejilla.
+  </p>
+
+  <ul>
+    <li><strong>Pagado ahora</strong> marcado: el dinero entra en la caja de hoy.</li>
+    <li><strong>Pagado ahora</strong> sin marcar: la visita se queda como deuda y aparece en <em>Cobros
+      pendientes</em>.</li>
+    <li><strong>Entregado</strong>: escriba lo que le dan y la pantalla calcula el cambio.</li>
+  </ul>
+
+  <p>
+    El botón <em>Presupuesto</em> saca en PDF lo que hay en el ticket sin cobrar nada, para dárselo a quien está
+    pensándoselo.
+  </p>
+
+  <h3>Formas de pago con descuento fijo</h3>
+  <p>
+    Algunas formas de pago llevan el descuento puesto de fábrica. <strong>Regalo</strong> es del cien por cien: al
+    elegirla, el total se pone a cero solo. No hay que acordarse de nada, y no se puede cobrar por error algo que
+    se está regalando.
+  </p>
+
+  <h3 id="cobrar-partido">Pagar con dos formas a la vez</h3>
+
+  <p>
+    La cuenta son cien euros, el cliente lleva cincuenta en efectivo y el resto lo quiere poner con tarjeta. Marque
+    <strong>«Repartir el cobro entre varias formas de pago»</strong> y aparecen dos líneas: en cada una se elige la
+    forma y cuánto va por ahí. Se pueden añadir más.
+  </p>
+
+  <p>
+    Debajo se ve la suma del reparto junto al total. <strong>Mientras no cuadre al céntimo, en rojo, el botón de
+    cobrar no se enciende.</strong> Es a propósito: un reparto que no suma es un descuadre en la caja que aparece
+    semanas después y del que ya nadie se acuerda.
+  </p>
+
+  <p>
+    El ticket sale con el desglose: cuánto se puso con cada cosa. Y el cierre de caja reparte ese cobro entre las
+    dos formas, no lo mete entero en una.
+  </p>
+
+  <h3 id="cobrar-deudas">Cobros pendientes</h3>
+  <span class="ruta">Menú → Cobros pendientes</span>
+
+  <p>
+    Aquí están las visitas que se atendieron sin pagar. Al pulsar una se abre el diálogo de cobro: se elige la
+    forma de pago, se ajusta el descuento si procede y se salda. Después se puede imprimir el ticket.
+  </p>
+</section>
+
+<section id="bonos">
+  <h2>5. Bonos</h2>
+
+  <p>
+    Un bono son sesiones pagadas por adelantado de un <strong>grupo de servicios</strong>. Se venden de dos maneras:
+  </p>
+  <ul>
+    <li><strong>Solas:</strong> en la ficha del cliente, en el apartado de bonos, se crea uno a mano diciendo el
+      grupo, las sesiones y cuándo caduca.</li>
+    <li><strong>Al vender un servicio marcado como bono:</strong> el bono se crea solo al cobrar.</li>
+  </ul>
+
+  <h3>Cómo se gastan</h3>
+  <p>
+    Una sesión se descuenta al <strong>cobrar con forma de pago «Bono»</strong>: una por cada servicio del ticket.
+    También se puede descontar a mano desde la ficha del cliente, para el caso de haber atendido sin pasar por caja.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Marcar una cita como atendida no gasta el bono.</strong> El bono se descuenta al cobrar, no al
+      atender. Si en su centro se atiende con bono sin pasar por el TPV, alguien tiene que descontar la sesión a
+      mano desde la ficha, o el saldo dejará de cuadrar.</p>
+  </div>
+
+  <p>
+    En la agenda, el icono de vale de cada cita dice cuántas sesiones le quedan a ese cliente. Los bonos agotados o
+    caducados no se cuentan.
+  </p>
+</section>
+
+<section id="aparatos">
+  <h2>6. Aparatología</h2>
+  <span class="ruta">Administración → Aparatos</span>
+
+  <p>
+    Un aparato no es una cabina. El ecógrafo se lleva de un box a otro y el láser está donde haga falta, pero
+    <strong>sólo hay uno y sólo lo puede usar una persona a la vez</strong>. Eso es lo que resuelve esta pantalla.
+  </p>
+
+  <h3 id="aparatos-alta">Dar de alta un aparato</h3>
+  <p>De cada aparato se dice:</p>
+  <ul>
+    <li><strong>El nombre</strong> y <strong>cuántas unidades</strong> hay. Con dos, dos citas a la vez están bien
+      y tres no.</li>
+    <li><strong>Qué servicios lo necesitan.</strong> Mientras no se marque ninguno, el aparato no estorba a nadie.</li>
+    <li><strong>Qué hay que anotar cada vez que se usa</strong>: los julios del láser, la potencia de la cama de
+      rayos. Se añade un dato con «Añadir un dato» y se quita con la papelera de su fila.</li>
+  </ul>
+
+  <p>Cada dato que se anota es de uno de tres tipos:</p>
+  <table>
+    <tr><th>Tipo</th><th>Qué pide</th><th>Cuándo usarlo</th></tr>
+    <tr><td><strong>Número</strong></td><td>Una cifra, con su unidad y, si se quiere, un mínimo y un máximo</td>
+      <td>Julios, vatios, grados. Es el caso de casi todo aparato</td></tr>
+    <tr><td><strong>Texto</strong></td><td>Lo que se escriba</td><td>Un cabezal, una observación corta</td></tr>
+    <tr><td><strong>Lista de opciones</strong></td><td>Una de las opciones que se escriban separadas por comas</td>
+      <td>Zonas, programas, intensidades con nombre</td></tr>
+  </table>
+  <p>
+    Marcar un dato como <strong>obligatorio</strong> hace que la cita no deje guardar la sesión sin él. Los topes
+    del número también se comprueban al anotar: si el láser va de 1 a 40 julios, un 60 no entra.
+  </p>
+
+  <div class="ojo">
+    <strong>Un aparato que ya se ha usado no se borra: se apaga.</strong> Al darle a eliminar, si tiene sesiones
+    anotadas, Turnera lo desactiva en vez de borrarlo, deja de mirarlo al citar y conserva con cuánto se trató a
+    cada cliente. Por la misma razón, <strong>un dato con sesiones anotadas no se puede quitar</strong> de la lista:
+    al guardar aparece un aviso y el aparato se queda como estaba. Apagar el aparato es también la forma de seguir
+    citando mientras está en el taller.
+  </div>
+
+  <h3>Qué cambia en la agenda</h3>
+  <p>
+    Si dos citas a la misma hora necesitan el mismo aparato y no hay unidades para las dos, <strong>la segunda no se
+    deja guardar</strong>, aunque estén en cabinas distintas y con profesionales distintos. Es una cita que no se iba
+    a poder dar, y es mejor saberlo al escribirla que a las once con el cliente delante.
+  </p>
+
+  <h3 id="aparatos-sesion">Anotar la sesión</h3>
+  <span class="ruta">Agenda → (una cita) → Aparatología de la sesión</span>
+  <p>
+    En las citas que llevan un servicio con aparato aparece, debajo de los datos de la cita, un apartado con los
+    campos que hay que rellenar, agrupados por aparato. Junto a cada uno, <strong>con cuánto se le trató a ese
+    cliente la vez anterior</strong>. Se guarda con su propio botón, «Guardar lo anotado», sin tener que guardar
+    la cita entera; un campo que se deja en blanco se entiende como «no se anotó» y no queda escrito.
+  </p>
+  <p>
+    Si la cita no lleva ningún servicio con aparato, el apartado no aparece.
+  </p>
+  <p>
+    Ése es el dato que de verdad se mira antes de empezar: en depilación láser la pauta sube sesión a sesión, y
+    pasarse quema. Se busca por cliente, no por cita, así que da igual que la vez anterior fuera en otra cabina,
+    con otra persona y hace tres semanas.
+  </p>
+</section>
+
+<section id="portal">
+  <h2>7. El portal de reservas</h2>
+
+  <p>
+    Es la pantalla donde el cliente reserva solo, en <code>/reservas</code> de la dirección del centro. Está
+    <strong>apagado hasta que el centro lo enciende</strong>, y se enciende por delegación.
+  </p>
+
+  <h3>Cómo entra el cliente</h3>
+  <p>
+    No hay contraseña. El cliente escribe su correo y recibe un <strong>código de seis cifras</strong> que vale
+    quince minutos; el mismo mensaje trae un enlace que lo rellena solo, para no tener que copiarlo. Con eso entra.
+  </p>
+  <p>
+    Nunca se le dice si ese correo está o no está en la ficha de alguien: la respuesta es la misma en los dos
+    casos. Si no lo está, el mensaje no llega y ya está. Así nadie puede averiguar quién es cliente del centro
+    probando correos.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Sin pasarela de correo configurada, el portal no funciona.</strong> El código no puede salir del
+      servidor y el cliente se queda esperando. Es lo primero que hay que dejar puesto antes de encender el portal
+      para nadie.</p>
+  </div>
+
+  <h3>Qué ve y qué no</h3>
+  <ul>
+    <li>Sólo los servicios y las cabinas marcados como reservables por internet.</li>
+    <li>Un servicio que no se da en una cabina <strong>no se le ofrece ahí</strong>. En el mostrador eso es un aviso;
+      en el portal es un muro, porque el cliente sabe menos que el programa y una reserva mal hecha es una llamada
+      de teléfono para deshacerla.</li>
+    <li>Los ratos cerrados no aparecen.</li>
+  </ul>
+</section>
+
+<section id="informes">
+  <h2>8. Informes y cierre de caja</h2>
+  <span class="ruta">Menú → Informes</span>
+
+  <p>Todos se filtran por fechas y todos se bajan en Excel con el botón de exportar.</p>
+
+  <div class="tabla-envoltorio">
+  <table>
+    <tr><th>Informe</th><th>Responde a</th></tr>
+    <tr><td><strong>Caja diaria</strong></td><td>Qué ha entrado hoy y con qué forma de pago. Es el cierre del día.</td></tr>
+    <tr><td><strong>Cobros</strong></td><td>Lo cobrado en un rango, repartido por forma de pago.</td></tr>
+    <tr><td><strong>Citas</strong></td><td>Las citas de un periodo, con filtro por primera visita.</td></tr>
+    <tr><td><strong>Anulaciones</strong></td><td>Quién anula y cuánto, de más a menos, sobre lo que reservó.</td></tr>
+    <tr><td><strong>Clientes</strong></td><td>Altas, cumpleaños y de dónde vienen.</td></tr>
+    <tr><td><strong>Bonos</strong></td><td>Qué hay vendido, qué queda por consumir y qué está a punto de caducar.</td></tr>
+    <tr><td><strong>Stock</strong></td><td>Qué falta y qué ha entrado y salido.</td></tr>
+  </table>
+  </div>
+
+  <h3>El informe de anulaciones</h3>
+  <p>
+    Cuenta sobre <strong>las citas del rango, no sobre las anuladas en el rango</strong>. La diferencia importa: una
+    cita de marzo anulada en abril es una cita de marzo que se cayó. Sale ordenado por número de anulaciones y, a
+    igualdad, por proporción: quien anuló tres de tres molesta más que quien anuló tres de cuarenta.
+  </p>
+
+  <h3>Un cobro repartido en el cierre</h3>
+  <p>
+    Si una visita se cobró con dos formas de pago, el cierre reparte el importe entre las dos. Los cincuenta en
+    efectivo van a efectivo y los cincuenta de tarjeta a tarjeta: la caja cuadra con lo que hay en el cajón.
+  </p>
+</section>
+
+<section id="ajustes">
+  <h2>9. Ajustes del centro</h2>
+  <span class="ruta">Menú → Administración</span>
+
+  <p>Lo que se toca una vez y casi no se vuelve a mirar. Lo que más se consulta:</p>
+
+  <h3>La agenda</h3>
+  <ul>
+    <li><strong>Hora de apertura y de cierre</strong>: hasta dónde llega la rejilla.</li>
+    <li><strong>Duración mínima de una cita</strong>: cada cuántos minutos puede empezar una cita. Es el paso del
+      centro.</li>
+    <li><strong>Días a mostrar</strong>: cuántos pinta la vista de semana.</li>
+  </ul>
+
+  <h3>El paso de cada cabina</h3>
+  <span class="ruta">Administración → Cabinas → (una) → Paso de la agenda</span>
+  <p>
+    Cada sitio puede llevar su propio paso. La cabina de láser va de quince en quince y el equipo de indiba de cinco
+    en cinco. <strong>Dejándolo vacío se sigue el del centro</strong>, que es como nacen todas.
+  </p>
+  <p>
+    La rejilla se dibuja con el paso más fino que haya, porque las columnas comparten el eje y no se pueden rayar
+    de dos maneras a la vez. Lo que sí es de cada sitio es dónde cae una cita al soltarla y cuánto puede durar.
+  </p>
+
+  <h3>Cabinas, pistas y salas</h3>
+  <p>
+    De cada una se dice cuánta gente cabe (una cabina 1, una pista de pádel 4, una sala de spinning 20), si se
+    reserva por internet, y <strong>qué servicios se dan ahí</strong>. Sin marcar ninguno, se da todo.
+  </p>
+
+  <h3>Otros</h3>
+  <ul>
+    <li><strong>Aparatos</strong>: las máquinas que no se pueden compartir y lo que se anota de cada sesión.
+      Está explicado en <a href="#aparatos">Aparatología</a>.</li>
+    <li><strong>Catálogo</strong>: servicios, productos, grupos de bonos y proveedores.</li>
+    <li><strong>Profesionales</strong>: quién atiende, su color en la agenda y su columna.</li>
+    <li><strong>Usuarios y permisos</strong>: quién entra y qué puede ver.</li>
+    <li><strong>Datos del centro</strong>: nombre, NIF, dirección y logotipo, que es lo que sale en los PDF.</li>
+    <li><strong>Correo</strong>: la pasarela con la que salen los avisos y los códigos del portal.</li>
+  </ul>
+</section>
+
+<section id="historia">
+  <h2>10. La historia clínica</h2>
+
+  <p>
+    En los centros que la usan, cada cliente tiene antecedentes y casos, y cada caso sus evoluciones. Se imprime en
+    PDF.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Cada vez que alguien abre una historia clínica queda registrado</strong>: quién, cuándo y qué miró.
+      No es vigilancia, es lo que la ley pide para los datos de salud, y es lo que hay que poder enseñar si alguien
+      pregunta.</p>
+  </div>
+
+  <p>
+    Ver la historia clínica es un permiso aparte del de ver la ficha del cliente. Quien está en el mostrador no
+    tiene por qué tenerlo.
+  </p>
+
+  <p>
+    En los centros de entrenamiento la aplicación no habla de historia clínica: los mismos campos se llaman
+    <em>punto de partida</em>, <em>objetivo</em>, <em>valoración física</em> y <em>plan de trabajo</em>, que es lo
+    que se dice ahí.
+  </p>
+</section>
+
+<section id="problemas">
+  <h2>11. Cuando algo no sale</h2>
+
+  <h3>«No me deja poner la cita»</h3>
+  <p>
+    Si dice que el hueco está ocupado, hay otra cita en esa cabina o con ese profesional a esa hora; el aviso dice
+    con cuál. Si dice que el aparato está cogido, hay otra cita a esa hora que necesita el mismo, aunque esté en
+    otra cabina.
+  </p>
+
+  <h3>«Falta una opción del menú»</h3>
+  <p>Es un permiso que su usuario no tiene. Quien administra el centro puede dárselo.</p>
+
+  <h3>«El cliente no recibe el código del portal»</h3>
+  <p>
+    Compruebe que el correo de su ficha es el que está escribiendo, que la pasarela de correo está configurada, y
+    que no le ha caído en la carpeta de no deseado. El código caduca a los quince minutos: pasado ese rato hay que
+    pedir otro.
+  </p>
+
+  <h3>«El cierre de caja no cuadra»</h3>
+  <p>
+    Mire primero los cobros repartidos entre varias formas de pago y las visitas que se quedaron a deber. Una
+    visita sin pagar no está en la caja: está en <em>Cobros pendientes</em>.
+  </p>
+
+  <h3>«He anulado una cita sin querer»</h3>
+  <p>No se puede recuperar: hay que crearla otra vez con los mismos datos.</p>
+</section>
+</div>
+</main>
+
+<footer>
+  <div class="shell footer__inner">
+    <span>© 2026 DEVEL · Turnera es un producto de DEVEL</span>
+    <span><a href="/">devel.es</a></span>
+  </div>
+</footer>
+</body>
+</html>
