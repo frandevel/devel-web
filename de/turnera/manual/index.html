@@ -529,7 +529,7 @@ footer{
 .contenido section{scroll-margin-top:5rem;padding-top:1.6rem;border-top:1px solid var(--line);margin-top:2.2rem}
 .contenido section:first-of-type{border-top:0;margin-top:0}
 .contenido h2{font-size:1.38rem;margin:0 0 .8rem}
-.contenido h3{font-size:1.04rem;margin:1.7rem 0 .5rem}
+.contenido h3{font-size:1.14rem;margin:1.9rem 0 .55rem}
 .contenido p{margin:0 0 .9rem;line-height:1.65}
 .contenido ul,.contenido ol.pasos{margin:0 0 1rem;padding-left:1.3rem}
 .contenido li{margin-bottom:.35rem;line-height:1.6}
@@ -551,6 +551,9 @@ footer{
 .contenido th,.contenido td{padding:.55rem .65rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
 .contenido th{font-family:var(--display);font-weight:600;color:var(--text);white-space:nowrap}
 
+.contenido figure{margin:1.6rem 0}
+.contenido figure img{width:100%;display:block;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.contenido figcaption{margin-top:.5rem;font-size:.86rem;color:var(--text-dim)}
 .ruta{display:inline-block;margin-bottom:1rem;padding:.2rem .65rem;border-radius:999px;background:var(--surface-sunk);
   border:1px solid var(--line);font-size:.82rem;color:var(--text-dim);font-family:var(--mono)}
 
@@ -617,6 +620,11 @@ footer{
 <section id="empezar">
   <h2>1. Anmelden und zurechtfinden</h2>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/01-entrar.png" alt="Der Anmeldebildschirm von Turnera, mit Benutzername und Passwort" loading="lazy">
+    <figcaption>Der Anmeldebildschirm. Jede Person meldet sich mit ihrem eigenen Benutzer an.</figcaption>
+  </figure>
+
   <p>
     Turnera wird im Browser geöffnet, mit der Adresse des Betriebs und dem Benutzernamen und dem Passwort, die Sie bekommen haben.
     Es gibt nichts zu installieren, und es läuft am Rechner am Empfang genauso wie auf einem Tablet oder am Handy.
@@ -629,6 +637,11 @@ footer{
   </p>
 
   <h3>Das Menü links</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/03-menu.png" alt="Das Seitenmenü von Turnera, oben der Terminkalender, die Kasse und die offenen Zahlungen" loading="lazy">
+    <figcaption>Das Menü, und ganz unten die aktive Filiale und die Version, die der Betrieb fährt.</figcaption>
+  </figure>
+
   <p>
     Oben, ohne Überschrift, steht das, was jeden Tag benutzt wird: <strong>Start</strong>, <strong>Terminkalender</strong>,
     <strong>Kasse</strong>, <strong>Offene Zahlungen</strong> und <strong>Kunden</strong>. Darunter, gruppiert, das, was
@@ -639,7 +652,19 @@ footer{
     den Betrieb verwaltet, kann sie Ihnen geben.
   </p>
 
+  <h3>Welche Version habe ich</h3>
+  <p>
+    Ganz unten im linken Menü, unter der aktiven Filiale, steht die <strong>Turnera-
+    Version</strong> die dieser Betrieb fährt. Danach wird als Erstes gefragt, wenn etwas nicht funktioniert, deshalb
+    sollte man wissen, wo sie steht, bevor man sie braucht. Mit der Maus darüber steht auch, wann sie gebaut wurde.
+  </p>
+
   <h3>Start</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/02-inicio.png" alt="Der Startbildschirm mit den Terminen des Tages, dem Kassierten und den Geburtstagen" loading="lazy">
+    <figcaption>Der Startbildschirm fasst den Tag zusammen. Jeder Block führt zu dem Bildschirm, der ihn erklärt.</figcaption>
+  </figure>
+
   <p>
     Der Startbildschirm fasst den Tag zusammen: die Termine, die noch kommen, was kassiert wurde, was noch offen
     ist, und die Geburtstage. Jeder Block ist eine Abkürzung — ein Klick, und Sie sind auf dem Bildschirm, der ihn erklärt.
@@ -680,6 +705,11 @@ footer{
     Die gewählte Ansicht wird gemerkt: Wenn Sie morgen wiederkommen, ist sie so, wie Sie sie verlassen haben.
   </p>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/04-agenda.png" alt="Der Terminkalender des Tages mit einer Spalte je Mitarbeiter und nach Status eingefärbten Terminen" loading="lazy">
+    <figcaption>Der Terminkalender des Tages, eine Spalte je Mitarbeiter. Der orange Balken und der Stern kennzeichnen einen Erstbesuch.</figcaption>
+  </figure>
+
   <h3 id="agenda-citas">Termine eintragen, verschieben und stornieren</h3>
 
   <ul>
@@ -703,6 +733,11 @@ footer{
     Wenn Sie zwei Termine gleichzeitig in dieselbe Kabine oder zum selben Mitarbeiter legen wollen, lässt die Anwendung das nicht zu und
     sagt Ihnen, womit es sich überschneidet. Das ist das Einzige, was wirklich verhindert wird: alles andere sind Hinweise.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/05-cita.png" alt="Ein Termin mit Kunde, Mitarbeiter, Uhrzeit und Leistungen" loading="lazy">
+    <figcaption>Ein Termin. Darunter der Status, Bestätigen, Kassieren und Stornieren.</figcaption>
+  </figure>
 
   <h3 id="agenda-senales">Was jede Karte anzeigt</h3>
 
@@ -773,9 +808,15 @@ footer{
 
   <p>
     In der Kundenakte stehen die Daten, die Besuchshistorie, die Wertkarten und die Notizen.
-    <strong>Telefonnummer und E-Mail-Adresse sind Links</strong>: ein Klick öffnet die Telefon-App oder das E-Mail-Programm,
-    ohne dass Sie etwas kopieren und einfügen müssen.
+    <strong>Telefonnummer und E-Mail-Adresse sind Links</strong>: ein Klick öffnet die Telefon- oder die Mail-Anwendung,
+    ohne Kopieren und Einfügen. Das gilt in der ganzen Anwendung — auch bei Mitarbeitern, Lieferanten und
+    Filialen —, sodass nirgends eine Nummer von Hand abgeschrieben werden muss.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/07-ficha-cliente.png" alt="Eine Kundenakte mit den Daten, dem Verlauf und den Wertkarten" loading="lazy">
+    <figcaption>Eine Kundenakte. Telefonnummer und E-Mail-Adresse sind Links.</figcaption>
+  </figure>
 
   <h3>Doppelte Kundenakten</h3>
   <p>
@@ -820,6 +861,11 @@ footer{
     überlegen.
   </p>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/08-tpv.png" alt="Die Kasse mit ausgewähltem Kunden und halb zusammengestelltem Bon" loading="lazy">
+    <figcaption>Die Kasse: der Kunde, der Mitarbeiter und der Bon mit seinen Leistungen und Produkten.</figcaption>
+  </figure>
+
   <h3>Zahlungsarten mit festem Rabatt</h3>
   <p>
     Manche Zahlungsarten haben den Rabatt schon ab Werk eingebaut. <strong>Geschenk</strong> liegt bei hundert Prozent: Wenn Sie sie
@@ -847,6 +893,11 @@ footer{
   </p>
 
   <h3 id="cobrar-deudas">Offene Zahlungen</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/09-cobros-pendientes.png" alt="Die Liste der Besuche, die stattgefunden haben und noch nicht kassiert wurden" loading="lazy">
+    <figcaption>Die Besuche, die ohne Bezahlung stattgefunden haben. Ein Klick öffnet den Zahlungsdialog.</figcaption>
+  </figure>
+
   <span class="ruta">Menü → Offene Zahlungen</span>
 
   <p>
@@ -895,6 +946,11 @@ footer{
   </p>
 
   <h3 id="aparatos-alta">Ein Gerät anlegen</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/10-aparatos.png" alt="Die Liste der Geräte des Betriebs mit ihren Einheiten und dem, was jeweils erfasst wird" loading="lazy">
+    <figcaption>Die Geräte des Betriebs, mit der Anzahl der Einheiten und dem, was je Sitzung erfasst wird.</figcaption>
+  </figure>
+
   <p>Zu jedem Gerät wird angegeben:</p>
   <ul>
     <li><strong>Der Name</strong> und <strong>wie viele Einheiten</strong> es gibt. Bei zwei Einheiten sind zwei Termine gleichzeitig in Ordnung
@@ -926,6 +982,11 @@ footer{
     Termine zu vergeben, während es in der Werkstatt ist.
   </div>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/11-aparato.png" alt="Das Formular eines Geräts mit seinen Einheiten, seinen Leistungen und den zu erfassenden Daten" loading="lazy">
+    <figcaption>Beim Anlegen eines Geräts wird festgelegt, welche Leistungen es brauchen und was jedes Mal zu erfassen ist.</figcaption>
+  </figure>
+
   <h3>Was sich im Terminkalender ändert</h3>
   <p>
     Wenn zwei Termine zur selben Zeit dasselbe Gerät brauchen und es nicht genug Einheiten für beide gibt, <strong>lässt sich der zweite nicht
@@ -949,6 +1010,11 @@ footer{
     zu viel verbrennt. Gesucht wird nach Kunde, nicht nach Termin, also ist es egal, ob das letzte Mal in einer anderen Kabine war,
     bei einer anderen Person und vor drei Wochen.
   </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/16-aparatologia-en-la-cita.png" alt="Ein Termin mit dem Geräte-Abschnitt und dem auszufüllenden Leistungsfeld" loading="lazy">
+    <figcaption>Der Abschnitt erscheint von selbst bei Terminen mit einer Leistung, die ein Gerät braucht.</figcaption>
+  </figure>
+
 </section>
 
 <section id="portal">
@@ -1005,6 +1071,11 @@ footer{
   </tbody></table>
   </div>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/13-caja-diaria.png" alt="Der Kassenabschlussbericht mit den Summen je Zahlungsart" loading="lazy">
+    <figcaption>Der Kassenabschluss: was eingegangen ist und mit welcher Zahlungsart. Das ist der Tagesabschluss.</figcaption>
+  </figure>
+
   <h3>Der Stornierungsbericht</h3>
   <p>
     Er rechnet bezogen auf <strong>die Termine des Zeitraums, nicht auf die im Zeitraum stornierten</strong>. Der Unterschied zählt: Ein
@@ -1026,6 +1097,11 @@ footer{
   <p>Was man einmal einstellt und danach kaum wieder ansieht. Am häufigsten nachgeschlagen wird:</p>
 
   <h3>Der Terminkalender</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/14-administracion.png" alt="Die Übersicht der Einstellungen mit ihren Abschnitten" loading="lazy">
+    <figcaption>Unter Einstellungen steht, was man einmal einrichtet: Benutzer, Filialen, Ressourcen, Geräte und Voreinstellungen.</figcaption>
+  </figure>
+
   <ul>
     <li><strong>Öffnungs- und Schließzeit</strong>: wie weit das Raster reicht.</li>
     <li><strong>Mindestdauer eines Termins</strong>: alle wie viel Minuten ein Termin beginnen kann. Das ist das Raster des
@@ -1045,6 +1121,11 @@ footer{
   </p>
 
   <h3>Kabinen, Plätze und Räume</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/15-recursos.png" alt="Die Liste der Kabinen und Räume des Betriebs mit ihrer Reihenfolge und ihrer Farbe" loading="lazy">
+    <figcaption>Die Kabinen, Plätze und Räume, mit ihrer Reihenfolge im Terminkalender und ihrer Farbe.</figcaption>
+  </figure>
+
   <p>
     Zu jedem wird angegeben, wie viele Personen hineinpassen (eine Kabine 1, ein Padelplatz 4, ein Spinning-Raum 20), ob er
     online buchbar ist, und <strong>welche Leistungen es dort gibt</strong>. Ist keine markiert, wird alles angeboten.
@@ -1096,6 +1177,12 @@ footer{
     Wenn es heißt, die Lücke sei belegt, gibt es zu dieser Zeit einen anderen Termin in dieser Kabine oder bei diesem Mitarbeiter; der Hinweis sagt,
     welchen. Wenn es heißt, das Gerät sei besetzt, gibt es zu dieser Zeit einen anderen Termin, der dasselbe Gerät braucht, auch wenn er in einer
     anderen Kabine liegt.
+  </p>
+
+  <h3>„Welche Version habt ihr?“</h3>
+  <p>
+    Unten im linken Menü, unter der aktiven Filiale. Das schaut man zuerst nach, bevor man schreibt,
+    denn ein Fehler, der in einer neueren Version schon behoben ist, löst sich mit einem Update.
   </p>
 
   <h3>„Im Menü fehlt ein Eintrag“</h3>

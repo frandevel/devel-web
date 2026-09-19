@@ -526,7 +526,7 @@ footer{
 .contenido section{scroll-margin-top:5rem;padding-top:1.6rem;border-top:1px solid var(--line);margin-top:2.2rem}
 .contenido section:first-of-type{border-top:0;margin-top:0}
 .contenido h2{font-size:1.38rem;margin:0 0 .8rem}
-.contenido h3{font-size:1.04rem;margin:1.7rem 0 .5rem}
+.contenido h3{font-size:1.14rem;margin:1.9rem 0 .55rem}
 .contenido p{margin:0 0 .9rem;line-height:1.65}
 .contenido ul,.contenido ol.pasos{margin:0 0 1rem;padding-left:1.3rem}
 .contenido li{margin-bottom:.35rem;line-height:1.6}
@@ -548,6 +548,9 @@ footer{
 .contenido th,.contenido td{padding:.55rem .65rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
 .contenido th{font-family:var(--display);font-weight:600;color:var(--text);white-space:nowrap}
 
+.contenido figure{margin:1.6rem 0}
+.contenido figure img{width:100%;display:block;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.contenido figcaption{margin-top:.5rem;font-size:.86rem;color:var(--text-dim)}
 .ruta{display:inline-block;margin-bottom:1rem;padding:.2rem .65rem;border-radius:999px;background:var(--surface-sunk);
   border:1px solid var(--line);font-size:.82rem;color:var(--text-dim);font-family:var(--mono)}
 
@@ -614,6 +617,11 @@ footer{
 <section id="empezar">
   <h2>1. Entrar y orientarse</h2>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/01-entrar.png" alt="La pantalla de entrada de Turnera, con el usuario y la contrasena" loading="lazy">
+    <figcaption>La pantalla de entrada. Cada persona entra con su usuario.</figcaption>
+  </figure>
+
   <p>
     Turnera se abre en el navegador, con la dirección del centro y el usuario y la contraseña que os hayan dado.
     No hay nada que instalar y funciona igual en el ordenador del mostrador, en una tableta o en el móvil.
@@ -626,6 +634,11 @@ footer{
   </p>
 
   <h3>El menú de la izquierda</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/03-menu.png" alt="El menú lateral de Turnera, con la agenda, el TPV y los cobros pendientes arriba" loading="lazy">
+    <figcaption>El menú, y abajo del todo la delegación activa y la versión que corre el centro.</figcaption>
+  </figure>
+
   <p>
     Arriba, sin título, está lo que se toca cada día: <strong>Inicio</strong>, <strong>Agenda</strong>,
     <strong>TPV</strong>, <strong>Cobros pendientes</strong> y <strong>Clientes</strong>. Debajo, agrupado, lo que
@@ -636,7 +649,19 @@ footer{
     administra el centro puede dárselo.
   </p>
 
+  <h3>Qué versión tengo</h3>
+  <p>
+    Abajo del todo del menú de la izquierda, debajo de la delegación activa, está la <strong>versión de
+    Turnera</strong> que corre este centro. Es el primer dato que se pide cuando algo no funciona, así que
+    conviene saber dónde está antes de necesitarlo. Pasando el ratón por encima dice también cuándo se construyó.
+  </p>
+
   <h3>Inicio</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/02-inicio.png" alt="La pantalla de inicio con las citas del día, lo cobrado y los cumpleaños" loading="lazy">
+    <figcaption>La pantalla de inicio resume el día. Cada bloque lleva a la pantalla que lo explica.</figcaption>
+  </figure>
+
   <p>
     La pantalla de inicio resume el día: las citas que quedan, lo que se ha cobrado, lo que está pendiente de
     cobro y los cumpleaños. Cada bloque es un atajo — se pulsa y se llega a la pantalla que lo explica.
@@ -677,6 +702,11 @@ footer{
     La vista elegida se recuerda: al volver mañana estará como la dejó.
   </p>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/04-agenda.png" alt="La agenda del día con una columna por profesional y las citas pintadas por estado" loading="lazy">
+    <figcaption>La agenda del día, una columna por profesional. La barra naranja y la estrella marcan una primera visita.</figcaption>
+  </figure>
+
   <h3 id="agenda-citas">Poner, mover y anular citas</h3>
 
   <ul>
@@ -700,6 +730,11 @@ footer{
     Si intenta poner dos citas a la vez en la misma cabina o con el mismo profesional, la aplicación no la deja y
     le dice con cuál choca. Es la única cosa que impide de verdad: el resto son avisos.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/05-cita.png" alt="La ficha de una cita con el cliente, el profesional, la hora y los servicios" loading="lazy">
+    <figcaption>La ficha de una cita. Abajo, el estado, confirmar, cobrar y anular.</figcaption>
+  </figure>
 
   <h3 id="agenda-senales">Lo que dice cada tarjeta</h3>
 
@@ -771,8 +806,14 @@ footer{
   <p>
     En la ficha de un cliente están sus datos, su historial de visitas, sus bonos y sus notas.
     <strong>El teléfono y el correo son enlaces</strong>: al pulsarlos se abre el marcador o el programa de correo,
-    sin copiar ni pegar nada.
+    sin copiar ni pegar nada. Ocurre en toda la aplicación —también en profesionales, proveedores y
+    delegaciones—, así que no hay que copiar un número a mano en ningún sitio.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/07-ficha-cliente.png" alt="La ficha de un cliente con sus datos, su historial y sus bonos" loading="lazy">
+    <figcaption>La ficha de un cliente. El teléfono y el correo son enlaces.</figcaption>
+  </figure>
 
   <h3>Fichas repetidas</h3>
   <p>
@@ -817,6 +858,11 @@ footer{
     pensándoselo.
   </p>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/08-tpv.png" alt="El TPV con un cliente elegido y el ticket a medio montar" loading="lazy">
+    <figcaption>El TPV: el cliente, el profesional y el ticket con sus servicios y productos.</figcaption>
+  </figure>
+
   <h3>Formas de pago con descuento fijo</h3>
   <p>
     Algunas formas de pago llevan el descuento puesto de fábrica. <strong>Regalo</strong> es del cien por cien: al
@@ -844,6 +890,11 @@ footer{
   </p>
 
   <h3 id="cobrar-deudas">Cobros pendientes</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/09-cobros-pendientes.png" alt="La lista de visitas atendidas que todavia no se han cobrado" loading="lazy">
+    <figcaption>Las visitas que se atendieron sin pagar. Al pulsar una se abre el diálogo de cobro.</figcaption>
+  </figure>
+
   <span class="ruta">Menú → Cobros pendientes</span>
 
   <p>
@@ -892,6 +943,11 @@ footer{
   </p>
 
   <h3 id="aparatos-alta">Dar de alta un aparato</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/10-aparatos.png" alt="La lista de aparatos del centro con sus unidades y lo que se anota de cada uno" loading="lazy">
+    <figcaption>Los aparatos del centro, con cuántas unidades hay y qué se anota de cada sesión.</figcaption>
+  </figure>
+
   <p>De cada aparato se dice:</p>
   <ul>
     <li><strong>El nombre</strong> y <strong>cuántas unidades</strong> hay. Con dos, dos citas a la vez están bien
@@ -923,6 +979,11 @@ footer{
     citando mientras está en el taller.
   </div>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/11-aparato.png" alt="El formulario de un aparato con sus unidades, sus servicios y sus datos a anotar" loading="lazy">
+    <figcaption>Al dar de alta un aparato se dice qué servicios lo necesitan y qué hay que anotar cada vez.</figcaption>
+  </figure>
+
   <h3>Qué cambia en la agenda</h3>
   <p>
     Si dos citas a la misma hora necesitan el mismo aparato y no hay unidades para las dos, <strong>la segunda no se
@@ -946,6 +1007,11 @@ footer{
     pasarse quema. Se busca por cliente, no por cita, así que da igual que la vez anterior fuera en otra cabina,
     con otra persona y hace tres semanas.
   </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/16-aparatologia-en-la-cita.png" alt="Una cita con la seccion de aparatologia y el campo de potencia a rellenar" loading="lazy">
+    <figcaption>La sección aparece sola en las citas que llevan un servicio con aparato.</figcaption>
+  </figure>
+
 </section>
 
 <section id="portal">
@@ -1002,6 +1068,11 @@ footer{
   </table>
   </div>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/13-caja-diaria.png" alt="El informe de caja diaria con los totales por forma de pago" loading="lazy">
+    <figcaption>La caja diaria: qué ha entrado y con qué forma de pago. Es el cierre del día.</figcaption>
+  </figure>
+
   <h3>El informe de anulaciones</h3>
   <p>
     Cuenta sobre <strong>las citas del rango, no sobre las anuladas en el rango</strong>. La diferencia importa: una
@@ -1023,6 +1094,11 @@ footer{
   <p>Lo que se toca una vez y casi no se vuelve a mirar. Lo que más se consulta:</p>
 
   <h3>La agenda</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/14-administracion.png" alt="El indice de administracion con sus secciones" loading="lazy">
+    <figcaption>Administración reúne lo que se toca una vez: usuarios, delegaciones, recursos, aparatos y preferencias.</figcaption>
+  </figure>
+
   <ul>
     <li><strong>Hora de apertura y de cierre</strong>: hasta dónde llega la rejilla.</li>
     <li><strong>Duración mínima de una cita</strong>: cada cuántos minutos puede empezar una cita. Es el paso del
@@ -1042,6 +1118,11 @@ footer{
   </p>
 
   <h3>Cabinas, pistas y salas</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/15-recursos.png" alt="La lista de cabinas y salas del centro con su orden y su color" loading="lazy">
+    <figcaption>Las cabinas, pistas y salas, con su orden en la agenda y su color.</figcaption>
+  </figure>
+
   <p>
     De cada una se dice cuánta gente cabe (una cabina 1, una pista de pádel 4, una sala de spinning 20), si se
     reserva por internet, y <strong>qué servicios se dan ahí</strong>. Sin marcar ninguno, se da todo.
@@ -1093,6 +1174,12 @@ footer{
     Si dice que el hueco está ocupado, hay otra cita en esa cabina o con ese profesional a esa hora; el aviso dice
     con cuál. Si dice que el aparato está cogido, hay otra cita a esa hora que necesita el mismo, aunque esté en
     otra cabina.
+  </p>
+
+  <h3>«¿Qué versión tenéis?»</h3>
+  <p>
+    Abajo del menú de la izquierda, bajo la delegación activa. Es lo primero que conviene mirar antes de
+    escribir, porque un fallo que ya está arreglado en una versión posterior se resuelve actualizando.
   </p>
 
   <h3>«Falta una opción del menú»</h3>

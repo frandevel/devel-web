@@ -529,7 +529,7 @@ footer{
 .contenido section{scroll-margin-top:5rem;padding-top:1.6rem;border-top:1px solid var(--line);margin-top:2.2rem}
 .contenido section:first-of-type{border-top:0;margin-top:0}
 .contenido h2{font-size:1.38rem;margin:0 0 .8rem}
-.contenido h3{font-size:1.04rem;margin:1.7rem 0 .5rem}
+.contenido h3{font-size:1.14rem;margin:1.9rem 0 .55rem}
 .contenido p{margin:0 0 .9rem;line-height:1.65}
 .contenido ul,.contenido ol.pasos{margin:0 0 1rem;padding-left:1.3rem}
 .contenido li{margin-bottom:.35rem;line-height:1.6}
@@ -551,6 +551,9 @@ footer{
 .contenido th,.contenido td{padding:.55rem .65rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
 .contenido th{font-family:var(--display);font-weight:600;color:var(--text);white-space:nowrap}
 
+.contenido figure{margin:1.6rem 0}
+.contenido figure img{width:100%;display:block;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.contenido figcaption{margin-top:.5rem;font-size:.86rem;color:var(--text-dim)}
 .ruta{display:inline-block;margin-bottom:1rem;padding:.2rem .65rem;border-radius:999px;background:var(--surface-sunk);
   border:1px solid var(--line);font-size:.82rem;color:var(--text-dim);font-family:var(--mono)}
 
@@ -617,6 +620,11 @@ footer{
 <section id="empezar">
   <h2>1. Logging in and finding your way around</h2>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/01-entrar.png" alt="Turnera's sign-in screen, with the user name and the password" loading="lazy">
+    <figcaption>The sign-in screen. Everybody signs in with their own user.</figcaption>
+  </figure>
+
   <p>
     Turnera opens in the browser, with the centre's address and the username and password you were given.
     There is nothing to install and it works the same on the front desk computer, on a tablet or on a phone.
@@ -629,6 +637,11 @@ footer{
   </p>
 
   <h3>The menu on the left</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/03-menu.png" alt="Turnera's side menu, with the agenda, the point of sale and the unpaid visits at the top" loading="lazy">
+    <figcaption>The menu, and right at the bottom the active delegation and the version the centre is running.</figcaption>
+  </figure>
+
   <p>
     At the top, with no heading, is what you use every day: <strong>Home</strong>, <strong>Agenda</strong>,
     <strong>Point of sale</strong>, <strong>Unpaid visits</strong> and <strong>Customers</strong>. Below, grouped together, is what
@@ -639,7 +652,19 @@ footer{
     Whoever administers the centre can give it to you.
   </p>
 
+  <h3>Which version am I on</h3>
+  <p>
+    Right at the bottom of the left-hand menu, under the active delegation, is the <strong>Turnera
+    version</strong> this centre is running. It is the first thing you are asked for when something does not work, so it
+    is worth knowing where it is before you need it. Hovering over it also says when it was built.
+  </p>
+
   <h3>Home</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/02-inicio.png" alt="The home screen with the day's appointments, what has been charged and the birthdays" loading="lazy">
+    <figcaption>The home screen sums the day up. Every block leads to the screen that explains it.</figcaption>
+  </figure>
+
   <p>
     The home screen sums up the day: the appointments still to come, what has been charged, what is still unpaid
     and the birthdays. Each block is a shortcut — click it and you land on the screen that explains it.
@@ -680,6 +705,11 @@ footer{
     The view you choose is remembered: when you come back tomorrow it will be as you left it.
   </p>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/04-agenda.png" alt="The day's agenda with one column per member of staff and the appointments painted by status" loading="lazy">
+    <figcaption>The day's agenda, one column per member of staff. The orange bar and the star mark a first visit.</figcaption>
+  </figure>
+
   <h3 id="agenda-citas">Booking, moving and cancelling appointments</h3>
 
   <ul>
@@ -703,6 +733,11 @@ footer{
     If you try to book two appointments at once in the same room or with the same member of staff, the application
     will not let you and tells you which one it clashes with. It is the only thing it truly blocks: the rest are warnings.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/05-cita.png" alt="An appointment with the customer, the member of staff, the time and the services" loading="lazy">
+    <figcaption>An appointment. Below it, the status, confirm, charge and cancel.</figcaption>
+  </figure>
 
   <h3 id="agenda-senales">What each card tells you</h3>
 
@@ -773,9 +808,15 @@ footer{
 
   <p>
     A customer record holds their details, their visit history, their vouchers and their notes.
-    <strong>The phone number and the email address are links</strong>: click them and the dialler or the email program opens,
-    with nothing to copy and paste.
+    <strong>The phone number and the email address are links</strong>: tapping them opens the dialler or the mail programme,
+    with nothing to copy and paste. It happens throughout the application — staff, suppliers and
+    delegations too — so there is never a number to copy out by hand.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/07-ficha-cliente.png" alt="A customer record with their details, their history and their vouchers" loading="lazy">
+    <figcaption>A customer record. The phone number and the email address are links.</figcaption>
+  </figure>
 
   <h3>Duplicate records</h3>
   <p>
@@ -820,6 +861,11 @@ footer{
     still thinking about it.
   </p>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/08-tpv.png" alt="The point of sale with a customer picked and the ticket half built" loading="lazy">
+    <figcaption>The point of sale: the customer, the member of staff and the ticket with its services and products.</figcaption>
+  </figure>
+
   <h3>Payment methods with a fixed discount</h3>
   <p>
     Some payment methods come with the discount built in. <strong>Gift</strong> is a hundred per cent: choose it
@@ -847,6 +893,11 @@ footer{
   </p>
 
   <h3 id="cobrar-deudas">Unpaid visits</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/09-cobros-pendientes.png" alt="The list of visits that were seen and have not been charged yet" loading="lazy">
+    <figcaption>The visits that were seen without paying. Tapping one opens the payment dialog.</figcaption>
+  </figure>
+
   <span class="ruta">Menu → Unpaid visits</span>
 
   <p>
@@ -895,6 +946,11 @@ footer{
   </p>
 
   <h3 id="aparatos-alta">Adding a device</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/10-aparatos.png" alt="The list of the centre's equipment with its units and what gets written down for each" loading="lazy">
+    <figcaption>The centre's equipment, with how many units there are and what gets written down each session.</figcaption>
+  </figure>
+
   <p>For each device you state:</p>
   <ul>
     <li><strong>The name</strong> and <strong>how many units</strong> there are. With two, two appointments at once are fine
@@ -926,6 +982,11 @@ footer{
     booking while it is away being repaired.
   </div>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/11-aparato.png" alt="The form of a device with its units, its services and the fields to write down" loading="lazy">
+    <figcaption>Adding a device says which services need it and what has to be written down every time.</figcaption>
+  </figure>
+
   <h3>What changes on the agenda</h3>
   <p>
     If two appointments at the same time need the same device and there are not enough units for both, <strong>the second one cannot
@@ -949,6 +1010,11 @@ footer{
     and going too far burns. It is looked up by customer, not by appointment, so it does not matter if last time was in
     another room, with another person and three weeks ago.
   </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/16-aparatologia-en-la-cita.png" alt="An appointment with the equipment section and the power field to fill in" loading="lazy">
+    <figcaption>The section appears on its own in appointments that carry a service with a device.</figcaption>
+  </figure>
+
 </section>
 
 <section id="portal">
@@ -1005,6 +1071,11 @@ footer{
   </tbody></table>
   </div>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/13-caja-diaria.png" alt="The end-of-day till report with the totals per payment method" loading="lazy">
+    <figcaption>The end-of-day till: what came in and with which payment method. It is the close of the day.</figcaption>
+  </figure>
+
   <h3>The cancellations report</h3>
   <p>
     It counts against <strong>the appointments in the range, not the ones cancelled in the range</strong>. The difference matters: a
@@ -1026,6 +1097,11 @@ footer{
   <p>What you set once and hardly ever look at again. The ones most looked at:</p>
 
   <h3>The agenda</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/14-administracion.png" alt="The administration index with its sections" loading="lazy">
+    <figcaption>Administration gathers what you set once: users, delegations, resources, equipment and preferences.</figcaption>
+  </figure>
+
   <ul>
     <li><strong>Opening and closing time</strong>: how far the grid runs.</li>
     <li><strong>Minimum length of an appointment</strong>: how many minutes apart an appointment can start. It is the centre's
@@ -1045,6 +1121,11 @@ footer{
   </p>
 
   <h3>Rooms, courts and studios</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/15-recursos.png" alt="The list of the centre's rooms and studios with their order and their colour" loading="lazy">
+    <figcaption>The rooms, courts and studios, with their order in the agenda and their colour.</figcaption>
+  </figure>
+
   <p>
     For each one you state how many people fit (a room 1, a padel court 4, a spinning studio 20), whether it is
     booked online, and <strong>which services are given there</strong>. With none ticked, everything is given there.
@@ -1096,6 +1177,12 @@ footer{
     If it says the slot is taken, there is another appointment in that room or with that member of staff at that
     time; the warning says which. If it says the device is in use, there is another appointment at that time that
     needs the same one, even if it is in another room.
+  </p>
+
+  <h3>“Which version are you on?”</h3>
+  <p>
+    At the bottom of the left-hand menu, under the active delegation. It is the first thing to look at
+    before writing in, because a fault already fixed in a later version is solved by updating.
   </p>
 
   <h3>“A menu option is missing”</h3>
