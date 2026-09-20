@@ -732,6 +732,14 @@ footer{
       Monat ist dieser Grund im Stornierungsbericht das Einzige, was erklärt, was passiert ist.</li>
   </ul>
 
+  <p>
+    <strong>Die Leistung bestimmt die Dauer.</strong> Beim Auswählen der Leistungen des Termins passt sich die Dauer
+    von selbst an ihre Summe an und wird auf den Takt dieser Kabine aufgerundet: zwei Leistungen von zwanzig
+    Minuten in einer Kabine im Fünfzehn-Minuten-Takt belegen fünfundvierzig, nicht vierzig. Sobald Sie die
+    Dauer von Hand ändern, bestimmen Sie, und wir rühren sie nicht mehr an. Bei einem Termin, den es schon
+    gibt, wird ebenfalls nichts neu berechnet: seine Dauer ist die, die er hat.
+  </p>
+
   <div class="ojo">
     <p><strong>Eine Stornierung lässt sich nicht rückgängig machen.</strong> Ein stornierter Termin bleibt sichtbar, durchgestrichen, lässt sich aber nicht
       wiederherstellen: Sie müssen ihn neu anlegen. Und jemanden als <em>Nicht erschienen</em> zu markieren storniert den Termin ebenfalls, also
@@ -944,6 +952,55 @@ footer{
   <p>
     Im Terminkalender zeigt das Gutschein-Symbol jedes Termins, wie viele Sitzungen diesem Kunden noch bleiben. Aufgebrauchte oder
     abgelaufene Wertkarten zählen nicht mit.
+  </p>
+  <h3 id="bonos-traspaso">Eine Wertkarte auf einen anderen Kunden übertragen</h3>
+  <span class="ruta">Kundenakte → Wertkarten → Übertragen</span>
+
+  <p>
+    Jemand kauft eine Wertkarte über zehn Sitzungen, nimmt drei in Anspruch und zieht weg. Die Wertkarte
+    lässt sich auf einen anderen Kunden des Betriebs übertragen: drücken Sie <em>Übertragen</em> in der Zeile der Wertkarte, suchen Sie den Empfänger, fertig. Der Grund ist
+    freiwillig.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Eine Übertragung lässt sich nicht rückgängig machen.</strong> Wenn Sie den falschen Kunden erwischt haben, müssen Sie sie
+      zurückübertragen, und dann sind beide Übertragungen zu sehen. Das ist Absicht: an dem Tag, an dem jemand
+      fragt, warum seine Wertkarte weniger Sitzungen hat als gekauft, ist diese Spur das Einzige, womit sich
+      antworten lässt.</p>
+  </div>
+
+  <p>
+    Von jeder Übertragung wird festgehalten, <strong>von wem an wen, wie viele Sitzungen übrig waren, wer es
+    gemacht hat sowie Datum und Uhrzeit</strong>. Sie erscheint in beiden Akten, im Block <em>Übertragene Wertkarten</em>: bei dem, der sie
+    abgegeben hat, und bei dem, der sie bekommen hat.
+  </p>
+
+  <p>
+    Die verbliebenen Sitzungen werden genau so gespeichert, wie sie an dem Tag standen, denn die Wertkarte
+    wird danach weiter verbraucht — sonst wüsste in einem Jahr niemand mehr, wie viel der Empfänger
+    aufgebraucht hat.
+  </p>
+
+  <h4>Was nicht geht</h4>
+
+  <ul>
+    <li><strong>Eine abgelaufene Wertkarte wird nicht übertragen.</strong> Was für den Käufer nicht mehr gilt, gilt auch für den
+      Empfänger nicht, und sie zu übertragen wäre eine stille Wiederbelebung. Wenn Sie mehr Zeit geben wollen,
+      korrigieren Sie zuerst das Ablaufdatum.</li>
+    <li><strong>Eine ohne Sitzungen ebenso wenig.</strong> Es gibt nichts weiterzugeben.</li>
+    <li><strong>Nur zwischen Kunden desselben Betriebs.</strong></li>
+  </ul>
+
+  <p>
+    <strong>Die Übertragung verschiebt den Verkauf nicht.</strong> Wer die Wertkarte bezahlt hat, hat sie bezahlt: es wird
+    weder neu in Rechnung gestellt noch storniert. Es ist eine Abtretung zwischen Kunden, kein Kassenvorgang,
+    und im Kassenabschluss taucht sie nicht auf.
+  </p>
+
+  <p>
+    Dafür braucht es die Berechtigung <em>TRASPASAR BONOS</em>, die nicht dieselbe ist wie die für die Behandlungen, mit der
+    Wertkarten verkauft und verbraucht werden: den Besitzer einer angebrochenen Wertkarte zu wechseln ist
+    nicht dasselbe wie sie zu kassieren, und nicht der ganze Empfang muss das können. Vergeben wird sie unter <em>Verwaltung → Benutzer</em>.
   </p>
 </section>
 
@@ -1274,6 +1331,236 @@ footer{
     Die Seite ist zunächst aus. Eingeschaltet wird sie unter <em>Verwaltung → Voreinstellungen → Buchhaltungsentwurf</em>, und das lohnt
     sich, sobald die Mehrwertsteuer des Katalogs durchgegangen ist: davor kommt fast alles als „nicht gesetzt“
     heraus.
+  </p>
+  <h3 id="whatsapp">WhatsApp-Erinnerungen</h3>
+  <span class="ruta">Verwaltung → Einstellungen → WhatsApp-Erinnerungen</span>
+
+  <div class="ojo">
+    <p><strong>Das versendet noch nicht.</strong> Es fehlt noch die Freigabe von Meta auf Seiten von DEVEL. Die
+      Maske ist da, der Text lässt sich schreiben und man sieht, wie er aussehen wird, aber bis Meta freigibt,
+      geht keine Nachricht hinaus.</p>
+  </div>
+
+  <h4>Das Konto gehört Ihnen, nicht uns</h4>
+
+  <p>
+    Sie verbinden Ihr eigenes WhatsApp-Business-Konto und hinterlegen dort Ihre Zahlungsart. <strong>Meta stellt
+    Ihnen die Rechnung</strong>; wir berechnen keine Nachrichten und teilen keine Kreditlinie. Drei Dinge, die
+    man vorher wissen sollte:
+  </p>
+
+  <ul>
+    <li>Die Erinnerung ist eine <strong>Utility-Vorlage</strong> und wird pro Nachricht bezahlt. In Europa ist
+      das nicht billig, und ab dem 1. Oktober 2026 werden Utility-Vorlagen auch innerhalb des
+      24-Stunden-Fensters berechnet.</li>
+    <li>Die Nummer, die Sie verbinden, <strong>funktioniert in der normalen WhatsApp-App nicht mehr</strong>. Eine eigene ist
+      ratsam, nicht das Handy am Empfang.</li>
+    <li>Eine Unternehmensverifizierung bei Meta ist nötig.</li>
+  </ul>
+
+  <h4>Der Text der Erinnerung</h4>
+
+  <p>
+    Den schreiben Sie selbst, mit Platzhaltern in geschweiften Klammern, die sich von selbst füllen: <code>{nombre}</code>,
+    <code>{apellidos}</code>, <code>{servicio}</code>, <code>{profesional}</code>, <code>{fecha}</code>,
+    <code>{hora}</code>, <code>{centro}</code>, <code>{telefono}</code> und <code>{enlace}</code>. Darunter sehen Sie,
+    wie der Kunde ihn lesen wird.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Den Text gibt Meta frei.</strong> Beim Speichern bleibt er ein <em>Entwurf</em>; mit dem Knopf schicken Sie
+      ihn zur Prüfung, und es wird nichts versendet, solange er nicht <em>freigegeben ist</em>. <strong>Jede Änderung setzt ihn wieder
+      auf Entwurf</strong> und er muss erneut durch die Freigabe: was Meta freigegeben hatte, war der vorige Text,
+      nicht der neue.</p>
+  </div>
+
+  <p>
+    Meta versteht <code>{nombre}</code>nicht: es verlangt nummerierte Platzhalter. Turnera übersetzt das von selbst und
+    zeigt Ihnen das Ergebnis unter <em>So schicken wir es an Meta</em>, falls Sie eines Tages etwas mit ihnen klären müssen.
+    Ein Platzhalter, den es nicht gibt, bleibt so stehen, wie er geschrieben wurde, damit Sie ihn beim
+    Durchsehen bemerken, statt zu verschwinden und eine seltsame Nachricht auf dem Handy eines Kunden zu
+    hinterlassen.
+  </p>
+
+  <h3 id="consentimientos">Einwilligungserklärungen</h3>
+  <span class="ruta">Kundenakte → Unterschriebene Unterlagen · Verwaltung → Einwilligungen</span>
+
+  <p>
+    Der Kunde unterschreibt auf dem <strong>Tablet am Empfang</strong>. Ihm wird nichts per E-Mail oder per WhatsApp
+    geschickt, und er unterschreibt nicht auf seinem eigenen Handy: kleine Bildschirme, unterschiedliche
+    Browser und ältere Kunden.
+  </p>
+
+  <h4>Wie unterschrieben wird</h4>
+
+  <ol>
+    <li>Das Tablet ist immer auf <em>Unterschriften</em>geöffnet, mit seiner eigenen Empfangssitzung. Es fragt von
+      selbst alle paar Sekunden, ob es etwas zu unterschreiben gibt.</li>
+    <li>In der Kundenakte drückt der Empfang <em>Unterschrift anfordern</em> und wählt das Dokument.</li>
+    <li>Das Dokument erscheint von selbst auf dem Tablet, mit Namen und Steuernummer bereits eingesetzt. Der
+      Kunde liest es und unterschreibt mit dem Finger.</li>
+    <li>Gespeichert werden das PDF, der Schriftzug, die Uhrzeit, die Version des Textes und ein Fingerabdruck des Dokuments.</li>
+  </ol>
+
+  <div class="ojo">
+    <p><strong>Die Anforderung läuft nach fünfzehn Minuten ab</strong> und gilt nur einmal. Das ist Absicht: eine
+      vergessene Anforderung auf dem Tresen ist eine Unterschrift, die auf die Falschen wartet. Läuft sie ab,
+      fordern Sie sie aus der Akte erneut an.</p>
+  </div>
+
+  <h4>Die Vorlagen</h4>
+
+  <p>
+    Geschrieben werden sie unter <em>Verwaltung → Einwilligungen</em>. Im Text können Sie Platzhalter lassen, die sich von
+    selbst füllen: <code>cliente</code>, <code>nif</code>, <code>centro</code>, <code>fecha</code> und
+    <code>tratamiento</code>, in doppelten geschweiften Klammern geschrieben.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Eine Vorlage wird nie geändert.</strong> Beim Speichern von Änderungen entsteht die
+      nächste Version und die vorige wird zurückgezogen. Was schon unterschrieben wurde, muss genau so weiter
+      bestehen, wie es gelesen wurde: das ist die Hälfte dessen, was diese Unterschrift an dem Tag trägt, an
+      dem jemand bestreitet, was ihm erklärt wurde.</p>
+  </div>
+
+  <p>
+    Wenn Sie eine Vorlage als <strong>verpflichtend</strong>kennzeichnen, weist die Akte jedes Kunden darauf hin, der
+    sie nicht unterschrieben hat. Ohne diesen Hinweis wäre das ein Ordner voller Papiere: der Sinn ist, es vor
+    der Behandlung zu merken, nicht danach.
+  </p>
+
+  <h4>Wer das Unterschriebene sehen darf</h4>
+
+  <p>
+    Der Empfang darf die Unterschrift anfordern und begleiten, aber <strong>das Herunterladen einer unterschriebenen Einwilligung
+    braucht die Berechtigung für die Krankengeschichte und wird</strong> in der Zugriffsspur festgehalten, genau wie das
+    Öffnen eines Falls. Eine unterschriebene Einwilligung ist ein Gesundheitsdatum. So kann das Tablet am
+    Empfang den ganzen Tag mit seiner Sitzung offen stehen, ohne dass diese Sitzung die Dokumente von
+    irgendjemandem öffnet.
+  </p>
+
+  <p>
+    Es ist eine <strong>einfache elektronische Signatur</strong>. Was sie trägt, ist nicht der Schriftzug: es sind die
+    Versionierung des Textes, die Uhrzeit und der Fingerabdruck des Dokuments, mit dem sich belegen lässt,
+    dass das gezeigte PDF dasselbe ist, das unterschrieben wurde.
+  </p>
+
+  <h3 id="presencia">Arbeitszeiterfassung (stempeln)</h3>
+  <span class="ruta">Start → Knopf <em>Stempeln</em> · Verwaltung → Arbeitszeiterfassung</span>
+
+  <div class="ojo">
+    <p><strong>Das verlangt das Gesetz.</strong> Artikel 34.9 des spanischen Arbeitnehmerstatuts verlangt seit
+      2019 eine tägliche Arbeitszeiterfassung, vier Jahre Aufbewahrung und Vorlage bei der Arbeitsinspektion.
+      Sie nicht zu führen ist bußgeldbewehrt.</p>
+  </div>
+
+  <p>
+    Auf dem Startbildschirm hat jede Person einen Knopf, auf dem <em>Kommen stempeln</em> oder <em>Gehen
+    stempeln</em> steht, je nachdem, was ansteht. Es gibt nichts auszuwählen: die Anwendung weiß es aus dem letzten
+    Eintrag dieser Person. Wer keinen Mitarbeiter mit seinem Benutzer verknüpft hat, sieht den Knopf nicht,
+    weil es keinen Arbeitstag von ihm zu erfassen gibt; verknüpft wird das unter <em>Verwaltung → Benutzer</em>.
+  </p>
+
+  <p>
+    Unter <em>Verwaltung → Arbeitszeiterfassung</em> steht alles Übrige: wählen Sie einen Zeitraum und, wenn
+    Sie möchten, eine Person. Oben erscheinen die Tage mit ihren Abschnitten und den summierten Stunden;
+    darunter die Einträge einzeln. Es lässt sich als Excel herunterladen, und genau das zeigt man der
+    Inspektion.
+  </p>
+
+  <h4>Einen Eintrag korrigieren</h4>
+
+  <p>
+    Ein Eintrag <strong>wird nie bearbeitet und nie gelöscht</strong>. Beim Korrigieren kommt eine weitere
+    Zeile hinzu, die ihn ersetzt, mit der richtigen Uhrzeit, wer sie eingetragen hat und dem Grund, der
+    verpflichtend ist. Der falsche Eintrag bleibt sichtbar, als korrigiert gekennzeichnet.
+  </p>
+
+  <p>
+    Das mag unbequem wirken und ist genau das, was diese Erfassung wertvoll macht: eine, die sich
+    überschreiben ließe, würde nichts beweisen. Wenn jemand versehentlich gestempelt hat und gar nicht
+    gekommen ist, haken Sie <em>Dieser Eintrag ist nie
+    passiert</em>an; die Zeile bleibt, zählt aber nicht mehr.
+  </p>
+
+  <h4>Die Tage, die markiert erscheinen</h4>
+
+  <p>
+    Wenn jemand Kommen stempelt und geht, ohne Gehen zu stempeln, erscheint dieser Tag als <strong>offener Arbeitstag</strong>
+    und <strong>ohne Stunden</strong>. Es wird bewusst keine Endzeit erfunden: eine Erfassung mit Stunden, die niemand
+    gestempelt hat, ist schlimmer als eine unvollständige, denn die unvollständige sieht man und die
+    erfundene nicht. Korrigieren Sie ihn über die Liste der Einträge.
+  </p>
+
+  <p>
+    Eine Schicht über Mitternacht zählt ganz an dem Tag, an dem sie begonnen hat, so wie es die
+    Lohnabrechnung zählt. Und Pausen werden nicht gestempelt: das Gesetz verlangt sie nicht und jeder
+    Tarifvertrag zählt sie anders, sie hier zu erfinden hieße also, in fast allen falsch zu zählen.
+  </p>
+
+  <h3 id="integraciones">Ein externes Programm anbinden (ERP)</h3>
+  <span class="ruta">Verwaltung → Integrationen</span>
+
+  <p>
+    Wenn Ihre Steuerkanzlei oder Ihr ERP die Daten des Betriebs direkt lesen will — den Katalog, die Kunden,
+    die Verkäufe —, braucht es dafür keinen Turnera-Benutzer. Sie legen eine <strong>Integration</strong>an, also
+    eine Zugangsberechtigung für ein Programm und nicht für eine Person.
+  </p>
+
+  <p>Beim Anlegen entscheiden Sie:</p>
+
+  <ul>
+    <li><strong>Name.</strong> Woran Sie sie in der Liste wiedererkennen. Zum Beispiel „ERP der Steuerkanzlei“.</li>
+    <li><strong>Filiale.</strong> Die einzige, die dieses Programm sieht. Sie steht hier fest, weil ein Programm
+      sie nicht auf einer Maske auswählen kann, wie es eine Person beim Anmelden tut.</li>
+    <li><strong>Berechtigungen.</strong> Was es lesen darf: den Katalog, die Kunden oder die Verkäufe. Geben Sie nur,
+      was gebraucht wird.</li>
+    <li><strong>Erlaubte Adressen.</strong> Von welcher IP aus es sich verbinden darf, eine pro Zeile.
+      Ein Bereich in CIDR-Schreibweise ist erlaubt, zum Beispiel <code>203.0.113.0/24</code>.</li>
+  </ul>
+
+  <div class="ojo">
+    <p><strong>Das Geheimnis wird nur ein einziges Mal gezeigt.</strong> Beim Speichern zeigt die Maske eine
+      <code>client_id</code> und ein <code>client_secret</code>. Kopieren Sie beides und geben Sie es über einen sicheren
+      Kanal an denjenigen weiter, der das ERP programmiert: sie werden nicht im Klartext gespeichert und
+      lassen sich nicht erneut abrufen. Gehen sie verloren, werden sie rotiert.</p>
+  </div>
+
+  <p>
+    <strong>Ein „von überall“ gibt es nicht.</strong> Ein ERP läuft auf einem Server, und dieser Server hat eine
+    feste IP. Wenn man Ihnen sagt, er habe keine, ist das ein Gespräch, das man führen sollte, bevor man die
+    Daten seiner Kunden herausgibt.
+  </p>
+
+  <p>
+    <strong>Die Krankengeschichte lässt sich nicht freigeben.</strong> Es ist keine Berechtigung, die ausgeschaltet
+    geliefert wird: es gibt sie nicht. Die Kundenberechtigung liefert die Verwaltungsdaten — Name, Kontakt,
+    Anschrift — und nichts aus Vorgeschichte, Fällen oder Verläufen.
+  </p>
+
+  <p>
+    <strong>Nur lesend.</strong> Ein externes Programm darf lesen, nie ändern. Nichts, was das ERP tut,
+    verändert einen Termin, eine Zahlung oder eine Akte.
+  </p>
+
+  <h4>Das Geheimnis wechseln, ohne den Dienst zu unterbrechen</h4>
+
+  <p>
+    Der Knopf <em>Geheimnis rotieren</em> erzeugt ein neues und <strong>lässt das vorige am Leben</strong>. So lässt sich das ERP in
+    Ruhe umstellen; sobald es mit dem neuen antwortet, drücken Sie <em>Das vorige zurückziehen</em> und das alte gilt nicht
+    mehr. Solange die Rotation läuft, zeigt die Liste es mit einer Markierung an.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Datenschutz.</strong> Mit der Freigabe einer Integration verarbeitet der Anbieter
+      dieses Programms Daten Ihrer Kunden im Auftrag des Betriebs. Vermerken Sie das in Ihrem Verzeichnis von
+      Verarbeitungstätigkeiten und prüfen Sie, dass Sie mit ihm den passenden Auftragsverarbeitungsvertrag
+      haben.</p>
+  </div>
+
+  <p>
+    Wer die andere Seite programmiert, findet alles Nötige — wie man sich authentifiziert, was verfügbar ist
+    und wie paginiert wird — im technischen Leitfaden <code>docs/api-integracion.md</code>.
   </p>
 </section>
 

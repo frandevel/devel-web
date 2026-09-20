@@ -732,6 +732,14 @@ footer{
       later, in the cancellations report, that reason is the only thing that explains what happened.</li>
   </ul>
 
+  <p>
+    <strong>The service sets the duration.</strong> When you pick the services for the appointment, the duration adjusts
+    itself to what they add up to, rounding up to the slot of that room: two twenty-minute services in a room
+    that runs in fifteens take forty-five, not forty. The moment you touch the duration selector by hand, you
+    are in charge and we stop touching it. On an appointment that already exists nothing is recalculated
+    either: its duration is the one it has.
+  </p>
+
   <div class="ojo">
     <p><strong>Cancelling cannot be undone.</strong> A cancelled appointment stays in view, crossed out, but it cannot be
       recovered: you have to create it again. And marking someone as <em>No show</em> also cancels the appointment, so
@@ -944,6 +952,53 @@ footer{
   <p>
     On the agenda, the voucher icon on each appointment says how many sessions that customer has left. Vouchers that
     are used up or expired are not counted.
+  </p>
+  <h3 id="bonos-traspaso">Transferring a voucher to another customer</h3>
+  <span class="ruta">Customer record → Vouchers → Transfer</span>
+
+  <p>
+    Someone buys a voucher of ten sessions, uses three and moves away. The voucher can be passed to another
+    customer of the centre: press <em>Transfer</em> on the voucher's line, look up whoever receives it and that is it. The reason
+    is optional.
+  </p>
+
+  <div class="ojo">
+    <p><strong>A transfer cannot be undone.</strong> If you picked the wrong customer, you have to transfer it back
+      the other way, and then both transfers will show. That is deliberate: the day someone asks why their
+      voucher has fewer sessions than they bought, that trail is all there is to answer them with.</p>
+  </div>
+
+  <p>
+    Every transfer records <strong>from whom to whom, how many sessions were left, who did it and the
+    date and the time</strong>. It shows on both records, in the block <em>Transferred vouchers</em>: on the one who gave it
+    and on the one who received it.
+  </p>
+
+  <p>
+    The sessions that were left are stored exactly as they stood that day, because the voucher keeps being
+    used afterwards and otherwise, a year from now, nobody would know how much whoever received it used up.
+  </p>
+
+  <h4>What cannot be done</h4>
+
+  <ul>
+    <li><strong>An expired voucher cannot be transferred.</strong> What is no longer good for whoever bought it is no good
+      for whoever receives it either, and transferring it would be a quiet way of bringing it back to life. If
+      you want to give it more time, correct the expiry date first.</li>
+    <li><strong>Nor one with no sessions left.</strong> There is nothing to pass on.</li>
+    <li><strong>Only between customers of the same centre.</strong></li>
+  </ul>
+
+  <p>
+    <strong>A transfer does not move the sale.</strong> Whoever paid for the voucher paid for it: nothing is invoiced
+    again and nothing is credited. It is an assignment between customers, not a till operation, and it does
+    not show up in the cash close.
+  </p>
+
+  <p>
+    It needs the <em>TRASPASAR BONOS</em>permission, which is not the same as the one for attendance used to sell and
+    use up vouchers: changing the owner of a voucher already in use is not the same as charging for it, and
+    not every receptionist has to be able to do it. It is granted in <em>Administration → Users</em>.
   </p>
 </section>
 
@@ -1275,6 +1330,227 @@ footer{
     The screen comes switched off. It is switched on under <em>Administration → Preferences → Draft accounting summary</em>, and it is
     worth doing once the VAT of the catalogue has been gone through: before that almost everything comes out
     «not set».
+  </p>
+  <h3 id="whatsapp">WhatsApp reminders</h3>
+  <span class="ruta">Administration → Preferences → WhatsApp reminders</span>
+
+  <div class="ojo">
+    <p><strong>This does not send yet.</strong> Meta's approval on DEVEL's side is still missing. The screen is
+      there, the text can be written and you can see how it will look, but until Meta approves, no message
+      goes out.</p>
+  </div>
+
+  <h4>The account is yours, not ours</h4>
+
+  <p>
+    You connect your own WhatsApp Business account and put your payment method on it. <strong>Meta bills
+    you</strong>; we do not charge for messages and we do not share a credit line. Three things
+    worth knowing before you start:
+  </p>
+
+  <ul>
+    <li>The reminder is a <strong>utility template</strong> and is paid per message. It is not cheap in
+      Europe, and from 1 October 2026 utility templates are charged inside the 24-hour window too.</li>
+    <li>The number you connect <strong>stops working in the regular WhatsApp app</strong>. A dedicated one is
+      advisable, not the phone on the counter.</li>
+    <li>Business verification with Meta is required.</li>
+  </ul>
+
+  <h4>The text of the reminder</h4>
+
+  <p>
+    You write it, with placeholders between braces that fill themselves in: <code>{nombre}</code>,
+    <code>{apellidos}</code>, <code>{servicio}</code>, <code>{profesional}</code>, <code>{fecha}</code>,
+    <code>{hora}</code>, <code>{centro}</code>, <code>{telefono}</code> and <code>{enlace}</code>. Underneath you will see
+    how the customer will read it.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Meta approves the text.</strong> Saving it leaves it as a <em>draft</em>; you send it for review
+      with the button and nothing is sent until it is <em>approved</em>. <strong>Every time you change it, it goes back
+      to draft</strong> and it has to go through approval again: what Meta approved was the previous text,
+      not the new one.</p>
+  </div>
+
+  <p>
+    Meta does not understand <code>{nombre}</code>: it demands numbered placeholders. Turnera does the translation by itself and
+    shows you the result under <em>This is what we send Meta</em>, in case one day you have to take something up with
+    them. A placeholder that does not exist stays written as it is so that you see it when reviewing, instead
+    of disappearing and leaving an odd message on a customer's phone.
+  </p>
+
+  <h3 id="consentimientos">Informed consent</h3>
+  <span class="ruta">Customer record → Signed paperwork · Administration → Consents</span>
+
+  <p>
+    The customer signs on the <strong>tablet on the counter</strong>. Nothing is sent to them by e-mail or by WhatsApp,
+    and they do not sign on their own phone: small screens, different browsers and older customers.
+  </p>
+
+  <h4>How it gets signed</h4>
+
+  <ol>
+    <li>The tablet is always open on <em>Signatures</em>, with its own reception session. It asks by itself every
+      few seconds whether there is anything to sign.</li>
+    <li>On the customer record, reception presses <em>Ask for signature</em> and chooses the document.</li>
+    <li>The document appears on the tablet by itself, with the name and the tax number already filled in. The
+      customer reads it and signs with a finger.</li>
+    <li>The PDF, the stroke, the time, the version of the text and a fingerprint of the document are stored.</li>
+  </ol>
+
+  <div class="ojo">
+    <p><strong>The request expires after fifteen minutes</strong> and works once only. That is deliberate: a
+      request left lying on the counter is a signature waiting for the wrong person. If it expires, ask for it
+      again from the record.</p>
+  </div>
+
+  <h4>The templates</h4>
+
+  <p>
+    They are written in <em>Administration → Consents</em>. In the text you can leave placeholders that fill
+    themselves in: <code>cliente</code>, <code>nif</code>, <code>centro</code>, <code>fecha</code> and
+    <code>tratamiento</code>, written between double braces.
+  </p>
+
+  <div class="ojo">
+    <p><strong>A template is never modified.</strong> Saving changes creates the next version and
+      retires the previous one. What has already been signed has to keep existing exactly as it was read: it
+      is half of what defends this signature the day someone disputes what they were told.</p>
+  </div>
+
+  <p>
+    If you mark a template as <strong>required</strong>, the record of every customer who has not signed it
+    says so. Without that warning this would be a folder of papers: the point is finding out before doing the
+    treatment, not afterwards.
+  </p>
+
+  <h4>Who can see what has been signed</h4>
+
+  <p>
+    Reception can ask for the signature and accompany it, but <strong>downloading a signed consent needs the
+    clinical history permission and is written down</strong> in the access trail, just like opening a case.
+    A signed consent is health data. That way the tablet on the counter can stay open all day with its session
+    without that session opening anybody's documents.
+  </p>
+
+  <p>
+    It is a <strong>simple electronic signature</strong>. What holds it up is not the stroke: it is the versioning of
+    the text, the time and the fingerprint of the document, which is what lets you prove that the PDF being
+    shown is the same one that was signed.
+  </p>
+
+  <h3 id="presencia">Working time (clocking in)</h3>
+  <span class="ruta">Home → the <em>Clock</em> button · Administration → Working time</span>
+
+  <div class="ojo">
+    <p><strong>The law requires this.</strong> Article 34.9 of the Spanish Workers' Statute has required since
+      2019 that a daily working time register is kept, held for four years and made available to the labour
+      inspectorate. Not keeping it is a fine.</p>
+  </div>
+
+  <p>
+    On the home screen, each person has a button that says <em>Clock in</em> or <em>Clock
+    out</em> depending on what is due. There is nothing to choose: the application knows from that person's last
+    entry. Whoever has no employee linked to their user does not see the button, because there is no working
+    day of theirs to record; that is linked in <em>Administration → Users</em>.
+  </p>
+
+  <p>
+    In <em>Administration → Working time</em> is everything else: choose a range and, if you want, a person.
+    At the top come the days with their shifts and the hours added up; underneath, the entries one by one. It
+    downloads to Excel, and that is what you show the inspectorate.
+  </p>
+
+  <h4>Correcting an entry</h4>
+
+  <p>
+    An entry <strong>is never edited and never deleted</strong>. Correcting it adds another line that
+    replaces it, with the right time, who put it there and the reason, which is required. The wrong entry
+    stays in sight, marked as corrected.
+  </p>
+
+  <p>
+    It may look awkward and it is exactly what makes this register worth something: one that could be
+    rewritten would prove nothing. If somebody clocked in by mistake and never came in, tick <em>This entry never
+    happened</em>; the line stays, but it stops counting.
+  </p>
+
+  <h4>The days that come out marked</h4>
+
+  <p>
+    If somebody clocks in and leaves without clocking out, that day comes out as an <strong>open shift</strong>
+    and <strong>with no hours</strong>. No closing time is invented for it, on purpose: a register with hours nobody
+    clocked is worse than an incomplete one, because the incomplete one shows and the invented one does not.
+    Correct it from the list of entries.
+  </p>
+
+  <p>
+    A shift that crosses midnight counts whole on the day it started, which is how whoever does the payroll
+    counts it. And breaks are not clocked: the law does not ask for them and every collective agreement counts
+    them differently, so inventing them here would mean counting wrong in almost all of them.
+  </p>
+
+  <h3 id="integraciones">Connecting an outside program (ERP)</h3>
+  <span class="ruta">Administration → Integrations</span>
+
+  <p>
+    If your accountant or your ERP wants to read the centre's data directly —the catalogue, the customers,
+    the sales— there is no need to give it a Turnera user. You register an <strong>integration</strong>, which is
+    a credential meant for a program and not for a person.
+  </p>
+
+  <p>When creating it you decide:</p>
+
+  <ul>
+    <li><strong>Name.</strong> How you will recognise it in the list. For instance, "the accountant's ERP".</li>
+    <li><strong>Delegation.</strong> The only one that program will see. It is fixed here because a program cannot
+      choose one on a screen, the way a person does when logging in.</li>
+    <li><strong>Scopes.</strong> What it may read: the catalogue, the customers or the sales. Grant only what it
+      needs.</li>
+    <li><strong>Allowed addresses.</strong> Which IP it can connect from, one per line. It accepts a range
+      written in CIDR, for example <code>203.0.113.0/24</code>.</li>
+  </ul>
+
+  <div class="ojo">
+    <p><strong>The secret is shown once only.</strong> On saving, the screen shows a
+      <code>client_id</code> and a <code>client_secret</code>. Copy them and pass them to whoever programs the ERP over a
+      secure channel: they are not stored in the clear and they cannot be looked up again. If they are lost,
+      they are rotated.</p>
+  </div>
+
+  <p>
+    <strong>There is no "from anywhere".</strong> An ERP runs on a server and that server has a fixed IP. If
+    they tell you it does not, that is a conversation worth having before handing over your customers' data.
+  </p>
+
+  <p>
+    <strong>Clinical records cannot be granted.</strong> It is not a permission that comes switched off: it does not
+    exist. The customers scope returns the administrative record —name, contact, address— and nothing of
+    history, cases or progress notes.
+  </p>
+
+  <p>
+    <strong>Read only.</strong> An outside program can read, never change. Nothing the ERP does alters an
+    appointment, a payment or a record.
+  </p>
+
+  <h4>Changing the secret without cutting the service</h4>
+
+  <p>
+    The <em>Rotate secret</em> issues a new one and <strong>keeps the previous one alive</strong>. That way the ERP is
+    reconfigured without a rush; once it answers with the new one, press <em>Retire the previous one</em> and the old one stops
+    working. While the rotation lasts, the list marks it.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Data protection.</strong> By authorising an integration, that program's provider starts
+      processing your customers' data on the centre's behalf. Note it in your register of processing
+      activities and check that you have the right processor agreement with them.</p>
+  </div>
+
+  <p>
+    Whoever programs the other side will find everything they need —how to authenticate, what is available
+    and how to paginate— in the technical guide <code>docs/api-integracion.md</code>.
   </p>
 </section>
 

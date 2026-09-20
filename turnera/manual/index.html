@@ -733,6 +733,14 @@ footer{
       siguiente, en el informe de anulaciones, ese motivo es lo único que explica qué pasó.</li>
   </ul>
 
+  <p>
+    <strong>El servicio pone la duración.</strong> Al elegir los servicios de la cita, la duración se ajusta
+    sola a lo que suman, redondeando hacia arriba al paso de esa cabina: dos servicios de veinte minutos en
+    una cabina que va de quince en quince ocupan cuarenta y cinco, no cuarenta. En cuanto usted toque el
+    selector de duración a mano, manda usted y dejamos de tocarlo. En una cita que ya existe tampoco se
+    recalcula nada: su duración es la que tiene.
+  </p>
+
   <div class="ojo">
     <p><strong>Anular no se deshace.</strong> Una cita anulada se queda a la vista, tachada, pero no se puede
       recuperar: hay que crearla otra vez. Y marcar a alguien como <em>No vino</em> también anula la cita, así que
@@ -945,6 +953,52 @@ footer{
   <p>
     En la agenda, el icono de vale de cada cita dice cuántas sesiones le quedan a ese cliente. Los bonos agotados o
     caducados no se cuentan.
+  </p>
+  <h3 id="bonos-traspaso">Traspasar un bono a otro cliente</h3>
+  <span class="ruta">Ficha del cliente → Bonos → Traspasar</span>
+
+  <p>
+    Alguien compra un bono de diez sesiones, se hace tres y se muda. El bono se puede pasar a otro cliente del
+    centro: se pulsa <em>Traspasar</em> en la línea del bono, se busca a quien lo recibe y ya está. El motivo
+    es opcional.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Un traspaso no se deshace.</strong> Si se ha equivocado de cliente, tiene que traspasarlo otra
+      vez al revés, y entonces se verán los dos. Es a propósito: el día que alguien pregunte por qué su bono
+      tiene menos sesiones de las que compró, ese rastro es lo único que hay para contestarle.</p>
+  </div>
+
+  <p>
+    De cada traspaso queda anotado <strong>de quién a quién, cuántas sesiones quedaban, quién lo hizo y la
+    fecha y la hora</strong>. Sale en las dos fichas, en el bloque <em>Bonos traspasados</em>: en la de quien
+    lo dio y en la de quien lo recibió.
+  </p>
+
+  <p>
+    Las sesiones que quedaban se guardan tal y como estaban ese día, porque el bono se sigue gastando después
+    y si no, dentro de un año nadie sabría cuánto se llevó puesto quien lo recibió.
+  </p>
+
+  <h4>Lo que no se puede</h4>
+
+  <ul>
+    <li><strong>Un bono caducado no se traspasa.</strong> Lo que ya no vale para quien lo compró tampoco vale
+      para quien lo reciba, y traspasarlo sería una forma silenciosa de resucitarlo. Si quiere darle más
+      tiempo, primero corrija la caducidad.</li>
+    <li><strong>Uno sin sesiones tampoco.</strong> No hay nada que pasar.</li>
+    <li><strong>Sólo entre clientes del mismo centro.</strong></li>
+  </ul>
+
+  <p>
+    <strong>El traspaso no mueve la venta.</strong> El bono lo pagó quien lo pagó: no se factura de nuevo ni se
+    rectifica nada. Es una cesión entre clientes, no una operación de caja, y en el cierre no aparece.
+  </p>
+
+  <p>
+    Hace falta el permiso <em>TRASPASAR BONOS</em>, que es distinto del de atenciones con el que se venden y se
+    gastan: cambiar de dueño un bono empezado no es lo mismo que cobrarlo, y no toda la recepción tiene por qué
+    poder hacerlo. Se da en <em>Administración → Usuarios</em>.
   </p>
 </section>
 
@@ -1274,6 +1328,228 @@ footer{
   <p>
     La pantalla viene apagada. Se enciende en <em>Administración → Preferencias → Borrador contable</em>, y
     conviene hacerlo cuando el IVA del catálogo esté repasado: antes de eso casi todo sale «sin asignar».
+  </p>
+  <h3 id="whatsapp">Avisos por WhatsApp</h3>
+  <span class="ruta">Administración → Preferencias → Avisos por WhatsApp</span>
+
+  <div class="ojo">
+    <p><strong>Esto todavía no envía.</strong> Falta la aprobación de Meta del lado de DEVEL. La pantalla ya
+      está, el texto se puede escribir y se ve cómo quedará, pero hasta que Meta apruebe no sale ningún
+      mensaje.</p>
+  </div>
+
+  <h4>La cuenta es suya, no nuestra</h4>
+
+  <p>
+    Usted conecta su propia cuenta de WhatsApp Business y pone su método de pago en ella. <strong>Meta le
+    factura a usted</strong>; nosotros no cobramos mensajes ni compartimos línea de crédito. Tres cosas que
+    conviene saber antes de empezar:
+  </p>
+
+  <ul>
+    <li>El recordatorio es una <strong>plantilla de utilidad</strong> y se paga por mensaje. En Europa no es
+      barato, y desde el 1 de octubre de 2026 también se cobran las de utilidad dentro de la ventana de 24
+      horas.</li>
+    <li>El número que conecte <strong>deja de funcionar en la app normal de WhatsApp</strong>. Conviene uno
+      dedicado, no el móvil del mostrador.</li>
+    <li>Hace falta verificación de negocio en Meta.</li>
+  </ul>
+
+  <h4>El texto del aviso</h4>
+
+  <p>
+    Lo escribe usted, con huecos entre llaves que se rellenan solos: <code>{nombre}</code>,
+    <code>{apellidos}</code>, <code>{servicio}</code>, <code>{profesional}</code>, <code>{fecha}</code>,
+    <code>{hora}</code>, <code>{centro}</code>, <code>{telefono}</code> y <code>{enlace}</code>. Debajo verá
+    cómo lo leerá el cliente.
+  </p>
+
+  <div class="ojo">
+    <p><strong>El texto lo aprueba Meta.</strong> Al guardarlo queda en <em>borrador</em>; se manda a revisión
+      con el botón y no se envía nada hasta que está <em>aprobado</em>. <strong>Cada vez que lo cambie vuelve
+      a borrador</strong> y hay que pasar otra vez por aprobación: lo que Meta aprobó era el texto anterior,
+      no el nuevo.</p>
+  </div>
+
+  <p>
+    Meta no entiende <code>{nombre}</code>: exige huecos numerados. Turnera hace la traducción sola y le
+    enseña el resultado en <em>Así se lo mandamos a Meta</em>, por si algún día tiene que discutir algo con
+    ellos. Un hueco que no exista se queda escrito tal cual para que lo vea al revisar, en vez de
+    desaparecer y dejar un mensaje raro en el móvil de un cliente.
+  </p>
+
+  <h3 id="consentimientos">Consentimientos informados</h3>
+  <span class="ruta">Ficha del cliente → Documentación firmada · Administración → Consentimientos</span>
+
+  <p>
+    El cliente firma en el <strong>iPad del mostrador</strong>. No se le manda nada por correo ni por WhatsApp,
+    y no se firma en su móvil: pantallas pequeñas, navegadores distintos y clientes mayores.
+  </p>
+
+  <h4>Cómo se firma</h4>
+
+  <ol>
+    <li>El iPad está siempre abierto en <em>Firmas</em>, con su propia sesión de recepción. Pregunta solo cada
+      pocos segundos si hay algo que firmar.</li>
+    <li>En la ficha del cliente, recepción pulsa <em>Pedir firma</em> y elige el documento.</li>
+    <li>El documento aparece solo en el iPad, ya con el nombre y el NIF puestos. El cliente lo lee y firma con
+      el dedo.</li>
+    <li>Se guarda el PDF, el trazo, la hora, la versión del texto y una huella del documento.</li>
+  </ol>
+
+  <div class="ojo">
+    <p><strong>La petición caduca a los quince minutos</strong> y sirve una sola vez. Es a propósito: una
+      petición olvidada encima del mostrador es una firma esperando a quien no debe. Si caduca, se vuelve a
+      pedir desde la ficha.</p>
+  </div>
+
+  <h4>Las plantillas</h4>
+
+  <p>
+    Se escriben en <em>Administración → Consentimientos</em>. En el texto puede dejar huecos que se rellenan
+    solos: <code>cliente</code>, <code>nif</code>, <code>centro</code>, <code>fecha</code> y
+    <code>tratamiento</code>, escritos entre dobles llaves.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Una plantilla no se modifica nunca.</strong> Al guardar cambios se crea la versión siguiente y
+      se retira la anterior. Lo que ya se firmó tiene que seguir existiendo tal y como se leyó: es la mitad de
+      lo que defiende esta firma el día que alguien discuta qué le explicaron.</p>
+  </div>
+
+  <p>
+    Si marca una plantilla como <strong>obligatoria</strong>, la ficha de cada cliente que no la tenga firmada
+    lo avisa. Sin ese aviso esto sería una carpeta de papeles: la gracia es enterarse antes de hacer el
+    tratamiento, no después.
+  </p>
+
+  <h4>Quién puede ver lo firmado</h4>
+
+  <p>
+    Recepción puede pedir la firma y acompañarla, pero <strong>descargar un consentimiento firmado necesita el
+    permiso de la historia clínica y queda registrado</strong> en el rastro de accesos, igual que abrir un caso.
+    Un consentimiento firmado es dato de salud. Así el iPad del mostrador puede estar todo el día abierto con
+    su sesión sin que esa sesión abra los documentos de nadie.
+  </p>
+
+  <p>
+    Es una <strong>firma electrónica simple</strong>. Lo que la sostiene no es el trazo: son el versionado del
+    texto, la hora y la huella del documento, que es lo que permite demostrar que el PDF que se enseña es el
+    mismo que se firmó.
+  </p>
+
+  <h3 id="presencia">Control de presencia (fichar)</h3>
+  <span class="ruta">Inicio → botón <em>Fichar</em> · Administración → Control de presencia</span>
+
+  <div class="ojo">
+    <p><strong>Esto lo exige la ley.</strong> El artículo 34.9 del Estatuto de los Trabajadores obliga desde
+      2019 a llevar un registro diario de jornada, a conservarlo cuatro años y a tenerlo a disposición de la
+      Inspección de Trabajo. No llevarlo es sanción.</p>
+  </div>
+
+  <p>
+    En la pantalla de inicio, cada persona tiene un botón que dice <em>Fichar entrada</em> o <em>Fichar
+    salida</em> según lo que toque. No hay que elegir: la aplicación lo sabe por el último fichaje de esa
+    persona. Quien no tenga un empleado asociado a su usuario no ve el botón, porque no hay jornada suya que
+    registrar; eso se asocia en <em>Administración → Usuarios</em>.
+  </p>
+
+  <p>
+    En <em>Administración → Control de presencia</em> está lo demás: elija un rango y, si quiere, una persona.
+    Arriba salen los días con sus tramos y las horas sumadas; abajo, los fichajes uno a uno. Se descarga en
+    Excel, y eso es lo que se le enseña a la Inspección.
+  </p>
+
+  <h4>Corregir un fichaje</h4>
+
+  <p>
+    Un fichaje <strong>no se edita ni se borra nunca</strong>. Al corregirlo se añade otra línea que lo
+    sustituye, con la hora buena, quién la puso y el motivo, que es obligatorio. El fichaje equivocado se
+    queda a la vista, marcado como corregido.
+  </p>
+
+  <p>
+    Puede parecer incómodo y es justo lo que hace que este registro valga: uno que se pudiera reescribir no
+    probaría nada. Si alguien fichó por error y no llegó a entrar, marque <em>Este fichaje no llegó a
+    pasar</em>; la línea se queda, pero deja de contar.
+  </p>
+
+  <h4>Los días que salen marcados</h4>
+
+  <p>
+    Si alguien ficha la entrada y se va sin fichar la salida, ese día sale como <strong>jornada abierta</strong>
+    y <strong>sin horas</strong>. No se le inventa una hora de cierre a propósito: un registro con horas que
+    nadie fichó es peor que uno incompleto, porque el incompleto se ve y el inventado no. Corríjalo desde la
+    lista de fichajes.
+  </p>
+
+  <p>
+    Un turno que cruza la medianoche se cuenta entero en el día en que empezó, que es como lo cuenta quien
+    hace las nóminas. Y las pausas no se fichan: la ley no las pide y cada convenio las cuenta de una manera,
+    así que inventarlas aquí sería contar mal en casi todos.
+  </p>
+
+  <h3 id="integraciones">Conectar un programa externo (ERP)</h3>
+  <span class="ruta">Administración → Integraciones</span>
+
+  <p>
+    Si su gestoría o su ERP quiere leer directamente los datos del centro —el catálogo, los clientes, las
+    ventas— no hace falta darle un usuario de Turnera. Se da de alta una <strong>integración</strong>, que es
+    una credencial pensada para un programa y no para una persona.
+  </p>
+
+  <p>Al crearla se decide:</p>
+
+  <ul>
+    <li><strong>Nombre.</strong> Cómo lo va a reconocer usted en la lista. Por ejemplo, «ERP de la asesoría».</li>
+    <li><strong>Delegación.</strong> La única que verá ese programa. Va fijada aquí porque un programa no puede
+      elegirla en una pantalla, como hace una persona al entrar.</li>
+    <li><strong>Permisos.</strong> Qué puede leer: el catálogo, los clientes o las ventas. Dé sólo lo que
+      necesite.</li>
+    <li><strong>Direcciones autorizadas.</strong> Desde qué IP puede conectarse, una por línea. Admite un rango
+      escrito en CIDR, por ejemplo <code>203.0.113.0/24</code>.</li>
+  </ul>
+
+  <div class="ojo">
+    <p><strong>El secreto se enseña una sola vez.</strong> Al guardar, la pantalla muestra un
+      <code>client_id</code> y un <code>client_secret</code>. Cópielos y páselos a quien programa el ERP por un
+      canal seguro: no se guardan en claro y no se pueden volver a consultar. Si se pierden, se rotan.</p>
+  </div>
+
+  <p>
+    <strong>No hay «desde cualquier sitio».</strong> Un ERP corre en un servidor y ese servidor tiene IP fija.
+    Si le dicen que no la tiene, esa es una conversación que conviene tener antes de darle los datos de sus
+    clientes.
+  </p>
+
+  <p>
+    <strong>La historia clínica no se puede dar.</strong> No es un permiso que venga apagado: es que no existe.
+    El permiso de clientes devuelve la ficha administrativa —nombre, contacto, dirección— y nada de
+    antecedentes, casos ni evoluciones.
+  </p>
+
+  <p>
+    <strong>Sólo lectura.</strong> Un programa externo puede leer, nunca modificar. Nada de lo que haga el ERP
+    cambia una cita, un cobro ni una ficha.
+  </p>
+
+  <h4>Cambiar el secreto sin cortar el servicio</h4>
+
+  <p>
+    El botón <em>Rotar secreto</em> genera uno nuevo y <strong>deja vivo el anterior</strong>. Así se configura
+    el ERP con calma; cuando ya responde con el nuevo, se pulsa <em>Retirar el anterior</em> y el viejo deja de
+    valer. Mientras dure la rotación, la lista lo indica con una marca.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Protección de datos.</strong> Al autorizar una integración, el proveedor de ese programa pasa a
+      tratar datos de sus clientes por cuenta del centro. Anótelo en su registro de actividades de tratamiento
+      y compruebe que tiene con él el contrato de encargado que corresponde.</p>
+  </div>
+
+  <p>
+    Quien programe el otro lado encontrará todo lo que necesita —cómo autenticarse, qué hay disponible y cómo
+    paginar— en la guía técnica <code>docs/api-integracion.md</code>.
   </p>
 </section>
 
