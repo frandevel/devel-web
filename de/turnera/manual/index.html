@@ -1146,7 +1146,8 @@ footer{
   <ul>
     <li><strong>Geräte</strong>: die Maschinen, die sich nicht teilen lassen, und was zu jeder Sitzung erfasst wird.
       Erklärt ist das unter <a href="#aparatos">Geräte und Zubehör</a>.</li>
-    <li><strong>Katalog</strong>: Leistungen, Produkte, Wertkartengruppen und Lieferanten.</li>
+    <li><strong>Katalog</strong>: Leistungen, Produkte, Bonusgruppen und Lieferanten. Jede Leistung und jedes
+      Produkt tragen außerdem <strong>ihre Mehrwertsteuer</strong>, die hier entschieden wird und nicht am Empfang.</li>
     <li><strong>Mitarbeiter</strong>: wer behandelt, seine Farbe im Terminkalender und seine Spalte.</li>
     <li><strong>Benutzer und Berechtigungen</strong>: wer hineinkommt, was er sehen darf und <strong>von welchen IP-Adressen</strong>.</li>
     <li><strong>Daten des Betriebs</strong>: Name, Steuernummer, Adresse und Logo. Das Logo steht im Kopf der PDFs
@@ -1215,6 +1216,64 @@ footer{
   <p>
     Das Logo des Betriebs bleibt in jedem Thema auf weißem Grund, auch im dunklen. Das ist Absicht: eine
     Marke für weißes Papier würde auf der Leiste verschwinden.
+  </p>
+
+  <h3 id="iva">Die Mehrwertsteuer von allem, was verkauft wird</h3>
+  <span class="ruta">Verwaltung → Katalog → Leistungen / Produkte</span>
+
+  <p>
+    Im Formular jeder Leistung und jedes Produkts steht unter dem Preis eine Auswahl <strong>MwSt.</strong>
+    mit fünf Möglichkeiten: <em>21 %</em>, <em>10 %</em>, <em>4 %</em>, <em>Befreit</em> und <em>Offen</em>.
+  </p>
+
+  <p>
+    <strong>Es wird hier entschieden, beim Anlegen.</strong> Und zwar mit Absicht: wer gerade mit dem Kunden vor sich
+    kassiert, muss nicht wissen, ob eine Sitzung befreit ist, und in dem Moment danach zu fragen ist der
+    schnellste Weg zu Büchern, die nicht stimmen. Der Katalog trägt es, der Bon erbt es.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Befreit ist nicht „mit 0 %“.</strong> Eine Sitzung mit therapeutischem Zweck durch eine medizinische
+      Fachkraft ist <em>befreit</em> nach Artikel 20 des spanischen Umsatzsteuergesetzes, und das ist etwas anderes als ein
+      Satz von null Prozent: die Rechnung muss sagen, warum. Deshalb gibt es eine eigene Option <em>Befreit</em>
+      und keine Null in der Liste der Sätze.</p>
+  </div>
+
+  <p>
+    <strong>Offen</strong> ist kein Fehler, so sieht der erste Tag aus. Lassen Sie es dort, wo Sie unsicher sind,
+    und gehen Sie es mit Ihrer Steuerberatung durch; der Buchhaltungsentwurf sagt Ihnen genau, was fehlt.
+  </p>
+
+  <h3 id="contabilidad">Der Buchhaltungsentwurf</h3>
+  <span class="ruta">Berichte → Buchhaltungsentwurf</span>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/20-borrador-contable.png" alt="Der Buchhaltungsentwurf von Turnera, mit der Summe pro Tag und Steuersatz" loading="lazy">
+    <figcaption>Ein Eintrag pro Tag und Steuersatz, mit Bemessungsgrundlage, Steuer und Bonnummern.</figcaption>
+  </figure>
+
+  <div class="ojo">
+    <p><strong>Entwurf zur Durchsicht mit Ihrer Steuerberatung. Er ersetzt Ihre Bücher nicht.</strong> Es wird keine Rechnung
+      ausgestellt oder nummeriert: diese Seite liest nur die Bons, die es schon gibt, und zählt sie zusammen.
+      Die Sätze sind die, die der Katalog <em>heute</em> hat; ändern Sie einen, ändert sich auch der Entwurf
+      vergangener Monate.</p>
+  </div>
+
+  <p>
+    Es ist der <strong>Sammelbuchungssatz</strong> den die Steuerberatung verlangt: ein Eintrag pro Tag und Satz, mit
+    Bemessungsgrundlage, Steuer und Bonnummern, statt vierhundert einzelner Zeilen. Als Excel herunterladbar.
+  </p>
+
+  <p>
+    Oben steht, wie viel Geld <strong>ohne gesetzten Steuersatz</strong>ist. Diese Zeilen tragen mit Absicht weder
+    Bemessungsgrundlage noch Steuer bei: sie sich auszudenken wäre genau das Gegenteil dessen, wofür es diese
+    Seite gibt. Sie sind die Liste dessen, was im Katalog durchzugehen ist.
+  </p>
+
+  <p>
+    Die Seite ist zunächst aus. Eingeschaltet wird sie unter <em>Verwaltung → Voreinstellungen → Buchhaltungsentwurf</em>, und das lohnt
+    sich, sobald die Mehrwertsteuer des Katalogs durchgegangen ist: davor kommt fast alles als „nicht gesetzt“
+    heraus.
   </p>
 </section>
 

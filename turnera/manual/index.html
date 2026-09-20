@@ -1147,7 +1147,8 @@ footer{
   <ul>
     <li><strong>Aparatos</strong>: las máquinas que no se pueden compartir y lo que se anota de cada sesión.
       Está explicado en <a href="#aparatos">Aparatología</a>.</li>
-    <li><strong>Catálogo</strong>: servicios, productos, grupos de bonos y proveedores.</li>
+    <li><strong>Catálogo</strong>: servicios, productos, grupos de bonos y proveedores. Cada servicio y cada
+      producto llevan además <strong>su IVA</strong>, que se decide aquí y no en el mostrador.</li>
     <li><strong>Profesionales</strong>: quién atiende, su color en la agenda y su columna.</li>
     <li><strong>Usuarios y permisos</strong>: quién entra, qué puede ver y <strong>desde qué direcciones IP</strong>.</li>
     <li><strong>Datos del centro</strong>: nombre, NIF, dirección y logotipo. El logotipo encabeza los PDF
@@ -1216,6 +1217,63 @@ footer{
   <p>
     El logotipo del centro se queda sobre fondo blanco en todos los temas, incluido el oscuro. Es a propósito:
     una marca pensada para papel blanco desaparecería sobre la barra.
+  </p>
+
+  <h3 id="iva">El IVA de cada cosa que se vende</h3>
+  <span class="ruta">Administración → Catálogo → Servicios / Productos</span>
+
+  <p>
+    En la ficha de cada servicio y de cada producto, debajo del precio, hay un desplegable de <strong>IVA</strong>
+    con cinco opciones: <em>21 %</em>, <em>10 %</em>, <em>4 %</em>, <em>Exento</em> y <em>Sin decidir</em>.
+  </p>
+
+  <p>
+    <strong>Se decide aquí, al dar de alta.</strong> Es a propósito: quien está cobrando con el cliente delante
+    no tiene por qué saber si una sesión está exenta, y preguntárselo en ese momento es la forma más rápida de
+    acabar con unos libros que no cuadran. El catálogo lo lleva puesto y el ticket lo hereda.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Exento no es «al 0 %».</strong> Una sesión con finalidad terapéutica prestada por un profesional
+      sanitario está <em>exenta</em> por el artículo 20 de la Ley del IVA, y eso es un dato distinto de un tipo
+      del cero por ciento: la factura tiene que decir por qué lo está. Por eso hay una opción <em>Exento</em>
+      aparte y no un cero en la lista de tipos.</p>
+  </div>
+
+  <p>
+    <strong>Sin decidir</strong> no es un fallo, es lo normal el primer día. Déjelo así en lo que no tenga
+    claro y repáselo con su asesoría; el borrador contable le dirá exactamente lo que falta.
+  </p>
+
+  <h3 id="contabilidad">El borrador contable</h3>
+  <span class="ruta">Informes → Borrador contable</span>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/20-borrador-contable.png" alt="El borrador contable de Turnera, con el resumen por dia y por tipo de IVA" loading="lazy">
+    <figcaption>Un apunte por día y por tipo de IVA, con su base, su cuota y el rango de tickets.</figcaption>
+  </figure>
+
+  <div class="ojo">
+    <p><strong>Borrador para revisar con su asesoría. No sustituye a sus libros.</strong> No se emite ni se
+      numera ninguna factura: esta pantalla sólo lee los tickets que ya existen y los suma. Los tipos que usa
+      son los que tiene <em>hoy</em> el catálogo, así que si cambia uno, el borrador de meses pasados cambia
+      con él.</p>
+  </div>
+
+  <p>
+    Es el <strong>asiento resumen</strong> que pide la asesoría: un apunte por día y por tipo, con la base, la
+    cuota y el rango de tickets de cada uno, en vez de cuatrocientas líneas sueltas. Se descarga en Excel.
+  </p>
+
+  <p>
+    Arriba avisa de cuánto dinero hay <strong>sin tipo de IVA asignado</strong>. Esas líneas no suman base ni
+    cuota a propósito: inventárselas sería justo lo contrario de para lo que existe esta pantalla. Son la lista
+    de lo que hay que repasar en el catálogo.
+  </p>
+
+  <p>
+    La pantalla viene apagada. Se enciende en <em>Administración → Preferencias → Borrador contable</em>, y
+    conviene hacerlo cuando el IVA del catálogo esté repasado: antes de eso casi todo sale «sin asignar».
   </p>
 </section>
 

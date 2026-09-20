@@ -1146,7 +1146,8 @@ footer{
   <ul>
     <li><strong>Devices</strong>: the machines that cannot be shared and what is recorded for each session.
       It is explained under <a href="#aparatos">Equipment</a>.</li>
-    <li><strong>Catalogue</strong>: services, products, voucher groups and suppliers.</li>
+    <li><strong>Catalogue</strong>: services, products, voucher groups and providers. Each service and each
+      product also carries <strong>its VAT</strong>, which is decided here and not at the counter.</li>
     <li><strong>Staff</strong>: who sees customers, their colour on the agenda and their column.</li>
     <li><strong>Users and permissions</strong>: who gets in, what they can see and <strong>from which IP addresses</strong>.</li>
     <li><strong>Centre details</strong>: name, tax ID, address and logo. The logo heads the PDFs
@@ -1215,6 +1216,65 @@ footer{
   <p>
     The logo of the centre stays on a white background in every theme, the dark one included. That is on
     purpose: a mark meant for white paper would disappear on the bar.
+  </p>
+
+  <h3 id="iva">The VAT of each thing that is sold</h3>
+  <span class="ruta">Administration → Catalogue → Services / Products</span>
+
+  <p>
+    On the form of each service and each product, under the price, there is a <strong>VAT</strong>
+    dropdown with five options: <em>21 %</em>, <em>10 %</em>, <em>4 %</em>, <em>Exempt</em> and <em>Undecided</em>.
+  </p>
+
+  <p>
+    <strong>It is decided here, when the item is created.</strong> That is on purpose: whoever is taking the money with the customer
+    in front of them has no reason to know whether a session is exempt, and asking at that moment is the
+    quickest way to end up with books that do not add up. The catalogue carries it and the ticket inherits it.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Exempt is not «at 0 %».</strong> A session with a therapeutic purpose given by a healthcare
+      professional is <em>exempt</em> under article 20 of the VAT Act, and that is a different fact from a rate of
+      zero per cent: the invoice has to say why. That is why there is a separate <em>Exempt</em>
+      option and not a zero in the list of rates.</p>
+  </div>
+
+  <p>
+    <strong>Undecided</strong> is not a fault, it is what the first day looks like. Leave it there for whatever you are
+    not sure about and go through it with your accountant; the draft accounting summary will tell you exactly
+    what is missing.
+  </p>
+
+  <h3 id="contabilidad">The draft accounting summary</h3>
+  <span class="ruta">Reports → Draft accounting summary</span>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/20-borrador-contable.png" alt="The draft accounting summary of Turnera, with the total per day and VAT rate" loading="lazy">
+    <figcaption>One entry per day and VAT rate, with its base, its tax and the range of tickets.</figcaption>
+  </figure>
+
+  <div class="ojo">
+    <p><strong>A draft to review with your accountant. It does not replace your books.</strong> No invoice is issued or
+      numbered: this screen only reads the tickets that already exist and adds them up. The rates it uses are
+      the ones the catalogue has <em>today</em> , so if you change one, the draft of past months changes
+      with it.</p>
+  </div>
+
+  <p>
+    It is the <strong>summary entry</strong> your accountant asks for: one entry per day and rate, with the base, the
+    tax and the range of tickets of each, instead of four hundred loose lines. It downloads to Excel.
+  </p>
+
+  <p>
+    At the top it says how much money there is <strong>with no VAT set</strong>. Those lines add no base and no
+    tax on purpose: making them up would be the very opposite of what this screen is for. They are the list of
+    what to go through in the catalogue.
+  </p>
+
+  <p>
+    The screen comes switched off. It is switched on under <em>Administration → Preferences → Draft accounting summary</em>, and it is
+    worth doing once the VAT of the catalogue has been gone through: before that almost everything comes out
+    «not set».
   </p>
 </section>
 
