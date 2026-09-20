@@ -1146,12 +1146,36 @@ footer{
       Erklärt ist das unter <a href="#aparatos">Geräte und Zubehör</a>.</li>
     <li><strong>Katalog</strong>: Leistungen, Produkte, Wertkartengruppen und Lieferanten.</li>
     <li><strong>Mitarbeiter</strong>: wer behandelt, seine Farbe im Terminkalender und seine Spalte.</li>
-    <li><strong>Benutzer und Berechtigungen</strong>: wer sich anmeldet und was er sehen darf.</li>
+    <li><strong>Benutzer und Berechtigungen</strong>: wer hineinkommt, was er sehen darf und <strong>von welchen Rechnern aus</strong>.</li>
     <li><strong>Daten des Betriebs</strong>: Name, Steuernummer, Adresse und Logo. Das Logo steht im Kopf der PDFs
       — Bons, Kostenvoranschläge, Terminkalender — und <strong>ersetzt oben im Menü das von Turnera</strong>, auf weißem Grund, damit es in jeder
       Farbe lesbar bleibt. Solange keines hochgeladen wird, erscheint dort das von Turnera.</li>
     <li><strong>E-Mail</strong>: das Gateway, über das die Benachrichtigungen und die Codes des Portals verschickt werden.</li>
   </ul>
+
+  <h3>Von welchen Rechnern sich jeder Benutzer anmelden darf</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/18-equipos-autorizados.png" alt="Das Formular eines Benutzers mit dem Feld für zugelassene Rechner" loading="lazy">
+    <figcaption>Im Benutzerformular steht unter den Berechtigungen die Liste der Rechner, von denen aus er sich anmelden darf.</figcaption>
+  </figure>
+
+  <p>
+    Unter <em>Verwaltung → Benutzer und Berechtigungen</em> gibt es beim Bearbeiten eines Benutzers das Feld <strong>Zugelassene Rechner</strong>. Dort stehen <strong>IP-Adressen</strong>: eine pro Zeile, eintippen und Enter
+    drücken, mehrere sind möglich. Mit dem Wort <code>any</code> meldet sich der Benutzer von überall an,
+    und so kommt jedes Konto von Haus aus.
+  </p>
+
+  <p>
+    Es tut genau das, wonach es aussieht: das Konto des Empfangs funktioniert im Betrieb und nicht von zu
+    Hause. Wer es von anderswo versucht, sieht dasselbe „Anmeldung nicht möglich“ wie bei falschem Passwort, und
+    der Versuch wird protokolliert.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Dafür braucht der Betrieb eine feste IP.</strong> Bei einer wechselnden Adresse ist dieser Benutzer an dem Tag ausgesperrt, an
+      dem der Anbieter sie ändert. Lassen Sie immer ein Verwaltungskonto auf
+      <code>any</code>, sonst gibt es keinen Weg zurück.</p>
+  </div>
 </section>
 
 <section id="historia">

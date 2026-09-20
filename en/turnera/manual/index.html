@@ -1131,7 +1131,7 @@ footer{
 
   <h3>Rooms, courts and studios</h3>
   <figure>
-    <img src="/turnera/manual/imagenes/15-recursos.png" alt="The list of the centre's rooms and studios with their order and their colour" loading="lazy">
+    <img src="/turnera/manual/imagenes/15-recursos.png" alt="The list of the centre's rooms and cabins with their order and their colour" loading="lazy">
     <figcaption>The rooms, courts and studios, with their order in the agenda and their colour.</figcaption>
   </figure>
 
@@ -1146,12 +1146,36 @@ footer{
       It is explained under <a href="#aparatos">Equipment</a>.</li>
     <li><strong>Catalogue</strong>: services, products, voucher groups and suppliers.</li>
     <li><strong>Staff</strong>: who sees customers, their colour on the agenda and their column.</li>
-    <li><strong>Users and permissions</strong>: who logs in and what they can see.</li>
+    <li><strong>Users and permissions</strong>: who gets in, what they can see and <strong>from which computers</strong>.</li>
     <li><strong>Centre details</strong>: name, tax ID, address and logo. The logo heads the PDFs
       —tickets, quotes, agenda— and <strong>replaces Turnera's at the top of the menu</strong>, on a white background so that it reads
       whatever colour it is. Until one is uploaded, Turnera's appears there.</li>
     <li><strong>Email</strong>: the gateway the notifications and the portal codes go out through.</li>
   </ul>
+
+  <h3>Which computers each user can sign in from</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/18-equipos-autorizados.png" alt="The form of a user with the authorised computers field" loading="lazy">
+    <figcaption>On the user's form, under the permissions, is the list of computers they can sign in from.</figcaption>
+  </figure>
+
+  <p>
+    In <em>Administration → Users and permissions</em>, when you edit a user there is a field <strong>Authorised computers</strong>. What goes in there are <strong>IP addresses</strong>: one per line, you type it and press Enter,
+    and you can add several. With the word <code>any</code> the user signs in from anywhere, which is
+    what every account starts with.
+  </p>
+
+  <p>
+    It does what it looks like it does: it keeps the front desk account working inside the centre and not from
+    home. Whoever tries from somewhere else sees the same “could not sign in” as with a wrong password, and the
+    attempt is recorded.
+  </p>
+
+  <div class="ojo">
+    <p><strong>This needs the centre to have a fixed IP.</strong> With an address that changes, the day the provider changes it that user is
+      locked out. Always leave one administration account on
+      <code>any</code>, or there will be nowhere to fix it from.</p>
+  </div>
 </section>
 
 <section id="historia">

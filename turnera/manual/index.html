@@ -1147,12 +1147,37 @@ footer{
       Está explicado en <a href="#aparatos">Aparatología</a>.</li>
     <li><strong>Catálogo</strong>: servicios, productos, grupos de bonos y proveedores.</li>
     <li><strong>Profesionales</strong>: quién atiende, su color en la agenda y su columna.</li>
-    <li><strong>Usuarios y permisos</strong>: quién entra y qué puede ver.</li>
+    <li><strong>Usuarios y permisos</strong>: quién entra, qué puede ver y <strong>desde qué equipos</strong>.</li>
     <li><strong>Datos del centro</strong>: nombre, NIF, dirección y logotipo. El logotipo encabeza los PDF
       —tickets, presupuestos, agenda— y <strong>sustituye al de Turnera arriba del menú</strong>, sobre un fondo blanco para que
       se lea sea del color que sea. Mientras no se suba ninguno, ahí sale el de Turnera.</li>
     <li><strong>Correo</strong>: la pasarela con la que salen los avisos y los códigos del portal.</li>
   </ul>
+
+  <h3>Desde qué equipos puede entrar cada usuario</h3>
+  <figure>
+    <img src="/turnera/manual/imagenes/18-equipos-autorizados.png" alt="La ficha de un usuario con el campo de equipos autorizados" loading="lazy">
+    <figcaption>En la ficha del usuario, debajo de los permisos, está la lista de equipos desde los que puede entrar.</figcaption>
+  </figure>
+
+  <p>
+    En <em>Administración → Usuarios y permisos</em>, al editar un usuario hay un campo <strong>Equipos
+    autorizados</strong>. Lo que se escribe ahí son <strong>direcciones IP</strong>: una por línea, se teclea y se
+    pulsa Intro, y se pueden poner varias. Con la palabra <code>any</code> el usuario entra desde donde sea, que
+    es lo que traen todos de fábrica.
+  </p>
+
+  <p>
+    Sirve para lo que parece: que la cuenta del mostrador funcione dentro del centro y no desde casa. Quien lo
+    intenta desde otro sitio ve el mismo «no se ha podido entrar» que con la contraseña mal puesta, y el intento
+    queda registrado.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Esto pide que el centro tenga IP fija.</strong> Con una dirección que cambia, el día que la
+      cambie el operador ese usuario se queda fuera. Deje siempre una cuenta de administración con
+      <code>any</code>, o no habrá desde dónde arreglarlo.</p>
+  </div>
 </section>
 
 <section id="historia">
