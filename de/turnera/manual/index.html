@@ -751,8 +751,10 @@ footer{
   <h3 id="agenda-senales">Was jede Karte anzeigt</h3>
 
   <p>
-    Die Farbe der Karte ist der Status des Termins — wartend, läuft, behandelt, nicht erschienen — und die Legende
-    unter der Überschrift erklärt die Farben. Darüber hinaus gibt es vier Zeichen:
+    Die Farbe der Karte ist der Status des Termins — wartend, läuft, behandelt, nicht erschienen — und die
+    Legende unter dem Titel erklärt sie. Mit dem <a href="#tema">dunklen Thema</a> werden dieselben Status heller gezeichnet, und
+    „nicht erschienen“, auf hellem Grund fast schwarz, wird fast weiß: es bleibt das, was aus der Reihe fällt.
+    Über der Farbe gibt es vier Zeichen:
   </p>
 
   <div class="tabla-envoltorio">
@@ -1146,23 +1148,25 @@ footer{
       Erklärt ist das unter <a href="#aparatos">Geräte und Zubehör</a>.</li>
     <li><strong>Katalog</strong>: Leistungen, Produkte, Wertkartengruppen und Lieferanten.</li>
     <li><strong>Mitarbeiter</strong>: wer behandelt, seine Farbe im Terminkalender und seine Spalte.</li>
-    <li><strong>Benutzer und Berechtigungen</strong>: wer hineinkommt, was er sehen darf und <strong>von welchen Rechnern aus</strong>.</li>
+    <li><strong>Benutzer und Berechtigungen</strong>: wer hineinkommt, was er sehen darf und <strong>von welchen IP-Adressen</strong>.</li>
     <li><strong>Daten des Betriebs</strong>: Name, Steuernummer, Adresse und Logo. Das Logo steht im Kopf der PDFs
       — Bons, Kostenvoranschläge, Terminkalender — und <strong>ersetzt oben im Menü das von Turnera</strong>, auf weißem Grund, damit es in jeder
       Farbe lesbar bleibt. Solange keines hochgeladen wird, erscheint dort das von Turnera.</li>
     <li><strong>E-Mail</strong>: das Gateway, über das die Benachrichtigungen und die Codes des Portals verschickt werden.</li>
   </ul>
 
-  <h3>Von welchen Rechnern sich jeder Benutzer anmelden darf</h3>
+  <h3>Von welchen IP-Adressen sich jeder Benutzer anmelden darf</h3>
+  <span class="ruta">Verwaltung → Benutzer und Berechtigungen → (ein Benutzer)</span>
+
   <figure>
-    <img src="/turnera/manual/imagenes/18-equipos-autorizados.png" alt="Das Formular eines Benutzers mit dem Feld für zugelassene Rechner" loading="lazy">
-    <figcaption>Im Benutzerformular steht unter den Berechtigungen die Liste der Rechner, von denen aus er sich anmelden darf.</figcaption>
+    <img src="/turnera/manual/imagenes/18-equipos-autorizados.png" alt="Das Formular eines Benutzers mit dem Feld für zugelassene IP-Adressen" loading="lazy">
+    <figcaption>Im Benutzerformular steht unter den Berechtigungen die Liste der Adressen, von denen aus er sich anmelden darf.</figcaption>
   </figure>
 
   <p>
-    Unter <em>Verwaltung → Benutzer und Berechtigungen</em> gibt es beim Bearbeiten eines Benutzers das Feld <strong>Zugelassene Rechner</strong>. Dort stehen <strong>IP-Adressen</strong>: eine pro Zeile, eintippen und Enter
-    drücken, mehrere sind möglich. Mit dem Wort <code>any</code> meldet sich der Benutzer von überall an,
-    und so kommt jedes Konto von Haus aus.
+    Beim Bearbeiten eines Benutzers gibt es das Feld <strong>Zugelassene IP-Adressen</strong>: eine eintippen, Enter drücken,
+    mehrere sind möglich. Mit dem Wort <code>any</code> meldet sich der Benutzer von überall an, und so
+    kommt jedes Konto von Haus aus; lässt man es leer, steht wieder <code>any</code>.
   </p>
 
   <p>
@@ -1176,6 +1180,42 @@ footer{
       dem der Anbieter sie ändert. Lassen Sie immer ein Verwaltungskonto auf
       <code>any</code>, sonst gibt es keinen Weg zurück.</p>
   </div>
+
+  <h3 id="tema">Wie die Anwendung aussieht</h3>
+  <span class="ruta">Verwaltung → Voreinstellungen → Wie die Anwendung aussieht</span>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/19-tema-oscuro.png" alt="Der Terminkalender von Turnera mit dem dunklen Thema" loading="lazy">
+    <figcaption>Der Terminkalender mit dem dunklen Thema, gedacht für Räume mit wenig Licht.</figcaption>
+  </figure>
+
+  <p>
+    Es gibt fünf Themen, und eines gilt für den ganzen Betrieb. Vier sind Farbthemen —<strong>Turnera-Grün</strong>,
+    <strong>Nachtblau</strong>, <strong>Pflaume</strong> und <strong>Terrakotta</strong>— und sie ändern nur die linke Leiste,
+    den Ton des Hintergrunds und die Linien des Terminkalenders; sie sind dafür da, dass die Anwendung nicht
+    mit der Identität des Betriebs beißt. Das fünfte ist <strong>Dunkel</strong>, und das dreht den ganzen Bildschirm um.
+  </p>
+
+  <p>
+    Das dunkle ist für Empfänge und Räume, die mit Absicht wenig Licht haben und wo ein weißer Bildschirm
+    blendet. Darin werden die Statusfarben des Terminkalenders aufgehellt, damit sie lesbar bleiben, also
+    <strong>ändert die Legende die Töne, nicht die Bedeutung</strong>: was blau war, bleibt blau, und was fast
+    schwarz war, wird fast weiß.
+  </p>
+
+  <p>
+    Das Grün der Schaltflächen ändert sich mit dem Thema nicht: es ist die Farbe einer Aktion, und das ist es in allen fünf.
+  </p>
+
+  <p>
+    Das Thema sieht man, sobald man es in der Auswahl wählt, noch vor dem Speichern, um sie vergleichen zu können. <strong>Es bleibt erst,
+    wenn Speichern gedrückt wird</strong>: verlässt man die Seite ohne zu speichern, kommt das vorherige zurück.
+  </p>
+
+  <p>
+    Das Logo des Betriebs bleibt in jedem Thema auf weißem Grund, auch im dunklen. Das ist Absicht: eine
+    Marke für weißes Papier würde auf der Leiste verschwinden.
+  </p>
 </section>
 
 <section id="historia">

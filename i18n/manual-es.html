@@ -750,7 +750,9 @@ footer{
 
   <p>
     El color de la tarjeta es el estado de la cita — esperando, en curso, atendida, no vino — y la leyenda de
-    debajo del título los explica. Encima de eso hay cuatro señales:
+    debajo del título los explica. Con el <a href="#tema">tema oscuro</a> los mismos estados se pintan más
+    claros, y el de «no vino», que sobre fondo claro es casi negro, pasa a ser casi blanco: sigue siendo el que
+    se sale de la escala. Encima del color hay cuatro señales:
   </p>
 
   <div class="tabla-envoltorio">
@@ -1144,24 +1146,25 @@ footer{
       Está explicado en <a href="#aparatos">Aparatología</a>.</li>
     <li><strong>Catálogo</strong>: servicios, productos, grupos de bonos y proveedores.</li>
     <li><strong>Profesionales</strong>: quién atiende, su color en la agenda y su columna.</li>
-    <li><strong>Usuarios y permisos</strong>: quién entra, qué puede ver y <strong>desde qué equipos</strong>.</li>
+    <li><strong>Usuarios y permisos</strong>: quién entra, qué puede ver y <strong>desde qué direcciones IP</strong>.</li>
     <li><strong>Datos del centro</strong>: nombre, NIF, dirección y logotipo. El logotipo encabeza los PDF
       —tickets, presupuestos, agenda— y <strong>sustituye al de Turnera arriba del menú</strong>, sobre un fondo blanco para que
       se lea sea del color que sea. Mientras no se suba ninguno, ahí sale el de Turnera.</li>
     <li><strong>Correo</strong>: la pasarela con la que salen los avisos y los códigos del portal.</li>
   </ul>
 
-  <h3>Desde qué equipos puede entrar cada usuario</h3>
+  <h3>Desde qué direcciones IP puede entrar cada usuario</h3>
+  <span class="ruta">Administración → Usuarios y permisos → (un usuario)</span>
+
   <figure>
-    <img src="/turnera/manual/imagenes/18-equipos-autorizados.png" alt="La ficha de un usuario con el campo de equipos autorizados" loading="lazy">
-    <figcaption>En la ficha del usuario, debajo de los permisos, está la lista de equipos desde los que puede entrar.</figcaption>
+    <img src="/turnera/manual/imagenes/18-equipos-autorizados.png" alt="La ficha de un usuario con el campo de direcciones IP autorizadas" loading="lazy">
+    <figcaption>En la ficha del usuario, debajo de los permisos, está la lista de direcciones desde las que puede entrar.</figcaption>
   </figure>
 
   <p>
-    En <em>Administración → Usuarios y permisos</em>, al editar un usuario hay un campo <strong>Equipos
-    autorizados</strong>. Lo que se escribe ahí son <strong>direcciones IP</strong>: una por línea, se teclea y se
-    pulsa Intro, y se pueden poner varias. Con la palabra <code>any</code> el usuario entra desde donde sea, que
-    es lo que traen todos de fábrica.
+    Al editar un usuario hay un campo <strong>Direcciones IP autorizadas</strong>: se escribe una, se pulsa
+    Intro, y se pueden poner varias. Con la palabra <code>any</code> el usuario entra desde donde sea, que es lo
+    que traen todos de fábrica; dejándolo vacío vuelve a ponerse <code>any</code>.
   </p>
 
   <p>
@@ -1175,6 +1178,42 @@ footer{
       cambie el operador ese usuario se queda fuera. Deje siempre una cuenta de administración con
       <code>any</code>, o no habrá desde dónde arreglarlo.</p>
   </div>
+
+  <h3 id="tema">Cómo se ve la aplicación</h3>
+  <span class="ruta">Administración → Preferencias → Cómo se ve la aplicación</span>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/19-tema-oscuro.png" alt="La agenda de Turnera con el tema oscuro" loading="lazy">
+    <figcaption>La agenda con el tema oscuro, pensada para las salas que trabajan con poca luz.</figcaption>
+  </figure>
+
+  <p>
+    Hay cinco temas y se elige uno para todo el centro. Cuatro son de color —<strong>Verde Turnera</strong>,
+    <strong>Azul noche</strong>, <strong>Ciruela</strong> y <strong>Terracota</strong>— y sólo cambian la barra
+    de la izquierda, el tono del fondo y las rayas de la agenda; sirven para que la aplicación no desentone con
+    la identidad del centro. El quinto es <strong>Oscuro</strong>, y ése sí da la vuelta a la pantalla entera.
+  </p>
+
+  <p>
+    El oscuro está para las recepciones y las salas que trabajan con poca luz a propósito, donde una pantalla
+    blanca deslumbra. En él los colores de los estados de la agenda se aclaran para que sigan leyéndose, así que
+    <strong>la leyenda cambia de tonos pero no de significado</strong>: lo que era azul sigue siendo azul, y lo
+    que era casi negro pasa a ser casi blanco.
+  </p>
+
+  <p>
+    El verde de los botones no cambia con el tema: es el color de una acción, y lo es en los cinco.
+  </p>
+
+  <p>
+    El tema se ve nada más elegirlo en el desplegable, antes de guardar, para poder compararlos. <strong>No
+    queda puesto hasta que se pulsa Guardar</strong>: si sale de la pantalla sin guardar, vuelve el anterior.
+  </p>
+
+  <p>
+    El logotipo del centro se queda sobre fondo blanco en todos los temas, incluido el oscuro. Es a propósito:
+    una marca pensada para papel blanco desaparecería sobre la barra.
+  </p>
 </section>
 
 <section id="historia">

@@ -751,8 +751,10 @@ footer{
   <h3 id="agenda-senales">What each card tells you</h3>
 
   <p>
-    The colour of the card is the state of the appointment — waiting, in progress, seen, no show — and the key
-    below the title explains them. On top of that there are four signals:
+    The colour of the card is the status of the appointment — waiting, in progress, seen, did not come — and the
+    legend under the title explains them. With the <a href="#tema">dark theme</a> the same statuses are painted lighter,
+    and «did not come», which on a light background is almost black, becomes almost white: it is still the one
+    that falls outside the scale. On top of the colour there are four signs:
   </p>
 
   <div class="tabla-envoltorio">
@@ -1146,23 +1148,25 @@ footer{
       It is explained under <a href="#aparatos">Equipment</a>.</li>
     <li><strong>Catalogue</strong>: services, products, voucher groups and suppliers.</li>
     <li><strong>Staff</strong>: who sees customers, their colour on the agenda and their column.</li>
-    <li><strong>Users and permissions</strong>: who gets in, what they can see and <strong>from which computers</strong>.</li>
+    <li><strong>Users and permissions</strong>: who gets in, what they can see and <strong>from which IP addresses</strong>.</li>
     <li><strong>Centre details</strong>: name, tax ID, address and logo. The logo heads the PDFs
       —tickets, quotes, agenda— and <strong>replaces Turnera's at the top of the menu</strong>, on a white background so that it reads
       whatever colour it is. Until one is uploaded, Turnera's appears there.</li>
     <li><strong>Email</strong>: the gateway the notifications and the portal codes go out through.</li>
   </ul>
 
-  <h3>Which computers each user can sign in from</h3>
+  <h3>Which IP addresses each user can sign in from</h3>
+  <span class="ruta">Administration → Users and permissions → (a user)</span>
+
   <figure>
-    <img src="/turnera/manual/imagenes/18-equipos-autorizados.png" alt="The form of a user with the authorised computers field" loading="lazy">
-    <figcaption>On the user's form, under the permissions, is the list of computers they can sign in from.</figcaption>
+    <img src="/turnera/manual/imagenes/18-equipos-autorizados.png" alt="The form of a user with the allowed IP addresses field" loading="lazy">
+    <figcaption>On the user's form, under the permissions, is the list of addresses they can sign in from.</figcaption>
   </figure>
 
   <p>
-    In <em>Administration → Users and permissions</em>, when you edit a user there is a field <strong>Authorised computers</strong>. What goes in there are <strong>IP addresses</strong>: one per line, you type it and press Enter,
-    and you can add several. With the word <code>any</code> the user signs in from anywhere, which is
-    what every account starts with.
+    When you edit a user there is a field <strong>Allowed IP addresses</strong>: you type one, press Enter,
+    and you can add several. With the word <code>any</code> the user signs in from anywhere, which is what
+    every account starts with; leaving it empty puts <code>any</code>.
   </p>
 
   <p>
@@ -1176,6 +1180,42 @@ footer{
       locked out. Always leave one administration account on
       <code>any</code>, or there will be nowhere to fix it from.</p>
   </div>
+
+  <h3 id="tema">How the application looks</h3>
+  <span class="ruta">Administration → Preferences → How the application looks</span>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/19-tema-oscuro.png" alt="The Turnera agenda with the dark theme" loading="lazy">
+    <figcaption>The agenda with the dark theme, meant for rooms that work in low light.</figcaption>
+  </figure>
+
+  <p>
+    There are five themes and one is picked for the whole centre. Four are colour ones —<strong>Turnera green</strong>,
+    <strong>Night blue</strong>, <strong>Plum</strong> and <strong>Terracotta</strong>— and they only change the left-hand
+    bar, the tone of the background and the lines of the agenda; they are there so the application does not
+    clash with the identity of the centre. The fifth is <strong>Dark</strong>, and that one does turn the whole screen around.
+  </p>
+
+  <p>
+    The dark one is for the front desks and rooms that work in low light on purpose, where a white screen
+    dazzles. In it the agenda status colours are lightened so they still read, so
+    <strong>the legend changes tones but not meanings</strong>: what was blue is still blue, and what
+    was almost black becomes almost white.
+  </p>
+
+  <p>
+    The green of the buttons does not change with the theme: it is the colour of an action, and it is in all five.
+  </p>
+
+  <p>
+    You see the theme as soon as you pick it in the dropdown, before saving, so you can compare them. <strong>It is not
+    kept until you press Save</strong>: if you leave the screen without saving, the previous one comes back.
+  </p>
+
+  <p>
+    The logo of the centre stays on a white background in every theme, the dark one included. That is on
+    purpose: a mark meant for white paper would disappear on the bar.
+  </p>
 </section>
 
 <section id="historia">
