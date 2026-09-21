@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DEVEL · Desarrollo de software, trading cuantitativo y consultoría de IA</title>
-<meta name="description" content="DEVEL — desarrollo de software, estrategias automáticas de trading cuantitativo y consultoría de software e IA. Valencia, España.">
+<title>DEVEL · Software a medida, trading cuantitativo e IA</title>
+<meta name="description" content="Desarrollo de software a medida, estrategias automáticas de trading cuantitativo y consultoría de IA desde Valencia. Cuéntame tu proyecto y te respondo yo.">
 <link rel="canonical" href="https://devel.es/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DEVEL">
-<meta property="og:title" content="DEVEL · Desarrollo de software, trading cuantitativo y consultoría de IA">
+<meta property="og:title" content="DEVEL · Software a medida, trading cuantitativo e IA">
 <meta property="og:description" content="Se construye en días y funciona durante años. Software a medida, estrategias automáticas y consultoría de IA desde Valencia.">
 <meta property="og:url" content="https://devel.es/">
 <meta property="og:locale" content="es_ES">
@@ -18,9 +18,38 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="DEVEL: se construye en días, funciona durante años">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="DEVEL · Desarrollo de software, trading cuantitativo y consultoría de IA">
+<meta name="twitter:title" content="DEVEL · Software a medida, trading cuantitativo e IA">
 <meta name="twitter:description" content="Se construye en días y funciona durante años. Software a medida, estrategias automáticas y consultoría de IA desde Valencia.">
 <meta name="twitter:image" content="https://devel.es/devel-og.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://devel.es/#organizacion",
+      "name": "DEVEL",
+      "url": "https://devel.es/",
+      "logo": "https://devel.es/devel-isotipo.png",
+      "image": "https://devel.es/devel-og.png",
+      "email": "f.serrano@devel.es",
+      "foundingDate": "2008",
+      "founder": { "@type": "Person", "name": "Francisco José Serrano Pons" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Valencia", "addressCountry": "ES" },
+      "areaServed": "Worldwide",
+      "sameAs": ["https://github.com/frandevel"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://devel.es/#web",
+      "url": "https://devel.es/",
+      "name": "DEVEL",
+      "inLanguage": ["es", "en", "de"],
+      "publisher": { "@id": "https://devel.es/#organizacion" }
+    }
+  ]
+}
+</script>
 <link rel="icon" href="/devel-isotipo.png" type="image/png">
 <style>*{box-sizing:border-box}html,body{margin:0}img{max-width:100%}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -158,12 +187,13 @@ a{color:var(--link)}
   padding-block:clamp(3.5rem,7vw,6rem);
 }
 .hero .eyebrow{color:var(--mist)}
-.hero h1{
+.hero__lema{
+  font-family:var(--display);font-weight:600;text-wrap:balance;line-height:1.12;letter-spacing:-.01em;
   font-size:clamp(2.3rem,1.4rem + 3.4vw,3.9rem);
   margin-top:1.1rem;
   color:#FFFFFF;
 }
-.hero h1 em{font-style:normal;color:var(--accent-lift)}
+.hero__lema em{font-style:normal;color:var(--accent-lift)}
 .lede{
   margin-top:1.4rem;
   font-size:1.09rem;
@@ -372,8 +402,8 @@ footer{
   <section class="hero">
     <div class="shell hero__inner">
       <div>
-        <p class="eyebrow">Valencia · software desde 2008</p>
-        <h1>Se construye en días.<br><em>Funciona durante años.</em></h1>
+        <h1 class="eyebrow">Desarrollo de software, trading cuantitativo e IA · Valencia</h1>
+        <p class="hero__lema">Se construye en días.<br><em>Funciona durante años.</em></p>
         <p class="lede">Lo que antes costaba meses de desarrollo hoy sale en días: la IA nos ha cambiado la velocidad, no el listón. Detrás de cada entrega hay veinticinco años de ingeniería, y sistemas que siguen en marcha cuando nadie los mira.</p>
         <div class="actions">
           <a class="btn btn--solid" href="#contacto">Hablemos</a>

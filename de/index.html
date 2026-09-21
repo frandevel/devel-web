@@ -2,8 +2,8 @@
 <!DOCTYPE html><html lang="de"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DEVEL · Softwareentwicklung, quantitativer Handel und KI-Beratung</title>
-<meta name="description" content="DEVEL — Softwareentwicklung, automatisierte quantitative Handelsstrategien sowie Software- und KI-Beratung. Valencia, Spanien.">
+<title>DEVEL · Individualsoftware, quantitativer Handel und KI</title>
+<meta name="description" content="Individuelle Softwareentwicklung, automatisierte quantitative Handelsstrategien und KI-Beratung aus Valencia. Erzählen Sie mir von Ihrem Projekt.">
 <link rel="canonical" href="https://devel.es/de/">
 <link rel="alternate" hreflang="es" href="https://devel.es/">
 <link rel="alternate" hreflang="en" href="https://devel.es/en/">
@@ -12,7 +12,7 @@
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DEVEL">
-<meta property="og:title" content="DEVEL · Softwareentwicklung, quantitativer Handel und KI-Beratung">
+<meta property="og:title" content="DEVEL · Individualsoftware, quantitativer Handel und KI">
 <meta property="og:description" content="In Tagen gebaut, jahrelang im Einsatz. Individuelle Software, automatisierte Strategien und KI-Beratung aus Valencia.">
 <meta property="og:url" content="https://devel.es/de/">
 <meta property="og:locale" content="de_DE">
@@ -21,9 +21,38 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="DEVEL: in Tagen gebaut, jahrelang im Einsatz">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="DEVEL · Softwareentwicklung, quantitativer Handel und KI-Beratung">
+<meta name="twitter:title" content="DEVEL · Individualsoftware, quantitativer Handel und KI">
 <meta name="twitter:description" content="In Tagen gebaut, jahrelang im Einsatz. Individuelle Software, automatisierte Strategien und KI-Beratung aus Valencia.">
 <meta name="twitter:image" content="https://devel.es/devel-og.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://devel.es/#organizacion",
+      "name": "DEVEL",
+      "url": "https://devel.es/",
+      "logo": "https://devel.es/devel-isotipo.png",
+      "image": "https://devel.es/devel-og.png",
+      "email": "f.serrano@devel.es",
+      "foundingDate": "2008",
+      "founder": { "@type": "Person", "name": "Francisco José Serrano Pons" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Valencia", "addressCountry": "ES" },
+      "areaServed": "Worldwide",
+      "sameAs": ["https://github.com/frandevel"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://devel.es/#web",
+      "url": "https://devel.es/",
+      "name": "DEVEL",
+      "inLanguage": ["es", "en", "de"],
+      "publisher": { "@id": "https://devel.es/#organizacion" }
+    }
+  ]
+}
+</script>
 <link rel="icon" href="/devel-isotipo.png" type="image/png">
 <style>*{box-sizing:border-box}html,body{margin:0}img{max-width:100%}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -161,12 +190,13 @@ a{color:var(--link)}
   padding-block:clamp(3.5rem,7vw,6rem);
 }
 .hero .eyebrow{color:var(--mist)}
-.hero h1{
+.hero__lema{
+  font-family:var(--display);font-weight:600;text-wrap:balance;line-height:1.12;letter-spacing:-.01em;
   font-size:clamp(2.3rem,1.4rem + 3.4vw,3.9rem);
   margin-top:1.1rem;
   color:#FFFFFF;
 }
-.hero h1 em{font-style:normal;color:var(--accent-lift)}
+.hero__lema em{font-style:normal;color:var(--accent-lift)}
 .lede{
   margin-top:1.4rem;
   font-size:1.09rem;
@@ -375,8 +405,8 @@ footer{
   <section class="hero">
     <div class="shell hero__inner">
       <div>
-        <p class="eyebrow">Valencia · Software seit 2008</p>
-        <h1>In Tagen gebaut.<br><em>Jahrelang im Einsatz.</em></h1>
+        <h1 class="eyebrow">Softwareentwicklung, quantitativer Handel und KI · Valencia</h1>
+        <p class="hero__lema">In Tagen gebaut.<br><em>Jahrelang im Einsatz.</em></p>
         <p class="lede">Was früher Monate an Entwicklung kostete, entsteht heute in Tagen: die KI hat unser Tempo verändert, nicht unseren Anspruch. Hinter jeder Auslieferung stehen fünfundzwanzig Jahre Ingenieursarbeit und Systeme, die weiterlaufen, wenn niemand hinschaut.</p>
         <div class="actions">
           <a class="btn btn--solid" href="#contacto">Sprechen wir</a>

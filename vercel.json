@@ -4,7 +4,7 @@
       "source": "/(.*)",
       "has": [{ "type": "host", "value": "(www\\.)?turnera\\.es" }],
       "destination": "https://devel.es/turnera",
-      "permanent": false
+      "permanent": true
     }
   ]
 }

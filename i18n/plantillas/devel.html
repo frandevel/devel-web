@@ -1,13 +1,13 @@
 <!DOCTYPE html><html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{{ta27fc6ce}}</title>
-<meta name="description" content="{{tebde7ded}}">
+<title>{{t76e71eba}}</title>
+<meta name="description" content="{{t7833d46c}}">
 <link rel="canonical" href="https://devel.es/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DEVEL">
-<meta property="og:title" content="{{ta27fc6ce}}">
+<meta property="og:title" content="{{t76e71eba}}">
 <meta property="og:description" content="{{t60ec6a61}}">
 <meta property="og:url" content="https://devel.es/">
 <meta property="og:locale" content="es_ES">
@@ -16,9 +16,38 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="{{t95b1e0ac}}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ta27fc6ce}}">
+<meta name="twitter:title" content="{{t76e71eba}}">
 <meta name="twitter:description" content="{{t60ec6a61}}">
 <meta name="twitter:image" content="https://devel.es/devel-og.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://devel.es/#organizacion",
+      "name": "DEVEL",
+      "url": "https://devel.es/",
+      "logo": "https://devel.es/devel-isotipo.png",
+      "image": "https://devel.es/devel-og.png",
+      "email": "f.serrano@devel.es",
+      "foundingDate": "2008",
+      "founder": { "@type": "Person", "name": "Francisco José Serrano Pons" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Valencia", "addressCountry": "ES" },
+      "areaServed": "Worldwide",
+      "sameAs": ["https://github.com/frandevel"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://devel.es/#web",
+      "url": "https://devel.es/",
+      "name": "DEVEL",
+      "inLanguage": ["es", "en", "de"],
+      "publisher": { "@id": "https://devel.es/#organizacion" }
+    }
+  ]
+}
+</script>
 <link rel="icon" href="/devel-isotipo.png" type="image/png">
 <style>*{box-sizing:border-box}html,body{margin:0}img{max-width:100%}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -156,12 +185,13 @@ a{color:var(--link)}
   padding-block:clamp(3.5rem,7vw,6rem);
 }
 .hero .eyebrow{color:var(--mist)}
-.hero h1{
+.hero__lema{
+  font-family:var(--display);font-weight:600;text-wrap:balance;line-height:1.12;letter-spacing:-.01em;
   font-size:clamp(2.3rem,1.4rem + 3.4vw,3.9rem);
   margin-top:1.1rem;
   color:#FFFFFF;
 }
-.hero h1 em{font-style:normal;color:var(--accent-lift)}
+.hero__lema em{font-style:normal;color:var(--accent-lift)}
 .lede{
   margin-top:1.4rem;
   font-size:1.09rem;
@@ -370,8 +400,8 @@ footer{
   <section class="hero">
     <div class="shell hero__inner">
       <div>
-        <p class="eyebrow">{{te8c50a2c}}</p>
-        <h1>{{t8f4f4569}}<br><em>{{t2ebfd613}}</em></h1>
+        <h1 class="eyebrow">{{t6251ed6b}}</h1>
+        <p class="hero__lema">{{t8f4f4569}}<br><em>{{t2ebfd613}}</em></p>
         <p class="lede">{{tc0c5e431}}</p>
         <div class="actions">
           <a class="btn btn--solid" href="#contacto">{{t0cf77054}}</a>
