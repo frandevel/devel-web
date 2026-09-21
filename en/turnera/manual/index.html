@@ -730,6 +730,8 @@ footer{
     <li><strong>Changing how long it lasts:</strong> drag the bottom edge.</li>
     <li><strong>Cancelling it:</strong> open it and click <em>Cancel</em>. You can write down the reason, and it is worth doing: a month
       later, in the cancellations report, that reason is the only thing that explains what happened.</li>
+    <li><strong>Taking cancelled appointments off the view:</strong> tick <em>Hide cancelled</em>, in the legend
+      under the title. The diary remembers the box, so next time you will find it as you left it.</li>
   </ul>
 
   <p>
@@ -741,8 +743,9 @@ footer{
   </p>
 
   <div class="ojo">
-    <p><strong>Cancelling cannot be undone.</strong> A cancelled appointment stays in view, crossed out, but it cannot be
-      recovered: you have to create it again. And marking someone as <em>No show</em> also cancels the appointment, so
+    <p><strong>Cancelling cannot be undone.</strong> A cancelled appointment stays in view, crossed out — its slot is free again to
+      book over, or it can be taken off the view with <em>Hide cancelled</em> —, but it cannot be
+      recovered: it has to be created again. And marking someone as <em>No show</em> also cancels the appointment, so
       do not use it for “has not arrived yet”.</p>
   </div>
 
@@ -892,6 +895,28 @@ footer{
     something you are giving away.
   </p>
 
+  <h3 id="cobrar-bono">Paying with a voucher</h3>
+  <p>
+    If the customer holds a voucher with sessions left, the till applies it by itself. Every service on the ticket
+    that belongs to that voucher's group comes out at <strong>0,00 €</strong> with the mark <em>Voucher: covers 1 of 1</em>, and the rest of the ticket
+    (services from other groups, products) is paid today with whichever payment method you choose. The totals show
+    the line <em>Covered by vouchers</em> with what the customer has saved.
+  </p>
+  <p>
+    <strong>If you would rather charge for a service and keep the session</strong>, untick the box on that line: it goes
+    back to its price and the voucher is left alone. Useful for the customer who wants to keep the sessions they have
+    left, or the one who is paying for somebody else today.
+  </p>
+  <p>
+    When there are several services from the same group and the voucher does not stretch to all of them, it covers the
+    most expensive ones first. And if the visit is left as a debt, the sessions are not spent until it is paid: the
+    voucher stays whole on the customer's record in the meantime.
+  </p>
+  <p>
+    On the receipt every line paid with a voucher comes out as <em>(voucher session)</em>, and the day's takings only count
+    the money that actually came in. “Voucher” is no longer a payment method you pick from the list.
+  </p>
+
   <h3 id="cobrar-partido">Paying by two methods at once</h3>
 
   <p>
@@ -939,8 +964,10 @@ footer{
 
   <h3>How they are used up</h3>
   <p>
-    A session is deducted when you <strong>charge with the payment method “Voucher”</strong>: one for each service on the ticket.
-    You can also deduct one by hand from the customer record, for when someone was seen without going through the till.
+    A session is deducted <strong>when paying at the till</strong>, for every service on the ticket that belongs to the voucher's
+    group and is left ticked as covered (see <a href="#cobrar-bono">Paying with a voucher</a>). Services from
+    other groups and products on the same ticket are paid with the normal payment method. It can also be deducted
+    by hand from the customer's record, for when someone was seen without going through the till.
   </p>
 
   <div class="ojo">
@@ -953,6 +980,7 @@ footer{
     On the agenda, the voucher icon on each appointment says how many sessions that customer has left. Vouchers that
     are used up or expired are not counted.
   </p>
+
   <h3 id="bonos-traspaso">Transferring a voucher to another customer</h3>
   <span class="ruta">Customer record → Vouchers → Transfer</span>
 
@@ -961,6 +989,11 @@ footer{
     customer of the centre: press <em>Transfer</em> on the voucher's line, look up whoever receives it and that is it. The reason
     is optional.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/25-traspaso-de-bono.png" alt="The dialog for transferring a voucher, with the warning that it cannot be undone" loading="lazy">
+    <figcaption>The transfer dialog. The notice at the top says how many sessions are moving and that there is no going back.</figcaption>
+  </figure>
 
   <div class="ojo">
     <p><strong>A transfer cannot be undone.</strong> If you picked the wrong customer, you have to transfer it back
@@ -1331,52 +1364,44 @@ footer{
     worth doing once the VAT of the catalogue has been gone through: before that almost everything comes out
     «not set».
   </p>
+
   <h3 id="whatsapp">WhatsApp reminders</h3>
-  <span class="ruta">Administration → Preferences → WhatsApp reminders</span>
-
-  <div class="ojo">
-    <p><strong>This does not send yet.</strong> Meta's approval on DEVEL's side is still missing. The screen is
-      there, the text can be written and you can see how it will look, but until Meta approves, no message
-      goes out.</p>
-  </div>
-
-  <h4>The account is yours, not ours</h4>
+  <span class="ruta">Appointment card → WhatsApp · Administration → Preferences → WhatsApp notices</span>
 
   <p>
-    You connect your own WhatsApp Business account and put your payment method on it. <strong>Meta bills
-    you</strong>; we do not charge for messages and we do not share a credit line. Three things
-    worth knowing before you start:
+    Turnera <strong>does not send anything on its own</strong>. When you open an appointment there is a WhatsApp button that opens the
+    conversation with the customer, in the WhatsApp of whoever is attending, with the notice already written. You read it,
+    change it if need be and send it. It is what the centre already did — pick up the phone, open WhatsApp and type —
+    without having to copy the number or key in the sentence.
   </p>
 
-  <ul>
-    <li>The reminder is a <strong>utility template</strong> and is paid per message. It is not cheap in
-      Europe, and from 1 October 2026 utility templates are charged inside the 24-hour window too.</li>
-    <li>The number you connect <strong>stops working in the regular WhatsApp app</strong>. A dedicated one is
-      advisable, not the phone on the counter.</li>
-    <li>Business verification with Meta is required.</li>
-  </ul>
+  <div class="ojo">
+    <p><strong>There is no automatic reminder.</strong> Nobody sends a message without having read it first, and in
+      exchange there is no sending N hours ahead, no log of what was sent and no delivery confirmation. If your centre
+      needs that, talk to us.</p>
+  </div>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/27-whatsapp.png" alt="The WhatsApp notices card, with the country code, the text of the notice and its preview" loading="lazy">
+    <figcaption>The WhatsApp card in Preferences: the country code, the text of the notice and how the customer will read it.</figcaption>
+  </figure>
+
+  <h4>The country code</h4>
+
+  <p>
+    WhatsApp needs the phone number with its international code. The one you put here is prepended to customers'
+    numbers that do not carry it; a customer whose number already starts with <code>+</code> is left as
+    it is. Without a code the button cannot open the conversation.
+  </p>
 
   <h4>The text of the reminder</h4>
 
   <p>
-    You write it, with placeholders between braces that fill themselves in: <code>{nombre}</code>,
-    <code>{apellidos}</code>, <code>{servicio}</code>, <code>{profesional}</code>, <code>{fecha}</code>,
-    <code>{hora}</code>, <code>{centro}</code>, <code>{telefono}</code> and <code>{enlace}</code>. Underneath you will see
-    how the customer will read it.
-  </p>
-
-  <div class="ojo">
-    <p><strong>Meta approves the text.</strong> Saving it leaves it as a <em>draft</em>; you send it for review
-      with the button and nothing is sent until it is <em>approved</em>. <strong>Every time you change it, it goes back
-      to draft</strong> and it has to go through approval again: what Meta approved was the previous text,
-      not the new one.</p>
-  </div>
-
-  <p>
-    Meta does not understand <code>{nombre}</code>: it demands numbered placeholders. Turnera does the translation by itself and
-    shows you the result under <em>This is what we send Meta</em>, in case one day you have to take something up with
-    them. A placeholder that does not exist stays written as it is so that you see it when reviewing, instead
-    of disappearing and leaving an odd message on a customer's phone.
+    You write it, with gaps in braces that are filled in by themselves with the appointment's details:
+    <code>{nombre}</code>, <code>{apellidos}</code>, <code>{servicio}</code>, <code>{profesional}</code>,
+    <code>{fecha}</code>, <code>{hora}</code>, <code>{centro}</code>, <code>{telefono}</code> and
+    <code>{enlace}</code>. Below you will see how the customer will read it. A gap that does not exist is left written as
+    it is so you notice it when reviewing, instead of vanishing and leaving an odd message.
   </p>
 
   <h3 id="consentimientos">Informed consent</h3>
@@ -1404,6 +1429,11 @@ footer{
       again from the record.</p>
   </div>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/24-ipad-de-firmas.png" alt="The iPad screen with a consent form and the box for signing with a finger" loading="lazy">
+    <figcaption>The counter iPad with the document up: the name and the ID number already come filled in.</figcaption>
+  </figure>
+
   <h4>The templates</h4>
 
   <p>
@@ -1411,6 +1441,11 @@ footer{
     themselves in: <code>cliente</code>, <code>nif</code>, <code>centro</code>, <code>fecha</code> and
     <code>tratamiento</code>, written between double braces.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/23-plantillas-de-consentimiento.png" alt="The list of consent templates with their version and which ones are compulsory" loading="lazy">
+    <figcaption>The templates, with their version and which ones are compulsory for every customer.</figcaption>
+  </figure>
 
   <div class="ojo">
     <p><strong>A template is never modified.</strong> Saving changes creates the next version and
@@ -1455,11 +1490,21 @@ footer{
     day of theirs to record; that is linked in <em>Administration → Users</em>.
   </p>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/22-fichar.png" alt="The Your day block on the home screen, with the clock-in button" loading="lazy">
+    <figcaption>The clock-in button, on the home screen. It says “in” or “out” depending on what is due.</figcaption>
+  </figure>
+
   <p>
     In <em>Administration → Working time</em> is everything else: choose a range and, if you want, a person.
     At the top come the days with their shifts and the hours added up; underneath, the entries one by one. It
     downloads to Excel, and that is what you show the inspectorate.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/21-control-de-presencia.png" alt="The attendance record with the days worked, their stretches and their hours" loading="lazy">
+    <figcaption>The working-time record: the days with their stretches and their hours, and at the top the notice about open days.</figcaption>
+  </figure>
 
   <h4>Correcting an entry</h4>
 
@@ -1468,6 +1513,11 @@ footer{
     replaces it, with the right time, who put it there and the reason, which is required. The wrong entry
     stays in sight, marked as corrected.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/28-fichajes.png" alt="The clockings table with one marked as corrected and the line that replaces it" loading="lazy">
+    <figcaption>The clockings one by one. The corrected one stays, marked, and next to it is the line that replaces it.</figcaption>
+  </figure>
 
   <p>
     It may look awkward and it is exactly what makes this register worth something: one that could be
@@ -1490,6 +1540,16 @@ footer{
     them differently, so inventing them here would mean counting wrong in almost all of them.
   </p>
 
+  <h4>The centre's clock</h4>
+
+  <p>
+    A clocking is not a time somebody writes, like an appointment's: it is the exact moment the button is
+    pressed. To know which day and which stretch it belongs to, the application needs to know which time zone the
+    centre lives in, and it comes set to <strong>Europe/Madrid</strong>. A centre outside mainland Spain
+    changes it with the <code>TURNERA_TZ</code> variable when installing; otherwise the stretches would come out shifted
+    even if the summed hours were right.
+  </p>
+
   <h3 id="integraciones">Connecting an outside program (ERP)</h3>
   <span class="ruta">Administration → Integrations</span>
 
@@ -1498,6 +1558,11 @@ footer{
     the sales— there is no need to give it a Turnera user. You register an <strong>integration</strong>, which is
     a credential meant for a program and not for a person.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/26-integraciones.png" alt="The list of the centre's integrations with their permissions and their authorised addresses" loading="lazy">
+    <figcaption>The centre's integrations, with what each one can read and from which addresses.</figcaption>
+  </figure>
 
   <p>When creating it you decide:</p>
 

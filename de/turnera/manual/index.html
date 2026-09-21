@@ -730,6 +730,8 @@ footer{
     <li><strong>Die Dauer ändern:</strong> ziehen Sie den unteren Rand.</li>
     <li><strong>Stornieren:</strong> öffnen Sie ihn und klicken Sie auf <em>Stornieren</em>. Sie können den Grund eintragen, und das lohnt sich: im nächsten
       Monat ist dieser Grund im Stornierungsbericht das Einzige, was erklärt, was passiert ist.</li>
+    <li><strong>Abgesagte Termine aus der Ansicht nehmen:</strong> setzen Sie das Häkchen bei <em>Abgesagte ausblenden</em>, in der Legende
+      unter dem Titel. Der Kalender merkt sich das Kästchen, beim nächsten Mal finden Sie es so vor, wie Sie es gelassen haben.</li>
   </ul>
 
   <p>
@@ -741,8 +743,9 @@ footer{
   </p>
 
   <div class="ojo">
-    <p><strong>Eine Stornierung lässt sich nicht rückgängig machen.</strong> Ein stornierter Termin bleibt sichtbar, durchgestrichen, lässt sich aber nicht
-      wiederherstellen: Sie müssen ihn neu anlegen. Und jemanden als <em>Nicht erschienen</em> zu markieren storniert den Termin ebenfalls, also
+    <p><strong>Eine Stornierung lässt sich nicht rückgängig machen.</strong> Ein abgesagter Termin bleibt durchgestrichen sichtbar — sein Platz ist wieder frei, um
+      darüber zu buchen, oder er wird aus der Ansicht genommen mit <em>Abgesagte ausblenden</em> —, aber er lässt sich nicht
+      wiederherstellen: er muss neu angelegt werden. Und jemanden als <em>Nicht erschienen</em> zu markieren storniert den Termin ebenfalls, also
       verwenden Sie das nicht für „ist noch nicht da“.</p>
   </div>
 
@@ -892,6 +895,28 @@ footer{
     das verschenkt wird.
   </p>
 
+  <h3 id="cobrar-bono">Mit Gutschein bezahlen</h3>
+  <p>
+    Hat der Kunde einen Gutschein mit Sitzungen, wendet die Kasse ihn von selbst an. Jede Leistung auf dem Bon,
+    die zur Gruppe dieses Gutscheins gehört, erscheint mit <strong>0,00 €</strong> und der Markierung <em>Gutschein: deckt 1 von 1</em>, und der Rest des Bons
+    (Leistungen anderer Gruppen, Produkte) wird heute mit der gewählten Zahlungsart bezahlt. In den Summen erscheint
+    die Zeile <em>Durch Gutscheine gedeckt</em> mit dem, was der Kunde gespart hat.
+  </p>
+  <p>
+    <strong>Wenn Sie eine Leistung lieber kassieren und die Sitzung aufheben möchten</strong>, nehmen Sie das Häkchen in dieser Zeile heraus: sie kehrt
+    zu ihrem Preis zurück und der Gutschein bleibt unberührt. Das ist für den Kunden gedacht, der seine restlichen Sitzungen
+    aufheben will, oder für den, der heute für jemand anderen bezahlt.
+  </p>
+  <p>
+    Gibt es mehrere Leistungen derselben Gruppe und der Gutschein reicht nicht für alle, deckt er zuerst die
+    teuersten. Und bleibt der Besuch als Schuld stehen, werden die Sitzungen erst beim Bezahlen verbraucht: der Gutschein
+    bleibt bis dahin in der Kundenakte unangetastet.
+  </p>
+  <p>
+    Auf dem Bon erscheint jede mit Gutschein bezahlte Zeile als <em>(Gutschein-Sitzung)</em>, und in der Tageskasse zählt nur
+    das Geld, das wirklich hereingekommen ist. „Gutschein“ ist keine Zahlungsart mehr, die man aus der Liste wählt.
+  </p>
+
   <h3 id="cobrar-partido">Mit zwei Zahlungsarten gleichzeitig bezahlen</h3>
 
   <p>
@@ -939,8 +964,10 @@ footer{
 
   <h3>Wie sie verbraucht werden</h3>
   <p>
-    Eine Sitzung wird abgezogen, wenn Sie <strong>mit der Zahlungsart „Wertkarte“ kassieren</strong>: eine pro Leistung auf dem Bon.
-    Sie lässt sich auch von Hand aus der Kundenakte abziehen, für den Fall, dass ohne Kassiervorgang behandelt wurde.
+    Eine Sitzung wird abgezogen <strong>beim Kassieren an der Kasse</strong>, für jede Leistung auf dem Bon, die zur Gruppe des
+    Gutscheins gehört und als gedeckt markiert bleibt (siehe <a href="#cobrar-bono">Mit Gutschein bezahlen</a>). Leistungen
+    anderer Gruppen und Produkte auf demselben Bon werden mit der normalen Zahlungsart bezahlt. Sie kann auch von Hand
+    in der Kundenakte abgezogen werden, falls jemand behandelt wurde, ohne an der Kasse vorbeizukommen.
   </p>
 
   <div class="ojo">
@@ -953,6 +980,7 @@ footer{
     Im Terminkalender zeigt das Gutschein-Symbol jedes Termins, wie viele Sitzungen diesem Kunden noch bleiben. Aufgebrauchte oder
     abgelaufene Wertkarten zählen nicht mit.
   </p>
+
   <h3 id="bonos-traspaso">Eine Wertkarte auf einen anderen Kunden übertragen</h3>
   <span class="ruta">Kundenakte → Wertkarten → Übertragen</span>
 
@@ -961,6 +989,11 @@ footer{
     lässt sich auf einen anderen Kunden des Betriebs übertragen: drücken Sie <em>Übertragen</em> in der Zeile der Wertkarte, suchen Sie den Empfänger, fertig. Der Grund ist
     freiwillig.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/25-traspaso-de-bono.png" alt="Der Dialog zum Übertragen eines Gutscheins, mit dem Hinweis, dass es sich nicht rückgängig machen lässt" loading="lazy">
+    <figcaption>Der Übertragungsdialog. Der Hinweis oben sagt, wie viele Sitzungen mitgehen und dass es kein Zurück gibt.</figcaption>
+  </figure>
 
   <div class="ojo">
     <p><strong>Eine Übertragung lässt sich nicht rückgängig machen.</strong> Wenn Sie den falschen Kunden erwischt haben, müssen Sie sie
@@ -1332,54 +1365,44 @@ footer{
     sich, sobald die Mehrwertsteuer des Katalogs durchgegangen ist: davor kommt fast alles als „nicht gesetzt“
     heraus.
   </p>
+
   <h3 id="whatsapp">WhatsApp-Erinnerungen</h3>
-  <span class="ruta">Verwaltung → Einstellungen → WhatsApp-Erinnerungen</span>
-
-  <div class="ojo">
-    <p><strong>Das versendet noch nicht.</strong> Es fehlt noch die Freigabe von Meta auf Seiten von DEVEL. Die
-      Maske ist da, der Text lässt sich schreiben und man sieht, wie er aussehen wird, aber bis Meta freigibt,
-      geht keine Nachricht hinaus.</p>
-  </div>
-
-  <h4>Das Konto gehört Ihnen, nicht uns</h4>
+  <span class="ruta">Terminkarte → WhatsApp · Verwaltung → Einstellungen → WhatsApp-Benachrichtigungen</span>
 
   <p>
-    Sie verbinden Ihr eigenes WhatsApp-Business-Konto und hinterlegen dort Ihre Zahlungsart. <strong>Meta stellt
-    Ihnen die Rechnung</strong>; wir berechnen keine Nachrichten und teilen keine Kreditlinie. Drei Dinge, die
-    man vorher wissen sollte:
+    Turnera <strong>verschickt nichts von sich aus</strong>. Beim Öffnen eines Termins gibt es eine WhatsApp-Schaltfläche, die das
+    Gespräch mit dem Kunden öffnet, im WhatsApp der behandelnden Person, mit der bereits geschriebenen Nachricht. Man liest sie,
+    ändert sie bei Bedarf und schickt sie ab. Es ist das, was das Zentrum ohnehin getan hat — Telefon nehmen, WhatsApp öffnen
+    und schreiben — ohne die Nummer kopieren oder den Satz eintippen zu müssen.
   </p>
 
-  <ul>
-    <li>Die Erinnerung ist eine <strong>Utility-Vorlage</strong> und wird pro Nachricht bezahlt. In Europa ist
-      das nicht billig, und ab dem 1. Oktober 2026 werden Utility-Vorlagen auch innerhalb des
-      24-Stunden-Fensters berechnet.</li>
-    <li>Die Nummer, die Sie verbinden, <strong>funktioniert in der normalen WhatsApp-App nicht mehr</strong>. Eine eigene ist
-      ratsam, nicht das Handy am Empfang.</li>
-    <li>Eine Unternehmensverifizierung bei Meta ist nötig.</li>
-  </ul>
+  <div class="ojo">
+    <p><strong>Es gibt keine automatische Erinnerung.</strong> Niemand schickt eine Nachricht, ohne sie vorher gelesen zu haben, und im
+      Gegenzug gibt es keinen Versand N Stunden vorher, kein Versandprotokoll und keine Zustellbestätigung. Braucht Ihr Zentrum
+      das, sprechen Sie mit uns.</p>
+  </div>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/27-whatsapp.png" alt="Die Karte der WhatsApp-Benachrichtigungen, mit Landesvorwahl, Nachrichtentext und Vorschau" loading="lazy">
+    <figcaption>Die WhatsApp-Karte in den Einstellungen: die Landesvorwahl, der Text der Nachricht und wie der Kunde sie lesen wird.</figcaption>
+  </figure>
+
+  <h4>Die Landesvorwahl</h4>
+
+  <p>
+    WhatsApp braucht die Telefonnummer mit internationaler Vorwahl. Die hier eingetragene wird den Kundennummern
+    vorangestellt, die keine haben; ein Kunde, dessen Nummer bereits mit <code>+</code> beginnt, bleibt wie
+    er ist. Ohne Vorwahl kann die Schaltfläche das Gespräch nicht öffnen.
+  </p>
 
   <h4>Der Text der Erinnerung</h4>
 
   <p>
-    Den schreiben Sie selbst, mit Platzhaltern in geschweiften Klammern, die sich von selbst füllen: <code>{nombre}</code>,
-    <code>{apellidos}</code>, <code>{servicio}</code>, <code>{profesional}</code>, <code>{fecha}</code>,
-    <code>{hora}</code>, <code>{centro}</code>, <code>{telefono}</code> und <code>{enlace}</code>. Darunter sehen Sie,
-    wie der Kunde ihn lesen wird.
-  </p>
-
-  <div class="ojo">
-    <p><strong>Den Text gibt Meta frei.</strong> Beim Speichern bleibt er ein <em>Entwurf</em>; mit dem Knopf schicken Sie
-      ihn zur Prüfung, und es wird nichts versendet, solange er nicht <em>freigegeben ist</em>. <strong>Jede Änderung setzt ihn wieder
-      auf Entwurf</strong> und er muss erneut durch die Freigabe: was Meta freigegeben hatte, war der vorige Text,
-      nicht der neue.</p>
-  </div>
-
-  <p>
-    Meta versteht <code>{nombre}</code>nicht: es verlangt nummerierte Platzhalter. Turnera übersetzt das von selbst und
-    zeigt Ihnen das Ergebnis unter <em>So schicken wir es an Meta</em>, falls Sie eines Tages etwas mit ihnen klären müssen.
-    Ein Platzhalter, den es nicht gibt, bleibt so stehen, wie er geschrieben wurde, damit Sie ihn beim
-    Durchsehen bemerken, statt zu verschwinden und eine seltsame Nachricht auf dem Handy eines Kunden zu
-    hinterlassen.
+    Sie schreiben ihn selbst, mit Platzhaltern in geschweiften Klammern, die von selbst mit den Termindaten gefüllt werden:
+    <code>{nombre}</code>, <code>{apellidos}</code>, <code>{servicio}</code>, <code>{profesional}</code>,
+    <code>{fecha}</code>, <code>{hora}</code>, <code>{centro}</code>, <code>{telefono}</code> und
+    <code>{enlace}</code>. Darunter sehen Sie, wie der Kunde ihn lesen wird. Ein Platzhalter, den es nicht gibt, bleibt so
+    stehen, damit Sie ihn beim Durchsehen bemerken, statt zu verschwinden und eine seltsame Nachricht zu hinterlassen.
   </p>
 
   <h3 id="consentimientos">Einwilligungserklärungen</h3>
@@ -1408,6 +1431,11 @@ footer{
       fordern Sie sie aus der Akte erneut an.</p>
   </div>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/24-ipad-de-firmas.png" alt="Der iPad-Bildschirm mit einer Einwilligungserklärung und dem Feld zum Unterschreiben mit dem Finger" loading="lazy">
+    <figcaption>Das iPad am Empfang mit dem aufgerufenen Dokument: Name und Ausweisnummer sind schon ausgefüllt.</figcaption>
+  </figure>
+
   <h4>Die Vorlagen</h4>
 
   <p>
@@ -1415,6 +1443,11 @@ footer{
     selbst füllen: <code>cliente</code>, <code>nif</code>, <code>centro</code>, <code>fecha</code> und
     <code>tratamiento</code>, in doppelten geschweiften Klammern geschrieben.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/23-plantillas-de-consentimiento.png" alt="Die Liste der Einwilligungsvorlagen mit ihrer Version und welche verpflichtend sind" loading="lazy">
+    <figcaption>Die Vorlagen, mit ihrer Version und welche für alle Kunden verpflichtend sind.</figcaption>
+  </figure>
 
   <div class="ojo">
     <p><strong>Eine Vorlage wird nie geändert.</strong> Beim Speichern von Änderungen entsteht die
@@ -1461,12 +1494,22 @@ footer{
     weil es keinen Arbeitstag von ihm zu erfassen gibt; verknüpft wird das unter <em>Verwaltung → Benutzer</em>.
   </p>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/22-fichar.png" alt="Der Block Ihr Arbeitstag auf der Startseite, mit der Schaltfläche zum Einstempeln" loading="lazy">
+    <figcaption>Die Stempel-Schaltfläche auf der Startseite. Sie sagt „Kommen“ oder „Gehen“, je nachdem, was ansteht.</figcaption>
+  </figure>
+
   <p>
     Unter <em>Verwaltung → Arbeitszeiterfassung</em> steht alles Übrige: wählen Sie einen Zeitraum und, wenn
     Sie möchten, eine Person. Oben erscheinen die Tage mit ihren Abschnitten und den summierten Stunden;
     darunter die Einträge einzeln. Es lässt sich als Excel herunterladen, und genau das zeigt man der
     Inspektion.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/21-control-de-presencia.png" alt="Die Anwesenheitserfassung mit den gearbeiteten Tagen, ihren Abschnitten und Stunden" loading="lazy">
+    <figcaption>Die Arbeitszeiterfassung: die Tage mit ihren Abschnitten und Stunden, und oben der Hinweis auf offene Arbeitstage.</figcaption>
+  </figure>
 
   <h4>Einen Eintrag korrigieren</h4>
 
@@ -1475,6 +1518,11 @@ footer{
     Zeile hinzu, die ihn ersetzt, mit der richtigen Uhrzeit, wer sie eingetragen hat und dem Grund, der
     verpflichtend ist. Der falsche Eintrag bleibt sichtbar, als korrigiert gekennzeichnet.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/28-fichajes.png" alt="Die Tabelle der Stempelungen mit einer als korrigiert markierten und der Zeile, die sie ersetzt" loading="lazy">
+    <figcaption>Die Stempelungen einzeln. Die korrigierte bleibt, markiert, und daneben steht die Zeile, die sie ersetzt.</figcaption>
+  </figure>
 
   <p>
     Das mag unbequem wirken und ist genau das, was diese Erfassung wertvoll macht: eine, die sich
@@ -1498,6 +1546,16 @@ footer{
     Tarifvertrag zählt sie anders, sie hier zu erfinden hieße also, in fast allen falsch zu zählen.
   </p>
 
+  <h4>Die Uhrzeit des Zentrums</h4>
+
+  <p>
+    Eine Stempelung ist keine Uhrzeit, die jemand einträgt, wie bei einem Termin: sie ist der genaue Moment, in dem
+    die Schaltfläche gedrückt wird. Um zu wissen, zu welchem Tag und Abschnitt sie gehört, muss die Anwendung wissen, in
+    welcher Zeitzone das Zentrum liegt, und sie ist voreingestellt auf <strong>Europe/Madrid</strong>. Ein Zentrum außerhalb des spanischen Festlands
+    ändert das bei der Installation über die Variable <code>TURNERA_TZ</code> ; sonst kämen die Abschnitte verschoben heraus,
+    auch wenn die Stundensumme stimmte.
+  </p>
+
   <h3 id="integraciones">Ein externes Programm anbinden (ERP)</h3>
   <span class="ruta">Verwaltung → Integrationen</span>
 
@@ -1506,6 +1564,11 @@ footer{
     die Verkäufe —, braucht es dafür keinen Turnera-Benutzer. Sie legen eine <strong>Integration</strong>an, also
     eine Zugangsberechtigung für ein Programm und nicht für eine Person.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/26-integraciones.png" alt="Die Liste der Integrationen des Zentrums mit ihren Berechtigungen und zugelassenen Adressen" loading="lazy">
+    <figcaption>Die Integrationen des Zentrums, mit dem, was jede lesen darf, und von welchen Adressen aus.</figcaption>
+  </figure>
 
   <p>Beim Anlegen entscheiden Sie:</p>
 
