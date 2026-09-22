@@ -54,6 +54,22 @@ function conLosEnlacesInternosEnSuIdioma(html, idioma) {
   return html;
 }
 
+/**
+ * El manual en ingles y en aleman ensena las pantallas con la aplicacion en ingles, que estan en `imagenes/en/`.
+ * La aplicacion no habla aleman, y una captura en ingles se entiende mejor que una en castellano. Se cambia
+ * captura a captura y solo si existe la inglesa: una pantalla nueva sin fotografiar en ingles sale en castellano
+ * en vez de salir rota.
+ */
+const CAPTURAS = '/turnera/manual/imagenes/';
+const IDIOMA_DE_LAS_CAPTURAS = { es: null, en: 'en', de: 'en' };
+
+function conLasCapturasEnSuIdioma(html, idioma) {
+  const carpeta = IDIOMA_DE_LAS_CAPTURAS[idioma];
+  if (carpeta === null) return html;
+  return html.replace(/"\/turnera\/manual\/imagenes\/([^"\/]+)"/g, (coincidencia, nombre) =>
+    existsSync(join('..', CAPTURAS, carpeta, nombre)) ? `"${CAPTURAS}${carpeta}/${nombre}"` : coincidencia);
+}
+
 function construir() {
   for (const pagina of PAGINAS) {
     const plantilla = readFileSync(pagina.plantilla, 'utf8');
@@ -80,6 +96,7 @@ function construir() {
       // justo lo que hace el selector. Al reves, la traduccion se lo llevaba por delante y el boton ES
       // devolvia a la misma pagina.
       html = conLosEnlacesInternosEnSuIdioma(html, idioma);
+      html = conLasCapturasEnSuIdioma(html, idioma);
       html = html.replace('<!--selector-de-idioma-->', selectorDeIdioma(idioma, pagina.ruta));
 
       const destino = join('..', direccionDe(idioma, pagina.ruta).replace(/^\//, ''), 'index.html');

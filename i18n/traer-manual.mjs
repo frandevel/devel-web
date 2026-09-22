@@ -2,13 +2,16 @@
 //
 // El manual lo escribe el programa: su original vive en `docs/manual/index.html` del repositorio de Turnera y
 // se mantiene con cada cambio funcional. Aqui solo se trasplanta -- el indice y las secciones -- al envoltorio
-// de devel.es, se reescriben las rutas de las imagenes a absolutas y se copian las capturas que falten.
+// de devel.es, se reescriben las rutas de las imagenes a absolutas y se copian las capturas, con la carpeta
+// `en/` de las sacadas con la aplicacion en ingles. Se copian todas y no solo las que falten: una pantalla
+// que cambia se vuelve a fotografiar con el mismo nombre, y copiando solo las nuevas la web seguia
+// ensenando la vieja.
 //
 //   node traer-manual.mjs ["ruta del repositorio de Turnera"]
 //
 // Despues toca lo de siempre: extraer, traducir lo nuevo y construir.
 
-import { readFileSync, writeFileSync, existsSync, readdirSync, copyFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync, cpSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -63,17 +66,10 @@ writeFileSync(destino, salida);
 
 let copiadas = 0;
 if (existsSync(capturasOriginales)) {
-  mkdirSync(capturasDelSitio, { recursive: true });
-  for (const captura of readdirSync(capturasOriginales)) {
-    const desde = join(capturasOriginales, captura);
-    const hasta = join(capturasDelSitio, captura);
-    if (!existsSync(hasta)) {
-      copyFileSync(desde, hasta);
-      copiadas += 1;
-    }
-  }
+  cpSync(capturasOriginales, capturasDelSitio, { recursive: true });
+  copiadas = readdirSync(capturasOriginales, { recursive: true }).filter((nombre) => nombre.endsWith('.png')).length;
 }
 
 const titulos = (html) => (html.match(/<h[23][^>]*>/g) ?? []).length;
-console.log(`Manual traido: ${titulos(cuerpo)} titulos, ${copiadas} capturas nuevas.`);
+console.log(`Manual traido: ${titulos(cuerpo)} titulos, ${copiadas} capturas copiadas.`);
 console.log('Ahora: node extraer.mjs manual-es.html plantillas/manual.html catalogos/manual.es.json');
