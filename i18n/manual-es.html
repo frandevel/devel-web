@@ -671,6 +671,12 @@ footer{
     La pantalla de inicio resume el día: las citas que quedan, lo que se ha cobrado, lo que está pendiente de
     cobro y los cumpleaños. Cada bloque es un atajo — se pulsa y se llega a la pantalla que lo explica.
   </p>
+
+  <p>
+    El bloque de clientes trae además <strong>las cinco últimas altas</strong>, cada una con su enlace a la
+    ficha. Es para lo de todos los días: alguien dio de alta a un cliente hace un rato, hay que añadirle el
+    teléfono o darle cita, y buscarlo por el apellido que quizá se escribió mal es el camino largo.
+  </p>
 </section>
 
 <section id="agenda">
@@ -837,6 +843,20 @@ footer{
     <img src="/turnera/manual/imagenes/07-ficha-cliente.png" alt="La ficha de un cliente con sus datos, su historial y sus bonos" loading="lazy">
     <figcaption>La ficha de un cliente. El teléfono y el correo son enlaces.</figcaption>
   </figure>
+
+  <h3>Ir a su próxima cita</h3>
+
+  <p>
+    La ficha lleva un apartado de <strong>próximas citas</strong> con las que ese cliente tiene por delante, y
+    cada una con un enlace a la agenda. Al pulsarlo se abre la agenda del día que toca y <strong>la cita se
+    marca sola durante un segundo y medio</strong>, con la pantalla desplazada hasta ella.
+  </p>
+
+  <p>
+    Pasado ese segundo y medio la marca se apaga y la agenda es la de siempre. Es a propósito: quien llega ahí
+    viene a mover la cita, a cobrarla o a mirar la de al lado, y una agenda que hay que Â«desbloquearÂ» con un
+    clic antes de poder tocarla estorba justo en el momento en que se iba a trabajar.
+  </p>
 
   <h3>Fichas repetidas</h3>
   <p>
@@ -1085,10 +1105,18 @@ footer{
 
   <h3>Qué cambia en la agenda</h3>
   <p>
-    Si dos citas a la misma hora necesitan el mismo aparato y no hay unidades para las dos, <strong>la segunda no se
-    deja guardar</strong>, aunque estén en cabinas distintas y con profesionales distintos. Es una cita que no se iba
-    a poder dar, y es mejor saberlo al escribirla que a las once con el cliente delante.
+    Si dos citas a la misma hora necesitan el mismo aparato y no hay unidades para las dos, Turnera
+    <strong>avisa antes de guardar la segunda</strong>, aunque estén en cabinas distintas y con profesionales
+    distintos. El aviso dice de qué aparato se trata y <strong>qué otra cita lo tiene cogido</strong>: la hora,
+    el cliente y el profesional. Con eso delante se decide: cambiar la hora, o guardarla igual.
   </p>
+
+  <div class="ojo">
+    <p><strong>El aparato avisa; el sitio y el profesional siguen bloqueando.</strong> La diferencia es real: dos
+      citas no caben en la misma cabina ni una persona está en dos sitios a la vez, pero el láser se lleva de
+      una cabina a otra y quien atiende sabe si le da tiempo. Turnera no puede saberlo, así que lo cuenta y
+      deja decidir.</p>
+  </div>
 
   <h3 id="aparatos-sesion">Anotar la sesión</h3>
   <span class="ruta">Agenda → (una cita) → Aparatología de la sesión</span>
@@ -1461,6 +1489,28 @@ footer{
     permiso de la historia clínica y queda registrado</strong> en el rastro de accesos, igual que abrir un caso.
     Un consentimiento firmado es dato de salud. Así el iPad del mostrador puede estar todo el día abierto con
     su sesión sin que esa sesión abra los documentos de nadie.
+  </p>
+
+  <h4>Retirar una firma</h4>
+
+  <p>
+    Pasa: se firma el documento que no era, o el de otro cliente, o el paciente <strong>retira su
+    consentimiento</strong>, que es un derecho suyo y no un fallo de nadie. En la línea del documento hay un
+    botón <em>Retirar</em> que lo pide con un motivo obligatorio.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Retirar no borra.</strong> El documento se queda donde estaba, con su fecha y su huella, y al
+      lado se anota quién lo retiró, cuándo y por qué. Un consentimiento firmado es la prueba de una
+      conversación que ocurrió, y borrarla deja al centro sin ella el día que alguien discuta qué le
+      explicaron. Lo que sí cambia es que deja de contar: si la plantilla era obligatoria, la ficha vuelve a
+      avisar de que falta.</p>
+  </div>
+
+  <p>
+    Hace falta el permiso <strong>RETIRAR CONSENTIMIENTOS</strong>, que es propio y no el de atenciones: quien
+    pide una firma en el mostrador no tiene por qué poder deshacerla. Se da en
+    <em>Administración → Usuarios</em>, normalmente sólo a dirección.
   </p>
 
   <p>

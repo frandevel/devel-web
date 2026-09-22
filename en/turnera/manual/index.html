@@ -673,6 +673,10 @@ footer{
     The home screen sums up the day: the appointments still to come, what has been charged, what is still unpaid
     and the birthdays. Each block is a shortcut — click it and you land on the screen that explains it.
   </p>
+
+  <p>
+    The customers block also brings <strong>the last five sign-ups</strong>, each one linking to its record. It is for the everyday case: somebody registered a customer a while ago, you need to add their phone number or give them an appointment, and looking them up by a surname that may have been typed wrong is the long way round.
+  </p>
 </section>
 
 <section id="agenda">
@@ -839,6 +843,16 @@ footer{
     <img src="/turnera/manual/imagenes/07-ficha-cliente.png" alt="A customer record with their details, their history and their vouchers" loading="lazy">
     <figcaption>A customer record. The phone number and the email address are links.</figcaption>
   </figure>
+
+  <h3>Going to their next appointment</h3>
+
+  <p>
+    The record has a <strong>upcoming appointments</strong> section with the ones that customer has ahead, each with a link to the agenda. Clicking it opens the agenda of the right day and <strong>the appointment marks itself for a second and a half</strong>, with the screen scrolled to it.
+  </p>
+
+  <p>
+    After that second and a half the mark fades and the agenda is the one you always use. That is on purpose: whoever gets there has come to move the appointment, to charge it or to look at the one next to it, and an agenda you have to «unlock» with a click before you can touch it gets in the way exactly when you were about to work.
+  </p>
 
   <h3>Duplicate records</h3>
   <p>
@@ -1088,10 +1102,13 @@ footer{
 
   <h3>What changes on the agenda</h3>
   <p>
-    If two appointments at the same time need the same device and there are not enough units for both, <strong>the second one cannot
-    be saved</strong>, even if they are in different rooms and with different members of staff. It is an appointment that was never
-    going to happen, and it is better to know as you write it down than at eleven with the customer in front of you.
+    If two appointments at the same time need the same piece of equipment and there are not units for both, Turnera
+    <strong>warns before saving the second one</strong>, even if they are in different rooms and with different professionals. The warning says which piece of equipment it is and <strong>which other appointment has it taken</strong>: the time, the customer and the professional. With that in front of you, you decide: change the time, or save it anyway.
   </p>
+
+  <div class="ojo">
+    <p><strong>Equipment warns; the room and the professional still block.</strong> The difference is real: two appointments do not fit in the same room and one person is not in two places at once, but the laser is carried from one room to another and whoever is treating knows whether there is time. Turnera cannot know that, so it says so and lets you decide.</p>
+  </div>
 
   <h3 id="aparatos-sesion">Recording the session</h3>
   <span class="ruta">Agenda → (an appointment) → Equipment for the session</span>
@@ -1466,6 +1483,21 @@ footer{
     clinical history permission and is written down</strong> in the access trail, just like opening a case.
     A signed consent is health data. That way the tablet on the counter can stay open all day with its session
     without that session opening anybody's documents.
+  </p>
+
+  <h4>Withdrawing a signature</h4>
+
+  <p>
+    It happens: the wrong document gets signed, or another customer's, or the patient <strong>withdraws their consent</strong>, which is a right of theirs and nobody's mistake. On the line of the document there is a <em>Withdraw</em> button that asks for it with a compulsory reason.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Withdrawing does not delete.</strong> The document stays where it was, with its date and its fingerprint, and beside it goes who withdrew it, when and why. A signed consent is the proof of a conversation that took place, and deleting it leaves the centre without it the day somebody argues about what they were told. What does change is that it stops counting: if the template was compulsory, the record warns again that it is missing.</p>
+  </div>
+
+  <p>
+    It needs the <strong>WITHDRAW CONSENTS</strong>, which is its own and not the attentions one: whoever asks for a signature at the counter does not have to be able to undo it. It is granted in
+    <em>Administration → Users</em>, normally only to management.
   </p>
 
   <p>

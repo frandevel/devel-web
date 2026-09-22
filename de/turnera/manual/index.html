@@ -673,6 +673,10 @@ footer{
     Der Startbildschirm fasst den Tag zusammen: die Termine, die noch kommen, was kassiert wurde, was noch offen
     ist, und die Geburtstage. Jeder Block ist eine Abkürzung — ein Klick, und Sie sind auf dem Bildschirm, der ihn erklärt.
   </p>
+
+  <p>
+    Der Kundenblock bringt außerdem <strong>die fünf letzten Neuanlagen</strong>, jede mit ihrem Link zur Karte. Das ist für den Alltag: jemand hat vor einer Weile einen Kunden angelegt, man muss die Telefonnummer nachtragen oder einen Termin geben, und ihn über einen vielleicht falsch geschriebenen Nachnamen zu suchen ist der lange Weg.
+  </p>
 </section>
 
 <section id="agenda">
@@ -839,6 +843,16 @@ footer{
     <img src="/turnera/manual/imagenes/07-ficha-cliente.png" alt="Eine Kundenakte mit den Daten, dem Verlauf und den Wertkarten" loading="lazy">
     <figcaption>Eine Kundenakte. Telefonnummer und E-Mail-Adresse sind Links.</figcaption>
   </figure>
+
+  <h3>Zum nächsten Termin springen</h3>
+
+  <p>
+    Die Karte hat einen Abschnitt <strong>nächste Termine</strong> mit denen, die dieser Kunde vor sich hat, jeder mit einem Link zum Kalender. Ein Klick öffnet den Kalender des richtigen Tages, und <strong>der Termin markiert sich anderthalb Sekunden lang von selbst</strong>, mit dem Bildschirm bis zu ihm gescrollt.
+  </p>
+
+  <p>
+    Nach diesen anderthalb Sekunden erlischt die Markierung und der Kalender ist wieder der gewohnte. Das ist Absicht: wer dorthin kommt, will den Termin verschieben, kassieren oder den danebenliegenden ansehen, und ein Kalender, den man erst mit einem Klick «entsperren» muss, stört genau in dem Moment, in dem gearbeitet werden sollte.
+  </p>
 
   <h3>Doppelte Kundenakten</h3>
   <p>
@@ -1090,10 +1104,13 @@ footer{
 
   <h3>Was sich im Terminkalender ändert</h3>
   <p>
-    Wenn zwei Termine zur selben Zeit dasselbe Gerät brauchen und es nicht genug Einheiten für beide gibt, <strong>lässt sich der zweite nicht
-    speichern</strong>, auch wenn sie in verschiedenen Kabinen und bei verschiedenen Mitarbeitern liegen. Es ist ein Termin, der gar nicht
-    hätte stattfinden können, und das weiß man besser beim Eintragen als um elf mit dem Kunden davor.
+    Wenn zwei Termine zur selben Zeit dasselbe Gerät brauchen und es nicht genug Einheiten für beide gibt, warnt Turnera
+    <strong>bevor der zweite gespeichert wird</strong>, auch wenn sie in verschiedenen Kabinen und mit verschiedenen Fachkräften stattfinden. Die Warnung nennt das Gerät und <strong>welcher andere Termin es belegt</strong>: die Uhrzeit, den Kunden und die Fachkraft. Damit vor Augen wird entschieden: die Uhrzeit ändern oder trotzdem speichern.
   </p>
+
+  <div class="ojo">
+    <p><strong>Das Gerät warnt; Raum und Fachkraft blockieren weiterhin.</strong> Der Unterschied ist real: zwei Termine passen nicht in dieselbe Kabine, und eine Person ist nicht an zwei Orten zugleich, aber der Laser wird von einer Kabine in die andere getragen, und wer behandelt, weiß, ob die Zeit reicht. Turnera kann das nicht wissen, also sagt es Bescheid und lässt entscheiden.</p>
+  </div>
 
   <h3 id="aparatos-sesion">Die Sitzung erfassen</h3>
   <span class="ruta">Terminkalender → (ein Termin) → Geräte der Sitzung</span>
@@ -1470,6 +1487,21 @@ footer{
     Öffnen eines Falls. Eine unterschriebene Einwilligung ist ein Gesundheitsdatum. So kann das Tablet am
     Empfang den ganzen Tag mit seiner Sitzung offen stehen, ohne dass diese Sitzung die Dokumente von
     irgendjemandem öffnet.
+  </p>
+
+  <h4>Eine Unterschrift zurücknehmen</h4>
+
+  <p>
+    Es passiert: das falsche Dokument wird unterschrieben, oder das eines anderen Kunden, oder der Patient <strong>zieht seine Einwilligung zurück</strong>, was sein Recht ist und niemandes Fehler. In der Zeile des Dokuments gibt es eine Schaltfläche <em>Zurücknehmen</em> , die einen Pflichtgrund verlangt.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Zurücknehmen löscht nicht.</strong> Das Dokument bleibt, wo es war, mit seinem Datum und seinem Fingerabdruck, und daneben wird vermerkt, wer es zurückgenommen hat, wann und warum. Eine unterschriebene Einwilligung ist der Beweis für ein Gespräch, das stattgefunden hat, und sie zu löschen lässt den Betrieb ohne diesen Beweis dastehen, wenn jemand bestreitet, was ihm erklärt wurde. Was sich sehr wohl ändert: sie zählt nicht mehr. War die Vorlage Pflicht, warnt die Karte wieder, dass sie fehlt.</p>
+  </div>
+
+  <p>
+    Dafür braucht es die Berechtigung <strong>EINWILLIGUNGEN ZURÜCKNEHMEN</strong>, eine eigene und nicht die der Behandlungen: wer am Empfang eine Unterschrift anfordert, muss sie nicht rückgängig machen können. Vergeben wird sie unter
+    <em>Verwaltung → Benutzer</em>, normalerweise nur an die Leitung.
   </p>
 
   <p>
