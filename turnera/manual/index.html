@@ -603,6 +603,7 @@ footer{
     <li><a href="#cobrar-bono" class="sub">Cobrar con bono</a></li>
     <li><a href="#cobrar-partido" class="sub">Pagar con dos formas</a></li>
     <li><a href="#cobrar-deudas" class="sub">Cobros pendientes</a></li>
+    <li><a href="#devoluciones" class="sub">Devolver un ticket</a></li>
     <li><a href="#bonos">5. Bonos</a></li>
     <li><a href="#aparatos">6. Aparatología</a></li>
     <li><a href="#aparatos-alta" class="sub">Dar de alta un aparato</a></li>
@@ -758,6 +759,15 @@ footer{
     <li><strong>Quitar las anuladas de la vista:</strong> marque <em>Ocultar canceladas</em>, en la leyenda de
       debajo del título. La agenda recuerda la casilla, así que la próxima vez la encontrará como la dejó.</li>
   </ul>
+
+  <p>
+    <strong>Lo que puede hacer cada uno en la agenda depende de sus permisos.</strong> Quien no puede citar ve la
+    agenda entera, pero no le sale el botón de nueva cita, pulsar un hueco libre no hace nada y las citas no se
+    arrastran ni se estiran: al pulsar una, se abre para leerla, sin botón de guardar. Los botones de cerrar un
+    rato, lista de espera e imprimir solo salen a quien tiene su permiso. Dentro de una cita, <em>Anular</em>,
+    <em>Cobrar</em> y <em>WhatsApp</em> se ven siempre, pero apagados para quien no puede usarlos; al pasar el
+    ratón por encima dice por qué.
+  </p>
 
   <p>
     <strong>El servicio pone la duración.</strong> Al elegir los servicios de la cita, la duración se ajusta
@@ -1167,6 +1177,51 @@ footer{
     Aquí están las visitas que se atendieron sin pagar. Al pulsar una se abre el diálogo de cobro: se elige la
     forma de pago, se ajusta el descuento si procede y se salda. Después se puede imprimir el ticket.
   </p>
+
+  <h3 id="devoluciones">Devolver un ticket</h3>
+  <span class="ruta">Ficha del cliente → Historial → Devolver</span>
+
+  <p>
+    El cliente vuelve con la crema sin abrir, o se cobró un servicio que al final no se hizo. En el historial de
+    su ficha, cada ticket cobrado tiene el botón <strong>Devolver</strong>. Se abre el ticket con sus líneas y se
+    marcan las que se devuelven: <strong>no hace falta devolverlo entero</strong>. Lo que ya se devolvió sale
+    marcado como <em>Devuelta</em> y no se puede marcar otra vez.
+  </p>
+
+  <p>
+    Luego se elige cómo se devuelve:
+  </p>
+  <ul>
+    <li><strong>En dinero</strong>, por donde entró: lo que se pagó en efectivo sale del cajón y lo de tarjeta
+      vuelve a la tarjeta.</li>
+    <li><strong>Como saldo a favor</strong>: el dinero se queda en la casa y el cliente lo gasta otro día. La
+      próxima vez que se le cobre, <em>Saldo a favor</em> aparece como una forma de pago más.</li>
+  </ul>
+  <p>
+    Lo que se pagó con puntos vuelve siempre en puntos, y lo que se pagó con saldo a favor vuelve al saldo: no
+    se pueden convertir en dinero devolviéndolos. Se puede escribir el motivo, y conviene.
+  </p>
+
+  <p>
+    <strong>Devolver deshace todo lo que movió la venta.</strong> El producto vuelve al almacén, la sesión que
+    pagó un bono vuelve a ese bono, y se le quitan al cliente los puntos que le dio la compra (si ya los gastó,
+    se le quitan los que le queden, sin dejarle en negativo). Si lo que se devuelve es un bono vendido, el bono
+    desaparece de su ficha, pero solo si está sin estrenar: de uno con sesiones gastadas no se sabe qué parte
+    devolver, y la aplicación no lo deja.
+  </p>
+
+  <div class="ojo">
+    <p><strong>El ticket original no se toca.</strong> La devolución es un ticket nuevo, con las líneas en
+      negativo, que en el historial sale marcado como <em>Devolución</em>. Así la caja del día cuadra con el
+      cajón: lo que salió hoy resta hoy, no el día de la venta. Y un cupón usado en la venta no se recupera.</p>
+  </div>
+
+  <p>
+    Si el cliente tiene saldo a favor, su ficha lo avisa arriba, y el TPV dice cuánto le queda al elegir la
+    forma de pago. Si el saldo no llega para toda la cuenta, se reparte el cobro: una parte con el saldo y el
+    resto con otra forma de pago. Devolver es un permiso aparte, <em>Devolver un ticket</em>, que de fábrica
+    solo trae el rol de dirección.
+  </p>
 </section>
 
 <section id="bonos">
@@ -1413,6 +1468,14 @@ footer{
     Si una visita se cobró con dos formas de pago, el cierre reparte el importe entre las dos. Los cincuenta en
     efectivo van a efectivo y los cincuenta de tarjeta a tarjeta: la caja cuadra con lo que hay en el cajón.
   </p>
+
+  <h3>Una devolución en el cierre</h3>
+  <p>
+    Una devolución cuenta el día que se hizo, en negativo y en su forma de pago: si hoy se devolvieron 12,50 € en
+    efectivo, el efectivo del día es 12,50 menos. Las devueltas como saldo a favor salen en la forma de pago
+    <em>Saldo a favor</em>, en negativo; lo que después se cobra con ese saldo sale ahí en positivo. Y en los
+    servicios más vendidos, uno que se vendió y se devolvió no cuenta como vendido.
+  </p>
 </section>
 
 <section id="ajustes">
@@ -1655,6 +1718,11 @@ footer{
     conversación con el cliente, en el WhatsApp de quien atiende, con el aviso ya escrito. Se lee, se cambia si
     hace falta y se envía. Es lo que el centro ya hacía —coger el teléfono, abrir WhatsApp y escribir— sin tener
     que copiar el número ni teclear la frase.
+  </p>
+
+  <p>
+    El botón lleva dentro el teléfono del cliente, así que solo funciona para quien tiene el permiso de ver
+    teléfonos y correos. A los demás les sale apagado.
   </p>
 
   <div class="ojo">

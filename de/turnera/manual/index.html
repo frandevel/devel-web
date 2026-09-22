@@ -603,6 +603,7 @@ footer{
     <li><a href="#cobrar-bono" class="sub">Mit Gutschein bezahlen</a></li>
     <li><a href="#cobrar-partido" class="sub">Mit zwei Zahlungsarten bezahlen</a></li>
     <li><a href="#cobrar-deudas" class="sub">Offene Zahlungen</a></li>
+    <li><a href="#devoluciones" class="sub">Einen Beleg erstatten</a></li>
     <li><a href="#bonos">5. Wertkarten</a></li>
     <li><a href="#aparatos">6. Geräte</a></li>
     <li><a href="#aparatos-alta" class="sub">Ein Gerät anlegen</a></li>
@@ -751,6 +752,11 @@ footer{
     <li><strong>Abgesagte Termine aus der Ansicht nehmen:</strong> setzen Sie das Häkchen bei <em>Abgesagte ausblenden</em>, in der Legende
       unter dem Titel. Der Kalender merkt sich das Kästchen, beim nächsten Mal finden Sie es so vor, wie Sie es gelassen haben.</li>
   </ul>
+
+  <p>
+    <strong>Was jede Person im Kalender tun kann, hängt von ihren Berechtigungen ab.</strong> Wer keine Termine vergeben darf, sieht den ganzen Kalender, bekommt aber keine Schaltfläche für einen neuen Termin; ein Klick auf eine freie Lücke bewirkt nichts, und Termine lassen sich weder ziehen noch verlängern: Ein Klick öffnet den Termin zum Lesen, ohne Speichern-Schaltfläche. Die Schaltflächen zum Sperren von Zeiten, für die Warteliste und zum Drucken erscheinen nur für diejenigen mit der jeweiligen Berechtigung. Innerhalb eines Termins sind <em>Stornieren</em>,
+    <em>Kassieren</em> und <em>WhatsApp</em> immer zu sehen, aber für alle ohne Berechtigung deaktiviert; beim Darüberfahren mit der Maus steht, warum.
+  </p>
 
   <p>
     <strong>Die Leistung bestimmt die Dauer.</strong> Beim Auswählen der Leistungen des Termins passt sich die Dauer
@@ -1103,6 +1109,36 @@ footer{
     Hier stehen die Besuche, die ohne Bezahlung behandelt wurden. Ein Klick öffnet den Zahlungsdialog: Sie wählen die
     Zahlungsart, passen bei Bedarf den Rabatt an und gleichen aus. Danach lässt sich der Bon drucken.
   </p>
+
+  <h3 id="devoluciones">Einen Beleg erstatten</h3>
+  <span class="ruta">Kundenkarte → Verlauf → Erstatten</span>
+
+  <p>
+    Die Kundin kommt mit der ungeöffneten Creme zurück, oder es wurde eine Behandlung berechnet, die am Ende nicht stattfand. Im Verlauf ihrer Kundenkarte hat jeder bezahlte Beleg die Schaltfläche <strong>Erstatten</strong>. Der Beleg öffnet sich mit seinen Positionen, und man markiert die, die erstattet werden: <strong>man muss nicht den ganzen Beleg erstatten</strong>. Was schon erstattet wurde, erscheint als <em>Erstattet</em> und lässt sich nicht noch einmal markieren.
+  </p>
+
+  <p>
+    Dann wählt man, wie erstattet wird:
+  </p>
+  <ul>
+    <li><strong>Als Geld</strong>, auf dem Weg, auf dem es hereinkam: Bar Bezahltes geht aus der Kasse, per Karte Bezahltes zurück auf die Karte.</li>
+    <li><strong>Als Guthaben</strong>: Das Geld bleibt im Haus, und die Kundin gibt es an einem anderen Tag aus. Beim nächsten Kassieren erscheint <em>Guthaben</em> als weitere Zahlungsart.</li>
+  </ul>
+  <p>
+    Mit Punkten Bezahltes geht immer als Punkte zurück, und mit Guthaben Bezahltes zurück ins Guthaben: Durch eine Erstattung werden sie nicht zu Geld. Man kann den Grund eintragen, und es lohnt sich.
+  </p>
+
+  <p>
+    <strong>Eine Erstattung macht alles rückgängig, was der Verkauf bewegt hat.</strong> Das Produkt geht zurück ins Lager, die Sitzung, die eine Zehnerkarte bezahlt hat, geht zurück auf diese Karte, und der Kundin werden die Punkte abgezogen, die ihr der Kauf gebracht hat (hat sie sie schon ausgegeben, werden ihr die verbleibenden abgezogen, ohne ins Minus zu gehen). Wird eine verkaufte Zehnerkarte erstattet, verschwindet sie aus der Kundenkarte, aber nur, wenn sie noch unbenutzt ist: Bei einer mit verbrauchten Sitzungen ist nicht klar, welcher Teil zu erstatten wäre, und die Anwendung lässt es nicht zu.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Der ursprüngliche Beleg bleibt unverändert.</strong> Die Erstattung ist ein neuer Beleg mit negativen Positionen, der im Verlauf markiert ist als <em>Erstattung</em>. So stimmt die Tageskasse mit der Schublade überein: Was heute hinausging, wird heute abgezogen, nicht am Tag des Verkaufs. Und ein beim Verkauf eingelöster Gutscheincode wird nicht zurückgegeben.</p>
+  </div>
+
+  <p>
+    Hat die Kundin Guthaben, weist ihre Kundenkarte oben darauf hin, und die Kasse zeigt bei der Wahl der Zahlungsart, wie viel übrig ist. Reicht das Guthaben nicht für die ganze Rechnung, wird der Betrag aufgeteilt: ein Teil mit dem Guthaben, der Rest mit einer anderen Zahlungsart. Erstatten ist eine eigene Berechtigung, <em>Einen Beleg erstatten</em>, die ab Werk nur die Rolle der Leitung hat.
+  </p>
 </section>
 
 <section id="bonos">
@@ -1347,6 +1383,12 @@ footer{
     Wenn ein Besuch mit zwei Zahlungsarten kassiert wurde, teilt der Abschluss den Betrag auf beide auf. Die fünfzig in
     bar gehen auf Bar und die fünfzig mit Karte auf Karte: Die Kasse stimmt mit dem überein, was in der Schublade liegt.
   </p>
+
+  <h3>Eine Erstattung im Kassenabschluss</h3>
+  <p>
+    Eine Erstattung zählt an dem Tag, an dem sie gemacht wurde, negativ und in ihrer Zahlungsart: Wurden heute 12,50 € bar erstattet, ist das Bargeld des Tages 12,50 weniger. Als Guthaben Erstattetes erscheint in der Zahlungsart
+    <em>Guthaben</em>, negativ; was später mit diesem Guthaben bezahlt wird, erscheint dort positiv. Und bei den meistverkauften Behandlungen zählt eine verkaufte und erstattete nicht als verkauft.
+  </p>
 </section>
 
 <section id="ajustes">
@@ -1574,6 +1616,10 @@ footer{
     Gespräch mit dem Kunden öffnet, im WhatsApp der behandelnden Person, mit der bereits geschriebenen Nachricht. Man liest sie,
     ändert sie bei Bedarf und schickt sie ab. Es ist das, was das Zentrum ohnehin getan hat — Telefon nehmen, WhatsApp öffnen
     und schreiben — ohne die Nummer kopieren oder den Satz eintippen zu müssen.
+  </p>
+
+  <p>
+    Die Schaltfläche enthält die Telefonnummer der Kundin, deshalb funktioniert sie nur für diejenigen mit der Berechtigung, Telefonnummern und E-Mails zu sehen. Für alle anderen ist sie deaktiviert.
   </p>
 
   <div class="ojo">
