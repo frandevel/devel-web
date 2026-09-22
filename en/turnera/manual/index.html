@@ -1160,7 +1160,7 @@ footer{
   <div class="tabla-envoltorio">
   <table>
     <tbody><tr><th>Report</th><th>Answers</th></tr>
-    <tr><td><strong>Daily till</strong></td><td>What came in today and by which payment method. This is the end of the day.</td></tr>
+    <tr><td><strong>Daily till</strong></td><td>What came in today and by which payment method. It is the closing of the day. Only the payment methods that moved money are listed: what a voucher paid for, or what was given away, is worth zero euros and takes up no row.</td></tr>
     <tr><td><strong>Payments</strong></td><td>What was charged over a range, split by payment method.</td></tr>
     <tr><td><strong>Appointments</strong></td><td>The appointments in a period, with a filter for first visits.</td></tr>
     <tr><td><strong>Cancellations</strong></td><td>Who cancels and how much, most to least, against what they booked.</td></tr>
@@ -1529,6 +1529,13 @@ footer{
     The PIN is stored encrypted and <strong>cannot be read again</strong>, not even from administration: if somebody
     forgets it, they are given a new one. It is cleared with <em>Clear the PIN</em>, and that person clocks by pressing
     their name again.
+  </p>
+
+  <p>
+    <strong>Everyone changes their own</strong> from the clocking screen itself: when the keypad comes up, at the bottom
+    there is <em>Change my PIN</em>, which asks for the one in force and the new one twice. You have to know the one that is set,
+    and whoever knows it could already clock in for that person, so it opens no door; what it saves is having
+    the change depend on administration being around that morning.
   </p>
 
   <p>
