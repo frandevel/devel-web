@@ -601,6 +601,7 @@ footer{
     <li><a href="#cobrar-partido" class="sub">Pagar con dos formas</a></li>
     <li><a href="#cobrar-deudas" class="sub">Cobros pendientes</a></li>
     <li><a href="#devoluciones" class="sub">Devolver un ticket</a></li>
+    <li><a href="#tarjetas-regalo" class="sub">Tarjetas regalo</a></li>
     <li><a href="#bonos">5. Bonos</a></li>
     <li><a href="#aparatos">6. Aparatología</a></li>
     <li><a href="#aparatos-alta" class="sub">Dar de alta un aparato</a></li>
@@ -1086,8 +1087,9 @@ footer{
   </p>
 
   <p>
-    Las formas de pago que ofrece el TPV son efectivo, tarjeta, transferencia, financiación y regalo, y, cuando toca, los
-    puntos del club y el saldo a favor del cliente. Estas dos últimas solo aparecen si hay un cliente con saldo.
+    Las formas de pago que ofrece el TPV son efectivo, tarjeta, transferencia, financiación, regalo y tarjeta
+    regalo, y, cuando toca, los puntos del club y el saldo a favor del cliente. Estas dos últimas solo aparecen si
+    hay un cliente con saldo.
   </p>
 
   <h3 id="cupones">Cupones</h3>
@@ -1210,7 +1212,9 @@ footer{
   </p>
 
   <p>
-    <strong>Devolver deshace todo lo que movió la venta.</strong> El producto vuelve al almacén, la sesión que
+    <strong>Devolver deshace todo lo que movió la venta.</strong> El producto vuelve al almacén —salvo que llegue
+    abierto o roto: al marcar la línea aparece la casilla <em>Vuelve al almacén</em>, y si se desmarca se devuelve
+    el dinero pero el producto no se repone—, la sesión que
     pagó un bono vuelve a ese bono, y se le quitan al cliente los puntos que le dio la compra (si ya los gastó,
     se le quitan los que le queden, sin dejarle en negativo). Si lo que se devuelve es un bono vendido, el bono
     desaparece de su ficha, pero solo si está sin estrenar: de uno con sesiones gastadas no se sabe qué parte
@@ -1226,10 +1230,51 @@ footer{
   </div>
 
   <p>
+    El ticket de una devolución se imprime como cualquier otro, desde el historial, y dice arriba
+    <em>Devolución del ticket</em> y el número del que deshace. Un producto que no volvió al almacén lo lleva
+    anotado en su línea.
+  </p>
+
+  <p>
     Si el cliente tiene saldo a favor, su ficha lo avisa arriba, y el TPV dice cuánto le queda al elegir la
     forma de pago. Si el saldo no llega para toda la cuenta, se reparte el cobro: una parte con el saldo y el
     resto con otra forma de pago. Devolver es un permiso aparte, <em>Devolver un ticket</em>, que de fábrica
     solo trae el rol de dirección.
+  </p>
+
+  <h3 id="tarjetas-regalo">Tarjetas regalo</h3>
+  <span class="ruta">Menú → Tarjetas regalo</span>
+
+  <p>
+    Alguien paga hoy y otra persona lo gasta otro día. Se vende con <strong>Vender tarjeta regalo</strong>: quién la
+    paga, quién la vende, el importe, la forma de pago y, si se quiere, para quién es, su correo, una dedicatoria y
+    hasta cuándo vale (sin fecha, no caduca). Al cobrarla sale un código del estilo <code>RG-7K2M-Q9TX</code>, que
+    se imprime en una tarjeta para regalar o se manda por correo con la tarjeta en PDF.
+  </p>
+
+  <div class="ojo">
+    <p><strong>El dinero entra el día que se vende, no el día que se gasta.</strong> La venta es un ticket
+      cobrado como cualquier otro y cuenta en la caja de ese día. Al gastarla no entra nada: en el cierre sale
+      aparte, como <em>Tarjeta regalo</em>, igual que un bono. Por eso no se puede pagar una tarjeta regalo con
+      puntos, con saldo a favor ni con otra tarjeta.</p>
+  </div>
+
+  <p>
+    Para gastarla, en el TPV se elige <strong>Tarjeta regalo</strong> como forma de pago y se teclea el código;
+    debajo sale lo que le queda. Se gasta en varias veces hasta agotarla, y si no llega para toda la cuenta se
+    reparte el cobro: una parte con la tarjeta y el resto de otra forma. Una deuda también se puede saldar con ella.
+  </p>
+
+  <p>
+    Arriba de la lista está lo <strong>pendiente de gastar</strong>: lo que queda en todas las tarjetas que
+    todavía valen. Es dinero que el centro ya ha cobrado y que debe en servicios y productos, y es lo que hay
+    que tener presente al cerrar el año. Cada tarjeta dice si está vigente, gastada, caducada o devuelta.
+  </p>
+
+  <p>
+    Si se devuelve algo que se pagó con una tarjeta regalo, el dinero vuelve a la tarjeta. Y la venta de una
+    tarjeta se puede devolver desde el historial de quien la compró mientras esté sin estrenar: entonces deja de
+    valer. Ver las tarjetas y venderlas son dos permisos; de fábrica los tienen recepción y dirección.
   </p>
 </section>
 
@@ -1482,7 +1527,9 @@ footer{
   <p>
     Una devolución cuenta el día que se hizo, en negativo y en su forma de pago: si hoy se devolvieron 12,50 € en
     efectivo, el efectivo del día es 12,50 menos. Las devueltas como saldo a favor salen en la forma de pago
-    <em>Saldo a favor</em>, en negativo; lo que después se cobra con ese saldo sale ahí en positivo. Y en los
+    <em>Saldo a favor</em>, en negativo; lo que después se cobra con ese saldo sale ahí en positivo. Con las
+    tarjetas regalo pasa lo mismo: su venta entra en la forma de pago con que se pagó, y lo que se gasta con ellas
+    sale en la fila <em>Tarjeta regalo</em>, que no es dinero del cajón. Y en los
     servicios más vendidos, uno que se vendió y se devolvió no cuenta como vendido.
   </p>
 </section>

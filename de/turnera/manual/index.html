@@ -604,6 +604,7 @@ footer{
     <li><a href="#cobrar-partido" class="sub">Mit zwei Zahlungsarten bezahlen</a></li>
     <li><a href="#cobrar-deudas" class="sub">Offene Zahlungen</a></li>
     <li><a href="#devoluciones" class="sub">Einen Beleg erstatten</a></li>
+    <li><a href="#tarjetas-regalo" class="sub">Geschenkkarten</a></li>
     <li><a href="#bonos">5. Wertkarten</a></li>
     <li><a href="#aparatos">6. Geräte</a></li>
     <li><a href="#aparatos-alta" class="sub">Ein Gerät anlegen</a></li>
@@ -1033,7 +1034,7 @@ footer{
   </p>
 
   <p>
-    Die Zahlungsarten an der Kasse sind Bargeld, Karte, Überweisung, Finanzierung und Geschenk sowie, wenn es passt, die Clubpunkte und das Guthaben der Kundin. Die letzten beiden erscheinen nur, wenn eine Kundin mit Guthaben ausgewählt ist.
+    Die Zahlungsarten an der Kasse sind Bargeld, Karte, Überweisung, Finanzierung, Geschenk und Geschenkkarte sowie, wenn es passt, die Clubpunkte und das Guthaben der Kundin. Die letzten beiden erscheinen nur, wenn eine Kundin mit Guthaben ausgewählt ist.
   </p>
 
   <h3 id="cupones">Gutscheincodes</h3>
@@ -1136,7 +1137,7 @@ footer{
   </p>
 
   <p>
-    <strong>Eine Erstattung macht alles rückgängig, was der Verkauf bewegt hat.</strong> Das Produkt geht zurück ins Lager, die Sitzung, die eine Zehnerkarte bezahlt hat, geht zurück auf diese Karte, und der Kundin werden die Punkte abgezogen, die ihr der Kauf gebracht hat (hat sie sie schon ausgegeben, werden ihr die verbleibenden abgezogen, ohne ins Minus zu gehen). Wird eine verkaufte Zehnerkarte erstattet, verschwindet sie aus der Kundenkarte, aber nur, wenn sie noch unbenutzt ist: Bei einer mit verbrauchten Sitzungen ist nicht klar, welcher Teil zu erstatten wäre, und die Anwendung lässt es nicht zu.
+    <strong>Eine Erstattung macht alles rückgängig, was der Verkauf bewegt hat.</strong> Das Produkt geht zurück ins Lager (außer es kommt geöffnet oder beschädigt zurück: Beim Markieren der Position erscheint das Kästchen <em>Zurück ins Lager</em>, und wird es abgewählt, wird das Geld erstattet, das Produkt aber nicht wieder eingelagert), die Sitzung, die eine Zehnerkarte bezahlt hat, geht zurück auf diese Karte, und der Kundin werden die Punkte abgezogen, die ihr der Kauf gebracht hat (hat sie sie schon ausgegeben, werden ihr die verbleibenden abgezogen, ohne ins Minus zu gehen). Wird eine verkaufte Zehnerkarte erstattet, verschwindet sie aus der Kundenkarte, aber nur, wenn sie noch unbenutzt ist: Bei einer mit verbrauchten Sitzungen ist nicht klar, welcher Teil zu erstatten wäre, und die Anwendung lässt es nicht zu.
   </p>
 
   <div class="ojo">
@@ -1144,7 +1145,35 @@ footer{
   </div>
 
   <p>
+    Der Beleg einer Erstattung wird wie jeder andere aus dem Verlauf gedruckt und trägt oben
+    <em>Erstattung zum Beleg</em> und die Nummer des Belegs, den sie rückgängig macht. Ein Produkt, das nicht ins Lager zurückging, ist in seiner Position vermerkt.
+  </p>
+
+  <p>
     Hat die Kundin Guthaben, weist ihre Kundenkarte oben darauf hin, und die Kasse zeigt bei der Wahl der Zahlungsart, wie viel übrig ist. Reicht das Guthaben nicht für die ganze Rechnung, wird der Betrag aufgeteilt: ein Teil mit dem Guthaben, der Rest mit einer anderen Zahlungsart. Erstatten ist eine eigene Berechtigung, <em>Einen Beleg erstatten</em>, die ab Werk nur die Rolle der Leitung hat.
+  </p>
+
+  <h3 id="tarjetas-regalo">Geschenkkarten</h3>
+  <span class="ruta">Menü → Geschenkkarten</span>
+
+  <p>
+    Jemand bezahlt heute, und eine andere Person gibt es an einem anderen Tag aus. Verkauft wird sie mit <strong>Geschenkkarte verkaufen</strong>: wer sie bezahlt, wer sie verkauft, der Betrag, die Zahlungsart und, falls gewünscht, für wen sie ist, deren E-Mail, eine Widmung und bis wann sie gilt (ohne Datum verfällt sie nicht). Nach dem Kassieren erscheint ein Code wie <code>RG-7K2M-Q9TX</code>, der auf eine Karte zum Verschenken gedruckt oder mit der Karte als PDF per E-Mail verschickt wird.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Das Geld kommt am Tag des Verkaufs herein, nicht am Tag der Einlösung.</strong> Der Verkauf ist ein Beleg wie jeder andere und zählt in der Kasse dieses Tages. Beim Einlösen kommt nichts herein: Im Kassenabschluss erscheint es gesondert als <em>Geschenkkarte</em>, genau wie eine Zehnerkarte. Deshalb kann eine Geschenkkarte nicht mit Punkten, Guthaben oder einer anderen Karte bezahlt werden.</p>
+  </div>
+
+  <p>
+    Zum Einlösen wählt man an der Kasse <strong>Geschenkkarte</strong> als Zahlungsart und gibt den Code ein; darunter steht, was noch übrig ist. Sie kann in mehreren Besuchen ausgegeben werden, bis sie aufgebraucht ist, und reicht sie nicht für die ganze Rechnung, wird der Betrag aufgeteilt: ein Teil mit der Karte, der Rest anders. Auch eine offene Rechnung lässt sich damit begleichen.
+  </p>
+
+  <p>
+    Oben in der Liste steht, was <strong>noch auszugeben</strong>ist: was auf allen noch gültigen Karten übrig ist. Es ist Geld, das das Studio schon kassiert hat und in Behandlungen und Produkten schuldet, und das man beim Jahresabschluss im Blick haben muss. Jede Karte zeigt, ob sie gültig, aufgebraucht, verfallen oder erstattet ist.
+  </p>
+
+  <p>
+    Wird etwas erstattet, das mit einer Geschenkkarte bezahlt wurde, geht das Geld auf die Karte zurück. Und der Verkauf einer Karte kann aus dem Verlauf der Käuferin erstattet werden, solange sie unbenutzt ist: Dann verliert sie ihre Gültigkeit. Karten ansehen und verkaufen sind zwei Berechtigungen; ab Werk haben sie Empfang und Leitung.
   </p>
 </section>
 
@@ -1394,7 +1423,7 @@ footer{
   <h3>Eine Erstattung im Kassenabschluss</h3>
   <p>
     Eine Erstattung zählt an dem Tag, an dem sie gemacht wurde, negativ und in ihrer Zahlungsart: Wurden heute 12,50 € bar erstattet, ist das Bargeld des Tages 12,50 weniger. Als Guthaben Erstattetes erscheint in der Zahlungsart
-    <em>Guthaben</em>, negativ; was später mit diesem Guthaben bezahlt wird, erscheint dort positiv. Und bei den meistverkauften Behandlungen zählt eine verkaufte und erstattete nicht als verkauft.
+    <em>Guthaben</em>, negativ; was später mit diesem Guthaben bezahlt wird, erscheint dort positiv. Bei Geschenkkarten ist es genauso: Ihr Verkauf geht in die Zahlungsart, mit der sie bezahlt wurde, und was mit ihnen ausgegeben wird, erscheint in der Zeile <em>Geschenkkarte</em>, die kein Geld in der Kasse ist. Und bei den meistverkauften Behandlungen zählt eine verkaufte und erstattete nicht als verkauft.
   </p>
 </section>
 

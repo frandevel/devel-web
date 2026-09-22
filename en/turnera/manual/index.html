@@ -604,6 +604,7 @@ footer{
     <li><a href="#cobrar-partido" class="sub">Paying by two methods</a></li>
     <li><a href="#cobrar-deudas" class="sub">Unpaid visits</a></li>
     <li><a href="#devoluciones" class="sub">Refunding a ticket</a></li>
+    <li><a href="#tarjetas-regalo" class="sub">Gift cards</a></li>
     <li><a href="#bonos">5. Vouchers</a></li>
     <li><a href="#aparatos">6. Equipment</a></li>
     <li><a href="#aparatos-alta" class="sub">Adding a device</a></li>
@@ -1033,7 +1034,7 @@ footer{
   </p>
 
   <p>
-    The payment methods the till offers are cash, card, bank transfer, financing and gift and, when it applies, the club points and the customer's store credit. These last two only appear when there is a customer with a balance.
+    The payment methods the till offers are cash, card, bank transfer, financing, gift and gift card and, when it applies, the club points and the customer's store credit. These last two only appear when there is a customer with a balance.
   </p>
 
   <h3 id="cupones">Coupons</h3>
@@ -1136,7 +1137,7 @@ footer{
   </p>
 
   <p>
-    <strong>Refunding undoes everything the sale moved.</strong> The product goes back to stock, the session a voucher paid goes back to that voucher, and the customer loses the points the purchase gave them (if they already spent them, they lose whatever they have left, never going negative). If what is refunded is a voucher that was sold, the voucher disappears from their record, but only if it is untouched: with one that has sessions used it is not known which part to refund, and the application does not allow it.
+    <strong>Refunding undoes everything the sale moved.</strong> The product goes back to stock (unless it comes back opened or broken: when the line is ticked, the box <em>Back to stock</em>appears, and if it is unticked the money is refunded but the product is not restocked), the session a voucher paid goes back to that voucher, and the customer loses the points the purchase gave them (if they already spent them, they lose whatever they have left, never going negative). If what is refunded is a voucher that was sold, the voucher disappears from their record, but only if it is untouched: with one that has sessions used it is not known which part to refund, and the application does not allow it.
   </p>
 
   <div class="ojo">
@@ -1144,7 +1145,35 @@ footer{
   </div>
 
   <p>
+    The ticket of a refund prints like any other, from the history, and says at the top
+    <em>Refund of ticket</em> and the number of the one it undoes. A product that did not go back to stock has it noted on its line.
+  </p>
+
+  <p>
     If the customer has store credit, their record warns about it at the top, and the till says how much is left when choosing the payment method. If the credit does not cover the whole bill, split the charge: one part with the credit and the rest with another payment method. Refunding is a separate permission, <em>Refunding a ticket</em>, which out of the box only the management role has.
+  </p>
+
+  <h3 id="tarjetas-regalo">Gift cards</h3>
+  <span class="ruta">Menu → Gift cards</span>
+
+  <p>
+    Someone pays today and another person spends it another day. It is sold with <strong>Sell a gift card</strong>: who pays for it, who sells it, the amount, the payment method and, if wanted, who it is for, their email, a dedication and until when it is valid (without a date, it does not expire). Once charged, a code like <code>RG-7K2M-Q9TX</code>comes out, which is printed on a card to give away or emailed with the card as a PDF.
+  </p>
+
+  <div class="ojo">
+    <p><strong>The money comes in the day it is sold, not the day it is spent.</strong> The sale is a ticket charged like any other and counts in that day's takings. Spending it brings nothing in: in the cash closing it shows up separately, as <em>Gift card</em>, just like a voucher. That is why a gift card cannot be paid with points, store credit or another card.</p>
+  </div>
+
+  <p>
+    To spend it, choose <strong>Gift card</strong> as the payment method at the till and type the code; what is left is shown below. It can be spent in several visits until it runs out, and if it does not cover the whole bill the charge is split: one part with the card and the rest another way. A debt can also be settled with it.
+  </p>
+
+  <p>
+    At the top of the list is what is <strong>still to be spent</strong>: what is left on all the cards that are still valid. It is money the centre has already charged and owes in services and products, and it is what has to be kept in mind when closing the year. Each card says whether it is valid, spent, expired or refunded.
+  </p>
+
+  <p>
+    If something paid with a gift card is refunded, the money goes back to the card. And the sale of a card can be refunded from the buyer's history while it is untouched: it then stops being valid. Seeing the cards and selling them are two permissions; out of the box reception and management have them.
   </p>
 </section>
 
@@ -1392,7 +1421,7 @@ footer{
   <h3>A refund in the cash closing</h3>
   <p>
     A refund counts on the day it was made, in negative and in its payment method: if 12.50 € were refunded in cash today, today's cash is 12.50 less. Those refunded as store credit show up in the payment method
-    <em>Store credit</em>, in negative; whatever is later charged with that credit shows up there in positive. And in the best-selling services, one that was sold and refunded does not count as sold.
+    <em>Store credit</em>, in negative; whatever is later charged with that credit shows up there in positive. The same happens with gift cards: their sale goes to the payment method it was paid with, and what is spent with them shows up in the row <em>Gift card</em>, which is not money in the drawer. And in the best-selling services, one that was sold and refunded does not count as sold.
   </p>
 </section>
 
