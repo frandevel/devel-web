@@ -501,10 +501,12 @@ footer{
 
 
 /* En pantallas estrechas el selector es lo primero que necesita quien llega en el idioma que no es el suyo,
-   así que la barra envuelve y la navegación cede el sitio, en lugar de empujarlo fuera de la pantalla. */
-@media (max-width:640px){
+   así que la barra envuelve y la navegación cede el sitio, en lugar de empujarlo fuera de la pantalla.
+   Con los seis enlaces de esta página la barra deja de caber ya en tablet (el alemán necesita 826px),
+   así que aquí envuelve desde 900px, y la propia navegación envuelve cuando no le llega el ancho. */
+@media (max-width:900px){
   .site__inner{flex-wrap:wrap;justify-content:flex-start;gap:.5rem 1rem}
-  .site nav{order:3;width:100%;justify-content:space-between;gap:.5rem}
+  .site nav{order:3;width:100%;justify-content:space-between;flex-wrap:wrap;gap:.35rem .9rem}
   .idiomas{margin-left:auto;padding-left:.8rem}
 }
 

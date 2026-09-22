@@ -589,11 +589,14 @@ footer{
     <li><a href="#agenda">2. La agenda</a></li>
     <li><a href="#agenda-citas" class="sub">Poner, mover y anular citas</a></li>
     <li><a href="#agenda-senales" class="sub">Lo que dice cada tarjeta</a></li>
+    <li><a href="#espera" class="sub">Lista de espera</a></li>
     <li><a href="#agenda-cerrar" class="sub">Cerrar ratos</a></li>
     <li><a href="#agenda-imprimir" class="sub">Imprimir la agenda</a></li>
     <li><a href="#clientes">3. Clientes</a></li>
     <li><a href="#cobrar">4. Cobrar</a></li>
     <li><a href="#cobrar-tpv" class="sub">El TPV</a></li>
+    <li><a href="#paquetes" class="sub">Paquetes</a></li>
+    <li><a href="#cobrar-bono" class="sub">Cobrar con bono</a></li>
     <li><a href="#cobrar-partido" class="sub">Pagar con dos formas</a></li>
     <li><a href="#cobrar-deudas" class="sub">Cobros pendientes</a></li>
     <li><a href="#bonos">5. Bonos</a></li>
@@ -804,6 +807,33 @@ footer{
   </table>
   </div>
 
+  <h3 id="espera">Lista de espera</h3>
+  <span class="ruta">Agenda → Lista de espera</span>
+
+  <p>
+    Alguien pide una hora que ya está cogida. En vez de apuntarlo en un papel, se apunta en la lista de espera
+    de ese día: quién es, qué quería hacerse, la franja que le vendría bien y lo que haga falta saber al
+    llamarle. El botón de la agenda lleva delante cuántos esperan el día que se está mirando.
+  </p>
+
+  <p>
+    <strong>Al anular una cita, la pantalla lo dice:</strong> «hay dos personas en lista de espera para este
+    día». Quien anula decide a quién llama — la lista va por orden de llegada —, y al darle hora se
+    <em>retira</em> de la lista.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Turnera no llama ni escribe a nadie.</strong> Es a propósito: avisar solo, al primero y con un
+      plazo para contestar, es una funcionalidad entera —con su cola, sus reintentos y su «qué pasa si
+      contestan dos»— y merece hacerse con el uso real delante. Lo corriente es que la lista tenga dos nombres
+      y se resuelva con una llamada.</p>
+  </div>
+
+  <p>
+    El teléfono sale en la lista sólo para quien tiene el permiso de <em>datos de contacto del cliente</em>,
+    igual que en la ficha. Y retirar a alguien no borra nada: la fila se queda con quién la retiró y cuándo,
+    para poder decir mañana a quién se llamó y a quién no.
+  </p>
   <h3 id="agenda-cerrar">Cerrar ratos de la agenda</h3>
   <span class="ruta">Agenda → Cerrar un rato</span>
 
@@ -900,6 +930,13 @@ footer{
       ello, pero en cuanto dirección puede regalar puntos hay que poder explicar cada uno.</p>
   </div>
 
+  <h4>Pagar con puntos</h4>
+
+  <p>
+    En el TPV los puntos son una forma de pago más, con el nombre comercial del centro detrás — <em>Puntos
+    Aurora</em> —, y <strong>sólo se ofrecen si el cliente es socio y tiene saldo para lo que se está
+    cobrando</strong>. A quien no le llega no se le enseña, para que en el mostrador no haya que probar a ver.
+  </p>
   <h4>Poner o quitar puntos a mano</h4>
 
   <p>
@@ -993,6 +1030,43 @@ footer{
     <figcaption>El TPV: el cliente, el profesional y el ticket con sus servicios y productos.</figcaption>
   </figure>
 
+  <h3 id="paquetes">Paquetes</h3>
+  <span class="ruta">Menú → Catálogo → Paquetes</span>
+
+  <p>
+    Un paquete es un precio cerrado para varias cosas juntas: «crema hidratante de aloe vera + depilación de
+    piernas, 50 €». Puede llevar servicios, productos o los dos, y cada línea con las unidades que haga falta.
+  </p>
+
+  <p>
+    <strong>El precio del paquete es opcional.</strong> En blanco, el paquete vale lo que sumen sus partes, y
+    sube solo el día que suba el precio de un servicio. Puesto, el paquete es una oferta: la diferencia se
+    reparte entre sus líneas en proporción a lo que cuesta cada una.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Por qué se reparte y no se queda en una línea.</strong> El paquete entra en el ticket como las
+      líneas que lleva dentro, no como una sola. Así cada una lleva su IVA al borrador contable, y un bono puede
+      pagar la depilación mientras la crema se cobra. Si el descuento se quedara entero en una línea, el IVA y
+      la caja saldrían mal.</p>
+  </div>
+
+  <p>
+    Con el ejemplo de arriba: crema de 24,20 € y depilación de 30,00 €, paquete a 50 €. La crema queda en
+    22,32 € y la depilación en 27,68 €, que suman los 50 que se cobran. Y si un bono cubre la depilación, lo
+    que se deja de pagar son esos 27,68 €, no los 30 de tarifa.
+  </p>
+
+  <p>
+    Para venderlo, el TPV tiene una tercera pestaña, <em>Paquetes</em>, junto a servicios y productos. Se añade
+    igual que lo demás y sale en el ticket con su nombre; la casilla del bono se comporta como en un servicio
+    suelto, por si el cliente prefiere pagarlo y guardarse la sesión.
+  </p>
+
+  <p>
+    Un paquete no se borra: se <em>retira</em>. Deja de ofrecerse en el TPV, y los tickets que ya lo llevan se
+    quedan como están.
+  </p>
   <h3>Formas de pago con descuento fijo</h3>
   <p>
     Algunas formas de pago llevan el descuento puesto de fábrica. <strong>Regalo</strong> es del cien por cien: al
@@ -1349,15 +1423,73 @@ footer{
     <li><strong>Catálogo</strong>: servicios, productos, grupos de bonos y proveedores. Cada servicio y cada
       producto llevan además <strong>su IVA</strong>, que se decide aquí y no en el mostrador.</li>
     <li><strong>Profesionales</strong>: quién atiende, su color en la agenda y su columna.</li>
-    <li><strong>Usuarios y permisos</strong>: quién entra, qué puede ver y <strong>desde qué direcciones IP</strong>.</li>
+    <li><strong>Roles y usuarios</strong>: quién entra, qué puede hacer y <strong>desde qué direcciones IP</strong>.</li>
     <li><strong>Datos del centro</strong>: nombre, NIF, dirección y logotipo. El logotipo encabeza los PDF
       —tickets, presupuestos, agenda— y <strong>sustituye al de Turnera arriba del menú</strong>, sobre un fondo blanco para que
       se lea sea del color que sea. Mientras no se suba ninguno, ahí sale el de Turnera.</li>
     <li><strong>Correo</strong>: la pasarela con la que salen los avisos y los códigos del portal.</li>
   </ul>
 
+  <h3 id="roles">Roles y permisos</h3>
+  <span class="ruta">Administración → Roles</span>
+
+  <p>
+    Un <strong>rol</strong> es un trabajo: recepción, profesional, dirección. Cada rol lleva dentro los
+    <strong>permisos</strong> que ese trabajo necesita, y a una persona se le dan roles, no permisos sueltos. Así
+    el día que entra alguien nuevo no hay que acordarse de veinte casillas: se le da su rol y ya está.
+  </p>
+
+  <p>El centro viene con cuatro roles hechos, que se pueden cambiar y borrar como cualquier otro:</p>
+
+  <ul>
+    <li><strong>Recepción</strong>: da horas, atiende el mostrador y cobra.</li>
+    <li><strong>Profesional</strong>: su agenda, sus clientes y la historia clínica.</li>
+    <li><strong>Dirección</strong>: lleva el centro — catálogo, personal, informes y ajustes — y da de alta usuarios.</li>
+    <li><strong>Administrador del sistema</strong>: todo, incluidos los permisos delicados.</li>
+  </ul>
+
+  <p>
+    Para hacer uno a medida se pulsa <strong>Nuevo rol</strong>, se le pone un nombre que no exista y se reparten
+    los permisos con las dos listas: a la izquierda los <strong>disponibles</strong>, a la derecha los
+    <strong>del rol</strong>. Se pasan de un lado a otro con las flechas o con doble clic, y arriba de cada lista
+    hay un buscador para no recorrer los setenta. <strong>Al pasar el ratón por encima de un permiso, se explica
+    qué desbloquea</strong>, que no siempre es una pantalla entera: a veces es solo un botón, o que ese botón
+    se pueda pulsar. Ver los servicios y cambiar sus precios, por ejemplo, son dos permisos distintos.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Los permisos delicados van marcados.</strong> Son los que sacan de golpe los datos de mucha gente
+      — exportar la lista de clientes, el registro de jornada de toda la plantilla — o los que no tienen
+      vuelta atrás, como vaciar el centro. Ninguno de los roles de fábrica los trae: déselos solo a quien lleve
+      la dirección del centro. Descargar el historial de <em>un</em> cliente no es de estos: eso se imprime en
+      consulta y se le entrega.</p>
+  </div>
+
+  <p>
+    Los roles se le dan a una persona en su ficha, en <span class="ruta">Administración → Usuarios → (un
+    usuario)</span>, con las mismas dos listas. Un usuario puede llevar varios: quien hace recepción y además
+    lleva el stock no necesita un rol inventado para él solo.
+  </p>
+
+  <p>
+    En pantalla, un permiso que no se tiene se nota de dos maneras: o la opción no sale del menú, o el botón
+    está ahí pero no se deja pulsar. En el catálogo, por ejemplo, quien puede ver los servicios pero no
+    cambiarlos no ve el botón de dar de alta, y los de editar y retirar le salen apagados.
+  </p>
+
+  <div class="ojo">
+    <p><strong>El cambio se nota al volver a entrar.</strong> Lo que puede hacer cada uno viaja dentro de su
+      sesión, así que si le cambia el rol a alguien que está trabajando en ese momento, no lo verá hasta que
+      salga y vuelva a entrar.</p>
+  </div>
+
+  <p>
+    Un rol que lleva alguien no se deja borrar, para que nadie se quede sin permisos sin enterarse: primero se
+    les quita a esas personas y después se borra el rol.
+  </p>
+
   <h3>Desde qué direcciones IP puede entrar cada usuario</h3>
-  <span class="ruta">Administración → Usuarios y permisos → (un usuario)</span>
+  <span class="ruta">Administración → Usuarios → (un usuario)</span>
 
   <figure>
     <img src="/turnera/manual/imagenes/18-equipos-autorizados.png" alt="La ficha de un usuario con el campo de direcciones IP autorizadas" loading="lazy">
@@ -1865,6 +1997,13 @@ footer{
   <h3>«He anulado una cita sin querer»</h3>
   <p>No se puede recuperar: hay que crearla otra vez con los mismos datos.</p>
 </section>
+
+<footer>
+  <p>
+    Turnera — manual de uso. Actualizado el 22 de septiembre de 2026.<br>
+    Este documento se mantiene junto al programa: cada cambio que altera cómo se usa algo se refleja aquí.
+  </p>
+</footer>
 </div>
 </main>
 

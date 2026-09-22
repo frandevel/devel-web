@@ -592,11 +592,14 @@ footer{
     <li><a href="#agenda">2. The agenda</a></li>
     <li><a href="#agenda-citas" class="sub">Booking, moving and cancelling appointments</a></li>
     <li><a href="#agenda-senales" class="sub">What each card tells you</a></li>
+    <li><a href="#espera" class="sub">Waiting list</a></li>
     <li><a href="#agenda-cerrar" class="sub">Closing stretches</a></li>
     <li><a href="#agenda-imprimir" class="sub">Printing the agenda</a></li>
     <li><a href="#clientes">3. Customers</a></li>
     <li><a href="#cobrar">4. Charging</a></li>
     <li><a href="#cobrar-tpv" class="sub">The point of sale</a></li>
+    <li><a href="#paquetes" class="sub">Packages</a></li>
+    <li><a href="#cobrar-bono" class="sub">Paying with a voucher</a></li>
     <li><a href="#cobrar-partido" class="sub">Paying by two methods</a></li>
     <li><a href="#cobrar-deudas" class="sub">Unpaid visits</a></li>
     <li><a href="#bonos">5. Vouchers</a></li>
@@ -800,6 +803,25 @@ footer{
   </tbody></table>
   </div>
 
+  <h3 id="espera">Waiting list</h3>
+  <span class="ruta">Agenda → Waiting list</span>
+
+  <p>
+    Somebody asks for a time that is already taken. Instead of writing it on a piece of paper, it goes on that day's waiting list: who they are, what they wanted done, the stretch that would suit them and whatever is worth knowing when you call. The agenda button shows up front how many are waiting on the day you are looking at.
+  </p>
+
+  <p>
+    <strong>When a booking is cancelled, the screen says so:</strong> “two people are on the waiting list for this day”. Whoever cancels decides who to call — the list goes in order of arrival —, and once they are given a time they are
+    <em>taken off</em> the list.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Turnera neither calls nor writes to anybody.</strong> It is on purpose: notifying on its own, the first in line and with a deadline to reply, is a whole feature —with its queue, its retries and its “what if two of them answer”— and deserves to be built with real use in front of it. The usual thing is a list with two names, settled with one phone call.</p>
+  </div>
+
+  <p>
+    The phone number only shows on the list for whoever holds the permission for the <em>contact details of the customer</em>, just like on the customer record. And taking somebody off deletes nothing: the row keeps who took them off and when, so tomorrow you can say who was called and who was not.
+  </p>
   <h3 id="agenda-cerrar">Closing stretches in the agenda</h3>
   <span class="ruta">Agenda → Close a stretch</span>
 
@@ -884,6 +906,11 @@ footer{
     <p><strong>This is what you show when a customer argues about their balance.</strong> The balance used to be a loose number going up and down with no trace; while only the till touched it you could live with that, but once management can give points away, every one of them has to be explainable.</p>
   </div>
 
+  <h4>Paying with points</h4>
+
+  <p>
+    At the point of sale, points are one more way to pay, with the centre's own name behind them — <em>Aurora points</em> —, and <strong>they are only offered if the customer is a member and has enough balance for what is being charged</strong>. Whoever does not have enough is not shown them, so nobody has to try at the counter to find out.
+  </p>
   <h4>Adding or taking away points by hand</h4>
 
   <p>
@@ -965,6 +992,32 @@ footer{
     <figcaption>The point of sale: the customer, the member of staff and the ticket with its services and products.</figcaption>
   </figure>
 
+  <h3 id="paquetes">Packages</h3>
+  <span class="ruta">Menu → Catalogue → Packages</span>
+
+  <p>
+    A package is a closed price for several things together: “aloe vera moisturiser + leg waxing, 50 €”. It can carry services, products or both, and each line with as many units as it needs.
+  </p>
+
+  <p>
+    <strong>The price of the package is optional.</strong> Left blank, the package is worth whatever its parts add up to, and goes up by itself the day a service goes up. Filled in, the package is an offer: the difference is split across its lines in proportion to what each one costs.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Why it is split and not left on one line.</strong> The package goes onto the ticket as the lines it carries inside, not as a single one. That way each one takes its own VAT to the accounting draft, and a voucher can pay for the waxing while the cream is charged. If the discount stayed whole on one line, the VAT and the till would come out wrong.</p>
+  </div>
+
+  <p>
+    With the example above: a 24.20 € cream and a 30.00 € waxing, package at 50 €. The cream ends up at 22.32 € and the waxing at 27.68 €, which add up to the 50 that are charged. And if a voucher covers the waxing, what is not paid is those 27.68 €, not the 30 of the tariff.
+  </p>
+
+  <p>
+    To sell one, the point of sale has a third tab, <em>Packages</em>, next to services and products. It is added like everything else and appears on the ticket under its name; the voucher box behaves as it does on a single service, in case the customer would rather pay for it and keep the session.
+  </p>
+
+  <p>
+    A package is not deleted: it is <em>taken off</em>. It stops being offered at the point of sale, and the tickets that already carry it stay as they are.
+  </p>
   <h3>Payment methods with a fixed discount</h3>
   <p>
     Some payment methods come with the discount built in. <strong>Gift</strong> is a hundred per cent: choose it
@@ -1317,15 +1370,57 @@ footer{
     <li><strong>Catalogue</strong>: services, products, voucher groups and providers. Each service and each
       product also carries <strong>its VAT</strong>, which is decided here and not at the counter.</li>
     <li><strong>Staff</strong>: who sees customers, their colour on the agenda and their column.</li>
-    <li><strong>Users and permissions</strong>: who gets in, what they can see and <strong>from which IP addresses</strong>.</li>
+    <li><strong>Roles and users</strong>: who gets in, what they may do and <strong>from which IP addresses</strong>.</li>
     <li><strong>Centre details</strong>: name, tax ID, address and logo. The logo heads the PDFs
       —tickets, quotes, agenda— and <strong>replaces Turnera's at the top of the menu</strong>, on a white background so that it reads
       whatever colour it is. Until one is uploaded, Turnera's appears there.</li>
     <li><strong>Email</strong>: the gateway the notifications and the portal codes go out through.</li>
   </ul>
 
+  <h3 id="roles">Roles and permissions</h3>
+  <span class="ruta">Administration → Roles</span>
+
+  <p>
+    A <strong>role</strong> is a job: reception, professional, management. Each role carries inside it the
+    <strong>permissions</strong> that the job needs, and a person is given roles, not loose permissions. That way, the day somebody new starts, nobody has to remember twenty tick boxes: you give them their role and that is that.
+  </p>
+
+  <p>The centre comes with four roles already made, which can be changed and deleted like any other:</p>
+
+  <ul>
+    <li><strong>Reception</strong>: gives out times, minds the counter and charges.</li>
+    <li><strong>Professional</strong>: their agenda, their customers and the clinical record.</li>
+    <li><strong>Management</strong>: runs the centre — catalogue, staff, reports and settings — and creates users.</li>
+    <li><strong>System administrator</strong>: everything, delicate permissions included.</li>
+  </ul>
+
+  <p>
+    To make one to measure, press <strong>New role</strong>, give it a name that does not exist yet and share out the permissions with the two lists: on the left the <strong>available ones</strong>, on the right the
+    <strong>ones of the role</strong>. They move from one side to the other with the arrows or a double click, and above each list there is a search box, so you do not have to run through all seventy. <strong>Hovering over a permission explains what it unlocks</strong>, which is not always a whole screen: sometimes it is just a button, or whether that button can be pressed. Seeing the services and changing their prices, for example, are two different permissions.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Delicate permissions are marked.</strong> They are the ones that take out the data of many people at once — exporting the customer list, the time records of the whole staff — or the ones that cannot be undone, such as wiping the centre. None of the factory roles carries them: give them only to whoever runs the centre. Downloading the history of <em>one</em> customer is not one of these: that is printed in the consulting room and handed over.</p>
+  </div>
+
+  <p>
+    Roles are given to a person on their record, in <span class="ruta">Administration → Users → (a user)</span>, with the same two lists. A user may carry several: whoever works the counter and also looks after the stock does not need a role invented for them alone.
+  </p>
+
+  <p>
+    On screen, a permission you do not have shows in two ways: either the option does not appear in the menu, or the button is there but will not be pressed. In the catalogue, for example, whoever can see the services but not change them does not see the button to create one, and the edit and retire buttons come out greyed.
+  </p>
+
+  <div class="ojo">
+    <p><strong>The change is noticed on logging back in.</strong> What each person may do travels inside their session, so if you change somebody's role while they are working, they will not see it until they leave and come back in.</p>
+  </div>
+
+  <p>
+    A role that somebody carries will not let itself be deleted, so that nobody is left without permissions without noticing: first take it off those people, then delete the role.
+  </p>
+
   <h3>Which IP addresses each user can sign in from</h3>
-  <span class="ruta">Administration → Users and permissions → (a user)</span>
+  <span class="ruta">Administration → Users → (a user)</span>
 
   <figure>
     <img src="/turnera/manual/imagenes/18-equipos-autorizados.png" alt="The form of a user with the allowed IP addresses field" loading="lazy">
@@ -1829,6 +1924,13 @@ footer{
   <h3>“I cancelled an appointment by mistake”</h3>
   <p>It cannot be recovered: you have to create it again with the same details.</p>
 </section>
+
+<footer>
+  <p>
+    Turnera — user manual. Updated on 22 September 2026.<br>
+    This document is kept alongside the program: every change that alters how something is used is reflected here.
+  </p>
+</footer>
 </div>
 </main>
 

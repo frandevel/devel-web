@@ -592,11 +592,14 @@ footer{
     <li><a href="#agenda">2. Der Terminkalender</a></li>
     <li><a href="#agenda-citas" class="sub">Termine eintragen, verschieben und stornieren</a></li>
     <li><a href="#agenda-senales" class="sub">Was jede Karte anzeigt</a></li>
+    <li><a href="#espera" class="sub">Warteliste</a></li>
     <li><a href="#agenda-cerrar" class="sub">Zeitspannen sperren</a></li>
     <li><a href="#agenda-imprimir" class="sub">Den Terminkalender ausdrucken</a></li>
     <li><a href="#clientes">3. Kunden</a></li>
     <li><a href="#cobrar">4. Kassieren</a></li>
     <li><a href="#cobrar-tpv" class="sub">Die Kasse</a></li>
+    <li><a href="#paquetes" class="sub">Pakete</a></li>
+    <li><a href="#cobrar-bono" class="sub">Mit Gutschein bezahlen</a></li>
     <li><a href="#cobrar-partido" class="sub">Mit zwei Zahlungsarten bezahlen</a></li>
     <li><a href="#cobrar-deudas" class="sub">Offene Zahlungen</a></li>
     <li><a href="#bonos">5. Wertkarten</a></li>
@@ -800,6 +803,25 @@ footer{
   </tbody></table>
   </div>
 
+  <h3 id="espera">Warteliste</h3>
+  <span class="ruta">Terminkalender → Warteliste</span>
+
+  <p>
+    Jemand fragt nach einer Uhrzeit, die schon vergeben ist. Statt sie auf einen Zettel zu schreiben, kommt sie auf die Warteliste dieses Tages: wer es ist, was er machen lassen wollte, welche Zeitspanne ihm passen würde und was beim Anruf sonst zu wissen ist. Die Schaltfläche im Terminkalender zeigt vorne, wie viele an dem Tag warten, den man gerade ansieht.
+  </p>
+
+  <p>
+    <strong>Beim Absagen eines Termins sagt es der Bildschirm:</strong> „zwei Personen stehen für diesen Tag auf der Warteliste“. Wer absagt, entscheidet, wen er anruft — die Liste geht nach Eingang —, und sobald er einen Termin bekommt, wird sein Eintrag
+    <em>aus der Warteliste</em> entfernt.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Turnera ruft niemanden an und schreibt niemandem.</strong> Das ist Absicht: von selbst zu benachrichtigen, den Ersten und mit einer Frist zum Antworten, ist eine ganze Funktion —mit Warteschlange, Wiederholungen und dem „was, wenn zwei antworten“— und verdient es, mit echter Nutzung vor Augen gebaut zu werden. Üblich ist eine Liste mit zwei Namen, die sich mit einem Anruf erledigt.</p>
+  </div>
+
+  <p>
+    Die Telefonnummer erscheint in der Liste nur für den, der die Berechtigung für die <em>Kontaktdaten des Kunden</em> hat, genau wie in der Kundenakte. Und jemanden herauszunehmen löscht nichts: in der Zeile bleibt stehen, wer sie herausgenommen hat und wann, damit man morgen sagen kann, wen man angerufen hat und wen nicht.
+  </p>
   <h3 id="agenda-cerrar">Zeitspannen im Terminkalender sperren</h3>
   <span class="ruta">Terminkalender → Eine Zeitspanne sperren</span>
 
@@ -884,6 +906,11 @@ footer{
     <p><strong>Das ist es, was man zeigt, wenn ein Kunde seinen Saldo bestreitet.</strong> Früher war der Saldo eine lose Zahl, die ohne Spur stieg und fiel; solange nur die Kasse sie anfasste, ging das, aber sobald die Leitung Punkte verschenken kann, muss sich jeder einzelne erklären lassen.</p>
   </div>
 
+  <h4>Mit Punkten bezahlen</h4>
+
+  <p>
+    An der Kasse sind Punkte eine weitere Zahlungsart, mit dem Namen des Betriebs dahinter — <em>Aurora-Punkte</em> —, und <strong>sie werden nur angeboten, wenn der Kunde Mitglied ist und genug Guthaben für das hat, was gerade abgerechnet wird</strong>. Wem es nicht reicht, dem werden sie nicht angezeigt, damit man am Tresen nicht ausprobieren muss.
+  </p>
   <h4>Punkte von Hand geben oder abziehen</h4>
 
   <p>
@@ -965,6 +992,32 @@ footer{
     <figcaption>Die Kasse: der Kunde, der Mitarbeiter und der Bon mit seinen Leistungen und Produkten.</figcaption>
   </figure>
 
+  <h3 id="paquetes">Pakete</h3>
+  <span class="ruta">Menü → Katalog → Pakete</span>
+
+  <p>
+    Ein Paket ist ein Festpreis für mehrere Dinge zusammen: „Aloe-vera-Feuchtigkeitscreme + Beinenthaarung, 50 €“. Es kann Leistungen, Produkte oder beides enthalten, jede Zeile mit so vielen Einheiten wie nötig.
+  </p>
+
+  <p>
+    <strong>Der Preis des Pakets ist optional.</strong> Bleibt er leer, ist das Paket so viel wert wie die Summe seiner Teile und steigt von selbst an dem Tag, an dem eine Leistung teurer wird. Ist er gesetzt, ist das Paket ein Angebot: die Differenz wird auf die Zeilen im Verhältnis zu ihren Preisen verteilt.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Warum sie verteilt wird und nicht auf einer Zeile bleibt.</strong> Das Paket erscheint auf dem Beleg als die Zeilen, die es enthält, nicht als eine einzige. So trägt jede ihre eigene Mehrwertsteuer in den Buchhaltungsentwurf, und ein Gutschein kann die Enthaarung bezahlen, während die Creme berechnet wird. Bliebe der Rabatt ganz auf einer Zeile, kämen Mehrwertsteuer und Kasse falsch heraus.</p>
+  </div>
+
+  <p>
+    Mit dem Beispiel von oben: Creme zu 24,20 € und Enthaarung zu 30,00 €, Paket zu 50 €. Die Creme liegt dann bei 22,32 € und die Enthaarung bei 27,68 €, zusammen die 50, die berechnet werden. Und deckt ein Gutschein die Enthaarung, entfällt dieser Betrag von 27,68 €, nicht die 30 des Tarifs.
+  </p>
+
+  <p>
+    Zum Verkaufen hat die Kasse einen dritten Reiter, <em>Pakete</em>, neben Leistungen und Produkten. Es wird wie alles andere hinzugefügt und erscheint mit seinem Namen auf dem Beleg; das Kästchen für den Gutschein verhält sich wie bei einer einzelnen Leistung, falls der Kunde lieber bezahlt und sich die Sitzung aufhebt.
+  </p>
+
+  <p>
+    Ein Paket wird nicht gelöscht, sondern <em>aus der Warteliste</em>. Es wird an der Kasse nicht mehr angeboten, und die Belege, die es schon tragen, bleiben, wie sie sind.
+  </p>
   <h3>Zahlungsarten mit festem Rabatt</h3>
   <p>
     Manche Zahlungsarten haben den Rabatt schon ab Werk eingebaut. <strong>Geschenk</strong> liegt bei hundert Prozent: Wenn Sie sie
@@ -1319,15 +1372,57 @@ footer{
     <li><strong>Katalog</strong>: Leistungen, Produkte, Bonusgruppen und Lieferanten. Jede Leistung und jedes
       Produkt tragen außerdem <strong>ihre Mehrwertsteuer</strong>, die hier entschieden wird und nicht am Empfang.</li>
     <li><strong>Mitarbeiter</strong>: wer behandelt, seine Farbe im Terminkalender und seine Spalte.</li>
-    <li><strong>Benutzer und Berechtigungen</strong>: wer hineinkommt, was er sehen darf und <strong>von welchen IP-Adressen</strong>.</li>
+    <li><strong>Rollen und Benutzer</strong>: wer hereinkommt, was er tun darf und <strong>von welchen IP-Adressen</strong>.</li>
     <li><strong>Daten des Betriebs</strong>: Name, Steuernummer, Adresse und Logo. Das Logo steht im Kopf der PDFs
       — Bons, Kostenvoranschläge, Terminkalender — und <strong>ersetzt oben im Menü das von Turnera</strong>, auf weißem Grund, damit es in jeder
       Farbe lesbar bleibt. Solange keines hochgeladen wird, erscheint dort das von Turnera.</li>
     <li><strong>E-Mail</strong>: das Gateway, über das die Benachrichtigungen und die Codes des Portals verschickt werden.</li>
   </ul>
 
+  <h3 id="roles">Rollen und Berechtigungen</h3>
+  <span class="ruta">Verwaltung → Rollen</span>
+
+  <p>
+    Eine <strong>Rolle</strong> ist eine Tätigkeit: Empfang, Fachkraft, Leitung. Jede Rolle trägt die
+    <strong>Berechtigungen</strong> in sich, die diese Tätigkeit braucht, und einer Person gibt man Rollen, keine einzelnen Berechtigungen. So muss man am Tag, an dem jemand Neues anfängt, nicht an zwanzig Kästchen denken: man gibt ihm seine Rolle, und fertig.
+  </p>
+
+  <p>Der Betrieb kommt mit vier fertigen Rollen, die sich wie jede andere ändern und löschen lassen:</p>
+
+  <ul>
+    <li><strong>Empfang</strong>: vergibt Termine, betreut den Tresen und kassiert.</li>
+    <li><strong>Fachkraft</strong>: der eigene Terminkalender, die eigenen Kunden und die Krankenakte.</li>
+    <li><strong>Leitung</strong>: führt den Betrieb — Katalog, Personal, Berichte und Einstellungen — und legt Benutzer an.</li>
+    <li><strong>Systemadministrator</strong>: alles, heikle Berechtigungen eingeschlossen.</li>
+  </ul>
+
+  <p>
+    Für eine maßgeschneiderte drückt man <strong>Neue Rolle</strong>, gibt ihr einen Namen, den es noch nicht gibt, und verteilt die Berechtigungen mit den zwei Listen: links die <strong>verfügbaren</strong>, rechts die
+    <strong>der Rolle</strong>. Sie wandern mit den Pfeilen oder per Doppelklick von einer Seite zur anderen, und über jeder Liste gibt es ein Suchfeld, damit man nicht alle siebzig durchgehen muss. <strong>Fährt man mit der Maus über eine Berechtigung, wird erklärt, was sie freischaltet</strong>, was nicht immer ein ganzer Bildschirm ist: manchmal ist es nur eine Schaltfläche oder ob sie sich drücken lässt. Die Leistungen zu sehen und ihre Preise zu ändern sind zum Beispiel zwei verschiedene Berechtigungen.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Heikle Berechtigungen sind gekennzeichnet.</strong> Es sind die, die auf einen Schlag die Daten vieler Menschen herausziehen — die Kundenliste exportieren, die Arbeitszeiten der ganzen Belegschaft — oder die, die sich nicht rückgängig machen lassen, etwa den Betrieb zu leeren. Keine der Werksrollen bringt sie mit: geben Sie sie nur dem, der den Betrieb leitet. Den Verlauf <em>eines</em> Kunden herunterzuladen gehört nicht dazu: der wird in der Sprechstunde ausgedruckt und ausgehändigt.</p>
+  </div>
+
+  <p>
+    Rollen gibt man einer Person in ihrer Akte, unter <span class="ruta">Verwaltung → Benutzer → (ein Benutzer)</span>, mit denselben zwei Listen. Ein Benutzer kann mehrere tragen: wer am Empfang arbeitet und zusätzlich das Lager führt, braucht keine eigens erfundene Rolle.
+  </p>
+
+  <p>
+    Auf dem Bildschirm zeigt sich eine fehlende Berechtigung auf zwei Arten: entweder erscheint die Option nicht im Menü, oder die Schaltfläche ist da, lässt sich aber nicht drücken. Im Katalog sieht zum Beispiel jemand, der die Leistungen sehen, aber nicht ändern darf, die Schaltfläche zum Anlegen nicht, und die zum Bearbeiten und Stilllegen sind ausgegraut.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Die Änderung bemerkt man erst beim nächsten Anmelden.</strong> Was jeder tun darf, reist in seiner Sitzung mit; ändern Sie also jemandem die Rolle, während er arbeitet, sieht er es erst, wenn er sich ab- und wieder anmeldet.</p>
+  </div>
+
+  <p>
+    Eine Rolle, die jemand trägt, lässt sich nicht löschen, damit niemand unbemerkt ohne Berechtigungen dasteht: erst nimmt man sie diesen Personen weg, dann löscht man die Rolle.
+  </p>
+
   <h3>Von welchen IP-Adressen sich jeder Benutzer anmelden darf</h3>
-  <span class="ruta">Verwaltung → Benutzer und Berechtigungen → (ein Benutzer)</span>
+  <span class="ruta">Verwaltung → Benutzer → (ein Benutzer)</span>
 
   <figure>
     <img src="/turnera/manual/imagenes/18-equipos-autorizados.png" alt="Das Formular eines Benutzers mit dem Feld für zugelassene IP-Adressen" loading="lazy">
@@ -1837,6 +1932,13 @@ footer{
   <h3>„Ich habe versehentlich einen Termin storniert“</h3>
   <p>Er lässt sich nicht wiederherstellen: Sie müssen ihn mit denselben Daten neu anlegen.</p>
 </section>
+
+<footer>
+  <p>
+    Turnera — Handbuch. Stand: 22. September 2026.<br>
+    Dieses Dokument wird zusammen mit dem Programm gepflegt: jede Änderung, die etwas an der Bedienung ändert, wird hier abgebildet.
+  </p>
+</footer>
 </div>
 </main>
 
