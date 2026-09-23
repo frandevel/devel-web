@@ -586,7 +586,7 @@ footer{
 <main id="top" class="shell manual">
 <nav class="indice">
   <h2>The Turnera manual</h2>
-  <p>Updated 19 September 2026</p>
+  <p>Updated on 23 September 2026</p>
   <ol>
     <li><a href="#empezar">1. Logging in and finding your way around</a></li>
     <li><a href="#agenda">2. The agenda</a></li>
@@ -612,6 +612,8 @@ footer{
     <li><a href="#portal">7. The booking portal</a></li>
     <li><a href="#informes">8. Reports and the end-of-day till</a></li>
     <li><a href="#ajustes">9. Centre settings</a></li>
+    <li><a href="#desactivar-centro" class="sub">Disabling a centre</a></li>
+    <li><a href="#irse" class="sub">Take your data</a></li>
     <li><a href="#historia">10. The clinical record</a></li>
     <li><a href="#problemas">11. When something goes wrong</a></li>
   </ol>
@@ -1796,11 +1798,7 @@ footer{
   </p>
 
   <p>
-    <strong>Anyone can open the screen</strong>, and that is on purpose. A Turnera user is not a person:
-    at the front desk the whole shift normally shares one, and the working-time record belongs to each
-    professional. That is why the name is pressed here instead of looking at who signed into the application.
-    Whoever also has an employee linked to their user still has their button on the home screen, which is a
-    shortcut to the same thing.
+    <strong>Anyone can open the screen</strong>, and on purpose. A Turnera user is not a person: at the front desk the whole shift usually shares one, and the working-time record belongs to each practitioner. That is why here you press the name instead of looking at who signed in to the application, and why it is <strong>the only place where people clock in</strong>: always as an employee and with their PIN, never as a user.
   </p>
 
   <figure>
@@ -1849,11 +1847,6 @@ footer{
     typed their PIN, and next to it stands <strong>which user it was recorded from</strong>. They are two different facts on purpose, and
     together they are what you show when somebody asks.
   </p>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/en/22-fichar.png" alt="The Your day block on the home screen, with the clock-in button" loading="lazy">
-    <figcaption>The clock-in button, on the home screen. It says “in” or “out” depending on what is due.</figcaption>
-  </figure>
 
   <p>
     In <em>Administration → Working time</em> is everything else: choose a range and, if you want, a person.
@@ -1980,6 +1973,49 @@ footer{
   <p>
     Whoever programs the other side will find everything they need —how to authenticate, what is available
     and how to paginate— in the technical guide <code>docs/api-integracion.md</code>.
+  </p>
+
+  <h3 id="desactivar-centro">Disabling a centre</h3>
+  <span class="ruta">Administration → Delegations → Edit</span>
+
+  <p>
+    When a centre closes, or stops working with Turnera for a while, there is no need to delete it: it is
+    <strong>disabled</strong> by unticking <em>Delegation active</em>. Its customers, appointments and payments stay where they were, but nobody can get into it, and whoever was in it is signed out straight away.
+  </p>
+  <p>
+    When signing in to Turnera, if only one centre is left enabled you go straight into it; if several are, you keep choosing. Whoever only worked in the disabled centre can no longer sign in, and the sign-in screen tells them so.
+  </p>
+  <p>
+    The disabled centre stays in the list of delegations, marked as inactive, and is enabled again from there. Two cannot be disabled: the one you are working in —switch to another one first— and the last one left enabled.
+  </p>
+
+  <h3 id="irse">Taking the centre's data</h3>
+  <span class="ruta">Administration → Take your data</span>
+
+  <p>
+    The data belongs to the centre, not to Turnera. From here the <strong>admin</strong> account downloads everything the centre has stored, in a single zip file and whenever it wants: to move to another program, to keep its own copy or to hand it to whoever looks after its IT.
+  </p>
+
+  <p>Inside there are three things and a <em>LEEME.txt</em> that explains them:</p>
+  <ul>
+    <li><strong>turnera.sql</strong>, the whole database. Any IT person loads it into MySQL with one command, and with it you can come back to Turnera or move the data to another program.</li>
+    <li><strong>One spreadsheet per table</strong> —customers, appointments, payments, vouchers, clinical records…—, which opens in Excel with a double click.</li>
+    <li><strong>The documents</strong>: the signed consents as PDF and the logo, each in its own file.</li>
+  </ul>
+  <p>
+    Passwords, clock-in PINs and integration secrets are left out: outside Turnera they are useless, and in the wrong hands someone could try to crack them.
+  </p>
+
+  <p>
+    <strong>Why two keys are needed.</strong> It is the most sensitive download in the application, because it takes the data of every customer at once, clinical records included. Only the admin account can ask for it —no other, even with every permission— and on top of that it needs a link that goes to the email of the centre's owner, the one given when signing up, which cannot be changed from the application. Whoever steals the password does not have the email, and whoever reads the email does not have the password.
+  </p>
+  <ol>
+    <li>Press <em>Send me the link</em>. The screen tells you which email it goes to, with part of the address hidden.</li>
+    <li>Open the email in the same browser, signed in as admin, and press <em>Download</em>. The button shows how far it has got.</li>
+    <li>Keep the zip somewhere safe: it holds the data of all your customers.</li>
+  </ol>
+  <p>
+    The link works only once and expires in 30 minutes; if the download is interrupted, ask for another, up to three an hour. When it finishes another email arrives saying it has been downloaded, with the time and the address it was done from: if it was not you, change the admin password and write to us. The screen also keeps the list of exports requested and downloaded.
   </p>
 </section>
 

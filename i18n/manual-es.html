@@ -583,7 +583,7 @@ footer{
 <main id="top" class="shell manual">
 <nav class="indice">
   <h2>Manual de Turnera</h2>
-  <p>Actualizado el 19 de septiembre de 2026</p>
+  <p>Actualizado el 23 de septiembre de 2026</p>
   <ol>
     <li><a href="#empezar">1. Entrar y orientarse</a></li>
     <li><a href="#agenda">2. La agenda</a></li>
@@ -609,6 +609,8 @@ footer{
     <li><a href="#portal">7. El portal de reservas</a></li>
     <li><a href="#informes">8. Informes y cierre de caja</a></li>
     <li><a href="#ajustes">9. Ajustes del centro</a></li>
+    <li><a href="#desactivar-centro" class="sub">Desactivar un centro</a></li>
+    <li><a href="#irse" class="sub">Llevarse los datos</a></li>
     <li><a href="#historia">10. La historia clínica</a></li>
     <li><a href="#problemas">11. Cuando algo no sale</a></li>
   </ol>
@@ -1934,9 +1936,8 @@ footer{
   <p>
     <strong>La pantalla la abre cualquiera</strong>, y es a propósito. Un usuario de Turnera no es una persona:
     en el mostrador lo normal es que lo comparta el turno entero, y el registro de jornada es de cada
-    profesional. Por eso aquí se pulsa el nombre en lugar de mirar quién ha entrado en la aplicación. Quien
-    tenga además un empleado asociado a su usuario sigue teniendo su botón en la pantalla de inicio, que es un
-    atajo para lo mismo.
+    profesional. Por eso aquí se pulsa el nombre en lugar de mirar quién ha entrado en la aplicación, y por eso
+    es <strong>el único sitio donde se ficha</strong>: siempre como empleado y con su PIN, nunca como usuario.
   </p>
 
   <figure>
@@ -1984,11 +1985,6 @@ footer{
     y al lado consta <strong>desde qué usuario se registró</strong>. Son dos datos distintos a propósito, y
     juntos son lo que se enseña cuando alguien pregunta.
   </p>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/22-fichar.png" alt="El bloque Su jornada de la pantalla de inicio, con el boton de fichar entrada" loading="lazy">
-    <figcaption>El botón de fichar, en la pantalla de inicio. Dice «entrada» o «salida» según lo que toque.</figcaption>
-  </figure>
 
   <p>
     En <em>Administración → Control de presencia</em> está lo demás: elija un rango y, si quiere, una persona.
@@ -2116,6 +2112,67 @@ footer{
   <p>
     Quien programe el otro lado encontrará todo lo que necesita —cómo autenticarse, qué hay disponible y cómo
     paginar— en la guía técnica <code>docs/api-integracion.md</code>.
+  </p>
+
+  <h3 id="desactivar-centro">Desactivar un centro</h3>
+  <span class="ruta">Administración → Delegaciones → Editar</span>
+
+  <p>
+    Cuando un centro cierra, o deja de trabajar con Turnera una temporada, no hace falta borrarlo: se
+    <strong>desactiva</strong> quitando la marca <em>Delegación activa</em>. Sus clientes, citas y cobros se quedan
+    donde estaban, pero nadie puede entrar en él, y quien estaba dentro sale en el acto.
+  </p>
+  <p>
+    Al entrar en Turnera, si solo queda un centro activo se entra directamente en él; si quedan varios, se sigue
+    eligiendo. Quien solo trabajaba en el centro desactivado ya no puede entrar, y la pantalla de entrada se lo dice.
+  </p>
+  <p>
+    El centro desactivado sigue en la lista de delegaciones, marcado como inactivo, y se vuelve a activar desde ahí
+    mismo. Hay dos que no se pueden desactivar: aquel en el que está trabajando —cambie antes a otro— y el último
+    que queda activo.
+  </p>
+
+  <h3 id="irse">Llevarse los datos del centro</h3>
+  <span class="ruta">Administración → Llevarse los datos</span>
+
+  <p>
+    Los datos son del centro, no de Turnera. Desde aquí la cuenta <strong>admin</strong> descarga todo lo que el
+    centro ha guardado, en un solo fichero zip y cuando quiera: para irse a otro programa, para tener una copia
+    propia o para dársela a quien le lleve la informática.
+  </p>
+
+  <p>Dentro van tres cosas y un <em>LEEME.txt</em> que las explica:</p>
+  <ul>
+    <li><strong>turnera.sql</strong>, la base de datos entera. Cualquier informático la carga en un MySQL con una
+      orden, y con ella se puede volver a Turnera o pasar los datos a otro programa.</li>
+    <li><strong>Una hoja por tabla</strong> —clientes, citas, cobros, bonos, historia clínica…—, que se abre con
+      doble clic en Excel.</li>
+    <li><strong>Los documentos</strong>: los consentimientos firmados en PDF y el logotipo, cada uno en su
+      fichero.</li>
+  </ul>
+  <p>
+    No van las contraseñas, los PIN de fichar ni los secretos de las integraciones: fuera de Turnera no sirven para
+    nada, y en malas manos se podrían intentar romper.
+  </p>
+
+  <p>
+    <strong>Por qué hacen falta dos llaves.</strong> Es la descarga más delicada de la aplicación, porque saca de
+    una vez los datos de todos los clientes, historias clínicas incluidas. Solo la puede pedir la cuenta admin
+    —ninguna otra, aunque tenga todos los permisos—, y además hace falta un enlace que llega al correo del titular
+    del centro, el que se dio al contratar y que no se cambia desde la aplicación. Quien robe la contraseña no tiene
+    el correo, y quien lea el correo no tiene la contraseña.
+  </p>
+  <ol>
+    <li>Pulse <em>Enviarme el enlace</em>. La pantalla dice a qué correo va, con parte de la dirección oculta.</li>
+    <li>Abra el correo en el mismo navegador, con la sesión de admin iniciada, y pulse <em>Descargar</em>. El botón
+      va diciendo cuánto lleva.</li>
+    <li>Guarde el zip en un sitio seguro: lleva los datos de todos sus clientes.</li>
+  </ol>
+  <p>
+    El enlace sirve una sola vez y caduca en 30 minutos; si la descarga se corta, se pide otro, hasta tres por
+    hora. Al terminar llega otro correo avisando de que se ha descargado, con la hora y la dirección desde la que se
+    hizo: si no ha sido usted, cambie la contraseña de admin y escríbanos. La pantalla guarda además la lista de las
+    exportaciones pedidas y descargadas.
   </p>
 </section>
 

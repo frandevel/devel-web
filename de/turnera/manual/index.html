@@ -586,7 +586,7 @@ footer{
 <main id="top" class="shell manual">
 <nav class="indice">
   <h2>Turnera-Handbuch</h2>
-  <p>Aktualisiert am 19. September 2026</p>
+  <p>Aktualisiert am 23. September 2026</p>
   <ol>
     <li><a href="#empezar">1. Anmelden und zurechtfinden</a></li>
     <li><a href="#agenda">2. Der Terminkalender</a></li>
@@ -612,6 +612,8 @@ footer{
     <li><a href="#portal">7. Das Buchungsportal</a></li>
     <li><a href="#informes">8. Berichte und Kassenabschluss</a></li>
     <li><a href="#ajustes">9. Einstellungen des Betriebs</a></li>
+    <li><a href="#desactivar-centro" class="sub">Ein Zentrum deaktivieren</a></li>
+    <li><a href="#irse" class="sub">Die Daten mitnehmen</a></li>
     <li><a href="#historia">10. Die Patientenakte</a></li>
     <li><a href="#problemas">11. Wenn etwas nicht klappt</a></li>
   </ol>
@@ -1800,11 +1802,7 @@ footer{
   </p>
 
   <p>
-    <strong>Den Bildschirm öffnet jeder</strong>, und zwar mit Absicht. Ein Turnera-Benutzer ist keine Person:
-    am Empfang teilt ihn sich normalerweise die ganze Schicht, und die Arbeitszeiterfassung gehört jeder
-    Fachkraft einzeln. Deshalb wird hier der Name gedrückt, statt zu schauen, wer sich in der Anwendung
-    angemeldet hat. Wer zusätzlich einen Mitarbeiter mit seinem Benutzer verknüpft hat, behält seine
-    Schaltfläche auf der Startseite, die eine Abkürzung zum Gleichen ist.
+    <strong>Den Bildschirm öffnet jeder</strong>, und das mit Absicht. Ein Turnera-Benutzer ist keine Person: Am Empfang teilt ihn meist die ganze Schicht, und die Arbeitszeiterfassung gehört jeder einzelnen Fachkraft. Deshalb drückt man hier auf den Namen, statt zu schauen, wer in der Anwendung angemeldet ist, und deshalb ist es <strong>der einzige Ort, an dem gestempelt wird</strong>: immer als Mitarbeiter und mit der eigenen PIN, nie als Benutzer.
   </p>
 
   <figure>
@@ -1853,11 +1851,6 @@ footer{
     eingetippt hat, und daneben steht <strong>von welchem Benutzer aus sie erfasst wurde</strong>. Das sind mit Absicht zwei verschiedene Angaben, und
     zusammen sind sie das, was man zeigt, wenn jemand fragt.
   </p>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/en/22-fichar.png" alt="Der Block Ihr Arbeitstag auf der Startseite, mit der Schaltfläche zum Einstempeln" loading="lazy">
-    <figcaption>Die Stempel-Schaltfläche auf der Startseite. Sie sagt „Kommen“ oder „Gehen“, je nachdem, was ansteht.</figcaption>
-  </figure>
 
   <p>
     Unter <em>Verwaltung → Arbeitszeiterfassung</em> steht alles Übrige: wählen Sie einen Zeitraum und, wenn
@@ -1988,6 +1981,49 @@ footer{
   <p>
     Wer die andere Seite programmiert, findet alles Nötige — wie man sich authentifiziert, was verfügbar ist
     und wie paginiert wird — im technischen Leitfaden <code>docs/api-integracion.md</code>.
+  </p>
+
+  <h3 id="desactivar-centro">Ein Zentrum deaktivieren</h3>
+  <span class="ruta">Administration → Delegations → Edit</span>
+
+  <p>
+    Wenn ein Zentrum schließt oder eine Zeit lang nicht mehr mit Turnera arbeitet, muss man es nicht löschen: Es wird
+    <strong>deaktiviert</strong> , indem man das Häkchen entfernt bei <em>Delegation active</em>. Seine Kunden, Termine und Zahlungen bleiben, wo sie waren, aber niemand kann es mehr betreten, und wer gerade darin arbeitet, wird sofort abgemeldet.
+  </p>
+  <p>
+    Beim Anmelden bei Turnera gelangt man direkt in das einzige noch aktive Zentrum; sind es mehrere, wählt man weiterhin aus. Wer nur im deaktivierten Zentrum gearbeitet hat, kann sich nicht mehr anmelden, und der Anmeldebildschirm sagt es ihm.
+  </p>
+  <p>
+    Das deaktivierte Zentrum bleibt in der Liste der Delegationen, als inaktiv markiert, und wird dort wieder aktiviert. Zwei lassen sich nicht deaktivieren: das, in dem Sie gerade arbeiten —wechseln Sie vorher in ein anderes— und das letzte, das noch aktiv ist.
+  </p>
+
+  <h3 id="irse">Die Daten des Zentrums mitnehmen</h3>
+  <span class="ruta">Administration → Take your data</span>
+
+  <p>
+    Die Daten gehören dem Zentrum, nicht Turnera. Von hier aus lädt das Konto <strong>admin</strong> alles herunter, was das Zentrum gespeichert hat, in einer einzigen ZIP-Datei und wann immer es will: um zu einem anderen Programm zu wechseln, um eine eigene Kopie zu haben oder um sie der Person zu geben, die sich um die IT kümmert.
+  </p>
+
+  <p>Darin sind drei Dinge und eine <em>LEEME.txt</em> , die sie erklärt:</p>
+  <ul>
+    <li><strong>turnera.sql</strong>, die ganze Datenbank. Jede IT-Fachkraft lädt sie mit einem Befehl in MySQL, und damit kann man zu Turnera zurückkehren oder die Daten in ein anderes Programm übernehmen.</li>
+    <li><strong>Eine Tabelle pro Datenbanktabelle</strong> —Kunden, Termine, Zahlungen, Gutscheine, Krankenakte…—, die sich per Doppelklick in Excel öffnet.</li>
+    <li><strong>Die Dokumente</strong>: die unterschriebenen Einwilligungen als PDF und das Logo, jeweils in einer eigenen Datei.</li>
+  </ul>
+  <p>
+    Passwörter, Stempel-PINs und die Geheimnisse der Integrationen sind nicht dabei: außerhalb von Turnera nützen sie nichts, und in falschen Händen könnte jemand versuchen, sie zu knacken.
+  </p>
+
+  <p>
+    <strong>Warum es zwei Schlüssel braucht.</strong> Es ist der heikelste Download der Anwendung, denn er nimmt die Daten aller Kunden auf einmal mit, Krankenakten eingeschlossen. Nur das Konto admin kann ihn anfordern —kein anderes, auch nicht mit allen Berechtigungen—, und zusätzlich braucht es einen Link, der an die E-Mail-Adresse des Inhabers des Zentrums geht, die bei Vertragsabschluss angegeben wurde und sich in der Anwendung nicht ändern lässt. Wer das Passwort stiehlt, hat die E-Mail nicht, und wer die E-Mail liest, hat das Passwort nicht.
+  </p>
+  <ol>
+    <li>Drücken Sie <em>Send me the link</em>. Der Bildschirm zeigt, an welche E-Mail-Adresse er geht, teilweise verdeckt.</li>
+    <li>Öffnen Sie die E-Mail im selben Browser, mit angemeldetem admin, und drücken Sie <em>Download</em>. Die Schaltfläche zeigt den Fortschritt.</li>
+    <li>Bewahren Sie die ZIP-Datei an einem sicheren Ort auf: Sie enthält die Daten aller Ihrer Kunden.</li>
+  </ol>
+  <p>
+    Der Link funktioniert nur einmal und läuft nach 30 Minuten ab; bricht der Download ab, fordert man einen neuen an, bis zu drei pro Stunde. Am Ende kommt eine weitere E-Mail, die meldet, dass heruntergeladen wurde, mit Uhrzeit und Adresse: Waren Sie es nicht, ändern Sie das admin-Passwort und schreiben Sie uns. Der Bildschirm führt außerdem die Liste der angeforderten und heruntergeladenen Exporte.
   </p>
 </section>
 
