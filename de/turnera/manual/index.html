@@ -610,6 +610,7 @@ footer{
     <li><a href="#aparatos-alta" class="sub">Ein Gerät anlegen</a></li>
     <li><a href="#aparatos-sesion" class="sub">Die Sitzung erfassen</a></li>
     <li><a href="#portal">7. Das Buchungsportal</a></li>
+    <li><a href="#portal-reglas" class="sub">Wie weit im Voraus gebucht wird</a></li>
     <li><a href="#informes">8. Berichte und Kassenabschluss</a></li>
     <li><a href="#cuadro-de-mando" class="sub">Das Cockpit</a></li>
     <li><a href="#ajustes">9. Einstellungen des Betriebs</a></li>
@@ -1393,6 +1394,24 @@ footer{
       Telefonanruf, um sie rückgängig zu machen.</li>
     <li>Gesperrte Zeitspannen erscheinen nicht.</li>
   </ul>
+
+  <h3 id="portal-reglas">Wie weit im Voraus gebucht wird und mit welchen Regeln</h3>
+  <span class="ruta">Verwaltung → Einstellungen → Buchungen von außen</span>
+  <p>
+    Es wird pro Niederlassung eingestellt, der der Sitzung, und gilt für das Portal und für Integrationen, die buchen, wie eine Kampagnenplattform:
+  </p>
+  <ul>
+    <li><strong>Tage im Voraus.</strong> Wie weit der Kalender offen ist: mit 60 kann man heute bis in 60 Tagen buchen. Das Fenster rückt jeden Tag von selbst weiter.</li>
+    <li><strong>Mindestvorlauf.</strong> Mit 2 Stunden ist um zehn der erste angebotene Termin um zwölf.</li>
+    <li><strong>Stornofrist</strong>, <strong>offene Buchungen pro Kunde</strong>, <strong>was ohne Gutschein passiert</strong> und <strong>wann das Portal für Schuldner schließt</strong>. Diese vier gelten nur für das Portal.</li>
+  </ul>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/31-reservas-desde-fuera.png" alt="Die Karte für Buchungen von außen mit den Tagen im Voraus, dem Vorlauf und den übrigen Regeln" loading="lazy">
+    <figcaption>Die Regeln für Buchungen von außen, in den Einstellungen.</figcaption>
+  </figure>
+  <p>
+    Das Kästchen des Portals öffnet oder schließt es nur für Kunden. Integrationen, die buchen, funktionieren weiter mit den Tagen im Voraus und dem Vorlauf. Am Empfang gilt keine dieser Regeln.
+  </p>
 </section>
 
 <section id="informes">
