@@ -1,23 +1,24 @@
+<!-- Generado por i18n/construir.mjs: no editar a mano, se pierde. -->
 <!DOCTYPE html><html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{{tdf3b1c82}}</title>
-<meta name="description" content="{{ted4616b3}}">
-<link rel="canonical" href="https://devel.es/turnera/manual">
+<title>API de integración · Turnera</title>
+<meta name="description" content="Guía para integrar un programa con Turnera: autenticación, permisos, recursos, reservas y errores.">
+<link rel="canonical" href="https://devel.es/turnera/api">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="DEVEL">
-<meta property="og:title" content="{{t298755e1}}">
-<meta property="og:description" content="{{t0720b557}}">
-<meta property="og:url" content="https://devel.es/turnera/manual">
+<meta property="og:title" content="Manual de uso de Turnera">
+<meta property="og:description" content="Citar, cobrar y saber qué pasó. Escrito para quien está en el mostrador, no para quien programa.">
+<meta property="og:url" content="https://devel.es/turnera/api">
 <meta property="og:locale" content="es_ES">
 <meta property="og:image" content="https://devel.es/turnera/turnera-og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="{{ta950f224}}">
+<meta property="og:image:alt" content="Turnera: la agenda, la ficha y la caja en la misma pantalla">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{t298755e1}}">
-<meta name="twitter:description" content="{{t0720b557}}">
+<meta name="twitter:title" content="Manual de uso de Turnera">
+<meta name="twitter:description" content="Citar, cobrar y saber qué pasó. Escrito para quien está en el mostrador, no para quien programa.">
 <meta name="twitter:image" content="https://devel.es/turnera/turnera-og.png">
 <link rel="icon" href="/turnera/isotipo.svg" type="image/svg+xml">
 <style>*{box-sizing:border-box}html,body{margin:0}img{max-width:100%}</style>
@@ -562,1369 +563,463 @@ footer{
   .contenido section{break-inside:avoid-page}
 }
 </style>
+<style>.contenido pre{background:#10302b;color:#e7f1ef;padding:1rem 1.25rem;border-radius:10px;overflow-x:auto;font-size:.85rem;line-height:1.5}.contenido pre code{background:none;color:inherit;padding:0;border:0;box-shadow:none;text-decoration:none;display:block;white-space:pre}</style>
 </head>
 <body>
 <header class="site">
   <div class="shell site__inner">
     <a class="brand" href="/">
-      <span class="mark" role="img" aria-label="{{t58805743}}"></span>
-      <span>{{t21a6cafa}}</span>
+      <span class="mark" role="img" aria-label="Logotipo de DEVEL"></span>
+      <span>devel</span>
     </a>
     <nav>
-      <a href="/turnera">{{t178f7acd}}</a>
-      <a href="/turnera/manual" aria-current="page">{{t4e836fdc}}</a>
+      <a href="/turnera">Turnera</a>
+      <a href="/turnera/manual">Manual</a>
+      <a href="/turnera/api" aria-current="page">API</a>
     </nav>
-    <!--selector-de-idioma-->
-  </div>
+    </div>
 </header>
 
 <main id="top" class="shell manual">
 <nav class="indice">
-  <h2>{{t350072bc}}</h2>
-  <p>{{tafa8df7b}}</p>
+  <h2>API de integración</h2>
+  <p><a href="/turnera/api/openapi-integracion.json" download>Descargar el OpenAPI</a></p>
   <ol>
-    <li><a href="#empezar">{{ted2544bc}}</a></li>
-    <li><a href="#agenda">{{t9b76c10a}}</a></li>
-    <li><a href="#agenda-citas" class="sub">{{t786af4fb}}</a></li>
-    <li><a href="#agenda-senales" class="sub">{{t3fc7ef80}}</a></li>
-    <li><a href="#espera" class="sub">{{tf52d7c80}}</a></li>
-    <li><a href="#agenda-cerrar" class="sub">{{t3bfeba10}}</a></li>
-    <li><a href="#agenda-imprimir" class="sub">{{t4d84a027}}</a></li>
-    <li><a href="#clientes">{{t70d02af0}}</a></li>
-    <li><a href="#cobrar">{{t720dcd4a}}</a></li>
-    <li><a href="#cobrar-tpv" class="sub">{{tf8072379}}</a></li>
-    <li><a href="#paquetes" class="sub">{{tfe6b297f}}</a></li>
-    <li><a href="#cupones" class="sub">{{td1477179}}</a></li>
-    <li><a href="#cobrar-bono" class="sub">{{t67201a80}}</a></li>
-    <li><a href="#cobrar-partido" class="sub">{{t25a1a4ba}}</a></li>
-    <li><a href="#cobrar-deudas" class="sub">{{tf42553f7}}</a></li>
-    <li><a href="#devoluciones" class="sub">{{t07ed0f36}}</a></li>
-    <li><a href="#tarjetas-regalo" class="sub">{{t9c15e949}}</a></li>
-    <li><a href="#bonos">{{t44ac7e4e}}</a></li>
-    <li><a href="#aparatos">{{tda69c249}}</a></li>
-    <li><a href="#aparatos-alta" class="sub">{{taf596a02}}</a></li>
-    <li><a href="#aparatos-sesion" class="sub">{{t8f8374a2}}</a></li>
-    <li><a href="#portal">{{t139476a2}}</a></li>
-    <li><a href="#portal-reglas" class="sub">{{tbc346673}}</a></li>
-    <li><a href="#informes">{{t772ade1d}}</a></li>
-    <li><a href="#cuadro-de-mando" class="sub">{{tf3505e30}}</a></li>
-    <li><a href="#ajustes">{{t4fc373a3}}</a></li>
-    <li><a href="#desactivar-centro" class="sub">{{t758505c2}}</a></li>
-    <li><a href="#irse" class="sub">{{tbe27722d}}</a></li>
-    <li><a href="#historia">{{t7e4c964d}}</a></li>
-    <li><a href="#problemas">{{t5e1ffc28}}</a></li>
+    <li><a href="#1-en-dos-minutos">1. En dos minutos</a></li>
+    <li><a href="#2-darse-de-alta-como-cliente">2. Darse de alta como cliente</a></li>
+    <li><a href="#lo-que-hay-que-pedirle-al-centro" class="sub">Lo que hay que pedirle al centro</a></li>
+    <li><a href="#3-autenticacion">3. Autenticación</a></li>
+    <li><a href="#la-ip" class="sub">La IP</a></li>
+    <li><a href="#4-los-permisos-scopes">4. Los permisos (scopes)</a></li>
+    <li><a href="#5-los-recursos">5. Los recursos</a></li>
+    <li><a href="#paginacion-por-cursor" class="sub">Paginación por cursor</a></li>
+    <li><a href="#sincronizacion-incremental" class="sub">Sincronización incremental</a></li>
+    <li><a href="#get-integration-catalog-services" class="sub">GET /integration/catalog/services</a></li>
+    <li><a href="#get-integration-catalog-products" class="sub">GET /integration/catalog/products</a></li>
+    <li><a href="#get-integration-customers" class="sub">GET /integration/customers</a></li>
+    <li><a href="#get-integration-sales" class="sub">GET /integration/sales</a></li>
+    <li><a href="#get-integration-accounting-draft" class="sub">GET /integration/accounting-draft</a></li>
+    <li><a href="#5-1-reservar-en-la-agenda" class="sub">5.1 Reservar en la agenda</a></li>
+    <li><a href="#6-rotar-el-secreto">6. Rotar el secreto</a></li>
+    <li><a href="#7-limite-de-peticiones">7. Límite de peticiones</a></li>
+    <li><a href="#8-los-errores">8. Los errores</a></li>
+    <li><a href="#9-las-reglas-del-contrato">9. Las reglas del contrato</a></li>
+    <li><a href="#10-lo-que-conviene-saber-antes-de-empezar">10. Lo que conviene saber antes de empezar</a></li>
   </ol>
 </nav>
 <div class="contenido">
-<h1>{{t350072bc}}</h1>
-<p class="entradilla">
-  {{t414c74e1}}
-</p>
-
-<section id="empezar">
-  <h2>{{ted2544bc}}</h2>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/01-entrar.png" alt="{{td22cbf75}}" loading="lazy">
-    <figcaption>{{te10febe2}}</figcaption>
-  </figure>
-
-  <p>
-    {{tee517e71}}
-  </p>
-
-  <p>
-    <strong>{{teb502b7f}}</strong> {{t693db287}}
-  </p>
-
-  <h3>{{tddd9eee9}}</h3>
-  <figure>
-    <img src="/turnera/manual/imagenes/03-menu.png" alt="{{tda009fcf}}" loading="lazy">
-    <figcaption>{{t90db1092}}</figcaption>
-  </figure>
-
-  <p>
-    {{tb488eb48}} <strong>{{t4f70d8c3}}</strong>, <strong>{{t891e9d6d}}</strong>,
-    <strong>{{t0196f0a8}}</strong>, <strong>{{tf42553f7}}</strong> {{t95cb0bfd}} <strong>{{te84b64f4}}</strong>{{t77f373c1}}
-  </p>
-  <p>
-    {{tee169027}}
-  </p>
-
-  <p>
-    {{t8a957369}} <em>{{t7629678c}}</em>{{td419670b}}
-  </p>
-
-  <h3 id="ordenar">{{t66210a7a}}</h3>
-  <p>
-    {{t78d451ba}}
-    <strong>{{tb98a7bb4}}</strong>{{tf4050164}}
-  </p>
-  <p>
-    {{tc23d968c}}
-  </p>
-
-  <h3>{{t9db15095}}</h3>
-  <p>
-    {{t6b190d98}} <strong>{{t4b67dd73}}</strong> {{ta54f6edb}}
-  </p>
-
-  <h3>{{t4f70d8c3}}</h3>
-  <figure>
-    <img src="/turnera/manual/imagenes/02-inicio.png" alt="{{td8c29983}}" loading="lazy">
-    <figcaption>{{tbfaee876}}</figcaption>
-  </figure>
-
-  <p>
-    {{t59c73406}}
-  </p>
-
-  <p>
-    {{t4e6f1541}} <strong>{{tf898aa86}}</strong>{{t6935922a}}
-  </p>
-</section>
-
-<section id="agenda">
-  <h2>{{t9b76c10a}}</h2>
-  <span class="ruta">{{t782f4e9f}}</span>
-
-  <p>
-    {{t3c3ebb51}}
-  </p>
-
-  <div class="tabla-envoltorio">
-  <table>
-    <tbody><tr><th>{{t462d2dd3}}</th><th>{{ta61516b7}}</th><th>{{t15613b52}}</th></tr>
-    <tr>
-      <td><strong>{{t1a78742f}}</strong></td>
-      <td>{{t0b0bb7d8}}</td>
-      <td>{{tab190d2f}}</td>
-    </tr>
-    <tr>
-      <td><strong>{{t8ac12fd2}}</strong></td>
-      <td>{{ta4979728}}</td>
-      <td>{{t06665d37}}</td>
-    </tr>
-    <tr>
-      <td><strong>{{tb66c0136}}</strong></td>
-      <td>{{tf80b52c5}}</td>
-      <td>{{ta469e1c2}}</td>
-    </tr>
-  </tbody></table>
-  </div>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/17-agenda-semana.png" alt="{{t051fb72b}}" loading="lazy">
-    <figcaption>{{t4498887e}}</figcaption>
-  </figure>
-
-  <p>
-    {{tb6efae6e}}
-  </p>
-
-  <h3 id="agenda-ahora">{{tb16178d9}}</h3>
-
-  <p>
-    {{taf50fc19}} <strong>{{t57d00af1}}</strong>{{t3119a67b}}
-  </p>
-
-  <p>
-    {{tdaed131a}}
-  </p>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/04-agenda.png" alt="{{tcbf880df}}" loading="lazy">
-    <figcaption>{{t338eba52}}</figcaption>
-  </figure>
-
-  <h3 id="agenda-citas">{{t786af4fb}}</h3>
-
-  <ul>
-    <li><strong>{{t21a49fb1}}</strong> {{t75b953ac}}</li>
-    <li><strong>{{t0a20ac3b}}</strong> {{t967fea6d}}</li>
-    <li><strong>{{tbfa354de}}</strong> {{t6df049fb}}</li>
-    <li><strong>{{t18f77585}}</strong> {{t876694d4}}</li>
-    <li><strong>{{td0b4977e}}</strong> {{t6f1d6439}} <em>{{t5b4de74e}}</em>{{tae56d9fd}}</li>
-    <li><strong>{{te5d82e6c}}</strong> {{t1a5f76a0}} <em>{{t90141c0d}}</em>{{t39b88af1}}</li>
-  </ul>
-
-  <p>
-    <strong>{{t5925defb}}</strong> {{t61362297}} <em>{{t5b4de74e}}</em>,
-    <em>{{tc7ae321f}}</em> {{t95cb0bfd}} <em>{{tb336fc55}}</em> {{t30f22cec}}
-  </p>
-
-  <p>
-    <strong>{{t28a36423}}</strong> {{t2de429c2}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{tfbb10976}}</strong> {{tfaa955aa}} <em>{{t90141c0d}}</em> {{t2d9be59d}} <em>{{t6f50d6fe}}</em> {{t951d8e6e}}</p>
-  </div>
-
-  <p>
-    {{t92837284}}
-  </p>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/05-cita.png" alt="{{t2ab30147}}" loading="lazy">
-    <figcaption>{{tbccdde05}}</figcaption>
-  </figure>
-
-  <h3 id="agenda-senales">{{t3fc7ef80}}</h3>
-
-  <p>
-    {{t3662283c}} <a href="#tema">{{t4a39fc11}}</a> {{t426c8ab7}}
-  </p>
-
-  <div class="tabla-envoltorio">
-  <table>
-    <tbody><tr><th>{{tc6118009}}</th><th>{{tcbd995dc}}</th></tr>
-    <tr>
-      <td><strong>{{tab54d2a2}}</strong> {{t31357ccd}}</td>
-      <td><strong>{{t9ed8a52a}}</strong> {{t78ec090f}}</td>
-    </tr>
-    <tr>
-      <td><strong>{{tb81be365}}</strong> {{t8aa051df}}</td>
-      <td>{{t1ce8870d}} <strong>{{t37a704a6}}</strong>
-        {{td574517f}}</td>
-    </tr>
-    <tr><td><strong>{{te18c82cf}}</strong></td><td>{{ta56f29b0}}</td></tr>
-    <tr><td><strong>{{t7408f1fb}}</strong></td><td>{{t744f4c4b}}</td></tr>
-  </tbody></table>
-  </div>
-
-  <h3 id="espera">{{tf52d7c80}}</h3>
-  <span class="ruta">{{t9b5dd516}}</span>
-
-  <p>
-    {{ta7c095c2}}
-  </p>
-
-  <p>
-    <strong>{{t6bd10a42}}</strong> {{te146725a}}
-    <em>{{t383f2e73}}</em> {{td058e10d}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{td3a8d8a2}}</strong> {{ta3e825fc}}</p>
-  </div>
-
-  <p>
-    {{t5fccaaba}} <em>{{tf452fe4a}}</em>{{t8a2d0095}}
-  </p>
-  <h3 id="agenda-cerrar">{{t43692d03}}</h3>
-  <span class="ruta">{{tc24c23f5}}</span>
-
-  <p>
-    {{t815c7a41}}
-  </p>
-
-  <p>
-    {{t3904f7d5}} <strong>{{t7d693600}}</strong>{{t25becdc4}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{t4699d4a4}}</strong> {{t89f88483}}</p>
-  </div>
-
-  <h3 id="agenda-imprimir">{{t4d84a027}}</h3>
-  <span class="ruta">{{td7c418d6}}</span>
-
-  <p>
-    {{ta168ad98}}
-  </p>
-  <p>
-    {{tf93833a0}}
-  </p>
-</section>
-
-<section id="clientes">
-  <h2>{{t70d02af0}}</h2>
-  <span class="ruta">{{tea6fd092}}</span>
-
-  <p>
-    {{t9cf2f5ec}}<a href="#ordenar">{{tf72338cc}}</a>{{td4191940}}
-  </p>
-
-  <p>
-    {{tac042437}}
-    <strong>{{taef4af1e}}</strong>{{t61f61135}}
-  </p>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/07-ficha-cliente.png" alt="{{t36dccb1d}}" loading="lazy">
-    <figcaption>{{t397a6c94}}</figcaption>
-  </figure>
-
-  <h3>{{tc81559bc}}</h3>
-
-  <p>
-    {{t35150093}} <strong>{{tdeed4270}}</strong> {{tfa977675}} <em>{{te284fdaa}}</em>{{t13b83f38}} <strong>{{t5f699ba5}}</strong>{{tbaa40f72}}
-  </p>
-
-  <p>
-    {{t9664cd83}}
-  </p>
-
-  <h3 id="puntos">{{t52b7d78c}}</h3>
-
-  <p>
-    {{tea829afd}} <em>{{t04df318d}}</em>{{t9d086222}} <strong>{{tb65e6289}}</strong> {{tc0513c22}} <strong>{{t6518f85d}}</strong> {{taa6d308e}}
-  </p>
-
-  <p>
-    {{t36a50b74}}
-  </p>
-
-  <h4>{{tc0a41319}}</h4>
-
-  <p>
-    {{tc4639468}} <strong>{{td7b496ef}}</strong>{{t85c7e59a}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{ta88c5ed0}}</strong> {{t4b318b91}}</p>
-  </div>
-
-  <h4>{{t25fae1e7}}</h4>
-
-  <p>
-    {{t42dbc54d}} <em>{{t3e4b6426}}</em> {{t146072ab}} <strong>{{t65ff4f21}}</strong>{{t80f86d95}}
-  </p>
-  <h4>{{tf3ee1c64}}</h4>
-
-  <p>
-    {{tf6b38904}} <em>{{t3e933219}}</em> {{te04e3f26}} <strong>{{t3ad8854b}}</strong>{{t50c1f6a5}}
-    <strong>{{t9dbf7c14}}</strong>{{tb44d9aa8}}
-  </p>
-
-  <p>
-    {{tc1338509}}
-  </p>
-
-  <h3 id="avisos">{{t1af940fa}}</h3>
-
-  <p>
-    {{t0d417298}} <strong>{{t4ec3a2cf}}</strong> {{t93e3e365}} <em>{{t1af940fa}}</em>{{t4b312444}} <strong>{{tee1e359a}}</strong> {{tb60aadbb}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{t060b98b5}}</strong> {{tcd938183}}</p>
-  </div>
-
-  <p>
-    {{tb9ca1420}}
-  </p>
-
-  <p>
-    {{tf5c53ff3}} <strong>{{ta6306500}}</strong>{{tef66b489}} <em>{{ta8e19621}}</em> {{t36e8b45b}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{tbfc81413}}</strong> {{t8a7e26e8}}</p>
-  </div>
-
-  <h3>{{t79d5b296}}</h3>
-  <p>
-    {{t8af9941a}} <strong>{{t987c88ce}}</strong> {{tfa8b9393}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{t2b177f29}}</strong> {{t0797f501}}</p>
-  </div>
-</section>
-
-<section id="cobrar">
-  <h2>{{t720dcd4a}}</h2>
-
-  <h3 id="cobrar-tpv">{{tf8072379}}</h3>
-  <span class="ruta">{{t1c3e01af}}</span>
-
-  <p>
-    {{t54a4d47e}}
-  </p>
-
-  <p>
-    <strong>{{te0839005}}</strong> {{tbd5abbc9}} <em>{{tc7ae321f}}</em>{{t475e7daa}}
-  </p>
-
-  <ul>
-    <li><strong>{{t8c05d815}}</strong> {{t54e4b216}}</li>
-    <li><strong>{{t8c05d815}}</strong> {{t8cc569c1}} <em>{{te1f21d88}}</em>.</li>
-    <li><strong>{{tcea554aa}}</strong>{{t543193fb}}</li>
-  </ul>
-
-  <p>
-    {{t4e6c3fd1}} <em>{{t38874795}}</em> {{tfca820a3}}
-  </p>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/08-tpv.png" alt="{{t44a4e8a7}}" loading="lazy">
-    <figcaption>{{td820436c}}</figcaption>
-  </figure>
-
-  <h3 id="paquetes">{{tfe6b297f}}</h3>
-  <span class="ruta">{{t73965fc6}}</span>
-
-  <p>
-    {{t4a3fff8f}}
-  </p>
-
-  <p>
-    <strong>{{tf8d4f9a6}}</strong> {{tf2541f0c}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{t6fcce1b0}}</strong> {{tfa540764}}</p>
-  </div>
-
-  <p>
-    {{t20d3d66b}}
-  </p>
-
-  <p>
-    {{t0b3e34a2}} <em>{{tfe6b297f}}</em>{{tf48b44ad}}
-  </p>
-
-  <p>
-    {{t65f2999e}} <em>{{t383f2e73}}</em>{{t1e2d6243}}
-  </p>
-  <h3>{{tfa0f573e}}</h3>
-  <p>
-    {{t2e13cc9d}} <strong>{{td7448c07}}</strong> {{t864dd020}}
-  </p>
-
-  <p>
-    {{t58bb08c6}}
-  </p>
-
-  <h3 id="cupones">{{td1477179}}</h3>
-  <span class="ruta">{{t68fc4ff1}}</span>
-
-  <p>
-    {{t9c2ace88}} <strong>{{t470b302f}}</strong>, <strong>{{t7141db1e}}</strong>{{t95690120}}
-    <strong>{{tfe487a49}}</strong> {{t4d68955c}} <strong>{{tff04c87d}}</strong> {{tc41acfbe}}
-  </p>
-
-  <p>
-    {{tab81ac2e}} <strong>{{t5a405a6b}}</strong> {{tae9cf92f}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{tf89d6158}}</strong> {{tbe0cd1ca}}</p>
-  </div>
-
-  <p>
-    {{tc6cadc45}} <strong>{{tc92b6072}}</strong>{{t30fb5f4b}}
-  </p>
-
-  <p>
-    {{t337561a8}} <strong>{{t383f2e73}}</strong>{{tca273a60}}
-  </p>
-
-  <h3 id="cobrar-bono">{{t67201a80}}</h3>
-  <p>
-    {{tc9be7f59}} <strong>0,00 €</strong> {{ta6650116}} <em>{{t0651e6f4}}</em>{{tdeb16b9d}} <em>{{tc9713f25}}</em> {{t50514065}}
-  </p>
-  <p>
-    <strong>{{td0aef683}}</strong>{{t3125e715}}
-  </p>
-  <p>
-    {{t7012bb8c}}
-  </p>
-  <p>
-    {{t50788b85}} <em>{{t5f008297}}</em>{{t0ce62767}}
-  </p>
-
-  <h3 id="cobrar-partido">{{t1439a502}}</h3>
-
-  <p>
-    {{t52a14521}}
-    <strong>{{td88dce71}}</strong> {{t52e0fd32}}
-  </p>
-
-  <p>
-    {{t647ff09c}} <strong>{{t2536cfa9}}</strong> {{t53a76f0e}}
-  </p>
-
-  <p>
-    {{t2cbca90b}}
-  </p>
-
-  <h3 id="cobrar-deudas">{{tf42553f7}}</h3>
-  <figure>
-    <img src="/turnera/manual/imagenes/09-cobros-pendientes.png" alt="{{t32871e59}}" loading="lazy">
-    <figcaption>{{taffa2cf2}}</figcaption>
-  </figure>
-
-  <span class="ruta">{{t7053b263}}</span>
-
-  <p>
-    {{tf195f42d}}
-  </p>
-
-  <h3 id="devoluciones">{{t07ed0f36}}</h3>
-  <span class="ruta">{{t03406a1d}}</span>
-
-  <p>
-    {{t36ef17c1}} <strong>{{tfda85136}}</strong>{{tc7f12c71}} <strong>{{tc815568d}}</strong>{{t2bd97e3a}} <em>{{t667ed808}}</em> {{t7cbb8576}}
-  </p>
-
-  <p>
-    {{tf68b1932}}
-  </p>
-  <ul>
-    <li><strong>{{td8765b99}}</strong>{{t911057c0}}</li>
-    <li><strong>{{t20b57852}}</strong>{{te301db84}} <em>{{tb08342d3}}</em> {{t31787050}}</li>
-  </ul>
-  <p>
-    {{t9178fa64}}
-  </p>
-  <p>
-    {{td836b957}}
-  </p>
-
-  <p>
-    <strong>{{t125c0211}}</strong> {{t98540aff}} <em>{{t2a416f6a}}</em>{{t645482c8}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{t5b54c4e9}}</strong> {{t9a6ecbc7}} <em>{{tc1b67e37}}</em> {{t85c0d72f}} <em>{{t33e8faa2}}</em>{{tfd47ed15}}</p>
-  </div>
-
-  <p>
-    {{t5fd7c0e0}}
-    <em>{{t0ec94ac3}}</em> {{t4ae73d6e}}
-  </p>
-
-  <p>
-    {{t6d10262e}} <em>{{t07ed0f36}}</em>{{tb9ce4501}}
-  </p>
-
-  <h3 id="tarjetas-regalo">{{t9c15e949}}</h3>
-  <span class="ruta">{{t07148ad6}}</span>
-
-  <p>
-    {{t7ffc4c46}} <strong>{{tffe15e7b}}</strong>{{t57d72b93}} <code>{{t8eff1b77}}</code>{{tc7c518ab}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{t068beb8f}}</strong> {{t91ff00f3}} <em>{{t8500256c}}</em>{{t14234e98}}</p>
-  </div>
-
-  <p>
-    {{tadc6a542}} <strong>{{t8500256c}}</strong> {{t69c09c93}}
-  </p>
-
-  <p>
-    {{t80347634}} <strong>{{t304fdabf}}</strong>{{t136ec41b}}
-  </p>
-
-  <p>
-    {{td7bf9f3c}}
-  </p>
-</section>
-
-<section id="bonos">
-  <h2>{{t44ac7e4e}}</h2>
-
-  <p>
-    {{te54090fe}} <strong>{{td06ff668}}</strong>{{te86501d1}}
-  </p>
-  <ul>
-    <li><strong>{{t5e93ee86}}</strong> {{t0dbcfb1d}}</li>
-    <li><strong>{{t1ab2b727}}</strong> {{t9fdf6b2f}}</li>
-  </ul>
-
-  <h3>{{t853350d6}}</h3>
-  <p>
-    {{t99691620}} <strong>{{t87c0cfd8}}</strong>{{t4908cdd5}} <a href="#cobrar-bono">{{t67201a80}}</a>{{tb334844e}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{t7cf08d05}}</strong> {{t6ec3889f}}</p>
-  </div>
-
-  <p>
-    {{tc0dd17e3}}
-  </p>
-
-  <h3 id="bonos-traspaso">{{tf9476567}}</h3>
-  <span class="ruta">{{t9c0cb384}}</span>
-
-  <p>
-    {{t39e29672}} <em>{{tb9dd395f}}</em> {{t050e1c05}}
-  </p>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/25-traspaso-de-bono.png" alt="{{t7a30723a}}" loading="lazy">
-    <figcaption>{{td3b61902}}</figcaption>
-  </figure>
-
-  <div class="ojo">
-    <p><strong>{{t2579f004}}</strong> {{tf24bad7e}}</p>
-  </div>
-
-  <p>
-    {{t426da70d}} <strong>{{tef48bc0d}}</strong>{{t64191c92}} <em>{{t9978c51a}}</em>{{t1e76fccc}}
-  </p>
-
-  <p>
-    {{te5f8ecc8}}
-  </p>
-
-  <h4>{{t11a7317f}}</h4>
-
-  <ul>
-    <li><strong>{{tcb185fd1}}</strong> {{t019677ee}}</li>
-    <li><strong>{{t16875df7}}</strong> {{tb9496367}}</li>
-    <li><strong>{{tad249d2e}}</strong></li>
-  </ul>
-
-  <p>
-    <strong>{{tc1e4e88f}}</strong> {{t005f545e}}
-  </p>
-
-  <p>
-    {{t99807b5e}} <em>{{t31390281}}</em>{{t00092c2e}} <em>{{tad801964}}</em>.
-  </p>
-</section>
-
-<section id="aparatos">
-  <h2>{{tda69c249}}</h2>
-  <span class="ruta">{{t716c3754}}</span>
-
-  <p>
-    {{t0006a00f}}
-    <strong>{{ta94dc541}}</strong>{{tc55bd5b3}}
-  </p>
-
-  <h3 id="aparatos-alta">{{taf596a02}}</h3>
-  <figure>
-    <img src="/turnera/manual/imagenes/10-aparatos.png" alt="{{t258c5bdd}}" loading="lazy">
-    <figcaption>{{t16dd9826}}</figcaption>
-  </figure>
-
-  <p>{{td2eb1cd2}}</p>
-  <ul>
-    <li><strong>{{t87616ace}}</strong> {{t95cb0bfd}} <strong>{{t1624d495}}</strong> {{tb7b124ef}}</li>
-    <li><strong>{{t2e0cbe58}}</strong> {{ta6c60d79}}</li>
-    <li><strong>{{tce42d491}}</strong>{{tbd35b95e}}</li>
-  </ul>
-
-  <p>{{t02fe8a4c}}</p>
-  <table>
-    <tbody><tr><th>{{t6cc6198d}}</th><th>{{tad0b8306}}</th><th>{{t52b71a16}}</th></tr>
-    <tr><td><strong>{{t1d91f4b8}}</strong></td><td>{{tf5291ce1}}</td>
-      <td>{{t8567ef1a}}</td></tr>
-    <tr><td><strong>{{t6eeba656}}</strong></td><td>{{t314dd093}}</td><td>{{t2a477e75}}</td></tr>
-    <tr><td><strong>{{t161e6bb4}}</strong></td><td>{{tb50c1d8c}}</td>
-      <td>{{tfa26cbfe}}</td></tr>
-  </tbody></table>
-  <p>
-    {{tc45b25aa}} <strong>{{t070dbd3c}}</strong> {{t66989b3b}}
-  </p>
-
-  <div class="ojo">
-    <strong>{{t36941897}}</strong> {{t6d2a3276}} <strong>{{t5f96b275}}</strong> {{te2c85586}}
-  </div>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/11-aparato.png" alt="{{t791302a6}}" loading="lazy">
-    <figcaption>{{tb69e50eb}}</figcaption>
-  </figure>
-
-  <h3>{{t7c41e211}}</h3>
-  <p>
-    {{t5c77aedc}}
-    <strong>{{t2a6e42d8}}</strong>{{t20406be9}} <strong>{{t8b740f5c}}</strong>{{td612c2e8}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{ta5f1aa61}}</strong> {{tfc37b881}}</p>
-  </div>
-
-  <h3 id="aparatos-sesion">{{t8f8374a2}}</h3>
-  <span class="ruta">{{ta0f8ce1c}}</span>
-  <p>
-    {{t09761302}} <strong>{{tbebdc4f3}}</strong>{{t01359cab}}
-  </p>
-  <p>
-    {{tf5354953}}
-  </p>
-  <p>
-    {{tc6e666d9}}
-  </p>
-  <figure>
-    <img src="/turnera/manual/imagenes/16-aparatologia-en-la-cita.png" alt="{{t6b80bbee}}" loading="lazy">
-    <figcaption>{{td5017277}}</figcaption>
-  </figure>
-
-</section>
-
-<section id="portal">
-  <h2>{{t139476a2}}</h2>
-
-  <p>
-    {{tcd0e7eff}} <code>{{td3d728f4}}</code> {{tb1c9c156}}
-    <strong>{{tba5592fa}}</strong>{{t8b16d3c6}}
-  </p>
-
-  <h3>{{tea3f0a96}}</h3>
-  <p>
-    {{t3de45948}} <strong>{{t10064c72}}</strong> {{t71e6237b}}
-  </p>
-  <p>
-    {{t9b5c67a6}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{te447a648}}</strong> {{tfc24b2e9}}</p>
-  </div>
-
-  <h3>{{t088bad3c}}</h3>
-  <ul>
-    <li>{{t5c8979cd}}</li>
-    <li>{{t6dc69fab}} <strong>{{t8ed7410c}}</strong>{{t4ec87abc}}</li>
-    <li>{{ta23e5be5}}</li>
-  </ul>
-
-  <h3 id="portal-reglas">{{t8fd3ccda}}</h3>
-  <span class="ruta">{{t32daa9e6}}</span>
-  <p>
-    {{t39368a02}}
-  </p>
-  <ul>
-    <li><strong>{{t6cfa812e}}</strong> {{tad450b77}}</li>
-    <li><strong>{{t71d0bd06}}</strong> {{ta5debd54}}</li>
-    <li><strong>{{te16d41a3}}</strong>, <strong>{{t1cceba4e}}</strong>, <strong>{{t9534e46e}}</strong> {{t95cb0bfd}} <strong>{{tcceea269}}</strong>{{t9e77b38a}}</li>
-  </ul>
-  <figure>
-    <img src="/turnera/manual/imagenes/31-reservas-desde-fuera.png" alt="{{tb3257c10}}" loading="lazy">
-    <figcaption>{{t936d9fd9}}</figcaption>
-  </figure>
-  <p>
-    {{t3be64612}}
-  </p>
-</section>
-
-<section id="informes">
-  <h2>{{t772ade1d}}</h2>
-  <span class="ruta">{{t229acf3d}}</span>
-
-  <p>{{t6499bb8c}}</p>
-
-  <div class="tabla-envoltorio">
-  <table>
-    <tbody><tr><th>{{t7c16eab2}}</th><th>{{t6b25d224}}</th></tr>
-    <tr><td><strong>{{t7083a3f4}}</strong></td><td>{{t1f1d0171}}</td></tr>
-    <tr><td><strong>{{t8f9b1d40}}</strong></td><td>{{t6b5c5f15}}</td></tr>
-    <tr><td><strong>{{t6fb19a08}}</strong></td><td>{{t3e9922c0}}</td></tr>
-    <tr><td><strong>{{td83ef34a}}</strong></td><td>{{t368c1b8b}}</td></tr>
-    <tr><td><strong>{{te84b64f4}}</strong></td><td>{{t3a6038b4}}</td></tr>
-    <tr><td><strong>{{tc3f50a1b}}</strong></td><td>{{t6dea23c1}}</td></tr>
-    <tr><td><strong>{{tbcecf456}}</strong></td><td>{{tca2f954c}}</td></tr>
-  </tbody></table>
-  </div>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/13-caja-diaria.png" alt="{{te5fd61b1}}" loading="lazy">
-    <figcaption>{{t5b8d4864}}</figcaption>
-  </figure>
-
-  <h3 id="cuadro-de-mando">{{tf3505e30}}</h3>
-  <span class="ruta">{{taf1affdd}}</span>
-  <p>
-    {{t05dc0072}}<strong>{{t166f5f0d}}</strong>, <strong>{{tbb201c31}}</strong>, <strong>{{t64ad6141}}</strong>{{t1f98761e}}
-  </p>
-  <div class="tabla-envoltorio">
-  <table>
-    <tbody><tr><th>{{t27a21118}}</th><th>{{t4ecc61c7}}</th><th>{{t6f6ecd5d}}</th></tr>
-    <tr><td><strong>{{t17f818ca}}</strong></td><td>{{tfa1d836e}}</td><td>{{t65d1c95f}}</td></tr>
-    <tr><td><strong>{{tddbf5933}}</strong></td><td>{{tf887e679}}</td><td>{{t5b83b525}}</td></tr>
-    <tr><td><strong>{{tb6c8e1d8}}</strong></td><td>{{t8bb797fe}}</td><td>{{t2e8d5e8c}}</td></tr>
-    <tr><td><strong>{{tc3155590}}</strong></td><td>{{t260cff02}}</td><td>{{t34495d4e}}</td></tr>
-    <tr><td><strong>{{tf999ab32}}</strong></td><td>{{t1b5c8b42}}</td><td>{{t2e8d5e8c}}</td></tr>
-    <tr><td><strong>{{t6ac144ee}}</strong></td><td>{{tee989426}}</td><td>{{t19e295c1}}</td></tr>
-  </tbody></table>
-  </div>
-  <p>
-    {{t6e7b94dd}} <em>{{t3b066c8d}}</em> {{t980e97c2}} <em>{{tc86e76eb}}</em>{{t022832fc}}
-  </p>
-  <figure>
-    <img src="/turnera/manual/imagenes/30-cuadro-de-mando.png" alt="{{t3bbdab42}}" loading="lazy">
-    <figcaption>{{t86462bbf}}</figcaption>
-  </figure>
-
-  <h3>{{tf77be032}}</h3>
-  <p>
-    {{ta9a3ec46}} <strong>{{t990c8329}}</strong>{{t64e29491}}
-  </p>
-
-  <h3>{{t4a622f17}}</h3>
-  <p>
-    {{t8383a335}}
-  </p>
-
-  <h3>{{t8de2b602}}</h3>
-  <p>
-    {{t5b12f0e4}}
-    <em>{{tb08342d3}}</em>{{t12bca9bc}} <em>{{t8500256c}}</em>{{tdbf0bc4a}}
-  </p>
-</section>
-
-<section id="ajustes">
-  <h2>{{t4fc373a3}}</h2>
-  <span class="ruta">{{t03138cc6}}</span>
-
-  <p>{{t05d9e08b}}</p>
-
-  <h3>{{t5dee7f91}}</h3>
-  <figure>
-    <img src="/turnera/manual/imagenes/14-administracion.png" alt="{{t74b76194}}" loading="lazy">
-    <figcaption>{{t25f273a4}}</figcaption>
-  </figure>
-
-  <ul>
-    <li><strong>{{tfc4af9f4}}</strong>{{tc2951a54}}</li>
-    <li><strong>{{t6ddaa854}}</strong>{{t8d3db5bc}}</li>
-    <li><strong>{{t53eb627a}}</strong>{{tf74db60e}}</li>
-  </ul>
-
-  <h3>{{t8f893443}}</h3>
-  <span class="ruta">{{t8a2da17b}}</span>
-  <p>
-    {{t041544b3}} <strong>{{t25ddd935}}</strong>{{t52be8250}}
-  </p>
-  <p>
-    {{t74cc0fd7}}
-  </p>
-
-  <h3>{{t12751e28}}</h3>
-  <figure>
-    <img src="/turnera/manual/imagenes/15-recursos.png" alt="{{tc61745e3}}" loading="lazy">
-    <figcaption>{{td82d026d}}</figcaption>
-  </figure>
-
-  <p>
-    {{tfdcf8daf}} <strong>{{t53d532f7}}</strong>{{t54a6a5c9}}
-  </p>
-
-  <h3>{{taddfa495}}</h3>
-  <ul>
-    <li><strong>{{t1ad15cbf}}</strong>{{tca6cf7a7}} <a href="#aparatos">{{t91696341}}</a>.</li>
-    <li><strong>{{td92b8115}}</strong>{{t880af7a7}} <strong>{{t91b94190}}</strong>{{t1692c36e}}</li>
-    <li><strong>{{t41dde626}}</strong>{{t7cf78cfc}}</li>
-    <li><strong>{{t43c7feec}}</strong>{{t8e0fcc27}} <strong>{{tc1f1c13a}}</strong>.</li>
-    <li><strong>{{tfb0e3b34}}</strong>{{tcf62fc2f}} <strong>{{t058d8286}}</strong>{{tcbb41612}}</li>
-    <li><strong>{{t98f00c3e}}</strong>{{t38a19e55}}</li>
-  </ul>
-
-  <h3 id="roles">{{t2d35ad3c}}</h3>
-  <span class="ruta">{{t370eb09a}}</span>
-
-  <p>
-    {{t1844cc8a}} <strong>{{t96e3f164}}</strong> {{tf7eac24c}}
-    <strong>{{tb9914e7f}}</strong> {{tebc5bd60}}
-  </p>
-
-  <p>{{t9e7e6b4b}}</p>
-
-  <ul>
-    <li><strong>{{t429afb36}}</strong>{{tab102829}}</li>
-    <li><strong>{{tf3919e4d}}</strong>{{t4b4a1fb4}}</li>
-    <li><strong>{{t04f478b2}}</strong>{{tafa9b41e}}</li>
-    <li><strong>{{t8de85e4e}}</strong>{{t1f9e97e7}}</li>
-  </ul>
-
-  <p>
-    {{tb70473b7}} <strong>{{td469b504}}</strong>{{ta74850cc}} <strong>{{t301c1852}}</strong>{{te118243e}}
-    <strong>{{ta449845d}}</strong>{{tef9031e5}} <strong>{{t34854139}}</strong>{{t4375da0f}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{t2099dc52}}</strong> {{t8958a378}} <em>{{tdd3bc42b}}</em> {{tc09d93f9}}</p>
-  </div>
-
-  <p>
-    {{tf5207344}} <span class="ruta">{{tcb052245}}</span>{{t212fd71a}}
-  </p>
-
-  <p>
-    {{t35d2eb6c}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{tac823a4a}}</strong> {{t69d97136}}</p>
-  </div>
-
-  <p>
-    {{ta947018f}}
-  </p>
-
-  <h3>{{t36105829}}</h3>
-  <span class="ruta">{{tf3b7037e}}</span>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/18-equipos-autorizados.png" alt="{{tdab853b5}}" loading="lazy">
-    <figcaption>{{tace4a892}}</figcaption>
-  </figure>
-
-  <p>
-    {{tef720928}} <strong>{{t66461c8b}}</strong>{{t46a1ce4e}} <code>{{tc5fe0200}}</code> {{te5337ddf}} <code>{{tc5fe0200}}</code>.
-  </p>
-
-  <p>
-    {{tb97ff9dd}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{t8ccfdef6}}</strong> {{t8268a7e4}}
-      <code>{{tc5fe0200}}</code>{{t0277f680}}</p>
-  </div>
-
-  <h3 id="tema">{{ted4defcc}}</h3>
-  <span class="ruta">{{t3e3bb00b}}</span>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/19-tema-oscuro.png" alt="{{t0169a1cd}}" loading="lazy">
-    <figcaption>{{t648671c6}}</figcaption>
-  </figure>
-
-  <p>
-    {{tb828a3ed}}<strong>{{td443c097}}</strong>,
-    <strong>{{t14185ba1}}</strong>, <strong>{{tc66106fd}}</strong> {{t95cb0bfd}} <strong>{{ta62f1a1c}}</strong>{{tf39417d9}} <strong>{{t36c9b4bb}}</strong>{{t3e51a5a2}}
-  </p>
-
-  <p>
-    {{tedbaf4a9}}
-    <strong>{{t86d28726}}</strong>{{tc824808b}}
-  </p>
-
-  <p>
-    {{t4494f73e}}
-  </p>
-
-  <p>
-    {{tea8222cc}} <strong>{{t22979e06}}</strong>{{t3ab65bab}}
-  </p>
-
-  <p>
-    {{td3187453}}
-  </p>
-
-  <h3 id="iva">{{tb4deede4}}</h3>
-  <span class="ruta">{{t46febad6}}</span>
-
-  <p>
-    {{tf36c192d}} <strong>{{t837c2bdb}}</strong>
-    {{t0e66869f}} <em>21 %</em>, <em>10 %</em>, <em>4 %</em>, <em>{{tb77c08b8}}</em> {{t95cb0bfd}} <em>{{t0cfdf2bc}}</em>.
-  </p>
-
-  <p>
-    <strong>{{t0be624ac}}</strong> {{ta0e4b28a}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{t737fd725}}</strong> {{t89ece861}} <em>{{tc4e4accd}}</em> {{t0237616d}} <em>{{tb77c08b8}}</em>
-      {{t555bcd88}}</p>
-  </div>
-
-  <p>
-    <strong>{{t0cfdf2bc}}</strong> {{ta231086e}}
-  </p>
-
-  <h3 id="contabilidad">{{tb86405cb}}</h3>
-  <span class="ruta">{{t4dde909c}}</span>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/20-borrador-contable.png" alt="{{tf8fde5e3}}" loading="lazy">
-    <figcaption>{{td1068ce1}}</figcaption>
-  </figure>
-
-  <div class="ojo">
-    <p><strong>{{t91092150}}</strong> {{t33418989}} <em>{{tec80f569}}</em> {{tad69c0e6}}</p>
-  </div>
-
-  <p>
-    {{tdd3b40db}} <strong>{{tf54be7ee}}</strong> {{t26475bbb}}
-  </p>
-
-  <p>
-    {{t0bca2d9d}} <strong>{{tee582e67}}</strong>{{t3933b9de}}
-  </p>
-
-  <p>
-    {{t87cfbad9}} <em>{{td92cfa3f}}</em>{{t6df90255}}
-  </p>
-
-  <h3 id="whatsapp">{{t22dd289b}}</h3>
-  <span class="ruta">{{t4a89b23f}}</span>
-
-  <p>
-    {{t178f7acd}} <strong>{{t751783ef}}</strong>{{te956f512}}
-  </p>
-
-  <p>
-    {{t20ad5097}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{t36c04564}}</strong> {{t4aa9ec1b}}</p>
-  </div>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/27-whatsapp.png" alt="{{tf3a591c5}}" loading="lazy">
-    <figcaption>{{t4a5fe7db}}</figcaption>
-  </figure>
-
-  <h4>{{t39feb0f8}}</h4>
-
-  <p>
-    {{t5ccb8307}} <code>+</code> {{t71b6fe61}}
-  </p>
-
-  <h4>{{t00fc4f7e}}</h4>
-
-  <p>
-    {{ta99d3da4}}
-    <code>{{tc9b6a534}}</code>, <code>{{t93a3aa7c}}</code>, <code>{{tf80fa24e}}</code>, <code>{{t866affca}}</code>,
-    <code>{{tb07238cd}}</code>, <code>{{t7756464a}}</code>, <code>{{t51740ed2}}</code>, <code>{{t5fd109a2}}</code> {{t95cb0bfd}}
-    <code>{{td8d7e705}}</code>{{t1d1858d7}}
-  </p>
-
-  <h3 id="consentimientos">{{t2536d014}}</h3>
-  <span class="ruta">{{ta82e7c6a}}</span>
-
-  <p>
-    {{t407241f4}} <strong>{{t30267be6}}</strong>{{tb2519234}}
-  </p>
-
-  <h4>{{t9d13c9d8}}</h4>
-
-  <ol>
-    <li>{{t05de6c02}} <em>{{t49358b1d}}</em>{{t65118d67}}</li>
-    <li>{{tb1e9dea5}} <em>{{te883683c}}</em> {{t5ed076b2}}</li>
-    <li>{{t0bdfb927}}</li>
-    <li>{{tfc2dbd3c}}</li>
-  </ol>
-
-  <div class="ojo">
-    <p><strong>{{ta9091832}}</strong> {{t998a9242}}</p>
-  </div>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/24-ipad-de-firmas.png" alt="{{t597ee321}}" loading="lazy">
-    <figcaption>{{t8b2f288c}}</figcaption>
-  </figure>
-
-  <h4>{{t83593f4a}}</h4>
-
-  <p>
-    {{tf6a49837}} <em>{{t5a7729e3}}</em>{{t9befb3f1}} <code>{{td94019fd}}</code>, <code>{{t0f3869f5}}</code>, <code>{{t69794b47}}</code>, <code>{{tc01a46e2}}</code> {{t95cb0bfd}}
-    <code>{{tf46b3ae6}}</code>{{t363d4c15}}
-  </p>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/23-plantillas-de-consentimiento.png" alt="{{t0c091d0a}}" loading="lazy">
-    <figcaption>{{tc2048a55}}</figcaption>
-  </figure>
-
-  <div class="ojo">
-    <p><strong>{{t06b8d7e3}}</strong> {{t58e18c98}}</p>
-  </div>
-
-  <p>
-    {{tba1c7edb}} <strong>{{t2453f5c4}}</strong>{{ta4d8875c}}
-  </p>
-
-  <h4>{{t72831ba9}}</h4>
-
-  <p>
-    {{ta9b3ca8d}} <strong>{{t6c89769b}}</strong> {{tc9b5b193}}
-  </p>
-
-  <h4>{{tdd732e3c}}</h4>
-
-  <p>
-    {{t812490cc}} <strong>{{t626c80df}}</strong>{{t3491d231}} <em>{{ta8e19621}}</em> {{t8d017ddd}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{t758d70fe}}</strong> {{t4148d4b1}}</p>
-  </div>
-
-  <p>
-    {{t99807b5e}} <strong>{{t1b892236}}</strong>{{t38cc1eae}}
-    <em>{{tad801964}}</em>{{t0507faed}}
-  </p>
-
-  <p>
-    {{td8ad6fd6}} <strong>{{t69643489}}</strong>{{t5bfced51}}
-  </p>
-
-  <h3 id="presencia">{{t5c57e215}}</h3>
-  <span class="ruta">{{t8b7df974}}</span>
-
-  <div class="ojo">
-    <p><strong>{{t886215ed}}</strong> {{t3300beba}}</p>
-  </div>
-
-  <p>
-    {{tcf30a19d}} <em>{{t6e6ef8c2}}</em>{{tc76ff6bc}}
-    <em>{{t73f83108}}</em> {{t7a81af3e}} <em>{{t13058e58}}</em> {{t3f72fd83}}
-  </p>
-
-  <p>
-    <strong>{{t9a4fc70f}}</strong>{{t1d477f2d}} <strong>{{tca3a08cf}}</strong>{{t288306d8}}
-  </p>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/29-fichar.png" alt="{{te0e8fbec}}" loading="lazy">
-    <figcaption>{{te7f798fb}}</figcaption>
-  </figure>
-
-  <h4>{{t80a85d16}}</h4>
-
-  <p>
-    {{t7fbfaa53}} <strong>{{t45c41e97}}</strong>{{t86c36fa6}}
-    <em>{{t19738da0}}</em>{{t962b7a62}}
-  </p>
-
-  <p>
-    {{t4e6c3fd1}} <em>{{t1f31a10c}}</em> {{t4f82dc49}}
-    <strong>{{tea34b215}}</strong>{{t0fc7a66b}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{tc5056d90}}</strong> {{t7cfbf8d1}}</p>
-  </div>
-
-  <p>
-    {{ta612cd9c}} <strong>{{t9b25757c}}</strong>{{t34840e09}} <em>{{t520a1f8d}}</em>{{t2c4e220a}}
-  </p>
-
-  <p>
-    <strong>{{t3ac1b44f}}</strong> {{td19994c2}} <em>{{t515bdcac}}</em>{{tbf08c218}}
-  </p>
-
-  <p>
-    {{t365f5634}} <strong>{{ta4a20420}}</strong>{{t87e39816}}
-  </p>
-
-  <p>
-    {{tcf30a19d}} <em>{{t6a700d96}}</em> {{tde737868}}
-  </p>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/21-control-de-presencia.png" alt="{{t88139cb7}}" loading="lazy">
-    <figcaption>{{tf86a2494}}</figcaption>
-  </figure>
-
-  <h4>{{t4378792c}}</h4>
-
-  <p>
-    {{te29292ee}} <strong>{{t72b22457}}</strong>{{t00b2003e}}
-  </p>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/28-fichajes.png" alt="{{t33e58780}}" loading="lazy">
-    <figcaption>{{t1d725b10}}</figcaption>
-  </figure>
-
-  <p>
-    {{tb989a4b0}} <em>{{t878a7416}}</em>{{t4210b84d}}
-  </p>
-
-  <h4>{{td17ace3f}}</h4>
-
-  <p>
-    {{t9d18bfeb}} <strong>{{t79775cb2}}</strong>
-    {{t95cb0bfd}} <strong>{{t1d5a4873}}</strong>{{t261f86e1}}
-  </p>
-
-  <p>
-    {{t546fbd66}}
-  </p>
-
-  <h4>{{tccd375b4}}</h4>
-
-  <p>
-    {{teb36487c}} <strong>{{t971b64ad}}</strong>{{t74d9d722}} <code>{{t77347cde}}</code> {{t69ca239b}}
-  </p>
-
-  <h3 id="integraciones">{{t6c03707a}}</h3>
-  <span class="ruta">{{t8fedd76c}}</span>
-
-  <p>
-    {{td312c742}} <strong>{{tbba9edb0}}</strong>{{t21fabbb4}}
-  </p>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/26-integraciones.png" alt="{{t114fbe3b}}" loading="lazy">
-    <figcaption>{{t68a311a5}}</figcaption>
-  </figure>
-
-  <p>{{t400b5641}}</p>
-
-  <ul>
-    <li><strong>{{t67be9e34}}</strong> {{t9f2a5314}}</li>
-    <li><strong>{{t64ee82c3}}</strong> {{tb94f0043}}</li>
-    <li><strong>{{tdc5b0fb0}}</strong> {{tec1c7cfe}}</li>
-    <li><strong>{{t0f2ea142}}</strong> {{ta3ab5d54}} <code>{{taa1f77ab}}</code>.</li>
-  </ul>
-
-  <div class="ojo">
-    <p><strong>{{tffcd2f95}}</strong> {{te6366ac7}}
-      <code>{{t96da4938}}</code> {{t5da78f45}} <code>{{t8318df9e}}</code>{{t4bb16b20}}</p>
-  </div>
-
-  <p>
-    <strong>{{t18436245}}</strong> {{t237fd935}} <em>{{te8cb29be}}</em> {{t95cb0bfd}} <em>{{ta8baee62}}</em>{{t5a86a763}}
-  </p>
-
-  <p>
-    <strong>{{t4af85179}}</strong> {{t39d5feb9}} <a href="https://devel.es/turnera/api">{{tea9d16ed}}</a>{{tbc4e8717}}
-  </p>
-
-  <p>
-    <strong>{{t65754a3d}}</strong> {{tcb7c6297}}
-  </p>
-
-  <p>
-    <strong>{{tb0b3653e}}</strong> {{t23d529aa}}
-  </p>
-
-  <p>
-    <strong>{{t7bc45987}}</strong> {{ta0a4974f}}
-  </p>
-
-  <h4>{{taa20e1fe}}</h4>
-
-  <p>
-    {{t4e6c3fd1}} <em>{{tb0d9b033}}</em> {{t923e23d0}} <strong>{{t2508a2a5}}</strong>{{t19715af0}} <em>{{tee1ad51d}}</em> {{t0c6f7919}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{t3d66d10c}}</strong> {{tcaf6f96a}}</p>
-  </div>
-
-  <p>
-    {{tafa83e05}}
-  </p>
-
-  <p>
-    {{t1a48311f}} <code>{{t3b87a956}}</code>.
-  </p>
-
-  <h3 id="desactivar-centro">{{t758505c2}}</h3>
-  <span class="ruta">{{t695380ba}}</span>
-
-  <p>
-    {{t5414d22f}}
-    <strong>{{td5cdb13a}}</strong> {{t1edfffec}} <em>{{t91b15e07}}</em>{{t5ffc1485}}
-  </p>
-  <p>
-    {{teee10c3d}}
-  </p>
-  <p>
-    {{t5e94df6c}}
-  </p>
-
-  <h3 id="irse">{{t767f1b9b}}</h3>
-  <span class="ruta">{{tf5f11038}}</span>
-
-  <p>
-    {{t506c87f6}} <strong>{{td033e22a}}</strong> {{t36935a40}}
-  </p>
-
-  <p>{{tc240ffe9}} <em>{{tb765e9d0}}</em> {{t715e7ebe}}</p>
-  <ul>
-    <li><strong>{{t4302f571}}</strong>{{t3a025dff}}</li>
-    <li><strong>{{ta9d68f43}}</strong> {{t81346e3a}}</li>
-    <li><strong>{{t967c40f3}}</strong>{{t397bdf55}}</li>
-  </ul>
-  <p>
-    {{tca7f8b0e}}
-  </p>
-
-  <p>
-    <strong>{{tde05e01c}}</strong> {{tb7c8de88}}
-  </p>
-  <ol>
-    <li>{{tb3cc660b}} <em>{{t25aef72a}}</em>{{tb209b0ba}}</li>
-    <li>{{t012870b8}} <em>{{t8b98cb1d}}</em>{{t35db1477}}</li>
-    <li>{{t2dc1a49c}}</li>
-  </ol>
-  <p>
-    {{td45c53fa}}
-  </p>
-</section>
-
-<section id="historia">
-  <h2>{{t7e4c964d}}</h2>
-
-  <p>
-    {{t235b27d0}}
-  </p>
-
-  <div class="ojo">
-    <p><strong>{{t2ac758ea}}</strong>{{te5e344a6}}</p>
-  </div>
-
-  <p>
-    {{t0920f85d}}
-  </p>
-
-  <p>
-    {{t3c07fd23}}
-    <em>{{t1531053c}}</em>, <em>{{tfa937776}}</em>, <em>{{t232aba22}}</em> {{t95cb0bfd}} <em>{{t576b9244}}</em>{{t9f57a9ea}}
-  </p>
-</section>
-
-<section id="problemas">
-  <h2>{{t5e1ffc28}}</h2>
-
-  <h3>{{td20ddc8f}}</h3>
-  <p>
-    {{t4b1c15fc}}
-  </p>
-
-  <h3>{{tf31aca04}}</h3>
-  <p>
-    {{t1ed15f0b}}
-  </p>
-
-  <h3>{{t43f7003d}}</h3>
-  <p>{{tbf66b1d5}}</p>
-
-  <h3>{{tff82044d}}</h3>
-  <p>
-    {{tb9b5dee7}}
-  </p>
-
-  <h3>{{t84495f4c}}</h3>
-  <p>
-    {{t70b45323}} <em>{{tf42553f7}}</em>.
-  </p>
-
-  <h3>{{t0359f282}}</h3>
-  <p>{{t2f6b30b9}}</p>
-</section>
-
-<footer>
-  <p>
-    {{t6303532c}}<br>
-    {{t96d21c48}}
-  </p>
-</footer>
+<div class="ojo"><p><strong>OpenAPI.</strong> La descripción de todos los recursos, para importarla en Postman o generar un cliente: <a href="/turnera/api/openapi-integracion.json" download>openapi-integracion.json</a>.</p></div>
+<h1 id="la-api-de-integracion-de-turnera-v1">La API de integración de Turnera — v1</h1>
+<p>Turnera publica una API para que un programa externo —el ERP del centro, el de su asesoría— pueda leer su
+catálogo, sus clientes y sus ventas. Es de lectura salvo en una cosa: <strong>reservar un hueco de la agenda</strong>, que
+existe para la plataforma de campañas de un centro, que trae al cliente y necesita la cita en el momento
+(apartado 5.1). Nada más se modifica desde fuera.</p>
+<hr>
+<h2 id="1-en-dos-minutos">1. En dos minutos</h2>
+<pre><code class="language-bash"># 1. Cambiar las credenciales por un token (media hora de vida)
+curl -s -X POST https://sucentro.turnera.devel.es/api/v1/integration/token \
+     -H &#39;Content-Type: application/json&#39; \
+     -d &#39;{&quot;grant_type&quot;:&quot;client_credentials&quot;,&quot;client_id&quot;:&quot;...&quot;,&quot;client_secret&quot;:&quot;...&quot;}&#39;
+
+# {&quot;access_token&quot;:&quot;eyJ...&quot;,&quot;token_type&quot;:&quot;Bearer&quot;,&quot;expires_in&quot;:1800,&quot;scope&quot;:&quot;catalog:read sales:read&quot;}
+
+# 2. Leer, con el token en la cabecera
+curl -s https://sucentro.turnera.devel.es/api/v1/integration/catalog/services \
+     -H &#39;Authorization: Bearer eyJ...&#39;
+</code></pre>
+<p><strong>La dirección base es la del centro</strong>: <code>https://&lt;centro&gt;.turnera.devel.es/api/v1</code>. Cada centro tiene su
+dominio y su base de datos, así que no hay ningún parámetro que diga a qué centro se está llamando — lo dice
+el dominio.</p>
+<hr>
+<h2 id="2-darse-de-alta-como-cliente">2. Darse de alta como cliente</h2>
+<p>Esto <strong>no se hace por la API</strong>. Quien programa el ERP recibe unas credenciales; no la posibilidad de crearse
+otras.</p>
+<p>Lo hace <strong>alguien con rol de administración del centro</strong>, en <em>Administración → Integraciones → Nueva
+integración</em>. Ahí se decide:</p>
+<div class="tabla-envoltorio"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Qué es</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Nombre</strong></td>
+<td>Cómo lo reconocerá el centro en la lista. «ERP de la asesoría».</td>
+</tr>
+<tr>
+<td><strong>Delegación</strong></td>
+<td>La única que verá la integración. Va fijada aquí porque una máquina no puede elegirla en una pantalla.</td>
+</tr>
+<tr>
+<td><strong>Permisos</strong></td>
+<td>Qué puede leer. Véase la tabla de scopes más abajo.</td>
+</tr>
+<tr>
+<td><strong>Direcciones autorizadas</strong></td>
+<td>Desde dónde puede entrar. Una por línea: una IPv4 o un rango en CIDR.</td>
+</tr>
+</tbody></table>
+</div><p>Al guardar, la pantalla enseña el <code>client_id</code> y el <code>client_secret</code> <strong>una sola vez</strong>. El secreto no se guarda
+en claro, así que si se pierde no se recupera: se rota (§6).</p>
+<h3 id="lo-que-hay-que-pedirle-al-centro">Lo que hay que pedirle al centro</h3>
+<ol>
+<li>El <strong>dominio</strong> de su Turnera.</li>
+<li>Las <strong>credenciales</strong>, por un canal que no sea el correo del día a día.</li>
+<li>Que autorice la <strong>IP fija del servidor</strong> donde correrá el ERP. Si ese servidor no tiene IP fija, esa es una
+conversación que hay que tener antes de darle los datos de los clientes de nadie.</li>
+</ol>
+<hr>
+<h2 id="3-autenticacion">3. Autenticación</h2>
+<p><strong>OAuth 2.0 <em>client credentials</em></strong>. Ni el usuario de una persona, ni una clave estática en una cabecera.</p>
+<pre><code>POST /api/v1/integration/token
+Content-Type: application/json
+
+{ &quot;grant_type&quot;: &quot;client_credentials&quot;, &quot;client_id&quot;: &quot;...&quot;, &quot;client_secret&quot;: &quot;...&quot; }
+</code></pre>
+<pre><code class="language-json">{
+  &quot;access_token&quot;: &quot;eyJhbGciOiJIUzI1NiJ9...&quot;,
+  &quot;token_type&quot;: &quot;Bearer&quot;,
+  &quot;expires_in&quot;: 1800,
+  &quot;scope&quot;: &quot;catalog:read sales:read&quot;
+}
+</code></pre>
+<p>Los nombres de este endpoint van en <code>snake_case</code> porque son los de OAuth 2.0; <strong>el resto de la API va en
+camelCase</strong>.</p>
+<ul>
+<li>El token dura <strong>media hora</strong> y lleva dentro el <code>client_id</code>, la delegación y los scopes.</li>
+<li><strong>No hay <em>refresh token</em></strong>: cuando caduca se vuelve a pedir, que es una línea en el ERP. Lo razonable es
+pedirlo al arrancar cada sincronización y renovarlo ante un <code>401</code>.</li>
+<li>Cualquier problema —identificador que no existe, secreto que no coincide, dirección no autorizada,
+integración apagada— contesta <strong>lo mismo</strong>:</li>
+</ul>
+<pre><code>401 Unauthorized
+{ &quot;title&quot;: &quot;Unauthorized&quot;, &quot;status&quot;: 401, &quot;error&quot;: &quot;invalid_client&quot;, &quot;detail&quot;: &quot;Las credenciales no son válidas&quot; }
+</code></pre>
+<p>No se distingue cuál de los cuatro falló, a propósito. Si las credenciales son buenas, no hace falta el
+detalle; si se están probando, tampoco.</p>
+<h3 id="la-ip">La IP</h3>
+<p>La dirección se comprueba <strong>al pedir el token y además en cada llamada</strong>: un token robado dura media hora, y
+media hora desde otra máquina es media hora de más. Una llamada desde una dirección que no está en la lista
+contesta <code>403</code>.</p>
+<p>Un cambio en la lista de direcciones tarda <strong>hasta un minuto</strong> en hacerse efectivo.</p>
+<hr>
+<h2 id="4-los-permisos-scopes">4. Los permisos (<em>scopes</em>)</h2>
+<p>Vocabulario propio y corto. Los roles de Turnera son de pantallas y no significan nada para un ERP.</p>
+<div class="tabla-envoltorio"><table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Qué abre</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>catalog:read</code></td>
+<td><code>/catalog/services</code>, <code>/catalog/products</code></td>
+</tr>
+<tr>
+<td><code>customers:read</code></td>
+<td><code>/customers</code></td>
+</tr>
+<tr>
+<td><code>sales:read</code></td>
+<td><code>/sales</code>, <code>/accounting-draft</code></td>
+</tr>
+<tr>
+<td><code>availability:read</code></td>
+<td><code>/availability</code></td>
+</tr>
+<tr>
+<td><code>bookings:write</code></td>
+<td><code>/bookings</code></td>
+</tr>
+</tbody></table>
+</div><p>Llamar a un recurso sin su scope contesta <code>403</code>. No hay un scope de historia clínica, y no es que no se dé por
+defecto: <strong>es que no existe</strong>. <code>customers:read</code> devuelve la ficha administrativa y nada de antecedentes, casos
+ni evoluciones.</p>
+<hr>
+<h2 id="5-los-recursos">5. Los recursos</h2>
+<p>Todos los listados devuelven el mismo sobre:</p>
+<pre><code class="language-json">{
+  &quot;items&quot;: [ ... ],
+  &quot;nextCursor&quot;: &quot;412&quot;
+}
+</code></pre>
+<h3 id="paginacion-por-cursor">Paginación por cursor</h3>
+<p>No hay número de página. Si alguien cobra mientras el ERP está paginando, una página numerada se descoloca y
+se pierde una venta sin que nadie se entere; el cursor es el último identificador leído, así que lo que ya
+pasó no se mueve.</p>
+<pre><code>GET /integration/sales?limit=200
+GET /integration/sales?limit=200&amp;cursor=412
+GET /integration/sales?limit=200&amp;cursor=980   →  &quot;nextCursor&quot;: null   ← se acabó
+</code></pre>
+<ul>
+<li><code>limit</code>: por defecto <strong>100</strong>, máximo <strong>500</strong>.</li>
+<li><strong><code>nextCursor: null</code> es la señal de que no queda nada.</strong> No hay total de elementos que contar.</li>
+</ul>
+<h3 id="sincronizacion-incremental">Sincronización incremental</h3>
+<p>Todos los listados admiten <code>updatedSince</code>, en <strong>ISO-8601 con huso</strong>:</p>
+<pre><code>GET /integration/catalog/services?updatedSince=2026-09-01T00:00:00Z
+</code></pre>
+<p>Una fecha sin huso obliga a adivinar en qué zona la interpretamos, y ahí es donde se pierde la venta de las
+once de la noche. Por eso se rechaza con un <code>400</code>.</p>
+<p>La comparación es <strong>mayor o igual</strong>, así que conviene guardar el <code>updatedOn</code> más alto que se haya visto y
+usarlo como marca de agua en la pasada siguiente. Puede repetir una fila; nunca saltársela.</p>
+<blockquote>
+<p>En la primera pasada, sin <code>updatedSince</code>, se lo lleva todo. Es lo que tiene que pasar.</p>
+</blockquote>
+<h3 id="get-integration-catalog-services"><code>GET /integration/catalog/services</code></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 41,
+  &quot;name&quot;: &quot;Sesión de fisioterapia&quot;,
+  &quot;category&quot;: &quot;Fisioterapia&quot;,
+  &quot;description&quot;: null,
+  &quot;price&quot;: &quot;35.00&quot;,
+  &quot;taxRate&quot;: null,
+  &quot;taxExemption&quot;: &quot;E1&quot;,
+  &quot;durationInMinutes&quot;: 45,
+  &quot;enabled&quot;: true,
+  &quot;updatedOn&quot;: &quot;2026-09-18T11:04:22+02:00&quot;
+}
+</code></pre>
+<h3 id="get-integration-catalog-products"><code>GET /integration/catalog/products</code></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 7,
+  &quot;name&quot;: &quot;Crema hidratante&quot;,
+  &quot;category&quot;: &quot;Cosmética&quot;,
+  &quot;brand&quot;: &quot;…&quot;,
+  &quot;reference&quot;: &quot;…&quot;,
+  &quot;price&quot;: &quot;18.50&quot;,
+  &quot;taxRate&quot;: 21,
+  &quot;taxExemption&quot;: null,
+  &quot;enabled&quot;: true,
+  &quot;updatedOn&quot;: &quot;2026-09-18T11:04:22+02:00&quot;
+}
+</code></pre>
+<p><strong>Sobre el IVA en los dos</strong>: <code>taxRate</code> es el tipo en tanto por ciento y <code>taxExemption</code> el código de exención
+de la AEAT (<code>E1</code> por el artículo 20, y los demás de su lista). Se excluyen: una operación exenta no lleva un
+tipo del cero por ciento, lleva la causa por la que lo está. <strong>Los dos a <code>null</code> significa que ese servicio o
+producto todavía no tiene el IVA decidido en el catálogo del centro.</strong> Eso no es un error de la API: es la
+lista de deberes del centro, y el ERP debería avisar en vez de suponer un 21.</p>
+<h3 id="get-integration-customers"><code>GET /integration/customers</code></h3>
+<p>La ficha administrativa. Nunca nada clínico.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: 1204,
+  &quot;taxId&quot;: &quot;12345678Z&quot;,
+  &quot;name&quot;: &quot;…&quot;, &quot;surname&quot;: &quot;…&quot;,
+  &quot;email&quot;: &quot;…&quot;, &quot;phone&quot;: null, &quot;mobile&quot;: &quot;…&quot;,
+  &quot;address&quot;: &quot;…&quot;, &quot;postalCode&quot;: &quot;…&quot;, &quot;city&quot;: &quot;…&quot;, &quot;province&quot;: &quot;…&quot;,
+  &quot;updatedOn&quot;: &quot;2026-09-19T09:12:00+02:00&quot;
+}
+</code></pre>
+<h3 id="get-integration-sales"><code>GET /integration/sales</code></h3>
+<p>Las visitas <strong>cobradas</strong>, con sus líneas.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: 9812,
+  &quot;date&quot;: &quot;2026-09-19T17:30:00+02:00&quot;,
+  &quot;customerId&quot;: 1204,
+  &quot;delegationId&quot;: 1,
+  &quot;total&quot;: &quot;53.50&quot;,
+  &quot;updatedOn&quot;: &quot;2026-09-19T17:31:02+02:00&quot;,
+  &quot;refundOf&quot;: null,
+  &quot;lines&quot;: [
+    {
+      &quot;id&quot;: 44120,
+      &quot;description&quot;: &quot;Sesión de fisioterapia&quot;,
+      &quot;amount&quot;: &quot;35.00&quot;,
+      &quot;discountPercentage&quot;: 0,
+      &quot;serviceId&quot;: 41,
+      &quot;productId&quot;: null,
+      &quot;taxRate&quot;: null,
+      &quot;taxExemption&quot;: &quot;E1&quot;
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li><strong><code>amount</code> ya viene con el descuento aplicado</strong>; así lo guarda el cobro. <code>discountPercentage</code> es
+informativo.</li>
+<li><code>total</code> es la suma de las líneas.</li>
+<li><strong>Una devolución es una venta más</strong>, con las líneas y el total en negativo y <code>refundOf</code> apuntando al <code>id</code> de la
+venta que deshace. La venta original no cambia: para saber lo que quedó vendido de verdad, se suman las dos.</li>
+<li>El IVA de la línea es <strong>el que tiene hoy el catálogo</strong>, no el que tenía el día de la venta. Mientras no esté
+la fase 2 de contabilidad, esto es un dato para conciliar y todavía no un libro de facturas.</li>
+</ul>
+<h3 id="get-integration-accounting-draft"><code>GET /integration/accounting-draft</code></h3>
+<p>El asiento resumen por día y tipo de IVA: un apunte por día y por tipo, no cuatrocientas líneas de ticket.
+<strong>No pagina</strong> y pide las dos fechas.</p>
+<pre><code>GET /integration/accounting-draft?from=2026-09-01&amp;to=2026-09-30
+</code></pre>
+<pre><code class="language-json">{
+  &quot;from&quot;: &quot;2026-09-01&quot;,
+  &quot;to&quot;: &quot;2026-09-30&quot;,
+  &quot;disclaimer&quot;: &quot;Borrador para revisar con su asesoría. No sustituye a sus libros.&quot;,
+  &quot;entries&quot;: [
+    { &quot;day&quot;: &quot;2026-09-01&quot;, &quot;taxRate&quot;: 21, &quot;taxExemption&quot;: null,
+      &quot;total&quot;: &quot;184.20&quot;, &quot;tickets&quot;: 6, &quot;firstSaleId&quot;: 9780, &quot;lastSaleId&quot;: 9791 },
+    { &quot;day&quot;: &quot;2026-09-01&quot;, &quot;taxRate&quot;: null, &quot;taxExemption&quot;: null,
+      &quot;total&quot;: &quot;70.00&quot;, &quot;tickets&quot;: 2, &quot;firstSaleId&quot;: 9782, &quot;lastSaleId&quot;: 9788 }
+  ]
+}
+</code></pre>
+<p>La segunda línea del ejemplo es lo cobrado <strong>sin IVA decidido</strong>. Sale aparte a propósito, porque es
+exactamente lo que hay que repasar. El <code>disclaimer</code> viaja en la respuesta y conviene enseñarlo donde se
+enseñen los números.</p>
+<h3 id="5-1-reservar-en-la-agenda">5.1 Reservar en la agenda</h3>
+<p>Pensado para una plataforma de campañas: pregunta qué horas quedan libres, su cliente elige una y la reserva.
+Si mientras tanto la ha cogido otro —recepción, el portal u otra reserva—, Turnera contesta que está ocupada.</p>
+<p><strong>Los huecos</strong> son los mismos que ofrece el portal de reservas del centro: sólo servicios y sitios marcados como
+<em>se reserva por internet</em>, con la antelación mínima y los días por delante que tenga configurados el centro.
+La plataforma elige la hora; Turnera pone el primer sitio y el primer profesional libres.</p>
+<h4 id="get-integration-availability-serviceid-12-amp-day-2026-10-02"><code>GET /integration/availability?serviceId=12&amp;day=2026-10-02</code></h4>
+<p>Scope <code>availability:read</code>. Las horas de inicio libres de ese día para ese servicio:</p>
+<pre><code class="language-json">{
+  &quot;day&quot;: &quot;2026-10-02&quot;,
+  &quot;serviceId&quot;: 12,
+  &quot;bookableUntil&quot;: &quot;2026-11-21&quot;,
+  &quot;slots&quot;: [ { &quot;start&quot;: &quot;10:00:00&quot;, &quot;end&quot;: &quot;11:00:00&quot; }, { &quot;start&quot;: &quot;11:00:00&quot;, &quot;end&quot;: &quot;12:00:00&quot; } ]
+}
+</code></pre>
+<p><code>bookableUntil</code> es el último día que hoy se puede reservar: la agenda está abierta tantos días por delante como
+tenga configurados el centro, y la ventana avanza sola cada día. Una lista vacía para un día posterior es que la
+agenda <strong>aún no está abierta</strong>, no que esté llena. Para un día dentro de plazo, que no queda nada o que ese
+servicio no se reserva por internet.</p>
+<h4 id="post-integration-bookings"><code>POST /integration/bookings</code></h4>
+<p>Scope <code>bookings:write</code>.</p>
+<pre><code class="language-json">{
+  &quot;serviceId&quot;: 12,
+  &quot;day&quot;: &quot;2026-10-02&quot;,
+  &quot;start&quot;: &quot;10:00&quot;,
+  &quot;reference&quot;: &quot;VIR-000123&quot;,
+  &quot;customer&quot;: { &quot;name&quot;: &quot;Ana&quot;, &quot;surname&quot;: &quot;García&quot;, &quot;phone&quot;: &quot;600123456&quot;, &quot;email&quot;: &quot;ana@example.org&quot; }
+}
+</code></pre>
+<div class="tabla-envoltorio"><table>
+<thead>
+<tr>
+<th>Respuesta</th>
+<th>Qué significa</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>201</code></td>
+<td>Reservada. Devuelve la cita (<code>appointmentId</code>, <code>reference</code>, <code>day</code>, <code>start</code>, <code>end</code>, <code>customerId</code>).</td>
+</tr>
+<tr>
+<td><code>200</code></td>
+<td><strong>Esa referencia ya estaba reservada</strong>: devuelve la misma cita, sin coger otro hueco.</td>
+</tr>
+<tr>
+<td><code>409</code> <code>BOOKING_SLOT_TAKEN</code></td>
+<td>El hueco ya no está libre: lo ha cogido otro. Vuelva a pedir la disponibilidad.</td>
+</tr>
+<tr>
+<td><code>409</code> <code>BOOKING_TOO_FAR_AHEAD</code></td>
+<td>Ese día la agenda aún no está abierta (posterior a <code>bookableUntil</code>).</td>
+</tr>
+<tr>
+<td><code>409</code> <code>BOOKING_MINIMUM_NOTICE</code></td>
+<td>La hora ya ha pasado o no cumple la antelación mínima del centro. La respuesta trae <code>minimumNoticeHours</code>.</td>
+</tr>
+<tr>
+<td><code>400</code></td>
+<td>Falta un dato, o el cliente no trae ni teléfono ni correo.</td>
+</tr>
+</tbody></table>
+</div><ul>
+<li><strong>La referencia hace seguro reintentar.</strong> Es el identificador de la reserva en su sistema y debe ser única
+para cada reserva. Si no le llega la respuesta, repita la misma petición con la misma referencia: recibirá
+la cita que ya existe, nunca una segunda.</li>
+<li><strong>El cliente.</strong> Si en el centro ya hay una ficha con ese correo, la cita va a esa ficha y la ficha no se
+toca. Si no, se abre una ficha nueva con los datos que manda.</li>
+<li><strong>Queda marcada.</strong> La cita lleva escrito en sus comentarios el nombre de la integración y la referencia, para
+que recepción sepa de dónde viene, y se guarda de qué integración vino para poder medir cada canal.</li>
+<li><strong>El aviso al cliente</strong> lo manda Turnera, igual que en el portal, si el cliente tiene correo.</li>
+<li>Anular o cambiar una cita desde fuera todavía no se puede: se hace desde el centro.</li>
+</ul>
+<hr>
+<h2 id="6-rotar-el-secreto">6. Rotar el secreto</h2>
+<p>Se rota desde <em>Administración → Integraciones → Rotar secreto</em>. <strong>Los dos secretos valen a la vez</strong> hasta que
+el viejo se retire: se genera el nuevo, se configura el ERP con calma, y cuando responde se pulsa <em>Retirar el
+anterior</em>. Es media tabla más y evita la llamada de las tres de la mañana.</p>
+<hr>
+<h2 id="7-limite-de-peticiones">7. Límite de peticiones</h2>
+<p><strong>120 peticiones por minuto y por integración.</strong> Cada respuesta trae:</p>
+<pre><code>X-RateLimit-Limit: 120
+X-RateLimit-Remaining: 117
+</code></pre>
+<p>Pasado el límite, <code>429</code> con <code>Retry-After: 60</code>. Un ERP con un bucle de reintentos mal puesto tumba un centro un
+sábado, así que conviene respetar el <code>Retry-After</code> en vez de reintentar en seguida.</p>
+<hr>
+<h2 id="8-los-errores">8. Los errores</h2>
+<div class="tabla-envoltorio"><table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Qué ha pasado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>400</code></td>
+<td>Un parámetro mal: fecha sin huso, cursor que no dimos, <code>to</code> anterior a <code>from</code>. El <code>detail</code> lo dice.</td>
+</tr>
+<tr>
+<td><code>401</code></td>
+<td>El token falta, ha caducado o es de otro centro. En <code>/token</code>, <code>invalid_client</code>.</td>
+</tr>
+<tr>
+<td><code>403</code></td>
+<td>El scope no da para ese recurso, o la llamada viene de una dirección no autorizada.</td>
+</tr>
+<tr>
+<td><code>409</code></td>
+<td>Al reservar: el hueco ya no está libre (<code>BOOKING_SLOT_TAKEN</code>), la agenda aún no llega a ese día (<code>BOOKING_TOO_FAR_AHEAD</code>) o la hora no cumple la antelación mínima (<code>BOOKING_MINIMUM_NOTICE</code>).</td>
+</tr>
+<tr>
+<td><code>429</code></td>
+<td>Límite de peticiones. Espere lo que diga <code>Retry-After</code>.</td>
+</tr>
+</tbody></table>
+</div><p>Todas las respuestas de error son <code>application/problem+json</code> (RFC 7807).</p>
+<hr>
+<h2 id="9-las-reglas-del-contrato">9. Las reglas del contrato</h2>
+<p>Escritas antes de tener clientes, porque después se negocian:</p>
+<ol>
+<li><strong>Se puede añadir</strong> un campo o un recurso. Un cliente que no lo conoce lo ignora, así que <strong>el parseo del
+ERP no debe romperse ante un campo que no esperaba</strong>.</li>
+<li><strong>No se puede</strong> quitar ni renombrar un campo, ni cambiar su tipo, ni cambiar el significado de uno que ya
+existe. Para eso está la <code>v2</code>.</li>
+<li>Un campo que deja de tener sentido <strong>se marca como obsoleto en el OpenAPI y se sigue enviando</strong>.</li>
+<li>La <code>v1</code> se mantiene al menos <strong>doce meses</strong> después de publicar la <code>v2</code>.</li>
+<li>Los cambios se avisan a los centros que tengan una integración activa.</li>
+</ol>
+<p>Un campo nulo <strong>siempre viaja como <code>null</code></strong>; nunca desaparece del JSON. Es la diferencia con los endpoints que
+consume la aplicación web, y es la razón de que la API de integración tenga sus propias clases.</p>
+<p>La descripción OpenAPI de esta API está publicada junto a esta guía, en
+<a href="https://devel.es/turnera/api/openapi-integracion.json"><code>devel.es/turnera/api/openapi-integracion.json</code></a>, para
+importarla en Postman o generar un cliente. Una prueba del programa comprueba en cada cambio que ese fichero dice
+lo mismo que el código. Las instalaciones no sirven Swagger.</p>
+<hr>
+<h2 id="10-lo-que-conviene-saber-antes-de-empezar">10. Lo que conviene saber antes de empezar</h2>
+<ul>
+<li><strong>Una venta anulada.</strong> Hoy la anulación deshace la venta; con la fase 2 de contabilidad se rectificará. El
+ERP se entera por <code>updatedSince</code> en los dos casos, <strong>pero lo que ve es distinto</strong>: hoy la venta deja de
+aparecer, mañana aparecerá una rectificativa.</li>
+<li><strong>Los importes son cadenas decimales</strong>, no números en coma flotante. Léalos como <code>decimal</code>. Si los lee como
+<code>double</code>, un <code>35.00</code> acaba siendo <code>34.999999</code>.</li>
+<li><strong>El borrador contable es un borrador.</strong> No numera ni emite nada. La facturación con VeriFactu es la fase 2
+y todavía no está.</li>
+<li><strong>Protección de datos.</strong> Sacar la ficha de los clientes de un centro hacia su ERP convierte al proveedor de
+ese ERP en otro encargado del tratamiento del centro. El centro tiene que tenerlo en su registro de
+actividades; la pantalla de crear una integración lo recuerda.</li>
+</ul>
 </div>
 </main>
 
 <footer>
   <div class="shell footer__inner">
-    <span>{{tfb7daf23}}</span>
-    <span><a href="/">{{tcd7c8586}}</a></span>
+    <span>© 2026 DEVEL · Turnera es un producto de DEVEL</span>
+    <span><a href="/">devel.es</a></span>
   </div>
 </footer>
 
