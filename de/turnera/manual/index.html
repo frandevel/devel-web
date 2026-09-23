@@ -1754,6 +1754,44 @@ footer{
     stehen, damit Sie ihn beim Durchsehen bemerken, statt zu verschwinden und eine seltsame Nachricht zu hinterlassen.
   </p>
 
+  <h3 id="stripe">Zahlung per Link mit Stripe</h3>
+  <span class="ruta">Verwaltung → Einstellungen → Zahlungen und Kundenbindung</span>
+
+  <p>
+    Damit Sie einem Kunden einen Link schicken können, mit dem er bequem am Handy bezahlt, verbindet das Zentrum <strong>sein eigenes Stripe-Konto</strong>. Das Geld fließt direkt von Ihrem Kunden auf Ihr Konto: Turnera erhebt keine Provision, steht nicht dazwischen und erscheint nicht auf dem Beleg. Was Stripe pro Zahlung berechnet, regeln Sie direkt mit Stripe.
+  </p>
+
+  <h4>Schritt für Schritt verbinden</h4>
+
+  <ol>
+    <li>Melden Sie sich bei <a href="https://dashboard.stripe.com" target="_blank" rel="noopener">dashboard.stripe.com</a>
+      mit dem Konto des Zentrums an. Falls Sie noch keines haben, legen Sie es dort an: Stripe fragt nach den Firmendaten und dem Bankkonto, auf dem Sie das Geld erhalten möchten.</li>
+    <li>Öffnen Sie <em>Entwickler → API-Schlüssel</em> und kopieren Sie den <strong>geheimen Schlüssel</strong>, der mit <code>sk_live_</code>beginnt. Nicht geeignet ist der veröffentlichbare (<code>pk_</code>).</li>
+    <li>Öffnen Sie in Turnera <em>Einstellungen → Zahlungen und Kundenbindung</em>, fügen Sie den Schlüssel in die Karte
+      <em>Zahlung per Link mit Stripe</em> ein und klicken Sie auf <em>Verbinden</em>.</li>
+  </ol>
+
+  <p>
+    Das ist alles. Turnera prüft bei Stripe, ob der Schlüssel gültig ist, und richtet in Ihrem Konto die <strong>Zahlungsbenachrichtigung</strong>ein: Darüber erfährt Turnera, dass ein Kunde bezahlt hat. Sie finden sie in Stripe unter
+    <em>Entwickler → Webhooks</em>mit dem Namen <em>Turnera: pagos por enlace</em>; löschen Sie sie nicht, sonst werden Zahlungen nicht mehr automatisch verbucht.
+  </p>
+
+  <p>
+    Der Schlüssel wird verschlüsselt gespeichert und nie wieder angezeigt: Die Karte zeigt nur, mit welchem Konto sie verbunden ist, die letzten vier Zeichen des Schlüssels und seit wann. Wenn Sie es ausprobieren möchten, bevor Sie echte Zahlungen annehmen, verbinden Sie den Testschlüssel (<code>sk_test_</code>, im Testmodus von Stripe): Die Karte erinnert Sie daran, dass diese Zahlungen nicht echt sind, bis Sie ihn durch den Live-Schlüssel ersetzen.
+  </p>
+
+  <h4>Ändern oder trennen</h4>
+
+  <p>
+    <em>Schlüssel ändern</em> verbindet den neuen und entfernt die Zahlungsbenachrichtigung des alten. <em>Trennen</em>
+    vergisst den Schlüssel und löscht die Benachrichtigung aus Ihrem Stripe-Konto; bereits verschickte Links werden nicht mehr als bezahlt markiert. Sichtbar nur für Personen mit der Berechtigung <em>Externe Programme verbinden</em>.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Möchten Sie Turnera nicht den vollständigen geheimen Schlüssel geben?</strong> Legen Sie in Stripe einen <em>eingeschränkten Schlüssel</em>
+    (<code>rk_live_</code>) mit Schreibrechten nur für <em>Checkout Sessions</em> und <em>Webhook Endpoints</em>an und fügen Sie diesen ein. Das funktioniert genauso.</p>
+  </div>
+
   <h3 id="consentimientos">Einwilligungserklärungen</h3>
   <span class="ruta">Kundenakte → Unterschriebene Unterlagen · Verwaltung → Einwilligungen</span>
 

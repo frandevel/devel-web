@@ -1753,6 +1753,44 @@ footer{
     it is so you notice it when reviewing, instead of vanishing and leaving an odd message.
   </p>
 
+  <h3 id="stripe">Payment links with Stripe</h3>
+  <span class="ruta">Administration → Preferences → Payments and loyalty</span>
+
+  <p>
+    To send a customer a link they can pay from their phone, the centre connects <strong>its own Stripe account</strong>. The money goes straight from your customer to your account: Turnera takes no fee, never stands in between and does not appear on the receipt. Whatever Stripe charges per payment is between you and Stripe.
+  </p>
+
+  <h4>Connecting it, step by step</h4>
+
+  <ol>
+    <li>Sign in to <a href="https://dashboard.stripe.com" target="_blank" rel="noopener">dashboard.stripe.com</a>
+      with the centre's account. If you do not have one yet, create it there: Stripe will ask for the business details and the bank account where you want to receive the money.</li>
+    <li>Go to <em>Developers → API keys</em> and copy the <strong>secret key</strong>, the one starting with <code>sk_live_</code>. The publishable one will not do (<code>pk_</code>).</li>
+    <li>In Turnera, open <em>Preferences → Payments and loyalty</em>, paste the key into the card
+      <em>Payment links with Stripe</em> and press <em>Connect</em>.</li>
+  </ol>
+
+  <p>
+    That is all. Turnera checks with Stripe that the key is valid and registers in your account the <strong>payment notice</strong>: it is what tells Turnera that a customer has paid. You will see it in Stripe, under
+    <em>Developers → Webhooks</em>, named <em>Turnera: pagos por enlace</em>; do not delete it, or payments will stop being marked automatically.
+  </p>
+
+  <p>
+    The key is stored encrypted and never shown again: the card only shows which account it is connected to, the last four characters of the key and since when. If you want to try it before charging for real, connect the test key (<code>sk_test_</code>, in Stripe's test mode): the card will remind you that those payments are not real until you replace it with the live one.
+  </p>
+
+  <h4>Changing it or disconnecting</h4>
+
+  <p>
+    <em>Change the key</em> connects the new one and removes the payment notice of the old one. <em>Disconnect</em>
+    forgets the key and deletes the notice from your Stripe account; links you had already sent will no longer be marked as paid. Visible only to people with the permission <em>Connect external programs</em>.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Would you rather not give Turnera the full secret key?</strong> Create a <em>restricted key</em>
+    (<code>rk_live_</code>) in Stripe with write permission only on <em>Checkout Sessions</em> and <em>Webhook Endpoints</em>, and paste that one. It works the same.</p>
+  </div>
+
   <h3 id="consentimientos">Informed consent</h3>
   <span class="ruta">Customer record → Signed paperwork · Administration → Consents</span>
 
