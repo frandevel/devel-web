@@ -461,7 +461,7 @@
   "t8fd3ccda": "How far ahead bookings go, and with which rules",
   "t32daa9e6": "Administration → Preferences → Bookings from outside",
   "t39368a02": "It is set per delegation, the one of the session, and applies to the portal and to integrations that book, such as a campaign platform:",
-  "tad450b77": "How far the diary is open: with 60, today you can book up to 60 days from now. The window moves forward by itself every day.",
+  "t705ad0b0": "How far ahead the agenda is open: with 60, today you can book up to 60 days from now. The window moves forward on its own every day. If you leave it as it is, the agenda opens 30 days ahead.",
   "t6cfa812e": "Days ahead.",
   "ta5debd54": "With 2 hours, at ten the first slot offered is at twelve.",
   "t71d0bd06": "Minimum notice.",
