@@ -438,20 +438,7 @@ footer{
 
 /* ---------- preguntas frecuentes ---------- */
 #preguntas{background:var(--surface-sunk);border-block:1px solid var(--line)}
-.faq__buscador{margin-top:2.4rem}
-.faq__buscador input{
-  width:100%;max-width:26rem;
-  padding:.7rem .9rem;
-  font:inherit;font-size:.95rem;color:var(--text);
-  background:var(--surface);border:1px solid var(--line);border-radius:8px;
-}
-.faq__buscador input:focus-visible{outline:2px solid var(--tu-anillo);outline-offset:1px;border-color:transparent}
-.faq__vacio{margin:1.4rem 0 0;color:var(--text-dim)}
-.faq__marca{background:rgba(14,110,98,.17);color:inherit;border-radius:3px;padding:0 .12em}
-:root[data-theme="dark"] .faq__marca{background:rgba(84,191,174,.26)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .faq__marca{background:rgba(84,191,174,.26)}}
-.faq[hidden],.faq__grupo[hidden],.faq__columna[hidden],.faq__item[hidden]{display:none}
-.faq{margin-top:2rem;display:grid;gap:2.6rem 3.5rem}
+.faq{margin-top:2.8rem;display:grid;gap:2.6rem 3.5rem}
 @media (min-width:900px){.faq{grid-template-columns:1fr 1fr;align-items:start}}
 .faq__columna{display:flex;flex-direction:column;gap:2.6rem}
 .faq__grupo h3{font-size:1.1rem;color:var(--brand);padding-bottom:.7rem;border-bottom:2px solid var(--tu-anillo)}
@@ -506,12 +493,10 @@ footer{
 
 
 /* En pantallas estrechas el selector es lo primero que necesita quien llega en el idioma que no es el suyo,
-   así que la barra envuelve y la navegación cede el sitio, en lugar de empujarlo fuera de la pantalla.
-   Con los seis enlaces de esta página la barra deja de caber ya en tablet (el alemán necesita 826px),
-   así que aquí envuelve desde 900px, y la propia navegación envuelve cuando no le llega el ancho. */
-@media (max-width:900px){
+   así que la barra envuelve y la navegación cede el sitio, en lugar de empujarlo fuera de la pantalla. */
+@media (max-width:640px){
   .site__inner{flex-wrap:wrap;justify-content:flex-start;gap:.5rem 1rem}
-  .site nav{order:3;width:100%;justify-content:space-between;flex-wrap:wrap;gap:.35rem .9rem}
+  .site nav{order:3;width:100%;justify-content:space-between;gap:.5rem}
   .idiomas{margin-left:auto;padding-left:.8rem}
 }
 
@@ -800,19 +785,7 @@ footer{
         <p>Answered straight: price, sign-up, how to bring your data across and what happens to it. If yours is missing, ask it in the form below and we'll add it here.</p>
       </div>
 
-      <div class="faq__buscador">
-        <input
-          id="faq-buscador"
-          type="search"
-          autocomplete="off"
-          placeholder="Search the questions"
-          aria-label="Search the questions"
-          aria-controls="faq-lista"
-        >
-      </div>
-      <p id="faq-sin-resultados" class="faq__vacio" hidden>No question contains that.</p>
-
-      <div class="faq" id="faq-lista">
+      <div class="faq">
 
         <div class="faq__columna">
 
@@ -1101,6 +1074,41 @@ footer{
         </div>
 
         <div class="faq__grupo">
+          <h3>Connecting with other software</h3>
+
+          <details class="faq__item">
+            <summary>Can Turnera connect to my ERP or accounting software?</summary>
+            <div class="faq__respuesta">
+              <p>Yes. Turnera has an integration API through which your ERP, or your accountant's, reads the catalogue, the clients, the sales and an accounting summary by day and VAT rate directly. No exporting by hand, no files sent by email.</p>
+              <p>The documentation is public, with examples, at <a href="/turnera/api">devel.es/turnera/api</a>. Whoever programs the connection finds everything they need there, without waiting for us to send anything.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>And with a marketing or booking platform?</summary>
+            <div class="faq__respuesta">
+              <p>That too. A platform that brings you clients through its campaigns can check the free slots in your diary and book the appointment on the spot, with the same rules as your booking portal: the notice and the days ahead that you decide. If the front desk has taken that slot in the meantime, the platform is told and there are never two appointments at once.</p>
+              <p>Every appointment that comes in this way is marked with the platform it comes from, so you know how much each one brings you.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Is it safe? What can that software see?</summary>
+            <div class="faq__respuesta">
+              <p>Only what you give it. You set up each connection yourself, from Turnera's administration, and decide what it can read and whether it can book. It signs in with its own credentials, only from the addresses you authorise, and you switch it off whenever you want.</p>
+              <p><b>The clinical history never leaves through the API</b>: it is not a permission that comes switched off, it simply does not exist.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Does it cost extra?</summary>
+            <div class="faq__respuesta">
+              <p>No. The API is included in the price, like everything else. Whatever the person programming the connection on your ERP or platform charges is up to them.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
           <h3>Help and support</h3>
 
           <details class="faq__item">
@@ -1335,113 +1343,4 @@ if (pestanas.length > 0) mostrarPerfil(pestanas[0]);
 </script>
 
 
-
-  <script>
-    /*
-      El buscador del FAQ: filtra segun se escribe, sin pedir nada al servidor -- las preguntas ya estan todas
-      en la pagina, asi que buscarlas es mirar el texto que ya hay.
-
-      Se compara sin tildes y sin mayusculas, porque nadie escribe «anulación» con tilde en un buscador, y se
-      mira la pregunta *y* la respuesta: lo que la gente recuerda suele estar en el cuerpo, no en el titulo. Por
-      eso mismo, mientras hay busqueda las coincidencias salen abiertas, con lo escrito resaltado alli donde
-      aparezca, que es lo que dice de un vistazo por que esa pregunta ha salido en la lista.
-    */
-    (function () {
-      var buscador = document.getElementById('faq-buscador');
-      var vacio = document.getElementById('faq-sin-resultados');
-      if (buscador === null || vacio === null) {
-        return;
-      }
-      var preguntas = Array.prototype.slice.call(document.querySelectorAll('#faq-lista .faq__item'));
-      var grupos = Array.prototype.slice.call(document.querySelectorAll('#faq-lista .faq__grupo'));
-      var columnas = Array.prototype.slice.call(document.querySelectorAll('#faq-lista .faq__columna'));
-
-      /*
-        Se pliega letra a letra, y no de una pasada sobre la cadena entera, para que el texto plano mida
-        exactamente lo mismo que el original: asi la posicion que encuentra `indexOf` sirve tal cual para cortar
-        el texto de verdad y envolver la coincidencia. Plegar de golpe descoloca los indices en cuanto aparece
-        una tilde, y el resaltado caeria una letra mas alla de donde toca.
-      */
-      function plano(texto) {
-        var resultado = '';
-        for (var i = 0; i < texto.length; i++) {
-          var letra = texto[i].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-          resultado += letra.length === 1 ? letra : texto[i].toLowerCase();
-        }
-        return resultado;
-      }
-
-      var textos = preguntas.map(function (item) { return plano(item.textContent || ''); });
-
-      function quitarElResaltado(item) {
-        var marcas = Array.prototype.slice.call(item.querySelectorAll('mark.faq__marca'));
-        marcas.forEach(function (marca) {
-          marca.parentNode.replaceChild(document.createTextNode(marca.textContent), marca);
-        });
-        if (marcas.length > 0) {
-          item.normalize();
-        }
-      }
-
-      function resaltar(item, buscado) {
-        var paseo = document.createTreeWalker(item, NodeFilter.SHOW_TEXT, null);
-        var nodos = [];
-        while (paseo.nextNode()) {
-          nodos.push(paseo.currentNode);
-        }
-        nodos.forEach(function (nodo) {
-          var texto = nodo.data;
-          var posicion = plano(texto).indexOf(buscado);
-          if (posicion === -1) {
-            return;
-          }
-          var trozos = document.createDocumentFragment();
-          var desde = 0;
-          while (posicion !== -1) {
-            trozos.appendChild(document.createTextNode(texto.slice(desde, posicion)));
-            var marca = document.createElement('mark');
-            marca.className = 'faq__marca';
-            marca.textContent = texto.slice(posicion, posicion + buscado.length);
-            trozos.appendChild(marca);
-            desde = posicion + buscado.length;
-            posicion = plano(texto).indexOf(buscado, desde);
-          }
-          trozos.appendChild(document.createTextNode(texto.slice(desde)));
-          nodo.parentNode.replaceChild(trozos, nodo);
-        });
-      }
-
-      function filtrar() {
-        var buscado = plano(buscador.value.trim());
-        var encontradas = 0;
-        preguntas.forEach(function (item, indice) {
-          var coincide = buscado === '' || textos[indice].indexOf(buscado) !== -1;
-          item.hidden = !coincide;
-          item.open = coincide && buscado !== '';
-          quitarElResaltado(item);
-          if (coincide) {
-            encontradas += 1;
-            if (buscado !== '') {
-              resaltar(item, buscado);
-            }
-          }
-        });
-        grupos.forEach(function (grupo) {
-          grupo.hidden = grupo.querySelector('.faq__item:not([hidden])') === null;
-        });
-        columnas.forEach(function (columna) {
-          columna.hidden = columna.querySelector('.faq__item:not([hidden])') === null;
-        });
-        vacio.hidden = encontradas > 0;
-      }
-
-      buscador.addEventListener('input', filtrar);
-      buscador.addEventListener('keydown', function (evento) {
-        if (evento.key === 'Escape') {
-          buscador.value = '';
-          filtrar();
-        }
-      });
-    })();
-  </script>
 </body></html>
