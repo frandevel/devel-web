@@ -608,6 +608,7 @@ footer{
     <li><a href="#aparatos-sesion" class="sub">Anotar la sesión</a></li>
     <li><a href="#portal">7. El portal de reservas</a></li>
     <li><a href="#informes">8. Informes y cierre de caja</a></li>
+    <li><a href="#cuadro-de-mando" class="sub">El cuadro de mando</a></li>
     <li><a href="#ajustes">9. Ajustes del centro</a></li>
     <li><a href="#desactivar-centro" class="sub">Desactivar un centro</a></li>
     <li><a href="#irse" class="sub">Llevarse los datos</a></li>
@@ -1524,6 +1525,35 @@ footer{
   <figure>
     <img src="/turnera/manual/imagenes/13-caja-diaria.png" alt="El informe de caja diaria con los totales por forma de pago" loading="lazy">
     <figcaption>La caja diaria: qué ha entrado y con qué forma de pago. Es el cierre del día.</figcaption>
+  </figure>
+
+  <h3 id="cuadro-de-mando">El cuadro de mando</h3>
+  <span class="ruta">Menú → Cuadro de mando</span>
+  <p>
+    Seis cifras para saber de un vistazo si la empresa va bien y hacia dónde va. Cada una lleva un semáforo
+    &mdash;<strong>Va bien</strong>, <strong>Vigilar</strong>, <strong>Actuar</strong>&mdash;, la variación frente a lo
+    mismo hace un año y una línea con sus doce últimos meses. Debajo, la facturación mes a mes con la del año anterior
+    al lado y, en el mes en curso, punteada, la previsión de cierre. Se mira la empresa entera o una delegación.
+  </p>
+  <div class="tabla-envoltorio">
+  <table>
+    <tr><th>Cifra</th><th>Qué cuenta</th><th>Semáforo</th></tr>
+    <tr><td><strong>Facturación del mes</strong></td><td>Lo cobrado del día 1 a hoy, frente a los mismos días del año pasado. La previsión estira ese ritmo al mes entero.</td><td>Verde desde un 5 % más; rojo desde un 5 % menos.</td></tr>
+    <tr><td><strong>Ocupación</strong></td><td>De las horas que caben en la agenda las próximas cuatro semanas, cuántas tienen cita. Caben los sitios activos (cabinas, salas) por el horario de la agenda, los días de la semana en que se ha trabajado el último año, menos los ratos cerrados.</td><td>Verde desde el 75 %; rojo por debajo del 50 %.</td></tr>
+    <tr><td><strong>Clientes activos</strong></td><td>Los que han venido en los últimos 90 días: con un ticket o con una cita a la que acudieron.</td><td>Como la facturación, frente al año pasado.</td></tr>
+    <tr><td><strong>Repetición de los nuevos</strong></td><td>De los que vinieron por primera vez hace entre tres y seis meses, cuántos volvieron antes de tres meses.</td><td>Verde desde el 50 %; rojo por debajo del 30 %.</td></tr>
+    <tr><td><strong>Gasto medio</strong></td><td>Lo cobrado en doce meses a clientes con ficha, entre los que pagaron algo.</td><td>Como la facturación, frente al año pasado.</td></tr>
+    <tr><td><strong>Citas perdidas</strong></td><td>Las del mes a las que no vinieron o que se anularon con menos de 24 horas, y lo que valían en tarifa. Anular con tiempo no cuenta: el hueco se pudo volver a llenar.</td><td>Verde por debajo del 8 %; rojo por encima del 15 %.</td></tr>
+  </table>
+  </div>
+  <p>
+    Lo que se compara con el año anterior sale <em>Sin referencia</em> mientras no hay año anterior: un centro recién
+    llegado no va ni bien ni mal. Lo abre quien tenga el permiso <em>Cuadro de mando</em>, que el rol Dirección trae de
+    fábrica.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/30-cuadro-de-mando.png" alt="El cuadro de mando con las seis cifras, sus semáforos y la facturación mensual" loading="lazy">
+    <figcaption>El cuadro de mando: seis cifras con su semáforo y la facturación de los doce últimos meses.</figcaption>
   </figure>
 
   <h3>El informe de anulaciones</h3>
