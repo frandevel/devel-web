@@ -1779,6 +1779,35 @@ footer{
     Der Schlüssel wird verschlüsselt gespeichert und nie wieder angezeigt: Die Karte zeigt nur, mit welchem Konto sie verbunden ist, die letzten vier Zeichen des Schlüssels und seit wann. Wenn Sie es ausprobieren möchten, bevor Sie echte Zahlungen annehmen, verbinden Sie den Testschlüssel (<code>sk_test_</code>, im Testmodus von Stripe): Die Karte erinnert Sie daran, dass diese Zahlungen nicht echt sind, bis Sie ihn durch den Live-Schlüssel ersetzen.
   </p>
 
+  <h4>Mit dem Link kassieren</h4>
+
+  <p>
+    Mit verbundenem Stripe bietet die Kasse die Zahlungsart <em>Zahlung per Link</em> an (ohne Stripe erscheint sie nirgends). Sie wählen sie wie jede andere, und die Schaltfläche heißt dann <em>Abschließen und Link senden</em>. Der Verkauf wird als <strong>offener Posten</strong>abgeschlossen, weil der Kunde noch nicht bezahlt hat, und das Fenster danach enthält den Link:
+  </p>
+
+  <ul>
+    <li>hat der Kunde eine E-Mail-Adresse in seiner Kartei, <strong>wurde er ihm bereits geschickt</strong>, und das Fenster zeigt, an welche Adresse;</li>
+    <li><em>Kopieren</em> legt ihn in die Zwischenablage, um ihn einzufügen, wo Sie möchten;</li>
+    <li><em>Per WhatsApp senden</em> öffnet das WhatsApp der Person am Empfang mit der fertigen Nachricht, im Chat mit dem Kunden, wenn er eine Telefonnummer hat.</li>
+  </ul>
+
+  <p>
+    Auch für einen bereits bestehenden offenen Posten können Sie ihn senden: unter <em>Offene Zahlungen</em>mit der Schaltfläche <em>Link senden</em> in seiner Zeile. Erneut senden schickt denselben Link, keinen neuen.
+  </p>
+
+  <p>
+    Der Kunde öffnet den Link, sieht den Namen des Zentrums und den Betrag, klickt auf <em>Bezahlen</em> und zahlt mit Karte auf der Seite von Stripe. Danach kehrt er auf eine Seite des Zentrums zurück, die die Zahlung bestätigt. In diesem Moment
+    <strong>begleicht sich</strong>der offene Posten, mit der Zahlungsart <em>Zahlung per Link</em>, so erscheint er später auch in den Berichten. Was den Posten als bezahlt markiert, ist die Benachrichtigung von Stripe, nicht die Rückkehr des Kunden auf die Seite: Niemand kann ihn als bezahlt markieren, indem er eine Adresse von Hand eintippt.
+  </p>
+
+  <p>
+    Der Link verfällt nicht und berechnet immer, was noch offen ist. Wird die Rechnung inzwischen an der Theke bezahlt, zeigt der Link, dass sie schon bezahlt ist, und lässt kein zweites Bezahlen zu.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Falls trotzdem doppelt bezahlt wird.</strong> Das kann passieren, wenn jemand an der Theke kassiert, während der Kunde gerade bei Stripe bezahlt. Turnera fasst die Kasse nicht an: Die Rechnung bleibt so, wie sie an der Theke kassiert wurde, und an die Kontakt-E-Mail des Zentrums geht eine Nachricht mit Rechnung, Betrag und Stripe-Zahlungsreferenz. Erstatten Sie die Zahlung in Ihrem Stripe-Dashboard unter <em>Zahlungen</em>.</p>
+  </div>
+
   <h4>Ändern oder trennen</h4>
 
   <p>

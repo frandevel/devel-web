@@ -1778,6 +1778,35 @@ footer{
     The key is stored encrypted and never shown again: the card only shows which account it is connected to, the last four characters of the key and since when. If you want to try it before charging for real, connect the test key (<code>sk_test_</code>, in Stripe's test mode): the card will remind you that those payments are not real until you replace it with the live one.
   </p>
 
+  <h4>Charging with the link</h4>
+
+  <p>
+    With Stripe connected, the point of sale offers the payment method <em>Payment link</em> (without Stripe it does not appear anywhere). You choose it like any other and the button changes to <em>Close and send link</em>. The sale is closed as a <strong>debt</strong>, because the customer has not paid yet, and the window that follows brings the link:
+  </p>
+
+  <ul>
+    <li>if the customer has an email address on their record, <strong>it has already been sent</strong>, and the window says where to;</li>
+    <li><em>Copy</em> puts it on the clipboard, to paste it wherever you like;</li>
+    <li><em>Send by WhatsApp</em> opens the WhatsApp of whoever is at the desk with the message already written, in the customer's conversation if they have a phone number.</li>
+  </ul>
+
+  <p>
+    You can also send it for a debt that already existed: in <em>Unpaid visits</em>, the button <em>Send link</em> on its row. Sending it again sends the same link, not a new one.
+  </p>
+
+  <p>
+    The customer opens the link, sees the centre's name and the amount, presses <em>Pay</em> and pays by card on the Stripe page. When done, they come back to a page of the centre confirming the payment. At that moment the debt
+    <strong>settles itself</strong>, with the payment method <em>Payment link</em>, which is how it later appears in the reports. What marks the debt as paid is the notice Stripe sends, not the customer coming back to the page: nobody can mark it as paid by typing an address by hand.
+  </p>
+
+  <p>
+    The link does not expire and always charges whatever is still pending. If in the meantime the bill is paid at the counter, the link says it is already paid and does not let anyone pay again.
+  </p>
+
+  <div class="ojo">
+    <p><strong>If they still pay twice.</strong> It can happen if someone charges it at the counter just while the customer is paying in Stripe. Turnera does not touch the till: the bill stays as it was charged at the counter, and the centre's contact email receives a notice with the bill, the amount and the Stripe payment reference. Refund it from your Stripe dashboard, under <em>Payments</em>.</p>
+  </div>
+
   <h4>Changing it or disconnecting</h4>
 
   <p>

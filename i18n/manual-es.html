@@ -1940,6 +1940,46 @@ footer{
     cobros no son reales hasta que la cambie por la buena.
   </p>
 
+  <h4>Cobrar con el enlace</h4>
+
+  <p>
+    Con Stripe conectado aparece en el TPV la forma de pago <em>Pago por enlace</em> (sin Stripe no sale en ningún
+    sitio). Se elige como cualquier otra y el botón pasa a decir <em>Cerrar y enviar enlace</em>. La venta se cierra
+    como <strong>deuda</strong>, porque el cliente todavía no ha pagado, y la ventana que sale después trae el enlace:
+  </p>
+
+  <ul>
+    <li>si el cliente tiene correo en su ficha, <strong>ya se le ha enviado</strong>, y la ventana dice a dónde;</li>
+    <li><em>Copiar</em> lo deja en el portapapeles, para pegarlo donde quiera;</li>
+    <li><em>Enviar por WhatsApp</em> abre el WhatsApp de quien atiende con el mensaje ya escrito, en la conversación
+      del cliente si tiene teléfono.</li>
+  </ul>
+
+  <p>
+    A una deuda que ya existía también se le puede mandar: en <em>Cobros pendientes</em>, el botón <em>Enviar enlace</em> de su
+    fila. Enviarlo otra vez manda el mismo enlace, no uno nuevo.
+  </p>
+
+  <p>
+    El cliente abre el enlace, ve el nombre del centro y el importe, pulsa <em>Pagar</em> y paga con tarjeta en la
+    página de Stripe. Al terminar vuelve a una página del centro que le confirma el pago. En ese momento la deuda
+    <strong>se salda sola</strong>, con la forma de pago <em>Pago por enlace</em>, que es como aparece luego en los
+    informes. Lo que da la deuda por pagada es el aviso que manda Stripe, no que el cliente vuelva a la página: nadie
+    puede marcarla como pagada escribiendo una dirección a mano.
+  </p>
+
+  <p>
+    El enlace no caduca y cobra siempre lo que quede pendiente. Si mientras tanto la cuenta se cobra en el mostrador,
+    el enlace dice que ya está pagada y no deja pagar otra vez.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Si aun así paga dos veces.</strong> Puede pasar si alguien la cobra en el mostrador justo mientras el
+      cliente está pagando en Stripe. Turnera no toca la caja: la cuenta se queda como se cobró en el mostrador, y al
+      correo de contacto del centro le llega un aviso con la cuenta, el importe y la referencia del pago en Stripe.
+      Devuélvaselo desde su panel de Stripe, en <em>Pagos</em>.</p>
+  </div>
+
   <h4>Cambiarla o desconectar</h4>
 
   <p>
