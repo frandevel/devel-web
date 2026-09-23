@@ -1955,8 +1955,7 @@ footer{
     <li><strong>Name.</strong> Woran Sie sie in der Liste wiedererkennen. Zum Beispiel „ERP der Steuerkanzlei“.</li>
     <li><strong>Filiale.</strong> Die einzige, die dieses Programm sieht. Sie steht hier fest, weil ein Programm
       sie nicht auf einer Maske auswählen kann, wie es eine Person beim Anmelden tut.</li>
-    <li><strong>Berechtigungen.</strong> Was es lesen darf: den Katalog, die Kunden oder die Verkäufe. Geben Sie nur,
-      was gebraucht wird.</li>
+    <li><strong>Berechtigungen.</strong> Was es lesen darf: den Katalog, die Kunden, die Verkäufe oder die freien Termine im Kalender, und ob es Termine buchen darf. Geben Sie nur, was es braucht.</li>
     <li><strong>Erlaubte Adressen.</strong> Von welcher IP aus es sich verbinden darf, eine pro Zeile.
       Ein Bereich in CIDR-Schreibweise ist erlaubt, zum Beispiel <code>203.0.113.0/24</code>.</li>
   </ul>
@@ -1967,6 +1966,10 @@ footer{
       Kanal an denjenigen weiter, der das ERP programmiert: sie werden nicht im Klartext gespeichert und
       lassen sich nicht erneut abrufen. Gehen sie verloren, werden sie rotiert.</p>
   </div>
+
+  <p>
+    <strong>Von außen buchen.</strong> Eine Kampagnenplattform, die Ihnen Kunden bringt, kann deren Termine direkt buchen, mit den Berechtigungen <em>freie Termine</em> und <em>Termine buchen</em>. Sie sieht und bucht nur, was auch das Portal anbietet: die online buchbaren Leistungen und Plätze, mit ihrer Vorlaufzeit und ihren Tagen im Voraus. Hat der Kunde schon eine Kartei mit dieser E-Mail, kommt der Termin in diese Kartei; sonst wird eine neue angelegt. Jeder so gebuchte Termin trägt in seinen Kommentaren, von welcher Plattform er kommt und mit welcher Referenz.
+  </p>
 
   <p>
     <strong>Ein „von überall“ gibt es nicht.</strong> Ein ERP läuft auf einem Server, und dieser Server hat eine

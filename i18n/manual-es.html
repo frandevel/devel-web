@@ -2091,8 +2091,8 @@ footer{
     <li><strong>Nombre.</strong> Cómo lo va a reconocer usted en la lista. Por ejemplo, «ERP de la asesoría».</li>
     <li><strong>Delegación.</strong> La única que verá ese programa. Va fijada aquí porque un programa no puede
       elegirla en una pantalla, como hace una persona al entrar.</li>
-    <li><strong>Permisos.</strong> Qué puede leer: el catálogo, los clientes o las ventas. Dé sólo lo que
-      necesite.</li>
+    <li><strong>Permisos.</strong> Qué puede leer: el catálogo, los clientes, las ventas o los huecos libres de la
+      agenda, y si puede reservar citas. Dé sólo lo que necesite.</li>
     <li><strong>Direcciones autorizadas.</strong> Desde qué IP puede conectarse, una por línea. Admite un rango
       escrito en CIDR, por ejemplo <code>203.0.113.0/24</code>.</li>
   </ul>
@@ -2102,6 +2102,14 @@ footer{
       <code>client_id</code> y un <code>client_secret</code>. Cópielos y páselos a quien programa el ERP por un
       canal seguro: no se guardan en claro y no se pueden volver a consultar. Si se pierden, se rotan.</p>
   </div>
+
+  <p>
+    <strong>Reservar desde fuera.</strong> Una plataforma de campañas que le trae clientes puede reservarles la
+    cita directamente, con los permisos de <em>huecos libres</em> y <em>reservar citas</em>. Sólo ve y reserva lo
+    mismo que el portal: los servicios y sitios que se reservan por internet, con su antelación y sus días por
+    delante. Si el cliente ya tiene ficha con ese correo, la cita va a su ficha; si no, se le abre una. Cada cita
+    que entra así lleva escrito en sus comentarios de qué plataforma viene y con qué referencia.
+  </p>
 
   <p>
     <strong>No hay «desde cualquier sitio».</strong> Un ERP corre en un servidor y ese servidor tiene IP fija.

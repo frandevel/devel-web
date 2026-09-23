@@ -1949,8 +1949,7 @@ footer{
     <li><strong>Name.</strong> How you will recognise it in the list. For instance, "the accountant's ERP".</li>
     <li><strong>Delegation.</strong> The only one that program will see. It is fixed here because a program cannot
       choose one on a screen, the way a person does when logging in.</li>
-    <li><strong>Scopes.</strong> What it may read: the catalogue, the customers or the sales. Grant only what it
-      needs.</li>
+    <li><strong>Scopes.</strong> What it can read: the catalogue, the clients, the sales or the free slots in the diary, and whether it can book appointments. Give it only what it needs.</li>
     <li><strong>Allowed addresses.</strong> Which IP it can connect from, one per line. It accepts a range
       written in CIDR, for example <code>203.0.113.0/24</code>.</li>
   </ul>
@@ -1961,6 +1960,10 @@ footer{
       secure channel: they are not stored in the clear and they cannot be looked up again. If they are lost,
       they are rotated.</p>
   </div>
+
+  <p>
+    <strong>Booking from outside.</strong> A campaign platform that brings you clients can book their appointments directly, with the permissions <em>free slots</em> and <em>book appointments</em>. It only sees and books what the portal offers: the services and places booked online, with their notice and how many days ahead. If the client already has a record with that email, the appointment goes to that record; if not, a new one is opened. Every appointment that comes in this way says in its comments which platform it comes from and its reference.
+  </p>
 
   <p>
     <strong>There is no "from anywhere".</strong> An ERP runs on a server and that server has a fixed IP. If
