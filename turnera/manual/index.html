@@ -609,6 +609,7 @@ footer{
     <li><a href="#aparatos">6. Aparatología</a></li>
     <li><a href="#aparatos-alta" class="sub">Dar de alta un aparato</a></li>
     <li><a href="#aparatos-sesion" class="sub">Anotar la sesión</a></li>
+    <li><a href="#zonas" class="sub">Zonas del cuerpo</a></li>
     <li><a href="#portal">7. El portal de reservas</a></li>
     <li><a href="#portal-reglas" class="sub">Hasta cuándo se reserva</a></li>
     <li><a href="#informes">8. Informes y cierre de caja</a></li>
@@ -1507,6 +1508,33 @@ footer{
     <img src="/turnera/manual/imagenes/16-aparatologia-en-la-cita.png" alt="Una cita con la seccion de aparatologia y el campo de potencia a rellenar" loading="lazy">
     <figcaption>La sección aparece sola en las citas que llevan un servicio con aparato.</figcaption>
   </figure>
+
+  <h3 id="zonas">Zonas del cuerpo</h3>
+  <span class="ruta">Catálogo → Zonas</span>
+  <p>
+    El consentimiento informado no se firma para «depilación láser» en general, sino para unas zonas concretas.
+    Por eso Turnera guarda <strong>qué partes se trataron en cada sesión</strong>, y así se puede cotejar con lo
+    firmado, sobre todo con menores.
+  </p>
+  <p>Se prepara en dos pasos:</p>
+  <ol>
+    <li>En <strong>Catálogo → Zonas</strong> se da de alta la lista: axilas, ingles, piernas… Sólo llevan nombre.</li>
+    <li>En <strong>Catálogo → Servicios</strong>, el botón <strong>«Zonas»</strong> de cada servicio dice cuáles
+      se pueden elegir con él. Son las <em>posibles</em>: un servicio sin zonas no pide nada y todo sigue como
+      antes.</li>
+  </ol>
+  <p>
+    A partir de ahí, al poner la cita aparece, debajo de los servicios, un campo <strong>«Zonas tratadas»</strong>
+    por cada servicio que tenga zonas. Se eligen las que se vayan a tratar: ninguna, alguna o todas, porque
+    <strong>es opcional</strong>. Al cobrar, cada línea del TPV trae las de la cita y se pueden corregir antes de
+    cobrar. Lo cobrado es lo que queda como histórico, y se ve en la ficha del cliente junto a cada servicio.
+  </p>
+  <div class="ojo">
+    <p><strong>Las zonas no cambian el precio y no salen en el ticket ni en la factura.</strong> Son un registro
+      de lo que se hizo, no una línea de la cuenta.</p>
+    <p><strong>Una zona que ya se ha usado no se borra: se desactiva.</strong> Deja de ofrecerse en la agenda y en
+      el cobro, y el histórico sigue diciendo lo mismo.</p>
+  </div>
 
 </section>
 

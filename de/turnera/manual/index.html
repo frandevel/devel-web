@@ -609,6 +609,7 @@ footer{
     <li><a href="#aparatos">6. Geräte</a></li>
     <li><a href="#aparatos-alta" class="sub">Ein Gerät anlegen</a></li>
     <li><a href="#aparatos-sesion" class="sub">Die Sitzung erfassen</a></li>
+    <li><a href="#zonas" class="sub">Körperzonen</a></li>
     <li><a href="#portal">7. Das Buchungsportal</a></li>
     <li><a href="#portal-reglas" class="sub">Wie weit im Voraus gebucht wird</a></li>
     <li><a href="#informes">8. Berichte und Kassenabschluss</a></li>
@@ -1374,6 +1375,33 @@ footer{
     <img src="/turnera/manual/imagenes/en/16-aparatologia-en-la-cita.png" alt="Ein Termin mit dem Geräte-Abschnitt und dem auszufüllenden Leistungsfeld" loading="lazy">
     <figcaption>Der Abschnitt erscheint von selbst bei Terminen mit einer Leistung, die ein Gerät braucht.</figcaption>
   </figure>
+
+  <h3 id="zonas">Körperzonen</h3>
+  <span class="ruta">Katalog → Körperzonen</span>
+  <p>
+    Die Einwilligungserklärung wird nicht für «Laser-Haarentfernung» im Allgemeinen unterschrieben, sondern für bestimmte Zonen.
+    Deshalb speichert Turnera <strong>welche Körperteile in jeder Sitzung behandelt wurden</strong>, damit man es mit dem Unterschriebenen
+    abgleichen kann, vor allem bei Minderjährigen.
+  </p>
+  <p>Die Einrichtung erfolgt in zwei Schritten:</p>
+  <ol>
+    <li>Unter <strong>Katalog → Körperzonen</strong> legt man die Liste an: Achseln, Leisten, Beine… Sie haben nur einen Namen.</li>
+    <li>Unter <strong>Katalog → Leistungen</strong>mit der Schaltfläche <strong>«Zonen»</strong> jeder Leistung legt fest, welche
+      damit gewählt werden können. Es sind die <em>möglichen</em> Zonen: Eine Leistung ohne Zonen fragt nach nichts, und alles bleibt wie
+      bisher.</li>
+  </ol>
+  <p>
+    Ab dann erscheint beim Anlegen des Termins unter den Leistungen ein Feld <strong>«Behandelte Zonen»</strong>
+    für jede Leistung mit Zonen. Man wählt die zu behandelnden: keine, einige oder alle, denn
+    <strong>es ist optional</strong>. An der Kasse übernimmt jede Zeile die Zonen des Termins, und sie lassen sich vor dem Kassieren
+    korrigieren. Was kassiert wird, bleibt als Verlauf und ist in der Kundenakte neben jeder Leistung zu sehen.
+  </p>
+  <div class="ojo">
+    <p><strong>Zonen ändern den Preis nicht und erscheinen weder auf dem Beleg noch auf der Rechnung.</strong> Sie sind eine Aufzeichnung
+      dessen, was gemacht wurde, keine Rechnungsposition.</p>
+    <p><strong>Eine bereits verwendete Zone wird nicht gelöscht, sondern deaktiviert.</strong> Sie wird im Kalender und an der
+      Kasse nicht mehr angeboten, und der Verlauf bleibt unverändert.</p>
+  </div>
 
 </section>
 
