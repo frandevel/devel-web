@@ -783,6 +783,10 @@ footer{
       <strong>causa externa</strong> (la lluvia en una pista descubierta, un corte de luz). Es obligatorio, porque
       solo lo que anula el cliente cuenta en su historial y en las citas perdidas. Además puede escribir el motivo
       con sus palabras, que queda en los comentarios de la cita.</li>
+      <li><strong>Quitar una cita puesta por error:</strong> en los <strong>15 minutos</strong> siguientes a crearla,
+      al anularla aparece una cuarta opción, <em>Creada por error</em>. La cita desaparece de la agenda y no cuenta
+      en ningún informe, porque nunca fue una reserva. Pasado ese rato ya no se ofrece: es una anulación de alguien,
+      y hay que decir de quién.</li>
     <li><strong>Quitar las anuladas de la vista:</strong> marque <em>Ocultar canceladas</em>, en la leyenda de
       debajo del título. La agenda recuerda la casilla, así que la próxima vez la encontrará como la dejó.</li>
   </ul>
@@ -1615,7 +1619,13 @@ footer{
     Arriba, <strong>cuántas se anularon y quién las anuló</strong>: el cliente, el centro o una causa externa. Las
     del centro salen repartidas por profesional, y las externas por cabina o pista, que es donde se ve si una pista
     descubierta pierde muchas más clases con la lluvia que una cubierta. Las anuladas antes de existir esta
-    distinción salen como <em>sin indicar</em>.
+    distinción salen como <em>sin indicar</em>. Las <em>creadas por error</em> se cuentan aparte: no son
+    anulaciones, pero si ese número crece, conviene saber por qué.
+  </p>
+  <p>
+    Con el filtro <strong>Causa</strong> el informe deja el ranking y lista una a una las citas anuladas por esa
+    causa: el día, el cliente, el profesional, cuándo se creó, cuándo se anuló y los comentarios. Es la forma de
+    revisar qué se marcó como error.
   </p>
   <p>
     Debajo, <strong>qué clientes anulan más</strong>. Aquí solo cuenta lo que anula el propio cliente: si la clase

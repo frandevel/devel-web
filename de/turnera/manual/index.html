@@ -765,6 +765,7 @@ footer{
     <li><strong>Die Dauer ändern:</strong> ziehen Sie den unteren Rand.</li>
     <li><strong>Stornieren:</strong> öffnen Sie ihn, drücken Sie <em>Stornieren</em> und geben Sie an, <strong>wer storniert</strong>: der Kunde, das Zentrum (die Fachkraft kann nicht, die Kabine oder der Platz ist nicht verfügbar, ein Defekt) oder ein
       <strong>externer Grund</strong> (Regen auf einem offenen Platz, ein Stromausfall). Die Angabe ist Pflicht, denn nur was der Kunde storniert, zählt in seiner Historie und bei den verlorenen Terminen. Zusätzlich können Sie den Grund in eigenen Worten notieren; er bleibt in den Kommentaren des Termins.</li>
+      <li><strong>Einen versehentlich angelegten Termin entfernen:</strong> in den <strong>15 Minuten</strong> nach dem Anlegen erscheint beim Stornieren eine vierte Option, <em>Versehentlich angelegt</em>. Der Termin verschwindet aus dem Kalender und zählt in keinem Bericht, denn er war nie eine Buchung. Danach wird die Option nicht mehr angeboten: Es ist eine Stornierung durch jemanden, und man muss angeben, durch wen.</li>
     <li><strong>Abgesagte Termine aus der Ansicht nehmen:</strong> setzen Sie das Häkchen bei <em>Abgesagte ausblenden</em>, in der Legende
       unter dem Titel. Der Kalender merkt sich das Kästchen, beim nächsten Mal finden Sie es so vor, wie Sie es gelassen haben.</li>
   </ul>
@@ -1479,7 +1480,10 @@ footer{
     Er rechnet bezogen auf <strong>die Termine des Zeitraums, nicht auf die im Zeitraum stornierten</strong>. Der Unterschied ist wichtig: Ein Termin im März, der im April storniert wurde, ist ein Termin im März, der ausgefallen ist.
   </p>
   <p>
-    Oben steht, <strong>wie viele storniert wurden und wer sie storniert hat</strong>: der Kunde, das Zentrum oder ein externer Grund. Die des Zentrums werden nach Fachkraft aufgeschlüsselt, die externen nach Kabine oder Platz – dort sieht man, ob ein offener Platz durch Regen viel mehr Stunden verliert als ein überdachter. Was storniert wurde, bevor es diese Unterscheidung gab, erscheint als <em>nicht angegeben</em>.
+    Oben steht, <strong>wie viele storniert wurden und wer sie storniert hat</strong>: der Kunde, das Zentrum oder ein externer Grund. Die des Zentrums werden nach Fachkraft aufgeschlüsselt, die externen nach Kabine oder Platz – dort sieht man, ob ein offener Platz durch Regen viel mehr Stunden verliert als ein überdachter. Was storniert wurde, bevor es diese Unterscheidung gab, erscheint als <em>nicht angegeben</em>. Die <em>versehentlich angelegten</em> werden getrennt gezählt: Sie sind keine Stornierungen, aber wenn diese Zahl wächst, sollte man wissen, warum.
+  </p>
+  <p>
+    Mit dem Filter <strong>Grund</strong> verlässt der Bericht die Rangliste und listet die aus diesem Grund stornierten Termine einzeln auf: Tag, Kunde, Fachkraft, wann er angelegt und wann er storniert wurde, und die Kommentare. So prüft man, was als Versehen markiert wurde.
   </p>
   <p>
     Darunter steht, <strong>welche Kunden am meisten stornieren</strong>. Hier zählt nur, was der Kunde selbst storniert: Fällt eine Stunde wegen Regen aus, rückt er in der Liste nicht nach oben. Sortiert wird nach Anzahl der Stornierungen und bei Gleichstand nach Anteil: Wer drei von drei storniert hat, ist ein größeres Problem als wer drei von vierzig storniert hat.
