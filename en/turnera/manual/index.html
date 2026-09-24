@@ -616,6 +616,7 @@ footer{
     <li><a href="#cuadro-de-mando" class="sub">The scorecard</a></li>
     <li><a href="#ajustes">9. Centre settings</a></li>
     <li><a href="#desactivar-centro" class="sub">Disabling a centre</a></li>
+    <li><a href="#importar" class="sub">Bringing the data from flowww</a></li>
     <li><a href="#irse" class="sub">Take your data</a></li>
     <li><a href="#historia">10. The clinical record</a></li>
     <li><a href="#problemas">11. When something goes wrong</a></li>
@@ -2160,6 +2161,40 @@ footer{
   <p>
     The disabled centre stays in the list of delegations, marked as inactive, and is enabled again from there. Two cannot be disabled: the one you are working in —switch to another one first— and the last one left enabled.
   </p>
+
+  <h3 id="importar">Bringing the data from flowww</h3>
+  <span class="ruta">Administration → Import from another program</span>
+
+  <p>
+    For a centre coming from flowww. It brings in one go the customers (with their notes), the price list of services,
+    vouchers and products, the vouchers customers have half used, the gift cheques with balance and the appointments still
+    ahead. It needs the permission <strong>«Import from another program»</strong>, which is sensitive and
+    only the administrator has.
+  </p>
+  <ol>
+    <li>In flowww, export each screen to CSV: customers, price list, pending vouchers, gift cheques and agenda.</li>
+    <li>Press <strong>«Choose files»</strong> and choose them all at once. Their names do not matter: each sheet is
+      recognised by its columns.</li>
+    <li>Press <strong>«Try it»</strong>. Turnera runs the whole import and throws it away at the end: the report says
+      how much of each thing would be created, how much was already there and what is left out, with grouped warnings and examples to
+      look them up in flowww. Nothing is saved.</li>
+    <li>If the report looks right, <strong>«Import»</strong>. The files are not stored anywhere.</li>
+  </ol>
+  <p>
+    Importing twice duplicates nothing: what was already brought is recognised and counted as «already there». That makes it possible
+    to import a newer export on the day of the switch and bring only what is missing.
+  </p>
+  <div class="ojo">
+    <p><strong>It can be undone</strong> from «Imports done», and it takes away everything that import brought
+      without touching what was already there. But if someone has already worked with what was imported —an appointment, a charge,
+      a note— Turnera does not undo it and says what prevents it: undoing it would take that work with it.</p>
+    <p><strong>What is not brought:</strong> the flowww portal passwords, the packages (the export does not say
+      what they contain), the cheques without balance and the old slot of appointments that were moved. The history of
+      visits, the clinical record and the signed consents are not in those sheets.</p>
+    <p><strong>After importing:</strong> the professionals arrive with the code they had in flowww and need
+      a name, and customers with a repeated ID are all brought and reviewed with the
+      <a href="#clientes">record merge</a> (a minor with their mother's ID is not the same person).</p>
+  </div>
 
   <h3 id="irse">Taking the centre's data</h3>
   <span class="ruta">Administration → Take your data</span>

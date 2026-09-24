@@ -616,6 +616,7 @@ footer{
     <li><a href="#cuadro-de-mando" class="sub">Das Cockpit</a></li>
     <li><a href="#ajustes">9. Einstellungen des Betriebs</a></li>
     <li><a href="#desactivar-centro" class="sub">Ein Zentrum deaktivieren</a></li>
+    <li><a href="#importar" class="sub">Daten aus flowww übernehmen</a></li>
     <li><a href="#irse" class="sub">Die Daten mitnehmen</a></li>
     <li><a href="#historia">10. Die Patientenakte</a></li>
     <li><a href="#problemas">11. Wenn etwas nicht klappt</a></li>
@@ -2168,6 +2169,40 @@ footer{
   <p>
     Das deaktivierte Zentrum bleibt in der Liste der Delegationen, als inaktiv markiert, und wird dort wieder aktiviert. Zwei lassen sich nicht deaktivieren: das, in dem Sie gerade arbeiten —wechseln Sie vorher in ein anderes— und das letzte, das noch aktiv ist.
   </p>
+
+  <h3 id="importar">Daten aus flowww übernehmen</h3>
+  <span class="ruta">Verwaltung → Aus einem anderen Programm importieren</span>
+
+  <p>
+    Für ein Zentrum, das von flowww kommt. Auf einmal werden die Kunden (mit ihren Notizen), die Preisliste der Leistungen,
+    Gutscheine und Produkte, die angebrochenen Gutscheine der Kunden, die Geschenkgutscheine mit Guthaben und die
+    anstehenden Termine übernommen. Dafür ist die Berechtigung <strong>«Aus einem anderen Programm importieren»</strong> nötig, die sensibel ist und
+    nur der Administrator hat.
+  </p>
+  <ol>
+    <li>In flowww jede Ansicht als CSV exportieren: Kunden, Preisliste, offene Gutscheine, Geschenkgutscheine und Kalender.</li>
+    <li>Auf <strong>«Dateien auswählen»</strong> klicken und alle auf einmal auswählen. Die Dateinamen sind egal: Jede Tabelle wird
+      an ihren Spalten erkannt.</li>
+    <li>Auf <strong>«Probelauf»</strong> klicken. Turnera führt den ganzen Import durch und verwirft ihn am Ende: Der Bericht zeigt,
+      wie viel von allem angelegt würde, was schon da war und was draußen bleibt, mit gruppierten Hinweisen und Beispielen, um
+      sie in flowww zu finden. Nichts wird gespeichert.</li>
+    <li>Wenn der Bericht stimmt, <strong>«Importieren»</strong>. Die Dateien werden nirgends gespeichert.</li>
+  </ol>
+  <p>
+    Zweimal importieren verdoppelt nichts: Was schon übernommen wurde, wird erkannt und als «schon da» gezählt. So lässt sich
+    am Tag des Wechsels ein neuerer Export importieren, der nur das Fehlende bringt.
+  </p>
+  <div class="ojo">
+    <p><strong>Er lässt sich rückgängig machen</strong> unter «Durchgeführte Importe», und es wird alles entfernt, was dieser Import gebracht hat,
+      ohne das anzutasten, was schon da war. Hat aber jemand schon mit den importierten Daten gearbeitet —ein Termin, eine Abrechnung,
+      eine Notiz—, macht Turnera ihn nicht rückgängig und sagt, was es verhindert: Sonst ginge diese Arbeit verloren.</p>
+    <p><strong>Was nicht übernommen wird:</strong> die Passwörter des flowww-Portals, die Pakete (der Export sagt nicht,
+      was sie enthalten), Gutscheine ohne Guthaben und der alte Platz verschobener Termine. Der Besuchsverlauf,
+      die Krankenakte und die unterschriebenen Einwilligungen sind nicht in diesen Tabellen.</p>
+    <p><strong>Nach dem Import:</strong> die Fachkräfte kommen mit ihrem Code aus flowww und brauchen
+      einen Namen, und Kunden mit doppelter Ausweisnummer werden alle übernommen und mit der
+      <a href="#clientes">Zusammenführung von Kundenakten</a> geprüft (ein Kind mit dem Ausweis seiner Mutter ist nicht dieselbe Person).</p>
+  </div>
 
   <h3 id="irse">Die Daten des Zentrums mitnehmen</h3>
   <span class="ruta">Administration → Take your data</span>

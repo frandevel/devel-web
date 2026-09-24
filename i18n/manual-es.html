@@ -613,6 +613,7 @@ footer{
     <li><a href="#cuadro-de-mando" class="sub">El cuadro de mando</a></li>
     <li><a href="#ajustes">9. Ajustes del centro</a></li>
     <li><a href="#desactivar-centro" class="sub">Desactivar un centro</a></li>
+    <li><a href="#importar" class="sub">Traer los datos de flowww</a></li>
     <li><a href="#irse" class="sub">Llevarse los datos</a></li>
     <li><a href="#historia">10. La historia clínica</a></li>
     <li><a href="#problemas">11. Cuando algo no sale</a></li>
@@ -2379,6 +2380,40 @@ footer{
     mismo. Hay dos que no se pueden desactivar: aquel en el que está trabajando —cambie antes a otro— y el último
     que queda activo.
   </p>
+
+  <h3 id="importar">Traer los datos de flowww</h3>
+  <span class="ruta">Administración → Importar de otro programa</span>
+
+  <p>
+    Para un centro que viene de flowww. Se traen de una vez los clientes (con sus notas), la tarifa de servicios,
+    bonos y productos, los bonos que los clientes tienen a medias, los cheques regalo con saldo y las citas que
+    quedan por delante. Hace falta el permiso <strong>«Importar de otro programa»</strong>, que es sensible y
+    sólo lo trae el administrador.
+  </p>
+  <ol>
+    <li>En flowww, exportar a CSV cada pantalla: clientes, tarifa, bonos pendientes, cheques regalo y agenda.</li>
+    <li>Pulsar <strong>«Elegir ficheros»</strong> y elegirlos todos a la vez. Da igual cómo se llamen: cada hoja se
+      reconoce por sus columnas.</li>
+    <li>Pulsar <strong>«Ensayar»</strong>. Turnera hace la importación entera y la tira al final: el informe dice
+      cuánto de cada cosa se crearía, cuánto ya estaba y qué se queda fuera, con avisos agrupados y ejemplos para
+      buscarlos en flowww. No se guarda nada.</li>
+    <li>Si el informe cuadra, <strong>«Importar»</strong>. Los ficheros no se quedan guardados en ningún sitio.</li>
+  </ol>
+  <p>
+    Importar dos veces no duplica: lo que ya se trajo se reconoce y se cuenta como «ya estaba». Eso permite
+    importar una exportación más nueva el día del cambio y traer sólo lo que falte.
+  </p>
+  <div class="ojo">
+    <p><strong>Se puede deshacer</strong> desde «Importaciones hechas», y se lleva todo lo que trajo esa
+      importación sin tocar lo que ya había. Pero si alguien ha trabajado ya con lo importado —una cita, un cobro,
+      una nota— Turnera no la deshace y dice qué lo impide: deshacerla se llevaría ese trabajo por delante.</p>
+    <p><strong>Lo que no se trae:</strong> las contraseñas del portal de flowww, los paquetes (la exportación no dice
+      qué llevan dentro), los cheques sin saldo y el hueco viejo de las citas que se movieron. El histórico de
+      visitas, la historia clínica y los consentimientos firmados no salen en esas hojas.</p>
+    <p><strong>Después de importar:</strong> los profesionales llegan con el código que tenían en flowww y hay que
+      ponerles nombre, y los clientes con un DNI repetido se traen todos y se revisan con la
+      <a href="#clientes">fusión de fichas</a> (un menor con el DNI de su madre no es la misma persona).</p>
+  </div>
 
   <h3 id="irse">Llevarse los datos del centro</h3>
   <span class="ruta">Administración → Llevarse los datos</span>
