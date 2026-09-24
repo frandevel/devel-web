@@ -763,8 +763,8 @@ footer{
     <li><strong>Moving it:</strong> drag it. If you drop it in another column it also changes member of staff or
       room, depending on the view you are in.</li>
     <li><strong>Changing how long it lasts:</strong> drag the bottom edge.</li>
-    <li><strong>Cancelling it:</strong> open it and click <em>Cancel</em>. You can write down the reason, and it is worth doing: a month
-      later, in the cancellations report, that reason is the only thing that explains what happened.</li>
+    <li><strong>Cancelling it:</strong> open it, press <em>Cancel</em> and say <strong>who is calling it off</strong>: the customer, the centre (the professional cannot make it, the cabin or the court is unavailable, something broke) or an
+      <strong>external cause</strong> (rain on an outdoor court, a power cut). It is required, because only what the customer calls off counts in their history and in lost appointments. You can also write the reason in your own words, which is kept in the comments of the appointment.</li>
     <li><strong>Taking cancelled appointments off the view:</strong> tick <em>Hide cancelled</em>, in the legend
       under the title. The diary remembers the box, so next time you will find it as you left it.</li>
   </ul>
@@ -1435,7 +1435,7 @@ footer{
     <tr><td><strong>Daily till</strong></td><td>What came in today and by which payment method. It is the closing of the day. Only the payment methods that moved money are listed: what a voucher paid for, or what was given away, is worth zero euros and takes up no row.</td></tr>
     <tr><td><strong>Payments</strong></td><td>What was charged over a range, split by payment method.</td></tr>
     <tr><td><strong>Appointments</strong></td><td>The appointments in a period, with a filter for first visits.</td></tr>
-    <tr><td><strong>Cancellations</strong></td><td>Who cancels and how much, most to least, against what they booked.</td></tr>
+    <tr><td><strong>Cancellations</strong></td><td>How many were cancelled by the customer, by the centre and by external causes, and which customers cancel the most.</td></tr>
     <tr><td><strong>Customers</strong></td><td>Sign-ups, birthdays and where they come from.</td></tr>
     <tr><td><strong>Vouchers</strong></td><td>What has been sold, what is left to use and what is about to expire.</td></tr>
     <tr><td><strong>Stock</strong></td><td>What is missing and what has come in and gone out.</td></tr>
@@ -1461,7 +1461,7 @@ footer{
     <tr><td><strong>Active clients</strong></td><td>Those who came in the last 90 days: with a ticket or with an appointment they attended.</td><td>Like revenue, against last year.</td></tr>
     <tr><td><strong>New clients who come back</strong></td><td>Of those who first came three to six months ago, how many came back within three months.</td><td>Green from 50%; red below 30%.</td></tr>
     <tr><td><strong>Average spend</strong></td><td>What was collected over twelve months from clients with a record, divided among those who paid anything.</td><td>Like revenue, against last year.</td></tr>
-    <tr><td><strong>Lost appointments</strong></td><td>This month's appointments that were missed or cancelled less than 24 hours ahead, and what they were worth at list price. Cancelling in good time does not count: the slot could be filled again.</td><td>Green below 8%; red above 15%.</td></tr>
+    <tr><td><strong>Lost appointments</strong></td><td>Appointments this month that were missed or that the customer cancelled less than 24 hours ahead, and what they were worth at list price. Cancelling in good time does not count: the slot could be filled again. Nor does what the centre or an external cause calls off.</td><td>Green below 8%; red above 15%.</td></tr>
   </tbody></table>
   </div>
   <p>
@@ -1474,9 +1474,13 @@ footer{
 
   <h3>The cancellations report</h3>
   <p>
-    It counts against <strong>the appointments in the range, not the ones cancelled in the range</strong>. The difference matters: a
-    March appointment cancelled in April is a March appointment that fell through. It comes out sorted by number of
-    cancellations and, where equal, by proportion: three out of three is worse than three out of forty.
+    It counts against <strong>the appointments in the range, not the ones cancelled in the range</strong>. The difference matters: a March appointment cancelled in April is a March appointment that fell through.
+  </p>
+  <p>
+    At the top, <strong>how many were cancelled and who called them off</strong>: the customer, the centre or an external cause. The centre's are broken down by professional, and the external ones by cabin or court, which is where you see whether an outdoor court loses many more classes to the rain than a covered one. Those cancelled before this distinction existed appear as <em>not stated</em>.
+  </p>
+  <p>
+    Below, <strong>which customers cancel the most</strong>. Only what the customer calls off counts here: if a class is called off because of rain, it does not push them up the list. It is sorted by number of cancellations and, when tied, by proportion: someone who cancelled three out of three is more of a problem than someone who cancelled three out of forty.
   </p>
 
   <h3>A split payment in the end-of-day till</h3>

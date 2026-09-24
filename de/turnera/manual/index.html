@@ -763,8 +763,8 @@ footer{
     <li><strong>Verschieben:</strong> ziehen Sie ihn. Wenn Sie ihn in einer anderen Spalte ablegen, wechselt er auch den Mitarbeiter oder die
       Kabine, je nach Ansicht.</li>
     <li><strong>Die Dauer ändern:</strong> ziehen Sie den unteren Rand.</li>
-    <li><strong>Stornieren:</strong> öffnen Sie ihn und klicken Sie auf <em>Stornieren</em>. Sie können den Grund eintragen, und das lohnt sich: im nächsten
-      Monat ist dieser Grund im Stornierungsbericht das Einzige, was erklärt, was passiert ist.</li>
+    <li><strong>Stornieren:</strong> öffnen Sie ihn, drücken Sie <em>Stornieren</em> und geben Sie an, <strong>wer storniert</strong>: der Kunde, das Zentrum (die Fachkraft kann nicht, die Kabine oder der Platz ist nicht verfügbar, ein Defekt) oder ein
+      <strong>externer Grund</strong> (Regen auf einem offenen Platz, ein Stromausfall). Die Angabe ist Pflicht, denn nur was der Kunde storniert, zählt in seiner Historie und bei den verlorenen Terminen. Zusätzlich können Sie den Grund in eigenen Worten notieren; er bleibt in den Kommentaren des Termins.</li>
     <li><strong>Abgesagte Termine aus der Ansicht nehmen:</strong> setzen Sie das Häkchen bei <em>Abgesagte ausblenden</em>, in der Legende
       unter dem Titel. Der Kalender merkt sich das Kästchen, beim nächsten Mal finden Sie es so vor, wie Sie es gelassen haben.</li>
   </ul>
@@ -1437,7 +1437,7 @@ footer{
     <tr><td><strong>Tageskasse</strong></td><td>Was heute hereingekommen ist und mit welcher Zahlungsart. Das ist der Tagesabschluss. Aufgeführt werden nur die Zahlungsarten, die Geld bewegt haben: was ein Gutschein bezahlt hat oder was verschenkt wurde, ist null Euro wert und belegt keine Zeile.</td></tr>
     <tr><td><strong>Zahlungen</strong></td><td>Das in einem Zeitraum Kassierte, aufgeteilt nach Zahlungsart.</td></tr>
     <tr><td><strong>Termine</strong></td><td>Die Termine eines Zeitraums, mit Filter nach Erstbesuch.</td></tr>
-    <tr><td><strong>Stornierungen</strong></td><td>Wer wie viel storniert, von oben nach unten, gemessen an dem, was er gebucht hat.</td></tr>
+    <tr><td><strong>Stornierungen</strong></td><td>Wie viele vom Kunden, vom Zentrum und aus externen Gründen storniert wurden, und welche Kunden am meisten stornieren.</td></tr>
     <tr><td><strong>Kunden</strong></td><td>Neuanmeldungen, Geburtstage und woher sie kommen.</td></tr>
     <tr><td><strong>Wertkarten</strong></td><td>Was verkauft ist, was noch offen ist und was demnächst abläuft.</td></tr>
     <tr><td><strong>Lager</strong></td><td>Was fehlt und was zu- und abgegangen ist.</td></tr>
@@ -1463,7 +1463,7 @@ footer{
     <tr><td><strong>Aktive Kunden</strong></td><td>Wer in den letzten 90 Tagen da war: mit einem Beleg oder mit einem wahrgenommenen Termin.</td><td>Wie der Umsatz, gegenüber dem Vorjahr.</td></tr>
     <tr><td><strong>Wiederkehr der Neukunden</strong></td><td>Von denen, die vor drei bis sechs Monaten zum ersten Mal kamen, wie viele innerhalb von drei Monaten wiederkamen.</td><td>Grün ab 50 %; rot unter 30 %.</td></tr>
     <tr><td><strong>Durchschnittliche Ausgaben</strong></td><td>Das in zwölf Monaten von Kunden mit Kartei Kassierte, geteilt durch die, die etwas bezahlt haben.</td><td>Wie der Umsatz, gegenüber dem Vorjahr.</td></tr>
-    <tr><td><strong>Verlorene Termine</strong></td><td>Die Termine des Monats, zu denen niemand kam oder die weniger als 24 Stunden vorher abgesagt wurden, und was sie laut Preisliste wert waren. Rechtzeitig absagen zählt nicht: die Lücke konnte neu besetzt werden.</td><td>Grün unter 8 %; rot über 15 %.</td></tr>
+    <tr><td><strong>Verlorene Termine</strong></td><td>Termine des Monats, zu denen niemand kam oder die der Kunde weniger als 24 Stunden vorher storniert hat, und ihr Wert laut Preisliste. Rechtzeitig zu stornieren zählt nicht: Die Lücke konnte neu besetzt werden. Was das Zentrum oder ein externer Grund storniert, zählt ebenfalls nicht.</td><td>Grün unter 8 %; rot über 15 %.</td></tr>
   </tbody></table>
   </div>
   <p>
@@ -1476,9 +1476,13 @@ footer{
 
   <h3>Der Stornierungsbericht</h3>
   <p>
-    Er rechnet bezogen auf <strong>die Termine des Zeitraums, nicht auf die im Zeitraum stornierten</strong>. Der Unterschied zählt: Ein
-    Märztermin, der im April storniert wurde, ist ein Märztermin, der ausgefallen ist. Sortiert wird nach Zahl der Stornierungen und, bei
-    Gleichstand, nach Anteil: Wer drei von drei storniert hat, stört mehr als wer drei von vierzig storniert hat.
+    Er rechnet bezogen auf <strong>die Termine des Zeitraums, nicht auf die im Zeitraum stornierten</strong>. Der Unterschied ist wichtig: Ein Termin im März, der im April storniert wurde, ist ein Termin im März, der ausgefallen ist.
+  </p>
+  <p>
+    Oben steht, <strong>wie viele storniert wurden und wer sie storniert hat</strong>: der Kunde, das Zentrum oder ein externer Grund. Die des Zentrums werden nach Fachkraft aufgeschlüsselt, die externen nach Kabine oder Platz – dort sieht man, ob ein offener Platz durch Regen viel mehr Stunden verliert als ein überdachter. Was storniert wurde, bevor es diese Unterscheidung gab, erscheint als <em>nicht angegeben</em>.
+  </p>
+  <p>
+    Darunter steht, <strong>welche Kunden am meisten stornieren</strong>. Hier zählt nur, was der Kunde selbst storniert: Fällt eine Stunde wegen Regen aus, rückt er in der Liste nicht nach oben. Sortiert wird nach Anzahl der Stornierungen und bei Gleichstand nach Anteil: Wer drei von drei storniert hat, ist ein größeres Problem als wer drei von vierzig storniert hat.
   </p>
 
   <h3>Eine aufgeteilte Zahlung im Abschluss</h3>

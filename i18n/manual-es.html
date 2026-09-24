@@ -775,8 +775,11 @@ footer{
     <li><strong>Moverla:</strong> arrástrela. Si la suelta en otra columna cambia también de profesional o de
       cabina, según la vista en la que esté.</li>
     <li><strong>Cambiar cuánto dura:</strong> arrastre el borde de abajo.</li>
-    <li><strong>Anularla:</strong> ábrala y pulse <em>Anular</em>. Puede escribir el motivo, y conviene: al mes
-      siguiente, en el informe de anulaciones, ese motivo es lo único que explica qué pasó.</li>
+    <li><strong>Anularla:</strong> ábrala, pulse <em>Anular</em> y diga <strong>quién la anula</strong>: el
+      cliente, el centro (el profesional no puede, la cabina o la pista no está disponible, una avería) o una
+      <strong>causa externa</strong> (la lluvia en una pista descubierta, un corte de luz). Es obligatorio, porque
+      solo lo que anula el cliente cuenta en su historial y en las citas perdidas. Además puede escribir el motivo
+      con sus palabras, que queda en los comentarios de la cita.</li>
     <li><strong>Quitar las anuladas de la vista:</strong> marque <em>Ocultar canceladas</em>, en la leyenda de
       debajo del título. La agenda recuerda la casilla, así que la próxima vez la encontrará como la dejó.</li>
   </ul>
@@ -1559,7 +1562,7 @@ footer{
     <tr><td><strong>Caja diaria</strong></td><td>Qué ha entrado hoy y con qué forma de pago. Es el cierre del día. Sólo salen las formas de pago que han movido dinero: lo pagado con bono o regalado vale cero euros y no ocupa una fila.</td></tr>
     <tr><td><strong>Cobros</strong></td><td>Lo cobrado en un rango, repartido por forma de pago.</td></tr>
     <tr><td><strong>Citas</strong></td><td>Las citas de un periodo, con filtro por primera visita.</td></tr>
-    <tr><td><strong>Anulaciones</strong></td><td>Quién anula y cuánto, de más a menos, sobre lo que reservó.</td></tr>
+    <tr><td><strong>Anulaciones</strong></td><td>Cuántas se anularon por el cliente, por el centro y por causas externas, y qué clientes anulan más.</td></tr>
     <tr><td><strong>Clientes</strong></td><td>Altas, cumpleaños y de dónde vienen.</td></tr>
     <tr><td><strong>Bonos</strong></td><td>Qué hay vendido, qué queda por consumir y qué está a punto de caducar.</td></tr>
     <tr><td><strong>Stock</strong></td><td>Qué falta y qué ha entrado y salido.</td></tr>
@@ -1587,7 +1590,7 @@ footer{
     <tr><td><strong>Clientes activos</strong></td><td>Los que han venido en los últimos 90 días: con un ticket o con una cita a la que acudieron.</td><td>Como la facturación, frente al año pasado.</td></tr>
     <tr><td><strong>Repetición de los nuevos</strong></td><td>De los que vinieron por primera vez hace entre tres y seis meses, cuántos volvieron antes de tres meses.</td><td>Verde desde el 50 %; rojo por debajo del 30 %.</td></tr>
     <tr><td><strong>Gasto medio</strong></td><td>Lo cobrado en doce meses a clientes con ficha, entre los que pagaron algo.</td><td>Como la facturación, frente al año pasado.</td></tr>
-    <tr><td><strong>Citas perdidas</strong></td><td>Las del mes a las que no vinieron o que se anularon con menos de 24 horas, y lo que valían en tarifa. Anular con tiempo no cuenta: el hueco se pudo volver a llenar.</td><td>Verde por debajo del 8 %; rojo por encima del 15 %.</td></tr>
+    <tr><td><strong>Citas perdidas</strong></td><td>Las del mes a las que no vinieron o que el cliente anuló con menos de 24 horas, y lo que valían en tarifa. Anular con tiempo no cuenta: el hueco se pudo volver a llenar. Lo que anula el centro o una causa externa tampoco.</td><td>Verde por debajo del 8 %; rojo por encima del 15 %.</td></tr>
   </table>
   </div>
   <p>
@@ -1603,8 +1606,18 @@ footer{
   <h3>El informe de anulaciones</h3>
   <p>
     Cuenta sobre <strong>las citas del rango, no sobre las anuladas en el rango</strong>. La diferencia importa: una
-    cita de marzo anulada en abril es una cita de marzo que se cayó. Sale ordenado por número de anulaciones y, a
-    igualdad, por proporción: quien anuló tres de tres molesta más que quien anuló tres de cuarenta.
+    cita de marzo anulada en abril es una cita de marzo que se cayó.
+  </p>
+  <p>
+    Arriba, <strong>cuántas se anularon y quién las anuló</strong>: el cliente, el centro o una causa externa. Las
+    del centro salen repartidas por profesional, y las externas por cabina o pista, que es donde se ve si una pista
+    descubierta pierde muchas más clases con la lluvia que una cubierta. Las anuladas antes de existir esta
+    distinción salen como <em>sin indicar</em>.
+  </p>
+  <p>
+    Debajo, <strong>qué clientes anulan más</strong>. Aquí solo cuenta lo que anula el propio cliente: si la clase
+    se suspende por lluvia, no le sube en la lista. Sale ordenado por número de anulaciones y, a igualdad, por
+    proporción: quien anuló tres de tres molesta más que quien anuló tres de cuarenta.
   </p>
 
   <h3>Un cobro repartido en el cierre</h3>
