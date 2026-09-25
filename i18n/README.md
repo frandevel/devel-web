@@ -15,6 +15,8 @@ i18n/
   catalogos/devel.de.json
   catalogos/turnera.{es,en,de}.json
   catalogos/manual.{es,en,de}.json
+  plantillas/novedades.html  lo nuevo de cada versión, para los clientes
+  catalogos/novedades.{es,en,de}.json
   construir.mjs              genera las nueve páginas y el sitemap
   extraer.mjs                saca los marcadores de un HTML en español
 ```

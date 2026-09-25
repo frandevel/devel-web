@@ -5,7 +5,8 @@ const navegador = await chromium.launch(
   process.env.PLAYWRIGHT_CHROMIUM ? { executablePath: process.env.PLAYWRIGHT_CHROMIUM } : {});
 
 const PAGINAS = ['/', '/en/', '/de/', '/turnera/', '/en/turnera/', '/de/turnera/',
-                 '/turnera/manual/', '/en/turnera/manual/', '/de/turnera/manual/'];
+                 '/turnera/manual/', '/en/turnera/manual/', '/de/turnera/manual/',
+                 '/turnera/novedades/', '/en/turnera/novedades/', '/de/turnera/novedades/'];
 const PREFIJO = { es: '', en: '/en', de: '/de' };
 
 let problemas = 0;

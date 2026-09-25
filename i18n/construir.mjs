@@ -8,7 +8,8 @@ const SITIO = 'https://devel.es';
 const PAGINAS = [
   { plantilla: 'plantillas/devel.html',   catalogo: 'devel',   ruta: '' },
   { plantilla: 'plantillas/turnera.html', catalogo: 'turnera', ruta: 'turnera' },
-  { plantilla: 'plantillas/manual.html',  catalogo: 'manual',  ruta: 'turnera/manual' }
+  { plantilla: 'plantillas/manual.html',  catalogo: 'manual',  ruta: 'turnera/manual' },
+  { plantilla: 'plantillas/novedades.html', catalogo: 'novedades', ruta: 'turnera/novedades' }
 ];
 
 /** La dirección de una página en un idioma: el predeterminado va en la raíz y los demás bajo su prefijo. */

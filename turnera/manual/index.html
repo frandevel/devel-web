@@ -578,6 +578,7 @@ footer{
     <nav>
       <a href="/turnera">Turnera</a>
       <a href="/turnera/manual" aria-current="page">Manual</a>
+      <a href="/turnera/novedades">Novedades</a>
     </nav>
     <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/turnera/manual" lang="es" aria-current="true">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera/manual" lang="en">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera/manual" lang="de">DE<span class="idiomas__nombre">Deutsch</span></a></div>
   </div>
@@ -609,7 +610,6 @@ footer{
     <li><a href="#aparatos">6. Aparatología</a></li>
     <li><a href="#aparatos-alta" class="sub">Dar de alta un aparato</a></li>
     <li><a href="#aparatos-sesion" class="sub">Anotar la sesión</a></li>
-    <li><a href="#zonas" class="sub">Zonas del cuerpo</a></li>
     <li><a href="#portal">7. El portal de reservas</a></li>
     <li><a href="#portal-reglas" class="sub">Hasta cuándo se reserva</a></li>
     <li><a href="#informes">8. Informes y cierre de caja</a></li>
@@ -827,6 +827,14 @@ footer{
     recalcula nada: su duración es la que tiene.
   </p>
 
+  <p>
+    <strong>Selección rápida por código.</strong> Junto a los servicios de la cita está el botón <em>Selección
+    rápida</em>: abre todos los <strong>códigos abreviados</strong> de la tarifa a la vista —HMBS, AXIL…— para
+    pinchar dos o tres seguidos, y al aceptar se añaden a la cita. Cada código es un solo servicio. El código se
+    pone en <em>Catálogo → Servicios</em>, en la ficha de cada uno (<em>Código abreviado</em>: letras y cifras, y
+    no puede repetirse). En el desplegable de servicios también sale delante del nombre, y se puede buscar por él.
+  </p>
+
   <div class="ojo">
     <p><strong>Anular no se deshace.</strong> Una cita anulada se queda a la vista, tachada — y su hueco vuelve a
       estar libre para citar encima, o se quita de la vista con <em>Ocultar canceladas</em> —, pero no se puede
@@ -847,17 +855,29 @@ footer{
   <h3 id="agenda-senales">Lo que dice cada tarjeta</h3>
 
   <p>
-    El color de la tarjeta es el estado de la cita — esperando, en curso, atendida, no vino — y la leyenda de
-    debajo del título los explica. Con el <a href="#tema">tema oscuro</a> los mismos estados se pintan más
-    claros, y el de «no vino», que sobre fondo claro es casi negro, pasa a ser casi blanco: sigue siendo el que
-    se sale de la escala. Encima del color hay cuatro señales:
+    <strong>El fondo de la tarjeta es la categoría del servicio</strong> —láser, cabina, medicina…—, la de su
+    primer servicio cuando lleva varios, y debajo de la leyenda salen las categorías que hay ese día con su color.
+    Una cita sin servicio va en gris. Cada categoría trae un color de fábrica, y se cambia en <em>Catálogo →
+    Servicios → Colores de la agenda</em>: se elige el tono, se ve una muestra de la tarjeta y se pulsa
+    <em>Guardar</em>.
+  </p>
+  <p>
+    <strong>El estado de la cita es la barra del canto izquierdo</strong> — esperando, en curso, atendida, no
+    vino —, con los colores de siempre, y la leyenda de debajo del título los explica. Con el
+    <a href="#tema">tema oscuro</a> los mismos estados se pintan más claros, y el de «no vino», que sobre fondo
+    claro es casi negro, pasa a ser casi blanco. Delante del nombre va el <strong>número de cliente</strong>.
+  </p>
+  <p>
+    <strong>Una cita rodeada de rojo ya ha terminado y no ha pasado por caja.</strong> Al final del día no
+    debería quedar ninguna: o se cobra, o se marca como que no vino. Las anuladas no se marcan. Encima del color
+    hay además estas señales:
   </p>
 
   <div class="tabla-envoltorio">
   <table>
     <tbody><tr><th>Señal</th><th>Qué significa</th></tr>
     <tr>
-      <td><strong>Barra naranja</strong> en el borde izquierdo, con una estrella junto al nombre</td>
+      <td><strong>Estrella naranja</strong> junto al nombre</td>
       <td><strong>Primera visita de esa persona en el centro.</strong> No es una marca que alguien tenga que poner:
         se calcula sola mirando si tiene alguna cita anterior.</td>
     </tr>
@@ -937,8 +957,17 @@ footer{
   <span class="ruta">Menú → Clientes</span>
 
   <p>
-    El buscador de arriba busca por nombre, apellidos, teléfono o NIF. No hace falta escribirlo entero. La lista
-    se ordena pulsando la cabecera de cualquier columna (<a href="#ordenar">cómo</a>).
+    El buscador de arriba busca por nombre, apellidos, teléfono, NIF o <strong>número de cliente</strong>. No hace
+    falta escribirlo entero, salvo el número, que va exacto. La lista se ordena pulsando la cabecera de cualquier
+    columna (<a href="#ordenar">cómo</a>).
+  </p>
+
+  <p>
+    <strong>El número de cliente sale en todas partes</strong>: en la lista, en la ficha, en la tarjeta de la
+    agenda, en el buscador de la cita y del cobro, en los cobros pendientes y en los informes. El de los clientes
+    que vinieron de flowww es el que tenían allí, y a los nuevos se les da el siguiente al darlos de alta. Y
+    <strong>el nombre de un cliente en cualquier listado es un enlace a su ficha</strong>, igual que en el
+    inicio; en la cita y en el cobro, el botón de la tarjeta que hay junto al cliente lleva también a ella.
   </p>
 
   <p>
@@ -1094,8 +1123,23 @@ footer{
   </ul>
 
   <p>
+    Un producto <strong>se vende aunque el stock diga que no quedan</strong>: si está en el mostrador, está. La
+    unidad sale del stock —que se queda en cero, nunca en negativo— y la salida queda apuntada; el inventario es
+    el que pone luego la cifra buena. Al abonar o anular la venta, la unidad vuelve.
+  </p>
+
+  <p>
     El botón <em>Presupuesto</em> saca en PDF lo que hay en el ticket sin cobrar nada, para dárselo a quien está
     pensándoselo.
+  </p>
+
+  <p>
+    <strong>Consultar sin perder el ticket.</strong> El icono <em>i</em> de cada servicio o producto del buscador,
+    y el nombre de cada línea del ticket, abren su ficha en un panel a la derecha: precio, IVA, duración, código,
+    unidades que quedan en este centro… Se cierra y el ticket sigue igual. Y si hace falta salir del TPV —a la
+    ficha del cliente, a la agenda—, <strong>el ticket a medias se queda guardado en ese puesto</strong>: al volver
+    aparece tal cual, con el aviso <em>Se ha recuperado el ticket</em> y el botón <em>Descartarlo</em> para
+    empezar uno limpio. Es de cada usuario y de cada centro, se borra al cobrar y caduca a las doce horas.
   </p>
 
   <figure>
@@ -1189,6 +1233,14 @@ footer{
     dirección los inventa.
   </p>
 
+  <div class="ojo">
+    <p><strong>Si un cobro no sale, el aviso dice por qué y qué hacer.</strong> Por ejemplo, que al cliente no le
+      quedan sesiones de bono para todo el ticket y hay que cobrar el resto de otra forma, o que falta elegir la
+      línea de negocio de las ventas en <em>Administración → Preferencias → El centro</em>. Si es un fallo del
+      servidor, el aviso trae una <strong>referencia</strong> de ocho letras y números: con ella, soporte
+      encuentra exactamente qué pasó.</p>
+  </div>
+
   <h3 id="cobrar-bono">Cobrar con bono</h3>
   <p>
     Si el cliente tiene un bono con sesiones, el TPV lo aplica solo. Cada servicio del ticket que sea del grupo
@@ -1197,7 +1249,13 @@ footer{
     la línea <em>Cubierto por bonos</em> con lo que se ha ahorrado el cliente.
   </p>
   <p>
-    <strong>Si prefiere cobrar un servicio y guardar la sesión</strong>, desmarque la casilla de esa línea: vuelve
+    La forma de pago sale ya puesta en <strong>Bono</strong>. Si el bono lo paga todo, no hay nada más que
+    elegir: se cobra y se descuenta la sesión. Si queda algo por pagar, debajo aparece <em>El resto se paga
+    con</em> para elegir cómo. <strong>Si el cliente prefiere pagar y guardarse la sesión</strong>, elija otra
+    forma de pago en lugar de Bono: todo el ticket vuelve a su precio y el bono no se toca.
+  </p>
+  <p>
+    <strong>Para guardar la sesión de un solo servicio</strong> y gastarla en los demás, desmarque la casilla de esa línea: vuelve
     a su precio y el bono no se toca. Sirve para el cliente que quiere reservar las sesiones que le quedan, o para
     el que hoy paga por otra persona.
   </p>
@@ -1208,7 +1266,7 @@ footer{
   </p>
   <p>
     En el ticket cada línea pagada con bono sale como <em>(sesión de bono)</em>, y en la caja del día sólo cuenta
-    el dinero que ha entrado de verdad. «Bono» ya no es una forma de pago que se elija de la lista.
+    el dinero que ha entrado de verdad.
   </p>
 
   <h3 id="cobrar-partido">Pagar con dos formas a la vez</h3>
@@ -1510,33 +1568,6 @@ footer{
     <figcaption>La sección aparece sola en las citas que llevan un servicio con aparato.</figcaption>
   </figure>
 
-  <h3 id="zonas">Zonas del cuerpo</h3>
-  <span class="ruta">Catálogo → Zonas</span>
-  <p>
-    El consentimiento informado no se firma para «depilación láser» en general, sino para unas zonas concretas.
-    Por eso Turnera guarda <strong>qué partes se trataron en cada sesión</strong>, y así se puede cotejar con lo
-    firmado, sobre todo con menores.
-  </p>
-  <p>Se prepara en dos pasos:</p>
-  <ol>
-    <li>En <strong>Catálogo → Zonas</strong> se da de alta la lista: axilas, ingles, piernas… Sólo llevan nombre.</li>
-    <li>En <strong>Catálogo → Servicios</strong>, el botón <strong>«Zonas»</strong> de cada servicio dice cuáles
-      se pueden elegir con él. Son las <em>posibles</em>: un servicio sin zonas no pide nada y todo sigue como
-      antes.</li>
-  </ol>
-  <p>
-    A partir de ahí, al poner la cita aparece, debajo de los servicios, un campo <strong>«Zonas tratadas»</strong>
-    por cada servicio que tenga zonas. Se eligen las que se vayan a tratar: ninguna, alguna o todas, porque
-    <strong>es opcional</strong>. Al cobrar, cada línea del TPV trae las de la cita y se pueden corregir antes de
-    cobrar. Lo cobrado es lo que queda como histórico, y se ve en la ficha del cliente junto a cada servicio.
-  </p>
-  <div class="ojo">
-    <p><strong>Las zonas no cambian el precio y no salen en el ticket ni en la factura.</strong> Son un registro
-      de lo que se hizo, no una línea de la cuenta.</p>
-    <p><strong>Una zona que ya se ha usado no se borra: se desactiva.</strong> Deja de ofrecerse en la agenda y en
-      el cobro, y el histórico sigue diciendo lo mismo.</p>
-  </div>
-
 </section>
 
 <section id="portal">
@@ -1620,6 +1651,40 @@ footer{
     <img src="/turnera/manual/imagenes/13-caja-diaria.png" alt="El informe de caja diaria con los totales por forma de pago" loading="lazy">
     <figcaption>La caja diaria: qué ha entrado y con qué forma de pago. Es el cierre del día.</figcaption>
   </figure>
+
+  <h3 id="cierre-de-caja">Cuadrar y cerrar la caja del día</h3>
+  <span class="ruta">Menú → Cierre de caja</span>
+
+  <p>
+    Al final de cada día se cuadra lo que hay en el cajón y lo que ha entrado por el datáfono con lo que Turnera dice
+    que se ha cobrado. La pantalla de entrada es el <strong>buscador de cajas</strong>: un día por fila, con lo
+    cobrado, el descuadre, lo retirado y el estado —<em>Cerrada</em>, <em>Abierta</em> o <em>Sin cerrar</em>, que
+    son los días en que se cobró algo y nadie cerró la caja—. <em>Caja de hoy</em> abre la del día; cualquier otro,
+    pulsando su fila.
+  </p>
+  <ul>
+    <li><strong>Lo que ha cobrado Turnera</strong>, a la izquierda: el total de cada forma de pago. <em>Ver
+      desglose</em> enseña los cobros uno a uno —hora, ticket, cliente e importe—, para encontrar el que no cuadra.</li>
+    <li><strong>Tarjeta</strong>: se escribe lo que dicen los resguardos del datáfono o el banco, y sale el
+      descuadre de tarjeta.</li>
+    <li><strong>Efectivo</strong>: la caja inicial —se propone lo que dejó el cierre anterior—, más lo cobrado en
+      efectivo, menos los <em>pagos por caja</em> (el mensajero, la floristería), es lo que <em>debería haber en el
+      cajón</em>. Se escribe el recuento y sale el descuadre de efectivo. Lo que se lleva al banco va en <em>cantidad
+      retirada</em>, y lo que queda es la caja inicial del día siguiente.</li>
+  </ul>
+  <p>
+    Arriba, grande, <strong>el veredicto</strong>: en verde si la caja cuadra, en rojo con cuánto falta o sobra
+    —negativo es que falta—, repartido entre efectivo y tarjeta. Se recalcula con cada cifra que se teclea, así que
+    se puede ir repasando hasta que cuadre. <em>Guardar lo contado</em> deja la caja abierta para seguir luego;
+    <em>Cerrar caja</em> la deja fija y vuelve a la lista de cierres, donde aparece como cerrada; pide haber
+    contado el efectivo y la tarjeta. Cualquier cierre de la lista se abre con un clic para consultarlo. Para
+    corregirlo hay que reabrirlo, y queda apuntado quién lo cerró y quién lo reabrió.
+  </p>
+  <div class="ojo">
+    <p>Cuadrar y cerrar la caja es el permiso <strong>«Cuadrar y cerrar la caja»</strong>, que traen Recepción y
+      Dirección. Reabrir una caja cerrada es otro, <strong>«Reabrir una caja cerrada»</strong>, que sólo trae
+      Dirección.</p>
+  </div>
 
   <h3 id="cuadro-de-mando">El cuadro de mando</h3>
   <span class="ruta">Menú → Cuadro de mando</span>
@@ -2186,8 +2251,9 @@ footer{
   <h4>El PIN</h4>
 
   <p>
-    Cada profesional puede tener un <strong>PIN de cuatro a seis cifras</strong>, que se le pone en
-    <em>Profesionales → PIN de fichaje</em>. Al pulsar su botón sale un teclado y lo teclea. Es lo que hace que
+    Cada profesional puede tener un <strong>PIN de cuatro cifras</strong>, que se le pone en
+    <em>Profesionales → PIN de fichaje</em>. Al pulsar su botón sale un teclado y lo teclea: con la cuarta
+    cifra ya ficha, sin pulsar nada más. Es lo que hace que
     pulsar el botón de otro no sea fichar por otro, y sin ello la lista de nombres no probaría gran cosa ante
     una inspección.
   </p>
@@ -2402,6 +2468,16 @@ footer{
       buscarlos en flowww. No se guarda nada.</li>
     <li>Si el informe cuadra, <strong>«Importar»</strong>. Los ficheros no se quedan guardados en ningún sitio.</li>
   </ol>
+  <p>
+    El <strong>código</strong> de cada servicio en flowww llega como su código abreviado. En flowww un mismo código
+    puede servir para varios servicios, y en Turnera no: a esos se les añade lo que distingue su nombre —IDEE pasa
+    a IDEE20, IDEE30 e IDEE50 para el Indiba de 20, 30 y 50 minutos— y el informe del ensayo dice cómo queda cada
+    uno. Se pueden cambiar después en la ficha del servicio.
+  </p>
+  <p>
+    Los productos llegan <strong>con su stock a cero</strong> en cada centro, porque flowww no dice cuántas unidades
+    hay: se ponen después con un inventario, desde <em>Stock</em>. Mientras tanto se pueden vender igual.
+  </p>
   <p>
     Importar dos veces no duplica: lo que ya se trajo se reconoce y se cuenta como «ya estaba». Eso permite
     importar una exportación más nueva el día del cambio y traer sólo lo que falte.

@@ -578,6 +578,7 @@ footer{
     <nav>
       <a href="/de/turnera">Turnera</a>
       <a href="/de/turnera/manual" aria-current="page">Handbuch</a>
+      <a href="/de/turnera/novedades">Neuigkeiten</a>
     </nav>
     <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/turnera/manual" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera/manual" lang="en">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera/manual" lang="de" aria-current="true">DE<span class="idiomas__nombre">Deutsch</span></a></div>
   </div>
@@ -609,7 +610,6 @@ footer{
     <li><a href="#aparatos">6. Geräte</a></li>
     <li><a href="#aparatos-alta" class="sub">Ein Gerät anlegen</a></li>
     <li><a href="#aparatos-sesion" class="sub">Die Sitzung erfassen</a></li>
-    <li><a href="#zonas" class="sub">Körperzonen</a></li>
     <li><a href="#portal">7. Das Buchungsportal</a></li>
     <li><a href="#portal-reglas" class="sub">Wie weit im Voraus gebucht wird</a></li>
     <li><a href="#informes">8. Berichte und Kassenabschluss</a></li>
@@ -793,6 +793,10 @@ footer{
     gibt, wird ebenfalls nichts neu berechnet: seine Dauer ist die, die er hat.
   </p>
 
+  <p>
+    <strong>Schnellauswahl per Code.</strong> Neben den Leistungen des Termins steht die Schaltfläche <em>Schnellauswahl</em>: Sie öffnet alle <strong>Kurzcodes</strong> der Preisliste auf einen Blick —HMBS, AXIL…—, um zwei oder drei hintereinander anzuklicken; beim Bestätigen werden sie dem Termin hinzugefügt. Jeder Code ist genau eine Leistung. Der Code wird festgelegt unter <em>Katalog → Leistungen</em>, in der Karte jeder Leistung (<em>Kurzcode</em>: Buchstaben und Ziffern, und er darf sich nicht wiederholen). Er steht auch vor dem Namen in der Leistungsauswahl, und man kann danach suchen.
+  </p>
+
   <div class="ojo">
     <p><strong>Eine Stornierung lässt sich nicht rückgängig machen.</strong> Ein abgesagter Termin bleibt durchgestrichen sichtbar — sein Platz ist wieder frei, um
       darüber zu buchen, oder er wird aus der Ansicht genommen mit <em>Abgesagte ausblenden</em> —, aber er lässt sich nicht
@@ -813,17 +817,22 @@ footer{
   <h3 id="agenda-senales">Was jede Karte anzeigt</h3>
 
   <p>
-    Die Farbe der Karte ist der Status des Termins — wartend, läuft, behandelt, nicht erschienen — und die
-    Legende unter dem Titel erklärt sie. Mit dem <a href="#tema">dunklen Thema</a> werden dieselben Status heller gezeichnet, und
-    „nicht erschienen“, auf hellem Grund fast schwarz, wird fast weiß: es bleibt das, was aus der Reihe fällt.
-    Über der Farbe gibt es vier Zeichen:
+    <strong>Der Hintergrund der Karte ist die Kategorie der Leistung</strong> —Laser, Kabine, Medizin…—, bei mehreren die der ersten Leistung; unter der Legende erscheinen die Kategorien des Tages mit ihrer Farbe. Ein Termin ohne Leistung ist grau. Jede Kategorie hat eine Standardfarbe, die man ändert unter <em>Katalog → Leistungen → Farben des Kalenders</em>: Farbton wählen, eine Vorschau der Karte ansehen und
+    <em>Speichern</em>.
+  </p>
+  <p>
+    <strong>Der Status des Termins ist der Balken am linken Rand</strong> — wartend, in Behandlung, behandelt, nicht erschienen —, in den gewohnten Farben; die Legende unter dem Titel erklärt sie. Mit dem
+    <a href="#tema">dunklen Thema</a> werden dieselben Status heller dargestellt, und «nicht erschienen», das auf hellem Grund fast schwarz ist, wird fast weiß. Vor dem Namen steht die <strong>Kundennummer</strong>.
+  </p>
+  <p>
+    <strong>Ein rot umrandeter Termin ist schon vorbei und wurde noch nicht kassiert.</strong> Am Ende des Tages sollte keiner übrig sein: Entweder wird er kassiert oder als nicht erschienen markiert. Stornierte werden nicht markiert. Über der Farbe gibt es außerdem diese Zeichen:
   </p>
 
   <div class="tabla-envoltorio">
   <table>
     <tbody><tr><th>Zeichen</th><th>Was es bedeutet</th></tr>
     <tr>
-      <td><strong>Oranger Balken</strong> am linken Rand, mit einem Stern neben dem Namen</td>
+      <td><strong>Oranger Stern</strong> neben dem Namen</td>
       <td><strong>Erstbesuch dieser Person im Betrieb.</strong> Das ist keine Markierung, die jemand setzen muss:
         sie ergibt sich von selbst daraus, ob es einen früheren Termin gibt.</td>
     </tr>
@@ -895,7 +904,12 @@ footer{
   <span class="ruta">Menü → Kunden</span>
 
   <p>
-    Das Suchfeld oben sucht nach Vorname, Nachname, Telefonnummer oder Steuernummer. Man muss sie nicht vollständig eingeben. Die Liste lässt sich per Klick auf die Überschrift jeder Spalte sortieren (<a href="#ordenar">wie</a>).
+    Das Suchfeld oben sucht nach Vorname, Nachname, Telefon, Steuernummer oder <strong>Kundennummer</strong>. Man muss nichts vollständig eingeben, außer der Nummer, die exakt sein muss. Die Liste wird durch Klick auf eine Spaltenüberschrift sortiert (<a href="#ordenar">wie</a>).
+  </p>
+
+  <p>
+    <strong>Die Kundennummer steht überall</strong>: in der Liste, in der Kundenakte, auf der Terminkarte, in der Kundensuche von Termin und Kasse, bei offenen Zahlungen und in den Berichten. Kunden aus flowww behalten ihre dortige Nummer, neue bekommen bei der Anlage die nächste. Und
+    <strong>der Name eines Kunden ist in jeder Liste ein Link zu seiner Akte</strong>, genau wie auf der Startseite; im Termin und an der Kasse führt auch die Kartenschaltfläche neben dem Kunden dorthin.
   </p>
 
   <p>
@@ -1022,8 +1036,16 @@ footer{
   </ul>
 
   <p>
+    Ein Produkt <strong>wird verkauft, auch wenn laut Bestand keines mehr da ist</strong>: Wenn es auf dem Tresen liegt, ist es da. Die Einheit geht aus dem Bestand —der bei null bleibt, nie negativ— und der Abgang wird verbucht; die richtige Zahl setzt später die Inventur. Wird der Verkauf erstattet oder storniert, kommt die Einheit zurück.
+  </p>
+
+  <p>
     Der Knopf <em>Kostenvoranschlag</em> gibt als PDF aus, was auf dem Bon steht, ohne etwas zu kassieren, für alle, die noch
     überlegen.
+  </p>
+
+  <p>
+    <strong>Nachschlagen, ohne den Bon zu verlieren.</strong> Das Symbol <em>i</em> bei jeder Leistung oder jedem Produkt in der Suche und der Name jeder Bonzeile öffnen die Karte in einem Seitenpanel: Preis, MwSt., Dauer, Code, verbleibende Einheiten in diesem Zentrum… Es schließt sich, und der Bon bleibt, wie er war. Und wenn man die Kasse verlassen muss —zur Kundenakte, zum Kalender—, <strong>bleibt der halbfertige Bon an diesem Arbeitsplatz gespeichert</strong>: Beim Zurückkommen erscheint er unverändert, mit dem Hinweis <em>Der Bon wurde wiederhergestellt</em> und der Schaltfläche <em>Verwerfen</em> zum Neubeginnen. Er gehört zu jedem Benutzer und jedem Zentrum, wird beim Kassieren gelöscht und verfällt nach zwölf Stunden.
   </p>
 
   <figure>
@@ -1092,6 +1114,10 @@ footer{
     Ein Gutschein wird nicht gelöscht, sondern <strong>aus der Warteliste</strong>. Er gilt am Tresen nicht mehr, und was mit ihm schon abgezogen wurde, bleibt, wo es war. Die Gutscheine zu sehen und sie anzulegen sind zwei verschiedene Berechtigungen: der Empfang sieht sie, die Leitung erfindet sie.
   </p>
 
+  <div class="ojo">
+    <p><strong>Wenn eine Zahlung nicht durchgeht, sagt der Hinweis, warum und was zu tun ist.</strong> Zum Beispiel, dass der Kunde nicht genug Gutscheinsitzungen für den ganzen Bon hat und der Rest anders bezahlt werden muss, oder dass die Geschäftslinie für Verkäufe nicht gewählt ist unter <em>Verwaltung → Einstellungen → Das Zentrum</em>. Ist es ein Serverfehler, enthält der Hinweis eine <strong>Referenz</strong> aus acht Buchstaben und Ziffern: Damit findet der Support genau, was passiert ist.</p>
+  </div>
+
   <h3 id="cobrar-bono">Mit Gutschein bezahlen</h3>
   <p>
     Hat der Kunde einen Gutschein mit Sitzungen, wendet die Kasse ihn von selbst an. Jede Leistung auf dem Bon,
@@ -1100,9 +1126,10 @@ footer{
     die Zeile <em>Durch Gutscheine gedeckt</em> mit dem, was der Kunde gespart hat.
   </p>
   <p>
-    <strong>Wenn Sie eine Leistung lieber kassieren und die Sitzung aufheben möchten</strong>, nehmen Sie das Häkchen in dieser Zeile heraus: sie kehrt
-    zu ihrem Preis zurück und der Gutschein bleibt unberührt. Das ist für den Kunden gedacht, der seine restlichen Sitzungen
-    aufheben will, oder für den, der heute für jemand anderen bezahlt.
+    Die Zahlungsart ist bereits auf <strong>Gutschein</strong> gesetzt. Wenn der Gutschein alles bezahlt, gibt es nichts weiter zu wählen: Es wird kassiert und die Sitzung abgezogen. Bleibt etwas zu zahlen, erscheint darunter <em>Der Rest wird bezahlt mit</em> (zur Auswahl der Zahlungsart). <strong>Wenn der Kunde lieber zahlt und die Sitzung behält</strong>, wählen Sie statt Gutschein eine andere Zahlungsart: Der ganze Bon kehrt zu seinem Preis zurück, und der Gutschein bleibt unberührt.
+  </p>
+  <p>
+    <strong>Um die Sitzung einer einzelnen Leistung zu behalten</strong> und sie für die anderen nutzen möchte, entfernen Sie das Häkchen bei dieser Zeile: Sie kehrt zu ihrem Preis zurück, und der Gutschein bleibt unberührt. Das ist für Kunden gedacht, die ihre restlichen Sitzungen aufheben wollen oder heute für jemand anderen bezahlen.
   </p>
   <p>
     Gibt es mehrere Leistungen derselben Gruppe und der Gutschein reicht nicht für alle, deckt er zuerst die
@@ -1110,8 +1137,7 @@ footer{
     bleibt bis dahin in der Kundenakte unangetastet.
   </p>
   <p>
-    Auf dem Bon erscheint jede mit Gutschein bezahlte Zeile als <em>(Gutschein-Sitzung)</em>, und in der Tageskasse zählt nur
-    das Geld, das wirklich hereingekommen ist. „Gutschein“ ist keine Zahlungsart mehr, die man aus der Liste wählt.
+    Auf dem Bon erscheint jede mit Gutschein bezahlte Zeile als <em>(Gutschein-Sitzung)</em>, und in der Tageskasse zählt nur das Geld, das wirklich eingegangen ist.
   </p>
 
   <h3 id="cobrar-partido">Mit zwei Zahlungsarten gleichzeitig bezahlen</h3>
@@ -1377,33 +1403,6 @@ footer{
     <figcaption>Der Abschnitt erscheint von selbst bei Terminen mit einer Leistung, die ein Gerät braucht.</figcaption>
   </figure>
 
-  <h3 id="zonas">Körperzonen</h3>
-  <span class="ruta">Katalog → Körperzonen</span>
-  <p>
-    Die Einwilligungserklärung wird nicht für «Laser-Haarentfernung» im Allgemeinen unterschrieben, sondern für bestimmte Zonen.
-    Deshalb speichert Turnera <strong>welche Körperteile in jeder Sitzung behandelt wurden</strong>, damit man es mit dem Unterschriebenen
-    abgleichen kann, vor allem bei Minderjährigen.
-  </p>
-  <p>Die Einrichtung erfolgt in zwei Schritten:</p>
-  <ol>
-    <li>Unter <strong>Katalog → Körperzonen</strong> legt man die Liste an: Achseln, Leisten, Beine… Sie haben nur einen Namen.</li>
-    <li>Unter <strong>Katalog → Leistungen</strong>mit der Schaltfläche <strong>«Zonen»</strong> jeder Leistung legt fest, welche
-      damit gewählt werden können. Es sind die <em>möglichen</em> Zonen: Eine Leistung ohne Zonen fragt nach nichts, und alles bleibt wie
-      bisher.</li>
-  </ol>
-  <p>
-    Ab dann erscheint beim Anlegen des Termins unter den Leistungen ein Feld <strong>«Behandelte Zonen»</strong>
-    für jede Leistung mit Zonen. Man wählt die zu behandelnden: keine, einige oder alle, denn
-    <strong>es ist optional</strong>. An der Kasse übernimmt jede Zeile die Zonen des Termins, und sie lassen sich vor dem Kassieren
-    korrigieren. Was kassiert wird, bleibt als Verlauf und ist in der Kundenakte neben jeder Leistung zu sehen.
-  </p>
-  <div class="ojo">
-    <p><strong>Zonen ändern den Preis nicht und erscheinen weder auf dem Beleg noch auf der Rechnung.</strong> Sie sind eine Aufzeichnung
-      dessen, was gemacht wurde, keine Rechnungsposition.</p>
-    <p><strong>Eine bereits verwendete Zone wird nicht gelöscht, sondern deaktiviert.</strong> Sie wird im Kalender und an der
-      Kasse nicht mehr angeboten, und der Verlauf bleibt unverändert.</p>
-  </div>
-
 </section>
 
 <section id="portal">
@@ -1482,6 +1481,25 @@ footer{
     <img src="/turnera/manual/imagenes/en/13-caja-diaria.png" alt="Der Kassenabschlussbericht mit den Summen je Zahlungsart" loading="lazy">
     <figcaption>Der Kassenabschluss: was eingegangen ist und mit welcher Zahlungsart. Das ist der Tagesabschluss.</figcaption>
   </figure>
+
+  <h3 id="cierre-de-caja">Die Tageskasse abgleichen und schließen</h3>
+  <span class="ruta">Menü → Kassenabschluss</span>
+
+  <p>
+    Am Ende jedes Tages wird abgeglichen, was in der Kasse liegt und was über das Kartenterminal eingegangen ist, mit dem, was laut Turnera kassiert wurde. Der Einstieg ist die <strong>Kassensuche</strong>: ein Tag pro Zeile, mit Einnahmen, Differenz, Entnahme und Status —<em>Geschlossen</em>, <em>Offen</em> oder <em>Nicht geschlossen</em>, das sind die Tage, an denen etwas kassiert und die Kasse nicht geschlossen wurde—. <em>Heutige Kasse</em> öffnet die heutige; jede andere per Klick auf ihre Zeile.
+  </p>
+  <ul>
+    <li><strong>Was Turnera kassiert hat</strong>, links: die Summe jeder Zahlungsart. <em>Aufschlüsselung ansehen</em> zeigt die Zahlungen einzeln —Uhrzeit, Bon, Kunde und Betrag—, um die zu finden, die nicht stimmt.</li>
+    <li><strong>Karte</strong>: Man trägt ein, was die Belege des Kartenterminals oder die Bank sagen, und die Kartendifferenz erscheint.</li>
+    <li><strong>Bargeld</strong>: der Anfangsbestand —vorgeschlagen wird, was der letzte Abschluss hinterlassen hat—, plus die Bareinnahmen, minus die <em>Auszahlungen aus der Kasse</em> (der Kurier, der Blumenladen), ist das, was <em>in der Kasse liegen sollte</em>. Man trägt die Zählung ein, und die Bardifferenz erscheint. Was zur Bank geht, kommt in <em>entnommener Betrag</em>, und was bleibt, ist der Anfangsbestand des nächsten Tages.</li>
+  </ul>
+  <p>
+    Oben, groß, <strong>das Ergebnis</strong>: grün, wenn die Kasse stimmt, rot mit dem Fehlbetrag oder Überschuss —negativ heißt Fehlbetrag—, aufgeteilt nach Bargeld und Karte. Es wird bei jeder eingegebenen Zahl neu berechnet, sodass man prüfen kann, bis es stimmt. <em>Zählung speichern</em> lässt die Kasse offen, um später weiterzumachen;
+    <em>Kasse schließen</em> schreibt sie fest und kehrt zur Liste der Abschlüsse zurück, wo sie als geschlossen erscheint; dafür müssen Bargeld und Karte gezählt sein. Jeder Abschluss der Liste lässt sich per Klick ansehen. Zum Korrigieren muss man ihn wieder öffnen, und es wird festgehalten, wer ihn geschlossen und wer ihn wieder geöffnet hat.
+  </p>
+  <div class="ojo">
+    <p>Kasse abgleichen und schließen ist die Berechtigung <strong>«Kasse abgleichen und schließen»</strong>, die Empfang und Leitung haben. Eine geschlossene Kasse wieder öffnen ist eine andere, <strong>«Geschlossene Kasse wieder öffnen»</strong>, die nur die Leitung hat.</p>
+  </div>
 
   <h3 id="cuadro-de-mando">Das Cockpit</h3>
   <span class="ruta">Menü → Cockpit</span>
@@ -1979,10 +1997,8 @@ footer{
   <h4>Die PIN</h4>
 
   <p>
-    Jede Fachkraft kann eine <strong>PIN aus vier bis sechs Ziffern</strong>haben, die unter
-    <em>Fachkräfte → Stempel-PIN</em>vergeben wird. Beim Drücken ihrer Schaltfläche erscheint ein Tastenfeld dafür. Das ist
-    es, was das Drücken der Schaltfläche einer anderen Person davon unterscheidet, für sie zu stempeln, und
-    ohne das würde eine Namensliste bei einer Prüfung wenig beweisen.
+    Jede Fachkraft kann eine <strong>vierstellige PIN</strong>haben, die unter
+    <em>Fachkräfte → Stempel-PIN</em>. Beim Drücken der eigenen Schaltfläche erscheint ein Tastenfeld: Mit der vierten Ziffer wird schon gestempelt, ohne weiteren Klick. Dadurch stempelt niemand für jemand anderen, nur weil er dessen Schaltfläche drückt, und ohne das würde die Namensliste bei einer Prüfung wenig beweisen.
   </p>
 
   <p>
@@ -2188,6 +2204,12 @@ footer{
       sie in flowww zu finden. Nichts wird gespeichert.</li>
     <li>Wenn der Bericht stimmt, <strong>«Importieren»</strong>. Die Dateien werden nirgends gespeichert.</li>
   </ol>
+  <p>
+    Der <strong>Code</strong> jeder Leistung in flowww wird zu ihrem Kurzcode. In flowww kann derselbe Code für mehrere Leistungen gelten, in Turnera nicht: Diesen wird angehängt, was ihren Namen unterscheidet —aus IDEE werden IDEE20, IDEE30 und IDEE50 für Indiba mit 20, 30 und 50 Minuten—, und der Bericht des Probelaufs zeigt, wie jeder Code am Ende heißt. Sie lassen sich später in der Leistungskarte ändern.
+  </p>
+  <p>
+    Die Produkte kommen <strong>mit Bestand null</strong> in jedem Zentrum an, weil flowww nicht angibt, wie viele Einheiten es gibt: Sie werden später per Inventur eingetragen, unter <em>Lager</em>. Bis dahin kann man sie trotzdem verkaufen.
+  </p>
   <p>
     Zweimal importieren verdoppelt nichts: Was schon übernommen wurde, wird erkannt und als «schon da» gezählt. So lässt sich
     am Tag des Wechsels ein neuerer Export importieren, der nur das Fehlende bringt.

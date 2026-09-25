@@ -578,6 +578,7 @@ footer{
     <nav>
       <a href="/en/turnera">Turnera</a>
       <a href="/en/turnera/manual" aria-current="page">Manual</a>
+      <a href="/en/turnera/novedades">What's new</a>
     </nav>
     <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/turnera/manual" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera/manual" lang="en" aria-current="true">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera/manual" lang="de">DE<span class="idiomas__nombre">Deutsch</span></a></div>
   </div>
@@ -609,7 +610,6 @@ footer{
     <li><a href="#aparatos">6. Equipment</a></li>
     <li><a href="#aparatos-alta" class="sub">Adding a device</a></li>
     <li><a href="#aparatos-sesion" class="sub">Recording the session</a></li>
-    <li><a href="#zonas" class="sub">Body zones</a></li>
     <li><a href="#portal">7. The booking portal</a></li>
     <li><a href="#portal-reglas" class="sub">How far ahead bookings go</a></li>
     <li><a href="#informes">8. Reports and the end-of-day till</a></li>
@@ -793,6 +793,10 @@ footer{
     either: its duration is the one it has.
   </p>
 
+  <p>
+    <strong>Quick selection by code.</strong> Next to the appointment's services there is the button <em>Quick selection</em>: it opens all the <strong>short codes</strong> of the price list at a glance —HMBS, AXIL…— so you can click two or three in a row, and on accepting they are added to the appointment. Each code is a single service. The code is set in <em>Catalogue → Services</em>, in the record of each one (<em>Short code</em>: letters and digits, and it cannot be repeated). It also appears in front of the name in the services drop-down, and you can search by it.
+  </p>
+
   <div class="ojo">
     <p><strong>Cancelling cannot be undone.</strong> A cancelled appointment stays in view, crossed out — its slot is free again to
       book over, or it can be taken off the view with <em>Hide cancelled</em> —, but it cannot be
@@ -813,17 +817,22 @@ footer{
   <h3 id="agenda-senales">What each card tells you</h3>
 
   <p>
-    The colour of the card is the status of the appointment — waiting, in progress, seen, did not come — and the
-    legend under the title explains them. With the <a href="#tema">dark theme</a> the same statuses are painted lighter,
-    and «did not come», which on a light background is almost black, becomes almost white: it is still the one
-    that falls outside the scale. On top of the colour there are four signs:
+    <strong>The background of the card is the category of the service</strong> —laser, treatment room, medicine…—, that of its first service when it has several, and below the legend you see the categories of that day with their colour. An appointment without a service is grey. Each category comes with a default colour, which is changed in <em>Catalogue → Services → Agenda colours</em>: choose the shade, see a sample of the card and press
+    <em>Save</em>.
+  </p>
+  <p>
+    <strong>The status of the appointment is the bar on the left edge</strong> — waiting, in progress, attended, no-show —, with the usual colours, and the legend under the title explains them. With the
+    <a href="#tema">dark theme</a> the same statuses are painted lighter, and the «no-show» one, which is almost black on a light background, becomes almost white. In front of the name comes the <strong>customer number</strong>.
+  </p>
+  <p>
+    <strong>An appointment outlined in red has already finished and has not gone through the till.</strong> At the end of the day there should be none left: either it is charged or it is marked as a no-show. Cancelled ones are not marked. On top of the colour there are also these signs:
   </p>
 
   <div class="tabla-envoltorio">
   <table>
     <tbody><tr><th>Signal</th><th>What it means</th></tr>
     <tr>
-      <td><strong>Orange bar</strong> on the left edge, with a star next to the name</td>
+      <td><strong>Orange star</strong> next to the name</td>
       <td><strong>That person's first visit to the centre.</strong> It is not a mark anyone has to set:
         it works itself out by looking at whether the person has any earlier appointment.</td>
     </tr>
@@ -895,7 +904,12 @@ footer{
   <span class="ruta">Menu → Customers</span>
 
   <p>
-    The search box at the top searches by first name, surname, phone number or tax ID. There is no need to type it in full. The list is sorted by clicking the header of any column (<a href="#ordenar">how</a>).
+    The search box at the top searches by first name, surname, phone, tax ID or <strong>customer number</strong>. You don't need to type it in full, except the number, which has to be exact. The list is sorted by clicking the header of any column (<a href="#ordenar">how</a>).
+  </p>
+
+  <p>
+    <strong>The customer number appears everywhere</strong>: in the list, in the record, on the agenda card, in the customer search of the appointment and of the checkout, in pending payments and in the reports. Customers who came from flowww keep the number they had there, and new ones get the next one when they are created. And
+    <strong>a customer's name in any list is a link to their record</strong>, just like on the home screen; in the appointment and at the checkout, the card button next to the customer also takes you there.
   </p>
 
   <p>
@@ -1022,8 +1036,16 @@ footer{
   </ul>
 
   <p>
+    A product <strong>is sold even if the stock says there are none left</strong>: if it is on the counter, it is there. The unit leaves the stock —which stays at zero, never negative— and the outgoing movement is recorded; the stock count is what later sets the right figure. When the sale is refunded or cancelled, the unit comes back.
+  </p>
+
+  <p>
     The <em>Quote</em> button prints as a PDF what is on the ticket without charging anything, to hand to someone who is
     still thinking about it.
+  </p>
+
+  <p>
+    <strong>Look things up without losing the ticket.</strong> The icon <em>i</em> of each service or product in the search, and the name of each ticket line, open its record in a panel on the right: price, VAT, duration, code, units left in this centre… It closes and the ticket stays the same. And if you need to leave the checkout —to the customer record, to the agenda—, <strong>the half-finished ticket stays saved on that workstation</strong>: when you come back it appears as it was, with the notice <em>The ticket has been recovered</em> and the button <em>Discard it</em> to start a clean one. It belongs to each user and each centre, it is deleted when the sale is charged and it expires after twelve hours.
   </p>
 
   <figure>
@@ -1092,6 +1114,10 @@ footer{
     A coupon is not deleted: it is <strong>taken off</strong>. It stops working at the counter and what was already taken off with it stays where it was. Seeing the coupons and creating them are two different permissions: reception sees them, management invents them.
   </p>
 
+  <div class="ojo">
+    <p><strong>If a charge does not go through, the notice says why and what to do.</strong> For example, that the customer has no voucher sessions left for the whole ticket and the rest has to be charged another way, or that the business line for sales has not been chosen in <em>Administration → Preferences → The centre</em>. If it is a server failure, the notice carries a <strong>reference</strong> of eight letters and digits: with it, support finds exactly what happened.</p>
+  </div>
+
   <h3 id="cobrar-bono">Paying with a voucher</h3>
   <p>
     If the customer holds a voucher with sessions left, the till applies it by itself. Every service on the ticket
@@ -1100,9 +1126,10 @@ footer{
     the line <em>Covered by vouchers</em> with what the customer has saved.
   </p>
   <p>
-    <strong>If you would rather charge for a service and keep the session</strong>, untick the box on that line: it goes
-    back to its price and the voucher is left alone. Useful for the customer who wants to keep the sessions they have
-    left, or the one who is paying for somebody else today.
+    The payment method is already set to <strong>Voucher</strong>. If the voucher pays for everything, there is nothing else to choose: it is charged and the session is deducted. If something is left to pay, below appears <em>The rest is paid with</em> to choose how. <strong>If the customer prefers to pay and keep the session</strong>, choose another payment method instead of Voucher: the whole ticket goes back to its price and the voucher is not touched.
+  </p>
+  <p>
+    <strong>To keep the session of a single service</strong> and use it on the others, untick that line's box: it goes back to its price and the voucher is not touched. It is useful for the customer who wants to keep the sessions they have left, or who is paying for someone else today.
   </p>
   <p>
     When there are several services from the same group and the voucher does not stretch to all of them, it covers the
@@ -1110,8 +1137,7 @@ footer{
     voucher stays whole on the customer's record in the meantime.
   </p>
   <p>
-    On the receipt every line paid with a voucher comes out as <em>(voucher session)</em>, and the day's takings only count
-    the money that actually came in. “Voucher” is no longer a payment method you pick from the list.
+    On the receipt every line paid with a voucher comes out as <em>(voucher session)</em>, and the day's cash only counts the money that has really come in.
   </p>
 
   <h3 id="cobrar-partido">Paying by two methods at once</h3>
@@ -1375,33 +1401,6 @@ footer{
     <figcaption>The section appears on its own in appointments that carry a service with a device.</figcaption>
   </figure>
 
-  <h3 id="zonas">Body zones</h3>
-  <span class="ruta">Catalogue → Body zones</span>
-  <p>
-    Informed consent is not signed for «laser hair removal» in general, but for specific zones.
-    That is why Turnera keeps <strong>which parts were treated in each session</strong>, so it can be checked against what was
-    signed, especially with minors.
-  </p>
-  <p>It is set up in two steps:</p>
-  <ol>
-    <li>In <strong>Catalogue → Body zones</strong> add the list: armpits, groin, legs… They only have a name.</li>
-    <li>In <strong>Catalogue → Services</strong>, the button <strong>«Zones»</strong> button of each service says which ones
-      can be chosen with it. They are the <em>possible</em> ones: a service without zones asks for nothing and everything stays as
-      before.</li>
-  </ol>
-  <p>
-    From then on, when booking the appointment, below the services a field <strong>«Zones treated»</strong>
-    appears for each service that has zones. You choose the ones to be treated: none, some or all, because
-    <strong>it is optional</strong>. At checkout, each line of the point of sale brings those of the appointment and they can be corrected before
-    charging. What is charged is what remains as history, and it shows in the customer record next to each service.
-  </p>
-  <div class="ojo">
-    <p><strong>Zones do not change the price and do not appear on the receipt or the invoice.</strong> They are a record
-      of what was done, not a line of the bill.</p>
-    <p><strong>A zone that has already been used is not deleted: it is disabled.</strong> It is no longer offered in the agenda or at
-      checkout, and the history still says the same.</p>
-  </div>
-
 </section>
 
 <section id="portal">
@@ -1480,6 +1479,25 @@ footer{
     <img src="/turnera/manual/imagenes/en/13-caja-diaria.png" alt="The end-of-day till report with the totals per payment method" loading="lazy">
     <figcaption>The end-of-day till: what came in and with which payment method. It is the close of the day.</figcaption>
   </figure>
+
+  <h3 id="cierre-de-caja">Balancing and closing the day's cash</h3>
+  <span class="ruta">Menu → Cash closing</span>
+
+  <p>
+    At the end of each day, what is in the drawer and what has come in through the card terminal is balanced against what Turnera says has been charged. The entry screen is the <strong>cash search</strong>: one day per row, with what was charged, the difference, what was withdrawn and the status —<em>Closed</em>, <em>Open</em> or <em>Not closed</em>, which are the days on which something was charged and nobody closed the cash—. <em>Today's cash</em> opens today's; any other one, by clicking its row.
+  </p>
+  <ul>
+    <li><strong>What Turnera has charged</strong>, on the left: the total of each payment method. <em>See breakdown</em> shows the payments one by one —time, ticket, customer and amount—, to find the one that does not match.</li>
+    <li><strong>Card</strong>: you type what the card terminal receipts or the bank say, and the card difference appears.</li>
+    <li><strong>Cash</strong>: the opening cash —what the previous closing left is suggested—, plus what was charged in cash, minus the <em>payments out of the till</em> (the courier, the florist), is what <em>should be in the drawer</em>. You type the count and the cash difference appears. What goes to the bank goes in <em>amount withdrawn</em>, and what is left is the opening cash of the next day.</li>
+  </ul>
+  <p>
+    At the top, in large type, <strong>the verdict</strong>: in green if the cash balances, in red with how much is missing or over —negative means missing—, split between cash and card. It is recalculated with each figure you type, so you can keep checking until it balances. <em>Save the count</em> leaves the cash open to continue later;
+    <em>Close till</em> fixes it and goes back to the list of closings, where it appears as closed; it requires having counted the cash and the card. Any closing in the list opens with a click to look it up. To correct it you have to reopen it, and who closed it and who reopened it is recorded.
+  </p>
+  <div class="ojo">
+    <p>Balancing and closing the cash is the permission <strong>«Balance and close the cash»</strong>, which Front desk and Management have. Reopening a closed cash is another one, <strong>«Reopen a closed cash»</strong>, which only Management has.</p>
+  </div>
 
   <h3 id="cuadro-de-mando">The scorecard</h3>
   <span class="ruta">Menu → Scorecard</span>
@@ -1975,10 +1993,8 @@ footer{
   <h4>The PIN</h4>
 
   <p>
-    Every professional can have a <strong>PIN of four to six digits</strong>, set in
-    <em>Professionals → Clocking PIN</em>. Pressing their button brings up a keypad to type it on. It is what makes pressing
-    somebody else's button not the same as clocking in for them, and without it a list of names would prove
-    little to an inspector.
+    Every professional can have a <strong>four-digit PIN</strong>, set in
+    <em>Professionals → Clocking PIN</em>. Pressing their button brings up a keypad and they type it: with the fourth digit it already clocks, without pressing anything else. It is what makes pressing someone else's button not clocking for someone else, and without it the list of names would not prove much in an inspection.
   </p>
 
   <p>
@@ -2180,6 +2196,12 @@ footer{
       look them up in flowww. Nothing is saved.</li>
     <li>If the report looks right, <strong>«Import»</strong>. The files are not stored anywhere.</li>
   </ol>
+  <p>
+    The <strong>code</strong> of each service in flowww arrives as its short code. In flowww the same code can be used for several services, and in Turnera it cannot: those get what distinguishes their name added —IDEE becomes IDEE20, IDEE30 and IDEE50 for the Indiba of 20, 30 and 50 minutes— and the trial run report says how each one ends up. They can be changed later in the service record.
+  </p>
+  <p>
+    Products arrive <strong>with their stock at zero</strong> in each centre, because flowww does not say how many units there are: they are set later with a stock count, from <em>Stock</em>. Meanwhile they can be sold all the same.
+  </p>
   <p>
     Importing twice duplicates nothing: what was already brought is recognised and counted as «already there». That makes it possible
     to import a newer export on the day of the switch and bring only what is missing.
