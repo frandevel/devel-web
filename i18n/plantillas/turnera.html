@@ -857,6 +857,14 @@ footer{
             </div>
           </details>
 
+          <details class="faq__item" id="recomienda">
+            <summary>{{tbbe7d8cc}}</summary>
+            <div class="faq__respuesta">
+              <p>{{t1671e9b3}} <b>{{tdccd80b7}}</b>{{t9b249c14}}</p>
+              <p>{{t84b40320}}</p>
+            </div>
+          </details>
+
           <details class="faq__item">
             <summary>{{t399d30f8}}</summary>
             <div class="faq__respuesta">
@@ -1202,6 +1210,10 @@ footer{
           <label for="mensaje">{{ta6ab6128}}</label>
           <textarea id="mensaje" name="mensaje" rows="5" required="" maxlength="2000" placeholder="{{t6b50c5b5}}"></textarea>
         </div>
+        <div class="field">
+          <label for="recomendacion">{{t72a3ede5}}</label>
+          <input id="recomendacion" name="recomendacion" type="text" autocomplete="off" maxlength="20" spellcheck="false" style="text-transform:uppercase">
+        </div>
         <div class="trampa" aria-hidden="true">
           <label for="empresa">{{t063ac36a}}</label>
           <input id="empresa" name="empresa" type="text" tabindex="-1" autocomplete="off">
@@ -1227,6 +1239,12 @@ const boton = document.getElementById("enviar");
 const aviso = document.getElementById("aviso");
 const textoBotonEnReposo = boton.textContent;
 const ESPERAS_POR_EL_TOKEN = 25;
+
+// Quien llega con el enlace de «Recomienda Turnera» trae el código en ?ref=: se deja puesto en el formulario.
+const codigoRecomendado = new URLSearchParams(location.search).get("ref");
+if (codigoRecomendado && /^[A-Za-z0-9-]{3,20}$/.test(codigoRecomendado)) {
+  document.getElementById("recomendacion").value = codigoRecomendado.toUpperCase();
+}
 
 function mostrarAviso(texto, estado) {
   aviso.textContent = texto;
@@ -1289,6 +1307,7 @@ formulario.addEventListener("submit", async (evento) => {
         correo: document.getElementById("correo").value.trim(),
         mensaje: document.getElementById("mensaje").value.trim(),
         empresa: document.getElementById("empresa").value,
+        recomendacion: document.getElementById("recomendacion").value.trim().toUpperCase(),
         origen: "turnera",
         token
       })

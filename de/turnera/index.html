@@ -862,6 +862,14 @@ footer{
             </div>
           </details>
 
+          <details class="faq__item" id="recomienda">
+            <summary>Ein anderes Zentrum hat mir Turnera empfohlen. Habe ich etwas davon?</summary>
+            <div class="faq__respuesta">
+              <p>Ja. Wenn du dich mit dem Empfehlungscode eines Zentrums anmeldest, das Turnera bereits nutzt, <b>zahlst du keine Einrichtungsgebühr und der erste Monat ist kostenlos</b>. Müssen deine Daten aus einem anderen Programm übernommen werden, wird die Migration wie immer separat berechnet: 150 €.</p>
+              <p>Und das Zentrum, das dich empfohlen hat, erhält für jede Ressource, die du buchst, einen Gratismonat, sobald du deine erste Gebühr bezahlst, bis zu zwölf Monate im Jahr. Jedes Zentrum, das Turnera nutzt, findet seinen Code oben neben der Sprache unter der Schaltfläche „Turnera empfehlen“.</p>
+            </div>
+          </details>
+
           <details class="faq__item">
             <summary>Wie wird bezahlt?</summary>
             <div class="faq__respuesta">
@@ -1207,6 +1215,10 @@ footer{
           <label for="mensaje">Was für einen Betrieb</label>
           <textarea id="mensaje" name="mensaje" rows="5" required="" maxlength="2000" placeholder="Eine Physiotherapiepraxis mit drei Kabinen, bisher mit Terminkalender auf Papier…"></textarea>
         </div>
+        <div class="field">
+          <label for="recomendacion">Empfehlungscode, falls vorhanden</label>
+          <input id="recomendacion" name="recomendacion" type="text" autocomplete="off" maxlength="20" spellcheck="false" style="text-transform:uppercase">
+        </div>
         <div class="trampa" aria-hidden="true">
           <label for="empresa">Dieses Feld bitte frei lassen</label>
           <input id="empresa" name="empresa" type="text" tabindex="-1" autocomplete="off">
@@ -1232,6 +1244,12 @@ const boton = document.getElementById("enviar");
 const aviso = document.getElementById("aviso");
 const textoBotonEnReposo = boton.textContent;
 const ESPERAS_POR_EL_TOKEN = 25;
+
+// Quien llega con el enlace de «Recomienda Turnera» trae el código en ?ref=: se deja puesto en el formulario.
+const codigoRecomendado = new URLSearchParams(location.search).get("ref");
+if (codigoRecomendado && /^[A-Za-z0-9-]{3,20}$/.test(codigoRecomendado)) {
+  document.getElementById("recomendacion").value = codigoRecomendado.toUpperCase();
+}
 
 function mostrarAviso(texto, estado) {
   aviso.textContent = texto;
@@ -1294,6 +1312,7 @@ formulario.addEventListener("submit", async (evento) => {
         correo: document.getElementById("correo").value.trim(),
         mensaje: document.getElementById("mensaje").value.trim(),
         empresa: document.getElementById("empresa").value,
+        recomendacion: document.getElementById("recomendacion").value.trim().toUpperCase(),
         origen: "turnera",
         token
       })

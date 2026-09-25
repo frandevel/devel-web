@@ -691,6 +691,25 @@ footer{
     detrás del guion señala el cambio exacto, y es lo que conviene copiar al pedir ayuda.
   </p>
 
+  <h3 id="recomienda">Recomienda Turnera</h3>
+  <p>
+    Arriba, junto al idioma, quien lleva el centro ve el botón <strong>Recomienda Turnera</strong>. Abre el
+    <strong>código de recomendación</strong> del centro -- siempre el mismo, con su nombre delante, como
+    <code>AURORA-7K2Q</code> -- y la manera de pasarlo: copiar el código, copiar el enlace a la página de Turnera con el
+    código ya puesto, o mandarlo por WhatsApp o por correo.
+  </p>
+  <ul>
+    <li><strong>Para vosotros:</strong> un mes gratis por cada recurso que contrate el centro recomendado. Si
+      contrata cuatro cabinas, cuatro meses. Se ganan cuando ese centro paga su primera cuota y se descuentan en
+      vuestras siguientes facturas, hasta doce meses al año.</li>
+    <li><strong>Para el centro recomendado:</strong> no paga la puesta en marcha y el primer mes es gratis. Si trae
+      datos de otro programa, la migración se cobra como siempre.</li>
+  </ul>
+  <p>
+    Al pie del diálogo se ve cuántos meses lleva ganados el centro este año y si hay algún recomendado que todavía
+    no ha pagado su primera cuota. El botón sólo lo ve quien puede cambiar las preferencias del centro.
+  </p>
+
   <h3>Inicio</h3>
   <figure>
     <img src="/turnera/manual/imagenes/02-inicio.png" alt="La pantalla de inicio con las citas del día, lo cobrado y los cumpleaños" loading="lazy">
@@ -2455,12 +2474,16 @@ footer{
 
   <p>
     Para un centro que viene de flowww. Se traen de una vez los clientes (con sus notas), la tarifa de servicios,
-    bonos y productos, los bonos que los clientes tienen a medias, los cheques regalo con saldo y las citas que
-    quedan por delante. Hace falta el permiso <strong>«Importar de otro programa»</strong>, que es sensible y
+    bonos y productos, los bonos que los clientes tienen a medias, los cheques regalo con saldo, la agenda —la que
+    queda por delante y la del último año—, el stock de cada producto, el histórico de tratamientos de cada cliente
+    y lo que dejaron a deber. Hace falta el permiso <strong>«Importar de otro programa»</strong>, que es sensible y
     sólo lo trae el administrador.
   </p>
   <ol>
-    <li>En flowww, exportar a CSV cada pantalla: clientes, tarifa, bonos pendientes, cheques regalo y agenda.</li>
+    <li>En flowww, exportar a CSV cada pantalla: clientes, histórico de servicios, tarifa, agenda, bonos, pagos
+      aplazados, cheques regalo y stock. Dónde está cada una en flowww lo dice la propia pantalla de importar, en
+      <em>Cómo sacar las hojas de flowww</em>. Las que se sacan de más —cajas del día, facturas, anticipos— no
+      molestan: el informe dice que no se traen.</li>
     <li>Pulsar <strong>«Elegir ficheros»</strong> y elegirlos todos a la vez. Da igual cómo se llamen: cada hoja se
       reconoce por sus columnas.</li>
     <li>Pulsar <strong>«Ensayar»</strong>. Turnera hace la importación entera y la tira al final: el informe dice
@@ -2475,8 +2498,19 @@ footer{
     uno. Se pueden cambiar después en la ficha del servicio.
   </p>
   <p>
-    Los productos llegan <strong>con su stock a cero</strong> en cada centro, porque flowww no dice cuántas unidades
-    hay: se ponen después con un inventario, desde <em>Stock</em>. Mientras tanto se pueden vender igual.
+    Con la hoja de <strong>stocks</strong>, cada producto llega con las unidades que flowww tenía en el centro; lo
+    negativo llega a cero. Si un producto está en el stock pero ya no en la tarifa, se crea igual, con IVA del 21 %,
+    para no perder sus unidades. Sin esa hoja, los productos llegan con el stock a cero y se ponen con un inventario
+    desde <em>Stock</em>. Si alguien ya ha hecho el inventario en Turnera, una importación nueva no lo pisa.
+  </p>
+  <p>
+    <strong>Las citas pasadas</strong> llegan atendidas o anuladas, como estaban en flowww, y la agenda no las rodea
+    de rojo: se cobraron allí. <strong>El histórico de servicios</strong> —años de sesiones— llega como las visitas del
+    cliente: las de un mismo día son una visita, con una línea por servicio, y se ven en el historial de su ficha.
+    El aparato, sus parámetros, la sesión y los comentarios van en cada línea. flowww no dice cuánto se cobró, así
+    que llegan a cero y cobradas: no mueven la caja ni salen como deuda. Las aplazadas y a las que no vino no se
+    traen, porque no se hicieron. <strong>Los pagos pendientes</strong> llegan a
+    <em>Cobros pendientes</em>; los ya pagados no, porque están en la caja de flowww.
   </p>
   <p>
     Importar dos veces no duplica: lo que ya se trajo se reconoce y se cuenta como «ya estaba». Eso permite
@@ -2487,8 +2521,9 @@ footer{
       importación sin tocar lo que ya había. Pero si alguien ha trabajado ya con lo importado —una cita, un cobro,
       una nota— Turnera no la deshace y dice qué lo impide: deshacerla se llevaría ese trabajo por delante.</p>
     <p><strong>Lo que no se trae:</strong> las contraseñas del portal de flowww, los paquetes (la exportación no dice
-      qué llevan dentro), los cheques sin saldo y el hueco viejo de las citas que se movieron. El histórico de
-      visitas, la historia clínica y los consentimientos firmados no salen en esas hojas.</p>
+      qué llevan dentro), los cheques sin saldo, los bonos ya gastados, el hueco viejo de las citas que se movieron,
+      las cajas diarias y las facturas, que son contabilidad cerrada y se consultan en flowww. Los consentimientos
+      firmados no salen en ninguna hoja.</p>
     <p><strong>Después de importar:</strong> los profesionales llegan con el código que tenían en flowww y hay que
       ponerles nombre, y los clientes con un DNI repetido se traen todos y se revisan con la
       <a href="#clientes">fusión de fichas</a> (un menor con el DNI de su madre no es la misma persona).</p>

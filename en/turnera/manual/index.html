@@ -683,6 +683,20 @@ footer{
     version</strong> this centre is running. It is the first thing you are asked for when something does not work, so it is worth knowing where it is before you need it. Hovering over it also says when it was built. It reads like this: <code>2026.9.262-bdc9dd2</code> is from 2026, month 9, the 262nd change of that month; what comes after the hyphen identifies the exact change, and it is what you should copy when asking for help.
   </p>
 
+  <h3 id="recomienda">Recommend Turnera</h3>
+  <p>
+    At the top, next to the language, whoever runs the centre sees the <strong>Recommend Turnera</strong> button. It opens the
+    <strong>referral code</strong> of the centre -- always the same, with its name in front, like
+    <code>AURORA-7K2Q</code> -- and the ways to pass it on: copy the code, copy the link to the Turnera page with the code already filled in, or send it by WhatsApp or email.
+  </p>
+  <ul>
+    <li><strong>For you:</strong> one free month for every resource the recommended centre contracts. If it takes four rooms, four months. They are earned when that centre pays its first fee and come off your next invoices, up to twelve months a year.</li>
+    <li><strong>For the recommended centre:</strong> no setup fee and the first month free. If it brings data from another program, the migration is charged as usual.</li>
+  </ul>
+  <p>
+    At the foot of the dialog you can see how many months the centre has earned this year and whether any recommended centre has not paid its first fee yet. Only those who can change the centre's preferences see the button.
+  </p>
+
   <h3>Home</h3>
   <figure>
     <img src="/turnera/manual/imagenes/en/02-inicio.png" alt="The home screen with the day's appointments, what has been charged and the birthdays" loading="lazy">
@@ -2182,13 +2196,12 @@ footer{
   <span class="ruta">Administration → Import from another program</span>
 
   <p>
-    For a centre coming from flowww. It brings in one go the customers (with their notes), the price list of services,
-    vouchers and products, the vouchers customers have half used, the gift cheques with balance and the appointments still
-    ahead. It needs the permission <strong>«Import from another program»</strong>, which is sensitive and
+    For a centre coming from flowww. It brings over in one go the customers (with their notes), the price list of services, vouchers and products, the vouchers customers have half used, the gift cards with a balance, the diary —what lies ahead and the last year—, the stock of every product, each customer's treatment history and what they left owing. It needs the permission <strong>«Import from another program»</strong>, which is sensitive and
     only the administrator has.
   </p>
   <ol>
-    <li>In flowww, export each screen to CSV: customers, price list, pending vouchers, gift cheques and agenda.</li>
+    <li>In flowww, export each screen to CSV: customers, service history, price list, diary, vouchers, deferred payments, gift cards and stock. Where each one is in flowww is explained on the import screen itself, under
+      <em>How to export the sheets from flowww</em>. Extra sheets —daily cash, invoices, advance payments— do no harm: the report says they are not imported.</li>
     <li>Press <strong>«Choose files»</strong> and choose them all at once. Their names do not matter: each sheet is
       recognised by its columns.</li>
     <li>Press <strong>«Try it»</strong>. Turnera runs the whole import and throws it away at the end: the report says
@@ -2200,7 +2213,11 @@ footer{
     The <strong>code</strong> of each service in flowww arrives as its short code. In flowww the same code can be used for several services, and in Turnera it cannot: those get what distinguishes their name added —IDEE becomes IDEE20, IDEE30 and IDEE50 for the Indiba of 20, 30 and 50 minutes— and the trial run report says how each one ends up. They can be changed later in the service record.
   </p>
   <p>
-    Products arrive <strong>with their stock at zero</strong> in each centre, because flowww does not say how many units there are: they are set later with a stock count, from <em>Stock</em>. Meanwhile they can be sold all the same.
+    With the <strong>stocks</strong>sheet, each product arrives with the units flowww had at the centre; negative figures arrive as zero. If a product is in the stock but no longer in the price list, it is created anyway, with 21 % VAT, so its units are not lost. Without that sheet, products arrive with zero stock and are set with a stocktake from <em>Stock</em>. If someone has already done the stocktake in Turnera, a new import does not overwrite it.
+  </p>
+  <p>
+    <strong>Past appointments</strong> arrive attended or cancelled, as they were in flowww, and the diary does not outline them in red: they were charged there. <strong>The service history</strong> —years of sessions— arrives as the customer's visits: those on the same day are one visit, with a line per service, and they show in the history on their record. The device, its settings, the session and the comments go on each line. flowww does not say how much was charged, so they arrive at zero and paid: they do not move the till or show up as debt. Postponed ones and those the customer missed are not imported, because they did not happen. <strong>Pending payments</strong> arrive in
+    <em>Unpaid visits</em>; those already paid do not, because they are in flowww's till.
   </p>
   <p>
     Importing twice duplicates nothing: what was already brought is recognised and counted as «already there». That makes it possible
@@ -2210,9 +2227,7 @@ footer{
     <p><strong>It can be undone</strong> from «Imports done», and it takes away everything that import brought
       without touching what was already there. But if someone has already worked with what was imported —an appointment, a charge,
       a note— Turnera does not undo it and says what prevents it: undoing it would take that work with it.</p>
-    <p><strong>What is not brought:</strong> the flowww portal passwords, the packages (the export does not say
-      what they contain), the cheques without balance and the old slot of appointments that were moved. The history of
-      visits, the clinical record and the signed consents are not in those sheets.</p>
+    <p><strong>What is not brought:</strong> the flowww portal passwords, packages (the export does not say what is inside them), gift cards without a balance, used-up vouchers, the old slot of appointments that were moved, the daily cash and the invoices, which are closed accounting and are consulted in flowww. Signed consents are not in any sheet.</p>
     <p><strong>After importing:</strong> the professionals arrive with the code they had in flowww and need
       a name, and customers with a repeated ID are all brought and reviewed with the
       <a href="#clientes">record merge</a> (a minor with their mother's ID is not the same person).</p>

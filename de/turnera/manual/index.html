@@ -683,6 +683,20 @@ footer{
     Version</strong> die dieser Betrieb fährt. Danach wird als Erstes gefragt, wenn etwas nicht funktioniert, deshalb sollte man wissen, wo sie steht, bevor man sie braucht. Mit der Maus darüber steht auch, wann sie gebaut wurde. So liest man sie: <code>2026.9.262-bdc9dd2</code> stammt aus dem Jahr 2026, Monat 9, und ist die 262. Änderung in diesem Monat; der Teil nach dem Bindestrich bezeichnet die genaue Änderung und ist das, was Sie kopieren sollten, wenn Sie um Hilfe bitten.
   </p>
 
+  <h3 id="recomienda">Turnera empfehlen</h3>
+  <p>
+    Oben, neben der Sprache, sieht die Leitung des Zentrums die Schaltfläche <strong>Turnera empfehlen</strong>. Sie öffnet den
+    <strong>Empfehlungscode</strong> des Zentrums -- immer derselbe, mit seinem Namen vorne, etwa
+    <code>AURORA-7K2Q</code> -- und die Möglichkeiten, ihn weiterzugeben: den Code kopieren, den Link zur Turnera-Seite mit bereits eingetragenem Code kopieren oder ihn per WhatsApp oder E-Mail senden.
+  </p>
+  <ul>
+    <li><strong>Für euch:</strong> ein Gratismonat für jede Ressource, die das empfohlene Zentrum bucht. Bucht es vier Kabinen, vier Monate. Sie werden verdient, sobald dieses Zentrum seine erste Gebühr bezahlt, und von euren nächsten Rechnungen abgezogen, bis zu zwölf Monate im Jahr.</li>
+    <li><strong>Für das empfohlene Zentrum:</strong> keine Einrichtungsgebühr und der erste Monat gratis. Bringt es Daten aus einem anderen Programm mit, wird die Migration wie immer berechnet.</li>
+  </ul>
+  <p>
+    Unten im Dialog sieht man, wie viele Monate das Zentrum in diesem Jahr verdient hat und ob ein empfohlenes Zentrum seine erste Gebühr noch nicht bezahlt hat. Die Schaltfläche sehen nur diejenigen, die die Einstellungen des Zentrums ändern dürfen.
+  </p>
+
   <h3>Start</h3>
   <figure>
     <img src="/turnera/manual/imagenes/en/02-inicio.png" alt="Der Startbildschirm mit den Terminen des Tages, dem Kassierten und den Geburtstagen" loading="lazy">
@@ -2190,13 +2204,12 @@ footer{
   <span class="ruta">Verwaltung → Aus einem anderen Programm importieren</span>
 
   <p>
-    Für ein Zentrum, das von flowww kommt. Auf einmal werden die Kunden (mit ihren Notizen), die Preisliste der Leistungen,
-    Gutscheine und Produkte, die angebrochenen Gutscheine der Kunden, die Geschenkgutscheine mit Guthaben und die
-    anstehenden Termine übernommen. Dafür ist die Berechtigung <strong>«Aus einem anderen Programm importieren»</strong> nötig, die sensibel ist und
+    Für ein Zentrum, das von flowww kommt. In einem Durchgang werden übernommen: die Kunden (mit ihren Notizen), die Preisliste mit Leistungen, Gutscheinen und Produkten, die halb verbrauchten Gutscheine der Kunden, die Geschenkkarten mit Guthaben, der Kalender —das, was noch kommt, und das letzte Jahr—, der Bestand jedes Produkts, der Behandlungsverlauf jedes Kunden und das, was offen geblieben ist. Nötig ist die Berechtigung <strong>«Aus einem anderen Programm importieren»</strong> nötig, die sensibel ist und
     nur der Administrator hat.
   </p>
   <ol>
-    <li>In flowww jede Ansicht als CSV exportieren: Kunden, Preisliste, offene Gutscheine, Geschenkgutscheine und Kalender.</li>
+    <li>In flowww jede Ansicht als CSV exportieren: Kunden, Behandlungsverlauf, Preisliste, Kalender, Gutscheine, aufgeschobene Zahlungen, Geschenkkarten und Bestand. Wo sich jede in flowww befindet, erklärt die Import-Seite selbst unter
+      <em>Wie man die Blätter aus flowww exportiert</em>. Zusätzliche Blätter —Tageskassen, Rechnungen, Anzahlungen— stören nicht: der Bericht sagt, dass sie nicht übernommen werden.</li>
     <li>Auf <strong>«Dateien auswählen»</strong> klicken und alle auf einmal auswählen. Die Dateinamen sind egal: Jede Tabelle wird
       an ihren Spalten erkannt.</li>
     <li>Auf <strong>«Probelauf»</strong> klicken. Turnera führt den ganzen Import durch und verwirft ihn am Ende: Der Bericht zeigt,
@@ -2208,7 +2221,11 @@ footer{
     Der <strong>Code</strong> jeder Leistung in flowww wird zu ihrem Kurzcode. In flowww kann derselbe Code für mehrere Leistungen gelten, in Turnera nicht: Diesen wird angehängt, was ihren Namen unterscheidet —aus IDEE werden IDEE20, IDEE30 und IDEE50 für Indiba mit 20, 30 und 50 Minuten—, und der Bericht des Probelaufs zeigt, wie jeder Code am Ende heißt. Sie lassen sich später in der Leistungskarte ändern.
   </p>
   <p>
-    Die Produkte kommen <strong>mit Bestand null</strong> in jedem Zentrum an, weil flowww nicht angibt, wie viele Einheiten es gibt: Sie werden später per Inventur eingetragen, unter <em>Lager</em>. Bis dahin kann man sie trotzdem verkaufen.
+    Mit dem Blatt <strong>stocks</strong>kommt jedes Produkt mit den Einheiten an, die flowww im Zentrum hatte; Negatives kommt als null an. Steht ein Produkt im Bestand, aber nicht mehr in der Preisliste, wird es trotzdem angelegt, mit 21 % MwSt., damit seine Einheiten nicht verloren gehen. Ohne dieses Blatt kommen die Produkte mit Bestand null an und werden per Inventur eingetragen unter <em>Lager</em>. Hat jemand die Inventur in Turnera schon gemacht, überschreibt ein neuer Import sie nicht.
+  </p>
+  <p>
+    <strong>Vergangene Termine</strong> kommen als erledigt oder storniert an, wie sie in flowww waren, und der Kalender rahmt sie nicht rot ein: sie wurden dort kassiert. <strong>Der Behandlungsverlauf</strong> —Jahre an Sitzungen— kommt als Besuche des Kunden an: die eines Tages sind ein Besuch, mit einer Zeile pro Leistung, und erscheinen im Verlauf seiner Kartei. Gerät, Parameter, Sitzung und Kommentare stehen in jeder Zeile. flowww sagt nicht, wie viel kassiert wurde, daher kommen sie mit null und bezahlt an: sie bewegen die Kasse nicht und erscheinen nicht als Schuld. Verschobene und nicht wahrgenommene werden nicht übernommen, weil sie nicht stattgefunden haben. <strong>Offene Zahlungen</strong> landen in
+    <em>Offene Zahlungen</em>; bereits bezahlte nicht, weil sie in der Kasse von flowww sind.
   </p>
   <p>
     Zweimal importieren verdoppelt nichts: Was schon übernommen wurde, wird erkannt und als «schon da» gezählt. So lässt sich
@@ -2218,9 +2235,7 @@ footer{
     <p><strong>Er lässt sich rückgängig machen</strong> unter «Durchgeführte Importe», und es wird alles entfernt, was dieser Import gebracht hat,
       ohne das anzutasten, was schon da war. Hat aber jemand schon mit den importierten Daten gearbeitet —ein Termin, eine Abrechnung,
       eine Notiz—, macht Turnera ihn nicht rückgängig und sagt, was es verhindert: Sonst ginge diese Arbeit verloren.</p>
-    <p><strong>Was nicht übernommen wird:</strong> die Passwörter des flowww-Portals, die Pakete (der Export sagt nicht,
-      was sie enthalten), Gutscheine ohne Guthaben und der alte Platz verschobener Termine. Der Besuchsverlauf,
-      die Krankenakte und die unterschriebenen Einwilligungen sind nicht in diesen Tabellen.</p>
+    <p><strong>Was nicht übernommen wird:</strong> die Passwörter des flowww-Portals, die Pakete (der Export sagt nicht, was darin ist), Geschenkkarten ohne Guthaben, verbrauchte Gutscheine, der alte Platz verschobener Termine, die Tageskassen und die Rechnungen, die abgeschlossene Buchhaltung sind und in flowww eingesehen werden. Unterschriebene Einwilligungen stehen in keinem Blatt.</p>
     <p><strong>Nach dem Import:</strong> die Fachkräfte kommen mit ihrem Code aus flowww und brauchen
       einen Namen, und Kunden mit doppelter Ausweisnummer werden alle übernommen und mit der
       <a href="#clientes">Zusammenführung von Kundenakten</a> geprüft (ein Kind mit dem Ausweis seiner Mutter ist nicht dieselbe Person).</p>
