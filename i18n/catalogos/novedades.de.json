@@ -10,7 +10,6 @@
   "tf8a7748d": "Was sich in Turnera ändert, Version für Version, erzählt für die Menschen am Empfang. Wie man alles bedient, steht im",
   "tb363713a": "Handbuch",
   "td27c38ad": "Die Kasse abgleichen, endlich ohne Papier",
-  "tce039b6f": "Jeden Tag zeigt Turnera, was bar und mit Karte kassiert wurde. Sie tragen ein, was in der Kasse liegt und was das Kartenterminal anzeigt, und Turnera sagt sofort, ob die Kasse stimmt oder wie viel fehlt oder zu viel ist.",
   "t385ddb84": "Neuer Bildschirm für den Kassenabschluss.",
   "t42839c4b": "Wenn sie nicht stimmt, sehen Sie die Zahlungen einzeln, bis Sie die fehlerhafte finden.",
   "tfd56a012": "Mit «Kasse schließen» wird der Abschluss in der Liste der Kassen gespeichert. Dort können Sie jeden früheren Tag ansehen, und die Leitung kann eine Kasse wieder öffnen, wenn sie korrigiert werden muss.",
@@ -65,5 +64,6 @@
   "tb6e14c17": "Behandlungsverlauf",
   "t71b02b2b": "kommt als Besuche jedes Kunden an, mit den Notizen in jeder Zeile, nicht als klinische Fälle.",
   "tff318551": "Auch künftige Termine, Lagerbestand, Gutscheine, Geschenkkarten und offene Zahlungen werden übernommen.",
-  "t9a7a64ca": "Die Import-Seite erklärt Blatt für Blatt, wie man jede Datei aus flowww exportiert."
+  "t9a7a64ca": "Die Import-Seite erklärt Blatt für Blatt, wie man jede Datei aus flowww exportiert.",
+  "t07f6cab2": "Jeden Tag zeigt Turnera, was bar und mit Karte kassiert wurde. Sie tragen ein, was in der Kasse liegt und was das Kartenterminal anzeigt, und Turnera sagt sofort, ob die Kasse stimmt oder wie viel fehlt oder zu viel ist."
 }

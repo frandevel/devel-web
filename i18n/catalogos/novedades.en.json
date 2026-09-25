@@ -10,7 +10,6 @@
   "tf8a7748d": "What changes in Turnera, release by release, told for the people who use it at the front desk. How each thing is used is in the",
   "tb363713a": "manual",
   "td27c38ad": "Balancing the till, finally without paper",
-  "tce039b6f": "Every day, Turnera shows what has been charged in cash and by card. You type what is in the drawer and what the card terminal says, and Turnera tells you at once whether the till balances or how much is missing or over.",
   "t385ddb84": "New cash closing screen.",
   "t42839c4b": "If it does not balance, you can see the payments one by one until you find the one that is wrong.",
   "tfd56a012": "When you press «Close till», the closing is saved in the list of tills. From there you can look up any previous day, and management can reopen a till if it needs correcting.",
@@ -65,5 +64,6 @@
   "tb6e14c17": "service history",
   "t71b02b2b": "arrives as each customer's visits, with its notes on every line, not as clinical cases.",
   "tff318551": "Future appointments, stock, vouchers, gift cards and pending payments come across too.",
-  "t9a7a64ca": "The import screen explains, sheet by sheet, how to export each file from flowww."
+  "t9a7a64ca": "The import screen explains, sheet by sheet, how to export each file from flowww.",
+  "t07f6cab2": "Every day, Turnera shows what has been charged in cash and by card. You type what is in the till and what the card terminal says, and Turnera tells you at once whether the till balances or how much is missing or over."
 }
