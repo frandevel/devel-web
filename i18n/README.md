@@ -38,6 +38,19 @@ falla diciendo cuál falta: eso es a propósito, para que no se publique una pá
 4. `node construir.mjs`
 5. Comprueba con `node verificar.mjs` (con el sitio servido en el 8899).
 
+## Añadir una versión a las novedades
+
+Cada versión es una **ficha**: una `<section class="version">` en `i18n/novedades-es.html`, con la fecha y los
+cambios agrupados por lo que gana quien usa Turnera, contados para el mostrador y no para quien programa.
+
+1. La nueva va **arriba del todo**, dentro de `<div class="contenido">`, con `id` igual a su fecha
+   (`2026-10-02`). Copia la estructura de la anterior: `version__cabecera` con el `<h2>` de la fecha.
+2. **El sello `Última versión` se mueve** a la nueva: se quita el `<span class="version__sello">` de la
+   anterior. El filo de color lo pone el CSS a la primera ficha, solo.
+3. Añade la fecha al índice de la izquierda, también arriba.
+4. Extrae, traduce las claves nuevas en `novedades.en.json` y `novedades.de.json`, construye y verifica.
+5. Se sube **cuando la versión ya está desplegada**, no antes: la página anuncia lo que los clientes ya tienen.
+
 ## Añadir un idioma
 
 En `construir.mjs`, mete el código en `IDIOMAS` y su nombre en `NOMBRES`, crea los dos catálogos y construye.

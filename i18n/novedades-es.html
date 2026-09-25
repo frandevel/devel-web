@@ -564,6 +564,21 @@ footer{
   .contenido section{break-inside:avoid-page}
 }
 </style>
+<style>
+/* Cada versión es una ficha. La más reciente lleva el filo de color y el sello; al publicar una nueva, el sello
+   pasa a la nueva y la anterior se queda como ficha normal. */
+.contenido section.version{background:var(--surface);border:1px solid var(--line);border-radius:14px;
+  padding:1.3rem 1.5rem 1.1rem;margin:0 0 1.6rem;box-shadow:0 1px 2px rgba(16,40,63,.05)}
+.contenido section.version:first-of-type{border-top:4px solid var(--tu-anillo)}
+.version__cabecera{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  padding-bottom:.7rem;margin-bottom:.4rem;border-bottom:1px solid var(--line)}
+.contenido .version__cabecera h2{margin:0}
+.version__sello{font-size:.78rem;font-weight:600;letter-spacing:.02em;padding:.2rem .7rem;border-radius:999px;
+  background:var(--tu-anillo);color:var(--tu-sobre-anillo);white-space:nowrap}
+.contenido section.version h3{font-size:1.02rem;margin:1.2rem 0 .4rem}
+.contenido section.version ul{margin-bottom:.4rem}
+@media print{.contenido section.version{box-shadow:none}}
+</style>
 </head>
 <body>
 <header class="site">
@@ -596,8 +611,11 @@ footer{
   está en el <a href="/turnera/manual">manual</a>.
 </p>
 
-<section id="2026-09-25">
-  <h2>25 de septiembre de 2026</h2>
+<section id="2026-09-25" class="version">
+  <div class="version__cabecera">
+    <h2>25 de septiembre de 2026</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
 
   <h3>Cuadrar la caja, por fin sin papel</h3>
   <ul>
