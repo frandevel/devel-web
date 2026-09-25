@@ -87,12 +87,10 @@
   "ta467dd50": "€39 a month with two resources included, and €10 for each additional resource. From ten resources up, let's talk. It doesn't matter how many premises they are spread across.",
   "t65fe49ad": "Your centre",
   "tdf450d80": "Per month",
-  "t932c9887": "Per year",
   "tff81856d": "2 resources",
   "tef00a8a3": "4 resources",
   "tcc081b56": "6 resources",
   "tdb13f88a": "9 resources",
-  "t73b004fc": "Prices exclude VAT. A year is ten monthly payments: pay up front and you save two months.",
   "t8ee9d024": "What counts as a resource?",
   "t26926045": "Every slot in your diary that can be occupied at the same time. If your centre can see three people at once, that's three resources.",
   "t63ac3236": "Two rooms worked in parallel are two resources. If two practitioners take turns in the same room and never overlap, it's one.",
@@ -275,5 +273,11 @@
   "tdccd80b7": "you don't pay the setup fee and the first month is free",
   "t9b249c14": ". If your data has to be brought over from another program, the migration is charged separately as usual: €150.",
   "t84b40320": "And the centre that recommended you earns one free month for every resource you contract, once you pay your first fee, up to twelve months a year. Every centre that uses Turnera has its code under the “Recommend Turnera” button, at the top, next to the language.",
-  "t72a3ede5": "Referral code, if you have one"
+  "t72a3ede5": "Referral code, if you have one",
+  "te9e76f24": "Per year, paid up front",
+  "tfe1c0471": "You save",
+  "t6c58a50f": "Two months",
+  "t412c6b02": "Prices exclude VAT. If you pay the year up front,",
+  "t5481b01b": "we give you two months free",
+  "t3268d247": ": you pay ten monthly fees instead of twelve."
 }

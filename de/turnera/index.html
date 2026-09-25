@@ -467,11 +467,13 @@ footer{
   background:var(--surface);border-radius:0 8px 8px 0;
   padding:.65rem .9rem;color:var(--text);
 }
-.faq__tabla{border-collapse:collapse;width:100%;max-width:24rem;font-size:.92rem;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.faq__tabla{border-collapse:collapse;width:100%;max-width:36rem;font-size:.92rem;background:var(--surface);border:1px solid var(--line);border-radius:8px}
 .faq__tabla th,.faq__tabla td{padding:.45rem .8rem;text-align:left;border-bottom:1px solid var(--line)}
 .faq__tabla th{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);font-weight:500}
 .faq__tabla td:not(:first-child),.faq__tabla th:not(:first-child){text-align:right;font-variant-numeric:tabular-nums}
 .faq__tabla tr:last-child td{border-bottom:none}
+.faq__tabla td:last-child{color:var(--accent);font-weight:600}
+@media (max-width:480px){.faq__tabla th,.faq__tabla td{padding:.4rem .45rem}.faq__tabla th{letter-spacing:.06em}}
 .faq__pie{margin-top:.5rem;font-size:1rem}
 .faq__nota{margin-top:.8rem;font-size:.82rem;color:var(--steel);max-width:60ch}
 
@@ -798,19 +800,19 @@ footer{
             <div class="faq__respuesta">
               <p>39 € im Monat mit zwei Ressourcen inklusive und 10 € für jede weitere Ressource bis sechs. Von der siebten bis zur zehnten kostet jede Ressource weniger: Mit zehn zahlen Sie 100 €. Danach 5 € für jede weitere Ressource bis zwanzig. Bei mehr als zwanzig sprechen wir darüber. Es spielt keine Rolle, auf wie viele Standorte sie verteilt sind.</p>
               <table class="faq__tabla">
-                <thead><tr><th>Ihr Betrieb</th><th>Pro Monat</th><th>Pro Jahr</th></tr></thead>
+                <thead><tr><th>Ihr Betrieb</th><th>Pro Monat</th><th>Pro Jahr, im Voraus bezahlt</th><th>Sie sparen</th></tr></thead>
                 <tbody>
-                  <tr><td>2 Ressourcen</td><td>39 €</td><td>390 €</td></tr>
-                  <tr><td>4 Ressourcen</td><td>59 €</td><td>590 €</td></tr>
-                  <tr><td>6 Ressourcen</td><td>79 €</td><td>790 €</td></tr>
-                  <tr><td>8 Ressourcen</td><td>90 €</td><td>900 €</td></tr>
-                  <tr><td>10 Ressourcen</td><td>100 €</td><td>1.000 €</td></tr>
-                  <tr><td>15 Ressourcen</td><td>125 €</td><td>1.250 €</td></tr>
-                  <tr><td>20 Ressourcen</td><td>150 €</td><td>1.500 €</td></tr>
-                  <tr><td>Mehr als 20</td><td>Auf Anfrage</td><td>Auf Anfrage</td></tr>
+                  <tr><td>2 Ressourcen</td><td>39 €</td><td>390 €</td><td>78 €</td></tr>
+                  <tr><td>4 Ressourcen</td><td>59 €</td><td>590 €</td><td>118 €</td></tr>
+                  <tr><td>6 Ressourcen</td><td>79 €</td><td>790 €</td><td>158 €</td></tr>
+                  <tr><td>8 Ressourcen</td><td>90 €</td><td>900 €</td><td>180 €</td></tr>
+                  <tr><td>10 Ressourcen</td><td>100 €</td><td>1.000 €</td><td>200 €</td></tr>
+                  <tr><td>15 Ressourcen</td><td>125 €</td><td>1.250 €</td><td>250 €</td></tr>
+                  <tr><td>20 Ressourcen</td><td>150 €</td><td>1.500 €</td><td>300 €</td></tr>
+                  <tr><td>Mehr als 20</td><td>Auf Anfrage</td><td>Auf Anfrage</td><td>Zwei Monate</td></tr>
                 </tbody>
               </table>
-              <p>Preise ohne MwSt. Ein Jahr sind zehn Monatsbeträge: Wer im Voraus zahlt, spart zwei Monate.</p>
+              <p>Preise ohne MwSt. Wenn Sie das Jahr im Voraus bezahlen, <b>schenken wir Ihnen zwei Monate</b>: Sie zahlen zehn Monatsbeträge statt zwölf.</p>
             </div>
           </details>
 
@@ -865,8 +867,8 @@ footer{
           <details class="faq__item" id="recomienda">
             <summary>Ein anderes Zentrum hat mir Turnera empfohlen. Habe ich etwas davon?</summary>
             <div class="faq__respuesta">
-              <p>Ja. Wenn du dich mit dem Empfehlungscode eines Zentrums anmeldest, das Turnera bereits nutzt, <b>zahlst du keine Einrichtungsgebühr und der erste Monat ist kostenlos</b>. Müssen deine Daten aus einem anderen Programm übernommen werden, wird die Migration wie immer separat berechnet: 150 €.</p>
-              <p>Und das Zentrum, das dich empfohlen hat, erhält für jede Ressource, die du buchst, einen Gratismonat, sobald du deine erste Gebühr bezahlst, bis zu zwölf Monate im Jahr. Jedes Zentrum, das Turnera nutzt, findet seinen Code oben neben der Sprache unter der Schaltfläche „Turnera empfehlen“.</p>
+              <p>Ja. Wenn Sie sich mit dem Empfehlungscode eines Zentrums anmelden, das Turnera bereits nutzt, <b>zahlen Sie keine Einrichtungsgebühr und der erste Monat ist kostenlos</b>. Müssen Ihre Daten aus einem anderen Programm übernommen werden, wird die Migration wie immer separat berechnet: 150 €.</p>
+              <p>Und das Zentrum, das Sie empfohlen hat, erhält für jede Ressource, die Sie buchen, einen Gratismonat, sobald Sie Ihre erste Gebühr bezahlen, bis zu zwölf Monate im Jahr. Jedes Zentrum, das Turnera nutzt, findet seinen Code oben neben der Sprache unter der Schaltfläche „Turnera empfehlen“.</p>
             </div>
           </details>
 
