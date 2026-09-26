@@ -218,7 +218,6 @@
   "t4c99a4f0": "Wer wir sind",
   "te45184ff": "Sind Sie ein großes Unternehmen?",
   "te3e10d95": "Was passiert mit meinem Betrieb, wenn Ihnen etwas zustößt?",
-  "t8276acf1": "Das ist die richtige Frage. Ihre Daten lassen sich vollständig exportieren und liegen in einer gewöhnlichen Datenbank, sodass jeder Informatiker dieselbe Installation auf einem anderen Server aufsetzen kann. Sie sind nicht davon abhängig, dass es uns weiter gibt, und was Sie an Turnera bindet, muss sein, dass es für Sie funktioniert, und nicht, was ein Wechsel kosten würde.",
   "t2b0293c4": "Warum heißt es Turnera?",
   "tafbcddcd": "Von „turno“, dem spanischen Wort für Termin oder Schicht, denn das ist es, was einen Betrieb wirklich ordnet: wer kommt, wann und mit wem. Alles andere — die Akte, die Zahlung, der Bericht — hängt daran.",
   "t0f61ede1": "und ein Mensch antwortet Ihnen, keine Vorlage. Ist die Frage gut, landet sie auf dieser Seite.",
@@ -234,7 +233,6 @@
   "t9ef7e457": "und",
   "t1b3ab681": "Datenschutzerklärung",
   "t5857d2fb": "Nutzungsbedingungen",
-  "tc64b6164": "f.serrano@devel.es",
   "t5442e2b6": "GitHub",
   "tcd7c8586": "devel.es",
   "t07852c55": "Kalender je Mitarbeiter, Akte mit Krankengeschichte, Behandlungspakete, Kasse und Berichte. Für Praxen, Kosmetik, Physiotherapie und Sportvereine. Keine Provision je Buchung.",
@@ -278,5 +276,7 @@
   "td673d413": "Wir zeigen es Ihnen und Sie sagen uns Bescheid.",
   "tcc2d3210": "Erzählen Sie uns, was für einen Betrieb Sie haben und womit Sie sich gerade herumschlagen. Wir zeigen Ihnen Turnera mit echten Daten und sprechen darüber, ob es Ihnen nützt. Es liest jemand, der das Programm von innen kennt, kein Vertrieb.",
   "t42df8e61": ". Sie erreichen uns auch unter",
-  "tccb13fe5": "© 2026 DEVEL · Valencia, Spanien · Turnera ist ein Produkt von DEVEL"
+  "tccb13fe5": "© 2026 DEVEL · Valencia, Spanien · Turnera ist ein Produkt von DEVEL",
+  "t7ea5da81": "hola@devel.es",
+  "tbbec5e3b": "Das ist die richtige Frage. Ihre Daten lassen sich jederzeit vollständig exportieren, ohne uns zu fragen, in einem Format, das andere Programme importieren können: Gibt es uns eines Tages nicht mehr, nehmen Sie sie in ein anderes Programm mit. Sie sind nicht davon abhängig, dass es uns weiter gibt, und was Sie an Turnera bindet, muss sein, dass es für Sie funktioniert, und nicht, was ein Wechsel kosten würde."
 }

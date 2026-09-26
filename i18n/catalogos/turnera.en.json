@@ -218,7 +218,6 @@
   "t4c99a4f0": "Who we are",
   "te45184ff": "Are you a big company?",
   "te3e10d95": "What happens to my centre if something happens to you?",
-  "t8276acf1": "It's the right question. Your data exports in full and sits in an ordinary database, so any IT person can set up the same installation on another server. You're not tied to us still being here, and what ties you to Turnera has to be that it works for you, not what leaving would cost.",
   "t2b0293c4": "Why is it called Turnera?",
   "tafbcddcd": "From \"turno\", the Spanish word for a turn or a slot, which is what really organises a centre: who comes in, when, and with whom. Everything else — the record, the payment, the report — hangs off that.",
   "t0f61ede1": "and a person answers you, not a template. If it's a good question, it ends up on this page.",
@@ -234,7 +233,6 @@
   "t9ef7e457": "and",
   "t1b3ab681": "privacy policy",
   "t5857d2fb": "terms of service",
-  "tc64b6164": "f.serrano@devel.es",
   "t5442e2b6": "GitHub",
   "tcd7c8586": "devel.es",
   "t07852c55": "Diary by practitioner, records with clinical history, session packs, point of sale and reports. For clinics, beauty salons, physiotherapy and sports clubs. No commission per booking.",
@@ -278,5 +276,7 @@
   "td673d413": "We'll show you and you tell us.",
   "tcc2d3210": "Tell us what kind of centre you have and what you're fighting with right now. We'll show you Turnera running with real data and we'll talk about whether it suits you. It's read by someone who knows the program from the inside, not by a salesperson.",
   "t42df8e61": ". You'll also find us at",
-  "tccb13fe5": "© 2026 DEVEL · Valencia, Spain · Turnera is a DEVEL product"
+  "tccb13fe5": "© 2026 DEVEL · Valencia, Spain · Turnera is a DEVEL product",
+  "t7ea5da81": "hola@devel.es",
+  "tbbec5e3b": "It's the right question. Your data exports in full whenever you want, without asking us, in a format other programs know how to import: if one day we're gone, you take it to another program. You're not tied to us still being here, and what ties you to Turnera has to be that it works for you, not what leaving would cost."
 }

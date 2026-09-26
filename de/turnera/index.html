@@ -537,7 +537,7 @@ footer{
       "@id": "https://devel.es/#organizacion",
       "name": "DEVEL",
       "url": "https://devel.es/",
-      "email": "f.serrano@devel.es",
+      "email": "hola@devel.es",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Valencia",
@@ -1176,7 +1176,7 @@ footer{
           <details class="faq__item">
             <summary>Was passiert mit meinem Betrieb, wenn Ihnen etwas zustößt?</summary>
             <div class="faq__respuesta">
-              <p>Das ist die richtige Frage. Ihre Daten lassen sich vollständig exportieren und liegen in einer gewöhnlichen Datenbank, sodass jeder Informatiker dieselbe Installation auf einem anderen Server aufsetzen kann. Sie sind nicht davon abhängig, dass es uns weiter gibt, und was Sie an Turnera bindet, muss sein, dass es für Sie funktioniert, und nicht, was ein Wechsel kosten würde.</p>
+              <p>Das ist die richtige Frage. Ihre Daten lassen sich jederzeit vollständig exportieren, ohne uns zu fragen, in einem Format, das andere Programme importieren können: Gibt es uns eines Tages nicht mehr, nehmen Sie sie in ein anderes Programm mit. Sie sind nicht davon abhängig, dass es uns weiter gibt, und was Sie an Turnera bindet, muss sein, dass es für Sie funktioniert, und nicht, was ein Wechsel kosten würde.</p>
             </div>
           </details>
 
@@ -1228,7 +1228,7 @@ footer{
         <div class="cf-turnstile" data-sitekey="0x4AAAAAAEpkmDVpt3IXS_Mc" data-action="contacto" data-theme="auto"></div>
         <button class="btn btn--solid" type="submit" id="enviar">Demo anfragen</button>
         <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
-        <p class="legal">Geschützt durch Cloudflare Turnstile: es gelten deren <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Datenschutzerklärung</a> und <a href="https://www.cloudflare.com/website-terms/" rel="noopener">Nutzungsbedingungen</a>. Sie erreichen uns auch unter <a href="mailto:f.serrano@devel.es">f.serrano@devel.es</a>.</p>
+        <p class="legal">Geschützt durch Cloudflare Turnstile: es gelten deren <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Datenschutzerklärung</a> und <a href="https://www.cloudflare.com/website-terms/" rel="noopener">Nutzungsbedingungen</a>. Sie erreichen uns auch unter <a href="mailto:hola@devel.es">hola@devel.es</a>.</p>
       </form>
     </div>
   </section>
@@ -1327,10 +1327,10 @@ formulario.addEventListener("submit", async (evento) => {
   } catch (error) {
     const avisosPorError = {
       "verificacion-sin-token": "Marca la casilla de verificaci\u00f3n antes de enviar.",
-      "verificacion-no-disponible": "No se ha podido cargar la verificaci\u00f3n. Escr\u00edbeme a f.serrano@devel.es."
+      "verificacion-no-disponible": "No se ha podido cargar la verificaci\u00f3n. Escr\u00edbenos a hola@devel.es."
     };
     mostrarAviso(
-      avisosPorError[error.message] || "No he podido enviar el mensaje. Int\u00e9ntalo de nuevo o escr\u00edbeme a f.serrano@devel.es.",
+      avisosPorError[error.message] || "No hemos podido enviar el mensaje. Int\u00e9ntalo de nuevo o escr\u00edbenos a hola@devel.es.",
       "error"
     );
   } finally {

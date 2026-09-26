@@ -35,7 +35,7 @@
       "url": "https://devel.es/",
       "logo": "https://devel.es/devel-isotipo.png",
       "image": "https://devel.es/devel-og.png",
-      "email": "f.serrano@devel.es",
+      "email": "hola@devel.es",
       "foundingDate": "2008",
       "address": { "@type": "PostalAddress", "addressLocality": "Valencia", "addressCountry": "ES" },
       "areaServed": "Worldwide",
@@ -528,7 +528,7 @@ footer{
         <div class="cf-turnstile" data-sitekey="0x4AAAAAAEpkmDVpt3IXS_Mc" data-action="contacto" data-theme="auto"></div>
         <button class="btn btn--solid" type="submit" id="enviar">Enviar mensaje</button>
         <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
-        <p class="legal">Protegido por Cloudflare Turnstile: se aplican su <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">privacidad</a> y sus <a href="https://www.cloudflare.com/website-terms/" rel="noopener">condiciones</a>. También nos tienes en <a href="mailto:f.serrano@devel.es">f.serrano@devel.es</a> y en <a href="https://github.com/frandevel" rel="noopener">GitHub</a>.</p>
+        <p class="legal">Protegido por Cloudflare Turnstile: se aplican su <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">privacidad</a> y sus <a href="https://www.cloudflare.com/website-terms/" rel="noopener">condiciones</a>. También nos tienes en <a href="mailto:hola@devel.es">hola@devel.es</a> y en <a href="https://github.com/frandevel" rel="noopener">GitHub</a>.</p>
       </form>
     </div>
   </section>
@@ -620,10 +620,10 @@ formulario.addEventListener("submit", async (evento) => {
   } catch (error) {
     const avisosPorError = {
       "verificacion-sin-token": "Marca la casilla de verificaci\u00f3n antes de enviar.",
-      "verificacion-no-disponible": "No se ha podido cargar la verificaci\u00f3n. Escr\u00edbeme a f.serrano@devel.es."
+      "verificacion-no-disponible": "No se ha podido cargar la verificaci\u00f3n. Escr\u00edbenos a hola@devel.es."
     };
     mostrarAviso(
-      avisosPorError[error.message] || "No he podido enviar el mensaje. Int\u00e9ntalo de nuevo o escr\u00edbeme a f.serrano@devel.es.",
+      avisosPorError[error.message] || "No hemos podido enviar el mensaje. Int\u00e9ntalo de nuevo o escr\u00edbenos a hola@devel.es.",
       "error"
     );
   } finally {

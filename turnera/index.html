@@ -537,7 +537,7 @@ footer{
       "@id": "https://devel.es/#organizacion",
       "name": "DEVEL",
       "url": "https://devel.es/",
-      "email": "f.serrano@devel.es",
+      "email": "hola@devel.es",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Valencia",
@@ -1176,7 +1176,7 @@ footer{
           <details class="faq__item">
             <summary>¿Qué pasa con mi centro si a vosotros os pasa algo?</summary>
             <div class="faq__respuesta">
-              <p>Es la pregunta correcta. Tus datos se exportan enteros y están en una base de datos corriente, así que cualquier informático puede montarte la misma instalación en otro servidor. No estás atado a que nosotros sigamos aquí, y lo que te ate a Turnera tiene que ser que te funciona, no lo que cuesta irse.</p>
+              <p>Es la pregunta correcta. Tus datos se exportan enteros cuando quieras, sin pedirnos permiso, en un formato que otros programas saben importar: si un día faltamos, te los llevas a otro programa. No estás atado a que nosotros sigamos aquí, y lo que te ate a Turnera tiene que ser que te funciona, no lo que cuesta irse.</p>
             </div>
           </details>
 
@@ -1228,7 +1228,7 @@ footer{
         <div class="cf-turnstile" data-sitekey="0x4AAAAAAEpkmDVpt3IXS_Mc" data-action="contacto" data-theme="auto"></div>
         <button class="btn btn--solid" type="submit" id="enviar">Pedir la demo</button>
         <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
-        <p class="legal">Protegido por Cloudflare Turnstile: se aplican su <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">privacidad</a> y sus <a href="https://www.cloudflare.com/website-terms/" rel="noopener">condiciones</a>. También nos tienes en <a href="mailto:f.serrano@devel.es">f.serrano@devel.es</a>.</p>
+        <p class="legal">Protegido por Cloudflare Turnstile: se aplican su <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">privacidad</a> y sus <a href="https://www.cloudflare.com/website-terms/" rel="noopener">condiciones</a>. También nos tienes en <a href="mailto:hola@devel.es">hola@devel.es</a>.</p>
       </form>
     </div>
   </section>
@@ -1327,10 +1327,10 @@ formulario.addEventListener("submit", async (evento) => {
   } catch (error) {
     const avisosPorError = {
       "verificacion-sin-token": "Marca la casilla de verificaci\u00f3n antes de enviar.",
-      "verificacion-no-disponible": "No se ha podido cargar la verificaci\u00f3n. Escr\u00edbeme a f.serrano@devel.es."
+      "verificacion-no-disponible": "No se ha podido cargar la verificaci\u00f3n. Escr\u00edbenos a hola@devel.es."
     };
     mostrarAviso(
-      avisosPorError[error.message] || "No he podido enviar el mensaje. Int\u00e9ntalo de nuevo o escr\u00edbeme a f.serrano@devel.es.",
+      avisosPorError[error.message] || "No hemos podido enviar el mensaje. Int\u00e9ntalo de nuevo o escr\u00edbenos a hola@devel.es.",
       "error"
     );
   } finally {
