@@ -21,7 +21,6 @@
   "td2e61488": "Trading",
   "t745a7aaf": "Tradegun",
   "t7ecc1828": "The umbrella for our market tools: roboadvisors, indicators and automated strategies for people who trade with a method and want to stop relying on their nerve.",
-  "t8d672841": "C# strategies for ATAS, on CME micro futures",
   "tdd560d7e": "Order block, breakout and retest indicators",
   "t6d489c08": "Daily portfolio and market sentiment reports",
   "t2019147e": "Daily loss limit and position sizing designed in, not bolted on",
@@ -57,5 +56,6 @@
   "t445f051f": "How can we help?",
   "t42df8e61": ". You'll also find us on",
   "t84ca9325": "Custom software development, automated quantitative trading strategies and AI consulting from Valencia. Tell us about your project: you'll hear back from the people who will build it.",
-  "t7ea5da81": "hola@devel.es"
+  "t7ea5da81": "hola@devel.es",
+  "t74516f14": "C# strategies for ATAS, on CME futures"
 }
