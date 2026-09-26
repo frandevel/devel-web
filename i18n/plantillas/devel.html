@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{{t76e71eba}}</title>
-<meta name="description" content="{{t7833d46c}}">
+<meta name="description" content="{{t84ca9325}}">
 <link rel="canonical" href="https://devel.es/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
@@ -32,7 +32,6 @@
       "image": "https://devel.es/devel-og.png",
       "email": "f.serrano@devel.es",
       "foundingDate": "2008",
-      "founder": { "@type": "Person", "name": "Francisco José Serrano Pons" },
       "address": { "@type": "PostalAddress", "addressLocality": "Valencia", "addressCountry": "ES" },
       "areaServed": "Worldwide",
       "sameAs": ["https://github.com/frandevel"]
@@ -501,8 +500,8 @@ footer{
     <div class="shell contact">
       <div>
         <p class="eyebrow">{{td8a53e1f}}</p>
-        <h2>{{t99233389}}</h2>
-        <p>{{t59fd1a32}}</p>
+        <h2>{{t1c4b692b}}</h2>
+        <p>{{tfc92f2bb}}</p>
       </div>
       <form class="card-contact" id="formulario" novalidate="">
         <div class="field">
@@ -514,7 +513,7 @@ footer{
           <input id="correo" name="correo" type="email" autocomplete="email" required="" maxlength="120">
         </div>
         <div class="field">
-          <label for="mensaje">{{t88748045}}</label>
+          <label for="mensaje">{{t445f051f}}</label>
           <textarea id="mensaje" name="mensaje" rows="5" required="" maxlength="2000"></textarea>
         </div>
         <div class="trampa" aria-hidden="true">
@@ -524,7 +523,7 @@ footer{
         <div class="cf-turnstile" data-sitekey="0x4AAAAAAEpkmDVpt3IXS_Mc" data-action="contacto" data-theme="auto"></div>
         <button class="btn btn--solid" type="submit" id="enviar">{{tb25cabb5}}</button>
         <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
-        <p class="legal">{{te9b9cd26}} <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">{{t1b3ab681}}</a> {{t9ef7e457}} <a href="https://www.cloudflare.com/website-terms/" rel="noopener">{{t5857d2fb}}</a>{{t1be720f4}} <a href="mailto:f.serrano@devel.es">{{tc64b6164}}</a> {{t3867c498}} <a href="https://github.com/frandevel" rel="noopener">{{t5442e2b6}}</a>.</p>
+        <p class="legal">{{te9b9cd26}} <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">{{t1b3ab681}}</a> {{t9ef7e457}} <a href="https://www.cloudflare.com/website-terms/" rel="noopener">{{t5857d2fb}}</a>{{t42df8e61}} <a href="mailto:f.serrano@devel.es">{{tc64b6164}}</a> {{t3867c498}} <a href="https://github.com/frandevel" rel="noopener">{{t5442e2b6}}</a>.</p>
       </form>
     </div>
   </section>
@@ -612,7 +611,7 @@ formulario.addEventListener("submit", async (evento) => {
     if (!respuesta.ok) throw new Error("respuesta-" + respuesta.status);
 
     formulario.reset();
-    mostrarAviso("Mensaje enviado. Te respondo en cuanto lo lea.", "ok");
+    mostrarAviso("Mensaje enviado. Te contestamos en cuanto lo leamos.", "ok");
   } catch (error) {
     const avisosPorError = {
       "verificacion-sin-token": "Marca la casilla de verificaci\u00f3n antes de enviar.",

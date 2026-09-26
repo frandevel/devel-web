@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>DEVEL · Custom software, quantitative trading and AI</title>
-<meta name="description" content="Custom software development, automated quantitative trading strategies and AI consulting from Valencia. Tell me about your project and I'll reply myself.">
+<meta name="description" content="Custom software development, automated quantitative trading strategies and AI consulting from Valencia. Tell us about your project: you'll hear back from the people who will build it.">
 <link rel="canonical" href="https://devel.es/en/">
 <link rel="alternate" hreflang="es" href="https://devel.es/">
 <link rel="alternate" hreflang="en" href="https://devel.es/en/">
@@ -37,7 +37,6 @@
       "image": "https://devel.es/devel-og.png",
       "email": "f.serrano@devel.es",
       "foundingDate": "2008",
-      "founder": { "@type": "Person", "name": "Francisco José Serrano Pons" },
       "address": { "@type": "PostalAddress", "addressLocality": "Valencia", "addressCountry": "ES" },
       "areaServed": "Worldwide",
       "sameAs": ["https://github.com/frandevel"]
@@ -506,8 +505,8 @@ footer{
     <div class="shell contact">
       <div>
         <p class="eyebrow">Contact</p>
-        <h2>Tell me what you're working on.</h2>
-        <p>Describe the problem in two lines. I read it myself, not a shared inbox: if it fits I'll tell you how I'd approach it, and if it doesn't fit I'll tell you that too.</p>
+        <h2>Tell us what you're working on.</h2>
+        <p>Describe the problem in two lines. It's read by the people who will build it, not by a salesperson: if it fits we'll tell you how we'd approach it, and if it doesn't fit we'll tell you that too.</p>
       </div>
       <form class="card-contact" id="formulario" novalidate="">
         <div class="field">
@@ -519,7 +518,7 @@ footer{
           <input id="correo" name="correo" type="email" autocomplete="email" required="" maxlength="120">
         </div>
         <div class="field">
-          <label for="mensaje">How can I help?</label>
+          <label for="mensaje">How can we help?</label>
           <textarea id="mensaje" name="mensaje" rows="5" required="" maxlength="2000"></textarea>
         </div>
         <div class="trampa" aria-hidden="true">
@@ -529,7 +528,7 @@ footer{
         <div class="cf-turnstile" data-sitekey="0x4AAAAAAEpkmDVpt3IXS_Mc" data-action="contacto" data-theme="auto"></div>
         <button class="btn btn--solid" type="submit" id="enviar">Send message</button>
         <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
-        <p class="legal">Protected by Cloudflare Turnstile: their <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">privacy policy</a> and <a href="https://www.cloudflare.com/website-terms/" rel="noopener">terms of service</a>. You'll also find me on <a href="mailto:f.serrano@devel.es">f.serrano@devel.es</a> and on <a href="https://github.com/frandevel" rel="noopener">GitHub</a>.</p>
+        <p class="legal">Protected by Cloudflare Turnstile: their <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">privacy policy</a> and <a href="https://www.cloudflare.com/website-terms/" rel="noopener">terms of service</a>. You'll also find us on <a href="mailto:f.serrano@devel.es">f.serrano@devel.es</a> and on <a href="https://github.com/frandevel" rel="noopener">GitHub</a>.</p>
       </form>
     </div>
   </section>
@@ -617,7 +616,7 @@ formulario.addEventListener("submit", async (evento) => {
     if (!respuesta.ok) throw new Error("respuesta-" + respuesta.status);
 
     formulario.reset();
-    mostrarAviso("Mensaje enviado. Te respondo en cuanto lo lea.", "ok");
+    mostrarAviso("Mensaje enviado. Te contestamos en cuanto lo leamos.", "ok");
   } catch (error) {
     const avisosPorError = {
       "verificacion-sin-token": "Marca la casilla de verificaci\u00f3n antes de enviar.",

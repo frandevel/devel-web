@@ -757,12 +757,12 @@ footer{
       <div class="section__head">
         <p class="eyebrow">Your data</p>
         <h2>They're yours, and you can check that.</h2>
-        <p>Your centre's data is not my hostage. It sits in an ordinary database, it comes out whenever you want and in a format somebody else can read: what ties you to Turnera has to be that it works for you, not what leaving would cost.</p>
+        <p>Your centre's data is not our hostage. It sits in an ordinary database, it comes out whenever you want and in a format somebody else can read: what ties you to Turnera has to be that it works for you, not what leaving would cost.</p>
       </div>
       <div class="abierto">
         <div class="pillar">
           <h3>No commission per booking</h3>
-          <p>You pay a fee and that's it. No percentage of what you charge, no marketplace in the middle: your clients are yours and I don't show them to anybody.</p>
+          <p>You pay a fee and that's it. No percentage of what you charge, no marketplace in the middle: your clients are yours and we don't show them to anybody.</p>
         </div>
         <div class="pillar">
           <h3>One installation per business</h3>
@@ -1130,7 +1130,7 @@ footer{
           <details class="faq__item">
             <summary>If I get stuck, who do I call?</summary>
             <div class="faq__respuesta">
-              <p>Us, by phone or by email, without going through a form or a bot. And inside the program there's going to be a help button on every screen that opens the documentation for that specific screen, with a "write to us" that already knows where you're writing from.</p>
+              <p>Us, by phone or by email, from Valencia, without going through a form or a bot. And inside the program there's going to be a help button on every screen that opens the documentation for that specific screen, with a "write to us" that already knows where you're writing from.</p>
             </div>
           </details>
 
@@ -1144,7 +1144,7 @@ footer{
           <details class="faq__item">
             <summary>Is training included?</summary>
             <div class="faq__respuesta">
-              <p>Yes, in the onboarding. We sit down with your team and set it up with your services, your prices and the way you work, not with a generic example.</p>
+              <p>Yes, in the onboarding. We sit down with your team and set it up with your services, your prices and the way you work, not with a generic example. If your centre is in the province of Valencia, we come in person; otherwise, by video call.</p>
             </div>
           </details>
 
@@ -1169,7 +1169,7 @@ footer{
           <details class="faq__item">
             <summary>Are you a big company?</summary>
             <div class="faq__respuesta">
-              <p>No, and you should know that before signing. We're a small team, and that cuts both ways: when you call, someone who knows the program from the inside picks up the phone, and when you ask for something reasonable it can be done in weeks. In exchange, we don't have a 24-hour call centre.</p>
+              <p>No, and you should know that before signing. We're a small team based in Valencia, and that cuts both ways: when you call, someone who knows the program from the inside picks up the phone, and when you ask for something reasonable it can be done in weeks. In exchange, we don't have a 24-hour call centre.</p>
             </div>
           </details>
 
@@ -1201,8 +1201,8 @@ footer{
     <div class="shell contact">
       <div>
         <p class="eyebrow">Demo</p>
-        <h2>I'll show you and you tell me.</h2>
-        <p>Tell me what kind of centre you have and what you're fighting with right now. I'll show you Turnera running with real data and we'll talk about whether it suits you. I read it myself, not a shared inbox.</p>
+        <h2>We'll show you and you tell us.</h2>
+        <p>Tell us what kind of centre you have and what you're fighting with right now. We'll show you Turnera running with real data and we'll talk about whether it suits you. It's read by someone who knows the program from the inside, not by a salesperson.</p>
       </div>
       <form class="card-contact" id="formulario" novalidate="">
         <div class="field">
@@ -1228,7 +1228,7 @@ footer{
         <div class="cf-turnstile" data-sitekey="0x4AAAAAAEpkmDVpt3IXS_Mc" data-action="contacto" data-theme="auto"></div>
         <button class="btn btn--solid" type="submit" id="enviar">Ask for the demo</button>
         <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
-        <p class="legal">Protected by Cloudflare Turnstile: their <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">privacy policy</a> and <a href="https://www.cloudflare.com/website-terms/" rel="noopener">terms of service</a>. You'll also find me on <a href="mailto:f.serrano@devel.es">f.serrano@devel.es</a>, and the code on <a href="https://github.com/frandevel/turnera" rel="noopener">GitHub</a>.</p>
+        <p class="legal">Protected by Cloudflare Turnstile: their <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">privacy policy</a> and <a href="https://www.cloudflare.com/website-terms/" rel="noopener">terms of service</a>. You'll also find us at <a href="mailto:f.serrano@devel.es">f.serrano@devel.es</a>.</p>
       </form>
     </div>
   </section>
@@ -1236,7 +1236,7 @@ footer{
 
 <footer>
   <div class="shell footer__inner">
-    <span>© 2026 DEVEL · Turnera is a DEVEL product</span>
+    <span>© 2026 DEVEL · Valencia, Spain · Turnera is a DEVEL product</span>
     <span><a href="/en/">devel.es</a></span>
   </div>
 </footer>
@@ -1323,7 +1323,7 @@ formulario.addEventListener("submit", async (evento) => {
     if (!respuesta.ok) throw new Error("respuesta-" + respuesta.status);
 
     formulario.reset();
-    mostrarAviso("Mensaje enviado. Te respondo en cuanto lo lea.", "ok");
+    mostrarAviso("Mensaje enviado. Te contestamos en cuanto lo leamos.", "ok");
   } catch (error) {
     const avisosPorError = {
       "verificacion-sin-token": "Marca la casilla de verificaci\u00f3n antes de enviar.",

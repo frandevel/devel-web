@@ -754,12 +754,12 @@ footer{
       <div class="section__head">
         <p class="eyebrow">Tus datos</p>
         <h2>Son tuyos, y eso se puede comprobar.</h2>
-        <p>Los datos de tu centro no son mi rehén. Están en una base de datos corriente, salen cuando quieras y en un formato que otro sabe leer: lo que te ate a Turnera tiene que ser que te funciona, no lo que cuesta irse.</p>
+        <p>Los datos de tu centro no son nuestro rehén. Están en una base de datos corriente, salen cuando quieras y en un formato que otro sabe leer: lo que te ate a Turnera tiene que ser que te funciona, no lo que cuesta irse.</p>
       </div>
       <div class="abierto">
         <div class="pillar">
           <h3>Sin comisión por reserva</h3>
-          <p>Se paga una cuota y ya. Ni un porcentaje de lo que cobras, ni un marketplace en medio: tus clientes son tuyos y no se los enseño a nadie.</p>
+          <p>Se paga una cuota y ya. Ni un porcentaje de lo que cobras, ni un marketplace en medio: tus clientes son tuyos y no se los enseñamos a nadie.</p>
         </div>
         <div class="pillar">
           <h3>Una instalación por negocio</h3>
@@ -1127,7 +1127,7 @@ footer{
           <details class="faq__item">
             <summary>Si me atasco, ¿a quién llamo?</summary>
             <div class="faq__respuesta">
-              <p>A nosotros, por teléfono o por correo, sin pasar por un formulario ni por un robot. Y dentro del programa va a haber un botón de ayuda en cada pantalla que abre la documentación de esa pantalla en concreto, con un «escríbenos» que ya sabe desde dónde escribes.</p>
+              <p>A nosotros, por teléfono o por correo, en español y desde Valencia, sin pasar por un formulario ni por un robot. Y dentro del programa va a haber un botón de ayuda en cada pantalla que abre la documentación de esa pantalla en concreto, con un «escríbenos» que ya sabe desde dónde escribes.</p>
             </div>
           </details>
 
@@ -1141,7 +1141,7 @@ footer{
           <details class="faq__item">
             <summary>¿La formación está incluida?</summary>
             <div class="faq__respuesta">
-              <p>Sí, en la puesta en marcha. Nos sentamos con tu equipo y lo montamos con tus servicios, tus tarifas y tu forma de trabajar, no con un ejemplo genérico.</p>
+              <p>Sí, en la puesta en marcha. Nos sentamos con tu equipo y lo montamos con tus servicios, tus tarifas y tu forma de trabajar, no con un ejemplo genérico. Si tu centro está en la provincia de Valencia, vamos en persona; si no, por videollamada.</p>
             </div>
           </details>
 
@@ -1166,7 +1166,7 @@ footer{
           <details class="faq__item">
             <summary>¿Sois una empresa grande?</summary>
             <div class="faq__respuesta">
-              <p>No, y conviene que lo sepas antes de firmar. Somos un equipo pequeño y eso tiene dos caras: cuando llames, te va a coger el teléfono alguien que conoce el programa por dentro, y cuando pidas algo razonable puede estar hecho en semanas. A cambio, no tenemos un centro de llamadas 24 horas.</p>
+              <p>No, y conviene que lo sepas antes de firmar. Somos un equipo pequeño, en Valencia, y eso tiene dos caras: cuando llames, te va a coger el teléfono alguien que conoce el programa por dentro, y cuando pidas algo razonable puede estar hecho en semanas. A cambio, no tenemos un centro de llamadas 24 horas.</p>
             </div>
           </details>
 
@@ -1198,8 +1198,8 @@ footer{
     <div class="shell contact">
       <div>
         <p class="eyebrow">Demo</p>
-        <h2>Te la enseño y me dices.</h2>
-        <p>Cuéntame qué centro tienes y con qué te peleas ahora. Te enseño Turnera funcionando con datos de verdad y hablamos de si te sirve. Lo leo yo, no un buzón compartido.</p>
+        <h2>Te la enseñamos y nos dices.</h2>
+        <p>Cuéntanos qué centro tienes y con qué te peleas ahora. Te enseñamos Turnera funcionando con datos de verdad y hablamos de si te sirve. Lo lee alguien que conoce el programa por dentro, no un comercial.</p>
       </div>
       <form class="card-contact" id="formulario" novalidate>
         <div class="field">
@@ -1225,7 +1225,7 @@ footer{
         <div class="cf-turnstile" data-sitekey="0x4AAAAAAEpkmDVpt3IXS_Mc" data-action="contacto" data-theme="auto"></div>
         <button class="btn btn--solid" type="submit" id="enviar">Pedir la demo</button>
         <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
-        <p class="legal">Protegido por Cloudflare Turnstile: se aplican su <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">privacidad</a> y sus <a href="https://www.cloudflare.com/website-terms/" rel="noopener">condiciones</a>. También me tienes en <a href="mailto:f.serrano@devel.es">f.serrano@devel.es</a>, y el código en <a href="https://github.com/frandevel/turnera" rel="noopener">GitHub</a>.</p>
+        <p class="legal">Protegido por Cloudflare Turnstile: se aplican su <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">privacidad</a> y sus <a href="https://www.cloudflare.com/website-terms/" rel="noopener">condiciones</a>. También nos tienes en <a href="mailto:f.serrano@devel.es">f.serrano@devel.es</a>.</p>
       </form>
     </div>
   </section>
@@ -1233,7 +1233,7 @@ footer{
 
 <footer>
   <div class="shell footer__inner">
-    <span>© 2026 DEVEL · Turnera es un producto de DEVEL</span>
+    <span>© 2026 DEVEL · Valencia, España · Turnera es un producto de DEVEL</span>
     <span><a href="/">devel.es</a></span>
   </div>
 </footer>
@@ -1320,7 +1320,7 @@ formulario.addEventListener("submit", async (evento) => {
     if (!respuesta.ok) throw new Error("respuesta-" + respuesta.status);
 
     formulario.reset();
-    mostrarAviso("Mensaje enviado. Te respondo en cuanto lo lea.", "ok");
+    mostrarAviso("Mensaje enviado. Te contestamos en cuanto lo leamos.", "ok");
   } catch (error) {
     const avisosPorError = {
       "verificacion-sin-token": "Marca la casilla de verificaci\u00f3n antes de enviar.",
