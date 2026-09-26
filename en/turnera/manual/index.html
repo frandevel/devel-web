@@ -683,6 +683,24 @@ footer{
     version</strong> this centre is running. It is the first thing you are asked for when something does not work, so it is worth knowing where it is before you need it. Hovering over it also says when it was built. It reads like this: <code>2026.9.262-bdc9dd2</code> is from 2026, month 9, the 262nd change of that month; what comes after the hyphen identifies the exact change, and it is what you should copy when asking for help.
   </p>
 
+  <h3 id="idiomas">Languages</h3>
+  <p>
+    Turnera speaks <strong>Spanish, English, German and Portuguese</strong> (from Portugal). Each person picks their own in
+    the selector at the top and it stays set; anyone who does not pick one sees the centre's, which is changed in
+    <em>Administration → Preferences</em>.
+  </p>
+  <p>
+    Whatever a customer is given or sent does not come out in the language of whoever presses the button, but in the
+    <strong>customer's own</strong>: on their record, <em>Edit → Language</em>. That covers tickets, quotes,
+    reports, consent forms, booking-portal emails and payment links. If the record says
+    <em>The centre's</em>, it comes out in the centre's language. So a German physiotherapist works in Turnera in German and prints
+    the ticket in Spanish for her patient from Valencia.
+  </p>
+  <div class="ojo">
+    <p>What the centre writes itself -- the names of services and products, notes, the WhatsApp reminder text --
+      comes out as written. Consent forms can have their text in each language: see <a href="#consentimientos-idiomas">Consent forms in other languages</a>.</p>
+  </div>
+
   <h3 id="recomienda">Recommend Turnera</h3>
   <p>
     At the top, next to the language, whoever runs the centre sees the <strong>Recommend Turnera</strong> button. It opens the
@@ -1912,6 +1930,20 @@ footer{
       customer reads it and signs with a finger.</li>
     <li>The PDF, the stroke, the time, the version of the text and a fingerprint of the document are stored.</li>
   </ol>
+
+  <h4 id="consentimientos-idiomas">Consent forms in other languages</h4>
+  <p>
+    Whoever signs has to understand what they sign. When creating or changing a template, below the main text
+    there is <em>Text in other languages</em>: one optional section per language, with its name and its text. The gaps are
+    written the same way in all of them, with their Spanish names: <code>{{cliente}}</code>, <code>{{nif}}</code>,
+    <code>{{centro}}</code>, <code>{{fecha}}</code> and <code>{{tratamiento}}</code>.
+  </p>
+  <ul>
+    <li>If the customer's record has a language the template is written in, the iPad shows that text, and
+      the buttons and the notice below are in their language too. The signed PDF comes out the same.</li>
+    <li>If not, they sign the main text, in the centre's language.</li>
+    <li>Each signature keeps the language it was signed in and the exact text that was read.</li>
+  </ul>
 
   <div class="ojo">
     <p><strong>The request expires after fifteen minutes</strong> and works once only. That is deliberate: a
