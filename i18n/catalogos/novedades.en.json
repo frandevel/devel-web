@@ -65,5 +65,14 @@
   "t71b02b2b": "arrives as each customer's visits, with its notes on every line, not as clinical cases.",
   "tff318551": "Future appointments, stock, vouchers, gift cards and pending payments come across too.",
   "t9a7a64ca": "The import screen explains, sheet by sheet, how to export each file from flowww.",
-  "t07f6cab2": "Every day, Turnera shows what has been charged in cash and by card. You type what is in the till and what the card terminal says, and Turnera tells you at once whether the till balances or how much is missing or over."
+  "t07f6cab2": "Every day, Turnera shows what has been charged in cash and by card. You type what is in the till and what the card terminal says, and Turnera tells you at once whether the till balances or how much is missing or over.",
+  "t77e77eeb": "26 September 2026",
+  "tf3d8fa82": "Clinical record: the pain and the photos of each session",
+  "tc0f0bc49": "In each progress note, and when a case is opened, you can tick",
+  "t0740902b": "“There is pain”",
+  "t1baeb990": "and give it a number from 0 to 10 with a bar that goes from green to red. In the case, each progress note carries its pain in a label of the same colour, and it also appears in the PDF.",
+  "t4a1aeced": "Each progress note takes",
+  "t22a4b32c": "up to three photos",
+  "tf5303997": "to follow by eye how an injury or a scar changes. From a tablet or a phone they can be taken on the spot. Turnera reduces them before uploading and strips the camera data, such as where they were taken.",
+  "t4fc087df": "Fixed: correcting a progress note moved its time two hours ahead."
 }

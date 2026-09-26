@@ -1233,5 +1233,19 @@
   "tf06e14ca": "At the end of each day, what is in the till and what has come in through the card terminal is balanced against what Turnera says has been charged. The entry screen is the",
   "ta28cff16": "should be in the till",
   "td644b7de": "If a visit was charged with two payment methods, the end-of-day till splits the amount between the two. The fifty in cash goes to cash and the fifty on card to card: the till matches the cash counted.",
-  "t4342f953": ", which is not money in the till. And in the best-selling services, one that was sold and refunded does not count as sold."
+  "t4342f953": ", which is not money in the till. And in the best-selling services, one that was sold and refunded does not count as sold.",
+  "t3aad3f42": "The pain of each session",
+  "t27ddc712": "When a case is opened and in each progress note you can tick",
+  "t3c6ec698": "There is pain",
+  "t65a06a05": ". Ticking it shows a bar from 0 to 10, from green to red: 0 is no pain and 10 the worst imaginable, the scale doctors and physiotherapists use. If it is not ticked, no pain is noted, which is not the same as a zero: a zero says it was asked and it did not hurt. On the case page each progress note carries its pain in a label of the same colour, so you can see at a glance whether it is easing, and it also appears in the PDF.",
+  "t3d877145": "Photos in the progress notes",
+  "t4a1aeced": "Each progress note takes",
+  "t22a4b32c": "up to three photos",
+  "t93fdefe8": ", to follow by eye how an injury, a scar or a posture changes. They are added with",
+  "t846172aa": "Add photo",
+  "ta83e5797": "in the progress note itself; from a tablet or a phone the photo can be taken there and then. They are uploaded when you press",
+  "tf140257d": ", and removed with the cross on each one.",
+  "t2df0a46c": "Turnera reduces each photo before uploading it, and strips what the camera writes inside, such as where it was taken.",
+  "t6b57918f": "They are health data: only those who can see the clinical record see them, and they travel with the backup and with the export of the centre's data.",
+  "tae52e5d8": "On the case page they appear small under each progress note; click one to see it full size."
 }

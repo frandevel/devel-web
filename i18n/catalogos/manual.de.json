@@ -1233,5 +1233,19 @@
   "tf06e14ca": "Am Ende jedes Tages wird abgeglichen, was in der Kasse liegt und was über das Kartenterminal eingegangen ist, mit dem, was laut Turnera kassiert wurde. Der Einstieg ist die",
   "ta28cff16": "in der Kasse liegen sollte",
   "td644b7de": "Wenn ein Besuch mit zwei Zahlungsarten kassiert wurde, teilt der Abschluss den Betrag auf beide auf. Die fünfzig in bar gehen auf Bar und die fünfzig mit Karte auf Karte: Die Kasse stimmt mit dem gezählten Bargeld überein.",
-  "t4342f953": ", die kein Geld in der Kasse ist. Und bei den meistverkauften Behandlungen zählt eine verkaufte und erstattete nicht als verkauft."
+  "t4342f953": ", die kein Geld in der Kasse ist. Und bei den meistverkauften Behandlungen zählt eine verkaufte und erstattete nicht als verkauft.",
+  "t3aad3f42": "Der Schmerz jeder Sitzung",
+  "t27ddc712": "Beim Öffnen eines Falls und in jedem Verlaufseintrag kann man",
+  "t3c6ec698": "Schmerzen vorhanden",
+  "t65a06a05": " ankreuzen. Dann erscheint ein Balken von 0 bis 10, von Grün nach Rot: 0 ist kein Schmerz und 10 der schlimmste vorstellbare, die Skala, die Ärzte und Physiotherapeuten verwenden. Ohne Kreuz wird kein Schmerz vermerkt, was nicht dasselbe ist wie eine Null: Die Null sagt, dass gefragt wurde und es nicht wehtat. Auf der Seite des Falls trägt jeder Verlaufseintrag seinen Schmerz in einem Etikett derselben Farbe, so sieht man auf einen Blick, ob er nachlässt, und er erscheint auch im PDF.",
+  "t3d877145": "Fotos in den Verlaufseinträgen",
+  "t4a1aeced": "Jeder Verlaufseintrag nimmt",
+  "t22a4b32c": "bis zu drei Fotos",
+  "t93fdefe8": " auf, um mit bloßem Auge zu verfolgen, wie sich eine Verletzung, eine Narbe oder eine Haltung verändert. Sie werden mit",
+  "t846172aa": "Foto hinzufügen",
+  "ta83e5797": "im Verlaufseintrag selbst hinzugefügt; mit Tablet oder Handy lässt sich das Foto direkt aufnehmen. Sie werden hochgeladen, wenn man",
+  "tf140257d": " drückt, und mit dem Kreuz auf jedem Foto entfernt.",
+  "t2df0a46c": "Turnera verkleinert jedes Foto vor dem Hochladen und entfernt dabei, was die Kamera hineinschreibt, etwa den Aufnahmeort.",
+  "t6b57918f": "Es sind Gesundheitsdaten: Sie sieht nur, wer die Krankenakte sehen darf, und sie sind in der Sicherung und im Export der Daten des Zentrums enthalten.",
+  "tae52e5d8": "Auf der Seite des Falls erscheinen sie klein unter jedem Verlaufseintrag; ein Klick zeigt sie groß."
 }
