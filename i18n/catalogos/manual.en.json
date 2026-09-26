@@ -1247,5 +1247,13 @@
   "tf140257d": ", and removed with the cross on each one.",
   "t2df0a46c": "Turnera reduces each photo before uploading it, and strips what the camera writes inside, such as where it was taken.",
   "t6b57918f": "They are health data: only those who can see the clinical record see them, and they travel with the backup and with the export of the centre's data.",
-  "tae52e5d8": "On the case page they appear small under each progress note; click one to see it full size."
+  "tae52e5d8": "On the case page they appear small under each progress note; click one to see it full size.",
+  "tc246e751": "Medicines in the treatment",
+  "tfd5626b6": "Above the treatment, in the case and in each progress note, there is",
+  "tbc63bbc3": "Add a medicine to the treatment",
+  "tb3206359": ". With three letters (",
+  "t5692b85d": "ibupro",
+  "t2c0fc0ca": "enantyum",
+  "t6bb408d5": ") it suggests the medicines marketed in Spain that start that way, with their active ingredient, the laboratory and whether they need a prescription. Picking one adds it on a line of the treatment, ready to write the dosage after it.",
+  "t6200f5f7": "It is a writing aid, not a prescription: the treatment is still free text. The list comes from CIMA, the medicines information centre of the AEMPS (the Spanish medicines agency), checked on the spot, so it is always up to date. Only what is typed of the medicine's name reaches the AEMPS, nothing about the patient. If one day it does not answer, Turnera says so and the treatment is written by hand as always."
 }

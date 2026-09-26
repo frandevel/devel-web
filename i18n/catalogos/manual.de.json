@@ -1247,5 +1247,13 @@
   "tf140257d": " drückt, und mit dem Kreuz auf jedem Foto entfernt.",
   "t2df0a46c": "Turnera verkleinert jedes Foto vor dem Hochladen und entfernt dabei, was die Kamera hineinschreibt, etwa den Aufnahmeort.",
   "t6b57918f": "Es sind Gesundheitsdaten: Sie sieht nur, wer die Krankenakte sehen darf, und sie sind in der Sicherung und im Export der Daten des Zentrums enthalten.",
-  "tae52e5d8": "Auf der Seite des Falls erscheinen sie klein unter jedem Verlaufseintrag; ein Klick zeigt sie groß."
+  "tae52e5d8": "Auf der Seite des Falls erscheinen sie klein unter jedem Verlaufseintrag; ein Klick zeigt sie groß.",
+  "tc246e751": "Arzneimittel in der Behandlung",
+  "tfd5626b6": "Über der Behandlung, im Fall und in jedem Verlaufseintrag, steht",
+  "tbc63bbc3": "Arzneimittel zur Behandlung hinzufügen",
+  "tb3206359": ". Mit drei Buchstaben (",
+  "t5692b85d": "ibupro",
+  "t2c0fc0ca": "enantyum",
+  "t6bb408d5": ") schlägt es die in Spanien vertriebenen Arzneimittel vor, die so beginnen, mit Wirkstoff, Hersteller und Angabe, ob sie verschreibungspflichtig sind. Ein ausgewähltes wird in einer eigenen Zeile der Behandlung eingefügt, bereit für die Dosierung dahinter.",
+  "t6200f5f7": "Es ist eine Schreibhilfe, kein Rezept: Die Behandlung bleibt freier Text. Die Liste stammt aus CIMA, dem Arzneimittel-Informationszentrum der spanischen Arzneimittelbehörde AEMPS, im Moment abgefragt und daher immer aktuell. Bei der AEMPS kommt nur an, was vom Namen des Arzneimittels getippt wird, nichts über den Patienten. Antwortet sie einmal nicht, sagt Turnera es, und die Behandlung wird wie immer von Hand geschrieben."
 }

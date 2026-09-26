@@ -74,5 +74,8 @@
   "t4a1aeced": "Each progress note takes",
   "t22a4b32c": "up to three photos",
   "tf5303997": "to follow by eye how an injury or a scar changes. From a tablet or a phone they can be taken on the spot. Turnera reduces them before uploading and strips the camera data, such as where they were taken.",
-  "t4fc087df": "Fixed: correcting a progress note moved its time two hours ahead."
+  "t4fc087df": "Fixed: correcting a progress note moved its time two hours ahead.",
+  "t853a0e0a": "Above the treatment,",
+  "t85eb093e": "the medicines marketed in Spain",
+  "tf079c9c2": "are suggested as you type three letters of their name, with their active ingredient and whether they need a prescription. They come from CIMA, the AEMPS database, always up to date. Picking one adds it to the treatment, which is still free text."
 }
