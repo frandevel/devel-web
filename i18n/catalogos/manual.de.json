@@ -1297,12 +1297,21 @@
   "t9120f780": ". Das gilt für Belege, Kostenvoranschläge,\n    Berichte, Einwilligungen, E-Mails des Buchungsportals und Zahlungslinks. Steht in der Karteikarte",
   "t5c357115": "Sprache des Zentrums",
   "td4243dea": ", erscheint es in der Sprache des Zentrums. So arbeitet eine deutsche Physiotherapeutin mit Turnera auf Deutsch\n    und druckt ihrem Patienten aus Valencia den Beleg auf Spanisch aus.",
-  "t2bff17e8": "Was das Zentrum selbst schreibt -- die Namen der Leistungen und Produkte, Notizen, der Text der\n      WhatsApp-Erinnerung -- erscheint so, wie es geschrieben ist. Einwilligungen können ihren Text in jeder Sprache haben:\n      siehe",
   "t64580a96": "Einwilligungen in anderen Sprachen",
   "t36d57fae": "Wer unterschreibt, muss verstehen, was er unterschreibt. Beim Anlegen oder Ändern einer Vorlage steht unter dem\n    Haupttext",
   "td352e04d": "Text in anderen Sprachen",
   "t777fc69f": ": ein optionaler Abschnitt pro Sprache, mit Namen und Text. Die Platzhalter\n    werden in allen gleich geschrieben, mit ihrem spanischen Namen:",
   "t100366e7": "Hat der Kunde in seiner Karteikarte eine Sprache, in der die Vorlage geschrieben ist, zeigt das iPad diesen Text,\n      und auch die Knöpfe und der Hinweis darunter sind in seiner Sprache. Das unterschriebene PDF ebenso.",
   "t51150e34": "Sonst unterschreibt er den Haupttext, in der Sprache des Zentrums.",
-  "t03747b87": "Jede Unterschrift speichert, in welcher Sprache unterschrieben wurde, und den genauen Text, der gelesen wurde."
+  "t03747b87": "Jede Unterschrift speichert, in welcher Sprache unterschrieben wurde, und den genauen Text, der gelesen wurde.",
+  "t570c2aa6": "{Vorname}",
+  "t463ad93c": "{Datum}",
+  "t0f8a3789": "{nome}",
+  "t7791171d": "{data}",
+  "te66c94a0": "Was das Zentrum selbst schreibt -- die Namen der Leistungen und Produkte, Notizen -- erscheint so, wie es\n      geschrieben ist. Einwilligungen und die WhatsApp-Erinnerung können ihren Text in jeder Sprache haben: siehe",
+  "t3867c498": "und",
+  "t95c470d5": "Die Erinnerung in anderen Sprachen",
+  "tdf0152d4": "Unter dem Haupttext gibt es einen optionalen Abschnitt pro Sprache. Wer eine dieser Sprachen in der\n    Karteikarte hat, bekommt das Gespräch mit diesem Text geöffnet; alle anderen mit dem Haupttext. Die Platzhalter\n    lassen sich mit ihrem Namen in dieser Sprache schreiben --",
+  "t3fb824f8": "auf Deutsch,",
+  "teb13ff4d": "auf Portugiesisch -- und das Datum wird so geschrieben, wie man es dort liest: auf Deutsch\n    mit Punkten (22.09.2026). Die Vorschau jeder Sprache erscheint nach dem Speichern."
 }

@@ -1297,12 +1297,21 @@
   "t9120f780": ". That covers tickets, quotes,\n    reports, consent forms, booking-portal emails and payment links. If the record says",
   "t5c357115": "The centre's",
   "td4243dea": ", it comes out in the centre's language. So a German physiotherapist works in Turnera in German and prints\n    the ticket in Spanish for her patient from Valencia.",
-  "t2bff17e8": "What the centre writes itself -- the names of services and products, notes, the WhatsApp reminder text --\n      comes out as written. Consent forms can have their text in each language: see",
   "t64580a96": "Consent forms in other languages",
   "t36d57fae": "Whoever signs has to understand what they sign. When creating or changing a template, below the main text\n    there is",
   "td352e04d": "Text in other languages",
   "t777fc69f": ": one optional section per language, with its name and its text. The gaps are\n    written the same way in all of them, with their Spanish names:",
   "t100366e7": "If the customer's record has a language the template is written in, the iPad shows that text, and\n      the buttons and the notice below are in their language too. The signed PDF comes out the same.",
   "t51150e34": "If not, they sign the main text, in the centre's language.",
-  "t03747b87": "Each signature keeps the language it was signed in and the exact text that was read."
+  "t03747b87": "Each signature keeps the language it was signed in and the exact text that was read.",
+  "t570c2aa6": "{Vorname}",
+  "t463ad93c": "{Datum}",
+  "t0f8a3789": "{nome}",
+  "t7791171d": "{data}",
+  "te66c94a0": "What the centre writes itself -- the names of services and products, notes -- comes out as\n      written. Consent forms and the WhatsApp reminder can have their text in each language: see",
+  "t3867c498": "and",
+  "t95c470d5": "The reminder in other languages",
+  "tdf0152d4": "Below the main text there is one optional section per language. Customers with one of those languages on\n    their record get the conversation opened with that text; everyone else, with the main one. The gaps can be\n    written with their name in that language --",
+  "t3fb824f8": "in German,",
+  "teb13ff4d": "in Portuguese -- and the date is written the way it is read there: in German, with\n    dots (22.09.2026). The preview for each language appears once saved."
 }

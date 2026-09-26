@@ -697,8 +697,10 @@ footer{
     the ticket in Spanish for her patient from Valencia.
   </p>
   <div class="ojo">
-    <p>What the centre writes itself -- the names of services and products, notes, the WhatsApp reminder text --
-      comes out as written. Consent forms can have their text in each language: see <a href="#consentimientos-idiomas">Consent forms in other languages</a>.</p>
+    <p>What the centre writes itself -- the names of services and products, notes -- comes out as
+      written. Consent forms and the WhatsApp reminder can have their text in each language: see
+      <a href="#consentimientos-idiomas">Consent forms in other languages</a> and
+      <a href="#whatsapp-idiomas">The reminder in other languages</a>.</p>
   </div>
 
   <h3 id="recomienda">Recommend Turnera</h3>
@@ -1843,6 +1845,16 @@ footer{
     <code>{fecha}</code>, <code>{hora}</code>, <code>{centro}</code>, <code>{telefono}</code> and
     <code>{enlace}</code>. Below you will see how the customer will read it. A gap that does not exist is left written as
     it is so you notice it when reviewing, instead of vanishing and leaving an odd message.
+  </p>
+
+  <h4 id="whatsapp-idiomas">The reminder in other languages</h4>
+
+  <p>
+    Below the main text there is one optional section per language. Customers with one of those languages on
+    their record get the conversation opened with that text; everyone else, with the main one. The gaps can be
+    written with their name in that language -- <code>{Vorname}</code> and <code>{Datum}</code> in German,
+    <code>{nome}</code> and <code>{data}</code> in Portuguese -- and the date is written the way it is read there: in German, with
+    dots (22.09.2026). The preview for each language appears once saved.
   </p>
 
   <h3 id="stripe">Payment links with Stripe</h3>

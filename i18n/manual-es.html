@@ -702,9 +702,10 @@ footer{
     paciente de Valencia le imprime el ticket en español.
   </p>
   <div class="ojo">
-    <p>Lo que escribe el propio centro -- los nombres de los servicios y productos, las notas, el texto del aviso
-      por WhatsApp -- sale como esté escrito. Los consentimientos sí pueden tener su texto en cada idioma: se
-      explica en <a href="#consentimientos-idiomas">Consentimientos en otros idiomas</a>.</p>
+    <p>Lo que escribe el propio centro -- los nombres de los servicios y productos, las notas -- sale como esté
+      escrito. Los consentimientos y el aviso por WhatsApp sí pueden tener su texto en cada idioma: se explica en
+      <a href="#consentimientos-idiomas">Consentimientos en otros idiomas</a> y en
+      <a href="#whatsapp-idiomas">El aviso en otros idiomas</a>.</p>
   </div>
 
   <h3 id="recomienda">Recomienda Turnera</h3>
@@ -2073,6 +2074,16 @@ footer{
     <code>{fecha}</code>, <code>{hora}</code>, <code>{centro}</code>, <code>{telefono}</code> y
     <code>{enlace}</code>. Debajo verá cómo lo leerá el cliente. Un hueco que no exista se queda escrito tal
     cual para que lo vea al revisar, en vez de desaparecer y dejar un mensaje raro.
+  </p>
+
+  <h4 id="whatsapp-idiomas">El aviso en otros idiomas</h4>
+
+  <p>
+    Debajo del texto principal hay un apartado por idioma, opcional. Al cliente que tenga uno de esos idiomas en
+    su ficha se le abre la conversación con ese texto; a los demás, con el principal. Los huecos se pueden escribir
+    con el nombre que tienen en ese idioma -- <code>{Vorname}</code> y <code>{Datum}</code> en alemán,
+    <code>{nome}</code> y <code>{data}</code> en portugués -- y la fecha se escribe como se lee allí: en alemán, con
+    puntos (22.09.2026). La vista previa de cada idioma aparece al guardar.
   </p>
 
   <h3 id="stripe">Cobro por enlace con Stripe</h3>
