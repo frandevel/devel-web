@@ -6,7 +6,8 @@ const navegador = await chromium.launch(
 
 const PAGINAS = ['/', '/en/', '/de/', '/turnera/', '/en/turnera/', '/de/turnera/',
                  '/turnera/manual/', '/en/turnera/manual/', '/de/turnera/manual/',
-                 '/turnera/novedades/', '/en/turnera/novedades/', '/de/turnera/novedades/'];
+                 '/turnera/novedades/', '/en/turnera/novedades/', '/de/turnera/novedades/',
+                 '/legal/', '/en/legal/', '/de/legal/'];
 const PREFIJO = { es: '', en: '/en', de: '/de' };
 
 let problemas = 0;

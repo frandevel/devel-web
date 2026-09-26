@@ -84,4 +84,25 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/novedades"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/novedades"/>
   </url>
+  <url>
+    <loc>https://devel.es/legal</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/legal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/legal"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/legal"/>
+  </url>
+  <url>
+    <loc>https://devel.es/en/legal</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/legal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/legal"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/legal"/>
+  </url>
+  <url>
+    <loc>https://devel.es/de/legal</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/legal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/legal"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/legal"/>
+  </url>
 </urlset>
