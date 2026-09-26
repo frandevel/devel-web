@@ -1025,8 +1025,6 @@
   "te5e344a6": ": wer, wann und was angesehen wurde.\n      Das ist keine Überwachung, das verlangt das Gesetz für Gesundheitsdaten, und das muss man vorzeigen können, wenn jemand\n      fragt.",
   "t2ac758ea": "Jedes Mal, wenn jemand eine Patientenakte öffnet, wird das protokolliert",
   "t0920f85d": "Die Patientenakte zu sehen ist eine eigene Berechtigung, getrennt von der für die Kundenakte. Wer am Empfang steht,\n    muss sie nicht haben.",
-  "t3c07fd23": "In Trainingsbetrieben spricht die Anwendung nicht von einer Patientenakte: dieselben Felder heißen",
-  "t9f57a9ea": ", denn so heißt es\n    dort.",
   "t1531053c": "Ausgangspunkt",
   "tfa937776": "Ziel",
   "t232aba22": "körperliche Bewertung",
@@ -1272,5 +1270,13 @@
   "t444308ef": "abgeschlossen",
   "t4de11ed0": " markiert. Es gibt keine medizinische Vorgeschichte, keine Körperkarte, keine Schmerzskala und keine Arzneimittel: das gehört zu den Kliniken. Die Berechtigung heißt",
   "t13696093": "Begleitung ansehen",
-  "tc964ab9d": ", und das Programm wird genauso als PDF gedruckt."
+  "tc964ab9d": ", und das Programm wird genauso als PDF gedruckt.",
+  "te58974f1": "Einen Fall drucken",
+  "t56839718": "Auf der Seite des Falls erzeugt",
+  "te852ed37": "PDF-Bericht",
+  "tf8deefe9": "den ganzen Fall, um ihn dem Patienten zu geben oder an einen anderen Facharzt zu schicken: die Vorgeschichte, die Falldaten und jeden Verlaufseintrag in einem eigenen Block, vom ältesten zum neuesten, mit Datum, behandelnder Person, Symptomen, Untersuchung, Diagnose, Behandlung, Schmerz, Bemerkungen und Fotos. Jede Seite trägt unten den Hinweis, dass es ein vertrauliches Dokument mit Gesundheitsdaten ist, und ihre Nummer.",
+  "t4782dd21": "Drucken ist eine eigene Berechtigung,",
+  "t29ea8053": "Krankenakte drucken",
+  "t92ec7e63": ", die ab Werk die Rolle",
+  "t0084645c": "und die Verwaltung haben; der Empfang nicht. Wer sie nicht hat, sieht die Schaltfläche nicht. Jeder Druck wird im Zugriffsprotokoll vermerkt."
 }

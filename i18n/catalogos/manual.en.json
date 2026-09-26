@@ -1025,8 +1025,6 @@
   "te5e344a6": ": who, when and what they looked at.\n      It is not surveillance, it is what the law requires for health data, and it is what you have to be able to show\n      if anyone asks.",
   "t2ac758ea": "Every time someone opens a clinical record it is logged",
   "t0920f85d": "Seeing the clinical record is a separate permission from seeing the customer record. Whoever is at the front desk\n    has no need for it.",
-  "t3c07fd23": "In training centres the application does not talk about a clinical record: the same fields are called",
-  "t9f57a9ea": ", which is what\n    they are called there.",
   "t1531053c": "starting point",
   "tfa937776": "goal",
   "t232aba22": "physical assessment",
@@ -1272,5 +1270,13 @@
   "t444308ef": "finished",
   "t4de11ed0": ". There is no medical background, no body map, no pain scale and no medicines: that belongs to clinics. The permission is called",
   "t13696093": "See the follow-up",
-  "tc964ab9d": "and the programme prints to PDF the same way."
+  "tc964ab9d": "and the programme prints to PDF the same way.",
+  "te58974f1": "Printing a case",
+  "t56839718": "On the case page,",
+  "te852ed37": "PDF report",
+  "tf8deefe9": "produces the whole case to give to the patient or send to another specialist: the medical background, the case details and each progress note in its own block, from oldest to newest, with the date, who saw the patient, symptoms, examination, diagnosis, treatment, pain, notes and its photos. Every page carries a footer saying it is a confidential document with health data, and its number.",
+  "t4782dd21": "Printing is a separate permission,",
+  "t29ea8053": "Print the clinical record",
+  "t92ec7e63": ", which the",
+  "t0084645c": "role and the administrator have out of the box; reception does not. Whoever does not have it does not see the button. Every print is recorded in the access log."
 }
