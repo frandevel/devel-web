@@ -468,12 +468,14 @@ footer{
   padding:.65rem .9rem;color:var(--text);
 }
 .faq__tabla{border-collapse:collapse;width:100%;max-width:36rem;font-size:.92rem;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.faq__tabla s{color:var(--text-dim);font-weight:400;margin-right:.3rem}
 .faq__tabla th,.faq__tabla td{padding:.45rem .8rem;text-align:left;border-bottom:1px solid var(--line)}
 .faq__tabla th{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);font-weight:500}
 .faq__tabla td:not(:first-child),.faq__tabla th:not(:first-child){text-align:right;font-variant-numeric:tabular-nums}
 .faq__tabla tr:last-child td{border-bottom:none}
 .faq__tabla td:last-child{color:var(--accent);font-weight:600}.faq__tabla td{white-space:nowrap}
-@media (max-width:480px){.faq__tabla th,.faq__tabla td{padding:.4rem .45rem}.faq__tabla th{letter-spacing:.06em}}
+@media (max-width:480px){.faq__tabla s{color:var(--text-dim);font-weight:400;margin-right:.3rem}
+.faq__tabla th,.faq__tabla td{padding:.4rem .45rem}.faq__tabla th{letter-spacing:.06em}}
 .faq__pie{margin-top:.5rem;font-size:1rem}
 .faq__nota{margin-top:.8rem;font-size:.82rem;color:var(--steel);max-width:60ch}
 
@@ -802,13 +804,13 @@ footer{
               <table class="faq__tabla">
                 <thead><tr><th>Tu centro</th><th>Al mes</th><th>Al año, pagando por adelantado</th><th>Te ahorras</th></tr></thead>
                 <tbody>
-                  <tr><td>2 recursos</td><td>39 €</td><td>390 €</td><td>78 €</td></tr>
-                  <tr><td>4 recursos</td><td>59 €</td><td>590 €</td><td>118 €</td></tr>
-                  <tr><td>6 recursos</td><td>79 €</td><td>790 €</td><td>158 €</td></tr>
-                  <tr><td>8 recursos</td><td>90 €</td><td>900 €</td><td>180 €</td></tr>
-                  <tr><td>10 recursos</td><td>100 €</td><td>1.000 €</td><td>200 €</td></tr>
-                  <tr><td>15 recursos</td><td>125 €</td><td>1.250 €</td><td>250 €</td></tr>
-                  <tr><td>20 recursos</td><td>150 €</td><td>1.500 €</td><td>300 €</td></tr>
+                  <tr><td>2 recursos</td><td>39 €</td><td><s>468 €</s> 390 €</td><td>78 €</td></tr>
+                  <tr><td>4 recursos</td><td>59 €</td><td><s>708 €</s> 590 €</td><td>118 €</td></tr>
+                  <tr><td>6 recursos</td><td>79 €</td><td><s>948 €</s> 790 €</td><td>158 €</td></tr>
+                  <tr><td>8 recursos</td><td>90 €</td><td><s>1.080 €</s> 900 €</td><td>180 €</td></tr>
+                  <tr><td>10 recursos</td><td>100 €</td><td><s>1.200 €</s> 1.000 €</td><td>200 €</td></tr>
+                  <tr><td>15 recursos</td><td>125 €</td><td><s>1.500 €</s> 1.250 €</td><td>250 €</td></tr>
+                  <tr><td>20 recursos</td><td>150 €</td><td><s>1.800 €</s> 1.500 €</td><td>300 €</td></tr>
                   <tr><td>Más de 20</td><td>A consultar</td><td>A consultar</td><td>Dos meses</td></tr>
                 </tbody>
               </table>
