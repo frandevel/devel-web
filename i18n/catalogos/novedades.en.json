@@ -102,7 +102,7 @@
   "t586572e2": "Tickets, quotes, reports and emails come out in the",
   "t78c7f5fe": "customer's language",
   "t358c7c9c": ", which now shows on their record, and not in the language of whoever prints them.",
-  "t26528831": "",
+  "t26528831": "Your",
   "td09fd136": "Consent forms",
   "tde991c81": "can have their text in several languages: the customer reads and signs in their own, and the iPad speaks to them in it.",
   "t59cf8d11": "2026.9.296-393e432",
@@ -123,5 +123,18 @@
   "t4ce782c0": "The zones are",
   "t11168806": ": when it is opened they appear tinted with the colour of their pain, and the PDF report lists them by name in the patient's language.",
   "t66f031a8": "saved with the case",
-  "te3c2b12d": "Older cases that had a point on the picture of their line keep it as it was."
+  "te3c2b12d": "Older cases that had a point on the picture of their line keep it as it was.",
+  "t7283f3a3": "2026.9.298-b474980",
+  "t00e62750": "Agenda, customers and suppliers",
+  "t5db2b00e": "An appointment with several services",
+  "t9f84e779": ", without having to open the drop-down.",
+  "te7421e7e": "shows them all at once",
+  "taf50fc19": "An",
+  "tcc5a25f0": "can only be cancelled by whoever has the new «Anular citas ya cobradas» (cancel charged appointments) permission, which out of the box only the administrator has. Through the portal, customers cannot cancel a booking they have already paid either.",
+  "t8af80edb": "appointment already charged",
+  "tbb83f3c2": "can be deactivated from their record: they keep their whole history, but no longer show up in searches, when booking or at checkout.",
+  "t103866a3": "customers and suppliers",
+  "t95d58a71": "The lists of customers, suppliers, services, products and packages have the tickbox",
+  "t88e51bdf": "to see what is deactivated.",
+  "te20bd204": "«Include inactive»"
 }

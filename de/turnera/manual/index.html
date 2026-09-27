@@ -805,6 +805,11 @@ footer{
     <li><strong>Die Dauer ändern:</strong> ziehen Sie den unteren Rand.</li>
     <li><strong>Stornieren:</strong> öffnen Sie ihn, drücken Sie <em>Stornieren</em> und geben Sie an, <strong>wer storniert</strong>: der Kunde, das Zentrum (die Fachkraft kann nicht, die Kabine oder der Platz ist nicht verfügbar, ein Defekt) oder ein
       <strong>externer Grund</strong> (Regen auf einem offenen Platz, ein Stromausfall). Die Angabe ist Pflicht, denn nur was der Kunde storniert, zählt in seiner Historie und bei den verlorenen Terminen. Zusätzlich können Sie den Grund in eigenen Worten notieren; er bleibt in den Kommentaren des Termins.</li>
+      <li><strong>Einen bereits abgerechneten Termin</strong> kann nur stornieren, wer die Berechtigung <strong>«Anular citas ya
+      cobradas» (abgerechnete Termine stornieren)</strong> hat, die ab Werk nur der Administrator besitzt. Für alle anderen ist <em>Stornieren</em> ausgegraut
+      und nennt beim Darüberfahren den Grund. Stornieren erstattet das Geld nicht: dafür gibt es
+      <a href="#devoluciones">die Rückerstattung des Belegs</a>. Auch über das Buchungsportal kann der Kunde einen bereits
+      bezahlten Termin nicht stornieren: er muss im Zentrum anrufen.</li>
       <li><strong>Einen versehentlich angelegten Termin entfernen:</strong> in den <strong>15 Minuten</strong> nach dem Anlegen erscheint beim Stornieren eine vierte Option, <em>Versehentlich angelegt</em>. Der Termin verschwindet aus dem Kalender und zählt in keinem Bericht, denn er war nie eine Buchung. Danach wird die Option nicht mehr angeboten: Es ist eine Stornierung durch jemanden, und man muss angeben, durch wen.</li>
     <li><strong>Abgesagte Termine aus der Ansicht nehmen:</strong> setzen Sie das Häkchen bei <em>Abgesagte ausblenden</em>, in der Legende
       unter dem Titel. Der Kalender merkt sich das Kästchen, beim nächsten Mal finden Sie es so vor, wie Sie es gelassen haben.</li>
@@ -828,7 +833,10 @@ footer{
   </p>
 
   <p>
-    <strong>Schnellauswahl per Code.</strong> Neben den Leistungen des Termins steht die Schaltfläche <em>Schnellauswahl</em>: Sie öffnet alle <strong>Kurzcodes</strong> der Preisliste auf einen Blick —HMBS, AXIL…—, um zwei oder drei hintereinander anzuklicken; beim Bestätigen werden sie dem Termin hinzugefügt. Jeder Code ist genau eine Leistung. Der Code wird festgelegt unter <em>Katalog → Leistungen</em>, in der Karte jeder Leistung (<em>Kurzcode</em>: Buchstaben und Ziffern, und er darf sich nicht wiederholen). Er steht auch vor dem Namen in der Leistungsauswahl, und man kann danach suchen.
+    <strong>Schnellauswahl per Code.</strong> Neben den Leistungen des Termins steht die Schaltfläche <em>Schnellauswahl</em>: Sie öffnet alle <strong>Kurzcodes</strong> der Preisliste auf einen Blick —HMBS, AXIL…—, um zwei oder drei hintereinander anzuklicken; beim Bestätigen werden sie dem Termin hinzugefügt. Jeder Code ist genau eine Leistung. Der Code wird festgelegt unter <em>Katalog → Leistungen</em>, in der Karte jeder Leistung (<em>Kurzcode</em>: Buchstaben und Ziffern,
+    ohne Wiederholung). In der Leistungsauswahl steht er auch vor dem Namen, und man kann danach suchen.
+    Hat der Termin mehrere Leistungen, <strong>sieht man alle auf einmal</strong> im Feld, eine nach der anderen, ohne
+    die Auswahl öffnen zu müssen.
   </p>
 
   <div class="ojo">
@@ -957,6 +965,16 @@ footer{
     <img src="/turnera/manual/imagenes/en/07-ficha-cliente.png" alt="Eine Kundenakte mit den Daten, dem Verlauf und den Wertkarten" loading="lazy">
     <figcaption>Eine Kundenakte. Telefonnummer und E-Mail-Adresse sind Links.</figcaption>
   </figure>
+
+  <h3 id="clientes-baja">Einen Kunden abmelden</h3>
+
+  <p>
+    Ein Kunde, der nicht mehr kommt, wird nicht gelöscht, sondern <strong>abgemeldet</strong>. In seiner Akte <em>Bearbeiten</em> und das Häkchen bei
+     <em>Aktiv</em> entfernen. Er behält alles —Termine, Zahlungen, Gutscheine, Historie—, aber <strong>er erscheint nicht mehr
+    in der Suche</strong>: in der Kundenliste, beim Terminieren und an der Kasse. Um ihn zu sehen, haken Sie <em>Auch
+    inaktive</em> neben der Suche an; er erscheint mit dem Etikett <em>Inaktiv</em>, und in seiner Akte <em>Inaktiv</em>.
+    Reaktivieren heißt, wieder anzuhaken: <em>Aktiv</em>.
+  </p>
 
   <h3>Zum nächsten Termin springen</h3>
 
@@ -1638,6 +1656,11 @@ footer{
       Erklärt ist das unter <a href="#aparatos">Geräte und Zubehör</a>.</li>
     <li><strong>Katalog</strong>: Leistungen, Produkte, Bonusgruppen und Lieferanten. Jede Leistung und jedes
       Produkt tragen außerdem <strong>ihre Mehrwertsteuer</strong>, die hier entschieden wird und nicht am Empfang.</li>
+    <li><strong>Was abgemeldet ist, erscheint nicht in der Suche.</strong> Eine zurückgezogene Leistung, ein Produkt, ein Paket oder eine
+      Fachkraft, oder ein Lieferant, mit dem man nicht mehr arbeitet (in seiner Akte das Häkchen bei <em>Aktiv</em> entfernen),
+      verschwindet aus den Listen und Auswahlfeldern. Die Listen der Leistungen, Produkte, Pakete, Lieferanten und
+      Kunden haben das Kästchen <em>Auch inaktive</em> , um sie mit ihrem Etikett zu sehen; die der Fachkräfte hat
+      <em>Nur aktive</em>.</li>
     <li><strong>Mitarbeiter</strong>: wer behandelt, seine Farbe im Terminkalender und seine Spalte.</li>
     <li><strong>Rollen und Benutzer</strong>: wer hereinkommt, was er tun darf und <strong>von welchen IP-Adressen</strong>.</li>
     <li><strong>Daten des Betriebs</strong>: Name, Steuernummer, Adresse und Logo. Das Logo steht im Kopf der PDFs

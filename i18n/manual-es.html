@@ -832,6 +832,11 @@ footer{
       <strong>causa externa</strong> (la lluvia en una pista descubierta, un corte de luz). Es obligatorio, porque
       solo lo que anula el cliente cuenta en su historial y en las citas perdidas. Además puede escribir el motivo
       con sus palabras, que queda en los comentarios de la cita.</li>
+      <li><strong>Una cita ya cobrada</strong> solo la anula quien tiene el permiso <strong>«Anular citas ya
+      cobradas»</strong>, que de fábrica lleva solo el administrador. Para los demás, <em>Anular</em> sale apagado
+      y, al pasar el ratón, dice por qué. Anularla no devuelve el dinero: para eso está
+      <a href="#devoluciones">devolver el ticket</a>. Por el portal de reservas, el cliente tampoco puede anular
+      una cita que ya pagó: tiene que llamar al centro.</li>
       <li><strong>Quitar una cita puesta por error:</strong> en los <strong>15 minutos</strong> siguientes a crearla,
       al anularla aparece una cuarta opción, <em>Creada por error</em>. La cita desaparece de la agenda y no cuenta
       en ningún informe, porque nunca fue una reserva. Pasado ese rato ya no se ofrece: es una anulación de alguien,
@@ -869,6 +874,8 @@ footer{
     pinchar dos o tres seguidos, y al aceptar se añaden a la cita. Cada código es un solo servicio. El código se
     pone en <em>Catálogo → Servicios</em>, en la ficha de cada uno (<em>Código abreviado</em>: letras y cifras, y
     no puede repetirse). En el desplegable de servicios también sale delante del nombre, y se puede buscar por él.
+    Si la cita lleva varios servicios, <strong>se ven todos a la vez</strong> en el campo, uno detrás de otro, sin
+    tener que abrir el desplegable.
   </p>
 
   <div class="ojo">
@@ -1017,6 +1024,16 @@ footer{
     <img src="/turnera/manual/imagenes/07-ficha-cliente.png" alt="La ficha de un cliente con sus datos, su historial y sus bonos" loading="lazy">
     <figcaption>La ficha de un cliente. El teléfono y el correo son enlaces.</figcaption>
   </figure>
+
+  <h3 id="clientes-baja">Dar de baja a un cliente</h3>
+
+  <p>
+    Un cliente que ya no viene no se borra: se <strong>da de baja</strong>. En su ficha, <em>Editar</em> y quitar
+    la marca de <em>Activo</em>. Conserva todo —citas, cobros, bonos, historia—, pero <strong>deja de salir al
+    buscar</strong>: en la lista de clientes, al poner una cita y al cobrar. Para verlo, marque <em>También los
+    inactivos</em> junto al buscador; sale con la etiqueta <em>Inactivo</em>, y en su ficha, <em>Dado de baja</em>.
+    Volver a darlo de alta es marcar otra vez <em>Activo</em>.
+  </p>
 
   <h3>Ir a su próxima cita</h3>
 
@@ -1846,6 +1863,11 @@ footer{
       Está explicado en <a href="#aparatos">Aparatología</a>.</li>
     <li><strong>Catálogo</strong>: servicios, productos, grupos de bonos y proveedores. Cada servicio y cada
       producto llevan además <strong>su IVA</strong>, que se decide aquí y no en el mostrador.</li>
+    <li><strong>Lo que está de baja no sale al buscar.</strong> Un servicio, un producto, un paquete o un
+      profesional retirado, o un proveedor con el que ya no se trabaja (en su ficha, quitando <em>Activo</em>),
+      desaparece de las listas y de los desplegables. Las listas de servicios, productos, paquetes, proveedores y
+      clientes tienen la casilla <em>También los inactivos</em> para verlos, con su etiqueta; la de profesionales,
+      <em>Solo activos</em>.</li>
     <li><strong>Profesionales</strong>: quién atiende, su color en la agenda y su columna.</li>
     <li><strong>Roles y usuarios</strong>: quién entra, qué puede hacer y <strong>desde qué direcciones IP</strong>.</li>
     <li><strong>Datos del centro</strong>: nombre, NIF, dirección y logotipo. El logotipo encabeza los PDF

@@ -805,6 +805,11 @@ footer{
     <li><strong>Changing how long it lasts:</strong> drag the bottom edge.</li>
     <li><strong>Cancelling it:</strong> open it, press <em>Cancel</em> and say <strong>who is calling it off</strong>: the customer, the centre (the professional cannot make it, the cabin or the court is unavailable, something broke) or an
       <strong>external cause</strong> (rain on an outdoor court, a power cut). It is required, because only what the customer calls off counts in their history and in lost appointments. You can also write the reason in your own words, which is kept in the comments of the appointment.</li>
+      <li><strong>An appointment already charged</strong> can only be cancelled by whoever has the <strong>«Anular citas ya
+      cobradas» (cancel charged appointments)</strong> permission, which out of the box only the administrator has. For everyone else, <em>Cancel</em> is greyed out
+      and, when you hover over it, says why. Cancelling it does not give the money back: for that, use
+      <a href="#devoluciones">the ticket refund</a>. Through the booking portal, the customer cannot cancel
+      an appointment already paid either: they have to call the centre.</li>
       <li><strong>Removing an appointment made by mistake:</strong> within the <strong>15 minutes</strong> after creating it, a fourth option appears when cancelling it, <em>Created by mistake</em>. The appointment disappears from the agenda and counts in no report, because it was never a booking. After that time it is no longer offered: it is a cancellation by someone, and you have to say by whom.</li>
     <li><strong>Taking cancelled appointments off the view:</strong> tick <em>Hide cancelled</em>, in the legend
       under the title. The diary remembers the box, so next time you will find it as you left it.</li>
@@ -828,7 +833,10 @@ footer{
   </p>
 
   <p>
-    <strong>Quick selection by code.</strong> Next to the appointment's services there is the button <em>Quick selection</em>: it opens all the <strong>short codes</strong> of the price list at a glance —HMBS, AXIL…— so you can click two or three in a row, and on accepting they are added to the appointment. Each code is a single service. The code is set in <em>Catalogue → Services</em>, in the record of each one (<em>Short code</em>: letters and digits, and it cannot be repeated). It also appears in front of the name in the services drop-down, and you can search by it.
+    <strong>Quick selection by code.</strong> Next to the appointment's services there is the button <em>Quick selection</em>: it opens all the <strong>short codes</strong> of the price list at a glance —HMBS, AXIL…— so you can click two or three in a row, and on accepting they are added to the appointment. Each code is a single service. The code is set in <em>Catalogue → Services</em>, in the record of each one (<em>Short code</em>: letters and digits, and
+    it cannot be repeated). In the services drop-down it also appears in front of the name, and you can search by it.
+    If the appointment has several services, <strong>they are all shown at once</strong> in the field, one after another, without
+    having to open the drop-down.
   </p>
 
   <div class="ojo">
@@ -957,6 +965,16 @@ footer{
     <img src="/turnera/manual/imagenes/en/07-ficha-cliente.png" alt="A customer record with their details, their history and their vouchers" loading="lazy">
     <figcaption>A customer record. The phone number and the email address are links.</figcaption>
   </figure>
+
+  <h3 id="clientes-baja">Deactivating a customer</h3>
+
+  <p>
+    A customer who no longer comes is not deleted: they are <strong>deactivated</strong>. In their record, <em>Edit</em> and untick
+     <em>Active</em>. They keep everything —appointments, payments, vouchers, history—, but <strong>no longer show up in
+    searches</strong>: in the customer list, when booking an appointment and at checkout. To see them, tick <em>Include
+    inactive</em> next to the search box; they appear with the tag <em>Inactive</em>, and in their record, <em>Inactive</em>.
+    Reactivating them is ticking again <em>Active</em>.
+  </p>
 
   <h3>Going to their next appointment</h3>
 
@@ -1636,6 +1654,11 @@ footer{
       It is explained under <a href="#aparatos">Equipment</a>.</li>
     <li><strong>Catalogue</strong>: services, products, voucher groups and providers. Each service and each
       product also carries <strong>its VAT</strong>, which is decided here and not at the counter.</li>
+    <li><strong>What is deactivated does not show up in searches.</strong> A service, a product, a package or a
+      professional retired, or a supplier no longer used (in its record, unticking <em>Active</em>),
+      disappears from the lists and drop-downs. The lists of services, products, packages, suppliers and
+      customers have the tickbox <em>Include inactive</em> to see them, with their tag; the professionals list has
+      <em>Only active</em>.</li>
     <li><strong>Staff</strong>: who sees customers, their colour on the agenda and their column.</li>
     <li><strong>Roles and users</strong>: who gets in, what they may do and <strong>from which IP addresses</strong>.</li>
     <li><strong>Centre details</strong>: name, tax ID, address and logo. The logo heads the PDFs
