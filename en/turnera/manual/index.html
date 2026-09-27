@@ -608,6 +608,7 @@ footer{
     <li><a href="#devoluciones" class="sub">Refunding a ticket</a></li>
     <li><a href="#tarjetas-regalo" class="sub">Gift cards</a></li>
     <li><a href="#facturas" class="sub">Invoices and VeriFactu</a></li>
+    <li><a href="#facturas-pruebas" class="sub">Test mode and production</a></li>
     <li><a href="#bonos">5. Vouchers</a></li>
     <li><a href="#aparatos">6. Equipment</a></li>
     <li><a href="#aparatos-alta" class="sub">Adding a device</a></li>
@@ -1357,8 +1358,8 @@ footer{
   </p>
 
   <div class="ojo">
-    <p><strong>An issued invoice is never deleted or changed.</strong> If something is wrong, it is refunded and its
-      corrective invoice is issued. And the VAT of every service and product must be decided in the catalogue: without it,
+    <p><strong>In production, an issued invoice is never deleted or changed.</strong> If something is wrong, it is refunded and
+      its corrective invoice is issued. And the VAT of every service and product must be decided in the catalogue: without it,
       the sale cannot be charged and Turnera says what is missing.</p>
   </div>
 
@@ -1381,6 +1382,44 @@ footer{
     how each one stands at the Spanish tax agency. From there the book is downloaded in Excel with the daily summary
     entry, which is what the accountant asks for every quarter.
   </p>
+
+  <h3 id="facturas-pruebas">Test mode and moving to production</h3>
+  <span class="ruta">Administration → Invoicing and VeriFactu → Invoicing mode</span>
+
+  <p>
+    Invoicing has two modes, and every centre starts in <strong>test mode</strong>. It is for trying it out
+    calmly before invoicing for real: charging, refunding, issuing a full invoice, looking at the book and downloading the
+    Excel, without fear of breaking anything.
+  </p>
+
+  <ul>
+    <li>In test mode, every invoice carries at the top, in red, <em>FACTURA DE PRUEBA · SIN VALIDEZ FISCAL (test invoice, not valid for tax purposes)</em>. It is not valid
+      for the tax agency or the customer.</li>
+    <li>They are numbered like real ones, but that numbering is provisional.</li>
+    <li>In the invoice book they carry the label <em>Test</em>, and the Excel says so in the name of its
+      sheets.</li>
+    <li>While the centre is in test mode there is a notice at the top of the screen for whoever handles invoicing.</li>
+    <li>If sending is on, records go to the AEAT test environment, never to the real one.</li>
+  </ul>
+
+  <p>
+    When the centre is going to invoice for real, with the catalogue VAT reviewed with its accountant, press
+    <strong>Move to production…</strong>. The screen explains what will happen and asks you to tick that you understand and to type
+    <code>PRODUCCIÓN</code>. On confirming:
+  </p>
+
+  <ol>
+    <li>Every test invoice is deleted for good, with its records. Sales and payments are not
+      touched.</li>
+    <li>Every series of every delegation starts again: the next invoice is number 1.</li>
+    <li>From then on every invoice is real and cannot be deleted or changed, only corrected.</li>
+  </ol>
+
+  <div class="ojo">
+    <p><strong>Moving to production cannot be undone.</strong> There is no way back to test mode: the screen
+      shows since when the centre has been in production and who took the step. It needs its own permission,
+      <em>Pasar la facturación a producción (move invoicing to production)</em>, which out of the box only the administrator has.</p>
+  </div>
 
   <p>
     The <strong>sending to the AEAT</strong> is a second switch, also off. To turn it on, the centre

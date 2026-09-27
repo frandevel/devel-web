@@ -608,6 +608,7 @@ footer{
     <li><a href="#devoluciones" class="sub">Einen Beleg erstatten</a></li>
     <li><a href="#tarjetas-regalo" class="sub">Geschenkkarten</a></li>
     <li><a href="#facturas" class="sub">Rechnungen und VeriFactu</a></li>
+    <li><a href="#facturas-pruebas" class="sub">Testmodus und Produktion</a></li>
     <li><a href="#bonos">5. Wertkarten</a></li>
     <li><a href="#aparatos">6. Geräte</a></li>
     <li><a href="#aparatos-alta" class="sub">Ein Gerät anlegen</a></li>
@@ -1357,8 +1358,8 @@ footer{
   </p>
 
   <div class="ojo">
-    <p><strong>Eine ausgestellte Rechnung wird nie gelöscht oder geändert.</strong> Ist etwas falsch, wird zurückerstattet, und die
-      Korrekturrechnung wird ausgestellt. Und die MwSt. jeder Leistung und jedes Produkts muss im Katalog festgelegt sein: ohne sie kann
+    <p><strong>In Produktion wird eine ausgestellte Rechnung nie gelöscht oder geändert.</strong> Ist etwas falsch, wird zurückerstattet, und
+      die Korrekturrechnung wird ausgestellt. Und die MwSt. jeder Leistung und jedes Produkts muss im Katalog festgelegt sein: ohne sie kann
       nicht kassiert werden, und Turnera sagt, was fehlt.</p>
   </div>
 
@@ -1381,6 +1382,44 @@ footer{
     ihrem Stand bei der spanischen Steuerbehörde. Von dort wird das Buch als Excel mit der täglichen Sammelbuchung heruntergeladen,
     die die Steuerberatung jedes Quartal verlangt.
   </p>
+
+  <h3 id="facturas-pruebas">Testmodus und Wechsel in die Produktion</h3>
+  <span class="ruta">Verwaltung → Rechnungen und VeriFactu → Modus der Rechnungsstellung</span>
+
+  <p>
+    Die Rechnungsstellung hat zwei Modi, und jedes Zentrum beginnt im <strong>Testmodus</strong>. Er dient dazu, sie in Ruhe
+    auszuprobieren, bevor echt abgerechnet wird: kassieren, zurückerstatten, eine vollständige Rechnung ausstellen, das Buch ansehen und das
+    Excel herunterladen, ohne Angst, etwas kaputt zu machen.
+  </p>
+
+  <ul>
+    <li>Im Testmodus trägt jede Rechnung oben, in Rot, <em>FACTURA DE PRUEBA · SIN VALIDEZ FISCAL (Testrechnung, steuerlich ungültig)</em>. Sie gilt weder
+      für das Finanzamt noch für den Kunden.</li>
+    <li>Sie werden wie echte nummeriert, aber diese Nummerierung ist vorläufig.</li>
+    <li>Im Rechnungsbuch tragen sie das Etikett <em>Test</em>, und das Excel sagt es im Namen seiner
+      Blätter.</li>
+    <li>Solange das Zentrum im Testmodus ist, steht oben auf dem Bildschirm ein Hinweis für die Zuständigen der Rechnungsstellung.</li>
+    <li>Ist die Übermittlung eingeschaltet, gehen die Datensätze an die Testumgebung der AEAT, nie an die echte.</li>
+  </ul>
+
+  <p>
+    Wenn das Zentrum echt abrechnen will, mit der MwSt. des Katalogs von der Steuerberatung geprüft, drückt man
+    <strong>In die Produktion wechseln…</strong>. Der Bildschirm erklärt, was geschehen wird, und verlangt, zu bestätigen, dass man es versteht, und einzugeben:
+    <code>PRODUCCIÓN</code>. Beim Bestätigen:
+  </p>
+
+  <ol>
+    <li>Alle Testrechnungen werden endgültig gelöscht, mit ihren Datensätzen. Verkäufe und Zahlungen bleiben
+      unberührt.</li>
+    <li>Alle Serien aller Niederlassungen beginnen neu: die nächste Rechnung ist die Nummer 1.</li>
+    <li>Ab dann ist jede Rechnung echt und kann weder gelöscht noch geändert, nur korrigiert werden.</li>
+  </ol>
+
+  <div class="ojo">
+    <p><strong>Der Wechsel in die Produktion lässt sich nicht rückgängig machen.</strong> Es gibt keinen Weg zurück in den Testmodus: der Bildschirm
+      zeigt, seit wann das Zentrum in Produktion ist und wer den Schritt getan hat. Es braucht eine eigene Berechtigung,
+      <em>Pasar la facturación a producción (Rechnungsstellung in die Produktion überführen)</em>, die ab Werk nur der Administrator hat.</p>
+  </div>
 
   <p>
     Das <strong>Übermittlung an die AEAT</strong> ist ein zweiter Schalter, ebenfalls aus. Um ihn einzuschalten, muss das Zentrum

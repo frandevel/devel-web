@@ -172,5 +172,18 @@
   "t94535f33": "Invoice book",
   "ta87a0117": "The",
   "t7266c8c9": "is turned on separately, once the centre authorises us before the tax agency and the certificate is installed. Until then, the records wait in a queue without being lost.",
-  "t2221f57b": "sending to the AEAT"
+  "t2221f57b": "sending to the AEAT",
+  "tf4ec7cdf": "2026.9.302-dabbec3",
+  "tefd3c915": "Invoicing: test mode and moving to production",
+  "t9a4d1322": "Invoicing always starts in",
+  "t80b5e00d": ": invoices carry «FACTURA DE PRUEBA · SIN VALIDEZ FISCAL» at the top, they are labelled «Test» in the book and, if sent, they go to the AEAT test environment.",
+  "t93bf9b15": "test mode",
+  "t1e902a9b": "When the centre is going to invoice for real,",
+  "tbd66bd47": "deletes the test invoices and every series starts again at number 1.",
+  "tb9fdfa95": "Move to production",
+  "t865acdfb": "That step",
+  "t376dcd47": ": the screen explains it, asks you to tick that you understand and to type PRODUCCIÓN, and needs the new permission «Pasar la facturación a producción», which out of the box only the administrator has.",
+  "tccb01b99": "cannot be undone",
+  "t6f6c17e6": "The Invoicing and VeriFactu screen explains what each block does, and while the centre is in test mode there is a notice at the top for whoever handles invoicing.",
+  "t74e38fca": "28 September 2026"
 }

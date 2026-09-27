@@ -606,6 +606,7 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-09-28">28 de septiembre de 2026</a></li>
     <li><a href="#2026-09-27">27 de septiembre de 2026</a></li>
     <li><a href="#2026-09-26">26 de septiembre de 2026</a></li>
     <li><a href="#2026-09-25">25 de septiembre de 2026</a></li>
@@ -620,10 +621,25 @@ footer{
   izquierda, en «Versión»: si coincide con el de la tarjeta, ya tiene todo lo que cuenta.
 </p>
 
+<section id="2026-09-28" class="version">
+  <div class="version__cabecera">
+    <h2>28 de septiembre de 2026</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">2026.9.302-dabbec3</span></p>
+
+  <h3>Facturación: modo pruebas y paso a producción</h3>
+  <ul>
+    <li>La facturación empieza siempre en <strong>modo pruebas</strong>: las facturas llevan arriba «FACTURA DE PRUEBA · SIN VALIDEZ FISCAL», en el libro salen marcadas como «Prueba» y, si se remiten, van al entorno de pruebas de la AEAT.</li>
+    <li>Cuando el centro va a facturar de verdad, <strong>Pasar a producción</strong> borra las facturas de prueba y todas las series vuelven a empezar en el número 1.</li>
+    <li>Ese paso <strong>no tiene vuelta atrás</strong>: la pantalla lo explica, pide marcar que se entiende y escribir PRODUCCIÓN, y necesita el permiso nuevo «Pasar la facturación a producción», que de fábrica solo tiene el administrador.</li>
+    <li>La pantalla de Facturación y VeriFactu explica en cada bloque qué hace, y mientras el centro esté en pruebas hay un aviso arriba para quien lleva la facturación.</li>
+  </ul>
+</section>
+
 <section id="2026-09-27" class="version">
   <div class="version__cabecera">
     <h2>27 de septiembre de 2026</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">2026.9.301-f95fc0e</span></p>
 

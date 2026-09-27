@@ -606,6 +606,7 @@ footer{
   <h2>What's new in Turnera</h2>
   <p>Latest first</p>
   <ol>
+    <li><a href="#2026-09-28">28 September 2026</a></li>
     <li><a href="#2026-09-27">27 September 2026</a></li>
     <li><a href="#2026-09-26">26 September 2026</a></li>
     <li><a href="#2026-09-25">25 September 2026</a></li>
@@ -619,10 +620,25 @@ footer{
   left, under «Version»: if it matches the one on the card, you already have everything it describes.
 </p>
 
+<section id="2026-09-28" class="version">
+  <div class="version__cabecera">
+    <h2>28 September 2026</h2>
+    <span class="version__sello">Latest release</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">2026.9.302-dabbec3</span></p>
+
+  <h3>Invoicing: test mode and moving to production</h3>
+  <ul>
+    <li>Invoicing always starts in <strong>test mode</strong>: invoices carry «FACTURA DE PRUEBA · SIN VALIDEZ FISCAL» at the top, they are labelled «Test» in the book and, if sent, they go to the AEAT test environment.</li>
+    <li>When the centre is going to invoice for real, <strong>Move to production</strong> deletes the test invoices and every series starts again at number 1.</li>
+    <li>That step <strong>cannot be undone</strong>: the screen explains it, asks you to tick that you understand and to type PRODUCCIÓN, and needs the new permission «Pasar la facturación a producción», which out of the box only the administrator has.</li>
+    <li>The Invoicing and VeriFactu screen explains what each block does, and while the centre is in test mode there is a notice at the top for whoever handles invoicing.</li>
+  </ul>
+</section>
+
 <section id="2026-09-27" class="version">
   <div class="version__cabecera">
     <h2>27 September 2026</h2>
-    <span class="version__sello">Latest release</span>
   </div>
   <p class="version__numero">Version <span translate="no">2026.9.301-f95fc0e</span></p>
 

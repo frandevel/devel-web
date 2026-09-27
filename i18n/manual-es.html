@@ -605,6 +605,7 @@ footer{
     <li><a href="#devoluciones" class="sub">Devolver un ticket</a></li>
     <li><a href="#tarjetas-regalo" class="sub">Tarjetas regalo</a></li>
     <li><a href="#facturas" class="sub">Facturas y VeriFactu</a></li>
+    <li><a href="#facturas-pruebas" class="sub">Modo pruebas y producción</a></li>
     <li><a href="#bonos">5. Bonos</a></li>
     <li><a href="#aparatos">6. Aparatología</a></li>
     <li><a href="#aparatos-alta" class="sub">Dar de alta un aparato</a></li>
@@ -1522,8 +1523,8 @@ footer{
   </p>
 
   <div class="ojo">
-    <p><strong>Una factura emitida no se borra ni se cambia.</strong> Si algo está mal, se devuelve y sale su
-      rectificativa. Y el IVA de cada servicio y producto tiene que estar decidido en el catálogo: sin él, el cobro no
+    <p><strong>En producción, una factura emitida no se borra ni se cambia.</strong> Si algo está mal, se devuelve y
+      sale su rectificativa. Y el IVA de cada servicio y producto tiene que estar decidido en el catálogo: sin él, el cobro no
       se puede hacer y Turnera dice qué falta.</p>
   </div>
 
@@ -1546,6 +1547,44 @@ footer{
     cómo va cada una en la Agencia Tributaria. De ahí se descarga el libro en Excel con el asiento resumen diario,
     que es lo que pide la asesoría cada trimestre.
   </p>
+
+  <h3 id="facturas-pruebas">Modo pruebas y paso a producción</h3>
+  <span class="ruta">Administración → Facturación y VeriFactu → Modo de la facturación</span>
+
+  <p>
+    La facturación tiene dos modos, y todo centro empieza en <strong>modo pruebas</strong>. Es para probarla con
+    calma antes de facturar de verdad: cobrar, devolver, sacar una factura completa, mirar el libro y descargar el
+    Excel, sin miedo a estropear nada.
+  </p>
+
+  <ul>
+    <li>En modo pruebas, cada factura lleva arriba, en rojo, <em>FACTURA DE PRUEBA · SIN VALIDEZ FISCAL</em>. No vale
+      para Hacienda ni para el cliente.</li>
+    <li>Se numeran como las de verdad, pero esa numeración es provisional.</li>
+    <li>En el libro de facturas salen con la etiqueta <em>Prueba</em>, y el Excel lo dice en el nombre de sus
+      hojas.</li>
+    <li>Arriba de la pantalla hay un aviso mientras el centro esté en pruebas, para quien lleva la facturación.</li>
+    <li>Si se activa la remisión, los registros van al entorno de pruebas de la AEAT, nunca al real.</li>
+  </ul>
+
+  <p>
+    Cuando el centro vaya a facturar de verdad, con el IVA del catálogo revisado con su asesoría, se pulsa
+    <strong>Pasar a producción…</strong>. La pantalla explica qué va a pasar y pide marcar que se entiende y escribir
+    <code>PRODUCCIÓN</code>. Al confirmar:
+  </p>
+
+  <ol>
+    <li>Se borran para siempre todas las facturas de prueba, con sus registros. Las ventas y los cobros no se
+      tocan.</li>
+    <li>Todas las series de todas las delegaciones vuelven a empezar: la siguiente factura es la número 1.</li>
+    <li>Desde ese momento cada factura es real y no se puede borrar ni cambiar, solo rectificar.</li>
+  </ol>
+
+  <div class="ojo">
+    <p><strong>Pasar a producción no tiene vuelta atrás.</strong> No hay forma de volver al modo pruebas: la pantalla
+      dice desde cuándo está el centro en producción y quién dio el paso. Hace falta un permiso propio,
+      <em>Pasar la facturación a producción</em>, que de fábrica solo tiene el administrador.</p>
+  </div>
 
   <p>
     La <strong>remisión a la AEAT</strong> es un segundo interruptor, también apagado. Para encenderlo, el centro

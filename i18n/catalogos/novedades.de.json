@@ -172,5 +172,18 @@
   "t94535f33": "Rechnungsbuch",
   "ta87a0117": "Die",
   "t7266c8c9": "wird separat eingeschaltet, sobald das Zentrum uns bei der Steuerbehörde bevollmächtigt und das Zertifikat installiert ist. Bis dahin warten die Datensätze in einer Warteschlange, ohne verloren zu gehen.",
-  "t2221f57b": "Übermittlung an die AEAT"
+  "t2221f57b": "Übermittlung an die AEAT",
+  "tf4ec7cdf": "2026.9.302-dabbec3",
+  "tefd3c915": "Rechnungen: Testmodus und Wechsel in die Produktion",
+  "t9a4d1322": "Die Rechnungsstellung beginnt immer im",
+  "t80b5e00d": ": die Rechnungen tragen oben «FACTURA DE PRUEBA · SIN VALIDEZ FISCAL», im Buch sind sie als «Test» markiert und gehen, falls übermittelt, an die Testumgebung der AEAT.",
+  "t93bf9b15": "Testmodus",
+  "t1e902a9b": "Wenn das Zentrum echt abrechnen will, löscht",
+  "tbd66bd47": "die Testrechnungen, und alle Serien beginnen wieder bei Nummer 1.",
+  "tb9fdfa95": "In die Produktion wechseln",
+  "t865acdfb": "Dieser Schritt",
+  "t376dcd47": ": der Bildschirm erklärt ihn, verlangt eine Bestätigung und die Eingabe von PRODUCCIÓN, und braucht die neue Berechtigung «Pasar la facturación a producción», die ab Werk nur der Administrator hat.",
+  "tccb01b99": "lässt sich nicht rückgängig machen",
+  "t6f6c17e6": "Die Seite Rechnungen und VeriFactu erklärt in jedem Block, was er tut, und solange das Zentrum im Testmodus ist, steht oben ein Hinweis für die Zuständigen.",
+  "t74e38fca": "28. September 2026"
 }

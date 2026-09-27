@@ -606,6 +606,7 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-09-28">28. September 2026</a></li>
     <li><a href="#2026-09-27">27. September 2026</a></li>
     <li><a href="#2026-09-26">26. September 2026</a></li>
     <li><a href="#2026-09-25">25. September 2026</a></li>
@@ -619,10 +620,25 @@ footer{
   «Version»: Stimmt sie mit der auf der Karte überein, haben Sie bereits alles, was dort beschrieben ist.
 </p>
 
+<section id="2026-09-28" class="version">
+  <div class="version__cabecera">
+    <h2>28. September 2026</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">2026.9.302-dabbec3</span></p>
+
+  <h3>Rechnungen: Testmodus und Wechsel in die Produktion</h3>
+  <ul>
+    <li>Die Rechnungsstellung beginnt immer im <strong>Testmodus</strong>: die Rechnungen tragen oben «FACTURA DE PRUEBA · SIN VALIDEZ FISCAL», im Buch sind sie als «Test» markiert und gehen, falls übermittelt, an die Testumgebung der AEAT.</li>
+    <li>Wenn das Zentrum echt abrechnen will, löscht <strong>In die Produktion wechseln</strong> die Testrechnungen, und alle Serien beginnen wieder bei Nummer 1.</li>
+    <li>Dieser Schritt <strong>lässt sich nicht rückgängig machen</strong>: der Bildschirm erklärt ihn, verlangt eine Bestätigung und die Eingabe von PRODUCCIÓN, und braucht die neue Berechtigung «Pasar la facturación a producción», die ab Werk nur der Administrator hat.</li>
+    <li>Die Seite Rechnungen und VeriFactu erklärt in jedem Block, was er tut, und solange das Zentrum im Testmodus ist, steht oben ein Hinweis für die Zuständigen.</li>
+  </ul>
+</section>
+
 <section id="2026-09-27" class="version">
   <div class="version__cabecera">
     <h2>27. September 2026</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">2026.9.301-f95fc0e</span></p>
 
