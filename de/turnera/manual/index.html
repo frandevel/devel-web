@@ -607,6 +607,7 @@ footer{
     <li><a href="#cobrar-deudas" class="sub">Offene Zahlungen</a></li>
     <li><a href="#devoluciones" class="sub">Einen Beleg erstatten</a></li>
     <li><a href="#tarjetas-regalo" class="sub">Geschenkkarten</a></li>
+    <li><a href="#facturas" class="sub">Rechnungen und VeriFactu</a></li>
     <li><a href="#bonos">5. Wertkarten</a></li>
     <li><a href="#aparatos">6. Geräte</a></li>
     <li><a href="#aparatos-alta" class="sub">Ein Gerät anlegen</a></li>
@@ -1336,6 +1337,56 @@ footer{
 
   <p>
     Wird etwas erstattet, das mit einer Geschenkkarte bezahlt wurde, geht das Geld auf die Karte zurück. Und der Verkauf einer Karte kann aus dem Verlauf der Käuferin erstattet werden, solange sie unbenutzt ist: Dann verliert sie ihre Gültigkeit. Karten ansehen und verkaufen sind zwei Berechtigungen; ab Werk haben sie Empfang und Leitung.
+  </p>
+
+  <h3 id="facturas">Rechnungen und VeriFactu</h3>
+  <span class="ruta">Verwaltung → Rechnungen und VeriFactu</span>
+
+  <p>
+    Turnera kann jeden Verkauf so in Rechnung stellen, wie es VeriFactu verlangt. <strong>Es ist ab Werk ausgeschaltet</strong>: solange es nicht eingeschaltet ist,
+    wird kassiert wie immer, und der Beleg trägt keine Rechnungsnummer. Einschalten kann es, wer die Berechtigung hat
+    <em>Rechnungen und VeriFactu</em>, die ab Werk nur der Administrator hat, und vorher müssen Steuernummer und Firmenname des Zentrums eingetragen sein in <em>Einstellungen</em>.
+  </p>
+
+  <p>
+    Mit eingeschalteter Rechnungsstellung erhält jeder bezahlte Verkauf seine <strong>vereinfachte Rechnung</strong>, also den
+    gewohnten Beleg mit Nummer, MwSt.-Aufschlüsselung und einem QR-Code oben. Eine Schuld wird beim Begleichen in Rechnung gestellt. Eine
+    Rückerstattung erzeugt eine <strong>Korrekturrechnung</strong>, negativ, die angibt, welche Rechnung sie korrigiert. Mit einer
+    Mehrfachkarte bezahlte Sitzungen werden nicht in Rechnung gestellt (die Karte wurde beim Verkauf berechnet), ebenso wenig der Verkauf einer Geschenkkarte (berechnet
+    wird, was damit gekauft wird).
+  </p>
+
+  <div class="ojo">
+    <p><strong>Eine ausgestellte Rechnung wird nie gelöscht oder geändert.</strong> Ist etwas falsch, wird zurückerstattet, und die
+      Korrekturrechnung wird ausgestellt. Und die MwSt. jeder Leistung und jedes Produkts muss im Katalog festgelegt sein: ohne sie kann
+      nicht kassiert werden, und Turnera sagt, was fehlt.</p>
+  </div>
+
+  <p>
+    Jede Niederlassung nummeriert in drei Serien: vereinfachte, vollständige und Korrekturrechnungen. Die Nummer besteht aus Präfix,
+    Jahr und einer Zählung, die jedes Jahr neu beginnt, etwa <code>S1-2027/000123</code>. Das Präfix wählt das Zentrum auf
+    derselben Seite; solange die Serie keine Rechnungen hat, kann es geändert werden, danach eröffnet eine Änderung eine neue
+    Serie.
+  </p>
+
+  <p>
+    Möchte der Kunde eine <strong>vollständige Rechnung</strong> mit seiner Steuernummer, geht das aus seinem Verlauf, mit der Schaltfläche
+    <em>Vollständige Rechnung</em> des Belegs: Steuernummer, Name und Anschrift eintragen, und es wird eine Rechnung ausgestellt, die
+    den Beleg ersetzt. Dafür braucht es die Berechtigung <em>Hacer factura completa (vollständige Rechnung ausstellen)</em>, die ab Werk Empfang und
+    Leitung haben.
+  </p>
+
+  <p>
+    Alle Rechnungen stehen unter <em>Berichte → Rechnungsbuch</em> (Berechtigung <em>Libro de facturas (Rechnungsbuch)</em>), mit
+    ihrem Stand bei der spanischen Steuerbehörde. Von dort wird das Buch als Excel mit der täglichen Sammelbuchung heruntergeladen,
+    die die Steuerberatung jedes Quartal verlangt.
+  </p>
+
+  <p>
+    Das <strong>Übermittlung an die AEAT</strong> ist ein zweiter Schalter, ebenfalls aus. Um ihn einzuschalten, muss das Zentrum
+    Turnera bei der Steuerbehörde bevollmächtigen und der Support das Zertifikat installieren; bis dahin werden die
+    Rechnungen trotzdem ausgestellt, und ihre Datensätze warten in einer Warteschlange, ohne verloren zu gehen. Lehnt die AEAT einen ab oder
+    bleiben sie hängen, erscheint oben auf dem Bildschirm ein Hinweis für die Zuständigen, und unser Support wird benachrichtigt.
   </p>
 </section>
 

@@ -607,6 +607,7 @@ footer{
     <li><a href="#cobrar-deudas" class="sub">Unpaid visits</a></li>
     <li><a href="#devoluciones" class="sub">Refunding a ticket</a></li>
     <li><a href="#tarjetas-regalo" class="sub">Gift cards</a></li>
+    <li><a href="#facturas" class="sub">Invoices and VeriFactu</a></li>
     <li><a href="#bonos">5. Vouchers</a></li>
     <li><a href="#aparatos">6. Equipment</a></li>
     <li><a href="#aparatos-alta" class="sub">Adding a device</a></li>
@@ -1336,6 +1337,56 @@ footer{
 
   <p>
     If something paid with a gift card is refunded, the money goes back to the card. And the sale of a card can be refunded from the buyer's history while it is untouched: it then stops being valid. Seeing the cards and selling them are two permissions; out of the box reception and management have them.
+  </p>
+
+  <h3 id="facturas">Invoices and VeriFactu</h3>
+  <span class="ruta">Administration → Invoicing and VeriFactu</span>
+
+  <p>
+    Turnera can invoice every sale the way VeriFactu requires. <strong>It comes switched off</strong>: until it is turned on,
+    charging works as always and the ticket carries no invoice number. It is turned on by whoever holds the permission
+    <em>Invoicing and VeriFactu</em>, which out of the box only the administrator has, and the centre's tax ID and company name must first be in <em>Preferences</em>.
+  </p>
+
+  <p>
+    With invoicing on, every paid sale comes with its <strong>simplified invoice</strong>, which is the
+    usual ticket with a number, the VAT breakdown and a QR code at the top. A debt is invoiced when it is settled. A
+    refund produces a <strong>corrective invoice</strong>, in negative, stating which invoice it corrects. Sessions
+    paid with a package are not invoiced (the package was invoiced when sold), nor is the sale of a gift card (what is
+    bought with it is invoiced).
+  </p>
+
+  <div class="ojo">
+    <p><strong>An issued invoice is never deleted or changed.</strong> If something is wrong, it is refunded and its
+      corrective invoice is issued. And the VAT of every service and product must be decided in the catalogue: without it,
+      the sale cannot be charged and Turnera says what is missing.</p>
+  </div>
+
+  <p>
+    Each delegation numbers in three series: simplified, full and corrective. The number is the prefix, the
+    year and a counter that starts again every year, such as <code>S1-2027/000123</code>. The centre chooses the prefix on
+    the same screen; while the series has no invoices it can be changed, and after that changing it opens a new
+    series.
+  </p>
+
+  <p>
+    If the customer asks for a <strong>full invoice</strong> with their tax ID, it is done from their history, with the
+    <em>Full invoice</em> button of the ticket: enter their tax ID, name and address, and an invoice is issued that
+    replaces the ticket. It needs the permission <em>Hacer factura completa (issue a full invoice)</em>, which out of the box front desk and
+    management have.
+  </p>
+
+  <p>
+    Every invoice is in <em>Reports → Invoice book</em> (permission <em>Libro de facturas (invoice book)</em>), with
+    how each one stands at the Spanish tax agency. From there the book is downloaded in Excel with the daily summary
+    entry, which is what the accountant asks for every quarter.
+  </p>
+
+  <p>
+    The <strong>sending to the AEAT</strong> is a second switch, also off. To turn it on, the centre
+    has to authorise Turnera before the tax agency and support has to install the certificate; until then
+    invoices are issued all the same and their records wait in a queue, without being lost. If the AEAT rejects any or
+    they get stuck, a warning appears at the top of the screen for whoever handles invoicing, and it reaches our support.
   </p>
 </section>
 

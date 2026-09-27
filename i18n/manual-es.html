@@ -604,6 +604,7 @@ footer{
     <li><a href="#cobrar-deudas" class="sub">Cobros pendientes</a></li>
     <li><a href="#devoluciones" class="sub">Devolver un ticket</a></li>
     <li><a href="#tarjetas-regalo" class="sub">Tarjetas regalo</a></li>
+    <li><a href="#facturas" class="sub">Facturas y VeriFactu</a></li>
     <li><a href="#bonos">5. Bonos</a></li>
     <li><a href="#aparatos">6. Aparatología</a></li>
     <li><a href="#aparatos-alta" class="sub">Dar de alta un aparato</a></li>
@@ -1500,6 +1501,57 @@ footer{
     Si se devuelve algo que se pagó con una tarjeta regalo, el dinero vuelve a la tarjeta. Y la venta de una
     tarjeta se puede devolver desde el historial de quien la compró mientras esté sin estrenar: entonces deja de
     valer. Ver las tarjetas y venderlas son dos permisos; de fábrica los tienen recepción y dirección.
+  </p>
+
+  <h3 id="facturas">Facturas y VeriFactu</h3>
+  <span class="ruta">Administración → Facturación y VeriFactu</span>
+
+  <p>
+    Turnera puede facturar cada venta como pide VeriFactu. <strong>Viene apagado</strong>: mientras no se active,
+    se cobra como siempre y el ticket no lleva número de factura. Lo activa quien tenga el permiso
+    <em>Facturación y VeriFactu</em>, que de fábrica solo trae el administrador, y antes hacen falta el NIF y la
+    razón social del centro en <em>Preferencias</em>.
+  </p>
+
+  <p>
+    Con la facturación activada, cada venta cobrada sale con su <strong>factura simplificada</strong>, que es el
+    ticket de siempre con número, desglose del IVA y un código QR arriba. Una deuda se factura cuando se salda. Una
+    devolución saca una <strong>factura rectificativa</strong>, en negativo, que dice qué factura rectifica. Las
+    sesiones que paga un bono no se facturan (el bono se facturó al venderlo), ni la venta de una tarjeta regalo (se
+    factura lo que se compre con ella).
+  </p>
+
+  <div class="ojo">
+    <p><strong>Una factura emitida no se borra ni se cambia.</strong> Si algo está mal, se devuelve y sale su
+      rectificativa. Y el IVA de cada servicio y producto tiene que estar decidido en el catálogo: sin él, el cobro no
+      se puede hacer y Turnera dice qué falta.</p>
+  </div>
+
+  <p>
+    Cada delegación numera en tres series: simplificadas, completas y rectificativas. El número es el prefijo, el
+    año y un correlativo que empieza cada año, como <code>S1-2027/000123</code>. El prefijo lo elige el centro en
+    la misma pantalla; mientras la serie no tenga facturas se puede cambiar, y después cambiarlo abre una serie
+    nueva.
+  </p>
+
+  <p>
+    Si el cliente pide <strong>factura completa</strong> con su NIF, se hace desde su historial, con el botón
+    <em>Factura completa</em> del ticket: se escriben su NIF, su nombre y su domicilio, y sale una factura que
+    sustituye al ticket. Hace falta el permiso <em>Hacer factura completa</em>, que de fábrica tienen recepción y
+    dirección.
+  </p>
+
+  <p>
+    Todas las facturas están en <em>Informes → Libro de facturas</em> (permiso <em>Libro de facturas</em>), con
+    cómo va cada una en la Agencia Tributaria. De ahí se descarga el libro en Excel con el asiento resumen diario,
+    que es lo que pide la asesoría cada trimestre.
+  </p>
+
+  <p>
+    La <strong>remisión a la AEAT</strong> es un segundo interruptor, también apagado. Para encenderlo, el centro
+    tiene que apoderar a Turnera ante la Agencia Tributaria y soporte instalar el certificado; hasta entonces las
+    facturas se emiten igual y sus registros esperan en cola, sin perderse. Si la AEAT rechaza alguno o se quedan
+    atascados, sale un aviso arriba de la pantalla para quien lleva la facturación, y nos llega a soporte.
   </p>
 </section>
 
