@@ -136,5 +136,14 @@
   "t103866a3": "customers and suppliers",
   "t95d58a71": "The lists of customers, suppliers, services, products and packages have the tickbox",
   "t88e51bdf": "to see what is deactivated.",
-  "te20bd204": "«Include inactive»"
+  "te20bd204": "«Include inactive»",
+  "t5ae08936": "2026.9.299-80aa1d0",
+  "tabc0f004": "On a",
+  "t10d8ba71": "no appointments can be booked or moved there any more, except with the «Citar en días pasados» (book on past days) permission, which out of the box only the administrator has. You can still go and look at it, charge and mark who did not come, and today you can book at any time.",
+  "t09a57ae8": "past day",
+  "tf31d5db8": "Appointments that",
+  "t2e9ce2ea": "stand out from afar: dashed border and the tag",
+  "t8b9c890c": "if the customer booked them on the portal, or the name of the program if they came in through an integration.",
+  "t8dc0bd67": "come in from outside",
+  "tf1e29c6d": "WEB"
 }
