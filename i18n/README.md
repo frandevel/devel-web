@@ -45,6 +45,13 @@ cambios agrupados por lo que gana quien usa Turnera, contados para el mostrador 
 
 1. La nueva va **arriba del todo**, dentro de `<div class="contenido">`, con `id` igual a su fecha
    (`2026-10-02`). Copia la estructura de la anterior: `version__cabecera` con el `<h2>` de la fecha.
+   Dentro, los cambios van en **tres grupos, en este orden**, cada uno con su icono (copia el `<h3>` de una
+   ficha anterior); el que no tenga nada, no se pone:
+   - `<div class="grupo grupo--nuevo">` · **Nuevas características**: lo que antes no existía.
+   - `<div class="grupo grupo--mejora">` · **Mejoras**: lo que ya había y ahora funciona mejor.
+   - `<div class="grupo grupo--arreglo">` · **Errores corregidos**: lo que fallaba. Una sola lista, sin
+     subtítulos, y sin empezar por «Arreglado:», que ya lo dice el grupo.
+   En los dos primeros, cada tema lleva su `<h4>` y su lista.
 2. **El sello `Última versión` se mueve** a la nueva: se quita el `<span class="version__sello">` de la
    anterior. El filo de color lo pone el CSS a la primera ficha, solo.
 3. Añade la fecha al índice de la izquierda, también arriba.

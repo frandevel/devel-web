@@ -581,6 +581,19 @@ footer{
 .version__numero{margin:.5rem 0 0;font-size:.9rem;color:var(--text-dim)}
 .version__numero span{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-weight:600;color:var(--text)}
 .contenido section.version h3{font-size:1.02rem;margin:1.2rem 0 .4rem}
+.grupo--nuevo{--g:#0E6E62;--g-suave:#E3F2EF}
+.grupo--mejora{--g:#006699;--g-suave:#E2EFF7}
+.grupo--arreglo{--g:#B5532A;--g-suave:#FBEBE3}
+.grupo{margin-top:1.4rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--g)}
+.contenido section.version .grupo__titulo{display:flex;align-items:center;gap:.6rem;margin:.2rem 0 .3rem;
+  font-size:1.08rem;color:var(--g)}
+.grupo__icono{display:inline-flex;align-items:center;justify-content:center;flex:none;width:2rem;height:2rem;
+  border-radius:10px;background:var(--g-suave);color:var(--g)}
+.contenido .grupo h4{font-size:.95rem;margin:1rem 0 .3rem;color:var(--text)}
+.contenido .leyenda{list-style:none;display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;padding:0;margin:1rem 0 1.6rem}
+.leyenda li{display:flex;align-items:center;gap:.55rem;margin:0;font-size:.92rem;color:var(--text-dim)}
+.leyenda strong{color:var(--g)}
+.leyenda .grupo__icono{width:1.8rem;height:1.8rem}
 .contenido section.version ul{margin-bottom:.4rem}
 @media print{.contenido section.version{box-shadow:none}}
 </style>
@@ -619,6 +632,11 @@ footer{
   Jede Karte nennt die Versionsnummer, die Turnera seit diesem Tag hat. Ihre steht unten im linken Menü unter
   «Version»: Stimmt sie mit der auf der Karte überein, haben Sie bereits alles, was dort beschrieben ist.
 </p>
+<ul class="leyenda" aria-label="Arten von Änderungen">
+  <li class="grupo--nuevo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span><span><strong>Neue Funktionen</strong>: was es vorher nicht gab.</span></li>
+  <li class="grupo--mejora"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span><span><strong>Verbesserungen</strong>: was es schon gab und jetzt besser funktioniert.</span></li>
+  <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
+</ul>
 
 <section id="2026-09-28" class="version">
   <div class="version__cabecera">
@@ -627,19 +645,25 @@ footer{
   </div>
   <p class="version__numero">Version <span translate="no">2026.9.303-3c9bead</span></p>
 
-  <h3>Rechnungen: Testmodus und Wechsel in die Produktion</h3>
-  <ul>
-    <li>Die Rechnungsstellung beginnt immer im <strong>Testmodus</strong>: die Rechnungen tragen oben «FACTURA DE PRUEBA · SIN VALIDEZ FISCAL», im Buch sind sie als «Test» markiert und gehen, falls übermittelt, an die Testumgebung der AEAT.</li>
-    <li>Wenn das Zentrum echt abrechnen will, löscht <strong>In die Produktion wechseln</strong> die Testrechnungen, und alle Serien beginnen wieder bei Nummer 1.</li>
-    <li>Dieser Schritt <strong>lässt sich nicht rückgängig machen</strong>: der Bildschirm erklärt ihn, verlangt eine Bestätigung und die Eingabe von PRODUCCIÓN, und braucht die neue Berechtigung «Pasar la facturación a producción», die ab Werk nur der Administrator hat.</li>
-    <li>Die Seite Rechnungen und VeriFactu erklärt in jedem Block, was er tut, und solange das Zentrum im Testmodus ist, steht oben ein Hinweis für die Zuständigen.</li>
-  </ul>
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Rechnungen: Testmodus und Wechsel in die Produktion</h4>
+    <ul>
+      <li>Die Rechnungsstellung beginnt immer im <strong>Testmodus</strong>: die Rechnungen tragen oben «FACTURA DE PRUEBA · SIN VALIDEZ FISCAL», im Buch sind sie als «Test» markiert und gehen, falls übermittelt, an die Testumgebung der AEAT.</li>
+      <li>Wenn das Zentrum echt abrechnen will, löscht <strong>In die Produktion wechseln</strong> die Testrechnungen, und alle Serien beginnen wieder bei Nummer 1.</li>
+      <li>Dieser Schritt <strong>lässt sich nicht rückgängig machen</strong>: der Bildschirm erklärt ihn, verlangt eine Bestätigung und die Eingabe von PRODUCCIÓN, und braucht die neue Berechtigung «Pasar la facturación a producción», die ab Werk nur der Administrator hat.</li>
+      <li>Die Seite Rechnungen und VeriFactu erklärt in jedem Block, was er tut, und solange das Zentrum im Testmodus ist, steht oben ein Hinweis für die Zuständigen.</li>
+    </ul>
+  </div>
 
-  <h3>Übermittlung an die AEAT</h3>
-  <ul>
-    <li>Die Seite Rechnungen und VeriFactu erklärt, <strong>was übermitteln heißt</strong>: Turnera schickt der Steuerbehörde von selbst eine Kopie der Daten jeder Rechnung, sobald sie ausgestellt ist, und sagt, was übermittelt wird und was nicht.</li>
-    <li>Zum Einschalten der Übermittlung listet sie die <strong>zwei nötigen Dinge</strong> auf, wer sie erledigt und wie sie stehen: die Vollmacht des Zentrums für DEVEL bei der AEAT, einmalig, und die Verbindung von Turnera mit der AEAT, die DEVEL vorbereitet. <strong>Es muss kein Zertifikat hochgeladen werden.</strong></li>
-  </ul>
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Übermittlung an die AEAT</h4>
+    <ul>
+      <li>Die Seite Rechnungen und VeriFactu erklärt, <strong>was übermitteln heißt</strong>: Turnera schickt der Steuerbehörde von selbst eine Kopie der Daten jeder Rechnung, sobald sie ausgestellt ist, und sagt, was übermittelt wird und was nicht.</li>
+      <li>Zum Einschalten der Übermittlung listet sie die <strong>zwei nötigen Dinge</strong> auf, wer sie erledigt und wie sie stehen: die Vollmacht des Zentrums für DEVEL bei der AEAT, einmalig, und die Verbindung von Turnera mit der AEAT, die DEVEL vorbereitet. <strong>Es muss kein Zertifikat hochgeladen werden.</strong></li>
+    </ul>
+  </div>
 </section>
 
 <section id="2026-09-27" class="version">
@@ -648,35 +672,43 @@ footer{
   </div>
   <p class="version__numero">Version <span translate="no">2026.9.301-f95fc0e</span></p>
 
-  <h3>Krankengeschichte: die anatomische Karte</h3>
-  <ul>
-    <li>Jeder Fall hat eine <strong>Karte des ganzen Körpers</strong>, von vorne und von hinten, in vier Ebenen: Muskeln, Knochen, Haut (Mann) und Haut (Frau). Die Bilder sind neu, viel größer und detaillierter als bisher.</li>
-    <li>Wenn man <strong>mit der Maus darüberfährt</strong>, leuchtet jeder Muskel, jeder Knochen und jede Hautregion auf und zeigt Namen und Seite, immer die des Patienten. Ein Klick markiert sie, und daneben wird eingetragen, ob und wie stark sie schmerzt, von 0 bis 10.</li>
-    <li>Mit dem Mausrad oder der Lupe lässt sich <strong>bis zu sechsfach vergrößern</strong> um Hand, Fuß oder Gesicht genau zu markieren.</li>
-    <li>Die Zonen werden <strong>mit dem Fall gespeichert</strong>: beim Öffnen erscheinen sie in der Farbe ihres Schmerzes, und der PDF-Bericht führt sie mit Namen in der Sprache des Patienten auf.</li>
-    <li>Ältere Fälle mit einem Punkt auf dem Bild ihres Bereichs behalten ihn unverändert.</li>
-  </ul>
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Kalender, Kunden und Lieferanten</h4>
+    <ul>
+      <li>Ihre <strong>Kunden und Lieferanten</strong> lassen sich in ihrer Akte abmelden: Sie behalten ihre ganze Historie, erscheinen aber nicht mehr in der Suche, beim Terminieren und an der Kasse.</li>
+      <li>Die Listen der Kunden, Lieferanten, Leistungen, Produkte und Pakete haben das Kästchen <strong>„Auch inaktive“</strong> , um Abgemeldetes zu sehen.</li>
+      <li>Das <strong>Handbuch</strong> öffnet sich aus der Anwendung, in der gewählten Sprache: über <em>Handbuch</em>, unten im Menü neben der Version, und aus dem Meldefenster. Und es beginnt mit dem Wichtigsten: wie man Hilfe bekommt.</li>
+    </ul>
+    <h4>Rechnungen und VeriFactu</h4>
+    <ul>
+      <li>Turnera kann jetzt <strong>Rechnungen so ausstellen, wie es VeriFactu verlangt</strong>. Ab Werk ist es <strong>ausgeschaltet</strong>: eingeschaltet wird es unter Verwaltung → Rechnungen und VeriFactu, mit der neuen Berechtigung «Facturación y VeriFactu», die ab Werk nur der Administrator hat, und mit Steuernummer und Firmennamen des Zentrums in den Einstellungen.</li>
+      <li>Mit eingeschalteter Rechnungsstellung erhält jeder bezahlte Verkauf seine nummerierte <strong>vereinfachte Rechnung</strong> mit MwSt.-Aufschlüsselung und QR-Code, und jede Rückerstattung ihre <strong>Korrekturrechnung</strong>.</li>
+      <li>Jede Niederlassung wählt das <strong>Präfix ihrer Serien</strong>. Die Nummer besteht aus Präfix, Jahr und Zählung, etwa S1-2027/000123.</li>
+      <li>Im Verlauf des Kunden stellt die Schaltfläche <strong>Vollständige Rechnung</strong> den Beleg mit seiner Steuernummer und Anschrift neu aus. Dafür braucht es die Berechtigung «Hacer factura completa».</li>
+      <li>Unter Berichte zeigt das <strong>Rechnungsbuch</strong> den Stand jeder Rechnung bei der AEAT und lässt sich als Excel mit der täglichen Sammelbuchung herunterladen. Dafür braucht es die Berechtigung «Libro de facturas».</li>
+      <li>Die <strong>Übermittlung an die AEAT</strong> wird separat eingeschaltet, sobald das Zentrum uns bei der Steuerbehörde bevollmächtigt und das Zertifikat installiert ist. Bis dahin warten die Datensätze in einer Warteschlange, ohne verloren zu gehen.</li>
+    </ul>
+  </div>
 
-  <h3>Kalender, Kunden und Lieferanten</h3>
-  <ul>
-    <li>Ein Termin mit mehreren Leistungen <strong>zeigt sie alle auf einmal</strong>, ohne die Auswahl öffnen zu müssen.</li>
-    <li>Einen <strong>bereits abgerechneten Termin</strong> kann nur stornieren, wer die neue Berechtigung «Anular citas ya cobradas» (abgerechnete Termine stornieren) hat, die ab Werk nur der Administrator besitzt. Auch über das Portal kann der Kunde eine bereits bezahlte Buchung nicht stornieren.</li>
-    <li>Ihre <strong>Kunden und Lieferanten</strong> lassen sich in ihrer Akte abmelden: Sie behalten ihre ganze Historie, erscheinen aber nicht mehr in der Suche, beim Terminieren und an der Kasse.</li>
-    <li>Die Listen der Kunden, Lieferanten, Leistungen, Produkte und Pakete haben das Kästchen <strong>„Auch inaktive“</strong> , um Abgemeldetes zu sehen.</li>
-    <li>An einem <strong>vergangenen Tag</strong> lassen sich keine Termine mehr anlegen oder dorthin verschieben, außer mit der Berechtigung «Citar en días pasados» (an vergangenen Tagen buchen), die ab Werk nur der Administrator hat. Ansehen, abrechnen und markieren, wer nicht kam, geht weiterhin, und heute bucht man zu jeder Uhrzeit.</li>
-    <li>Das <strong>Handbuch</strong> öffnet sich aus der Anwendung, in der gewählten Sprache: über <em>Handbuch</em>, unten im Menü neben der Version, und aus dem Meldefenster. Und es beginnt mit dem Wichtigsten: wie man Hilfe bekommt.</li>
-    <li>Termine, die <strong>von außen kommen,</strong> erkennt man von weitem: gestrichelter Rand und das Etikett <em>WEB</em> , wenn der Kunde sie im Portal gebucht hat, oder der Name des Programms, wenn sie über eine Integration kamen.</li>
-  </ul>
-
-  <h3>Rechnungen und VeriFactu</h3>
-  <ul>
-    <li>Turnera kann jetzt <strong>Rechnungen so ausstellen, wie es VeriFactu verlangt</strong>. Ab Werk ist es <strong>ausgeschaltet</strong>: eingeschaltet wird es unter Verwaltung → Rechnungen und VeriFactu, mit der neuen Berechtigung «Facturación y VeriFactu», die ab Werk nur der Administrator hat, und mit Steuernummer und Firmennamen des Zentrums in den Einstellungen.</li>
-    <li>Mit eingeschalteter Rechnungsstellung erhält jeder bezahlte Verkauf seine nummerierte <strong>vereinfachte Rechnung</strong> mit MwSt.-Aufschlüsselung und QR-Code, und jede Rückerstattung ihre <strong>Korrekturrechnung</strong>.</li>
-    <li>Jede Niederlassung wählt das <strong>Präfix ihrer Serien</strong>. Die Nummer besteht aus Präfix, Jahr und Zählung, etwa S1-2027/000123.</li>
-    <li>Im Verlauf des Kunden stellt die Schaltfläche <strong>Vollständige Rechnung</strong> den Beleg mit seiner Steuernummer und Anschrift neu aus. Dafür braucht es die Berechtigung «Hacer factura completa».</li>
-    <li>Unter Berichte zeigt das <strong>Rechnungsbuch</strong> den Stand jeder Rechnung bei der AEAT und lässt sich als Excel mit der täglichen Sammelbuchung herunterladen. Dafür braucht es die Berechtigung «Libro de facturas».</li>
-    <li>Die <strong>Übermittlung an die AEAT</strong> wird separat eingeschaltet, sobald das Zentrum uns bei der Steuerbehörde bevollmächtigt und das Zertifikat installiert ist. Bis dahin warten die Datensätze in einer Warteschlange, ohne verloren zu gehen.</li>
-  </ul>
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Krankengeschichte: die anatomische Karte</h4>
+    <ul>
+      <li>Jeder Fall hat eine <strong>Karte des ganzen Körpers</strong>, von vorne und von hinten, in vier Ebenen: Muskeln, Knochen, Haut (Mann) und Haut (Frau). Die Bilder sind neu, viel größer und detaillierter als bisher.</li>
+      <li>Wenn man <strong>mit der Maus darüberfährt</strong>, leuchtet jeder Muskel, jeder Knochen und jede Hautregion auf und zeigt Namen und Seite, immer die des Patienten. Ein Klick markiert sie, und daneben wird eingetragen, ob und wie stark sie schmerzt, von 0 bis 10.</li>
+      <li>Mit dem Mausrad oder der Lupe lässt sich <strong>bis zu sechsfach vergrößern</strong> um Hand, Fuß oder Gesicht genau zu markieren.</li>
+      <li>Die Zonen werden <strong>mit dem Fall gespeichert</strong>: beim Öffnen erscheinen sie in der Farbe ihres Schmerzes, und der PDF-Bericht führt sie mit Namen in der Sprache des Patienten auf.</li>
+      <li>Ältere Fälle mit einem Punkt auf dem Bild ihres Bereichs behalten ihn unverändert.</li>
+    </ul>
+    <h4>Kalender, Kunden und Lieferanten</h4>
+    <ul>
+      <li>Ein Termin mit mehreren Leistungen <strong>zeigt sie alle auf einmal</strong>, ohne die Auswahl öffnen zu müssen.</li>
+      <li>Einen <strong>bereits abgerechneten Termin</strong> kann nur stornieren, wer die neue Berechtigung «Anular citas ya cobradas» (abgerechnete Termine stornieren) hat, die ab Werk nur der Administrator besitzt. Auch über das Portal kann der Kunde eine bereits bezahlte Buchung nicht stornieren.</li>
+      <li>An einem <strong>vergangenen Tag</strong> lassen sich keine Termine mehr anlegen oder dorthin verschieben, außer mit der Berechtigung «Citar en días pasados» (an vergangenen Tagen buchen), die ab Werk nur der Administrator hat. Ansehen, abrechnen und markieren, wer nicht kam, geht weiterhin, und heute bucht man zu jeder Uhrzeit.</li>
+      <li>Termine, die <strong>von außen kommen,</strong> erkennt man von weitem: gestrichelter Rand und das Etikett <em>WEB</em> , wenn der Kunde sie im Portal gebucht hat, oder der Name des Programms, wenn sie über eine Integration kamen.</li>
+    </ul>
+  </div>
 </section>
 
 <section id="2026-09-26" class="version">
@@ -685,29 +717,46 @@ footer{
   </div>
   <p class="version__numero">Version <span translate="no">2026.9.296-393e432</span></p>
 
-  <h3>Turnera auf Deutsch und Portugiesisch</h3>
-  <ul>
-    <li>Die Anwendung lässt sich jetzt auf <strong>Deutsch und Portugiesisch</strong> (aus Portugal) nutzen, zusätzlich zu Spanisch und Englisch. Jede Person wählt ihre Sprache oben in der Auswahl.</li>
-    <li>Belege, Kostenvoranschläge, Berichte und E-Mails erscheinen in der <strong>Sprache des Kunden</strong>, die jetzt in seiner Karteikarte steht, und nicht in der Sprache dessen, der sie druckt.</li>
-    <li>Ihre <strong>Einwilligungen</strong> können ihren Text in mehreren Sprachen haben: Der Kunde liest und unterschreibt in seiner, und das iPad spricht ihn darin an.</li>
-    <li>Das <strong>WhatsApp-Erinnerung</strong> ebenso: Das Zentrum schreibt sie in jeder Sprache, und jeder Kunde bekommt sie in seiner, mit dem Datum so geschrieben, wie man es dort liest.</li>
-  </ul>
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Turnera auf Deutsch und Portugiesisch</h4>
+    <ul>
+      <li>Die Anwendung lässt sich jetzt auf <strong>Deutsch und Portugiesisch</strong> (aus Portugal) nutzen, zusätzlich zu Spanisch und Englisch. Jede Person wählt ihre Sprache oben in der Auswahl.</li>
+      <li>Belege, Kostenvoranschläge, Berichte und E-Mails erscheinen in der <strong>Sprache des Kunden</strong>, die jetzt in seiner Karteikarte steht, und nicht in der Sprache dessen, der sie druckt.</li>
+      <li>Ihre <strong>Einwilligungen</strong> können ihren Text in mehreren Sprachen haben: Der Kunde liest und unterschreibt in seiner, und das iPad spricht ihn darin an.</li>
+      <li>Das <strong>WhatsApp-Erinnerung</strong> ebenso: Das Zentrum schreibt sie in jeder Sprache, und jeder Kunde bekommt sie in seiner, mit dem Datum so geschrieben, wie man es dort liest.</li>
+    </ul>
+    <h4>Krankenakte: der Schmerz und die Fotos jeder Sitzung</h4>
+    <ul>
+      <li>In jedem Verlaufseintrag und beim Öffnen eines Falls können Sie <strong>„Schmerzen vorhanden“</strong> ankreuzen und ihm mit einem Balken von Grün nach Rot eine Zahl von 0 bis 10 geben. Im Fall trägt jeder Verlaufseintrag seinen Schmerz in einem Etikett derselben Farbe, und er erscheint auch im PDF.</li>
+      <li>Jeder Verlaufseintrag nimmt <strong>bis zu drei Fotos</strong> auf, um mit bloßem Auge zu verfolgen, wie sich eine Verletzung oder eine Narbe verändert. Mit Tablet oder Handy lassen sie sich direkt aufnehmen. Turnera verkleinert sie vor dem Hochladen und entfernt die Kameradaten, etwa den Aufnahmeort.</li>
+      <li>Über der Behandlung werden <strong>die in Spanien vertriebenen Arzneimittel</strong> vorgeschlagen, sobald man drei Buchstaben ihres Namens tippt, mit Wirkstoff und Angabe, ob sie verschreibungspflichtig sind. Sie stammen aus CIMA, der Datenbank der spanischen Arzneimittelbehörde AEMPS, und sind immer aktuell. Ein ausgewähltes Arzneimittel wird der Behandlung hinzugefügt, die weiterhin freier Text bleibt.</li>
+    </ul>
+    <h4>Trainingszentren: die Begleitung jedes Schülers</h4>
+    <ul>
+      <li>Ein Club, eine Akademie oder ein Fitnessstudio sieht nichts mehr von Krankenakten. Jeder Schüler hat seine <strong>Programme</strong> mit Ziel, Ausgangspunkt, körperlicher Bewertung und Trainingsplan.</li>
+      <li>In jedem Programm schreibt man die <strong>Sitzungsnotizen</strong>: was trainiert wurde und wie es lief, mit bis zu drei Fotos.</li>
+    </ul>
+  </div>
 
-  <h3>Krankenakte: der Schmerz und die Fotos jeder Sitzung</h3>
-  <ul>
-    <li>In jedem Verlaufseintrag und beim Öffnen eines Falls können Sie <strong>„Schmerzen vorhanden“</strong> ankreuzen und ihm mit einem Balken von Grün nach Rot eine Zahl von 0 bis 10 geben. Im Fall trägt jeder Verlaufseintrag seinen Schmerz in einem Etikett derselben Farbe, und er erscheint auch im PDF.</li>
-    <li>Jeder Verlaufseintrag nimmt <strong>bis zu drei Fotos</strong> auf, um mit bloßem Auge zu verfolgen, wie sich eine Verletzung oder eine Narbe verändert. Mit Tablet oder Handy lassen sie sich direkt aufnehmen. Turnera verkleinert sie vor dem Hochladen und entfernt die Kameradaten, etwa den Aufnahmeort.</li>
-    <li>Über der Behandlung werden <strong>die in Spanien vertriebenen Arzneimittel</strong> vorgeschlagen, sobald man drei Buchstaben ihres Namens tippt, mit Wirkstoff und Angabe, ob sie verschreibungspflichtig sind. Sie stammen aus CIMA, der Datenbank der spanischen Arzneimittelbehörde AEMPS, und sind immer aktuell. Ein ausgewähltes Arzneimittel wird der Behandlung hinzugefügt, die weiterhin freier Text bleibt.</li>
-    <li><strong>PDF-Bericht des Falls:</strong> Jeder Verlaufseintrag erscheint in einem eigenen Block, mit behandelnder Person, Untersuchung, Schmerz und Fotos, und jede Seite weist darauf hin, dass es ein vertrauliches Dokument ist. Jetzt kann ihn auch die Fachkraft drucken, nicht nur die Verwaltung; der Empfang nicht.</li>
-    <li>Behoben: Beim Korrigieren eines Verlaufseintrags rückte seine Uhrzeit zwei Stunden vor.</li>
-  </ul>
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Krankenakte: der Schmerz und die Fotos jeder Sitzung</h4>
+    <ul>
+      <li><strong>PDF-Bericht des Falls:</strong> Jeder Verlaufseintrag erscheint in einem eigenen Block, mit behandelnder Person, Untersuchung, Schmerz und Fotos, und jede Seite weist darauf hin, dass es ein vertrauliches Dokument ist. Jetzt kann ihn auch die Fachkraft drucken, nicht nur die Verwaltung; der Empfang nicht.</li>
+    </ul>
+    <h4>Trainingszentren: die Begleitung jedes Schülers</h4>
+    <ul>
+      <li>Die Club-Demo zeigt jetzt nur noch Programme und Trainingsnotizen für Tennis und Padel, ohne klinische Inhalte.</li>
+    </ul>
+  </div>
 
-  <h3>Trainingszentren: die Begleitung jedes Schülers</h3>
-  <ul>
-    <li>Ein Club, eine Akademie oder ein Fitnessstudio sieht nichts mehr von Krankenakten. Jeder Schüler hat seine <strong>Programme</strong> mit Ziel, Ausgangspunkt, körperlicher Bewertung und Trainingsplan.</li>
-    <li>In jedem Programm schreibt man die <strong>Sitzungsnotizen</strong>: was trainiert wurde und wie es lief, mit bis zu drei Fotos.</li>
-    <li>Die Club-Demo zeigt jetzt nur noch das: Programme und Trainingsnotizen für Tennis und Padel, nichts Klinisches.</li>
-  </ul>
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Behobene Fehler</h3>
+    <ul>
+      <li>Beim Korrigieren eines Verlaufseintrags wurde die Uhrzeit um zwei Stunden vorgestellt.</li>
+    </ul>
+  </div>
 </section>
 
 <section id="2026-09-25" class="version">
@@ -716,63 +765,68 @@ footer{
   </div>
   <p class="version__numero">Version <span translate="no">2026.9.289-820772f</span></p>
 
-  <h3>Turnera empfehlen</h3>
-  <ul>
-    <li>Oben, neben der Sprache, hat die Leitung jetzt die Schaltfläche <strong>„Turnera empfehlen“</strong> mit dem Code Ihres Zentrums, bereit zum Kopieren oder Versenden per WhatsApp oder E-Mail.</li>
-    <li>Für jede Ressource, die das empfohlene Zentrum bucht, <strong>erhalten Sie einen Gratismonat</strong>, sobald dieses Zentrum seine erste Gebühr bezahlt, bis zu zwölf Monate im Jahr. Das empfohlene Zentrum zahlt keine Einrichtungsgebühr und hat den ersten Monat gratis.</li>
-  </ul>
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Turnera empfehlen</h4>
+    <ul>
+      <li>Oben, neben der Sprache, hat die Leitung jetzt die Schaltfläche <strong>„Turnera empfehlen“</strong> mit dem Code Ihres Zentrums, bereit zum Kopieren oder Versenden per WhatsApp oder E-Mail.</li>
+      <li>Für jede Ressource, die das empfohlene Zentrum bucht, <strong>erhalten Sie einen Gratismonat</strong>, sobald dieses Zentrum seine erste Gebühr bezahlt, bis zu zwölf Monate im Jahr. Das empfohlene Zentrum zahlt keine Einrichtungsgebühr und hat den ersten Monat gratis.</li>
+    </ul>
+    <h4>Die Kasse abgleichen, endlich ohne Papier</h4>
+    <ul>
+      <li><strong>Neuer Bildschirm für den Kassenabschluss.</strong> Jeden Tag zeigt Turnera, was bar und mit Karte kassiert wurde. Sie tragen ein, was in der Kasse liegt und was das Kartenterminal anzeigt, und Turnera sagt sofort, ob die Kasse stimmt oder wie viel fehlt oder zu viel ist.</li>
+      <li>Wenn sie nicht stimmt, sehen Sie die Zahlungen einzeln, bis Sie die fehlerhafte finden.</li>
+      <li>Mit «Kasse schließen» wird der Abschluss in der Liste der Kassen gespeichert. Dort können Sie jeden früheren Tag ansehen, und die Leitung kann eine Kasse wieder öffnen, wenn sie korrigiert werden muss.</li>
+    </ul>
+    <h4>Behandlungen per Code auswählen</h4>
+    <ul>
+      <li>Jede Leistung kann einen <strong>Kurzcode</strong> haben, etwa IDEE20. Im Termin lassen sich mit der «Schnellauswahl» mehrere Leistungen auf einmal per Code auswählen.</li>
+    </ul>
+  </div>
 
-  <h3>Die Kasse abgleichen, endlich ohne Papier</h3>
-  <ul>
-    <li><strong>Neuer Bildschirm für den Kassenabschluss.</strong> Jeden Tag zeigt Turnera, was bar und mit Karte kassiert wurde. Sie tragen ein, was in der Kasse liegt und was das Kartenterminal anzeigt, und Turnera sagt sofort, ob die Kasse stimmt oder wie viel fehlt oder zu viel ist.</li>
-    <li>Wenn sie nicht stimmt, sehen Sie die Zahlungen einzeln, bis Sie die fehlerhafte finden.</li>
-    <li>Mit «Kasse schließen» wird der Abschluss in der Liste der Kassen gespeichert. Dort können Sie jeden früheren Tag ansehen, und die Leitung kann eine Kasse wieder öffnen, wenn sie korrigiert werden muss.</li>
-  </ul>
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Der Kalender auf einen Blick</h4>
+    <ul>
+      <li>Jeder Termin bekommt die <strong>Farbe seiner Behandlungsart</strong>, und Sie wählen diese Farben unter Leistungen → Farben des Kalenders.</li>
+      <li>Der Status des Termins (wartend, in Behandlung, behandelt…) steht in einem Streifen links.</li>
+      <li>Die <strong>vergangenen, noch nicht kassierten Termine haben einen roten Rand</strong>, damit keiner durchrutscht.</li>
+    </ul>
+    <h4>Jeden Kunden schneller finden</h4>
+    <ul>
+      <li>Das <strong>Kundennummer</strong> steht überall: Kalender, Kasse, Listen und Berichte. Man kann Kunden auch nach ihrer Nummer suchen.</li>
+      <li>Der Name des Kunden führt aus jeder Liste und jedem Bildschirm zu seiner Akte.</li>
+    </ul>
+    <h4>Kassieren mit weniger Klicks</h4>
+    <ul>
+      <li>Hat der Kunde einen Gutschein für diese Behandlung, schlägt die Kasse ihn von selbst vor: Die Zeile steht auf 0 € und die Zahlungsart ist Gutschein. Wird anders bezahlt, bleibt die Gutscheinsitzung erhalten.</li>
+      <li><strong>Der Bon, den Sie vorbereitet haben, geht nicht verloren,</strong> wenn Sie die Kasse verlassen: Beim Zurückkommen bietet Turnera an, ihn wiederherzustellen.</li>
+      <li>Eine Info-Schaltfläche zeigt die Details jeder Leistung und jedes Produkts, ohne die Kasse zu verlassen.</li>
+      <li>Fehlermeldungen sagen jetzt, <strong>was passiert ist und was zu tun ist</strong>. Liegt der Fehler bei uns, enthält die Meldung eine Referenz, mit der der Support ihn sofort findet.</li>
+    </ul>
+    <h4>Produkte und Bestand</h4>
+    <ul>
+      <li>Ein verkauftes Produkt wird vom Bestand abgezogen, eine Rückgabe bucht es wieder zu.</li>
+      <li>Aus einem anderen Programm übernommene Produkte kommen in jedem Zentrum mit Bestand null an, bereit für die Inventur.</li>
+    </ul>
+    <h4>Daten aus einem anderen Programm übernehmen</h4>
+    <ul>
+      <li>Das <strong>Behandlungsverlauf</strong> kommt als Besuche jedes Kunden an, mit den Notizen in jeder Zeile, nicht als klinische Fälle.</li>
+      <li>Auch künftige Termine, Lagerbestand, Gutscheine, Geschenkkarten und offene Zahlungen werden übernommen.</li>
+      <li>Die Import-Seite erklärt Blatt für Blatt, wie man jede Datei aus flowww exportiert.</li>
+    </ul>
+    <h4>Zeiterfassung</h4>
+    <ul>
+      <li>Die PIN zum Stempeln hat <strong>vier Ziffern</strong> und wird beim Tippen der letzten Ziffer von selbst gesendet.</li>
+    </ul>
+  </div>
 
-  <h3>Der Kalender auf einen Blick</h3>
-  <ul>
-    <li>Jeder Termin bekommt die <strong>Farbe seiner Behandlungsart</strong>, und Sie wählen diese Farben unter Leistungen → Farben des Kalenders.</li>
-    <li>Der Status des Termins (wartend, in Behandlung, behandelt…) steht in einem Streifen links.</li>
-    <li>Die <strong>vergangenen, noch nicht kassierten Termine haben einen roten Rand</strong>, damit keiner durchrutscht.</li>
-  </ul>
-
-  <h3>Jeden Kunden schneller finden</h3>
-  <ul>
-    <li>Das <strong>Kundennummer</strong> steht überall: Kalender, Kasse, Listen und Berichte. Man kann Kunden auch nach ihrer Nummer suchen.</li>
-    <li>Der Name des Kunden führt aus jeder Liste und jedem Bildschirm zu seiner Akte.</li>
-  </ul>
-
-  <h3>Kassieren mit weniger Klicks</h3>
-  <ul>
-    <li>Hat der Kunde einen Gutschein für diese Behandlung, schlägt die Kasse ihn von selbst vor: Die Zeile steht auf 0 € und die Zahlungsart ist Gutschein. Wird anders bezahlt, bleibt die Gutscheinsitzung erhalten.</li>
-    <li><strong>Der Bon, den Sie vorbereitet haben, geht nicht verloren,</strong> wenn Sie die Kasse verlassen: Beim Zurückkommen bietet Turnera an, ihn wiederherzustellen.</li>
-    <li>Eine Info-Schaltfläche zeigt die Details jeder Leistung und jedes Produkts, ohne die Kasse zu verlassen.</li>
-    <li>Behoben: Bons mit Produkten ließen sich manchmal nicht kassieren.</li>
-    <li>Fehlermeldungen sagen jetzt, <strong>was passiert ist und was zu tun ist</strong>. Liegt der Fehler bei uns, enthält die Meldung eine Referenz, mit der der Support ihn sofort findet.</li>
-  </ul>
-
-  <h3>Behandlungen per Code auswählen</h3>
-  <ul>
-    <li>Jede Leistung kann einen <strong>Kurzcode</strong> haben, etwa IDEE20. Im Termin lassen sich mit der «Schnellauswahl» mehrere Leistungen auf einmal per Code auswählen.</li>
-  </ul>
-
-  <h3>Produkte und Bestand</h3>
-  <ul>
-    <li>Ein verkauftes Produkt wird vom Bestand abgezogen, eine Rückgabe bucht es wieder zu.</li>
-    <li>Aus einem anderen Programm übernommene Produkte kommen in jedem Zentrum mit Bestand null an, bereit für die Inventur.</li>
-  </ul>
-
-  <h3>Daten aus einem anderen Programm übernehmen</h3>
-  <ul>
-    <li>Das <strong>Behandlungsverlauf</strong> kommt als Besuche jedes Kunden an, mit den Notizen in jeder Zeile, nicht als klinische Fälle.</li>
-    <li>Auch künftige Termine, Lagerbestand, Gutscheine, Geschenkkarten und offene Zahlungen werden übernommen.</li>
-    <li>Die Import-Seite erklärt Blatt für Blatt, wie man jede Datei aus flowww exportiert.</li>
-  </ul>
-
-  <h3>Zeiterfassung</h3>
-  <ul>
-    <li>Die PIN zum Stempeln hat <strong>vier Ziffern</strong> und wird beim Tippen der letzten Ziffer von selbst gesendet.</li>
-  </ul>
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Behobene Fehler</h3>
+    <ul>
+      <li>Belege mit Produkten ließen sich manchmal nicht kassieren.</li>
+    </ul>
+  </div>
 </section>
 </div>
 </main>

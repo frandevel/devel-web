@@ -581,6 +581,19 @@ footer{
 .version__numero{margin:.5rem 0 0;font-size:.9rem;color:var(--text-dim)}
 .version__numero span{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-weight:600;color:var(--text)}
 .contenido section.version h3{font-size:1.02rem;margin:1.2rem 0 .4rem}
+.grupo--nuevo{--g:#0E6E62;--g-suave:#E3F2EF}
+.grupo--mejora{--g:#006699;--g-suave:#E2EFF7}
+.grupo--arreglo{--g:#B5532A;--g-suave:#FBEBE3}
+.grupo{margin-top:1.4rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--g)}
+.contenido section.version .grupo__titulo{display:flex;align-items:center;gap:.6rem;margin:.2rem 0 .3rem;
+  font-size:1.08rem;color:var(--g)}
+.grupo__icono{display:inline-flex;align-items:center;justify-content:center;flex:none;width:2rem;height:2rem;
+  border-radius:10px;background:var(--g-suave);color:var(--g)}
+.contenido .grupo h4{font-size:.95rem;margin:1rem 0 .3rem;color:var(--text)}
+.contenido .leyenda{list-style:none;display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;padding:0;margin:1rem 0 1.6rem}
+.leyenda li{display:flex;align-items:center;gap:.55rem;margin:0;font-size:.92rem;color:var(--text-dim)}
+.leyenda strong{color:var(--g)}
+.leyenda .grupo__icono{width:1.8rem;height:1.8rem}
 .contenido section.version ul{margin-bottom:.4rem}
 @media print{.contenido section.version{box-shadow:none}}
 </style>
@@ -620,6 +633,11 @@ footer{
   Cada tarjeta lleva el número de versión que tiene Turnera desde ese día. El suyo aparece abajo del menú de la
   izquierda, en «Versión»: si coincide con el de la tarjeta, ya tiene todo lo que cuenta.
 </p>
+<ul class="leyenda" aria-label="Tipos de cambio">
+  <li class="grupo--nuevo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span><span><strong>Nuevas características</strong>: lo que antes no existía.</span></li>
+  <li class="grupo--mejora"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span><span><strong>Mejoras</strong>: lo que ya había, y ahora funciona mejor.</span></li>
+  <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
+</ul>
 
 <section id="2026-09-28" class="version">
   <div class="version__cabecera">
@@ -628,19 +646,25 @@ footer{
   </div>
   <p class="version__numero">Versión <span translate="no">2026.9.303-3c9bead</span></p>
 
-  <h3>Facturación: modo pruebas y paso a producción</h3>
-  <ul>
-    <li>La facturación empieza siempre en <strong>modo pruebas</strong>: las facturas llevan arriba «FACTURA DE PRUEBA · SIN VALIDEZ FISCAL», en el libro salen marcadas como «Prueba» y, si se remiten, van al entorno de pruebas de la AEAT.</li>
-    <li>Cuando el centro va a facturar de verdad, <strong>Pasar a producción</strong> borra las facturas de prueba y todas las series vuelven a empezar en el número 1.</li>
-    <li>Ese paso <strong>no tiene vuelta atrás</strong>: la pantalla lo explica, pide marcar que se entiende y escribir PRODUCCIÓN, y necesita el permiso nuevo «Pasar la facturación a producción», que de fábrica solo tiene el administrador.</li>
-    <li>La pantalla de Facturación y VeriFactu explica en cada bloque qué hace, y mientras el centro esté en pruebas hay un aviso arriba para quien lleva la facturación.</li>
-  </ul>
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
+    <h4>Facturación: modo pruebas y paso a producción</h4>
+    <ul>
+      <li>La facturación empieza siempre en <strong>modo pruebas</strong>: las facturas llevan arriba «FACTURA DE PRUEBA · SIN VALIDEZ FISCAL», en el libro salen marcadas como «Prueba» y, si se remiten, van al entorno de pruebas de la AEAT.</li>
+      <li>Cuando el centro va a facturar de verdad, <strong>Pasar a producción</strong> borra las facturas de prueba y todas las series vuelven a empezar en el número 1.</li>
+      <li>Ese paso <strong>no tiene vuelta atrás</strong>: la pantalla lo explica, pide marcar que se entiende y escribir PRODUCCIÓN, y necesita el permiso nuevo «Pasar la facturación a producción», que de fábrica solo tiene el administrador.</li>
+      <li>La pantalla de Facturación y VeriFactu explica en cada bloque qué hace, y mientras el centro esté en pruebas hay un aviso arriba para quien lleva la facturación.</li>
+    </ul>
+  </div>
 
-  <h3>Envío a la AEAT</h3>
-  <ul>
-    <li>La pantalla de Facturación y VeriFactu explica <strong>qué es enviar</strong>: Turnera manda sola a la Agencia Tributaria una copia de los datos de cada factura en cuanto se emite, y dice qué se envía y qué no.</li>
-    <li>Para poder activar el envío lista las <strong>dos cosas que hacen falta</strong>, quién hace cada una y cómo están: que el centro autorice a DEVEL ante la AEAT, una sola vez, y la conexión de Turnera con la AEAT, que prepara DEVEL. <strong>No hay que subir ningún certificado.</strong></li>
-  </ul>
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Mejoras</h3>
+    <h4>Envío a la AEAT</h4>
+    <ul>
+      <li>La pantalla de Facturación y VeriFactu explica <strong>qué es enviar</strong>: Turnera manda sola a la Agencia Tributaria una copia de los datos de cada factura en cuanto se emite, y dice qué se envía y qué no.</li>
+      <li>Para poder activar el envío lista las <strong>dos cosas que hacen falta</strong>, quién hace cada una y cómo están: que el centro autorice a DEVEL ante la AEAT, una sola vez, y la conexión de Turnera con la AEAT, que prepara DEVEL. <strong>No hay que subir ningún certificado.</strong></li>
+    </ul>
+  </div>
 </section>
 
 <section id="2026-09-27" class="version">
@@ -649,35 +673,43 @@ footer{
   </div>
   <p class="version__numero">Versión <span translate="no">2026.9.301-f95fc0e</span></p>
 
-  <h3>Historia clínica: el mapa anatómico</h3>
-  <ul>
-    <li>Cada caso tiene un <strong>mapa del cuerpo entero</strong>, de frente y de espalda, en cuatro capas: músculo, hueso, piel de hombre y piel de mujer. Son imágenes nuevas, mucho más grandes y detalladas que las de antes.</li>
-    <li>Al <strong>pasar el ratón</strong>, cada músculo, hueso o región de la piel se ilumina y dice su nombre y su lado, siempre el del paciente. Un clic la marca, y al lado se apunta si duele y cuánto, del 0 al 10.</li>
-    <li>Con la rueda del ratón o la lupa se <strong>amplía hasta seis veces</strong> para marcar con precisión la mano, el pie o la cara.</li>
-    <li>Las zonas se <strong>guardan con el caso</strong>: al abrirlo, salen teñidas del color de su dolor, y el informe en PDF las lista con su nombre en el idioma del paciente.</li>
-    <li>Los casos de antes que tenían un punto sobre la imagen de su línea lo conservan tal cual.</li>
-  </ul>
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
+    <h4>Agenda, clientes y proveedores</h4>
+    <ul>
+      <li>Los <strong>clientes y proveedores</strong> se pueden dar de baja desde su ficha: conservan toda su historia, pero dejan de salir al buscar, al poner una cita y al cobrar.</li>
+      <li>Las listas de clientes, proveedores, servicios, productos y paquetes tienen la casilla <strong>«También los inactivos»</strong> para ver lo que está de baja.</li>
+      <li>El <strong>manual</strong> se abre desde la aplicación, en el idioma que tenga elegido: con <em>Manual de uso</em>, abajo del menú junto a la versión, y desde la ventana de incidencias. Y empieza por lo que más falta hace: cómo pedir ayuda.</li>
+    </ul>
+    <h4>Facturas y VeriFactu</h4>
+    <ul>
+      <li>Turnera ya puede <strong>facturar como pide VeriFactu</strong>. Viene <strong>apagado</strong>: se activa en Administración → Facturación y VeriFactu, con el permiso nuevo «Facturación y VeriFactu», que de fábrica solo tiene el administrador, y con el NIF y la razón social del centro en Preferencias.</li>
+      <li>Con la facturación activada, cada venta cobrada sale con su <strong>factura simplificada</strong> numerada, con el desglose del IVA y un código QR, y cada devolución con su <strong>rectificativa</strong>.</li>
+      <li>Cada delegación elige el <strong>prefijo de sus series</strong>. El número es prefijo, año y correlativo, como S1-2027/000123.</li>
+      <li>Desde el historial del cliente, el botón <strong>Factura completa</strong> reemite el ticket con su NIF y su domicilio. Hace falta el permiso «Hacer factura completa».</li>
+      <li>En Informes, el <strong>Libro de facturas</strong> dice cómo va cada una en la AEAT y se descarga en Excel con el asiento resumen diario. Hace falta el permiso «Libro de facturas».</li>
+      <li>La <strong>remisión a la AEAT</strong> se activa aparte, cuando el centro nos apodere ante la Agencia Tributaria y esté instalado el certificado. Mientras tanto, los registros esperan en cola sin perderse.</li>
+    </ul>
+  </div>
 
-  <h3>Agenda, clientes y proveedores</h3>
-  <ul>
-    <li>Una cita con varios servicios <strong>los enseña todos a la vez</strong>, sin tener que abrir el desplegable.</li>
-    <li>Una <strong>cita ya cobrada</strong> solo la anula quien tiene el permiso nuevo «Anular citas ya cobradas», que de fábrica lleva solo el administrador. Por el portal, el cliente tampoco puede anular una reserva que ya pagó.</li>
-    <li>Los <strong>clientes y proveedores</strong> se pueden dar de baja desde su ficha: conservan toda su historia, pero dejan de salir al buscar, al poner una cita y al cobrar.</li>
-    <li>Las listas de clientes, proveedores, servicios, productos y paquetes tienen la casilla <strong>«También los inactivos»</strong> para ver lo que está de baja.</li>
-    <li>En un <strong>día pasado</strong> ya no se ponen citas ni se llevan allí, salvo con el permiso «Citar en días pasados», que de fábrica lleva solo el administrador. Se sigue pudiendo ir a mirarlo, cobrar y marcar quién no vino, y hoy se cita a cualquier hora.</li>
-    <li>El <strong>manual</strong> se abre desde la aplicación, en el idioma que tenga elegido: con <em>Manual de uso</em>, abajo del menú junto a la versión, y desde la ventana de incidencias. Y empieza por lo que más falta hace: cómo pedir ayuda.</li>
-    <li>Las citas que <strong>entran de fuera</strong> se ven de lejos: borde discontinuo y la etiqueta <em>WEB</em> si las reservó el cliente en el portal, o el nombre del programa si entraron por una integración.</li>
-  </ul>
-
-  <h3>Facturas y VeriFactu</h3>
-  <ul>
-    <li>Turnera ya puede <strong>facturar como pide VeriFactu</strong>. Viene <strong>apagado</strong>: se activa en Administración → Facturación y VeriFactu, con el permiso nuevo «Facturación y VeriFactu», que de fábrica solo tiene el administrador, y con el NIF y la razón social del centro en Preferencias.</li>
-    <li>Con la facturación activada, cada venta cobrada sale con su <strong>factura simplificada</strong> numerada, con el desglose del IVA y un código QR, y cada devolución con su <strong>rectificativa</strong>.</li>
-    <li>Cada delegación elige el <strong>prefijo de sus series</strong>. El número es prefijo, año y correlativo, como S1-2027/000123.</li>
-    <li>Desde el historial del cliente, el botón <strong>Factura completa</strong> reemite el ticket con su NIF y su domicilio. Hace falta el permiso «Hacer factura completa».</li>
-    <li>En Informes, el <strong>Libro de facturas</strong> dice cómo va cada una en la AEAT y se descarga en Excel con el asiento resumen diario. Hace falta el permiso «Libro de facturas».</li>
-    <li>La <strong>remisión a la AEAT</strong> se activa aparte, cuando el centro nos apodere ante la Agencia Tributaria y esté instalado el certificado. Mientras tanto, los registros esperan en cola sin perderse.</li>
-  </ul>
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Mejoras</h3>
+    <h4>Historia clínica: el mapa anatómico</h4>
+    <ul>
+      <li>Cada caso tiene un <strong>mapa del cuerpo entero</strong>, de frente y de espalda, en cuatro capas: músculo, hueso, piel de hombre y piel de mujer. Son imágenes nuevas, mucho más grandes y detalladas que las de antes.</li>
+      <li>Al <strong>pasar el ratón</strong>, cada músculo, hueso o región de la piel se ilumina y dice su nombre y su lado, siempre el del paciente. Un clic la marca, y al lado se apunta si duele y cuánto, del 0 al 10.</li>
+      <li>Con la rueda del ratón o la lupa se <strong>amplía hasta seis veces</strong> para marcar con precisión la mano, el pie o la cara.</li>
+      <li>Las zonas se <strong>guardan con el caso</strong>: al abrirlo, salen teñidas del color de su dolor, y el informe en PDF las lista con su nombre en el idioma del paciente.</li>
+      <li>Los casos de antes que tenían un punto sobre la imagen de su línea lo conservan tal cual.</li>
+    </ul>
+    <h4>Agenda, clientes y proveedores</h4>
+    <ul>
+      <li>Una cita con varios servicios <strong>los enseña todos a la vez</strong>, sin tener que abrir el desplegable.</li>
+      <li>Una <strong>cita ya cobrada</strong> solo la anula quien tiene el permiso nuevo «Anular citas ya cobradas», que de fábrica lleva solo el administrador. Por el portal, el cliente tampoco puede anular una reserva que ya pagó.</li>
+      <li>En un <strong>día pasado</strong> ya no se ponen citas ni se llevan allí, salvo con el permiso «Citar en días pasados», que de fábrica lleva solo el administrador. Se sigue pudiendo ir a mirarlo, cobrar y marcar quién no vino, y hoy se cita a cualquier hora.</li>
+      <li>Las citas que <strong>entran de fuera</strong> se ven de lejos: borde discontinuo y la etiqueta <em>WEB</em> si las reservó el cliente en el portal, o el nombre del programa si entraron por una integración.</li>
+    </ul>
+  </div>
 </section>
 
 <section id="2026-09-26" class="version">
@@ -686,29 +718,46 @@ footer{
   </div>
   <p class="version__numero">Versión <span translate="no">2026.9.296-393e432</span></p>
 
-  <h3>Turnera en alemán y en portugués</h3>
-  <ul>
-    <li>La aplicación se puede usar en <strong>alemán y en portugués</strong> (de Portugal), además de en español y en inglés. Cada persona elige el suyo en el selector de arriba.</li>
-    <li>Los tickets, presupuestos, informes y correos salen en el <strong>idioma del cliente</strong>, que ahora se ve en su ficha, y no en el de quien los imprime.</li>
-    <li>Los <strong>consentimientos</strong> pueden tener su texto en varios idiomas: el cliente lee y firma en el suyo, y el iPad le habla en ese idioma.</li>
-    <li>El <strong>aviso por WhatsApp</strong> también: el centro lo escribe en cada idioma y a cada cliente se le abre con el suyo, con la fecha escrita como se lee allí.</li>
-  </ul>
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
+    <h4>Turnera en alemán y en portugués</h4>
+    <ul>
+      <li>La aplicación se puede usar en <strong>alemán y en portugués</strong> (de Portugal), además de en español y en inglés. Cada persona elige el suyo en el selector de arriba.</li>
+      <li>Los tickets, presupuestos, informes y correos salen en el <strong>idioma del cliente</strong>, que ahora se ve en su ficha, y no en el de quien los imprime.</li>
+      <li>Los <strong>consentimientos</strong> pueden tener su texto en varios idiomas: el cliente lee y firma en el suyo, y el iPad le habla en ese idioma.</li>
+      <li>El <strong>aviso por WhatsApp</strong> también: el centro lo escribe en cada idioma y a cada cliente se le abre con el suyo, con la fecha escrita como se lee allí.</li>
+    </ul>
+    <h4>Historia clínica: el dolor y las fotos de cada sesión</h4>
+    <ul>
+      <li>En cada evolución, y al abrir un caso, se puede marcar <strong>«Hay dolor»</strong> y ponerle un número del 0 al 10 con una barra que va de verde a rojo. En el caso, cada evolución lleva su dolor en una etiqueta del mismo color, y sale también en el PDF.</li>
+      <li>Cada evolución admite <strong>hasta tres fotos</strong> para seguir a ojo cómo cambia una lesión o una cicatriz. Desde una tablet o un móvil se pueden hacer en el momento. Turnera las reduce antes de subirlas y les quita los datos de la cámara, como el sitio donde se hicieron.</li>
+      <li>Encima del tratamiento, <strong>los medicamentos comercializados en España</strong> se sugieren al escribir tres letras de su nombre, con su principio activo y si llevan receta. Salen de CIMA, de la AEMPS, siempre al día. Al elegir uno se añade al tratamiento, que sigue siendo texto libre.</li>
+    </ul>
+    <h4>Centros de entrenamiento: el seguimiento del alumno</h4>
+    <ul>
+      <li>En un club, una academia o un gimnasio ya no aparece nada de historia clínica. Cada alumno tiene sus <strong>programas</strong>, con su objetivo, su punto de partida, la valoración física y el plan de trabajo.</li>
+      <li>Dentro de cada programa se escriben las <strong>notas de sesión</strong>: qué se ha trabajado y cómo ha ido, con hasta tres fotos.</li>
+    </ul>
+  </div>
 
-  <h3>Historia clínica: el dolor y las fotos de cada sesión</h3>
-  <ul>
-    <li>En cada evolución, y al abrir un caso, se puede marcar <strong>«Hay dolor»</strong> y ponerle un número del 0 al 10 con una barra que va de verde a rojo. En el caso, cada evolución lleva su dolor en una etiqueta del mismo color, y sale también en el PDF.</li>
-    <li>Cada evolución admite <strong>hasta tres fotos</strong> para seguir a ojo cómo cambia una lesión o una cicatriz. Desde una tablet o un móvil se pueden hacer en el momento. Turnera las reduce antes de subirlas y les quita los datos de la cámara, como el sitio donde se hicieron.</li>
-    <li>Encima del tratamiento, <strong>los medicamentos comercializados en España</strong> se sugieren al escribir tres letras de su nombre, con su principio activo y si llevan receta. Salen de CIMA, de la AEMPS, siempre al día. Al elegir uno se añade al tratamiento, que sigue siendo texto libre.</li>
-    <li><strong>Informe en PDF del caso:</strong> cada evolución sale en su bloque, con quién atendió, la exploración, el dolor y sus fotos, y cada página avisa de que es un documento confidencial. Ahora también lo puede imprimir el profesional, no sólo el administrador; recepción no.</li>
-    <li>Arreglado: al corregir una evolución, su hora se adelantaba dos horas.</li>
-  </ul>
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Mejoras</h3>
+    <h4>Historia clínica: el dolor y las fotos de cada sesión</h4>
+    <ul>
+      <li><strong>Informe en PDF del caso:</strong> cada evolución sale en su bloque, con quién atendió, la exploración, el dolor y sus fotos, y cada página avisa de que es un documento confidencial. Ahora también lo puede imprimir el profesional, no sólo el administrador; recepción no.</li>
+    </ul>
+    <h4>Centros de entrenamiento: el seguimiento del alumno</h4>
+    <ul>
+      <li>La demostración de club enseña ya sólo programas y notas de sesión de tenis y pádel, sin nada de clínica.</li>
+    </ul>
+  </div>
 
-  <h3>Centros de entrenamiento: el seguimiento del alumno</h3>
-  <ul>
-    <li>En un club, una academia o un gimnasio ya no aparece nada de historia clínica. Cada alumno tiene sus <strong>programas</strong>, con su objetivo, su punto de partida, la valoración física y el plan de trabajo.</li>
-    <li>Dentro de cada programa se escriben las <strong>notas de sesión</strong>: qué se ha trabajado y cómo ha ido, con hasta tres fotos.</li>
-    <li>La demostración de club enseña ya sólo eso: programas y notas de sesión de tenis y pádel, sin nada de clínica.</li>
-  </ul>
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Errores corregidos</h3>
+    <ul>
+      <li>Al corregir una evolución, su hora se adelantaba dos horas.</li>
+    </ul>
+  </div>
 </section>
 
 <section id="2026-09-25" class="version">
@@ -717,63 +766,68 @@ footer{
   </div>
   <p class="version__numero">Versión <span translate="no">2026.9.289-820772f</span></p>
 
-  <h3>Recomienda Turnera</h3>
-  <ul>
-    <li>Arriba, junto al idioma, dirección tiene el botón <strong>«Recomienda Turnera»</strong> con el código de su centro, listo para copiarlo o mandarlo por WhatsApp o por correo.</li>
-    <li>Por cada recurso que contrate el centro recomendado, <strong>usted gana un mes gratis</strong>, cuando ese centro pague su primera cuota y hasta doce meses al año. El centro recomendado no paga la puesta en marcha y tiene el primer mes gratis.</li>
-  </ul>
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
+    <h4>Recomienda Turnera</h4>
+    <ul>
+      <li>Arriba, junto al idioma, dirección tiene el botón <strong>«Recomienda Turnera»</strong> con el código de su centro, listo para copiarlo o mandarlo por WhatsApp o por correo.</li>
+      <li>Por cada recurso que contrate el centro recomendado, <strong>usted gana un mes gratis</strong>, cuando ese centro pague su primera cuota y hasta doce meses al año. El centro recomendado no paga la puesta en marcha y tiene el primer mes gratis.</li>
+    </ul>
+    <h4>Cuadrar la caja, por fin sin papel</h4>
+    <ul>
+      <li><strong>Nueva pantalla de cierre de caja.</strong> Cada día, Turnera enseña lo que se ha cobrado en efectivo y con tarjeta. Usted escribe lo que hay en la caja y lo que marca el datáfono, y Turnera le dice al momento si la caja cuadra o cuánto falta o sobra.</li>
+      <li>Si no cuadra, puede ver los cobros uno a uno hasta encontrar el que falla.</li>
+      <li>Al pulsar «Cerrar caja», el cierre queda guardado en la lista de cajas. Desde ahí puede consultar cualquier día anterior, y dirección puede reabrir una caja si hay que corregirla.</li>
+    </ul>
+    <h4>Elegir tratamientos por su código</h4>
+    <ul>
+      <li>Cada servicio puede tener un <strong>código abreviado</strong>, como IDEE20. En la cita, la «Selección rápida» permite marcar varios servicios por su código de una vez.</li>
+    </ul>
+  </div>
 
-  <h3>Cuadrar la caja, por fin sin papel</h3>
-  <ul>
-    <li><strong>Nueva pantalla de cierre de caja.</strong> Cada día, Turnera enseña lo que se ha cobrado en efectivo y con tarjeta. Usted escribe lo que hay en la caja y lo que marca el datáfono, y Turnera le dice al momento si la caja cuadra o cuánto falta o sobra.</li>
-    <li>Si no cuadra, puede ver los cobros uno a uno hasta encontrar el que falla.</li>
-    <li>Al pulsar «Cerrar caja», el cierre queda guardado en la lista de cajas. Desde ahí puede consultar cualquier día anterior, y dirección puede reabrir una caja si hay que corregirla.</li>
-  </ul>
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Mejoras</h3>
+    <h4>La agenda se lee de un vistazo</h4>
+    <ul>
+      <li>Cada cita toma el <strong>color de su tipo de tratamiento</strong>, y usted elige esos colores en Servicios → Colores de la agenda.</li>
+      <li>El estado de la cita (en espera, en curso, atendida…) se ve en una franja a la izquierda.</li>
+      <li>Las <strong>citas ya pasadas que siguen sin cobrar salen con un borde rojo</strong>, para que no se escape ninguna.</li>
+    </ul>
+    <h4>Encontrar a cada cliente más rápido</h4>
+    <ul>
+      <li>El <strong>número de cliente</strong> aparece en todas partes: agenda, TPV, listados e informes. También se puede buscar a un cliente por su número.</li>
+      <li>El nombre del cliente lleva a su ficha desde cualquier listado o pantalla.</li>
+    </ul>
+    <h4>Cobrar con menos clics</h4>
+    <ul>
+      <li>Si el cliente tiene un bono para ese tratamiento, el TPV lo propone solo: la línea sale a 0 € y la forma de pago es Bono. Si prefiere cobrarlo de otra forma, la sesión del bono no se gasta.</li>
+      <li><strong>El ticket que estaba preparando no se pierde</strong> si sale del TPV: al volver, Turnera le ofrece recuperarlo.</li>
+      <li>Un botón de información enseña los detalles de cada servicio o producto sin salir del TPV.</li>
+      <li>Los avisos de error ahora dicen <strong>qué ha pasado y qué hacer</strong>. Si el fallo es nuestro, el aviso trae una referencia para que soporte lo encuentre al momento.</li>
+    </ul>
+    <h4>Productos y stock</h4>
+    <ul>
+      <li>Al vender un producto se descuenta del stock, y al devolverlo vuelve a sumarse.</li>
+      <li>Los productos que se traen de otro programa llegan con su stock a cero en todos los centros, listos para hacer el inventario.</li>
+    </ul>
+    <h4>Traer los datos de otro programa</h4>
+    <ul>
+      <li>El <strong>histórico de servicios</strong> llega como las visitas de cada cliente, con sus notas en cada línea, y no como casos clínicos.</li>
+      <li>También llegan las citas futuras, el stock, los bonos, las tarjetas regalo y los pagos pendientes.</li>
+      <li>La pantalla de importar explica, hoja por hoja, cómo sacar cada fichero de flowww.</li>
+    </ul>
+    <h4>Fichaje</h4>
+    <ul>
+      <li>El PIN para fichar es de <strong>cuatro cifras</strong> y se envía solo al teclear la última.</li>
+    </ul>
+  </div>
 
-  <h3>La agenda se lee de un vistazo</h3>
-  <ul>
-    <li>Cada cita toma el <strong>color de su tipo de tratamiento</strong>, y usted elige esos colores en Servicios → Colores de la agenda.</li>
-    <li>El estado de la cita (en espera, en curso, atendida…) se ve en una franja a la izquierda.</li>
-    <li>Las <strong>citas ya pasadas que siguen sin cobrar salen con un borde rojo</strong>, para que no se escape ninguna.</li>
-  </ul>
-
-  <h3>Encontrar a cada cliente más rápido</h3>
-  <ul>
-    <li>El <strong>número de cliente</strong> aparece en todas partes: agenda, TPV, listados e informes. También se puede buscar a un cliente por su número.</li>
-    <li>El nombre del cliente lleva a su ficha desde cualquier listado o pantalla.</li>
-  </ul>
-
-  <h3>Cobrar con menos clics</h3>
-  <ul>
-    <li>Si el cliente tiene un bono para ese tratamiento, el TPV lo propone solo: la línea sale a 0 € y la forma de pago es Bono. Si prefiere cobrarlo de otra forma, la sesión del bono no se gasta.</li>
-    <li><strong>El ticket que estaba preparando no se pierde</strong> si sale del TPV: al volver, Turnera le ofrece recuperarlo.</li>
-    <li>Un botón de información enseña los detalles de cada servicio o producto sin salir del TPV.</li>
-    <li>Arreglado: a veces no se podían cobrar tickets con productos.</li>
-    <li>Los avisos de error ahora dicen <strong>qué ha pasado y qué hacer</strong>. Si el fallo es nuestro, el aviso trae una referencia para que soporte lo encuentre al momento.</li>
-  </ul>
-
-  <h3>Elegir tratamientos por su código</h3>
-  <ul>
-    <li>Cada servicio puede tener un <strong>código abreviado</strong>, como IDEE20. En la cita, la «Selección rápida» permite marcar varios servicios por su código de una vez.</li>
-  </ul>
-
-  <h3>Productos y stock</h3>
-  <ul>
-    <li>Al vender un producto se descuenta del stock, y al devolverlo vuelve a sumarse.</li>
-    <li>Los productos que se traen de otro programa llegan con su stock a cero en todos los centros, listos para hacer el inventario.</li>
-  </ul>
-
-  <h3>Traer los datos de otro programa</h3>
-  <ul>
-    <li>El <strong>histórico de servicios</strong> llega como las visitas de cada cliente, con sus notas en cada línea, y no como casos clínicos.</li>
-    <li>También llegan las citas futuras, el stock, los bonos, las tarjetas regalo y los pagos pendientes.</li>
-    <li>La pantalla de importar explica, hoja por hoja, cómo sacar cada fichero de flowww.</li>
-  </ul>
-
-  <h3>Fichaje</h3>
-  <ul>
-    <li>El PIN para fichar es de <strong>cuatro cifras</strong> y se envía solo al teclear la última.</li>
-  </ul>
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Errores corregidos</h3>
+    <ul>
+      <li>A veces no se podían cobrar tickets con productos.</li>
+    </ul>
+  </div>
 </section>
 </div>
 </main>
