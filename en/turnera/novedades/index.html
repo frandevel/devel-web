@@ -643,7 +643,7 @@ footer{
     <h2>28 September 2026</h2>
     <span class="version__sello">Latest release</span>
   </div>
-  <p class="version__numero">Version <span translate="no">2026.9.303-3c9bead</span></p>
+  <p class="version__numero">Version <span translate="no">2026.9.305-d926d9c</span></p>
 
   <div class="grupo grupo--nuevo">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
@@ -662,6 +662,27 @@ footer{
     <ul>
       <li>The Invoicing and VeriFactu screen explains <strong>what sending means</strong>: Turnera sends the tax agency, on its own, a copy of each invoice's data as soon as it is issued, and it says what is sent and what is not.</li>
       <li>To turn sending on, it lists the <strong>two things needed</strong>, who does each and how they stand: the centre authorising DEVEL before the AEAT, once, and Turnera's connection with the AEAT, which DEVEL prepares. <strong>No certificate has to be uploaded.</strong></li>
+    </ul>
+    <h4>Customers</h4>
+    <ul>
+      <li>The customer search finds by <strong>the start of each word</strong> of the first name or surnames: «iba» finds Ibáñez but not Arribas, and «ana gar» finds Ana García. Phone and tax ID are still found by any fragment.</li>
+    </ul>
+    <h4>Diary</h4>
+    <ul>
+      <li>When you hover over the <strong>voucher icon</strong> of an appointment, a card appears above the diary showing which voucher each session belongs to, how many are left and when it expires, in orange if less than a month remains.</li>
+    </ul>
+    <h4>Bringing data over from flowww</h4>
+    <ul>
+      <li>Your <strong>vouchers that have already expired</strong> arrive disabled: they are kept on the customer's record, but cannot be used.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Bugs fixed</h3>
+    <ul>
+      <li>When searching for a customer for an appointment or a payment, what you had typed was erased as soon as the suggestions appeared.</li>
+      <li>The breakdown of an appointment's vouchers was cut off inside the appointment itself.</li>
+      <li>On the record of a customer with pending payments, the notice showed technical text instead of what they owe.</li>
     </ul>
   </div>
 </section>

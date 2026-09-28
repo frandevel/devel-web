@@ -204,5 +204,20 @@
   "t98398d59": "The club demo now only shows programmes and session notes for tennis and padel, with nothing clinical.",
   "t9b7ffc97": "When correcting a progress note, its time moved two hours forward.",
   "tc7653412": "Sometimes tickets with products could not be charged.",
-  "t8b58fbed": "Types of change"
+  "t8b58fbed": "Types of change",
+  "t6561cd34": "2026.9.305-d926d9c",
+  "te84b64f4": "Customers",
+  "t4bcd9d5c": "The customer search finds by",
+  "te67d265c": "of the first name or surnames: «iba» finds Ibáñez but not Arribas, and «ana gar» finds Ana García. Phone and tax ID are still found by any fragment.",
+  "t87076198": "the start of each word",
+  "t891e9d6d": "Diary",
+  "t9f1f7f06": "When you hover over the",
+  "t8df42aae": "of an appointment, a card appears above the diary showing which voucher each session belongs to, how many are left and when it expires, in orange if less than a month remains.",
+  "t2cd8d647": "voucher icon",
+  "tfbd53906": "Bringing data over from flowww",
+  "tebf4677e": "arrive disabled: they are kept on the customer's record, but cannot be used.",
+  "t10ee0179": "vouchers that have already expired",
+  "t40a50a34": "When searching for a customer for an appointment or a payment, what you had typed was erased as soon as the suggestions appeared.",
+  "t699fd888": "The breakdown of an appointment's vouchers was cut off inside the appointment itself.",
+  "t7f745943": "On the record of a customer with pending payments, the notice showed technical text instead of what they owe."
 }

@@ -930,7 +930,7 @@ footer{
     <tr>
       <td><strong>Voucher icon</strong> with a number, at the bottom right</td>
       <td>The customer has a voucher, and that number is the sessions they have left. <strong>Hover over it</strong>
-        and it opens out to show which voucher each one is from and when it expires.</td>
+        and a card appears above the diary showing which voucher each one belongs to, how many are left and when it expires; in orange if it expires in less than a month. It goes away when you move the mouse off the icon.</td>
     </tr>
     <tr><td><strong>Green tick</strong></td><td>The appointment is confirmed.</td></tr>
     <tr><td><strong>Euro icon</strong></td><td>That appointment has already been through the till.</td></tr>
@@ -1002,7 +1002,7 @@ footer{
   <span class="ruta">Menu → Customers</span>
 
   <p>
-    The search box at the top searches by first name, surname, phone, tax ID or <strong>customer number</strong>. You don't need to type it in full, except the number, which has to be exact. The list is sorted by clicking the header of any column (<a href="#ordenar">how</a>).
+    The search box at the top searches by first name, surname, phone, tax ID or <strong>customer number</strong>. For the first name and surnames, <strong>the start of each word</strong>is enough: «iba» finds Ibáñez but not Arribas, and «ana gar» finds Ana García. Phone and tax ID are found by any fragment; the customer number must be exact. It is the same search as in the appointment and at the till. The list is sorted by clicking the header of any column (<a href="#ordenar">how</a>).
   </p>
 
   <p>
@@ -2452,6 +2452,9 @@ footer{
   </ol>
   <p>
     The <strong>code</strong> of each service in flowww arrives as its short code. In flowww the same code can be used for several services, and in Turnera it cannot: those get what distinguishes their name added —IDEE becomes IDEE20, IDEE30 and IDEE50 for the Indiba of 20, 30 and 50 minutes— and the trial run report says how each one ends up. They can be changed later in the service record.
+  </p>
+  <p>
+    The <strong>vouchers that have already expired</strong> with unused sessions arrive disabled: they are kept on the customer's record, but cannot be used. The report counts them separately.
   </p>
   <p>
     With the <strong>stocks</strong>sheet, each product arrives with the units flowww had at the centre; negative figures arrive as zero. If a product is in the stock but no longer in the price list, it is created anyway, with 21 % VAT, so its units are not lost. Without that sheet, products arrive with zero stock and are set with a stocktake from <em>Stock</em>. If someone has already done the stocktake in Turnera, a new import does not overwrite it.

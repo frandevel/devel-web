@@ -1510,5 +1510,12 @@
   "t8c0d1b17": "Turnera's connection with the AEAT",
   "tfa16e789": "The screen shows how each of the two stands, and the switch cannot be turned on until both are ready. If the\n    AEAT rejects a record or they get stuck, a warning appears at the top of the screen for whoever handles\n    invoicing, and it reaches our support. If the AEAT says DEVEL is no longer authorised, the authorisation goes back to",
   "t85c89de2": "and sending stops until it is fixed, without losing anything.",
-  "t7d63af37": "Pending"
+  "t7d63af37": "Pending",
+  "t724a2ec5": "and a card appears above the diary showing which voucher each one belongs to, how many are left and when it expires; in orange if it expires in less than a month. It goes away when you move the mouse off the icon.",
+  "t614626ea": ". For the first name and surnames,",
+  "t4738d8b6": "is enough: «iba» finds Ibáñez but not Arribas, and «ana gar» finds Ana García. Phone and tax ID are found by any fragment; the customer number must be exact. It is the same search as in the appointment and at the till. The list is sorted by clicking the header of any column (",
+  "t87076198": "the start of each word",
+  "t26528831": "The",
+  "t719633b4": "with unused sessions arrive disabled: they are kept on the customer's record, but cannot be used. The report counts them separately.",
+  "t10ee0179": "vouchers that have already expired"
 }

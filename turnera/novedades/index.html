@@ -644,7 +644,7 @@ footer{
     <h2>28 de septiembre de 2026</h2>
     <span class="version__sello">Última versión</span>
   </div>
-  <p class="version__numero">Versión <span translate="no">2026.9.303-3c9bead</span></p>
+  <p class="version__numero">Versión <span translate="no">2026.9.305-d926d9c</span></p>
 
   <div class="grupo grupo--nuevo">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
@@ -663,6 +663,27 @@ footer{
     <ul>
       <li>La pantalla de Facturación y VeriFactu explica <strong>qué es enviar</strong>: Turnera manda sola a la Agencia Tributaria una copia de los datos de cada factura en cuanto se emite, y dice qué se envía y qué no.</li>
       <li>Para poder activar el envío lista las <strong>dos cosas que hacen falta</strong>, quién hace cada una y cómo están: que el centro autorice a DEVEL ante la AEAT, una sola vez, y la conexión de Turnera con la AEAT, que prepara DEVEL. <strong>No hay que subir ningún certificado.</strong></li>
+    </ul>
+    <h4>Clientes</h4>
+    <ul>
+      <li>El buscador de clientes encuentra por <strong>el principio de cada palabra</strong> del nombre o los apellidos: «iba» encuentra a Ibáñez y no a Arribas, y «ana gar», a Ana García. El teléfono y el NIF se siguen encontrando con cualquier trozo.</li>
+    </ul>
+    <h4>Agenda</h4>
+    <ul>
+      <li>Al pasar el ratón por el <strong>icono del bono</strong> de una cita, sale por encima de la agenda de qué bono es cada sesión, cuántas quedan y cuándo caduca, en naranja si falta menos de un mes.</li>
+    </ul>
+    <h4>Traer los datos de flowww</h4>
+    <ul>
+      <li>Los <strong>bonos ya caducados</strong> llegan inhabilitados: constan en la ficha del cliente, pero no se pueden usar.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Errores corregidos</h3>
+    <ul>
+      <li>Al buscar un cliente para una cita o un cobro, lo escrito se borraba en cuanto salían las sugerencias.</li>
+      <li>El detalle de los bonos de una cita se cortaba dentro de la propia cita.</li>
+      <li>En la ficha de un cliente con cobros pendientes, el aviso mostraba un texto técnico en lugar de lo que debe.</li>
     </ul>
   </div>
 </section>

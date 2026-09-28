@@ -976,7 +976,8 @@ footer{
     <tr>
       <td><strong>Icono de vale</strong> con un número, abajo a la derecha</td>
       <td>El cliente tiene bono, y ese número son las sesiones que le quedan. <strong>Pase el ratón por encima</strong>
-        y se despliega de qué bono es cada una y cuándo caduca.</td>
+        y sale, por encima de la agenda, de qué bono es cada una, cuántas quedan y cuándo caduca; en naranja, si
+        caduca en menos de un mes. Se va al quitar el ratón del icono.</td>
     </tr>
     <tr><td><strong>Visto verde</strong></td><td>La cita está confirmada.</td></tr>
     <tr><td><strong>Icono de euro</strong></td><td>Esa cita ya ha pasado por caja.</td></tr>
@@ -1056,8 +1057,10 @@ footer{
   <span class="ruta">Menú → Clientes</span>
 
   <p>
-    El buscador de arriba busca por nombre, apellidos, teléfono, NIF o <strong>número de cliente</strong>. No hace
-    falta escribirlo entero, salvo el número, que va exacto. La lista se ordena pulsando la cabecera de cualquier
+    El buscador de arriba busca por nombre, apellidos, teléfono, NIF o <strong>número de cliente</strong>. Del nombre
+    y los apellidos basta con <strong>el principio de cada palabra</strong>: «iba» encuentra a Ibáñez, pero no a
+    Arribas, y «ana gar» encuentra a Ana García. El teléfono y el NIF se encuentran con cualquier trozo; el número
+    de cliente va exacto. Es el mismo buscador que el de la cita y el del cobro. La lista se ordena pulsando la cabecera de cualquier
     columna (<a href="#ordenar">cómo</a>).
   </p>
 
@@ -2735,6 +2738,10 @@ footer{
     puede servir para varios servicios, y en Turnera no: a esos se les añade lo que distingue su nombre —IDEE pasa
     a IDEE20, IDEE30 e IDEE50 para el Indiba de 20, 30 y 50 minutos— y el informe del ensayo dice cómo queda cada
     uno. Se pueden cambiar después en la ficha del servicio.
+  </p>
+  <p>
+    Los <strong>bonos ya caducados</strong> con sesiones sin gastar llegan inhabilitados: constan en la ficha del
+    cliente, pero no se pueden usar. El informe los cuenta aparte.
   </p>
   <p>
     Con la hoja de <strong>stocks</strong>, cada producto llega con las unidades que flowww tenía en el centro; lo

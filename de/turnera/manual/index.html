@@ -930,7 +930,7 @@ footer{
     <tr>
       <td><strong>Gutschein-Symbol</strong> mit einer Zahl, unten rechts</td>
       <td>Der Kunde hat eine Wertkarte, und diese Zahl sind die Sitzungen, die ihm noch bleiben. <strong>Fahren Sie mit der Maus darüber</strong>
-        und es klappt auf, zu welcher Wertkarte jede Sitzung gehört und wann sie abläuft.</td>
+        und über dem Kalender erscheint, zu welchem Gutschein jede gehört, wie viele übrig sind und wann er abläuft; in Orange, wenn er in weniger als einem Monat abläuft. Sie verschwindet, wenn Sie die Maus vom Symbol nehmen.</td>
     </tr>
     <tr><td><strong>Grüner Haken</strong></td><td>Der Termin ist bestätigt.</td></tr>
     <tr><td><strong>Euro-Symbol</strong></td><td>Dieser Termin ist bereits kassiert.</td></tr>
@@ -1002,7 +1002,7 @@ footer{
   <span class="ruta">Menü → Kunden</span>
 
   <p>
-    Das Suchfeld oben sucht nach Vorname, Nachname, Telefon, Steuernummer oder <strong>Kundennummer</strong>. Man muss nichts vollständig eingeben, außer der Nummer, die exakt sein muss. Die Liste wird durch Klick auf eine Spaltenüberschrift sortiert (<a href="#ordenar">wie</a>).
+    Das Suchfeld oben sucht nach Vorname, Nachname, Telefon, Steuernummer oder <strong>Kundennummer</strong>. Bei Vor- und Nachnamen genügt <strong>der Anfang jedes Wortes</strong>: «iba» findet Ibáñez, aber nicht Arribas, und «ana gar» findet Ana García. Telefon und Steuernummer werden über jeden Teil gefunden; die Kundennummer muss exakt sein. Es ist dieselbe Suche wie beim Termin und an der Kasse. Die Liste wird sortiert, indem Sie auf die Überschrift einer Spalte klicken (<a href="#ordenar">wie</a>).
   </p>
 
   <p>
@@ -2460,6 +2460,9 @@ footer{
   </ol>
   <p>
     Der <strong>Code</strong> jeder Leistung in flowww wird zu ihrem Kurzcode. In flowww kann derselbe Code für mehrere Leistungen gelten, in Turnera nicht: Diesen wird angehängt, was ihren Namen unterscheidet —aus IDEE werden IDEE20, IDEE30 und IDEE50 für Indiba mit 20, 30 und 50 Minuten—, und der Bericht des Probelaufs zeigt, wie jeder Code am Ende heißt. Sie lassen sich später in der Leistungskarte ändern.
+  </p>
+  <p>
+    Die <strong>bereits abgelaufenen Gutscheine</strong> mit ungenutzten Sitzungen kommen deaktiviert an: Sie bleiben in der Kundenakte, können aber nicht verwendet werden. Der Bericht zählt sie gesondert.
   </p>
   <p>
     Mit dem Blatt <strong>stocks</strong>kommt jedes Produkt mit den Einheiten an, die flowww im Zentrum hatte; Negatives kommt als null an. Steht ein Produkt im Bestand, aber nicht mehr in der Preisliste, wird es trotzdem angelegt, mit 21 % MwSt., damit seine Einheiten nicht verloren gehen. Ohne dieses Blatt kommen die Produkte mit Bestand null an und werden per Inventur eingetragen unter <em>Lager</em>. Hat jemand die Inventur in Turnera schon gemacht, überschreibt ein neuer Import sie nicht.
