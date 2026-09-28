@@ -625,7 +625,7 @@ footer{
     <h2>28 September 2026</h2>
     <span class="version__sello">Latest release</span>
   </div>
-  <p class="version__numero">Version <span translate="no">2026.9.302-dabbec3</span></p>
+  <p class="version__numero">Version <span translate="no">2026.9.303-3c9bead</span></p>
 
   <h3>Invoicing: test mode and moving to production</h3>
   <ul>
@@ -633,6 +633,12 @@ footer{
     <li>When the centre is going to invoice for real, <strong>Move to production</strong> deletes the test invoices and every series starts again at number 1.</li>
     <li>That step <strong>cannot be undone</strong>: the screen explains it, asks you to tick that you understand and to type PRODUCCIÓN, and needs the new permission «Pasar la facturación a producción», which out of the box only the administrator has.</li>
     <li>The Invoicing and VeriFactu screen explains what each block does, and while the centre is in test mode there is a notice at the top for whoever handles invoicing.</li>
+  </ul>
+
+  <h3>Sending to the AEAT</h3>
+  <ul>
+    <li>The Invoicing and VeriFactu screen explains <strong>what sending means</strong>: Turnera sends the tax agency, on its own, a copy of each invoice's data as soon as it is issued, and it says what is sent and what is not.</li>
+    <li>To turn sending on, it lists the <strong>two things needed</strong>, who does each and how they stand: the centre authorising DEVEL before the AEAT, once, and Turnera's connection with the AEAT, which DEVEL prepares. <strong>No certificate has to be uploaded.</strong></li>
   </ul>
 </section>
 

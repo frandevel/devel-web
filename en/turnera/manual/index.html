@@ -609,6 +609,7 @@ footer{
     <li><a href="#tarjetas-regalo" class="sub">Gift cards</a></li>
     <li><a href="#facturas" class="sub">Invoices and VeriFactu</a></li>
     <li><a href="#facturas-pruebas" class="sub">Test mode and production</a></li>
+    <li><a href="#facturas-envio" class="sub">Sending to the AEAT</a></li>
     <li><a href="#bonos">5. Vouchers</a></li>
     <li><a href="#aparatos">6. Equipment</a></li>
     <li><a href="#aparatos-alta" class="sub">Adding a device</a></li>
@@ -1421,11 +1422,42 @@ footer{
       <em>Pasar la facturación a producción (move invoicing to production)</em>, which out of the box only the administrator has.</p>
   </div>
 
+  <h3 id="facturas-envio">Sending to the AEAT</h3>
+  <span class="ruta">Administration → Invoicing and VeriFactu → Sending to the AEAT</span>
+
   <p>
-    The <strong>sending to the AEAT</strong> is a second switch, also off. To turn it on, the centre
-    has to authorise Turnera before the tax agency and support has to install the certificate; until then
-    invoices are issued all the same and their records wait in a queue, without being lost. If the AEAT rejects any or
-    they get stuck, a warning appears at the top of the screen for whoever handles invoicing, and it reaches our support.
+    <strong>Send</strong> means that Turnera sends the Spanish tax agency, on its own and as soon as each invoice is
+    issued, a copy of its data: what the rules call an «invoicing record». Nobody has to do anything
+    invoice by invoice.
+  </p>
+
+  <ul>
+    <li><strong>What is sent:</strong> the number, the date, the kind of invoice, the description of what was sold, the
+      VAT breakdown and the total; for a full invoice, also the customer's name and tax ID.</li>
+    <li><strong>What is not sent:</strong> the invoice PDF, or anything from the customer's file or clinical
+      record.</li>
+    <li>That way the AEAT keeps its own copy, and whoever holds the invoice can check it by scanning its QR.</li>
+    <li>While sending is off, records are kept in Turnera in order and, when it is turned on, they are all sent,
+      oldest first: none is lost.</li>
+  </ul>
+
+  <p>Sending is a second switch, also off. Turning it on needs two things, and
+    <strong>no certificate has to be uploaded</strong>:</p>
+
+  <ol>
+    <li><strong>Authorise DEVEL before the AEAT</strong>, done by the centre once: with the centre's
+      certificate, on the tax agency's website, an authorisation (apoderamiento) in favour of DEVEL is registered to
+      send invoicing records. It is only good for that, and the centre can withdraw it whenever it wants. Once
+      done, tell support through <em>Report an incident</em> and we mark it on that screen.</li>
+    <li><strong>Turnera's connection with the AEAT</strong>, prepared by DEVEL: it is our certificate, with which
+      Turnera identifies itself when sending on the centre's behalf. It is installed once on the server.</li>
+  </ol>
+
+  <p>
+    The screen shows how each of the two stands, and the switch cannot be turned on until both are ready. If the
+    AEAT rejects a record or they get stuck, a warning appears at the top of the screen for whoever handles
+    invoicing, and it reaches our support. If the AEAT says DEVEL is no longer authorised, the authorisation goes back to
+    <em>Pending</em> and sending stops until it is fixed, without losing anything.
   </p>
 </section>
 

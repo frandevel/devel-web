@@ -606,6 +606,7 @@ footer{
     <li><a href="#tarjetas-regalo" class="sub">Tarjetas regalo</a></li>
     <li><a href="#facturas" class="sub">Facturas y VeriFactu</a></li>
     <li><a href="#facturas-pruebas" class="sub">Modo pruebas y producción</a></li>
+    <li><a href="#facturas-envio" class="sub">Enviar a la AEAT</a></li>
     <li><a href="#bonos">5. Bonos</a></li>
     <li><a href="#aparatos">6. Aparatología</a></li>
     <li><a href="#aparatos-alta" class="sub">Dar de alta un aparato</a></li>
@@ -1564,7 +1565,7 @@ footer{
     <li>En el libro de facturas salen con la etiqueta <em>Prueba</em>, y el Excel lo dice en el nombre de sus
       hojas.</li>
     <li>Arriba de la pantalla hay un aviso mientras el centro esté en pruebas, para quien lleva la facturación.</li>
-    <li>Si se activa la remisión, los registros van al entorno de pruebas de la AEAT, nunca al real.</li>
+    <li>Si se activa el envío, los registros van al entorno de pruebas de la AEAT, nunca al real.</li>
   </ul>
 
   <p>
@@ -1586,11 +1587,42 @@ footer{
       <em>Pasar la facturación a producción</em>, que de fábrica solo tiene el administrador.</p>
   </div>
 
+  <h3 id="facturas-envio">Enviar a la AEAT</h3>
+  <span class="ruta">Administración → Facturación y VeriFactu → Envío a la AEAT</span>
+
   <p>
-    La <strong>remisión a la AEAT</strong> es un segundo interruptor, también apagado. Para encenderlo, el centro
-    tiene que apoderar a Turnera ante la Agencia Tributaria y soporte instalar el certificado; hasta entonces las
-    facturas se emiten igual y sus registros esperan en cola, sin perderse. Si la AEAT rechaza alguno o se quedan
-    atascados, sale un aviso arriba de la pantalla para quien lleva la facturación, y nos llega a soporte.
+    <strong>Enviar</strong> significa que Turnera manda a la Agencia Tributaria, sola y en el momento en que se emite
+    cada factura, una copia de sus datos: lo que la norma llama «registro de facturación». Nadie tiene que hacer nada
+    factura a factura.
+  </p>
+
+  <ul>
+    <li><strong>Lo que se envía:</strong> el número, la fecha, el tipo de factura, la descripción de lo vendido, el
+      desglose del IVA y el total; en una factura completa, también el nombre y el NIF del cliente.</li>
+    <li><strong>Lo que no se envía:</strong> el PDF de la factura, ni nada de la ficha del cliente ni de su historia
+      clínica.</li>
+    <li>Así la AEAT guarda su propia copia, y quien tenga la factura puede comprobarla escaneando su QR.</li>
+    <li>Mientras el envío está apagado, los registros se guardan en Turnera en orden y, cuando se activa, se envían
+      todos, del más antiguo al más nuevo: no se pierde ninguno.</li>
+  </ul>
+
+  <p>El envío es un segundo interruptor, también apagado. Para poder encenderlo hacen falta dos cosas, y
+    <strong>no hay que subir ningún certificado</strong>:</p>
+
+  <ol>
+    <li><strong>Autorizar a DEVEL ante la AEAT</strong>, que lo hace el centro una sola vez: con el certificado del
+      centro, en la sede electrónica de la Agencia Tributaria, se da de alta un apoderamiento a favor de DEVEL para
+      enviar los registros de facturación. Solo sirve para eso, y el centro puede retirarlo cuando quiera. Cuando esté
+      hecho, se le dice a soporte con <em>Contar una incidencia</em> y lo marcamos en esa pantalla.</li>
+    <li><strong>La conexión de Turnera con la AEAT</strong>, que la prepara DEVEL: es nuestro certificado, con el
+      que Turnera se identifica al enviar en nombre del centro. Se instala una vez en el servidor.</li>
+  </ol>
+
+  <p>
+    La pantalla dice cómo está cada una de las dos, y el interruptor no se deja activar hasta que estén listas. Si la
+    AEAT rechaza algún registro o se quedan atascados, sale un aviso arriba de la pantalla para quien lleva la
+    facturación, y nos llega a soporte. Si la AEAT dice que DEVEL ya no está autorizada, la autorización vuelve a
+    <em>Pendiente</em> y el envío se para hasta que se arregle, sin perder nada.
   </p>
 </section>
 

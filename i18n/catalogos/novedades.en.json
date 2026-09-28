@@ -185,5 +185,14 @@
   "t376dcd47": ": the screen explains it, asks you to tick that you understand and to type PRODUCCIÓN, and needs the new permission «Pasar la facturación a producción», which out of the box only the administrator has.",
   "tccb01b99": "cannot be undone",
   "t6f6c17e6": "The Invoicing and VeriFactu screen explains what each block does, and while the centre is in test mode there is a notice at the top for whoever handles invoicing.",
-  "t74e38fca": "28 September 2026"
+  "t74e38fca": "28 September 2026",
+  "t47c6501a": "2026.9.303-3c9bead",
+  "t8e28b035": "Sending to the AEAT",
+  "t7968171b": "The Invoicing and VeriFactu screen explains",
+  "tdb417021": ": Turnera sends the tax agency, on its own, a copy of each invoice's data as soon as it is issued, and it says what is sent and what is not.",
+  "tff2e0353": "what sending means",
+  "t4af205ce": "To turn sending on, it lists the",
+  "t069832da": ", who does each and how they stand: the centre authorising DEVEL before the AEAT, once, and Turnera's connection with the AEAT, which DEVEL prepares.",
+  "tebb3d42e": "two things needed",
+  "t95e7afa9": "No certificate has to be uploaded."
 }

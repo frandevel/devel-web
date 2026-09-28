@@ -609,6 +609,7 @@ footer{
     <li><a href="#tarjetas-regalo" class="sub">Geschenkkarten</a></li>
     <li><a href="#facturas" class="sub">Rechnungen und VeriFactu</a></li>
     <li><a href="#facturas-pruebas" class="sub">Testmodus und Produktion</a></li>
+    <li><a href="#facturas-envio" class="sub">Übermittlung an die AEAT</a></li>
     <li><a href="#bonos">5. Wertkarten</a></li>
     <li><a href="#aparatos">6. Geräte</a></li>
     <li><a href="#aparatos-alta" class="sub">Ein Gerät anlegen</a></li>
@@ -1421,11 +1422,42 @@ footer{
       <em>Pasar la facturación a producción (Rechnungsstellung in die Produktion überführen)</em>, die ab Werk nur der Administrator hat.</p>
   </div>
 
+  <h3 id="facturas-envio">Übermittlung an die AEAT</h3>
+  <span class="ruta">Verwaltung → Rechnungen und VeriFactu → Übermittlung an die AEAT</span>
+
   <p>
-    Das <strong>Übermittlung an die AEAT</strong> ist ein zweiter Schalter, ebenfalls aus. Um ihn einzuschalten, muss das Zentrum
-    Turnera bei der Steuerbehörde bevollmächtigen und der Support das Zertifikat installieren; bis dahin werden die
-    Rechnungen trotzdem ausgestellt, und ihre Datensätze warten in einer Warteschlange, ohne verloren zu gehen. Lehnt die AEAT einen ab oder
-    bleiben sie hängen, erscheint oben auf dem Bildschirm ein Hinweis für die Zuständigen, und unser Support wird benachrichtigt.
+    <strong>Senden</strong> heißt, dass Turnera der spanischen Steuerbehörde von selbst und sobald jede Rechnung
+    ausgestellt ist, eine Kopie ihrer Daten schickt: was die Vorschrift «Rechnungsdatensatz» nennt. Niemand muss
+    Rechnung für Rechnung etwas tun.
+  </p>
+
+  <ul>
+    <li><strong>Was übermittelt wird:</strong> Nummer, Datum, Rechnungsart, Beschreibung des Verkauften,
+      MwSt.-Aufschlüsselung und Gesamtbetrag; bei einer vollständigen Rechnung auch Name und Steuernummer des Kunden.</li>
+    <li><strong>Was nicht übermittelt wird:</strong> das PDF der Rechnung und nichts aus der Kundenakte oder der
+      Krankengeschichte.</li>
+    <li>So behält die AEAT ihre eigene Kopie, und wer die Rechnung hat, kann sie über den QR-Code prüfen.</li>
+    <li>Solange die Übermittlung aus ist, werden die Datensätze in Turnera der Reihe nach aufbewahrt und beim Einschalten alle
+      gesendet, die ältesten zuerst: keiner geht verloren.</li>
+  </ul>
+
+  <p>Die Übermittlung ist ein zweiter Schalter, ebenfalls aus. Zum Einschalten braucht es zwei Dinge, und
+    <strong>es muss kein Zertifikat hochgeladen werden</strong>:</p>
+
+  <ol>
+    <li><strong>DEVEL bei der AEAT bevollmächtigen</strong>, erledigt das Zentrum einmalig: mit dem Zertifikat des
+      Zentrums wird auf der Website der Steuerbehörde eine Vollmacht (apoderamiento) zugunsten von DEVEL für die
+      Übermittlung der Rechnungsdatensätze eingetragen. Sie gilt nur dafür, und das Zentrum kann sie jederzeit widerrufen. Danach
+      sagt man es dem Support über <em>Problem melden</em> und wir markieren es auf dieser Seite.</li>
+    <li><strong>Die Verbindung von Turnera mit der AEAT</strong>, bereitet DEVEL vor: es ist unser Zertifikat, mit dem
+      sich Turnera beim Übermitteln im Namen des Zentrums ausweist. Es wird einmal auf dem Server installiert.</li>
+  </ol>
+
+  <p>
+    Die Seite zeigt den Stand von beidem, und der Schalter lässt sich erst einschalten, wenn beides bereit ist. Lehnt die
+    AEAT einen Datensatz ab oder bleiben sie hängen, erscheint oben ein Hinweis für die Zuständigen, und unser
+    Support wird benachrichtigt. Sagt die AEAT, dass DEVEL nicht mehr bevollmächtigt ist, geht die Vollmacht zurück auf
+    <em>Ausstehend</em> und die Übermittlung stoppt, bis es behoben ist, ohne dass etwas verloren geht.
   </p>
 </section>
 
