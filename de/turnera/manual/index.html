@@ -619,6 +619,7 @@ footer{
     <li><a href="#informes">8. Berichte und Kassenabschluss</a></li>
     <li><a href="#cuadro-de-mando" class="sub">Das Cockpit</a></li>
     <li><a href="#ajustes">9. Einstellungen des Betriebs</a></li>
+    <li><a href="#calendario-laboral" class="sub">Arbeitskalender</a></li>
     <li><a href="#desactivar-centro" class="sub">Ein Zentrum deaktivieren</a></li>
     <li><a href="#importar" class="sub">Daten aus flowww übernehmen</a></li>
     <li><a href="#irse" class="sub">Die Daten mitnehmen</a></li>
@@ -2359,6 +2360,79 @@ footer{
     welcher Zeitzone das Zentrum liegt, und sie ist voreingestellt auf <strong>Europe/Madrid</strong>. Ein Zentrum außerhalb des spanischen Festlands
     ändert das bei der Installation über die Variable <code>TURNERA_TZ</code> ; sonst kämen die Abschnitte verschoben heraus,
     auch wenn die Stundensumme stimmte.
+  </p>
+
+  <h3 id="calendario-laboral">Arbeitskalender</h3>
+  <span class="ruta">Menü → Arbeitskalender · Menü → Mein Kalender</span>
+
+  <p>
+    Der Arbeitskalender verteilt über das Jahr <strong>die Stunden, die der Tarifvertrag vorsieht,</strong> jeder
+    Fachkraft: an welchen Tagen und in welcher Schicht sie arbeitet, ihren Urlaub, ihre Abwesenheiten und die Feiertage. Ihn führt, wer
+    die Rolle <strong>RRHH</strong> hat (oder die Berechtigungen «Ver los calendarios laborales» und «Planificar los
+    calendarios laborales»). Er ist ein Plan: Was wirklich gearbeitet wurde, bleibt die Zeiterfassung, und der Bildschirm
+    vergleicht beides.
+  </p>
+
+  <h4>Was einmal eingerichtet wird</h4>
+  <ul>
+    <li><strong>Tarifvertrag</strong>legt das Zentrum fest; es gibt <strong>einen pro Jahr für die ganze Belegschaft</strong> und
+      alle Standorte: Name, Jahresarbeitsstunden bei Vollzeit und Urlaubstage, Kalendertage
+      (die 30 des Statuts) oder Arbeitstage (ohne Wochenenden und Feiertage). Jeder Kalender übernimmt den seines Jahres;
+      er wird nicht Person für Person gewählt.</li>
+    <li><strong>Schichten</strong>: «Vormittag 9-14», «Nachmittag 15-21»… Eine geteilte hat zwei Abschnitte, und eine, die endet,
+      bevor sie beginnt, ist eine Nachtschicht und endet am nächsten Tag.</li>
+    <li><strong>Abwesenheiten</strong>: Krankschreibung, bezahlte oder unbezahlte Freistellung… Jede sagt, ob der Tag
+      für die Stunden des Tarifvertrags als gearbeitet zählt. Bei einer Krankschreibung wird nur das festgehalten, nie die Diagnose.</li>
+    <li><strong>Feiertage</strong>: unter <em>Einstellungen</em> wird die Region des Zentrums gewählt, und unter
+      <em>Feiertage</em> holt die Schaltfläche die nationalen und die Feiertage dieser Region für das Jahr.</li>
+  </ul>
+
+  <div class="ojo">
+    <p><strong>Lokale Feiertage werden nicht importiert.</strong> Die zwei jeder Gemeinde veröffentlicht niemand
+      zuverlässig, daher müssen sie von Hand eingetragen werden unter <em>Feiertage → Lokalen Feiertag hinzufügen</em>. Der Bildschirm
+      zeigt, wie viele lokale eingetragen sind: steht dort null, fehlen sie.</p>
+  </div>
+
+  <h4>Der Kalender jeder Fachkraft</h4>
+  <p>
+    Beschreiben Sie unter <em>Kalender</em> zeigt alle Fachkräfte des Zentrums und wie ihr Kalender im gewählten Jahr steht.
+    <em>Anlegen</em> übernimmt den Tarifvertrag des Jahres und fragt nach der Arbeitszeit (100 % Vollzeit, 50 % halbtags) und,
+    falls sie im Jahr liegen, nach den Daten von <strong>Eintritt und Austritt</strong>: Damit werden Stunden und Urlaub automatisch anteilig berechnet,
+    was für eine Abrechnung nötig ist. In Halbtagsarbeit gibt es gleich viel Urlaub
+    und die Hälfte der Stunden.
+  </p>
+  <p>
+    Um das Jahr zu verteilen, wählt man oben, was eingetragen wird —eine Schicht, Urlaub, eine Abwesenheit oder <em>Frei</em> zum
+    Entfernen— und klickt auf einen Tag oder zieht von einem Tag zum anderen, um alle dazwischen zu markieren.
+    <em>Nach Wochentagen füllen</em> trägt es auf einmal ein, zum Beispiel Montag bis Freitag von Januar bis
+    Juni, ohne Feiertage und ohne Bestehendes zu ändern. Rechts <strong>werden die Zahlen bei
+    jeder Änderung neu berechnet</strong>: Stunden laut Tarifvertrag, geplant, noch zu verteilen (oder zu viel), der
+    eingetragene Urlaub gegenüber dem Anspruch und, bis gestern, Geplantes gegenüber Erfasstem.
+  </p>
+  <p>
+    Darunter stehen die <strong>Hinweise</strong> des spanischen Arbeitnehmerstatuts: weniger als 12 Stunden Ruhe zwischen
+    zwei Arbeitstagen, mehr als 9 Stunden an einem Tag, weniger als 3 freie Tage in 14, eine Schicht an einem Feiertag, mehr Urlaub als
+    zusteht oder markierte Tage außerhalb von Eintritt und Austritt. Es sind Hinweise und sie verhindern das Speichern nicht: Manche
+    Tarifverträge erlauben anderes.
+  </p>
+  <p>
+    <em>Für andere Fachkraft duplizieren</em> kopiert den Kalender unverändert auf andere im Zentrum (hatten sie für dieses
+    Jahr schon einen, wird er ersetzt, und der Bildschirm warnt vorher). <em>PDF herunterladen</em> bringt das Jahr auf ein Blatt, zum
+    Aushängen am Schwarzen Brett oder für die Steuerberatung.
+  </p>
+
+  <h4>Im Terminkalender</h4>
+  <p>
+    In den Ansichten nach Fachkraft graut der Terminkalender aus, was <strong>außerhalb ihrer Schicht</strong> liegt, und die
+    Tage mit Urlaub, Abwesenheit oder Feiertag. Anfangs markiert er nur und lässt trotzdem buchen. Wird unter
+    <em>Arbeitskalender → Einstellungen</em> aktiviert: <em>Der Arbeitskalender sperrt den Terminkalender</em>, lässt er keine Termine mehr
+    außerhalb der Schicht buchen oder verschieben. Wer in diesem Jahr keinen Kalender hat, ist nicht betroffen.
+  </p>
+
+  <h4>Mein Kalender</h4>
+  <p>
+    Jede Fachkraft mit verknüpftem Benutzer sieht <strong>ihren eigenen Kalender</strong> unter <em>Mein Kalender</em>,
+    mit ihren Zahlen und ihrem PDF, auch ohne Berechtigung: Den eigenen Dienstplan und Urlaub zu kennen, ist ihr Recht.
   </p>
 
   <h3 id="integraciones">Ein externes Programm anbinden (ERP)</h3>

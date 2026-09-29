@@ -619,6 +619,7 @@ footer{
     <li><a href="#informes">8. Informes y cierre de caja</a></li>
     <li><a href="#cuadro-de-mando" class="sub">El cuadro de mando</a></li>
     <li><a href="#ajustes">9. Ajustes del centro</a></li>
+    <li><a href="#calendario-laboral" class="sub">Calendario laboral</a></li>
     <li><a href="#desactivar-centro" class="sub">Desactivar un centro</a></li>
     <li><a href="#importar" class="sub">Traer los datos de flowww</a></li>
     <li><a href="#irse" class="sub">Llevarse los datos</a></li>
@@ -2619,6 +2620,79 @@ footer{
     centro, y viene puesta en <strong>Europe/Madrid</strong>. Un centro fuera de la España peninsular lo
     cambia con la variable <code>TURNERA_TZ</code> al instalar; si no, los tramos saldrían desplazados
     aunque las horas sumadas fueran correctas.
+  </p>
+
+  <h3 id="calendario-laboral">Calendario laboral</h3>
+  <span class="ruta">Menú → Calendario laboral · Menú → Mi calendario</span>
+
+  <p>
+    El calendario laboral reparte a lo largo del año <strong>las horas que marca el convenio</strong> de cada
+    profesional: qué días trabaja y en qué turno, sus vacaciones, sus ausencias y los festivos. Lo lleva quien
+    tenga el rol <strong>RRHH</strong> (o los permisos «Ver los calendarios laborales» y «Planificar los
+    calendarios laborales»). Es un plan: lo que de verdad se trabajó sigue siendo lo fichado, y la pantalla
+    compara una cosa con la otra.
+  </p>
+
+  <h4>Lo que se prepara una vez</h4>
+  <ul>
+    <li><strong>Convenio</strong>: lo acuerda el centro y es <strong>uno por año para toda la plantilla</strong> y
+      todas sus sedes: el nombre, las horas de trabajo al año a jornada completa y los días de vacaciones, naturales
+      (los 30 del Estatuto) o laborables (sin contar fines de semana ni festivos). Cada calendario toma el de su año;
+      no se elige persona a persona.</li>
+    <li><strong>Turnos</strong>: «Mañana 9-14», «Tarde 15-21»… Uno partido lleva dos tramos, y uno que acaba
+      antes de empezar es de noche y termina al día siguiente.</li>
+    <li><strong>Ausencias</strong>: baja, permiso retribuido, permiso sin sueldo… Cada una dice si ese día cuenta
+      como trabajado para las horas del convenio. De una baja se apunta que es una baja, nunca el diagnóstico.</li>
+    <li><strong>Festivos</strong>: en <em>Ajustes</em> se elige la comunidad autónoma del centro, y en
+      <em>Festivos</em> el botón trae los nacionales y los de esa comunidad para el año.</li>
+  </ul>
+
+  <div class="ojo">
+    <p><strong>Los festivos locales no se importan.</strong> Los dos de cada municipio no los publica nadie de
+      forma fiable, así que hay que añadirlos a mano en <em>Festivos → Añadir festivo local</em>. La pantalla
+      avisa de cuántos locales hay puestos: si pone cero, faltan.</p>
+  </div>
+
+  <h4>El calendario de cada profesional</h4>
+  <p>
+    En <em>Calendarios</em> salen todos los profesionales del centro con cómo va el suyo en el año elegido.
+    <em>Crear</em> toma el convenio del año y pide la jornada (100 % a jornada completa, 50 % a media) y,
+    si caen dentro del año, las fechas de <strong>alta y baja</strong>: con ellas las horas y las vacaciones se prorratean solas,
+    que es lo que hace falta para una liquidación o un finiquito. A media jornada se tienen las mismas vacaciones
+    y la mitad de horas.
+  </p>
+  <p>
+    Para repartir el año se elige arriba qué poner —un turno, vacaciones, una ausencia o <em>Libre</em> para
+    quitar— y se pincha un día, o se arrastra de un día a otro para marcar todos los de en medio.
+    <em>Rellenar por días de la semana</em> lo pone de una vez en, por ejemplo, los lunes a viernes de enero a
+    junio, saltándose los festivos y sin tocar lo ya puesto. A la derecha, <strong>las cuentas se rehacen con
+    cada cambio</strong>: horas del convenio, planificadas, las que quedan por repartir (o las que sobran), las
+    vacaciones puestas frente a las que le corresponden, y hasta ayer, lo planificado frente a lo fichado.
+  </p>
+  <p>
+    Debajo salen los <strong>avisos</strong> del Estatuto de los Trabajadores: menos de 12 horas de descanso entre
+    dos jornadas, más de 9 horas en un día, menos de 3 días libres en 14, turno en un festivo, más vacaciones de
+    las que tocan o días marcados fuera de las fechas de alta y baja. Son avisos y no impiden guardar: hay
+    convenios que permiten otra cosa.
+  </p>
+  <p>
+    <em>Duplicar en otro profesional</em> copia el calendario tal cual a otros del centro (si ya tenían uno ese
+    año, se sustituye, y la pantalla lo avisa antes). <em>Descargar PDF</em> saca el año en una hoja, para
+    colgarlo en el tablón o dárselo a la gestoría.
+  </p>
+
+  <h4>En la agenda</h4>
+  <p>
+    En las vistas por profesional, la agenda sombrea en gris lo que queda <strong>fuera de su turno</strong> y los
+    días de vacaciones, ausencia o festivo. De entrada solo lo marca y deja citar igual. Si en
+    <em>Calendario laboral → Ajustes</em> se activa <em>El calendario laboral bloquea la agenda</em>, ya no deja
+    poner ni mover una cita fuera del turno. Quien no tiene calendario ese año no se ve afectado.
+  </p>
+
+  <h4>Mi calendario</h4>
+  <p>
+    Cada profesional con su usuario vinculado ve <strong>su propio calendario</strong> en <em>Mi calendario</em>,
+    con sus cuentas y su PDF, aunque no tenga ningún permiso: saber su horario y sus vacaciones es su derecho.
   </p>
 
   <h3 id="integraciones">Conectar un programa externo (ERP)</h3>

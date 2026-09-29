@@ -619,6 +619,7 @@ footer{
     <li><a href="#informes">8. Reports and the end-of-day till</a></li>
     <li><a href="#cuadro-de-mando" class="sub">The scorecard</a></li>
     <li><a href="#ajustes">9. Centre settings</a></li>
+    <li><a href="#calendario-laboral" class="sub">Work calendar</a></li>
     <li><a href="#desactivar-centro" class="sub">Disabling a centre</a></li>
     <li><a href="#importar" class="sub">Bringing the data from flowww</a></li>
     <li><a href="#irse" class="sub">Take your data</a></li>
@@ -2353,6 +2354,79 @@ footer{
     centre lives in, and it comes set to <strong>Europe/Madrid</strong>. A centre outside mainland Spain
     changes it with the <code>TURNERA_TZ</code> variable when installing; otherwise the stretches would come out shifted
     even if the summed hours were right.
+  </p>
+
+  <h3 id="calendario-laboral">Work calendar</h3>
+  <span class="ruta">Menu → Work calendar · Menu → My calendar</span>
+
+  <p>
+    The work calendar spreads over the year <strong>the hours set by the agreement</strong> of each
+    professional: which days they work and on which shift, their holidays, their absences and the public holidays. It is kept by whoever
+    has the role <strong>HR</strong> (or the permissions «Ver los calendarios laborales» and «Planificar los
+    calendarios laborales»). It is a plan: what was really worked is still what was clocked, and the screen
+    compares one with the other.
+  </p>
+
+  <h4>What is set up once</h4>
+  <ul>
+    <li><strong>Agreement</strong>: set by the centre, it is <strong>one a year for the whole staff</strong> and
+      all its sites: the name, the yearly working hours full time and the holiday days, calendar days
+      (the Statute's 30) or working days (not counting weekends or public holidays). Each calendar takes the one of its year;
+      it is not chosen person by person.</li>
+    <li><strong>Shifts</strong>: «Morning 9-14», «Afternoon 15-21»… A split one has two stretches, and one that ends
+      before it starts is a night shift and ends the next day.</li>
+    <li><strong>Absences</strong>: sick leave, paid leave, unpaid leave… Each one says whether that day counts
+      as worked for the agreement hours. For a sick leave only that it is a sick leave is written down, never the diagnosis.</li>
+    <li><strong>Public holidays</strong>: in <em>Settings</em> the region of the centre is chosen, and in
+      <em>Public holidays</em> the button brings the national ones and those of that region for the year.</li>
+  </ul>
+
+  <div class="ojo">
+    <p><strong>Local public holidays are not imported.</strong> Nobody publishes the two of each town reliably,
+      so they have to be added by hand in <em>Public holidays → Add local holiday</em>. The screen
+      shows how many local ones are set: if it says zero, they are missing.</p>
+  </div>
+
+  <h4>The calendar of each professional</h4>
+  <p>
+    In <em>Calendars</em> lists every professional of the centre with how theirs stands in the chosen year.
+    <em>Create</em> takes the agreement of the year and asks for the workday (100 % full time, 50 % half time) and,
+    if they fall within the year, the <strong>start and leaving</strong> dates: with them hours and holidays are prorated automatically,
+    which is what a final settlement needs. Part-timers get the same holidays
+    and half the hours.
+  </p>
+  <p>
+    To spread the year, choose at the top what to put —a shift, holidays, an absence or <em>Free</em> to
+    clear— and click a day, or drag from one day to another to mark every day in between.
+    <em>Fill by weekdays</em> puts it at once on, for example, Monday to Friday from January to
+    June, skipping public holidays and leaving alone what is already set. On the right, <strong>the figures are redone with
+    each change</strong>: agreement hours, planned, still to plan (or over), the
+    holidays set against those due, and up to yesterday, planned against clocked.
+  </p>
+  <p>
+    Below are the <strong>warnings</strong> of the Workers' Statute: less than 12 hours of rest between
+    two workdays, more than 9 hours in a day, fewer than 3 days off in 14, a shift on a public holiday, more holidays than
+    due or days marked outside the start and leaving dates. They are warnings and do not stop saving: some
+    agreements allow otherwise.
+  </p>
+  <p>
+    <em>Duplicate to another professional</em> copies the calendar as it is to others in the centre (if they already had one that
+    year, it is replaced, and the screen warns first). <em>Download PDF</em> puts the year on one sheet, to
+    pin on the notice board or give to the accountant.
+  </p>
+
+  <h4>In the diary</h4>
+  <p>
+    In the views by professional, the diary shades in grey what is <strong>outside their shift</strong> and the
+    days of holidays, absence or public holiday. At first it only marks them and still lets you book. If in
+    <em>Work calendar → Settings</em> you switch on <em>The work calendar blocks the diary</em>, it no longer lets you
+    book or move an appointment outside the shift. Those without a calendar that year are not affected.
+  </p>
+
+  <h4>My calendar</h4>
+  <p>
+    Each professional with a linked user sees <strong>their own calendar</strong> in <em>My calendar</em>,
+    with its figures and its PDF, even without any permission: knowing their schedule and holidays is their right.
   </p>
 
   <h3 id="integraciones">Connecting an outside program (ERP)</h3>
