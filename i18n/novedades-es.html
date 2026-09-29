@@ -616,6 +616,7 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-09-29">29 de septiembre de 2026</a></li>
     <li><a href="#2026-09-28">28 de septiembre de 2026</a></li>
     <li><a href="#2026-09-27">27 de septiembre de 2026</a></li>
     <li><a href="#2026-09-26">26 de septiembre de 2026</a></li>
@@ -636,10 +637,65 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-09-29" class="version">
+  <div class="version__cabecera">
+    <h2>29 de septiembre de 2026</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">2026.9.314-729bded</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"/></svg></span>Nuevas características</h3>
+    <h4>Academias</h4>
+    <ul>
+      <li>Al poner Turnera en marcha por primera vez se puede elegir <strong>Academia</strong>, para centros que enseñan música, idiomas o cualquier otra cosa: Turnera habla de alumnos y clases en lugar de clientes y citas.</li>
+    </ul>
+    <h4>Consentimientos con formato</h4>
+    <ul>
+      <li>Las plantillas de consentimiento tienen ahora un <strong>editor con formato</strong>: títulos, negritas, cursivas y listas. Se puede <strong>pegar desde Word</strong>: se quedan los títulos, las negritas y las listas, y se quitan los tipos de letra y los colores.</li>
+      <li>El botón <strong>Insertar campo</strong> pone en el texto los datos que se rellenan solos al firmar —el nombre de quien firma, su DNI, el día de la firma…—, y debajo del editor hay una tabla que explica cada uno.</li>
+    </ul>
+    <h4>Color propio de un servicio</h4>
+    <ul>
+      <li>Cada cita se sigue pintando en la agenda con el color de la categoría de su servicio, pero ahora un servicio concreto puede tener <strong>su propio color</strong>, que manda sobre el de la categoría. Se elige en la ficha del servicio, en «Color en la agenda», y «Usar el de la categoría» lo deja como estaba.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>Mejoras</h3>
+    <h4>La ventana de la cita</h4>
+    <ul>
+      <li>Se puede <strong>arrastrar</strong> por su título para ver la parte de la agenda que queda debajo mientras se da de alta o se cambia una cita.</li>
+      <li><strong>Cobrar</strong> guarda antes lo que se haya cambiado en la cita, como un servicio añadido, y luego lleva al TPV.</li>
+      <li>Si desde la cita se abre la ficha del cliente, su botón <strong>Volver</strong> regresa a la cita abierta en lugar de al listado de clientes.</li>
+    </ul>
+    <h4>Mover citas atendidas</h4>
+    <ul>
+      <li>Una cita ya atendida, o en la que el cliente no vino, se puede mover con el permiso nuevo <strong>«Mover citas atendidas»</strong>, que de fábrica tiene el administrador. Las citas cobradas o anuladas siguen sin moverse.</li>
+    </ul>
+    <h4>Pedir ayuda</h4>
+    <ul>
+      <li>Al abrir una incidencia con el botón de ayuda se pueden adjuntar <strong>hasta cinco pantallazos</strong> en lugar de uno.</li>
+    </ul>
+    <h4>Traer los datos de flowww</h4>
+    <ul>
+      <li>Los <strong>paquetes de servicios</strong> llegan con lo que incluyen, sacado de su nombre (los servicios separados por «+»).</li>
+      <li>Los <strong>pagos pendientes sin fecha</strong> también se traen, con la fecha del día de la importación.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span>Errores corregidos</h3>
+    <ul>
+      <li>Al añadir un servicio a una cita y pulsar Cobrar, el servicio añadido no llegaba al cobro.</li>
+      <li>Una cita marcada como atendida, o en la que el cliente no vino, ya no se podía mover, ni siquiera siendo administrador.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-09-28" class="version">
   <div class="version__cabecera">
     <h2>28 de septiembre de 2026</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">2026.9.305-d926d9c</span></p>
 

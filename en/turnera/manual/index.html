@@ -848,7 +848,13 @@ footer{
     <li><strong>Taking it to another day:</strong> open it and press <em>Cut</em>. A bar appears above the agenda with the appointment you are moving, and its card stays faded in its place. Go to the day you want, click the free slot and confirm with <em>Paste</em>: the whole appointment moves, with its services, comments and voucher, and if the slot is taken you are told and can pick another. Until you paste it nothing has changed: with
       <em>Cancel</em> or the <strong>Escape</strong> key it stays as it was. Once pasted, the agenda offers
       <em>Notify on WhatsApp</em> to tell the customer the new day.</li>
-      <li><strong>What can be moved:</strong> an appointment that changes day goes back to <em>Absent</em> and unconfirmed, because what was known belonged to the previous day. An appointment <em>in progress</em> can change hour or cabin that same day, but not be taken to another: if it is interrupted, it is closed as appropriate and a new one is booked. And an appointment that was <em>attended</em>, charged, of someone who <em>did not come</em> or cancelled does not move: what happened that day counts. For those <em>Cut</em>does not appear, and if you try to drag them, the agenda explains why not.</li>
+      <li><strong>What can be moved:</strong> an appointment that changes day goes back to <em>Absent</em> and unconfirmed, because what was known belonged to the previous day. An appointment <em>in progress</em> can be moved to another time or cabin
+      that same day, but not to another day: if it is interrupted, it is closed as appropriate and a new one is booked. An
+      appointment already charged or cancelled does not move: it records what happened that day. An <em>attended</em> or one of someone who
+      <em>did not come</em> can only be moved by whoever has the permission <strong>«Mover citas atendidas» (move attended appointments)</strong>, which out of the box
+      the administrator has: it is meant for one marked by mistake or for the customer who did not come and calls to
+      change it. Without the permission it does not show <em>Cut</em>, and if you try to drag it, the diary says which permission
+      is needed.</li>
       <li><strong>Moving it:</strong> drag it. If you drop it in another column it also changes member of staff or
       room, depending on the view you are in.</li>
     <li><strong>Changing how long it lasts:</strong> drag the bottom edge.</li>
@@ -871,6 +877,13 @@ footer{
   <p>
     <strong>What each person can do in the diary depends on their permissions.</strong> Whoever cannot book sees the whole diary, but gets no new appointment button, clicking a free slot does nothing and appointments cannot be dragged or stretched: clicking one opens it to read, without a save button. The buttons to close off time, the waiting list and printing only show up for whoever has their permission. Inside an appointment, <em>Cancel</em>,
     <em>Charge</em> and <em>WhatsApp</em> are always shown, but switched off for whoever cannot use them; hovering over them says why.
+  </p>
+
+  <p>
+    <strong>The appointment window can be moved aside.</strong> Drag it by its title to see the part of the
+    diary it covers while you create or change an appointment. <em>Charge</em> first saves whatever was changed in the
+    appointment —an added service, for instance— and then takes you to the till. And if the customer record is opened from the appointment,
+    its <em>Back</em> goes back to the open appointment, not to the customer list.
   </p>
 
   <p>
@@ -909,7 +922,9 @@ footer{
 
   <p>
     <strong>The background of the card is the category of the service</strong> —laser, treatment room, medicine…—, that of its first service when it has several, and below the legend you see the categories of that day with their colour. An appointment without a service is grey. Each category comes with a default colour, which is changed in <em>Catalogue → Services → Agenda colours</em>: choose the shade, see a sample of the card and press
-    <em>Save</em>.
+    <em>Save</em>. A particular service can have <strong>its own colour</strong>, which wins over its
+    category's: it is chosen in its form, under <em>Colour in the diary</em>, and <em>Use the category's</em> puts it back
+    to the usual one.
   </p>
   <p>
     <strong>The status of the appointment is the bar on the left edge</strong> — waiting, in progress, attended, no-show —, with the usual colours, and the legend under the title explains them. With the
@@ -2471,7 +2486,16 @@ footer{
     <p><strong>It can be undone</strong> from «Imports done», and it takes away everything that import brought
       without touching what was already there. But if someone has already worked with what was imported —an appointment, a charge,
       a note— Turnera does not undo it and says what prevents it: undoing it would take that work with it.</p>
-    <p><strong>What is not brought:</strong> the flowww portal passwords, packages (the export does not say what is inside them), gift cards without a balance, used-up vouchers, the old slot of appointments that were moved, the daily cash and the invoices, which are closed accounting and are consulted in flowww. Signed consents are not in any sheet.</p>
+    <p><strong>Packages</strong> are brought over with what their name says, which in flowww lists the services separated
+      by «+»: «PAQUETE 7 LPG + PRESOTERAPIA» is seven sessions of each, and «TRIO DE ZONAS (AX+ING+BP)» one for each
+      area. The import report shows which service it understood for each part, so you can check it. If a part
+      is not recognised («RFN400» is a device, not a service), that package is not brought over until it is stated in a sheet
+      <em>Contenido de paquetes</em> with the columns <code>ID Paquete</code>, <code>ID Servicio</code> and
+      <code>Cantidad</code> (the IDs are those of the flowww price list), uploaded along with the others; it wins over the
+      name.</p>
+    <p><strong>What is not brought:</strong> the flowww portal passwords, vouchers with no balance, vouchers already used up, the old slot of appointments that were moved,
+      the daily tills and the invoices, which are closed accounting and are looked up in flowww. Signed
+      consents do not come in any sheet.</p>
     <p><strong>After importing:</strong> the professionals arrive with the code they had in flowww and need
       a name, and customers with a repeated ID are all brought and reviewed with the
       <a href="#clientes">record merge</a> (a minor with their mother's ID is not the same person).</p>

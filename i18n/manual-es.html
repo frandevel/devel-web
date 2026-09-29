@@ -870,9 +870,12 @@ footer{
       <em>Avisar por WhatsApp</em> para decirle al cliente el nuevo día.</li>
       <li><strong>Qué se puede mover:</strong> una cita que cambia de día vuelve a <em>Ausente</em> y sin confirmar,
       porque lo que se sabía era del día de antes. Una cita <em>en curso</em> se puede cambiar de hora o de cabina
-      ese mismo día, pero no llevarse a otro: si se interrumpe, se cierra como corresponda y se da una nueva. Y una
-      cita <em>atendida</em>, cobrada, de alguien que <em>no vino</em> o anulada no se mueve: cuenta lo que pasó ese
-      día. Para esas no aparece <em>Cortar</em>, y si se intenta arrastrarlas, la agenda explica por qué no.</li>
+      ese mismo día, pero no llevarse a otro: si se interrumpe, se cierra como corresponda y se da una nueva. Una
+      cita cobrada o anulada no se mueve: cuenta lo que pasó ese día. Una <em>atendida</em> o de alguien que
+      <em>no vino</em> solo la mueve quien tiene el permiso <strong>«Mover citas atendidas»</strong>, que de fábrica
+      lleva el administrador: sirve para la que se marcó por error o la de la clienta que no vino y llama para
+      cambiarla. Sin el permiso no aparece <em>Cortar</em>, y si se intenta arrastrarla, la agenda dice qué permiso
+      hace falta.</li>
       <li><strong>Moverla:</strong> arrástrela. Si la suelta en otra columna cambia también de profesional o de
       cabina, según la vista en la que esté.</li>
     <li><strong>Cambiar cuánto dura:</strong> arrastre el borde de abajo.</li>
@@ -907,6 +910,13 @@ footer{
     rato, lista de espera e imprimir solo salen a quien tiene su permiso. Dentro de una cita, <em>Anular</em>,
     <em>Cobrar</em> y <em>WhatsApp</em> se ven siempre, pero apagados para quien no puede usarlos; al pasar el
     ratón por encima dice por qué.
+  </p>
+
+  <p>
+    <strong>La ventana de la cita se puede apartar.</strong> Se arrastra por su título para ver la parte de la
+    agenda que tapa mientras se da de alta o se cambia. <em>Cobrar</em> guarda antes lo que se haya cambiado en la
+    cita —un servicio añadido, por ejemplo— y luego lleva al TPV. Y si desde la cita se abre la ficha del cliente,
+    su <em>Volver</em> regresa a la cita abierta, no al listado de clientes.
   </p>
 
   <p>
@@ -951,7 +961,9 @@ footer{
     primer servicio cuando lleva varios, y debajo de la leyenda salen las categorías que hay ese día con su color.
     Una cita sin servicio va en gris. Cada categoría trae un color de fábrica, y se cambia en <em>Catálogo →
     Servicios → Colores de la agenda</em>: se elige el tono, se ve una muestra de la tarjeta y se pulsa
-    <em>Guardar</em>.
+    <em>Guardar</em>. Un servicio concreto puede llevar <strong>su propio color</strong>, que manda sobre el de su
+    categoría: se elige en su ficha, en <em>Color en la agenda</em>, y <em>Usar el de la categoría</em> lo devuelve
+    al de siempre.
   </p>
   <p>
     <strong>El estado de la cita es la barra del canto izquierdo</strong> — esperando, en curso, atendida, no
@@ -2766,8 +2778,14 @@ footer{
     <p><strong>Se puede deshacer</strong> desde «Importaciones hechas», y se lleva todo lo que trajo esa
       importación sin tocar lo que ya había. Pero si alguien ha trabajado ya con lo importado —una cita, un cobro,
       una nota— Turnera no la deshace y dice qué lo impide: deshacerla se llevaría ese trabajo por delante.</p>
-    <p><strong>Lo que no se trae:</strong> las contraseñas del portal de flowww, los paquetes (la exportación no dice
-      qué llevan dentro), los cheques sin saldo, los bonos ya gastados, el hueco viejo de las citas que se movieron,
+    <p><strong>Los paquetes</strong> se traen con lo que dice su nombre, que en flowww lleva los servicios separados
+      por «+»: «PAQUETE 7 LPG + PRESOTERAPIA» son siete sesiones de cada uno, y «TRIO DE ZONAS (AX+ING+BP)» una de cada
+      zona. El informe de la importación enseña qué servicio ha entendido en cada parte, para revisarlo. Si una parte
+      no se reconoce («RFN400» es un aparato, no un servicio), ese paquete no se trae hasta que se diga en una hoja
+      <em>Contenido de paquetes</em> con las columnas <code>ID Paquete</code>, <code>ID Servicio</code> y
+      <code>Cantidad</code> (los ID son los de la tarifa de flowww), que se sube junto a las demás y manda sobre el
+      nombre.</p>
+    <p><strong>Lo que no se trae:</strong> las contraseñas del portal de flowww, los cheques sin saldo, los bonos ya gastados, el hueco viejo de las citas que se movieron,
       las cajas diarias y las facturas, que son contabilidad cerrada y se consultan en flowww. Los consentimientos
       firmados no salen en ninguna hoja.</p>
     <p><strong>Después de importar:</strong> los profesionales llegan con el código que tenían en flowww y hay que

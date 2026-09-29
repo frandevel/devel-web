@@ -848,7 +848,13 @@ footer{
     <li><strong>Auf einen anderen Tag legen:</strong> öffnen Sie ihn und drücken Sie <em>Ausschneiden</em>. Über dem Kalender erscheint eine Leiste mit dem Termin, den Sie verschieben, und seine Karte bleibt abgeblendet an ihrem Platz. Gehen Sie zum gewünschten Tag, klicken Sie auf die freie Lücke und bestätigen Sie mit <em>Einfügen</em>: Der ganze Termin wird verschoben, mit Leistungen, Kommentaren und Bon; ist die Lücke belegt, wird es Ihnen gesagt und Sie können eine andere wählen. Solange Sie ihn nicht einfügen, hat sich nichts geändert: Mit
       <em>Abbrechen</em> oder der Taste <strong>Escape</strong> bleibt er, wie er war. Nach dem Einfügen bietet der Kalender
       <em>Per WhatsApp benachrichtigen</em> an, um dem Kunden den neuen Tag mitzuteilen.</li>
-      <li><strong>Was sich verschieben lässt:</strong> Ein Termin, der den Tag wechselt, wird wieder <em>Abwesend</em> und unbestätigt, denn was man wusste, galt für den Tag davor. Ein Termin <em>läuft</em> kann am selben Tag Uhrzeit oder Kabine wechseln, aber nicht auf einen anderen Tag gelegt werden: Wird er unterbrochen, schließt man ihn entsprechend ab und vergibt einen neuen. Und ein Termin, der <em>erledigt</em>, abgerechnet, bei dem jemand <em>nicht erschienen</em> oder storniert ist, wird nicht verschoben: Es zählt, was an dem Tag geschah. Bei diesen erscheint <em>Ausschneiden</em>nicht, und wer sie ziehen will, bekommt vom Kalender erklärt, warum nicht.</li>
+      <li><strong>Was sich verschieben lässt:</strong> Ein Termin, der den Tag wechselt, wird wieder <em>Abwesend</em> und unbestätigt, denn was man wusste, galt für den Tag davor. Ein Termin <em>läuft</em> kann am selben Tag auf eine andere Uhrzeit
+      oder Kabine verschoben werden, aber nicht auf einen anderen Tag: Wird sie unterbrochen, wird sie entsprechend abgeschlossen und eine neue vergeben. Ein
+      bereits abgerechneter oder stornierter Termin wird nicht verschoben: Er hält fest, was an dem Tag geschah. Einen <em>erledigt</em> oder den von jemandem, der
+      <em>nicht erschienen</em> verschiebt nur, wer die Berechtigung <strong>«Mover citas atendidas» (erledigte Termine verschieben)</strong> hat, die ab Werk
+      der Administrator besitzt: für den irrtümlich markierten Termin oder die Kundin, die nicht kam und anruft,
+      um ihn zu verlegen. Ohne die Berechtigung erscheint nicht <em>Ausschneiden</em>, und wer ihn zu ziehen versucht, erfährt vom Terminkalender, welche Berechtigung
+      nötig ist.</li>
       <li><strong>Verschieben:</strong> ziehen Sie ihn. Wenn Sie ihn in einer anderen Spalte ablegen, wechselt er auch den Mitarbeiter oder die
       Kabine, je nach Ansicht.</li>
     <li><strong>Die Dauer ändern:</strong> ziehen Sie den unteren Rand.</li>
@@ -871,6 +877,13 @@ footer{
   <p>
     <strong>Was jede Person im Kalender tun kann, hängt von ihren Berechtigungen ab.</strong> Wer keine Termine vergeben darf, sieht den ganzen Kalender, bekommt aber keine Schaltfläche für einen neuen Termin; ein Klick auf eine freie Lücke bewirkt nichts, und Termine lassen sich weder ziehen noch verlängern: Ein Klick öffnet den Termin zum Lesen, ohne Speichern-Schaltfläche. Die Schaltflächen zum Sperren von Zeiten, für die Warteliste und zum Drucken erscheinen nur für diejenigen mit der jeweiligen Berechtigung. Innerhalb eines Termins sind <em>Stornieren</em>,
     <em>Kassieren</em> und <em>WhatsApp</em> immer zu sehen, aber für alle ohne Berechtigung deaktiviert; beim Darüberfahren mit der Maus steht, warum.
+  </p>
+
+  <p>
+    <strong>Das Terminfenster lässt sich beiseiteschieben.</strong> Ziehen Sie es an seinem Titel, um den Teil des
+    Terminkalenders zu sehen, den es verdeckt, während Sie einen Termin anlegen oder ändern. <em>Kassieren</em> speichert zuerst, was am Termin geändert
+    wurde —zum Beispiel eine hinzugefügte Leistung— und führt dann zur Kasse. Und wird aus dem Termin die Kundenakte geöffnet,
+    führt ihr <em>Zurück</em> zurück zum geöffneten Termin, nicht zur Kundenliste.
   </p>
 
   <p>
@@ -909,7 +922,9 @@ footer{
 
   <p>
     <strong>Der Hintergrund der Karte ist die Kategorie der Leistung</strong> —Laser, Kabine, Medizin…—, bei mehreren die der ersten Leistung; unter der Legende erscheinen die Kategorien des Tages mit ihrer Farbe. Ein Termin ohne Leistung ist grau. Jede Kategorie hat eine Standardfarbe, die man ändert unter <em>Katalog → Leistungen → Farben des Kalenders</em>: Farbton wählen, eine Vorschau der Karte ansehen und
-    <em>Speichern</em>.
+    <em>Speichern</em>. Eine einzelne Leistung kann <strong>eine eigene Farbe</strong> haben, die Vorrang vor ihrer
+    Kategorie hat: Sie wird in ihrem Formular unter <em>Farbe im Terminkalender</em> gewählt, und <em>Farbe der Kategorie verwenden</em> setzt sie
+    auf die übliche zurück.
   </p>
   <p>
     <strong>Der Status des Termins ist der Balken am linken Rand</strong> — wartend, in Behandlung, behandelt, nicht erschienen —, in den gewohnten Farben; die Legende unter dem Titel erklärt sie. Mit dem
@@ -2479,7 +2494,16 @@ footer{
     <p><strong>Er lässt sich rückgängig machen</strong> unter «Durchgeführte Importe», und es wird alles entfernt, was dieser Import gebracht hat,
       ohne das anzutasten, was schon da war. Hat aber jemand schon mit den importierten Daten gearbeitet —ein Termin, eine Abrechnung,
       eine Notiz—, macht Turnera ihn nicht rückgängig und sagt, was es verhindert: Sonst ginge diese Arbeit verloren.</p>
-    <p><strong>Was nicht übernommen wird:</strong> die Passwörter des flowww-Portals, die Pakete (der Export sagt nicht, was darin ist), Geschenkkarten ohne Guthaben, verbrauchte Gutscheine, der alte Platz verschobener Termine, die Tageskassen und die Rechnungen, die abgeschlossene Buchhaltung sind und in flowww eingesehen werden. Unterschriebene Einwilligungen stehen in keinem Blatt.</p>
+    <p><strong>Die Pakete</strong> werden mit dem übernommen, was ihr Name sagt, der in flowww die Leistungen durch «+» getrennt
+      aufführt: «PAQUETE 7 LPG + PRESOTERAPIA» sind sieben Sitzungen von jeder, und «TRIO DE ZONAS (AX+ING+BP)» eine pro
+      Zone. Der Importbericht zeigt, welche Leistung in jedem Teil erkannt wurde, zum Prüfen. Wird ein Teil
+      nicht erkannt («RFN400» ist ein Gerät, keine Leistung), wird dieses Paket erst übernommen, wenn es in einem Blatt
+      <em>Contenido de paquetes</em> mit den Spalten <code>ID Paquete</code>, <code>ID Servicio</code> und
+      <code>Cantidad</code> angegeben ist (die IDs sind die der flowww-Preisliste), das mit den anderen hochgeladen wird und Vorrang vor dem
+      Namen hat.</p>
+    <p><strong>Was nicht übernommen wird:</strong> die Passwörter des flowww-Portals, Gutscheine ohne Guthaben, bereits aufgebrauchte Gutscheine, der alte Platz verschobener Termine,
+      die Tageskassen und die Rechnungen, die abgeschlossene Buchhaltung sind und in flowww eingesehen werden. Unterschriebene
+      Einwilligungen kommen in keinem Blatt vor.</p>
     <p><strong>Nach dem Import:</strong> die Fachkräfte kommen mit ihrem Code aus flowww und brauchen
       einen Namen, und Kunden mit doppelter Ausweisnummer werden alle übernommen und mit der
       <a href="#clientes">Zusammenführung von Kundenakten</a> geprüft (ein Kind mit dem Ausweis seiner Mutter ist nicht dieselbe Person).</p>
