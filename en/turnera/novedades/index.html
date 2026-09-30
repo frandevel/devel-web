@@ -619,6 +619,7 @@ footer{
   <h2>What's new in Turnera</h2>
   <p>Latest first</p>
   <ol>
+    <li><a href="#2026-09-30-cobros">30 September 2026 · Final price, equipment data and invoices for debts</a></li>
     <li><a href="#2026-09-30-bizum">30 September 2026 · Bizum and imported consents</a></li>
     <li><a href="#2026-09-30-rrhh">30 September 2026 · Hours worked and overtime</a></li>
     <li><a href="#2026-09-29-rrhh">29 September 2026 · Work calendar</a></li>
@@ -642,10 +643,54 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Bugs fixed</strong>: what failed, and no longer does.</span></li>
 </ul>
 
+<section id="2026-09-30-cobros" class="version">
+  <div class="version__cabecera">
+    <h2>30 September 2026 · Final price, equipment data and invoices for debts</h2>
+    <span class="version__sello">Latest release</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">2026.9.323-1a59966</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Till</h4>
+    <ul>
+      <li>The discount can be entered as a <strong>final price</strong>: you say how much you want to charge (“make it 50”) and Turnera works out the discount, spreads it across the lines and shows the old price struck through and the percentage it amounts to.</li>
+      <li>With a final price, it offers one tap away the <strong>round prices</strong> just below the total. With a percentage, 5, 10, 15 and 20 % are one tap away.</li>
+    </ul>
+    <h4>Equipment</h4>
+    <ul>
+      <li>When charging an appointment, the till <strong>asks for the session data</strong> (joules, spot size…) above the ticket, and does not let you charge while a required one is missing.</li>
+      <li>New card <strong>Sessions with equipment</strong> in the customer's record: each session with its day, the equipment, the parameters and who did it, to follow a treatment's progression.</li>
+    </ul>
+    <h4>Clocking</h4>
+    <ul>
+      <li><strong>Missed clock-in notices</strong> can be switched off, and you choose who gets them: the professional, HR or both. You can also enter the <strong>HR person's email</strong>; if none is entered, they go to the centre's management email.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Improvements</h3>
+    <h4>Invoicing</h4>
+    <ul>
+      <li>What is left owing <strong>is invoiced when the sale is made</strong>, not when it is collected. If the amount changes when it is settled, the difference goes into a corrective invoice.</li>
+      <li>What is paid with <strong>club points</strong> counts as a discount: the invoice is for what is paid with money.</li>
+    </ul>
+    <h4>Diary and equipment</h4>
+    <ul>
+      <li><strong>Vouchers no longer appear</strong> among the services of an appointment or among those that use a piece of equipment: they are sold, not given as treatments.</li>
+      <li>When adding a piece of equipment, its services are chosen with <strong>two lists</strong>, the available ones and those that use it, with a search box. Each item's unit, minimum and maximum fit on a single line.</li>
+    </ul>
+    <h4>Clocking</h4>
+    <ul>
+      <li>Whoever clocks in and forgets to clock out leaves the <strong>working day open</strong>: after 16 hours, their next clocking is a clock-in again, instead of closing the previous day's shift with all those hours.</li>
+      <li>Correcting a clocking always asks for the reason, which is kept next to the correction.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-09-30-bizum" class="version">
   <div class="version__cabecera">
     <h2>30 September 2026 · Bizum and imported consents</h2>
-    <span class="version__sello">Latest release</span>
   </div>
   <p class="version__numero">Version <span translate="no">2026.9.321-1552141</span></p>
 

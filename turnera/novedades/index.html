@@ -619,6 +619,7 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-09-30-cobros">30 de septiembre de 2026 · Precio final, datos del aparato y facturas de las deudas</a></li>
     <li><a href="#2026-09-30-bizum">30 de septiembre de 2026 · Bizum y consentimientos importados</a></li>
     <li><a href="#2026-09-30-rrhh">30 de septiembre de 2026 · Horas trabajadas y horas extra</a></li>
     <li><a href="#2026-09-29-rrhh">29 de septiembre de 2026 · Calendario laboral</a></li>
@@ -643,10 +644,54 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-09-30-cobros" class="version">
+  <div class="version__cabecera">
+    <h2>30 de septiembre de 2026 · Precio final, datos del aparato y facturas de las deudas</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">2026.9.323-1a59966</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
+    <h4>TPV</h4>
+    <ul>
+      <li>El descuento se puede poner como <strong>precio final</strong>: se dice cuánto se quiere cobrar («déjalo en 50») y Turnera calcula la rebaja, la reparte entre las líneas y enseña el precio de antes tachado y a qué porcentaje equivale.</li>
+      <li>Con precio final, propone a un toque los <strong>precios redondos</strong> que quedan justo por debajo del total. Con porcentaje, el 5, 10, 15 y 20 % están a un toque.</li>
+    </ul>
+    <h4>Aparatología</h4>
+    <ul>
+      <li>Al cobrar una cita, el TPV <strong>pide los datos de la sesión</strong> (los julios, el spot…) encima del ticket, y no deja cobrar mientras falte alguno obligatorio.</li>
+      <li>Nueva tarjeta <strong>Sesiones con aparato</strong> en la ficha del cliente: cada sesión con su día, el aparato, los parámetros y quién la hizo, para seguir la pauta de un tratamiento.</li>
+    </ul>
+    <h4>Fichajes</h4>
+    <ul>
+      <li><strong>Los avisos de fichaje olvidado</strong> se pueden apagar y elegir a quién van: al profesional, a RRHH o a los dos. Y se puede apuntar el <strong>correo de la persona de RRHH</strong>; si no se apunta, van al de administración del centro.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Mejoras</h3>
+    <h4>Facturación</h4>
+    <ul>
+      <li>Lo que se deja a deber <strong>se factura al hacer la venta</strong>, no al cobrarlo. Si al saldarlo cambia el importe, la diferencia sale en una factura rectificativa.</li>
+      <li>Lo que se paga con <strong>puntos del club</strong> cuenta como descuento: la factura sale por lo que se paga con dinero.</li>
+    </ul>
+    <h4>Agenda y aparatos</h4>
+    <ul>
+      <li><strong>Los bonos ya no salen</strong> entre los servicios de una cita ni entre los que usan un aparato: se venden, no se tratan.</li>
+      <li>En el alta de un aparato, sus servicios se eligen con <strong>dos listas</strong>, las disponibles y las que lo usan, con buscador. La unidad, el mínimo y el máximo de cada dato caben en una sola línea.</li>
+    </ul>
+    <h4>Fichajes</h4>
+    <ul>
+      <li>Quien ficha la entrada y se olvida de la salida deja la <strong>jornada abierta</strong>: pasadas 16 horas, su siguiente fichaje vuelve a ser una entrada, en lugar de cerrar la jornada de la víspera con todas esas horas.</li>
+      <li>Corregir un fichaje pide siempre el motivo, que queda escrito junto a la corrección.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-09-30-bizum" class="version">
   <div class="version__cabecera">
     <h2>30 de septiembre de 2026 · Bizum y consentimientos importados</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">2026.9.321-1552141</span></p>
 

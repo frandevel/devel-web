@@ -896,9 +896,7 @@ footer{
   </p>
 
   <p>
-    <strong>Schnellauswahl per Code.</strong> Neben den Leistungen des Termins steht die Schaltfläche <em>Schnellauswahl</em>: Sie öffnet alle <strong>Kurzcodes</strong> der Preisliste auf einen Blick —HMBS, AXIL…—, um zwei oder drei hintereinander anzuklicken; beim Bestätigen werden sie dem Termin hinzugefügt. Jeder Code ist genau eine Leistung. Der Code wird festgelegt unter <em>Katalog → Leistungen</em>, in der Karte jeder Leistung (<em>Kurzcode</em>: Buchstaben und Ziffern,
-    ohne Wiederholung). In der Leistungsauswahl steht er auch vor dem Namen, und man kann danach suchen.
-    Hat der Termin mehrere Leistungen, <strong>sieht man alle auf einmal</strong> im Feld, eine nach der anderen, ohne
+    <strong>Schnellauswahl per Code.</strong> Neben den Leistungen des Termins steht die Schaltfläche <em>Schnellauswahl</em>: Sie öffnet alle <strong>Kurzcodes</strong> der Preisliste auf einen Blick —HMBS, AXIL…—, um zwei oder drei hintereinander anzuklicken; beim Bestätigen werden sie dem Termin hinzugefügt. Jeder Code ist genau eine Leistung. Der Code wird festgelegt unter <em>Katalog → Leistungen</em>, in der Karte jeder Leistung (<em>Kurzcode</em>: Buchstaben und Ziffern, und er darf sich nicht wiederholen). In der Auswahlliste der Leistungen steht er auch vor dem Namen, und man kann danach suchen. Gutscheinpakete erscheinen nicht im Termin: Ein Paket wird an der Kasse verkauft, es ist keine Behandlung in einer Kabine. Hat der Termin mehrere Leistungen, <strong>sieht man alle auf einmal</strong> im Feld, eine nach der anderen, ohne
     die Auswahl öffnen zu müssen.
   </p>
 
@@ -1136,9 +1134,11 @@ footer{
   <span class="ruta">Menü → Kasse</span>
 
   <p>
-    Sie wählen Kunde und Mitarbeiter, und von da an fügen Sie Leistungen und Produkte zum Bon hinzu. Der
-    Rabatt ist ein Prozentsatz auf die Summe, und die Zahlungsart kommt aus der Liste der Zahlungsarten, die im Betrieb
-    aktiv sind.
+    Man wählt Kunde und Fachkraft und fügt dann Leistungen und Produkte zum Beleg hinzu. Die Zahlungsart kommt aus der Liste der vom Zentrum aktivierten.
+  </p>
+
+  <p>
+    <strong>Der Nachlass lässt sich auf zwei Arten eingeben.</strong> Mit <em>%</em>, als Prozentsatz: die gängigsten (5, 10, 15 und 20 %) sind einen Tipp entfernt, jeder andere wird eingegeben. Mit <em>Endpreis</em> sagt man, wie viel man kassieren will —„mach 50 daraus“— und Turnera berechnet den Nachlass und verteilt ihn auf die Positionen, die der Kunde zahlt; darunter steht, wie viel abgezogen wird und welchem Prozentsatz das entspricht, und die Summe erscheint mit dem durchgestrichenen alten Preis. Außerdem schlägt es mit einem Tipp die runden Preise knapp darunter vor (bei 57,30 € also 55 und 50). Der Endpreis senkt nur: Ist er höher als die Summe, warnt Turnera und lässt nicht kassieren.
   </p>
 
   <p>
@@ -1370,11 +1370,7 @@ footer{
   </p>
 
   <p>
-    Mit eingeschalteter Rechnungsstellung erhält jeder bezahlte Verkauf seine <strong>vereinfachte Rechnung</strong>, also den
-    gewohnten Beleg mit Nummer, MwSt.-Aufschlüsselung und einem QR-Code oben. Eine Schuld wird beim Begleichen in Rechnung gestellt. Eine
-    Rückerstattung erzeugt eine <strong>Korrekturrechnung</strong>, negativ, die angibt, welche Rechnung sie korrigiert. Mit einer
-    Mehrfachkarte bezahlte Sitzungen werden nicht in Rechnung gestellt (die Karte wurde beim Verkauf berechnet), ebenso wenig der Verkauf einer Geschenkkarte (berechnet
-    wird, was damit gekauft wird).
+    Mit eingeschalteter Rechnungsstellung erhält jeder bezahlte Verkauf seine <strong>vereinfachte Rechnung</strong>, also der übliche Beleg mit Nummer, MwSt.-Aufschlüsselung und einem QR-Code oben. <strong>Die Rechnung gehört zum Verkauf, nicht zur Zahlung</strong>: Was offen bleibt, wird trotzdem sofort in Rechnung gestellt, und das Einkassieren ist Sache des Zentrums. Ändert sich der Betrag beim Begleichen der Schuld —ein Nachlass der Zahlungsart oder ein Paket, das eine Sitzung übernimmt—, geht die Differenz in eine Korrekturrechnung. Eine Rückgabe erzeugt eine <strong>Korrekturrechnung</strong>, negativ, mit Angabe der korrigierten Rechnung. Sitzungen, die ein Paket bezahlt, werden nicht berechnet (das Paket wurde beim Verkauf mit seiner MwSt. berechnet), ebenso wenig der Verkauf einer Geschenkkarte, die ein Guthaben ist: berechnet wird, was damit gekauft wird. Was mit Clubpunkten bezahlt wird, zählt als Nachlass: Die Rechnung lautet auf das, was mit Geld bezahlt wird.
   </p>
 
   <div class="ojo">
@@ -1586,7 +1582,7 @@ footer{
   <ul>
     <li><strong>Der Name</strong> und <strong>wie viele Einheiten</strong> es gibt. Bei zwei Einheiten sind zwei Termine gleichzeitig in Ordnung
       und drei nicht.</li>
-    <li><strong>Welche Leistungen es brauchen.</strong> Solange keine markiert ist, stört das Gerät niemanden.</li>
+    <li><strong>Welche Leistungen es brauchen.</strong> Sie werden aus der Liste <em>Verfügbar</em> in die Liste <em>Nutzen es</em> verschoben, mit Suche in beiden. Pakete erscheinen nicht: Sie werden verkauft, nicht behandelt. Solange keine gewählt ist, stört das Gerät niemanden.</li>
     <li><strong>Was bei jeder Benutzung zu erfassen ist</strong>: die Joule des Lasers, die Leistung der
       Sonnenbank. Ein Wert wird mit „Wert hinzufügen“ ergänzt und mit dem Papierkorb in seiner Zeile entfernt.</li>
   </ul>
@@ -1638,6 +1634,12 @@ footer{
   </p>
   <p>
     Wenn der Termin keine Leistung mit Gerät enthält, erscheint der Abschnitt nicht.
+  </p>
+  <p>
+    <strong>Sie werden auch auf dem Weg zum Kassieren abgefragt.</strong> Wenn man im Termin auf <em>Kassieren</em> tippt, zeigt die Kasse über dem Beleg dieselben Sitzungsdaten. Fehlt ein Pflichtwert, lässt sie nicht kassieren, bis er notiert und gespeichert ist (wer ihn nicht notieren darf, wird gewarnt, kann aber kassieren).
+  </p>
+  <p>
+    <strong>Wo man es danach sieht.</strong> In der Kundenakte listet die Karte <em>Sitzungen mit Gerät</em> jede Sitzung auf, die neueste zuerst, mit Tag und Uhrzeit, Gerät, Parametern mit Einheit und wer sie durchgeführt hat. Dort verfolgt man eine Laserbehandlung Sitzung für Sitzung. Wurde für den Kunden nie etwas notiert, erscheint die Karte nicht.
   </p>
   <p>
     Das ist der Wert, auf den vor dem Beginn wirklich geschaut wird: Bei der Laser-Haarentfernung steigt die Einstellung von Sitzung zu Sitzung, und
@@ -2351,9 +2353,7 @@ footer{
 
   <p>
     Wenn jemand Kommen stempelt und geht, ohne Gehen zu stempeln, erscheint dieser Tag als <strong>offener Arbeitstag</strong>
-    und <strong>ohne Stunden</strong>. Es wird bewusst keine Endzeit erfunden: eine Erfassung mit Stunden, die niemand
-    gestempelt hat, ist schlimmer als eine unvollständige, denn die unvollständige sieht man und die
-    erfundene nicht. Korrigieren Sie ihn über die Liste der Einträge.
+    und <strong>ohne Stunden</strong>. Eine erfundene Endzeit gibt es absichtlich nicht: Ein Register mit Stunden, die niemand gestempelt hat, ist schlimmer als ein unvollständiges, denn das unvollständige sieht man, das erfundene nicht. Der Eingang bleibt offen, und nach <strong>16 Stunden</strong> gilt er als vergessen: Die nächste Stempelung dieser Person ist wieder ein Eingang, nicht der Ausgang vom Vortag. Korrigieren Sie es in der Liste der Stempelungen.
   </p>
 
   <p>
@@ -2477,7 +2477,8 @@ footer{
 
   <h4>Hinweise auf vergessene Stempelungen</h4>
   <p>
-    Sollte jemand laut Kalender angefangen haben und hat sich nach <strong>15 Minuten</strong> nicht eingestempelt, oder hätte gehen sollen und ist nach 15 Minuten noch da, geht eine <strong>E-Mail</strong> an die Fachkraft (an die E-Mail in ihrer Akte) und an die Personalabteilung (an die Benutzer mit der Berechtigung, Kalender zu planen, die mit einer Fachkraft mit E-Mail verknüpft sind; gibt es keine, an die Kontakt-E-Mail des Zentrums). Ein Schichtabschnitt erzeugt höchstens einen Hinweis zum Kommen und einen zum Gehen. An Feiertagen gibt es keine Hinweise. Sobald es die Handy-App gibt, kommt der Hinweis auch dort an.
+    Sollte jemand laut Kalender angefangen haben und hat sich nach <strong>15 Minuten</strong> nicht eingestempelt, oder hätte gehen sollen und ist nach 15 Minuten noch da, geht eine <strong>E-Mail</strong>. In den
+    <em>Einstellungen</em> des Arbeitskalenders legt man fest, ob benachrichtigt wird und wen: die Fachkraft (an die E-Mail ihrer Akte), die Personalabteilung oder beide. Dort trägt man auch die <strong>E-Mail der Personalabteilung</strong>ein; bleibt sie leer, gehen die Hinweise an die Verwaltungs-E-Mail des Zentrums (<em>Einstellungen</em>). Eine Schicht erzeugt höchstens einen Hinweis zum Eingang und einen zum Ausgang. An Feiertagen gibt es keine Hinweise. Sobald es die Handy-App gibt, kommt der Hinweis auch dort an.
   </p>
 
   <h4>Im Terminkalender</h4>

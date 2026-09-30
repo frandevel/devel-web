@@ -619,6 +619,7 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-09-30-cobros">30. September 2026 · Endpreis, Gerätedaten und Rechnungen für offene Beträge</a></li>
     <li><a href="#2026-09-30-bizum">30. September 2026 · Bizum und importierte Einwilligungen</a></li>
     <li><a href="#2026-09-30-rrhh">30. September 2026 · Gearbeitete Stunden und Überstunden</a></li>
     <li><a href="#2026-09-29-rrhh">29. September 2026 · Arbeitskalender</a></li>
@@ -642,10 +643,54 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-09-30-cobros" class="version">
+  <div class="version__cabecera">
+    <h2>30. September 2026 · Endpreis, Gerätedaten und Rechnungen für offene Beträge</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">2026.9.323-1a59966</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Kasse</h4>
+    <ul>
+      <li>Der Nachlass lässt sich als <strong>Endpreis</strong> eingeben: Man sagt, wie viel man kassieren will („mach 50 daraus“), und Turnera berechnet den Nachlass, verteilt ihn auf die Positionen und zeigt den alten Preis durchgestrichen sowie den entsprechenden Prozentsatz.</li>
+      <li>Beim Endpreis schlägt es mit einem Tipp die <strong>runden Preise</strong> knapp unter der Summe vor. Beim Prozentsatz sind 5, 10, 15 und 20 % einen Tipp entfernt.</li>
+    </ul>
+    <h4>Geräte</h4>
+    <ul>
+      <li>Beim Kassieren eines Termins <strong>fragt die Kasse die Sitzungsdaten</strong> (Joule, Spotgröße…) über dem Beleg ab und lässt nicht kassieren, solange ein Pflichtwert fehlt.</li>
+      <li>Neue Karte <strong>Sitzungen mit Gerät</strong> in der Kundenakte: jede Sitzung mit Tag, Gerät, Parametern und wer sie durchgeführt hat, um den Verlauf einer Behandlung zu verfolgen.</li>
+    </ul>
+    <h4>Zeiterfassung</h4>
+    <ul>
+      <li><strong>Hinweise zu vergessenen Stempelungen</strong> lassen sich abschalten, und man wählt, wer sie bekommt: die Fachkraft, die Personalabteilung oder beide. Außerdem lässt sich die <strong>E-Mail der Personalabteilung</strong> eintragen; ist keine eingetragen, gehen sie an die Verwaltungs-E-Mail des Zentrums.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Rechnungsstellung</h4>
+    <ul>
+      <li>Was offen bleibt, <strong>wird beim Verkauf in Rechnung gestellt</strong>, nicht beim Einkassieren. Ändert sich der Betrag beim Begleichen, geht die Differenz in eine Korrekturrechnung.</li>
+      <li>Was mit <strong>Clubpunkten</strong> bezahlt wird, zählt als Nachlass: Die Rechnung lautet auf das, was mit Geld bezahlt wird.</li>
+    </ul>
+    <h4>Kalender und Geräte</h4>
+    <ul>
+      <li><strong>Pakete erscheinen weder</strong> unter den Leistungen eines Termins noch unter denen, die ein Gerät nutzen: Sie werden verkauft, nicht behandelt.</li>
+      <li>Beim Anlegen eines Geräts wählt man seine Leistungen mit <strong>zwei Listen</strong>, den verfügbaren und denen, die es nutzen, mit Suche. Einheit, Minimum und Maximum jedes Werts passen in eine Zeile.</li>
+    </ul>
+    <h4>Zeiterfassung</h4>
+    <ul>
+      <li>Wer einstempelt und das Ausstempeln vergisst, lässt den <strong>Arbeitstag offen</strong> zurück: Nach 16 Stunden ist die nächste Stempelung wieder ein Eingang, statt den Arbeitstag vom Vortag mit all diesen Stunden zu schließen.</li>
+      <li>Eine Stempelung zu korrigieren verlangt immer einen Grund, der neben der Korrektur gespeichert wird.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-09-30-bizum" class="version">
   <div class="version__cabecera">
     <h2>30. September 2026 · Bizum und importierte Einwilligungen</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">2026.9.321-1552141</span></p>
 

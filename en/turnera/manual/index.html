@@ -896,9 +896,7 @@ footer{
   </p>
 
   <p>
-    <strong>Quick selection by code.</strong> Next to the appointment's services there is the button <em>Quick selection</em>: it opens all the <strong>short codes</strong> of the price list at a glance —HMBS, AXIL…— so you can click two or three in a row, and on accepting they are added to the appointment. Each code is a single service. The code is set in <em>Catalogue → Services</em>, in the record of each one (<em>Short code</em>: letters and digits, and
-    it cannot be repeated). In the services drop-down it also appears in front of the name, and you can search by it.
-    If the appointment has several services, <strong>they are all shown at once</strong> in the field, one after another, without
+    <strong>Quick selection by code.</strong> Next to the appointment's services there is the button <em>Quick selection</em>: it opens all the <strong>short codes</strong> of the price list at a glance —HMBS, AXIL…— so you can click two or three in a row, and on accepting they are added to the appointment. Each code is a single service. The code is set in <em>Catalogue → Services</em>, in the record of each one (<em>Short code</em>: letters and digits, and it cannot be repeated). In the services drop-down it also appears before the name, and you can search by it. Vouchers do not appear in the appointment: a voucher is sold at the till, it is not a treatment given in a room. If the appointment has several services, <strong>they are all shown at once</strong> in the field, one after another, without
     having to open the drop-down.
   </p>
 
@@ -1136,9 +1134,11 @@ footer{
   <span class="ruta">Menu → Point of sale</span>
 
   <p>
-    You pick the customer and the member of staff, and from there you add services and products to the ticket. The
-    discount is a percentage of the total, and the payment method comes from the list of the ones the centre has
-    active.
+    You choose the customer and the professional, and from there you add services and products to the ticket. The payment method comes from the list of those the centre has enabled.
+  </p>
+
+  <p>
+    <strong>The discount can be set in two ways.</strong> With <em>%</em>, as a percentage: the most used ones (5, 10, 15 and 20 %) are one tap away, and any other can be typed. With <em>Final price</em> you say how much you want to charge —“make it 50”— and Turnera works out the discount and spreads it across the lines the customer pays; underneath it shows how much is taken off and what percentage that is, and the total appears with the previous price struck through. It also offers, one tap away, the round prices just below (with €57.30, 55 and 50). The final price only lowers: if you type one higher than the total, it warns you and does not let you charge.
   </p>
 
   <p>
@@ -1370,11 +1370,7 @@ footer{
   </p>
 
   <p>
-    With invoicing on, every paid sale comes with its <strong>simplified invoice</strong>, which is the
-    usual ticket with a number, the VAT breakdown and a QR code at the top. A debt is invoiced when it is settled. A
-    refund produces a <strong>corrective invoice</strong>, in negative, stating which invoice it corrects. Sessions
-    paid with a package are not invoiced (the package was invoiced when sold), nor is the sale of a gift card (what is
-    bought with it is invoiced).
+    With invoicing on, every paid sale comes with its <strong>simplified invoice</strong>, which is the usual ticket with a number, the VAT breakdown and a QR code at the top. <strong>The invoice goes with the sale, not with the payment</strong>: what is left owing is invoiced right then all the same, and collecting it is the centre's business. If the amount changes when the debt is settled —a discount of the payment method, or a voucher that takes over a session—, the difference goes into a corrective invoice. A refund produces a <strong>corrective invoice</strong>, in negative, stating which invoice it corrects. Sessions paid with a voucher are not invoiced (the voucher was invoiced when sold, with its VAT), nor is the sale of a gift card, which is money on account: what is bought with it is invoiced. What is paid with club points counts as a discount: the invoice is for what is paid with money.
   </p>
 
   <div class="ojo">
@@ -1584,7 +1580,7 @@ footer{
   <ul>
     <li><strong>The name</strong> and <strong>how many units</strong> there are. With two, two appointments at once are fine
       and three are not.</li>
-    <li><strong>Which services need it.</strong> As long as none is ticked, the device gets in nobody's way.</li>
+    <li><strong>Which services need it.</strong> They are moved from the <em>Available</em> list to the <em>Use it</em> list, with a search box in both. Vouchers do not appear: they are sold, not given as treatments. Until one is chosen, the equipment gets in nobody's way.</li>
     <li><strong>What has to be recorded each time it is used</strong>: the joules on the laser, the power on the
       sunbed. You add a field with “Add a field” and remove it with the bin on its row.</li>
   </ul>
@@ -1636,6 +1632,12 @@ footer{
   </p>
   <p>
     If the appointment has no service with a device, the section does not appear.
+  </p>
+  <p>
+    <strong>It is also asked for on the way to charging.</strong> When you press <em>Charge</em> in the appointment, the till shows the same session data above the ticket. If a required one is missing, it does not let you charge until it is written down and saved (whoever lacks permission to write it down is warned, but can charge).
+  </p>
+  <p>
+    <strong>Where you see it afterwards.</strong> In the customer's record, the <em>Sessions with equipment</em> card lists every session, newest first, with the day and time, the equipment, the parameters with their unit and who did it. That is where you follow a laser treatment session by session. If nothing was ever written down for the customer, the card does not appear.
   </p>
   <p>
     That is the figure you really look at before starting: in laser hair removal the settings go up session by session,
@@ -2345,9 +2347,7 @@ footer{
 
   <p>
     If somebody clocks in and leaves without clocking out, that day comes out as an <strong>open shift</strong>
-    and <strong>with no hours</strong>. No closing time is invented for it, on purpose: a register with hours nobody
-    clocked is worse than an incomplete one, because the incomplete one shows and the invented one does not.
-    Correct it from the list of entries.
+    and <strong>with no hours</strong>. It is not given a made-up closing time on purpose: a record with hours nobody clocked is worse than an incomplete one, because the incomplete one shows and the made-up one does not. The entry stays open, and after <strong>16 hours</strong> it is taken as forgotten: that person's next clocking is a clock-in again, not the clock-out of the day before. Correct it from the list of clockings.
   </p>
 
   <p>
@@ -2471,7 +2471,8 @@ footer{
 
   <h4>Forgotten clock-in warnings</h4>
   <p>
-    If according to their calendar someone should have come in and after <strong>15 minutes</strong> has not clocked in, or should have left and after 15 minutes is still in, an <strong>email</strong> is sent to the professional (to the email in their record) and to HR (to the users with the permission to plan calendars who are linked to a professional with an email; if there are none, to the centre's contact email). A shift segment gives at most one clock-in and one clock-out warning. No warnings on holidays. When the mobile app exists, the warning will also arrive there.
+    If according to their calendar someone should have come in and after <strong>15 minutes</strong> has not clocked in, or should have left and after 15 minutes is still in, an <strong>email</strong>. In the
+    <em>Settings</em> of the work calendar you decide whether to notify, and whom: the professional (at the email in their record), HR or both. That is also where you enter the <strong>HR person's email</strong>; if left empty, HR notices go to the centre's management email (<em>Preferences</em>). A shift gives at most one clock-in and one clock-out notice. No notices on public holidays. When the mobile app exists, the notice will reach it too.
   </p>
 
   <h4>In the diary</h4>

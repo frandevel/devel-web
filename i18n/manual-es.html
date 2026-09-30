@@ -934,6 +934,7 @@ footer{
     pinchar dos o tres seguidos, y al aceptar se añaden a la cita. Cada código es un solo servicio. El código se
     pone en <em>Catálogo → Servicios</em>, en la ficha de cada uno (<em>Código abreviado</em>: letras y cifras, y
     no puede repetirse). En el desplegable de servicios también sale delante del nombre, y se puede buscar por él.
+    Los bonos no salen en la cita: un bono se vende en el TPV, no es un tratamiento que se dé en una cabina.
     Si la cita lleva varios servicios, <strong>se ven todos a la vez</strong> en el campo, uno detrás de otro, sin
     tener que abrir el desplegable.
   </p>
@@ -1221,9 +1222,17 @@ footer{
   <span class="ruta">Menú → TPV</span>
 
   <p>
-    Se elige el cliente y el profesional, y a partir de ahí se van añadiendo servicios y productos al ticket. El
-    descuento es un porcentaje sobre el total, y la forma de pago sale de la lista de las que el centro tiene
-    activas.
+    Se elige el cliente y el profesional, y a partir de ahí se van añadiendo servicios y productos al ticket. La
+    forma de pago sale de la lista de las que el centro tiene activas.
+  </p>
+
+  <p>
+    <strong>El descuento se pone de dos maneras.</strong> Con <em>%</em>, como porcentaje: los más usados (5, 10, 15
+    y 20 %) están a un toque, y cualquier otro se escribe. Con <em>Precio final</em> se dice cuánto se quiere cobrar
+    —«déjalo en 50»— y Turnera calcula la rebaja y la reparte entre las líneas que paga el cliente; debajo dice
+    cuánto se rebaja y a qué porcentaje equivale, y el total aparece con el precio de antes tachado. Propone además,
+    a un toque, los precios redondos que quedan justo por debajo (con 57,30 €, 55 y 50). El precio final solo
+    rebaja: si se escribe uno mayor que el total, avisa y no deja cobrar.
   </p>
 
   <p>
@@ -1538,10 +1547,14 @@ footer{
 
   <p>
     Con la facturación activada, cada venta cobrada sale con su <strong>factura simplificada</strong>, que es el
-    ticket de siempre con número, desglose del IVA y un código QR arriba. Una deuda se factura cuando se salda. Una
-    devolución saca una <strong>factura rectificativa</strong>, en negativo, que dice qué factura rectifica. Las
-    sesiones que paga un bono no se facturan (el bono se facturó al venderlo), ni la venta de una tarjeta regalo (se
-    factura lo que se compre con ella).
+    ticket de siempre con número, desglose del IVA y un código QR arriba. <strong>La factura va con la venta, no con
+    el cobro</strong>: lo que se deja a deber se factura igual en ese momento, y cobrarlo es cosa del centro. Si al
+    saldar la deuda cambia el importe —un descuento de la forma de pago, o un bono que se hace cargo de una
+    sesión—, la diferencia sale en una rectificativa. Una devolución saca una <strong>factura
+    rectificativa</strong>, en negativo, que dice qué factura rectifica. Las sesiones que paga un bono no se
+    facturan (el bono se facturó al venderlo, con su IVA), ni la venta de una tarjeta regalo, que es dinero a
+    cuenta: se factura lo que se compre con ella. Lo que se paga con puntos del club cuenta como descuento: la
+    factura sale por lo que se paga con dinero.
   </p>
 
   <div class="ojo">
@@ -1750,7 +1763,9 @@ footer{
   <ul>
     <li><strong>El nombre</strong> y <strong>cuántas unidades</strong> hay. Con dos, dos citas a la vez están bien
       y tres no.</li>
-    <li><strong>Qué servicios lo necesitan.</strong> Mientras no se marque ninguno, el aparato no estorba a nadie.</li>
+    <li><strong>Qué servicios lo necesitan.</strong> Se pasan de la lista de <em>Disponibles</em> a la de <em>Lo
+      usan</em>, con buscador en las dos. Los bonos no salen: se venden, no se tratan. Mientras no se marque
+      ninguno, el aparato no estorba a nadie.</li>
     <li><strong>Qué hay que anotar cada vez que se usa</strong>: los julios del láser, la potencia de la cama de
       rayos. Se añade un dato con «Añadir un dato» y se quita con la papelera de su fila.</li>
   </ul>
@@ -1807,6 +1822,17 @@ footer{
   </p>
   <p>
     Si la cita no lleva ningún servicio con aparato, el apartado no aparece.
+  </p>
+  <p>
+    <strong>También se pide de camino al cobro.</strong> Al pulsar <em>Cobrar</em> en la cita, el TPV enseña encima
+    del ticket los mismos datos de la sesión. Si falta alguno obligatorio, no deja cobrar hasta anotarlo y
+    guardarlo (a quien no tiene permiso para anotar se le avisa, pero puede cobrar).
+  </p>
+  <p>
+    <strong>Dónde se ve después.</strong> En la ficha del cliente, la tarjeta <em>Sesiones con aparato</em> lista
+    cada sesión, de la más reciente a la más antigua, con el día y la hora, el aparato, los parámetros con su unidad
+    y quién la hizo. Es donde se sigue la pauta de un tratamiento de láser sesión a sesión. Si al cliente nunca se
+    le anotó nada, la tarjeta no aparece.
   </p>
   <p>
     Ése es el dato que de verdad se mira antes de empezar: en depilación láser la pauta sube sesión a sesión, y
@@ -2619,8 +2645,9 @@ footer{
   <p>
     Si alguien ficha la entrada y se va sin fichar la salida, ese día sale como <strong>jornada abierta</strong>
     y <strong>sin horas</strong>. No se le inventa una hora de cierre a propósito: un registro con horas que
-    nadie fichó es peor que uno incompleto, porque el incompleto se ve y el inventado no. Corríjalo desde la
-    lista de fichajes.
+    nadie fichó es peor que uno incompleto, porque el incompleto se ve y el inventado no. La entrada se queda
+    abierta, y pasadas <strong>16 horas</strong> se da por olvidada: el siguiente fichaje de esa persona vuelve a
+    ser una entrada, no la salida de la víspera. Corríjalo desde la lista de fichajes.
   </p>
 
   <p>
@@ -2764,11 +2791,12 @@ footer{
   <h4>Avisos de fichaje olvidado</h4>
   <p>
     Si según su calendario alguien tenía que haber entrado y a los <strong>15 minutos</strong> no ha fichado, o
-    tenía que haber salido y a los 15 minutos sigue dentro, sale un <strong>correo</strong> al profesional (al
-    correo de su ficha) y a RRHH (a los usuarios con el permiso de planificar calendarios que estén vinculados a
-    un profesional con correo; si no hay ninguno, al correo de contacto del centro). Un tramo da como mucho un
-    aviso de entrada y uno de salida. En festivo no se avisa. Cuando exista la aplicación del móvil, el aviso
-    llegará también allí.
+    tenía que haber salido y a los 15 minutos sigue dentro, sale un <strong>correo</strong>. En los
+    <em>Ajustes</em> del calendario laboral se decide si se avisa, y a quién: al profesional (al correo de su
+    ficha), a RRHH o a los dos. Ahí mismo se apunta el <strong>correo de la persona de RRHH</strong>; si se deja
+    vacío, los avisos de RRHH van al correo de administración del centro (<em>Preferencias</em>). Un tramo da como
+    mucho un aviso de entrada y uno de salida. En festivo no se avisa. Cuando exista la aplicación del móvil, el
+    aviso llegará también allí.
   </p>
 
   <h4>En la agenda</h4>
