@@ -1774,5 +1774,10 @@
   "t17f8088c": "mit dem Tag, den erfassten Stunden und der Erklärung, damit sie weiß, was in ihrer Zeiterfassung steht.",
   "tcd319a0b": "lässt sich weder ändern noch löschen",
   "t45257986": "Ersetzt",
-  "t899fa6df": "Die Tabelle der einzelnen Stempelungen"
+  "t899fa6df": "Die Tabelle der einzelnen Stempelungen",
+  "t6796facc": ", die ab Werk nur der Administrator hat, und vorher braucht es Steuernummer, Firmennamen und Geschäftsanschrift (Straße, PLZ und Ort) des Zentrums in den",
+  "t48bdc5c5": ": Die Rechnung muss sagen, wer sie ausstellt und wo.",
+  "t24246859": ", also der übliche Beleg mit Nummer, Ausstellungsdatum, MwSt.-Aufschlüsselung und oben links dem QR-Code mit „QR tributario:“ darüber. Positionen und Summe sind die der Rechnung; was der Beleg enthält und nicht berechnet wird (eine mit Paket bezahlte Sitzung, der Verkauf einer Geschenkkarte), steht getrennt unter",
+  "t57b7ed03": ", mit Begründung. Eine Korrekturrechnung nennt die korrigierte Rechnung und den Grund. Sobald das Zentrum seine Rechnungen an die AEAT sendet, erscheint unter dem QR „VERI*FACTU“ und daneben „Factura verificable en la sede electrónica de la AEAT“; solange es sie nicht sendet, nicht, denn es wäre nicht wahr. Ohne aktivierte Rechnungsstellung gibt es weder Rechnung noch QR: Es kommt der übliche Beleg.",
+  "tf33034d1": "Nicht in dieser Rechnung enthalten"
 }

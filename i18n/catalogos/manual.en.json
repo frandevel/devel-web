@@ -1774,5 +1774,10 @@
   "t17f8088c": "with the day, the declared hours and the explanation, so they know what is on their record.",
   "tcd319a0b": "cannot be changed or deleted",
   "t45257986": "Replaced",
-  "t899fa6df": "The table of clockings one by one"
+  "t899fa6df": "The table of clockings one by one",
+  "t6796facc": ", which by default only the administrator has, and first the tax ID, company name and registered address (street, postcode and town) of the centre are needed in",
+  "t48bdc5c5": ": the invoice has to say who issues it and where.",
+  "t24246859": ", which is the usual ticket with a number, issue date, the VAT breakdown and, at the top left, the QR code with “QR tributario:” above it. Its lines and total are those of the invoice; what the ticket carries and is not invoiced (a session paid with a voucher, the sale of a gift card) appears separately, under",
+  "t57b7ed03": ", saying why. A corrective invoice says which invoice it corrects and the reason. Once the centre sends its invoices to the AEAT, “VERI*FACTU” appears below the QR and “Factura verificable en la sede electrónica de la AEAT” next to it; while it does not send them, they do not, because it would not be true. Without invoicing switched on there is no invoice and no QR: the usual ticket is printed.",
+  "tf33034d1": "Not included in this invoice"
 }

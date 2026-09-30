@@ -1541,13 +1541,17 @@ footer{
   <p>
     Turnera puede facturar cada venta como pide VeriFactu. <strong>Viene apagado</strong>: mientras no se active,
     se cobra como siempre y el ticket no lleva número de factura. Lo activa quien tenga el permiso
-    <em>Facturación y VeriFactu</em>, que de fábrica solo trae el administrador, y antes hacen falta el NIF y la
-    razón social del centro en <em>Preferencias</em>.
+    <em>Facturación y VeriFactu</em>, que de fábrica solo trae el administrador, y antes hacen falta el NIF, la
+    razón social y el domicilio fiscal (dirección, código postal y población) del centro en <em>Preferencias</em>:
+    la factura tiene que decir quién la expide y dónde.
   </p>
 
   <p>
     Con la facturación activada, cada venta cobrada sale con su <strong>factura simplificada</strong>, que es el
-    ticket de siempre con número, desglose del IVA y, arriba a la izquierda, el código QR con «QR tributario:» encima.
+    ticket de siempre con número, fecha de expedición, desglose del IVA y, arriba a la izquierda, el código QR con
+    «QR tributario:» encima. Sus líneas y su total son los de la factura; lo que el ticket lleva y no se factura
+    (una sesión pagada con bono, la venta de una tarjeta regalo) sale aparte, en <em>No incluido en esta factura</em>,
+    diciendo por qué. Una rectificativa dice qué factura rectifica y el motivo.
     Cuando el centro ya envía sus facturas a la AEAT, debajo del QR aparece «VERI*FACTU» y al lado «Factura
     verificable en la sede electrónica de la AEAT»; mientras no las envía, no, porque no sería verdad. Sin la
     facturación activada no hay factura ni QR: sale el ticket de siempre. <strong>La factura va con la venta, no con
