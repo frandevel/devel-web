@@ -331,5 +331,22 @@
   "t59078f5e": ". Without a photo, a woman's, a man's or a neutral avatar is shown depending on the record.",
   "t0eb57679": "photo",
   "tdc0d5c0c": "When painting shifts on days before the start date or after the end date, the calendar counters did not move, because those days do not count. Now those days cannot be planned and the screen says how many it skipped.",
-  "tda354a4e": "2026.9.320-e2b6471"
+  "tda354a4e": "2026.9.320-e2b6471",
+  "t8159033d": "30 September 2026 · Bizum and imported consents",
+  "t8f9b1d40": "Payments",
+  "tbb8a3bc0": "New payment method",
+  "t8c4ee686": ". It is recorded when the customer's Bizum arrives, earns club points like a card and appears on its own line of the",
+  "t3bfb70f6": ", to check it against the bank statement.",
+  "tf4f50b81": "Bizum",
+  "te7dc4901": "cash closing",
+  "tb65f868d": "Consents",
+  "t4d26d3d8": "In the customer record,",
+  "tefcf69b4": "uploads the PDF consents signed on another platform or on paper,",
+  "t471fc154": "Import signed",
+  "t188691db": "up to 5 at once",
+  "t307a6801": "For each one you can set the name, the document date and the template it matches. With the template,",
+  "tff75ccde": "the missing-consent warning stops appearing",
+  "t778ab684": "They are marked as",
+  "tb7d69ad9": "and are downloaded and withdrawn like those signed in Turnera. New permission «Import signed consents», which Reception and Management have.",
+  "t08b4f84a": "Imported"
 }

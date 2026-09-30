@@ -1211,7 +1211,10 @@ footer{
   </p>
 
   <p>
-    The payment methods the till offers are cash, card, bank transfer, financing, gift and gift card and, when it applies, the club points and the customer's store credit. These last two only appear when there is a customer with a balance.
+    The payment methods the POS offers are cash, card, <strong>Bizum</strong>, bank transfer, financing, gift and gift card, and, when relevant, club points and the customer's credit balance. These last two only appear if there is a customer with a balance.
+  </p>
+  <p>
+    <strong>Bizum</strong> is recorded by hand: the customer sends it from their phone and, when it is seen arriving, it is charged with that payment method. It earns club points like a card and appears on its own line of the cash closing, which is checked against the bank statement.
   </p>
 
   <h3 id="cupones">Coupons</h3>
@@ -1732,6 +1735,7 @@ footer{
   <ul>
     <li><strong>What Turnera has charged</strong>, on the left: the total of each payment method. <em>See breakdown</em> shows the payments one by one —time, ticket, customer and amount—, to find the one that does not match.</li>
     <li><strong>Card</strong>: you type what the card terminal receipts or the bank say, and the card difference appears.</li>
+    <li><strong>Bizum and bank transfer</strong> are neither in the drawer nor in the card terminal: they appear on their own line of what was collected, and are checked against the bank statement.</li>
     <li><strong>Cash</strong>: the opening cash —what the previous closing left is suggested—, plus what was charged in cash, minus the <em>payments out of the till</em> (the courier, the florist), is what <em>should be in the till</em>. You type the count and the cash difference appears. What goes to the bank goes in <em>amount withdrawn</em>, and what is left is the opening cash of the next day.</li>
   </ul>
   <p>
@@ -2205,6 +2209,12 @@ footer{
     If you mark a template as <strong>required</strong>, the record of every customer who has not signed it
     says so. Without that warning this would be a folder of papers: the point is finding out before doing the
     treatment, not afterwards.
+  </p>
+
+  <h4 id="consentimientos-importar">Bringing in those already signed on another platform</h4>
+  <p>
+    Consents signed before using Turnera, in another program or on scanned paper, are uploaded as PDF to the customer record with <em>Import signed</em>. You can choose <strong>up to 5 at once</strong>, and for each one set the name, the <strong>document date</strong> and the <strong>template it matches</strong>. If the template is given, it counts as signed and the missing-consent warning stops appearing. In the list they are marked as <em>Imported</em>, with the file and the day they were uploaded; they are downloaded and withdrawn like those signed here. Each PDF can be up to 20 MB. Importing is the permission
+    <strong>«Import signed consents»</strong>, which Reception and Management have.
   </p>
 
   <h4>Who can see what has been signed</h4>
