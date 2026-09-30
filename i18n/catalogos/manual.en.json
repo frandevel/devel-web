@@ -1783,5 +1783,9 @@
   "td210c618": "The monthly fee depends on how many\n    agenda resources are active in the whole centre, adding up every branch. The top of this screen shows\n    how many there are and what they cost per month, before VAT. When you add or reactivate one, before saving, the form tells you\n    what the fee will become: the change applies",
   "t6f970540": ". Deactivating one lowers\n    it, also from the following month. Every addition, reactivation, deactivation or deletion that changes how many are active\n    is recorded with the date and who did it, and DEVEL receives it by email to adjust the fee.",
   "tfc1b8c6b": "Active resources set the fee.",
-  "t6b1a1d2a": "from the month after it is added"
+  "t6b1a1d2a": "from the month after it is added",
+  "t7d62bb88": "If, according to their calendar, someone should have come in and after the",
+  "t101344ef": "they have not\n    clocked in, or should have left and after the margin are still in, an",
+  "t87ac310c": " goes out. With the\n    factory margin that is 15 minutes; a notice never goes out before 15, even if the margin is smaller. That way, whoever stays\n    a few extra minutes within the margin, which is still a regular working day, does not get a false notice. In the",
+  "ta0461d1e": "overtime margin"
 }

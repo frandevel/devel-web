@@ -429,5 +429,14 @@
   "tfdc952ac": "When you add, reactivate or deactivate a resource, Turnera tells you before saving",
   "t5bd4dd7f": ". The change applies from the following month.",
   "t392209c0": "what the fee will become",
-  "t14f90399": "Every addition or removal that changes the fee is recorded with the date and who made it, and DEVEL receives it to adjust the invoice for the right month."
+  "t14f90399": "Every addition or removal that changes the fee is recorded with the date and who made it, and DEVEL receives it to adjust the invoice for the right month.",
+  "tf789b5a0": "30 September 2026 · Missed clocking notices",
+  "t9642b9a2": "2026.9.341-6be997f",
+  "t7b5971cb": "were never actually sent. Now they are.",
+  "tcebbfdab": "Email notices of missed clockings",
+  "t792f0c83": "The notice waits for the centre's",
+  "t285b45ed": "(never less than 15 minutes): whoever stays a few extra minutes, still within the margin, no longer gets a notice saying they did not clock out. The",
+  "t0daa3ac6": "say after how many minutes the notice goes out.",
+  "ta0461d1e": "overtime margin",
+  "t9751f876": "Settings"
 }

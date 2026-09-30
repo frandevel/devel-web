@@ -429,5 +429,14 @@
   "tfdc952ac": "Wenn Sie eine Ressource anlegen, reaktivieren oder deaktivieren, zeigt Turnera vor dem Speichern,",
   "t5bd4dd7f": ". Die Änderung gilt ab dem Folgemonat.",
   "t392209c0": "wie hoch die Gebühr dann wird",
-  "t14f90399": "Jede Neuanlage oder Abmeldung, die die Gebühr ändert, wird mit Datum und Benutzer festgehalten und geht an DEVEL, damit die Rechnung des richtigen Monats angepasst wird."
+  "t14f90399": "Jede Neuanlage oder Abmeldung, die die Gebühr ändert, wird mit Datum und Benutzer festgehalten und geht an DEVEL, damit die Rechnung des richtigen Monats angepasst wird.",
+  "tf789b5a0": "30. September 2026 · Benachrichtigungen bei vergessenem Stempeln",
+  "t9642b9a2": "2026.9.341-6be997f",
+  "t7b5971cb": "wurden nie verschickt. Jetzt schon.",
+  "tcebbfdab": "E-Mail-Benachrichtigungen bei vergessenem Stempeln",
+  "t792f0c83": "Die Benachrichtigung wartet die",
+  "t285b45ed": "des Zentrums ab (nie weniger als 15 Minuten): Wer ein paar Minuten länger bleibt, noch innerhalb der Toleranz, bekommt keine Benachrichtigung mehr, nicht ausgestempelt zu haben. Die",
+  "t0daa3ac6": "zeigen, nach wie vielen Minuten benachrichtigt wird.",
+  "ta0461d1e": "Toleranz für Überstunden",
+  "t9751f876": "Einstellungen"
 }

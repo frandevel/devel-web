@@ -1783,5 +1783,9 @@
   "td210c618": "Die Monatsgebühr hängt davon ab, wie viele\n    Terminressourcen im gesamten Zentrum aktiv sind, über alle Filialen zusammengezählt. Oben auf dieser Seite sehen Sie,\n    wie viele es sind und was sie im Monat kosten, ohne MwSt. Wenn Sie eine anlegen oder wieder aktivieren, zeigt das Formular vor dem Speichern,\n    wie hoch die Gebühr dann wird: Die Änderung gilt",
   "t6f970540": ". Eine zu deaktivieren senkt\n    sie, ebenfalls ab dem Folgemonat. Jede Neuanlage, Reaktivierung, Deaktivierung oder Löschung, die die Zahl der aktiven Ressourcen ändert,\n    wird mit Datum und Benutzer festgehalten und geht per E-Mail an DEVEL, damit die Gebühr angepasst wird.",
   "tfc1b8c6b": "Die aktiven Ressourcen bestimmen die Gebühr.",
-  "t6b1a1d2a": "ab dem Monat nach der Anlage"
+  "t6b1a1d2a": "ab dem Monat nach der Anlage",
+  "t7d62bb88": "Wenn laut Kalender jemand hätte kommen sollen und nach Ablauf der",
+  "t101344ef": "nicht\n    gestempelt hat, oder hätte gehen sollen und nach der Toleranz noch da ist, geht eine",
+  "t87ac310c": " raus. Mit der\n    Werkseinstellung sind das 15 Minuten; vor 15 Minuten wird nie benachrichtigt, auch wenn die Toleranz kleiner ist. So bekommt, wer\n    innerhalb der Toleranz ein paar Minuten länger bleibt, was noch reguläre Arbeitszeit ist, keine falsche Benachrichtigung. In den",
+  "ta0461d1e": "Toleranz für Überstunden"
 }
