@@ -621,7 +621,7 @@ footer{
     <li><a href="#ajustes">9. Centre settings</a></li>
     <li><a href="#calendario-laboral" class="sub">Work calendar</a></li>
     <li><a href="#desactivar-centro" class="sub">Disabling a centre</a></li>
-    <li><a href="#importar" class="sub">Bringing the data from flowww</a></li>
+    <li><a href="#importar" class="sub">Bringing in data from another platform</a></li>
     <li><a href="#irse" class="sub">Take your data</a></li>
     <li><a href="#historia">10. The clinical record</a></li>
     <li><a href="#problemas">11. When something goes wrong</a></li>
@@ -1022,7 +1022,7 @@ footer{
   </p>
 
   <p>
-    <strong>The customer number appears everywhere</strong>: in the list, in the record, on the agenda card, in the customer search of the appointment and of the checkout, in pending payments and in the reports. Customers who came from flowww keep the number they had there, and new ones get the next one when they are created. And
+    <strong>The customer number appears everywhere</strong>: in the list, in the record, on the diary card, in the appointment and payment search, in pending payments and in the reports. Customers who came from another platform keep the number they had there, and new ones get the next one when they are registered. And
     <strong>a customer's name in any list is a link to their record</strong>, just like on the home screen; in the appointment and at the checkout, the card button next to the customer also takes you there.
   </p>
 
@@ -2580,35 +2580,33 @@ footer{
     The disabled centre stays in the list of delegations, marked as inactive, and is enabled again from there. Two cannot be disabled: the one you are working in —switch to another one first— and the last one left enabled.
   </p>
 
-  <h3 id="importar">Bringing the data from flowww</h3>
+  <h3 id="importar">Bringing in data from another platform</h3>
   <span class="ruta">Administration → Import from another program</span>
 
   <p>
-    For a centre coming from flowww. It brings over in one go the customers (with their notes), the price list of services, vouchers and products, the vouchers customers have half used, the gift cards with a balance, the diary —what lies ahead and the last year—, the stock of every product, each customer's treatment history and what they left owing. It needs the permission <strong>«Import from another program»</strong>, which is sensitive and
+    For a centre coming from another platform. It brings in, in one go, the customers (with their notes), the price list of services, packages and products, the packages customers have half used, gift vouchers with a balance, the diary —what lies ahead and the last year—, the stock of each product, each customer's treatment history and what they left owing. It needs the permission <strong>«Import from another program»</strong>, which is sensitive and
     only the administrator has.
   </p>
   <ol>
-    <li>In flowww, export each screen to CSV: customers, service history, price list, diary, vouchers, deferred payments, gift cards and stock. Where each one is in flowww is explained on the import screen itself, under
-      <em>How to export the sheets from flowww</em>. Extra sheets —daily cash, invoices, advance payments— do no harm: the report says they are not imported.</li>
+    <li>In the source platform, export each screen to CSV: customers, service history, price list, diary, packages, deferred payments, gift vouchers and stock. Where each one is, the import screen itself tells you, under
+      <em>How to get the sheets out of the source platform</em>. Extra sheets —daily cash, invoices, advance payments— do no harm: the report says they are not imported.</li>
     <li>Press <strong>«Choose files»</strong> and choose them all at once. Their names do not matter: each sheet is
       recognised by its columns.</li>
-    <li>Press <strong>«Try it»</strong>. Turnera runs the whole import and throws it away at the end: the report says
-      how much of each thing would be created, how much was already there and what is left out, with grouped warnings and examples to
-      look them up in flowww. Nothing is saved.</li>
+    <li>Press <strong>«Try it»</strong>. Turnera runs the whole import and throws it away at the end: the report says how much of each thing would be created, how much was already there and what is left out, with grouped warnings and examples to look them up in the source. Nothing is saved.</li>
     <li>If the report looks right, <strong>«Import»</strong>. The files are not stored anywhere.</li>
   </ol>
   <p>
-    The <strong>code</strong> of each service in flowww arrives as its short code. In flowww the same code can be used for several services, and in Turnera it cannot: those get what distinguishes their name added —IDEE becomes IDEE20, IDEE30 and IDEE50 for the Indiba of 20, 30 and 50 minutes— and the trial run report says how each one ends up. They can be changed later in the service record.
+    The <strong>code</strong> of each service in the source arrives as its short code. There, one code can be used for several services, and in Turnera it cannot: those get what sets their name apart added —IDEE becomes IDEE20, IDEE30 and IDEE50 for the 20, 30 and 50-minute Indiba— and the trial report says how each one ends up. They can be changed later in the service record.
   </p>
   <p>
     The <strong>vouchers that have already expired</strong> with unused sessions arrive disabled: they are kept on the customer's record, but cannot be used. The report counts them separately.
   </p>
   <p>
-    With the <strong>stocks</strong>sheet, each product arrives with the units flowww had at the centre; negative figures arrive as zero. If a product is in the stock but no longer in the price list, it is created anyway, with 21 % VAT, so its units are not lost. Without that sheet, products arrive with zero stock and are set with a stocktake from <em>Stock</em>. If someone has already done the stocktake in Turnera, a new import does not overwrite it.
+    With the <strong>stocks</strong>, each product arrives with the units the source had in the centre; negatives arrive as zero. If a product is in the stock but no longer in the price list, it is created anyway, with 21 % VAT, so its units are not lost. Without that sheet, products arrive with zero stock and are set with a stocktake from <em>Stock</em>. If someone has already done the stocktake in Turnera, a new import does not overwrite it.
   </p>
   <p>
-    <strong>Past appointments</strong> arrive attended or cancelled, as they were in flowww, and the diary does not outline them in red: they were charged there. <strong>The service history</strong> —years of sessions— arrives as the customer's visits: those on the same day are one visit, with a line per service, and they show in the history on their record. The device, its settings, the session and the comments go on each line. flowww does not say how much was charged, so they arrive at zero and paid: they do not move the till or show up as debt. Postponed ones and those the customer missed are not imported, because they did not happen. <strong>Pending payments</strong> arrive in
-    <em>Unpaid visits</em>; those already paid do not, because they are in flowww's till.
+    <strong>Past appointments</strong> arrive attended or cancelled, as they were in the source, and the diary does not ring them in red: they were charged there. <strong>The service history</strong> —years of sessions— arrives as the customer's visits: those on the same day are one visit, with one line per service, and they show in the history of their record. The device, its settings, the session and the comments go on each line. The sheet does not say how much was charged, so they arrive at zero and paid: they do not move the till or show up as debt. Postponed ones and no-shows are not brought in, because they did not happen. <strong>Pending payments</strong> arrive in
+    <em>Unpaid visits</em>; those already paid do not, because they are in the source platform's till.
   </p>
   <p>
     Importing twice duplicates nothing: what was already brought is recognised and counted as «already there». That makes it possible
@@ -2618,18 +2616,11 @@ footer{
     <p><strong>It can be undone</strong> from «Imports done», and it takes away everything that import brought
       without touching what was already there. But if someone has already worked with what was imported —an appointment, a charge,
       a note— Turnera does not undo it and says what prevents it: undoing it would take that work with it.</p>
-    <p><strong>Packages</strong> are brought over with what their name says, which in flowww lists the services separated
-      by «+»: «PAQUETE 7 LPG + PRESOTERAPIA» is seven sessions of each, and «TRIO DE ZONAS (AX+ING+BP)» one for each
-      area. The import report shows which service it understood for each part, so you can check it. If a part
-      is not recognised («RFN400» is a device, not a service), that package is not brought over until it is stated in a sheet
+    <p><strong>Packages</strong> are brought in with what their name says, which in the source lists the services separated by «+»: «PAQUETE 7 LPG + PRESOTERAPIA» is seven sessions of each, and «TRIO DE ZONAS (AX+ING+BP)» one of each area. The import report shows which service it understood in each part, so it can be checked. If a part is not recognised («RFN400» is a device, not a service), that package is not brought in until it is stated in a sheet
       <em>Contenido de paquetes</em> with the columns <code>ID Paquete</code>, <code>ID Servicio</code> and
-      <code>Cantidad</code> (the IDs are those of the flowww price list), uploaded along with the others; it wins over the
-      name.</p>
-    <p><strong>What is not brought:</strong> the flowww portal passwords, vouchers with no balance, vouchers already used up, the old slot of appointments that were moved,
-      the daily tills and the invoices, which are closed accounting and are looked up in flowww. Signed
-      consents do not come in any sheet.</p>
-    <p><strong>After importing:</strong> the professionals arrive with the code they had in flowww and need
-      a name, and customers with a repeated ID are all brought and reviewed with the
+      <code>Cantidad</code> (the IDs are those of the source price list), which is uploaded with the others and overrides the name.</p>
+    <p><strong>What is not brought:</strong> the source platform's portal passwords, vouchers with no balance, used-up packages, the old slot of moved appointments, daily tills and invoices, which are closed accounts and are looked up in the source platform. Signed consents are not in any sheet: they are brought in as PDFs from each customer's record (<a href="#consentimientos-importar">see how</a>).</p>
+    <p><strong>After importing:</strong> professionals arrive with the code they had in the source and need a name, and customers with a repeated ID are all brought in and reviewed with the
       <a href="#clientes">record merge</a> (a minor with their mother's ID is not the same person).</p>
   </div>
 

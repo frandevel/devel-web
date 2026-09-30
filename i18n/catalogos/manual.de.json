@@ -1703,5 +1703,21 @@
   "tce66f9e3": "Datum des Dokuments",
   "t63e3a9d4": "zugehörige Vorlage",
   "t08b4f84a": "Importiert",
-  "t51edb66d": "«Unterschriebene Einwilligungen importieren»"
+  "t51edb66d": "«Unterschriebene Einwilligungen importieren»",
+  "t9fddecf2": "Daten aus einer anderen Plattform übernehmen",
+  "t091f4a4a": ": in der Liste, in der Kartei, auf der Terminkarte, in der Termin- und Zahlungssuche, bei den offenen Zahlungen und in den Berichten. Kunden, die von einer anderen Plattform kamen, behalten ihre dortige Nummer, und neue erhalten beim Anlegen die nächste. Und",
+  "t633b360e": "Für ein Zentrum, das von einer anderen Plattform kommt. In einem Schritt werden übernommen: die Kunden (mit ihren Notizen), die Preisliste für Leistungen, Pakete und Produkte, halb genutzte Pakete der Kunden, Gutscheine mit Guthaben, der Kalender —der kommende und der des letzten Jahres—, der Bestand jedes Produkts, die Behandlungshistorie jedes Kunden und offene Schulden. Dafür braucht es die Berechtigung",
+  "tf6c2ff1e": "In der Ursprungsplattform jede Ansicht als CSV exportieren: Kunden, Leistungshistorie, Preisliste, Kalender, Pakete, aufgeschobene Zahlungen, Gutscheine und Bestand. Wo sich jede befindet, sagt die Importseite selbst unter",
+  "tb53dbf48": "So holt man die Tabellen aus der Ursprungsplattform",
+  "t1bc6c4f3": ". Turnera führt den ganzen Import aus und verwirft ihn am Ende: Der Bericht sagt, wie viel von jedem angelegt würde, wie viel schon da war und was draußen bleibt, mit gruppierten Hinweisen und Beispielen, um sie im Ursprung nachzuschlagen. Nichts wird gespeichert.",
+  "t15a9a96a": "jeder Leistung im Ursprung wird zu ihrem Kurzcode. Dort kann ein Code für mehrere Leistungen gelten, in Turnera nicht: Diesen wird angehängt, was ihren Namen unterscheidet —IDEE wird zu IDEE20, IDEE30 und IDEE50 für Indiba mit 20, 30 und 50 Minuten— und der Probebericht zeigt, wie jede endet. Sie lassen sich später in der Leistungskartei ändern.",
+  "tbcc06be7": " kommt jedes Produkt mit den Einheiten, die der Ursprung im Zentrum hatte; Negatives kommt als null. Steht ein Produkt im Bestand, aber nicht mehr in der Preisliste, wird es trotzdem angelegt, mit 21 % MwSt., damit seine Einheiten nicht verloren gehen. Ohne diese Tabelle kommen die Produkte mit Bestand null und werden mit einer Inventur gesetzt unter",
+  "t0fc46ef7": "kommen als erledigt oder storniert, wie sie im Ursprung waren, und der Kalender umrandet sie nicht rot: Sie wurden dort kassiert.",
+  "t278980f0": "—Jahre von Sitzungen— kommt als Besuche des Kunden: die eines Tages sind ein Besuch, mit einer Zeile pro Leistung, und erscheinen im Verlauf seiner Kartei. Gerät, Parameter, Sitzung und Kommentare stehen in jeder Zeile. Die Tabelle sagt nicht, wie viel kassiert wurde, also kommen sie mit null und bezahlt: Sie bewegen die Kasse nicht und erscheinen nicht als Schuld. Verschobene und nicht wahrgenommene werden nicht übernommen, weil sie nicht stattfanden.",
+  "t655a3318": "; bereits bezahlte nicht, weil sie in der Kasse der Ursprungsplattform sind.",
+  "t348564a5": "werden mit dem übernommen, was ihr Name sagt, der im Ursprung die Leistungen durch «+» trennt: «PAQUETE 7 LPG + PRESOTERAPIA» sind sieben Sitzungen von jedem, und «TRIO DE ZONAS (AX+ING+BP)» eine pro Zone. Der Importbericht zeigt, welche Leistung er in jedem Teil verstanden hat, zur Kontrolle. Wird ein Teil nicht erkannt («RFN400» ist ein Gerät, keine Leistung), wird das Paket erst übernommen, wenn es in einer Tabelle angegeben ist:",
+  "tf5622a64": "(die IDs sind die der Ursprungspreisliste), die mit den anderen hochgeladen wird und Vorrang vor dem Namen hat.",
+  "t913123d8": "die Portal-Passwörter der Ursprungsplattform, Gutscheine ohne Guthaben, aufgebrauchte Pakete, der alte Platz verschobener Termine, Tageskassen und Rechnungen, die abgeschlossene Buchhaltung sind und in der Ursprungsplattform nachgeschlagen werden. Unterschriebene Einwilligungen stehen in keiner Tabelle: Sie werden als PDF aus der Kartei jedes Kunden übernommen (",
+  "td2fc9d34": "so geht’s",
+  "t2af1e52e": "Die Mitarbeiter kommen mit dem Code, den sie im Ursprung hatten, und brauchen einen Namen, und Kunden mit doppelter Ausweisnummer werden alle übernommen und geprüft mit der"
 }

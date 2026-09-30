@@ -621,7 +621,7 @@ footer{
     <li><a href="#ajustes">9. Ajustes del centro</a></li>
     <li><a href="#calendario-laboral" class="sub">Calendario laboral</a></li>
     <li><a href="#desactivar-centro" class="sub">Desactivar un centro</a></li>
-    <li><a href="#importar" class="sub">Traer los datos de flowww</a></li>
+    <li><a href="#importar" class="sub">Traer los datos de otra plataforma</a></li>
     <li><a href="#irse" class="sub">Llevarse los datos</a></li>
     <li><a href="#historia">10. La historia clínica</a></li>
     <li><a href="#problemas">11. Cuando algo no sale</a></li>
@@ -1083,7 +1083,7 @@ footer{
   <p>
     <strong>El número de cliente sale en todas partes</strong>: en la lista, en la ficha, en la tarjeta de la
     agenda, en el buscador de la cita y del cobro, en los cobros pendientes y en los informes. El de los clientes
-    que vinieron de flowww es el que tenían allí, y a los nuevos se les da el siguiente al darlos de alta. Y
+    que vinieron de otra plataforma es el que tenían allí, y a los nuevos se les da el siguiente al darlos de alta. Y
     <strong>el nombre de un cliente en cualquier listado es un enlace a su ficha</strong>, igual que en el
     inicio; en la cita y en el cobro, el botón de la tarjeta que hay junto al cliente lleva también a ella.
   </p>
@@ -2895,30 +2895,30 @@ footer{
     que queda activo.
   </p>
 
-  <h3 id="importar">Traer los datos de flowww</h3>
+  <h3 id="importar">Traer los datos de otra plataforma</h3>
   <span class="ruta">Administración → Importar de otro programa</span>
 
   <p>
-    Para un centro que viene de flowww. Se traen de una vez los clientes (con sus notas), la tarifa de servicios,
+    Para un centro que viene de otra plataforma. Se traen de una vez los clientes (con sus notas), la tarifa de servicios,
     bonos y productos, los bonos que los clientes tienen a medias, los cheques regalo con saldo, la agenda —la que
     queda por delante y la del último año—, el stock de cada producto, el histórico de tratamientos de cada cliente
     y lo que dejaron a deber. Hace falta el permiso <strong>«Importar de otro programa»</strong>, que es sensible y
     sólo lo trae el administrador.
   </p>
   <ol>
-    <li>En flowww, exportar a CSV cada pantalla: clientes, histórico de servicios, tarifa, agenda, bonos, pagos
-      aplazados, cheques regalo y stock. Dónde está cada una en flowww lo dice la propia pantalla de importar, en
-      <em>Cómo sacar las hojas de flowww</em>. Las que se sacan de más —cajas del día, facturas, anticipos— no
+    <li>En la plataforma de origen, exportar a CSV cada pantalla: clientes, histórico de servicios, tarifa, agenda, bonos, pagos
+      aplazados, cheques regalo y stock. Dónde está cada una lo dice la propia pantalla de importar, en
+      <em>Cómo sacar las hojas de la plataforma de origen</em>. Las que se sacan de más —cajas del día, facturas, anticipos— no
       molestan: el informe dice que no se traen.</li>
     <li>Pulsar <strong>«Elegir ficheros»</strong> y elegirlos todos a la vez. Da igual cómo se llamen: cada hoja se
       reconoce por sus columnas.</li>
     <li>Pulsar <strong>«Ensayar»</strong>. Turnera hace la importación entera y la tira al final: el informe dice
       cuánto de cada cosa se crearía, cuánto ya estaba y qué se queda fuera, con avisos agrupados y ejemplos para
-      buscarlos en flowww. No se guarda nada.</li>
+      buscarlos en el origen. No se guarda nada.</li>
     <li>Si el informe cuadra, <strong>«Importar»</strong>. Los ficheros no se quedan guardados en ningún sitio.</li>
   </ol>
   <p>
-    El <strong>código</strong> de cada servicio en flowww llega como su código abreviado. En flowww un mismo código
+    El <strong>código</strong> de cada servicio en el origen llega como su código abreviado. Allí un mismo código
     puede servir para varios servicios, y en Turnera no: a esos se les añade lo que distingue su nombre —IDEE pasa
     a IDEE20, IDEE30 e IDEE50 para el Indiba de 20, 30 y 50 minutos— y el informe del ensayo dice cómo queda cada
     uno. Se pueden cambiar después en la ficha del servicio.
@@ -2928,19 +2928,19 @@ footer{
     cliente, pero no se pueden usar. El informe los cuenta aparte.
   </p>
   <p>
-    Con la hoja de <strong>stocks</strong>, cada producto llega con las unidades que flowww tenía en el centro; lo
+    Con la hoja de <strong>stocks</strong>, cada producto llega con las unidades que el origen tenía en el centro; lo
     negativo llega a cero. Si un producto está en el stock pero ya no en la tarifa, se crea igual, con IVA del 21 %,
     para no perder sus unidades. Sin esa hoja, los productos llegan con el stock a cero y se ponen con un inventario
     desde <em>Stock</em>. Si alguien ya ha hecho el inventario en Turnera, una importación nueva no lo pisa.
   </p>
   <p>
-    <strong>Las citas pasadas</strong> llegan atendidas o anuladas, como estaban en flowww, y la agenda no las rodea
+    <strong>Las citas pasadas</strong> llegan atendidas o anuladas, como estaban en el origen, y la agenda no las rodea
     de rojo: se cobraron allí. <strong>El histórico de servicios</strong> —años de sesiones— llega como las visitas del
     cliente: las de un mismo día son una visita, con una línea por servicio, y se ven en el historial de su ficha.
-    El aparato, sus parámetros, la sesión y los comentarios van en cada línea. flowww no dice cuánto se cobró, así
+    El aparato, sus parámetros, la sesión y los comentarios van en cada línea. La hoja no dice cuánto se cobró, así
     que llegan a cero y cobradas: no mueven la caja ni salen como deuda. Las aplazadas y a las que no vino no se
     traen, porque no se hicieron. <strong>Los pagos pendientes</strong> llegan a
-    <em>Cobros pendientes</em>; los ya pagados no, porque están en la caja de flowww.
+    <em>Cobros pendientes</em>; los ya pagados no, porque están en la caja de la plataforma de origen.
   </p>
   <p>
     Importar dos veces no duplica: lo que ya se trajo se reconoce y se cuenta como «ya estaba». Eso permite
@@ -2950,17 +2950,18 @@ footer{
     <p><strong>Se puede deshacer</strong> desde «Importaciones hechas», y se lleva todo lo que trajo esa
       importación sin tocar lo que ya había. Pero si alguien ha trabajado ya con lo importado —una cita, un cobro,
       una nota— Turnera no la deshace y dice qué lo impide: deshacerla se llevaría ese trabajo por delante.</p>
-    <p><strong>Los paquetes</strong> se traen con lo que dice su nombre, que en flowww lleva los servicios separados
+    <p><strong>Los paquetes</strong> se traen con lo que dice su nombre, que en el origen lleva los servicios separados
       por «+»: «PAQUETE 7 LPG + PRESOTERAPIA» son siete sesiones de cada uno, y «TRIO DE ZONAS (AX+ING+BP)» una de cada
       zona. El informe de la importación enseña qué servicio ha entendido en cada parte, para revisarlo. Si una parte
       no se reconoce («RFN400» es un aparato, no un servicio), ese paquete no se trae hasta que se diga en una hoja
       <em>Contenido de paquetes</em> con las columnas <code>ID Paquete</code>, <code>ID Servicio</code> y
-      <code>Cantidad</code> (los ID son los de la tarifa de flowww), que se sube junto a las demás y manda sobre el
+      <code>Cantidad</code> (los ID son los de la tarifa de origen), que se sube junto a las demás y manda sobre el
       nombre.</p>
-    <p><strong>Lo que no se trae:</strong> las contraseñas del portal de flowww, los cheques sin saldo, los bonos ya gastados, el hueco viejo de las citas que se movieron,
-      las cajas diarias y las facturas, que son contabilidad cerrada y se consultan en flowww. Los consentimientos
-      firmados no salen en ninguna hoja.</p>
-    <p><strong>Después de importar:</strong> los profesionales llegan con el código que tenían en flowww y hay que
+    <p><strong>Lo que no se trae:</strong> las contraseñas del portal de la plataforma de origen, los cheques sin saldo, los bonos ya gastados, el hueco viejo de las citas que se movieron,
+      las cajas diarias y las facturas, que son contabilidad cerrada y se consultan en la plataforma de origen. Los consentimientos
+      firmados no salen en ninguna hoja: se traen en PDF desde la ficha de cada cliente
+      (<a href="#consentimientos-importar">ver cómo</a>).</p>
+    <p><strong>Después de importar:</strong> los profesionales llegan con el código que tenían en el origen y hay que
       ponerles nombre, y los clientes con un DNI repetido se traen todos y se revisan con la
       <a href="#clientes">fusión de fichas</a> (un menor con el DNI de su madre no es la misma persona).</p>
   </div>

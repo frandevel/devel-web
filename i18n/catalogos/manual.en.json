@@ -1703,5 +1703,21 @@
   "tce66f9e3": "document date",
   "t63e3a9d4": "template it matches",
   "t08b4f84a": "Imported",
-  "t51edb66d": "«Import signed consents»"
+  "t51edb66d": "«Import signed consents»",
+  "t9fddecf2": "Bringing in data from another platform",
+  "t091f4a4a": ": in the list, in the record, on the diary card, in the appointment and payment search, in pending payments and in the reports. Customers who came from another platform keep the number they had there, and new ones get the next one when they are registered. And",
+  "t633b360e": "For a centre coming from another platform. It brings in, in one go, the customers (with their notes), the price list of services, packages and products, the packages customers have half used, gift vouchers with a balance, the diary —what lies ahead and the last year—, the stock of each product, each customer's treatment history and what they left owing. It needs the permission",
+  "tf6c2ff1e": "In the source platform, export each screen to CSV: customers, service history, price list, diary, packages, deferred payments, gift vouchers and stock. Where each one is, the import screen itself tells you, under",
+  "tb53dbf48": "How to get the sheets out of the source platform",
+  "t1bc6c4f3": ". Turnera runs the whole import and throws it away at the end: the report says how much of each thing would be created, how much was already there and what is left out, with grouped warnings and examples to look them up in the source. Nothing is saved.",
+  "t15a9a96a": "of each service in the source arrives as its short code. There, one code can be used for several services, and in Turnera it cannot: those get what sets their name apart added —IDEE becomes IDEE20, IDEE30 and IDEE50 for the 20, 30 and 50-minute Indiba— and the trial report says how each one ends up. They can be changed later in the service record.",
+  "tbcc06be7": ", each product arrives with the units the source had in the centre; negatives arrive as zero. If a product is in the stock but no longer in the price list, it is created anyway, with 21 % VAT, so its units are not lost. Without that sheet, products arrive with zero stock and are set with a stocktake from",
+  "t0fc46ef7": "arrive attended or cancelled, as they were in the source, and the diary does not ring them in red: they were charged there.",
+  "t278980f0": "—years of sessions— arrives as the customer's visits: those on the same day are one visit, with one line per service, and they show in the history of their record. The device, its settings, the session and the comments go on each line. The sheet does not say how much was charged, so they arrive at zero and paid: they do not move the till or show up as debt. Postponed ones and no-shows are not brought in, because they did not happen.",
+  "t655a3318": "; those already paid do not, because they are in the source platform's till.",
+  "t348564a5": "are brought in with what their name says, which in the source lists the services separated by «+»: «PAQUETE 7 LPG + PRESOTERAPIA» is seven sessions of each, and «TRIO DE ZONAS (AX+ING+BP)» one of each area. The import report shows which service it understood in each part, so it can be checked. If a part is not recognised («RFN400» is a device, not a service), that package is not brought in until it is stated in a sheet",
+  "tf5622a64": "(the IDs are those of the source price list), which is uploaded with the others and overrides the name.",
+  "t913123d8": "the source platform's portal passwords, vouchers with no balance, used-up packages, the old slot of moved appointments, daily tills and invoices, which are closed accounts and are looked up in the source platform. Signed consents are not in any sheet: they are brought in as PDFs from each customer's record (",
+  "td2fc9d34": "see how",
+  "t2af1e52e": "professionals arrive with the code they had in the source and need a name, and customers with a repeated ID are all brought in and reviewed with the"
 }
