@@ -298,7 +298,6 @@
   "ted0083a2": "outside their shift",
   "te6d40440": "does not let you book outside the shift",
   "t370d72a8": "30 September 2026 · Hours worked and overtime",
-  "t2df915a3": "2026.9.319-9485d7b",
   "tf736d133": "Each calendar has two views:",
   "t546e9bc6": ", what was planned, and",
   "tf8ff8c01": ", what was clocked each day.",
@@ -331,5 +330,6 @@
   "t7731dfee": "The record accepts a",
   "t59078f5e": ". Without a photo, a woman's, a man's or a neutral avatar is shown depending on the record.",
   "t0eb57679": "photo",
-  "tdc0d5c0c": "When painting shifts on days before the start date or after the end date, the calendar counters did not move, because those days do not count. Now those days cannot be planned and the screen says how many it skipped."
+  "tdc0d5c0c": "When painting shifts on days before the start date or after the end date, the calendar counters did not move, because those days do not count. Now those days cannot be planned and the screen says how many it skipped.",
+  "tda354a4e": "2026.9.320-e2b6471"
 }
