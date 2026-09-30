@@ -1779,5 +1779,9 @@
   "t48bdc5c5": ": Die Rechnung muss sagen, wer sie ausstellt und wo.",
   "t24246859": ", also der übliche Beleg mit Nummer, Ausstellungsdatum, MwSt.-Aufschlüsselung und oben links dem QR-Code mit „QR tributario:“ darüber. Positionen und Summe sind die der Rechnung; was der Beleg enthält und nicht berechnet wird (eine mit Paket bezahlte Sitzung, der Verkauf einer Geschenkkarte), steht getrennt unter",
   "t57b7ed03": ", mit Begründung. Eine Korrekturrechnung nennt die korrigierte Rechnung und den Grund. Sobald das Zentrum seine Rechnungen an die AEAT sendet, erscheint unter dem QR „VERI*FACTU“ und daneben „Factura verificable en la sede electrónica de la AEAT“; solange es sie nicht sendet, nicht, denn es wäre nicht wahr. Ohne aktivierte Rechnungsstellung gibt es weder Rechnung noch QR: Es kommt der übliche Beleg.",
-  "tf33034d1": "Nicht in dieser Rechnung enthalten"
+  "tf33034d1": "Nicht in dieser Rechnung enthalten",
+  "td210c618": "Die Monatsgebühr hängt davon ab, wie viele\n    Terminressourcen im gesamten Zentrum aktiv sind, über alle Filialen zusammengezählt. Oben auf dieser Seite sehen Sie,\n    wie viele es sind und was sie im Monat kosten, ohne MwSt. Wenn Sie eine anlegen oder wieder aktivieren, zeigt das Formular vor dem Speichern,\n    wie hoch die Gebühr dann wird: Die Änderung gilt",
+  "t6f970540": ". Eine zu deaktivieren senkt\n    sie, ebenfalls ab dem Folgemonat. Jede Neuanlage, Reaktivierung, Deaktivierung oder Löschung, die die Zahl der aktiven Ressourcen ändert,\n    wird mit Datum und Benutzer festgehalten und geht per E-Mail an DEVEL, damit die Gebühr angepasst wird.",
+  "tfc1b8c6b": "Die aktiven Ressourcen bestimmen die Gebühr.",
+  "t6b1a1d2a": "ab dem Monat nach der Anlage"
 }

@@ -419,5 +419,15 @@
   "t520e8a9d": ", und Befreiungen zeigen den Artikel des MwSt.-Gesetzes auch im Detail.",
   "t94a4613e": "Grund",
   "t8bac55b4": "Jede Position zeigt ihren Rabatt, und Beträge stehen mit Komma: 12,50 €.",
-  "t70e6170d": "Auf der Startseite machte eine Woche mit vielen Geburtstagen die Karte endlos lang. Jetzt scrollt die Liste in ihrem Bereich und nennt die Anzahl."
+  "t70e6170d": "Auf der Startseite machte eine Woche mit vielen Geburtstagen die Karte endlos lang. Jetzt scrollt die Liste in ihrem Bereich und nennt die Anzahl.",
+  "ta305ffa1": "30. September 2026 · Ressourcen und Monatsgebühr",
+  "tfe6de7df": "2026.9.328-7bda558",
+  "t12751e28": "Kabinen, Plätze und Räume",
+  "tcfcb053e": "Die Ressourcenseite zeigt,",
+  "t35de4960": "im Monat, über alle Filialen gezählt.",
+  "t4e7e626d": "wie viele aktive Ressourcen das Zentrum hat und wie hoch seine Gebühr ist",
+  "tfdc952ac": "Wenn Sie eine Ressource anlegen, reaktivieren oder deaktivieren, zeigt Turnera vor dem Speichern,",
+  "t5bd4dd7f": ". Die Änderung gilt ab dem Folgemonat.",
+  "t392209c0": "wie hoch die Gebühr dann wird",
+  "t14f90399": "Jede Neuanlage oder Abmeldung, die die Gebühr ändert, wird mit Datum und Benutzer festgehalten und geht an DEVEL, damit die Rechnung des richtigen Monats angepasst wird."
 }

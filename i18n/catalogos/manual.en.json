@@ -1779,5 +1779,9 @@
   "t48bdc5c5": ": the invoice has to say who issues it and where.",
   "t24246859": ", which is the usual ticket with a number, issue date, the VAT breakdown and, at the top left, the QR code with “QR tributario:” above it. Its lines and total are those of the invoice; what the ticket carries and is not invoiced (a session paid with a voucher, the sale of a gift card) appears separately, under",
   "t57b7ed03": ", saying why. A corrective invoice says which invoice it corrects and the reason. Once the centre sends its invoices to the AEAT, “VERI*FACTU” appears below the QR and “Factura verificable en la sede electrónica de la AEAT” next to it; while it does not send them, they do not, because it would not be true. Without invoicing switched on there is no invoice and no QR: the usual ticket is printed.",
-  "tf33034d1": "Not included in this invoice"
+  "tf33034d1": "Not included in this invoice",
+  "td210c618": "The monthly fee depends on how many\n    agenda resources are active in the whole centre, adding up every branch. The top of this screen shows\n    how many there are and what they cost per month, before VAT. When you add or reactivate one, before saving, the form tells you\n    what the fee will become: the change applies",
+  "t6f970540": ". Deactivating one lowers\n    it, also from the following month. Every addition, reactivation, deactivation or deletion that changes how many are active\n    is recorded with the date and who did it, and DEVEL receives it by email to adjust the fee.",
+  "tfc1b8c6b": "Active resources set the fee.",
+  "t6b1a1d2a": "from the month after it is added"
 }
