@@ -1550,7 +1550,10 @@ footer{
 
   <p>
     Con la facturación activada, cada venta cobrada sale con su <strong>factura simplificada</strong>, que es el
-    ticket de siempre con número, desglose del IVA y un código QR arriba. <strong>La factura va con la venta, no con
+    ticket de siempre con número, desglose del IVA y, arriba a la izquierda, el código QR con «QR tributario:» encima.
+    Cuando el centro ya envía sus facturas a la AEAT, debajo del QR aparece «VERI*FACTU» y al lado «Factura
+    verificable en la sede electrónica de la AEAT»; mientras no las envía, no, porque no sería verdad. Sin la
+    facturación activada no hay factura ni QR: sale el ticket de siempre. <strong>La factura va con la venta, no con
     el cobro</strong>: lo que se deja a deber se factura igual en ese momento, y cobrarlo es cosa del centro. Si al
     saldar la deuda cambia el importe —un descuento de la forma de pago, o un bono que se hace cargo de una
     sesión—, la diferencia sale en una rectificativa. Una devolución saca una <strong>factura
@@ -2624,24 +2627,20 @@ footer{
     <figcaption>El registro de jornada: los días con sus tramos y sus horas, y arriba el aviso de las jornadas abiertas.</figcaption>
   </figure>
 
-  <h4>Corregir un fichaje</h4>
+  <h4>Un fichaje no se corrige</h4>
 
   <p>
-    Un fichaje <strong>no se edita ni se borra nunca</strong>. Al corregirlo se añade otra línea que lo
-    sustituye, con la hora buena, quién la puso y el motivo, que es obligatorio. El fichaje equivocado se
-    queda a la vista, marcado como corregido.
+    Un fichaje <strong>no se edita, no se borra y no se corrige</strong>: se queda como quedó. Es justo lo que hace
+    que este registro valga, porque uno que se pudiera reescribir no probaría nada. Cuando alguien se olvida de
+    fichar, RRHH abre una <strong>incidencia</strong> en su calendario laboral que explica lo que pasó y declara de
+    qué hora a qué hora trabajó de verdad (ver <em>Incidencias</em>, más abajo). En esta pantalla esas horas salen
+    en su día marcadas como <em>Declarado por RRHH</em>, y en la hoja de cálculo, con «(declarado por RRHH)».
   </p>
 
   <figure>
-    <img src="/turnera/manual/imagenes/28-fichajes.png" alt="La tabla de fichajes con uno marcado como corregido y la linea que lo sustituye" loading="lazy">
-    <figcaption>Los fichajes uno a uno. El corregido se queda, marcado, y al lado está la línea que lo sustituye.</figcaption>
+    <img src="/turnera/manual/imagenes/28-fichajes.png" alt="La tabla de fichajes uno a uno" loading="lazy">
+    <figcaption>Los fichajes uno a uno, tal como se ficharon. Los corregidos antes de que dejara de poder corregirse se siguen viendo, marcados.</figcaption>
   </figure>
-
-  <p>
-    Puede parecer incómodo y es justo lo que hace que este registro valga: uno que se pudiera reescribir no
-    probaría nada. Si alguien fichó por error y no llegó a entrar, marque <em>Este fichaje no llegó a
-    pasar</em>; la línea se queda, pero deja de contar.
-  </p>
 
   <h4>Los días que salen marcados</h4>
 
@@ -2650,7 +2649,8 @@ footer{
     y <strong>sin horas</strong>. No se le inventa una hora de cierre a propósito: un registro con horas que
     nadie fichó es peor que uno incompleto, porque el incompleto se ve y el inventado no. La entrada se queda
     abierta, y pasadas <strong>16 horas</strong> se da por olvidada: el siguiente fichaje de esa persona vuelve a
-    ser una entrada, no la salida de la víspera. Corríjalo desde la lista de fichajes.
+    ser una entrada, no la salida de la víspera. Para que ese día cuente, RRHH declara las horas en una
+    incidencia.
   </p>
 
   <p>
@@ -2748,7 +2748,7 @@ footer{
       pasa del margen, cuenta entero: quien se queda cuarenta minutos ha hecho cuarenta.</li>
     <li>Todo lo fichado en un <strong>festivo</strong>, en vacaciones, en una ausencia o en un día sin turno es
       extra.</li>
-    <li>Una entrada sin salida no suma nada hasta que se corrija.</li>
+    <li>Una entrada sin salida no suma nada hasta que RRHH declara las horas en una incidencia.</li>
   </ul>
   <p>
     Las horas extra van a la <strong>bolsa de horas</strong> del profesional, a la derecha. Quien tenga el permiso
@@ -2764,7 +2764,21 @@ footer{
     turnos. Con ella elegida, pinchar un día abre sus incidencias: se escribe lo que pasó y se pueden subir
     <strong>hasta 3 fotos</strong>. La incidencia se pone <strong>encima</strong> de lo que tenga el día —un turno,
     unas vacaciones— sin cambiarlo, y el día queda marcado con un <strong>«!»</strong> rojo. Se pueden corregir y
-    borrar, y dicen quién las anotó y cuándo. Son solo de RRHH: el profesional no las ve en <em>Mi calendario</em>.
+    borrar (salvo las que declaran horas, más abajo), y dicen quién las anotó y cuándo. Son solo de RRHH: el profesional no las ve en <em>Mi calendario</em>.
+  </p>
+  <p>
+    <strong>Un fichaje olvidado se arregla con una incidencia.</strong> Al escribirla, marque <em>Declarar la jornada
+    real (fichaje olvidado)</em> y ponga de qué hora a qué hora trabajó esa persona (si la hora de fin es anterior a
+    la de inicio, es un turno que acaba al día siguiente). El fichaje no se toca: esas horas se suman a lo fichado ese
+    día, el día deja de salir como jornada abierta y las horas normales y extra se cuentan con eso. No puede pisar lo
+    que ya está fichado ese día, porque eso ya cuenta.
+  </p>
+  <p>
+    Una incidencia que declara horas es parte del registro de jornada, así que <strong>no se cambia ni se borra</strong>,
+    ni se le quitan fotos (sí se le pueden añadir). Si estaba mal, se abre otra para el mismo día: la nueva es la que
+    cuenta y la anterior se queda a la vista, marcada como <em>Sustituida</em>. Al guardarla, el profesional recibe
+    un <strong>correo</strong> con el día, las horas declaradas y la explicación, para que sepa qué consta en su
+    registro.
   </p>
 
   <h4>El cuadrante</h4>

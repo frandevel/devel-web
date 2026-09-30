@@ -1370,7 +1370,7 @@ footer{
   </p>
 
   <p>
-    With invoicing on, every paid sale comes with its <strong>simplified invoice</strong>, which is the usual ticket with a number, the VAT breakdown and a QR code at the top. <strong>The invoice goes with the sale, not with the payment</strong>: what is left owing is invoiced right then all the same, and collecting it is the centre's business. If the amount changes when the debt is settled —a discount of the payment method, or a voucher that takes over a session—, the difference goes into a corrective invoice. A refund produces a <strong>corrective invoice</strong>, in negative, stating which invoice it corrects. Sessions paid with a voucher are not invoiced (the voucher was invoiced when sold, with its VAT), nor is the sale of a gift card, which is money on account: what is bought with it is invoiced. What is paid with club points counts as a discount: the invoice is for what is paid with money.
+    With invoicing on, every paid sale comes with its <strong>simplified invoice</strong>, which is the usual ticket with a number, the VAT breakdown and, at the top left, the QR code with “QR tributario:” above it. Once the centre sends its invoices to the AEAT, “VERI*FACTU” appears below the QR and “Factura verificable en la sede electrónica de la AEAT” next to it; while it does not send them, they do not, because it would not be true. Without invoicing switched on there is no invoice and no QR: the usual ticket is printed. <strong>The invoice goes with the sale, not with the payment</strong>: what is left owing is invoiced right then all the same, and collecting it is the centre's business. If the amount changes when the debt is settled —a discount of the payment method, or a voucher that takes over a session—, the difference goes into a corrective invoice. A refund produces a <strong>corrective invoice</strong>, in negative, stating which invoice it corrects. Sessions paid with a voucher are not invoiced (the voucher was invoiced when sold, with its VAT), nor is the sale of a gift card, which is money on account: what is bought with it is invoiced. What is paid with club points counts as a discount: the invoice is for what is paid with money.
   </p>
 
   <div class="ojo">
@@ -2324,30 +2324,22 @@ footer{
     <figcaption>The working-time record: the days with their stretches and their hours, and at the top the notice about open days.</figcaption>
   </figure>
 
-  <h4>Correcting an entry</h4>
+  <h4>A clocking is not corrected</h4>
 
   <p>
-    An entry <strong>is never edited and never deleted</strong>. Correcting it adds another line that
-    replaces it, with the right time, who put it there and the reason, which is required. The wrong entry
-    stays in sight, marked as corrected.
+    An entry <strong>is not edited, not deleted and not corrected</strong>: it stays as it was. That is exactly what makes this record worth something, because one that could be rewritten would prove nothing. When someone forgets to clock, HR opens an <strong>incident</strong> in their work calendar that explains what happened and declares from what time to what time they actually worked (see <em>Incidents</em>, below). On this screen those hours appear on their day marked as <em>Declared by HR</em>, and in the spreadsheet with “(declarado por RRHH)”.
   </p>
 
   <figure>
-    <img src="/turnera/manual/imagenes/en/28-fichajes.png" alt="The clockings table with one marked as corrected and the line that replaces it" loading="lazy">
-    <figcaption>The clockings one by one. The corrected one stays, marked, and next to it is the line that replaces it.</figcaption>
+    <img src="/turnera/manual/imagenes/en/28-fichajes.png" alt="The table of clockings one by one" loading="lazy">
+    <figcaption>Clockings one by one, as they were clocked. Those corrected before corrections were removed are still shown, marked.</figcaption>
   </figure>
-
-  <p>
-    It may look awkward and it is exactly what makes this register worth something: one that could be
-    rewritten would prove nothing. If somebody clocked in by mistake and never came in, tick <em>This entry never
-    happened</em>; the line stays, but it stops counting.
-  </p>
 
   <h4>The days that come out marked</h4>
 
   <p>
     If somebody clocks in and leaves without clocking out, that day comes out as an <strong>open shift</strong>
-    and <strong>with no hours</strong>. It is not given a made-up closing time on purpose: a record with hours nobody clocked is worse than an incomplete one, because the incomplete one shows and the made-up one does not. The entry stays open, and after <strong>16 hours</strong> it is taken as forgotten: that person's next clocking is a clock-in again, not the clock-out of the day before. Correct it from the list of clockings.
+    and <strong>with no hours</strong>. It is not given a made-up closing time on purpose: a record with hours nobody clocked is worse than an incomplete one, because the incomplete one shows and the made-up one does not. The entry stays open, and after <strong>16 hours</strong> it is taken as forgotten: that person's next clocking is a clock-in again, not the clock-out of the day before. For that day to count, HR declares the hours in an incident.
   </p>
 
   <p>
@@ -2437,7 +2429,7 @@ footer{
     <li>Time clocked <strong>within the shift</strong> planned is regular time.</li>
     <li>Time clocked <strong>outside the shift</strong> is overtime only if it goes past the <strong>margin</strong> of the centre (15 minutes by default, changed in <em>Settings</em>): coming in five minutes early is not overtime. If it goes past the margin, all of it counts: whoever stays forty minutes has done forty.</li>
     <li>Everything clocked on a <strong>holiday</strong>, on vacation, on an absence or on a day without a shift is overtime.</li>
-    <li>A clock-in without a clock-out adds nothing until it is corrected.</li>
+    <li>A clock-in without a clock-out adds nothing until HR declares the hours in an incident.</li>
   </ul>
   <p>
     Overtime goes to the <strong>overtime bank</strong> of the professional, on the right. Whoever has the permission «Compensate overtime» (by default, HR and Management) deducts it with <em>Compensate hours</em>, as
@@ -2448,7 +2440,13 @@ footer{
   <h4>Incidents</h4>
   <p>
     With the permission «Record incidents» (by default, HR and Management) <em>Incident</em> appears next to the shifts. With it selected, clicking a day opens its incidents: you write what happened and can upload
-    <strong>up to 3 photos</strong>. The incident sits <strong>on top of</strong> whatever the day has —a shift, vacation— without changing it, and the day is marked with a red <strong>«!»</strong> . They can be corrected and deleted, and they say who wrote them and when. They are HR's only: the professional does not see them in <em>My calendar</em>.
+    <strong>up to 3 photos</strong>. The incident sits <strong>on top of</strong> whatever the day has —a shift, vacation— without changing it, and the day is marked with a red <strong>«!»</strong> red. They can be corrected and deleted (except those that declare hours, below), and they show who wrote them down and when. They belong to HR only: the professional does not see them in <em>My calendar</em>.
+  </p>
+  <p>
+    <strong>A forgotten clocking is fixed with an incident.</strong> When writing it, tick <em>Declare the actual working hours (forgotten clocking)</em> and enter from what time to what time that person worked (if the end time is earlier than the start, it is a shift that ends the next day). The clocking is not touched: those hours are added to what was clocked that day, the day no longer shows as an open working day and normal and overtime hours are counted with that. It cannot overlap what is already clocked that day, because that already counts.
+  </p>
+  <p>
+    An incident that declares hours is part of the time record, so it <strong>cannot be changed or deleted</strong>, nor can photos be removed from it (they can be added). If it was wrong, open another one for the same day: the new one is the one that counts and the previous one stays visible, marked as <em>Replaced</em>. When it is saved, the professional receives an <strong>email</strong> with the day, the declared hours and the explanation, so they know what is on their record.
   </p>
 
   <h4>The roster</h4>

@@ -619,6 +619,7 @@ footer{
   <h2>What's new in Turnera</h2>
   <p>Latest first</p>
   <ol>
+    <li><a href="#2026-09-30-incidencias">30 September 2026 · Forgotten clockings and the invoice QR</a></li>
     <li><a href="#2026-09-30-cobros">30 September 2026 · Final price, equipment data and invoices for debts</a></li>
     <li><a href="#2026-09-30-bizum">30 September 2026 · Bizum and imported consents</a></li>
     <li><a href="#2026-09-30-rrhh">30 September 2026 · Hours worked and overtime</a></li>
@@ -643,10 +644,39 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Bugs fixed</strong>: what failed, and no longer does.</span></li>
 </ul>
 
+<section id="2026-09-30-incidencias" class="version">
+  <div class="version__cabecera">
+    <h2>30 September 2026 · Forgotten clockings and the invoice QR</h2>
+    <span class="version__sello">Latest release</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">2026.9.324-66a8564</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Clocking</h4>
+    <ul>
+      <li><strong>A forgotten clocking is fixed with an incident</strong>: HR explains what happened and declares from what time to what time the person worked. Those hours count, marked “Declared by HR”, and the day no longer shows as an open working day.</li>
+      <li>The incident that declares hours <strong>cannot be changed or deleted</strong>. If it was wrong, another one is opened for that day that replaces it, and both stay visible.</li>
+      <li>The professional receives an <strong>email</strong> with the day, the declared hours and the explanation.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Improvements</h3>
+    <h4>Clocking</h4>
+    <ul>
+      <li>Clockings <strong>are no longer corrected</strong>: they stay as they were clocked. The “Correct clockings” permission disappears.</li>
+    </ul>
+    <h4>Invoicing</h4>
+    <ul>
+      <li>The invoice QR code sits at the top left with <strong>“QR tributario:”</strong> above it, as the AEAT requires. The “VERI*FACTU” phrase only appears once the centre sends its invoices.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-09-30-cobros" class="version">
   <div class="version__cabecera">
     <h2>30 September 2026 · Final price, equipment data and invoices for debts</h2>
-    <span class="version__sello">Latest release</span>
   </div>
   <p class="version__numero">Version <span translate="no">2026.9.323-1a59966</span></p>
 

@@ -390,5 +390,21 @@
   "t79775cb2": "working day open",
   "t7589247a": "Correcting a clocking always asks for the reason, which is kept next to the correction.",
   "t7d577e06": "Missed clock-in notices",
-  "t41743122": "Vouchers no longer appear"
+  "t41743122": "Vouchers no longer appear",
+  "t7fe03a79": "30 September 2026 · Forgotten clockings and the invoice QR",
+  "t4676b408": "2026.9.324-66a8564",
+  "tb514729c": ": HR explains what happened and declares from what time to what time the person worked. Those hours count, marked “Declared by HR”, and the day no longer shows as an open working day.",
+  "t98fe0132": "A forgotten clocking is fixed with an incident",
+  "t07467275": "The incident that declares hours",
+  "te6064519": ". If it was wrong, another one is opened for that day that replaces it, and both stay visible.",
+  "tcd319a0b": "cannot be changed or deleted",
+  "t0fc9d563": "The professional receives an",
+  "t3bd70ef6": "with the day, the declared hours and the explanation.",
+  "t4fc1c3d1": "email",
+  "t1cb761f3": "Clockings",
+  "tf8510832": ": they stay as they were clocked. The “Correct clockings” permission disappears.",
+  "t7b9ff5df": "are no longer corrected",
+  "t77c5017b": "The invoice QR code sits at the top left with",
+  "t42ba7cc0": "above it, as the AEAT requires. The “VERI*FACTU” phrase only appears once the centre sends its invoices.",
+  "tb085e1aa": "“QR tributario:”"
 }
