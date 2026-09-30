@@ -1682,5 +1682,6 @@
   "t35a604e6": "has not clocked in, or should have left and after 15 minutes is still in, an",
   "t7e1ecf86": "is sent to the professional (to the email in their record) and to HR (to the users with the permission to plan calendars who are linked to a professional with an email; if there are none, to the centre's contact email). A shift segment gives at most one clock-in and one clock-out warning. No warnings on holidays. When the mobile app exists, the warning will also arrive there.",
   "t4fc1c3d1": "email",
-  "t8cdff012": ", with their counters and their PDF, even without any permission: knowing their schedule and their vacation is their right. They also see what they have clocked, their regular hours and overtime and their overtime bank, but not the incidents or the projection."
+  "t8cdff012": ", with their counters and their PDF, even without any permission: knowing their schedule and their vacation is their right. They also see what they have clocked, their regular hours and overtime and their overtime bank, but not the incidents or the projection.",
+  "ta41976a6": "gender"
 }
