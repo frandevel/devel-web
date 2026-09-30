@@ -348,5 +348,7 @@
   "tff75ccde": "the missing-consent warning stops appearing",
   "t778ab684": "They are marked as",
   "tb7d69ad9": "and are downloaded and withdrawn like those signed in Turnera. New permission «Import signed consents», which Reception and Management have.",
-  "t08b4f84a": "Imported"
+  "t08b4f84a": "Imported",
+  "tfff03286": "Bringing in data from other platforms",
+  "tac11c9da": "The import screen explains, sheet by sheet, how to export each file from the source platform."
 }
