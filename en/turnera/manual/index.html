@@ -1850,7 +1850,7 @@ footer{
       disappears from the lists and drop-downs. The lists of services, products, packages, suppliers and
       customers have the tickbox <em>Include inactive</em> to see them, with their tag; the professionals list has
       <em>Only active</em>.</li>
-    <li><strong>Staff</strong>: who sees customers, their colour on the agenda and their column.</li>
+    <li><strong>Staff</strong>: who attends, their colour in the diary and their column. In the record you can upload their <strong>photo</strong> (it is reduced before uploading) and set their <strong>sex</strong>: without a photo, lists and the roster show a woman's, a man's or, if not stated, a neutral avatar.</li>
     <li><strong>Roles and users</strong>: who gets in, what they may do and <strong>from which IP addresses</strong>.</li>
     <li><strong>Centre details</strong>: name, tax ID, address and logo. The logo heads the PDFs
       —tickets, quotes, agenda— and <strong>replaces Turnera's at the top of the menu</strong>, on a white background so that it reads
@@ -2366,6 +2366,10 @@ footer{
     calendarios laborales»). It is a plan: what was really worked is still what was clocked, and the screen
     compares one with the other.
   </p>
+  <p>
+    Above the calendar you switch between <strong>Planning</strong> (what has been planned) and
+    <strong>Actual</strong> (what has been clocked). They are two different things: someone working on a holiday is not planned, it is clocked, and those hours are not regular but overtime.
+  </p>
 
   <h4>What is set up once</h4>
   <ul>
@@ -2396,8 +2400,7 @@ footer{
     and half the hours.
   </p>
   <p>
-    To spread the year, choose at the top what to put —a shift, holidays, an absence or <em>Free</em> to
-    clear— and click a day, or drag from one day to another to mark every day in between.
+    To spread the year, choose at the top what to put —a shift, holidays, an absence or <em>Free</em> to remove— and you click a day, or drag from one day to another to mark all those in between. Each day has one thing only: if it has a shift it cannot also be vacation. <strong>Nothing is planned before the start date or after the end date</strong>: those days do not count towards the hours, so the screen skips them and says how many.
     <em>Fill by weekdays</em> puts it at once on, for example, Monday to Friday from January to
     June, skipping public holidays and leaving alone what is already set. On the right, <strong>the figures are redone with
     each change</strong>: agreement hours, planned, still to plan (or over), the
@@ -2415,6 +2418,52 @@ footer{
     pin on the notice board or give to the accountant.
   </p>
 
+  <h4>Actual hours: regular hours and overtime</h4>
+  <p>
+    In <em>Actual</em> each clocked day is coloured: green if it was all <strong>regular hours</strong>
+    and orange if there was <strong>overtime</strong>. Hovering over it shows the hours clocked. The rules:
+  </p>
+  <ul>
+    <li>Time clocked <strong>within the shift</strong> planned is regular time.</li>
+    <li>Time clocked <strong>outside the shift</strong> is overtime only if it goes past the <strong>margin</strong> of the centre (15 minutes by default, changed in <em>Settings</em>): coming in five minutes early is not overtime. If it goes past the margin, all of it counts: whoever stays forty minutes has done forty.</li>
+    <li>Everything clocked on a <strong>holiday</strong>, on vacation, on an absence or on a day without a shift is overtime.</li>
+    <li>A clock-in without a clock-out adds nothing until it is corrected.</li>
+  </ul>
+  <p>
+    Overtime goes to the <strong>overtime bank</strong> of the professional, on the right. Whoever has the permission «Compensate overtime» (by default, HR and Management) deducts it with <em>Compensate hours</em>, as
+    <strong>paid in payroll</strong> or as <strong>compensatory rest</strong>. The pending balance is what is left to compensate. If the overtime of the year, not counting what was given back as rest, goes past
+    <strong>80</strong>, a warning appears: it is the limit of article 35.2 of the Spanish Workers' Statute.
+  </p>
+
+  <h4>Incidents</h4>
+  <p>
+    With the permission «Record incidents» (by default, HR and Management) <em>Incident</em> appears next to the shifts. With it selected, clicking a day opens its incidents: you write what happened and can upload
+    <strong>up to 3 photos</strong>. The incident sits <strong>on top of</strong> whatever the day has —a shift, vacation— without changing it, and the day is marked with a red <strong>«!»</strong> . They can be corrected and deleted, and they say who wrote them and when. They are HR's only: the professional does not see them in <em>My calendar</em>.
+  </p>
+
+  <h4>The roster</h4>
+  <p>
+    <em>Work calendar → Roster</em> shows the week of the whole staff: who works each day and on which shift, who is on vacation, absent or off, and how many work each day. Today is highlighted and marks who is <strong>in right now</strong>, according to what was clocked. Whoever has no work calendar is not shown in the roster.
+  </p>
+
+  <h4>The hours summary</h4>
+  <p>
+    <em>Work calendar → Hours</em> gives, for each professional and each month between two dates, the
+    <strong>planned</strong>, the <strong>clocked</strong> hours and, of these, the <strong>regular</strong> and the
+    <strong>overtime</strong>, with a total per person when there are several months. <em>Download CSV</em> exports it for the accountant. A month without a work calendar says so, and there everything clocked shows as regular.
+  </p>
+
+  <h4>The year-end projection</h4>
+  <p>
+    Below each professional's calendar, a chart accumulates what is planned month by month, what has been clocked up to today and,
+    <strong>at their current pace</strong>, how much it would add up to at year end, against the hours of the agreement. If at that pace they would reach the hours of the agreement before the year ends, it says on which day: the moment to give them vacation or to stop counting on that person for more hours. Only whoever plans sees it, not the professional.
+  </p>
+
+  <h4>Forgotten clock-in warnings</h4>
+  <p>
+    If according to their calendar someone should have come in and after <strong>15 minutes</strong> has not clocked in, or should have left and after 15 minutes is still in, an <strong>email</strong> is sent to the professional (to the email in their record) and to HR (to the users with the permission to plan calendars who are linked to a professional with an email; if there are none, to the centre's contact email). A shift segment gives at most one clock-in and one clock-out warning. No warnings on holidays. When the mobile app exists, the warning will also arrive there.
+  </p>
+
   <h4>In the diary</h4>
   <p>
     In the views by professional, the diary shades in grey what is <strong>outside their shift</strong> and the
@@ -2425,8 +2474,7 @@ footer{
 
   <h4>My calendar</h4>
   <p>
-    Each professional with a linked user sees <strong>their own calendar</strong> in <em>My calendar</em>,
-    with its figures and its PDF, even without any permission: knowing their schedule and holidays is their right.
+    Each professional with a linked user sees <strong>their own calendar</strong> in <em>My calendar</em>, with their counters and their PDF, even without any permission: knowing their schedule and their vacation is their right. They also see what they have clocked, their regular hours and overtime and their overtime bank, but not the incidents or the projection.
   </p>
 
   <h3 id="integraciones">Connecting an outside program (ERP)</h3>

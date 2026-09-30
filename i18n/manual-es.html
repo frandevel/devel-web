@@ -2060,7 +2060,9 @@ footer{
       desaparece de las listas y de los desplegables. Las listas de servicios, productos, paquetes, proveedores y
       clientes tienen la casilla <em>También los inactivos</em> para verlos, con su etiqueta; la de profesionales,
       <em>Solo activos</em>.</li>
-    <li><strong>Profesionales</strong>: quién atiende, su color en la agenda y su columna.</li>
+    <li><strong>Profesionales</strong>: quién atiende, su color en la agenda y su columna. En la ficha se puede subir
+      su <strong>foto</strong> (se reduce antes de subirla) e indicar el <strong>sexo</strong>: sin foto, en las listas
+      y en el cuadrante sale un avatar de mujer, de hombre o, sin indicar, uno neutro.</li>
     <li><strong>Roles y usuarios</strong>: quién entra, qué puede hacer y <strong>desde qué direcciones IP</strong>.</li>
     <li><strong>Datos del centro</strong>: nombre, NIF, dirección y logotipo. El logotipo encabeza los PDF
       —tickets, presupuestos, agenda— y <strong>sustituye al de Turnera arriba del menú</strong>, sobre un fondo blanco para que
@@ -2629,6 +2631,11 @@ footer{
     calendarios laborales»). Es un plan: lo que de verdad se trabajó sigue siendo lo fichado, y la pantalla
     compara una cosa con la otra.
   </p>
+  <p>
+    Arriba del calendario se cambia entre <strong>Planificación</strong> (lo que se ha planificado) y
+    <strong>Ejecución</strong> (lo que se ha fichado). Son dos cosas distintas: que alguien trabaje un festivo no
+    se planifica, se ficha, y esas horas no son normales sino extra.
+  </p>
 
   <h4>Lo que se prepara una vez</h4>
   <ul>
@@ -2660,7 +2667,9 @@ footer{
   </p>
   <p>
     Para repartir el año se elige arriba qué poner —un turno, vacaciones, una ausencia o <em>Libre</em> para
-    quitar— y se pincha un día, o se arrastra de un día a otro para marcar todos los de en medio.
+    quitar— y se pincha un día, o se arrastra de un día a otro para marcar todos los de en medio. Cada día tiene
+    una sola cosa: si es de turno no puede ser a la vez vacaciones. <strong>Antes del alta y después de la baja no
+    se planifica</strong>: esos días no cuentan para las horas, así que la pantalla se los salta y avisa de cuántos.
     <em>Rellenar por días de la semana</em> lo pone de una vez en, por ejemplo, los lunes a viernes de enero a
     junio, saltándose los festivos y sin tocar lo ya puesto. A la derecha, <strong>las cuentas se rehacen con
     cada cambio</strong>: horas del convenio, planificadas, las que quedan por repartir (o las que sobran), las
@@ -2678,6 +2687,72 @@ footer{
     colgarlo en el tablón o dárselo a la gestoría.
   </p>
 
+  <h4>Lo ejecutado: horas normales y horas extra</h4>
+  <p>
+    En <em>Ejecución</em> cada día fichado sale coloreado: en verde si todo fueron <strong>horas normales</strong>
+    y en naranja si hubo <strong>horas extra</strong>. Pasando el ratón por encima se ven las horas fichadas.
+    Las reglas:
+  </p>
+  <ul>
+    <li>Lo fichado <strong>dentro del turno</strong> planificado son horas normales.</li>
+    <li>Lo fichado <strong>fuera del turno</strong> es extra solo si pasa del <strong>margen</strong> del centro
+      (15 minutos de fábrica, se cambia en <em>Ajustes</em>): entrar cinco minutos antes no es hacer horas. Si
+      pasa del margen, cuenta entero: quien se queda cuarenta minutos ha hecho cuarenta.</li>
+    <li>Todo lo fichado en un <strong>festivo</strong>, en vacaciones, en una ausencia o en un día sin turno es
+      extra.</li>
+    <li>Una entrada sin salida no suma nada hasta que se corrija.</li>
+  </ul>
+  <p>
+    Las horas extra van a la <strong>bolsa de horas</strong> del profesional, a la derecha. Quien tenga el permiso
+    «Compensar horas extra» (de fábrica, RRHH y Dirección) las descuenta con <em>Compensar horas</em>, como
+    <strong>pagadas en nómina</strong> o como <strong>descanso compensatorio</strong>. El saldo pendiente es lo que
+    queda por compensar. Si las horas extra del año, sin contar las devueltas en descanso, pasan de
+    <strong>80</strong>, sale un aviso: es el tope del artículo 35.2 del Estatuto de los Trabajadores.
+  </p>
+
+  <h4>Incidencias</h4>
+  <p>
+    Con el permiso «Registrar incidencias» (de fábrica, RRHH y Dirección) aparece <em>Incidencia</em> junto a los
+    turnos. Con ella elegida, pinchar un día abre sus incidencias: se escribe lo que pasó y se pueden subir
+    <strong>hasta 3 fotos</strong>. La incidencia se pone <strong>encima</strong> de lo que tenga el día —un turno,
+    unas vacaciones— sin cambiarlo, y el día queda marcado con un <strong>«!»</strong> rojo. Se pueden corregir y
+    borrar, y dicen quién las anotó y cuándo. Son solo de RRHH: el profesional no las ve en <em>Mi calendario</em>.
+  </p>
+
+  <h4>El cuadrante</h4>
+  <p>
+    <em>Calendario laboral → Cuadrante</em> enseña la semana de toda la plantilla: quién trabaja cada día y en qué
+    turno, quién está de vacaciones, de ausencia o libre, y cuántos trabajan cada día. El día de hoy va resaltado y
+    marca quién está <strong>dentro ahora mismo</strong>, según lo fichado. Quien no tiene calendario laboral no
+    sale en el cuadrante.
+  </p>
+
+  <h4>El resumen de horas</h4>
+  <p>
+    <em>Calendario laboral → Horas</em> da, para cada profesional y cada mes entre dos fechas, las horas
+    <strong>planificadas</strong>, las <strong>fichadas</strong> y, de estas, las <strong>normales</strong> y las
+    <strong>extra</strong>, con un total por persona si hay varios meses. <em>Descargar CSV</em> lo saca para la
+    gestoría. Un mes sin calendario laboral lo dice, y ahí todo lo fichado sale como normal.
+  </p>
+
+  <h4>La proyección a fin de año</h4>
+  <p>
+    Debajo del calendario de cada profesional, un gráfico acumula lo planificado mes a mes, lo fichado hasta hoy y,
+    <strong>al ritmo que lleva</strong>, cuánto sumaría a fin de año, frente a las horas del convenio. Si a ese
+    ritmo llegaría a las horas del convenio antes de acabar el año, dice qué día: es el momento de darle vacaciones
+    o de dejar de contar con esa persona para más horas. Solo lo ve quien planifica, no el profesional.
+  </p>
+
+  <h4>Avisos de fichaje olvidado</h4>
+  <p>
+    Si según su calendario alguien tenía que haber entrado y a los <strong>15 minutos</strong> no ha fichado, o
+    tenía que haber salido y a los 15 minutos sigue dentro, sale un <strong>correo</strong> al profesional (al
+    correo de su ficha) y a RRHH (a los usuarios con el permiso de planificar calendarios que estén vinculados a
+    un profesional con correo; si no hay ninguno, al correo de contacto del centro). Un tramo da como mucho un
+    aviso de entrada y uno de salida. En festivo no se avisa. Cuando exista la aplicación del móvil, el aviso
+    llegará también allí.
+  </p>
+
   <h4>En la agenda</h4>
   <p>
     En las vistas por profesional, la agenda sombrea en gris lo que queda <strong>fuera de su turno</strong> y los
@@ -2690,6 +2765,8 @@ footer{
   <p>
     Cada profesional con su usuario vinculado ve <strong>su propio calendario</strong> en <em>Mi calendario</em>,
     con sus cuentas y su PDF, aunque no tenga ningún permiso: saber su horario y sus vacaciones es su derecho.
+    También ve lo que ha fichado, sus horas normales y extra y su bolsa de horas, pero no las incidencias ni la
+    proyección.
   </p>
 
   <h3 id="integraciones">Conectar un programa externo (ERP)</h3>

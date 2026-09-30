@@ -619,6 +619,7 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-09-30-rrhh">30. September 2026 · Gearbeitete Stunden und Überstunden</a></li>
     <li><a href="#2026-09-29-rrhh">29. September 2026 · Arbeitskalender</a></li>
     <li><a href="#2026-09-29">29. September 2026</a></li>
     <li><a href="#2026-09-28">28. September 2026</a></li>
@@ -640,10 +641,44 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-09-30-rrhh" class="version">
+  <div class="version__cabecera">
+    <h2>30. September 2026 · Gearbeitete Stunden und Überstunden</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">2026.9.319-9485d7b</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Arbeitskalender</h4>
+    <ul>
+      <li>Jeder Kalender hat zwei Ansichten: <strong>Planung</strong>, was geplant wurde, und <strong>Ist-Zeiten</strong>, was an jedem Tag gestempelt wurde.</li>
+      <li>Was innerhalb der Schicht gestempelt wird, sind <strong>reguläre Stunden</strong>. Was außerhalb gestempelt wird, nach einer Toleranz von 15 Minuten, die das Zentrum ändern kann, oder an Feiertagen, im Urlaub oder an einem Tag ohne Schicht, sind <strong>Überstunden</strong>.</li>
+      <li>Die Überstunden gehen auf ein <strong>Überstundenkonto</strong> jeder Fachkraft. Die Personalabteilung zieht sie ab, als <strong>mit dem Lohn ausbezahlt</strong> oder als <strong>Freizeitausgleich</strong>, und der Bildschirm warnt, wenn im Jahr die 80 Stunden überschritten werden, die das spanische Arbeitnehmerstatut erlaubt.</li>
+      <li>Neuer <strong>Dienstplan</strong> pro Woche: wer an jedem Tag in welcher Schicht arbeitet, wer frei oder im Urlaub ist und wer gerade da ist.</li>
+      <li>Neuer <strong>Stundenübersicht</strong> pro Fachkraft und Monat zwischen zwei Daten: geplant, gestempelt, regulär und Überstunden, mit CSV-Download für das Steuerbüro.</li>
+      <li><strong>Hochrechnung zum Jahresende</strong>: im Tempo jeder Fachkraft, wie viele Stunden es würden und, falls die Stunden des Tarifvertrags zu früh erreicht würden, an welchem Tag. Nur die Personalabteilung sieht sie.</li>
+      <li><strong>Vorfälle</strong>: die Personalabteilung kann festhalten, was an einem Tag passiert ist, mit Text und bis zu 3 Fotos, ohne zu ändern, was der Tag hatte. Der Tag wird mit einem «!» markiert. Die Fachkraft sieht sie nicht.</li>
+      <li><strong>E-Mail-Hinweis bei vergessener Stempelung</strong>: hat sich jemand 15 Minuten nach Schichtbeginn nicht eingestempelt oder 15 Minuten nach Schichtende noch nicht ausgestempelt, geht eine E-Mail an die Person und an die Personalabteilung.</li>
+      <li>Neue Berechtigungen: «Überstunden ausgleichen» und «Vorfälle erfassen», die standardmäßig Personalabteilung und Leitung haben.</li>
+    </ul>
+    <h4>Fachkräfte</h4>
+    <ul>
+      <li>Die Akte nimmt ein <strong>Foto</strong>auf. Ohne Foto wird je nach Akte ein Avatar für Frau, Mann oder ein neutraler gezeigt.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Behobene Fehler</h3>
+    <ul>
+      <li>Wurden Schichten an Tagen vor dem Eintritt oder nach dem Austritt eingetragen, bewegten sich die Zähler des Kalenders nicht, weil diese Tage nicht zählen. Jetzt lassen sich diese Tage nicht planen, und der Bildschirm sagt, wie viele übersprungen wurden.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-09-29-rrhh" class="version">
   <div class="version__cabecera">
     <h2>29. September 2026 · Arbeitskalender</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">2026.9.317-0f22882</span></p>
 
