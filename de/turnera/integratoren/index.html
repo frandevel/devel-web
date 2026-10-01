@@ -1,24 +1,28 @@
 <!-- Generado por i18n/construir.mjs: no editar a mano, se pierde. -->
-<!DOCTYPE html><html lang="es"><head>
+<!DOCTYPE html><html lang="de"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>API de integración · Turnera</title>
-<meta name="description" content="Guía para integrar un programa con Turnera: autenticación, permisos, recursos, reservas y errores.">
-<link rel="canonical" href="https://devel.es/turnera/api">
+<title>Integratoren · Turnera</title>
+<meta name="description" content="Alles, um ein Programm mit Turnera zu verbinden: Authentifizierung, Berechtigungen, Endpunkte, Webhooks, Fehler, Versionen und die OpenAPI-Spezifikation.">
+<link rel="canonical" href="https://devel.es/de/turnera/integratoren">
+<link rel="alternate" hreflang="es" href="https://devel.es/turnera/integradores">
+<link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/integrators">
+<link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/integratoren">
+<link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/integradores">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="DEVEL">
-<meta property="og:title" content="Manual de uso de Turnera">
-<meta property="og:description" content="Citar, cobrar y saber qué pasó. Escrito para quien está en el mostrador, no para quien programa.">
-<meta property="og:url" content="https://devel.es/turnera/api">
-<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Integratoren · Turnera">
+<meta property="og:description" content="Alles, um ein Programm mit Turnera zu verbinden: Authentifizierung, Berechtigungen, Endpunkte, Webhooks, Fehler, Versionen und die OpenAPI-Spezifikation.">
+<meta property="og:url" content="https://devel.es/de/turnera/integratoren">
+<meta property="og:locale" content="de_DE">
 <meta property="og:image" content="https://devel.es/turnera/turnera-og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Turnera: la agenda, la ficha y la caja en la misma pantalla">
+<meta property="og:image:alt" content="Turnera: Terminkalender, Kundenakte und Kasse auf demselben Bildschirm">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Manual de uso de Turnera">
-<meta name="twitter:description" content="Citar, cobrar y saber qué pasó. Escrito para quien está en el mostrador, no para quien programa.">
+<meta name="twitter:title" content="Integratoren · Turnera">
+<meta name="twitter:description" content="Alles, um ein Programm mit Turnera zu verbinden: Authentifizierung, Berechtigungen, Endpunkte, Webhooks, Fehler, Versionen und die OpenAPI-Spezifikation.">
 <meta name="twitter:image" content="https://devel.es/turnera/turnera-og.png">
 <link rel="icon" href="/turnera/isotipo.svg" type="image/svg+xml">
 <style>*{box-sizing:border-box}html,body{margin:0}img{max-width:100%}</style>
@@ -568,110 +572,110 @@ footer{
 <body>
 <header class="site">
   <div class="shell site__inner">
-    <a class="brand" href="/">
-      <span class="mark" role="img" aria-label="Logotipo de DEVEL"></span>
+    <a class="brand" href="/de/">
+      <span class="mark" role="img" aria-label="Logo von DEVEL"></span>
       <span>devel</span>
     </a>
     <nav>
-      <a href="/turnera">Turnera</a>
-      <a href="/turnera/manual">Manual</a>
-      <a href="/turnera/api" aria-current="page">API</a>
+      <a href="/de/turnera">Turnera</a>
+      <a href="/de/turnera/manual">Handbuch</a>
+      <a href="/de/turnera/integratoren" aria-current="page">Integratoren</a>
+      <a href="/de/turnera/novedades">Neuigkeiten</a>
     </nav>
-    </div>
+    <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/turnera/integradores" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera/integrators" lang="en">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera/integratoren" lang="de" aria-current="true">DE<span class="idiomas__nombre">Deutsch</span></a></div>
+  </div>
 </header>
 
 <main id="top" class="shell manual">
 <nav class="indice">
-  <h2>API de integración</h2>
-  <p><a href="/turnera/api/openapi-integracion.json" download>Descargar el OpenAPI</a></p>
+  <h2>Integratoren</h2>
+  <p><a href="/turnera/integradores/openapi-integracion.json" download>OpenAPI herunterladen</a></p>
   <ol>
-    <li><a href="#1-en-dos-minutos">1. En dos minutos</a></li>
-    <li><a href="#2-darse-de-alta-como-cliente">2. Darse de alta como cliente</a></li>
-    <li><a href="#lo-que-hay-que-pedirle-al-centro" class="sub">Lo que hay que pedirle al centro</a></li>
-    <li><a href="#3-autenticacion">3. Autenticación</a></li>
-    <li><a href="#la-ip" class="sub">La IP</a></li>
-    <li><a href="#4-los-permisos-scopes">4. Los permisos (scopes)</a></li>
-    <li><a href="#5-los-recursos">5. Los recursos</a></li>
-    <li><a href="#paginacion-por-cursor" class="sub">Paginación por cursor</a></li>
-    <li><a href="#sincronizacion-incremental" class="sub">Sincronización incremental</a></li>
+    <li><a href="#1-in-zwei-minuten">1. In zwei Minuten</a></li>
+    <li><a href="#2-als-client-registrieren">2. Als Client registrieren</a></li>
+    <li><a href="#was-sie-vom-zentrum-anfordern-mussen" class="sub">Was Sie vom Zentrum anfordern müssen</a></li>
+    <li><a href="#3-authentifizierung">3. Authentifizierung</a></li>
+    <li><a href="#die-ip" class="sub">Die IP</a></li>
+    <li><a href="#4-die-berechtigungen-scopes">4. Die Berechtigungen (Scopes)</a></li>
+    <li><a href="#5-die-ressourcen">5. Die Ressourcen</a></li>
+    <li><a href="#cursor-paginierung" class="sub">Cursor-Paginierung</a></li>
+    <li><a href="#inkrementelle-synchronisierung" class="sub">Inkrementelle Synchronisierung</a></li>
     <li><a href="#get-integration-catalog-services" class="sub">GET /integration/catalog/services</a></li>
     <li><a href="#get-integration-catalog-products" class="sub">GET /integration/catalog/products</a></li>
     <li><a href="#get-integration-customers" class="sub">GET /integration/customers</a></li>
+    <li><a href="#get-integration-customers-exists-email-amp-mobile" class="sub">GET /integration/customers/exists?email=…&amp;mobile=…</a></li>
     <li><a href="#get-integration-sales" class="sub">GET /integration/sales</a></li>
     <li><a href="#get-integration-accounting-draft" class="sub">GET /integration/accounting-draft</a></li>
-    <li><a href="#5-1-reservar-en-la-agenda" class="sub">5.1 Reservar en la agenda</a></li>
-    <li><a href="#6-rotar-el-secreto">6. Rotar el secreto</a></li>
-    <li><a href="#7-limite-de-peticiones">7. Límite de peticiones</a></li>
-    <li><a href="#8-los-errores">8. Los errores</a></li>
-    <li><a href="#9-las-reglas-del-contrato">9. Las reglas del contrato</a></li>
-    <li><a href="#10-lo-que-conviene-saber-antes-de-empezar">10. Lo que conviene saber antes de empezar</a></li>
+    <li><a href="#5-1-im-terminkalender-reservieren" class="sub">5.1 Im Terminkalender reservieren</a></li>
+    <li><a href="#5-2-webhooks-turnera-benachrichtigt-sie" class="sub">5.2 Webhooks: Turnera benachrichtigt Sie</a></li>
+    <li><a href="#6-das-geheimnis-erneuern">6. Das Geheimnis erneuern</a></li>
+    <li><a href="#7-anfragelimit">7. Anfragelimit</a></li>
+    <li><a href="#8-die-fehler">8. Die Fehler</a></li>
+    <li><a href="#9-die-regeln-des-vertrags">9. Die Regeln des Vertrags</a></li>
+    <li><a href="#10-was-sie-vor-dem-start-wissen-sollten">10. Was Sie vor dem Start wissen sollten</a></li>
+    <li><a href="#11-die-testumgebung">11. Die Testumgebung</a></li>
   </ol>
 </nav>
 <div class="contenido">
-<div class="ojo"><p><strong>OpenAPI.</strong> La descripción de todos los recursos, para importarla en Postman o generar un cliente: <a href="/turnera/api/openapi-integracion.json" download>openapi-integracion.json</a>.</p></div>
-<h1 id="la-api-de-integracion-de-turnera-v1">La API de integración de Turnera — v1</h1>
-<p>Turnera publica una API para que un programa externo —el ERP del centro, el de su asesoría— pueda leer su
-catálogo, sus clientes y sus ventas. Es de lectura salvo en una cosa: <strong>reservar un hueco de la agenda</strong>, que
-existe para la plataforma de campañas de un centro, que trae al cliente y necesita la cita en el momento
-(apartado 5.1). Nada más se modifica desde fuera.</p>
+<div class="ojo"><p><strong>OpenAPI.</strong> Die Beschreibung aller Ressourcen, zum Importieren in Postman oder zum Erzeugen eines Clients: <a href="/turnera/integradores/openapi-integracion.json" download>openapi-integracion.json</a>.</p><p><strong>Testumgebung.</strong> Es gibt eine Sandbox mit erfundenen Daten: siehe den Abschnitt zur Testumgebung. Um Zugang anzufragen oder bei Fragen <a href="/de/#contacto">schreiben Sie uns über das Kontaktformular</a>.</p></div>
+<h1 id="die-turnera-integrations-api-v1">Die Turnera-Integrations-API — v1</h1>
+<p>Turnera stellt eine API bereit, damit ein externes Programm — das ERP des Zentrums oder das seiner Steuerberatung — dessen Katalog, Kunden und Verkäufe lesen kann. Die API ist lesend, bis auf eine Ausnahme: <strong>einen Platz im Terminkalender reservieren</strong>. Diese Funktion gibt es für die Kampagnenplattform eines Zentrums, die den Kunden zuführt und den Termin sofort benötigt (Abschnitt 5.1). Alles andere wird von außen nicht verändert. Und es gibt einen Rückweg: die <strong>Webhooks</strong> (Abschnitt 5.2), mit denen Turnera Ihr System benachrichtigt, wenn sich ein Termin ändert, ohne dass Sie alle paar Minuten nachfragen müssen.</p>
 <hr>
-<h2 id="1-en-dos-minutos">1. En dos minutos</h2>
-<pre><code class="language-bash"># 1. Cambiar las credenciales por un token (media hora de vida)
+<h2 id="1-in-zwei-minuten">1. In zwei Minuten</h2>
+<pre><code class="language-bash"># 1. Die Zugangsdaten gegen ein Token tauschen (eine halbe Stunde gültig)
 curl -s -X POST https://sucentro.turnera.devel.es/api/v1/integration/token \
      -H &#39;Content-Type: application/json&#39; \
      -d &#39;{&quot;grant_type&quot;:&quot;client_credentials&quot;,&quot;client_id&quot;:&quot;...&quot;,&quot;client_secret&quot;:&quot;...&quot;}&#39;
 
 # {&quot;access_token&quot;:&quot;eyJ...&quot;,&quot;token_type&quot;:&quot;Bearer&quot;,&quot;expires_in&quot;:1800,&quot;scope&quot;:&quot;catalog:read sales:read&quot;}
 
-# 2. Leer, con el token en la cabecera
+# 2. Lesen, mit dem Token im Header
 curl -s https://sucentro.turnera.devel.es/api/v1/integration/catalog/services \
      -H &#39;Authorization: Bearer eyJ...&#39;
 </code></pre>
-<p><strong>La dirección base es la del centro</strong>: <code>https://&lt;centro&gt;.turnera.devel.es/api/v1</code>. Cada centro tiene su
-dominio y su base de datos, así que no hay ningún parámetro que diga a qué centro se está llamando — lo dice
-el dominio.</p>
+<p><strong>Die Basisadresse ist die des Zentrums</strong>: <code>https://&lt;centro&gt;.turnera.devel.es/api/v1</code>. Zum Testen gibt es eine Sandbox mit erfundenen Daten (Abschnitt 11). Jedes Zentrum hat seine eigene Domain und seine eigene Datenbank, daher gibt es keinen Parameter, der angibt, welches Zentrum aufgerufen wird — das bestimmt die Domain.</p>
 <hr>
-<h2 id="2-darse-de-alta-como-cliente">2. Darse de alta como cliente</h2>
-<p>Esto <strong>no se hace por la API</strong>. Quien programa el ERP recibe unas credenciales; no la posibilidad de crearse
-otras.</p>
-<p>Lo hace <strong>alguien con rol de administración del centro</strong>, en <em>Administración → Integraciones → Nueva
-integración</em>. Ahí se decide:</p>
+<h2 id="2-als-client-registrieren">2. Als Client registrieren</h2>
+<p>Das geschieht <strong>nicht über die API</strong>. Wer das ERP programmiert, erhält Zugangsdaten, nicht die Möglichkeit, sich weitere zu erstellen.</p>
+<p>Das erledigt <strong>jemand mit Administrationsrolle des Zentrums</strong> unter <em>Verwaltung → Integrationen → Neue Integration</em>. Dort wird festgelegt:</p>
 <div class="tabla-envoltorio"><table>
 <thead>
 <tr>
-<th>Campo</th>
-<th>Qué es</th>
+<th>Feld</th>
+<th>Was es ist</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><strong>Nombre</strong></td>
-<td>Cómo lo reconocerá el centro en la lista. «ERP de la asesoría».</td>
+<td><strong>Name</strong></td>
+<td>Wie das Zentrum die Integration in der Liste erkennt. «ERP der Steuerberatung».</td>
 </tr>
 <tr>
-<td><strong>Delegación</strong></td>
-<td>La única que verá la integración. Va fijada aquí porque una máquina no puede elegirla en una pantalla.</td>
+<td><strong>Kontakt-E-Mail</strong></td>
+<td>Die Adresse der Person, die die Integration betreut. Sie wird für Hinweise auf Wartungsarbeiten, Versionswechsel oder Störungen der API verwendet. Pflichtfeld.</td>
 </tr>
 <tr>
-<td><strong>Permisos</strong></td>
-<td>Qué puede leer. Véase la tabla de scopes más abajo.</td>
+<td><strong>Standort</strong></td>
+<td>Die einzige, die die Integration sehen wird. Sie wird hier festgelegt, weil eine Maschine sie nicht in einer Bildschirmmaske auswählen kann.</td>
 </tr>
 <tr>
-<td><strong>Direcciones autorizadas</strong></td>
-<td>Desde dónde puede entrar. Una por línea: una IPv4 o un rango en CIDR.</td>
+<td><strong>Berechtigungen</strong></td>
+<td>Was gelesen werden darf. Siehe die Scope-Tabelle weiter unten.</td>
+</tr>
+<tr>
+<td><strong>Autorisierte Adressen</strong></td>
+<td>Von wo aus der Zugriff erlaubt ist. Eine pro Zeile: eine IPv4-Adresse oder ein Bereich in CIDR-Notation, oder <code>any</code>, um nicht einzuschränken (siehe «Die IP»).</td>
 </tr>
 </tbody></table>
-</div><p>Al guardar, la pantalla enseña el <code>client_id</code> y el <code>client_secret</code> <strong>una sola vez</strong>. El secreto no se guarda
-en claro, así que si se pierde no se recupera: se rota (§6).</p>
-<h3 id="lo-que-hay-que-pedirle-al-centro">Lo que hay que pedirle al centro</h3>
+</div><p>Beim Speichern erhält der <strong>Inhaber des Zentrums eine E-Mail</strong> mit der Registrierung und ihren Daten (niemals das Geheimnis), damit es keine Integrationen gibt, von deren Existenz niemand weiß. Der Bildschirm zeigt die <code>client_id</code> und das <code>client_secret</code> <strong>ein einziges Mal</strong> an. Das Geheimnis wird nicht im Klartext gespeichert; geht es verloren, lässt es sich nicht wiederherstellen: Es wird erneuert (§6).</p>
+<h3 id="was-sie-vom-zentrum-anfordern-mussen">Was Sie vom Zentrum anfordern müssen</h3>
 <ol>
-<li>El <strong>dominio</strong> de su Turnera.</li>
-<li>Las <strong>credenciales</strong>, por un canal que no sea el correo del día a día.</li>
-<li>Que autorice la <strong>IP fija del servidor</strong> donde correrá el ERP. Si ese servidor no tiene IP fija, esa es una
-conversación que hay que tener antes de darle los datos de los clientes de nadie.</li>
+<li>Die <strong>Domain</strong> seines Turnera.</li>
+<li>Die <strong>Zugangsdaten</strong>, über einen Kanal, der nicht die tägliche E-Mail ist.</li>
+<li>Dass es die <strong>feste IP des Servers</strong> autorisiert, auf dem das ERP laufen wird. Während der Entwicklung kann das Zentrum <code>any</code> eintragen, wenn von einem Laptop gearbeitet wird, der das Netz wechselt; beim Übergang in die Produktion sollte es durch die IP des Servers ersetzt werden.</li>
 </ol>
 <hr>
-<h2 id="3-autenticacion">3. Autenticación</h2>
-<p><strong>OAuth 2.0 <em>client credentials</em></strong>. Ni el usuario de una persona, ni una clave estática en una cabecera.</p>
+<h2 id="3-authentifizierung">3. Authentifizierung</h2>
+<p><strong>OAuth 2.0 <em>client credentials</em></strong>. Weder der Benutzer einer Person noch ein statischer Schlüssel in einem Header.</p>
 <pre><code>POST /api/v1/integration/token
 Content-Type: application/json
 
@@ -684,33 +688,28 @@ Content-Type: application/json
   &quot;scope&quot;: &quot;catalog:read sales:read&quot;
 }
 </code></pre>
-<p>Los nombres de este endpoint van en <code>snake_case</code> porque son los de OAuth 2.0; <strong>el resto de la API va en
-camelCase</strong>.</p>
+<p>Die Namen dieses Endpunkts stehen in <code>snake_case</code>, weil es die von OAuth 2.0 sind; <strong>der Rest der API verwendet camelCase</strong>.</p>
 <ul>
-<li>El token dura <strong>media hora</strong> y lleva dentro el <code>client_id</code>, la delegación y los scopes.</li>
-<li><strong>No hay <em>refresh token</em></strong>: cuando caduca se vuelve a pedir, que es una línea en el ERP. Lo razonable es
-pedirlo al arrancar cada sincronización y renovarlo ante un <code>401</code>.</li>
-<li>Cualquier problema —identificador que no existe, secreto que no coincide, dirección no autorizada,
-integración apagada— contesta <strong>lo mismo</strong>:</li>
+<li>Das Token ist <strong>eine halbe Stunde</strong> gültig und enthält die <code>client_id</code>, die Niederlassung und die Scopes.</li>
+<li>Es gibt <strong>kein <em>Refresh-Token</em></strong>: Läuft das Token ab, wird ein neues angefordert, was im ERP eine einzige Zeile ist. Sinnvoll ist es, es zu Beginn jeder Synchronisierung anzufordern und bei einem <code>401</code> zu erneuern.</li>
+<li>Jedes Problem — nicht existierende Kennung, nicht übereinstimmendes Geheimnis, nicht autorisierte Adresse, deaktivierte Integration — wird <strong>gleich</strong> beantwortet:</li>
 </ul>
 <pre><code>401 Unauthorized
 { &quot;title&quot;: &quot;Unauthorized&quot;, &quot;status&quot;: 401, &quot;error&quot;: &quot;invalid_client&quot;, &quot;detail&quot;: &quot;Las credenciales no son válidas&quot; }
 </code></pre>
-<p>No se distingue cuál de los cuatro falló, a propósito. Si las credenciales son buenas, no hace falta el
-detalle; si se están probando, tampoco.</p>
-<h3 id="la-ip">La IP</h3>
-<p>La dirección se comprueba <strong>al pedir el token y además en cada llamada</strong>: un token robado dura media hora, y
-media hora desde otra máquina es media hora de más. Una llamada desde una dirección que no está en la lista
-contesta <code>403</code>.</p>
-<p>Un cambio en la lista de direcciones tarda <strong>hasta un minuto</strong> en hacerse efectivo.</p>
+<p>Es wird absichtlich nicht unterschieden, welcher der vier Fälle vorlag. Sind die Zugangsdaten korrekt, braucht man die Details nicht; wenn sie nur ausprobiert werden, ebenfalls nicht.</p>
+<h3 id="die-ip">Die IP</h3>
+<p>Die Adresse wird <strong>bei der Anforderung des Tokens und zusätzlich bei jedem Aufruf</strong> geprüft: Ein gestohlenes Token ist eine halbe Stunde gültig, und eine halbe Stunde von einer anderen Maschine aus ist eine halbe Stunde zu viel. Ein Aufruf von einer Adresse, die nicht in der Liste steht, wird mit <code>403</code> beantwortet.</p>
+<p>Eine Änderung der Adressliste wird <strong>innerhalb von bis zu einer Minute</strong> wirksam.</p>
+<p><strong>Ohne IP-Einschränkung.</strong> Enthält die Liste <code>any</code>, ist der Zugriff von jeder Adresse aus möglich. Das ist für die Entwicklungsphase gedacht, wenn die integrierende Person zwischen Netzen wechselt. In diesem Fall ist die einzige Bremse das <code>client_secret</code>: Wer es besitzt, kann von überall lesen, was die Berechtigungen der Integration freigeben. Es empfiehlt sich, nur die Berechtigungen zu vergeben, die benötigt werden, und <code>any</code> beim Übergang in die Produktion durch die IP des Servers zu ersetzen.</p>
 <hr>
-<h2 id="4-los-permisos-scopes">4. Los permisos (<em>scopes</em>)</h2>
-<p>Vocabulario propio y corto. Los roles de Turnera son de pantallas y no significan nada para un ERP.</p>
+<h2 id="4-die-berechtigungen-scopes">4. Die Berechtigungen (<em>Scopes</em>)</h2>
+<p>Ein eigenes, kurzes Vokabular. Die Rollen von Turnera beziehen sich auf Bildschirmmasken und bedeuten für ein ERP nichts.</p>
 <div class="tabla-envoltorio"><table>
 <thead>
 <tr>
 <th>Scope</th>
-<th>Qué abre</th>
+<th>Was er freigibt</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -731,42 +730,40 @@ contesta <code>403</code>.</p>
 </tr>
 <tr>
 <td><code>bookings:write</code></td>
-<td><code>/bookings</code></td>
+<td><code>/bookings</code>, und die Möglichkeit, Webhooks für Termine anzulegen</td>
+</tr>
+<tr>
+<td><code>customers:exists</code></td>
+<td><code>/customers/exists</code></td>
 </tr>
 </tbody></table>
-</div><p>Llamar a un recurso sin su scope contesta <code>403</code>. No hay un scope de historia clínica, y no es que no se dé por
-defecto: <strong>es que no existe</strong>. <code>customers:read</code> devuelve la ficha administrativa y nada de antecedentes, casos
-ni evoluciones.</p>
+</div><p>Der Aufruf einer Ressource ohne ihren Scope wird mit <code>403</code> beantwortet. Es gibt keinen Scope für Krankenakten, und das heißt nicht, dass er standardmäßig nicht vergeben wird: <strong>Er existiert nicht</strong>. <code>customers:read</code> liefert den Verwaltungsdatensatz und nichts zu Vorgeschichte, Fällen oder Verläufen.</p>
 <hr>
-<h2 id="5-los-recursos">5. Los recursos</h2>
-<p>Todos los listados devuelven el mismo sobre:</p>
+<h2 id="5-die-ressourcen">5. Die Ressourcen</h2>
+<p>Alle Listen liefern denselben Umschlag:</p>
 <pre><code class="language-json">{
   &quot;items&quot;: [ ... ],
   &quot;nextCursor&quot;: &quot;412&quot;
 }
 </code></pre>
-<h3 id="paginacion-por-cursor">Paginación por cursor</h3>
-<p>No hay número de página. Si alguien cobra mientras el ERP está paginando, una página numerada se descoloca y
-se pierde una venta sin que nadie se entere; el cursor es el último identificador leído, así que lo que ya
-pasó no se mueve.</p>
+<h3 id="cursor-paginierung">Cursor-Paginierung</h3>
+<p>Es gibt keine Seitenzahl. Wenn jemand kassiert, während das ERP gerade paginiert, verschiebt sich eine nummerierte Seite, und ein Verkauf geht verloren, ohne dass es jemand merkt; der Cursor ist die zuletzt gelesene Kennung, sodass sich das, was bereits geschehen ist, nicht verschiebt.</p>
 <pre><code>GET /integration/sales?limit=200
 GET /integration/sales?limit=200&amp;cursor=412
-GET /integration/sales?limit=200&amp;cursor=980   →  &quot;nextCursor&quot;: null   ← se acabó
+GET /integration/sales?limit=200&amp;cursor=980   →  &quot;nextCursor&quot;: null   ← Ende
 </code></pre>
 <ul>
-<li><code>limit</code>: por defecto <strong>100</strong>, máximo <strong>500</strong>.</li>
-<li><strong><code>nextCursor: null</code> es la señal de que no queda nada.</strong> No hay total de elementos que contar.</li>
+<li><code>limit</code>: standardmäßig <strong>100</strong>, maximal <strong>500</strong>.</li>
+<li><strong><code>nextCursor: null</code> ist das Signal, dass nichts mehr übrig ist.</strong> Es gibt keine Gesamtzahl von Elementen zum Nachzählen.</li>
 </ul>
-<h3 id="sincronizacion-incremental">Sincronización incremental</h3>
-<p>Todos los listados admiten <code>updatedSince</code>, en <strong>ISO-8601 con huso</strong>:</p>
+<h3 id="inkrementelle-synchronisierung">Inkrementelle Synchronisierung</h3>
+<p>Alle Listen unterstützen <code>updatedSince</code>, im <strong>ISO-8601-Format mit Zeitzone</strong>:</p>
 <pre><code>GET /integration/catalog/services?updatedSince=2026-09-01T00:00:00Z
 </code></pre>
-<p>Una fecha sin huso obliga a adivinar en qué zona la interpretamos, y ahí es donde se pierde la venta de las
-once de la noche. Por eso se rechaza con un <code>400</code>.</p>
-<p>La comparación es <strong>mayor o igual</strong>, así que conviene guardar el <code>updatedOn</code> más alto que se haya visto y
-usarlo como marca de agua en la pasada siguiente. Puede repetir una fila; nunca saltársela.</p>
+<p>Ein Datum ohne Zeitzone zwingt dazu, zu raten, in welcher Zone wir es interpretieren, und genau dort geht der Verkauf von elf Uhr abends verloren. Deshalb wird es mit einem <code>400</code> abgelehnt.</p>
+<p>Der Vergleich ist <strong>größer oder gleich</strong>, daher empfiehlt es sich, das höchste gesehene <code>updatedOn</code> zu speichern und es im nächsten Durchlauf als Wasserzeichen zu verwenden. Eine Zeile kann doppelt erscheinen; sie wird niemals übersprungen.</p>
 <blockquote>
-<p>En la primera pasada, sin <code>updatedSince</code>, se lo lleva todo. Es lo que tiene que pasar.</p>
+<p>Im ersten Durchlauf, ohne <code>updatedSince</code>, wird alles geliefert. Das ist genau das, was passieren soll.</p>
 </blockquote>
 <h3 id="get-integration-catalog-services"><code>GET /integration/catalog/services</code></h3>
 <pre><code class="language-json">{
@@ -796,13 +793,9 @@ usarlo como marca de agua en la pasada siguiente. Puede repetir una fila; nunca 
   &quot;updatedOn&quot;: &quot;2026-09-18T11:04:22+02:00&quot;
 }
 </code></pre>
-<p><strong>Sobre el IVA en los dos</strong>: <code>taxRate</code> es el tipo en tanto por ciento y <code>taxExemption</code> el código de exención
-de la AEAT (<code>E1</code> por el artículo 20, y los demás de su lista). Se excluyen: una operación exenta no lleva un
-tipo del cero por ciento, lleva la causa por la que lo está. <strong>Los dos a <code>null</code> significa que ese servicio o
-producto todavía no tiene el IVA decidido en el catálogo del centro.</strong> Eso no es un error de la API: es la
-lista de deberes del centro, y el ERP debería avisar en vez de suponer un 21.</p>
+<p><strong>Zur Mehrwertsteuer bei beiden</strong>: <code>taxRate</code> ist der Satz in Prozent und <code>taxExemption</code> der Befreiungscode der AEAT (<code>E1</code> gemäß Artikel 20 sowie die übrigen aus deren Liste). Sie schließen sich gegenseitig aus: Ein befreiter Vorgang trägt keinen Satz von null Prozent, sondern den Grund, aus dem er befreit ist. <strong>Beide auf <code>null</code> bedeutet, dass für diese Dienstleistung oder dieses Produkt im Katalog des Zentrums die Mehrwertsteuer noch nicht festgelegt ist.</strong> Das ist kein Fehler der API: Es ist die Aufgabenliste des Zentrums, und das ERP sollte darauf hinweisen, statt 21 anzunehmen.</p>
 <h3 id="get-integration-customers"><code>GET /integration/customers</code></h3>
-<p>La ficha administrativa. Nunca nada clínico.</p>
+<p>Der Verwaltungsdatensatz. Niemals etwas Klinisches.</p>
 <pre><code class="language-json">{
   &quot;id&quot;: 1204,
   &quot;taxId&quot;: &quot;12345678Z&quot;,
@@ -812,8 +805,14 @@ lista de deberes del centro, y el ERP debería avisar en vez de suponer un 21.</
   &quot;updatedOn&quot;: &quot;2026-09-19T09:12:00+02:00&quot;
 }
 </code></pre>
+<h3 id="get-integration-customers-exists-email-amp-mobile"><code>GET /integration/customers/exists?email=…&amp;mobile=…</code></h3>
+<p>Scope <code>customers:exists</code>. Sie sagt <strong>nur, ob</strong> eine E-Mail-Adresse oder eine Telefonnummer zu einem Kunden des Zentrums gehört, und nichts weiter: weder den Namen noch die Kennung. Sie dient dazu, dass eine Kampagnenplattform keine Datensätze doppelt anlegt.</p>
+<pre><code class="language-json">{ &quot;exists&quot;: true }
+</code></pre>
+<p>Es muss <code>email</code>, <code>mobile</code> oder beides gesendet werden; wenn beides gesendet wird, genügt es, dass eines übereinstimmt. Die Telefonnummer wird anhand ihrer letzten neun Ziffern verglichen, ohne auf Leerzeichen, Bindestriche oder Vorwahl zu achten, und muss mindestens sieben haben.</p>
+<p>Diese Abfrage hat <strong>ihr eigenes Limit, viel strenger als das allgemeine: 20 pro Minute und 2.000 pro Tag</strong> je Integration. Bei Überschreitung folgt <code>429</code> mit <code>Retry-After</code>. Turnera erfasst, wie stark sie genutzt wird (niemals, wonach gefragt wird), und <strong>benachrichtigt per E-Mail den Inhaber des Zentrums und den Kontakt der Integration</strong>, wenn die Nutzung ungewöhnlich erscheint: das Tageskontingent fast ausgeschöpft, viele Abfragen und kaum Treffer, oder wiederholte Versuche mit ungültigen Zugangsdaten oder Adressen. Es ist eine Abfrage, die dazu gedacht ist, Datensätze einzeln zu prüfen, nicht dazu, eine Personenliste abzuarbeiten.</p>
 <h3 id="get-integration-sales"><code>GET /integration/sales</code></h3>
-<p>Las visitas <strong>cobradas</strong>, con sus líneas.</p>
+<p>Die <strong>kassierten</strong> Besuche, mit ihren Positionen.</p>
 <pre><code class="language-json">{
   &quot;id&quot;: 9812,
   &quot;date&quot;: &quot;2026-09-19T17:30:00+02:00&quot;,
@@ -837,17 +836,13 @@ lista de deberes del centro, y el ERP debería avisar en vez de suponer un 21.</
 }
 </code></pre>
 <ul>
-<li><strong><code>amount</code> ya viene con el descuento aplicado</strong>; así lo guarda el cobro. <code>discountPercentage</code> es
-informativo.</li>
-<li><code>total</code> es la suma de las líneas.</li>
-<li><strong>Una devolución es una venta más</strong>, con las líneas y el total en negativo y <code>refundOf</code> apuntando al <code>id</code> de la
-venta que deshace. La venta original no cambia: para saber lo que quedó vendido de verdad, se suman las dos.</li>
-<li>El IVA de la línea es <strong>el que tiene hoy el catálogo</strong>, no el que tenía el día de la venta. Mientras no esté
-la fase 2 de contabilidad, esto es un dato para conciliar y todavía no un libro de facturas.</li>
+<li><strong><code>amount</code> enthält den Rabatt bereits</strong>; so speichert ihn die Kassierung. <code>discountPercentage</code> dient nur der Information.</li>
+<li><code>total</code> ist die Summe der Positionen.</li>
+<li><strong>Eine Erstattung ist ein weiterer Verkauf</strong>, mit negativen Positionen und negativem Gesamtbetrag und <code>refundOf</code>, das auf die <code>id</code> des Verkaufs verweist, den sie rückgängig macht. Der ursprüngliche Verkauf ändert sich nicht: Um zu wissen, was tatsächlich verkauft blieb, werden beide addiert.</li>
+<li>Die Mehrwertsteuer der Position ist <strong>die, die der Katalog heute hat</strong>, nicht die vom Tag des Verkaufs. Solange Phase 2 der Buchhaltung nicht vorhanden ist, ist dies ein Datum zum Abgleich und noch kein Rechnungsbuch.</li>
 </ul>
 <h3 id="get-integration-accounting-draft"><code>GET /integration/accounting-draft</code></h3>
-<p>El asiento resumen por día y tipo de IVA: un apunte por día y por tipo, no cuatrocientas líneas de ticket.
-<strong>No pagina</strong> y pide las dos fechas.</p>
+<p>Die zusammenfassende Buchung pro Tag und Mehrwertsteuersatz: eine Buchung pro Tag und Satz, nicht vierhundert Belegzeilen. <strong>Keine Paginierung</strong>, und beide Daten sind erforderlich.</p>
 <pre><code>GET /integration/accounting-draft?from=2026-09-01&amp;to=2026-09-30
 </code></pre>
 <pre><code class="language-json">{
@@ -862,17 +857,12 @@ la fase 2 de contabilidad, esto es un dato para conciliar y todavía no un libro
   ]
 }
 </code></pre>
-<p>La segunda línea del ejemplo es lo cobrado <strong>sin IVA decidido</strong>. Sale aparte a propósito, porque es
-exactamente lo que hay que repasar. El <code>disclaimer</code> viaja en la respuesta y conviene enseñarlo donde se
-enseñen los números.</p>
-<h3 id="5-1-reservar-en-la-agenda">5.1 Reservar en la agenda</h3>
-<p>Pensado para una plataforma de campañas: pregunta qué horas quedan libres, su cliente elige una y la reserva.
-Si mientras tanto la ha cogido otro —recepción, el portal u otra reserva—, Turnera contesta que está ocupada.</p>
-<p><strong>Los huecos</strong> son los mismos que ofrece el portal de reservas del centro: sólo servicios y sitios marcados como
-<em>se reserva por internet</em>, con la antelación mínima y los días por delante que tenga configurados el centro.
-La plataforma elige la hora; Turnera pone el primer sitio y el primer profesional libres.</p>
+<p>Die zweite Zeile des Beispiels ist das Kassierte <strong>ohne festgelegte Mehrwertsteuer</strong>. Sie erscheint absichtlich separat, weil genau das zu prüfen ist. Der <code>disclaimer</code> wird in der Antwort mitgeliefert und sollte dort angezeigt werden, wo die Zahlen angezeigt werden.</p>
+<h3 id="5-1-im-terminkalender-reservieren">5.1 Im Terminkalender reservieren</h3>
+<p>Gedacht für eine Kampagnenplattform: Sie fragt, welche Zeiten frei sind, ihr Kunde wählt eine aus, und sie reserviert sie. Hat sie in der Zwischenzeit jemand anderes belegt — die Rezeption, das Portal oder eine andere Reservierung —, antwortet Turnera, dass sie besetzt ist.</p>
+<p><strong>Die Plätze</strong> sind dieselben, die das Reservierungsportal des Zentrums anbietet: nur Dienstleistungen und Orte, die als <em>online buchbar</em> markiert sind, mit der Mindestvorlaufzeit und den Tagen im Voraus, die das Zentrum konfiguriert hat. Die Plattform wählt die Uhrzeit; Turnera setzt den ersten freien Ort und den ersten freien Mitarbeiter ein.</p>
 <h4 id="get-integration-availability-serviceid-12-amp-day-2026-10-02"><code>GET /integration/availability?serviceId=12&amp;day=2026-10-02</code></h4>
-<p>Scope <code>availability:read</code>. Las horas de inicio libres de ese día para ese servicio:</p>
+<p>Scope <code>availability:read</code>. Die freien Startzeiten dieses Tages für diese Dienstleistung:</p>
 <pre><code class="language-json">{
   &quot;day&quot;: &quot;2026-10-02&quot;,
   &quot;serviceId&quot;: 12,
@@ -880,10 +870,7 @@ La plataforma elige la hora; Turnera pone el primer sitio y el primer profesiona
   &quot;slots&quot;: [ { &quot;start&quot;: &quot;10:00:00&quot;, &quot;end&quot;: &quot;11:00:00&quot; }, { &quot;start&quot;: &quot;11:00:00&quot;, &quot;end&quot;: &quot;12:00:00&quot; } ]
 }
 </code></pre>
-<p><code>bookableUntil</code> es el último día que hoy se puede reservar: la agenda está abierta tantos días por delante como
-tenga configurados el centro, y la ventana avanza sola cada día. Una lista vacía para un día posterior es que la
-agenda <strong>aún no está abierta</strong>, no que esté llena. Para un día dentro de plazo, que no queda nada o que ese
-servicio no se reserva por internet.</p>
+<p><code>bookableUntil</code> ist der letzte Tag, der heute reserviert werden kann: Der Terminkalender ist so viele Tage im Voraus geöffnet, wie das Zentrum konfiguriert hat, und das Fenster rückt jeden Tag von selbst vor. Eine leere Liste für einen späteren Tag bedeutet, dass der Terminkalender <strong>noch nicht geöffnet ist</strong>, nicht, dass er voll ist. Für einen Tag innerhalb der Frist bedeutet sie, dass nichts mehr frei ist oder dass diese Dienstleistung nicht online gebucht wird.</p>
 <h4 id="post-integration-bookings"><code>POST /integration/bookings</code></h4>
 <p>Scope <code>bookings:write</code>.</p>
 <pre><code class="language-json">{
@@ -897,129 +884,177 @@ servicio no se reserva por internet.</p>
 <div class="tabla-envoltorio"><table>
 <thead>
 <tr>
-<th>Respuesta</th>
-<th>Qué significa</th>
+<th>Antwort</th>
+<th>Bedeutung</th>
 </tr>
 </thead>
 <tbody><tr>
 <td><code>201</code></td>
-<td>Reservada. Devuelve la cita (<code>appointmentId</code>, <code>reference</code>, <code>day</code>, <code>start</code>, <code>end</code>, <code>customerId</code>).</td>
+<td>Reserviert. Liefert den Termin (<code>appointmentId</code>, <code>reference</code>, <code>day</code>, <code>start</code>, <code>end</code>, <code>customerId</code>).</td>
 </tr>
 <tr>
 <td><code>200</code></td>
-<td><strong>Esa referencia ya estaba reservada</strong>: devuelve la misma cita, sin coger otro hueco.</td>
+<td><strong>Diese Referenz war bereits reserviert</strong>: Es wird derselbe Termin geliefert, ohne einen weiteren Platz zu belegen.</td>
 </tr>
 <tr>
 <td><code>409</code> <code>BOOKING_SLOT_TAKEN</code></td>
-<td>El hueco ya no está libre: lo ha cogido otro. Vuelva a pedir la disponibilidad.</td>
+<td>Der Platz ist nicht mehr frei: Ihn hat jemand anderes belegt. Fordern Sie die Verfügbarkeit erneut an.</td>
 </tr>
 <tr>
 <td><code>409</code> <code>BOOKING_TOO_FAR_AHEAD</code></td>
-<td>Ese día la agenda aún no está abierta (posterior a <code>bookableUntil</code>).</td>
+<td>An diesem Tag ist der Terminkalender noch nicht geöffnet (später als <code>bookableUntil</code>).</td>
+</tr>
+<tr>
+<td><code>409</code> <code>BOOKING_EQUIPMENT_BUSY</code></td>
+<td>Die Dienstleistung benötigt ein Gerät, und zu dieser Zeit ist es belegt. <strong>Das ist nicht dasselbe wie <code>BOOKING_SLOT_TAKEN</code></strong>: Der Platz existiert, aber das Gerät fehlt. Die Antwort enthält <code>equipmentName</code>. Probieren Sie einen anderen Platz.</td>
 </tr>
 <tr>
 <td><code>409</code> <code>BOOKING_MINIMUM_NOTICE</code></td>
-<td>La hora ya ha pasado o no cumple la antelación mínima del centro. La respuesta trae <code>minimumNoticeHours</code>.</td>
+<td>Die Uhrzeit ist bereits vergangen oder erfüllt die Mindestvorlaufzeit des Zentrums nicht. Die Antwort enthält <code>minimumNoticeHours</code>.</td>
 </tr>
 <tr>
 <td><code>400</code></td>
-<td>Falta un dato, o el cliente no trae ni teléfono ni correo.</td>
+<td>Eine Angabe fehlt, oder der Kunde bringt weder Telefonnummer noch E-Mail-Adresse mit.</td>
 </tr>
 </tbody></table>
 </div><ul>
-<li><strong>La referencia hace seguro reintentar.</strong> Es el identificador de la reserva en su sistema y debe ser única
-para cada reserva. Si no le llega la respuesta, repita la misma petición con la misma referencia: recibirá
-la cita que ya existe, nunca una segunda.</li>
-<li><strong>El cliente.</strong> Si en el centro ya hay una ficha con ese correo, la cita va a esa ficha y la ficha no se
-toca. Si no, se abre una ficha nueva con los datos que manda.</li>
-<li><strong>Queda marcada.</strong> La cita lleva escrito en sus comentarios el nombre de la integración y la referencia, para
-que recepción sepa de dónde viene, y se guarda de qué integración vino para poder medir cada canal.</li>
-<li><strong>El aviso al cliente</strong> lo manda Turnera, igual que en el portal, si el cliente tiene correo.</li>
-<li>Anular o cambiar una cita desde fuera todavía no se puede: se hace desde el centro.</li>
+<li><strong>Die Referenz macht Wiederholungen sicher.</strong> Sie ist die Kennung der Reservierung in Ihrem System und muss für jede Reservierung eindeutig sein. Erreicht Sie die Antwort nicht, wiederholen Sie dieselbe Anfrage mit derselben Referenz: Sie erhalten den bereits existierenden Termin, niemals einen zweiten.</li>
+<li><strong>Der Kunde.</strong> Gibt es im Zentrum bereits einen Datensatz mit dieser E-Mail-Adresse, wird der Termin diesem Datensatz zugeordnet, und der Datensatz wird nicht verändert. Andernfalls wird mit den gesendeten Daten ein neuer Datensatz angelegt.</li>
+<li><strong>Er wird gekennzeichnet.</strong> In den Kommentaren des Termins stehen der Name der Integration und die Referenz, damit die Rezeption weiß, woher er kommt, und es wird gespeichert, von welcher Integration er kam, damit jeder Kanal gemessen werden kann.</li>
+<li><strong>Die Benachrichtigung des Kunden</strong> versendet Turnera, wie im Portal, wenn der Kunde eine E-Mail-Adresse hat.</li>
+<li>Einen Termin von außen stornieren oder ändern ist noch nicht möglich: Das geschieht im Zentrum.</li>
 </ul>
-<hr>
-<h2 id="6-rotar-el-secreto">6. Rotar el secreto</h2>
-<p>Se rota desde <em>Administración → Integraciones → Rotar secreto</em>. <strong>Los dos secretos valen a la vez</strong> hasta que
-el viejo se retire: se genera el nuevo, se configura el ERP con calma, y cuando responde se pulsa <em>Retirar el
-anterior</em>. Así se cambia el secreto sin cortar la integración ni un minuto.</p>
-<hr>
-<h2 id="7-limite-de-peticiones">7. Límite de peticiones</h2>
-<p><strong>120 peticiones por minuto y por integración.</strong> Cada respuesta trae:</p>
-<pre><code>X-RateLimit-Limit: 120
-X-RateLimit-Remaining: 117
-</code></pre>
-<p>Pasado el límite, <code>429</code> con <code>Retry-After: 60</code>. Un ERP con un bucle de reintentos mal puesto tumba un centro un
-sábado, así que conviene respetar el <code>Retry-After</code> en vez de reintentar en seguida.</p>
-<hr>
-<h2 id="8-los-errores">8. Los errores</h2>
+<h3 id="5-2-webhooks-turnera-benachrichtigt-sie">5.2 Webhooks: Turnera benachrichtigt Sie</h3>
+<p>Statt alle paar Minuten zu fragen, ob es neue Termine gibt, kann das Zentrum eine <strong>Adresse Ihres Systems</strong> anlegen (<em>Verwaltung → Integrationen → Webhooks</em>), und Turnera ruft sie auf, wenn sich ein Termin ändert. Dafür ist der Scope <code>bookings:write</code> in der Integration erforderlich, und jede Integration erlaubt bis zu fünf Webhooks.</p>
+<p><strong>Die Adresse</strong> muss <code>https://</code> verwenden, öffentlich sein und ohne Benutzer und Passwort auskommen. Adressen aus internen Netzen und Weiterleitungen werden nicht akzeptiert. Nach dem Anlegen lässt sich die Adresse nicht mehr ändern: Um auf eine andere zu verweisen, wird ein weiterer Webhook angelegt. Beim Anlegen <strong>erhält der Inhaber des Zentrums eine E-Mail</strong> darüber, wohin die Daten gesendet werden.</p>
+<p><strong>Die Ereignisse</strong>, die abonniert werden können:</p>
 <div class="tabla-envoltorio"><table>
 <thead>
 <tr>
-<th>Código</th>
-<th>Qué ha pasado</th>
+<th>Ereignis</th>
+<th>Wann</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>booking.created</code></td>
+<td>Ein Termin wird angelegt.</td>
+</tr>
+<tr>
+<td><code>booking.updated</code></td>
+<td>Ein weiterhin gültiger Termin ändert sich (Uhrzeit, Dienstleistung, Kunde …).</td>
+</tr>
+<tr>
+<td><code>booking.cancelled</code></td>
+<td>Ein Termin wird storniert oder gelöscht.</td>
+</tr>
+</tbody></table>
+</div><p>Außerdem gibt es <code>webhook.ping</code>, das nicht abonniert wird: Es ist der <strong>Test</strong>, den das Zentrum von Hand über die Bildschirmmaske auslösen kann, um zu prüfen, ob seine Adresse antwortet.</p>
+<p><strong>Welche Termine.</strong> Standardmäßig benachrichtigt der Webhook <strong>nur über Termine, die von derselben Integration angelegt wurden</strong>. Das Zentrum kann das Häkchen entfernen, um auch die der Rezeption und des Portals zu erhalten.</p>
+<p><strong>Die Benachrichtigung</strong> ist ein <code>POST</code> mit <code>Content-Type: application/json</code>:</p>
+<pre><code class="language-json">{
+  &quot;event&quot;: &quot;booking.created&quot;,
+  &quot;deliveryId&quot;: &quot;5b0c2c1e-6c1e-4d6e-9f43-0b1c0d2e3f4a&quot;,
+  &quot;occurredAt&quot;: &quot;2026-10-02T08:15:03Z&quot;,
+  &quot;data&quot;: {
+    &quot;appointmentId&quot;: 48213,
+    &quot;reference&quot;: &quot;VIR-000123&quot;,
+    &quot;state&quot;: &quot;booked&quot;,
+    &quot;day&quot;: &quot;2026-10-05&quot;,
+    &quot;start&quot;: &quot;10:00&quot;,
+    &quot;end&quot;: &quot;10:45&quot;,
+    &quot;service&quot;: &quot;Limpieza facial&quot;,
+    &quot;customerId&quot;: 1204,
+    &quot;bookedByThisIntegration&quot;: true
+  }
+}
+</code></pre>
+<p><code>state</code> ist <code>booked</code> oder <code>cancelled</code>. Hat die Integration zusätzlich den Scope <code>customers:read</code>, enthält <code>data</code> einen Block <code>customer</code> mit <code>name</code>, <code>surname</code>, <code>email</code> und <code>mobile</code>; ohne diesen Scope werden keinerlei Daten der Person übermittelt. <code>deliveryId</code> ist für jede Benachrichtigung eindeutig und ist das, was Sie verwenden müssen, um dieselbe nicht zweimal zu verarbeiten.</p>
+<p><strong>Die Signatur.</strong> Jede Benachrichtigung trägt diese Header:</p>
+<pre><code>X-Turnera-Signature: sha256=&lt;hex&gt;
+X-Turnera-Timestamp: 1790928903
+X-Turnera-Event: booking.created
+X-Turnera-Delivery: 5b0c2c1e-6c1e-4d6e-9f43-0b1c0d2e3f4a
+</code></pre>
+<p>Die Signatur ist der HMAC-SHA256, hexadezimal, von <code>timestamp + &quot;.&quot; + Body</code> mit dem <strong>Geheimnis des Webhooks</strong> (dem, das mit <code>whsec_</code> beginnt und nur ein einziges Mal beim Anlegen oder Erneuern angezeigt wird). Prüfen Sie sie <strong>bevor Sie dem Inhalt vertrauen</strong>, mit einem Vergleich in konstanter Zeit, und weisen Sie Benachrichtigungen ab, deren <code>X-Turnera-Timestamp</code> älter als fünf Minuten ist: So kann niemand eine alte Benachrichtigung wiederholen, die er kopiert hat.</p>
+<p><strong>Was zu antworten ist, und Wiederholungen.</strong> Antworten Sie mit einem beliebigen <code>2xx</code> in weniger als <strong>10 Sekunden</strong>; der Inhalt der Antwort spielt keine Rolle. Alles andere wird mit wachsenden Wartezeiten wiederholt: <strong>1 Minute, 5 Minuten, 30 Minuten, 2 Stunden und 6 Stunden</strong>; antwortet das System nach dem letzten Versuch weiterhin nicht, gilt die Benachrichtigung als verloren (das Zentrum sieht sie im Protokoll der Bildschirmmaske). Weiterleitungen werden nicht befolgt. Die Benachrichtigungen werden <strong>vierzehn Tage</strong> aufbewahrt und danach gelöscht. Wird der Termin mehrmals gespeichert, ohne dass sich etwas an dem ändert, was übermittelt wird, wird nur eine einzige Benachrichtigung gesendet.</p>
+<p><strong>Reihenfolge und Duplikate.</strong> Die Benachrichtigungen zu demselben Termin werden der Reihe nach gesendet, aber es wird nicht garantiert, dass sie in dieser Reihenfolge ankommen, wenn eine wiederholt wird, und eine Benachrichtigung kann mehr als einmal eintreffen. Verwenden Sie <code>deliveryId</code> und den Status in <code>data</code> (nicht die Reihenfolge des Eintreffens), um zu entscheiden.</p>
+<hr>
+<h2 id="6-das-geheimnis-erneuern">6. Das Geheimnis erneuern</h2>
+<p>Die Erneuerung erfolgt unter <em>Verwaltung → Integrationen → Geheimnis erneuern</em>. <strong>Beide Geheimnisse gelten gleichzeitig</strong>, bis das alte zurückgezogen wird: Das neue wird erzeugt, das ERP wird in Ruhe konfiguriert, und wenn es antwortet, wird <em>Das alte zurückziehen</em> gedrückt. So wird das Geheimnis gewechselt, ohne die Integration auch nur eine Minute zu unterbrechen.</p>
+<hr>
+<h2 id="7-anfragelimit">7. Anfragelimit</h2>
+<p><strong>120 Anfragen pro Minute und Integration.</strong> Jede Antwort enthält:</p>
+<pre><code>X-RateLimit-Limit: 120
+X-RateLimit-Remaining: 117
+</code></pre>
+<p>Bei Überschreitung des Limits folgt <code>429</code> mit <code>Retry-After: 60</code>. Neben diesem allgemeinen Limit hat <code>/customers/exists</code> sein eigenes (20 pro Minute und 2.000 pro Tag, siehe Abschnitt 5). Ein ERP mit einer falsch gesetzten Wiederholungsschleife legt an einem Samstag ein Zentrum lahm, daher empfiehlt es sich, <code>Retry-After</code> zu beachten, statt sofort zu wiederholen.</p>
+<hr>
+<h2 id="8-die-fehler">8. Die Fehler</h2>
+<div class="tabla-envoltorio"><table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Was passiert ist</th>
 </tr>
 </thead>
 <tbody><tr>
 <td><code>400</code></td>
-<td>Un parámetro mal: fecha sin huso, cursor que no dimos, <code>to</code> anterior a <code>from</code>. El <code>detail</code> lo dice.</td>
+<td>Ein Parameter ist falsch: Datum ohne Zeitzone, Cursor, den wir nicht vergeben haben, <code>to</code> vor <code>from</code>. Das <code>detail</code> sagt es.</td>
 </tr>
 <tr>
 <td><code>401</code></td>
-<td>El token falta, ha caducado o es de otro centro. En <code>/token</code>, <code>invalid_client</code>.</td>
+<td>Das Token fehlt, ist abgelaufen oder gehört zu einem anderen Zentrum. Bei <code>/token</code>: <code>invalid_client</code>.</td>
 </tr>
 <tr>
 <td><code>403</code></td>
-<td>El scope no da para ese recurso, o la llamada viene de una dirección no autorizada.</td>
+<td>Der Scope reicht für diese Ressource nicht aus, oder der Aufruf kommt von einer nicht autorisierten Adresse.</td>
 </tr>
 <tr>
 <td><code>409</code></td>
-<td>Al reservar: el hueco ya no está libre (<code>BOOKING_SLOT_TAKEN</code>), la agenda aún no llega a ese día (<code>BOOKING_TOO_FAR_AHEAD</code>) o la hora no cumple la antelación mínima (<code>BOOKING_MINIMUM_NOTICE</code>).</td>
+<td>Beim Reservieren: Der Platz ist nicht mehr frei (<code>BOOKING_SLOT_TAKEN</code>), ein Gerät, das die Dienstleistung zu dieser Zeit benötigt, fehlt (<code>BOOKING_EQUIPMENT_BUSY</code>), der Terminkalender reicht noch nicht bis zu diesem Tag (<code>BOOKING_TOO_FAR_AHEAD</code>) oder die Uhrzeit erfüllt die Mindestvorlaufzeit nicht (<code>BOOKING_MINIMUM_NOTICE</code>).</td>
 </tr>
 <tr>
 <td><code>429</code></td>
-<td>Límite de peticiones. Espere lo que diga <code>Retry-After</code>.</td>
+<td>Anfragelimit. Warten Sie so lange, wie <code>Retry-After</code> angibt.</td>
 </tr>
 </tbody></table>
-</div><p>Todas las respuestas de error son <code>application/problem+json</code> (RFC 7807).</p>
+</div><p>Alle Fehlerantworten sind <code>application/problem+json</code> (RFC 7807).</p>
 <hr>
-<h2 id="9-las-reglas-del-contrato">9. Las reglas del contrato</h2>
-<p>Escritas antes de tener clientes, porque después se negocian:</p>
+<h2 id="9-die-regeln-des-vertrags">9. Die Regeln des Vertrags</h2>
+<p>Geschrieben, bevor es Clients gab, denn danach werden sie verhandelt:</p>
 <ol>
-<li><strong>Se puede añadir</strong> un campo o un recurso. Un cliente que no lo conoce lo ignora, así que <strong>el parseo del
-ERP no debe romperse ante un campo que no esperaba</strong>.</li>
-<li><strong>No se puede</strong> quitar ni renombrar un campo, ni cambiar su tipo, ni cambiar el significado de uno que ya
-existe. Para eso está la <code>v2</code>.</li>
-<li>Un campo que deja de tener sentido <strong>se marca como obsoleto en el OpenAPI y se sigue enviando</strong>.</li>
-<li>La <code>v1</code> se mantiene al menos <strong>doce meses</strong> después de publicar la <code>v2</code>.</li>
-<li>Los cambios se avisan a los centros que tengan una integración activa.</li>
+<li><strong>Hinzufügen darf man</strong> ein Feld oder eine Ressource. Ein Client, der sie nicht kennt, ignoriert sie, daher <strong>darf das Parsing des ERP bei einem unerwarteten Feld nicht brechen</strong>.</li>
+<li><strong>Nicht erlaubt ist</strong> es, ein Feld zu entfernen oder umzubenennen, seinen Typ zu ändern oder die Bedeutung eines bereits existierenden zu ändern. Dafür gibt es die <code>v2</code>.</li>
+<li>Ein Feld, das keinen Sinn mehr hat, <strong>wird in der OpenAPI als veraltet markiert und weiterhin gesendet</strong>.</li>
+<li>Die <code>v1</code> wird mindestens <strong>zwölf Monate</strong> nach Veröffentlichung der <code>v2</code> aufrechterhalten.</li>
+<li>Änderungen werden den Zentren mit einer aktiven Integration mitgeteilt, und an die <strong>Kontakt-E-Mail</strong> jeder Integration. Sobald es die <code>v2</code> gibt, tragen die Antworten der <code>v1</code> die Header <code>Deprecation</code> und <code>Sunset</code> (RFC 9745 und RFC 8594) mit dem Datum der Abschaltung, damit das ERP es erkennt, ohne eine E-Mail zu lesen.</li>
 </ol>
-<p>Un campo nulo <strong>siempre viaja como <code>null</code></strong>; nunca desaparece del JSON. Es la diferencia con los endpoints que
-consume la aplicación web, y es la razón de que la API de integración tenga sus propias clases.</p>
-<p>La descripción OpenAPI de esta API está publicada junto a esta guía, en
-<a href="https://devel.es/turnera/api/openapi-integracion.json"><code>devel.es/turnera/api/openapi-integracion.json</code></a>, para
-importarla en Postman o generar un cliente. Una prueba del programa comprueba en cada cambio que ese fichero dice
-lo mismo que el código. Las instalaciones no sirven Swagger.</p>
+<p>Ein Null-Feld <strong>wird immer als <code>null</code> übermittelt</strong>; es verschwindet nie aus dem JSON. Das ist der Unterschied zu den Endpunkten, die die Webanwendung nutzt, und der Grund dafür, dass die Integrations-API eigene Klassen hat.</p>
+<p>Die OpenAPI-Beschreibung dieser API ist neben diesem Leitfaden veröffentlicht, unter <a href="https://devel.es/turnera/api/openapi-integracion.json"><code>devel.es/turnera/api/openapi-integracion.json</code></a>, zum Importieren in Postman oder zum Generieren eines Clients. Ein Test des Programms prüft bei jeder Änderung, dass diese Datei dasselbe aussagt wie der Code. Die Installationen stellen kein Swagger bereit.</p>
 <hr>
-<h2 id="10-lo-que-conviene-saber-antes-de-empezar">10. Lo que conviene saber antes de empezar</h2>
+<h2 id="10-was-sie-vor-dem-start-wissen-sollten">10. Was Sie vor dem Start wissen sollten</h2>
 <ul>
-<li><strong>Una venta anulada.</strong> Hoy la anulación deshace la venta; con la fase 2 de contabilidad se rectificará. El
-ERP se entera por <code>updatedSince</code> en los dos casos, <strong>pero lo que ve es distinto</strong>: hoy la venta deja de
-aparecer, mañana aparecerá una rectificativa.</li>
-<li><strong>Los importes son cadenas decimales</strong>, no números en coma flotante. Léalos como <code>decimal</code>. Si los lee como
-<code>double</code>, un <code>35.00</code> acaba siendo <code>34.999999</code>.</li>
-<li><strong>El borrador contable es un borrador.</strong> No numera ni emite nada. La facturación con VeriFactu es la fase 2
-y todavía no está.</li>
-<li><strong>Protección de datos.</strong> Sacar la ficha de los clientes de un centro hacia su ERP convierte al proveedor de
-ese ERP en otro encargado del tratamiento del centro. El centro tiene que tenerlo en su registro de
-actividades; la pantalla de crear una integración lo recuerda.</li>
+<li><strong>Ein stornierter Verkauf.</strong> Heute macht die Stornierung den Verkauf rückgängig; mit Phase 2 der Buchhaltung wird er berichtigt. Das ERP erfährt es in beiden Fällen über <code>updatedSince</code>, <strong>aber was es sieht, ist unterschiedlich</strong>: Heute erscheint der Verkauf nicht mehr, künftig erscheint eine Berichtigungsrechnung.</li>
+<li><strong>Die Beträge sind Dezimalzeichenketten</strong>, keine Gleitkommazahlen. Lesen Sie sie als <code>decimal</code>. Lesen Sie sie als <code>double</code>, wird aus <code>35.00</code> am Ende <code>34.999999</code>.</li>
+<li><strong>Der Buchungsentwurf ist ein Entwurf.</strong> Er nummeriert und stellt nichts aus. Die Rechnungsstellung mit VeriFactu ist Phase 2 und noch nicht vorhanden.</li>
+<li><strong>Datenschutz.</strong> Die Datensätze der Kunden eines Zentrums in dessen ERP zu übertragen macht den Anbieter dieses ERP zu einem weiteren Auftragsverarbeiter des Zentrums. Das Zentrum muss ihn in seinem Verzeichnis der Verarbeitungstätigkeiten führen; die Bildschirmmaske zum Anlegen einer Integration erinnert daran.</li>
+</ul>
+<hr>
+<h2 id="11-die-testumgebung">11. Die Testumgebung</h2>
+<p>Um eine Integration zu testen, ohne die Daten eines Zentrums anzufassen, gibt es eine <strong>Sandbox</strong>: ein Schein-Zentrum unter <code>https://sandbox.turnera.devel.es/api/v1</code>, mit erfundenen Kunden, Katalog, kassierten Verkäufen und Terminen.</p>
+<ul>
+<li>Die Zugangsdaten werden bei DEVEL angefordert, eines pro Integrator, mit den Berechtigungen, die er benötigt. Sie werden <strong>ohne IP-Einschränkung</strong> (<code>any</code>) angelegt, um von einem Laptop arbeiten zu können, der das Netz wechselt.</li>
+<li><strong>Sie wird jede Nacht zurückgesetzt</strong>: Alles, was angelegt wurde (vor allem Reservierungen), wird gelöscht, und die Beispieldaten kehren in ihren Ausgangszustand zurück, mit den Terminen der laufenden Woche.</li>
+<li><strong>Die Zugangsdaten überstehen das Zurücksetzen</strong>: <code>client_id</code> und Geheimnis bleiben gültig.</li>
+<li>Alles in diesem Leitfaden gilt unverändert; nur die Domain ändert sich. Beim Wechsel zum echten Zentrum erstellt das Zentrum neue Zugangsdaten und autorisiert die IP des Servers.</li>
 </ul>
 </div>
 </main>
 
 <footer>
   <div class="shell footer__inner">
-    <span>© 2026 DEVEL · Valencia, España · Turnera es un producto de DEVEL</span>
-    <span><a href="/legal">Aviso legal y privacidad</a> · <a href="/">devel.es</a></span>
+    <span>© 2026 DEVEL · Valencia, Spanien · Turnera ist ein Produkt von DEVEL</span>
+    <span><a href="/de/legal">Impressum und Datenschutz</a> · <a href="/de/">devel.es</a></span>
   </div>
 </footer>
 

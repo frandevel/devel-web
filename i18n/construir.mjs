@@ -120,6 +120,13 @@ function sitemap() {
 ${alternativas}
   </url>`;
   }));
+  // La seccion de integradores la genera traer-integradores.mjs y cada idioma tiene su propia direccion.
+  const integradores = { es: '/turnera/integradores', en: '/en/turnera/integrators', de: '/de/turnera/integratoren' };
+  for (const idioma of IDIOMAS) {
+    const alternativas = IDIOMAS.map((otro) =>
+      `    <xhtml:link rel="alternate" hreflang="${otro}" href="${SITIO}${integradores[otro]}"/>`).join('\n');
+    entradas.push(`  <url>\n    <loc>${SITIO}${integradores[idioma]}</loc>\n    <lastmod>${hoy}</lastmod>\n${alternativas}\n  </url>`);
+  }
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${entradas.join('\n')}

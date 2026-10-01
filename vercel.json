@@ -1,6 +1,16 @@
 {
   "redirects": [
     {
+      "source": "/turnera/api",
+      "destination": "/turnera/integradores",
+      "permanent": true
+    },
+    {
+      "source": "/turnera/api/openapi-integracion.json",
+      "destination": "/turnera/integradores/openapi-integracion.json",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "has": [{ "type": "host", "value": "(www\\.)?turnera\\.es" }],
       "destination": "https://devel.es/turnera",

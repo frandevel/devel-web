@@ -133,6 +133,14 @@
         "required" : [ "name" ],
         "type" : "object"
       },
+      "CustomerExistsResponse" : {
+        "properties" : {
+          "exists" : {
+            "type" : "boolean"
+          }
+        },
+        "type" : "object"
+      },
       "CustomerResponse" : {
         "properties" : {
           "address" : {
@@ -629,7 +637,7 @@
                 }
               }
             },
-            "description" : "BOOKING_SLOT_TAKEN, BOOKING_TOO_FAR_AHEAD or BOOKING_MINIMUM_NOTICE, in the 'code' of the problem detail"
+            "description" : "BOOKING_SLOT_TAKEN, BOOKING_EQUIPMENT_BUSY (the equipment the service needs is in use at that time; the problem detail carries its name in equipmentName), BOOKING_TOO_FAR_AHEAD or BOOKING_MINIMUM_NOTICE, in the 'code' of the problem detail"
           }
         },
         "summary" : "Book a free slot for a customer brought by the integration",
@@ -789,6 +797,50 @@
           }
         },
         "summary" : "Administrative customer records; never any clinical content",
+        "tags" : [ "Integration" ]
+      }
+    },
+    "/api/v1/integration/customers/exists" : {
+      "get" : {
+        "operationId" : "customerExists",
+        "parameters" : [ {
+          "in" : "query",
+          "name" : "email",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "in" : "query",
+          "name" : "mobile",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/CustomerExistsResponse"
+                }
+              }
+            },
+            "description" : "OK"
+          },
+          "400" : {
+            "content" : {
+              "application/problem+json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ProblemDetail"
+                }
+              }
+            },
+            "description" : "Bad Request"
+          }
+        },
+        "summary" : "Whether an email or a mobile number belongs to a customer; nothing else is revealed. Limited to 20 per minute and 2000 per day",
         "tags" : [ "Integration" ]
       }
     },

@@ -1811,8 +1811,7 @@ footer{
   <h3 id="cuadro-de-mando">Das Cockpit</h3>
   <span class="ruta">Menü → Cockpit</span>
   <p>
-    Sechs Kennzahlen, die auf einen Blick zeigen, ob das Unternehmen gut läuft und wohin es geht. Jede hat eine Ampel
-    —<strong>Läuft gut</strong>, <strong>Beobachten</strong>, <strong>Handeln</strong>—, die Veränderung gegenüber dem Vorjahreszeitraum und eine Linie mit ihren letzten zwölf Monaten. Darunter der Umsatz Monat für Monat mit dem des Vorjahres daneben und, im laufenden Monat, gestrichelt die Prognose zum Monatsende. Man sieht das ganze Unternehmen oder eine Niederlassung.
+    Die Zahlen, um auf einen Blick zu sehen, ob das Unternehmen gut läuft und wohin es geht. Jede Karte gehört zu einem Modul und erscheint nur, wenn das Zentrum es hat: Ohne Terminkalender gibt es keine Auslastung und keine verlorenen Termine, ohne Kunden keine aktiven Kunden und keine Wiederkehr, ohne Kasse keinen Umsatz und keinen Durchschnittsbon. Ein Zentrum, das nur das Personal verwaltet, sieht nur die Personalkarten. Jede trägt eine Ampel —<strong>Läuft gut</strong>, <strong>Beobachten</strong>, <strong>Handeln</strong>—, die Veränderung gegenüber dem Vorjahreszeitraum und eine Linie mit ihren letzten zwölf Monaten. Darunter der Umsatz Monat für Monat mit dem des Vorjahres daneben und, im laufenden Monat, gestrichelt die Prognose zum Monatsende. Man sieht das ganze Unternehmen oder eine Niederlassung.
   </p>
   <div class="tabla-envoltorio">
   <table>
@@ -1823,6 +1822,18 @@ footer{
     <tr><td><strong>Wiederkehr der Neukunden</strong></td><td>Von denen, die vor drei bis sechs Monaten zum ersten Mal kamen, wie viele innerhalb von drei Monaten wiederkamen.</td><td>Grün ab 50 %; rot unter 30 %.</td></tr>
     <tr><td><strong>Durchschnittliche Ausgaben</strong></td><td>Das in zwölf Monaten von Kunden mit Kartei Kassierte, geteilt durch die, die etwas bezahlt haben.</td><td>Wie der Umsatz, gegenüber dem Vorjahr.</td></tr>
     <tr><td><strong>Verlorene Termine</strong></td><td>Termine des Monats, zu denen niemand kam oder die der Kunde weniger als 24 Stunden vorher storniert hat, und ihr Wert laut Preisliste. Rechtzeitig zu stornieren zählt nicht: Die Lücke konnte neu besetzt werden. Was das Zentrum oder ein externer Grund storniert, zählt ebenfalls nicht.</td><td>Grün unter 8 %; rot über 15 %.</td></tr>
+  </tbody></table>
+  </div>
+  <p>
+    Die Personalkarten betrachten den Zeitraum vom 1. des Monats bis gestern —heute ist noch nicht zu Ende und würde die Erfüllung verfälschen— und werden nicht mit dem Vorjahr verglichen:
+  </p>
+  <div class="tabla-envoltorio">
+  <table>
+    <tbody><tr><th>Kennzahl</th><th>Was sie zählt</th><th>Ampel</th></tr>
+    <tr><td><strong>Stundenerfüllung</strong></td><td>Die geleisteten Stunden im Verhältnis zu den geplanten, bei Personen mit Arbeitskalender.</td><td>Grün ab 97 %; rot unter 90 %.</td></tr>
+    <tr><td><strong>Fehlzeiten</strong></td><td>Die Abwesenheitstage, ohne Urlaub, im Verhältnis zu den Schicht- und Abwesenheitstagen.</td><td>Grün unter 4 %; rot über 8 %.</td></tr>
+    <tr><td><strong>Überstunden</strong></td><td>Die Stunden über dem Geplanten. Die Farbe richtet sich danach, wie stark sie im Verhältnis zu den geplanten Stunden ins Gewicht fallen.</td><td>Grün unter 3 %; rot über 8 %.</td></tr>
+    <tr><td><strong>Gesetzliche Überstundengrenze</strong></td><td>Personen, die die Jahresgrenze überschritten haben oder bereits 80 % davon erreichen.</td><td>Grün, wenn niemand; gelb, wenn sich jemand nähert; rot, wenn jemand sie überschritten hat.</td></tr>
   </tbody></table>
   </div>
   <p>
@@ -2426,7 +2437,7 @@ footer{
   </p>
 
   <h3 id="calendario-laboral">Arbeitskalender</h3>
-  <span class="ruta">Menü → Personal → Arbeitskalender · Menü → Mein Kalender</span>
+  <span class="ruta">Menü → Personal → Arbeitskalender</span>
 
   <p>
     Der Arbeitskalender verteilt über das Jahr <strong>die Stunden, die der Tarifvertrag vorsieht,</strong> jeder
@@ -2558,9 +2569,9 @@ footer{
     außerhalb der Schicht buchen oder verschieben. Wer in diesem Jahr keinen Kalender hat, ist nicht betroffen.
   </p>
 
-  <h4>Mein Kalender</h4>
+  <h4>Der Kalender jeder Fachkraft</h4>
   <p>
-    Jede Fachkraft mit verknüpftem Benutzer sieht <strong>ihren eigenen Kalender</strong> unter <em>Mein Kalender</em>, mit ihren Zählern und ihrem PDF, auch ohne Berechtigung: den eigenen Dienstplan und Urlaub zu kennen ist ihr Recht. Sie sieht auch, was sie gestempelt hat, ihre regulären Stunden und Überstunden und ihr Überstundenkonto, aber nicht die Vorfälle und nicht die Hochrechnung.
+    Jede Fachkraft hat das Recht, ihren Dienstplan und ihren Urlaub ohne jede Berechtigung einzusehen und zu sehen, was sie gestempelt hat, ihre normalen und Überstunden und ihr Stundenkonto, aber nicht die Vorfälle oder die Prognose. Das ist für die App der Fachkraft gedacht; im Web, das das Büro nutzt, gibt es im Menü keinen Eintrag «Mein Kalender», weil der Benutzer, mit dem man sich anmeldet, keiner Fachkraft gehört.
   </p>
 
   <h3 id="integraciones">Ein externes Programm anbinden (ERP)</h3>
@@ -2581,9 +2592,10 @@ footer{
 
   <ul>
     <li><strong>Name.</strong> Woran Sie sie in der Liste wiedererkennen. Zum Beispiel „ERP der Steuerkanzlei“.</li>
+    <li><strong>Kontakt-E-Mail.</strong> Die Person, die die Integration betreut. Sie wird über Wartungen, Versionswechsel oder Störungen der API informiert.</li>
     <li><strong>Filiale.</strong> Die einzige, die dieses Programm sieht. Sie steht hier fest, weil ein Programm
       sie nicht auf einer Maske auswählen kann, wie es eine Person beim Anmelden tut.</li>
-    <li><strong>Berechtigungen.</strong> Was es lesen darf: den Katalog, die Kunden, die Verkäufe oder die freien Termine im Kalender, und ob es Termine buchen darf. Geben Sie nur, was es braucht.</li>
+    <li><strong>Berechtigungen.</strong> Was sie lesen darf: den Katalog, die Kunden, die Umsätze oder die freien Zeiten des Terminkalenders, ob sie Termine buchen darf und ob sie prüfen darf, ob eine E-Mail-Adresse oder Telefonnummer zu einem Kunden gehört (sie antwortet nur mit ja oder nein). Geben Sie nur, was nötig ist.</li>
     <li><strong>Erlaubte Adressen.</strong> Von welcher IP aus es sich verbinden darf, eine pro Zeile.
       Ein Bereich in CIDR-Schreibweise ist erlaubt, zum Beispiel <code>203.0.113.0/24</code>.</li>
   </ul>
@@ -2596,11 +2608,24 @@ footer{
   </div>
 
   <p>
-    <strong>Von außen buchen.</strong> Eine Kampagnenplattform, die Ihnen Kunden bringt, kann deren Termine direkt buchen, mit den Berechtigungen <em>freie Termine</em> und <em>Termine buchen</em>. Sie sieht und bucht nur, was auch das Portal anbietet: die online buchbaren Leistungen und Plätze, mit ihrer Vorlaufzeit und ihren Tagen im Voraus. Hat der Kunde schon eine Kartei mit dieser E-Mail, kommt der Termin in diese Kartei; sonst wird eine neue angelegt. Jeder so gebuchte Termin trägt in seinen Kommentaren, von welcher Plattform er kommt und mit welcher Referenz.
+    <strong>Sie erfahren von jeder neuen Integration.</strong> Wenn eine Integration gespeichert wird, erhält der Inhaber des Zentrums eine E-Mail mit Name, Kontakt, Berechtigungen und Adressen (nie das Geheimnis). Wenn Sie eine erhalten, die Sie nicht erwartet haben, schalten Sie diese Integration aus und ändern Sie das Verwaltungspasswort.
   </p>
 
   <p>
-    <strong>Was man dem Entwickler geben muss.</strong> Die API-Anleitung mit Beispielen und der OpenAPI-Datei steht unter <a href="https://devel.es/turnera/api">devel.es/turnera/api</a>. Damit und mit den Zugangsdaten hat er alles, was er braucht.
+    <strong>Von außen buchen.</strong> Eine Kampagnenplattform, die Ihnen Kunden bringt, kann deren Termine direkt buchen, mit den Berechtigungen <em>freie Termine</em> und <em>Termine buchen</em>. Sie sieht und bucht nur dasselbe wie das Portal: die Leistungen und Orte, die online buchbar sind, mit ihrer Vorlaufzeit und den Tagen im Voraus. Hat der Kunde bereits eine Karteikarte mit dieser E-Mail-Adresse, geht der Termin dorthin; sonst wird eine neue angelegt. Jeder so eingehende Termin trägt in seinen Kommentaren, von welcher Plattform er kommt und mit welcher Referenz. Braucht die Leistung ein Gerät und ist es zu dieser Zeit belegt, erhält die Plattform eine eigene Meldung, verschieden von «Termin vergeben», damit sie eine andere Zeit anbieten kann.
+  </p>
+
+  <p>
+    <strong>Benachrichtigungen an Ihr System (Webhooks).</strong> Statt alle paar Minuten zu fragen, ob es neue Termine gibt, kann die Integration eine Benachrichtigung an eine eigene Adresse erhalten, wenn ein Termin angelegt, geändert oder storniert wird. In der Liste der Integrationen erlaubt die Schaltfläche <em>Webhooks</em> das Anlegen der Adresse (immer
+    <code>https://</code> und öffentlich), die Wahl der gewünschten Ereignisse und den Test, ob sie antwortet. Standardmäßig meldet sie nur Termine, die diese Integration selbst angelegt hat; entfernen Sie den Haken, meldet sie auch die von der Rezeption und aus dem Portal und fügt mit der Berechtigung für Kunden deren Kontaktdaten hinzu. Jede Benachrichtigung wird mit einem Geheimnis signiert, das nur einmal angezeigt wird, wie das der Integration. Beim Anlegen eines Webhooks erhält der Inhaber des Zentrums eine E-Mail mit Adresse und Ereignissen, und die Adresse lässt sich danach nicht ändern: Für eine andere legt man einen neuen Webhook an. Die Schaltfläche <em>Letzte Zustellungen</em> zeigt, was gesendet wurde und was die Gegenseite geantwortet hat.
+  </p>
+
+  <p>
+    <strong>Überwachung.</strong> Turnera zählt, was jede Integration tut, ohne je zu speichern, was gefragt wird. Die Prüfung, ob eine E-Mail-Adresse oder Telefonnummer zu einem Kunden gehört, erlaubt 20 Abfragen pro Minute und 2.000 pro Tag, und wenn die Nutzung nach jemandem aussieht, der eine Personenliste durchgeht oder Passwörter ausprobiert, erhalten der Inhaber des Zentrums und der Kontakt der Integration eine E-Mail.
+  </p>
+
+  <p>
+    <strong>Was man dem Entwickler geben muss.</strong> Die API-Anleitung mit Beispielen und der OpenAPI-Datei steht unter <a href="https://devel.es/turnera/integradores">devel.es/turnera/integradores</a>. Damit und mit den Zugangsdaten hat er alles, was er braucht.
   </p>
 
   <p>
@@ -2616,8 +2641,7 @@ footer{
   </p>
 
   <p>
-    <strong>Nur lesend.</strong> Ein externes Programm darf lesen, nie ändern. Nichts, was das ERP tut,
-    verändert einen Termin, eine Zahlung oder eine Akte.
+    <strong>Fast alles ist nur lesend.</strong> Das Einzige, was ein externes Programm tun kann, ist, einen neuen Termin in einer freien Zeit zu buchen. Nichts, was das ERP tut, ändert eine Zahlung, eine Karteikarte oder einen bestehenden Termin.
   </p>
 
   <h4>Das Geheimnis wechseln, ohne den Dienst zu unterbrechen</h4>

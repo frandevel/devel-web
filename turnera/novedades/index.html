@@ -619,6 +619,8 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-10-02-integraciones">2 de octubre de 2026 · Avisos a otros programas y consulta de clientes</a></li>
+    <li><a href="#2026-09-30-fichajes-olvidados">30 de septiembre de 2026 · Avisos de fichaje olvidado</a></li>
     <li><a href="#2026-09-30-facturas">30 de septiembre de 2026 · Facturas completas según el Reglamento</a></li>
     <li><a href="#2026-09-30-incidencias">30 de septiembre de 2026 · Fichajes olvidados y QR de la factura</a></li>
     <li><a href="#2026-09-30-cobros">30 de septiembre de 2026 · Precio final, datos del aparato y facturas de las deudas</a></li>
@@ -646,10 +648,48 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-10-02-integraciones" class="version">
+  <div class="version__cabecera">
+    <h2>2 de octubre de 2026 · Avisos a otros programas y consulta de clientes</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">2026.10.42-8619c25</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Errores corregidos</h3>
+    <h4>Webhooks: Turnera avisa a otro programa</h4>
+    <ul>
+      <li>En <em>Administración → Integraciones → Webhooks</em> se puede dar de alta una dirección del otro programa (un ERP, un sistema de mensajes o de campañas) y Turnera la avisa cuando una cita <strong>se crea, cambia o se anula</strong>, sea desde recepción, desde el portal o desde la propia integración.</li>
+      <li>Los avisos van <strong>firmados</strong> y se reintentan solos si el otro programa no contesta. El centro ve el <strong>registro de entregas</strong> y puede lanzar una <strong>prueba</strong> desde la pantalla.</li>
+      <li>Por defecto avisa solo de las citas que creó esa misma integración; se puede ampliar a todas. Los datos de la persona solo salen si la integración tiene permiso para leer clientes.</li>
+      <li>Cada integración admite hasta cinco webhooks. Al dar de alta uno, <strong>el titular del centro recibe un correo</strong> diciendo a dónde van a salir los datos.</li>
+    </ul>
+    <h4>Saber si un cliente existe, sin ver sus datos</h4>
+    <ul>
+      <li>Nuevo permiso para integraciones: <strong>Consultar si un cliente existe</strong>. Con un teléfono o un correo, el otro programa solo recibe un sí o un no. Tiene un límite diario y, si el uso se parece a un barrido de números, el titular recibe un aviso por correo.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Errores corregidos</h3>
+    <h4>Integraciones</h4>
+    <ul>
+      <li>Las reservas que llegan por una integración <strong>reconocen al cliente por su teléfono</strong> cuando el correo es nuevo pero el teléfono coincide con una sola ficha: ya no se crean fichas duplicadas.</li>
+      <li>Al dar de alta una integración se pide un <strong>correo de contacto</strong> de quien integra, para avisarle de mantenimientos o cambios de versión.</li>
+      <li>El titular recibe un correo cuando la actividad de una integración parece rara (muchos fallos de credenciales, direcciones no autorizadas o límites superados).</li>
+    </ul>
+    <h4>Seguridad</h4>
+    <ul>
+      <li>Al pasar un centro de pruebas a producción, el administrador <strong>estrena una clave propia</strong> la primera vez que entra.</li>
+      <li>En el portal de clientes, pedir otro código ya no reinicia la cuenta de intentos fallidos al teclear el código.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-09-30-fichajes-olvidados" class="version">
   <div class="version__cabecera">
     <h2>30 de septiembre de 2026 · Avisos de fichaje olvidado</h2>
-    <span class="version__sello">Última versión</span>
+    
   </div>
   <p class="version__numero">Versión <span translate="no">2026.9.341-6be997f</span></p>
 

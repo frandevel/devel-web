@@ -1808,8 +1808,7 @@ footer{
   <h3 id="cuadro-de-mando">The scorecard</h3>
   <span class="ruta">Menu → Scorecard</span>
   <p>
-    Six figures that tell you at a glance whether the business is doing well and where it is heading. Each one carries a traffic light
-    —<strong>On track</strong>, <strong>Watch</strong>, <strong>Act</strong>—, the change against the same period a year ago and a line with its last twelve months. Below, revenue month by month with last year's alongside and, for the current month, the closing forecast dotted. You can look at the whole company or at one delegation.
+    The figures to see at a glance whether the business is doing well and where it is heading. Each card belongs to a module and only appears if the centre has it: without a diary there is no occupancy or lost appointments, without customers there are no active customers or repeat rate, without a till there is no turnover or average spend. A centre that only keeps staff records sees only the staff cards. Each one carries a traffic light —<strong>On track</strong>, <strong>Watch</strong>, <strong>Act</strong>—, the change against the same period a year ago and a line with its last twelve months. Below, revenue month by month with last year's alongside and, for the current month, the closing forecast dotted. You can look at the whole company or at one delegation.
   </p>
   <div class="tabla-envoltorio">
   <table>
@@ -1820,6 +1819,18 @@ footer{
     <tr><td><strong>New clients who come back</strong></td><td>Of those who first came three to six months ago, how many came back within three months.</td><td>Green from 50%; red below 30%.</td></tr>
     <tr><td><strong>Average spend</strong></td><td>What was collected over twelve months from clients with a record, divided among those who paid anything.</td><td>Like revenue, against last year.</td></tr>
     <tr><td><strong>Lost appointments</strong></td><td>Appointments this month that were missed or that the customer cancelled less than 24 hours ahead, and what they were worth at list price. Cancelling in good time does not count: the slot could be filled again. Nor does what the centre or an external cause calls off.</td><td>Green below 8%; red above 15%.</td></tr>
+  </tbody></table>
+  </div>
+  <p>
+    The staff cards look from day 1 of the month up to yesterday —today has not finished and would distort compliance— and are not compared with the previous year:
+  </p>
+  <div class="tabla-envoltorio">
+  <table>
+    <tbody><tr><th>Figure</th><th>What it counts</th><th>Traffic light</th></tr>
+    <tr><td><strong>Hours compliance</strong></td><td>Hours worked over hours planned, for people who have a work calendar.</td><td>Green from 97 %; red below 90 %.</td></tr>
+    <tr><td><strong>Absenteeism</strong></td><td>Days of absence, not counting holidays, over shift and absence days.</td><td>Green below 4 %; red above 8 %.</td></tr>
+    <tr><td><strong>Overtime</strong></td><td>Hours worked above what was planned. The colour looks at how much they weigh against planned hours.</td><td>Green below 3 %; red above 8 %.</td></tr>
+    <tr><td><strong>Legal overtime cap</strong></td><td>People who have passed the yearly cap or are already at 80 % of it.</td><td>Green if nobody; amber if someone is getting close; red if someone has passed it.</td></tr>
   </tbody></table>
   </div>
   <p>
@@ -2421,7 +2432,7 @@ footer{
   </p>
 
   <h3 id="calendario-laboral">Work calendar</h3>
-  <span class="ruta">Menu → Staff → Work calendar · Menu → My calendar</span>
+  <span class="ruta">Menu → Staff → Work calendar</span>
 
   <p>
     The work calendar spreads over the year <strong>the hours set by the agreement</strong> of each
@@ -2553,9 +2564,9 @@ footer{
     book or move an appointment outside the shift. Those without a calendar that year are not affected.
   </p>
 
-  <h4>My calendar</h4>
+  <h4>The calendar of each professional</h4>
   <p>
-    Each professional with a linked user sees <strong>their own calendar</strong> in <em>My calendar</em>, with their counters and their PDF, even without any permission: knowing their schedule and their vacation is their right. They also see what they have clocked, their regular hours and overtime and their overtime bank, but not the incidents or the projection.
+    Every professional has the right to know their schedule and holidays without needing any permission, and to see what they have clocked, their normal and overtime hours and their hours bank, but not the incidents or the projection. This is meant for the professional's app; on the web, which the office uses, there is no «My calendar» entry in the menu, because the user you sign in with does not belong to any professional.
   </p>
 
   <h3 id="integraciones">Connecting an outside program (ERP)</h3>
@@ -2576,9 +2587,10 @@ footer{
 
   <ul>
     <li><strong>Name.</strong> How you will recognise it in the list. For instance, "the accountant's ERP".</li>
+    <li><strong>Contact email.</strong> The person who maintains the integration. Used to warn them about maintenance, version changes or API incidents.</li>
     <li><strong>Delegation.</strong> The only one that program will see. It is fixed here because a program cannot
       choose one on a screen, the way a person does when logging in.</li>
-    <li><strong>Scopes.</strong> What it can read: the catalogue, the clients, the sales or the free slots in the diary, and whether it can book appointments. Give it only what it needs.</li>
+    <li><strong>Scopes.</strong> What it can read: the catalogue, customers, sales or the free slots of the diary, whether it can book appointments and whether it can check if an email or a phone number belongs to a customer (it only answers yes or no). Give only what it needs.</li>
     <li><strong>Allowed addresses.</strong> Which IP it can connect from, one per line. It accepts a range
       written in CIDR, for example <code>203.0.113.0/24</code>.</li>
   </ul>
@@ -2591,11 +2603,24 @@ footer{
   </div>
 
   <p>
-    <strong>Booking from outside.</strong> A campaign platform that brings you clients can book their appointments directly, with the permissions <em>free slots</em> and <em>book appointments</em>. It only sees and books what the portal offers: the services and places booked online, with their notice and how many days ahead. If the client already has a record with that email, the appointment goes to that record; if not, a new one is opened. Every appointment that comes in this way says in its comments which platform it comes from and its reference.
+    <strong>You find out about every new integration.</strong> When an integration is saved, the centre owner receives an email with its name, contact, permissions and addresses (never the secret). If you get one you did not expect, switch that integration off and change the administration password.
   </p>
 
   <p>
-    <strong>What to give whoever does the programming.</strong> The API guide, with examples and the OpenAPI file, is at <a href="https://devel.es/turnera/api">devel.es/turnera/api</a>. With it and the credentials they have everything they need.
+    <strong>Booking from outside.</strong> A campaign platform that brings you clients can book their appointments directly, with the permissions <em>free slots</em> and <em>book appointments</em>. It only sees and books the same as the portal: the services and places that can be booked online, with their notice and the days ahead. If the customer already has a record with that email, the appointment goes to their record; if not, a new one is opened. Every appointment that comes in this way carries in its comments which platform it comes from and with what reference. If the service needs a piece of equipment and it is busy at that time, the platform receives its own message, different from «slot taken», so it can offer another time.
+  </p>
+
+  <p>
+    <strong>Notifications to your system (webhooks).</strong> Instead of asking every few minutes whether there are new appointments, the integration can receive a notification at an address of its own when an appointment is created, changed or cancelled. In the list of integrations, the <em>Webhooks</em> button lets you add the address (always
+    <code>https://</code> and public), choose which events it wants and test that it answers. By default it only reports appointments created by that same integration; if you untick that box, it also reports those made at reception and in the portal, and with the customers permission it adds their contact details. Every notification is signed with a secret that is shown only once, like the integration's. When a webhook is added, the centre owner receives an email with the address and the events, and the address cannot be changed afterwards: to point somewhere else, create another webhook. The <em>Latest deliveries</em> button shows what was sent and what the other side answered.
+  </p>
+
+  <p>
+    <strong>Monitoring.</strong> Turnera counts what each integration does without ever storing what is asked. The check of whether an email or a phone number belongs to a customer allows 20 queries per minute and 2,000 per day, and if the use looks like someone going through a list of people or guessing passwords, the centre owner and the integration's contact receive an email.
+  </p>
+
+  <p>
+    <strong>What to give whoever does the programming.</strong> The API guide, with examples and the OpenAPI file, is at <a href="https://devel.es/turnera/integradores">devel.es/turnera/integradores</a>. With it and the credentials they have everything they need.
   </p>
 
   <p>
@@ -2610,8 +2635,7 @@ footer{
   </p>
 
   <p>
-    <strong>Read only.</strong> An outside program can read, never change. Nothing the ERP does alters an
-    appointment, a payment or a record.
+    <strong>Almost everything is read-only.</strong> The only thing an external program can do is book a new appointment in a free slot. Nothing the ERP does changes a payment, a record or an existing appointment.
   </p>
 
   <h4>Changing the secret without cutting the service</h4>

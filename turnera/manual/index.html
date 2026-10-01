@@ -2052,7 +2052,10 @@ footer{
   <h3 id="cuadro-de-mando">El cuadro de mando</h3>
   <span class="ruta">Menú → Cuadro de mando</span>
   <p>
-    Seis cifras para saber de un vistazo si la empresa va bien y hacia dónde va. Cada una lleva un semáforo
+    Las cifras para saber de un vistazo si la empresa va bien y hacia dónde va. Cada ficha pertenece a un módulo y
+    solo aparece si el centro lo tiene: sin agenda no hay ocupación ni citas perdidas, sin clientes no hay clientes
+    activos ni repetición, sin caja no hay facturación ni gasto medio. Un centro que solo lleva el personal ve
+    únicamente las fichas de personal. Cada una lleva un semáforo
     —<strong>Va bien</strong>, <strong>Vigilar</strong>, <strong>Actuar</strong>—, la variación frente a lo
     mismo hace un año y una línea con sus doce últimos meses. Debajo, la facturación mes a mes con la del año anterior
     al lado y, en el mes en curso, punteada, la previsión de cierre. Se mira la empresa entera o una delegación.
@@ -2066,6 +2069,19 @@ footer{
     <tr><td><strong>Repetición de los nuevos</strong></td><td>De los que vinieron por primera vez hace entre tres y seis meses, cuántos volvieron antes de tres meses.</td><td>Verde desde el 50 %; rojo por debajo del 30 %.</td></tr>
     <tr><td><strong>Gasto medio</strong></td><td>Lo cobrado en doce meses a clientes con ficha, entre los que pagaron algo.</td><td>Como la facturación, frente al año pasado.</td></tr>
     <tr><td><strong>Citas perdidas</strong></td><td>Las del mes a las que no vinieron o que el cliente anuló con menos de 24 horas, y lo que valían en tarifa. Anular con tiempo no cuenta: el hueco se pudo volver a llenar. Lo que anula el centro o una causa externa tampoco.</td><td>Verde por debajo del 8 %; rojo por encima del 15 %.</td></tr>
+  </tbody></table>
+  </div>
+  <p>
+    Las fichas de personal miran del día 1 del mes hasta ayer —hoy no ha terminado y falsearía el
+    cumplimiento— y no se comparan con el año anterior:
+  </p>
+  <div class="tabla-envoltorio">
+  <table>
+    <tbody><tr><th>Cifra</th><th>Qué cuenta</th><th>Semáforo</th></tr>
+    <tr><td><strong>Cumplimiento de horas</strong></td><td>Las horas trabajadas sobre las planificadas, de quien tiene calendario laboral.</td><td>Verde desde el 97 %; rojo por debajo del 90 %.</td></tr>
+    <tr><td><strong>Absentismo</strong></td><td>Los días de ausencia, sin contar vacaciones, sobre los días de turno y de ausencia.</td><td>Verde por debajo del 4 %; rojo por encima del 8 %.</td></tr>
+    <tr><td><strong>Horas extra</strong></td><td>Las horas hechas por encima de lo planificado. El color mira cuánto pesan sobre las horas planificadas.</td><td>Verde por debajo del 3 %; rojo por encima del 8 %.</td></tr>
+    <tr><td><strong>Tope legal de horas extra</strong></td><td>Las personas que han pasado el tope anual o ya van por el 80 % de él.</td><td>Verde si nadie; ámbar si alguien se acerca; rojo si alguien lo ha pasado.</td></tr>
   </tbody></table>
   </div>
   <p>
@@ -2767,7 +2783,7 @@ footer{
   </p>
 
   <h3 id="calendario-laboral">Calendario laboral</h3>
-  <span class="ruta">Menú → Personal → Calendario laboral · Menú → Mi calendario</span>
+  <span class="ruta">Menú → Personal → Calendario laboral</span>
 
   <p>
     El calendario laboral reparte a lo largo del año <strong>las horas que marca el convenio</strong> de cada
@@ -2957,12 +2973,12 @@ footer{
     poner ni mover una cita fuera del turno. Quien no tiene calendario ese año no se ve afectado.
   </p>
 
-  <h4>Mi calendario</h4>
+  <h4>El calendario de cada profesional</h4>
   <p>
-    Cada profesional con su usuario vinculado ve <strong>su propio calendario</strong> en <em>Mi calendario</em>,
-    con sus cuentas y su PDF, aunque no tenga ningún permiso: saber su horario y sus vacaciones es su derecho.
-    También ve lo que ha fichado, sus horas normales y extra y su bolsa de horas, pero no las incidencias ni la
-    proyección.
+    Cada profesional tiene derecho a saber su horario y sus vacaciones sin necesitar ningún permiso, y a ver lo que ha
+    fichado, sus horas normales y extra y su bolsa de horas, pero no las incidencias ni la proyección. Eso está
+    pensado para la aplicación del profesional; en la web, que usa la oficina, no hay entrada «Mi calendario» en el
+    menú, porque el usuario con el que se entra no es de ningún profesional.
   </p>
 
   <h3 id="integraciones">Conectar un programa externo (ERP)</h3>
@@ -2983,10 +2999,13 @@ footer{
 
   <ul>
     <li><strong>Nombre.</strong> Cómo lo va a reconocer usted en la lista. Por ejemplo, «ERP de la asesoría».</li>
+    <li><strong>Correo de contacto.</strong> El de quien mantiene la integración. Sirve para avisarle de
+      mantenimientos, cambios de versión o incidencias de la API.</li>
     <li><strong>Delegación.</strong> La única que verá ese programa. Va fijada aquí porque un programa no puede
       elegirla en una pantalla, como hace una persona al entrar.</li>
     <li><strong>Permisos.</strong> Qué puede leer: el catálogo, los clientes, las ventas o los huecos libres de la
-      agenda, y si puede reservar citas. Dé sólo lo que necesite.</li>
+      agenda, si puede reservar citas y si puede comprobar si un correo o un teléfono son de un cliente (sólo
+      contesta sí o no). Dé sólo lo que necesite.</li>
     <li><strong>Direcciones autorizadas.</strong> Desde qué IP puede conectarse, una por línea. Admite un rango
       escrito en CIDR, por ejemplo <code>203.0.113.0/24</code>.</li>
   </ul>
@@ -2998,16 +3017,43 @@ footer{
   </div>
 
   <p>
+    <strong>Usted se entera de cada alta.</strong> Al guardar una integración, el titular del centro recibe un
+    correo con su nombre, su contacto, sus permisos y sus direcciones (nunca el secreto). Si le llega uno que no
+    esperaba, desactive esa integración y cambie la contraseña de administración.
+  </p>
+
+  <p>
     <strong>Reservar desde fuera.</strong> Una plataforma de campañas que le trae clientes puede reservarles la
     cita directamente, con los permisos de <em>huecos libres</em> y <em>reservar citas</em>. Sólo ve y reserva lo
     mismo que el portal: los servicios y sitios que se reservan por internet, con su antelación y sus días por
     delante. Si el cliente ya tiene ficha con ese correo, la cita va a su ficha; si no, se le abre una. Cada cita
-    que entra así lleva escrito en sus comentarios de qué plataforma viene y con qué referencia.
+    que entra así lleva escrito en sus comentarios de qué plataforma viene y con qué referencia. Si el servicio
+    necesita un aparato y a esa hora está ocupado, la plataforma recibe un aviso propio, distinto del de «hueco
+    ocupado», para que ofrezca otra hora.
+  </p>
+
+  <p>
+    <strong>Avisos a su sistema (webhooks).</strong> En lugar de preguntar cada pocos minutos si hay citas
+    nuevas, la integración puede recibir un aviso en una dirección suya cuando una cita se crea, se modifica o se
+    anula. En la lista de integraciones, el botón <em>Webhooks</em> permite dar de alta la dirección (siempre
+    <code>https://</code> y pública), elegir qué eventos quiere y probar que contesta. Por defecto sólo avisa de las
+    citas que creó esa misma integración; si desmarca esa casilla, también avisa de las de recepción y las del
+    portal, y con el permiso de clientes añade sus datos de contacto. Cada aviso va firmado con un secreto que se
+    enseña una sola vez, como el de la integración. Al dar de alta un webhook, el titular del centro recibe un
+    correo con la dirección y los eventos, y la dirección no se puede cambiar después: para apuntar a otra se
+    crea otro webhook. El botón <em>Últimos avisos</em> enseña qué se envió y qué contestó el otro lado.
+  </p>
+
+  <p>
+    <strong>Vigilancia.</strong> Turnera cuenta lo que hace cada integración sin guardar nunca qué se pregunta. La
+    comprobación de si un correo o un teléfono son de un cliente admite 20 consultas por minuto y 2.000 al día, y
+    si el uso parece el de alguien que recorre una lista de personas o prueba contraseñas, el titular del centro
+    y el contacto de la integración reciben un aviso por correo.
   </p>
 
   <p>
     <strong>Lo que hay que darle a quien programa.</strong> La guía de la API, con ejemplos y el fichero OpenAPI,
-    está en <a href="https://devel.es/turnera/api">devel.es/turnera/api</a>. Con ella y las credenciales tiene
+    está en <a href="https://devel.es/turnera/integradores">devel.es/turnera/integradores</a>. Con ella y las credenciales tiene
     todo lo que necesita.
   </p>
 
@@ -3024,8 +3070,8 @@ footer{
   </p>
 
   <p>
-    <strong>Sólo lectura.</strong> Un programa externo puede leer, nunca modificar. Nada de lo que haga el ERP
-    cambia una cita, un cobro ni una ficha.
+    <strong>Casi todo es de lectura.</strong> Lo único que un programa externo puede hacer es reservar una cita
+    nueva en un hueco libre. Nada de lo que haga el ERP cambia un cobro, una ficha ni una cita ya existente.
   </p>
 
   <h4>Cambiar el secreto sin cortar el servicio</h4>

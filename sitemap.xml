@@ -105,4 +105,25 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/legal"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/legal"/>
   </url>
+  <url>
+    <loc>https://devel.es/turnera/integradores</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/integradores"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/integrators"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/integratoren"/>
+  </url>
+  <url>
+    <loc>https://devel.es/en/turnera/integrators</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/integradores"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/integrators"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/integratoren"/>
+  </url>
+  <url>
+    <loc>https://devel.es/de/turnera/integratoren</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/integradores"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/integrators"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/integratoren"/>
+  </url>
 </urlset>

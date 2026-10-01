@@ -196,7 +196,7 @@
   "t5eb3ae0e": "Yes. Turnera has an integration API through which your ERP, or your accountant's, reads the catalogue, the clients, the sales and an accounting summary by day and VAT rate directly. No exporting by hand, no files sent by email.",
   "tfe221318": "The documentation is public, with examples, at",
   "t50d9fe84": ". Whoever programs the connection finds everything they need there, without waiting for us to send anything.",
-  "tea9d16ed": "devel.es/turnera/api",
+  "tea9d16ed": "devel.es/turnera/integradores",
   "t31b41599": "And with a marketing or booking platform?",
   "t93a9613e": "That too. A platform that brings you clients through its campaigns can check the free slots in your diary and book the appointment on the spot, with the same rules as your booking portal: the notice and the days ahead that you decide. If the front desk has taken that slot in the meantime, the platform is told and there are never two appointments at once.",
   "t9dd0b218": "Every appointment that comes in this way is marked with the platform it comes from, so you know how much each one brings you.",
