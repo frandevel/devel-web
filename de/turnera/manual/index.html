@@ -1854,7 +1854,7 @@ footer{
 
   <p>
     <strong>Die Einstellungen sind in auf- und zuklappbare Gruppen gegliedert</strong>, nach Häufigkeit der Nutzung: <em>Das Zentrum</em>,
-    <em>Kalender und Buchungen</em>, <em>Nachrichten an Kunden</em>, <em>Zahlungen und Kundenbindung</em> und <em>Erscheinungsbild</em>. Zugeklappt zeigt jede Gruppe in einer Zeile ihren Stand, man muss sie also nicht öffnen, um etwas zu prüfen. Hat eine geschlossene Gruppe Änderungen, trägt sie den Hinweis <em>Nicht gespeichert</em>, und ist beim Speichern etwas ungültig, öffnet sie sich von selbst. Ganz unten, und immer geschlossen, der <em>Gefahrenbereich</em>: alle Daten exportieren und die Demonstration leeren.
+    <em>Kalender und Buchungen</em>, <em>Nachrichten an Kunden</em>, <em>Zahlungen und Kundenbindung</em> und <em>Erscheinungsbild</em>. Zugeklappt zeigt jede Gruppe in einer Zeile ihren Stand, man muss sie also nicht öffnen, um etwas zu prüfen. Hat eine geschlossene Gruppe Änderungen, trägt sie den Hinweis <em>Nicht gespeichert</em>, und ist beim Speichern etwas ungültig, öffnet sie sich von selbst. Ganz unten, und immer geschlossen, der <em>Gefahrenbereich</em>: alle Daten exportieren und die Demo leeren. Ein Zentrum mit echten Stempelungen des Personals oder abgeschlossenen Kalenderjahren kann nicht geleert werden: Das Gesetz verlangt, die Arbeitszeiterfassung aufzubewahren. Um ein Zentrum zu schließen, beantragt man bei Devel seine Abmeldung, und was aufbewahrt werden muss, wird aufbewahrt.
   </p>
 
   <h3>Der Terminkalender</h3>
@@ -2335,7 +2335,7 @@ footer{
   <h4>Die PIN</h4>
 
   <p>
-    Jede Fachkraft kann eine <strong>vierstellige PIN</strong>haben, die unter
+    Jede Fachkraft braucht eine <strong>vierstellige PIN</strong>haben, die unter
     <em>Fachkräfte → Stempel-PIN</em>. Beim Drücken der eigenen Schaltfläche erscheint ein Tastenfeld: Mit der vierten Ziffer wird schon gestempelt, ohne weiteren Klick. Dadurch stempelt niemand für jemand anderen, nur weil er dessen Schaltfläche drückt, und ohne das würde die Namensliste bei einer Prüfung wenig beweisen.
   </p>
 
@@ -2348,15 +2348,12 @@ footer{
   </p>
 
   <div class="ojo">
-    <p><strong>Die PIN ist freiwillig, vergeben Sie sie trotzdem.</strong> Wer keine hat, stempelt schlicht durch Drücken seines Namens,
-      damit ein Zentrum, das damit anfängt, während der Verteilung der PINs nicht ohne Erfassung dasteht. Sind
-      sie verteilt, sagt die Erfassung, wer gestempelt hat, und nicht nur, von welchem Empfang aus.</p>
+    <p><strong>Ohne PIN wird nicht gestempelt.</strong> Wer keine hat, sieht seine Schaltfläche deaktiviert, mit dem Hinweis, dass die Verwaltung sie in seiner Karteikarte setzt. So sagt das Register immer, wer gestempelt hat und nicht nur an welchem Schalter, was das Gesetz von einer Arbeitszeiterfassung erwartet. Verteilen Sie die PINs, bevor Sie die Uhr in einem Zentrum in Betrieb nehmen.</p>
   </div>
 
   <p>
     Die PIN wird verschlüsselt gespeichert und <strong>lässt sich nicht mehr lesen</strong>, auch nicht von der Verwaltung: vergisst sie
-    jemand, bekommt er eine neue. Entfernt wird sie mit <em>PIN entfernen</em>, und diese Person stempelt wieder
-    durch Drücken ihres Namens.
+    jemand, bekommt er eine neue. Entfernt wird sie mit <em>PIN entfernen</em>, und diese Person kann erst wieder stempeln, wenn sie eine neue hat.
   </p>
 
   <p>
@@ -2373,9 +2370,7 @@ footer{
   </p>
 
   <p>
-    Beschreiben Sie unter <em>Personal → Arbeitszeiterfassung</em>, im Menü, steht der Rest: Wählen Sie einen Zeitraum und, wenn Sie möchten, eine Person.
-    Oben stehen die Tage mit ihren Abschnitten und den summierten Stunden; unten die einzelnen Stempelungen. Das
-    Ganze lässt sich als Excel herunterladen, und das ist es, was man der Arbeitsinspektion vorlegt.
+    Beschreiben Sie unter <em>Personal → Arbeitszeiterfassung</em>, im Menü, finden Sie den Rest: Wählen Sie einen Zeitraum und, wenn Sie möchten, eine Person. Oben stehen die Tage mit ihren Abschnitten und den summierten Stunden; unten die einzelnen Stempelungen. Der Download ist als Excel oder CSV möglich, und das zeigen Sie der Arbeitsinspektion. Es gibt zwei CSV-Dateien: <em>Tage (CSV)</em>, die Zusammenfassung jedes Tages, und <em>Stempelungen (CSV)</em>, jede Stempelung genau so, wie sie gespeichert ist, mit der Angabe, wer sie erfasst hat und welche Korrekturen sie trägt; das belegt, dass das Register nicht umgeschrieben wurde. Sie öffnen sich per Doppelklick in Excel. Herunterladen kann sie, wer die Berechtigung zum Exportieren der Stempelungen hat, und sie lassen sich immer herunterladen: Das Gesetz verlangt, sie für die Inspektion bereitzuhalten.
   </p>
 
   <figure>
@@ -2464,14 +2459,10 @@ footer{
     Um das Jahr zu verteilen, wählt man oben, was eingetragen wird —eine Schicht, Urlaub, eine Abwesenheit oder <em>Frei</em> zum Entfernen — und klickt einen Tag an oder zieht von einem Tag zum anderen, um alle dazwischen zu markieren. Jeder Tag hat nur eine Sache: ein Schichttag kann nicht zugleich Urlaub sein. <strong>Vor dem Eintritt und nach dem Austritt wird nicht geplant</strong>: diese Tage zählen nicht zu den Stunden, deshalb überspringt der Bildschirm sie und sagt, wie viele.
     <em>Nach Wochentagen füllen</em> trägt es auf einmal ein, zum Beispiel Montag bis Freitag von Januar bis
     Juni, ohne Feiertage und ohne Bestehendes zu ändern. Rechts <strong>werden die Zahlen bei
-    jeder Änderung neu berechnet</strong>: Stunden laut Tarifvertrag, geplant, noch zu verteilen (oder zu viel), der
-    eingetragene Urlaub gegenüber dem Anspruch und, bis gestern, Geplantes gegenüber Erfasstem.
+    jeder Änderung neu berechnet</strong>: Stunden laut Tarifvertrag, geplante Stunden, noch zu verteilende (oder überschüssige), gesetzte Urlaubstage gegenüber den zustehenden und wie viele noch übrig sind sowie, bis gestern, das Geplante im Vergleich zum Gestempelten.
   </p>
   <p>
-    Darunter stehen die <strong>Hinweise</strong> des spanischen Arbeitnehmerstatuts: weniger als 12 Stunden Ruhe zwischen
-    zwei Arbeitstagen, mehr als 9 Stunden an einem Tag, weniger als 3 freie Tage in 14, eine Schicht an einem Feiertag, mehr Urlaub als
-    zusteht oder markierte Tage außerhalb von Eintritt und Austritt. Es sind Hinweise und sie verhindern das Speichern nicht: Manche
-    Tarifverträge erlauben anderes.
+    Darunter stehen die <strong>Hinweise</strong> des spanischen Arbeitnehmerstatuts: weniger als 12 Stunden Ruhe zwischen zwei Arbeitstagen, mehr als 9 Stunden an einem Tag, mehr als 6 Stunden am Stück ohne eine Pause von 15 Minuten, weniger als 3 freie Tage in 14, eine Schicht an einem Feiertag, mehr Urlaub als zusteht oder Tage außerhalb der Ein- und Austrittsdaten. Arbeitet jemand nachts (von 22:00 bis 06:00), warnt es außerdem, dass das Statut dies als Nachtarbeit behandelt, mit einem Durchschnittshöchstwert von 8 Stunden in 15 Tagen und höchstens zwei Wochen am Stück im Nachtdienst, außer es ist freiwillig. Jede Warnung enthält den Link <em>Artikel lesen</em>, der den Text des Statuts öffnet, damit man es nachprüfen kann. Auch beim Speichern eines Tarifvertrags mit weniger als 30 Kalendertagen Urlaub (22 Arbeitstage) erscheint die Warnung. Es sind Warnungen, die das Speichern nicht verhindern: Manche Tarifverträge erlauben etwas anderes, und was unterschrieben wurde, weiß die Personalabteilung.
   </p>
   <p>
     <em>Für andere Fachkraft duplizieren</em> kopiert den Kalender unverändert auf andere im Zentrum (hatten sie für dieses
@@ -2479,30 +2470,31 @@ footer{
     Aushängen am Schwarzen Brett oder für die Steuerberatung.
   </p>
   <p>
-    <em>Diesen Kalender löschen</em> entfernt ihn mit allen Tagen, auch den vergangenen, was die geleisteten Stunden und die Überstunden dieses Jahres ändert. Deshalb muss der Name der Fachkraft von Hand eingetippt werden.
+    <em>Diesen Kalender löschen</em> entfernt ihn mit allen seinen Tagen, auch den vergangenen, was die geleisteten Stunden und die Stunden außerhalb der Schicht dieses Jahres ändert. Deshalb müssen Sie den Namen der Fachkraft von Hand eintippen.
   </p>
 
   <h4 id="calendario-cerrar">Das Jahr abschließen</h4>
   <p>
-    Wenn ein Jahr zu Ende und geprüft ist, wählen Sie unter <em>Kalender</em>dieses Jahr aus; <em>Abschließen</em> lässt es <strong>so, wie es ist, für die Arbeitsinspektion</strong>: Ab dann ändert sich in diesem Zentrum nichts mehr an diesem Jahr — weder die Kalender und ihre Tage noch die Vorfälle, Ausgleiche, Feiertage oder der Tarifvertrag dieses Jahres. Es lässt sich ansehen und drucken. Wird später eine Schicht bearbeitet, die dieses Jahr verwendet hat, <strong>behält das abgeschlossene Jahr die bisherigen Zeiten</strong> (Turnera bewahrt eine zurückgezogene Kopie der Schicht auf), und es gilt die Überstunden-Toleranz von damals. Bestätigt wird durch Eintippen des Jahres, und es
-    <strong>wird nicht wieder geöffnet</strong>.
+    Wenn ein Jahr zu Ende und geprüft ist, wählen Sie unter <em>Kalender</em>dieses Jahr aus; <em>Abschließen</em> lässt es <strong>so, wie es ist, für die Arbeitsinspektion</strong>: Ab dann ändert sich in diesem Zentrum nichts mehr an diesem Jahr — weder die Kalender und ihre Tage noch die Vorfälle, Ausgleiche, Feiertage oder der Tarifvertrag dieses Jahres. Es lässt sich ansehen und drucken. Wird später eine Schicht bearbeitet, die dieses Jahr verwendet hat, <strong>behält das abgeschlossene Jahr die bisherigen Zeiten</strong> (Turnera bewahrt eine stillgelegte Kopie der Schicht auf), und die Toleranz für Stunden außerhalb der Schicht, die gilt, ist die zum Zeitpunkt des Abschlusses. Bestätigt wird durch Eintippen des Jahres und
+    <strong>wird nicht wieder geöffnet</strong>. Ein Jahr kann nicht abgeschlossen werden vor dem <strong>1. Mai des Folgejahres</strong>: Bis zum 30. April können noch Ruhetage für die Stunden außerhalb der Schicht gewährt werden (siehe unten).
   </p>
 
-  <h4>Ist-Zeiten: reguläre Stunden und Überstunden</h4>
+  <h4>Das Geleistete: normale Stunden und Stunden außerhalb der Schicht</h4>
   <p>
     Beschreiben Sie unter <em>Ist-Zeiten</em> wird jeder gestempelte Tag eingefärbt: grün, wenn alles <strong>reguläre Stunden</strong>
-    waren, und orange, wenn es <strong>Überstunden</strong>gab. Mit der Maus darüber sieht man die gestempelten Stunden. Die Regeln:
+    waren, und orange, wenn es <strong>Stunden außerhalb der Schicht</strong>gab. Mit der Maus darüber sieht man die gestempelten Stunden. Die Regeln:
   </p>
   <ul>
     <li>Was <strong>innerhalb der geplanten Schicht</strong> gestempelt wird, sind reguläre Stunden.</li>
-    <li>Was <strong>außerhalb der Schicht</strong> gestempelt wird, ist nur dann Überstunde, wenn es die <strong>Toleranz</strong> des Zentrums überschreitet (standardmäßig 15 Minuten, änderbar unter <em>Einstellungen</em>): fünf Minuten früher kommen sind keine Überstunden. Wird die Toleranz überschritten, zählt alles: wer vierzig Minuten bleibt, hat vierzig gemacht.</li>
-    <li>Alles, was an einem <strong>Feiertag</strong>, im Urlaub, bei einer Abwesenheit oder an einem Tag ohne Schicht gestempelt wird, sind Überstunden.</li>
+    <li>Was <strong>außerhalb der Schicht</strong> gestempelt wird, zählt nur dann als Stunden außerhalb der Schicht, wenn es die <strong>Toleranz</strong> des Zentrums überschreitet (standardmäßig 15 Minuten, änderbar unter <em>Einstellungen</em>): fünf Minuten früher kommen sind keine Überstunden. Wird die Toleranz überschritten, zählt alles: wer vierzig Minuten bleibt, hat vierzig gemacht.</li>
+    <li>Alles, was an einem <strong>Feiertag</strong>, im Urlaub, bei einer Abwesenheit oder an einem Tag ohne Schicht gestempelt wird, zählt als Stunden außerhalb der Schicht.</li>
     <li>Ein Eingang ohne Ausgang zählt nichts, bis die Personalabteilung die Stunden in einem Vorfall erfasst.</li>
   </ul>
   <p>
-    Die Überstunden gehen auf das <strong>Überstundenkonto</strong> der Fachkraft, rechts. Wer die Berechtigung «Überstunden ausgleichen» hat (standardmäßig Personalabteilung und Leitung), zieht sie mit <em>Stunden ausgleichen</em>ab, als
-    <strong>mit dem Lohn ausbezahlt</strong> oder als <strong>Freizeitausgleich</strong>. Der offene Saldo ist, was noch auszugleichen ist. Wenn die Überstunden des Jahres, ohne die durch Freizeit ausgeglichenen, mehr als
-    <strong>80</strong>betragen, erscheint ein Hinweis: das ist die Grenze von Artikel 35.2 des spanischen Arbeitnehmerstatuts.
+    Die Stunden außerhalb der Schicht gehen auf das <strong>Überstundenkonto</strong> der Fachkraft, rechts. Wer die Berechtigung «Stunden außerhalb der Schicht ausgleichen» hat (standardmäßig Personalabteilung und Leitung), zieht sie mit <em>Stunden ausgleichen</em>ab, als <strong>mit dem Lohn ausbezahlt</strong> oder als <strong>Freizeitausgleich</strong>. Der offene Saldo ist, was noch auszugleichen ist. Ein Ruhetag gleicht <strong>zuerst die ältesten Stunden aus</strong>.
+  </p>
+  <p>
+    Turnera entscheidet nicht, ob Stunden außerhalb der Schicht <em>Überstunden</em> sind: Das entscheidet die Personalabteilung nach Vertrag und Tarifvertrag. Was es überwacht, ist die Obergrenze, die das Arbeitnehmerstatut für Überstunden setzt, <strong>80 Stunden im Jahr</strong> (Art. 35.2; bei Teilzeitverträgen anteilig zur Arbeitszeit). Wenn die Stunden außerhalb der Schicht des Jahres, ohne die <strong>fristgerecht</strong>als Ruhe zurückgegebenen, diese Obergrenze überschreiten, erscheint eine Warnung. Die Frist beträgt <strong>vier Monate</strong> ab dem Zeitpunkt, an dem die Stunden geleistet wurden (Art. 35.1): Die Ruhe für die Septemberstunden kann im Januar gewährt werden. Deshalb kann das Datum eines Ausgleichs bis zum <strong>30. April des Folgejahres datiert werden</strong>. Kommt ein Ruhetag nach Fristablauf, wird er trotzdem gespeichert, markiert als <em>nach Fristablauf</em> , und diese Stunden zählen weiter für die Obergrenze. Es ist eine Warnung: Turnera verhindert nicht, etwas zu erfassen.
   </p>
 
   <h4>Vorfälle</h4>
@@ -2537,7 +2529,7 @@ footer{
 
   <h4>Hinweise auf vergessene Stempelungen</h4>
   <p>
-    Wenn laut Kalender jemand hätte kommen sollen und nach Ablauf der <strong>Toleranz für Überstunden</strong> nicht
+    Wenn laut Kalender jemand hätte kommen sollen und nach Ablauf der <strong>Toleranz für Stunden außerhalb der Schicht</strong> nicht
     gestempelt hat, oder hätte gehen sollen und nach der Toleranz noch da ist, geht eine <strong>E-Mail</strong> raus. Mit der
     Werkseinstellung sind das 15 Minuten; vor 15 Minuten wird nie benachrichtigt, auch wenn die Toleranz kleiner ist. So bekommt, wer
     innerhalb der Toleranz ein paar Minuten länger bleibt, was noch reguläre Arbeitszeit ist, keine falsche Benachrichtigung. In den

@@ -1851,7 +1851,7 @@ footer{
 
   <p>
     <strong>Preferences is organised in groups that open and close</strong>, in order of use: <em>The centre</em>,
-    <em>Agenda and bookings</em>, <em>Messages to customers</em>, <em>Payments and loyalty</em> and <em>Appearance</em>. Closed, each group says in one line how it stands, so there is no need to open it to check something. If a closed group has changes, it is marked <em>Not saved</em>, and if something is not valid when saving, it opens by itself. At the end, and always closed, the <em>Danger zone</em>: exporting all the data and emptying the demonstration.
+    <em>Agenda and bookings</em>, <em>Messages to customers</em>, <em>Payments and loyalty</em> and <em>Appearance</em>. Closed, each group says in one line how it stands, so there is no need to open it to check something. If a closed group has changes, it is marked <em>Not saved</em>, and if something is not valid when saving, it opens by itself. At the end, and always closed, the <em>Danger zone</em>: export all data and empty the demo. A centre with real staff clock-ins or closed calendar years cannot be emptied: the law requires keeping the working time register, so to close a centre you ask Devel for its deregistration and what has to be kept is kept.
   </p>
 
   <h3>The agenda</h3>
@@ -2330,7 +2330,7 @@ footer{
   <h4>The PIN</h4>
 
   <p>
-    Every professional can have a <strong>four-digit PIN</strong>, set in
+    Every professional needs a <strong>four-digit PIN</strong>, set in
     <em>Professionals → Clocking PIN</em>. Pressing their button brings up a keypad and they type it: with the fourth digit it already clocks, without pressing anything else. It is what makes pressing someone else's button not clocking for someone else, and without it the list of names would not prove much in an inspection.
   </p>
 
@@ -2343,15 +2343,12 @@ footer{
   </p>
 
   <div class="ojo">
-    <p><strong>The PIN is optional, but do set it.</strong> Whoever has none clocks by pressing their name, and nothing else,
-      so a centre starting out with this is not left without a record while the PINs are handed out. Once they
-      are, the record says who clocked and not just from which desk.</p>
+    <p><strong>Without a PIN there is no clocking in.</strong> Whoever does not have one sees their button disabled, with a notice that administration sets it on their record. That way the register always says who clocked in and not only from which counter, which is what the law expects of a working time register. When you start using the clock in a centre, hand out the PINs first.</p>
   </div>
 
   <p>
     The PIN is stored encrypted and <strong>cannot be read again</strong>, not even from administration: if somebody
-    forgets it, they are given a new one. It is cleared with <em>Clear the PIN</em>, and that person clocks by pressing
-    their name again.
+    forgets it, they are given a new one. It is cleared with <em>Clear the PIN</em>, and that person cannot clock in until they have another one.
   </p>
 
   <p>
@@ -2368,9 +2365,7 @@ footer{
   </p>
 
   <p>
-    In <em>Staff → Working time</em>, in the menu, is everything else: choose a range and, if you like, a person.
-    At the top are the days with their stretches and the hours added up; below, the clock-ins one by one. It can be
-    downloaded in Excel, and that is what you show the Labour Inspectorate.
+    In <em>Staff → Working time</em>, in the menu, holds the rest: pick a range and, if you want, one person. At the top come the days with their segments and the hours added up; below, the clock-ins one by one. It downloads as Excel or CSV, and that is what you show the Labour Inspectorate. There are two CSV files: <em>Days (CSV)</em>, the summary of each day, and <em>Clock-ins (CSV)</em>, each clock-in exactly as stored, with who recorded it and which corrections it carries, which is what proves the register has not been rewritten. They open with a double click in Excel. Whoever has the permission to export clock-ins can download them, and they can always be downloaded: the law requires having them available for the Inspectorate.
   </p>
 
   <figure>
@@ -2459,14 +2454,10 @@ footer{
     To spread the year, choose at the top what to put —a shift, holidays, an absence or <em>Free</em> to remove— and you click a day, or drag from one day to another to mark all those in between. Each day has one thing only: if it has a shift it cannot also be vacation. <strong>Nothing is planned before the start date or after the end date</strong>: those days do not count towards the hours, so the screen skips them and says how many.
     <em>Fill by weekdays</em> puts it at once on, for example, Monday to Friday from January to
     June, skipping public holidays and leaving alone what is already set. On the right, <strong>the figures are redone with
-    each change</strong>: agreement hours, planned, still to plan (or over), the
-    holidays set against those due, and up to yesterday, planned against clocked.
+    each change</strong>: agreement hours, planned hours, those still to be distributed (or those in excess), vacation days set against those owed and how many are left, and, up to yesterday, what was planned against what was clocked.
   </p>
   <p>
-    Below are the <strong>warnings</strong> of the Workers' Statute: less than 12 hours of rest between
-    two workdays, more than 9 hours in a day, fewer than 3 days off in 14, a shift on a public holiday, more holidays than
-    due or days marked outside the start and leaving dates. They are warnings and do not stop saving: some
-    agreements allow otherwise.
+    Below are the <strong>warnings</strong> of the Spanish Workers' Statute: fewer than 12 hours of rest between two working days, more than 9 hours in a day, more than 6 hours in a row without a 15-minute break, fewer than 3 days off in 14, a shift on a public holiday, more vacation than is owed, or days marked outside the start and end dates. If someone works at night (from 22:00 to 06:00) it also warns that the Statute treats it as night work, with a maximum average of 8 hours over 15 days and no more than two weeks in a row on night shift, unless voluntary. Each warning carries the link <em>Read the article</em>, which opens the text of the Statute so you can check it. Saving an agreement with fewer than 30 calendar days of vacation (22 working days) also shows the warning. These are warnings and do not prevent saving: some agreements allow otherwise, and what was signed is for HR to know.
   </p>
   <p>
     <em>Duplicate to another professional</em> copies the calendar as it is to others in the centre (if they already had one that
@@ -2474,30 +2465,31 @@ footer{
     pin on the notice board or give to the accountant.
   </p>
   <p>
-    <em>Delete this calendar</em> removes it with all its days, including those already past, which changes that year's hours worked and overtime. That is why it asks for the professional's name to be typed by hand.
+    <em>Delete this calendar</em> removes it with all its days, including past ones, which changes the hours worked and the out-of-shift hours of that year. That is why it asks you to type the professional's name by hand.
   </p>
 
   <h4 id="calendario-cerrar">Closing the year</h4>
   <p>
-    When a year has ended and has been reviewed, in <em>Calendars</em>, with that year selected, <em>Close</em> leaves it <strong>as it is, for the labour inspection</strong>: from then on nothing of that year changes in the centre — not the calendars or their days, the incidents, the compensations, the holidays or that year's agreement. It can be viewed and printed. If a shift that year used is edited later, the closed year <strong>keeps the hours it had</strong> (Turnera keeps a retired copy of the shift), and the overtime margin that applies is the one in force when it was closed. It is confirmed by typing the year, and it
-    <strong>cannot be reopened</strong>.
+    When a year has ended and has been reviewed, in <em>Calendars</em>, with that year selected, <em>Close</em> leaves it <strong>as it is, for the labour inspection</strong>: from then on nothing of that year changes in the centre — not the calendars or their days, the incidents, the compensations, the holidays or that year's agreement. It can be viewed and printed. If a shift that year used is edited later, the closed year <strong>keeps the hours it had</strong> (Turnera keeps a retired copy of the shift), and the out-of-shift hours margin that applies is the one in force when it was closed. You confirm by typing the year and
+    <strong>cannot be reopened</strong>. A year cannot be closed before <strong>1 May of the following year</strong>: until 30 April rest days can still be given for its out-of-shift hours (see below).
   </p>
 
-  <h4>Actual hours: regular hours and overtime</h4>
+  <h4>What was done: normal hours and out-of-shift hours</h4>
   <p>
     In <em>Actual</em> each clocked day is coloured: green if it was all <strong>regular hours</strong>
-    and orange if there was <strong>overtime</strong>. Hovering over it shows the hours clocked. The rules:
+    and orange if there was <strong>out-of-shift hours</strong>. Hovering over it shows the hours clocked. The rules:
   </p>
   <ul>
     <li>Time clocked <strong>within the shift</strong> planned is regular time.</li>
-    <li>Time clocked <strong>outside the shift</strong> is overtime only if it goes past the <strong>margin</strong> of the centre (15 minutes by default, changed in <em>Settings</em>): coming in five minutes early is not overtime. If it goes past the margin, all of it counts: whoever stays forty minutes has done forty.</li>
-    <li>Everything clocked on a <strong>holiday</strong>, on vacation, on an absence or on a day without a shift is overtime.</li>
+    <li>Time clocked <strong>outside the shift</strong> counts as out-of-shift hours only if it goes beyond the <strong>margin</strong> of the centre (15 minutes by default, changed in <em>Settings</em>): coming in five minutes early is not overtime. If it goes past the margin, all of it counts: whoever stays forty minutes has done forty.</li>
+    <li>Everything clocked on a <strong>holiday</strong>, on vacation, in an absence or on a day without a shift is out-of-shift hours.</li>
     <li>A clock-in without a clock-out adds nothing until HR declares the hours in an incident.</li>
   </ul>
   <p>
-    Overtime goes to the <strong>overtime bank</strong> of the professional, on the right. Whoever has the permission «Compensate overtime» (by default, HR and Management) deducts it with <em>Compensate hours</em>, as
-    <strong>paid in payroll</strong> or as <strong>compensatory rest</strong>. The pending balance is what is left to compensate. If the overtime of the year, not counting what was given back as rest, goes past
-    <strong>80</strong>, a warning appears: it is the limit of article 35.2 of the Spanish Workers' Statute.
+    Out-of-shift hours go to the professional's <strong>overtime bank</strong> on the right. Whoever has the permission «Compensate out-of-shift hours» (by default HR and Management) deducts them with <em>Compensate hours</em>, as <strong>paid in payroll</strong> or as <strong>compensatory rest</strong>. The pending balance is what is left to compensate. A rest day compensates <strong>the oldest hours first</strong>.
+  </p>
+  <p>
+    Turnera does not decide whether some out-of-shift hours are <em>extraordinary</em>: that is for HR to decide according to the contract and the agreement. What it does watch is the cap the Workers' Statute sets on extraordinary hours, <strong>80 hours a year</strong> (art. 35.2; for a part-time contract, proportional to its working hours). If the year's out-of-shift hours, not counting those returned as rest <strong>within the deadline</strong>, exceed that cap, a warning appears. The deadline is <strong>four months</strong> from when the hours were worked (art. 35.1): the rest for September's hours can be given in January. That is why the date of a compensation can fall as late as <strong>30 April of the following year</strong>. If a rest day arrives after the deadline, it is saved anyway, marked <em>out of time</em> , and those hours still count towards the cap. It is a warning: Turnera does not prevent recording anything.
   </p>
 
   <h4>Incidents</h4>
@@ -2532,7 +2524,7 @@ footer{
 
   <h4>Forgotten clock-in warnings</h4>
   <p>
-    If, according to their calendar, someone should have come in and after the <strong>overtime margin</strong> they have not
+    If, according to their calendar, someone should have come in and after the <strong>margin for out-of-shift hours</strong> they have not
     clocked in, or should have left and after the margin are still in, an <strong>email</strong> goes out. With the
     factory margin that is 15 minutes; a notice never goes out before 15, even if the margin is smaller. That way, whoever stays
     a few extra minutes within the margin, which is still a regular working day, does not get a false notice. In the

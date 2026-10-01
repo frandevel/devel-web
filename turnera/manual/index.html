@@ -2108,7 +2108,9 @@ footer{
     <em>Agenda y reservas</em>, <em>Avisos a los clientes</em>, <em>Cobros y fidelización</em> y <em>Apariencia</em>.
     Cerrado, cada grupo dice en una línea cómo está, así que para comprobar algo no hace falta abrirlo. Si un grupo
     cerrado tiene cambios, lo marca con <em>Sin guardar</em>, y si al guardar algo no vale, se abre solo. Al final, y
-    siempre cerrada, la <em>Zona delicada</em>: exportar todos los datos y vaciar la demostración.
+    siempre cerrada, la <em>Zona delicada</em>: exportar todos los datos y vaciar la demostración. Un centro con
+    fichajes de personal real o con años de calendario cerrados no se puede vaciar: la ley obliga a conservar
+    el registro de jornada, así que para cerrar un centro se pide su baja a Devel y se guarda lo que haya que guardar.
   </p>
 
   <h3>La agenda</h3>
@@ -2646,7 +2648,7 @@ footer{
   <h4>El PIN</h4>
 
   <p>
-    Cada profesional puede tener un <strong>PIN de cuatro cifras</strong>, que se le pone en
+    Cada profesional necesita un <strong>PIN de cuatro cifras</strong>, que se le pone en
     <em>Profesionales → PIN de fichaje</em>. Al pulsar su botón sale un teclado y lo teclea: con la cuarta
     cifra ya ficha, sin pulsar nada más. Es lo que hace que
     pulsar el botón de otro no sea fichar por otro, y sin ello la lista de nombres no probaría gran cosa ante
@@ -2661,15 +2663,16 @@ footer{
   </p>
 
   <div class="ojo">
-    <p><strong>El PIN es opcional, pero póngalo.</strong> Quien no lo tiene ficha pulsando su nombre, sin más,
-      para que un centro que estrena esto no se quede sin registro mientras los reparte. El día que estén
-      repartidos, el registro dice quién fichó y no sólo desde qué mostrador.</p>
+    <p><strong>Sin PIN no se ficha.</strong> Quien no lo tiene ve su botón desactivado, con el aviso de que
+      administración se lo pone en su ficha. Así el registro dice siempre quién fichó y no sólo desde qué
+      mostrador, que es lo que la ley espera de un registro de jornada. Al estrenar el reloj en un centro,
+      reparta antes los PIN.</p>
   </div>
 
   <p>
     El PIN se guarda cifrado y <strong>no se puede volver a leer</strong>, ni desde administración: si alguien
-    lo olvida se le pone uno nuevo. Se retira con <em>Quitar el PIN</em>, y esa persona vuelve a fichar
-    pulsando su nombre.
+    lo olvida se le pone uno nuevo. Se retira con <em>Quitar el PIN</em>, y esa persona no podrá fichar hasta
+    que tenga otro.
   </p>
 
   <p>
@@ -2688,7 +2691,11 @@ footer{
   <p>
     En <em>Personal → Control de presencia</em>, en el menú, está lo demás: elija un rango y, si quiere, una persona.
     Arriba salen los días con sus tramos y las horas sumadas; abajo, los fichajes uno a uno. Se descarga en
-    Excel, y eso es lo que se le enseña a la Inspección.
+    Excel o en CSV, y eso es lo que se le enseña a la Inspección. Hay dos CSV: <em>Días (CSV)</em>, el resumen
+    de cada día, y <em>Fichajes (CSV)</em>, cada fichaje tal como está guardado, con quién lo registró y qué
+    correcciones lleva, que es lo que prueba que el registro no se ha reescrito. Se abren con doble clic en
+    Excel. Quien puede descargarlos es quien tiene el permiso de exportar los fichajes, y siempre pueden bajarse:
+    la ley obliga a tenerlos a disposición de la Inspección.
   </p>
 
   <figure>
@@ -2790,13 +2797,18 @@ footer{
     <em>Rellenar por días de la semana</em> lo pone de una vez en, por ejemplo, los lunes a viernes de enero a
     junio, saltándose los festivos y sin tocar lo ya puesto. A la derecha, <strong>las cuentas se rehacen con
     cada cambio</strong>: horas del convenio, planificadas, las que quedan por repartir (o las que sobran), las
-    vacaciones puestas frente a las que le corresponden, y hasta ayer, lo planificado frente a lo fichado.
+    vacaciones puestas frente a las que le corresponden y cuántas le quedan, y hasta ayer, lo planificado frente a lo fichado.
   </p>
   <p>
     Debajo salen los <strong>avisos</strong> del Estatuto de los Trabajadores: menos de 12 horas de descanso entre
-    dos jornadas, más de 9 horas en un día, menos de 3 días libres en 14, turno en un festivo, más vacaciones de
-    las que tocan o días marcados fuera de las fechas de alta y baja. Son avisos y no impiden guardar: hay
-    convenios que permiten otra cosa.
+    dos jornadas, más de 9 horas en un día, más de 6 horas seguidas sin una pausa de 15 minutos, menos de 3 días
+    libres en 14, turno en un festivo, más vacaciones de las que tocan o días marcados fuera de las fechas de alta
+    y baja. Si alguien trabaja de noche (de 22:00 a 06:00) avisa además de que el Estatuto lo trata como trabajo
+    nocturno, con una media máxima de 8 horas en 15 días y no más de dos semanas seguidas de turno de noche, salvo
+    que sea voluntario. Cada aviso trae el enlace <em>Leer el artículo</em>, que abre el texto del Estatuto para
+    comprobarlo. Al dar de alta un convenio con menos de 30 días naturales de vacaciones (22 laborables) también
+    sale el aviso. Son avisos y no impiden guardar: hay convenios que permiten otra cosa y quien sabe lo que se
+    firmó es RRHH.
   </p>
   <p>
     <em>Duplicar en otro profesional</em> copia el calendario tal cual a otros del centro (si ya tenían uno ese
@@ -2805,7 +2817,7 @@ footer{
   </p>
   <p>
     <em>Borrar este calendario</em> lo quita con todos sus días, también los ya pasados, lo que cambia las horas
-    hechas y las extra de ese año. Por eso pide escribir a mano el nombre del profesional.
+    hechas y las de fuera de turno de ese año. Por eso pide escribir a mano el nombre del profesional.
   </p>
 
   <h4 id="calendario-cerrar">Cerrar el año</h4>
@@ -2815,31 +2827,42 @@ footer{
     centro —ni los calendarios ni sus días, ni las incidencias, ni las compensaciones, ni los festivos, ni el
     convenio de ese año—. Se puede consultar e imprimir. Si después se edita un turno que ese año usaba, el año
     cerrado <strong>se queda con el horario que tenía</strong> (Turnera guarda una copia retirada del turno), y el
-    margen de horas extra que vale es el que había al cerrarlo. Se confirma escribiendo el año y
-    <strong>no se reabre</strong>.
+    margen de horas fuera de turno que vale es el que había al cerrarlo. Se confirma escribiendo el año y
+    <strong>no se reabre</strong>. Un año no se puede cerrar antes del <strong>1 de mayo del siguiente</strong>: hasta
+    el 30 de abril aún se pueden dar descansos por sus horas de fuera de turno (ver más abajo).
   </p>
 
-  <h4>Lo ejecutado: horas normales y horas extra</h4>
+  <h4>Lo ejecutado: horas normales y horas fuera de turno</h4>
   <p>
     En <em>Ejecución</em> cada día fichado sale coloreado: en verde si todo fueron <strong>horas normales</strong>
-    y en naranja si hubo <strong>horas extra</strong>. Pasando el ratón por encima se ven las horas fichadas.
+    y en naranja si hubo <strong>horas fuera de turno</strong>. Pasando el ratón por encima se ven las horas fichadas.
     Las reglas:
   </p>
   <ul>
     <li>Lo fichado <strong>dentro del turno</strong> planificado son horas normales.</li>
-    <li>Lo fichado <strong>fuera del turno</strong> es extra solo si pasa del <strong>margen</strong> del centro
+    <li>Lo fichado <strong>fuera del turno</strong> son horas fuera de turno solo si pasa del <strong>margen</strong> del centro
       (15 minutos de fábrica, se cambia en <em>Ajustes</em>): entrar cinco minutos antes no es hacer horas. Si
       pasa del margen, cuenta entero: quien se queda cuarenta minutos ha hecho cuarenta.</li>
-    <li>Todo lo fichado en un <strong>festivo</strong>, en vacaciones, en una ausencia o en un día sin turno es
-      extra.</li>
+    <li>Todo lo fichado en un <strong>festivo</strong>, en vacaciones, en una ausencia o en un día sin turno son
+      horas fuera de turno.</li>
     <li>Una entrada sin salida no suma nada hasta que RRHH declara las horas en una incidencia.</li>
   </ul>
   <p>
-    Las horas extra van a la <strong>bolsa de horas</strong> del profesional, a la derecha. Quien tenga el permiso
-    «Compensar horas extra» (de fábrica, RRHH y Dirección) las descuenta con <em>Compensar horas</em>, como
-    <strong>pagadas en nómina</strong> o como <strong>descanso compensatorio</strong>. El saldo pendiente es lo que
-    queda por compensar. Si las horas extra del año, sin contar las devueltas en descanso, pasan de
-    <strong>80</strong>, sale un aviso: es el tope del artículo 35.2 del Estatuto de los Trabajadores.
+    Las horas fuera de turno van a la <strong>bolsa de horas</strong> del profesional, a la derecha. Quien tenga el
+    permiso «Compensar horas fuera de turno» (de fábrica, RRHH y Dirección) las descuenta con <em>Compensar
+    horas</em>, como <strong>pagadas en nómina</strong> o como <strong>descanso compensatorio</strong>. El saldo
+    pendiente es lo que queda por compensar. Un descanso compensa <strong>primero las horas más antiguas</strong>.
+  </p>
+  <p>
+    Turnera no decide si unas horas fuera de turno son <em>extraordinarias</em>: eso lo decide RRHH según el
+    contrato y el convenio. Lo que sí vigila es el tope que el Estatuto de los Trabajadores pone a las
+    extraordinarias, <strong>80 horas al año</strong> (art. 35.2; en un contrato a tiempo parcial, proporcional a su
+    jornada). Si las horas fuera de turno del año, sin contar las devueltas en descanso <strong>dentro de plazo</strong>,
+    pasan de ese tope, sale un aviso. El plazo es de <strong>cuatro meses</strong> desde que se hicieron las
+    horas (art. 35.1): el descanso de las de septiembre puede darse en enero. Por eso la fecha de una compensación
+    puede caer hasta el <strong>30 de abril del año siguiente</strong>. Si un descanso llega pasado el plazo, se
+    guarda igual, se marca <em>fuera de plazo</em> y esas horas siguen contando para el tope. Es un aviso: Turnera
+    no impide apuntar nada.
   </p>
 
   <h4>Incidencias</h4>
@@ -2891,7 +2914,7 @@ footer{
 
   <h4>Avisos de fichaje olvidado</h4>
   <p>
-    Si según su calendario alguien tenía que haber entrado y pasado el <strong>margen para horas extra</strong> no
+    Si según su calendario alguien tenía que haber entrado y pasado el <strong>margen para horas fuera de turno</strong> no
     ha fichado, o tenía que haber salido y pasado el margen sigue dentro, sale un <strong>correo</strong>. Con el
     margen de fábrica son 15 minutos; nunca se avisa antes de 15, aunque el margen sea menor. Así, quien se queda
     unos minutos de más dentro del margen, que todavía es jornada normal, no recibe un aviso falso. En los
