@@ -1913,5 +1913,10 @@
   "t25284b5b": ". If a rest day arrives after the deadline, it is saved anyway, marked",
   "td794362c": "out of time",
   "t15af02d2": ", and those hours still count towards the cap. It is a warning: Turnera does not prevent recording anything.",
-  "t4bdd0d40": "margin for out-of-shift hours"
+  "t4bdd0d40": "margin for out-of-shift hours",
+  "t47b3c960": ": the worked hours against the planned ones, the out-of-shift hours of the month and who has the most.\n      Below it, the",
+  "t7ace2779": ": what is still to be compensated and who is getting close to the legal ceiling of 80 hours (from 80 %), has gone over it or was given a rest too late.",
+  "t23270d0e": "overtime bank of the year",
+  "t9a2c9749": "(the working-time record, the hours summary and the roster, which open in their Staff screens). A section none of whose reports you can open is not shown.",
+  "t84a1eacc": "A night shift, which crosses midnight, is counted whole on the day it began. On the night the clocks change it counts the hours that really went by: nine in October and seven in March for a shift from 22:00 to 06:00."
 }

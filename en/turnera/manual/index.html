@@ -790,7 +790,8 @@ footer{
   <ul>
     <li><strong>Who is in now</strong>: how many of the professionals on shift today are in, and since what time. Below it, <strong>who should already have clocked in and has not</strong>, with the time their shift began: it is almost always an oversight, and seeing it in time avoids a gap that would have to be corrected later.</li>
     <li><strong>Holidays and absences</strong>: who is away today and who will be during the week, with the reason and the days.</li>
-    <li><strong>Hours this month</strong>: what was worked against what was planned, the extra hours of the month and who has done the most.</li>
+    <li><strong>Hours this month</strong>: the worked hours against the planned ones, the out-of-shift hours of the month and who has the most.
+      Below it, the <strong>overtime bank of the year</strong>: what is still to be compensated and who is getting close to the legal ceiling of 80 hours (from 80 %), has gone over it or was given a rest too late.</li>
   </ul>
   <p>
     Whoever can look up the clock-ins sees the attendance and hours cards; whoever can see the work calendars sees the holidays and absences card. If nobody has been scheduled yet and nobody has clocked in, they do not appear.
@@ -1762,8 +1763,8 @@ footer{
 
   <p>
     The screen groups them in sections, the same as the menu: <strong>Agenda</strong>, <strong>Customers</strong>,
-    <strong>Till and payments</strong>, <strong>Invoicing</strong> and <strong>Catalogue and stock</strong>. A section in
-    which you cannot open any report is not shown.
+    <strong>Till and payments</strong>, <strong>Invoicing</strong>, <strong>Catalogue and stock</strong> and
+    <strong>Staff</strong> (the working-time record, the hours summary and the roster, which open in their Staff screens). A section none of whose reports you can open is not shown.
   </p>
 
   <div class="tabla-envoltorio">
@@ -2496,6 +2497,7 @@ footer{
     <li>Time clocked <strong>outside the shift</strong> counts as out-of-shift hours only if it goes beyond the <strong>margin</strong> of the centre (15 minutes by default, changed in <em>Settings</em>): coming in five minutes early is not overtime. If it goes past the margin, all of it counts: whoever stays forty minutes has done forty.</li>
     <li>Everything clocked on a <strong>holiday</strong>, on vacation, in an absence or on a day without a shift is out-of-shift hours.</li>
     <li>A clock-in without a clock-out adds nothing until HR declares the hours in an incident.</li>
+    <li>A night shift, which crosses midnight, is counted whole on the day it began. On the night the clocks change it counts the hours that really went by: nine in October and seven in March for a shift from 22:00 to 06:00.</li>
   </ul>
   <p>
     Out-of-shift hours go to the professional's <strong>overtime bank</strong> on the right. Whoever has the permission «Compensate out-of-shift hours» (by default HR and Management) deducts them with <em>Compensate hours</em>, as <strong>paid in payroll</strong> or as <strong>compensatory rest</strong>. The pending balance is what is left to compensate. A rest day compensates <strong>the oldest hours first</strong>.

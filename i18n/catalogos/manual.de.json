@@ -1913,5 +1913,10 @@
   "t25284b5b": ". Kommt ein Ruhetag nach Fristablauf, wird er trotzdem gespeichert, markiert als",
   "td794362c": "nach Fristablauf",
   "t15af02d2": ", und diese Stunden zählen weiter für die Obergrenze. Es ist eine Warnung: Turnera verhindert nicht, etwas zu erfassen.",
-  "t4bdd0d40": "Toleranz für Stunden außerhalb der Schicht"
+  "t4bdd0d40": "Toleranz für Stunden außerhalb der Schicht",
+  "t47b3c960": ": die geleisteten gegenüber den geplanten Stunden, die Stunden außerhalb der Schicht im Monat und wer die meisten hat.\n      Darunter das",
+  "t7ace2779": ": was noch auszugleichen ist und wer sich der gesetzlichen Grenze von 80 Stunden nähert (ab 80 %), sie überschritten hat oder eine Ausgleichsruhe zu spät erhielt.",
+  "t23270d0e": "Überstundenkonto des Jahres",
+  "t9a2c9749": "(der Arbeitszeitnachweis, die Stundenübersicht und der Dienstplan, die sich in ihren Personal-Bildschirmen öffnen). Ein Bereich, von dem Sie keinen Bericht öffnen können, erscheint nicht.",
+  "t84a1eacc": "Eine Nachtschicht, die über Mitternacht geht, wird ganz dem Tag zugerechnet, an dem sie begann. In der Nacht der Zeitumstellung zählen die wirklich vergangenen Stunden: neun im Oktober und sieben im März bei einer Schicht von 22:00 bis 06:00."
 }
