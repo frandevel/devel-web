@@ -1045,6 +1045,23 @@ footer{
     inactive</em> next to the search box; they appear with the tag <em>Inactive</em>, and in their record, <em>Inactive</em>.
     Reactivating them is ticking again <em>Active</em>.
   </p>
+  <p>
+    When the tick is removed, before saving, Turnera warns about what is left pending: the <strong>appointments from today on</strong> (which stay in the diary: cancel them if the customer is not coming), what they <strong>owe</strong> and the
+    <strong>vouchers with sessions</strong> left unused. It warns; it does not stop you.
+  </p>
+
+  <h3 id="clientes-supresion">When the customer asks for their data to be erased</h3>
+  <span class="ruta">Customer record → Erase their data</span>
+  <p>
+    This is the <strong>right to erasure</strong> under the GDPR. It is done by whoever has the permission <em>Erase the data of a customer who asks for it</em> (by default, management). Their name, ID document, phone numbers, email, address, date of birth, notes, alerts, waiting list and portal access are erased, and their appointments from today on are cancelled. The record stays, with the name <em>Datos borrados</em> and its number, because its visits, payments and vouchers refer to it, and they stay in the centre's accounts.
+  </p>
+  <p>
+    What the law requires to be kept <strong>is kept</strong>: the <strong>invoices</strong>, as they are, and the
+    <strong>clinical history</strong> (at least five years, under Spanish Act 41/2002), blocked: it appears on no screen, but stays identified in case the customer or a court asks for it. Before erasing, the screen says what is erased, what is kept and whether appointments, debts or vouchers are left pending, and asks for the name and surnames to be typed by hand.
+  </p>
+  <div class="ojo">
+    <p><strong>It cannot be undone.</strong> Only do it when the customer has asked for it, and keep their request.</p>
+  </div>
 
   <h3>Going to their next appointment</h3>
 
@@ -1515,6 +1532,12 @@ footer{
     are used up or expired are not counted.
   </p>
 
+  <h3 id="bonos-baja">Withdrawing a voucher</h3>
+  <p>
+    When it is withdrawn from the customer record, the voucher <strong>can no longer be used</strong> and disappears from the record and the POS, but it is not deleted: the tickets that charged it and the transfers still say which voucher they were for. If the money also has to be given back, it is done through the <a href="#devoluciones">refund of the ticket</a>
+    that sold it.
+  </p>
+
   <h3 id="bonos-traspaso">Transferring a voucher to another customer</h3>
   <span class="ruta">Customer record → Vouchers → Transfer</span>
 
@@ -1875,7 +1898,8 @@ footer{
       disappears from the lists and drop-downs. The lists of services, products, packages, suppliers and
       customers have the tickbox <em>Include inactive</em> to see them, with their tag; the professionals list has
       <em>Only active</em>.</li>
-    <li><strong>Staff</strong>: who attends, their colour in the diary and their column. In the record you can upload their <strong>photo</strong> (it is reduced before uploading) and set their <strong>gender</strong>: without a photo, lists and the roster show a woman's, a man's or, if not stated, a neutral avatar.</li>
+    <li><strong>Staff</strong>: who attends, their colour in the diary and their column. In the record you can upload their <strong>photo</strong> (it is reduced before uploading) and set their <strong>gender</strong>: without a photo, lists and the roster show a woman's, a man's or, if not stated, a neutral avatar. To <strong>retire</strong>
+      someone who has appointments from today on, Turnera asks which professional takes them and moves them all at once; if any clashes with one the receiving professional already has, it says so, so it can be rearranged later.</li>
     <li><strong>Roles and users</strong>: who gets in, what they may do and <strong>from which IP addresses</strong>.</li>
     <li><strong>Centre details</strong>: name, tax ID, address and logo. The logo heads the PDFs
       —tickets, quotes, agenda— and <strong>replaces Turnera's at the top of the menu</strong>, on a white background so that it reads
@@ -2437,6 +2461,15 @@ footer{
     <em>Duplicate to another professional</em> copies the calendar as it is to others in the centre (if they already had one that
     year, it is replaced, and the screen warns first). <em>Download PDF</em> puts the year on one sheet, to
     pin on the notice board or give to the accountant.
+  </p>
+  <p>
+    <em>Delete this calendar</em> removes it with all its days, including those already past, which changes that year's hours worked and overtime. That is why it asks for the professional's name to be typed by hand.
+  </p>
+
+  <h4 id="calendario-cerrar">Closing the year</h4>
+  <p>
+    When a year has ended and has been reviewed, in <em>Calendars</em>, with that year selected, <em>Close</em> leaves it <strong>as it is, for the labour inspection</strong>: from then on nothing of that year changes in the centre — not the calendars or their days, the incidents, the compensations, the holidays or that year's agreement. It can be viewed and printed. If a shift that year used is edited later, the closed year <strong>keeps the hours it had</strong> (Turnera keeps a retired copy of the shift), and the overtime margin that applies is the one in force when it was closed. It is confirmed by typing the year, and it
+    <strong>cannot be reopened</strong>.
   </p>
 
   <h4>Actual hours: regular hours and overtime</h4>

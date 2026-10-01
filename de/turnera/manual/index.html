@@ -1045,6 +1045,23 @@ footer{
     inaktive</em> neben der Suche an; er erscheint mit dem Etikett <em>Inaktiv</em>, und in seiner Akte <em>Inaktiv</em>.
     Reaktivieren heißt, wieder anzuhaken: <em>Aktiv</em>.
   </p>
+  <p>
+    Wird das Häkchen entfernt, nennt Turnera vor dem Speichern, was offen bleibt: die <strong>Termine ab heute</strong> (die im Kalender bleiben: sagen Sie sie ab, wenn der Kunde nicht kommt), was er <strong>schuldet</strong> und die
+    <strong>Wertkarten</strong> mit offenen Sitzungen. Es warnt, verhindert aber nichts.
+  </p>
+
+  <h3 id="clientes-supresion">Wenn der Kunde die Löschung seiner Daten verlangt</h3>
+  <span class="ruta">Kundenakte → Seine Daten löschen</span>
+  <p>
+    Es handelt sich um das <strong>Recht auf Löschung</strong> nach der DSGVO. Das macht, wer die Berechtigung <em>Daten eines Kunden auf Wunsch löschen</em> hat (standardmäßig die Leitung). Gelöscht werden Name, Ausweis, Telefonnummern, E-Mail, Adresse, Geburtsdatum, Notizen, Hinweise, Warteliste und Portalzugang, und die Termine ab heute werden abgesagt. Die Akte bleibt, mit dem Namen <em>Datos borrados</em> und ihrer Nummer, denn ihre Besuche, Zahlungen und Wertkarten verweisen darauf und bleiben in der Buchhaltung des Zentrums.
+  </p>
+  <p>
+    Was das Gesetz aufzubewahren verlangt, <strong>bleibt erhalten</strong>: die <strong>Rechnungen</strong>, unverändert, und die
+    <strong>Krankengeschichte</strong> (mindestens fünf Jahre, nach dem spanischen Gesetz 41/2002), gesperrt: Sie erscheint auf keinem Bildschirm, bleibt aber zugeordnet, falls der Kunde oder ein Gericht sie anfordert. Vor dem Löschen zeigt der Bildschirm, was gelöscht wird, was erhalten bleibt und ob Termine, Schulden oder Wertkarten offen bleiben, und verlangt, Vor- und Nachnamen von Hand einzutippen.
+  </p>
+  <div class="ojo">
+    <p><strong>Das lässt sich nicht rückgängig machen.</strong> Tun Sie es nur, wenn der Kunde es verlangt hat, und bewahren Sie seine Anfrage auf.</p>
+  </div>
 
   <h3>Zum nächsten Termin springen</h3>
 
@@ -1515,6 +1532,12 @@ footer{
     abgelaufene Wertkarten zählen nicht mit.
   </p>
 
+  <h3 id="bonos-baja">Eine Wertkarte abmelden</h3>
+  <p>
+    Wird sie in der Kundenakte abgemeldet, kann die Wertkarte <strong>nicht mehr verwendet werden</strong> und verschwindet aus der Akte und der Kasse, wird aber nicht gelöscht: Die Belege, mit denen sie kassiert wurde, und die Übertragungen sagen weiter, um welche Wertkarte es ging. Muss zusätzlich Geld zurückgegeben werden, geschieht das über die <a href="#devoluciones">Rückerstattung des Belegs</a>
+    ihres Verkaufs.
+  </p>
+
   <h3 id="bonos-traspaso">Eine Wertkarte auf einen anderen Kunden übertragen</h3>
   <span class="ruta">Kundenakte → Wertkarten → Übertragen</span>
 
@@ -1877,7 +1900,8 @@ footer{
       verschwindet aus den Listen und Auswahlfeldern. Die Listen der Leistungen, Produkte, Pakete, Lieferanten und
       Kunden haben das Kästchen <em>Auch inaktive</em> , um sie mit ihrem Etikett zu sehen; die der Fachkräfte hat
       <em>Nur aktive</em>.</li>
-    <li><strong>Mitarbeiter</strong>: wer betreut, ihre Farbe im Terminkalender und ihre Spalte. In der Akte kann man ihr <strong>Foto</strong> hochladen (es wird vorher verkleinert) und das <strong>Geschlecht</strong>angeben: ohne Foto zeigen die Listen und der Dienstplan einen Avatar für Frau, Mann oder, ohne Angabe, einen neutralen.</li>
+    <li><strong>Mitarbeiter</strong>: wer betreut, ihre Farbe im Terminkalender und ihre Spalte. In der Akte kann man ihr <strong>Foto</strong> hochladen (es wird vorher verkleinert) und das <strong>Geschlecht</strong>angeben: ohne Foto zeigen die Listen und der Dienstplan einen Avatar für Frau, Mann oder, ohne Angabe, einen neutralen. Beim <strong>Abmelden</strong>
+      einer Person mit Terminen ab heute fragt Turnera, welche Fachkraft sie übernimmt, und überträgt alle auf einmal; überschneidet sich einer mit einem Termin, den die übernehmende Fachkraft schon hat, sagt Turnera es, damit er später umgelegt werden kann.</li>
     <li><strong>Rollen und Benutzer</strong>: wer hereinkommt, was er tun darf und <strong>von welchen IP-Adressen</strong>.</li>
     <li><strong>Daten des Betriebs</strong>: Name, Steuernummer, Adresse und Logo. Das Logo steht im Kopf der PDFs
       — Bons, Kostenvoranschläge, Terminkalender — und <strong>ersetzt oben im Menü das von Turnera</strong>, auf weißem Grund, damit es in jeder
@@ -2442,6 +2466,15 @@ footer{
     <em>Für andere Fachkraft duplizieren</em> kopiert den Kalender unverändert auf andere im Zentrum (hatten sie für dieses
     Jahr schon einen, wird er ersetzt, und der Bildschirm warnt vorher). <em>PDF herunterladen</em> bringt das Jahr auf ein Blatt, zum
     Aushängen am Schwarzen Brett oder für die Steuerberatung.
+  </p>
+  <p>
+    <em>Diesen Kalender löschen</em> entfernt ihn mit allen Tagen, auch den vergangenen, was die geleisteten Stunden und die Überstunden dieses Jahres ändert. Deshalb muss der Name der Fachkraft von Hand eingetippt werden.
+  </p>
+
+  <h4 id="calendario-cerrar">Das Jahr abschließen</h4>
+  <p>
+    Wenn ein Jahr zu Ende und geprüft ist, wählen Sie unter <em>Kalender</em>dieses Jahr aus; <em>Abschließen</em> lässt es <strong>so, wie es ist, für die Arbeitsinspektion</strong>: Ab dann ändert sich in diesem Zentrum nichts mehr an diesem Jahr — weder die Kalender und ihre Tage noch die Vorfälle, Ausgleiche, Feiertage oder der Tarifvertrag dieses Jahres. Es lässt sich ansehen und drucken. Wird später eine Schicht bearbeitet, die dieses Jahr verwendet hat, <strong>behält das abgeschlossene Jahr die bisherigen Zeiten</strong> (Turnera bewahrt eine zurückgezogene Kopie der Schicht auf), und es gilt die Überstunden-Toleranz von damals. Bestätigt wird durch Eintippen des Jahres, und es
+    <strong>wird nicht wieder geöffnet</strong>.
   </p>
 
   <h4>Ist-Zeiten: reguläre Stunden und Überstunden</h4>

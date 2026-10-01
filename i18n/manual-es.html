@@ -1107,6 +1107,30 @@ footer{
     inactivos</em> junto al buscador; sale con la etiqueta <em>Inactivo</em>, y en su ficha, <em>Dado de baja</em>.
     Volver a darlo de alta es marcar otra vez <em>Activo</em>.
   </p>
+  <p>
+    Al quitar la marca, antes de guardar, Turnera avisa de lo que deja a medias: las <strong>citas de hoy en
+    adelante</strong> (que se quedan en la agenda: anúlelas si no va a venir), lo que <strong>debe</strong> y los
+    <strong>bonos con sesiones</strong> sin gastar. Avisa, no impide.
+  </p>
+
+  <h3 id="clientes-supresion">Cuando el cliente pide que se borren sus datos</h3>
+  <span class="ruta">Ficha del cliente → Borrar sus datos</span>
+  <p>
+    Se trata del <strong>derecho de supresión</strong> del RGPD. Lo hace quien tiene el permiso <em>Borrar los datos de un
+    cliente que lo pide</em> (de serie, dirección). Se borran su nombre, documento, teléfonos, correo, dirección,
+    fecha de nacimiento, notas, avisos, lista de espera y acceso al portal, y se anulan sus citas de hoy en
+    adelante. La ficha se queda, con el nombre <em>Datos borrados</em> y su número, porque la nombran sus visitas,
+    cobros y bonos, que siguen en las cuentas del centro.
+  </p>
+  <p>
+    Lo que la ley obliga a guardar <strong>se conserva</strong>: las <strong>facturas</strong>, tal cual, y la
+    <strong>historia clínica</strong> (al menos cinco años, Ley 41/2002), bloqueada: no sale en ninguna pantalla,
+    pero sigue identificada por si el cliente o un juez la piden. Antes de borrar, la pantalla dice qué se borra,
+    qué se conserva y si deja citas, deudas o bonos a medias, y pide escribir a mano su nombre y apellidos.
+  </p>
+  <div class="ojo">
+    <p><strong>No se deshace.</strong> Hágalo solo cuando el cliente lo haya pedido, y guarde su petición.</p>
+  </div>
 
   <h3>Ir a su próxima cita</h3>
 
@@ -1706,6 +1730,14 @@ footer{
     caducados no se cuentan.
   </p>
 
+  <h3 id="bonos-baja">Dar de baja un bono</h3>
+  <p>
+    Al darlo de baja en la ficha del cliente, el bono <strong>deja de poder usarse</strong> y desaparece de
+    la ficha y del TPV, pero no se borra: los tickets que lo cobraron y los traspasos siguen diciendo de qué bono
+    eran. Si además hay que devolver el dinero, se hace desde la <a href="#devoluciones">devolución del ticket</a>
+    que lo vendió.
+  </p>
+
   <h3 id="bonos-traspaso">Traspasar un bono a otro cliente</h3>
   <span class="ruta">Ficha del cliente → Bonos → Traspasar</span>
 
@@ -2121,7 +2153,9 @@ footer{
       <em>Solo activos</em>.</li>
     <li><strong>Profesionales</strong>: quién atiende, su color en la agenda y su columna. En la ficha se puede subir
       su <strong>foto</strong> (se reduce antes de subirla) e indicar el <strong>género</strong>: sin foto, en las listas
-      y en el cuadrante sale un avatar de mujer, de hombre o, sin indicar, uno neutro.</li>
+      y en el cuadrante sale un avatar de mujer, de hombre o, sin indicar, uno neutro. Para <strong>dar de baja</strong>
+      a quien tiene citas de hoy en adelante, Turnera pide a qué profesional pasan y las pasa todas a la vez; si
+      alguna coincide con otra que ya tiene quien las recibe, lo dice para recolocarla después.</li>
     <li><strong>Roles y usuarios</strong>: quién entra, qué puede hacer y <strong>desde qué direcciones IP</strong>.</li>
     <li><strong>Datos del centro</strong>: nombre, NIF, dirección y logotipo. El logotipo encabeza los PDF
       —tickets, presupuestos, agenda— y <strong>sustituye al de Turnera arriba del menú</strong>, sobre un fondo blanco para que
@@ -2753,6 +2787,21 @@ footer{
     <em>Duplicar en otro profesional</em> copia el calendario tal cual a otros del centro (si ya tenían uno ese
     año, se sustituye, y la pantalla lo avisa antes). <em>Descargar PDF</em> saca el año en una hoja, para
     colgarlo en el tablón o dárselo a la gestoría.
+  </p>
+  <p>
+    <em>Borrar este calendario</em> lo quita con todos sus días, también los ya pasados, lo que cambia las horas
+    hechas y las extra de ese año. Por eso pide escribir a mano el nombre del profesional.
+  </p>
+
+  <h4 id="calendario-cerrar">Cerrar el año</h4>
+  <p>
+    Cuando un año ha terminado y está repasado, en <em>Calendarios</em>, con ese año elegido, <em>Cerrar</em> lo
+    deja <strong>como está, para la Inspección de Trabajo</strong>: desde entonces nada de ese año cambia en el
+    centro —ni los calendarios ni sus días, ni las incidencias, ni las compensaciones, ni los festivos, ni el
+    convenio de ese año—. Se puede consultar e imprimir. Si después se edita un turno que ese año usaba, el año
+    cerrado <strong>se queda con el horario que tenía</strong> (Turnera guarda una copia retirada del turno), y el
+    margen de horas extra que vale es el que había al cerrarlo. Se confirma escribiendo el año y
+    <strong>no se reabre</strong>.
   </p>
 
   <h4>Lo ejecutado: horas normales y horas extra</h4>
