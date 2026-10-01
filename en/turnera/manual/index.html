@@ -1122,8 +1122,9 @@ footer{
   </p>
 
   <div class="ojo">
-    <p><strong>A merge cannot be undone.</strong> Before confirming it, check on the screen that the record being
-      kept is the right one.</p>
+    <p><strong>A merge cannot be undone.</strong> Before confirming it, check on screen that the record that
+      stays is the right one. To confirm you have to <strong>type by hand the name</strong> of the record that is going to be
+      deleted; pasting it does not work, so nobody confirms without having read it.</p>
   </div>
 </section>
 
@@ -1202,6 +1203,13 @@ footer{
 
   <p>
     A package is not deleted: it is <em>taken off</em>. It stops being offered at the point of sale, and the tickets that already carry it stay as they are.
+  </p>
+  <p>
+    A service or a product is not deleted either: it is <strong>deactivated</strong>, and whatever was sold with it stays as it
+    was. But it cannot be retired while something still uses it: a <strong>package</strong> on sale that
+    includes it, a <strong>voucher</strong> on sale of its same group (the service is where it is spent) or, for a service,
+    <strong>appointments from today on</strong>. Turnera says which ones, and it has to be removed from them (or those appointments changed or cancelled)
+    first.
   </p>
   <h3>Payment methods with a fixed discount</h3>
   <p>
@@ -1600,6 +1608,8 @@ footer{
   </p>
 
   <div class="ojo">
+    <strong>A device that a service uses is not deleted:</strong> Turnera says which services use it and it has to be
+    removed from them first, so that no service is left asking for a device that is no longer there. Switching it off is allowed.
     <strong>A device that has already been used is not deleted: it is switched off.</strong> When you hit delete, if it has sessions
     recorded, Turnera deactivates it instead of deleting it, stops checking it when booking and keeps the settings
     each customer was treated with. For the same reason, <strong>a field with recorded sessions cannot be removed</strong> from the list:
