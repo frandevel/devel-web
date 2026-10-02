@@ -604,6 +604,7 @@ footer{
     <li><a href="#empezar">1. Logging in and finding your way around</a></li>
     <li><a href="#agenda">2. The agenda</a></li>
     <li><a href="#agenda-citas" class="sub">Booking, moving and cancelling appointments</a></li>
+    <li><a href="#agenda-repetir" class="sub">Repeating appointments</a></li>
     <li><a href="#agenda-senales" class="sub">What each card tells you</a></li>
     <li><a href="#espera" class="sub">Waiting list</a></li>
     <li><a href="#agenda-cerrar" class="sub">Closing stretches</a></li>
@@ -945,6 +946,29 @@ footer{
     <figcaption>An appointment. Below it, the status, confirm, charge and cancel.</figcaption>
   </figure>
 
+  <h3 id="agenda-repetir">Repeating appointments</h3>
+
+  <p>
+    For the client who comes every Tuesday, the class every Monday and Thursday or the check-up on the 1st of each month, there is no need to book the appointments one by one. When booking a new appointment, tick <strong>Repeats</strong> and choose:
+  </p>
+  <ul>
+    <li><strong>Every day</strong>, <strong>every week</strong> (and which days: Monday and Thursday, for example) or
+      <strong>every month</strong> (and which days of the month: the 1st and the 15th, for example). Months without that day —a 31st in November— are skipped.</li>
+    <li><strong>Until when:</strong> until a date or a number of times. One year from the first one at most.</li>
+  </ul>
+  <p>
+    They all go at the same time, with the same professional, the same room, the same services and the same comments as the first one. When you press <em>Review the days</em> the agenda <strong>shows the list of dates before saving anything</strong>: which ones fit and, for those that do not, why —there is already another appointment at that time, it is a public holiday, the professional does not work that day…—. When you confirm, those that fit are booked and the rest are skipped: nothing is ever booked on top of something else. The skipped ones are listed in the notice, so you can look at them by hand if needed.
+  </p>
+  <p>
+    In the agenda, the appointments of a series carry a <strong>circular arrows icon</strong> next to the name, and when opened it says so at the top. Each one is a normal appointment: it is confirmed, charged and marked separately.
+  </p>
+  <ul>
+    <li><strong>Changing one:</strong> when saving, the agenda asks whether the change is <em>only for this one</em> or for
+      <em>this and following</em>. The following ones keep their day and take the new time, duration, professional, services and comments. Those already charged are not touched, and if the change does not fit on some day, that one stays as it was: the notice says which days.</li>
+    <li><strong>Cancelling:</strong> when cancelling an appointment of a series there are two buttons, <em>Cancel only this one</em> and
+      <em>This and following</em>. The previous ones are never touched, and neither are those already charged: those are cancelled one by one, with their permission.</li>
+  </ul>
+
   <h3 id="agenda-senales">What each card tells you</h3>
 
   <p>
@@ -974,6 +998,8 @@ footer{
       <td>The customer has a voucher, and that number is the sessions they have left. <strong>Hover over it</strong>
         and a card appears above the diary showing which voucher each one belongs to, how many are left and when it expires; in orange if it expires in less than a month. It goes away when you move the mouse off the icon.</td>
     </tr>
+    <tr><td><strong>Circular arrows</strong> next to the name</td><td>The appointment belongs to a series that
+      <a href="#agenda-repetir">repeats</a>.</td></tr>
     <tr><td><strong>Green tick</strong></td><td>The appointment is confirmed.</td></tr>
     <tr><td><strong>Euro icon</strong></td><td>That appointment has already been through the till.</td></tr>
     <tr>

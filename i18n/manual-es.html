@@ -601,6 +601,7 @@ footer{
     <li><a href="#empezar">1. Entrar y orientarse</a></li>
     <li><a href="#agenda">2. La agenda</a></li>
     <li><a href="#agenda-citas" class="sub">Poner, mover y anular citas</a></li>
+    <li><a href="#agenda-repetir" class="sub">Citas que se repiten</a></li>
     <li><a href="#agenda-senales" class="sub">Lo que dice cada tarjeta</a></li>
     <li><a href="#espera" class="sub">Lista de espera</a></li>
     <li><a href="#agenda-cerrar" class="sub">Cerrar ratos</a></li>
@@ -994,6 +995,39 @@ footer{
     <figcaption>La ficha de una cita. Abajo, el estado, confirmar, cobrar y anular.</figcaption>
   </figure>
 
+  <h3 id="agenda-repetir">Citas que se repiten</h3>
+
+  <p>
+    Para el cliente que viene todos los martes, la clase de cada lunes y jueves o la revisión del día 1 de cada mes,
+    no hace falta poner las citas una a una. Al dar una cita nueva, marque <strong>Se repite</strong> y elija:
+  </p>
+  <ul>
+    <li><strong>Cada día</strong>, <strong>cada semana</strong> (y qué días: lunes y jueves, por ejemplo) o
+      <strong>cada mes</strong> (y qué días del mes: el 1 y el 15, por ejemplo). Los meses que no tienen ese día —un
+      31 en noviembre— se saltan.</li>
+    <li><strong>Hasta cuándo:</strong> hasta un día o un número de veces. Como mucho, un año desde la primera.</li>
+  </ul>
+  <p>
+    Todas van a la misma hora, con el mismo profesional, la misma cabina, los mismos servicios y los mismos
+    comentarios que la primera. Al pulsar <em>Ver los días</em> la agenda <strong>enseña la lista de fechas antes
+    de guardar nada</strong>: cuáles caben y, de las que no, por qué —ya hay otra cita a esa hora, es festivo, el
+    profesional no trabaja ese día…—. Al confirmar se dan las que caben y las otras se saltan: nunca se pone una
+    encima de otra. Las que se han saltado quedan dichas en el aviso, para mirarlas a mano si hace falta.
+  </p>
+  <p>
+    En la agenda, las citas de una serie llevan un <strong>icono de flechas en círculo</strong> junto al nombre, y al
+    abrirlas lo dice arriba. Cada una es una cita normal: se confirma, se cobra y se marca por separado.
+  </p>
+  <ul>
+    <li><strong>Cambiar una:</strong> al guardar, la agenda pregunta si el cambio es <em>sólo para esta</em> o para
+      <em>esta y las siguientes</em>. Las siguientes conservan su día y toman la hora, la duración, el profesional,
+      los servicios y los comentarios nuevos. Las ya cobradas no se tocan, y si en algún día el cambio no cabe, esa
+      se queda como estaba: el aviso dice qué días.</li>
+    <li><strong>Anular:</strong> al anular una cita de una serie salen dos botones, <em>Cancelar sólo esta</em> y
+      <em>Esta y las siguientes</em>. Las anteriores no se tocan nunca, y las ya cobradas tampoco: esas se anulan
+      una a una, con su permiso.</li>
+  </ul>
+
   <h3 id="agenda-senales">Lo que dice cada tarjeta</h3>
 
   <p>
@@ -1031,6 +1065,8 @@ footer{
         y sale, por encima de la agenda, de qué bono es cada una, cuántas quedan y cuándo caduca; en naranja, si
         caduca en menos de un mes. Se va al quitar el ratón del icono.</td>
     </tr>
+    <tr><td><strong>Flechas en círculo</strong> junto al nombre</td><td>La cita es de una serie que
+      <a href="#agenda-repetir">se repite</a>.</td></tr>
     <tr><td><strong>Visto verde</strong></td><td>La cita está confirmada.</td></tr>
     <tr><td><strong>Icono de euro</strong></td><td>Esa cita ya ha pasado por caja.</td></tr>
     <tr>

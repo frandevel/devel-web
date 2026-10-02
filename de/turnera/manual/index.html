@@ -604,6 +604,7 @@ footer{
     <li><a href="#empezar">1. Anmelden und zurechtfinden</a></li>
     <li><a href="#agenda">2. Der Terminkalender</a></li>
     <li><a href="#agenda-citas" class="sub">Termine eintragen, verschieben und stornieren</a></li>
+    <li><a href="#agenda-repetir" class="sub">Wiederkehrende Termine</a></li>
     <li><a href="#agenda-senales" class="sub">Was jede Karte anzeigt</a></li>
     <li><a href="#espera" class="sub">Warteliste</a></li>
     <li><a href="#agenda-cerrar" class="sub">Zeitspannen sperren</a></li>
@@ -946,6 +947,29 @@ footer{
     <figcaption>Ein Termin. Darunter der Status, Bestätigen, Kassieren und Stornieren.</figcaption>
   </figure>
 
+  <h3 id="agenda-repetir">Wiederkehrende Termine</h3>
+
+  <p>
+    Für den Kunden, der jeden Dienstag kommt, den Kurs jeden Montag und Donnerstag oder die Kontrolle am 1. jedes Monats müssen die Termine nicht einzeln angelegt werden. Beim Anlegen eines neuen Termins markieren Sie <strong>Wiederholen</strong> und wählen:
+  </p>
+  <ul>
+    <li><strong>Jeden Tag</strong>, <strong>jede Woche</strong> (und an welchen Tagen: zum Beispiel Montag und Donnerstag) oder
+      <strong>jeden Monat</strong> (und an welchen Monatstagen: zum Beispiel am 1. und 15.). Monate ohne diesen Tag —ein 31. im November— werden übersprungen.</li>
+    <li><strong>Bis wann:</strong> bis zu einem Datum oder eine Anzahl von Malen. Höchstens ein Jahr ab dem ersten Termin.</li>
+  </ul>
+  <p>
+    Alle finden zur selben Uhrzeit statt, mit derselben Fachkraft, derselben Kabine, denselben Leistungen und denselben Kommentaren wie der erste. Mit <em>Tage ansehen</em> zeigt der Kalender <strong>die Liste der Daten, bevor etwas gespeichert wird</strong>: welche passen und bei den anderen, warum —zu dieser Zeit gibt es schon einen Termin, es ist Feiertag, die Fachkraft arbeitet an dem Tag nicht…—. Beim Bestätigen werden die passenden angelegt und die übrigen übersprungen: Nie wird etwas doppelt gebucht. Die übersprungenen stehen in der Meldung, damit Sie sie bei Bedarf von Hand ansehen.
+  </p>
+  <p>
+    Im Kalender tragen die Termine einer Serie ein <strong>Symbol mit Kreispfeilen</strong> neben dem Namen, und beim Öffnen steht es oben. Jeder ist ein normaler Termin: Er wird einzeln bestätigt, abgerechnet und markiert.
+  </p>
+  <ul>
+    <li><strong>Einen ändern:</strong> beim Speichern fragt der Kalender, ob die Änderung <em>nur für diesen</em> oder für
+      <em>diesen und folgende</em>gilt. Die folgenden behalten ihren Tag und übernehmen die neue Uhrzeit, Dauer, Fachkraft, Leistungen und Kommentare. Bereits abgerechnete bleiben unberührt, und wenn die Änderung an einem Tag nicht passt, bleibt dieser unverändert: Die Meldung nennt die Tage.</li>
+    <li><strong>Absagen:</strong> beim Absagen eines Termins aus einer Serie gibt es zwei Schaltflächen, <em>Nur diesen absagen</em> und
+      <em>Diesen und folgende</em>. Die früheren werden nie angetastet, die bereits abgerechneten auch nicht: Diese werden einzeln abgesagt, mit der entsprechenden Berechtigung.</li>
+  </ul>
+
   <h3 id="agenda-senales">Was jede Karte anzeigt</h3>
 
   <p>
@@ -975,6 +999,8 @@ footer{
       <td>Der Kunde hat eine Wertkarte, und diese Zahl sind die Sitzungen, die ihm noch bleiben. <strong>Fahren Sie mit der Maus darüber</strong>
         und über dem Kalender erscheint, zu welchem Gutschein jede gehört, wie viele übrig sind und wann er abläuft; in Orange, wenn er in weniger als einem Monat abläuft. Sie verschwindet, wenn Sie die Maus vom Symbol nehmen.</td>
     </tr>
+    <tr><td><strong>Kreispfeile</strong> neben dem Namen</td><td>Der Termin gehört zu einer Serie, die sich
+      <a href="#agenda-repetir">wiederholt</a>.</td></tr>
     <tr><td><strong>Grüner Haken</strong></td><td>Der Termin ist bestätigt.</td></tr>
     <tr><td><strong>Euro-Symbol</strong></td><td>Dieser Termin ist bereits kassiert.</td></tr>
     <tr>
