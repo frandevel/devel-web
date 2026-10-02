@@ -55,6 +55,8 @@ function conLosEnlacesInternosEnSuIdioma(html, idioma) {
     const original = '/' + ruta;
     const traducida = direccionDe(idioma, ruta);
     html = html.split('href="' + original + '"').join('href="' + traducida + '"');
+    // Los enlaces a un apartado de otra pagina, como el menu del manual a /turnera#preguntas.
+    if (ruta !== '') html = html.split('href="' + original + '#').join('href="' + traducida + '#');
   }
   html = html.split('href="' + INTEGRADORES.es + '"').join('href="' + INTEGRADORES[idioma] + '"');
   return html;

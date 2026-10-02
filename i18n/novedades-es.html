@@ -603,7 +603,11 @@ footer{
       <span>devel</span>
     </a>
     <nav>
-      <a href="/turnera">Turnera</a>
+      <a href="/turnera#que-hace">Qué hace</a>
+      <a href="/turnera#pantallas">Pantallas</a>
+      <a href="/turnera#abierto">Tus datos</a>
+      <a href="/turnera#preguntas">Preguntas</a>
+      <a href="/turnera#demo">Demo</a>
       <a href="/turnera/manual">Manual</a>
       <a href="/turnera/integradores">Integradores</a>
       <a href="/turnera/novedades" aria-current="page">Novedades</a>
@@ -617,6 +621,7 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-10-02-cobros">2 de octubre de 2026 · Deudas con bono, datos del aparato por servicio y registro de jornada</a></li>
     <li><a href="#2026-10-02-integraciones">2 de octubre de 2026 · Avisos a otros programas y consulta de clientes</a></li>
     <li><a href="#2026-09-30-fichajes-olvidados">30 de septiembre de 2026 · Avisos de fichaje olvidado</a></li>
     <li><a href="#2026-09-30-facturas">30 de septiembre de 2026 · Facturas completas según el Reglamento</a></li>
@@ -646,15 +651,68 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-10-02-cobros" class="version">
+  <div class="version__cabecera">
+    <h2>2 de octubre de 2026 · Deudas con bono, datos del aparato por servicio y registro de jornada</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">2026.10.47-bf0efe2</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"/></svg></span>Nuevas características</h3>
+    <h4>Cobrar una deuda con el bono</h4>
+    <ul>
+      <li>Al cobrar una deuda en <em>Cobros pendientes</em> se vuelve a mirar si el cliente tiene bono, porque ha podido comprarlo después. Si cubre alguna línea, la forma de pago sale en <strong>Bono</strong>: esa línea queda a cero y la sesión se descuenta al saldar.</li>
+      <li>Si el bono lo paga todo, no hay nada que cobrar ni ticket que imprimir. Si el cliente prefiere pagar y guardarse la sesión, basta con elegir otra forma de pago.</li>
+    </ul>
+    <h4>Registro de jornada</h4>
+    <ul>
+      <li>En el reloj de fichar, cada persona abre lo suyo con su PIN: fichar entrada, salida o <strong>pausa</strong>, ver <strong>sus fichajes del mes</strong> y recibirlos por correo o en PDF.</li>
+      <li>Las horas que declara RRHH en una incidencia quedan pendientes hasta que la persona dice si está <strong>conforme</strong>, o no y por qué.</li>
+      <li>Exportación completa del registro (Excel, CSV y PDF mensual con hueco para firmas) y <strong>enlaces de solo lectura</strong> para la Inspección de Trabajo y la representación de los trabajadores, que caducan y dejan rastro de cada consulta.</li>
+      <li>Resumen mensual de horas por correo a cada profesional, si se activa en su ficha.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>Mejoras</h3>
+    <h4>TPV</h4>
+    <ul>
+      <li>Al desmarcar <em>Cobrar ahora</em> desaparecen la forma de pago, el reparto y el entregado, y el botón pasa a decir <strong>Dejar en deuda</strong>. La forma de pago se elige el día que se cobra.</li>
+      <li>Si la cita cambia con el ticket a medias —se vuelve a la agenda y se le añade un servicio—, al volver al TPV <strong>pregunta si actualizar el ticket</strong> con lo que lleva ahora la cita.</li>
+    </ul>
+    <h4>Aparatología</h4>
+    <ul>
+      <li>Los datos del aparato se anotan <strong>por servicio</strong>: si la cita lleva dos zonas con el mismo láser, cada una lleva sus julios, y «la vez anterior» es la de esa misma zona. La ficha del cliente dice también el servicio de cada sesión.</li>
+    </ul>
+    <h4>Calendario laboral</h4>
+    <ul>
+      <li>Queda más claro cómo hacer un <strong>turno partido</strong> (mañana y tarde con la pausa en medio), con un botón que lo empieza ya partido.</li>
+    </ul>
+    <h4>Historia clínica</h4>
+    <ul>
+      <li>Una evolución solo la puede borrar quien la escribió y el mismo día. Después se <strong>anula con un motivo</strong> y queda a la vista como anulada.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span>Errores corregidos</h3>
+    <ul>
+      <li>Al cobrar una deuda, el bono del cliente se gastaba siempre sin preguntar y el diálogo enseñaba el importe entero.</li>
+      <li>Una cita dejada a deber enseñaba en el TPV un total con el bono descontado, aunque la deuda se apuntaba entera.</li>
+      <li>Si una cabina tenía un paso de agenda más corto que el del centro, toda la agenda se rayaba con ese paso. Ahora cada columna se raya con el suyo.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-10-02-integraciones" class="version">
   <div class="version__cabecera">
     <h2>2 de octubre de 2026 · Avisos a otros programas y consulta de clientes</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">2026.10.42-8619c25</span></p>
 
   <div class="grupo grupo--nuevo">
-    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span>Errores corregidos</h3>
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"/></svg></span>Nuevas características</h3>
     <h4>Webhooks: Turnera avisa a otro programa</h4>
     <ul>
       <li>En <em>Administración → Integraciones → Webhooks</em> se puede dar de alta una dirección del otro programa (un ERP, un sistema de mensajes o de campañas) y Turnera la avisa cuando una cita <strong>se crea, cambia o se anula</strong>, sea desde recepción, desde el portal o desde la propia integración.</li>
@@ -669,7 +727,7 @@ footer{
   </div>
 
   <div class="grupo grupo--mejora">
-    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span>Errores corregidos</h3>
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>Mejoras</h3>
     <h4>Integraciones</h4>
     <ul>
       <li>Las reservas que llegan por una integración <strong>reconocen al cliente por su teléfono</strong> cuando el correo es nuevo pero el teléfono coincide con una sola ficha: ya no se crean fichas duplicadas.</li>

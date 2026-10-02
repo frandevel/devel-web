@@ -576,8 +576,13 @@ footer{
       <span>devel</span>
     </a>
     <nav>
-      <a href="/de/turnera">Turnera</a>
+      <a href="/de/turnera#que-hace">Was es kann</a>
+      <a href="/de/turnera#pantallas">Ansichten</a>
+      <a href="/de/turnera#abierto">Ihre Daten</a>
+      <a href="/de/turnera#preguntas">FAQ</a>
+      <a href="/de/turnera#demo">Demo</a>
       <a href="/de/turnera/manual" aria-current="page">Handbuch</a>
+      <a href="/de/turnera/integratoren">Integratoren</a>
       <a href="/de/turnera/novedades">Neuigkeiten</a>
     </nav>
     <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/turnera/manual" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera/manual" lang="en">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera/manual" lang="de" aria-current="true">DE<span class="idiomas__nombre">Deutsch</span></a></div>
@@ -1185,14 +1190,19 @@ footer{
   </p>
 
   <p>
+    <strong>Wenn sich der Termin bei halbfertigem Beleg ändert</strong> —Sie gehen zurück zum Kalender und fügen eine Leistung hinzu, die doch gemacht wurde—, erscheint beim Zurückkehren zur Kasse ein Hinweis mit dem, was der Termin jetzt enthält, und zwei Schaltflächen:
+    <em>Beleg aktualisieren</em> fügt das Neue hinzu (und entfernt, was aus dem Termin entfernt wurde), und <em>So lassen</em> ändert nichts. Er wird nicht von selbst angepasst, weil das, was an der Theke entfernt oder hinzugefügt wurde, Absicht sein kann.
+  </p>
+
+  <p>
     <strong>Und noch kürzer: oben in der Kasse.</strong> Sobald eine Fachkraft einen Termin als
     <em>Behandelt</em>markiert, erscheint der Kunde oben unter <em>Zu kassieren</em>, noch bevor er an der Theke ankommt. Darunter stehen die, die noch <em>in Behandlung</em>sind – sie kommen als Nächstes. Tippen Sie auf die Karte, und der Verkauf wird genauso geladen wie aus dem Kalender. Die Liste aktualisiert sich alle paar Sekunden von selbst, zeigt nur die heutigen Termine, und jeder Kunde verschwindet daraus, sobald kassiert oder der Besuch als offener Betrag verbucht ist.
   </p>
 
   <ul>
-    <li><strong>Jetzt bezahlt</strong> angehakt: Das Geld geht in die heutige Kasse.</li>
-    <li><strong>Jetzt bezahlt</strong> nicht angehakt: Der Besuch bleibt als Schuld stehen und erscheint unter <em>Offene
-      Zahlungen</em>.</li>
+    <li><strong>Jetzt kassieren</strong> angehakt: Sie wählen die Zahlungsart, und das Geld geht in die heutige Kasse.</li>
+    <li><strong>Jetzt kassieren</strong> nicht angehakt: Der Besuch bleibt als Schuld stehen und erscheint unter <em>Offene
+      Zahlungen</em>. Da heute nicht bezahlt wird, verschwinden Zahlungsart, Aufteilung und übergebener Betrag, und die Schaltfläche heißt nun <em>Als offenen Betrag erfassen</em>. Die Zahlungsart wird an dem Tag gewählt, an dem bezahlt wird.</li>
     <li><strong>Gegeben</strong>: Tragen Sie ein, was Sie bekommen, und der Bildschirm rechnet das Rückgeld aus.</li>
   </ul>
 
@@ -1341,6 +1351,10 @@ footer{
   <p>
     Hier stehen die Besuche, die ohne Bezahlung behandelt wurden. Ein Klick öffnet den Zahlungsdialog: Sie wählen die
     Zahlungsart, passen bei Bedarf den Rabatt an und gleichen aus. Danach lässt sich der Bon drucken.
+  </p>
+
+  <p>
+    <strong>Beim Begleichen wird erneut geprüft, ob der Kunde eine Mehrfachkarte hat</strong>, denn er kann sie gekauft haben, nachdem der Betrag offen blieb. Deckt eine Mehrfachkarte eine Position, steht als Zahlungsart <em>Gutschein</em>: diese Positionen gehen auf null, mit der Markierung <em>Gutschein</em>, und die Sitzung wird beim Begleichen abgebucht. Bleibt noch etwas offen, wählen Sie, womit der Rest bezahlt wird. Deckt die Mehrfachkarte alles, gibt es nichts zu kassieren und keinen Beleg zu drucken: Es wird nur die Sitzung verbraucht. Und will der Kunde lieber zahlen und die Sitzung behalten, wählen Sie eine andere Zahlungsart, und die Mehrfachkarte bleibt unberührt.
   </p>
 
   <h3 id="devoluciones">Einen Beleg erstatten</h3>
@@ -1679,10 +1693,7 @@ footer{
   <h3 id="aparatos-sesion">Die Sitzung erfassen</h3>
   <span class="ruta">Terminkalender → (ein Termin) → Geräte der Sitzung</span>
   <p>
-    Bei Terminen mit einer Leistung, die ein Gerät braucht, erscheint unter den Termindaten ein Abschnitt mit den
-    Feldern, die auszufüllen sind, nach Gerät gruppiert. Neben jedem steht, <strong>mit welchen Werten dieser Kunde
-    beim letzten Mal behandelt wurde</strong>. Gespeichert wird mit einem eigenen Knopf, „Erfasstes speichern“, ohne den ganzen
-    Termin speichern zu müssen; ein Feld, das leer bleibt, gilt als „nicht erfasst“ und wird nicht geschrieben.
+    Bei Terminen mit einer Leistung, die ein Gerät nutzt, erscheint unter den Termindaten ein Bereich mit den auszufüllenden Feldern, <strong>gruppiert nach Leistung und Gerät</strong>: Jede Gruppe zeigt, für welche Leistung sie gilt («Laser Achseln · Diodenlaser»). Hat der Termin zwei Leistungen mit demselben Gerät, erscheinen die Felder zweimal, einmal pro Leistung, damit klar ist, wie viele Joule in jeden Bereich gingen. Neben jedem Feld <strong>womit dieser Kunde beim letzten Mal in derselben Leistung behandelt wurde</strong>. Gespeichert wird mit einer eigenen Schaltfläche, «Notiertes speichern», ohne den ganzen Termin speichern zu müssen; ein leeres Feld bedeutet «nicht notiert» und wird nicht gespeichert.
   </p>
   <p>
     Wenn der Termin keine Leistung mit Gerät enthält, erscheint der Abschnitt nicht.
@@ -1691,7 +1702,7 @@ footer{
     <strong>Sie werden auch auf dem Weg zum Kassieren abgefragt.</strong> Wenn man im Termin auf <em>Kassieren</em> tippt, zeigt die Kasse über dem Beleg dieselben Sitzungsdaten. Fehlt ein Pflichtwert, lässt sie nicht kassieren, bis er notiert und gespeichert ist (wer ihn nicht notieren darf, wird gewarnt, kann aber kassieren).
   </p>
   <p>
-    <strong>Wo man es danach sieht.</strong> In der Kundenakte listet die Karte <em>Sitzungen mit Gerät</em> jede Sitzung auf, die neueste zuerst, mit Tag und Uhrzeit, Gerät, Parametern mit Einheit und wer sie durchgeführt hat. Dort verfolgt man eine Laserbehandlung Sitzung für Sitzung. Wurde für den Kunden nie etwas notiert, erscheint die Karte nicht.
+    <strong>Wo man es danach sieht.</strong> In der Kundenakte listet die Karte <em>Sitzungen mit Gerät</em> listet jede Sitzung auf, die neueste zuerst, mit Tag und Uhrzeit, Leistung, Gerät, den Parametern mit ihrer Einheit und wer sie durchgeführt hat. Dort verfolgt man eine Laserbehandlung Sitzung für Sitzung. Wurde für den Kunden nie etwas notiert, erscheint die Karte nicht.
   </p>
   <p>
     Das ist der Wert, auf den vor dem Beginn wirklich geschaut wird: Bei der Laser-Haarentfernung steigt die Einstellung von Sitzung zu Sitzung, und
@@ -1901,8 +1912,7 @@ footer{
     von fünf Minuten. <strong>Bleibt es leer, gilt das des Betriebs</strong>, und so entstehen sie alle.
   </p>
   <p>
-    Das Raster wird mit dem feinsten vorhandenen Schritt gezeichnet, weil die Spalten dieselbe Achse teilen und sich nicht auf zwei
-    Arten gleichzeitig linieren lassen. Ortsabhängig ist dagegen, wo ein Termin beim Ablegen landet und wie lange er dauern kann.
+    Jede Spalte des Kalenders wird mit dem Raster ihres Platzes gezeichnet: die der Indiba alle fünf Minuten, die Kabinen mit dem Raster des Zentrums alle fünfzehn. Auch wohin ein Termin beim Ablegen fällt und wie lange er dauern kann, hängt vom jeweiligen Platz ab.
   </p>
 
   <h3>Kabinen, Plätze und Räume</h3>
@@ -2342,9 +2352,12 @@ footer{
   </div>
 
   <p>
-    Beschreiben Sie unter <em>Stempeln</em>, im Menü, stehen alle Fachkräfte des Zentrums, jede mit einer Schaltfläche, die
-    <em>Kommen</em> oder <em>Gehen</em> sagt, je nachdem, was ansteht. Es gibt nichts zu wählen: die Anwendung weiß es
-    aus der letzten Stempelung dieser Person.
+    Beschreiben Sie unter <em>Stempeln</em> im Menü stehen alle Fachkräfte des Zentrums, jede mit ihrer Schaltfläche
+    <em>Stempeln</em>. Die Liste <strong>zeigt nur Namen</strong>: wer da ist und seit wann, gehört zur
+    Arbeitszeiterfassung, und den Bildschirm sieht jeder, der am Empfang vorbeikommt. Das sieht jede Person erst nach
+    Eingabe ihrer PIN, zusammen mit dem, was ansteht: <em>Kommen</em> oder <em>Gehen</em> und <em>Pause</em> , wenn sie schon
+    da ist. Zwischen Kommen und Gehen wählt man nicht: die Anwendung weiß es aus der letzten Stempelung
+    dieser Person.
   </p>
 
   <p>
@@ -2353,14 +2366,17 @@ footer{
 
   <figure>
     <img src="/turnera/manual/imagenes/en/29-fichar.png" alt="Der Stempelbildschirm mit den Fachkräften des Zentrums und ihrer Schaltfläche für Kommen oder Gehen" loading="lazy">
-    <figcaption>Der Stempelbildschirm: eine Karte je Fachkraft, mit dem anstehenden Kommen oder Gehen.</figcaption>
+    <figcaption>Der Stempel-Bildschirm: eine Fachkraft pro Karte. Das Eigene öffnet jede Person mit ihrer PIN.</figcaption>
   </figure>
 
   <h4>Die PIN</h4>
 
   <p>
     Jede Fachkraft braucht eine <strong>vierstellige PIN</strong>haben, die unter
-    <em>Fachkräfte → Stempel-PIN</em>. Beim Drücken der eigenen Schaltfläche erscheint ein Tastenfeld: Mit der vierten Ziffer wird schon gestempelt, ohne weiteren Klick. Dadurch stempelt niemand für jemand anderen, nur weil er dessen Schaltfläche drückt, und ohne das würde die Namensliste bei einer Prüfung wenig beweisen.
+    <em>Fachkräfte → Stempel-PIN</em>. Beim Tippen auf die Schaltfläche erscheint ein Ziffernblock: mit der vierten
+    Ziffer öffnet sich das Eigene, ohne weiteren Klick. Das sorgt dafür, dass
+    das Tippen auf die Schaltfläche eines anderen kein Stempeln für einen anderen ist; ohne das würde die Namensliste bei
+    einer Prüfung wenig beweisen.
   </p>
 
   <p>
@@ -2393,8 +2409,80 @@ footer{
     zusammen sind sie das, was man zeigt, wenn jemand fragt.
   </p>
 
+  <h4 id="fichar-lo-mio">Was jede Person nach ihrer PIN sieht</h4>
+
   <p>
-    Beschreiben Sie unter <em>Personal → Arbeitszeiterfassung</em>, im Menü, finden Sie den Rest: Wählen Sie einen Zeitraum und, wenn Sie möchten, eine Person. Oben stehen die Tage mit ihren Abschnitten und den summierten Stunden; unten die einzelnen Stempelungen. Der Download ist als Excel oder CSV möglich, und das zeigen Sie der Arbeitsinspektion. Es gibt zwei CSV-Dateien: <em>Tage (CSV)</em>, die Zusammenfassung jedes Tages, und <em>Stempelungen (CSV)</em>, jede Stempelung genau so, wie sie gespeichert ist, mit der Angabe, wer sie erfasst hat und welche Korrekturen sie trägt; das belegt, dass das Register nicht umgeschrieben wurde. Sie öffnen sich per Doppelklick in Excel. Herunterladen kann sie, wer die Berechtigung zum Exportieren der Stempelungen hat, und sie lassen sich immer herunterladen: Das Gesetz verlangt, sie für die Inspektion bereitzuhalten.
+    Mit der richtigen PIN öffnet sich ein Fenster mit dem Eigenen dieser Person, das <strong>nach einer Minute von selbst zur Liste zurückkehrt</strong>
+    , wenn niemand etwas berührt, und sobald gestempelt wurde:
+  </p>
+  <ul>
+    <li><strong>Ob sie da ist oder nicht</strong>, und seit wann, oder ob sie in einer Pause ist.</li>
+    <li><strong>Kommen</strong> oder <strong>Gehen</strong> und <strong>Pause</strong> , wenn sie da ist. Eine Pause ist
+      Zeit, die keine Arbeitszeit ist (das Mittagessen zum Beispiel): man stempelt sie mit <em>Pause</em> beim Gehen und mit
+      <em>Zurück aus der Pause</em> bei der Rückkehr. Sie zählt keine Stunden und erscheint in der Erfassung zwischen den beiden Abschnitten des Tages.</li>
+    <li><strong>Die Stunden, die die Personalabteilung für sie erfasst hat,</strong> wegen einer vergessenen Stempelung und zu denen sie noch
+      nichts gesagt hat. Mit <em>Ich bin einverstanden</em> oder <em>Ich bin nicht einverstanden</em>, in diesem Fall mit Begründung,
+      wird ihre Antwort bei diesen Stunden festgehalten und lässt sich danach nicht mehr ändern (siehe <em>Vorfälle</em>, weiter
+      unten).</li>
+    <li><strong>Meine Zeiten</strong>: ihr Monat, Tag für Tag, mit den Pausen, den Stunden und der Summe, und die
+      Vormonate. Sie kann ihn sich <strong>per E-Mail schicken</strong> als PDF oder herunterladen.</li>
+  </ul>
+
+  <p>
+    Beschreiben Sie unter <em>Personal → Arbeitszeiterfassung</em> im Menü steht der Rest: wählen Sie einen Zeitraum und, wenn Sie wollen, eine Person.
+    Oben erscheinen die <strong>Summen jeder Person und jedes Monats</strong>: erfasste Tage, geplante,
+    gearbeitete, reguläre Stunden und Überstunden laut Arbeitskalender, die in dem Monat ausgezahlten oder in Freizeit ausgeglichenen
+    Überstunden, und wie viele von der Personalabteilung erfasste Stunden auf Zustimmung warten oder abgelehnt wurden. Darunter jeder Tag mit
+    seinen Abschnitten, Pausen und Stunden, und ganz unten die Stempelungen einzeln.
+  </p>
+
+  <p>
+    Was der Arbeitsinspektion gezeigt wird, lädt man hier herunter:
+  </p>
+  <ul>
+    <li><strong>Monatsübersicht (PDF)</strong>: ein Blatt pro Person und Monat mit jedem Tag, der Summe, ihrer Arbeitszeitregelung
+      und Platz für die Unterschrift des Unternehmens und der Person. Es ist die Zusammenfassung, die mit der Lohnabrechnung übergeben wird.</li>
+    <li><strong>Alles (Excel)</strong>: eine Arbeitsmappe mit dem Unternehmen, seiner Steuernummer und dem Zentrum, der Erfassung Tag für Tag, den
+      Monatssummen und den Rohstempelungen.</li>
+    <li><strong>Tage (CSV)</strong>, <strong>Summen (CSV)</strong> und <strong>Stempelungen (CSV)</strong>: dasselbe
+      in Dateien, die sich per Doppelklick in Excel öffnen. Die der Stempelungen enthält jede so, wie sie gespeichert ist, mit
+      wer sie erfasst hat und welche Korrekturen sie hat – das beweist, dass die Erfassung nicht umgeschrieben wurde.</li>
+  </ul>
+
+  <p>
+    Das PDF lädt herunter, wer die Anwesenheitskontrolle sieht; den Rest, wer die Berechtigung zum Export der
+    Arbeitszeiterfassung hat. Sie lassen sich immer herunterladen: das Gesetz verlangt, sie der Arbeitsinspektion zur Verfügung zu halten.
+  </p>
+
+  <h4 id="presencia-enlaces">Zugang für Arbeitsinspektion und Belegschaftsvertretung</h4>
+
+  <p>
+    Am Ende von <em>Anwesenheitskontrolle</em> erstellt, wer die Berechtigung „Zugang zur Arbeitszeiterfassung geben“ hat,
+    <strong>Nur-Lese-Links</strong> für die <strong>Arbeitsinspektion</strong> oder die
+    <strong>Belegschaftsvertretung</strong>, ohne ihnen einen Benutzer anzulegen. Man wählt, für wen er ist, schreibt
+    genau für wen (zum Beispiel den Namen der Inspektorin und die Nummer der Anforderung) und wie viele Tage
+    er gilt, bis zu 90.
+  </p>
+  <p>
+    Wer ihn öffnet, sieht die Erfassung jedes Zeitraums der letzten vier Jahre, höchstens ein Jahr auf einmal, und
+    kann dieselben Dateien herunterladen. Die Belegschaftsvertretung sieht sie <strong>ohne Steuernummer</strong>, aus Datenschutzgründen. Der Link <strong>wird nur beim Erstellen angezeigt</strong>: kopieren Sie ihn dann und schicken Sie ihn ab. Er lässt sich vor
+    Ablauf widerrufen, und jeder Aufruf wird mit Zeitpunkt, Herkunft und Inhalt protokolliert.
+  </p>
+
+  <div class="ojo">
+    <p>Das verlangt der Entwurf des Königlichen Dekrets zur Arbeitszeiterfassung, den das spanische Arbeitsministerium vorbereitet:
+      sofortigen Fernzugang der Arbeitsinspektion und Zugang der Belegschaftsvertretung. Solange er nicht verabschiedet ist, genügt es,
+      die Erfassung auf Verlangen vorzeigen zu können; der Link macht das einfacher.</p>
+  </div>
+
+  <h4 id="presencia-resumen-mensual">Die Monatsübersicht per E-Mail</h4>
+
+  <p>
+    Im Profil jeder Fachkraft setzt, wer die Berechtigung „Monatliche Arbeitszeitübersicht per E-Mail“ hat (ab Werk
+    Personalabteilung und Leitung), den Haken bei <em>Jeden Monat die Zusammenfassung der Arbeitszeit per E-Mail schicken</em>. Ab dann kommt
+    zu Beginn jedes Monats das PDF des Vormonats. Das Profil braucht eine E-Mail. Es ist die Kopie, die das Gesetz
+    Teilzeitbeschäftigten mit der Lohnabrechnung zu übergeben verlangt und die der Dekretentwurf auf alle
+    ausweitet.
   </p>
 
   <figure>
@@ -2421,9 +2509,9 @@ footer{
   </p>
 
   <p>
-    Eine Schicht über Mitternacht zählt ganz an dem Tag, an dem sie begonnen hat, so wie es die
-    Lohnabrechnung zählt. Und Pausen werden nicht gestempelt: das Gesetz verlangt sie nicht und jeder
-    Tarifvertrag zählt sie anders, sie hier zu erfinden hieße also, in fast allen falsch zu zählen.
+    Eine Schicht über Mitternacht zählt ganz für den Tag, an dem sie begann, so wie die Lohnbuchhaltung
+    sie zählt, und was nach der Rückkehr aus einer Pause gearbeitet wird, gehört weiter zu diesem Tag. Eine Pause ohne Rückkehr
+    innerhalb von 16 Stunden bleibt ohne Ende: es wird keines erfunden.
   </p>
 
   <h4>Die Uhrzeit des Zentrums</h4>
@@ -2457,8 +2545,7 @@ footer{
       alle Standorte: Name, Jahresarbeitsstunden bei Vollzeit und Urlaubstage, Kalendertage
       (die 30 des Statuts) oder Arbeitstage (ohne Wochenenden und Feiertage). Jeder Kalender übernimmt den seines Jahres;
       er wird nicht Person für Person gewählt.</li>
-    <li><strong>Schichten</strong>: «Vormittag 9-14», «Nachmittag 15-21»… Eine geteilte hat zwei Abschnitte, und eine, die endet,
-      bevor sie beginnt, ist eine Nachtschicht und endet am nächsten Tag.</li>
+    <li><strong>Schichten</strong>: «Vormittag 9-14», «Nachmittag 15-21»… Eine, die vor ihrem Beginn endet, ist eine Nachtschicht und endet am nächsten Tag. <strong>Ein Tag hat eine einzige Schicht</strong>: Für Vor- und Nachmittag legen Sie eine geteilte Schicht an, mit <em>Abschnitt hinzufügen (geteilte Schicht)</em> oder mit <em>Als geteilte Schicht beginnen</em>, die sie auf 09:00-14:00 und 16:00-20:00 setzt, zum Anpassen. Die Pause ist die Lücke zwischen zwei Abschnitten und zählt nicht als Arbeitszeit.</li>
     <li><strong>Abwesenheiten</strong>: Krankschreibung, bezahlte oder unbezahlte Freistellung… Jede sagt, ob der Tag
       für die Stunden des Tarifvertrags als gearbeitet zählt. Bei einer Krankschreibung wird nur das festgehalten, nie die Diagnose.</li>
     <li><strong>Feiertage</strong>: unter <em>Einstellungen</em> wird die Region des Zentrums gewählt, und unter
@@ -2532,6 +2619,13 @@ footer{
   </p>
   <p>
     Ein Vorfall, der Stunden erfasst, gehört zur Zeiterfassung und <strong>lässt sich weder ändern noch löschen</strong>, auch Fotos lassen sich nicht entfernen (hinzufügen schon). War er falsch, legt man einen neuen für denselben Tag an: Der neue zählt, und der vorherige bleibt sichtbar, markiert als <em>Ersetzt</em>. Beim Speichern erhält die Fachkraft eine <strong>E-Mail</strong> mit dem Tag, den erfassten Stunden und der Erklärung, damit sie weiß, was in ihrer Zeiterfassung steht.
+  </p>
+  <p>
+    Außerdem wird sie beim nächsten Eingeben ihrer PIN an der Stempeluhr gefragt, ob sie mit diesen Stunden <strong>einverstanden</strong> ist. Solange sie nicht
+    antwortet, erscheint der Vorfall als <em>Zustimmung ausstehend</em>; sagt sie nein, erscheint er als
+    <em>Nicht einverstanden</em> mit ihrem Grund, hier, in der Anwesenheitskontrolle und in allem, was heruntergeladen wird. Die Stunden
+    zählen in beiden Fällen gleich: gibt es keine Einigung, zeigt die Erfassung, was das Unternehmen erfasst hat, und den Widerspruch
+    der Person – so verlangt es der Entwurf des Königlichen Dekrets zur Arbeitszeiterfassung.
   </p>
 
   <h4>Der Dienstplan</h4>

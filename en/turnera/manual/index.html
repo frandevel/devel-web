@@ -576,8 +576,13 @@ footer{
       <span>devel</span>
     </a>
     <nav>
-      <a href="/en/turnera">Turnera</a>
+      <a href="/en/turnera#que-hace">What it does</a>
+      <a href="/en/turnera#pantallas">Screens</a>
+      <a href="/en/turnera#abierto">Your data</a>
+      <a href="/en/turnera#preguntas">FAQ</a>
+      <a href="/en/turnera#demo">Demo</a>
       <a href="/en/turnera/manual" aria-current="page">Manual</a>
+      <a href="/en/turnera/integrators">Integrators</a>
       <a href="/en/turnera/novedades">What's new</a>
     </nav>
     <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/turnera/manual" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera/manual" lang="en" aria-current="true">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera/manual" lang="de">DE<span class="idiomas__nombre">Deutsch</span></a></div>
@@ -1184,14 +1189,19 @@ footer{
   </p>
 
   <p>
+    <strong>If the appointment changes with the ticket half done</strong> —you go back to the agenda and add a service that was done in the end—, on returning to the POS a notice shows what the appointment has now and two buttons:
+    <em>Update the ticket</em> adds what is new (and removes what was removed from the appointment), and <em>Keep it as it is</em> changes nothing. It is not updated on its own because what was removed or added at the counter may be on purpose.
+  </p>
+
+  <p>
     <strong>And shorter still: the top of the POS.</strong> As soon as a professional marks an appointment as
     <em>Attended</em>, the customer appears at the top, under <em>To charge</em>, before they reach the counter. Below are the ones still <em>In progress</em>, who come next. Tap the card and the sale loads just as it does from the agenda. The list refreshes itself every few seconds, only shows today's appointments, and each customer drops off it as soon as they are charged or the visit is left as a debt.
   </p>
 
   <ul>
-    <li><strong>Paid now</strong> ticked: the money goes into today's till.</li>
-    <li><strong>Paid now</strong> unticked: the visit is left as a debt and shows up in <em>Unpaid
-      visits</em>.</li>
+    <li><strong>Take payment now</strong> ticked: you choose the payment method and the money goes into today's till.</li>
+    <li><strong>Take payment now</strong> unticked: the visit is left as a debt and shows up in <em>Unpaid
+      visits</em>. As nothing is paid today, the payment method, the split and the amount handed over disappear, and the button changes to <em>Leave as debt</em>. The payment method is chosen on the day it is paid.</li>
     <li><strong>Tendered</strong>: type in what you are handed and the screen works out the change.</li>
   </ul>
 
@@ -1340,6 +1350,10 @@ footer{
   <p>
     Here are the visits that were seen without being paid for. Click one and the payment dialog opens: you pick the
     payment method, adjust the discount if need be and settle it. Afterwards you can print the ticket.
+  </p>
+
+  <p>
+    <strong>When it is settled, Turnera checks again whether the customer has a voucher</strong>, because they may have bought one after leaving it owed. If a voucher covers any line, the payment method shows <em>Voucher</em>: those lines go to zero, labelled <em>Voucher</em>, and the session is deducted on settling. If anything else is left, you choose how the rest is paid. If the voucher pays for everything, there is nothing to charge and no ticket to print: only the session is used up. And if the customer prefers to pay and keep the session, choose any other payment method and the voucher is left untouched.
   </p>
 
   <h3 id="devoluciones">Refunding a ticket</h3>
@@ -1676,10 +1690,7 @@ footer{
   <h3 id="aparatos-sesion">Recording the session</h3>
   <span class="ruta">Agenda → (an appointment) → Equipment for the session</span>
   <p>
-    On appointments that include a service with a device, below the appointment details there is a section with the
-    fields to fill in, grouped by device. Next to each one, <strong>the settings that customer was
-    treated with last time</strong>. It is saved with its own button, “Save what is recorded”, without having to save
-    the whole appointment; a field left blank is taken to mean “not recorded” and nothing is written.
+    Appointments with a service that uses a device show, below the appointment details, a section with the fields to fill in, <strong>grouped by service and device</strong>: each group says which service it is for («Armpit laser · Diode laser»). If the appointment has two services with the same device, their fields appear twice, once per service, so it is clear how many joules went into each area. Next to each field, <strong>how that customer was treated the previous time in that same service</strong>. It is saved with its own button, «Save what was noted», without having to save the whole appointment; a field left blank means «not noted» and is not stored.
   </p>
   <p>
     If the appointment has no service with a device, the section does not appear.
@@ -1688,7 +1699,7 @@ footer{
     <strong>It is also asked for on the way to charging.</strong> When you press <em>Charge</em> in the appointment, the till shows the same session data above the ticket. If a required one is missing, it does not let you charge until it is written down and saved (whoever lacks permission to write it down is warned, but can charge).
   </p>
   <p>
-    <strong>Where you see it afterwards.</strong> In the customer's record, the <em>Sessions with equipment</em> card lists every session, newest first, with the day and time, the equipment, the parameters with their unit and who did it. That is where you follow a laser treatment session by session. If nothing was ever written down for the customer, the card does not appear.
+    <strong>Where you see it afterwards.</strong> In the customer's record, the <em>Sessions with equipment</em> lists each session, newest first, with the day and time, the service, the device, the parameters with their unit and who did it. It is where a laser treatment is followed session by session. If nothing was ever noted for the customer, the card does not appear.
   </p>
   <p>
     That is the figure you really look at before starting: in laser hair removal the settings go up session by session,
@@ -1898,8 +1909,7 @@ footer{
     fives. <strong>Leave it empty and the centre's step is followed</strong>, which is how they all start out.
   </p>
   <p>
-    The grid is drawn with the finest step there is, because the columns share the axis and cannot be ruled
-    two ways at once. What does belong to each place is where an appointment lands when you drop it and how long it can last.
+    Each agenda column is ruled with the step of its place: the indiba one every five minutes, and the rooms that follow the centre's, every fifteen. Where an appointment lands when dropped and how long it can last also belong to each place.
   </p>
 
   <h3>Rooms, courts and studios</h3>
@@ -2337,9 +2347,12 @@ footer{
   </div>
 
   <p>
-    In <em>Clock</em>, in the menu, holds every professional of the centre, each one with a button that says
-    <em>In</em> or <em>Out</em> depending on what is due. There is nothing to choose: the application knows from that
-    person's last clocking.
+    In <em>Clock</em>, in the menu, there are all the professionals of the centre, each with their button
+    <em>Clock</em>. The list <strong>only shows names</strong>: who is in and since when is part of the
+    working time record, and anyone walking past reception sees the screen. Each person sees that after
+    typing their PIN, together with what they have to do: <em>In</em>, or <em>Out</em> and <em>Break</em> if they are
+    already in. There is no choosing between in and out: the application knows from that person's last
+    clocking.
   </p>
 
   <p>
@@ -2348,14 +2361,17 @@ footer{
 
   <figure>
     <img src="/turnera/manual/imagenes/en/29-fichar.png" alt="The clocking screen with the professionals of the centre and their entry or exit button" loading="lazy">
-    <figcaption>The clocking screen: one professional per card, with the entry or the exit that is due.</figcaption>
+    <figcaption>The clock-in screen: one professional per card. Each person's own opens with their PIN.</figcaption>
   </figure>
 
   <h4>The PIN</h4>
 
   <p>
     Every professional needs a <strong>four-digit PIN</strong>, set in
-    <em>Professionals → Clocking PIN</em>. Pressing their button brings up a keypad and they type it: with the fourth digit it already clocks, without pressing anything else. It is what makes pressing someone else's button not clocking for someone else, and without it the list of names would not prove much in an inspection.
+    <em>Professionals → Clocking PIN</em>. Tapping their button brings up a keypad and they type it: the fourth
+    digit opens their own screen, without pressing anything else. That is what makes
+    pressing someone else's button not clocking for someone else, and without it the list of names would prove little to
+    an inspection.
   </p>
 
   <p>
@@ -2388,8 +2404,81 @@ footer{
     together they are what you show when somebody asks.
   </p>
 
+  <h4 id="fichar-lo-mio">What each person sees after their PIN</h4>
+
   <p>
-    In <em>Staff → Working time</em>, in the menu, holds the rest: pick a range and, if you want, one person. At the top come the days with their segments and the hours added up; below, the clock-ins one by one. It downloads as Excel or CSV, and that is what you show the Labour Inspectorate. There are two CSV files: <em>Days (CSV)</em>, the summary of each day, and <em>Clock-ins (CSV)</em>, each clock-in exactly as stored, with who recorded it and which corrections it carries, which is what proves the register has not been rewritten. They open with a double click in Excel. Whoever has the permission to export clock-ins can download them, and they can always be downloaded: the law requires having them available for the Inspectorate.
+    The right PIN opens a window with that person's own information, which <strong>goes back to the list by itself after a minute</strong>
+    if nothing is touched, and as soon as they clock:
+  </p>
+  <ul>
+    <li><strong>Whether they are in or out</strong>, and since what time, or whether they are on a break.</li>
+    <li><strong>In</strong>, or <strong>Out</strong> and <strong>Break</strong> if they are in. A break is
+      time that is not working time (lunch, for instance): it is clocked with <em>Break</em> when leaving and with
+      <em>Back from the break</em> when coming back. It adds no hours and shows in the record between the two stretches of the day.</li>
+    <li><strong>The hours HR has recorded for them</strong> for a forgotten clocking and that they have not
+      said anything about yet. With <em>I agree</em> or <em>I do not agree</em>, explaining why in this case,
+      their answer is recorded next to those hours, and it cannot be changed afterwards (see <em>Incidents</em>, further
+      down).</li>
+    <li><strong>My records</strong>: their month, day by day, with the breaks, the hours and the total, and the previous
+      months. They can <strong>email it to themselves</strong> as a PDF or download it.</li>
+  </ul>
+
+  <p>
+    In <em>Staff → Working time</em>, in the menu, is everything else: choose a range and, if you like, a person.
+    At the top come the <strong>totals of each person and month</strong>: days recorded, planned hours,
+    worked, ordinary and overtime according to their work calendar, the overtime paid or given back as rest
+    that month, and how many hours declared by HR are awaiting their agreement or have their disagreement. Below, each day with
+    its stretches, its breaks and its hours, and at the bottom the clockings one by one.
+  </p>
+
+  <p>
+    What is shown to the labour inspectorate is downloaded from here:
+  </p>
+  <ul>
+    <li><strong>Monthly summary (PDF)</strong>: one sheet per person and month with each day, the total, their working
+      time arrangement and room for the signature of the company and of the person. It is the summary handed over with the payslip.</li>
+    <li><strong>Everything (Excel)</strong>: a workbook with the company, its tax ID and the centre, the record day by day, the
+      month totals and the raw clockings.</li>
+    <li><strong>Days (CSV)</strong>, <strong>Totals (CSV)</strong> and <strong>Clock-ins (CSV)</strong>: the same
+      in files that open with a double click in Excel. The clockings one brings each one as it is stored, with
+      who recorded it and which corrections it has, which is what proves the record has not been rewritten.</li>
+  </ul>
+
+  <p>
+    The PDF can be downloaded by whoever sees the time and attendance; the rest, by whoever has the permission to export the
+    working time record. They can always be downloaded: the law requires keeping them available to the labour inspectorate.
+  </p>
+
+  <h4 id="presencia-enlaces">Access for the labour inspectorate and the worker representatives</h4>
+
+  <p>
+    At the end of <em>Time and attendance</em>, whoever has the permission “Give access to the working time record” creates
+    <strong>read-only links</strong> to give to the <strong>labour inspectorate</strong> or to the
+    <strong>worker representatives</strong>, without creating a user for them. You choose who it is for, write
+    exactly who (for instance, the inspector's name and the number of the request) and how many days
+    it is valid, up to 90.
+  </p>
+  <p>
+    Whoever opens it sees the record of any period of the last four years, a year at most each time, and
+    can download the same files. The representatives see it <strong>without the tax ID</strong>, for data
+    protection. The link <strong>is only shown when it is created</strong>: copy it then and send it. It can be revoked before
+    it expires, and every visit is logged with when, from where and what was looked at.
+  </p>
+
+  <div class="ojo">
+    <p>This is what the draft Royal Decree on working time records being prepared by the Spanish Ministry of Labour asks for:
+      immediate and remote access for the labour inspectorate and access for the worker representatives. Until it is approved, it is enough
+      to be able to show the record when asked; the link makes that easier.</p>
+  </div>
+
+  <h4 id="presencia-resumen-mensual">The monthly summary by email</h4>
+
+  <p>
+    In each professional's record, whoever has the permission “Monthly working time summary by email” (by default,
+    HR and Management) ticks <em>Email them the summary of their working time every month</em>. From then on, at the
+    start of each month they get the PDF of the previous month. Their record needs an email. It is the copy the law
+    requires handing over with the payslip to part-time workers, and that the draft Royal Decree extends to
+    everyone.
   </p>
 
   <figure>
@@ -2416,9 +2505,9 @@ footer{
   </p>
 
   <p>
-    A shift that crosses midnight counts whole on the day it started, which is how whoever does the payroll
-    counts it. And breaks are not clocked: the law does not ask for them and every collective agreement counts
-    them differently, so inventing them here would mean counting wrong in almost all of them.
+    A shift that crosses midnight is counted whole on the day it started, which is how payroll
+    counts it, and what is worked after coming back from a break still belongs to that day. A break with no return
+    within 16 hours is left without an end: none is made up.
   </p>
 
   <h4>The centre's clock</h4>
@@ -2452,8 +2541,7 @@ footer{
       all its sites: the name, the yearly working hours full time and the holiday days, calendar days
       (the Statute's 30) or working days (not counting weekends or public holidays). Each calendar takes the one of its year;
       it is not chosen person by person.</li>
-    <li><strong>Shifts</strong>: «Morning 9-14», «Afternoon 15-21»… A split one has two stretches, and one that ends
-      before it starts is a night shift and ends the next day.</li>
+    <li><strong>Shifts</strong>: «Morning 9-14», «Afternoon 15-21»… One that ends before it starts is a night shift and finishes the next day. <strong>A day takes a single shift</strong>: for someone who works morning and afternoon, create a split shift, with <em>Add stretch (split shift)</em> or with <em>Start as a split shift</em>, which sets it to 09:00-14:00 and 16:00-20:00 for you to adjust. The break is the gap between one stretch and the next, and does not count as worked.</li>
     <li><strong>Absences</strong>: sick leave, paid leave, unpaid leave… Each one says whether that day counts
       as worked for the agreement hours. For a sick leave only that it is a sick leave is written down, never the diagnosis.</li>
     <li><strong>Public holidays</strong>: in <em>Settings</em> the region of the centre is chosen, and in
@@ -2527,6 +2615,13 @@ footer{
   </p>
   <p>
     An incident that declares hours is part of the time record, so it <strong>cannot be changed or deleted</strong>, nor can photos be removed from it (they can be added). If it was wrong, open another one for the same day: the new one is the one that counts and the previous one stays visible, marked as <em>Replaced</em>. When it is saved, the professional receives an <strong>email</strong> with the day, the declared hours and the explanation, so they know what is on their record.
+  </p>
+  <p>
+    Also, the next time they type their PIN at the time clock, they are asked whether they <strong>agree</strong> with those
+    hours. Until they answer, the incident shows as <em>Awaiting agreement</em>; if they say no, it shows as
+    <em>Disagreed</em> with their reason, here, in the time and attendance and in everything downloaded. The hours
+    count the same in both cases: if there is no agreement, the record reflects what the company declared and the person's
+    disagreement, which is what the draft Royal Decree on working time records asks for.
   </p>
 
   <h4>The roster</h4>

@@ -606,7 +606,11 @@ footer{
       <span>devel</span>
     </a>
     <nav>
-      <a href="/en/turnera">Turnera</a>
+      <a href="/en/turnera#que-hace">What it does</a>
+      <a href="/en/turnera#pantallas">Screens</a>
+      <a href="/en/turnera#abierto">Your data</a>
+      <a href="/en/turnera#preguntas">FAQ</a>
+      <a href="/en/turnera#demo">Demo</a>
       <a href="/en/turnera/manual">Manual</a>
       <a href="/en/turnera/integrators">Integrators</a>
       <a href="/en/turnera/novedades" aria-current="page">What's new</a>
@@ -620,6 +624,7 @@ footer{
   <h2>What's new in Turnera</h2>
   <p>Latest first</p>
   <ol>
+    <li><a href="#2026-10-02-cobros">2 October 2026 · Debts paid with a voucher, device data per service and working-time record</a></li>
     <li><a href="#2026-10-02-integraciones">2 October 2026 · Notices to other programs and client lookup</a></li>
     <li><a href="#2026-09-30-fichajes-olvidados">30 September 2026 · Missed clocking notices</a></li>
     <li><a href="#2026-09-30-facturas">30 September 2026 · Complete invoices under the Regulation</a></li>
@@ -648,15 +653,68 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Bugs fixed</strong>: what failed, and no longer does.</span></li>
 </ul>
 
+<section id="2026-10-02-cobros" class="version">
+  <div class="version__cabecera">
+    <h2>2 October 2026 · Debts paid with a voucher, device data per service and working-time record</h2>
+    <span class="version__sello">Latest release</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">2026.10.47-bf0efe2</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Settling a debt with the voucher</h4>
+    <ul>
+      <li>When settling a debt in <em>Outstanding payments</em> Turnera checks again whether the customer has a voucher, since they may have bought one later. If it covers any line, the payment method shows <strong>Voucher</strong>: that line goes to zero and the session is deducted on settling.</li>
+      <li>If the voucher pays for everything, there is nothing to charge and no ticket to print. If the customer prefers to pay and keep the session, just choose another payment method.</li>
+    </ul>
+    <h4>Working-time record</h4>
+    <ul>
+      <li>At the time clock, each person opens their own with their PIN: clock in, clock out or <strong>break</strong>, see <strong>their clock-ins for the month</strong> and receive them by email or as a PDF.</li>
+      <li>Hours declared by HR in an incident stay pending until the person says whether they <strong>agree</strong>, or not and why.</li>
+      <li>Full export of the record (Excel, CSV and a monthly PDF with room for signatures) and <strong>read-only links</strong> for the Labour Inspectorate and the workers' representatives, which expire and log every access.</li>
+      <li>Monthly summary of hours by email to each professional, if switched on in their record.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Improvements</h3>
+    <h4>Till</h4>
+    <ul>
+      <li>When you untick <em>Take payment now</em> the payment method, the split and the amount handed over disappear, and the button now says <strong>Leave as debt</strong>. The payment method is chosen on the day it is paid.</li>
+      <li>If the appointment changes with the ticket half done —you go back to the agenda and add a service—, on returning to the POS it <strong>asks whether to update the ticket</strong> with what the appointment has now.</li>
+    </ul>
+    <h4>Equipment</h4>
+    <ul>
+      <li>Device data is noted <strong>per service</strong>: if the appointment has two areas with the same laser, each gets its own joules, and «the previous time» is that of the same area. The customer record also shows the service of each session.</li>
+    </ul>
+    <h4>Work calendar</h4>
+    <ul>
+      <li>It is now clearer how to set up a <strong>split shift</strong> (morning and afternoon with the break in between), with a button that starts it already split.</li>
+    </ul>
+    <h4>Clinical record</h4>
+    <ul>
+      <li>A progress note can only be deleted by whoever wrote it and on the same day. After that it is <strong>cancelled with a reason</strong> and stays visible as cancelled.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Bugs fixed</h3>
+    <ul>
+      <li>When settling a debt, the customer's voucher was always used without asking, and the dialog showed the full amount.</li>
+      <li>An appointment left as a debt showed a total in the POS with the voucher deducted, although the full debt was recorded.</li>
+      <li>If a room had a shorter agenda step than the centre, the whole agenda was ruled with that step. Now each column is ruled with its own.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-10-02-integraciones" class="version">
   <div class="version__cabecera">
     <h2>2 October 2026 · Notices to other programs and client lookup</h2>
-    <span class="version__sello">Latest release</span>
   </div>
   <p class="version__numero">Version <span translate="no">2026.10.42-8619c25</span></p>
 
   <div class="grupo grupo--nuevo">
-    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Bugs fixed</h3>
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
     <h4>Webhooks: Turnera notifies another program</h4>
     <ul>
       <li>In <em>Administration → Integrations → Webhooks</em> you can add an address of the other program (an ERP, a messaging or campaign system) and Turnera notifies it when an appointment <strong>is created, changed or cancelled</strong>, whether from reception, from the portal or from the integration itself.</li>
@@ -671,7 +729,7 @@ footer{
   </div>
 
   <div class="grupo grupo--mejora">
-    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Bugs fixed</h3>
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Improvements</h3>
     <h4>Integrations</h4>
     <ul>
       <li>Bookings that arrive through an integration <strong>recognise the client by their phone number</strong> when the email is new but the phone matches a single record: duplicate records are no longer created.</li>

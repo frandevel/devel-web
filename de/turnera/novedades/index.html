@@ -606,7 +606,11 @@ footer{
       <span>devel</span>
     </a>
     <nav>
-      <a href="/de/turnera">Turnera</a>
+      <a href="/de/turnera#que-hace">Was es kann</a>
+      <a href="/de/turnera#pantallas">Ansichten</a>
+      <a href="/de/turnera#abierto">Ihre Daten</a>
+      <a href="/de/turnera#preguntas">FAQ</a>
+      <a href="/de/turnera#demo">Demo</a>
       <a href="/de/turnera/manual">Handbuch</a>
       <a href="/de/turnera/integratoren">Integratoren</a>
       <a href="/de/turnera/novedades" aria-current="page">Neuigkeiten</a>
@@ -620,6 +624,7 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-10-02-cobros">2. Oktober 2026 · Offene Beträge mit Mehrfachkarte, Gerätedaten pro Leistung und Arbeitszeiterfassung</a></li>
     <li><a href="#2026-10-02-integraciones">2. Oktober 2026 · Benachrichtigungen an andere Programme und Kundenabfrage</a></li>
     <li><a href="#2026-09-30-fichajes-olvidados">30. September 2026 · Benachrichtigungen bei vergessenem Stempeln</a></li>
     <li><a href="#2026-09-30-facturas">30. September 2026 · Vollständige Rechnungen nach der Verordnung</a></li>
@@ -648,15 +653,68 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-10-02-cobros" class="version">
+  <div class="version__cabecera">
+    <h2>2. Oktober 2026 · Offene Beträge mit Mehrfachkarte, Gerätedaten pro Leistung und Arbeitszeiterfassung</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">2026.10.47-bf0efe2</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Einen offenen Betrag mit der Mehrfachkarte begleichen</h4>
+    <ul>
+      <li>Beim Begleichen eines offenen Betrags unter <em>Offene Beträge</em> wird erneut geprüft, ob der Kunde eine Mehrfachkarte hat, denn er kann sie inzwischen gekauft haben. Deckt sie eine Position, steht als Zahlungsart <strong>Mehrfachkarte</strong>: diese Position geht auf null, und die Sitzung wird beim Begleichen abgebucht.</li>
+      <li>Deckt die Mehrfachkarte alles, gibt es nichts zu kassieren und keinen Beleg zu drucken. Will der Kunde lieber zahlen und die Sitzung behalten, wählen Sie einfach eine andere Zahlungsart.</li>
+    </ul>
+    <h4>Arbeitszeiterfassung</h4>
+    <ul>
+      <li>An der Stempeluhr öffnet jede Person ihren Bereich mit ihrer PIN: Kommen, Gehen oder <strong>Pause</strong>,  <strong>ihre Stempelungen des Monats</strong> einsehen und per E-Mail oder als PDF erhalten.</li>
+      <li>Von der Personalabteilung in einem Vorfall erfasste Stunden bleiben offen, bis die Person angibt, ob sie <strong>einverstanden</strong>ist, oder nicht und warum.</li>
+      <li>Vollständiger Export der Erfassung (Excel, CSV und monatliches PDF mit Platz für Unterschriften) und <strong>schreibgeschützte Links</strong> für die Arbeitsinspektion und die Arbeitnehmervertretung, die ablaufen und jeden Zugriff protokollieren.</li>
+      <li>Monatliche Stundenübersicht per E-Mail an jede Fachkraft, wenn sie in ihrem Profil aktiviert ist.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Kasse</h4>
+    <ul>
+      <li>Wenn Sie <em>Jetzt kassieren</em> abwählen, verschwinden Zahlungsart, Aufteilung und übergebener Betrag, und die Schaltfläche heißt nun <strong>Als offenen Betrag erfassen</strong>. Die Zahlungsart wird an dem Tag gewählt, an dem bezahlt wird.</li>
+      <li>Ändert sich der Termin bei halbfertigem Beleg —Sie gehen zurück zum Kalender und fügen eine Leistung hinzu—, wird beim Zurückkehren zur Kasse <strong>gefragt, ob der Beleg aktualisiert werden soll</strong> mit dem, was der Termin jetzt enthält.</li>
+    </ul>
+    <h4>Geräte</h4>
+    <ul>
+      <li>Gerätedaten werden <strong>pro Leistung</strong>erfasst: Hat der Termin zwei Bereiche mit demselben Laser, bekommt jeder seine eigenen Joule, und «das letzte Mal» ist das desselben Bereichs. Die Kundenakte zeigt auch die Leistung jeder Sitzung.</li>
+    </ul>
+    <h4>Arbeitskalender</h4>
+    <ul>
+      <li>Es ist jetzt klarer, wie man eine <strong>geteilte Schicht</strong> anlegt (Vor- und Nachmittag mit der Pause dazwischen), mit einer Schaltfläche, die sie schon geteilt beginnt.</li>
+    </ul>
+    <h4>Krankenakte</h4>
+    <ul>
+      <li>Ein Verlaufseintrag kann nur von der Person gelöscht werden, die ihn geschrieben hat, und nur am selben Tag. Danach wird er <strong>mit Begründung storniert</strong> und bleibt als storniert sichtbar.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Behobene Fehler</h3>
+    <ul>
+      <li>Beim Begleichen eines offenen Betrags wurde die Mehrfachkarte des Kunden immer ohne Rückfrage verbraucht, und der Dialog zeigte den vollen Betrag.</li>
+      <li>Ein als offener Betrag erfasster Termin zeigte an der Kasse eine Summe mit abgezogener Mehrfachkarte, obwohl der volle Betrag erfasst wurde.</li>
+      <li>Hatte eine Kabine ein kürzeres Kalenderraster als das Zentrum, wurde der ganze Kalender mit diesem Raster gezeichnet. Jetzt hat jede Spalte ihr eigenes.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-10-02-integraciones" class="version">
   <div class="version__cabecera">
     <h2>2. Oktober 2026 · Benachrichtigungen an andere Programme und Kundenabfrage</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">2026.10.42-8619c25</span></p>
 
   <div class="grupo grupo--nuevo">
-    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Behobene Fehler</h3>
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
     <h4>Webhooks: Turnera benachrichtigt ein anderes Programm</h4>
     <ul>
       <li>Unter <em>Verwaltung → Integrationen → Webhooks</em> kann man eine Adresse des anderen Programms (ein ERP, ein Nachrichten- oder Kampagnensystem) hinterlegen, und Turnera benachrichtigt es, wenn ein Termin <strong>angelegt, geändert oder storniert wird</strong>, sei es von der Rezeption, vom Portal oder von der Integration selbst.</li>
@@ -671,7 +729,7 @@ footer{
   </div>
 
   <div class="grupo grupo--mejora">
-    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Behobene Fehler</h3>
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
     <h4>Integrationen</h4>
     <ul>
       <li>Buchungen, die über eine Integration eingehen, <strong>erkennen den Kunden an der Telefonnummer,</strong> wenn die E-Mail-Adresse neu ist, die Telefonnummer aber zu genau einer Kundenakte passt: Doppelte Akten entstehen nicht mehr.</li>

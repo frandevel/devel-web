@@ -576,8 +576,13 @@ footer{
       <span>devel</span>
     </a>
     <nav>
-      <a href="/turnera">Turnera</a>
+      <a href="/turnera#que-hace">Qué hace</a>
+      <a href="/turnera#pantallas">Pantallas</a>
+      <a href="/turnera#abierto">Tus datos</a>
+      <a href="/turnera#preguntas">Preguntas</a>
+      <a href="/turnera#demo">Demo</a>
       <a href="/turnera/manual" aria-current="page">Manual</a>
+      <a href="/turnera/integradores">Integradores</a>
       <a href="/turnera/novedades">Novedades</a>
     </nav>
     <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/turnera/manual" lang="es" aria-current="true">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera/manual" lang="en">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera/manual" lang="de">DE<span class="idiomas__nombre">Deutsch</span></a></div>
@@ -1296,6 +1301,14 @@ footer{
   </p>
 
   <p>
+    <strong>Si la cita cambia con el ticket a medias</strong> —se vuelve a la agenda y se le añade un servicio que
+    al final se hizo—, al volver al TPV aparece un aviso con lo que lleva ahora la cita y dos botones:
+    <em>Actualizar el ticket</em> añade lo nuevo (y quita lo que se quitó de la cita), y <em>Dejarlo como
+    está</em> no toca nada. No se cambia solo porque lo que se quitó o se añadió en el mostrador puede ser a
+    propósito.
+  </p>
+
+  <p>
     <strong>Y más corto todavía: arriba del TPV.</strong> En cuanto un profesional marca una cita como
     <em>Atendido</em>, el cliente aparece arriba, en <em>Por cobrar</em>, antes de que llegue al mostrador. Debajo
     salen los que aún están <em>En curso</em>, que son los siguientes. Pulse la tarjeta y la venta se carga igual
@@ -1304,9 +1317,10 @@ footer{
   </p>
 
   <ul>
-    <li><strong>Pagado ahora</strong> marcado: el dinero entra en la caja de hoy.</li>
-    <li><strong>Pagado ahora</strong> sin marcar: la visita se queda como deuda y aparece en <em>Cobros
-      pendientes</em>.</li>
+    <li><strong>Cobrar ahora</strong> marcado: se elige la forma de pago y el dinero entra en la caja de hoy.</li>
+    <li><strong>Cobrar ahora</strong> sin marcar: la visita se queda como deuda y aparece en <em>Cobros
+      pendientes</em>. Como hoy no se paga, desaparecen la forma de pago, el reparto y el entregado, y el botón pasa
+      a decir <em>Dejar en deuda</em>. La forma de pago se elige el día que se cobra.</li>
     <li><strong>Entregado</strong>: escriba lo que le dan y la pantalla calcula el cambio.</li>
   </ul>
 
@@ -1499,6 +1513,14 @@ footer{
   <p>
     Aquí están las visitas que se atendieron sin pagar. Al pulsar una se abre el diálogo de cobro: se elige la
     forma de pago, se ajusta el descuento si procede y se salda. Después se puede imprimir el ticket.
+  </p>
+
+  <p>
+    <strong>Al cobrarla se vuelve a mirar si el cliente tiene bono</strong>, porque ha podido comprarlo después de
+    dejarla a deber. Si un bono cubre alguna línea, la forma de pago sale en <em>Bono</em>: esas líneas pasan a
+    cero, con la etiqueta <em>Bono</em>, y la sesión se descuenta al saldar. Si queda algo más, se elige con qué se
+    paga el resto. Si el bono lo paga todo, no hay nada que cobrar ni ticket que imprimir: solo se gasta la sesión.
+    Y si el cliente prefiere pagar y guardarse la sesión, se elige cualquier otra forma de pago y el bono no se toca.
   </p>
 
   <h3 id="devoluciones">Devolver un ticket</h3>
@@ -1894,8 +1916,11 @@ footer{
   <span class="ruta">Agenda → (una cita) → Aparatología de la sesión</span>
   <p>
     En las citas que llevan un servicio con aparato aparece, debajo de los datos de la cita, un apartado con los
-    campos que hay que rellenar, agrupados por aparato. Junto a cada uno, <strong>con cuánto se le trató a ese
-    cliente la vez anterior</strong>. Se guarda con su propio botón, «Guardar lo anotado», sin tener que guardar
+    campos que hay que rellenar, <strong>agrupados por servicio y aparato</strong>: cada grupo dice para qué
+    servicio se anota («Láser axilas · Láser de diodo»). Si la cita lleva dos servicios con el mismo aparato, sus
+    campos salen dos veces, una por servicio, y así queda claro cuántos julios se pusieron en cada zona. Junto a
+    cada campo, <strong>con cuánto se le trató a ese cliente la vez anterior en ese mismo servicio</strong>. Se
+    guarda con su propio botón, «Guardar lo anotado», sin tener que guardar
     la cita entera; un campo que se deja en blanco se entiende como «no se anotó» y no queda escrito.
   </p>
   <p>
@@ -1908,7 +1933,7 @@ footer{
   </p>
   <p>
     <strong>Dónde se ve después.</strong> En la ficha del cliente, la tarjeta <em>Sesiones con aparato</em> lista
-    cada sesión, de la más reciente a la más antigua, con el día y la hora, el aparato, los parámetros con su unidad
+    cada sesión, de la más reciente a la más antigua, con el día y la hora, el servicio, el aparato, los parámetros con su unidad
     y quién la hizo. Es donde se sigue la pauta de un tratamiento de láser sesión a sesión. Si al cliente nunca se
     le anotó nada, la tarjeta no aparece.
   </p>
@@ -2170,8 +2195,8 @@ footer{
     en cinco. <strong>Dejándolo vacío se sigue el del centro</strong>, que es como nacen todas.
   </p>
   <p>
-    La rejilla se dibuja con el paso más fino que haya, porque las columnas comparten el eje y no se pueden rayar
-    de dos maneras a la vez. Lo que sí es de cada sitio es dónde cae una cita al soltarla y cuánto puede durar.
+    Cada columna de la agenda se raya con el paso de su sitio: la de indiba, cada cinco minutos, y las cabinas que
+    siguen el del centro, cada quince. Y de cada sitio es también dónde cae una cita al soltarla y cuánto puede durar.
   </p>
 
   <h3>Cabinas, pistas y salas</h3>
@@ -2665,9 +2690,12 @@ footer{
   </div>
 
   <p>
-    En <em>Fichar</em>, en el menú, están todos los profesionales del centro, cada uno con un botón que dice
-    <em>Entrada</em> o <em>Salida</em> según lo que le toque. No hay que elegir: la aplicación lo sabe por el
-    último fichaje de esa persona.
+    En <em>Fichar</em>, en el menú, están todos los profesionales del centro, cada uno con su botón
+    <em>Fichar</em>. La lista <strong>solo enseña nombres</strong>: quién está dentro y desde cuándo es parte del
+    registro de jornada, y la pantalla la ve cualquiera que pase por recepción. Eso lo ve cada uno después de
+    teclear su PIN, junto con lo que le toca hacer: <em>Entrada</em>, o <em>Salida</em> y <em>Pausa</em> si ya
+    está dentro. No hay que elegir entre entrada y salida: la aplicación lo sabe por el último fichaje de esa
+    persona.
   </p>
 
   <p>
@@ -2679,7 +2707,7 @@ footer{
 
   <figure>
     <img src="/turnera/manual/imagenes/29-fichar.png" alt="La pantalla de fichar con los profesionales del centro y su boton de entrada o salida" loading="lazy">
-    <figcaption>La pantalla de fichar: un profesional por tarjeta, con la entrada o la salida que le toca.</figcaption>
+    <figcaption>La pantalla de fichar: un profesional por tarjeta. Lo de cada uno se abre con su PIN.</figcaption>
   </figure>
 
   <h4>El PIN</h4>
@@ -2687,7 +2715,7 @@ footer{
   <p>
     Cada profesional necesita un <strong>PIN de cuatro cifras</strong>, que se le pone en
     <em>Profesionales → PIN de fichaje</em>. Al pulsar su botón sale un teclado y lo teclea: con la cuarta
-    cifra ya ficha, sin pulsar nada más. Es lo que hace que
+    cifra se abre lo suyo, sin pulsar nada más. Es lo que hace que
     pulsar el botón de otro no sea fichar por otro, y sin ello la lista de nombres no probaría gran cosa ante
     una inspección.
   </p>
@@ -2725,14 +2753,81 @@ footer{
     juntos son lo que se enseña cuando alguien pregunta.
   </p>
 
+  <h4 id="fichar-lo-mio">Lo que ve cada uno tras su PIN</h4>
+
+  <p>
+    Con el PIN bueno se abre una ventana con lo de esa persona, que <strong>vuelve sola a la lista al minuto</strong>
+    sin tocar nada, y en cuanto ficha:
+  </p>
+  <ul>
+    <li><strong>Si está dentro o fuera</strong>, y desde qué hora, o si está en una pausa.</li>
+    <li><strong>Entrada</strong>, o <strong>Salida</strong> y <strong>Pausa</strong> si está dentro. Una pausa es
+      un rato que no es tiempo de trabajo (el almuerzo, por ejemplo): se ficha con <em>Pausa</em> al salir y con
+      <em>Volver de la pausa</em> al regresar. No suma horas y sale en el registro entre los dos tramos del día.</li>
+    <li><strong>Las horas que RRHH ha registrado por ella</strong> por un fichaje olvidado y de las que todavía no
+      ha dicho nada. Con <em>Estoy conforme</em> o <em>No estoy conforme</em>, en este caso explicando por qué,
+      queda anotada su respuesta junto a esas horas, que no se cambia después (ver <em>Incidencias</em>, más
+      abajo).</li>
+    <li><strong>Mis fichajes</strong>: su mes, día a día, con las pausas, las horas y el total, y los meses
+      anteriores. Se lo puede <strong>enviar a su correo</strong> en PDF o descargarlo.</li>
+  </ul>
+
   <p>
     En <em>Personal → Control de presencia</em>, en el menú, está lo demás: elija un rango y, si quiere, una persona.
-    Arriba salen los días con sus tramos y las horas sumadas; abajo, los fichajes uno a uno. Se descarga en
-    Excel o en CSV, y eso es lo que se le enseña a la Inspección. Hay dos CSV: <em>Días (CSV)</em>, el resumen
-    de cada día, y <em>Fichajes (CSV)</em>, cada fichaje tal como está guardado, con quién lo registró y qué
-    correcciones lleva, que es lo que prueba que el registro no se ha reescrito. Se abren con doble clic en
-    Excel. Quien puede descargarlos es quien tiene el permiso de exportar los fichajes, y siempre pueden bajarse:
-    la ley obliga a tenerlos a disposición de la Inspección.
+    Arriba salen los <strong>totales de cada persona y mes</strong>: días con registro, horas planificadas,
+    trabajadas, ordinarias y extraordinarias según su calendario laboral, las extra pagadas o devueltas en descanso
+    ese mes, y cuántas horas declaradas por RRHH esperan su conformidad o tienen su desacuerdo. Debajo, cada día con
+    sus tramos, sus pausas y sus horas, y abajo los fichajes uno a uno.
+  </p>
+
+  <p>
+    Lo que se le enseña a la Inspección se descarga desde aquí:
+  </p>
+  <ul>
+    <li><strong>Resumen mensual (PDF)</strong>: una hoja por persona y mes con cada día, el total, su régimen de
+      jornada y hueco para la firma de la empresa y de la persona. Es el resumen que se entrega con la nómina.</li>
+    <li><strong>Todo (Excel)</strong>: un libro con la empresa, su CIF y el centro, el registro día a día, los
+      totales del mes y los fichajes en bruto.</li>
+    <li><strong>Días (CSV)</strong>, <strong>Totales (CSV)</strong> y <strong>Fichajes (CSV)</strong>: lo mismo
+      en ficheros que se abren con doble clic en Excel. El de fichajes trae cada uno tal como está guardado, con
+      quién lo registró y qué correcciones lleva, que es lo que prueba que el registro no se ha reescrito.</li>
+  </ul>
+
+  <p>
+    El PDF lo descarga quien ve el control de presencia; los demás, quien tiene el permiso de exportar el
+    registro de jornada. Siempre pueden bajarse: la ley obliga a tenerlos a disposición de la Inspección.
+  </p>
+
+  <h4 id="presencia-enlaces">Acceso de la Inspección y de la representación</h4>
+
+  <p>
+    Al final de <em>Control de presencia</em>, quien tiene el permiso «Dar acceso al registro de jornada» crea
+    <strong>enlaces de solo lectura</strong> para dárselos a la <strong>Inspección de Trabajo</strong> o a la
+    <strong>representación de la plantilla</strong>, sin crearles un usuario. Se elige para quién es, se escribe
+    exactamente para quién (por ejemplo, el nombre de la inspectora y el número del requerimiento) y cuántos días
+    vale, hasta 90.
+  </p>
+  <p>
+    Quien lo abre ve el registro de cualquier periodo de los cuatro últimos años, de un año como mucho cada vez, y
+    puede descargar los mismos ficheros. La representación lo ve <strong>sin el NIF</strong>, por protección de
+    datos. El enlace <strong>solo se enseña al crearlo</strong>: cópielo entonces y envíelo. Se puede retirar antes
+    de que caduque, y cada consulta queda apuntada con cuándo, desde dónde y qué se miró.
+  </p>
+
+  <div class="ojo">
+    <p>Esto es lo que pide el borrador del Real Decreto de registro de jornada que prepara el Ministerio de Trabajo:
+      acceso inmediato y a distancia de la Inspección y acceso de la representación. Mientras no se apruebe, basta
+      con poder enseñar el registro cuando se pida; el enlace lo hace más fácil.</p>
+  </div>
+
+  <h4 id="presencia-resumen-mensual">El resumen mensual por correo</h4>
+
+  <p>
+    En la ficha de cada profesional, quien tiene el permiso «Resumen mensual de jornada por correo» (de fábrica,
+    RRHH y Dirección) marca <em>Enviarle cada mes por correo el resumen de su jornada</em>. Desde entonces, a
+    primeros de cada mes le llega el PDF del mes anterior. Necesita tener correo en su ficha. Es la copia que la ley
+    pide entregar con la nómina a quien trabaja a tiempo parcial, y que el borrador del Real Decreto extiende a
+    todos.
   </p>
 
   <figure>
@@ -2768,8 +2863,8 @@ footer{
 
   <p>
     Un turno que cruza la medianoche se cuenta entero en el día en que empezó, que es como lo cuenta quien
-    hace las nóminas. Y las pausas no se fichan: la ley no las pide y cada convenio las cuenta de una manera,
-    así que inventarlas aquí sería contar mal en casi todos.
+    hace las nóminas, y lo que se trabaja al volver de una pausa sigue siendo de ese día. Una pausa de la que no
+    se vuelve en 16 horas se queda sin final: no se le inventa uno.
   </p>
 
   <h4>La hora del centro</h4>
@@ -2804,8 +2899,11 @@ footer{
       todas sus sedes: el nombre, las horas de trabajo al año a jornada completa y los días de vacaciones, naturales
       (los 30 del Estatuto) o laborables (sin contar fines de semana ni festivos). Cada calendario toma el de su año;
       no se elige persona a persona.</li>
-    <li><strong>Turnos</strong>: «Mañana 9-14», «Tarde 15-21»… Uno partido lleva dos tramos, y uno que acaba
-      antes de empezar es de noche y termina al día siguiente.</li>
+    <li><strong>Turnos</strong>: «Mañana 9-14», «Tarde 15-21»… Uno que acaba antes de empezar es de noche y
+      termina al día siguiente. <strong>Un día lleva un solo turno</strong>: para quien hace mañana y tarde se crea
+      un turno partido, con <em>Añadir tramo (turno partido)</em> o con <em>Empezar como partido</em>, que lo deja en
+      09:00-14:00 y 16:00-20:00 para ajustarlo. La pausa es el hueco entre un tramo y el siguiente, y no cuenta como
+      trabajada.</li>
     <li><strong>Ausencias</strong>: baja, permiso retribuido, permiso sin sueldo… Cada una dice si ese día cuenta
       como trabajado para las horas del convenio. De una baja se apunta que es una baja, nunca el diagnóstico.</li>
     <li><strong>Festivos</strong>: en <em>Ajustes</em> se elige la comunidad autónoma del centro, y en
@@ -2926,6 +3024,13 @@ footer{
     cuenta y la anterior se queda a la vista, marcada como <em>Sustituida</em>. Al guardarla, el profesional recibe
     un <strong>correo</strong> con el día, las horas declaradas y la explicación, para que sepa qué consta en su
     registro.
+  </p>
+  <p>
+    Además, la próxima vez que teclee su PIN en el reloj, se le pregunta si está <strong>conforme</strong> con esas
+    horas. Mientras no conteste, la incidencia sale como <em>Pendiente de conformidad</em>; si dice que no, sale como
+    <em>No conforme</em> con su motivo, aquí, en el control de presencia y en todo lo que se descarga. Las horas
+    cuentan igual en los dos casos: si no hay acuerdo, el registro refleja lo que declaró la empresa y el desacuerdo
+    de la persona, que es lo que pide el borrador del Real Decreto de registro de jornada.
   </p>
 
   <h4>El cuadrante</h4>
