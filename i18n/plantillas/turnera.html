@@ -472,6 +472,22 @@ footer{
 @media (max-width:480px){.faq__tabla s{color:var(--text-dim);font-weight:400;margin-right:.3rem}
 .faq__tabla th,.faq__tabla td{padding:.4rem .45rem}.faq__tabla th{letter-spacing:.06em}}
 .faq__pie{margin-top:.5rem;font-size:1rem}
+.precio-config{max-width:36rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.8rem;color:var(--text)}
+.precio-config__cabecera{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.precio-config__cabecera label{font-weight:600}
+.precio-config__cabecera output{font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--tu-anillo);font-variant-numeric:tabular-nums}
+.precio-config input[type=range]{width:100%;accent-color:var(--tu-anillo);cursor:pointer;margin:0}
+.precio-config__escala{position:relative;height:1.1em;margin:0 .5rem;font-family:var(--mono);font-size:.72rem;color:var(--steel)}
+.precio-config__escala span{position:absolute;transform:translateX(-50%)}
+.precio-config__modo{display:flex;gap:.5rem;flex-wrap:wrap}
+.precio-config__modo button{font:inherit;font-size:.88rem;padding:.4rem .9rem;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--text-dim);cursor:pointer}
+.precio-config__modo button[aria-pressed="true"]{background:var(--tu-anillo);border-color:var(--tu-anillo);color:var(--tu-sobre-anillo)}
+.precio-config__resultado{border-top:1px solid var(--line);padding-top:.8rem}
+.precio-config__resultado p{margin:0}
+.precio-config__cifra{font-size:1rem;color:var(--text-dim)}
+.precio-config__cifra #precio-cifra,[data-cuando="consulta"] .precio-config__cifra{font-family:var(--display);font-size:2rem;font-weight:700;color:var(--text)}
+.precio-config__detalle{margin-top:.35rem!important;font-size:.92rem;color:var(--text-dim)}
+.precio-config__detalle s{margin-right:.3rem}
 .faq__nota{margin-top:.8rem;font-size:.82rem;color:var(--steel);max-width:60ch}
 
 /* ---------- selector de idioma ---------- */
@@ -566,6 +582,7 @@ footer{
       <a href="#preguntas">{{t1df9a6fc}}</a>
       <a href="#demo">{{te52c854d}}</a>
       <a href="/turnera/manual">{{t4e836fdc}}</a>
+      <a href="/turnera/integradores">{{tb480941d}}</a>
       <a href="/turnera/novedades">{{t5c371423}}</a>
     </nav>
     <!--selector-de-idioma-->
@@ -795,20 +812,30 @@ footer{
           <details class="faq__item">
             <summary>{{t882e7f82}}</summary>
             <div class="faq__respuesta">
-              <p>{{t2668815d}}</p>
-              <table class="faq__tabla">
-                <thead><tr><th>{{t65fe49ad}}</th><th>{{tdf450d80}}</th><th>{{te9e76f24}}</th><th>{{tfe1c0471}}</th></tr></thead>
-                <tbody>
-                  <tr><td>{{tff81856d}}</td><td>39 €</td><td><s>468 €</s> 390 €</td><td>78 €</td></tr>
-                  <tr><td>{{tef00a8a3}}</td><td>59 €</td><td><s>708 €</s> 590 €</td><td>118 €</td></tr>
-                  <tr><td>{{tcc081b56}}</td><td>79 €</td><td><s>948 €</s> 790 €</td><td>158 €</td></tr>
-                  <tr><td>{{t6228389e}}</td><td>90 €</td><td><s>1.080 €</s> 900 €</td><td>180 €</td></tr>
-                  <tr><td>{{t1d42ec2f}}</td><td>100 €</td><td><s>1.200 €</s> 1.000 €</td><td>200 €</td></tr>
-                  <tr><td>{{teaf8de72}}</td><td>125 €</td><td><s>1.500 €</s> 1.250 €</td><td>250 €</td></tr>
-                  <tr><td>{{tbe96e18f}}</td><td>150 €</td><td><s>1.800 €</s> 1.500 €</td><td>300 €</td></tr>
-                  <tr><td>{{t19417d37}}</td><td>{{t12c16e69}}</td><td>{{t12c16e69}}</td><td>{{t6c58a50f}}</td></tr>
-                </tbody>
-              </table>
+              <p>{{t59f3cc3a}}</p>
+              <div class="precio-config" id="configurador">
+                <div class="precio-config__cabecera">
+                  <label for="precio-recursos">{{t149c929f}}</label>
+                  <output id="precio-n" for="precio-recursos">4</output>
+                </div>
+                <input type="range" id="precio-recursos" min="2" max="21" step="1" value="4">
+                <div class="precio-config__escala" aria-hidden="true"><span style="left:0">2</span><span style="left:42.1%">10</span><span style="left:100%">20+</span></div>
+                <div class="precio-config__modo" role="group" aria-label="{{t73568c2e}}">
+                  <button type="button" data-modo="mes" aria-pressed="true">{{tdf450d80}}</button>
+                  <button type="button" data-modo="anual" aria-pressed="false">{{t54cfeb44}}</button>
+                </div>
+                <div class="precio-config__resultado" aria-live="polite">
+                  <div data-cuando="precio">
+                    <p class="precio-config__cifra"><span id="precio-cifra">56 €</span> <span data-modo-texto="mes">{{tbf486f3f}}</span><span data-modo-texto="anual" hidden="">{{t78ca2cb0}}</span></p>
+                    <p class="precio-config__detalle" data-modo-texto="mes">{{t92f70250}} <b id="precio-anual">560 €</b>{{t92c6b011}}</p>
+                    <p class="precio-config__detalle" data-modo-texto="anual" hidden=""><s id="precio-sin-descuento">672 €</s> {{tfe1c0471}} <b id="precio-ahorro">112 €</b>{{t3268d247}}</p>
+                  </div>
+                  <div data-cuando="consulta" hidden="">
+                    <p class="precio-config__cifra">{{t83fcaafc}}</p>
+                    <p class="precio-config__detalle">{{tb191cf50}} <a href="#demo">{{t6b7c744d}}</a> {{t03c142c2}}</p>
+                  </div>
+                </div>
+              </div>
               <p>{{t412c6b02}} <b>{{t5481b01b}}</b>{{t3268d247}}</p>
             </div>
           </details>
@@ -881,14 +908,14 @@ footer{
             <div class="faq__respuesta">
               <p>{{tf7372a6b}}</p>
               <p>{{t78e2da9c}} <b>{{t89fa3971}}</b>{{tcd9fd409}}</p>
-              <p>{{tc66a29c8}}</p>
+              <p>{{t09e5c45f}}</p>
             </div>
           </details>
 
           <details class="faq__item">
             <summary>{{tda3fe7ba}}</summary>
             <div class="faq__respuesta">
-              <p>{{tb8b9f136}} <b>{{te8114992}}</b> {{teee47f40}}</p>
+              <p>{{tb8b9f136}} <b>{{te8114992}}</b> {{tbdd23f09}}</p>
               <p>{{t1edc2731}}</p>
             </div>
           </details>
@@ -1093,7 +1120,7 @@ footer{
             <summary>{{tc44201a9}}</summary>
             <div class="faq__respuesta">
               <p>{{t5eb3ae0e}}</p>
-              <p>{{tfe221318}} <a href="/turnera/integradores">{{tea9d16ed}}</a>{{t50d9fe84}}</p>
+              <p>{{tfe221318}} <a href="/turnera/api">{{tea9d16ed}}</a>{{t50d9fe84}}</p>
             </div>
           </details>
 
@@ -1366,6 +1393,50 @@ for (const [posicion, pestana] of pestanas.entries()) {
 }
 
 if (pestanas.length > 0) mostrarPerfil(pestanas[0]);
+</script>
+<script>
+// El configurador de precios: las cifras salen de aquí y los textos de la página, que se traducen con ella.
+(function () {
+  const raiz = document.getElementById("configurador");
+  if (!raiz) return;
+  const HASTA_DIEZ = [39, 48, 56, 63, 69, 75, 80, 85, 90];
+  const A_CONSULTAR = 21;
+  const barra = document.getElementById("precio-recursos");
+  const formato = new Intl.NumberFormat(document.documentElement.lang || "es",
+    { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
+  let modo = "mes";
+
+  function alMes(recursos) {
+    return recursos <= 10 ? HASTA_DIEZ[Math.max(recursos, 2) - 2] : 90 + 5 * (recursos - 10);
+  }
+
+  function pintar() {
+    const recursos = Number(barra.value);
+    const aConsultar = recursos >= A_CONSULTAR;
+    document.getElementById("precio-n").textContent = aConsultar ? "20+" : String(recursos);
+    raiz.querySelector('[data-cuando="precio"]').hidden = aConsultar;
+    raiz.querySelector('[data-cuando="consulta"]').hidden = !aConsultar;
+    if (aConsultar) return;
+    const mensual = alMes(recursos);
+    document.getElementById("precio-cifra").textContent = formato.format(modo === "mes" ? mensual : mensual * 10);
+    document.getElementById("precio-anual").textContent = formato.format(mensual * 10);
+    document.getElementById("precio-sin-descuento").textContent = formato.format(mensual * 12);
+    document.getElementById("precio-ahorro").textContent = formato.format(mensual * 2);
+    raiz.querySelectorAll("[data-modo-texto]").forEach((elemento) => {
+      elemento.hidden = elemento.dataset.modoTexto !== modo;
+    });
+  }
+
+  barra.addEventListener("input", pintar);
+  raiz.querySelectorAll("[data-modo]").forEach((boton) => {
+    boton.addEventListener("click", () => {
+      modo = boton.dataset.modo;
+      raiz.querySelectorAll("[data-modo]").forEach((otro) => otro.setAttribute("aria-pressed", String(otro === boton)));
+      pintar();
+    });
+  });
+  pintar();
+})();
 </script>
 
 

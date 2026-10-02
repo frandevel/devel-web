@@ -477,6 +477,22 @@ footer{
 @media (max-width:480px){.faq__tabla s{color:var(--text-dim);font-weight:400;margin-right:.3rem}
 .faq__tabla th,.faq__tabla td{padding:.4rem .45rem}.faq__tabla th{letter-spacing:.06em}}
 .faq__pie{margin-top:.5rem;font-size:1rem}
+.precio-config{max-width:36rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.8rem;color:var(--text)}
+.precio-config__cabecera{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.precio-config__cabecera label{font-weight:600}
+.precio-config__cabecera output{font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--tu-anillo);font-variant-numeric:tabular-nums}
+.precio-config input[type=range]{width:100%;accent-color:var(--tu-anillo);cursor:pointer;margin:0}
+.precio-config__escala{position:relative;height:1.1em;margin:0 .5rem;font-family:var(--mono);font-size:.72rem;color:var(--steel)}
+.precio-config__escala span{position:absolute;transform:translateX(-50%)}
+.precio-config__modo{display:flex;gap:.5rem;flex-wrap:wrap}
+.precio-config__modo button{font:inherit;font-size:.88rem;padding:.4rem .9rem;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--text-dim);cursor:pointer}
+.precio-config__modo button[aria-pressed="true"]{background:var(--tu-anillo);border-color:var(--tu-anillo);color:var(--tu-sobre-anillo)}
+.precio-config__resultado{border-top:1px solid var(--line);padding-top:.8rem}
+.precio-config__resultado p{margin:0}
+.precio-config__cifra{font-size:1rem;color:var(--text-dim)}
+.precio-config__cifra #precio-cifra,[data-cuando="consulta"] .precio-config__cifra{font-family:var(--display);font-size:2rem;font-weight:700;color:var(--text)}
+.precio-config__detalle{margin-top:.35rem!important;font-size:.92rem;color:var(--text-dim)}
+.precio-config__detalle s{margin-right:.3rem}
 .faq__nota{margin-top:.8rem;font-size:.82rem;color:var(--steel);max-width:60ch}
 
 /* ---------- selector de idioma ---------- */
@@ -571,6 +587,7 @@ footer{
       <a href="#preguntas">Preguntas</a>
       <a href="#demo">Demo</a>
       <a href="/turnera/manual">Manual</a>
+      <a href="/turnera/integradores">Integradores</a>
       <a href="/turnera/novedades">Novedades</a>
     </nav>
     <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/turnera" lang="es" aria-current="true">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera" lang="en">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera" lang="de">DE<span class="idiomas__nombre">Deutsch</span></a></div>
@@ -800,20 +817,30 @@ footer{
           <details class="faq__item">
             <summary>¿Cuánto cuesta?</summary>
             <div class="faq__respuesta">
-              <p>39 € al mes con dos recursos incluidos y 10 € por cada recurso más hasta seis. Del séptimo al décimo, cada recurso cuesta menos: con diez pagas 100 €. A partir de ahí, 5 € por cada recurso más hasta veinte. Con más de veinte, lo hablamos. No importa en cuántos locales los tengas repartidos.</p>
-              <table class="faq__tabla">
-                <thead><tr><th>Tu centro</th><th>Al mes</th><th>Al año, pagando por adelantado</th><th>Te ahorras</th></tr></thead>
-                <tbody>
-                  <tr><td>2 recursos</td><td>39 €</td><td><s>468 €</s> 390 €</td><td>78 €</td></tr>
-                  <tr><td>4 recursos</td><td>59 €</td><td><s>708 €</s> 590 €</td><td>118 €</td></tr>
-                  <tr><td>6 recursos</td><td>79 €</td><td><s>948 €</s> 790 €</td><td>158 €</td></tr>
-                  <tr><td>8 recursos</td><td>90 €</td><td><s>1.080 €</s> 900 €</td><td>180 €</td></tr>
-                  <tr><td>10 recursos</td><td>100 €</td><td><s>1.200 €</s> 1.000 €</td><td>200 €</td></tr>
-                  <tr><td>15 recursos</td><td>125 €</td><td><s>1.500 €</s> 1.250 €</td><td>250 €</td></tr>
-                  <tr><td>20 recursos</td><td>150 €</td><td><s>1.800 €</s> 1.500 €</td><td>300 €</td></tr>
-                  <tr><td>Más de 20</td><td>A consultar</td><td>A consultar</td><td>Dos meses</td></tr>
-                </tbody>
-              </table>
+              <p>39 € al mes con dos recursos incluidos. Cada recurso más cuesta un poco menos que el anterior, y con diez pagas 90 €. A partir de ahí, 5 € por cada recurso más hasta veinte. Con más de veinte, lo hablamos. No importa en cuántos locales los tengas repartidos. Mueve la barra para ver lo que pagarías tú:</p>
+              <div class="precio-config" id="configurador">
+                <div class="precio-config__cabecera">
+                  <label for="precio-recursos">Recursos de tu centro</label>
+                  <output id="precio-n" for="precio-recursos">4</output>
+                </div>
+                <input type="range" id="precio-recursos" min="2" max="21" step="1" value="4">
+                <div class="precio-config__escala" aria-hidden="true"><span style="left:0">2</span><span style="left:42.1%">10</span><span style="left:100%">20+</span></div>
+                <div class="precio-config__modo" role="group" aria-label="Cómo pagas">
+                  <button type="button" data-modo="mes" aria-pressed="true">Al mes</button>
+                  <button type="button" data-modo="anual" aria-pressed="false">Al año, dos meses gratis</button>
+                </div>
+                <div class="precio-config__resultado" aria-live="polite">
+                  <div data-cuando="precio">
+                    <p class="precio-config__cifra"><span id="precio-cifra">56 €</span> <span data-modo-texto="mes">al mes</span><span data-modo-texto="anual" hidden="">al año</span></p>
+                    <p class="precio-config__detalle" data-modo-texto="mes">Pagando el año por adelantado: <b id="precio-anual">560 €</b>, dos meses gratis.</p>
+                    <p class="precio-config__detalle" data-modo-texto="anual" hidden=""><s id="precio-sin-descuento">672 €</s> Te ahorras <b id="precio-ahorro">112 €</b>: pagas diez mensualidades en vez de doce.</p>
+                  </div>
+                  <div data-cuando="consulta" hidden="">
+                    <p class="precio-config__cifra">Más de 20 recursos</p>
+                    <p class="precio-config__detalle">Lo hablamos: <a href="#demo">escríbenos</a> y te damos precio. Pagando el año, también dos meses gratis.</p>
+                  </div>
+                </div>
+              </div>
               <p>Precios sin IVA. Si pagas el año por adelantado, <b>te regalamos dos meses</b>: pagas diez mensualidades en vez de doce.</p>
             </div>
           </details>
@@ -886,14 +913,14 @@ footer{
             <div class="faq__respuesta">
               <p>No. Si pagas al mes, cancelas cuando quieras: sigues entrando hasta el final del mes que ya tienes pagado y no se te vuelve a cobrar.</p>
               <p>Si pagaste el año por adelantado y te vas antes de tiempo, <b>te devolvemos lo que no has usado, contando los meses que sí has usado al precio mensual</b>. El descuento de dos meses es lo que se paga por comprometer un año, así que se pierde si el año no se cumple; el dinero de los meses que no vas a usar vuelve a tu cuenta.</p>
-              <p>Con un centro de 59 € al mes: pagas 590 € por el año y te vas a los tres meses. Esos tres meses cuestan 177 €, así que te devolvemos 413 €.</p>
+              <p>Con un centro de 56 € al mes: pagas 560 € por el año y te vas a los tres meses. Esos tres meses cuestan 168 €, así que te devolvemos 392 €.</p>
             </div>
           </details>
 
           <details class="faq__item">
             <summary>Tengo dos centros. ¿Pago dos veces?</summary>
             <div class="faq__respuesta">
-              <p>No. <b>El número de centros no cambia el precio: solo cuentan los recursos, estén donde estén.</b> Dos locales con tres cabinas cada uno son una sola instalación de seis recursos, y pagas 79 € al mes, lo mismo que un centro con seis cabinas bajo el mismo techo.</p>
+              <p>No. <b>El número de centros no cambia el precio: solo cuentan los recursos, estén donde estén.</b> Dos locales con tres cabinas cada uno son una sola instalación de seis recursos, y pagas 69 € al mes, lo mismo que un centro con seis cabinas bajo el mismo techo.</p>
               <p>Cada delegación tiene su agenda, su caja y sus informes por separado, con la dirección viéndolo todo junto. Abrir un segundo local no te cuesta nada por el hecho de abrirlo; te cuesta si al abrirlo puedes atender a más gente a la vez, que es lo razonable.</p>
             </div>
           </details>
@@ -1098,7 +1125,7 @@ footer{
             <summary>¿Se puede conectar Turnera con mi ERP o mi programa de contabilidad?</summary>
             <div class="faq__respuesta">
               <p>Sí. Turnera tiene una API de integración con la que tu ERP, o el de tu asesoría, lee directamente el catálogo, los clientes, las ventas y un resumen contable por día y tipo de IVA. Sin exportar a mano ni pasar ficheros por correo.</p>
-              <p>La documentación es pública, con ejemplos, en <a href="/turnera/integradores">devel.es/turnera/integradores</a>. Quien programe la conexión tiene ahí todo lo que necesita, sin esperar a que le mandemos nada.</p>
+              <p>La documentación es pública, con ejemplos, en <a href="/turnera/api">devel.es/turnera/api</a>. Quien programe la conexión tiene ahí todo lo que necesita, sin esperar a que le mandemos nada.</p>
             </div>
           </details>
 
@@ -1371,6 +1398,50 @@ for (const [posicion, pestana] of pestanas.entries()) {
 }
 
 if (pestanas.length > 0) mostrarPerfil(pestanas[0]);
+</script>
+<script>
+// El configurador de precios: las cifras salen de aquí y los textos de la página, que se traducen con ella.
+(function () {
+  const raiz = document.getElementById("configurador");
+  if (!raiz) return;
+  const HASTA_DIEZ = [39, 48, 56, 63, 69, 75, 80, 85, 90];
+  const A_CONSULTAR = 21;
+  const barra = document.getElementById("precio-recursos");
+  const formato = new Intl.NumberFormat(document.documentElement.lang || "es",
+    { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
+  let modo = "mes";
+
+  function alMes(recursos) {
+    return recursos <= 10 ? HASTA_DIEZ[Math.max(recursos, 2) - 2] : 90 + 5 * (recursos - 10);
+  }
+
+  function pintar() {
+    const recursos = Number(barra.value);
+    const aConsultar = recursos >= A_CONSULTAR;
+    document.getElementById("precio-n").textContent = aConsultar ? "20+" : String(recursos);
+    raiz.querySelector('[data-cuando="precio"]').hidden = aConsultar;
+    raiz.querySelector('[data-cuando="consulta"]').hidden = !aConsultar;
+    if (aConsultar) return;
+    const mensual = alMes(recursos);
+    document.getElementById("precio-cifra").textContent = formato.format(modo === "mes" ? mensual : mensual * 10);
+    document.getElementById("precio-anual").textContent = formato.format(mensual * 10);
+    document.getElementById("precio-sin-descuento").textContent = formato.format(mensual * 12);
+    document.getElementById("precio-ahorro").textContent = formato.format(mensual * 2);
+    raiz.querySelectorAll("[data-modo-texto]").forEach((elemento) => {
+      elemento.hidden = elemento.dataset.modoTexto !== modo;
+    });
+  }
+
+  barra.addEventListener("input", pintar);
+  raiz.querySelectorAll("[data-modo]").forEach((boton) => {
+    boton.addEventListener("click", () => {
+      modo = boton.dataset.modo;
+      raiz.querySelectorAll("[data-modo]").forEach((otro) => otro.setAttribute("aria-pressed", String(otro === boton)));
+      pintar();
+    });
+  });
+  pintar();
+})();
 </script>
 
 

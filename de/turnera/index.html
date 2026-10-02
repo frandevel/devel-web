@@ -477,6 +477,22 @@ footer{
 @media (max-width:480px){.faq__tabla s{color:var(--text-dim);font-weight:400;margin-right:.3rem}
 .faq__tabla th,.faq__tabla td{padding:.4rem .45rem}.faq__tabla th{letter-spacing:.06em}}
 .faq__pie{margin-top:.5rem;font-size:1rem}
+.precio-config{max-width:36rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.8rem;color:var(--text)}
+.precio-config__cabecera{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.precio-config__cabecera label{font-weight:600}
+.precio-config__cabecera output{font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--tu-anillo);font-variant-numeric:tabular-nums}
+.precio-config input[type=range]{width:100%;accent-color:var(--tu-anillo);cursor:pointer;margin:0}
+.precio-config__escala{position:relative;height:1.1em;margin:0 .5rem;font-family:var(--mono);font-size:.72rem;color:var(--steel)}
+.precio-config__escala span{position:absolute;transform:translateX(-50%)}
+.precio-config__modo{display:flex;gap:.5rem;flex-wrap:wrap}
+.precio-config__modo button{font:inherit;font-size:.88rem;padding:.4rem .9rem;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--text-dim);cursor:pointer}
+.precio-config__modo button[aria-pressed="true"]{background:var(--tu-anillo);border-color:var(--tu-anillo);color:var(--tu-sobre-anillo)}
+.precio-config__resultado{border-top:1px solid var(--line);padding-top:.8rem}
+.precio-config__resultado p{margin:0}
+.precio-config__cifra{font-size:1rem;color:var(--text-dim)}
+.precio-config__cifra #precio-cifra,[data-cuando="consulta"] .precio-config__cifra{font-family:var(--display);font-size:2rem;font-weight:700;color:var(--text)}
+.precio-config__detalle{margin-top:.35rem!important;font-size:.92rem;color:var(--text-dim)}
+.precio-config__detalle s{margin-right:.3rem}
 .faq__nota{margin-top:.8rem;font-size:.82rem;color:var(--steel);max-width:60ch}
 
 /* ---------- selector de idioma ---------- */
@@ -571,6 +587,7 @@ footer{
       <a href="#preguntas">FAQ</a>
       <a href="#demo">Demo</a>
       <a href="/de/turnera/manual">Handbuch</a>
+      <a href="/de/turnera/integratoren">Integratoren</a>
       <a href="/de/turnera/novedades">Neuigkeiten</a>
     </nav>
     <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/turnera" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera" lang="en">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera" lang="de" aria-current="true">DE<span class="idiomas__nombre">Deutsch</span></a></div>
@@ -800,20 +817,30 @@ footer{
           <details class="faq__item">
             <summary>Was kostet es?</summary>
             <div class="faq__respuesta">
-              <p>39 € im Monat mit zwei Ressourcen inklusive und 10 € für jede weitere Ressource bis sechs. Von der siebten bis zur zehnten kostet jede Ressource weniger: Mit zehn zahlen Sie 100 €. Danach 5 € für jede weitere Ressource bis zwanzig. Bei mehr als zwanzig sprechen wir darüber. Es spielt keine Rolle, auf wie viele Standorte sie verteilt sind.</p>
-              <table class="faq__tabla">
-                <thead><tr><th>Ihr Betrieb</th><th>Pro Monat</th><th>Pro Jahr, im Voraus bezahlt</th><th>Sie sparen</th></tr></thead>
-                <tbody>
-                  <tr><td>2 Ressourcen</td><td>39 €</td><td><s>468 €</s> 390 €</td><td>78 €</td></tr>
-                  <tr><td>4 Ressourcen</td><td>59 €</td><td><s>708 €</s> 590 €</td><td>118 €</td></tr>
-                  <tr><td>6 Ressourcen</td><td>79 €</td><td><s>948 €</s> 790 €</td><td>158 €</td></tr>
-                  <tr><td>8 Ressourcen</td><td>90 €</td><td><s>1.080 €</s> 900 €</td><td>180 €</td></tr>
-                  <tr><td>10 Ressourcen</td><td>100 €</td><td><s>1.200 €</s> 1.000 €</td><td>200 €</td></tr>
-                  <tr><td>15 Ressourcen</td><td>125 €</td><td><s>1.500 €</s> 1.250 €</td><td>250 €</td></tr>
-                  <tr><td>20 Ressourcen</td><td>150 €</td><td><s>1.800 €</s> 1.500 €</td><td>300 €</td></tr>
-                  <tr><td>Mehr als 20</td><td>Auf Anfrage</td><td>Auf Anfrage</td><td>Zwei Monate</td></tr>
-                </tbody>
-              </table>
+              <p>39 € im Monat mit zwei Ressourcen inklusive. Jede weitere Ressource kostet etwas weniger als die vorherige, und mit zehn zahlen Sie 90 €. Ab dann 5 € für jede weitere Ressource bis zwanzig. Bei mehr als zwanzig sprechen wir darüber. Es spielt keine Rolle, auf wie viele Standorte sie verteilt sind. Bewegen Sie den Regler, um Ihren Preis zu sehen:</p>
+              <div class="precio-config" id="configurador">
+                <div class="precio-config__cabecera">
+                  <label for="precio-recursos">Ressourcen Ihres Zentrums</label>
+                  <output id="precio-n" for="precio-recursos">4</output>
+                </div>
+                <input type="range" id="precio-recursos" min="2" max="21" step="1" value="4">
+                <div class="precio-config__escala" aria-hidden="true"><span style="left:0">2</span><span style="left:42.1%">10</span><span style="left:100%">20+</span></div>
+                <div class="precio-config__modo" role="group" aria-label="Wie Sie zahlen">
+                  <button type="button" data-modo="mes" aria-pressed="true">Pro Monat</button>
+                  <button type="button" data-modo="anual" aria-pressed="false">Jährlich, zwei Monate gratis</button>
+                </div>
+                <div class="precio-config__resultado" aria-live="polite">
+                  <div data-cuando="precio">
+                    <p class="precio-config__cifra"><span id="precio-cifra">56 €</span> <span data-modo-texto="mes">im Monat</span><span data-modo-texto="anual" hidden="">im Jahr</span></p>
+                    <p class="precio-config__detalle" data-modo-texto="mes">Bei jährlicher Vorauszahlung: <b id="precio-anual">560 €</b>, zwei Monate gratis.</p>
+                    <p class="precio-config__detalle" data-modo-texto="anual" hidden=""><s id="precio-sin-descuento">672 €</s> Sie sparen <b id="precio-ahorro">112 €</b>: Sie zahlen zehn Monatsbeträge statt zwölf.</p>
+                  </div>
+                  <div data-cuando="consulta" hidden="">
+                    <p class="precio-config__cifra">Mehr als 20 Ressourcen</p>
+                    <p class="precio-config__detalle">Sprechen wir darüber: <a href="#demo">schreiben Sie uns</a> und wir nennen Ihnen einen Preis. Bei jährlicher Zahlung ebenfalls zwei Monate gratis.</p>
+                  </div>
+                </div>
+              </div>
               <p>Preise ohne MwSt. Wenn Sie das Jahr im Voraus bezahlen, <b>schenken wir Ihnen zwei Monate</b>: Sie zahlen zehn Monatsbeträge statt zwölf.</p>
             </div>
           </details>
@@ -886,14 +913,14 @@ footer{
             <div class="faq__respuesta">
               <p>Nein. Wer monatlich zahlt, kündigt, wann er will: Sie behalten den Zugang bis zum Ende des bereits bezahlten Monats, und es wird nichts mehr abgebucht.</p>
               <p>Wenn Sie das Jahr im Voraus bezahlt haben und vorzeitig gehen, <b>erstatten wir, was Sie nicht genutzt haben, und rechnen die genutzten Monate zum Monatspreis ab</b>. Der Rabatt von zwei Monaten ist der Preis dafür, sich für ein Jahr zu binden, und entfällt daher, wenn das Jahr nicht vollendet wird; das Geld für die Monate, die Sie nicht nutzen, geht zurück auf Ihr Konto.</p>
-              <p>Beispiel: ein Betrieb mit 59 € im Monat zahlt 590 € für das Jahr und geht nach drei Monaten. Diese drei Monate kosten 177 €, also erstatten wir 413 €.</p>
+              <p>Bei einem Zentrum mit 56 € im Monat: Sie zahlen 560 € für das Jahr und kündigen nach drei Monaten. Diese drei Monate kosten 168 €, also erstatten wir Ihnen 392 €.</p>
             </div>
           </details>
 
           <details class="faq__item">
             <summary>Ich habe zwei Standorte. Zahle ich doppelt?</summary>
             <div class="faq__respuesta">
-              <p>Nein. <b>Die Zahl der Standorte ändert den Preis nicht: Es zählen nur die Ressourcen, egal wo sie sind.</b> Zwei Standorte mit je drei Kabinen sind eine einzige Installation mit sechs Ressourcen, und Sie zahlen 79 € im Monat, genauso viel wie ein Betrieb mit sechs Kabinen unter einem Dach.</p>
+              <p>Nein. <b>Die Zahl der Standorte ändert den Preis nicht: Es zählen nur die Ressourcen, egal wo sie sind.</b> Zwei Standorte mit je drei Kabinen sind eine einzige Installation mit sechs Ressourcen, und Sie zahlen 69 € im Monat, genauso viel wie ein Zentrum mit sechs Kabinen unter einem Dach.</p>
               <p>Jede Filiale hat ihren eigenen Kalender, ihre eigene Kasse und ihre eigenen Berichte, und die Leitung sieht alles zusammen. Einen zweiten Standort zu eröffnen kostet nichts, nur weil Sie ihn eröffnen; es kostet dann, wenn Sie dadurch mehr Menschen gleichzeitig behandeln können, und das ist nur fair.</p>
             </div>
           </details>
@@ -1098,7 +1125,7 @@ footer{
             <summary>Lässt sich Turnera mit meinem ERP oder meiner Buchhaltungssoftware verbinden?</summary>
             <div class="faq__respuesta">
               <p>Ja. Turnera hat eine Integrations-API, über die Ihr ERP oder das Ihres Steuerberaters den Katalog, die Kunden, die Verkäufe und eine Buchungsübersicht nach Tag und Steuersatz direkt liest. Ohne Export von Hand und ohne Dateien per E-Mail.</p>
-              <p>Die Dokumentation ist öffentlich, mit Beispielen, unter <a href="/turnera/integradores">devel.es/turnera/integradores</a>. Wer die Verbindung programmiert, findet dort alles, was er braucht, ohne darauf zu warten, dass wir ihm etwas schicken.</p>
+              <p>Die Dokumentation ist öffentlich, mit Beispielen, unter <a href="/turnera/api">devel.es/turnera/integradores</a>. Wer die Verbindung programmiert, findet dort alles, was er braucht, ohne darauf zu warten, dass wir ihm etwas schicken.</p>
             </div>
           </details>
 
@@ -1371,6 +1398,50 @@ for (const [posicion, pestana] of pestanas.entries()) {
 }
 
 if (pestanas.length > 0) mostrarPerfil(pestanas[0]);
+</script>
+<script>
+// El configurador de precios: las cifras salen de aquí y los textos de la página, que se traducen con ella.
+(function () {
+  const raiz = document.getElementById("configurador");
+  if (!raiz) return;
+  const HASTA_DIEZ = [39, 48, 56, 63, 69, 75, 80, 85, 90];
+  const A_CONSULTAR = 21;
+  const barra = document.getElementById("precio-recursos");
+  const formato = new Intl.NumberFormat(document.documentElement.lang || "es",
+    { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
+  let modo = "mes";
+
+  function alMes(recursos) {
+    return recursos <= 10 ? HASTA_DIEZ[Math.max(recursos, 2) - 2] : 90 + 5 * (recursos - 10);
+  }
+
+  function pintar() {
+    const recursos = Number(barra.value);
+    const aConsultar = recursos >= A_CONSULTAR;
+    document.getElementById("precio-n").textContent = aConsultar ? "20+" : String(recursos);
+    raiz.querySelector('[data-cuando="precio"]').hidden = aConsultar;
+    raiz.querySelector('[data-cuando="consulta"]').hidden = !aConsultar;
+    if (aConsultar) return;
+    const mensual = alMes(recursos);
+    document.getElementById("precio-cifra").textContent = formato.format(modo === "mes" ? mensual : mensual * 10);
+    document.getElementById("precio-anual").textContent = formato.format(mensual * 10);
+    document.getElementById("precio-sin-descuento").textContent = formato.format(mensual * 12);
+    document.getElementById("precio-ahorro").textContent = formato.format(mensual * 2);
+    raiz.querySelectorAll("[data-modo-texto]").forEach((elemento) => {
+      elemento.hidden = elemento.dataset.modoTexto !== modo;
+    });
+  }
+
+  barra.addEventListener("input", pintar);
+  raiz.querySelectorAll("[data-modo]").forEach((boton) => {
+    boton.addEventListener("click", () => {
+      modo = boton.dataset.modo;
+      raiz.querySelectorAll("[data-modo]").forEach((otro) => otro.setAttribute("aria-pressed", String(otro === boton)));
+      pintar();
+    });
+  });
+  pintar();
+})();
 </script>
 
 

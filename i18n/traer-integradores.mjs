@@ -127,9 +127,15 @@ function publicar(idioma) {
   const selector = IDIOMAS.map((otro) => `<a class="idiomas__opcion" href="${otro.ruta}" lang="${otro.codigo}"`
     + `${otro.codigo === idioma.codigo ? ' aria-current="true"' : ''}>${otro.codigo.toUpperCase()}`
     + `<span class="idiomas__nombre">${{ es: 'Español', en: 'English', de: 'Deutsch' }[otro.codigo]}</span></a>`).join('');
-  pagina = pagina
-    .replace(/<a href="([^"]*\/turnera\/manual)" aria-current="page">([^<]*)<\/a>/,
-      `<a href="$1">$2</a>\n      <a href="${idioma.ruta}" aria-current="page">${idioma.nav}</a>`)
+  // El menu del manual ya trae el enlace a esta seccion: se marca como actual y el manual deja de serlo. Un
+  // manual construido antes de tenerlo lo recibe aqui, detras del suyo.
+  const enlaceDelManual = /<a href="([^"]*\/turnera\/manual)" aria-current="page">([^<]*)<\/a>/;
+  const yaLoEnlaza = pagina.includes(`<a href="${idioma.ruta}">`);
+  pagina = (yaLoEnlaza
+    ? pagina.replace(enlaceDelManual, '<a href="$1">$2</a>')
+      .replace(`<a href="${idioma.ruta}">`, `<a href="${idioma.ruta}" aria-current="page">`)
+    : pagina.replace(enlaceDelManual,
+      `<a href="$1">$2</a>\n      <a href="${idioma.ruta}" aria-current="page">${idioma.nav}</a>`))
     .replace(/<div class="idiomas"[^>]*>[\s\S]*?<\/div>\s*<\/div>\s*<\/header>/,
       `<div class="idiomas" role="group" aria-label="Idioma / Language / Sprache">${selector}</div>\n  </div>\n</header>`);
 

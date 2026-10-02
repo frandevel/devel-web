@@ -28,6 +28,9 @@ function bloqueDeAlternativas(ruta) {
 
 const NOMBRES = { es: 'Español', en: 'English', de: 'Deutsch' };
 
+/** La seccion de integradores la genera traer-integradores.mjs, y cada idioma tiene su propia carpeta. */
+const INTEGRADORES = { es: '/turnera/integradores', en: '/en/turnera/integrators', de: '/de/turnera/integratoren' };
+
 function selectorDeIdioma(idiomaActual, ruta) {
   const opciones = IDIOMAS.map((idioma) => {
     const actual = idioma === idiomaActual;
@@ -53,6 +56,7 @@ function conLosEnlacesInternosEnSuIdioma(html, idioma) {
     const traducida = direccionDe(idioma, ruta);
     html = html.split('href="' + original + '"').join('href="' + traducida + '"');
   }
+  html = html.split('href="' + INTEGRADORES.es + '"').join('href="' + INTEGRADORES[idioma] + '"');
   return html;
 }
 
@@ -121,7 +125,7 @@ ${alternativas}
   </url>`;
   }));
   // La seccion de integradores la genera traer-integradores.mjs y cada idioma tiene su propia direccion.
-  const integradores = { es: '/turnera/integradores', en: '/en/turnera/integrators', de: '/de/turnera/integratoren' };
+  const integradores = INTEGRADORES;
   for (const idioma of IDIOMAS) {
     const alternativas = IDIOMAS.map((otro) =>
       `    <xhtml:link rel="alternate" hreflang="${otro}" href="${SITIO}${integradores[otro]}"/>`).join('\n');
