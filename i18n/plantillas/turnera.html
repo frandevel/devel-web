@@ -472,6 +472,15 @@ footer{
 @media (max-width:480px){.faq__tabla s{color:var(--text-dim);font-weight:400;margin-right:.3rem}
 .faq__tabla th,.faq__tabla td{padding:.4rem .45rem}.faq__tabla th{letter-spacing:.06em}}
 .faq__pie{margin-top:.5rem;font-size:1rem}
+.precios{display:grid;gap:2.2rem 3rem;margin-top:2.8rem;align-items:start}
+@media (min-width:900px){.precios{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.precios__calculo{display:flex;flex-direction:column;gap:.9rem}
+.precios__nota{font-size:.85rem;color:var(--steel)}
+.precios__tabla summary{cursor:pointer;color:var(--link);font-size:.92rem}
+.precios__tabla[open] summary{margin-bottom:.7rem}
+.precios__claves{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.precios__claves .pillar:first-child{border-top-color:var(--tu-anillo)}
+.precios__claves .pillar b{color:var(--text);font-weight:600}
 .precio-config{max-width:36rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.8rem;color:var(--text)}
 .precio-config__cabecera{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
 .precio-config__cabecera label{font-weight:600}
@@ -511,7 +520,7 @@ footer{
    así que la barra envuelve y la navegación cede el sitio, en lugar de empujarlo fuera de la pantalla. */
 @media (max-width:640px){
   .site__inner{flex-wrap:wrap;justify-content:flex-start;gap:.5rem 1rem}
-  .site nav{order:3;width:100%;justify-content:space-between;gap:.5rem}
+  .site nav{order:3;width:100%;flex-wrap:wrap;justify-content:flex-start;gap:.35rem 1rem}
   .idiomas{margin-left:auto;padding-left:.8rem}
 }
 
@@ -579,6 +588,7 @@ footer{
       <a href="#que-hace">{{t86ef57e7}}</a>
       <a href="#pantallas">{{t3b0aebdc}}</a>
       <a href="#abierto">{{tf0a9b818}}</a>
+      <a href="#precios">{{t628c066b}}</a>
       <a href="#preguntas">{{t1df9a6fc}}</a>
       <a href="#demo">{{te52c854d}}</a>
       <a href="/turnera/manual">{{t4e836fdc}}</a>
@@ -794,6 +804,82 @@ footer{
     </div>
   </section>
 
+  <section id="precios">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">{{t628c066b}}</p>
+        <h2>{{t12047a9b}}</h2>
+        <p>{{t58f3d4f7}}</p>
+      </div>
+      <div class="precios">
+        <div class="precios__calculo">
+          <div class="precio-config" id="configurador">
+            <div class="precio-config__cabecera">
+              <label for="precio-recursos">{{t149c929f}}</label>
+              <output id="precio-n" for="precio-recursos">4</output>
+            </div>
+            <input type="range" id="precio-recursos" min="2" max="21" step="1" value="4">
+            <div class="precio-config__escala" aria-hidden="true"><span style="left:0">2</span><span style="left:42.1%">10</span><span style="left:100%">20+</span></div>
+            <div class="precio-config__modo" role="group" aria-label="{{t73568c2e}}">
+              <button type="button" data-modo="mes" aria-pressed="true">{{tdf450d80}}</button>
+              <button type="button" data-modo="anual" aria-pressed="false">{{t54cfeb44}}</button>
+            </div>
+            <div class="precio-config__resultado" aria-live="polite">
+              <div data-cuando="precio">
+                <p class="precio-config__cifra"><span id="precio-cifra">56 €</span> <span data-modo-texto="mes">{{tbf486f3f}}</span><span data-modo-texto="anual" hidden="">{{t78ca2cb0}}</span></p>
+                <p class="precio-config__detalle" data-modo-texto="mes">{{t92f70250}} <b id="precio-anual">560 €</b>{{t92c6b011}}</p>
+                <p class="precio-config__detalle" data-modo-texto="anual" hidden=""><s id="precio-sin-descuento">672 €</s> {{tfe1c0471}} <b id="precio-ahorro">112 €</b>{{t3268d247}}</p>
+              </div>
+              <div data-cuando="consulta" hidden="">
+                <p class="precio-config__cifra">{{t83fcaafc}}</p>
+                <p class="precio-config__detalle">{{tb191cf50}} <a href="#demo">{{t6b7c744d}}</a> {{t03c142c2}}</p>
+              </div>
+            </div>
+          </div>
+          <p class="precios__nota">{{t41fb0fb5}}</p>
+          <details class="precios__tabla">
+            <summary>{{t4bfbfc3f}}</summary>
+            <table class="faq__tabla">
+              <thead><tr><th>{{t65fe49ad}}</th><th>{{tdf450d80}}</th><th>{{t932c9887}}</th><th>{{tfe1c0471}}</th></tr></thead>
+              <tbody>
+                <tr><td>{{tff81856d}}</td><td>39 €</td><td>390 €</td><td>78 €</td></tr>
+                <tr><td>{{t483777d6}}</td><td>48 €</td><td>480 €</td><td>96 €</td></tr>
+                <tr><td>{{tef00a8a3}}</td><td>56 €</td><td>560 €</td><td>112 €</td></tr>
+                <tr><td>{{t17c6df98}}</td><td>63 €</td><td>630 €</td><td>126 €</td></tr>
+                <tr><td>{{tcc081b56}}</td><td>69 €</td><td>690 €</td><td>138 €</td></tr>
+                <tr><td>{{t4c72d93f}}</td><td>75 €</td><td>750 €</td><td>150 €</td></tr>
+                <tr><td>{{t6228389e}}</td><td>80 €</td><td>800 €</td><td>160 €</td></tr>
+                <tr><td>{{tdb13f88a}}</td><td>85 €</td><td>850 €</td><td>170 €</td></tr>
+                <tr><td>{{t1d42ec2f}}</td><td>90 €</td><td>900 €</td><td>180 €</td></tr>
+                <tr><td>{{teaf8de72}}</td><td>115 €</td><td>1.150 €</td><td>230 €</td></tr>
+                <tr><td>{{tbe96e18f}}</td><td>140 €</td><td>1.400 €</td><td>280 €</td></tr>
+                <tr><td>{{t19417d37}}</td><td>{{t12c16e69}}</td><td>{{t12c16e69}}</td><td>{{t6c58a50f}}</td></tr>
+              </tbody>
+            </table>
+          </details>
+        </div>
+        <div class="precios__claves">
+          <div class="pillar">
+            <h3>{{t33e79c3a}}</h3>
+            <p>{{t260e8685}}</p>
+          </div>
+          <div class="pillar">
+            <h3>{{t1c587f84}}</h3>
+            <p>{{t3221f3ad}}</p>
+          </div>
+          <div class="pillar">
+            <h3>{{ta3e40b04}}</h3>
+            <p>{{tdd55436b}} <b>150 €</b> {{t0ed7da0f}} <b>300 €</b> {{t371e61bb}}</p>
+          </div>
+          <div class="pillar">
+            <h3>{{t7feb623e}}</h3>
+            <p>{{t62d3fe36}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="preguntas">
     <div class="shell">
       <div class="section__head">
@@ -812,31 +898,7 @@ footer{
           <details class="faq__item">
             <summary>{{t882e7f82}}</summary>
             <div class="faq__respuesta">
-              <p>{{t59f3cc3a}}</p>
-              <div class="precio-config" id="configurador">
-                <div class="precio-config__cabecera">
-                  <label for="precio-recursos">{{t149c929f}}</label>
-                  <output id="precio-n" for="precio-recursos">4</output>
-                </div>
-                <input type="range" id="precio-recursos" min="2" max="21" step="1" value="4">
-                <div class="precio-config__escala" aria-hidden="true"><span style="left:0">2</span><span style="left:42.1%">10</span><span style="left:100%">20+</span></div>
-                <div class="precio-config__modo" role="group" aria-label="{{t73568c2e}}">
-                  <button type="button" data-modo="mes" aria-pressed="true">{{tdf450d80}}</button>
-                  <button type="button" data-modo="anual" aria-pressed="false">{{t54cfeb44}}</button>
-                </div>
-                <div class="precio-config__resultado" aria-live="polite">
-                  <div data-cuando="precio">
-                    <p class="precio-config__cifra"><span id="precio-cifra">56 €</span> <span data-modo-texto="mes">{{tbf486f3f}}</span><span data-modo-texto="anual" hidden="">{{t78ca2cb0}}</span></p>
-                    <p class="precio-config__detalle" data-modo-texto="mes">{{t92f70250}} <b id="precio-anual">560 €</b>{{t92c6b011}}</p>
-                    <p class="precio-config__detalle" data-modo-texto="anual" hidden=""><s id="precio-sin-descuento">672 €</s> {{tfe1c0471}} <b id="precio-ahorro">112 €</b>{{t3268d247}}</p>
-                  </div>
-                  <div data-cuando="consulta" hidden="">
-                    <p class="precio-config__cifra">{{t83fcaafc}}</p>
-                    <p class="precio-config__detalle">{{tb191cf50}} <a href="#demo">{{t6b7c744d}}</a> {{t03c142c2}}</p>
-                  </div>
-                </div>
-              </div>
-              <p>{{t412c6b02}} <b>{{t5481b01b}}</b>{{t3268d247}}</p>
+              <p>{{t1ddc0282}} <b>{{t5481b01b}}</b>{{tf5c83970}} <a href="#precios">{{t628c066b}}</a>.</p>
             </div>
           </details>
 

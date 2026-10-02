@@ -477,6 +477,15 @@ footer{
 @media (max-width:480px){.faq__tabla s{color:var(--text-dim);font-weight:400;margin-right:.3rem}
 .faq__tabla th,.faq__tabla td{padding:.4rem .45rem}.faq__tabla th{letter-spacing:.06em}}
 .faq__pie{margin-top:.5rem;font-size:1rem}
+.precios{display:grid;gap:2.2rem 3rem;margin-top:2.8rem;align-items:start}
+@media (min-width:900px){.precios{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.precios__calculo{display:flex;flex-direction:column;gap:.9rem}
+.precios__nota{font-size:.85rem;color:var(--steel)}
+.precios__tabla summary{cursor:pointer;color:var(--link);font-size:.92rem}
+.precios__tabla[open] summary{margin-bottom:.7rem}
+.precios__claves{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.precios__claves .pillar:first-child{border-top-color:var(--tu-anillo)}
+.precios__claves .pillar b{color:var(--text);font-weight:600}
 .precio-config{max-width:36rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.8rem;color:var(--text)}
 .precio-config__cabecera{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
 .precio-config__cabecera label{font-weight:600}
@@ -516,7 +525,7 @@ footer{
    así que la barra envuelve y la navegación cede el sitio, en lugar de empujarlo fuera de la pantalla. */
 @media (max-width:640px){
   .site__inner{flex-wrap:wrap;justify-content:flex-start;gap:.5rem 1rem}
-  .site nav{order:3;width:100%;justify-content:space-between;gap:.5rem}
+  .site nav{order:3;width:100%;flex-wrap:wrap;justify-content:flex-start;gap:.35rem 1rem}
   .idiomas{margin-left:auto;padding-left:.8rem}
 }
 
@@ -584,6 +593,7 @@ footer{
       <a href="#que-hace">Qué hace</a>
       <a href="#pantallas">Pantallas</a>
       <a href="#abierto">Tus datos</a>
+      <a href="#precios">Precios</a>
       <a href="#preguntas">Preguntas</a>
       <a href="#demo">Demo</a>
       <a href="/turnera/manual">Manual</a>
@@ -799,6 +809,82 @@ footer{
     </div>
   </section>
 
+  <section id="precios">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Precios</p>
+        <h2>Pagas por lo que tu agenda atiende a la vez.</h2>
+        <p>Una cuota según los recursos de tu centro, con todo incluido. Sin comisiones, sin usuarios que contar y sin permanencia.</p>
+      </div>
+      <div class="precios">
+        <div class="precios__calculo">
+          <div class="precio-config" id="configurador">
+            <div class="precio-config__cabecera">
+              <label for="precio-recursos">Recursos de tu centro</label>
+              <output id="precio-n" for="precio-recursos">4</output>
+            </div>
+            <input type="range" id="precio-recursos" min="2" max="21" step="1" value="4">
+            <div class="precio-config__escala" aria-hidden="true"><span style="left:0">2</span><span style="left:42.1%">10</span><span style="left:100%">20+</span></div>
+            <div class="precio-config__modo" role="group" aria-label="Cómo pagas">
+              <button type="button" data-modo="mes" aria-pressed="true">Al mes</button>
+              <button type="button" data-modo="anual" aria-pressed="false">Al año, dos meses gratis</button>
+            </div>
+            <div class="precio-config__resultado" aria-live="polite">
+              <div data-cuando="precio">
+                <p class="precio-config__cifra"><span id="precio-cifra">56 €</span> <span data-modo-texto="mes">al mes</span><span data-modo-texto="anual" hidden="">al año</span></p>
+                <p class="precio-config__detalle" data-modo-texto="mes">Pagando el año por adelantado: <b id="precio-anual">560 €</b>, dos meses gratis.</p>
+                <p class="precio-config__detalle" data-modo-texto="anual" hidden=""><s id="precio-sin-descuento">672 €</s> Te ahorras <b id="precio-ahorro">112 €</b>: pagas diez mensualidades en vez de doce.</p>
+              </div>
+              <div data-cuando="consulta" hidden="">
+                <p class="precio-config__cifra">Más de 20 recursos</p>
+                <p class="precio-config__detalle">Lo hablamos: <a href="#demo">escríbenos</a> y te damos precio. Pagando el año, también dos meses gratis.</p>
+              </div>
+            </div>
+          </div>
+          <p class="precios__nota">Precios sin IVA. Con el pago anual pagas diez mensualidades en vez de doce.</p>
+          <details class="precios__tabla">
+            <summary>Ver la tabla completa</summary>
+            <table class="faq__tabla">
+              <thead><tr><th>Tu centro</th><th>Al mes</th><th>Al año</th><th>Te ahorras</th></tr></thead>
+              <tbody>
+                <tr><td>2 recursos</td><td>39 €</td><td>390 €</td><td>78 €</td></tr>
+                <tr><td>3 recursos</td><td>48 €</td><td>480 €</td><td>96 €</td></tr>
+                <tr><td>4 recursos</td><td>56 €</td><td>560 €</td><td>112 €</td></tr>
+                <tr><td>5 recursos</td><td>63 €</td><td>630 €</td><td>126 €</td></tr>
+                <tr><td>6 recursos</td><td>69 €</td><td>690 €</td><td>138 €</td></tr>
+                <tr><td>7 recursos</td><td>75 €</td><td>750 €</td><td>150 €</td></tr>
+                <tr><td>8 recursos</td><td>80 €</td><td>800 €</td><td>160 €</td></tr>
+                <tr><td>9 recursos</td><td>85 €</td><td>850 €</td><td>170 €</td></tr>
+                <tr><td>10 recursos</td><td>90 €</td><td>900 €</td><td>180 €</td></tr>
+                <tr><td>15 recursos</td><td>115 €</td><td>1.150 €</td><td>230 €</td></tr>
+                <tr><td>20 recursos</td><td>140 €</td><td>1.400 €</td><td>280 €</td></tr>
+                <tr><td>Más de 20</td><td>A consultar</td><td>A consultar</td><td>Dos meses</td></tr>
+              </tbody>
+            </table>
+          </details>
+        </div>
+        <div class="precios__claves">
+          <div class="pillar">
+            <h3>Qué es un recurso</h3>
+            <p>Cada hueco de la agenda que puede estar ocupado a la vez: una cabina, un box o una pista. Tres cabinas en paralelo son tres recursos, tengas el personal que tengas. Da igual en cuántos locales estén.</p>
+          </div>
+          <div class="pillar">
+            <h3>Todo incluido</h3>
+            <p>Usuarios ilimitados y todas las funciones, sin planes capados: agenda, fichas e historia clínica, TPV, bonos, stock, informes, facturación y lo que vaya llegando. Ni comisión por reserva ni porcentaje de lo que cobras.</p>
+          </div>
+          <div class="pillar">
+            <h3>Puesta en marcha</h3>
+            <p>Una sola vez: <b>150 €</b> si empiezas de cero y <b>300 €</b> si traemos tus datos desde otro programa. Configuramos tu centro contigo y formamos a tu equipo. Si vienes recomendado por otro centro, no la pagas y el primer mes es gratis.</p>
+          </div>
+          <div class="pillar">
+            <h3>Sin permanencia</h3>
+            <p>Al mes, cancelas cuando quieras. Al año, si te vas antes te devolvemos lo que no has usado, contando los meses usados a precio mensual. Pagas con tarjeta o domiciliación y la factura te llega sola.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="preguntas">
     <div class="shell">
       <div class="section__head">
@@ -817,31 +903,7 @@ footer{
           <details class="faq__item">
             <summary>¿Cuánto cuesta?</summary>
             <div class="faq__respuesta">
-              <p>39 € al mes con dos recursos incluidos. Cada recurso más cuesta un poco menos que el anterior, y con diez pagas 90 €. A partir de ahí, 5 € por cada recurso más hasta veinte. Con más de veinte, lo hablamos. No importa en cuántos locales los tengas repartidos. Mueve la barra para ver lo que pagarías tú:</p>
-              <div class="precio-config" id="configurador">
-                <div class="precio-config__cabecera">
-                  <label for="precio-recursos">Recursos de tu centro</label>
-                  <output id="precio-n" for="precio-recursos">4</output>
-                </div>
-                <input type="range" id="precio-recursos" min="2" max="21" step="1" value="4">
-                <div class="precio-config__escala" aria-hidden="true"><span style="left:0">2</span><span style="left:42.1%">10</span><span style="left:100%">20+</span></div>
-                <div class="precio-config__modo" role="group" aria-label="Cómo pagas">
-                  <button type="button" data-modo="mes" aria-pressed="true">Al mes</button>
-                  <button type="button" data-modo="anual" aria-pressed="false">Al año, dos meses gratis</button>
-                </div>
-                <div class="precio-config__resultado" aria-live="polite">
-                  <div data-cuando="precio">
-                    <p class="precio-config__cifra"><span id="precio-cifra">56 €</span> <span data-modo-texto="mes">al mes</span><span data-modo-texto="anual" hidden="">al año</span></p>
-                    <p class="precio-config__detalle" data-modo-texto="mes">Pagando el año por adelantado: <b id="precio-anual">560 €</b>, dos meses gratis.</p>
-                    <p class="precio-config__detalle" data-modo-texto="anual" hidden=""><s id="precio-sin-descuento">672 €</s> Te ahorras <b id="precio-ahorro">112 €</b>: pagas diez mensualidades en vez de doce.</p>
-                  </div>
-                  <div data-cuando="consulta" hidden="">
-                    <p class="precio-config__cifra">Más de 20 recursos</p>
-                    <p class="precio-config__detalle">Lo hablamos: <a href="#demo">escríbenos</a> y te damos precio. Pagando el año, también dos meses gratis.</p>
-                  </div>
-                </div>
-              </div>
-              <p>Precios sin IVA. Si pagas el año por adelantado, <b>te regalamos dos meses</b>: pagas diez mensualidades en vez de doce.</p>
+              <p>39 € al mes con dos recursos incluidos. Cada recurso más cuesta un poco menos que el anterior, y con diez pagas 90 €. A partir de ahí, 5 € por cada recurso más hasta veinte. Con más de veinte, lo hablamos. Precios sin IVA, y si pagas el año por adelantado <b>te regalamos dos meses</b>. Calcula el tuyo en <a href="#precios">Precios</a>.</p>
             </div>
           </details>
 

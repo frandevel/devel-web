@@ -477,6 +477,15 @@ footer{
 @media (max-width:480px){.faq__tabla s{color:var(--text-dim);font-weight:400;margin-right:.3rem}
 .faq__tabla th,.faq__tabla td{padding:.4rem .45rem}.faq__tabla th{letter-spacing:.06em}}
 .faq__pie{margin-top:.5rem;font-size:1rem}
+.precios{display:grid;gap:2.2rem 3rem;margin-top:2.8rem;align-items:start}
+@media (min-width:900px){.precios{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.precios__calculo{display:flex;flex-direction:column;gap:.9rem}
+.precios__nota{font-size:.85rem;color:var(--steel)}
+.precios__tabla summary{cursor:pointer;color:var(--link);font-size:.92rem}
+.precios__tabla[open] summary{margin-bottom:.7rem}
+.precios__claves{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.precios__claves .pillar:first-child{border-top-color:var(--tu-anillo)}
+.precios__claves .pillar b{color:var(--text);font-weight:600}
 .precio-config{max-width:36rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.8rem;color:var(--text)}
 .precio-config__cabecera{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
 .precio-config__cabecera label{font-weight:600}
@@ -516,7 +525,7 @@ footer{
    así que la barra envuelve y la navegación cede el sitio, en lugar de empujarlo fuera de la pantalla. */
 @media (max-width:640px){
   .site__inner{flex-wrap:wrap;justify-content:flex-start;gap:.5rem 1rem}
-  .site nav{order:3;width:100%;justify-content:space-between;gap:.5rem}
+  .site nav{order:3;width:100%;flex-wrap:wrap;justify-content:flex-start;gap:.35rem 1rem}
   .idiomas{margin-left:auto;padding-left:.8rem}
 }
 
@@ -584,6 +593,7 @@ footer{
       <a href="#que-hace">What it does</a>
       <a href="#pantallas">Screens</a>
       <a href="#abierto">Your data</a>
+      <a href="#precios">Pricing</a>
       <a href="#preguntas">FAQ</a>
       <a href="#demo">Demo</a>
       <a href="/en/turnera/manual">Manual</a>
@@ -799,6 +809,82 @@ footer{
     </div>
   </section>
 
+  <section id="precios">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Pricing</p>
+        <h2>You pay for what your agenda handles at the same time.</h2>
+        <p>One fee based on your centre's resources, with everything included. No commissions, no users to count and no lock-in.</p>
+      </div>
+      <div class="precios">
+        <div class="precios__calculo">
+          <div class="precio-config" id="configurador">
+            <div class="precio-config__cabecera">
+              <label for="precio-recursos">Resources in your centre</label>
+              <output id="precio-n" for="precio-recursos">4</output>
+            </div>
+            <input type="range" id="precio-recursos" min="2" max="21" step="1" value="4">
+            <div class="precio-config__escala" aria-hidden="true"><span style="left:0">2</span><span style="left:42.1%">10</span><span style="left:100%">20+</span></div>
+            <div class="precio-config__modo" role="group" aria-label="How you pay">
+              <button type="button" data-modo="mes" aria-pressed="true">Per month</button>
+              <button type="button" data-modo="anual" aria-pressed="false">Per year, two months free</button>
+            </div>
+            <div class="precio-config__resultado" aria-live="polite">
+              <div data-cuando="precio">
+                <p class="precio-config__cifra"><span id="precio-cifra">56 €</span> <span data-modo-texto="mes">a month</span><span data-modo-texto="anual" hidden="">a year</span></p>
+                <p class="precio-config__detalle" data-modo-texto="mes">Paying the year in advance: <b id="precio-anual">560 €</b>, two months free.</p>
+                <p class="precio-config__detalle" data-modo-texto="anual" hidden=""><s id="precio-sin-descuento">672 €</s> You save <b id="precio-ahorro">112 €</b>: you pay ten monthly fees instead of twelve.</p>
+              </div>
+              <div data-cuando="consulta" hidden="">
+                <p class="precio-config__cifra">More than 20 resources</p>
+                <p class="precio-config__detalle">Let's talk: <a href="#demo">write to us</a> and we'll give you a price. Paying the year, two months free as well.</p>
+              </div>
+            </div>
+          </div>
+          <p class="precios__nota">Prices exclude VAT. With annual payment you pay ten monthly fees instead of twelve.</p>
+          <details class="precios__tabla">
+            <summary>See the full table</summary>
+            <table class="faq__tabla">
+              <thead><tr><th>Your centre</th><th>Per month</th><th>Per year</th><th>You save</th></tr></thead>
+              <tbody>
+                <tr><td>2 resources</td><td>39 €</td><td>390 €</td><td>78 €</td></tr>
+                <tr><td>3 resources</td><td>48 €</td><td>480 €</td><td>96 €</td></tr>
+                <tr><td>4 resources</td><td>56 €</td><td>560 €</td><td>112 €</td></tr>
+                <tr><td>5 resources</td><td>63 €</td><td>630 €</td><td>126 €</td></tr>
+                <tr><td>6 resources</td><td>69 €</td><td>690 €</td><td>138 €</td></tr>
+                <tr><td>7 resources</td><td>75 €</td><td>750 €</td><td>150 €</td></tr>
+                <tr><td>8 resources</td><td>80 €</td><td>800 €</td><td>160 €</td></tr>
+                <tr><td>9 resources</td><td>85 €</td><td>850 €</td><td>170 €</td></tr>
+                <tr><td>10 resources</td><td>90 €</td><td>900 €</td><td>180 €</td></tr>
+                <tr><td>15 resources</td><td>115 €</td><td>1.150 €</td><td>230 €</td></tr>
+                <tr><td>20 resources</td><td>140 €</td><td>1.400 €</td><td>280 €</td></tr>
+                <tr><td>More than 20</td><td>On request</td><td>On request</td><td>Two months</td></tr>
+              </tbody>
+            </table>
+          </details>
+        </div>
+        <div class="precios__claves">
+          <div class="pillar">
+            <h3>What a resource is</h3>
+            <p>Every slot in the agenda that can be busy at the same time: a room, a treatment box or a court. Three rooms working in parallel are three resources, however many staff you have. It does not matter how many premises they are in.</p>
+          </div>
+          <div class="pillar">
+            <h3>Everything included</h3>
+            <p>Unlimited users and every feature, with no cut-down plans: agenda, records and clinical history, POS, vouchers, stock, reports, invoicing and whatever comes next. No booking commission and no percentage of what you charge.</p>
+          </div>
+          <div class="pillar">
+            <h3>Onboarding</h3>
+            <p>Once only: <b>150 €</b> if you start from scratch and <b>300 €</b> if we bring your data over from another program. We set up your centre with you and train your team. If another centre recommended you, you don't pay it and the first month is free.</p>
+          </div>
+          <div class="pillar">
+            <h3>No lock-in</h3>
+            <p>Monthly, you cancel whenever you like. Yearly, if you leave early we refund what you haven't used, counting the months used at the monthly price. You pay by card or direct debit and the invoice arrives on its own.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="preguntas">
     <div class="shell">
       <div class="section__head">
@@ -817,31 +903,7 @@ footer{
           <details class="faq__item">
             <summary>How much does it cost?</summary>
             <div class="faq__respuesta">
-              <p>€39 a month with two resources included. Each extra resource costs a little less than the one before, and with ten you pay €90. From there, €5 for each extra resource up to twenty. Above twenty, let's talk. It doesn't matter how many premises they are spread across. Move the slider to see what you would pay:</p>
-              <div class="precio-config" id="configurador">
-                <div class="precio-config__cabecera">
-                  <label for="precio-recursos">Resources in your centre</label>
-                  <output id="precio-n" for="precio-recursos">4</output>
-                </div>
-                <input type="range" id="precio-recursos" min="2" max="21" step="1" value="4">
-                <div class="precio-config__escala" aria-hidden="true"><span style="left:0">2</span><span style="left:42.1%">10</span><span style="left:100%">20+</span></div>
-                <div class="precio-config__modo" role="group" aria-label="How you pay">
-                  <button type="button" data-modo="mes" aria-pressed="true">Per month</button>
-                  <button type="button" data-modo="anual" aria-pressed="false">Per year, two months free</button>
-                </div>
-                <div class="precio-config__resultado" aria-live="polite">
-                  <div data-cuando="precio">
-                    <p class="precio-config__cifra"><span id="precio-cifra">56 €</span> <span data-modo-texto="mes">a month</span><span data-modo-texto="anual" hidden="">a year</span></p>
-                    <p class="precio-config__detalle" data-modo-texto="mes">Paying the year in advance: <b id="precio-anual">560 €</b>, two months free.</p>
-                    <p class="precio-config__detalle" data-modo-texto="anual" hidden=""><s id="precio-sin-descuento">672 €</s> You save <b id="precio-ahorro">112 €</b>: you pay ten monthly fees instead of twelve.</p>
-                  </div>
-                  <div data-cuando="consulta" hidden="">
-                    <p class="precio-config__cifra">More than 20 resources</p>
-                    <p class="precio-config__detalle">Let's talk: <a href="#demo">write to us</a> and we'll give you a price. Paying the year, two months free as well.</p>
-                  </div>
-                </div>
-              </div>
-              <p>Prices exclude VAT. If you pay the year up front, <b>we give you two months free</b>: you pay ten monthly fees instead of twelve.</p>
+              <p>€39 a month with two resources included. Each extra resource costs a little less than the one before, and with ten you pay €90. From there, €5 for each extra resource up to twenty. Above twenty, let's talk. Prices exclude VAT, and if you pay the year in advance <b>we give you two months free</b>. Work out yours under <a href="#precios">Pricing</a>.</p>
             </div>
           </details>
 

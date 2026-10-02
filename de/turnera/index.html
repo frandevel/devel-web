@@ -477,6 +477,15 @@ footer{
 @media (max-width:480px){.faq__tabla s{color:var(--text-dim);font-weight:400;margin-right:.3rem}
 .faq__tabla th,.faq__tabla td{padding:.4rem .45rem}.faq__tabla th{letter-spacing:.06em}}
 .faq__pie{margin-top:.5rem;font-size:1rem}
+.precios{display:grid;gap:2.2rem 3rem;margin-top:2.8rem;align-items:start}
+@media (min-width:900px){.precios{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.precios__calculo{display:flex;flex-direction:column;gap:.9rem}
+.precios__nota{font-size:.85rem;color:var(--steel)}
+.precios__tabla summary{cursor:pointer;color:var(--link);font-size:.92rem}
+.precios__tabla[open] summary{margin-bottom:.7rem}
+.precios__claves{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.precios__claves .pillar:first-child{border-top-color:var(--tu-anillo)}
+.precios__claves .pillar b{color:var(--text);font-weight:600}
 .precio-config{max-width:36rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.8rem;color:var(--text)}
 .precio-config__cabecera{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
 .precio-config__cabecera label{font-weight:600}
@@ -516,7 +525,7 @@ footer{
    así que la barra envuelve y la navegación cede el sitio, en lugar de empujarlo fuera de la pantalla. */
 @media (max-width:640px){
   .site__inner{flex-wrap:wrap;justify-content:flex-start;gap:.5rem 1rem}
-  .site nav{order:3;width:100%;justify-content:space-between;gap:.5rem}
+  .site nav{order:3;width:100%;flex-wrap:wrap;justify-content:flex-start;gap:.35rem 1rem}
   .idiomas{margin-left:auto;padding-left:.8rem}
 }
 
@@ -584,6 +593,7 @@ footer{
       <a href="#que-hace">Was es kann</a>
       <a href="#pantallas">Ansichten</a>
       <a href="#abierto">Ihre Daten</a>
+      <a href="#precios">Preise</a>
       <a href="#preguntas">FAQ</a>
       <a href="#demo">Demo</a>
       <a href="/de/turnera/manual">Handbuch</a>
@@ -799,6 +809,82 @@ footer{
     </div>
   </section>
 
+  <section id="precios">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Preise</p>
+        <h2>Sie zahlen für das, was Ihr Kalender gleichzeitig abdeckt.</h2>
+        <p>Eine Gebühr nach den Ressourcen Ihres Betriebs, alles inklusive. Ohne Provisionen, ohne Nutzerzählung und ohne Mindestlaufzeit.</p>
+      </div>
+      <div class="precios">
+        <div class="precios__calculo">
+          <div class="precio-config" id="configurador">
+            <div class="precio-config__cabecera">
+              <label for="precio-recursos">Ressourcen Ihres Zentrums</label>
+              <output id="precio-n" for="precio-recursos">4</output>
+            </div>
+            <input type="range" id="precio-recursos" min="2" max="21" step="1" value="4">
+            <div class="precio-config__escala" aria-hidden="true"><span style="left:0">2</span><span style="left:42.1%">10</span><span style="left:100%">20+</span></div>
+            <div class="precio-config__modo" role="group" aria-label="Wie Sie zahlen">
+              <button type="button" data-modo="mes" aria-pressed="true">Pro Monat</button>
+              <button type="button" data-modo="anual" aria-pressed="false">Jährlich, zwei Monate gratis</button>
+            </div>
+            <div class="precio-config__resultado" aria-live="polite">
+              <div data-cuando="precio">
+                <p class="precio-config__cifra"><span id="precio-cifra">56 €</span> <span data-modo-texto="mes">im Monat</span><span data-modo-texto="anual" hidden="">im Jahr</span></p>
+                <p class="precio-config__detalle" data-modo-texto="mes">Bei jährlicher Vorauszahlung: <b id="precio-anual">560 €</b>, zwei Monate gratis.</p>
+                <p class="precio-config__detalle" data-modo-texto="anual" hidden=""><s id="precio-sin-descuento">672 €</s> Sie sparen <b id="precio-ahorro">112 €</b>: Sie zahlen zehn Monatsbeträge statt zwölf.</p>
+              </div>
+              <div data-cuando="consulta" hidden="">
+                <p class="precio-config__cifra">Mehr als 20 Ressourcen</p>
+                <p class="precio-config__detalle">Sprechen wir darüber: <a href="#demo">schreiben Sie uns</a> und wir nennen Ihnen einen Preis. Bei jährlicher Zahlung ebenfalls zwei Monate gratis.</p>
+              </div>
+            </div>
+          </div>
+          <p class="precios__nota">Preise zzgl. MwSt. Bei jährlicher Zahlung zahlen Sie zehn Monatsbeträge statt zwölf.</p>
+          <details class="precios__tabla">
+            <summary>Vollständige Tabelle anzeigen</summary>
+            <table class="faq__tabla">
+              <thead><tr><th>Ihr Betrieb</th><th>Pro Monat</th><th>Pro Jahr</th><th>Sie sparen</th></tr></thead>
+              <tbody>
+                <tr><td>2 Ressourcen</td><td>39 €</td><td>390 €</td><td>78 €</td></tr>
+                <tr><td>3 Ressourcen</td><td>48 €</td><td>480 €</td><td>96 €</td></tr>
+                <tr><td>4 Ressourcen</td><td>56 €</td><td>560 €</td><td>112 €</td></tr>
+                <tr><td>5 Ressourcen</td><td>63 €</td><td>630 €</td><td>126 €</td></tr>
+                <tr><td>6 Ressourcen</td><td>69 €</td><td>690 €</td><td>138 €</td></tr>
+                <tr><td>7 Ressourcen</td><td>75 €</td><td>750 €</td><td>150 €</td></tr>
+                <tr><td>8 Ressourcen</td><td>80 €</td><td>800 €</td><td>160 €</td></tr>
+                <tr><td>9 Ressourcen</td><td>85 €</td><td>850 €</td><td>170 €</td></tr>
+                <tr><td>10 Ressourcen</td><td>90 €</td><td>900 €</td><td>180 €</td></tr>
+                <tr><td>15 Ressourcen</td><td>115 €</td><td>1.150 €</td><td>230 €</td></tr>
+                <tr><td>20 Ressourcen</td><td>140 €</td><td>1.400 €</td><td>280 €</td></tr>
+                <tr><td>Mehr als 20</td><td>Auf Anfrage</td><td>Auf Anfrage</td><td>Zwei Monate</td></tr>
+              </tbody>
+            </table>
+          </details>
+        </div>
+        <div class="precios__claves">
+          <div class="pillar">
+            <h3>Was eine Ressource ist</h3>
+            <p>Jeder Platz im Kalender, der gleichzeitig belegt sein kann: eine Kabine, ein Behandlungsraum oder ein Platz. Drei parallel arbeitende Kabinen sind drei Ressourcen, egal wie viel Personal Sie haben. Es spielt keine Rolle, auf wie viele Standorte sie verteilt sind.</p>
+          </div>
+          <div class="pillar">
+            <h3>Alles inklusive</h3>
+            <p>Unbegrenzte Nutzer und alle Funktionen, ohne abgespeckte Tarife: Kalender, Akten und Krankengeschichte, Kasse, Mehrfachkarten, Lager, Berichte, Rechnungsstellung und alles, was noch kommt. Keine Buchungsprovision und kein Anteil an Ihren Einnahmen.</p>
+          </div>
+          <div class="pillar">
+            <h3>Einrichtung</h3>
+            <p>Einmalig: <b>150 €</b> wenn Sie bei null anfangen, und <b>300 €</b> wenn wir Ihre Daten aus einem anderen Programm übernehmen. Wir richten Ihren Betrieb mit Ihnen ein und schulen Ihr Team. Wenn Sie von einem anderen Betrieb empfohlen wurden, entfällt sie und der erste Monat ist gratis.</p>
+          </div>
+          <div class="pillar">
+            <h3>Keine Mindestlaufzeit</h3>
+            <p>Monatlich kündigen Sie, wann Sie wollen. Jährlich erstatten wir bei vorzeitigem Ausstieg den nicht genutzten Teil, wobei die genutzten Monate zum Monatspreis gerechnet werden. Sie zahlen per Karte oder Lastschrift, und die Rechnung kommt von selbst.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="preguntas">
     <div class="shell">
       <div class="section__head">
@@ -817,31 +903,7 @@ footer{
           <details class="faq__item">
             <summary>Was kostet es?</summary>
             <div class="faq__respuesta">
-              <p>39 € im Monat mit zwei Ressourcen inklusive. Jede weitere Ressource kostet etwas weniger als die vorherige, und mit zehn zahlen Sie 90 €. Ab dann 5 € für jede weitere Ressource bis zwanzig. Bei mehr als zwanzig sprechen wir darüber. Es spielt keine Rolle, auf wie viele Standorte sie verteilt sind. Bewegen Sie den Regler, um Ihren Preis zu sehen:</p>
-              <div class="precio-config" id="configurador">
-                <div class="precio-config__cabecera">
-                  <label for="precio-recursos">Ressourcen Ihres Zentrums</label>
-                  <output id="precio-n" for="precio-recursos">4</output>
-                </div>
-                <input type="range" id="precio-recursos" min="2" max="21" step="1" value="4">
-                <div class="precio-config__escala" aria-hidden="true"><span style="left:0">2</span><span style="left:42.1%">10</span><span style="left:100%">20+</span></div>
-                <div class="precio-config__modo" role="group" aria-label="Wie Sie zahlen">
-                  <button type="button" data-modo="mes" aria-pressed="true">Pro Monat</button>
-                  <button type="button" data-modo="anual" aria-pressed="false">Jährlich, zwei Monate gratis</button>
-                </div>
-                <div class="precio-config__resultado" aria-live="polite">
-                  <div data-cuando="precio">
-                    <p class="precio-config__cifra"><span id="precio-cifra">56 €</span> <span data-modo-texto="mes">im Monat</span><span data-modo-texto="anual" hidden="">im Jahr</span></p>
-                    <p class="precio-config__detalle" data-modo-texto="mes">Bei jährlicher Vorauszahlung: <b id="precio-anual">560 €</b>, zwei Monate gratis.</p>
-                    <p class="precio-config__detalle" data-modo-texto="anual" hidden=""><s id="precio-sin-descuento">672 €</s> Sie sparen <b id="precio-ahorro">112 €</b>: Sie zahlen zehn Monatsbeträge statt zwölf.</p>
-                  </div>
-                  <div data-cuando="consulta" hidden="">
-                    <p class="precio-config__cifra">Mehr als 20 Ressourcen</p>
-                    <p class="precio-config__detalle">Sprechen wir darüber: <a href="#demo">schreiben Sie uns</a> und wir nennen Ihnen einen Preis. Bei jährlicher Zahlung ebenfalls zwei Monate gratis.</p>
-                  </div>
-                </div>
-              </div>
-              <p>Preise ohne MwSt. Wenn Sie das Jahr im Voraus bezahlen, <b>schenken wir Ihnen zwei Monate</b>: Sie zahlen zehn Monatsbeträge statt zwölf.</p>
+              <p>39 € im Monat mit zwei Ressourcen inklusive. Jede weitere Ressource kostet etwas weniger als die vorherige, und mit zehn zahlen Sie 90 €. Ab dann 5 € für jede weitere Ressource bis zwanzig. Bei mehr als zwanzig sprechen wir darüber. Preise zzgl. MwSt., und wenn Sie das Jahr im Voraus zahlen, <b>schenken wir Ihnen zwei Monate</b>. Berechnen Sie Ihren Preis unter <a href="#precios">Preise</a>.</p>
             </div>
           </details>
 

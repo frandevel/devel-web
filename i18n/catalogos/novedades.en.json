@@ -506,5 +506,6 @@
   "t07cae208": "When settling a debt, the customer's voucher was always used without asking, and the dialog showed the full amount.",
   "t7f85f215": "An appointment left as a debt showed a total in the POS with the voucher deducted, although the full debt was recorded.",
   "td02046db": "If a room had a shorter agenda step than the centre, the whole agenda was ruled with that step. Now each column is ruled with its own.",
-  "t149f76d8": "2026.10.47-bf0efe2"
+  "t149f76d8": "2026.10.47-bf0efe2",
+  "t628c066b": "Pricing"
 }
