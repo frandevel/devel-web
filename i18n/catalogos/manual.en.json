@@ -1854,5 +1854,11 @@
   "t0beadf1e": "Monitoring.",
   "tf2f8a50a": "devel.es/turnera/integradores",
   "t1998f53e": "The only thing an external program can do is book a new appointment in a free slot. Nothing the ERP does changes a payment, a record or an existing appointment.",
-  "t32743da6": "Almost everything is read-only."
+  "t32743da6": "Almost everything is read-only.",
+  "t364c2637": "Deleting or annulling an evolution",
+  "t6f53f404": "An evolution is only",
+  "tae683c74": "deleted",
+  "tcd0b896d": "on the same day and by whoever wrote it: it is for removing one noted on the wrong record. After that day, or if someone else wrote it, it is",
+  "t53189eca": "annulled",
+  "t88dc2e3d": ", giving the reason. An annulled evolution does not disappear: it stays in the case, struck through, with who annulled it, when and why. It can no longer be changed nor its photos touched, and it is left out when the case is printed. That way the clinical history always says who noted what and when, which is what the law requires."
 }
