@@ -2004,5 +2004,12 @@
   "t3356caf5": "This and following",
   "tdcda0c16": "Circular arrows",
   "tb6a7930c": "The appointment belongs to a series that",
-  "t72b09d48": "repeats"
+  "t72b09d48": "repeats",
+  "t3a95a5c4": "On the left are the",
+  "t37a33390": ", with their short code in front and a search box that finds by name or code; on the right, those the appointment includes, with just the name and minutes, and at the top how many there are and how long they add up to. A click marks a service and the arrows in the middle move it from one list to the other; a double click (or the Enter key) moves it directly. Vouchers do not appear in the appointment: a voucher is sold at the POS, it is not a treatment given in a room.",
+  "t5145fe32": "Services, in two lists.",
+  "tbc54f438": "button, in the header of the available ones, opens all the",
+  "t5c9af66e": "of the price list at a glance —HMBS, AXIL…— to click two or three in a row, and on accepting they are added to the appointment. Each code is a single service. The code is set in",
+  "ta9288b22": ": letters and digits, and it cannot be repeated). It no longer appears in the appointment's list: it is for finding the service, not for reading it.",
+  "tb9457f41": "Quick"
 }

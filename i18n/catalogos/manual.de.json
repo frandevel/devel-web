@@ -2004,5 +2004,12 @@
   "t3356caf5": "Diesen und folgende",
   "tdcda0c16": "Kreispfeile",
   "tb6a7930c": "Der Termin gehört zu einer Serie, die sich",
-  "t72b09d48": "wiederholt"
+  "t72b09d48": "wiederholt",
+  "t3a95a5c4": "Links stehen die",
+  "t37a33390": ", mit ihrem Kurzcode davor und einer Suche nach Name oder Code; rechts die des Termins, nur mit Name und Minuten, und oben, wie viele es sind und was sie zusammen dauern. Ein Klick markiert eine Leistung, und die Pfeile in der Mitte verschieben sie von einer Liste in die andere; mit Doppelklick (oder der Eingabetaste) direkt. Gutscheine erscheinen nicht im Termin: Ein Gutschein wird an der Kasse verkauft, er ist keine Behandlung in einer Kabine.",
+  "t5145fe32": "Die Leistungen, in zwei Listen.",
+  "tbc54f438": "im Kopf der verfügbaren öffnet alle",
+  "t5c9af66e": "des Tarifs auf einen Blick —HMBS, AXIL…—, um zwei oder drei nacheinander anzuklicken; beim Übernehmen werden sie dem Termin hinzugefügt. Jeder Code ist eine einzige Leistung. Der Code wird festgelegt in",
+  "ta9288b22": ": Buchstaben und Ziffern, und er darf sich nicht wiederholen). In der Liste des Termins erscheint er nicht mehr: Er dient zum Finden der Leistung, nicht zum Lesen.",
+  "tb9457f41": "Schnell"
 }
