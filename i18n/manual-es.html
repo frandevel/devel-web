@@ -138,6 +138,10 @@ a{color:var(--link)}
 .site nav{display:flex;gap:1.8rem;font-size:.94rem}
 .site nav a{color:var(--text-dim);text-decoration:none}
 .site nav a:hover{color:var(--link)}
+/* Manual y novedades: para quien ya es cliente, detrás del idioma y en pequeño. */
+.site nav.nav-sec{gap:1rem;font-size:.8rem;margin-left:1.1rem}
+.site nav.nav-sec a{color:var(--steel)}
+.site nav a[aria-current="page"]{color:var(--text)}
 @media (max-width:640px){
   .site__inner{gap:1rem}
   .brand span:not(.mark){display:none}
@@ -495,6 +499,7 @@ footer{
   .site__inner{flex-wrap:wrap;justify-content:flex-start;gap:.5rem 1rem}
   .site nav{order:3;width:100%;flex-wrap:wrap;justify-content:flex-start;gap:.35rem 1rem}
   .idiomas{margin-left:auto;padding-left:.8rem}
+  .site nav.nav-sec{order:4;width:100%;margin-left:0}
 }
 
 /* ---- el manual ------------------------------------------------------- */
@@ -574,16 +579,16 @@ footer{
     </a>
     <nav>
       <a href="/turnera#que-hace">Qué hace</a>
-      <a href="/turnera#pantallas">Pantallas</a>
-      <a href="/turnera#abierto">Tus datos</a>
       <a href="/turnera#precios">Precios</a>
       <a href="/turnera#preguntas">Preguntas</a>
       <a href="/turnera#demo">Demo</a>
-      <a href="/turnera/manual" aria-current="page">Manual</a>
       <a href="/turnera/integradores">Integradores</a>
-      <a href="/turnera/novedades">Novedades</a>
     </nav>
     <!--selector-de-idioma-->
+    <nav class="nav-sec">
+      <a href="/turnera/manual" aria-current="page">Manual de usuario</a>
+      <a href="/turnera/novedades">Novedades</a>
+    </nav>
   </div>
 </header>
 

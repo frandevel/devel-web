@@ -136,8 +136,8 @@ function publicar(idioma) {
       .replace(`<a href="${idioma.ruta}">`, `<a href="${idioma.ruta}" aria-current="page">`)
     : pagina.replace(enlaceDelManual,
       `<a href="$1">$2</a>\n      <a href="${idioma.ruta}" aria-current="page">${idioma.nav}</a>`))
-    .replace(/<div class="idiomas"[^>]*>[\s\S]*?<\/div>\s*<\/div>\s*<\/header>/,
-      `<div class="idiomas" role="group" aria-label="Idioma / Language / Sprache">${selector}</div>\n  </div>\n</header>`);
+    .replace(/<div class="idiomas"[^>]*>[\s\S]*?<\/div>/,
+      `<div class="idiomas" role="group" aria-label="Idioma / Language / Sprache">${selector}</div>`);
 
   const abreMain = pagina.indexOf('<main');
   const cierraMain = pagina.indexOf('</main>') + '</main>'.length;
