@@ -2036,5 +2036,6 @@
   "tf520f7ed": "vier bis acht Ziffern",
   "t803f5e66": "Das gilt für die PINs, die ab dann vergeben werden —die, die die Verwaltung verteilt, und die, die jede Person\n    selbst ändert—.",
   "t3008ba13": ": Sie lassen sich auf dem Tastenfeld eingeben und mit der\n    Schaltfläche bestätigen. Wenn Sie die Ziffern verringern, muss wer eine längere hat, sie an der Stempeluhr ändern.",
-  "t86f40fda": "Bereits vergebene gelten weiter"
+  "t86f40fda": "Bereits vergebene gelten weiter",
+  "t3037f861": "Wer Karteikarten bearbeiten darf, aber nicht die Berechtigung «Telefonnummern und E-Mails sehen» hat, sieht beim\n    Bearbeiten die Kontaktdaten des Kunden —Telefon, Handy, E-Mail und Adresse— nicht und kann sie nicht ändern: Stattdessen\n    erscheint ein Hinweis, und beim Speichern bleiben die Kontaktdaten unverändert."
 }

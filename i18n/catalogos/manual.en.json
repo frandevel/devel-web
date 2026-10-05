@@ -2036,5 +2036,6 @@
   "tf520f7ed": "four to eight digits",
   "t803f5e66": "It applies to the PINs set from then on —the ones administration hands out and the ones each person\n    changes—.",
   "t3008ba13": ": they can be typed on the keypad and confirmed\n    with the button. If you lower the digits, whoever has a longer one will have to change it from the clock.",
-  "t86f40fda": "The ones already set keep working"
+  "t86f40fda": "The ones already set keep working",
+  "t3037f861": "Whoever can edit records but does not have the «See phones and emails» permission does not see the customer's contact\n    details when editing them —phone, mobile, email and address— nor can change them: a notice appears instead, and\n    saving leaves the contact details as they were."
 }
