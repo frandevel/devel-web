@@ -537,5 +537,21 @@
   "ted26ebee": "smaller",
   "t77def808": "Services are chosen in",
   "te7c58ed9": ": on the left the available ones, with their code and a search box; on the right those of the appointment, with how many minutes they add up to. A double click moves a service from one list to the other.",
-  "t18b270ac": "The short code is for finding the service: it is no longer shown in the appointment's list."
+  "t18b270ac": "The short code is for finding the service: it is no longer shown in the appointment's list.",
+  "t5975d47c": "5 October 2026 · Time clock PIN digits and notices from Turnera",
+  "t466e5e8d": "2026.10.63-cf1ee31",
+  "te3dfe46f": "How many digits the time clock PIN has",
+  "t4d0803f0": "the centre chooses whether the PIN has from",
+  "te5abe338": ". More digits make it much harder to guess; fewer are quicker to type.",
+  "tf14ae4c4": "Administration → Time tracking → Time clock",
+  "tf520f7ed": "four to eight digits",
+  "t7444cf7b": "It is changed by whoever has the",
+  "t3e2df31e": " permission, which Management and HR have out of the box.",
+  "t63037398": "Configure the time clock",
+  "t8679827c": "The PINs already set keep working. New ones, and the ones each professional changes, have the chosen digits.",
+  "t8b6e6405": "Notices from Turnera",
+  "t78b7be6c": "When we need to stop for a few minutes or go into maintenance, you will see it in advance in a",
+  "t7d522c8d": ", also on the sign-in screen and in the booking portal. If it is red, it is urgent.",
+  "t54ac284a": "strip at the top of the screen",
+  "t9203a844": "Fixed potential security issues."
 }
