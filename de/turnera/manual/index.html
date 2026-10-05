@@ -729,6 +729,23 @@ footer{
     Oben im Menü steht das Logo des Betriebs, sofern unter <em>Verwaltung → Daten des Betriebs</em> eines hochgeladen wurde; sonst das von Turnera.
   </p>
 
+  <h3 id="contrasena">Das Passwort ändern</h3>
+  <p>
+    Im Sitzungsmenü oben rechts finden Sie <strong>Passwort ändern</strong>: Es fragt nach dem aktuellen und dem
+    neuen. Beim Ändern <strong>werden alle anderen Sitzungen</strong> dieses Benutzers beendet —die auf dem Handy, die auf dem
+    Rechner zu Hause, die, die jemand mit dem alten noch offen haben könnte— und nur wer es geändert hat, bleibt angemeldet.
+    Ein Passwort ändert man, weil man vermutet, dass jemand anderes es kennt, und das wäre sinnlos, wenn dessen Sitzung
+    offen bliebe. Dasselbe geschieht, wenn die Verwaltung jemandem das Passwort zurücksetzt oder ihn deaktiviert.
+  </p>
+
+  <h3 id="aviso-general">Hinweise von Turnera</h3>
+  <p>
+    Manchmal erscheint ganz oben ein Streifen, auch auf der Anmeldeseite und im Buchungsportal, mit einem
+    Hinweis von uns an alle Zentren: dass wir für ein Update einige Minuten anhalten oder dass eine Wartung
+    nötig ist. Ist er <strong>rot</strong>, ist es dringend. Er lässt sich nicht schließen und verschwindet von selbst, wenn
+    er nicht mehr gebraucht wird.
+  </p>
+
   <h3 id="ordenar">Jede Liste sortieren</h3>
   <p>
     Alle Listen —Kunden, Lieferanten, Leistungen, Produkte, Lager, offene Zahlungen, Berichte…— werden sortiert durch
@@ -2003,7 +2020,7 @@ footer{
   <ul>
     <li><strong>Empfang</strong>: vergibt Termine, betreut den Tresen und kassiert.</li>
     <li><strong>Fachkraft</strong>: der eigene Terminkalender, die eigenen Kunden und die Krankenakte.</li>
-    <li><strong>Leitung</strong>: führt den Betrieb — Katalog, Personal, Berichte und Einstellungen — und legt Benutzer an.</li>
+    <li><strong>Leitung</strong>: führt das Zentrum — Katalog, Personal, Berichte und Einstellungen — und betreut die Benutzer: Namen oder Standort ändern, sie entsperren und ihr Passwort zurücksetzen.</li>
     <li><strong>Systemadministrator</strong>: alles, heikle Berechtigungen eingeschlossen.</li>
   </ul>
 
@@ -2026,6 +2043,13 @@ footer{
 
   <div class="ojo">
     <p><strong>Die Änderung bemerkt man erst beim nächsten Anmelden.</strong> Was jeder tun darf, reist in seiner Sitzung mit; ändern Sie also jemandem die Rolle, während er arbeitet, sieht er es erst, wenn er sich ab- und wieder anmeldet.</p>
+  </div>
+
+  <div class="ojo">
+    <p><strong>Rollen vergeben oder entziehen darf nur, wer die Berechtigungen verwaltet.</strong> Dafür braucht es die Berechtigung «Rollen und
+      Berechtigungen verwalten», die ab Werk nur der Administrator hat: Wer Rollen vergeben könnte, könnte sich selbst die
+      Administratorrolle geben. Aus demselben Grund kann niemand einen Benutzer ändern, deaktivieren oder sein Passwort
+      zurücksetzen, der Dinge darf, die er selbst nicht darf.</p>
   </div>
 
   <p>
@@ -2407,18 +2431,17 @@ footer{
   <h4>Die PIN</h4>
 
   <p>
-    Jede Fachkraft braucht eine <strong>vierstellige PIN</strong>haben, die unter
-    <em>Fachkräfte → Stempel-PIN</em>. Beim Tippen auf die Schaltfläche erscheint ein Ziffernblock: mit der vierten
-    Ziffer öffnet sich das Eigene, ohne weiteren Klick. Das sorgt dafür, dass
-    das Tippen auf die Schaltfläche eines anderen kein Stempeln für einen anderen ist; ohne das würde die Namensliste bei
-    einer Prüfung wenig beweisen.
+    Jede Fachkraft braucht eine <strong>PIN</strong>, vierstellig, sofern das Zentrum nichts anderes festlegt, die ihr
+    unter <em>Fachkräfte → Stempel-PIN</em> vergeben wird. Ein Druck auf ihre Schaltfläche öffnet ein Tastenfeld, sie tippt sie ein: Mit der letzten
+    Ziffer öffnet sich ihr Bereich, ohne weiteren Klick. Das sorgt dafür, dass
+    ein Druck auf die Schaltfläche einer anderen Person nicht heißt, für sie zu stempeln; ohne sie würde die Namensliste
+    bei einer Prüfung wenig beweisen.
   </p>
 
   <p>
-    Der Knopf <em>Erzeugen</em> schlägt eine zufällige vor, und das ist die bessere Idee, als sich eine auszudenken:
-    ausgelassen werden die, die man auf einen Blick errät —vier gleiche Ziffern, Leitern wie 1234—, also genau
-    die, die bei der Wahl von Hand herauskommen. Die PIN ist beim Eintippen sichtbar, damit Sie sie demjenigen
-    vorlesen können, der sie benutzen wird;
+    Der Knopf <em>Erzeugen</em> schlägt eine zufällige vor, und das ist besser, als sich eine auszudenken: Es verwirft die, die man
+    auf Anhieb errät —lauter gleiche Ziffern und Folgen wie 1234—, also genau die, die man von Hand wählt.
+    Die PIN ist beim Tippen sichtbar, damit Sie sie der Person diktieren können, die sie benutzen wird;
     <strong>notieren Sie sie vor dem Speichern</strong>, denn danach lässt sie sich nicht mehr lesen.
   </p>
 
@@ -2436,6 +2459,22 @@ footer{
     die Schaltfläche <em>Meine PIN ändern</em>, die nach der geltenden und zweimal nach der neuen fragt. Man muss die gesetzte kennen,
     und wer sie kennt, konnte ohnehin für diese Person stempeln, also öffnet das keine Tür; erspart wird,
     dass die Änderung davon abhängt, ob die Verwaltung an diesem Morgen da ist.
+  </p>
+
+  <h4 id="cifras-pin">Wie viele Ziffern die PIN hat</h4>
+  <span class="ruta">Verwaltung → Zeiterfassung → Stempeluhr</span>
+
+  <p>
+    Das Zentrum legt fest, ob die PIN <strong>vier bis acht Ziffern</strong> hat. Vier sind schnell getippt,
+    aber wer vor dem Bildschirm am Empfang steht, könnte die eines Kollegen in ein paar Stunden durch Ausprobieren erraten,
+    obwohl Turnera nur zehn Versuche pro Minute zulässt. Jede weitere Ziffer verzehnfacht diese Zeit: Mit sechs ist es schon
+    mehr als ein Monat. Ändern kann es, wer die Berechtigung «Stempeluhr einrichten» hat, die ab Werk Leitung und Personalabteilung haben.
+  </p>
+
+  <p>
+    Das gilt für die PINs, die ab dann vergeben werden —die, die die Verwaltung verteilt, und die, die jede Person
+    selbst ändert—. <strong>Bereits vergebene gelten weiter</strong>: Sie lassen sich auf dem Tastenfeld eingeben und mit der
+    Schaltfläche bestätigen. Wenn Sie die Ziffern verringern, muss wer eine längere hat, sie an der Stempeluhr ändern.
   </p>
 
   <p>

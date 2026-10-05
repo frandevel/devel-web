@@ -728,6 +728,23 @@ footer{
     At the top of the menu is the centre's logo, if one has been uploaded under <em>Administration → Centre details</em>; if not, Turnera's.
   </p>
 
+  <h3 id="contrasena">Changing the password</h3>
+  <p>
+    In the session menu, at the top right, there is <strong>Change password</strong>: it asks for the current one and the
+    new one. Changing it <strong>closes every other session</strong> of that user —the one on the phone, the one on the
+    computer at home, the one somebody might have open with the old password— and only whoever changed it stays in.
+    A password is changed because you suspect someone else knows it, and that would be pointless if their session
+    stayed open. The same happens when administration resets someone's password, or disables them.
+  </p>
+
+  <h3 id="aviso-general">Notices from Turnera</h3>
+  <p>
+    Sometimes a strip appears at the very top, also on the sign-in screen and in the booking portal, with a
+    notice from us to every centre: that we are going to stop for a few minutes for an update, or that we need to
+    go into maintenance. If it is <strong>red</strong>, it is urgent. It cannot be closed and it disappears on its own when
+    it is no longer needed.
+  </p>
+
   <h3 id="ordenar">Sorting any list</h3>
   <p>
     Every list —customers, suppliers, services, products, stock, outstanding payments, reports…— is sorted by
@@ -2000,7 +2017,7 @@ footer{
   <ul>
     <li><strong>Reception</strong>: gives out times, minds the counter and charges.</li>
     <li><strong>Professional</strong>: their agenda, their customers and the clinical record.</li>
-    <li><strong>Management</strong>: runs the centre — catalogue, staff, reports and settings — and creates users.</li>
+    <li><strong>Management</strong>: runs the centre — catalogue, staff, reports and settings — and looks after the users: changing their name or branch, unlocking them and resetting their password.</li>
     <li><strong>System administrator</strong>: everything, delicate permissions included.</li>
   </ul>
 
@@ -2023,6 +2040,13 @@ footer{
 
   <div class="ojo">
     <p><strong>The change is noticed on logging back in.</strong> What each person may do travels inside their session, so if you change somebody's role while they are working, they will not see it until they leave and come back in.</p>
+  </div>
+
+  <div class="ojo">
+    <p><strong>Giving or removing roles belongs to whoever governs permissions.</strong> It takes the «Govern roles and
+      permissions» permission, which out of the box only the administrator has: whoever could hand out roles could give
+      themselves the administrator one. For the same reason, nobody can change, disable or reset the password of a user
+      who can do things they cannot.</p>
   </div>
 
   <p>
@@ -2402,18 +2426,17 @@ footer{
   <h4>The PIN</h4>
 
   <p>
-    Every professional needs a <strong>four-digit PIN</strong>, set in
-    <em>Professionals → Clocking PIN</em>. Tapping their button brings up a keypad and they type it: the fourth
-    digit opens their own screen, without pressing anything else. That is what makes
-    pressing someone else's button not clocking for someone else, and without it the list of names would prove little to
-    an inspection.
+    Every professional needs a <strong>PIN</strong>, four digits unless the centre decides otherwise, which is set
+    in <em>Professionals → Clocking PIN</em>. Pressing their button brings up a keypad and they type it: with the last
+    digit their screen opens, without pressing anything else. That is what makes
+    pressing someone else's button not clocking in for someone else, and without it the list of names would prove little
+    in an inspection.
   </p>
 
   <p>
-    The <em>Generate</em> suggests a random one, and it is a better idea than thinking one up: it leaves out
-    the ones that are guessed at a glance —four identical digits, ladders like 1234— which are exactly the ones
-    that come out when you choose by hand. The PIN is visible while you type it, so you can read it out to
-    whoever will use it;
+    The <em>Generate</em> suggests a random one, and it is a better idea than making one up: it discards the ones that can be guessed
+    in one go —all the same digits and sequences like 1234— which are exactly the ones people come up with when
+    choosing by hand. The PIN is visible while you type it, so you can read it out to whoever is going to use it;
     <strong>write it down before saving</strong>, because afterwards it cannot be read again.
   </p>
 
@@ -2431,6 +2454,22 @@ footer{
     there is <em>Change my PIN</em>, which asks for the one in force and the new one twice. You have to know the one that is set,
     and whoever knows it could already clock in for that person, so it opens no door; what it saves is having
     the change depend on administration being around that morning.
+  </p>
+
+  <h4 id="cifras-pin">How many digits the PIN has</h4>
+  <span class="ruta">Administration → Time tracking → Time clock</span>
+
+  <p>
+    The centre decides whether the PIN has from <strong>four to eight digits</strong>. Four are typed in a moment,
+    but whoever is in front of the reception screen could guess a colleague's by trying for a few hours,
+    even though Turnera only allows ten tries a minute. Each extra digit multiplies that time by ten: with six it is already
+    more than a month. It is changed by whoever has the «Configure the time clock» permission, which Management and HR have out of the box.
+  </p>
+
+  <p>
+    It applies to the PINs set from then on —the ones administration hands out and the ones each person
+    changes—. <strong>The ones already set keep working</strong>: they can be typed on the keypad and confirmed
+    with the button. If you lower the digits, whoever has a longer one will have to change it from the clock.
   </p>
 
   <p>

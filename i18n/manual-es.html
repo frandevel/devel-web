@@ -729,6 +729,23 @@ footer{
     centro</em>; si no, el de Turnera.
   </p>
 
+  <h3 id="contrasena">Cambiar la contraseña</h3>
+  <p>
+    En el menú de la sesión, arriba a la derecha, está <strong>Cambiar contraseña</strong>: pide la de ahora y la
+    nueva. Al cambiarla <strong>se cierran todas las demás sesiones</strong> de ese usuario —la del móvil, la del
+    ordenador de casa, la que alguien pudiera tener abierta con la vieja— y sólo sigue dentro quien la ha cambiado.
+    Se cambia una contraseña porque se sospecha que otro la conoce, y eso no serviría de nada si su sesión siguiera
+    abierta. Lo mismo pasa cuando administración le restablece la contraseña a alguien, o lo desactiva.
+  </p>
+
+  <h3 id="aviso-general">Avisos de Turnera</h3>
+  <p>
+    A veces sale una franja arriba del todo, también en la pantalla de entrar y en el portal de reservas, con un
+    aviso nuestro para todos los centros: que vamos a parar unos minutos para una actualización, o que hay que
+    entrar en mantenimiento. Si es <strong>roja</strong>, es urgente. No se puede cerrar y desaparece sola cuando
+    deja de hacer falta.
+  </p>
+
   <h3 id="ordenar">Ordenar cualquier lista</h3>
   <p>
     Todas las listas —clientes, proveedores, servicios, productos, stock, cobros pendientes, informes…— se ordenan
@@ -2301,7 +2318,7 @@ footer{
   <ul>
     <li><strong>Recepción</strong>: da horas, atiende el mostrador y cobra.</li>
     <li><strong>Profesional</strong>: su agenda, sus clientes y la historia clínica.</li>
-    <li><strong>Dirección</strong>: lleva el centro — catálogo, personal, informes y ajustes — y da de alta usuarios.</li>
+    <li><strong>Dirección</strong>: lleva el centro — catálogo, personal, informes y ajustes — y atiende a los usuarios: cambiarles el nombre o la delegación, desbloquearlos y restablecerles la contraseña.</li>
     <li><strong>Administrador del sistema</strong>: todo, incluidos los permisos delicados.</li>
   </ul>
 
@@ -2338,6 +2355,13 @@ footer{
     <p><strong>El cambio se nota al volver a entrar.</strong> Lo que puede hacer cada uno viaja dentro de su
       sesión, así que si le cambia el rol a alguien que está trabajando en ese momento, no lo verá hasta que
       salga y vuelva a entrar.</p>
+  </div>
+
+  <div class="ojo">
+    <p><strong>Dar o quitar roles es de quien gobierna los permisos.</strong> Hace falta el permiso «Gobernar roles y
+      permisos», que de fábrica sólo trae el administrador: quien pudiera repartir roles podría darse a sí mismo el de
+      administrador. Por lo mismo, nadie puede cambiar, desactivar ni restablecer la contraseña de un usuario que
+      puede hacer cosas que él no puede.</p>
   </div>
 
   <p>
@@ -2758,8 +2782,8 @@ footer{
   <h4>El PIN</h4>
 
   <p>
-    Cada profesional necesita un <strong>PIN de cuatro cifras</strong>, que se le pone en
-    <em>Profesionales → PIN de fichaje</em>. Al pulsar su botón sale un teclado y lo teclea: con la cuarta
+    Cada profesional necesita un <strong>PIN</strong>, de cuatro cifras si el centro no decide otra cosa, que se le
+    pone en <em>Profesionales → PIN de fichaje</em>. Al pulsar su botón sale un teclado y lo teclea: con la última
     cifra se abre lo suyo, sin pulsar nada más. Es lo que hace que
     pulsar el botón de otro no sea fichar por otro, y sin ello la lista de nombres no probaría gran cosa ante
     una inspección.
@@ -2767,7 +2791,7 @@ footer{
 
   <p>
     El botón <em>Generar</em> propone uno al azar, y es mejor idea que pensarlo: descarta los que se adivinan
-    de una pasada —las cuatro cifras iguales y las escaleras tipo 1234— que son justo los que salen cuando uno
+    de una pasada —todas las cifras iguales y las escaleras tipo 1234— que son justo los que salen cuando uno
     los elige a mano. El PIN se ve mientras lo escribe, para que pueda dictárselo a quien va a usarlo;
     <strong>apúntelo antes de guardar</strong>, porque después ya no se puede volver a leer.
   </p>
@@ -2790,6 +2814,22 @@ footer{
     está <em>Cambiar mi PIN</em>, que pide el de ahora y el nuevo dos veces. Hay que saber el que está puesto,
     y quien lo sabe ya podía fichar por esa persona, así que no abre ninguna puerta; lo que evita es que
     cambiarlo dependa de que administración esté esa mañana.
+  </p>
+
+  <h4 id="cifras-pin">Cuántas cifras lleva el PIN</h4>
+  <span class="ruta">Administración → Control de presencia → Reloj de fichar</span>
+
+  <p>
+    El centro decide si el PIN lleva de <strong>cuatro a ocho cifras</strong>. Cuatro se teclean en un momento,
+    pero quien tiene delante la pantalla del mostrador puede acertar el de un compañero probando en unas horas,
+    aunque Turnera solo deje probar diez por minuto. Cada cifra más multiplica ese tiempo por diez: con seis ya es
+    más de un mes. Lo cambia quien tenga el permiso «Configurar el reloj de fichar», que de fábrica traen Dirección y RRHH.
+  </p>
+
+  <p>
+    Manda sobre los PIN que se pongan a partir de entonces —los que reparta administración y los que cada cual se
+    cambie—. <strong>Los que ya estaban puestos siguen valiendo</strong>: en el teclado se pueden escribir y confirmar
+    con el botón. Si baja las cifras, quien tenga uno más largo tendrá que cambiárselo desde el reloj.
   </p>
 
   <p>
