@@ -630,6 +630,7 @@ footer{
   <h2>What's new in Turnera</h2>
   <p>Latest first</p>
   <ol>
+    <li><a href="#2026-10-12-ausencias">12 October 2026 · Reopening closed stretches and partial absences</a></li>
     <li><a href="#2026-10-12-franjas">12 October 2026 · Colour of the agenda stripes</a></li>
     <li><a href="#2026-10-05-pin">5 October 2026 · Time clock PIN digits and notices from Turnera</a></li>
     <li><a href="#2026-10-02-dialogo">2 October 2026 · A smaller appointment window</a></li>
@@ -663,10 +664,49 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Bugs fixed</strong>: what failed, and no longer does.</span></li>
 </ul>
 
+<section id="2026-10-12-ausencias" class="version">
+  <div class="version__cabecera">
+    <h2>12 October 2026 · Reopening closed stretches and partial absences</h2>
+    <span class="version__sello">Latest release</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">2026.10.87-95e3b94</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Partial absences: deducting a stretch from the hours</h4>
+    <ul>
+      <li>When closing a stretch in the agenda <strong>for one person</strong>, whoever handles HR can tick <em>Deduct from hours</em>. Useful, for example, for a lunch at an odd hour or a personal errand.</li>
+      <li>It starts <strong>unticked</strong>. If left unticked, the stretch is kept only as a record in the person’s work calendar and nothing is deducted.</li>
+      <li>If ticked, the part where the clocked time, the closed stretch and their shift overlap is deducted from their normal hours. No PIN is asked for, there is no minimum, and the hours are not made up automatically.</li>
+      <li>In the year calendar, the day gets <strong>a dot</strong>: filled if it deducts, hollow if it is only informational.</li>
+      <li>The hours summary, the year-end projection and the working-time record include the deducted hours.</li>
+    </ul>
+    <h4>From the work calendar</h4>
+    <ul>
+      <li>Partial absences can also be <strong>added and removed from the work calendar</strong>, next to the summary of what was worked, with <em>Add partial absence</em>. Removing one also reopens that stretch in the agenda. In a closed year they cannot be changed.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Improvements</h3>
+    <h4>Closing a stretch in the agenda</h4>
+    <ul>
+      <li>A stretch closed by mistake can be <strong>reopened</strong>: it has an open padlock in the corner. Appointments do not change. Whoever can close stretches sees the padlock.</li>
+      <li>Before closing, Turnera <strong>warns how many appointments are already in that stretch</strong>. It only warns: it does not cancel or move any.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Bugs fixed</h3>
+    <ul>
+      <li>In the agenda by rooms, a stretch closed for a single person striped every column; now it only marks the ones that apply.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-10-12-franjas" class="version">
   <div class="version__cabecera">
     <h2>12 October 2026 · Colour of the agenda stripes</h2>
-    <span class="version__sello">Latest release</span>
   </div>
   <p class="version__numero">Version <span translate="no">2026.10.80-f69d467</span></p>
 

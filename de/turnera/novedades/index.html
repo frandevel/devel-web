@@ -630,6 +630,7 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-10-12-ausencias">12. Oktober 2026 · Gesperrte Zeitspannen wieder öffnen und Teilabwesenheiten</a></li>
     <li><a href="#2026-10-12-franjas">12. Oktober 2026 · Farbe der Streifen in der Agenda</a></li>
     <li><a href="#2026-10-05-pin">5. Oktober 2026 · Ziffern der Stempel-PIN und Hinweise von Turnera</a></li>
     <li><a href="#2026-10-02-dialogo">2. Oktober 2026 · Ein kleineres Terminfenster</a></li>
@@ -663,10 +664,49 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-10-12-ausencias" class="version">
+  <div class="version__cabecera">
+    <h2>12. Oktober 2026 · Gesperrte Zeitspannen wieder öffnen und Teilabwesenheiten</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">2026.10.87-95e3b94</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Teilabwesenheiten: eine Zeitspanne von den Stunden abziehen</h4>
+    <ul>
+      <li>Beim Sperren einer Zeitspanne im Terminkalender <strong>für eine Person</strong> kann, wer für die Personalverwaltung zuständig ist, die Option <em>Von den Stunden abziehen</em> ankreuzen. Das eignet sich zum Beispiel für eine verschobene Mittagspause oder einen privaten Termin.</li>
+      <li>Das Kästchen ist standardmäßig <strong>nicht angekreuzt</strong>. Bleibt es leer, wird die Zeitspanne nur als Vermerk im Arbeitskalender der Person festgehalten und nichts abgezogen.</li>
+      <li>Wenn angekreuzt, wird von den normalen Stunden abgezogen, was sich aus Gestempeltem, gesperrter Zeitspanne und Schicht überschneidet. Es wird keine PIN verlangt, es gibt keine Mindestdauer und die Stunden werden nicht automatisch nachgeholt.</li>
+      <li>Im Jahreskalender trägt der Tag <strong>einen Punkt</strong>: gefüllt, wenn abgezogen wird, hohl, wenn es nur informativ ist.</li>
+      <li>Die Stundenübersicht, die Hochrechnung zum Jahresende und die Arbeitszeiterfassung enthalten die abgezogenen Stunden.</li>
+    </ul>
+    <h4>Im Arbeitskalender</h4>
+    <ul>
+      <li>Teilabwesenheiten lassen sich auch <strong>im Arbeitskalender hinzufügen und entfernen</strong>, neben der Übersicht des Gearbeiteten, mit <em>Teilabwesenheit hinzufügen</em>. Beim Entfernen wird die Zeitspanne auch im Terminkalender wieder geöffnet. In einem abgeschlossenen Jahr lassen sie sich nicht ändern.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Eine Zeitspanne im Terminkalender sperren</h4>
+    <ul>
+      <li>Eine versehentlich gesperrte Zeitspanne lässt sich <strong>wieder öffnen</strong>: Sie trägt ein offenes Vorhängeschloss in der Ecke. Die Termine ändern sich nicht. Das Vorhängeschloss sieht, wer Zeitspannen sperren darf.</li>
+      <li>Vor dem Sperren <strong>weist Turnera darauf hin, wie viele Termine schon in dieser Zeitspanne liegen</strong>. Es weist nur hin: Es sagt keinen Termin ab und verschiebt keinen.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Behobene Fehler</h3>
+    <ul>
+      <li>Im Terminkalender nach Kabinen schraffierte eine für eine einzelne Person gesperrte Zeitspanne alle Spalten; jetzt markiert sie nur die zutreffenden.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-10-12-franjas" class="version">
   <div class="version__cabecera">
     <h2>12. Oktober 2026 · Farbe der Streifen in der Agenda</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">2026.10.80-f69d467</span></p>
 

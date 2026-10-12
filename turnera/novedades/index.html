@@ -630,6 +630,7 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-10-12-ausencias">12 de octubre de 2026 · Reabrir ratos cerrados y ausencias parciales</a></li>
     <li><a href="#2026-10-12-franjas">12 de octubre de 2026 · Color de las franjas de la agenda</a></li>
     <li><a href="#2026-10-05-pin">5 de octubre de 2026 · Cifras del PIN de fichar y avisos de Turnera</a></li>
     <li><a href="#2026-10-02-dialogo">2 de octubre de 2026 · Una ventana de cita más pequeña</a></li>
@@ -664,10 +665,49 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-10-12-ausencias" class="version">
+  <div class="version__cabecera">
+    <h2>12 de octubre de 2026 · Reabrir ratos cerrados y ausencias parciales</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">2026.10.87-95e3b94</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
+    <h4>Ausencias parciales: descontar un rato de las horas</h4>
+    <ul>
+      <li>Al cerrar un rato de la agenda <strong>para una persona</strong>, quien lleva RRHH puede marcar <em>Descontar de las horas</em>. Sirve, por ejemplo, para una comida a deshoras o una gestión personal.</li>
+      <li>Viene <strong>sin marcar</strong>. Si no se marca, el rato queda solo como constancia en el calendario laboral de la persona y no resta nada.</li>
+      <li>Si se marca, se resta de sus horas normales lo que coincide entre lo fichado, el rato cerrado y su turno. No pide PIN, no hay un mínimo y las horas no se recuperan solas.</li>
+      <li>En el calendario del año, el día lleva <strong>un punto</strong>: relleno si descuenta, hueco si es solo informativa.</li>
+      <li>El resumen de horas, la proyección a fin de año y el registro de jornada incluyen las horas descontadas.</li>
+    </ul>
+    <h4>Desde el calendario laboral</h4>
+    <ul>
+      <li>Las ausencias parciales también se <strong>añaden y se quitan desde el calendario laboral</strong>, junto al resumen de lo ejecutado, con <em>Añadir ausencia parcial</em>. Al quitarla se reabre también ese rato en la agenda. En un año cerrado no se pueden tocar.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Mejoras</h3>
+    <h4>Cerrar un rato de la agenda</h4>
+    <ul>
+      <li>Un rato cerrado por error se puede <strong>reabrir</strong>: lleva un candado abierto en la esquina. Las citas no cambian. El candado lo ve quien puede cerrar ratos.</li>
+      <li>Antes de cerrar, Turnera <strong>avisa de cuántas citas hay ya en ese rato</strong>. Solo avisa: no cancela ni mueve ninguna.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Errores corregidos</h3>
+    <ul>
+      <li>En la agenda por cabinas, un rato cerrado para una sola persona rayaba todas las columnas; ahora solo marca las que corresponden.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-10-12-franjas" class="version">
   <div class="version__cabecera">
     <h2>12 de octubre de 2026 · Color de las franjas de la agenda</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">2026.10.80-f69d467</span></p>
 
