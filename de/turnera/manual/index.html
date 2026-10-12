@@ -1067,6 +1067,23 @@ footer{
     ist, und am Ende steht ein Telefonanruf.
   </p>
 
+  <p>
+    <strong>Liegen in dieser Zeitspanne schon Termine, wird vor dem Sperren gewarnt</strong>: „Es gibt 2 Termine in dieser Zeitspanne“. Das ist nur ein Hinweis. Das Sperren sagt keinen Termin ab und verschiebt keinen; mit diesen Kunden zu sprechen bleibt Ihre Sache. Stornierte Termine zählen nicht, und ein Termin, der genau bei Beginn der Sperrung endet, ebenfalls nicht.
+  </p>
+
+  <p>
+    <strong>Bei einem Fehler wird wieder geöffnet.</strong> Jede von Hand gesperrte Zeitspanne trägt ein offenes Vorhängeschloss in der Ecke: anklicken, bestätigen, und die Zeitspanne ist wieder frei. Die Termine ändern sich nicht. Das Vorhängeschloss sieht nur, wer Zeitspannen sperren darf; bei dem, was der Arbeitskalender markiert (Urlaub, Feiertage oder außerhalb der Schicht), erscheint es nicht, das wird dort geändert.
+  </p>
+
+  <p>
+    <strong>Eine Zeitspanne für eine Person kann auch von deren Stunden abgezogen werden.</strong> Das nutzt man für eine verschobene Mittagspause oder einen privaten Termin. Hat, wer sperrt, die Schreibberechtigung für den Arbeitskalender (Personalverwaltung oder Leitung) und hat die Person in diesem Jahr einen Arbeitskalender, erscheint bei der Auswahl
+    <em>Von den Stunden abziehen</em>, <strong>standardmäßig nicht angekreuzt</strong>. Nicht angekreuzt bleibt die Zeitspanne als Hinweis im Arbeitskalender der Person und zieht nichts ab. Angekreuzt wird von den regulären Stunden abgezogen, was sich aus Gestempeltem, gesperrter Zeitspanne und Schicht überschneidet. Es ist keine PIN nötig, es gibt keine Mindestdauer, und die Stunden werden nicht automatisch nachgeholt. Das Wiederöffnen der Zeitspanne nimmt auch den Abzug zurück; in einem abgeschlossenen Jahr ist das nicht möglich.
+  </p>
+
+  <p>
+    In der Kabinenansicht werden nur Sperrungen dieser Kabine oder des ganzen Zentrums schraffiert; die Sperrung einer Person schraffiert die Kabinen nicht, und umgekehrt. Jede Sperrung erscheint in der Ansicht, die ihre Spalte hat.
+  </p>
+
   <div class="ojo">
     <p><strong>Sperren heißt nicht verbieten.</strong> Im Buchungsportal verschwindet die gesperrte Lücke, und der Kunde sieht
       sie nicht. Am Empfang dagegen kommt nur ein Hinweis und es geht weiter: Wird die Kabine früher frei als geplant,
@@ -2726,6 +2743,15 @@ footer{
     <em>Arbeitskalender → Stunden</em> liefert für jede Fachkraft und jeden Monat zwischen zwei Daten die
     <strong>geplanten</strong>, die <strong>gestempelten</strong> Stunden und davon die <strong>regulären</strong> und die
     <strong>Überstunden</strong>, mit einer Summe pro Person bei mehreren Monaten. <em>CSV herunterladen</em> exportiert sie für das Steuerbüro. Ein Monat ohne Arbeitskalender wird gekennzeichnet, und dort erscheint alles Gestempelte als regulär.
+  </p>
+
+  <h4 id="calendario-ausencias-parciales">Teilabwesenheiten</h4>
+  <p>
+    Eine für eine Person gesperrte Zeitspanne (<em>Terminkalender → Eine Zeitspanne sperren</em>) zählt in deren Arbeitskalender als Teilabwesenheit. Wurde <em>Von den Stunden abziehen</em> angekreuzt, ergänzt die Stundenübersicht die Spalte
+    <strong>abgezogen</strong>: Diese Minuten werden von den <strong>regulären</strong> Stunden des Tages abgezogen (Gestempeltes bleibt unberührt), ebenso von der Berechnung des Tarifvertrags und von der Hochrechnung zum Jahresende. Wurde nicht angekreuzt, erscheint sie im Kalender als informative Abwesenheit. Abgezogen wird nur, was in die Schicht eines Arbeitstags fällt; an einem Feiertag oder außerhalb der Schicht wird nichts abgezogen. Die monatliche Arbeitszeiterfassung und die CSV-Dateien enthalten ebenfalls die abgezogenen Minuten.
+  </p>
+  <p>
+    <strong>Im Jahreskalender trägt jede Teilabwesenheit einen Punkt an ihrem Tag</strong>: gefüllt, wenn abgezogen wird, hohl, wenn sie nur informativ ist. Beim Darüberfahren erscheinen die Uhrzeiten. Wer im Terminkalender Zeitspannen sperren darf, kann sie auch <strong>von hier aus hinzufügen</strong>, mit <em>Teilabwesenheit hinzufügen</em> neben der Übersicht des Gearbeiteten: Man wählt den Tag, die Uhrzeiten, den Grund und, mit Berechtigung, ob abgezogen wird. Es ist dieselbe Sperrung wie im Terminkalender, daher wird die Zeitspanne auch bei der Buchung nicht angeboten. Zum Entfernen dient der Papierkorb in der Zeile: Er öffnet die Zeitspanne auch im Terminkalender wieder und schreibt die Stunden gut, falls sie abgezogen waren. In einem abgeschlossenen Jahr lässt sich weder hinzufügen noch entfernen.
   </p>
 
   <h4>Die Hochrechnung zum Jahresende</h4>

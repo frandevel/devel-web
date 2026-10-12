@@ -1066,6 +1066,23 @@ footer{
     closed, and it ends in a phone call.
   </p>
 
+  <p>
+    <strong>If there are already appointments in that stretch, you are warned before closing</strong>: “There are 2 appointments in that stretch”. It is only a warning. Closing does not cancel or move any appointment; talking to those customers is still up to you. Cancelled appointments do not count, and neither does an appointment that ends exactly when the closure starts.
+  </p>
+
+  <p>
+    <strong>If you make a mistake, reopen it.</strong> Every stretch closed by hand has an open padlock in the corner: click it, confirm, and the stretch is free again. Appointments do not change. Only whoever can close stretches sees the padlock, and it does not appear on what the work calendar marks (holidays, public holidays or off-shift), which is changed there.
+  </p>
+
+  <p>
+    <strong>A stretch for one person can also be deducted from their hours.</strong> It is what you use for a lunch at an odd hour or a personal errand. If whoever closes has the work calendar write permission (HR or Management) and the person has a work calendar that year, choosing them shows
+    <em>Deduct from hours</em>, <strong>unticked by default</strong>. Unticked, the stretch stays as an informational note in their work calendar and deducts nothing. Ticked, the overlap between the clocked time, the closed stretch and their shift is deducted from their regular hours. No PIN is needed and there is no minimum, and the hours are not made up automatically. Reopening the stretch also removes the deduction; it cannot be done in a closed year.
+  </p>
+
+  <p>
+    In the rooms view, only closures of that room or of the whole centre are striped; a person’s closure does not stripe the rooms, and vice versa. Each closure shows in the view that has its column.
+  </p>
+
   <div class="ojo">
     <p><strong>Closing is not forbidding.</strong> On the booking portal the closed slot disappears and the customer does not
       see it. At the front desk, on the other hand, you get a warning and can carry on: if the room frees up sooner
@@ -2722,6 +2739,15 @@ footer{
     <em>Work calendar → Hours</em> gives, for each professional and each month between two dates, the
     <strong>planned</strong>, the <strong>clocked</strong> hours and, of these, the <strong>regular</strong> and the
     <strong>overtime</strong>, with a total per person when there are several months. <em>Download CSV</em> exports it for the accountant. A month without a work calendar says so, and there everything clocked shows as regular.
+  </p>
+
+  <h4 id="calendario-ausencias-parciales">Partial absences</h4>
+  <p>
+    A stretch closed for one person (<em>Agenda → Close a stretch</em>) counts as a partial absence in their work calendar. If you ticked <em>Deduct from hours</em>, the hours summary adds the column
+    <strong>deducted</strong>: those minutes are subtracted from the <strong>regular</strong> hours of the day (the clocked time is not touched), and also from the agreement calculation and the year-end projection. If it was not ticked, it shows in the calendar as an informational absence. It only deducts what falls inside the shift of a working day; on a public holiday or off shift it deducts nothing. The monthly working-time record and the CSVs also carry the deducted minutes.
+  </p>
+  <p>
+    <strong>In the year calendar every partial absence has a dot on its day</strong>: filled if it deducts, hollow if it is only informational. Hovering shows the hours. Whoever can close stretches in the agenda can also <strong>add them from here</strong>, with <em>Add partial absence</em> next to the summary of what was worked: you choose the day, the hours, the reason and, if you have permission, whether it deducts. It is the same closure as in the agenda, so that stretch is not offered for booking either. To remove one, use the bin on its row: it also reopens the stretch in the agenda and gives the hours back if they had been deducted. In a closed year they can be neither added nor removed.
   </p>
 
   <h4>The year-end projection</h4>
