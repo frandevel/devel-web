@@ -630,6 +630,7 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-10-13-agenda">13 de octubre de 2026 · Ratos cerrados que se repiten y se arrastran, y una agenda más limpia</a></li>
     <li><a href="#2026-10-12-ausencias">12 de octubre de 2026 · Reabrir ratos cerrados y ausencias parciales</a></li>
     <li><a href="#2026-10-12-franjas">12 de octubre de 2026 · Color de las franjas de la agenda</a></li>
     <li><a href="#2026-10-05-pin">5 de octubre de 2026 · Cifras del PIN de fichar y avisos de Turnera</a></li>
@@ -665,10 +666,68 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-10-13-agenda" class="version">
+  <div class="version__cabecera">
+    <h2>13 de octubre de 2026 · Ratos cerrados que se repiten y se arrastran, y una agenda más limpia</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">2026.10.95-bd520eb</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
+    <h4>Repetir un rato cerrado</h4>
+    <ul>
+      <li>Al cerrar un rato se puede marcar <em>Repetir cada día</em> y elegir <em>Hasta el día</em>: se cierra el mismo rato todos los días hasta esa fecha, como mucho un año.</li>
+      <li>Si alguno de esos días ya tiene citas en ese rato, el aviso dice cuáles antes de cerrar. Las citas no se tocan.</li>
+      <li>Cada día queda como un cierre suelto: se mueve o se reabre uno sin tocar los demás.</li>
+    </ul>
+    <h4>Mover los ratos cerrados como una cita</h4>
+    <ul>
+      <li>Un rato cerrado se arrastra por el asa de su esquina, junto al candado, y se estira por la pestaña de su borde de abajo.</li>
+      <li>Se puede llevar a otra persona, a otra cabina o, en la vista de semana, a otro día. Si dejó una ausencia parcial en el calendario laboral, la ausencia se mueve con él.</li>
+      <li>Lo que se cierra, se mueve o se reabre en un puesto <strong>se ve al momento en los demás</strong>, igual que las citas.</li>
+    </ul>
+    <h4>La sesión pagada con el bono que se compra a la vez</h4>
+    <ul>
+      <li>Si una clienta se hace una sesión y al salir se compra un bono del mismo grupo, en el mismo cobro <strong>la sesión sale del bono, a 0 €</strong>, y solo se cobra el bono, que empieza con esa sesión gastada.</li>
+      <li>Si ya tenía otro bono de ese grupo con sesiones, se gasta primero el más antiguo.</li>
+      <li>También vale dejándolo a deber: lo que se debe es el bono.</li>
+    </ul>
+    <h4>Cobros pendientes de hoy en el menú</h4>
+    <ul>
+      <li>Junto a <em>Cobros pendientes</em> sale cuántos cobros de hoy siguen sin hacerse, para retomarlos antes de cerrar el día.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Mejoras</h3>
+    <h4>Una agenda más limpia</h4>
+    <ul>
+      <li>Los botones de la cabecera son solo un icono, todos a la misma altura: al pasar el ratón, cada uno dice lo que hace.</li>
+      <li>Ya no salen la leyenda de colores ni la frase de ayuda. Lo que significa cada color sigue en el manual.</li>
+      <li>Lo que queda fuera de turno se raya en blanco y su nombre sale al pasar el ratón por encima.</li>
+    </ul>
+    <h4>La ventana de la cita</h4>
+    <ul>
+      <li>Un clic fuera de la ventana de la cita ya no la cierra, para no perder lo que se estaba escribiendo. Se cierra con la X, con <em>Cerrar</em> o con la tecla Escape.</li>
+    </ul>
+    <h4>Lista de espera opcional</h4>
+    <ul>
+      <li>La lista de espera se enciende en <em>Preferencias → Agenda</em>. Viene apagada, y apagada no sale su botón en la agenda.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Errores corregidos</h3>
+    <ul>
+      <li>Un rato cerrado con <em>Descontar de las horas</em> no se notaba en el calendario laboral hasta que la persona fichaba. Ahora esas horas dejan de contar como planificadas en cuanto se cierra el rato.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-10-12-ausencias" class="version">
   <div class="version__cabecera">
     <h2>12 de octubre de 2026 · Reabrir ratos cerrados y ausencias parciales</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">2026.10.87-95e3b94</span></p>
 
