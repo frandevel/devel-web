@@ -865,6 +865,11 @@ footer{
     The view you choose is remembered: when you come back tomorrow it will be as you left it.
   </p>
 
+  <p>
+    <strong>The buttons in the header are just an icon</strong>, so the agenda has room: the arrows and the calendar to go from one day to another and back to today, the padlock to <em>close a stretch</em>, the printer to
+    <em>print</em>, the people for the <em>waiting list</em> and the <strong>+</strong> for the <em>new appointment</em>. Hover over each one and it says what it does.
+  </p>
+
   <h3 id="agenda-ahora">The line of the hour</h3>
 
   <p>
@@ -913,8 +918,7 @@ footer{
       <a href="#devoluciones">the ticket refund</a>. Through the booking portal, the customer cannot cancel
       an appointment already paid either: they have to call the centre.</li>
       <li><strong>Removing an appointment made by mistake:</strong> within the <strong>15 minutes</strong> after creating it, a fourth option appears when cancelling it, <em>Created by mistake</em>. The appointment disappears from the agenda and counts in no report, because it was never a booking. After that time it is no longer offered: it is a cancellation by someone, and you have to say by whom.</li>
-    <li><strong>Taking cancelled appointments off the view:</strong> tick <em>Hide cancelled</em>, in the legend
-      under the title. The diary remembers the box, so next time you will find it as you left it.</li>
+    <li><strong>Taking cancelled appointments off the view:</strong> tick <em>Hide cancelled</em>, under the header. The agenda remembers the box, so next time you will find it as you left it.</li>
   </ul>
 
   <p>
@@ -922,13 +926,13 @@ footer{
   </p>
 
   <p>
-    <strong>What each person can do in the diary depends on their permissions.</strong> Whoever cannot book sees the whole diary, but gets no new appointment button, clicking a free slot does nothing and appointments cannot be dragged or stretched: clicking one opens it to read, without a save button. The buttons to close off time, the waiting list and printing only show up for whoever has their permission. Inside an appointment, <em>Cancel</em>,
+    <strong>What each person can do in the diary depends on their permissions.</strong> Whoever cannot book sees the whole diary, but gets no new appointment button, clicking a free slot does nothing and appointments cannot be dragged or stretched: clicking one opens it to read, without a save button. The buttons to close off time, the waiting list and printing only show up for whoever has their permission; the waiting list one, besides, only if the centre has it switched on. Inside an appointment, <em>Cancel</em>,
     <em>Charge</em> and <em>WhatsApp</em> are always shown, but switched off for whoever cannot use them; hovering over them says why.
   </p>
 
   <p>
-    <strong>The appointment window can be moved aside.</strong> Drag it by its title to see the part of the
-    diary it covers while you create or change an appointment. <em>Charge</em> first saves whatever was changed in the
+    <strong>The appointment window can be moved aside.</strong> Drag it by its title to see the part of the agenda it covers while you create or change it. A click outside it does not close it, so nothing you were typing gets lost: it closes with the <em>X</em>, with <em>Close</em> or with the <strong>Escape</strong>.
+    <em>Charge</em> first saves whatever was changed in the
     appointment —an added service, for instance— and then takes you to the till. And if the customer record is opened from the appointment,
     its <em>Back</em> goes back to the open appointment, not to the customer list.
   </p>
@@ -993,13 +997,13 @@ footer{
   <h3 id="agenda-senales">What each card tells you</h3>
 
   <p>
-    <strong>The background of the card is the category of the service</strong> —laser, treatment room, medicine…—, that of its first service when it has several, and below the legend you see the categories of that day with their colour. An appointment without a service is grey. Each category comes with a default colour, which is changed in <em>Catalogue → Services → Agenda colours</em>: choose the shade, see a sample of the card and press
+    <strong>The background of the card is the category of the service</strong> —laser, beauty room, medicine…—, that of its first service when it has several. The agenda has no colour legend: whoever works with it learns them straight away, and this section stays here to look them up. An appointment with no service is grey. Each category comes with a default colour, and it is changed in <em>Catalogue → Services → Agenda colours</em>: choose the shade, see a sample of the card and press
     <em>Save</em>. A particular service can have <strong>its own colour</strong>, which wins over its
     category's: it is chosen in its form, under <em>Colour in the diary</em>, and <em>Use the category's</em> puts it back
     to the usual one.
   </p>
   <p>
-    <strong>The status of the appointment is the bar on the left edge</strong> — waiting, in progress, attended, no-show —, with the usual colours, and the legend under the title explains them. With the
+    <strong>The status of the appointment is the bar on the left edge</strong> — waiting, in progress, attended, no-show —, with the usual colours. With the
     <a href="#tema">dark theme</a> the same statuses are painted lighter, and the «no-show» one, which is almost black on a light background, becomes almost white. In front of the name comes the <strong>customer number</strong>.
   </p>
   <p>
@@ -1035,6 +1039,10 @@ footer{
 
   <h3 id="espera">Waiting list</h3>
   <span class="ruta">Agenda → Waiting list</span>
+
+  <p>
+    <strong>It comes switched off.</strong> It is rarely used, and a button that almost nobody presses gets in the way on the screen people look at most. Whoever wants it switches it on in <em>Administration → Preferences → Agenda</em>, with <em>Use the waiting list</em>. Switching it off only hides it: whatever had been noted down is kept in case it is switched on again.
+  </p>
 
   <p>
     Somebody asks for a time that is already taken. Instead of writing it on a piece of paper, it goes on that day's waiting list: who they are, what they wanted done, the stretch that would suit them and whatever is worth knowing when you call. The agenda button shows up front how many are waiting on the day you are looking at.
@@ -1076,7 +1084,15 @@ footer{
 
   <p>
     <strong>A stretch for one person can also be deducted from their hours.</strong> It is what you use for a lunch at an odd hour or a personal errand. If whoever closes has the work calendar write permission (HR or Management) and the person has a work calendar that year, choosing them shows
-    <em>Deduct from hours</em>, <strong>unticked by default</strong>. Unticked, the stretch stays as an informational note in their work calendar and deducts nothing. Ticked, the overlap between the clocked time, the closed stretch and their shift is deducted from their regular hours. No PIN is needed and there is no minimum, and the hours are not made up automatically. Reopening the stretch also removes the deduction; it cannot be done in a closed year.
+    <em>Deduct from hours</em>, <strong>unticked by default</strong>. Unticked, the stretch stays as an informative notice in their work calendar and deducts nothing. Ticked, whatever the stretch covers of their shift stops counting as planned hours, from the moment it is closed and even if nobody has clocked in yet: the work calendar shows those hours short against the agreement. If the person stays clocked in during the stretch, the part where the clocked time, the stretch and their shift overlap is also deducted from their normal hours; if they clock out, those hours were no longer clocked anyway. Either way, worked and planned hours go down by the same amount. No PIN is needed, there is no minimum, and the hours are not made up automatically. Reopening the stretch also removes the deduction; in a closed year it cannot be done.
+  </p>
+
+  <p>
+    <strong>A closure can repeat every day.</strong> Tick <em>Repeat every day</em> and choose <em>Until</em>: the same stretch is closed every day up to that one, inclusive, for at most one year. If any of those days already has appointments in that stretch, the warning lists them before closing; the appointments are not touched. Each day is a closure of its own: you can move or reopen one without touching the rest. If <em>Deduct from hours</em>is ticked, it is deducted on each of the days, and if it cannot be done on any of them (no calendar that year, or the year closed) none is closed.
+  </p>
+
+  <p>
+    <strong>A closed stretch moves like an appointment.</strong> Grab it by the handle in its corner, next to the padlock, and drag it to another time; or stretch the tab on its bottom edge to change how long it lasts. It can be taken to another column: a person's to another person, a room's to another room and, in the week view, to another day. A whole-centre one only changes time. If it left a partial absence in the work calendar, the absence goes with it; moving one that deducts hours needs the permission <em>Plan the work calendars</em>. The rest of the stretch still ignores clicks: you can book on top of it just as before. Whatever is closed, moved or reopened at one terminal shows up straight away on the others.
   </p>
 
   <p>
@@ -1392,6 +1408,12 @@ footer{
     voucher stays whole on the customer's record in the meantime.
   </p>
   <p>
+    <strong>The session and the voucher on the same ticket.</strong> The customer has a laser session and on the way out buys a laser voucher: add both to the ticket. The session comes out of the voucher being bought, at €0.00, and only the voucher is charged, which starts with that session already used. If she already had another voucher of the same group with sessions left, the session comes out of that one, because <strong>the oldest voucher is always used first</strong>; the new one stays whole. It also works when left as a debt: the session comes out of the voucher just the same and what is owed is the voucher. Whatever was already charged on another ticket does not change when the voucher is bought later.
+  </p>
+  <p>
+    To refund that voucher you also have to refund the session that came out of it, in the same refund: the session goes back to the voucher and the voucher, whole again, is withdrawn. A voucher with used sessions is not refunded on its own.
+  </p>
+  <p>
     On the receipt every line paid with a voucher comes out as <em>(voucher session)</em>, and the day's cash only counts the money that has really come in.
   </p>
 
@@ -1425,6 +1447,10 @@ footer{
   <p>
     Here are the visits that were seen without being paid for. Click one and the payment dialog opens: you pick the
     payment method, adjust the discount if need be and settle it. Afterwards you can print the ticket.
+  </p>
+
+  <p>
+    <strong>In the menu, next to <em>Unpaid visits</em>, you can see how many of today's are still unpaid</strong> in the active delegation: a payment left half done that is worth picking up before closing the day. With none, no number shows. It updates itself when a payment is taken or left as a debt at any terminal.
   </p>
 
   <p>
@@ -2134,9 +2160,7 @@ footer{
   </p>
 
   <p>
-    Below the theme is the <strong>stripe colour</strong>: the diagonal stripes on the blocked slots
-    of the agenda, that is, a closed time or whatever falls outside the shift of the work calendar. The background of those
-    slots is always grey and only the stripes change; by default they are <strong>salmon</strong>. It is chosen with the
+    Below the theme is the <strong>stripe colour</strong>: the diagonal stripes on the closed stretches of the agenda. Whatever falls outside the work-calendar shift is always striped in white, so it is not mistaken for a closure. The background of those gaps is always grey and only the stripes change; by default they are <strong>salmon</strong>. It is chosen with the
     colour picker, it shows on the sample and on the agenda straight away, and <strong>Reset</strong> puts the
     salmon back. As with the theme, it is not kept until you press Save.
   </p>
@@ -2767,8 +2791,7 @@ footer{
 
   <h4>In the diary</h4>
   <p>
-    In the views by professional, the diary shades in grey what is <strong>outside their shift</strong> and the
-    days of holidays, absence or public holiday. At first it only marks them and still lets you book. If in
+    In the per-professional views, the agenda shades in grey, with white stripes, whatever is <strong>outside their shift</strong> and days of holiday, absence or bank holiday. Off-shift time carries no text on top: hovering over it says <em>Off shift</em>. Holidays, absences and bank holidays do have it written. At first it only marks it and still lets you book. If in
     <em>Work calendar → Settings</em> you switch on <em>The work calendar blocks the diary</em>, it no longer lets you
     book or move an appointment outside the shift. Those without a calendar that year are not affected.
   </p>

@@ -888,6 +888,13 @@ footer{
     La vista elegida se recuerda: al volver mañana estará como la dejó.
   </p>
 
+  <p>
+    <strong>Los botones de la cabecera son solo un icono</strong>, para que la agenda tenga sitio: las flechas y el
+    calendario para ir de un día a otro y volver a hoy, el candado para <em>cerrar un rato</em>, la impresora para
+    <em>imprimir</em>, las personas para la <em>lista de espera</em> y el <strong>+</strong> para la <em>nueva
+    cita</em>. Al pasar el ratón por encima, cada uno dice lo que hace.
+  </p>
+
   <h3 id="agenda-ahora">La raya de la hora</h3>
 
   <p>
@@ -950,8 +957,8 @@ footer{
       al anularla aparece una cuarta opción, <em>Creada por error</em>. La cita desaparece de la agenda y no cuenta
       en ningún informe, porque nunca fue una reserva. Pasado ese rato ya no se ofrece: es una anulación de alguien,
       y hay que decir de quién.</li>
-    <li><strong>Quitar las anuladas de la vista:</strong> marque <em>Ocultar canceladas</em>, en la leyenda de
-      debajo del título. La agenda recuerda la casilla, así que la próxima vez la encontrará como la dejó.</li>
+    <li><strong>Quitar las anuladas de la vista:</strong> marque <em>Ocultar canceladas</em>, debajo de la
+      cabecera. La agenda recuerda la casilla, así que la próxima vez la encontrará como la dejó.</li>
   </ul>
 
   <p>
@@ -964,14 +971,17 @@ footer{
     <strong>Lo que puede hacer cada uno en la agenda depende de sus permisos.</strong> Quien no puede citar ve la
     agenda entera, pero no le sale el botón de nueva cita, pulsar un hueco libre no hace nada y las citas no se
     arrastran ni se estiran: al pulsar una, se abre para leerla, sin botón de guardar. Los botones de cerrar un
-    rato, lista de espera e imprimir solo salen a quien tiene su permiso. Dentro de una cita, <em>Anular</em>,
+    rato, lista de espera e imprimir solo salen a quien tiene su permiso; el de lista de espera, además, solo si
+    el centro la tiene encendida. Dentro de una cita, <em>Anular</em>,
     <em>Cobrar</em> y <em>WhatsApp</em> se ven siempre, pero apagados para quien no puede usarlos; al pasar el
     ratón por encima dice por qué.
   </p>
 
   <p>
     <strong>La ventana de la cita se puede apartar.</strong> Se arrastra por su título para ver la parte de la
-    agenda que tapa mientras se da de alta o se cambia. <em>Cobrar</em> guarda antes lo que se haya cambiado en la
+    agenda que tapa mientras se da de alta o se cambia. Un clic fuera de ella no la cierra, para no perder lo que se
+    estaba escribiendo: se cierra con la <em>X</em>, con <em>Cerrar</em> o con la tecla <strong>Escape</strong>.
+    <em>Cobrar</em> guarda antes lo que se haya cambiado en la
     cita —un servicio añadido, por ejemplo— y luego lleva al TPV. Y si desde la cita se abre la ficha del cliente,
     su <em>Volver</em> regresa a la cita abierta, no al listado de clientes.
   </p>
@@ -1054,8 +1064,8 @@ footer{
 
   <p>
     <strong>El fondo de la tarjeta es la categoría del servicio</strong> —láser, cabina, medicina…—, la de su
-    primer servicio cuando lleva varios, y debajo de la leyenda salen las categorías que hay ese día con su color.
-    Una cita sin servicio va en gris. Cada categoría trae un color de fábrica, y se cambia en <em>Catálogo →
+    primer servicio cuando lleva varios. La agenda no lleva leyenda de colores: quien trabaja con ella los aprende
+    enseguida, y esta sección queda para consultarlos. Una cita sin servicio va en gris. Cada categoría trae un color de fábrica, y se cambia en <em>Catálogo →
     Servicios → Colores de la agenda</em>: se elige el tono, se ve una muestra de la tarjeta y se pulsa
     <em>Guardar</em>. Un servicio concreto puede llevar <strong>su propio color</strong>, que manda sobre el de su
     categoría: se elige en su ficha, en <em>Color en la agenda</em>, y <em>Usar el de la categoría</em> lo devuelve
@@ -1063,7 +1073,7 @@ footer{
   </p>
   <p>
     <strong>El estado de la cita es la barra del canto izquierdo</strong> — esperando, en curso, atendida, no
-    vino —, con los colores de siempre, y la leyenda de debajo del título los explica. Con el
+    vino —, con los colores de siempre. Con el
     <a href="#tema">tema oscuro</a> los mismos estados se pintan más claros, y el de «no vino», que sobre fondo
     claro es casi negro, pasa a ser casi blanco. Delante del nombre va el <strong>número de cliente</strong>.
   </p>
@@ -1103,6 +1113,12 @@ footer{
 
   <h3 id="espera">Lista de espera</h3>
   <span class="ruta">Agenda → Lista de espera</span>
+
+  <p>
+    <strong>Viene apagada.</strong> Se usa poco, y un botón que casi nadie pulsa estorba en la pantalla que más se
+    mira. Quien la quiera la enciende en <em>Administración → Preferencias → Agenda</em>, con <em>Usar la lista de
+    espera</em>. Apagarla solo la esconde: lo que hubiera apuntado se conserva por si se vuelve a encender.
+  </p>
 
   <p>
     Alguien pide una hora que ya está cogida. En vez de apuntarlo en un papel, se apunta en la lista de espera
@@ -1160,9 +1176,32 @@ footer{
     comida a deshoras o una gestión personal. Si quien cierra tiene el permiso de escritura del calendario laboral
     (RRHH o Dirección) y la persona tiene calendario laboral ese año, al elegirla aparece
     <em>Descontar de las horas</em>, <strong>sin marcar de forma predeterminada</strong>. Sin marcar, el rato queda
-    como aviso informativo en su calendario laboral y no resta nada. Marcado, se resta de sus horas normales lo que
-    coincida entre lo fichado, el rato cerrado y su turno. No hace falta PIN ni hay un mínimo, y las horas no se
-    recuperan solas. Reabrir el rato quita también el descuento; en un año cerrado no se puede.
+    como aviso informativo en su calendario laboral y no resta nada. Marcado, lo que el rato tape de su turno deja
+    de contar como horas planificadas, desde el momento en que se cierra y aunque nadie haya fichado todavía: el
+    calendario laboral enseña esas horas de menos frente al convenio. Si la persona se queda fichada durante el
+    rato, también se le resta de sus horas normales lo que coincida entre lo fichado, el rato y su turno; si ficha
+    la salida, esas horas ya no estaban fichadas. En los dos casos lo trabajado y lo planificado bajan lo mismo.
+    No hace falta PIN ni hay un mínimo, y las horas no se recuperan solas. Reabrir el rato quita también el
+    descuento; en un año cerrado no se puede.
+  </p>
+
+  <p>
+    <strong>Un cierre se puede repetir cada día.</strong> Marque <em>Repetir cada día</em> y elija <em>Hasta el
+    día</em>: se cierra el mismo rato todos los días hasta ese, incluido, como mucho un año. Si alguno de esos
+    días ya tiene citas en ese rato, el aviso dice cuáles antes de cerrar; las citas no se tocan. Cada día queda
+    como un cierre suelto: se mueve o se reabre uno sin tocar los demás. Si se marca <em>Descontar de las
+    horas</em>, se descuenta en cada uno de los días, y si en alguno no se puede (sin calendario ese año, o con el
+    año cerrado) no se cierra ninguno.
+  </p>
+
+  <p>
+    <strong>Un rato cerrado se mueve como una cita.</strong> Cójalo por el asa de su esquina, junto al candado, y
+    arrástrelo a otra hora; o estire la pestaña de su borde de abajo para cambiar lo que dura. Se puede llevar a otra columna:
+    el de una persona a otra persona, el de una cabina a otra cabina y, en la vista de semana, a otro día. El de
+    todo el centro solo cambia de hora. Si dejó una ausencia parcial en el calendario laboral, la ausencia se va
+    con él; mover uno que descuenta horas pide el permiso <em>Planificar los calendarios laborales</em>. El resto
+    del rato sigue sin recibir clics: encima se puede citar igual que antes. Lo que se cierra, se mueve o se
+    reabre en un puesto se ve al momento en los demás.
   </p>
 
   <p>
@@ -1575,6 +1614,18 @@ footer{
     mientras tanto.
   </p>
   <p>
+    <strong>La sesión y el bono en el mismo ticket.</strong> La clienta se hace una sesión de láser y al salir se
+    compra un bono de láser: añada los dos al ticket. La sesión sale del bono que se compra, a 0,00 €, y lo que se
+    cobra es solo el bono, que nace con esa sesión ya gastada. Si ya tenía otro bono del mismo grupo con sesiones,
+    la sesión sale de ese, porque <strong>siempre se gasta primero el bono más antiguo</strong>; el nuevo queda
+    entero. Vale también dejándolo a deber: la sesión sale del bono igual y lo que se debe es el bono. Lo que ya se
+    cobró en otro ticket no cambia al comprar después el bono.
+  </p>
+  <p>
+    Para devolver ese bono hay que devolver también la sesión que salió de él, en la misma devolución: la sesión
+    vuelve al bono y el bono, entero otra vez, se retira. Un bono con sesiones gastadas no se devuelve solo.
+  </p>
+  <p>
     En el ticket cada línea pagada con bono sale como <em>(sesión de bono)</em>, y en la caja del día sólo cuenta
     el dinero que ha entrado de verdad.
   </p>
@@ -1609,6 +1660,12 @@ footer{
   <p>
     Aquí están las visitas que se atendieron sin pagar. Al pulsar una se abre el diálogo de cobro: se elige la
     forma de pago, se ajusta el descuento si procede y se salda. Después se puede imprimir el ticket.
+  </p>
+
+  <p>
+    <strong>En el menú, junto a <em>Cobros pendientes</em>, sale cuántos de hoy siguen sin cobrar</strong> en la
+    delegación activa: un cobro que se dejó a medias y que conviene retomar antes de cerrar el día. Sin ninguno, no
+    sale el número. Se actualiza solo al cobrar o dejar a deber en cualquier puesto.
   </p>
 
   <p>
@@ -2461,8 +2518,9 @@ footer{
   </p>
 
   <p>
-    Debajo del tema está el <strong>color de las franjas</strong>: las rayas diagonales de los huecos bloqueados
-    de la agenda, es decir, un rato cerrado o lo que cae fuera del turno del calendario laboral. El fondo de esos
+    Debajo del tema está el <strong>color de las franjas</strong>: las rayas diagonales de los ratos cerrados de
+    la agenda. Lo que cae fuera del turno del calendario laboral va siempre rayado en blanco, para que no se
+    confunda con un cierre. El fondo de esos
     huecos es siempre gris y sólo cambian las rayas; de fábrica son <strong>salmón</strong>. Se elige con el
     selector de color, se ve en la muestra y en la agenda al momento, y <strong>Restablecer</strong> devuelve el
     salmón. Como con el tema, no queda puesto hasta que se pulsa Guardar.
@@ -3219,8 +3277,9 @@ footer{
 
   <h4>En la agenda</h4>
   <p>
-    En las vistas por profesional, la agenda sombrea en gris lo que queda <strong>fuera de su turno</strong> y los
-    días de vacaciones, ausencia o festivo. De entrada solo lo marca y deja citar igual. Si en
+    En las vistas por profesional, la agenda sombrea en gris, con rayas blancas, lo que queda <strong>fuera de su
+    turno</strong> y los días de vacaciones, ausencia o festivo. Lo de fuera de turno no lleva texto encima: al
+    pasar el ratón dice <em>Fuera de turno</em>. Las vacaciones, ausencias y festivos sí lo llevan escrito. De entrada solo lo marca y deja citar igual. Si en
     <em>Calendario laboral → Ajustes</em> se activa <em>El calendario laboral bloquea la agenda</em>, ya no deja
     poner ni mover una cita fuera del turno. Quien no tiene calendario ese año no se ve afectado.
   </p>
