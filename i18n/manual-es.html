@@ -599,7 +599,13 @@ footer{
   <ol>
     <li><a href="#ayuda">Pedir ayuda</a></li>
     <li><a href="#empezar">1. Entrar y orientarse</a></li>
+    <li><a href="#contrasena" class="sub">Cambiar la contraseña</a></li>
+    <li><a href="#aviso-general" class="sub">Avisos de Turnera</a></li>
+    <li><a href="#ordenar" class="sub">Ordenar cualquier lista</a></li>
+    <li><a href="#idiomas" class="sub">Idiomas</a></li>
+    <li><a href="#recomienda" class="sub">Recomienda Turnera</a></li>
     <li><a href="#agenda">2. La agenda</a></li>
+    <li><a href="#agenda-ahora" class="sub">La raya de la hora</a></li>
     <li><a href="#agenda-citas" class="sub">Poner, mover y anular citas</a></li>
     <li><a href="#agenda-repetir" class="sub">Citas que se repiten</a></li>
     <li><a href="#agenda-senales" class="sub">Lo que dice cada tarjeta</a></li>
@@ -607,6 +613,10 @@ footer{
     <li><a href="#agenda-cerrar" class="sub">Cerrar ratos</a></li>
     <li><a href="#agenda-imprimir" class="sub">Imprimir la agenda</a></li>
     <li><a href="#clientes">3. Clientes</a></li>
+    <li><a href="#clientes-baja" class="sub">Dar de baja a un cliente</a></li>
+    <li><a href="#clientes-supresion" class="sub">Cuando el cliente pide que se borren sus datos</a></li>
+    <li><a href="#puntos" class="sub">Puntos del club</a></li>
+    <li><a href="#avisos" class="sub">Avisos</a></li>
     <li><a href="#cobrar">4. Cobrar</a></li>
     <li><a href="#cobrar-tpv" class="sub">El TPV</a></li>
     <li><a href="#paquetes" class="sub">Paquetes</a></li>
@@ -620,22 +630,50 @@ footer{
     <li><a href="#facturas-pruebas" class="sub">Modo pruebas y producción</a></li>
     <li><a href="#facturas-envio" class="sub">Enviar a la AEAT</a></li>
     <li><a href="#bonos">5. Bonos</a></li>
+    <li><a href="#bonos-baja" class="sub">Dar de baja un bono</a></li>
+    <li><a href="#bonos-traspaso" class="sub">Traspasar un bono a otro cliente</a></li>
     <li><a href="#aparatos">6. Aparatología</a></li>
     <li><a href="#aparatos-alta" class="sub">Dar de alta un aparato</a></li>
     <li><a href="#aparatos-sesion" class="sub">Anotar la sesión</a></li>
     <li><a href="#portal">7. El portal de reservas</a></li>
     <li><a href="#portal-reglas" class="sub">Hasta cuándo se reserva</a></li>
     <li><a href="#informes">8. Informes y cierre de caja</a></li>
+    <li><a href="#cierre-de-caja" class="sub">Cuadrar y cerrar la caja del día</a></li>
     <li><a href="#cuadro-de-mando" class="sub">El cuadro de mando</a></li>
     <li><a href="#ajustes">9. Ajustes del centro</a></li>
+    <li><a href="#roles" class="sub">Roles y permisos</a></li>
+    <li><a href="#tema" class="sub">Cómo se ve la aplicación</a></li>
+    <li><a href="#iva" class="sub">El IVA de cada cosa que se vende</a></li>
+    <li><a href="#contabilidad" class="sub">El borrador contable</a></li>
+    <li><a href="#whatsapp" class="sub">Avisos por WhatsApp</a></li>
+    <li><a href="#whatsapp-idiomas" class="sub sub">El aviso en otros idiomas</a></li>
+    <li><a href="#stripe" class="sub">Cobro por enlace con Stripe</a></li>
+    <li><a href="#consentimientos" class="sub">Consentimientos informados</a></li>
+    <li><a href="#consentimientos-idiomas" class="sub sub">Consentimientos en otros idiomas</a></li>
+    <li><a href="#consentimientos-importar" class="sub sub">Traer los que ya se firmaron en otra plataforma</a></li>
+    <li><a href="#integraciones" class="sub">Conectar un programa externo (ERP)</a></li>
     <li><a href="#desactivar-centro" class="sub">Desactivar un centro</a></li>
     <li><a href="#importar" class="sub">Traer los datos de otra plataforma</a></li>
     <li><a href="#irse" class="sub">Llevarse los datos</a></li>
     <li><a href="#personal">10. Personal</a></li>
     <li><a href="#profesionales" class="sub">Profesionales</a></li>
     <li><a href="#presencia" class="sub">Fichar y control de presencia</a></li>
+    <li><a href="#cifras-pin" class="sub sub">Cuántas cifras lleva el PIN</a></li>
+    <li><a href="#fichar-lo-mio" class="sub sub">Lo que ve cada uno tras su PIN</a></li>
+    <li><a href="#presencia-enlaces" class="sub sub">Acceso de la Inspección y de la representación</a></li>
+    <li><a href="#presencia-resumen-mensual" class="sub sub">El resumen mensual por correo</a></li>
     <li><a href="#calendario-laboral" class="sub">Calendario laboral</a></li>
+    <li><a href="#calendario-cerrar" class="sub sub">Cerrar el año</a></li>
+    <li><a href="#calendario-ausencias-parciales" class="sub sub">Ausencias parciales</a></li>
+    <li><a href="#mi-calendario" class="sub sub">Lo que ve cada profesional</a></li>
     <li><a href="#historia">11. La historia clínica</a></li>
+    <li><a href="#historia-anular" class="sub">Borrar o anular una evolución</a></li>
+    <li><a href="#historia-mapa" class="sub">Marcar dónde duele: el mapa anatómico</a></li>
+    <li><a href="#historia-imprimir" class="sub">Imprimir un caso</a></li>
+    <li><a href="#historia-dolor" class="sub">El dolor de cada sesión</a></li>
+    <li><a href="#historia-fotos" class="sub">Fotos en las evoluciones</a></li>
+    <li><a href="#historia-medicamentos" class="sub">Medicamentos en el tratamiento</a></li>
+    <li><a href="#seguimiento" class="sub">En un centro de entrenamiento: el seguimiento del alumno</a></li>
     <li><a href="#mantenimiento">12. Mantenimiento (módulo opcional)</a></li>
     <li><a href="#problemas">13. Cuando algo no sale</a></li>
   </ol>
