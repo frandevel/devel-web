@@ -598,7 +598,7 @@ footer{
 <main id="top" class="shell manual">
 <nav class="indice">
   <h2>The Turnera manual</h2>
-  <p>Updated on 23 September 2026</p>
+  <p>Updated on 14 October 2026</p>
   <ol>
     <li><a href="#ayuda">Getting help</a></li>
     <li><a href="#empezar">1. Logging in and finding your way around</a></li>
@@ -631,12 +631,15 @@ footer{
     <li><a href="#informes">8. Reports and the end-of-day till</a></li>
     <li><a href="#cuadro-de-mando" class="sub">The scorecard</a></li>
     <li><a href="#ajustes">9. Centre settings</a></li>
-    <li><a href="#calendario-laboral" class="sub">Work calendar</a></li>
     <li><a href="#desactivar-centro" class="sub">Disabling a centre</a></li>
     <li><a href="#importar" class="sub">Bringing in data from another platform</a></li>
     <li><a href="#irse" class="sub">Take your data</a></li>
-    <li><a href="#historia">10. The clinical record</a></li>
-    <li><a href="#problemas">11. When something goes wrong</a></li>
+    <li><a href="#personal">10. Staff</a></li>
+    <li><a href="#profesionales" class="sub">Staff</a></li>
+    <li><a href="#presencia" class="sub">Clocking in and working time</a></li>
+    <li><a href="#calendario-laboral" class="sub">Work calendar</a></li>
+    <li><a href="#historia">11. The clinical record</a></li>
+    <li><a href="#problemas">12. When something goes wrong</a></li>
   </ol>
 </nav>
 <div class="contenido">
@@ -1745,11 +1748,10 @@ footer{
     <li><strong>The name</strong> and <strong>how many units</strong> there are. With two, two appointments at once are fine
       and three are not.</li>
     <li><strong>Which services need it.</strong> They are moved from the <em>Available</em> list to the <em>Use it</em> list, with a search box in both. Vouchers do not appear: they are sold, not given as treatments. Until one is chosen, the equipment gets in nobody's way.</li>
-    <li><strong>What has to be recorded each time it is used</strong>: the joules on the laser, the power on the
-      sunbed. You add a field with “Add a field” and remove it with the bin on its row.</li>
+    <li><strong>What has to be recorded each time it is used</strong>: the joules on the laser, the power on the sunbed. You add a parameter with “Add a parameter” and remove it with the bin on its row.</li>
   </ul>
 
-  <p>Each field that is recorded is one of three types:</p>
+  <p>Each parameter that is recorded is one of three types:</p>
   <table>
     <tbody><tr><th>Type</th><th>What it asks for</th><th>When to use it</th></tr>
     <tr><td><strong>Number</strong></td><td>A figure, with its unit and, if you like, a minimum and a maximum</td>
@@ -1759,7 +1761,7 @@ footer{
       <td>Areas, programmes, named intensities</td></tr>
   </tbody></table>
   <p>
-    Marking a field as <strong>compulsory</strong> means the appointment will not let you save the session without it. The limits
+    Marking a parameter as <strong>compulsory</strong> means the appointment will not let you save the session without it. The limits
     on the number are checked as you record too: if the laser runs from 1 to 40 joules, a 60 will not go in.
   </p>
 
@@ -1768,13 +1770,13 @@ footer{
     removed from them first, so that no service is left asking for a device that is no longer there. Switching it off is allowed.
     <strong>A device that has already been used is not deleted: it is switched off.</strong> When you hit delete, if it has sessions
     recorded, Turnera deactivates it instead of deleting it, stops checking it when booking and keeps the settings
-    each customer was treated with. For the same reason, <strong>a field with recorded sessions cannot be removed</strong> from the list:
+    each customer was treated with. For the same reason, <strong>a parameter with recorded sessions cannot be removed</strong> from the list:
     on saving a warning appears and the device stays as it was. Switching the device off is also the way to carry on
     booking while it is away being repaired.
   </div>
 
   <figure>
-    <img src="/turnera/manual/imagenes/en/11-aparato.png" alt="The form of a device with its units, its services and the fields to write down" loading="lazy">
+    <img src="/turnera/manual/imagenes/en/11-aparato.png" alt="A device’s form with its units, its services and the parameters to record" loading="lazy">
     <figcaption>Adding a device says which services need it and what has to be written down every time.</figcaption>
   </figure>
 
@@ -1791,13 +1793,13 @@ footer{
   <h3 id="aparatos-sesion">Recording the session</h3>
   <span class="ruta">Agenda → (an appointment) → Equipment for the session</span>
   <p>
-    Appointments with a service that uses a device show, below the appointment details, a section with the fields to fill in, <strong>grouped by service and device</strong>: each group says which service it is for («Armpit laser · Diode laser»). If the appointment has two services with the same device, their fields appear twice, once per service, so it is clear how many joules went into each area. Next to each field, <strong>how that customer was treated the previous time in that same service</strong>. It is saved with its own button, «Save what was noted», without having to save the whole appointment; a field left blank means «not noted» and is not stored.
+    On appointments that include a service with a device, below the appointment details there is a section with the parameters to record, <strong>grouped by service and device</strong>: each group says which service it is for (“Armpit laser · Diode laser”). If the appointment has two services with the same device, its parameters appear twice, once per service, so it is clear how many joules were used on each area. Next to each parameter, <strong>how that customer was treated the previous time in that same service</strong>. It is saved with its own button, “Save what was noted”, without having to save the whole appointment; a parameter left blank is understood as “not recorded” and is not written.
   </p>
   <p>
     If the appointment has no service with a device, the section does not appear.
   </p>
   <p>
-    <strong>It is also asked for on the way to charging.</strong> When you press <em>Charge</em> in the appointment, the till shows the same session data above the ticket. If a required one is missing, it does not let you charge until it is written down and saved (whoever lacks permission to write it down is warned, but can charge).
+    <strong>It is also asked for on the way to charging.</strong> When you press <em>Charge</em> in the appointment, the till shows the same session parameters above the ticket. If a compulsory one is missing, it will not let you charge until it is recorded and saved (someone without permission to record is warned, but can still charge).
   </p>
   <p>
     <strong>Where you see it afterwards.</strong> In the customer's record, the <em>Sessions with equipment</em> lists each session, newest first, with the day and time, the service, the device, the parameters with their unit and who did it. It is where a laser treatment is followed session by session. If nothing was ever noted for the customer, the card does not appear.
@@ -2043,9 +2045,8 @@ footer{
       professional retired, or a supplier no longer used (in its record, unticking <em>Active</em>),
       disappears from the lists and drop-downs. The lists of services, products, packages, suppliers and
       customers have the tickbox <em>Include inactive</em> to see them, with their tag; the professionals list has
-      <em>Only active</em>.</li>
-    <li><strong>Staff</strong>: who attends, their colour in the diary and their column. In the record you can upload their <strong>photo</strong> (it is reduced before uploading) and set their <strong>gender</strong>: without a photo, lists and the roster show a woman's, a man's or, if not stated, a neutral avatar. To <strong>retire</strong>
-      someone who has appointments from today on, Turnera asks which professional takes them and moves them all at once; if any clashes with one the receiving professional already has, it says so, so it can be rearranged later.</li>
+      <em>Active only</em>.</li>
+    <li><strong>Staff</strong>, clocking in and the work calendar: they are under <a href="#personal">Staff</a>.</li>
     <li><strong>Roles and users</strong>: who gets in, what they may do and <strong>from which IP addresses</strong>.</li>
     <li><strong>Centre details</strong>: name, tax ID, address and logo. The logo heads the PDFs
       —tickets, quotes, agenda— and <strong>replaces Turnera's at the top of the menu</strong>, on a white background so that it reads
@@ -2451,6 +2452,207 @@ footer{
     shown is the same one that was signed.
   </p>
 
+  <h3 id="integraciones">Connecting an outside program (ERP)</h3>
+  <span class="ruta">Administration → Integrations</span>
+
+  <p>
+    If your accountant or your ERP wants to read the centre's data directly —the catalogue, the customers,
+    the sales— there is no need to give it a Turnera user. You register an <strong>integration</strong>, which is
+    a credential meant for a program and not for a person.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/en/26-integraciones.png" alt="The list of the centre's integrations with their permissions and their authorised addresses" loading="lazy">
+    <figcaption>The centre's integrations, with what each one can read and from which addresses.</figcaption>
+  </figure>
+
+  <p>When creating it you decide:</p>
+
+  <ul>
+    <li><strong>Name.</strong> How you will recognise it in the list. For instance, "the accountant's ERP".</li>
+    <li><strong>Contact email.</strong> The person who maintains the integration. Used to warn them about maintenance, version changes or API incidents.</li>
+    <li><strong>Delegation.</strong> The only one that program will see. It is fixed here because a program cannot
+      choose one on a screen, the way a person does when logging in.</li>
+    <li><strong>Scopes.</strong> What it can read: the catalogue, customers, sales or the free slots of the diary, whether it can book appointments and whether it can check if an email or a phone number belongs to a customer (it only answers yes or no). Give only what it needs.</li>
+    <li><strong>Allowed addresses.</strong> Which IP it can connect from, one per line. It accepts a range
+      written in CIDR, for example <code>203.0.113.0/24</code>.</li>
+  </ul>
+
+  <div class="ojo">
+    <p><strong>The secret is shown once only.</strong> On saving, the screen shows a
+      <code>client_id</code> and a <code>client_secret</code>. Copy them and pass them to whoever programs the ERP over a
+      secure channel: they are not stored in the clear and they cannot be looked up again. If they are lost,
+      they are rotated.</p>
+  </div>
+
+  <p>
+    <strong>You find out about every new integration.</strong> When an integration is saved, the centre owner receives an email with its name, contact, permissions and addresses (never the secret). If you get one you did not expect, switch that integration off and change the administration password.
+  </p>
+
+  <p>
+    <strong>Booking from outside.</strong> A campaign platform that brings you clients can book their appointments directly, with the permissions <em>free slots</em> and <em>book appointments</em>. It only sees and books the same as the portal: the services and places that can be booked online, with their notice and the days ahead. If the customer already has a record with that email, the appointment goes to their record; if not, a new one is opened. Every appointment that comes in this way carries in its comments which platform it comes from and with what reference. If the service needs a piece of equipment and it is busy at that time, the platform receives its own message, different from «slot taken», so it can offer another time.
+  </p>
+
+  <p>
+    <strong>Notifications to your system (webhooks).</strong> Instead of asking every few minutes whether there are new appointments, the integration can receive a notification at an address of its own when an appointment is created, changed or cancelled. In the list of integrations, the <em>Webhooks</em> button lets you add the address (always
+    <code>https://</code> and public), choose which events it wants and test that it answers. By default it only reports appointments created by that same integration; if you untick that box, it also reports those made at reception and in the portal, and with the customers permission it adds their contact details. Every notification is signed with a secret that is shown only once, like the integration's. When a webhook is added, the centre owner receives an email with the address and the events, and the address cannot be changed afterwards: to point somewhere else, create another webhook. The <em>Latest deliveries</em> button shows what was sent and what the other side answered.
+  </p>
+
+  <p>
+    <strong>Monitoring.</strong> Turnera counts what each integration does without ever storing what is asked. The check of whether an email or a phone number belongs to a customer allows 20 queries per minute and 2,000 per day, and if the use looks like someone going through a list of people or guessing passwords, the centre owner and the integration's contact receive an email.
+  </p>
+
+  <p>
+    <strong>What to give whoever does the programming.</strong> The API guide, with examples and the OpenAPI file, is at <a href="https://devel.es/turnera/integradores">devel.es/turnera/integradores</a>. With it and the credentials they have everything they need.
+  </p>
+
+  <p>
+    <strong>There is no "from anywhere".</strong> An ERP runs on a server and that server has a fixed IP. If
+    they tell you it does not, that is a conversation worth having before handing over your customers' data.
+  </p>
+
+  <p>
+    <strong>Clinical records cannot be granted.</strong> It is not a permission that comes switched off: it does not
+    exist. The customers scope returns the administrative record —name, contact, address— and nothing of
+    history, cases or progress notes.
+  </p>
+
+  <p>
+    <strong>Almost everything is read-only.</strong> The only thing an external program can do is book a new appointment in a free slot. Nothing the ERP does changes a payment, a record or an existing appointment.
+  </p>
+
+  <h4>Changing the secret without cutting the service</h4>
+
+  <p>
+    The <em>Rotate secret</em> issues a new one and <strong>keeps the previous one alive</strong>. That way the ERP is
+    reconfigured without a rush; once it answers with the new one, press <em>Retire the previous one</em> and the old one stops
+    working. While the rotation lasts, the list marks it.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Data protection.</strong> By authorising an integration, that program's provider starts
+      processing your customers' data on the centre's behalf. Note it in your register of processing
+      activities and check that you have the right processor agreement with them.</p>
+  </div>
+
+  <p>
+    Refunds reach the ERP as negative sales, each one saying which sale it undoes, so what it takes to the accounts matches the centre's takings.
+  </p>
+
+  <p>
+    Whoever programs the other side will find everything they need —how to authenticate, what is available
+    and how to paginate— in the technical guide <code>docs/api-integracion.md</code>.
+  </p>
+
+  <h3 id="desactivar-centro">Disabling a centre</h3>
+  <span class="ruta">Administration → Delegations → Edit</span>
+
+  <p>
+    When a centre closes, or stops working with Turnera for a while, there is no need to delete it: it is
+    <strong>disabled</strong> by unticking <em>Delegation active</em>. Its customers, appointments and payments stay where they were, but nobody can get into it, and whoever was in it is signed out straight away.
+  </p>
+  <p>
+    When signing in to Turnera, if only one centre is left enabled you go straight into it; if several are, you keep choosing. Whoever only worked in the disabled centre can no longer sign in, and the sign-in screen tells them so.
+  </p>
+  <p>
+    The disabled centre stays in the list of delegations, marked as inactive, and is enabled again from there. Two cannot be disabled: the one you are working in —switch to another one first— and the last one left enabled.
+  </p>
+
+  <h3 id="importar">Bringing in data from another platform</h3>
+  <span class="ruta">Administration → Import from another program</span>
+
+  <p>
+    For a centre coming from another platform. It brings in, in one go, the customers (with their notes), the price list of services, packages and products, the packages customers have half used, gift vouchers with a balance, the diary —what lies ahead and the last year—, the stock of each product, each customer's treatment history and what they left owing. It needs the permission <strong>«Import from another program»</strong>, which is sensitive and
+    only the administrator has.
+  </p>
+  <ol>
+    <li>In the source platform, export each screen to CSV: customers, service history, price list, diary, packages, deferred payments, gift vouchers and stock. Where each one is, the import screen itself tells you, under
+      <em>How to get the sheets out of the source platform</em>. Extra sheets —daily cash, invoices, advance payments— do no harm: the report says they are not imported.</li>
+    <li>Press <strong>«Choose files»</strong> and choose them all at once. Their names do not matter: each sheet is
+      recognised by its columns.</li>
+    <li>Press <strong>«Try it»</strong>. Turnera runs the whole import and throws it away at the end: the report says how much of each thing would be created, how much was already there and what is left out, with grouped warnings and examples to look them up in the source. Nothing is saved.</li>
+    <li>If the report looks right, <strong>«Import»</strong>. The files are not stored anywhere.</li>
+  </ol>
+  <p>
+    The <strong>code</strong> of each service in the source arrives as its short code. There, one code can be used for several services, and in Turnera it cannot: those get what sets their name apart added —IDEE becomes IDEE20, IDEE30 and IDEE50 for the 20, 30 and 50-minute Indiba— and the trial report says how each one ends up. They can be changed later in the service record.
+  </p>
+  <p>
+    The <strong>vouchers that have already expired</strong> with unused sessions arrive disabled: they are kept on the customer's record, but cannot be used. The report counts them separately.
+  </p>
+  <p>
+    With the <strong>stocks</strong>, each product arrives with the units the source had in the centre; negatives arrive as zero. If a product is in the stock but no longer in the price list, it is created anyway, with 21 % VAT, so its units are not lost. Without that sheet, products arrive with zero stock and are set with a stocktake from <em>Stock</em>. If someone has already done the stocktake in Turnera, a new import does not overwrite it.
+  </p>
+  <p>
+    <strong>Past appointments</strong> arrive attended or cancelled, as they were in the source, and the diary does not ring them in red: they were charged there. <strong>The service history</strong> —years of sessions— arrives as the customer's visits: those on the same day are one visit, with one line per service, and they show in the history of their record. The device, its settings, the session and the comments go on each line. The sheet does not say how much was charged, so they arrive at zero and paid: they do not move the till or show up as debt. Postponed ones and no-shows are not brought in, because they did not happen. <strong>Pending payments</strong> arrive in
+    <em>Unpaid visits</em>; those already paid do not, because they are in the source platform's till.
+  </p>
+  <p>
+    Importing twice duplicates nothing: what was already brought is recognised and counted as «already there». That makes it possible
+    to import a newer export on the day of the switch and bring only what is missing.
+  </p>
+  <div class="ojo">
+    <p><strong>It can be undone</strong> from «Imports done», and it takes away everything that import brought
+      without touching what was already there. But if someone has already worked with what was imported —an appointment, a charge,
+      a note— Turnera does not undo it and says what prevents it: undoing it would take that work with it.</p>
+    <p><strong>Packages</strong> are brought in with what their name says, which in the source lists the services separated by «+»: «PAQUETE 7 LPG + PRESOTERAPIA» is seven sessions of each, and «TRIO DE ZONAS (AX+ING+BP)» one of each area. The import report shows which service it understood in each part, so it can be checked. If a part is not recognised («RFN400» is a device, not a service), that package is not brought in until it is stated in a sheet
+      <em>Contenido de paquetes</em> with the columns <code>ID Paquete</code>, <code>ID Servicio</code> and
+      <code>Cantidad</code> (the IDs are those of the source price list), which is uploaded with the others and overrides the name.</p>
+    <p><strong>What is not brought:</strong> the source platform's portal passwords, vouchers with no balance, used-up packages, the old slot of moved appointments, daily tills and invoices, which are closed accounts and are looked up in the source platform. Signed consents are not in any sheet: they are brought in as PDFs from each customer's record (<a href="#consentimientos-importar">see how</a>).</p>
+    <p><strong>After importing:</strong> professionals arrive with the code they had in the source and need a name, and customers with a repeated ID are all brought in and reviewed with the
+      <a href="#clientes">record merge</a> (a minor with their mother's ID is not the same person).</p>
+  </div>
+
+  <h3 id="irse">Taking the centre's data</h3>
+  <span class="ruta">Administration → Take your data</span>
+
+  <p>
+    The data belongs to the centre, not to Turnera. From here the <strong>admin</strong> account downloads everything the centre has stored, in a single zip file and whenever it wants: to move to another program, to keep its own copy or to hand it to whoever looks after its IT.
+  </p>
+
+  <p>Inside there are three things and a <em>LEEME.txt</em> that explains them:</p>
+  <ul>
+    <li><strong>turnera.sql</strong>, the whole database. Any IT person loads it into MySQL with one command, and with it you can come back to Turnera or move the data to another program.</li>
+    <li><strong>One spreadsheet per table</strong> —customers, appointments, payments, vouchers, clinical records…—, which opens in Excel with a double click.</li>
+    <li><strong>The documents</strong>: the signed consents as PDF and the logo, each in its own file.</li>
+  </ul>
+  <p>
+    Passwords, clock-in PINs and integration secrets are left out: outside Turnera they are useless, and in the wrong hands someone could try to crack them.
+  </p>
+
+  <p>
+    <strong>Why two keys are needed.</strong> It is the most sensitive download in the application, because it takes the data of every customer at once, clinical records included. Only the admin account can ask for it —no other, even with every permission— and on top of that it needs a link that goes to the email of the centre's owner, the one given when signing up, which cannot be changed from the application. Whoever steals the password does not have the email, and whoever reads the email does not have the password.
+  </p>
+  <ol>
+    <li>Click <em>Send me the link</em>. The screen tells you which email it goes to, with part of the address hidden.</li>
+    <li>Open the email in the same browser, signed in as admin, and press <em>Download</em>. The button shows how far it has got.</li>
+    <li>Keep the zip somewhere safe: it holds the data of all your customers.</li>
+  </ol>
+  <p>
+    The link works only once and expires in 30 minutes; if the download is interrupted, ask for another, up to three an hour. When it finishes another email arrives saying it has been downloaded, with the time and the address it was done from: if it was not you, change the admin password and write to us. The screen also keeps the list of exports requested and downloaded.
+  </p>
+</section>
+
+<section id="personal">
+  <h2>10. Staff</h2>
+  <span class="ruta">Menu → Staff</span>
+
+  <p>
+    Everything to do with the team: who works at the centre, when they come and go, and how their hours are spread over the year. In the menu it is grouped under <strong>Staff</strong>, except <em>Clock</em>, which is at the top, next to the agenda, because it is what is used every day at the front desk.
+  </p>
+
+  <h3 id="profesionales">Staff</h3>
+  <span class="ruta">Menu → Staff → Practitioners</span>
+  <p>
+    Who sees clients at the centre. The record holds their details, their <strong>colour in the agenda</strong> and, if wanted, their <strong>column</strong>: the fixed slot they take in the delegation’s agenda. Left blank, the agenda gives them the next free one in order. You can upload their <strong>photo</strong>, which is reduced before uploading, and state their
+    <strong>gender</strong>: without a photo, lists and the roster show a woman’s, a man’s or, if not stated, a neutral avatar.
+  </p>
+  <p>
+    The same record holds their <strong>clocking PIN</strong> (see <a href="#presencia">Working time</a>) and you tick whether the <strong>summary of their working day</strong> is emailed to them every month, which needs an email address on the record.
+  </p>
+  <p>
+    <strong>Deactivating does not delete.</strong> The practitioner leaves the agenda, but their appointments, visits and clinical cases still show them, and they can be reactivated by editing them. If they have appointments from today on, Turnera asks which practitioner takes them over and moves them all at once; if one clashes with another the receiver already has, it says so so you can rearrange it afterwards. The list shows only those who are active: by clearing <em>Active only</em> the inactive ones show too.
+  </p>
+
   <h3 id="presencia">Working time (clocking in)</h3>
   <span class="ruta">Menu → Clock in · Menu → Staff → Working time</span>
 
@@ -2677,6 +2879,11 @@ footer{
       <em>Public holidays</em> the button brings the national ones and those of that region for the year.</li>
   </ul>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/en/37-turnos.png" alt="The list of the centre’s shifts with their stretches and hours" loading="lazy">
+    <figcaption>The centre’s shifts. A split one has its two stretches, and the break between them does not count as worked.</figcaption>
+  </figure>
+
   <div class="ojo">
     <p><strong>Local public holidays are not imported.</strong> Nobody publishes the two of each town reliably,
       so they have to be added by hand in <em>Public holidays → Add local holiday</em>. The screen
@@ -2691,12 +2898,22 @@ footer{
     which is what a final settlement needs. Part-timers get the same holidays
     and half the hours.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/en/32-calendarios.png" alt="The list of the year’s calendars with the agreement hours, the planned ones and those left for each practitioner" loading="lazy">
+    <figcaption>The year’s calendars: how many hours the collective agreement sets for each person, how many are planned and how many are left to allocate or are over.</figcaption>
+  </figure>
   <p>
     To spread the year, choose at the top what to put —a shift, holidays, an absence or <em>Free</em> to remove— and you click a day, or drag from one day to another to mark all those in between. Each day has one thing only: if it has a shift it cannot also be vacation. <strong>Nothing is planned before the start date or after the end date</strong>: those days do not count towards the hours, so the screen skips them and says how many.
     <em>Fill by weekdays</em> puts it at once on, for example, Monday to Friday from January to
     June, skipping public holidays and leaving alone what is already set. On the right, <strong>the figures are redone with
     each change</strong>: agreement hours, planned hours, those still to be distributed (or those in excess), vacation days set against those owed and how many are left, and, up to yesterday, what was planned against what was clocked.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/en/33-calendario-planificacion.png" alt="A practitioner’s year painted with her split shift, her holidays and public holidays, with the totals alongside" loading="lazy">
+    <figcaption>The year of a practitioner who joined in September. What comes before the start date is not planned, and the agreement’s hours and holidays are pro-rated.</figcaption>
+  </figure>
   <p>
     Below are the <strong>warnings</strong> of the Spanish Workers' Statute: fewer than 12 hours of rest between two working days, more than 9 hours in a day, more than 6 hours in a row without a 15-minute break, fewer than 3 days off in 14, a shift on a public holiday, more vacation than is owed, or days marked outside the start and end dates. If someone works at night (from 22:00 to 06:00) it also warns that the Statute treats it as night work, with a maximum average of 8 hours over 15 days and no more than two weeks in a row on night shift, unless voluntary. Each warning carries the link <em>Read the article</em>, which opens the text of the Statute so you can check it. Saving an agreement with fewer than 30 calendar days of vacation (22 working days) also shows the warning. These are warnings and do not prevent saving: some agreements allow otherwise, and what was signed is for HR to know.
   </p>
@@ -2727,6 +2944,11 @@ footer{
     <li>A clock-in without a clock-out adds nothing until HR declares the hours in an incident.</li>
     <li>A night shift, which crosses midnight, is counted whole on the day it began. On the night the clocks change it counts the hours that really went by: nine in October and seven in March for a shift from 22:00 to 06:00.</li>
   </ul>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/en/34-calendario-ejecucion.png" alt="The same year in the actual view, with clocked days in green, clocked public holidays in orange and an incident" loading="lazy">
+    <figcaption>The same year in <em>Actual</em>: in green what was clocked within the shift, in orange the days with hours outside the shift, such as a public holiday worked, and the “!” of an incident.</figcaption>
+  </figure>
   <p>
     Out-of-shift hours go to the professional's <strong>overtime bank</strong> on the right. Whoever has the permission «Compensate out-of-shift hours» (by default HR and Management) deducts them with <em>Compensate hours</em>, as <strong>paid in payroll</strong> or as <strong>compensatory rest</strong>. The pending balance is what is left to compensate. A rest day compensates <strong>the oldest hours first</strong>.
   </p>
@@ -2758,12 +2980,22 @@ footer{
     <em>Work calendar → Roster</em> shows the week of the whole staff: who works each day and on which shift, who is on vacation, absent or off, and how many work each day. Today is highlighted and marks who is <strong>in right now</strong>, according to what was clocked. Whoever has no work calendar is not shown in the roster.
   </p>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/en/35-cuadrante.png" alt="The week’s roster with each practitioner’s shift and who is in now" loading="lazy">
+    <figcaption>The week’s roster. Today is highlighted, showing who is in right now.</figcaption>
+  </figure>
+
   <h4>The hours summary</h4>
   <p>
     <em>Work calendar → Hours</em> gives, for each professional and each month between two dates, the
     <strong>planned</strong>, the <strong>clocked</strong> hours and, of these, the <strong>regular</strong> and the
     <strong>overtime</strong>, with a total per person when there are several months. <em>Download CSV</em> exports it for the accountant. A month without a work calendar says so, and there everything clocked shows as regular.
   </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/en/36-resumen-de-horas.png" alt="The month’s hours summary per practitioner, with planned, clocked, normal and outside-shift hours" loading="lazy">
+    <figcaption>The month’s hours summary, which downloads as CSV for the accountants.</figcaption>
+  </figure>
 
   <h4 id="calendario-ausencias-parciales">Partial absences</h4>
   <p>
@@ -2796,193 +3028,15 @@ footer{
     book or move an appointment outside the shift. Those without a calendar that year are not affected.
   </p>
 
-  <h4>The calendar of each professional</h4>
+  <h4 id="mi-calendario">What each practitioner sees</h4>
   <p>
     Every professional has the right to know their schedule and holidays without needing any permission, and to see what they have clocked, their normal and overtime hours and their hours bank, but not the incidents or the projection. This is meant for the professional's app; on the web, which the office uses, there is no «My calendar» entry in the menu, because the user you sign in with does not belong to any professional.
   </p>
 
-  <h3 id="integraciones">Connecting an outside program (ERP)</h3>
-  <span class="ruta">Administration → Integrations</span>
-
-  <p>
-    If your accountant or your ERP wants to read the centre's data directly —the catalogue, the customers,
-    the sales— there is no need to give it a Turnera user. You register an <strong>integration</strong>, which is
-    a credential meant for a program and not for a person.
-  </p>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/en/26-integraciones.png" alt="The list of the centre's integrations with their permissions and their authorised addresses" loading="lazy">
-    <figcaption>The centre's integrations, with what each one can read and from which addresses.</figcaption>
-  </figure>
-
-  <p>When creating it you decide:</p>
-
-  <ul>
-    <li><strong>Name.</strong> How you will recognise it in the list. For instance, "the accountant's ERP".</li>
-    <li><strong>Contact email.</strong> The person who maintains the integration. Used to warn them about maintenance, version changes or API incidents.</li>
-    <li><strong>Delegation.</strong> The only one that program will see. It is fixed here because a program cannot
-      choose one on a screen, the way a person does when logging in.</li>
-    <li><strong>Scopes.</strong> What it can read: the catalogue, customers, sales or the free slots of the diary, whether it can book appointments and whether it can check if an email or a phone number belongs to a customer (it only answers yes or no). Give only what it needs.</li>
-    <li><strong>Allowed addresses.</strong> Which IP it can connect from, one per line. It accepts a range
-      written in CIDR, for example <code>203.0.113.0/24</code>.</li>
-  </ul>
-
-  <div class="ojo">
-    <p><strong>The secret is shown once only.</strong> On saving, the screen shows a
-      <code>client_id</code> and a <code>client_secret</code>. Copy them and pass them to whoever programs the ERP over a
-      secure channel: they are not stored in the clear and they cannot be looked up again. If they are lost,
-      they are rotated.</p>
-  </div>
-
-  <p>
-    <strong>You find out about every new integration.</strong> When an integration is saved, the centre owner receives an email with its name, contact, permissions and addresses (never the secret). If you get one you did not expect, switch that integration off and change the administration password.
-  </p>
-
-  <p>
-    <strong>Booking from outside.</strong> A campaign platform that brings you clients can book their appointments directly, with the permissions <em>free slots</em> and <em>book appointments</em>. It only sees and books the same as the portal: the services and places that can be booked online, with their notice and the days ahead. If the customer already has a record with that email, the appointment goes to their record; if not, a new one is opened. Every appointment that comes in this way carries in its comments which platform it comes from and with what reference. If the service needs a piece of equipment and it is busy at that time, the platform receives its own message, different from «slot taken», so it can offer another time.
-  </p>
-
-  <p>
-    <strong>Notifications to your system (webhooks).</strong> Instead of asking every few minutes whether there are new appointments, the integration can receive a notification at an address of its own when an appointment is created, changed or cancelled. In the list of integrations, the <em>Webhooks</em> button lets you add the address (always
-    <code>https://</code> and public), choose which events it wants and test that it answers. By default it only reports appointments created by that same integration; if you untick that box, it also reports those made at reception and in the portal, and with the customers permission it adds their contact details. Every notification is signed with a secret that is shown only once, like the integration's. When a webhook is added, the centre owner receives an email with the address and the events, and the address cannot be changed afterwards: to point somewhere else, create another webhook. The <em>Latest deliveries</em> button shows what was sent and what the other side answered.
-  </p>
-
-  <p>
-    <strong>Monitoring.</strong> Turnera counts what each integration does without ever storing what is asked. The check of whether an email or a phone number belongs to a customer allows 20 queries per minute and 2,000 per day, and if the use looks like someone going through a list of people or guessing passwords, the centre owner and the integration's contact receive an email.
-  </p>
-
-  <p>
-    <strong>What to give whoever does the programming.</strong> The API guide, with examples and the OpenAPI file, is at <a href="https://devel.es/turnera/integradores">devel.es/turnera/integradores</a>. With it and the credentials they have everything they need.
-  </p>
-
-  <p>
-    <strong>There is no "from anywhere".</strong> An ERP runs on a server and that server has a fixed IP. If
-    they tell you it does not, that is a conversation worth having before handing over your customers' data.
-  </p>
-
-  <p>
-    <strong>Clinical records cannot be granted.</strong> It is not a permission that comes switched off: it does not
-    exist. The customers scope returns the administrative record —name, contact, address— and nothing of
-    history, cases or progress notes.
-  </p>
-
-  <p>
-    <strong>Almost everything is read-only.</strong> The only thing an external program can do is book a new appointment in a free slot. Nothing the ERP does changes a payment, a record or an existing appointment.
-  </p>
-
-  <h4>Changing the secret without cutting the service</h4>
-
-  <p>
-    The <em>Rotate secret</em> issues a new one and <strong>keeps the previous one alive</strong>. That way the ERP is
-    reconfigured without a rush; once it answers with the new one, press <em>Retire the previous one</em> and the old one stops
-    working. While the rotation lasts, the list marks it.
-  </p>
-
-  <div class="ojo">
-    <p><strong>Data protection.</strong> By authorising an integration, that program's provider starts
-      processing your customers' data on the centre's behalf. Note it in your register of processing
-      activities and check that you have the right processor agreement with them.</p>
-  </div>
-
-  <p>
-    Refunds reach the ERP as negative sales, each one saying which sale it undoes, so what it takes to the accounts matches the centre's takings.
-  </p>
-
-  <p>
-    Whoever programs the other side will find everything they need —how to authenticate, what is available
-    and how to paginate— in the technical guide <code>docs/api-integracion.md</code>.
-  </p>
-
-  <h3 id="desactivar-centro">Disabling a centre</h3>
-  <span class="ruta">Administration → Delegations → Edit</span>
-
-  <p>
-    When a centre closes, or stops working with Turnera for a while, there is no need to delete it: it is
-    <strong>disabled</strong> by unticking <em>Delegation active</em>. Its customers, appointments and payments stay where they were, but nobody can get into it, and whoever was in it is signed out straight away.
-  </p>
-  <p>
-    When signing in to Turnera, if only one centre is left enabled you go straight into it; if several are, you keep choosing. Whoever only worked in the disabled centre can no longer sign in, and the sign-in screen tells them so.
-  </p>
-  <p>
-    The disabled centre stays in the list of delegations, marked as inactive, and is enabled again from there. Two cannot be disabled: the one you are working in —switch to another one first— and the last one left enabled.
-  </p>
-
-  <h3 id="importar">Bringing in data from another platform</h3>
-  <span class="ruta">Administration → Import from another program</span>
-
-  <p>
-    For a centre coming from another platform. It brings in, in one go, the customers (with their notes), the price list of services, packages and products, the packages customers have half used, gift vouchers with a balance, the diary —what lies ahead and the last year—, the stock of each product, each customer's treatment history and what they left owing. It needs the permission <strong>«Import from another program»</strong>, which is sensitive and
-    only the administrator has.
-  </p>
-  <ol>
-    <li>In the source platform, export each screen to CSV: customers, service history, price list, diary, packages, deferred payments, gift vouchers and stock. Where each one is, the import screen itself tells you, under
-      <em>How to get the sheets out of the source platform</em>. Extra sheets —daily cash, invoices, advance payments— do no harm: the report says they are not imported.</li>
-    <li>Press <strong>«Choose files»</strong> and choose them all at once. Their names do not matter: each sheet is
-      recognised by its columns.</li>
-    <li>Press <strong>«Try it»</strong>. Turnera runs the whole import and throws it away at the end: the report says how much of each thing would be created, how much was already there and what is left out, with grouped warnings and examples to look them up in the source. Nothing is saved.</li>
-    <li>If the report looks right, <strong>«Import»</strong>. The files are not stored anywhere.</li>
-  </ol>
-  <p>
-    The <strong>code</strong> of each service in the source arrives as its short code. There, one code can be used for several services, and in Turnera it cannot: those get what sets their name apart added —IDEE becomes IDEE20, IDEE30 and IDEE50 for the 20, 30 and 50-minute Indiba— and the trial report says how each one ends up. They can be changed later in the service record.
-  </p>
-  <p>
-    The <strong>vouchers that have already expired</strong> with unused sessions arrive disabled: they are kept on the customer's record, but cannot be used. The report counts them separately.
-  </p>
-  <p>
-    With the <strong>stocks</strong>, each product arrives with the units the source had in the centre; negatives arrive as zero. If a product is in the stock but no longer in the price list, it is created anyway, with 21 % VAT, so its units are not lost. Without that sheet, products arrive with zero stock and are set with a stocktake from <em>Stock</em>. If someone has already done the stocktake in Turnera, a new import does not overwrite it.
-  </p>
-  <p>
-    <strong>Past appointments</strong> arrive attended or cancelled, as they were in the source, and the diary does not ring them in red: they were charged there. <strong>The service history</strong> —years of sessions— arrives as the customer's visits: those on the same day are one visit, with one line per service, and they show in the history of their record. The device, its settings, the session and the comments go on each line. The sheet does not say how much was charged, so they arrive at zero and paid: they do not move the till or show up as debt. Postponed ones and no-shows are not brought in, because they did not happen. <strong>Pending payments</strong> arrive in
-    <em>Unpaid visits</em>; those already paid do not, because they are in the source platform's till.
-  </p>
-  <p>
-    Importing twice duplicates nothing: what was already brought is recognised and counted as «already there». That makes it possible
-    to import a newer export on the day of the switch and bring only what is missing.
-  </p>
-  <div class="ojo">
-    <p><strong>It can be undone</strong> from «Imports done», and it takes away everything that import brought
-      without touching what was already there. But if someone has already worked with what was imported —an appointment, a charge,
-      a note— Turnera does not undo it and says what prevents it: undoing it would take that work with it.</p>
-    <p><strong>Packages</strong> are brought in with what their name says, which in the source lists the services separated by «+»: «PAQUETE 7 LPG + PRESOTERAPIA» is seven sessions of each, and «TRIO DE ZONAS (AX+ING+BP)» one of each area. The import report shows which service it understood in each part, so it can be checked. If a part is not recognised («RFN400» is a device, not a service), that package is not brought in until it is stated in a sheet
-      <em>Contenido de paquetes</em> with the columns <code>ID Paquete</code>, <code>ID Servicio</code> and
-      <code>Cantidad</code> (the IDs are those of the source price list), which is uploaded with the others and overrides the name.</p>
-    <p><strong>What is not brought:</strong> the source platform's portal passwords, vouchers with no balance, used-up packages, the old slot of moved appointments, daily tills and invoices, which are closed accounts and are looked up in the source platform. Signed consents are not in any sheet: they are brought in as PDFs from each customer's record (<a href="#consentimientos-importar">see how</a>).</p>
-    <p><strong>After importing:</strong> professionals arrive with the code they had in the source and need a name, and customers with a repeated ID are all brought in and reviewed with the
-      <a href="#clientes">record merge</a> (a minor with their mother's ID is not the same person).</p>
-  </div>
-
-  <h3 id="irse">Taking the centre's data</h3>
-  <span class="ruta">Administration → Take your data</span>
-
-  <p>
-    The data belongs to the centre, not to Turnera. From here the <strong>admin</strong> account downloads everything the centre has stored, in a single zip file and whenever it wants: to move to another program, to keep its own copy or to hand it to whoever looks after its IT.
-  </p>
-
-  <p>Inside there are three things and a <em>LEEME.txt</em> that explains them:</p>
-  <ul>
-    <li><strong>turnera.sql</strong>, the whole database. Any IT person loads it into MySQL with one command, and with it you can come back to Turnera or move the data to another program.</li>
-    <li><strong>One spreadsheet per table</strong> —customers, appointments, payments, vouchers, clinical records…—, which opens in Excel with a double click.</li>
-    <li><strong>The documents</strong>: the signed consents as PDF and the logo, each in its own file.</li>
-  </ul>
-  <p>
-    Passwords, clock-in PINs and integration secrets are left out: outside Turnera they are useless, and in the wrong hands someone could try to crack them.
-  </p>
-
-  <p>
-    <strong>Why two keys are needed.</strong> It is the most sensitive download in the application, because it takes the data of every customer at once, clinical records included. Only the admin account can ask for it —no other, even with every permission— and on top of that it needs a link that goes to the email of the centre's owner, the one given when signing up, which cannot be changed from the application. Whoever steals the password does not have the email, and whoever reads the email does not have the password.
-  </p>
-  <ol>
-    <li>Click <em>Send me the link</em>. The screen tells you which email it goes to, with part of the address hidden.</li>
-    <li>Open the email in the same browser, signed in as admin, and press <em>Download</em>. The button shows how far it has got.</li>
-    <li>Keep the zip somewhere safe: it holds the data of all your customers.</li>
-  </ol>
-  <p>
-    The link works only once and expires in 30 minutes; if the download is interrupted, ask for another, up to three an hour. When it finishes another email arrives saying it has been downloaded, with the time and the address it was done from: if it was not you, change the admin password and write to us. The screen also keeps the list of exports requested and downloaded.
-  </p>
 </section>
 
 <section id="historia">
-  <h2>10. The clinical record</h2>
+  <h2>11. The clinical record</h2>
 
   <p>
     In the centres that use it, each customer has a history and cases, and each case its progress notes. It prints to
@@ -3082,8 +3136,41 @@ footer{
   </p>
 </section>
 
+<section id="mantenimiento">
+  <h2>Maintenance (optional module)</h2>
+  <p>
+    If the centre has the <strong>Maintenance</strong> module, it appears in the menu, inside <em>Catalogue</em>. Each fault or job is an <strong>order</strong>: with a title, objective, description, zone and equipment, type, priority and due date. An order goes through <em>open, assigned, in progress, waiting, resolved and closed</em>, or is annulled with a reason. Everything that happens is kept in the <strong>history</strong> of the order, with its author and time, and it cannot be deleted or changed.
+  </p>
+  <p>
+    Each order gets <strong>photos per phase</strong> (problem, before, during, after and document), up to ten per phase; each photo records who uploaded it, when and its fingerprint, so nobody can claim it was swapped. There are eight permissions (view, open orders, manage, close, annul, zones and equipment, export and links). It comes with a role of its own,
+    <strong>Maintenance</strong>, which handles orders, their zones and their equipment but does not annul orders or give links to the Inspectorate; <em>Management</em> has everything except the links, and the <em>System administrator</em> has those too. Reception, Practitioner and HR can view and report.
+  </p>
+  <p>
+    <strong>Links for the Inspectorate:</strong> from the screen itself you create a read-only link (1 to 90 days) that shows the orders, their history and photos and lets you download CSV, with no user account. It can be revoked whenever you like and every access is logged. Orders can also be exported to CSV from the list.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/en/38-mantenimiento-lista.png" alt="The list of maintenance orders, with an overdue order marked in red and the Inspectorate links below" loading="lazy">
+    <figcaption>The list: pending orders with their priority, status and who is handling them. An overdue order is marked in red.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/en/39-mantenimiento-parte.png" alt="An order in progress with its photos by phase and its history" loading="lazy">
+    <figcaption>An order: what is to be achieved, the photos by phase and, below, the history that cannot be erased.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/en/40-mantenimiento-parte-cerrado.png" alt="A closed order with the before and after photos" loading="lazy">
+    <figcaption>A closed order, with the before and after and everything that happened until it was closed.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/en/41-mantenimiento-inspeccion.png" alt="The read-only page the Inspectorate sees with the link" loading="lazy">
+    <figcaption>What the Inspectorate sees with its link: the orders, their history and photos, with no user account and read-only.</figcaption>
+  </figure>
+</section>
 <section id="problemas">
-  <h2>11. When something goes wrong</h2>
+  <h2>12. When something goes wrong</h2>
 
   <h3>“It will not let me book the appointment”</h3>
   <p>

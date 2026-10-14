@@ -595,7 +595,7 @@ footer{
 <main id="top" class="shell manual">
 <nav class="indice">
   <h2>Manual de Turnera</h2>
-  <p>Actualizado el 23 de septiembre de 2026</p>
+  <p>Actualizado el 14 de octubre de 2026</p>
   <ol>
     <li><a href="#ayuda">Pedir ayuda</a></li>
     <li><a href="#empezar">1. Entrar y orientarse</a></li>
@@ -628,12 +628,15 @@ footer{
     <li><a href="#informes">8. Informes y cierre de caja</a></li>
     <li><a href="#cuadro-de-mando" class="sub">El cuadro de mando</a></li>
     <li><a href="#ajustes">9. Ajustes del centro</a></li>
-    <li><a href="#calendario-laboral" class="sub">Calendario laboral</a></li>
     <li><a href="#desactivar-centro" class="sub">Desactivar un centro</a></li>
     <li><a href="#importar" class="sub">Traer los datos de otra plataforma</a></li>
     <li><a href="#irse" class="sub">Llevarse los datos</a></li>
-    <li><a href="#historia">10. La historia clínica</a></li>
-    <li><a href="#problemas">11. Cuando algo no sale</a></li>
+    <li><a href="#personal">10. Personal</a></li>
+    <li><a href="#profesionales" class="sub">Profesionales</a></li>
+    <li><a href="#presencia" class="sub">Fichar y control de presencia</a></li>
+    <li><a href="#calendario-laboral" class="sub">Calendario laboral</a></li>
+    <li><a href="#historia">11. La historia clínica</a></li>
+    <li><a href="#problemas">12. Cuando algo no sale</a></li>
   </ol>
 </nav>
 <div class="contenido">
@@ -2018,10 +2021,10 @@ footer{
       usan</em>, con buscador en las dos. Los bonos no salen: se venden, no se tratan. Mientras no se marque
       ninguno, el aparato no estorba a nadie.</li>
     <li><strong>Qué hay que anotar cada vez que se usa</strong>: los julios del láser, la potencia de la cama de
-      rayos. Se añade un dato con «Añadir un dato» y se quita con la papelera de su fila.</li>
+      rayos. Se añade un parámetro con «Añadir un parámetro» y se quita con la papelera de su fila.</li>
   </ul>
 
-  <p>Cada dato que se anota es de uno de tres tipos:</p>
+  <p>Cada parámetro que se anota es de uno de tres tipos:</p>
   <table>
     <tr><th>Tipo</th><th>Qué pide</th><th>Cuándo usarlo</th></tr>
     <tr><td><strong>Número</strong></td><td>Una cifra, con su unidad y, si se quiere, un mínimo y un máximo</td>
@@ -2031,7 +2034,7 @@ footer{
       <td>Zonas, programas, intensidades con nombre</td></tr>
   </table>
   <p>
-    Marcar un dato como <strong>obligatorio</strong> hace que la cita no deje guardar la sesión sin él. Los topes
+    Marcar un parámetro como <strong>obligatorio</strong> hace que la cita no deje guardar la sesión sin él. Los topes
     del número también se comprueban al anotar: si el láser va de 1 a 40 julios, un 60 no entra.
   </p>
 
@@ -2040,13 +2043,13 @@ footer{
     quitárselo antes, para que ningún servicio se quede pidiendo un aparato que ya no está. Apagarlo sí se puede.
     <strong>Un aparato que ya se ha usado no se borra: se apaga.</strong> Al darle a eliminar, si tiene sesiones
     anotadas, Turnera lo desactiva en vez de borrarlo, deja de mirarlo al citar y conserva con cuánto se trató a
-    cada cliente. Por la misma razón, <strong>un dato con sesiones anotadas no se puede quitar</strong> de la lista:
+    cada cliente. Por la misma razón, <strong>un parámetro con sesiones anotadas no se puede quitar</strong> de la lista:
     al guardar aparece un aviso y el aparato se queda como estaba. Apagar el aparato es también la forma de seguir
     citando mientras está en el taller.
   </div>
 
   <figure>
-    <img src="/turnera/manual/imagenes/11-aparato.png" alt="El formulario de un aparato con sus unidades, sus servicios y sus datos a anotar" loading="lazy">
+    <img src="/turnera/manual/imagenes/11-aparato.png" alt="El formulario de un aparato con sus unidades, sus servicios y sus parámetros a anotar" loading="lazy">
     <figcaption>Al dar de alta un aparato se dice qué servicios lo necesitan y qué hay que anotar cada vez.</figcaption>
   </figure>
 
@@ -2069,19 +2072,19 @@ footer{
   <span class="ruta">Agenda → (una cita) → Aparatología de la sesión</span>
   <p>
     En las citas que llevan un servicio con aparato aparece, debajo de los datos de la cita, un apartado con los
-    campos que hay que rellenar, <strong>agrupados por servicio y aparato</strong>: cada grupo dice para qué
+    parámetros que hay que anotar, <strong>agrupados por servicio y aparato</strong>: cada grupo dice para qué
     servicio se anota («Láser axilas · Láser de diodo»). Si la cita lleva dos servicios con el mismo aparato, sus
-    campos salen dos veces, una por servicio, y así queda claro cuántos julios se pusieron en cada zona. Junto a
-    cada campo, <strong>con cuánto se le trató a ese cliente la vez anterior en ese mismo servicio</strong>. Se
+    parámetros salen dos veces, una por servicio, y así queda claro cuántos julios se pusieron en cada zona. Junto a
+    cada parámetro, <strong>con cuánto se le trató a ese cliente la vez anterior en ese mismo servicio</strong>. Se
     guarda con su propio botón, «Guardar lo anotado», sin tener que guardar
-    la cita entera; un campo que se deja en blanco se entiende como «no se anotó» y no queda escrito.
+    la cita entera; un parámetro que se deja en blanco se entiende como «no se anotó» y no queda escrito.
   </p>
   <p>
     Si la cita no lleva ningún servicio con aparato, el apartado no aparece.
   </p>
   <p>
     <strong>También se pide de camino al cobro.</strong> Al pulsar <em>Cobrar</em> en la cita, el TPV enseña encima
-    del ticket los mismos datos de la sesión. Si falta alguno obligatorio, no deja cobrar hasta anotarlo y
+    del ticket los mismos parámetros de la sesión. Si falta alguno obligatorio, no deja cobrar hasta anotarlo y
     guardarlo (a quien no tiene permiso para anotar se le avisa, pero puede cobrar).
   </p>
   <p>
@@ -2382,12 +2385,8 @@ footer{
       profesional retirado, o un proveedor con el que ya no se trabaja (en su ficha, quitando <em>Activo</em>),
       desaparece de las listas y de los desplegables. Las listas de servicios, productos, paquetes, proveedores y
       clientes tienen la casilla <em>También los inactivos</em> para verlos, con su etiqueta; la de profesionales,
-      <em>Solo activos</em>.</li>
-    <li><strong>Profesionales</strong>: quién atiende, su color en la agenda y su columna. En la ficha se puede subir
-      su <strong>foto</strong> (se reduce antes de subirla) e indicar el <strong>género</strong>: sin foto, en las listas
-      y en el cuadrante sale un avatar de mujer, de hombre o, sin indicar, uno neutro. Para <strong>dar de baja</strong>
-      a quien tiene citas de hoy en adelante, Turnera pide a qué profesional pasan y las pasa todas a la vez; si
-      alguna coincide con otra que ya tiene quien las recibe, lo dice para recolocarla después.</li>
+      <em>Solo en activo</em>.</li>
+    <li><strong>Profesionales</strong>, fichajes y calendario laboral: están en <a href="#personal">Personal</a>.</li>
     <li><strong>Roles y usuarios</strong>: quién entra, qué puede hacer y <strong>desde qué direcciones IP</strong>.</li>
     <li><strong>Datos del centro</strong>: nombre, NIF, dirección y logotipo. El logotipo encabeza los PDF
       —tickets, presupuestos, agenda— y <strong>sustituye al de Turnera arriba del menú</strong>, sobre un fondo blanco para que
@@ -2849,449 +2848,6 @@ footer{
     mismo que se firmó.
   </p>
 
-  <h3 id="presencia">Control de presencia (fichar)</h3>
-  <span class="ruta">Menú → Fichar · Menú → Personal → Control de presencia</span>
-
-  <div class="ojo">
-    <p><strong>Esto lo exige la ley.</strong> El artículo 34.9 del Estatuto de los Trabajadores obliga desde
-      2019 a llevar un registro diario de jornada, a conservarlo cuatro años y a tenerlo a disposición de la
-      Inspección de Trabajo. No llevarlo es sanción.</p>
-  </div>
-
-  <p>
-    En <em>Fichar</em>, en el menú, están todos los profesionales del centro, cada uno con su botón
-    <em>Fichar</em>. La lista <strong>solo enseña nombres</strong>: quién está dentro y desde cuándo es parte del
-    registro de jornada, y la pantalla la ve cualquiera que pase por recepción. Eso lo ve cada uno después de
-    teclear su PIN, junto con lo que le toca hacer: <em>Entrada</em>, o <em>Salida</em> y <em>Pausa</em> si ya
-    está dentro. No hay que elegir entre entrada y salida: la aplicación lo sabe por el último fichaje de esa
-    persona.
-  </p>
-
-  <p>
-    <strong>La pantalla la abre cualquiera</strong>, y es a propósito. Un usuario de Turnera no es una persona:
-    en el mostrador lo normal es que lo comparta el turno entero, y el registro de jornada es de cada
-    profesional. Por eso aquí se pulsa el nombre en lugar de mirar quién ha entrado en la aplicación, y por eso
-    es <strong>el único sitio donde se ficha</strong>: siempre como empleado y con su PIN, nunca como usuario.
-  </p>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/29-fichar.png" alt="La pantalla de fichar con los profesionales del centro y su boton de entrada o salida" loading="lazy">
-    <figcaption>La pantalla de fichar: un profesional por tarjeta. Lo de cada uno se abre con su PIN.</figcaption>
-  </figure>
-
-  <h4>El PIN</h4>
-
-  <p>
-    Cada profesional necesita un <strong>PIN</strong>, de cuatro cifras si el centro no decide otra cosa, que se le
-    pone en <em>Profesionales → PIN de fichaje</em>. Al pulsar su botón sale un teclado y lo teclea: con la última
-    cifra se abre lo suyo, sin pulsar nada más. Es lo que hace que
-    pulsar el botón de otro no sea fichar por otro, y sin ello la lista de nombres no probaría gran cosa ante
-    una inspección.
-  </p>
-
-  <p>
-    El botón <em>Generar</em> propone uno al azar, y es mejor idea que pensarlo: descarta los que se adivinan
-    de una pasada —todas las cifras iguales y las escaleras tipo 1234— que son justo los que salen cuando uno
-    los elige a mano. El PIN se ve mientras lo escribe, para que pueda dictárselo a quien va a usarlo;
-    <strong>apúntelo antes de guardar</strong>, porque después ya no se puede volver a leer.
-  </p>
-
-  <div class="ojo">
-    <p><strong>Sin PIN no se ficha.</strong> Quien no lo tiene ve su botón desactivado, con el aviso de que
-      administración se lo pone en su ficha. Así el registro dice siempre quién fichó y no sólo desde qué
-      mostrador, que es lo que la ley espera de un registro de jornada. Al estrenar el reloj en un centro,
-      reparta antes los PIN.</p>
-  </div>
-
-  <p>
-    El PIN se guarda cifrado y <strong>no se puede volver a leer</strong>, ni desde administración: si alguien
-    lo olvida se le pone uno nuevo. Se retira con <em>Quitar el PIN</em>, y esa persona no podrá fichar hasta
-    que tenga otro.
-  </p>
-
-  <p>
-    <strong>Cada cual se cambia el suyo</strong> desde la propia pantalla de fichar: al salir el teclado, abajo
-    está <em>Cambiar mi PIN</em>, que pide el de ahora y el nuevo dos veces. Hay que saber el que está puesto,
-    y quien lo sabe ya podía fichar por esa persona, así que no abre ninguna puerta; lo que evita es que
-    cambiarlo dependa de que administración esté esa mañana.
-  </p>
-
-  <h4 id="cifras-pin">Cuántas cifras lleva el PIN</h4>
-  <span class="ruta">Administración → Control de presencia → Reloj de fichar</span>
-
-  <p>
-    El centro decide si el PIN lleva de <strong>cuatro a ocho cifras</strong>. Cuatro se teclean en un momento,
-    pero quien tiene delante la pantalla del mostrador puede acertar el de un compañero probando en unas horas,
-    aunque Turnera solo deje probar diez por minuto. Cada cifra más multiplica ese tiempo por diez: con seis ya es
-    más de un mes. Lo cambia quien tenga el permiso «Configurar el reloj de fichar», que de fábrica traen Dirección y RRHH.
-  </p>
-
-  <p>
-    Manda sobre los PIN que se pongan a partir de entonces —los que reparta administración y los que cada cual se
-    cambie—. <strong>Los que ya estaban puestos siguen valiendo</strong>: en el teclado se pueden escribir y confirmar
-    con el botón. Si baja las cifras, quien tenga uno más largo tendrá que cambiárselo desde el reloj.
-  </p>
-
-  <p>
-    En el registro queda escrito lo de siempre y una cosa más: la jornada es del profesional que tecleó su PIN,
-    y al lado consta <strong>desde qué usuario se registró</strong>. Son dos datos distintos a propósito, y
-    juntos son lo que se enseña cuando alguien pregunta.
-  </p>
-
-  <h4 id="fichar-lo-mio">Lo que ve cada uno tras su PIN</h4>
-
-  <p>
-    Con el PIN bueno se abre una ventana con lo de esa persona, que <strong>vuelve sola a la lista al minuto</strong>
-    sin tocar nada, y en cuanto ficha:
-  </p>
-  <ul>
-    <li><strong>Si está dentro o fuera</strong>, y desde qué hora, o si está en una pausa.</li>
-    <li><strong>Entrada</strong>, o <strong>Salida</strong> y <strong>Pausa</strong> si está dentro. Una pausa es
-      un rato que no es tiempo de trabajo (el almuerzo, por ejemplo): se ficha con <em>Pausa</em> al salir y con
-      <em>Volver de la pausa</em> al regresar. No suma horas y sale en el registro entre los dos tramos del día.</li>
-    <li><strong>Las horas que RRHH ha registrado por ella</strong> por un fichaje olvidado y de las que todavía no
-      ha dicho nada. Con <em>Estoy conforme</em> o <em>No estoy conforme</em>, en este caso explicando por qué,
-      queda anotada su respuesta junto a esas horas, que no se cambia después (ver <em>Incidencias</em>, más
-      abajo).</li>
-    <li><strong>Mis fichajes</strong>: su mes, día a día, con las pausas, las horas y el total, y los meses
-      anteriores. Se lo puede <strong>enviar a su correo</strong> en PDF o descargarlo.</li>
-  </ul>
-
-  <p>
-    En <em>Personal → Control de presencia</em>, en el menú, está lo demás: elija un rango y, si quiere, una persona.
-    Arriba salen los <strong>totales de cada persona y mes</strong>: días con registro, horas planificadas,
-    trabajadas, ordinarias y extraordinarias según su calendario laboral, las extra pagadas o devueltas en descanso
-    ese mes, y cuántas horas declaradas por RRHH esperan su conformidad o tienen su desacuerdo. Debajo, cada día con
-    sus tramos, sus pausas y sus horas, y abajo los fichajes uno a uno.
-  </p>
-
-  <p>
-    Lo que se le enseña a la Inspección se descarga desde aquí:
-  </p>
-  <ul>
-    <li><strong>Resumen mensual (PDF)</strong>: una hoja por persona y mes con cada día, el total, su régimen de
-      jornada y hueco para la firma de la empresa y de la persona. Es el resumen que se entrega con la nómina.</li>
-    <li><strong>Todo (Excel)</strong>: un libro con la empresa, su CIF y el centro, el registro día a día, los
-      totales del mes y los fichajes en bruto.</li>
-    <li><strong>Días (CSV)</strong>, <strong>Totales (CSV)</strong> y <strong>Fichajes (CSV)</strong>: lo mismo
-      en ficheros que se abren con doble clic en Excel. El de fichajes trae cada uno tal como está guardado, con
-      quién lo registró y qué correcciones lleva, que es lo que prueba que el registro no se ha reescrito.</li>
-  </ul>
-
-  <p>
-    El PDF lo descarga quien ve el control de presencia; los demás, quien tiene el permiso de exportar el
-    registro de jornada. Siempre pueden bajarse: la ley obliga a tenerlos a disposición de la Inspección.
-  </p>
-
-  <h4 id="presencia-enlaces">Acceso de la Inspección y de la representación</h4>
-
-  <p>
-    Al final de <em>Control de presencia</em>, quien tiene el permiso «Dar acceso al registro de jornada» crea
-    <strong>enlaces de solo lectura</strong> para dárselos a la <strong>Inspección de Trabajo</strong> o a la
-    <strong>representación de la plantilla</strong>, sin crearles un usuario. Se elige para quién es, se escribe
-    exactamente para quién (por ejemplo, el nombre de la inspectora y el número del requerimiento) y cuántos días
-    vale, hasta 90.
-  </p>
-  <p>
-    Quien lo abre ve el registro de cualquier periodo de los cuatro últimos años, de un año como mucho cada vez, y
-    puede descargar los mismos ficheros. La representación lo ve <strong>sin el NIF</strong>, por protección de
-    datos. El enlace <strong>solo se enseña al crearlo</strong>: cópielo entonces y envíelo. Se puede retirar antes
-    de que caduque, y cada consulta queda apuntada con cuándo, desde dónde y qué se miró.
-  </p>
-
-  <div class="ojo">
-    <p>Esto es lo que pide el borrador del Real Decreto de registro de jornada que prepara el Ministerio de Trabajo:
-      acceso inmediato y a distancia de la Inspección y acceso de la representación. Mientras no se apruebe, basta
-      con poder enseñar el registro cuando se pida; el enlace lo hace más fácil.</p>
-  </div>
-
-  <h4 id="presencia-resumen-mensual">El resumen mensual por correo</h4>
-
-  <p>
-    En la ficha de cada profesional, quien tiene el permiso «Resumen mensual de jornada por correo» (de fábrica,
-    RRHH y Dirección) marca <em>Enviarle cada mes por correo el resumen de su jornada</em>. Desde entonces, a
-    primeros de cada mes le llega el PDF del mes anterior. Necesita tener correo en su ficha. Es la copia que la ley
-    pide entregar con la nómina a quien trabaja a tiempo parcial, y que el borrador del Real Decreto extiende a
-    todos.
-  </p>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/21-control-de-presencia.png" alt="El control de presencia con los dias trabajados, sus tramos y sus horas" loading="lazy">
-    <figcaption>El registro de jornada: los días con sus tramos y sus horas, y arriba el aviso de las jornadas abiertas.</figcaption>
-  </figure>
-
-  <h4>Un fichaje no se corrige</h4>
-
-  <p>
-    Un fichaje <strong>no se edita, no se borra y no se corrige</strong>: se queda como quedó. Es justo lo que hace
-    que este registro valga, porque uno que se pudiera reescribir no probaría nada. Cuando alguien se olvida de
-    fichar, RRHH abre una <strong>incidencia</strong> en su calendario laboral que explica lo que pasó y declara de
-    qué hora a qué hora trabajó de verdad (ver <em>Incidencias</em>, más abajo). En esta pantalla esas horas salen
-    en su día marcadas como <em>Declarado por RRHH</em>, y en la hoja de cálculo, con «(declarado por RRHH)».
-  </p>
-
-  <figure>
-    <img src="/turnera/manual/imagenes/28-fichajes.png" alt="La tabla de fichajes uno a uno" loading="lazy">
-    <figcaption>Los fichajes uno a uno, tal como se ficharon. Los corregidos antes de que dejara de poder corregirse se siguen viendo, marcados.</figcaption>
-  </figure>
-
-  <h4>Los días que salen marcados</h4>
-
-  <p>
-    Si alguien ficha la entrada y se va sin fichar la salida, ese día sale como <strong>jornada abierta</strong>
-    y <strong>sin horas</strong>. No se le inventa una hora de cierre a propósito: un registro con horas que
-    nadie fichó es peor que uno incompleto, porque el incompleto se ve y el inventado no. La entrada se queda
-    abierta, y pasadas <strong>16 horas</strong> se da por olvidada: el siguiente fichaje de esa persona vuelve a
-    ser una entrada, no la salida de la víspera. Para que ese día cuente, RRHH declara las horas en una
-    incidencia.
-  </p>
-
-  <p>
-    Un turno que cruza la medianoche se cuenta entero en el día en que empezó, que es como lo cuenta quien
-    hace las nóminas, y lo que se trabaja al volver de una pausa sigue siendo de ese día. Una pausa de la que no
-    se vuelve en 16 horas se queda sin final: no se le inventa uno.
-  </p>
-
-  <h4>La hora del centro</h4>
-
-  <p>
-    Un fichaje no es una hora que alguien escribe, como la de una cita: es el momento exacto en que se pulsa
-    el botón. Para saber a qué día y a qué tramo pertenece, la aplicación necesita saber en qué huso vive el
-    centro, y viene puesta en <strong>Europe/Madrid</strong>. Un centro fuera de la España peninsular lo
-    cambia con la variable <code>TURNERA_TZ</code> al instalar; si no, los tramos saldrían desplazados
-    aunque las horas sumadas fueran correctas.
-  </p>
-
-  <h3 id="calendario-laboral">Calendario laboral</h3>
-  <span class="ruta">Menú → Personal → Calendario laboral</span>
-
-  <p>
-    El calendario laboral reparte a lo largo del año <strong>las horas que marca el convenio</strong> de cada
-    profesional: qué días trabaja y en qué turno, sus vacaciones, sus ausencias y los festivos. Lo lleva quien
-    tenga el rol <strong>RRHH</strong> (o los permisos «Ver los calendarios laborales» y «Planificar los
-    calendarios laborales»). Es un plan: lo que de verdad se trabajó sigue siendo lo fichado, y la pantalla
-    compara una cosa con la otra.
-  </p>
-  <p>
-    Arriba del calendario se cambia entre <strong>Planificación</strong> (lo que se ha planificado) y
-    <strong>Ejecución</strong> (lo que se ha fichado). Son dos cosas distintas: que alguien trabaje un festivo no
-    se planifica, se ficha, y esas horas no son normales sino extra.
-  </p>
-
-  <h4>Lo que se prepara una vez</h4>
-  <ul>
-    <li><strong>Convenio</strong>: lo acuerda el centro y es <strong>uno por año para toda la plantilla</strong> y
-      todas sus sedes: el nombre, las horas de trabajo al año a jornada completa y los días de vacaciones, naturales
-      (los 30 del Estatuto) o laborables (sin contar fines de semana ni festivos). Cada calendario toma el de su año;
-      no se elige persona a persona.</li>
-    <li><strong>Turnos</strong>: «Mañana 9-14», «Tarde 15-21»… Uno que acaba antes de empezar es de noche y
-      termina al día siguiente. <strong>Un día lleva un solo turno</strong>: para quien hace mañana y tarde se crea
-      un turno partido, con <em>Añadir tramo (turno partido)</em> o con <em>Empezar como partido</em>, que lo deja en
-      09:00-14:00 y 16:00-20:00 para ajustarlo. La pausa es el hueco entre un tramo y el siguiente, y no cuenta como
-      trabajada.</li>
-    <li><strong>Ausencias</strong>: baja, permiso retribuido, permiso sin sueldo… Cada una dice si ese día cuenta
-      como trabajado para las horas del convenio. De una baja se apunta que es una baja, nunca el diagnóstico.</li>
-    <li><strong>Festivos</strong>: en <em>Ajustes</em> se elige la comunidad autónoma del centro, y en
-      <em>Festivos</em> el botón trae los nacionales y los de esa comunidad para el año.</li>
-  </ul>
-
-  <div class="ojo">
-    <p><strong>Los festivos locales no se importan.</strong> Los dos de cada municipio no los publica nadie de
-      forma fiable, así que hay que añadirlos a mano en <em>Festivos → Añadir festivo local</em>. La pantalla
-      avisa de cuántos locales hay puestos: si pone cero, faltan.</p>
-  </div>
-
-  <h4>El calendario de cada profesional</h4>
-  <p>
-    En <em>Calendarios</em> salen todos los profesionales del centro con cómo va el suyo en el año elegido.
-    <em>Crear</em> toma el convenio del año y pide la jornada (100&nbsp;% a jornada completa, 50&nbsp;% a media) y,
-    si caen dentro del año, las fechas de <strong>alta y baja</strong>: con ellas las horas y las vacaciones se prorratean solas,
-    que es lo que hace falta para una liquidación o un finiquito. A media jornada se tienen las mismas vacaciones
-    y la mitad de horas.
-  </p>
-  <p>
-    Para repartir el año se elige arriba qué poner —un turno, vacaciones, una ausencia o <em>Libre</em> para
-    quitar— y se pincha un día, o se arrastra de un día a otro para marcar todos los de en medio. Cada día tiene
-    una sola cosa: si es de turno no puede ser a la vez vacaciones. <strong>Antes del alta y después de la baja no
-    se planifica</strong>: esos días no cuentan para las horas, así que la pantalla se los salta y avisa de cuántos.
-    <em>Rellenar por días de la semana</em> lo pone de una vez en, por ejemplo, los lunes a viernes de enero a
-    junio, saltándose los festivos y sin tocar lo ya puesto. A la derecha, <strong>las cuentas se rehacen con
-    cada cambio</strong>: horas del convenio, planificadas, las que quedan por repartir (o las que sobran), las
-    vacaciones puestas frente a las que le corresponden y cuántas le quedan, y hasta ayer, lo planificado frente a lo fichado.
-  </p>
-  <p>
-    Debajo salen los <strong>avisos</strong> del Estatuto de los Trabajadores: menos de 12 horas de descanso entre
-    dos jornadas, más de 9 horas en un día, más de 6 horas seguidas sin una pausa de 15 minutos, menos de 3 días
-    libres en 14, turno en un festivo, más vacaciones de las que tocan o días marcados fuera de las fechas de alta
-    y baja. Si alguien trabaja de noche (de 22:00 a 06:00) avisa además de que el Estatuto lo trata como trabajo
-    nocturno, con una media máxima de 8 horas en 15 días y no más de dos semanas seguidas de turno de noche, salvo
-    que sea voluntario. Cada aviso trae el enlace <em>Leer el artículo</em>, que abre el texto del Estatuto para
-    comprobarlo. Al dar de alta un convenio con menos de 30 días naturales de vacaciones (22 laborables) también
-    sale el aviso. Son avisos y no impiden guardar: hay convenios que permiten otra cosa y quien sabe lo que se
-    firmó es RRHH.
-  </p>
-  <p>
-    <em>Duplicar en otro profesional</em> copia el calendario tal cual a otros del centro (si ya tenían uno ese
-    año, se sustituye, y la pantalla lo avisa antes). <em>Descargar PDF</em> saca el año en una hoja, para
-    colgarlo en el tablón o dárselo a la gestoría.
-  </p>
-  <p>
-    <em>Borrar este calendario</em> lo quita con todos sus días, también los ya pasados, lo que cambia las horas
-    hechas y las de fuera de turno de ese año. Por eso pide escribir a mano el nombre del profesional.
-  </p>
-
-  <h4 id="calendario-cerrar">Cerrar el año</h4>
-  <p>
-    Cuando un año ha terminado y está repasado, en <em>Calendarios</em>, con ese año elegido, <em>Cerrar</em> lo
-    deja <strong>como está, para la Inspección de Trabajo</strong>: desde entonces nada de ese año cambia en el
-    centro —ni los calendarios ni sus días, ni las incidencias, ni las compensaciones, ni los festivos, ni el
-    convenio de ese año—. Se puede consultar e imprimir. Si después se edita un turno que ese año usaba, el año
-    cerrado <strong>se queda con el horario que tenía</strong> (Turnera guarda una copia retirada del turno), y el
-    margen de horas fuera de turno que vale es el que había al cerrarlo. Se confirma escribiendo el año y
-    <strong>no se reabre</strong>. Un año no se puede cerrar antes del <strong>1 de mayo del siguiente</strong>: hasta
-    el 30 de abril aún se pueden dar descansos por sus horas de fuera de turno (ver más abajo).
-  </p>
-
-  <h4>Lo ejecutado: horas normales y horas fuera de turno</h4>
-  <p>
-    En <em>Ejecución</em> cada día fichado sale coloreado: en verde si todo fueron <strong>horas normales</strong>
-    y en naranja si hubo <strong>horas fuera de turno</strong>. Pasando el ratón por encima se ven las horas fichadas.
-    Las reglas:
-  </p>
-  <ul>
-    <li>Lo fichado <strong>dentro del turno</strong> planificado son horas normales.</li>
-    <li>Lo fichado <strong>fuera del turno</strong> son horas fuera de turno solo si pasa del <strong>margen</strong> del centro
-      (15 minutos de fábrica, se cambia en <em>Ajustes</em>): entrar cinco minutos antes no es hacer horas. Si
-      pasa del margen, cuenta entero: quien se queda cuarenta minutos ha hecho cuarenta.</li>
-    <li>Todo lo fichado en un <strong>festivo</strong>, en vacaciones, en una ausencia o en un día sin turno son
-      horas fuera de turno.</li>
-    <li>Una entrada sin salida no suma nada hasta que RRHH declara las horas en una incidencia.</li>
-    <li>Un turno de noche, que cruza la medianoche, se cuenta entero en el día en que empezó. La noche en que
-      cambia la hora cuenta las horas que pasaron de verdad: nueve en octubre y siete en marzo para un turno de
-      22:00 a 06:00.</li>
-  </ul>
-  <p>
-    Las horas fuera de turno van a la <strong>bolsa de horas</strong> del profesional, a la derecha. Quien tenga el
-    permiso «Compensar horas fuera de turno» (de fábrica, RRHH y Dirección) las descuenta con <em>Compensar
-    horas</em>, como <strong>pagadas en nómina</strong> o como <strong>descanso compensatorio</strong>. El saldo
-    pendiente es lo que queda por compensar. Un descanso compensa <strong>primero las horas más antiguas</strong>.
-  </p>
-  <p>
-    Turnera no decide si unas horas fuera de turno son <em>extraordinarias</em>: eso lo decide RRHH según el
-    contrato y el convenio. Lo que sí vigila es el tope que el Estatuto de los Trabajadores pone a las
-    extraordinarias, <strong>80 horas al año</strong> (art. 35.2; en un contrato a tiempo parcial, proporcional a su
-    jornada). Si las horas fuera de turno del año, sin contar las devueltas en descanso <strong>dentro de plazo</strong>,
-    pasan de ese tope, sale un aviso. El plazo es de <strong>cuatro meses</strong> desde que se hicieron las
-    horas (art. 35.1): el descanso de las de septiembre puede darse en enero. Por eso la fecha de una compensación
-    puede caer hasta el <strong>30 de abril del año siguiente</strong>. Si un descanso llega pasado el plazo, se
-    guarda igual, se marca <em>fuera de plazo</em> y esas horas siguen contando para el tope. Es un aviso: Turnera
-    no impide apuntar nada.
-  </p>
-
-  <h4>Incidencias</h4>
-  <p>
-    Con el permiso «Registrar incidencias» (de fábrica, RRHH y Dirección) aparece <em>Incidencia</em> junto a los
-    turnos. Con ella elegida, pinchar un día abre sus incidencias: se escribe lo que pasó y se pueden subir
-    <strong>hasta 3 fotos</strong>. La incidencia se pone <strong>encima</strong> de lo que tenga el día —un turno,
-    unas vacaciones— sin cambiarlo, y el día queda marcado con un <strong>«!»</strong> rojo. Se pueden corregir y
-    borrar (salvo las que declaran horas, más abajo), y dicen quién las anotó y cuándo. Son solo de RRHH: el profesional no las ve en <em>Mi calendario</em>.
-  </p>
-  <p>
-    <strong>Un fichaje olvidado se arregla con una incidencia.</strong> Al escribirla, marque <em>Declarar la jornada
-    real (fichaje olvidado)</em> y ponga de qué hora a qué hora trabajó esa persona (si la hora de fin es anterior a
-    la de inicio, es un turno que acaba al día siguiente). El fichaje no se toca: esas horas se suman a lo fichado ese
-    día, el día deja de salir como jornada abierta y las horas normales y extra se cuentan con eso. No puede pisar lo
-    que ya está fichado ese día, porque eso ya cuenta.
-  </p>
-  <p>
-    Una incidencia que declara horas es parte del registro de jornada, así que <strong>no se cambia ni se borra</strong>,
-    ni se le quitan fotos (sí se le pueden añadir). Si estaba mal, se abre otra para el mismo día: la nueva es la que
-    cuenta y la anterior se queda a la vista, marcada como <em>Sustituida</em>. Al guardarla, el profesional recibe
-    un <strong>correo</strong> con el día, las horas declaradas y la explicación, para que sepa qué consta en su
-    registro.
-  </p>
-  <p>
-    Además, la próxima vez que teclee su PIN en el reloj, se le pregunta si está <strong>conforme</strong> con esas
-    horas. Mientras no conteste, la incidencia sale como <em>Pendiente de conformidad</em>; si dice que no, sale como
-    <em>No conforme</em> con su motivo, aquí, en el control de presencia y en todo lo que se descarga. Las horas
-    cuentan igual en los dos casos: si no hay acuerdo, el registro refleja lo que declaró la empresa y el desacuerdo
-    de la persona, que es lo que pide el borrador del Real Decreto de registro de jornada.
-  </p>
-
-  <h4>El cuadrante</h4>
-  <p>
-    <em>Calendario laboral → Cuadrante</em> enseña la semana de toda la plantilla: quién trabaja cada día y en qué
-    turno, quién está de vacaciones, de ausencia o libre, y cuántos trabajan cada día. El día de hoy va resaltado y
-    marca quién está <strong>dentro ahora mismo</strong>, según lo fichado. Quien no tiene calendario laboral no
-    sale en el cuadrante.
-  </p>
-
-  <h4>El resumen de horas</h4>
-  <p>
-    <em>Calendario laboral → Horas</em> da, para cada profesional y cada mes entre dos fechas, las horas
-    <strong>planificadas</strong>, las <strong>fichadas</strong> y, de estas, las <strong>normales</strong> y las
-    <strong>extra</strong>, con un total por persona si hay varios meses. <em>Descargar CSV</em> lo saca para la
-    gestoría. Un mes sin calendario laboral lo dice, y ahí todo lo fichado sale como normal.
-  </p>
-
-  <h4 id="calendario-ausencias-parciales">Ausencias parciales</h4>
-  <p>
-    Un rato cerrado para una persona (<em>Agenda → Cerrar un rato</em>) cuenta como ausencia parcial en su
-    calendario laboral. Si se marcó <em>Descontar de las horas</em>, el resumen de horas añade la columna
-    <strong>descontadas</strong>: esos minutos se restan de las horas <strong>normales</strong> del día (lo fichado
-    no se toca), y también del cómputo del convenio y de la proyección a fin de año. Si no se marcó, sale en el
-    calendario como ausencia informativa. Solo descuenta lo que cae dentro del turno de un día laborable; en un
-    festivo o fuera de turno no resta. El registro de jornada mensual y los CSV traen también los minutos
-    descontados.
-  </p>
-  <p>
-    <strong>En el calendario del año cada ausencia parcial lleva un punto en su día</strong>: relleno si descuenta,
-    hueco si es solo informativa. Al pasar el ratón dice las horas. Quien puede cerrar ratos en la agenda también
-    puede <strong>añadirlas desde aquí</strong>, con <em>Añadir ausencia parcial</em> junto al resumen de lo
-    ejecutado: se elige el día, las horas, el motivo y, si tiene permiso, si descuenta. Es el mismo cierre de la
-    agenda, así que ese rato tampoco se ofrece al reservar. Para quitarla, la papelera de su fila: reabre también el
-    rato en la agenda y devuelve las horas si se habían descontado. En un año cerrado no se puede ni añadir ni
-    quitar.
-  </p>
-
-  <h4>La proyección a fin de año</h4>
-  <p>
-    Debajo del calendario de cada profesional, un gráfico acumula lo planificado mes a mes, lo fichado hasta hoy y,
-    <strong>al ritmo que lleva</strong>, cuánto sumaría a fin de año, frente a las horas del convenio. Si a ese
-    ritmo llegaría a las horas del convenio antes de acabar el año, dice qué día: es el momento de darle vacaciones
-    o de dejar de contar con esa persona para más horas. Solo lo ve quien planifica, no el profesional.
-  </p>
-
-  <h4>Avisos de fichaje olvidado</h4>
-  <p>
-    Si según su calendario alguien tenía que haber entrado y pasado el <strong>margen para horas fuera de turno</strong> no
-    ha fichado, o tenía que haber salido y pasado el margen sigue dentro, sale un <strong>correo</strong>. Con el
-    margen de fábrica son 15 minutos; nunca se avisa antes de 15, aunque el margen sea menor. Así, quien se queda
-    unos minutos de más dentro del margen, que todavía es jornada normal, no recibe un aviso falso. En los
-    <em>Ajustes</em> del calendario laboral se decide si se avisa, y a quién: al profesional (al correo de su
-    ficha), a RRHH o a los dos. Ahí mismo se apunta el <strong>correo de la persona de RRHH</strong>; si se deja
-    vacío, los avisos de RRHH van al correo de administración del centro (<em>Preferencias</em>). Un tramo da como
-    mucho un aviso de entrada y uno de salida. En festivo no se avisa. Cuando exista la aplicación del móvil, el
-    aviso llegará también allí.
-  </p>
-
-  <h4>En la agenda</h4>
-  <p>
-    En las vistas por profesional, la agenda sombrea en gris, con rayas blancas, lo que queda <strong>fuera de su
-    turno</strong> y los días de vacaciones, ausencia o festivo. Lo de fuera de turno no lleva texto encima: al
-    pasar el ratón dice <em>Fuera de turno</em>. Las vacaciones, ausencias y festivos sí lo llevan escrito. De entrada solo lo marca y deja citar igual. Si en
-    <em>Calendario laboral → Ajustes</em> se activa <em>El calendario laboral bloquea la agenda</em>, ya no deja
-    poner ni mover una cita fuera del turno. Quien no tiene calendario ese año no se ve afectado.
-  </p>
-
-  <h4>El calendario de cada profesional</h4>
-  <p>
-    Cada profesional tiene derecho a saber su horario y sus vacaciones sin necesitar ningún permiso, y a ver lo que ha
-    fichado, sus horas normales y extra y su bolsa de horas, pero no las incidencias ni la proyección. Eso está
-    pensado para la aplicación del profesional; en la web, que usa la oficina, no hay entrada «Mi calendario» en el
-    menú, porque el usuario con el que se entra no es de ningún profesional.
-  </p>
-
   <h3 id="integraciones">Conectar un programa externo (ERP)</h3>
   <span class="ruta">Administración → Integraciones</span>
 
@@ -3542,8 +3098,515 @@ footer{
   </p>
 </section>
 
+<section id="personal">
+  <h2>10. Personal</h2>
+  <span class="ruta">Menú → Personal</span>
+
+  <p>
+    Lo que tiene que ver con el equipo: quién trabaja en el centro, cuándo entra y sale, y cómo se reparten sus
+    horas a lo largo del año. En el menú va agrupado bajo <strong>Personal</strong>, salvo <em>Fichar</em>, que
+    está arriba, junto a la agenda, porque es lo que se usa cada día en el mostrador.
+  </p>
+
+  <h3 id="profesionales">Profesionales</h3>
+  <span class="ruta">Menú → Personal → Profesionales</span>
+  <p>
+    Quién atiende en el centro. La ficha lleva sus datos, su <strong>color en la agenda</strong> y, si se quiere,
+    su <strong>columna</strong>: la casilla fija que ocupa en la agenda de la delegación. En blanco, la agenda le da
+    la que le toque por orden. Se puede subir su <strong>foto</strong>, que se reduce antes de subirla, e indicar el
+    <strong>género</strong>: sin foto, en las listas y en el cuadrante sale un avatar de mujer, de hombre o, sin
+    indicar, uno neutro.
+  </p>
+  <p>
+    En la misma ficha se pone el <strong>PIN de fichaje</strong> (ver <a href="#presencia">Control de
+    presencia</a>) y se marca si se le manda cada mes por correo el <strong>resumen de su jornada</strong>, para lo
+    que hace falta un correo en la ficha.
+  </p>
+  <p>
+    <strong>Dar de baja no borra.</strong> El profesional sale de la agenda, pero sus citas, visitas y casos
+    clínicos siguen mostrándolo, y se puede volver a activar editándolo. Si tiene citas de hoy en adelante, Turnera
+    pide a qué profesional pasan y las pasa todas a la vez; si alguna coincide con otra que ya tiene quien las
+    recibe, lo dice para recolocarla después. La lista enseña solo a los que están en activo: quitando <em>Solo en
+    activo</em> salen también los de baja.
+  </p>
+
+  <h3 id="presencia">Control de presencia (fichar)</h3>
+  <span class="ruta">Menú → Fichar · Menú → Personal → Control de presencia</span>
+
+  <div class="ojo">
+    <p><strong>Esto lo exige la ley.</strong> El artículo 34.9 del Estatuto de los Trabajadores obliga desde
+      2019 a llevar un registro diario de jornada, a conservarlo cuatro años y a tenerlo a disposición de la
+      Inspección de Trabajo. No llevarlo es sanción.</p>
+  </div>
+
+  <p>
+    En <em>Fichar</em>, en el menú, están todos los profesionales del centro, cada uno con su botón
+    <em>Fichar</em>. La lista <strong>solo enseña nombres</strong>: quién está dentro y desde cuándo es parte del
+    registro de jornada, y la pantalla la ve cualquiera que pase por recepción. Eso lo ve cada uno después de
+    teclear su PIN, junto con lo que le toca hacer: <em>Entrada</em>, o <em>Salida</em> y <em>Pausa</em> si ya
+    está dentro. No hay que elegir entre entrada y salida: la aplicación lo sabe por el último fichaje de esa
+    persona.
+  </p>
+
+  <p>
+    <strong>La pantalla la abre cualquiera</strong>, y es a propósito. Un usuario de Turnera no es una persona:
+    en el mostrador lo normal es que lo comparta el turno entero, y el registro de jornada es de cada
+    profesional. Por eso aquí se pulsa el nombre en lugar de mirar quién ha entrado en la aplicación, y por eso
+    es <strong>el único sitio donde se ficha</strong>: siempre como empleado y con su PIN, nunca como usuario.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/29-fichar.png" alt="La pantalla de fichar con los profesionales del centro y su boton de entrada o salida" loading="lazy">
+    <figcaption>La pantalla de fichar: un profesional por tarjeta. Lo de cada uno se abre con su PIN.</figcaption>
+  </figure>
+
+  <h4>El PIN</h4>
+
+  <p>
+    Cada profesional necesita un <strong>PIN</strong>, de cuatro cifras si el centro no decide otra cosa, que se le
+    pone en <em>Profesionales → PIN de fichaje</em>. Al pulsar su botón sale un teclado y lo teclea: con la última
+    cifra se abre lo suyo, sin pulsar nada más. Es lo que hace que
+    pulsar el botón de otro no sea fichar por otro, y sin ello la lista de nombres no probaría gran cosa ante
+    una inspección.
+  </p>
+
+  <p>
+    El botón <em>Generar</em> propone uno al azar, y es mejor idea que pensarlo: descarta los que se adivinan
+    de una pasada —todas las cifras iguales y las escaleras tipo 1234— que son justo los que salen cuando uno
+    los elige a mano. El PIN se ve mientras lo escribe, para que pueda dictárselo a quien va a usarlo;
+    <strong>apúntelo antes de guardar</strong>, porque después ya no se puede volver a leer.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Sin PIN no se ficha.</strong> Quien no lo tiene ve su botón desactivado, con el aviso de que
+      administración se lo pone en su ficha. Así el registro dice siempre quién fichó y no sólo desde qué
+      mostrador, que es lo que la ley espera de un registro de jornada. Al estrenar el reloj en un centro,
+      reparta antes los PIN.</p>
+  </div>
+
+  <p>
+    El PIN se guarda cifrado y <strong>no se puede volver a leer</strong>, ni desde administración: si alguien
+    lo olvida se le pone uno nuevo. Se retira con <em>Quitar el PIN</em>, y esa persona no podrá fichar hasta
+    que tenga otro.
+  </p>
+
+  <p>
+    <strong>Cada cual se cambia el suyo</strong> desde la propia pantalla de fichar: al salir el teclado, abajo
+    está <em>Cambiar mi PIN</em>, que pide el de ahora y el nuevo dos veces. Hay que saber el que está puesto,
+    y quien lo sabe ya podía fichar por esa persona, así que no abre ninguna puerta; lo que evita es que
+    cambiarlo dependa de que administración esté esa mañana.
+  </p>
+
+  <h4 id="cifras-pin">Cuántas cifras lleva el PIN</h4>
+  <span class="ruta">Administración → Control de presencia → Reloj de fichar</span>
+
+  <p>
+    El centro decide si el PIN lleva de <strong>cuatro a ocho cifras</strong>. Cuatro se teclean en un momento,
+    pero quien tiene delante la pantalla del mostrador puede acertar el de un compañero probando en unas horas,
+    aunque Turnera solo deje probar diez por minuto. Cada cifra más multiplica ese tiempo por diez: con seis ya es
+    más de un mes. Lo cambia quien tenga el permiso «Configurar el reloj de fichar», que de fábrica traen Dirección y RRHH.
+  </p>
+
+  <p>
+    Manda sobre los PIN que se pongan a partir de entonces —los que reparta administración y los que cada cual se
+    cambie—. <strong>Los que ya estaban puestos siguen valiendo</strong>: en el teclado se pueden escribir y confirmar
+    con el botón. Si baja las cifras, quien tenga uno más largo tendrá que cambiárselo desde el reloj.
+  </p>
+
+  <p>
+    En el registro queda escrito lo de siempre y una cosa más: la jornada es del profesional que tecleó su PIN,
+    y al lado consta <strong>desde qué usuario se registró</strong>. Son dos datos distintos a propósito, y
+    juntos son lo que se enseña cuando alguien pregunta.
+  </p>
+
+  <h4 id="fichar-lo-mio">Lo que ve cada uno tras su PIN</h4>
+
+  <p>
+    Con el PIN bueno se abre una ventana con lo de esa persona, que <strong>vuelve sola a la lista al minuto</strong>
+    sin tocar nada, y en cuanto ficha:
+  </p>
+  <ul>
+    <li><strong>Si está dentro o fuera</strong>, y desde qué hora, o si está en una pausa.</li>
+    <li><strong>Entrada</strong>, o <strong>Salida</strong> y <strong>Pausa</strong> si está dentro. Una pausa es
+      un rato que no es tiempo de trabajo (el almuerzo, por ejemplo): se ficha con <em>Pausa</em> al salir y con
+      <em>Volver de la pausa</em> al regresar. No suma horas y sale en el registro entre los dos tramos del día.</li>
+    <li><strong>Las horas que RRHH ha registrado por ella</strong> por un fichaje olvidado y de las que todavía no
+      ha dicho nada. Con <em>Estoy conforme</em> o <em>No estoy conforme</em>, en este caso explicando por qué,
+      queda anotada su respuesta junto a esas horas, que no se cambia después (ver <em>Incidencias</em>, más
+      abajo).</li>
+    <li><strong>Mis fichajes</strong>: su mes, día a día, con las pausas, las horas y el total, y los meses
+      anteriores. Se lo puede <strong>enviar a su correo</strong> en PDF o descargarlo.</li>
+  </ul>
+
+  <p>
+    En <em>Personal → Control de presencia</em>, en el menú, está lo demás: elija un rango y, si quiere, una persona.
+    Arriba salen los <strong>totales de cada persona y mes</strong>: días con registro, horas planificadas,
+    trabajadas, ordinarias y extraordinarias según su calendario laboral, las extra pagadas o devueltas en descanso
+    ese mes, y cuántas horas declaradas por RRHH esperan su conformidad o tienen su desacuerdo. Debajo, cada día con
+    sus tramos, sus pausas y sus horas, y abajo los fichajes uno a uno.
+  </p>
+
+  <p>
+    Lo que se le enseña a la Inspección se descarga desde aquí:
+  </p>
+  <ul>
+    <li><strong>Resumen mensual (PDF)</strong>: una hoja por persona y mes con cada día, el total, su régimen de
+      jornada y hueco para la firma de la empresa y de la persona. Es el resumen que se entrega con la nómina.</li>
+    <li><strong>Todo (Excel)</strong>: un libro con la empresa, su CIF y el centro, el registro día a día, los
+      totales del mes y los fichajes en bruto.</li>
+    <li><strong>Días (CSV)</strong>, <strong>Totales (CSV)</strong> y <strong>Fichajes (CSV)</strong>: lo mismo
+      en ficheros que se abren con doble clic en Excel. El de fichajes trae cada uno tal como está guardado, con
+      quién lo registró y qué correcciones lleva, que es lo que prueba que el registro no se ha reescrito.</li>
+  </ul>
+
+  <p>
+    El PDF lo descarga quien ve el control de presencia; los demás, quien tiene el permiso de exportar el
+    registro de jornada. Siempre pueden bajarse: la ley obliga a tenerlos a disposición de la Inspección.
+  </p>
+
+  <h4 id="presencia-enlaces">Acceso de la Inspección y de la representación</h4>
+
+  <p>
+    Al final de <em>Control de presencia</em>, quien tiene el permiso «Dar acceso al registro de jornada» crea
+    <strong>enlaces de solo lectura</strong> para dárselos a la <strong>Inspección de Trabajo</strong> o a la
+    <strong>representación de la plantilla</strong>, sin crearles un usuario. Se elige para quién es, se escribe
+    exactamente para quién (por ejemplo, el nombre de la inspectora y el número del requerimiento) y cuántos días
+    vale, hasta 90.
+  </p>
+  <p>
+    Quien lo abre ve el registro de cualquier periodo de los cuatro últimos años, de un año como mucho cada vez, y
+    puede descargar los mismos ficheros. La representación lo ve <strong>sin el NIF</strong>, por protección de
+    datos. El enlace <strong>solo se enseña al crearlo</strong>: cópielo entonces y envíelo. Se puede retirar antes
+    de que caduque, y cada consulta queda apuntada con cuándo, desde dónde y qué se miró.
+  </p>
+
+  <div class="ojo">
+    <p>Esto es lo que pide el borrador del Real Decreto de registro de jornada que prepara el Ministerio de Trabajo:
+      acceso inmediato y a distancia de la Inspección y acceso de la representación. Mientras no se apruebe, basta
+      con poder enseñar el registro cuando se pida; el enlace lo hace más fácil.</p>
+  </div>
+
+  <h4 id="presencia-resumen-mensual">El resumen mensual por correo</h4>
+
+  <p>
+    En la ficha de cada profesional, quien tiene el permiso «Resumen mensual de jornada por correo» (de fábrica,
+    RRHH y Dirección) marca <em>Enviarle cada mes por correo el resumen de su jornada</em>. Desde entonces, a
+    primeros de cada mes le llega el PDF del mes anterior. Necesita tener correo en su ficha. Es la copia que la ley
+    pide entregar con la nómina a quien trabaja a tiempo parcial, y que el borrador del Real Decreto extiende a
+    todos.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/21-control-de-presencia.png" alt="El control de presencia con los dias trabajados, sus tramos y sus horas" loading="lazy">
+    <figcaption>El registro de jornada: los días con sus tramos y sus horas, y arriba el aviso de las jornadas abiertas.</figcaption>
+  </figure>
+
+  <h4>Un fichaje no se corrige</h4>
+
+  <p>
+    Un fichaje <strong>no se edita, no se borra y no se corrige</strong>: se queda como quedó. Es justo lo que hace
+    que este registro valga, porque uno que se pudiera reescribir no probaría nada. Cuando alguien se olvida de
+    fichar, RRHH abre una <strong>incidencia</strong> en su calendario laboral que explica lo que pasó y declara de
+    qué hora a qué hora trabajó de verdad (ver <em>Incidencias</em>, más abajo). En esta pantalla esas horas salen
+    en su día marcadas como <em>Declarado por RRHH</em>, y en la hoja de cálculo, con «(declarado por RRHH)».
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/28-fichajes.png" alt="La tabla de fichajes uno a uno" loading="lazy">
+    <figcaption>Los fichajes uno a uno, tal como se ficharon. Los corregidos antes de que dejara de poder corregirse se siguen viendo, marcados.</figcaption>
+  </figure>
+
+  <h4>Los días que salen marcados</h4>
+
+  <p>
+    Si alguien ficha la entrada y se va sin fichar la salida, ese día sale como <strong>jornada abierta</strong>
+    y <strong>sin horas</strong>. No se le inventa una hora de cierre a propósito: un registro con horas que
+    nadie fichó es peor que uno incompleto, porque el incompleto se ve y el inventado no. La entrada se queda
+    abierta, y pasadas <strong>16 horas</strong> se da por olvidada: el siguiente fichaje de esa persona vuelve a
+    ser una entrada, no la salida de la víspera. Para que ese día cuente, RRHH declara las horas en una
+    incidencia.
+  </p>
+
+  <p>
+    Un turno que cruza la medianoche se cuenta entero en el día en que empezó, que es como lo cuenta quien
+    hace las nóminas, y lo que se trabaja al volver de una pausa sigue siendo de ese día. Una pausa de la que no
+    se vuelve en 16 horas se queda sin final: no se le inventa uno.
+  </p>
+
+  <h4>La hora del centro</h4>
+
+  <p>
+    Un fichaje no es una hora que alguien escribe, como la de una cita: es el momento exacto en que se pulsa
+    el botón. Para saber a qué día y a qué tramo pertenece, la aplicación necesita saber en qué huso vive el
+    centro, y viene puesta en <strong>Europe/Madrid</strong>. Un centro fuera de la España peninsular lo
+    cambia con la variable <code>TURNERA_TZ</code> al instalar; si no, los tramos saldrían desplazados
+    aunque las horas sumadas fueran correctas.
+  </p>
+
+  <h3 id="calendario-laboral">Calendario laboral</h3>
+  <span class="ruta">Menú → Personal → Calendario laboral</span>
+
+  <p>
+    El calendario laboral reparte a lo largo del año <strong>las horas que marca el convenio</strong> de cada
+    profesional: qué días trabaja y en qué turno, sus vacaciones, sus ausencias y los festivos. Lo lleva quien
+    tenga el rol <strong>RRHH</strong> (o los permisos «Ver los calendarios laborales» y «Planificar los
+    calendarios laborales»). Es un plan: lo que de verdad se trabajó sigue siendo lo fichado, y la pantalla
+    compara una cosa con la otra.
+  </p>
+  <p>
+    Arriba del calendario se cambia entre <strong>Planificación</strong> (lo que se ha planificado) y
+    <strong>Ejecución</strong> (lo que se ha fichado). Son dos cosas distintas: que alguien trabaje un festivo no
+    se planifica, se ficha, y esas horas no son normales sino extra.
+  </p>
+
+  <h4>Lo que se prepara una vez</h4>
+  <ul>
+    <li><strong>Convenio</strong>: lo acuerda el centro y es <strong>uno por año para toda la plantilla</strong> y
+      todas sus sedes: el nombre, las horas de trabajo al año a jornada completa y los días de vacaciones, naturales
+      (los 30 del Estatuto) o laborables (sin contar fines de semana ni festivos). Cada calendario toma el de su año;
+      no se elige persona a persona.</li>
+    <li><strong>Turnos</strong>: «Mañana 9-14», «Tarde 15-21»… Uno que acaba antes de empezar es de noche y
+      termina al día siguiente. <strong>Un día lleva un solo turno</strong>: para quien hace mañana y tarde se crea
+      un turno partido, con <em>Añadir tramo (turno partido)</em> o con <em>Empezar como partido</em>, que lo deja en
+      09:00-14:00 y 16:00-20:00 para ajustarlo. La pausa es el hueco entre un tramo y el siguiente, y no cuenta como
+      trabajada.</li>
+    <li><strong>Ausencias</strong>: baja, permiso retribuido, permiso sin sueldo… Cada una dice si ese día cuenta
+      como trabajado para las horas del convenio. De una baja se apunta que es una baja, nunca el diagnóstico.</li>
+    <li><strong>Festivos</strong>: en <em>Ajustes</em> se elige la comunidad autónoma del centro, y en
+      <em>Festivos</em> el botón trae los nacionales y los de esa comunidad para el año.</li>
+  </ul>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/37-turnos.png" alt="La lista de turnos del centro con sus tramos y sus horas" loading="lazy">
+    <figcaption>Los turnos del centro. Uno partido lleva sus dos tramos, y la pausa entre ellos no cuenta como trabajada.</figcaption>
+  </figure>
+
+  <div class="ojo">
+    <p><strong>Los festivos locales no se importan.</strong> Los dos de cada municipio no los publica nadie de
+      forma fiable, así que hay que añadirlos a mano en <em>Festivos → Añadir festivo local</em>. La pantalla
+      avisa de cuántos locales hay puestos: si pone cero, faltan.</p>
+  </div>
+
+  <h4>El calendario de cada profesional</h4>
+  <p>
+    En <em>Calendarios</em> salen todos los profesionales del centro con cómo va el suyo en el año elegido.
+    <em>Crear</em> toma el convenio del año y pide la jornada (100&nbsp;% a jornada completa, 50&nbsp;% a media) y,
+    si caen dentro del año, las fechas de <strong>alta y baja</strong>: con ellas las horas y las vacaciones se prorratean solas,
+    que es lo que hace falta para una liquidación o un finiquito. A media jornada se tienen las mismas vacaciones
+    y la mitad de horas.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/32-calendarios.png" alt="La lista de calendarios del año con las horas del convenio, las planificadas y las que quedan de cada profesional" loading="lazy">
+    <figcaption>Los calendarios del año: cuántas horas marca el convenio a cada uno, cuántas lleva planificadas y cuántas le quedan por repartir o le sobran.</figcaption>
+  </figure>
+  <p>
+    Para repartir el año se elige arriba qué poner —un turno, vacaciones, una ausencia o <em>Libre</em> para
+    quitar— y se pincha un día, o se arrastra de un día a otro para marcar todos los de en medio. Cada día tiene
+    una sola cosa: si es de turno no puede ser a la vez vacaciones. <strong>Antes del alta y después de la baja no
+    se planifica</strong>: esos días no cuentan para las horas, así que la pantalla se los salta y avisa de cuántos.
+    <em>Rellenar por días de la semana</em> lo pone de una vez en, por ejemplo, los lunes a viernes de enero a
+    junio, saltándose los festivos y sin tocar lo ya puesto. A la derecha, <strong>las cuentas se rehacen con
+    cada cambio</strong>: horas del convenio, planificadas, las que quedan por repartir (o las que sobran), las
+    vacaciones puestas frente a las que le corresponden y cuántas le quedan, y hasta ayer, lo planificado frente a lo fichado.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/33-calendario-planificacion.png" alt="El año de una profesional pintado con su turno partido, sus vacaciones y los festivos, con las cuentas al lado" loading="lazy">
+    <figcaption>El año de una profesional que entró en septiembre. Lo de antes del alta no se planifica, y las horas y las vacaciones del convenio se prorratean.</figcaption>
+  </figure>
+  <p>
+    Debajo salen los <strong>avisos</strong> del Estatuto de los Trabajadores: menos de 12 horas de descanso entre
+    dos jornadas, más de 9 horas en un día, más de 6 horas seguidas sin una pausa de 15 minutos, menos de 3 días
+    libres en 14, turno en un festivo, más vacaciones de las que tocan o días marcados fuera de las fechas de alta
+    y baja. Si alguien trabaja de noche (de 22:00 a 06:00) avisa además de que el Estatuto lo trata como trabajo
+    nocturno, con una media máxima de 8 horas en 15 días y no más de dos semanas seguidas de turno de noche, salvo
+    que sea voluntario. Cada aviso trae el enlace <em>Leer el artículo</em>, que abre el texto del Estatuto para
+    comprobarlo. Al dar de alta un convenio con menos de 30 días naturales de vacaciones (22 laborables) también
+    sale el aviso. Son avisos y no impiden guardar: hay convenios que permiten otra cosa y quien sabe lo que se
+    firmó es RRHH.
+  </p>
+  <p>
+    <em>Duplicar en otro profesional</em> copia el calendario tal cual a otros del centro (si ya tenían uno ese
+    año, se sustituye, y la pantalla lo avisa antes). <em>Descargar PDF</em> saca el año en una hoja, para
+    colgarlo en el tablón o dárselo a la gestoría.
+  </p>
+  <p>
+    <em>Borrar este calendario</em> lo quita con todos sus días, también los ya pasados, lo que cambia las horas
+    hechas y las de fuera de turno de ese año. Por eso pide escribir a mano el nombre del profesional.
+  </p>
+
+  <h4 id="calendario-cerrar">Cerrar el año</h4>
+  <p>
+    Cuando un año ha terminado y está repasado, en <em>Calendarios</em>, con ese año elegido, <em>Cerrar</em> lo
+    deja <strong>como está, para la Inspección de Trabajo</strong>: desde entonces nada de ese año cambia en el
+    centro —ni los calendarios ni sus días, ni las incidencias, ni las compensaciones, ni los festivos, ni el
+    convenio de ese año—. Se puede consultar e imprimir. Si después se edita un turno que ese año usaba, el año
+    cerrado <strong>se queda con el horario que tenía</strong> (Turnera guarda una copia retirada del turno), y el
+    margen de horas fuera de turno que vale es el que había al cerrarlo. Se confirma escribiendo el año y
+    <strong>no se reabre</strong>. Un año no se puede cerrar antes del <strong>1 de mayo del siguiente</strong>: hasta
+    el 30 de abril aún se pueden dar descansos por sus horas de fuera de turno (ver más abajo).
+  </p>
+
+  <h4>Lo ejecutado: horas normales y horas fuera de turno</h4>
+  <p>
+    En <em>Ejecución</em> cada día fichado sale coloreado: en verde si todo fueron <strong>horas normales</strong>
+    y en naranja si hubo <strong>horas fuera de turno</strong>. Pasando el ratón por encima se ven las horas fichadas.
+    Las reglas:
+  </p>
+  <ul>
+    <li>Lo fichado <strong>dentro del turno</strong> planificado son horas normales.</li>
+    <li>Lo fichado <strong>fuera del turno</strong> son horas fuera de turno solo si pasa del <strong>margen</strong> del centro
+      (15 minutos de fábrica, se cambia en <em>Ajustes</em>): entrar cinco minutos antes no es hacer horas. Si
+      pasa del margen, cuenta entero: quien se queda cuarenta minutos ha hecho cuarenta.</li>
+    <li>Todo lo fichado en un <strong>festivo</strong>, en vacaciones, en una ausencia o en un día sin turno son
+      horas fuera de turno.</li>
+    <li>Una entrada sin salida no suma nada hasta que RRHH declara las horas en una incidencia.</li>
+    <li>Un turno de noche, que cruza la medianoche, se cuenta entero en el día en que empezó. La noche en que
+      cambia la hora cuenta las horas que pasaron de verdad: nueve en octubre y siete en marzo para un turno de
+      22:00 a 06:00.</li>
+  </ul>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/34-calendario-ejecucion.png" alt="El mismo año en la vista de ejecución, con los días fichados en verde, los festivos fichados en naranja y una incidencia" loading="lazy">
+    <figcaption>El mismo año en <em>Ejecución</em>: en verde lo fichado dentro del turno, en naranja los días con horas fuera de turno, como un festivo en que fichó, y el «!» de una incidencia.</figcaption>
+  </figure>
+  <p>
+    Las horas fuera de turno van a la <strong>bolsa de horas</strong> del profesional, a la derecha. Quien tenga el
+    permiso «Compensar horas fuera de turno» (de fábrica, RRHH y Dirección) las descuenta con <em>Compensar
+    horas</em>, como <strong>pagadas en nómina</strong> o como <strong>descanso compensatorio</strong>. El saldo
+    pendiente es lo que queda por compensar. Un descanso compensa <strong>primero las horas más antiguas</strong>.
+  </p>
+  <p>
+    Turnera no decide si unas horas fuera de turno son <em>extraordinarias</em>: eso lo decide RRHH según el
+    contrato y el convenio. Lo que sí vigila es el tope que el Estatuto de los Trabajadores pone a las
+    extraordinarias, <strong>80 horas al año</strong> (art. 35.2; en un contrato a tiempo parcial, proporcional a su
+    jornada). Si las horas fuera de turno del año, sin contar las devueltas en descanso <strong>dentro de plazo</strong>,
+    pasan de ese tope, sale un aviso. El plazo es de <strong>cuatro meses</strong> desde que se hicieron las
+    horas (art. 35.1): el descanso de las de septiembre puede darse en enero. Por eso la fecha de una compensación
+    puede caer hasta el <strong>30 de abril del año siguiente</strong>. Si un descanso llega pasado el plazo, se
+    guarda igual, se marca <em>fuera de plazo</em> y esas horas siguen contando para el tope. Es un aviso: Turnera
+    no impide apuntar nada.
+  </p>
+
+  <h4>Incidencias</h4>
+  <p>
+    Con el permiso «Registrar incidencias» (de fábrica, RRHH y Dirección) aparece <em>Incidencia</em> junto a los
+    turnos. Con ella elegida, pinchar un día abre sus incidencias: se escribe lo que pasó y se pueden subir
+    <strong>hasta 3 fotos</strong>. La incidencia se pone <strong>encima</strong> de lo que tenga el día —un turno,
+    unas vacaciones— sin cambiarlo, y el día queda marcado con un <strong>«!»</strong> rojo. Se pueden corregir y
+    borrar (salvo las que declaran horas, más abajo), y dicen quién las anotó y cuándo. Son solo de RRHH: el profesional no las ve en <em>Mi calendario</em>.
+  </p>
+  <p>
+    <strong>Un fichaje olvidado se arregla con una incidencia.</strong> Al escribirla, marque <em>Declarar la jornada
+    real (fichaje olvidado)</em> y ponga de qué hora a qué hora trabajó esa persona (si la hora de fin es anterior a
+    la de inicio, es un turno que acaba al día siguiente). El fichaje no se toca: esas horas se suman a lo fichado ese
+    día, el día deja de salir como jornada abierta y las horas normales y extra se cuentan con eso. No puede pisar lo
+    que ya está fichado ese día, porque eso ya cuenta.
+  </p>
+  <p>
+    Una incidencia que declara horas es parte del registro de jornada, así que <strong>no se cambia ni se borra</strong>,
+    ni se le quitan fotos (sí se le pueden añadir). Si estaba mal, se abre otra para el mismo día: la nueva es la que
+    cuenta y la anterior se queda a la vista, marcada como <em>Sustituida</em>. Al guardarla, el profesional recibe
+    un <strong>correo</strong> con el día, las horas declaradas y la explicación, para que sepa qué consta en su
+    registro.
+  </p>
+  <p>
+    Además, la próxima vez que teclee su PIN en el reloj, se le pregunta si está <strong>conforme</strong> con esas
+    horas. Mientras no conteste, la incidencia sale como <em>Pendiente de conformidad</em>; si dice que no, sale como
+    <em>No conforme</em> con su motivo, aquí, en el control de presencia y en todo lo que se descarga. Las horas
+    cuentan igual en los dos casos: si no hay acuerdo, el registro refleja lo que declaró la empresa y el desacuerdo
+    de la persona, que es lo que pide el borrador del Real Decreto de registro de jornada.
+  </p>
+
+  <h4>El cuadrante</h4>
+  <p>
+    <em>Calendario laboral → Cuadrante</em> enseña la semana de toda la plantilla: quién trabaja cada día y en qué
+    turno, quién está de vacaciones, de ausencia o libre, y cuántos trabajan cada día. El día de hoy va resaltado y
+    marca quién está <strong>dentro ahora mismo</strong>, según lo fichado. Quien no tiene calendario laboral no
+    sale en el cuadrante.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/35-cuadrante.png" alt="El cuadrante de la semana con el turno de cada profesional y quién está dentro ahora" loading="lazy">
+    <figcaption>El cuadrante de la semana. Hoy va resaltado, con quién está dentro ahora mismo.</figcaption>
+  </figure>
+
+  <h4>El resumen de horas</h4>
+  <p>
+    <em>Calendario laboral → Horas</em> da, para cada profesional y cada mes entre dos fechas, las horas
+    <strong>planificadas</strong>, las <strong>fichadas</strong> y, de estas, las <strong>normales</strong> y las
+    <strong>extra</strong>, con un total por persona si hay varios meses. <em>Descargar CSV</em> lo saca para la
+    gestoría. Un mes sin calendario laboral lo dice, y ahí todo lo fichado sale como normal.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/36-resumen-de-horas.png" alt="El resumen de horas del mes por profesional, con las planificadas, las fichadas, las normales y las de fuera de turno" loading="lazy">
+    <figcaption>El resumen de horas del mes, que se descarga en CSV para la gestoría.</figcaption>
+  </figure>
+
+  <h4 id="calendario-ausencias-parciales">Ausencias parciales</h4>
+  <p>
+    Un rato cerrado para una persona (<em>Agenda → Cerrar un rato</em>) cuenta como ausencia parcial en su
+    calendario laboral. Si se marcó <em>Descontar de las horas</em>, el resumen de horas añade la columna
+    <strong>descontadas</strong>: esos minutos se restan de las horas <strong>normales</strong> del día (lo fichado
+    no se toca), y también del cómputo del convenio y de la proyección a fin de año. Si no se marcó, sale en el
+    calendario como ausencia informativa. Solo descuenta lo que cae dentro del turno de un día laborable; en un
+    festivo o fuera de turno no resta. El registro de jornada mensual y los CSV traen también los minutos
+    descontados.
+  </p>
+  <p>
+    <strong>En el calendario del año cada ausencia parcial lleva un punto en su día</strong>: relleno si descuenta,
+    hueco si es solo informativa. Al pasar el ratón dice las horas. Quien puede cerrar ratos en la agenda también
+    puede <strong>añadirlas desde aquí</strong>, con <em>Añadir ausencia parcial</em> junto al resumen de lo
+    ejecutado: se elige el día, las horas, el motivo y, si tiene permiso, si descuenta. Es el mismo cierre de la
+    agenda, así que ese rato tampoco se ofrece al reservar. Para quitarla, la papelera de su fila: reabre también el
+    rato en la agenda y devuelve las horas si se habían descontado. En un año cerrado no se puede ni añadir ni
+    quitar.
+  </p>
+
+  <h4>La proyección a fin de año</h4>
+  <p>
+    Debajo del calendario de cada profesional, un gráfico acumula lo planificado mes a mes, lo fichado hasta hoy y,
+    <strong>al ritmo que lleva</strong>, cuánto sumaría a fin de año, frente a las horas del convenio. Si a ese
+    ritmo llegaría a las horas del convenio antes de acabar el año, dice qué día: es el momento de darle vacaciones
+    o de dejar de contar con esa persona para más horas. Solo lo ve quien planifica, no el profesional.
+  </p>
+
+  <h4>Avisos de fichaje olvidado</h4>
+  <p>
+    Si según su calendario alguien tenía que haber entrado y pasado el <strong>margen para horas fuera de turno</strong> no
+    ha fichado, o tenía que haber salido y pasado el margen sigue dentro, sale un <strong>correo</strong>. Con el
+    margen de fábrica son 15 minutos; nunca se avisa antes de 15, aunque el margen sea menor. Así, quien se queda
+    unos minutos de más dentro del margen, que todavía es jornada normal, no recibe un aviso falso. En los
+    <em>Ajustes</em> del calendario laboral se decide si se avisa, y a quién: al profesional (al correo de su
+    ficha), a RRHH o a los dos. Ahí mismo se apunta el <strong>correo de la persona de RRHH</strong>; si se deja
+    vacío, los avisos de RRHH van al correo de administración del centro (<em>Preferencias</em>). Un tramo da como
+    mucho un aviso de entrada y uno de salida. En festivo no se avisa. Cuando exista la aplicación del móvil, el
+    aviso llegará también allí.
+  </p>
+
+  <h4>En la agenda</h4>
+  <p>
+    En las vistas por profesional, la agenda sombrea en gris, con rayas blancas, lo que queda <strong>fuera de su
+    turno</strong> y los días de vacaciones, ausencia o festivo. Lo de fuera de turno no lleva texto encima: al
+    pasar el ratón dice <em>Fuera de turno</em>. Las vacaciones, ausencias y festivos sí lo llevan escrito. De entrada solo lo marca y deja citar igual. Si en
+    <em>Calendario laboral → Ajustes</em> se activa <em>El calendario laboral bloquea la agenda</em>, ya no deja
+    poner ni mover una cita fuera del turno. Quien no tiene calendario ese año no se ve afectado.
+  </p>
+
+  <h4 id="mi-calendario">Lo que ve cada profesional</h4>
+  <p>
+    Cada profesional tiene derecho a saber su horario y sus vacaciones sin necesitar ningún permiso, y a ver lo que ha
+    fichado, sus horas normales y extra y su bolsa de horas, pero no las incidencias ni la proyección. Eso está
+    pensado para la aplicación del profesional; en la web, que usa la oficina, no hay entrada «Mi calendario» en el
+    menú, porque el usuario con el que se entra no es de ningún profesional.
+  </p>
+
+</section>
+
 <section id="historia">
-  <h2>10. La historia clínica</h2>
+  <h2>11. La historia clínica</h2>
 
   <p>
     En los centros que la usan, cada cliente tiene antecedentes y casos, y cada caso sus evoluciones. Se imprime en
@@ -3669,8 +3732,51 @@ footer{
   </p>
 </section>
 
+<section id="mantenimiento">
+  <h2>Mantenimiento (módulo opcional)</h2>
+  <p>
+    Si el centro tiene el módulo de <strong>Mantenimiento</strong>, aparece en el menú, dentro de <em>Catálogo</em>. Cada
+    avería o trabajo es un <strong>parte</strong>: con título, objetivo, descripción, zona y equipo, tipo, prioridad y
+    fecha límite. Un parte pasa por <em>abierto, asignado, en curso, en espera, resuelto y cerrado</em>, o se anula con
+    motivo. Todo lo que ocurre queda en la <strong>historia</strong> del parte, con su autor y su hora, y no se puede
+    borrar ni cambiar.
+  </p>
+  <p>
+    A cada parte se le suben <strong>fotos por fase</strong> (problema, antes, durante, después y documento), hasta diez
+    por fase; cada foto guarda quién la subió, cuándo y su huella, para que nadie pueda decir que se cambió. Los permisos
+    son ocho (ver, abrir partes, gestionar, cerrar, anular, zonas y equipos, exportar y enlaces). Trae un rol propio,
+    <strong>Mantenimiento</strong>, que lleva los partes, sus zonas y sus equipos pero no anula partes ni da enlaces a la
+    Inspección; <em>Dirección</em> lo tiene todo salvo los enlaces, y el <em>Administrador del sistema</em> también esos.
+    Recepción, Profesional y RRHH pueden ver y avisar.
+  </p>
+  <p>
+    <strong>Enlaces para la Inspección:</strong> desde la propia pantalla se crea un enlace de solo lectura (de 1 a 90
+    días) que enseña los partes, su historia y sus fotos y deja descargar CSV, sin usuario. Se puede revocar cuando se
+    quiera y cada acceso queda anotado. Los partes se exportan también a CSV desde el listado.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/38-mantenimiento-lista.png" alt="El listado de partes de mantenimiento, con un parte vencido marcado en rojo y los enlaces para la Inspección debajo" loading="lazy">
+    <figcaption>El listado: los pendientes con su prioridad, su estado y quién los lleva. El parte vencido se marca en rojo.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/39-mantenimiento-parte.png" alt="Un parte en curso con sus fotos por fase y su historia" loading="lazy">
+    <figcaption>Un parte: lo que se quiere conseguir, las fotos por fase y, debajo, la historia que no se puede borrar.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/40-mantenimiento-parte-cerrado.png" alt="Un parte cerrado con la foto del antes y la del después" loading="lazy">
+    <figcaption>Un parte cerrado, con el antes y el después y todo lo que pasó hasta cerrarlo.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/41-mantenimiento-inspeccion.png" alt="La página de solo lectura que ve la Inspección con el enlace" loading="lazy">
+    <figcaption>Lo que ve la Inspección con su enlace: los partes, su historia y sus fotos, sin usuario y de solo lectura.</figcaption>
+  </figure>
+</section>
 <section id="problemas">
-  <h2>11. Cuando algo no sale</h2>
+  <h2>12. Cuando algo no sale</h2>
 
   <h3>«No me deja poner la cita»</h3>
   <p>
