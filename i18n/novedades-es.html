@@ -627,6 +627,7 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-10-16-nomina">16 de octubre de 2026 · Código de nómina y cierre de cada mes</a></li>
     <li><a href="#2026-10-13-agenda">13 de octubre de 2026 · Ratos cerrados que se repiten y se arrastran, y una agenda más limpia</a></li>
     <li><a href="#2026-10-12-ausencias">12 de octubre de 2026 · Reabrir ratos cerrados y ausencias parciales</a></li>
     <li><a href="#2026-10-12-franjas">12 de octubre de 2026 · Color de las franjas de la agenda</a></li>
@@ -663,10 +664,34 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-10-16-nomina" class="version">
+  <div class="version__cabecera">
+    <h2>16 de octubre de 2026 · Código de nómina y cierre de cada mes</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">2026.10.137-0870b48</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"/></svg></span>Nuevas características</h3>
+    <h4>Cerrar cada mes para la nómina</h4>
+    <ul>
+      <li>En <em>Cierres</em> salen los meses del año con su estado. Al mandar un mes a la gestoría, <em>Cerrar el mes</em> lo deja <strong>como se mandó</strong>.</li>
+      <li>Mientras un mes está cerrado no se pueden cambiar sus incidencias, los días de los calendarios de ese mes, las compensaciones fechadas en él ni sus festivos. Los fichajes nunca se tocaban.</li>
+      <li>Si después se edita un turno que ese mes usaba, el mes cerrado se queda con el horario que tenía.</li>
+      <li>Un mes se cierra a partir del día 1 del siguiente. A diferencia del año, <strong>un mes se puede reabrir</strong> para regularizar una nómina: se pide el motivo y queda escrito con la fecha y quién lo hizo.</li>
+    </ul>
+    <h4>El código con el que la gestoría conoce a cada persona</h4>
+    <ul>
+      <li>En la ficha de cada profesional hay un campo <em>Código en nómina o ERP</em>, y en la ficha de la delegación, <em>Código de empresa en nómina o ERP</em>.</li>
+      <li>El Excel y los CSV del registro de jornada llevan una columna <strong>Código</strong>, y el de la delegación sale en la hoja «Empresa y periodo». Quien recibe el fichero no tiene que cruzar a mano por nombre.</li>
+      <li>Son opcionales, y dos profesionales de la misma delegación no pueden tener el mismo.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-10-13-agenda" class="version">
   <div class="version__cabecera">
     <h2>13 de octubre de 2026 · Ratos cerrados que se repiten y se arrastran, y una agenda más limpia</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">2026.10.95-bd520eb</span></p>
 

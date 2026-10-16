@@ -630,6 +630,7 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-10-16-nomina">16. Oktober 2026 · Lohncode und Abschluss jedes Monats</a></li>
     <li><a href="#2026-10-13-agenda">13. Oktober 2026 · Gesperrte Zeitspannen, die sich wiederholen und verschieben lassen, und eine aufgeräumtere Agenda</a></li>
     <li><a href="#2026-10-12-ausencias">12. Oktober 2026 · Gesperrte Zeitspannen wieder öffnen und Teilabwesenheiten</a></li>
     <li><a href="#2026-10-12-franjas">12. Oktober 2026 · Farbe der Streifen in der Agenda</a></li>
@@ -665,10 +666,34 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-10-16-nomina" class="version">
+  <div class="version__cabecera">
+    <h2>16. Oktober 2026 · Lohncode und Abschluss jedes Monats</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">2026.10.137-0870b48</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Jeden Monat für die Lohnabrechnung abschließen</h4>
+    <ul>
+      <li>Unter <em>Abschlüsse</em> zeigt die Monate des Jahres mit ihrem Status. Wenn ein Monat an die Steuerkanzlei geht, <em>Monat abschließen</em> lässt ihn <strong>so, wie er abgeschickt wurde</strong>.</li>
+      <li>Solange ein Monat abgeschlossen ist, lassen sich seine Vorfälle, die Tage der Kalender dieses Monats, die darin datierten Ausgleiche und seine Feiertage nicht ändern. Die Stempelungen wurden nie angetastet.</li>
+      <li>Wird danach eine Schicht bearbeitet, die der Monat verwendet hat, behält der abgeschlossene Monat den Zeitplan, den er hatte.</li>
+      <li>Ein Monat wird ab dem 1. des Folgemonats abgeschlossen. Anders als das Jahr kann <strong>ein Monat wieder geöffnet werden,</strong> um eine Lohnabrechnung zu berichtigen: Der Grund wird erfragt und mit Datum und Person festgehalten.</li>
+    </ul>
+    <h4>Der Code, unter dem die Steuerkanzlei jede Person kennt</h4>
+    <ul>
+      <li>In der Akte jeder Fachkraft gibt es ein Feld <em>Code in Lohnabrechnung oder ERP</em> und in der Akte der Filiale <em>Firmencode in Lohnabrechnung oder ERP</em>.</li>
+      <li>Das Excel und die CSV-Dateien der Arbeitszeiterfassung enthalten eine Spalte <strong>Code</strong>, und der Code der Filiale steht im Blatt „Unternehmen und Zeitraum“. Wer die Datei erhält, muss nicht mehr von Hand nach Namen abgleichen.</li>
+      <li>Sie sind optional, und zwei Fachkräfte derselben Filiale dürfen nicht denselben haben.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-10-13-agenda" class="version">
   <div class="version__cabecera">
     <h2>13. Oktober 2026 · Gesperrte Zeitspannen, die sich wiederholen und verschieben lassen, und eine aufgeräumtere Agenda</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">2026.10.95-bd520eb</span></p>
 
