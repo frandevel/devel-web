@@ -662,6 +662,7 @@ footer{
     <li><a href="#profesionales" class="sub">Profesionales</a></li>
     <li><a href="#presencia" class="sub">Fichar y control de presencia</a></li>
     <li><a href="#cifras-pin" class="sub sub">Cuántas cifras lleva el PIN</a></li>
+    <li><a href="#fichar-donde" class="sub sub">Desde dónde se ficha</a></li>
     <li><a href="#fichar-lo-mio" class="sub sub">Lo que ve cada uno tras su PIN</a></li>
     <li><a href="#presencia-enlaces" class="sub sub">Acceso de la Inspección y de la representación</a></li>
     <li><a href="#presencia-resumen-mensual" class="sub sub">El resumen mensual por correo</a></li>
@@ -678,7 +679,15 @@ footer{
     <li><a href="#historia-medicamentos" class="sub">Medicamentos en el tratamiento</a></li>
     <li><a href="#seguimiento" class="sub">En un centro de entrenamiento: el seguimiento del alumno</a></li>
     <li><a href="#mantenimiento">12. Mantenimiento</a></li>
+    <li><a href="#mantenimiento-quien" class="sub">Quién lleva un parte, y soltarlo</a></li>
+    <li><a href="#mantenimiento-movil" class="sub">Desde el móvil: la app de los profesionales</a></li>
     <li><a href="#problemas">13. Cuando algo no sale</a></li>
+    <li><a href="#app-nativa">14. La aplicación nativa de los profesionales (Android)</a></li>
+    <li><a href="#app-entrar" class="sub">Entrar y elegir la sede</a></li>
+    <li><a href="#app-fichar" class="sub">Fichar con el PIN</a></li>
+    <li><a href="#app-menu" class="sub">El menú y la versión</a></li>
+    <li><a href="#app-lo-mio" class="sub">Mis fichajes, mi calendario y mi agenda</a></li>
+    <li><a href="#app-mantenimiento" class="sub">Los partes de mantenimiento</a></li>
   </ol>
 </nav>
 <div class="contenido">
@@ -3261,6 +3270,58 @@ footer{
     juntos son lo que se enseña cuando alguien pregunta.
   </p>
 
+  <h4 id="pin-provisional">PIN provisional</h4>
+  <span class="ruta">Personal → Profesionales → PIN de fichaje</span>
+
+  <p>
+    Un PIN que <strong>pone o restablece administración</strong> es <strong>provisional</strong>, porque lo conoce
+    quien lo puso. Con él la persona no ficha, ni en la web ni en la aplicación de los profesionales, ni firma su
+    resumen mensual: al teclearlo, Turnera le pide <strong>elegir uno suyo</strong> (distinto del provisional y de
+    las cifras que pida el centro), y a partir de ahí es solo suyo. Así RRHH nunca llega a conocer el PIN con el que
+    alguien firma. Los PIN que ya estaban puestos antes de esta mejora no se tocan.
+  </p>
+
+  <h4 id="firma-resumen">Firma del resumen mensual</h4>
+  <span class="ruta">Administración → Control de presencia → Firma del resumen mensual</span>
+
+  <p>
+    Si se activa, el <strong>día 1 de cada mes</strong>, con el mes ya cerrado, cada profesional con correo recibe un
+    enlace a su resumen de horas. Entrando con el enlace y <strong>el PIN con el que ficha</strong> ve sus días y el
+    total del mes, marca las dos casillas —que lo ha leído y que acepta que lo que figura es correcto— y
+    <strong>firma con el dedo</strong>. El PDF firmado, con la fecha y la hora, llega a su correo y al
+    <strong>correo de RRHH</strong> que se indica en el mismo apartado (sin él no se puede activar).
+  </p>
+
+  <p>
+    El enlace vale 30 días y se firma una sola vez. Si alguien no firma, <strong>no se le vuelve a mandar ni se le
+    recuerda</strong> solo; si el enlace caduca, RRHH tiene que reenviarlo. Quien tenga todavía el PIN provisional
+    tiene que cambiarlo en el reloj antes de poder firmar.
+  </p>
+  <h4 id="fichar-donde">Desde dónde se ficha</h4>
+  <span class="ruta">Administración → Control de presencia → Zona del centro</span>
+
+  <p>
+    Cuando se ficha con el móvil, Turnera apunta <strong>desde dónde</strong> se hizo, para que quien revise el
+    registro vea si fue en el centro o fuera. <strong>Nunca impide fichar</strong>: hay quien sale a otro local, a un
+    domicilio o a un curso, y fichar es una obligación del centro. Si el aparato no da la ubicación, o la persona no
+    la permite, se ficha igual y la entrada queda «sin ubicación».
+  </p>
+
+  <p>
+    El sitio se toma <strong>solo en el instante de fichar</strong>; no se sigue a nadie ni se mira entre fichajes.
+    No va dentro del registro de jornada: ni en los PDF, ni en las hojas de cálculo, ni en lo que se enseña a la
+    Inspección con un enlace. Se guarda aparte y lo ve solo quien tenga el permiso «Ver dónde se fichó» (de fábrica,
+    Dirección y RRHH), en una columna <em>Dónde</em> de la lista de fichajes: <em>En el centro</em>, <em>Fuera del
+    centro</em> con la distancia, o <em>Ubicación guardada</em> si el centro aún no ha definido su zona.
+  </p>
+
+  <p>
+    La <strong>zona del centro</strong> es un punto con un radio (150 m de fábrica, hasta 5 km). Quien tenga el permiso
+    «Configurar el reloj de fichar» la define estando en el centro con <em>Usar mi ubicación actual como centro</em>,
+    cambia el radio con <em>Guardar radio</em> o la quita con <em>Quitar la zona</em>. Los móviles son del centro,
+    compartidos o no; cada profesional ficha con su PIN.
+  </p>
+
   <h4 id="fichar-lo-mio">Lo que ve cada uno tras su PIN</h4>
 
   <p>
@@ -3797,6 +3858,35 @@ footer{
     quiera y cada acceso queda anotado. Los partes se exportan también a CSV desde el listado.
   </p>
 
+  <h3 id="mantenimiento-quien">Quién lleva un parte, y soltarlo</h3>
+  <p>
+    Un parte lo lleva una persona (o un proveedor externo) a la vez. Quien gestiona los partes lo <strong>asigna</strong>
+    desde el parte; y quien trabaja en Mantenimiento puede <strong>quedarse</strong> con uno que esté sin asignar, sin
+    esperar a que se lo den. Al quedárselo pasa a <em>asignado</em>; sigue su camino con <em>En curso</em>,
+    <em>En espera</em> y <em>Resolver</em>.
+  </p>
+  <p>
+    Si alguien no puede seguir (acaba el turno, cae enfermo, el trabajo necesita a otra persona), no lo deja olvidado:
+    abre el menú <strong>Más</strong> del parte, elige <strong>Soltar parte</strong> y cuenta <strong>en qué punto queda el trabajo</strong>. El motivo es
+    obligatorio. El parte conserva su historia, sus fotos y su estado, queda <strong>sin responsable</strong> y lo puede
+    coger otra persona o asignarlo de nuevo el encargado. Un parte que estaba <em>asignado</em> vuelve a
+    <em>abierto</em>; uno <em>en curso</em> o <em>en espera</em> sigue como estaba, para que se vea que ya hay trabajo
+    hecho. En la historia queda anotado como <em>Soltado</em>, con quién lo llevaba y lo que escribió. Solo se
+    puede soltar un parte pendiente que tenga responsable: cada cual suelta el suyo, y quien tiene el permiso de
+    <em>Gestionar</em> puede soltar el de otra persona.
+  </p>
+
+  <h3 id="mantenimiento-movil">Desde el móvil: la app de los profesionales</h3>
+  <p>
+    El personal de mantenimiento no tiene por qué sentarse delante del ordenador. En la <strong>app de los
+    profesionales</strong> (Android), en la opción <em>Mantenimiento</em>, cada uno toca su nombre y escribe su
+    <strong>PIN</strong>, el mismo con el que ficha. Ve la lista de partes con su prioridad, su fecha límite y quién los
+    lleva (los vencidos, en rojo); en cada parte ve la historia y las fotos, <strong>saca fotos por fase</strong>
+    directamente con la cámara, se queda con un parte sin asignar y lo suelta con su motivo si no puede acabarlo. Lo que
+    se hace en la app queda en la misma historia que lo que se hace en la web, con la persona que puso su PIN como autora.
+    El manual de la aplicación, pantalla a pantalla, está en el <a href="#app-nativa">apartado 14</a>.
+  </p>
+
   <figure>
     <img src="/turnera/manual/imagenes/38-mantenimiento-lista.png" alt="El listado de partes de mantenimiento, con un parte vencido marcado en rojo y los enlaces para la Inspección debajo" loading="lazy">
     <figcaption>El listado: los pendientes con su prioridad, su estado y quién los lleva. El parte vencido se marca en rojo.</figcaption>
@@ -3813,9 +3903,15 @@ footer{
   </figure>
 
   <figure>
+    <img src="/turnera/manual/imagenes/42-mantenimiento-soltar.png" alt="El aviso para soltar un parte, que pide en qué punto queda el trabajo" loading="lazy">
+    <figcaption>Soltar un parte: se cuenta en qué punto queda, y el parte queda sin responsable para que lo coja otra persona.</figcaption>
+  </figure>
+
+  <figure>
     <img src="/turnera/manual/imagenes/41-mantenimiento-inspeccion.png" alt="La página de solo lectura que ve la Inspección con el enlace" loading="lazy">
     <figcaption>Lo que ve la Inspección con su enlace: los partes, su historia y sus fotos, sin usuario y de solo lectura.</figcaption>
   </figure>
+
 </section>
 <section id="problemas">
   <h2>13. Cuando algo no sale</h2>
@@ -3852,10 +3948,174 @@ footer{
   <h3>«He anulado una cita sin querer»</h3>
   <p>No se puede recuperar: hay que crearla otra vez con los mismos datos.</p>
 </section>
+<section id="app-nativa">
+  <h2>14. La aplicación nativa de los profesionales (Android)</h2>
+  <p>
+    <strong>Este apartado es el manual de la aplicación nativa para Android, no el de la web.</strong> Es una aplicación
+    aparte, que se instala en un móvil o en una tableta, pensada para que el personal fiche, vea lo suyo y lleve los partes
+    de mantenimiento sin sentarse delante del ordenador. Todo lo demás de este manual habla de la web de Turnera.
+  </p>
+  <p>
+    Lo que se hace en la aplicación queda en el mismo sitio que lo que se hace en la web: los fichajes en
+    <em>Fichar y control de presencia</em> y los partes en <em>Mantenimiento</em>.
+  </p>
+
+  <h3 id="app-entrar">Entrar y elegir la sede</h3>
+  <p>
+    La aplicación se prepara <strong>una sola vez por dispositivo</strong>: la dirección del centro entra con su
+    usuario y elige la sede donde va a estar. A partir de ahí el dispositivo queda con esa sesión compartida y cada
+    profesional se identifica con su <strong>PIN</strong>, el mismo con el que ficha en la web.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/43-app-entrar.png" alt="La pantalla de entrada de la aplicación nativa" loading="lazy">
+    <figcaption>La primera vez, la dirección entra con su usuario en el centro.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/44-app-sede.png" alt="La lista de sedes del centro en la aplicación nativa" loading="lazy">
+    <figcaption>Se elige la sede en la que está el dispositivo.</figcaption>
+  </figure>
+
+  <h3 id="app-fichar">Fichar con el PIN</h3>
+  <p>
+    En <em>Fichar</em> salen los profesionales de la sede. Cada uno toca su nombre y escribe su PIN. Quien todavía no
+    tiene PIN aparece apagado, con <em>sin PIN</em>: hay que dárselo desde la web, en <em>Personal</em>. Si el PIN lo
+    puso la dirección, es <strong>provisional</strong> y la aplicación pide elegir uno propio la primera vez (véase
+    <a href="#pin-provisional">PIN provisional</a>).
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/45-app-fichar-lista.png" alt="La lista de profesionales de la sede, con «sin PIN» en quien aún no lo tiene" loading="lazy">
+    <figcaption>Cada persona toca su nombre y escribe su PIN. Quien aún no tiene PIN aparece apagado.</figcaption>
+  </figure>
+
+  <p>
+    Tras el PIN se ve el estado de la persona (<em>Dentro</em>, <em>En pausa</em> o <em>Fuera</em>), desde cuándo, y los
+    botones que tocan en ese momento: <em>Entrada</em>, <em>Pausa</em> o <em>Salida</em>. La aplicación anota
+    <strong>desde dónde se ficha, solo en ese momento</strong>, y no sigue a nadie. <em>Volver</em> deja la pantalla lista
+    para la siguiente persona.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/46-app-panel.png" alt="El panel de una profesional que está dentro, con los botones Salida y Pausa" loading="lazy">
+    <figcaption>Tras el PIN: el estado, desde cuándo está dentro y los botones de fichaje.</figcaption>
+  </figure>
+
+  <h3 id="app-menu">El menú y la versión</h3>
+  <p>
+    El botón de las tres rayas abre el menú: <em>Fichar</em>, <em>Mantenimiento</em>, <em>Mis fichajes</em>,
+    <em>Mi calendario</em> y <em>Mi agenda</em>. Debajo se elige el idioma (español, inglés o alemán), se cierra la
+    sesión del dispositivo o se cambia de centro. Al pie del menú está la <strong>versión de la aplicación</strong>, que
+    conviene decir cuando se pide ayuda.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/47-app-menu.png" alt="El menú de la aplicación con las opciones, el idioma y la versión al pie" loading="lazy">
+    <figcaption>El menú. Al pie se ve la versión de la aplicación.</figcaption>
+  </figure>
+
+  <h3 id="app-lo-mio">Mis fichajes, mi calendario y mi agenda</h3>
+  <p>
+    Las tres opciones piden el PIN de la persona y enseñan solo lo suyo.
+  </p>
+  <ul>
+    <li><strong>Mis fichajes</strong>: lo trabajado en el mes y cada día con sus tramos. Con las flechas se pasa de mes.</li>
+    <li><strong>Mi calendario</strong>: el mes con los turnos, las vacaciones, las ausencias y los festivos, cada uno de su
+      color. Si el calendario laboral de la persona aún no está definido, la aplicación lo dice.</li>
+    <li><strong>Mi agenda</strong>: las citas del día con la hora, el cliente, el servicio, la cabina y el teléfono. Con las
+      flechas se pasa de día, y <em>Imprimir (A4)</em> saca la agenda en papel.</li>
+  </ul>
+  <figure>
+    <img src="/turnera/manual/imagenes/48-app-mis-fichajes.png" alt="Los fichajes del mes de una profesional, con el total trabajado" loading="lazy">
+    <figcaption>Mis fichajes: lo trabajado en el mes y cada día con sus tramos.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/50-app-mi-calendario.png" alt="El calendario laboral del mes de una profesional, con vacaciones y festivos de colores" loading="lazy">
+    <figcaption>Mi calendario: el mes con los turnos, las vacaciones, las ausencias y los festivos.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/51-app-mi-agenda.png" alt="La agenda del día de una profesional con sus citas y el botón Imprimir" loading="lazy">
+    <figcaption>Mi agenda: las citas del día, con el botón para imprimirlas en A4.</figcaption>
+  </figure>
+
+  <h3 id="app-mantenimiento">Los partes de mantenimiento</h3>
+  <p>
+    En <em>Mantenimiento</em> cada persona toca su nombre, escribe su PIN y ve los partes: los <strong>sin asignar</strong>,
+    los suyos y los que llevan otras personas, con su prioridad, su fecha límite y el aviso en rojo de los vencidos. Al
+    tocar uno se abre con lo que se quiere conseguir, sus fotos por fase y su historia. Lo que se hace aquí queda en la
+    misma historia que lo que se hace en la web (véase <a href="#mantenimiento">Mantenimiento</a>).
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/49-app-mantenimiento.png" alt="La lista de partes de mantenimiento en la aplicación, con uno vencido en rojo" loading="lazy">
+    <figcaption>La lista: primero los partes sin asignar y después los que llevan otras personas.</figcaption>
+  </figure>
+
+  <h4 id="app-tomar">Quedarse con un parte</h4>
+  <p>
+    Un parte sin asignar se coge con <em>Quedarme con este parte</em>. Mientras no es tuyo, el menú de los tres puntos solo
+    deja <em>Añadir un comentario</em>.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/52-app-parte-sin-asignar.png" alt="Un parte sin asignar en la aplicación, con la foto del problema, la historia y los botones Quedarme con este parte, Foto y el menú" loading="lazy">
+    <figcaption>Un parte sin asignar: lo que se quiere conseguir, las fotos, la historia y, abajo, los botones.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/53-app-parte-menu.png" alt="El menú de tres puntos de un parte ajeno, con la opción Añadir un comentario" loading="lazy">
+    <figcaption>En un parte que no es tuyo, el menú solo permite comentar.</figcaption>
+  </figure>
+
+  <h4 id="app-trabajar">Trabajar el parte y darlo por resuelto</h4>
+  <p>
+    Con el parte asignado, el botón grande pasa a ser <em>Empezar a trabajar</em> y, una vez en curso, <em>Resolver</em>,
+    que pide <strong>qué se ha hecho</strong> antes de cerrar el parte.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/54-app-parte-asignado.png" alt="Un parte asignado, con el botón Empezar a trabajar" loading="lazy">
+    <figcaption>Un parte asignado: «Lo lleva» y el botón para empezar a trabajar.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/58-app-parte-en-curso.png" alt="Un parte en curso, con el botón Resolver" loading="lazy">
+    <figcaption>Un parte en curso: el botón grande es ahora «Resolver».</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/59-app-resolver.png" alt="El aviso Dar por resuelto, que pregunta qué se ha hecho" loading="lazy">
+    <figcaption>Dar por resuelto: se cuenta qué se ha hecho. Sin texto no se puede enviar.</figcaption>
+  </figure>
+
+  <h4 id="app-foto">Sacar una foto</h4>
+  <p>
+    <em>Foto</em> abre la cámara directamente. La foto queda en el parte, en la fase que toca (el problema, durante el
+    trabajo o el resultado), con quién la hizo y cuándo.
+  </p>
+  <h4 id="app-soltar">En espera y soltar un parte</h4>
+  <p>
+    En el menú de los tres puntos de un parte propio hay dos opciones más. <em>En espera / Bloqueado</em> pregunta qué se
+    espera (un repuesto, un presupuesto…) o qué lo bloquea. <em>Soltar este parte</em> pide <strong>en qué punto queda el
+    trabajo</strong>; el parte conserva su historia y sus fotos, queda sin responsable y lo podrá coger otra persona. En los
+    dos casos el texto es obligatorio.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/55-app-parte-menu-asignado.png" alt="El menú de tres puntos de un parte propio, con Añadir un comentario, En espera y Soltar este parte" loading="lazy">
+    <figcaption>En un parte propio, el menú añade «En espera / Bloqueado» y «Soltar este parte».</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/57-app-en-espera.png" alt="El aviso En espera o Bloqueado, que pregunta qué se espera" loading="lazy">
+    <figcaption>En espera / Bloqueado: se cuenta qué se espera o qué lo bloquea.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/56-app-soltar.png" alt="El aviso Soltar el parte, que pide en qué punto queda el trabajo" loading="lazy">
+    <figcaption>Soltar el parte: se cuenta en qué punto queda y el parte queda para que lo coja otra persona.</figcaption>
+  </figure>
+
+</section>
 
 <footer>
   <p>
-    Turnera — manual de uso. Actualizado el 22 de septiembre de 2026.<br>
+    Turnera — manual de uso. Actualizado el 16 de octubre de 2026.<br>
     Este documento se mantiene junto al programa: cada cambio que altera cómo se usa algo se refleja aquí.
   </p>
 </footer>

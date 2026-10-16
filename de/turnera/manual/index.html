@@ -662,6 +662,7 @@ footer{
     <li><a href="#profesionales" class="sub">Mitarbeiter</a></li>
     <li><a href="#presencia" class="sub">Stempeln und Arbeitszeiterfassung</a></li>
     <li><a href="#cifras-pin" class="sub sub">Wie viele Ziffern die PIN hat</a></li>
+    <li><a href="#fichar-donde" class="sub sub">Von wo aus gestempelt wird</a></li>
     <li><a href="#fichar-lo-mio" class="sub sub">Was jede Person nach ihrer PIN sieht</a></li>
     <li><a href="#presencia-enlaces" class="sub sub">Zugang für Arbeitsinspektion und Belegschaftsvertretung</a></li>
     <li><a href="#presencia-resumen-mensual" class="sub sub">Die Monatsübersicht per E-Mail</a></li>
@@ -678,7 +679,15 @@ footer{
     <li><a href="#historia-medicamentos" class="sub">Arzneimittel in der Behandlung</a></li>
     <li><a href="#seguimiento" class="sub">In einem Trainingszentrum: die Begleitung des Schülers</a></li>
     <li><a href="#mantenimiento">12. Wartung</a></li>
+    <li><a href="#mantenimiento-quien" class="sub">Wer einen Auftrag übernimmt, und ihn abgeben</a></li>
+    <li><a href="#mantenimiento-movil" class="sub">Vom Handy aus: die App der Mitarbeitenden</a></li>
     <li><a href="#problemas">13. Wenn etwas nicht klappt</a></li>
+    <li><a href="#app-nativa">14. Die native App der Mitarbeitenden (Android)</a></li>
+    <li><a href="#app-entrar" class="sub">Anmelden und den Standort wählen</a></li>
+    <li><a href="#app-fichar" class="sub">Mit der PIN stempeln</a></li>
+    <li><a href="#app-menu" class="sub">Das Menü und die Version</a></li>
+    <li><a href="#app-lo-mio" class="sub">Meine Stempelungen, mein Kalender und mein Terminkalender</a></li>
+    <li><a href="#app-mantenimiento" class="sub">Wartungsaufträge</a></li>
   </ol>
 </nav>
 <div class="contenido">
@@ -2781,6 +2790,40 @@ footer{
     zusammen sind sie das, was man zeigt, wenn jemand fragt.
   </p>
 
+  <h4 id="pin-provisional">Vorläufige PIN</h4>
+  <span class="ruta">Personal → Mitarbeitende → Stempel-PIN</span>
+
+  <p>
+    Eine PIN, die <strong>die Verwaltung setzt oder zurücksetzt</strong> ist <strong>vorläufig</strong>, weil sie derjenige kennt, der sie gesetzt hat. Mit ihr kann die Person weder stempeln, weder im Web noch in der App der Mitarbeitenden, noch ihre Monatsübersicht unterschreiben: Beim Eintippen fordert Turnera sie auf, <strong>eine eigene zu wählen</strong> (anders als die vorläufige und als die Stellenzahl, die der Betrieb verlangt), und von da an gehört sie allein ihr. So lernt die Personalabteilung nie die PIN kennen, mit der jemand unterschreibt. PINs, die schon vor dieser Verbesserung gesetzt waren, bleiben unberührt.
+  </p>
+
+  <h4 id="firma-resumen">Unterschrift der Monatsübersicht</h4>
+  <span class="ruta">Verwaltung → Zeiterfassung → Unterschrift der Monatsübersicht</span>
+
+  <p>
+    Wenn sie eingeschaltet ist, erhält am <strong>1. jedes Monats</strong>, bei bereits abgeschlossenem Monat, jede Person mit E-Mail-Adresse einen Link zu ihrer Stundenübersicht. Mit dem Link und <strong>der PIN, mit der sie stempelt</strong> sieht sie ihre Tage und die Monatssumme, setzt die beiden Häkchen —dass sie sie gelesen hat und dass sie das Aufgeführte als richtig anerkennt— und
+    <strong>unterschreibt sie mit dem Finger</strong>. Das unterschriebene PDF, mit Datum und Uhrzeit, kommt in ihr Postfach und an die
+    <strong>E-Mail-Adresse der Personalabteilung</strong> die im selben Abschnitt angegeben wird (ohne sie lässt es sich nicht einschalten).
+  </p>
+
+  <p>
+    Der Link gilt 30 Tage und wird nur einmal unterschrieben. Wer nicht unterschreibt, <strong>bekommt ihn nicht erneut und wird auch nicht erinnert</strong> von selbst; läuft der Link ab, muss die Personalabteilung ihn neu senden. Wer noch die vorläufige PIN hat, muss sie an der Stempeluhr ändern, bevor er unterschreiben kann.
+  </p>
+  <h4 id="fichar-donde">Von wo aus gestempelt wird</h4>
+  <span class="ruta">Verwaltung → Zeiterfassung → Zone des Betriebs</span>
+
+  <p>
+    Wenn mit dem Handy gestempelt wird, hält Turnera fest, <strong>von wo aus</strong> es geschah, damit, wer das Protokoll prüft, sieht, ob es im Betrieb oder außerhalb war. <strong>Es verhindert nie das Stempeln</strong>: Manche gehen in einen anderen Raum, zu einem Hausbesuch oder zu einem Kurs, und das Stempeln ist eine Pflicht des Betriebs. Liefert das Gerät den Standort nicht oder erlaubt ihn die Person nicht, wird trotzdem gestempelt und der Eintrag bleibt „ohne Standort“.
+  </p>
+
+  <p>
+    Der Ort wird <strong>nur im Augenblick des Stempelns</strong>erfasst; niemand wird verfolgt und zwischen den Stempelungen wird nichts geprüft. Er gehört nicht zum Arbeitszeitprotokoll: nicht in die PDFs, nicht in die Tabellen, nicht in das, was der Prüfung per Link gezeigt wird. Er wird getrennt gespeichert und nur wer die Berechtigung „Sehen, wo gestempelt wurde“ hat (standardmäßig Leitung und Personalabteilung) sieht ihn, in einer Spalte <em>Wo</em> der Stempelliste: <em>Im Betrieb</em>, <em>Außerhalb des Betriebs</em> mit der Entfernung, oder <em>Standort gespeichert</em> wenn der Betrieb seine Zone noch nicht festgelegt hat.
+  </p>
+
+  <p>
+    Das <strong>Zone des Betriebs</strong> ist ein Punkt mit einem Radius (standardmäßig 150 m, bis zu 5 km). Wer die Berechtigung „Die Stempeluhr konfigurieren“ hat, legt sie im Betrieb fest mit <em>Meinen aktuellen Standort als Betrieb verwenden</em>, ändert den Radius mit <em>Radius speichern</em> oder entfernt sie mit <em>Zone entfernen</em>. Die Handys gehören dem Betrieb, geteilt oder nicht; jede Person stempelt mit ihrer PIN.
+  </p>
+
   <h4 id="fichar-lo-mio">Was jede Person nach ihrer PIN sieht</h4>
 
   <p>
@@ -3194,6 +3237,25 @@ footer{
     <strong>Links für die Prüfer:</strong> direkt auf dem Bildschirm erstellt man einen Nur-Lese-Link (1 bis 90 Tage), der die Aufträge, ihren Verlauf und ihre Fotos zeigt und den CSV-Download erlaubt, ohne Benutzerkonto. Er lässt sich jederzeit widerrufen, und jeder Zugriff wird protokolliert. Die Aufträge können auch aus der Liste als CSV exportiert werden.
   </p>
 
+  <h3 id="mantenimiento-quien">Wer einen Auftrag übernimmt, und ihn abgeben</h3>
+  <p>
+    Einen Auftrag betreut jeweils eine Person (oder ein externer Anbieter). Wer die Aufträge verwaltet, <strong>weist ihn zu</strong>
+    vom Auftrag aus; und wer in der Wartung arbeitet, kann <strong>ihn übernehmen</strong> einen nicht zugewiesenen, ohne darauf zu warten, dass er ihm gegeben wird. Wer ihn übernimmt, setzt ihn auf <em>zugewiesen</em>; er geht weiter mit <em>in Behandlung</em>,
+    <em>Wartend</em> und <em>Erledigen</em>.
+  </p>
+  <p>
+    Wenn jemand nicht weitermachen kann (die Schicht endet, er wird krank, die Arbeit braucht eine andere Person), lässt er den Auftrag nicht liegen: Er öffnet das Menü <strong>Mehr</strong> des Auftrags, wählt <strong>Auftrag abgeben</strong> und schreibt, <strong>wo die Arbeit steht</strong>. Der Grund ist Pflicht. Der Auftrag behält seinen Verlauf, seine Fotos und seinen Status, bleibt <strong>ohne Verantwortlichen</strong> und eine andere Person kann ihn übernehmen, oder die Leitung weist ihn neu zu. Ein Auftrag, der <em>zugewiesen</em> war, geht zurück auf
+    <em>offen</em>; einer <em>läuft</em> oder <em>wartend</em> bleibt, wie er war, damit man sieht, dass schon gearbeitet wurde. Im Verlauf steht er als <em>Abgegeben</em>, mit dem, der ihn betreut hat, und dem, was er geschrieben hat. Abgeben lässt sich nur ein offener Auftrag mit Verantwortlichem: Jeder gibt seinen ab, und wer die Berechtigung
+    <em>Verwalten</em> hat, kann den einer anderen Person abgeben.
+  </p>
+
+  <h3 id="mantenimiento-movil">Vom Handy aus: die App der Mitarbeitenden</h3>
+  <p>
+    Das Wartungspersonal muss nicht vor dem Computer sitzen. In der <strong>App</strong> (Android) tippt jede Person unter der Option <em>Wartung</em>auf ihren Namen und tippt ihre
+    <strong>PIN</strong> ein, dieselbe, mit der sie stempelt. Sie sieht die Liste der Aufträge mit Priorität, Frist und Zuständigem (überfällige in Rot); in jedem Auftrag sieht sie den Verlauf und die Fotos, <strong>macht Fotos je Phase</strong>
+    direkt mit der Kamera, übernimmt einen nicht zugewiesenen Auftrag und gibt ihn mit Begründung ab, wenn sie ihn nicht beenden kann. Was in der App geschieht, steht im selben Verlauf wie das, was im Web geschieht, mit der Person, die ihre PIN eingegeben hat, als Urheberin. Das Handbuch der App, Bildschirm für Bildschirm, steht in <a href="#app-nativa">Abschnitt 14</a>.
+  </p>
+
   <figure>
     <img src="/turnera/manual/imagenes/en/38-mantenimiento-lista.png" alt="Die Liste der Wartungsaufträge, mit einem überfälligen Auftrag in Rot und den Links für die Prüfer darunter" loading="lazy">
     <figcaption>Die Liste: offene Aufträge mit Priorität, Status und Zuständigem. Ein überfälliger Auftrag ist rot markiert.</figcaption>
@@ -3210,9 +3272,15 @@ footer{
   </figure>
 
   <figure>
+    <img src="/turnera/manual/imagenes/en/42-mantenimiento-soltar.png" alt="Der Hinweis zum Abgeben eines Auftrags, der fragt, wo die Arbeit steht" loading="lazy">
+    <figcaption>Einen Auftrag abgeben: Man sagt, wo die Arbeit steht, und der Auftrag bleibt ohne Verantwortlichen, damit ihn jemand anderes übernehmen kann.</figcaption>
+  </figure>
+
+  <figure>
     <img src="/turnera/manual/imagenes/en/41-mantenimiento-inspeccion.png" alt="Die Nur-Lese-Seite, die die Prüfer mit dem Link sehen" loading="lazy">
     <figcaption>Was die Prüfer mit ihrem Link sehen: die Aufträge, ihren Verlauf und ihre Fotos, ohne Benutzerkonto und nur lesbar.</figcaption>
   </figure>
+
 </section>
 <section id="problemas">
   <h2>13. Wenn etwas nicht klappt</h2>
@@ -3249,10 +3317,153 @@ footer{
   <h3>„Ich habe versehentlich einen Termin storniert“</h3>
   <p>Er lässt sich nicht wiederherstellen: Sie müssen ihn mit denselben Daten neu anlegen.</p>
 </section>
+<section id="app-nativa">
+  <h2>14. Die native App der Mitarbeitenden (Android)</h2>
+  <p>
+    <strong>Dieser Abschnitt ist das Handbuch der nativen Android-App, nicht das des Webs.</strong> Sie ist eine eigene Anwendung, die auf einem Handy oder Tablet installiert wird und dafür gedacht ist, dass das Personal stempelt, das Eigene sieht und die Wartungsaufträge bearbeitet, ohne vor dem Computer zu sitzen. Alles andere in diesem Handbuch handelt vom Turnera-Web.
+  </p>
+  <p>
+    Was in der App geschieht, landet am selben Ort wie das, was im Web geschieht: die Stempelungen in
+    <em>Stempeln und Arbeitszeiterfassung</em> und die Aufträge in <em>Wartung</em>.
+  </p>
+
+  <h3 id="app-entrar">Anmelden und den Standort wählen</h3>
+  <p>
+    Die App wird <strong>einmal pro Gerät</strong> eingerichtet: Die Leitung des Betriebs meldet sich mit ihrem Benutzer an und wählt den Standort, an dem das Gerät stehen wird. Von da an behält das Gerät diese gemeinsame Sitzung, und jede Person identifiziert sich mit ihrer <strong>PIN</strong>, derselben, mit der sie im Web stempelt.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/43-app-entrar.png" alt="Der Anmeldebildschirm der nativen App" loading="lazy">
+    <figcaption>Beim ersten Mal meldet sich die Leitung mit ihrem Benutzer im Betrieb an.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/44-app-sede.png" alt="Die Liste der Standorte des Betriebs in der nativen App" loading="lazy">
+    <figcaption>Man wählt den Standort, an dem das Gerät steht.</figcaption>
+  </figure>
+
+  <h3 id="app-fichar">Mit der PIN stempeln</h3>
+  <p>
+    Beschreiben Sie unter <em>Stempeln</em> zeigt die Mitarbeitenden des Standorts. Jede Person tippt auf ihren Namen und gibt ihre PIN ein. Wer noch keine PIN hat, erscheint abgeblendet, mit <em>ohne PIN</em>: Sie muss im Web vergeben werden, unter <em>Personal</em>. Wenn die Leitung die PIN gesetzt hat, ist sie <strong>vorläufig</strong> und die App fordert beim ersten Mal auf, eine eigene zu wählen (siehe
+    <a href="#pin-provisional">Vorläufige PIN</a>).
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/45-app-fichar-lista.png" alt="Die Liste der Mitarbeitenden des Standorts, mit „ohne PIN“ bei denen, die noch keine haben" loading="lazy">
+    <figcaption>Jede Person tippt auf ihren Namen und gibt ihre PIN ein. Wer noch keine PIN hat, erscheint abgeblendet.</figcaption>
+  </figure>
+
+  <p>
+    Nach der PIN sieht man den Status der Person (<em>Anwesend</em>, <em>In Pause</em> oder <em>Abwesend</em>), seit wann, und die Schaltflächen, die in diesem Moment gelten: <em>Kommen</em>, <em>Pause</em> oder <em>Gehen</em>. Die App hält fest,
+    <strong>von wo aus gestempelt wird, nur in diesem Moment</strong>, und folgt niemandem. <em>Zurück</em> lässt den Bildschirm für die nächste Person bereit.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/46-app-panel.png" alt="Das Panel einer anwesenden Mitarbeiterin, mit den Schaltflächen Ausstempeln und Pause" loading="lazy">
+    <figcaption>Nach der PIN: der Status, seit wann die Person anwesend ist, und die Stempel-Schaltflächen.</figcaption>
+  </figure>
+
+  <h3 id="app-menu">Das Menü und die Version</h3>
+  <p>
+    Die Schaltfläche mit den drei Strichen öffnet das Menü: <em>Stempeln</em>, <em>Wartung</em>, <em>Meine Zeiten</em>,
+    <em>Mein Kalender</em> und <em>Mein Terminkalender</em>. Darunter wählt man die Sprache (Spanisch, Englisch oder Deutsch), meldet die Sitzung des Geräts ab oder wechselt den Betrieb. Am Ende des Menüs steht die <strong>Version der App</strong>, die man nennen sollte, wenn man um Hilfe bittet.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/47-app-menu.png" alt="Das Menü der App mit den Optionen, der Sprache und der Version am Ende" loading="lazy">
+    <figcaption>Das Menü. Am Ende steht die Version der App.</figcaption>
+  </figure>
+
+  <h3 id="app-lo-mio">Meine Stempelungen, mein Kalender und mein Terminkalender</h3>
+  <p>
+    Die drei Optionen verlangen die PIN der Person und zeigen nur ihre eigenen Daten.
+  </p>
+  <ul>
+    <li><strong>Meine Zeiten</strong>: die im Monat gearbeitete Zeit und jeder Tag mit seinen Abschnitten. Mit den Pfeilen wechselt man den Monat.</li>
+    <li><strong>Mein Kalender</strong>: der Monat mit Schichten, Urlaub, Abwesenheiten und Feiertagen, jedes in seiner Farbe. Ist der Arbeitskalender der Person noch nicht festgelegt, sagt die App das.</li>
+    <li><strong>Mein Terminkalender</strong>: die Termine des Tages mit Uhrzeit, Kunde, Leistung, Kabine und Telefon. Mit den Pfeilen wechselt man den Tag, und <em>Drucken (A4)</em> druckt den Terminkalender auf Papier.</li>
+  </ul>
+  <figure>
+    <img src="/turnera/manual/imagenes/48-app-mis-fichajes.png" alt="Die Stempelungen einer Mitarbeiterin im Monat, mit der gearbeiteten Gesamtzeit" loading="lazy">
+    <figcaption>Meine Stempelungen: die im Monat gearbeitete Zeit und jeder Tag mit seinen Abschnitten.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/50-app-mi-calendario.png" alt="Der Arbeitskalender einer Mitarbeiterin im Monat, mit Urlaub und Feiertagen in Farbe" loading="lazy">
+    <figcaption>Mein Kalender: der Monat mit Schichten, Urlaub, Abwesenheiten und Feiertagen.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/51-app-mi-agenda.png" alt="Der Terminkalender einer Mitarbeiterin für den Tag mit ihren Terminen und der Schaltfläche Drucken" loading="lazy">
+    <figcaption>Mein Terminkalender: die Termine des Tages, mit der Schaltfläche, um sie auf A4 zu drucken.</figcaption>
+  </figure>
+
+  <h3 id="app-mantenimiento">Wartungsaufträge</h3>
+  <p>
+    Beschreiben Sie unter <em>Wartung</em> jede Person tippt auf ihren Namen, gibt ihre PIN ein und sieht die Aufträge: die <strong>nicht zugewiesenen</strong>, ihre eigenen und die anderer Personen, mit Priorität, Frist und der roten Warnung bei überfälligen. Tippt man auf einen, öffnet er sich mit dem Ziel, seinen Fotos je Phase und seinem Verlauf. Was hier geschieht, steht im selben Verlauf wie das, was im Web geschieht (siehe <a href="#mantenimiento">Wartung</a>).
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/49-app-mantenimiento.png" alt="Die Liste der Wartungsaufträge in der App, mit einem überfälligen in Rot" loading="lazy">
+    <figcaption>Die Liste: zuerst die nicht zugewiesenen Aufträge, dann die, die andere Personen betreuen.</figcaption>
+  </figure>
+
+  <h4 id="app-tomar">Einen Auftrag übernehmen</h4>
+  <p>
+    Ein nicht zugewiesener Auftrag wird übernommen mit <em>Auftrag übernehmen</em>. Solange er nicht der eigene ist, bietet das Drei-Punkte-Menü nur <em>Kommentar hinzufügen</em>.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/52-app-parte-sin-asignar.png" alt="Ein nicht zugewiesener Auftrag in der App, mit dem Foto des Problems, dem Verlauf und den Schaltflächen Auftrag übernehmen, Foto und Menü" loading="lazy">
+    <figcaption>Ein nicht zugewiesener Auftrag: das Ziel, die Fotos, der Verlauf und unten die Schaltflächen.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/53-app-parte-menu.png" alt="Das Drei-Punkte-Menü eines fremden Auftrags, mit der Option Kommentar hinzufügen" loading="lazy">
+    <figcaption>Bei einem Auftrag, der nicht der eigene ist, erlaubt das Menü nur zu kommentieren.</figcaption>
+  </figure>
+
+  <h4 id="app-trabajar">Den Auftrag bearbeiten und als erledigt melden</h4>
+  <p>
+    Ist der Auftrag zugewiesen, wird die große Schaltfläche zu <em>Arbeit beginnen</em> und, sobald er in Bearbeitung ist, zu <em>Erledigen</em>, die fragt, <strong>was getan wurde</strong> bevor der Auftrag geschlossen wird.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/54-app-parte-asignado.png" alt="Ein zugewiesener Auftrag, mit der Schaltfläche Arbeit beginnen" loading="lazy">
+    <figcaption>Ein zugewiesener Auftrag: „Betreut von“ und die Schaltfläche, um die Arbeit zu beginnen.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/58-app-parte-en-curso.png" alt="Ein Auftrag in Bearbeitung, mit der Schaltfläche Erledigen" loading="lazy">
+    <figcaption>Ein Auftrag in Bearbeitung: Die große Schaltfläche ist jetzt „Erledigen“.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/59-app-resolver.png" alt="Der Hinweis Als erledigt melden, der fragt, was getan wurde" loading="lazy">
+    <figcaption>Als erledigt melden: Man schreibt, was getan wurde. Ohne Text lässt es sich nicht senden.</figcaption>
+  </figure>
+
+  <h4 id="app-foto">Ein Foto machen</h4>
+  <p>
+    <em>Foto</em> öffnet direkt die Kamera. Das Foto bleibt im Auftrag, in der passenden Phase (das Problem, während der Arbeit oder das Ergebnis), mit dem, der es gemacht hat, und wann.
+  </p>
+  <h4 id="app-soltar">Wartend und einen Auftrag abgeben</h4>
+  <p>
+    Im Drei-Punkte-Menü eines eigenen Auftrags gibt es zwei weitere Optionen. <em>Wartend / Blockiert</em> fragt, worauf gewartet wird (ein Ersatzteil, ein Angebot …) oder was ihn blockiert. <em>Diesen Auftrag abgeben</em> fragt, <strong>wo die Arbeit steht</strong>; der Auftrag behält seinen Verlauf und seine Fotos, bleibt ohne Verantwortlichen und eine andere Person kann ihn übernehmen. In beiden Fällen ist der Text Pflicht.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/55-app-parte-menu-asignado.png" alt="Das Drei-Punkte-Menü eines eigenen Auftrags, mit Kommentar hinzufügen, Wartend und Diesen Auftrag abgeben" loading="lazy">
+    <figcaption>Bei einem eigenen Auftrag ergänzt das Menü „Wartend / Blockiert“ und „Diesen Auftrag abgeben“.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/57-app-en-espera.png" alt="Der Hinweis Wartend oder Blockiert, der fragt, worauf gewartet wird" loading="lazy">
+    <figcaption>Wartend / Blockiert: Man schreibt, worauf gewartet wird oder was ihn blockiert.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/56-app-soltar.png" alt="Der Hinweis Den Auftrag abgeben, der fragt, wo die Arbeit steht" loading="lazy">
+    <figcaption>Den Auftrag abgeben: Man sagt, wo die Arbeit steht, und der Auftrag bleibt für eine andere Person übrig.</figcaption>
+  </figure>
+
+</section>
 
 <footer>
   <p>
-    Turnera — Handbuch. Stand: 22. September 2026.<br>
+    Turnera — Benutzerhandbuch. Stand: 16. Oktober 2026.<br>
     Dieses Dokument wird zusammen mit dem Programm gepflegt: jede Änderung, die etwas an der Bedienung ändert, wird hier abgebildet.
   </p>
 </footer>

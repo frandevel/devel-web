@@ -662,6 +662,7 @@ footer{
     <li><a href="#profesionales" class="sub">Staff</a></li>
     <li><a href="#presencia" class="sub">Clocking in and working time</a></li>
     <li><a href="#cifras-pin" class="sub sub">How many digits the PIN has</a></li>
+    <li><a href="#fichar-donde" class="sub sub">Where clocking in happens from</a></li>
     <li><a href="#fichar-lo-mio" class="sub sub">What each person sees after their PIN</a></li>
     <li><a href="#presencia-enlaces" class="sub sub">Access for the labour inspectorate and the worker representatives</a></li>
     <li><a href="#presencia-resumen-mensual" class="sub sub">The monthly summary by email</a></li>
@@ -678,7 +679,15 @@ footer{
     <li><a href="#historia-medicamentos" class="sub">Medicines in the treatment</a></li>
     <li><a href="#seguimiento" class="sub">In a training centre: following the student</a></li>
     <li><a href="#mantenimiento">12. Maintenance</a></li>
+    <li><a href="#mantenimiento-quien" class="sub">Who handles an order, and releasing it</a></li>
+    <li><a href="#mantenimiento-movil" class="sub">From the phone: the professionals’ app</a></li>
     <li><a href="#problemas">13. When something goes wrong</a></li>
+    <li><a href="#app-nativa">14. The professionals’ native app (Android)</a></li>
+    <li><a href="#app-entrar" class="sub">Signing in and choosing the site</a></li>
+    <li><a href="#app-fichar" class="sub">Clocking in with the PIN</a></li>
+    <li><a href="#app-menu" class="sub">The menu and the version</a></li>
+    <li><a href="#app-lo-mio" class="sub">My clockings, my calendar and my diary</a></li>
+    <li><a href="#app-mantenimiento" class="sub">Maintenance orders</a></li>
   </ol>
 </nav>
 <div class="contenido">
@@ -2774,6 +2783,40 @@ footer{
     together they are what you show when somebody asks.
   </p>
 
+  <h4 id="pin-provisional">Temporary PIN</h4>
+  <span class="ruta">Staff → Professionals → Clocking PIN</span>
+
+  <p>
+    A PIN that <strong>administration sets or resets</strong> is <strong>temporary</strong>, because whoever set it knows it. With it the person cannot clock in, neither on the web nor in the professionals’ app, nor sign their monthly summary: when they type it, Turnera asks them to <strong>choose their own</strong> (different from the temporary one and from the digits the centre requires), and from then on it is theirs alone. That way HR never gets to know the PIN someone signs with. PINs that were already set before this improvement are left untouched.
+  </p>
+
+  <h4 id="firma-resumen">Signing the monthly summary</h4>
+  <span class="ruta">Administration → Attendance control → Monthly summary signing</span>
+
+  <p>
+    If it is switched on, on the <strong>1st of every month</strong>, with the month already closed, every professional with an email address receives a link to their summary of hours. Opening the link and entering <strong>the PIN they clock in with</strong> they see their days and the month’s total, tick the two boxes —that they have read it and that they accept what it says is correct— and
+    <strong>sign with their finger</strong>. The signed PDF, with the date and time, reaches their email and the
+    <strong>HR email address</strong> given in the same section (it cannot be switched on without it).
+  </p>
+
+  <p>
+    The link is valid for 30 days and can be signed only once. If someone does not sign, <strong>they are not sent it again or reminded</strong> by itself; if the link expires, HR has to send it again. Whoever still has the temporary PIN has to change it on the clock before being able to sign.
+  </p>
+  <h4 id="fichar-donde">Where clocking in happens from</h4>
+  <span class="ruta">Administration → Attendance control → Centre zone</span>
+
+  <p>
+    When someone clocks in with the phone, Turnera records <strong>where from</strong> it was done, so that whoever reviews the record can see whether it was at the centre or away. <strong>It never prevents clocking in</strong>: some people go out to another premises, to a home or to a course, and clocking in is the centre’s obligation. If the device does not give the location, or the person does not allow it, they clock in all the same and the entry is left as “no location”.
+  </p>
+
+  <p>
+    The place is taken <strong>only at the moment of clocking in</strong>; nobody is tracked and nothing is looked at between clockings. It is not part of the working-time record: not in the PDFs, not in the spreadsheets, not in what is shown to the Inspectorate with a link. It is stored separately and only whoever has the permission “See where it was clocked” (by default, Management and HR) sees it, in a column <em>Where</em> of the list of clockings: <em>At the centre</em>, <em>Away from the centre</em> with the distance, or <em>Location saved</em> if the centre has not yet defined its zone.
+  </p>
+
+  <p>
+    The <strong>centre zone</strong> is a point with a radius (150 m by default, up to 5 km). Whoever has the permission “Configure the clock” sets it while at the centre with <em>Use my current location as the centre</em>, changes the radius with <em>Save radius</em> or removes it with <em>Remove the zone</em>. The phones belong to the centre, shared or not; each professional clocks in with their PIN.
+  </p>
+
   <h4 id="fichar-lo-mio">What each person sees after their PIN</h4>
 
   <p>
@@ -3188,6 +3231,25 @@ footer{
     <strong>Links for the Inspectorate:</strong> from the screen itself you create a read-only link (1 to 90 days) that shows the orders, their history and photos and lets you download CSV, with no user account. It can be revoked whenever you like and every access is logged. Orders can also be exported to CSV from the list.
   </p>
 
+  <h3 id="mantenimiento-quien">Who handles an order, and releasing it</h3>
+  <p>
+    An order is handled by one person (or one external provider) at a time. Whoever manages the orders <strong>assigns it</strong>
+    from the order; and whoever works in Maintenance can <strong>take it</strong> one that is unassigned, without waiting to be given it. By taking it, it becomes <em>assigned</em>; it goes on its way with <em>In progress</em>,
+    <em>On hold</em> and <em>Resolve</em>.
+  </p>
+  <p>
+    If someone cannot carry on (the shift ends, they fall ill, the job needs someone else), they do not leave it forgotten: they open the order’s <strong>More</strong> menu, choose <strong>Release order</strong> and explain <strong>where the work stands</strong>. The reason is mandatory. The order keeps its history, its photos and its status, is left <strong>without anyone responsible</strong> and someone else can take it, or the manager can assign it again. An order that was <em>assigned</em> goes back to
+    <em>open</em>; one <em>in progress</em> or <em>on hold</em> stays as it was, so that it is clear work has already been done. In the history it is noted as <em>Released</em>, with who was handling it and what they wrote. Only a pending order that has someone responsible can be released: everyone releases their own, and whoever has the permission
+    <em>Manage</em> can release someone else’s.
+  </p>
+
+  <h3 id="mantenimiento-movil">From the phone: the professionals’ app</h3>
+  <p>
+    Maintenance staff do not have to sit in front of the computer. In the professionals’ <strong>app</strong> (Android), under the <em>Maintenance</em>option, each person taps their name and types their
+    <strong>PIN</strong>, the same one they clock in with. They see the list of orders with their priority, due date and who is handling them (overdue ones in red); in each order they see the history and the photos, <strong>take photos by stage</strong>
+    directly with the camera, take an unassigned order and release it with a reason if they cannot finish it. What is done in the app goes into the same history as what is done on the web, with the person who typed their PIN as the author. The app’s manual, screen by screen, is in <a href="#app-nativa">section 14</a>.
+  </p>
+
   <figure>
     <img src="/turnera/manual/imagenes/en/38-mantenimiento-lista.png" alt="The list of maintenance orders, with an overdue order marked in red and the Inspectorate links below" loading="lazy">
     <figcaption>The list: pending orders with their priority, status and who is handling them. An overdue order is marked in red.</figcaption>
@@ -3204,9 +3266,15 @@ footer{
   </figure>
 
   <figure>
+    <img src="/turnera/manual/imagenes/en/42-mantenimiento-soltar.png" alt="The notice for releasing an order, which asks where the work stands" loading="lazy">
+    <figcaption>Releasing an order: you say where the work stands, and the order is left without anyone responsible so that someone else can take it.</figcaption>
+  </figure>
+
+  <figure>
     <img src="/turnera/manual/imagenes/en/41-mantenimiento-inspeccion.png" alt="The read-only page the Inspectorate sees with the link" loading="lazy">
     <figcaption>What the Inspectorate sees with its link: the orders, their history and photos, with no user account and read-only.</figcaption>
   </figure>
+
 </section>
 <section id="problemas">
   <h2>13. When something goes wrong</h2>
@@ -3243,10 +3311,153 @@ footer{
   <h3>“I cancelled an appointment by mistake”</h3>
   <p>It cannot be recovered: you have to create it again with the same details.</p>
 </section>
+<section id="app-nativa">
+  <h2>14. The professionals’ native app (Android)</h2>
+  <p>
+    <strong>This section is the manual of the native Android app, not of the web.</strong> It is a separate application, installed on a phone or a tablet, designed so that staff can clock in, see their own information and handle maintenance orders without sitting in front of the computer. Everything else in this manual is about the Turnera web.
+  </p>
+  <p>
+    What is done in the app ends up in the same place as what is done on the web: clockings in
+    <em>Clocking in and working time</em> and orders in <em>Maintenance</em>.
+  </p>
+
+  <h3 id="app-entrar">Signing in and choosing the site</h3>
+  <p>
+    The app is set up <strong>once per device</strong>: the centre’s management signs in with its user and chooses the site where it will be. From then on the device keeps that shared session and each professional identifies themselves with their <strong>PIN</strong>, the same one they clock in with on the web.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/43-app-entrar.png" alt="The sign-in screen of the native app" loading="lazy">
+    <figcaption>The first time, management signs in to the centre with its user.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/44-app-sede.png" alt="The list of the centre’s sites in the native app" loading="lazy">
+    <figcaption>The site where the device is kept is chosen.</figcaption>
+  </figure>
+
+  <h3 id="app-fichar">Clocking in with the PIN</h3>
+  <p>
+    In <em>Clock</em> shows the professionals of the site. Each one taps their name and types their PIN. Whoever does not have a PIN yet appears greyed out, with <em>no PIN</em>: it has to be given on the web, in <em>Staff</em>. If the PIN was set by management, it is <strong>temporary</strong> and the app asks them to choose their own the first time (see
+    <a href="#pin-provisional">Temporary PIN</a>).
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/45-app-fichar-lista.png" alt="The list of the site’s professionals, with “no PIN” on those who do not have one yet" loading="lazy">
+    <figcaption>Each person taps their name and types their PIN. Whoever has no PIN yet appears greyed out.</figcaption>
+  </figure>
+
+  <p>
+    After the PIN the person’s status is shown (<em>In</em>, <em>On a break</em> or <em>Out</em>), since when, and the buttons that apply at that moment: <em>In</em>, <em>Break</em> or <em>Out</em>. The app records
+    <strong>where the clocking is done from, only at that moment</strong>, and does not follow anybody. <em>Back</em> leaves the screen ready for the next person.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/46-app-panel.png" alt="The panel of a professional who is in, with the Out and Break buttons" loading="lazy">
+    <figcaption>After the PIN: the status, since when they have been in, and the clocking buttons.</figcaption>
+  </figure>
+
+  <h3 id="app-menu">The menu and the version</h3>
+  <p>
+    The three-line button opens the menu: <em>Clock</em>, <em>Maintenance</em>, <em>My records</em>,
+    <em>My calendar</em> and <em>My diary</em>. Below, the language is chosen (Spanish, English or German), the device’s session is closed or the centre is changed. At the foot of the menu is the <strong>app version</strong>, which is worth quoting when asking for help.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/47-app-menu.png" alt="The app menu with the options, the language and the version at the foot" loading="lazy">
+    <figcaption>The menu. At the foot is the app version.</figcaption>
+  </figure>
+
+  <h3 id="app-lo-mio">My clockings, my calendar and my diary</h3>
+  <p>
+    The three options ask for the person’s PIN and show only their own information.
+  </p>
+  <ul>
+    <li><strong>My records</strong>: what has been worked in the month and each day with its spells. The arrows move between months.</li>
+    <li><strong>My calendar</strong>: the month with shifts, holidays, absences and public holidays, each in its own colour. If the person’s work calendar is not defined yet, the app says so.</li>
+    <li><strong>My diary</strong>: the day’s appointments with the time, the customer, the service, the booth and the phone number. The arrows move between days, and <em>Print (A4)</em> prints the diary on paper.</li>
+  </ul>
+  <figure>
+    <img src="/turnera/manual/imagenes/48-app-mis-fichajes.png" alt="A professional’s clockings for the month, with the total worked" loading="lazy">
+    <figcaption>My clockings: what has been worked in the month and each day with its spells.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/50-app-mi-calendario.png" alt="A professional’s work calendar for the month, with holidays and public holidays in colour" loading="lazy">
+    <figcaption>My calendar: the month with shifts, holidays, absences and public holidays.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/51-app-mi-agenda.png" alt="A professional’s diary for the day with their appointments and the Print button" loading="lazy">
+    <figcaption>My diary: the day’s appointments, with the button to print them on A4.</figcaption>
+  </figure>
+
+  <h3 id="app-mantenimiento">Maintenance orders</h3>
+  <p>
+    In <em>Maintenance</em> each person taps their name, types their PIN and sees the orders: the <strong>unassigned</strong>, their own and those handled by other people, with their priority, due date and the red warning for overdue ones. Tapping one opens it with what is to be achieved, its photos by stage and its history. What is done here goes into the same history as what is done on the web (see <a href="#mantenimiento">Maintenance</a>).
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/49-app-mantenimiento.png" alt="The list of maintenance orders in the app, with one overdue in red" loading="lazy">
+    <figcaption>The list: first the unassigned orders and then those handled by other people.</figcaption>
+  </figure>
+
+  <h4 id="app-tomar">Taking an order</h4>
+  <p>
+    An unassigned order is taken with <em>Take this order</em>. As long as it is not yours, the three-dot menu only offers <em>Add a comment</em>.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/52-app-parte-sin-asignar.png" alt="An unassigned order in the app, with the photo of the problem, the history and the Take this order, Photo and menu buttons" loading="lazy">
+    <figcaption>An unassigned order: what is to be achieved, the photos, the history and, below, the buttons.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/53-app-parte-menu.png" alt="The three-dot menu of someone else’s order, with the Add a comment option" loading="lazy">
+    <figcaption>On an order that is not yours, the menu only allows commenting.</figcaption>
+  </figure>
+
+  <h4 id="app-trabajar">Working an order and marking it resolved</h4>
+  <p>
+    Once the order is assigned, the big button becomes <em>Start working</em> and, once it is in progress, <em>Resolve</em>, which asks <strong>what has been done</strong> before closing the order.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/54-app-parte-asignado.png" alt="An assigned order, with the Start working button" loading="lazy">
+    <figcaption>An assigned order: “Handled by” and the button to start working.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/58-app-parte-en-curso.png" alt="An order in progress, with the Resolve button" loading="lazy">
+    <figcaption>An order in progress: the big button is now “Resolve”.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/59-app-resolver.png" alt="The Mark as resolved notice, which asks what has been done" loading="lazy">
+    <figcaption>Mark as resolved: you say what has been done. It cannot be sent without text.</figcaption>
+  </figure>
+
+  <h4 id="app-foto">Taking a photo</h4>
+  <p>
+    <em>Photo</em> opens the camera directly. The photo stays in the order, at the relevant stage (the problem, during the work or the result), with who took it and when.
+  </p>
+  <h4 id="app-soltar">On hold, and releasing an order</h4>
+  <p>
+    In the three-dot menu of your own order there are two more options. <em>On hold / Blocked</em> asks what is being waited for (a spare part, a quote…) or what is blocking it. <em>Release this order</em> asks <strong>where the work stands</strong>; the order keeps its history and photos, is left without anyone responsible and someone else can take it. In both cases the text is mandatory.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/55-app-parte-menu-asignado.png" alt="The three-dot menu of your own order, with Add a comment, On hold and Release this order" loading="lazy">
+    <figcaption>On your own order, the menu adds “On hold / Blocked” and “Release this order”.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/57-app-en-espera.png" alt="The On hold or Blocked notice, which asks what is being waited for" loading="lazy">
+    <figcaption>On hold / Blocked: you say what is awaited or what is blocking it.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/56-app-soltar.png" alt="The Release the order notice, which asks where the work stands" loading="lazy">
+    <figcaption>Releasing the order: you say where the work stands and the order is left for someone else to take.</figcaption>
+  </figure>
+
+</section>
 
 <footer>
   <p>
-    Turnera — user manual. Updated on 22 September 2026.<br>
+    Turnera — user manual. Updated on 16 October 2026.<br>
     This document is kept alongside the program: every change that alters how something is used is reflected here.
   </p>
 </footer>
