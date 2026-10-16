@@ -390,6 +390,22 @@ footer{
 .pantalla figcaption{margin-top:.9rem;font-size:.96rem;color:var(--text-dim);line-height:1.6}
 .pantalla b{color:var(--text);font-weight:600}
 
+/* ---------- recorrido en vídeo ---------- */
+.recorrido{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.4rem 2rem;margin-top:2.8rem}
+.recorrido__video{margin:0}
+.recorrido video{
+  width:100%;height:auto;aspect-ratio:16/9;display:block;
+  border:1px solid var(--line);border-radius:12px;
+  background:var(--navy);
+  box-shadow:0 10px 30px rgba(10,30,50,.10);
+}
+:root[data-theme="dark"] .recorrido video{box-shadow:0 10px 30px rgba(0,0,0,.38)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .recorrido video{box-shadow:0 10px 30px rgba(0,0,0,.38)}}
+.recorrido h3{margin-top:.9rem;font-family:var(--display);font-size:1.15rem;color:var(--text)}
+.recorrido p{margin-top:.3rem;font-size:.96rem;color:var(--text-dim);line-height:1.6}
+.recorrido__nota{margin-top:2rem;font-size:.92rem;color:var(--text-dim);max-width:60ch}
+@media (max-width:820px){.recorrido{grid-template-columns:1fr}}
+
 /* ---------- perfiles de centro, en pestanas ---------- */
 .perfiles{margin-top:2.8rem}
 .perfiles__botones{
@@ -696,6 +712,129 @@ footer{
           </figure>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="recorrido">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Videos</p>
+        <h2>A tour of each module.</h2>
+        <p>A short video per module, recorded on an installation with demo data. No sound: the subtitles follow the language of this page.</p>
+      </div>
+      <div class="recorrido">
+        <div class="recorrido__video">
+          <video controls="" preload="none" playsinline="" crossorigin="anonymous" width="1600" height="900" poster="https://media.turnera.devel.es/01-nucleo.jpg">
+            <source src="https://media.turnera.devel.es/01-nucleo.mp4" type="video/mp4">
+            <track kind="subtitles" srclang="es" label="Español" src="https://media.turnera.devel.es/01-nucleo.es.vtt">
+            <track kind="subtitles" srclang="en" label="English" src="https://media.turnera.devel.es/01-nucleo.en.vtt">
+            <track kind="subtitles" srclang="de" label="Deutsch" src="https://media.turnera.devel.es/01-nucleo.de.vtt">
+          </video>
+          <h3>Core</h3>
+          <p>Users and roles, preferences, branches and professionals.</p>
+        </div>
+        <div class="recorrido__video">
+          <video controls="" preload="none" playsinline="" crossorigin="anonymous" width="1600" height="900" poster="https://media.turnera.devel.es/02-clientes.jpg">
+            <source src="https://media.turnera.devel.es/02-clientes.mp4" type="video/mp4">
+            <track kind="subtitles" srclang="es" label="Español" src="https://media.turnera.devel.es/02-clientes.es.vtt">
+            <track kind="subtitles" srclang="en" label="English" src="https://media.turnera.devel.es/02-clientes.en.vtt">
+            <track kind="subtitles" srclang="de" label="Deutsch" src="https://media.turnera.devel.es/02-clientes.de.vtt">
+          </video>
+          <h3>Clients</h3>
+          <p>Records, alerts, notes, history and the right to erasure.</p>
+        </div>
+        <div class="recorrido__video">
+          <video controls="" preload="none" playsinline="" crossorigin="anonymous" width="1600" height="900" poster="https://media.turnera.devel.es/03-catalogo.jpg">
+            <source src="https://media.turnera.devel.es/03-catalogo.mp4" type="video/mp4">
+            <track kind="subtitles" srclang="es" label="Español" src="https://media.turnera.devel.es/03-catalogo.es.vtt">
+            <track kind="subtitles" srclang="en" label="English" src="https://media.turnera.devel.es/03-catalogo.en.vtt">
+            <track kind="subtitles" srclang="de" label="Deutsch" src="https://media.turnera.devel.es/03-catalogo.de.vtt">
+          </video>
+          <h3>Catalogue</h3>
+          <p>Services, packages, vouchers, products, suppliers and stock.</p>
+        </div>
+        <div class="recorrido__video">
+          <video controls="" preload="none" playsinline="" crossorigin="anonymous" width="1600" height="900" poster="https://media.turnera.devel.es/04-agenda.jpg">
+            <source src="https://media.turnera.devel.es/04-agenda.mp4" type="video/mp4">
+            <track kind="subtitles" srclang="es" label="Español" src="https://media.turnera.devel.es/04-agenda.es.vtt">
+            <track kind="subtitles" srclang="en" label="English" src="https://media.turnera.devel.es/04-agenda.en.vtt">
+            <track kind="subtitles" srclang="de" label="Deutsch" src="https://media.turnera.devel.es/04-agenda.de.vtt">
+          </video>
+          <h3>Calendar</h3>
+          <p>Appointments by professional or by resource, and how to book a new one.</p>
+        </div>
+        <div class="recorrido__video">
+          <video controls="" preload="none" playsinline="" crossorigin="anonymous" width="1600" height="900" poster="https://media.turnera.devel.es/05-historia-clinica.jpg">
+            <source src="https://media.turnera.devel.es/05-historia-clinica.mp4" type="video/mp4">
+            <track kind="subtitles" srclang="es" label="Español" src="https://media.turnera.devel.es/05-historia-clinica.es.vtt">
+            <track kind="subtitles" srclang="en" label="English" src="https://media.turnera.devel.es/05-historia-clinica.en.vtt">
+            <track kind="subtitles" srclang="de" label="Deutsch" src="https://media.turnera.devel.es/05-historia-clinica.de.vtt">
+          </video>
+          <h3>Clinical records</h3>
+          <p>Clinical cases, consents and who opens each record.</p>
+        </div>
+        <div class="recorrido__video">
+          <video controls="" preload="none" playsinline="" crossorigin="anonymous" width="1600" height="900" poster="https://media.turnera.devel.es/06-caja.jpg">
+            <source src="https://media.turnera.devel.es/06-caja.mp4" type="video/mp4">
+            <track kind="subtitles" srclang="es" label="Español" src="https://media.turnera.devel.es/06-caja.es.vtt">
+            <track kind="subtitles" srclang="en" label="English" src="https://media.turnera.devel.es/06-caja.en.vtt">
+            <track kind="subtitles" srclang="de" label="Deutsch" src="https://media.turnera.devel.es/06-caja.de.vtt">
+          </video>
+          <h3>Till</h3>
+          <p>Point of sale, pending payments, cash-up and gift cards.</p>
+        </div>
+        <div class="recorrido__video">
+          <video controls="" preload="none" playsinline="" crossorigin="anonymous" width="1600" height="900" poster="https://media.turnera.devel.es/07-facturacion.jpg">
+            <source src="https://media.turnera.devel.es/07-facturacion.mp4" type="video/mp4">
+            <track kind="subtitles" srclang="es" label="Español" src="https://media.turnera.devel.es/07-facturacion.es.vtt">
+            <track kind="subtitles" srclang="en" label="English" src="https://media.turnera.devel.es/07-facturacion.en.vtt">
+            <track kind="subtitles" srclang="de" label="Deutsch" src="https://media.turnera.devel.es/07-facturacion.de.vtt">
+          </video>
+          <h3>Invoicing</h3>
+          <p>Simplified and full invoices, invoice book and VeriFactu.</p>
+        </div>
+        <div class="recorrido__video">
+          <video controls="" preload="none" playsinline="" crossorigin="anonymous" width="1600" height="900" poster="https://media.turnera.devel.es/08-portal-y-avisos.jpg">
+            <source src="https://media.turnera.devel.es/08-portal-y-avisos.mp4" type="video/mp4">
+            <track kind="subtitles" srclang="es" label="Español" src="https://media.turnera.devel.es/08-portal-y-avisos.es.vtt">
+            <track kind="subtitles" srclang="en" label="English" src="https://media.turnera.devel.es/08-portal-y-avisos.en.vtt">
+            <track kind="subtitles" srclang="de" label="Deutsch" src="https://media.turnera.devel.es/08-portal-y-avisos.de.vtt">
+          </video>
+          <h3>Portal and alerts</h3>
+          <p>Online booking, WhatsApp reminders and integrations.</p>
+        </div>
+        <div class="recorrido__video">
+          <video controls="" preload="none" playsinline="" crossorigin="anonymous" width="1600" height="900" poster="https://media.turnera.devel.es/09-personal.jpg">
+            <source src="https://media.turnera.devel.es/09-personal.mp4" type="video/mp4">
+            <track kind="subtitles" srclang="es" label="Español" src="https://media.turnera.devel.es/09-personal.es.vtt">
+            <track kind="subtitles" srclang="en" label="English" src="https://media.turnera.devel.es/09-personal.en.vtt">
+            <track kind="subtitles" srclang="de" label="Deutsch" src="https://media.turnera.devel.es/09-personal.de.vtt">
+          </video>
+          <h3>Staff</h3>
+          <p>Clocking in, working-time record, work calendars and overtime.</p>
+        </div>
+        <div class="recorrido__video">
+          <video controls="" preload="none" playsinline="" crossorigin="anonymous" width="1600" height="900" poster="https://media.turnera.devel.es/09b-convenio-y-calendario.jpg">
+            <source src="https://media.turnera.devel.es/09b-convenio-y-calendario.mp4" type="video/mp4">
+            <track kind="subtitles" srclang="es" label="Español" src="https://media.turnera.devel.es/09b-convenio-y-calendario.es.vtt">
+            <track kind="subtitles" srclang="en" label="English" src="https://media.turnera.devel.es/09b-convenio-y-calendario.en.vtt">
+            <track kind="subtitles" srclang="de" label="Deutsch" src="https://media.turnera.devel.es/09b-convenio-y-calendario.de.vtt">
+          </video>
+          <h3>Labour agreement and work calendar</h3>
+          <p>Creating from scratch the agreement, shifts, public holidays and a professional's calendar.</p>
+        </div>
+        <div class="recorrido__video">
+          <video controls="" preload="none" playsinline="" crossorigin="anonymous" width="1600" height="900" poster="https://media.turnera.devel.es/10-mantenimiento.jpg">
+            <source src="https://media.turnera.devel.es/10-mantenimiento.mp4" type="video/mp4">
+            <track kind="subtitles" srclang="es" label="Español" src="https://media.turnera.devel.es/10-mantenimiento.es.vtt">
+            <track kind="subtitles" srclang="en" label="English" src="https://media.turnera.devel.es/10-mantenimiento.en.vtt">
+            <track kind="subtitles" srclang="de" label="Deutsch" src="https://media.turnera.devel.es/10-mantenimiento.de.vtt">
+          </video>
+          <h3>Maintenance</h3>
+          <p>Repair tickets with photos, history and an inspection link.</p>
+        </div>
+      </div>
+      <p class="recorrido__nota">Each video only downloads when you press play, and uses no cookies. With the player's subtitles button you can switch language.</p>
     </div>
   </section>
 
@@ -1526,6 +1665,21 @@ if (pestanas.length > 0) mostrarPerfil(pestanas[0]);
     });
   });
   pintar();
+})();
+</script>
+<script>
+(function () {
+  var idioma = (document.documentElement.lang || 'es').slice(0, 2);
+  document.querySelectorAll('.recorrido video').forEach(function (video) {
+    function elegirSubtitulos() {
+      for (var i = 0; i < video.textTracks.length; i++) {
+        var pista = video.textTracks[i];
+        pista.mode = pista.language === idioma ? 'showing' : 'disabled';
+      }
+    }
+    elegirSubtitulos();
+    video.addEventListener('loadedmetadata', elegirSubtitulos);
+  });
 })();
 </script>
 
