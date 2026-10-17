@@ -225,23 +225,6 @@ section{padding-block:clamp(3.2rem,6vw,5.5rem)}
 .pillar p{color:var(--text-dim);font-size:.97rem}
 .pillar:first-child{border-top-color:var(--accent)}
 
-.modulo-explica{margin-top:2.4rem;padding:1.3rem 1.5rem;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--tu-anillo);border-radius:8px;max-width:60rem}
-.modulo-explica h3{font-size:1.14rem;margin-bottom:.5rem;color:var(--brand)}
-:root[data-theme="dark"] .modulo-explica h3{color:var(--mist)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .modulo-explica h3{color:var(--mist)}}
-.modulo-explica p{color:var(--text-dim);font-size:.97rem}
-.modulo-explica p+p{margin-top:.7rem}
-.rrhh-extra{margin-top:2.8rem;max-width:60rem}
-.rrhh-extra h3{font-size:1.14rem;margin-bottom:.6rem;color:var(--brand)}
-:root[data-theme="dark"] .rrhh-extra h3{color:var(--mist)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .rrhh-extra h3{color:var(--mist)}}
-.rrhh-extra p{color:var(--text-dim);font-size:.97rem}
-.rrhh-extra .actions{margin-top:1.4rem}
-.precios__tabla-sola{display:flex;flex-direction:column;gap:.9rem}
-.precios__tabla-sola h3{font-size:1.14rem;color:var(--brand)}
-:root[data-theme="dark"] .precios__tabla-sola h3{color:var(--mist)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .precios__tabla-sola h3{color:var(--mist)}}
-.precios__tabla-sola p{color:var(--text-dim);font-size:.97rem}
 /* ---------- productos ---------- */
 #productos{background:var(--surface-sunk);border-block:1px solid var(--line)}
 .products{display:grid;gap:1.5rem;margin-top:2.8rem}
@@ -629,7 +612,6 @@ footer{
     </a>
     <nav>
       <a href="#que-hace">What it does</a>
-      <a href="#recursos-humanos">Human Resources</a>
       <a href="#precios">Pricing</a>
       <a href="#preguntas">FAQ</a>
       <a href="#demo">Demo</a>
@@ -861,7 +843,7 @@ footer{
       <div class="section__head">
         <p class="eyebrow">One product</p>
         <h2>The same application, set up your way.</h2>
-        <p>It isn't several programs or several prices. It's a setting in the configuration and a few numbers in the catalogue: from there on the application speaks the way your centre speaks.</p>
+        <p>It isn't several programs. It's a setting in the configuration and a few numbers in the catalogue: from there on the application speaks the way your centre speaks.</p>
       </div>
 
       <div class="perfiles">
@@ -871,6 +853,7 @@ footer{
           <button class="perfil__boton" role="tab" id="pestana-colectivas" aria-controls="perfil-colectivas" aria-selected="false">Spinning and group classes</button>
           <button class="perfil__boton" role="tab" id="pestana-club" aria-controls="perfil-club" aria-selected="false">Padel or tennis club</button>
           <button class="perfil__boton" role="tab" id="pestana-academia" aria-controls="perfil-academia" aria-selected="false">Academy and private lessons</button>
+          <button class="perfil__boton" role="tab" id="pestana-rrhh" aria-controls="perfil-rrhh" aria-selected="false">Care homes and work teams</button>
         </div>
 
         <div class="perfil" role="tabpanel" id="perfil-clinica" aria-labelledby="pestana-clinica" tabindex="0">
@@ -957,90 +940,26 @@ footer{
             </ul>
           </div>
         </div>
+
+        <div class="perfil" role="tabpanel" id="perfil-rrhh" aria-labelledby="pestana-rrhh" tabindex="0" hidden="">
+          <div class="perfil__texto">
+            <h3>Care homes, residents’ associations, workshops</h3>
+            <p>If what you need is to look after your staff (clocking in, rota, work calendar and hours), Turnera can be set up without appointments or customers, with the Human Resources module and its own price per professional.</p>
+            <p><a href="/en/turnera/recursos-humanos">See features and prices</a></p>
+          </div>
+          <div class="perfil__montaje">
+            <h4>How it's set up</h4>
+            <ul class="montaje">
+              <li><span><b>Modules:</b> Human Resources.</span></li>
+              <li><span><b>Without:</b> appointments, customers or till.</span></li>
+              <li><span><b>And also:</b> clocking in, rota and work calendar.</span></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="recursos-humanos">
-    <div class="shell">
-      <div class="section__head">
-        <p class="eyebrow">Human Resources module</p>
-        <h2>Your team's hours, without spreadsheets.</h2>
-        <p>Care homes, residents’ associations, workshops, shops: any centre with employees to clock in and shifts to organise. Turnera handles their rota, their work calendar and their working-time record, with no appointments, no customers and nothing you don’t need.</p>
-      </div>
-
-      <div class="modulo-explica">
-        <h3>What is a module?</h3>
-        <p>Turnera is built in parts, and each part is called a module: the appointment book, customer records, the till, invoicing, staff. A module is a part of the application that is switched on or off depending on what your centre needs.</p>
-        <p>Human Resources is the module that looks after your employees, and it can be taken on its own: you see only what you use and pay only for that. If you ever need another part, it is switched on without changing application.</p>
-      </div>
-
-      <div class="pillars">
-        <div class="pillar">
-          <h3>Clock in with a PIN</h3>
-          <p>Each person clocks in, out or on a break at the time clock by the entrance with their PIN, checks their clockings for the month and receives them by email or as a PDF.</p>
-        </div>
-        <div class="pillar">
-          <h3>Weekly rota</h3>
-          <p>Who works each day and on which shift, who is off or on holiday and who is in right now. On the home screen you see who should have clocked in and hasn’t.</p>
-        </div>
-        <div class="pillar">
-          <h3>Work calendar</h3>
-          <p>Each year’s agreement with its hours and holiday days, the shifts, the types of absence and the public holidays. National and regional holidays load themselves when you choose the centre’s region.</p>
-        </div>
-        <div class="pillar">
-          <h3>Overtime and overtime bank</h3>
-          <p>Hours clocked outside the shift are recorded as overtime in each professional’s bank, and you decide whether it is paid in the payroll or taken back as time off. If in the year they go past the 80 hours the Spanish Workers’ Statute allows, the screen warns you.</p>
-        </div>
-        <div class="pillar">
-          <h3>Month-end close for payroll</h3>
-          <p>Each month is closed for payroll and can be reopened to adjust it, with the reason written down. Each person carries the code your accountant knows them by.</p>
-        </div>
-        <div class="pillar">
-          <h3>Ready for the Inspectorate</h3>
-          <p>The full record comes out in Excel, CSV and as a monthly PDF with space for signatures. And you can give the Labour Inspectorate or the workers’ representatives a read-only link that expires and logs every access.</p>
-        </div>
-      </div>
-
-      <div class="precios">
-        <div class="precios__tabla-sola">
-          <h3>What it costs</h3>
-          <p>You pay for each professional on your team, not for users or premises. Each band applies only to the professionals who fall in it, so there are no jumps when you move from one to the next.</p>
-          <table class="faq__tabla">
-            <thead><tr><th>Professionals</th><th>Per professional per month</th></tr></thead>
-            <tbody>
-              <tr><td>The first 25</td><td>2,50 €</td></tr>
-              <tr><td>26th to 100th</td><td>2,00 €</td></tr>
-              <tr><td>From the 101st</td><td>1,50 €</td></tr>
-            </tbody>
-          </table>
-          <p class="precios__nota">Minimum fee of €10 a month. Prices exclude VAT. Paying the year in advance means ten monthly payments instead of twelve.</p>
-        </div>
-        <div class="precios__tabla-sola">
-          <h3>A few examples</h3>
-          <table class="faq__tabla">
-            <thead><tr><th>Your team</th><th>Per month</th><th>Per year</th></tr></thead>
-            <tbody>
-              <tr><td>5 professionals</td><td>12,50 €</td><td>125 €</td></tr>
-              <tr><td>10 professionals</td><td>25 €</td><td>250 €</td></tr>
-              <tr><td>25 professionals</td><td>62,50 €</td><td>625 €</td></tr>
-              <tr><td>50 professionals</td><td>112,50 €</td><td>1.125 €</td></tr>
-              <tr><td>100 professionals</td><td>212,50 €</td><td>2.125 €</td></tr>
-            </tbody>
-          </table>
-          <p>Everything included: what you see above and whatever comes next. Technical support by email, no commissions and no lock-in. We set up your centre with you, at no cost.</p>
-        </div>
-      </div>
-
-      <div class="rrhh-extra">
-        <h3>And if you need more tomorrow</h3>
-        <p>Because Human Resources is a module and not a separate program, you can add others without changing application or loading anything again: the appointment book and customer records if you work by appointment, the till and invoicing, or maintenance reports with photos for inspections. What you already have stays where it is and the new part appears in the menu. Before switching anything on, we tell you how much your fee changes.</p>
-        <div class="actions">
-          <a class="btn btn--solid" href="#demo">Ask for a demo</a>
-        </div>
-      </div>
-    </div>
-  </section>
   <section id="abierto">
     <div class="shell">
       <div class="section__head">

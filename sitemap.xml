@@ -43,6 +43,27 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera"/>
   </url>
   <url>
+    <loc>https://devel.es/turnera/recursos-humanos</loc>
+    <lastmod>2026-10-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/recursos-humanos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/recursos-humanos"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/recursos-humanos"/>
+  </url>
+  <url>
+    <loc>https://devel.es/en/turnera/recursos-humanos</loc>
+    <lastmod>2026-10-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/recursos-humanos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/recursos-humanos"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/recursos-humanos"/>
+  </url>
+  <url>
+    <loc>https://devel.es/de/turnera/recursos-humanos</loc>
+    <lastmod>2026-10-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/recursos-humanos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/recursos-humanos"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/recursos-humanos"/>
+  </url>
+  <url>
     <loc>https://devel.es/turnera/manual</loc>
     <lastmod>2026-10-16</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/manual"/>

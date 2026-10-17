@@ -8,6 +8,7 @@ const SITIO = 'https://devel.es';
 const PAGINAS = [
   { plantilla: 'plantillas/devel.html',   catalogo: 'devel',   ruta: '' },
   { plantilla: 'plantillas/turnera.html', catalogo: 'turnera', ruta: 'turnera' },
+  { plantilla: 'plantillas/recursos-humanos.html', catalogo: 'recursos-humanos', ruta: 'turnera/recursos-humanos' },
   { plantilla: 'plantillas/manual.html',  catalogo: 'manual',  ruta: 'turnera/manual' },
   { plantilla: 'plantillas/novedades.html', catalogo: 'novedades', ruta: 'turnera/novedades' },
   { plantilla: 'plantillas/legal.html',   catalogo: 'legal',   ruta: 'legal' }

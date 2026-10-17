@@ -225,23 +225,6 @@ section{padding-block:clamp(3.2rem,6vw,5.5rem)}
 .pillar p{color:var(--text-dim);font-size:.97rem}
 .pillar:first-child{border-top-color:var(--accent)}
 
-.modulo-explica{margin-top:2.4rem;padding:1.3rem 1.5rem;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--tu-anillo);border-radius:8px;max-width:60rem}
-.modulo-explica h3{font-size:1.14rem;margin-bottom:.5rem;color:var(--brand)}
-:root[data-theme="dark"] .modulo-explica h3{color:var(--mist)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .modulo-explica h3{color:var(--mist)}}
-.modulo-explica p{color:var(--text-dim);font-size:.97rem}
-.modulo-explica p+p{margin-top:.7rem}
-.rrhh-extra{margin-top:2.8rem;max-width:60rem}
-.rrhh-extra h3{font-size:1.14rem;margin-bottom:.6rem;color:var(--brand)}
-:root[data-theme="dark"] .rrhh-extra h3{color:var(--mist)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .rrhh-extra h3{color:var(--mist)}}
-.rrhh-extra p{color:var(--text-dim);font-size:.97rem}
-.rrhh-extra .actions{margin-top:1.4rem}
-.precios__tabla-sola{display:flex;flex-direction:column;gap:.9rem}
-.precios__tabla-sola h3{font-size:1.14rem;color:var(--brand)}
-:root[data-theme="dark"] .precios__tabla-sola h3{color:var(--mist)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .precios__tabla-sola h3{color:var(--mist)}}
-.precios__tabla-sola p{color:var(--text-dim);font-size:.97rem}
 /* ---------- productos ---------- */
 #productos{background:var(--surface-sunk);border-block:1px solid var(--line)}
 .products{display:grid;gap:1.5rem;margin-top:2.8rem}
@@ -629,7 +612,6 @@ footer{
     </a>
     <nav>
       <a href="#que-hace">Was es kann</a>
-      <a href="#recursos-humanos">Personal</a>
       <a href="#precios">Preise</a>
       <a href="#preguntas">FAQ</a>
       <a href="#demo">Demo</a>
@@ -861,7 +843,7 @@ footer{
       <div class="section__head">
         <p class="eyebrow">Ein Produkt</p>
         <h2>Dieselbe Anwendung, auf Ihre Art eingerichtet.</h2>
-        <p>Es sind nicht mehrere Programme und nicht mehrere Preise. Es ist eine Einstellung in der Konfiguration und ein paar Zahlen im Katalog: Ab da spricht die Anwendung so, wie Ihr Betrieb spricht.</p>
+        <p>Es sind nicht mehrere Programme. Es ist eine Einstellung in der Konfiguration und ein paar Zahlen im Katalog: Ab da spricht die Anwendung so, wie Ihr Betrieb spricht.</p>
       </div>
 
       <div class="perfiles">
@@ -871,6 +853,7 @@ footer{
           <button class="perfil__boton" role="tab" id="pestana-colectivas" aria-controls="perfil-colectivas" aria-selected="false">Spinning und Gruppenkurse</button>
           <button class="perfil__boton" role="tab" id="pestana-club" aria-controls="perfil-club" aria-selected="false">Padel- oder Tennisverein</button>
           <button class="perfil__boton" role="tab" id="pestana-academia" aria-controls="perfil-academia" aria-selected="false">Schule und Einzelunterricht</button>
+          <button class="perfil__boton" role="tab" id="pestana-rrhh" aria-controls="perfil-rrhh" aria-selected="false">Pflegeheime und Teams</button>
         </div>
 
         <div class="perfil" role="tabpanel" id="perfil-clinica" aria-labelledby="pestana-clinica" tabindex="0">
@@ -957,90 +940,26 @@ footer{
             </ul>
           </div>
         </div>
+
+        <div class="perfil" role="tabpanel" id="perfil-rrhh" aria-labelledby="pestana-rrhh" tabindex="0" hidden="">
+          <div class="perfil__texto">
+            <h3>Pflegeheime, Eigentümergemeinschaften, Werkstätten</h3>
+            <p>Wenn Sie vor allem Ihr Personal verwalten möchten (Stempeln, Dienstplan, Arbeitskalender und Stunden), lässt sich Turnera ohne Terminkalender und ohne Kundschaft einrichten, mit dem Modul Personal und seinem eigenen Preis pro Fachkraft.</p>
+            <p><a href="/de/turnera/recursos-humanos">Funktionen und Preise ansehen</a></p>
+          </div>
+          <div class="perfil__montaje">
+            <h4>So wird es eingerichtet</h4>
+            <ul class="montaje">
+              <li><span><b>Module:</b> Personal.</span></li>
+              <li><span><b>Ohne:</b> Terminkalender, Kundschaft oder Kasse.</span></li>
+              <li><span><b>Und außerdem:</b> Stempeln, Dienstplan und Arbeitskalender.</span></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="recursos-humanos">
-    <div class="shell">
-      <div class="section__head">
-        <p class="eyebrow">Modul Personal</p>
-        <h2>Die Arbeitszeiten Ihres Teams, ohne Tabellenkalkulation.</h2>
-        <p>Seniorenheime, Wohnungseigentümergemeinschaften, Werkstätten, Läden: jeder Betrieb mit Mitarbeitenden, die stempeln, und Schichten, die geplant werden müssen. Turnera führt ihren Dienstplan, ihren Arbeitskalender und ihre Arbeitszeiterfassung, ohne Terminkalender, ohne Kundschaft und ohne etwas, das Sie nicht brauchen.</p>
-      </div>
-
-      <div class="modulo-explica">
-        <h3>Was ist ein Modul?</h3>
-        <p>Turnera besteht aus Teilen, und jeder Teil heißt Modul: der Terminkalender, die Kundenakten, die Kasse, die Rechnungsstellung, das Personal. Ein Modul ist ein Teil der Anwendung, der je nach Bedarf Ihres Betriebs ein- oder ausgeschaltet wird.</p>
-        <p>Personal ist das Modul, das sich um Ihre Mitarbeitenden kümmert, und es lässt sich einzeln buchen: Sie sehen nur, was Sie nutzen, und zahlen nur dafür. Wenn Sie eines Tages einen weiteren Teil brauchen, wird er eingeschaltet, ohne die Anwendung zu wechseln.</p>
-      </div>
-
-      <div class="pillars">
-        <div class="pillar">
-          <h3>Stempeln mit PIN</h3>
-          <p>Jede Person stempelt am Eingang mit ihrer PIN Ein, Aus oder Pause, sieht ihre Stempelungen des Monats und erhält sie per E-Mail oder als PDF.</p>
-        </div>
-        <div class="pillar">
-          <h3>Wochendienstplan</h3>
-          <p>Wer an welchem Tag in welcher Schicht arbeitet, wer frei hat oder im Urlaub ist und wer gerade da ist. Auf der Startseite sehen Sie, wer hätte stempeln müssen und es nicht getan hat.</p>
-        </div>
-        <div class="pillar">
-          <h3>Arbeitskalender</h3>
-          <p>Der Tarifvertrag jedes Jahres mit seinen Stunden und Urlaubstagen, die Schichten, die Abwesenheitsarten und die Feiertage. Die landesweiten und regionalen Feiertage werden automatisch geladen, sobald Sie die Region des Betriebs wählen.</p>
-        </div>
-        <div class="pillar">
-          <h3>Überstunden und Überstundenkonto</h3>
-          <p>Außerhalb der Schicht gestempelte Stunden werden als Überstunden auf dem Konto jeder Fachkraft verbucht, und Sie entscheiden, ob sie mit der Lohnabrechnung ausgezahlt oder durch Freizeit ausgeglichen werden. Überschreiten sie im Jahr die 80 Stunden, die das spanische Arbeitnehmerstatut erlaubt, warnt Sie der Bildschirm.</p>
-        </div>
-        <div class="pillar">
-          <h3>Monatsabschluss für die Lohnabrechnung</h3>
-          <p>Jeder Monat wird für die Lohnabrechnung abgeschlossen und kann zur Korrektur wieder geöffnet werden, wobei der Grund festgehalten wird. Jede Person trägt den Code, unter dem Ihre Steuerkanzlei sie kennt.</p>
-        </div>
-        <div class="pillar">
-          <h3>Bereit für die Inspektion</h3>
-          <p>Das vollständige Register gibt es als Excel, CSV und als monatliches PDF mit Platz für die Unterschriften. Und Sie können der Arbeitsinspektion oder der Arbeitnehmervertretung einen schreibgeschützten Link geben, der abläuft und jeden Zugriff protokolliert.</p>
-        </div>
-      </div>
-
-      <div class="precios">
-        <div class="precios__tabla-sola">
-          <h3>Was es kostet</h3>
-          <p>Sie zahlen für jede Fachkraft Ihres Teams, nicht für Nutzer oder Standorte. Jede Stufe gilt nur für die Fachkräfte, die in sie fallen, es gibt also keine Sprünge beim Wechsel von einer zur nächsten.</p>
-          <table class="faq__tabla">
-            <thead><tr><th>Fachkräfte</th><th>Pro Fachkraft und Monat</th></tr></thead>
-            <tbody>
-              <tr><td>Die ersten 25</td><td>2,50 €</td></tr>
-              <tr><td>Die 26. bis 100.</td><td>2,00 €</td></tr>
-              <tr><td>Ab der 101.</td><td>1,50 €</td></tr>
-            </tbody>
-          </table>
-          <p class="precios__nota">Mindestgebühr von 10 € im Monat. Preise ohne MwSt. Bei Vorauszahlung des Jahres zahlen Sie zehn Monatsraten statt zwölf.</p>
-        </div>
-        <div class="precios__tabla-sola">
-          <h3>Einige Beispiele</h3>
-          <table class="faq__tabla">
-            <thead><tr><th>Ihr Team</th><th>Pro Monat</th><th>Pro Jahr</th></tr></thead>
-            <tbody>
-              <tr><td>5 Fachkräfte</td><td>12,50 €</td><td>125 €</td></tr>
-              <tr><td>10 Fachkräfte</td><td>25 €</td><td>250 €</td></tr>
-              <tr><td>25 Fachkräfte</td><td>62,50 €</td><td>625 €</td></tr>
-              <tr><td>50 Fachkräfte</td><td>112,50 €</td><td>1.125 €</td></tr>
-              <tr><td>100 Fachkräfte</td><td>212,50 €</td><td>2.125 €</td></tr>
-            </tbody>
-          </table>
-          <p>Alles inklusive: was Sie oben sehen und was noch kommt. Technischer Support per E-Mail, ohne Provisionen und ohne Mindestlaufzeit. Wir richten Ihren Betrieb gemeinsam mit Ihnen ein, ohne Kosten.</p>
-        </div>
-      </div>
-
-      <div class="rrhh-extra">
-        <h3>Und wenn Sie morgen mehr brauchen</h3>
-        <p>Da Personal ein Modul ist und kein eigenes Programm, können Sie weitere hinzunehmen, ohne die Anwendung zu wechseln und ohne etwas neu zu laden: den Terminkalender und die Kundenakten, wenn Sie mit Termin arbeiten, die Kasse und die Rechnungsstellung oder die Wartungsberichte mit Fotos für Inspektionen. Was Sie schon haben, bleibt, wo es ist, und der neue Teil erscheint im Menü. Bevor wir etwas einschalten, sagen wir Ihnen, wie sich Ihre Gebühr ändert.</p>
-        <div class="actions">
-          <a class="btn btn--solid" href="#demo">Demo anfragen</a>
-        </div>
-      </div>
-    </div>
-  </section>
   <section id="abierto">
     <div class="shell">
       <div class="section__head">
