@@ -222,6 +222,23 @@ section{padding-block:clamp(3.2rem,6vw,5.5rem)}
 .pillar p{color:var(--text-dim);font-size:.97rem}
 .pillar:first-child{border-top-color:var(--accent)}
 
+.modulo-explica{margin-top:2.4rem;padding:1.3rem 1.5rem;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--tu-anillo);border-radius:8px;max-width:60rem}
+.modulo-explica h3{font-size:1.14rem;margin-bottom:.5rem;color:var(--brand)}
+:root[data-theme="dark"] .modulo-explica h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .modulo-explica h3{color:var(--mist)}}
+.modulo-explica p{color:var(--text-dim);font-size:.97rem}
+.modulo-explica p+p{margin-top:.7rem}
+.rrhh-extra{margin-top:2.8rem;max-width:60rem}
+.rrhh-extra h3{font-size:1.14rem;margin-bottom:.6rem;color:var(--brand)}
+:root[data-theme="dark"] .rrhh-extra h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .rrhh-extra h3{color:var(--mist)}}
+.rrhh-extra p{color:var(--text-dim);font-size:.97rem}
+.rrhh-extra .actions{margin-top:1.4rem}
+.precios__tabla-sola{display:flex;flex-direction:column;gap:.9rem}
+.precios__tabla-sola h3{font-size:1.14rem;color:var(--brand)}
+:root[data-theme="dark"] .precios__tabla-sola h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .precios__tabla-sola h3{color:var(--mist)}}
+.precios__tabla-sola p{color:var(--text-dim);font-size:.97rem}
 /* ---------- productos ---------- */
 #productos{background:var(--surface-sunk);border-block:1px solid var(--line)}
 .products{display:grid;gap:1.5rem;margin-top:2.8rem}
@@ -609,6 +626,7 @@ footer{
     </a>
     <nav>
       <a href="#que-hace">Qué hace</a>
+      <a href="#recursos-humanos">Recursos Humanos</a>
       <a href="#precios">Precios</a>
       <a href="#preguntas">Preguntas</a>
       <a href="#demo">Demo</a>
@@ -940,6 +958,86 @@ footer{
     </div>
   </section>
 
+  <section id="recursos-humanos">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Módulo de Recursos Humanos</p>
+        <h2>Las horas de tu plantilla, sin hojas de cálculo.</h2>
+        <p>Residencias, comunidades de vecinos, talleres, tiendas: cualquier centro con trabajadores que fichar y turnos que cuadrar. Turnera lleva su cuadrante, su calendario laboral y su registro de jornada, sin agenda, sin clientes y sin nada que no necesites.</p>
+      </div>
+
+      <div class="modulo-explica">
+        <h3>¿Qué es un módulo?</h3>
+        <p>Turnera está hecha por partes, y cada parte se llama módulo: la agenda, las fichas de clientes, la caja, la facturación, el personal. Un módulo es una parte de la aplicación que se enciende o se apaga según lo que necesite tu centro.</p>
+        <p>Recursos Humanos es el módulo que cuida de tus trabajadores, y se contrata solo: ves únicamente lo que usas y pagas solo por eso. Si un día necesitas otra parte, se enciende sin cambiar de aplicación.</p>
+      </div>
+
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Fichar con un PIN</h3>
+          <p>Cada persona ficha entrada, salida o pausa en el reloj de la entrada con su PIN, mira sus fichajes del mes y los recibe por correo o en PDF.</p>
+        </div>
+        <div class="pillar">
+          <h3>Cuadrante semanal</h3>
+          <p>Quién trabaja cada día y en qué turno, quién está libre o de vacaciones y quién está dentro ahora mismo. En el inicio ves quién debería haber fichado y no lo ha hecho.</p>
+        </div>
+        <div class="pillar">
+          <h3>Calendario laboral</h3>
+          <p>El convenio de cada año con sus horas y sus días de vacaciones, los turnos, los tipos de ausencia y los festivos. Los nacionales y los autonómicos se cargan solos al elegir la comunidad del centro.</p>
+        </div>
+        <div class="pillar">
+          <h3>Horas extra y bolsa de horas</h3>
+          <p>Lo fichado fuera de turno se anota como hora extra en la bolsa de cada profesional, y tú decides si se paga en nómina o se compensa con descanso. Si en el año se pasan de las 80 horas que permite el Estatuto de los Trabajadores, la pantalla te avisa.</p>
+        </div>
+        <div class="pillar">
+          <h3>Cierre del mes para la nómina</h3>
+          <p>Cada mes se cierra para la nómina y se puede reabrir para regularizarla, dejando escrito el motivo. Cada persona lleva el código con el que la conoce tu gestoría.</p>
+        </div>
+        <div class="pillar">
+          <h3>Listo para la Inspección</h3>
+          <p>El registro completo sale en Excel, CSV y en PDF mensual con hueco para las firmas. Y puedes dar un enlace de solo lectura, que caduca y deja rastro de cada consulta, a la Inspección de Trabajo o a la representación de los trabajadores.</p>
+        </div>
+      </div>
+
+      <div class="precios">
+        <div class="precios__tabla-sola">
+          <h3>Cuánto cuesta</h3>
+          <p>Pagas por cada profesional de tu plantilla, no por usuarios ni por locales. Cada tramo se aplica solo a los profesionales que caen en él, así que no hay saltos al pasar de uno a otro.</p>
+          <table class="faq__tabla">
+            <thead><tr><th>Profesionales</th><th>Por profesional y mes</th></tr></thead>
+            <tbody>
+              <tr><td>Los primeros 25</td><td>2,50 €</td></tr>
+              <tr><td>Del 26 al 100</td><td>2,00 €</td></tr>
+              <tr><td>A partir del 101</td><td>1,50 €</td></tr>
+            </tbody>
+          </table>
+          <p class="precios__nota">Cuota mínima de 10 € al mes. Precios sin IVA. Pagando el año por adelantado pagas diez mensualidades en vez de doce.</p>
+        </div>
+        <div class="precios__tabla-sola">
+          <h3>Algunos ejemplos</h3>
+          <table class="faq__tabla">
+            <thead><tr><th>Tu plantilla</th><th>Al mes</th><th>Al año</th></tr></thead>
+            <tbody>
+              <tr><td>5 profesionales</td><td>12,50 €</td><td>125 €</td></tr>
+              <tr><td>10 profesionales</td><td>25 €</td><td>250 €</td></tr>
+              <tr><td>25 profesionales</td><td>62,50 €</td><td>625 €</td></tr>
+              <tr><td>50 profesionales</td><td>112,50 €</td><td>1.125 €</td></tr>
+              <tr><td>100 profesionales</td><td>212,50 €</td><td>2.125 €</td></tr>
+            </tbody>
+          </table>
+          <p>Todo incluido: lo que ves arriba y lo que vaya llegando. Soporte técnico por correo, sin comisiones y sin permanencia. Configuramos tu centro contigo, sin coste.</p>
+        </div>
+      </div>
+
+      <div class="rrhh-extra">
+        <h3>Y si mañana necesitas más</h3>
+        <p>Como Recursos Humanos es un módulo y no un programa aparte, puedes sumar otros sin cambiar de aplicación ni volver a cargar nada: la agenda y las fichas de clientes si atiendes con cita, la caja y la facturación, o los partes de mantenimiento con fotos para las inspecciones. Lo que ya tienes se queda donde está y lo nuevo aparece en el menú. Antes de encender nada te decimos cuánto cambia tu cuota.</p>
+        <div class="actions">
+          <a class="btn btn--solid" href="#demo">Pedir una demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="abierto">
     <div class="shell">
       <div class="section__head">

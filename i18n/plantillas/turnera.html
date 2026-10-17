@@ -220,6 +220,23 @@ section{padding-block:clamp(3.2rem,6vw,5.5rem)}
 .pillar p{color:var(--text-dim);font-size:.97rem}
 .pillar:first-child{border-top-color:var(--accent)}
 
+.modulo-explica{margin-top:2.4rem;padding:1.3rem 1.5rem;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--tu-anillo);border-radius:8px;max-width:60rem}
+.modulo-explica h3{font-size:1.14rem;margin-bottom:.5rem;color:var(--brand)}
+:root[data-theme="dark"] .modulo-explica h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .modulo-explica h3{color:var(--mist)}}
+.modulo-explica p{color:var(--text-dim);font-size:.97rem}
+.modulo-explica p+p{margin-top:.7rem}
+.rrhh-extra{margin-top:2.8rem;max-width:60rem}
+.rrhh-extra h3{font-size:1.14rem;margin-bottom:.6rem;color:var(--brand)}
+:root[data-theme="dark"] .rrhh-extra h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .rrhh-extra h3{color:var(--mist)}}
+.rrhh-extra p{color:var(--text-dim);font-size:.97rem}
+.rrhh-extra .actions{margin-top:1.4rem}
+.precios__tabla-sola{display:flex;flex-direction:column;gap:.9rem}
+.precios__tabla-sola h3{font-size:1.14rem;color:var(--brand)}
+:root[data-theme="dark"] .precios__tabla-sola h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .precios__tabla-sola h3{color:var(--mist)}}
+.precios__tabla-sola p{color:var(--text-dim);font-size:.97rem}
 /* ---------- productos ---------- */
 #productos{background:var(--surface-sunk);border-block:1px solid var(--line)}
 .products{display:grid;gap:1.5rem;margin-top:2.8rem}
@@ -607,6 +624,7 @@ footer{
     </a>
     <nav>
       <a href="#que-hace">{{t86ef57e7}}</a>
+      <a href="#recursos-humanos">{{t6c764be6}}</a>
       <a href="#precios">{{t628c066b}}</a>
       <a href="#preguntas">{{t1df9a6fc}}</a>
       <a href="#demo">{{te52c854d}}</a>
@@ -938,6 +956,86 @@ footer{
     </div>
   </section>
 
+  <section id="recursos-humanos">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">{{te858a9be}}</p>
+        <h2>{{tec1179a9}}</h2>
+        <p>{{tbc356517}}</p>
+      </div>
+
+      <div class="modulo-explica">
+        <h3>{{t6fa4aa50}}</h3>
+        <p>{{tf11b6ab2}}</p>
+        <p>{{t7f0775e7}}</p>
+      </div>
+
+      <div class="pillars">
+        <div class="pillar">
+          <h3>{{tf6d55f7f}}</h3>
+          <p>{{tdaea23e4}}</p>
+        </div>
+        <div class="pillar">
+          <h3>{{tfc015288}}</h3>
+          <p>{{tb711368d}}</p>
+        </div>
+        <div class="pillar">
+          <h3>{{td808a415}}</h3>
+          <p>{{ta3290f13}}</p>
+        </div>
+        <div class="pillar">
+          <h3>{{t132f50a8}}</h3>
+          <p>{{tc03f58ac}}</p>
+        </div>
+        <div class="pillar">
+          <h3>{{tba2483a8}}</h3>
+          <p>{{tbb5c42df}}</p>
+        </div>
+        <div class="pillar">
+          <h3>{{t6589e72a}}</h3>
+          <p>{{t60318f9a}}</p>
+        </div>
+      </div>
+
+      <div class="precios">
+        <div class="precios__tabla-sola">
+          <h3>{{t0154c403}}</h3>
+          <p>{{t632045e2}}</p>
+          <table class="faq__tabla">
+            <thead><tr><th>{{t41dde626}}</th><th>{{t13af23db}}</th></tr></thead>
+            <tbody>
+              <tr><td>{{t99a64079}}</td><td>2,50 €</td></tr>
+              <tr><td>{{tce07479c}}</td><td>2,00 €</td></tr>
+              <tr><td>{{t262a8019}}</td><td>1,50 €</td></tr>
+            </tbody>
+          </table>
+          <p class="precios__nota">{{te1a0cfde}}</p>
+        </div>
+        <div class="precios__tabla-sola">
+          <h3>{{t5415f8d8}}</h3>
+          <table class="faq__tabla">
+            <thead><tr><th>{{t7580c58e}}</th><th>{{tdf450d80}}</th><th>{{t932c9887}}</th></tr></thead>
+            <tbody>
+              <tr><td>{{t3e0cae0d}}</td><td>12,50 €</td><td>125 €</td></tr>
+              <tr><td>{{t319b97c4}}</td><td>25 €</td><td>250 €</td></tr>
+              <tr><td>{{t81a180a3}}</td><td>62,50 €</td><td>625 €</td></tr>
+              <tr><td>{{t54fc831a}}</td><td>112,50 €</td><td>1.125 €</td></tr>
+              <tr><td>{{tb5ee3beb}}</td><td>212,50 €</td><td>2.125 €</td></tr>
+            </tbody>
+          </table>
+          <p>{{tffc4dfb2}}</p>
+        </div>
+      </div>
+
+      <div class="rrhh-extra">
+        <h3>{{t5ae2e85c}}</h3>
+        <p>{{tc63978c4}}</p>
+        <div class="actions">
+          <a class="btn btn--solid" href="#demo">{{td44582c6}}</a>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="abierto">
     <div class="shell">
       <div class="section__head">
