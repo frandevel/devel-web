@@ -59,5 +59,20 @@
   "tc3ac04c3": "Das Modul Personal von Turnera, mit seinen Funktionen und seinen Preisen pro Fachkraft.",
   "ta950f224": "Turnera: Kalender, Akte und Kasse auf demselben Bildschirm",
   "t58805743": "DEVEL-Logo",
-  "t27e3f99e": "Bildmarke von Turnera"
+  "t27e3f99e": "Bildmarke von Turnera",
+  "t3b0aebdc": "Ansichten",
+  "t23c929de": "So sieht es von innen aus.",
+  "tf356ce0e": "Bildschirmfotos einer echten Installation mit Beispieldaten. Keine Entwürfe, keine Attrappen.",
+  "t9e188e7a": "Die Stempeluhr am Eingang: Jede Person tippt auf ihren Namen, gibt ihre PIN ein und stempelt Ein, Pause oder Aus. Wer noch keine PIN hat, fällt sofort auf, und die Verwaltung vergibt sie im Profil der Person.",
+  "t946fe7f4": "Stempeln.",
+  "t5d54c7ff": "Pro Fachkraft und Monat: geplante gegenüber gestempelten Stunden, getrennt in normale und außerhalb der Schicht gestempelte Stunden, bereit zum Download als CSV.",
+  "tc3d48be2": "Gestempelte Stunden.",
+  "tc57d3ff3": "Wer an welchem Tag in welcher Schicht arbeitet, mit den bereits eingetragenen Feiertagen und wer gerade da ist.",
+  "te9c7e30e": "Dienstplan.",
+  "t01356d7a": "Der Tarifvertrag jeder Person, ihre Schichten und rechts die Rechnung: Stunden des Tarifvertrags gegenüber den geplanten, verbleibender Urlaub und das bis heute Gestempelte.",
+  "t8af91882": "Arbeitskalender.",
+  "t56beacc5": "Die Stempeluhr am Eingang, mit einer Karte pro Person und ihrer Schaltfläche zum Stempeln mit PIN",
+  "t248e9b51": "Stundenübersicht pro Fachkraft und Monat, mit geplanten, gestempelten und außerhalb der Schicht gearbeiteten Stunden",
+  "t4880738e": "Der Wochendienstplan mit der Schicht jeder Fachkraft an jedem Tag und wer gerade da ist",
+  "tef5d1c82": "Der Arbeitskalender einer Fachkraft mit ihrem Tarifvertrag, den verfügbaren Schichten und den Stunden- und Urlaubsständen"
 }
