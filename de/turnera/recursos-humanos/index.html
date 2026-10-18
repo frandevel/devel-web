@@ -400,6 +400,7 @@ footer{
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pantalla img{box-shadow:0 10px 30px rgba(0,0,0,.38)}}
 .pantalla figcaption{margin-top:.9rem;font-size:.96rem;color:var(--text-dim);line-height:1.6}
 .pantalla b{color:var(--text);font-weight:600}
+@media (min-width:900px){.pantalla--alta{grid-template-columns:minmax(0,36rem) minmax(0,15rem)}}
 
 /* ---------- recorrido en vídeo ---------- */
 .recorrido{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.4rem 2rem;margin-top:2.8rem}
@@ -636,7 +637,7 @@ footer{
       <div class="pillars">
         <div class="pillar">
           <h3>Stempeln mit PIN</h3>
-          <p>Jede Person stempelt am Eingang mit ihrer PIN Ein, Aus oder Pause, sieht ihre Stempelungen des Monats und erhält sie per E-Mail oder als PDF.</p>
+          <p>Jede Person stempelt Kommen, Gehen oder Pause mit ihrer PIN, an der Uhr am Eingang oder in der nativen Handy-App, sieht ihre Stempelungen des Monats und erhält sie per E-Mail oder als PDF.</p>
         </div>
         <div class="pillar">
           <h3>Wochendienstplan</h3>
@@ -667,31 +668,37 @@ footer{
       <div class="section__head">
         <p class="eyebrow">Ansichten</p>
         <h2>So sieht es von innen aus.</h2>
-        <p>Bildschirmfotos einer echten Installation mit Beispieldaten. Keine Entwürfe, keine Attrappen.</p>
+        <p>Screenshots von Turnera Personal mit Demodaten: nur das Personalmodul. Keine Skizzen, keine Mock-ups.</p>
       </div>
       <div class="pantallas">
         <div class="pantalla">
           <figure>
-            <img src="/turnera/manual/imagenes/en/29-fichar.png" alt="Die Stempeluhr am Eingang, mit einer Karte pro Person und ihrer Schaltfläche zum Stempeln mit PIN" width="1280" height="720" loading="lazy" decoding="async">
-            <figcaption><b>Stempeln.</b> Die Stempeluhr am Eingang: Jede Person tippt auf ihren Namen, gibt ihre PIN ein und stempelt Ein, Pause oder Aus. Wer noch keine PIN hat, fällt sofort auf, und die Verwaltung vergibt sie im Profil der Person.</figcaption>
+            <img src="/turnera/manual/imagenes/en/web-rrhh-fichar.png" alt="Die Stempeluhr am Eingang, mit einer Karte pro Person und ihrer Schaltfläche zum Stempeln mit PIN" width="1440" height="900" loading="lazy" decoding="async">
+            <figcaption><b>Stempeln.</b> Die Uhr am Eingang: Jede Person tippt auf ihren Namen, gibt ihre PIN ein und stempelt Kommen, Pause oder Gehen. Wer noch keine PIN hat, fällt sofort auf, und die Verwaltung vergibt sie in der Mitarbeiterakte. Gestempelt werden kann auch in der nativen Handy-App, mit derselben PIN und im selben Protokoll.</figcaption>
+          </figure>
+        </div>
+        <div class="pantalla pantalla--alta">
+          <figure>
+            <img src="/turnera/manual/imagenes/en/web-rrhh-calendario-ano.png" alt="Der Arbeitskalender einer Mitarbeiterin mit gemischten Früh-, Spät-, geteilten, Mittags- und Samstagsschichten sowie Urlaub, Krankheit und Feiertagen in anderen Farben" width="816" height="924" loading="lazy" decoding="async">
+            <figcaption><b>Arbeitskalender.</b> Früh-, Spät-, geteilte und Mittagsschichten sowie Samstagsverstärkung im selben Kalender: Jeder Tag trägt seine Schicht, Urlaub, Krankheit, Freistellungen und Feiertage sind farblich abgesetzt.</figcaption>
+          </figure>
+        </div>
+        <div class="pantalla pantalla--alta">
+          <figure>
+            <img src="/turnera/manual/imagenes/en/web-rrhh-cuentas.png" alt="Die Stundenkonten einer Mitarbeiterin: Tarifstunden abzüglich geplanter Stunden, Geplantes gegenüber Gestempeltem bis heute und das Geleistete mit seinen Stunden außerhalb der Schicht" width="660" height="537" loading="lazy" decoding="async">
+            <figcaption><b>Die Konten.</b> Der Tarif abzüglich des Geplanten zeigt, wie viele Stunden noch zu verteilen sind, und das bis heute Geplante abzüglich des Gestempelten die Differenz. Daneben das Geleistete: Normalstunden, Stunden außerhalb der Schicht und der noch auszugleichende Stundenpool.</figcaption>
           </figure>
         </div>
         <div class="pantalla">
           <figure>
-            <img src="/turnera/manual/imagenes/en/36-resumen-de-horas.png" alt="Stundenübersicht pro Fachkraft und Monat, mit geplanten, gestempelten und außerhalb der Schicht gearbeiteten Stunden" width="1280" height="720" loading="lazy" decoding="async">
-            <figcaption><b>Gestempelte Stunden.</b> Pro Fachkraft und Monat: geplante gegenüber gestempelten Stunden, getrennt in normale und außerhalb der Schicht gestempelte Stunden, bereit zum Download als CSV.</figcaption>
-          </figure>
-        </div>
-        <div class="pantalla">
-          <figure>
-            <img src="/turnera/manual/imagenes/en/35-cuadrante.png" alt="Der Wochendienstplan mit der Schicht jeder Fachkraft an jedem Tag und wer gerade da ist" width="1280" height="720" loading="lazy" decoding="async">
+            <img src="/turnera/manual/imagenes/en/web-rrhh-cuadrante.png" alt="Der Wochendienstplan mit der Schicht jeder Fachkraft an jedem Tag und wer gerade da ist" width="1440" height="900" loading="lazy" decoding="async">
             <figcaption><b>Dienstplan.</b> Wer an welchem Tag in welcher Schicht arbeitet, mit den bereits eingetragenen Feiertagen und wer gerade da ist.</figcaption>
           </figure>
         </div>
         <div class="pantalla">
           <figure>
-            <img src="/turnera/manual/imagenes/en/web-rrhh-calendario-planificacion.png" alt="Der Arbeitskalender einer Fachkraft mit ihrem Tarifvertrag, den verfügbaren Schichten und den Stunden- und Urlaubsständen" width="1280" height="880" loading="lazy" decoding="async">
-            <figcaption><b>Arbeitskalender.</b> Der Tarifvertrag jeder Person, ihre Schichten und rechts die Rechnung: Stunden des Tarifvertrags gegenüber den geplanten, verbleibender Urlaub und das bis heute Gestempelte.</figcaption>
+            <img src="/turnera/manual/imagenes/en/web-rrhh-horas.png" alt="Stundenübersicht pro Fachkraft und Monat, mit geplanten, gestempelten und außerhalb der Schicht gearbeiteten Stunden" width="1440" height="900" loading="lazy" decoding="async">
+            <figcaption><b>Gestempelte Stunden.</b> Pro Fachkraft und Monat: geplante gegenüber gestempelten Stunden, getrennt in normale und außerhalb der Schicht gestempelte Stunden, bereit zum Download als CSV.</figcaption>
           </figure>
         </div>
       </div>

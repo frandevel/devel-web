@@ -74,5 +74,13 @@
   "t56beacc5": "Die Stempeluhr am Eingang, mit einer Karte pro Person und ihrer Schaltfläche zum Stempeln mit PIN",
   "t248e9b51": "Stundenübersicht pro Fachkraft und Monat, mit geplanten, gestempelten und außerhalb der Schicht gearbeiteten Stunden",
   "t4880738e": "Der Wochendienstplan mit der Schicht jeder Fachkraft an jedem Tag und wer gerade da ist",
-  "tef5d1c82": "Der Arbeitskalender einer Fachkraft mit ihrem Tarifvertrag, den verfügbaren Schichten und den Stunden- und Urlaubsständen"
+  "tef5d1c82": "Der Arbeitskalender einer Fachkraft mit ihrem Tarifvertrag, den verfügbaren Schichten und den Stunden- und Urlaubsständen",
+  "t3df81cad": "Jede Person stempelt Kommen, Gehen oder Pause mit ihrer PIN, an der Uhr am Eingang oder in der nativen Handy-App, sieht ihre Stempelungen des Monats und erhält sie per E-Mail oder als PDF.",
+  "t1673e92a": "Screenshots von Turnera Personal mit Demodaten: nur das Personalmodul. Keine Skizzen, keine Mock-ups.",
+  "t6e5567a1": "Die Uhr am Eingang: Jede Person tippt auf ihren Namen, gibt ihre PIN ein und stempelt Kommen, Pause oder Gehen. Wer noch keine PIN hat, fällt sofort auf, und die Verwaltung vergibt sie in der Mitarbeiterakte. Gestempelt werden kann auch in der nativen Handy-App, mit derselben PIN und im selben Protokoll.",
+  "tf86b2ff9": "Früh-, Spät-, geteilte und Mittagsschichten sowie Samstagsverstärkung im selben Kalender: Jeder Tag trägt seine Schicht, Urlaub, Krankheit, Freistellungen und Feiertage sind farblich abgesetzt.",
+  "tb68bca56": "Der Tarif abzüglich des Geplanten zeigt, wie viele Stunden noch zu verteilen sind, und das bis heute Geplante abzüglich des Gestempelten die Differenz. Daneben das Geleistete: Normalstunden, Stunden außerhalb der Schicht und der noch auszugleichende Stundenpool.",
+  "t0064edeb": "Die Konten.",
+  "t817419ac": "Der Arbeitskalender einer Mitarbeiterin mit gemischten Früh-, Spät-, geteilten, Mittags- und Samstagsschichten sowie Urlaub, Krankheit und Feiertagen in anderen Farben",
+  "tbe22a3af": "Die Stundenkonten einer Mitarbeiterin: Tarifstunden abzüglich geplanter Stunden, Geplantes gegenüber Gestempeltem bis heute und das Geleistete mit seinen Stunden außerhalb der Schicht"
 }

@@ -397,6 +397,7 @@ footer{
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pantalla img{box-shadow:0 10px 30px rgba(0,0,0,.38)}}
 .pantalla figcaption{margin-top:.9rem;font-size:.96rem;color:var(--text-dim);line-height:1.6}
 .pantalla b{color:var(--text);font-weight:600}
+@media (min-width:900px){.pantalla--alta{grid-template-columns:minmax(0,36rem) minmax(0,15rem)}}
 
 /* ---------- recorrido en vídeo ---------- */
 .recorrido{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.4rem 2rem;margin-top:2.8rem}
@@ -633,7 +634,7 @@ footer{
       <div class="pillars">
         <div class="pillar">
           <h3>Fichar con un PIN</h3>
-          <p>Cada persona ficha entrada, salida o pausa en el reloj de la entrada con su PIN, mira sus fichajes del mes y los recibe por correo o en PDF.</p>
+          <p>Cada persona ficha entrada, salida o pausa con su PIN, en el reloj de la entrada o desde la aplicación nativa del móvil, mira sus fichajes del mes y los recibe por correo o en PDF.</p>
         </div>
         <div class="pillar">
           <h3>Cuadrante semanal</h3>
@@ -664,31 +665,37 @@ footer{
       <div class="section__head">
         <p class="eyebrow">Pantallas</p>
         <h2>Así se ve por dentro.</h2>
-        <p>Capturas de una instalación real con datos de demostración. Ni bocetos ni maquetas.</p>
+        <p>Capturas de Turnera RRHH con datos de demostración: solo el módulo de personal. Ni bocetos ni maquetas.</p>
       </div>
       <div class="pantallas">
         <div class="pantalla">
           <figure>
-            <img src="/turnera/manual/imagenes/29-fichar.png" alt="El reloj de la entrada con una tarjeta por persona y su botón para fichar con el PIN" width="1280" height="720" loading="lazy" decoding="async">
-            <figcaption><b>Fichar.</b> El reloj de la entrada: cada persona pulsa su nombre, teclea su PIN y ficha entrada, pausa o salida. A quien aún no tiene PIN se le ve de un vistazo, y administración se lo pone en su ficha.</figcaption>
+            <img src="/turnera/manual/imagenes/web-rrhh-fichar.png" alt="El reloj de la entrada con una tarjeta por persona y su botón para fichar con el PIN" width="1440" height="900" loading="lazy" decoding="async">
+            <figcaption><b>Fichar.</b> El reloj de la entrada: cada persona pulsa su nombre, teclea su PIN y ficha entrada, pausa o salida. A quien aún no tiene PIN se le ve de un vistazo, y administración se lo pone en su ficha. También se puede fichar desde la aplicación nativa del móvil, con el mismo PIN y en el mismo registro.</figcaption>
+          </figure>
+        </div>
+        <div class="pantalla pantalla--alta">
+          <figure>
+            <img src="/turnera/manual/imagenes/web-rrhh-calendario-ano.png" alt="El calendario laboral de una profesional con sus turnos de mañana, tarde, partido, intermedio y sábado mezclados, y las vacaciones, bajas y festivos en otros colores" width="816" height="924" loading="lazy" decoding="async">
+            <figcaption><b>Calendario laboral.</b> Mañanas, tardes, partidos, intermedios y refuerzos de sábado en el mismo calendario: cada día lleva su turno, y las vacaciones, las bajas, los permisos y los festivos se pintan aparte.</figcaption>
+          </figure>
+        </div>
+        <div class="pantalla pantalla--alta">
+          <figure>
+            <img src="/turnera/manual/imagenes/web-rrhh-cuentas.png" alt="Las cuentas de horas de una profesional: horas del convenio menos planificadas, lo planificado frente a lo fichado hasta hoy y lo ejecutado con sus horas fuera de turno" width="660" height="537" loading="lazy" decoding="async">
+            <figcaption><b>Las cuentas.</b> El convenio menos lo planificado dice cuántas horas quedan por repartir, y lo planificado hasta hoy menos lo fichado, la diferencia. A su lado, lo ejecutado: horas normales, horas fuera de turno y la bolsa que queda por compensar.</figcaption>
           </figure>
         </div>
         <div class="pantalla">
           <figure>
-            <img src="/turnera/manual/imagenes/36-resumen-de-horas.png" alt="Resumen de horas por profesional y mes, con lo planificado, lo fichado y las horas fuera de turno" width="1280" height="720" loading="lazy" decoding="async">
-            <figcaption><b>Horas fichadas.</b> Por profesional y mes, lo planificado frente a lo fichado, separado en horas normales y fuera de turno, listo para descargar en CSV.</figcaption>
-          </figure>
-        </div>
-        <div class="pantalla">
-          <figure>
-            <img src="/turnera/manual/imagenes/35-cuadrante.png" alt="El cuadrante semanal con el turno de cada profesional cada día y quién está dentro ahora mismo" width="1280" height="720" loading="lazy" decoding="async">
+            <img src="/turnera/manual/imagenes/web-rrhh-cuadrante.png" alt="El cuadrante semanal con el turno de cada profesional cada día y quién está dentro ahora mismo" width="1440" height="900" loading="lazy" decoding="async">
             <figcaption><b>Cuadrante.</b> Quién trabaja cada día y en qué turno, con los festivos ya puestos y quién está dentro ahora mismo.</figcaption>
           </figure>
         </div>
         <div class="pantalla">
           <figure>
-            <img src="/turnera/manual/imagenes/web-rrhh-calendario-planificacion.png" alt="El calendario laboral de una profesional con su convenio, los turnos disponibles y las cuentas de horas y vacaciones" width="1280" height="880" loading="lazy" decoding="async">
-            <figcaption><b>Calendario laboral.</b> El convenio de cada persona, sus turnos y, a la derecha, las cuentas: horas del convenio frente a las planificadas, vacaciones que quedan y lo fichado hasta hoy.</figcaption>
+            <img src="/turnera/manual/imagenes/web-rrhh-horas.png" alt="Resumen de horas por profesional y mes, con lo planificado, lo fichado y las horas fuera de turno" width="1440" height="900" loading="lazy" decoding="async">
+            <figcaption><b>Horas fichadas.</b> Por profesional y mes, lo planificado frente a lo fichado, separado en horas normales y fuera de turno, listo para descargar en CSV.</figcaption>
           </figure>
         </div>
       </div>

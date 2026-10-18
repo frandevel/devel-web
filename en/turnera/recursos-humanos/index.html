@@ -400,6 +400,7 @@ footer{
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pantalla img{box-shadow:0 10px 30px rgba(0,0,0,.38)}}
 .pantalla figcaption{margin-top:.9rem;font-size:.96rem;color:var(--text-dim);line-height:1.6}
 .pantalla b{color:var(--text);font-weight:600}
+@media (min-width:900px){.pantalla--alta{grid-template-columns:minmax(0,36rem) minmax(0,15rem)}}
 
 /* ---------- recorrido en vídeo ---------- */
 .recorrido{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.4rem 2rem;margin-top:2.8rem}
@@ -636,7 +637,7 @@ footer{
       <div class="pillars">
         <div class="pillar">
           <h3>Clock in with a PIN</h3>
-          <p>Each person clocks in, out or on a break at the time clock by the entrance with their PIN, checks their clockings for the month and receives them by email or as a PDF.</p>
+          <p>Everyone clocks in, out or on a break with their PIN, at the clock by the door or from the native mobile app, checks their own entries for the month and receives them by email or as a PDF.</p>
         </div>
         <div class="pillar">
           <h3>Weekly rota</h3>
@@ -667,31 +668,37 @@ footer{
       <div class="section__head">
         <p class="eyebrow">Screens</p>
         <h2>Here’s how it looks inside.</h2>
-        <p>Screenshots of a real installation with demonstration data. No sketches, no mockups.</p>
+        <p>Screenshots of Turnera HR with demo data: the staff module only. No sketches, no mock-ups.</p>
       </div>
       <div class="pantallas">
         <div class="pantalla">
           <figure>
-            <img src="/turnera/manual/imagenes/en/29-fichar.png" alt="The time clock by the entrance, with a card for each person and their button to clock in with a PIN" width="1280" height="720" loading="lazy" decoding="async">
-            <figcaption><b>Clocking in.</b> The time clock by the entrance: each person taps their name, types their PIN and clocks in, goes on a break or clocks out. Anyone without a PIN yet is easy to spot, and administration sets it on their record.</figcaption>
+            <img src="/turnera/manual/imagenes/en/web-rrhh-fichar.png" alt="The time clock by the entrance, with a card for each person and their button to clock in with a PIN" width="1440" height="900" loading="lazy" decoding="async">
+            <figcaption><b>Clocking in.</b> The clock by the door: each person taps their name, types their PIN and clocks in, takes a break or clocks out. Anyone who has no PIN yet is easy to spot, and administration sets it on their record. You can also clock from the native mobile app, with the same PIN and in the same record.</figcaption>
+          </figure>
+        </div>
+        <div class="pantalla pantalla--alta">
+          <figure>
+            <img src="/turnera/manual/imagenes/en/web-rrhh-calendario-ano.png" alt="The work calendar of one employee with morning, afternoon, split, midday and Saturday shifts mixed together, and holidays, sick leave and public holidays in other colours" width="816" height="924" loading="lazy" decoding="async">
+            <figcaption><b>Work calendar.</b> Mornings, afternoons, split shifts, midday shifts and Saturday cover in the same calendar: each day carries its shift, and holidays, sick leave, leave of absence and public holidays are painted apart.</figcaption>
+          </figure>
+        </div>
+        <div class="pantalla pantalla--alta">
+          <figure>
+            <img src="/turnera/manual/imagenes/en/web-rrhh-cuentas.png" alt="The hour accounts of one employee: agreement hours minus planned hours, planned against clocked so far, and what was actually worked with its out-of-shift hours" width="660" height="537" loading="lazy" decoding="async">
+            <figcaption><b>The figures.</b> The agreement minus what is planned says how many hours are still to be scheduled, and what is planned up to today minus what was clocked gives the difference. Beside it, what was actually worked: regular hours, out-of-shift hours and the pool still to be compensated.</figcaption>
           </figure>
         </div>
         <div class="pantalla">
           <figure>
-            <img src="/turnera/manual/imagenes/en/36-resumen-de-horas.png" alt="Hours summary by professional and month, with planned hours, clocked hours and out-of-shift hours" width="1280" height="720" loading="lazy" decoding="async">
-            <figcaption><b>Hours clocked.</b> By professional and month, planned hours against clocked hours, split into normal and out-of-shift hours, ready to download as CSV.</figcaption>
-          </figure>
-        </div>
-        <div class="pantalla">
-          <figure>
-            <img src="/turnera/manual/imagenes/en/35-cuadrante.png" alt="The weekly rota with each professional’s shift every day and who is in right now" width="1280" height="720" loading="lazy" decoding="async">
+            <img src="/turnera/manual/imagenes/en/web-rrhh-cuadrante.png" alt="The weekly rota with each professional’s shift every day and who is in right now" width="1440" height="900" loading="lazy" decoding="async">
             <figcaption><b>Rota.</b> Who works each day and on which shift, with the public holidays already in and who is in right now.</figcaption>
           </figure>
         </div>
         <div class="pantalla">
           <figure>
-            <img src="/turnera/manual/imagenes/en/web-rrhh-calendario-planificacion.png" alt="A professional’s work calendar with their agreement, the available shifts and the hours and holiday figures" width="1280" height="880" loading="lazy" decoding="async">
-            <figcaption><b>Work calendar.</b> Each person’s agreement, their shifts and, on the right, the figures: agreement hours against planned hours, holiday left and what has been clocked so far.</figcaption>
+            <img src="/turnera/manual/imagenes/en/web-rrhh-horas.png" alt="Hours summary by professional and month, with planned hours, clocked hours and out-of-shift hours" width="1440" height="900" loading="lazy" decoding="async">
+            <figcaption><b>Hours clocked.</b> By professional and month, planned hours against clocked hours, split into normal and out-of-shift hours, ready to download as CSV.</figcaption>
           </figure>
         </div>
       </div>

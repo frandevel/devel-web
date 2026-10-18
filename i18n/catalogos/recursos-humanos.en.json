@@ -74,5 +74,13 @@
   "t56beacc5": "The time clock by the entrance, with a card for each person and their button to clock in with a PIN",
   "t248e9b51": "Hours summary by professional and month, with planned hours, clocked hours and out-of-shift hours",
   "t4880738e": "The weekly rota with each professional’s shift every day and who is in right now",
-  "tef5d1c82": "A professional’s work calendar with their agreement, the available shifts and the hours and holiday figures"
+  "tef5d1c82": "A professional’s work calendar with their agreement, the available shifts and the hours and holiday figures",
+  "t3df81cad": "Everyone clocks in, out or on a break with their PIN, at the clock by the door or from the native mobile app, checks their own entries for the month and receives them by email or as a PDF.",
+  "t1673e92a": "Screenshots of Turnera HR with demo data: the staff module only. No sketches, no mock-ups.",
+  "t6e5567a1": "The clock by the door: each person taps their name, types their PIN and clocks in, takes a break or clocks out. Anyone who has no PIN yet is easy to spot, and administration sets it on their record. You can also clock from the native mobile app, with the same PIN and in the same record.",
+  "tf86b2ff9": "Mornings, afternoons, split shifts, midday shifts and Saturday cover in the same calendar: each day carries its shift, and holidays, sick leave, leave of absence and public holidays are painted apart.",
+  "tb68bca56": "The agreement minus what is planned says how many hours are still to be scheduled, and what is planned up to today minus what was clocked gives the difference. Beside it, what was actually worked: regular hours, out-of-shift hours and the pool still to be compensated.",
+  "t0064edeb": "The figures.",
+  "t817419ac": "The work calendar of one employee with morning, afternoon, split, midday and Saturday shifts mixed together, and holidays, sick leave and public holidays in other colours",
+  "tbe22a3af": "The hour accounts of one employee: agreement hours minus planned hours, planned against clocked so far, and what was actually worked with its out-of-shift hours"
 }
