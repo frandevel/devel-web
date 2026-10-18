@@ -666,5 +666,22 @@
   "t5cf5e41b": "The Excel and the CSV files of the working-time record carry a column",
   "t4f98ba1f": ", and the branch's code appears on the \"Company and period\" sheet. Whoever receives the file does not have to match people by name by hand.",
   "tc3551023": "Code",
-  "taaf8e57a": "They are optional, and two professionals of the same branch cannot have the same one."
+  "taaf8e57a": "They are optional, and two professionals of the same branch cannot have the same one.",
+  "t404ed661": "18 October 2026 · Quick price lookup",
+  "tbc9c759e": "2026.10.149-fdb8744",
+  "t10483e8a": "Giving a price on the spot, without opening the catalogue",
+  "tf6b38904": "With",
+  "t28ed3a79": "(",
+  "tb7e8b8fd": "on a Mac), or with the",
+  "tad08960e": "button at the top, a search box opens over whatever screen you are on: type the name of a service, a voucher, a package or a product and its name and price come up, VAT included.",
+  "t2433e15b": "Alt + P",
+  "t077beb78": "Option + P",
+  "tcb24ea1b": "There is a new permission,",
+  "td1189f2f": ". With it, someone who has no access to the tariffs or to anything that is charged can still tell a customer a price: they do not see costs, VAT, stock or the records. Reception, Professional and Management have it by default; in a role that already existed it has to be ticked in",
+  "t1d83ee15": "Look up prices",
+  "t370eb09a": "Administration → Roles",
+  "ta438db05": "By default everything active that has a price is shown. Whoever can edit services, packages or products can, from the same box,",
+  "t967f8c71": "and hide from the lookup whatever the centre does not want to give out this way. The catalogue does not change.",
+  "t783180d1": "choose what is shown",
+  "t95842cac": "A package without its own price is worth the sum of its services and products. Lookups leave no trace."
 }
