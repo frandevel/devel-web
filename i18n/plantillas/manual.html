@@ -567,6 +567,26 @@ footer{
   .contenido section{break-inside:avoid-page}
 }
 </style>
+<style id="buscador-css">
+  .buscador { position: sticky; top: -1.6rem; z-index: 1; margin: 0 -0.2rem 0.8rem; padding: 0.5rem 0.2rem; background: var(--crudo, #F7F4EE); }
+  .buscador input {
+    width: 100%; padding: 0.5rem 0.7rem; font: inherit; font-size: 0.88rem;
+    color: var(--texto, #23302e); background: var(--fondo, #fff);
+    border: 1px solid var(--linea, #e2ded5); border-radius: 6px;
+  }
+  .buscador input:focus { outline: 2px solid var(--verde, #0E6E62); outline-offset: 1px; }
+  .buscador__estado { display: flex; align-items: center; gap: 0.4rem; min-height: 2rem; margin-top: 0.4rem; font-size: 0.8rem; color: var(--suave, #5b6b68); }
+  .buscador__cuenta { flex: 1; }
+  .buscador button {
+    min-width: 2rem; padding: 0.2rem 0.5rem; font: inherit; line-height: 1.4; cursor: pointer;
+    color: var(--texto, #23302e); background: var(--fondo, #fff);
+    border: 1px solid var(--linea, #e2ded5); border-radius: 6px;
+  }
+  .buscador button:disabled { opacity: 0.4; cursor: default; }
+  ::highlight(buscador) { background-color: #ffe58a; color: #1a1a1a; }
+  ::highlight(buscador-actual) { background-color: #ff9f43; color: #1a1a1a; }
+  @media print { .buscador { display: none; } }
+</style>
 </head>
 <body>
 <header class="site">
@@ -593,7 +613,17 @@ footer{
 <main id="top" class="shell manual">
 <nav class="indice">
   <h2>{{t350072bc}}</h2>
-  <p>{{t86a01b81}}</p>
+  <p>{{t2bd1f7c9}}</p>
+  <div class="buscador" role="search">
+    <input type="search" id="buscador-texto" placeholder="{{t82a59083}}" aria-label="{{t82a59083}}" autocomplete="off">
+    <div class="buscador__estado">
+      <span class="buscador__cuenta" id="buscador-cuenta" aria-live="polite"></span>
+      <button type="button" id="buscador-anterior" aria-label="{{tb7b0085d}}" title="{{tb7b0085d}}">{{t9555ffd7}}</button>
+      <button type="button" id="buscador-siguiente" aria-label="{{t5494bbde}}" title="{{t5494bbde}}">{{tfc486696}}</button>
+    </div>
+    <span hidden="" id="buscador-de">{{t600ccd1b}}</span>
+    <span hidden="" id="buscador-sin-resultados">{{t926beaa3}}</span>
+  </div>
   <ol>
     <li><a href="#ayuda">{{t247407f6}}</a></li>
     <li><a href="#empezar">{{ted2544bc}}</a></li>
@@ -640,6 +670,7 @@ footer{
     <li><a href="#cuadro-de-mando" class="sub">{{tf3505e30}}</a></li>
     <li><a href="#ajustes">{{t4fc373a3}}</a></li>
     <li><a href="#roles" class="sub">{{t2d35ad3c}}</a></li>
+    <li><a href="#roles-permisos" class="sub">{{tabc17f78}}</a></li>
     <li><a href="#tema" class="sub">{{ted4defcc}}</a></li>
     <li><a href="#iva" class="sub">{{tb4deede4}}</a></li>
     <li><a href="#contabilidad" class="sub">{{tb86405cb}}</a></li>
@@ -676,6 +707,7 @@ footer{
     <li><a href="#mantenimiento">{{t935be01f}}</a></li>
     <li><a href="#mantenimiento-quien" class="sub">{{t221c2db0}}</a></li>
     <li><a href="#mantenimiento-movil" class="sub">{{t960a5b0c}}</a></li>
+    <li><a href="#activaciones">{{t5f96e84f}}</a></li>
     <li><a href="#problemas">{{ta975f33f}}</a></li>
     <li><a href="#app-nativa">{{t07742d5a}}</a></li>
     <li><a href="#app-entrar" class="sub">{{td3dfa034}}</a></li>
@@ -1925,18 +1957,34 @@ footer{
     <strong>{{tb9914e7f}}</strong> {{tebc5bd60}}
   </p>
 
-  <p>{{t9e7e6b4b}}</p>
+  <p>{{tefd4ae12}} <strong>{{t686547d6}}</strong>:</p>
 
   <ul>
     <li><strong>{{t429afb36}}</strong>{{tab102829}}</li>
     <li><strong>{{tf3919e4d}}</strong>{{t4b4a1fb4}}</li>
     <li><strong>{{t04f478b2}}</strong>{{t306f3310}}</li>
+    <li><strong>{{tfee04e51}}</strong>{{t427b278f}}</li>
+    <li><strong>{{t16f2c712}}</strong>{{t8ff9c111}}</li>
+    <li><strong>{{t8d3ce108}}</strong>{{t648c0a84}}</li>
     <li><strong>{{t8de85e4e}}</strong>{{t1f9e97e7}}</li>
+  </ul>
+
+  <p>{{t63996192}}</p>
+
+  <ul>
+    <li><strong>{{te84b64f4}}</strong>{{ta45e41bb}}</li>
+    <li><strong>{{td92b8115}}</strong>{{tb1f9c023}}</li>
+    <li><strong>{{t891e9d6d}}</strong>{{t83f5937f}}</li>
+    <li><strong>{{tf9a71a96}}</strong>{{ta926395c}}</li>
+    <li><strong>{{t29ce2309}}</strong>{{t5acca36b}}</li>
+    <li><strong>{{tf6ebb566}}</strong>{{t3f0d4098}}</li>
+    <li><strong>{{te011da47}}</strong>{{t588ef6af}}</li>
+    <li><strong>{{t40f07323}}</strong>{{t8a897640}}</li>
   </ul>
 
   <p>
     {{tb70473b7}} <strong>{{td469b504}}</strong>{{ta74850cc}} <strong>{{t301c1852}}</strong>{{te118243e}}
-    <strong>{{ta449845d}}</strong>{{tef9031e5}} <strong>{{t34854139}}</strong>{{t4375da0f}}
+    <strong>{{ta449845d}}</strong>{{t415a2a43}} <strong>{{t34854139}}</strong>{{t4375da0f}}
   </p>
 
   <div class="ojo">
@@ -1962,6 +2010,159 @@ footer{
   <p>
     {{ta947018f}}
   </p>
+
+  <h3 id="roles-que-quita">{{t6774cbc0}}</h3>
+
+  <p>
+    {{t186f54f5}} <strong>{{t40dfb1ed}}</strong>{{t30ac1e0b}}
+  </p>
+
+  <ul>
+    <li><strong>{{t8705737f}}</strong> {{taaeb7ceb}}</li>
+    <li><strong>{{t64c6e8ec}}</strong> {{te724fa8f}} <em>{{tcd09cb5f}}</em> {{t2bf1e807}} <em>{{ta9010807}}</em> {{t55048a74}}</li>
+    <li><strong>{{tec53c821}}</strong> {{t4e6e6e8d}}</li>
+  </ul>
+
+  <p>
+    {{t3145e393}} <strong>{{td65ba574}}</strong>{{t043a5464}}<strong>{{td469b504}}</strong>{{t3668d443}}
+  </p>
+
+  <div class="ojo">
+    <p><strong>{{te3b65de1}}</strong> {{t9a54a13e}}</p>
+  </div>
+
+  <p>
+    {{t6cd70808}}
+  </p>
+
+  <h4 id="roles-permisos">{{t47eb001d}}</h4>
+
+  <p>
+    {{td1b36910}}
+  </p>
+
+  <table>
+    <tbody><tr><th>{{t9b974b5f}}</th><th>{{tb4ea9e11}}</th><th>{{tddbb679e}}</th></tr>
+    <tr><th colspan="3">{{t891e9d6d}}</th></tr>
+    <tr><td><strong>{{t41b01021}}</strong></td><td>{{t5a9c6ea3}}</td><td>{{t30081f6b}}</td></tr>
+    <tr><td><strong>{{t083dab0e}}</strong></td><td>{{tcd19db1d}}</td><td>{{t30081f6b}}</td></tr>
+    <tr><td><strong>{{t31be2736}}</strong></td><td>{{te51fab08}}</td><td>{{t6f370bcb}}</td></tr>
+    <tr><td><strong>{{tf7b1a582}}</strong></td><td>{{tfe46c981}}</td><td>{{t891e9d6d}}</td></tr>
+    <tr><td><strong>{{tf7de3b37}}</strong></td><td>{{t635cea91}}</td><td>{{t891e9d6d}}</td></tr>
+    <tr><td><strong>{{td62bc0b4}}</strong></td><td>{{t302a4293}}</td><td>{{t891e9d6d}}</td></tr>
+    <tr><td><strong>{{t43692d03}}</strong></td><td>{{t10b79e6f}}</td><td>{{t28912fff}}</td></tr>
+    <tr><td><strong>{{t4d84a027}}</strong></td><td>{{t989d5539}}</td><td>{{t6f370bcb}}</td></tr>
+    <tr><td><strong>{{tf52d7c80}}</strong></td><td>{{te91a3227}}</td><td>{{t6f370bcb}}</td></tr>
+    <tr><td><strong>{{tbecafd19}}</strong></td><td>{{t47e76312}}</td><td>{{t64e608eb}}</td></tr>
+    <tr><td><strong>{{te2f1f3b0}}</strong></td><td>{{t03496ef4}}</td><td>{{te4ea2dca}}</td></tr>
+    <tr><td><strong>{{t12751e28}}</strong></td><td>{{t0847b7e1}}</td><td>{{te4ea2dca}}</td></tr>
+    <tr><td><strong>{{tad8303be}}</strong></td><td>{{t7ac45b44}}</td><td>{{te4ea2dca}}</td></tr>
+    <tr><th colspan="3">{{te84b64f4}}</th></tr>
+    <tr><td><strong>{{t3d0ebbce}}</strong></td><td>{{t30842ff2}}</td><td>{{te9f76254}}</td></tr>
+    <tr><td><strong>{{tcaaf30c1}}</strong></td><td>{{t3037aa36}}</td><td>{{t30435862}}</td></tr>
+    <tr><td><strong>{{t25a2ab5d}}</strong></td><td>{{td2b78a25}}</td><td>{{t30435862}}</td></tr>
+    <tr><td><strong>{{t878a9756}}</strong></td><td>{{t152d9611}}</td><td>{{t30435862}}</td></tr>
+    <tr><td><strong>{{t22f4aead}}</strong></td><td>{{t706b0666}}</td><td>{{te9f76254}}</td></tr>
+    <tr><td><strong>{{tc817a496}}</strong></td><td>{{t2edc9752}}</td><td>{{t2574f8db}}</td></tr>
+    <tr><td><strong>{{t06735ecf}}</strong></td><td>{{t52b94036}}</td><td>{{t2574f8db}}</td></tr>
+    <tr><td><strong>{{t3c87cfd9}}</strong></td><td>{{t970afbe6}}</td><td>{{t2574f8db}}</td></tr>
+    <tr><td><strong>{{t811c4d8b}}</strong></td><td>{{t5eecf12b}}</td><td>{{te84b64f4}}</td></tr>
+    <tr><td><strong>{{ta8c4079c}}</strong></td><td>{{t7136c679}}</td><td><strong>{{tc91ab6ad}}</strong> {{t7e954ef7}}</td></tr>
+    <tr><td><strong>{{tca29c639}}</strong></td><td>{{ta56cabdb}}</td><td>{{te9f76254}}</td></tr>
+    <tr><td><strong>{{taab6d802}}</strong></td><td>{{tc7838713}}</td><td><strong>{{tc91ab6ad}}</strong> {{t7e954ef7}}</td></tr>
+    <tr><td><strong>{{t39b6022d}}</strong></td><td>{{t12b28ac4}}</td><td>{{t2574f8db}}</td></tr>
+    <tr><td><strong>{{t5b5c8c6f}}</strong></td><td>{{tdba316ea}}</td><td><strong>{{tc91ab6ad}}</strong> {{t7e954ef7}}</td></tr>
+    <tr><th colspan="3">{{t840c9bd7}}</th></tr>
+    <tr><td><strong>{{tc873086c}}</strong></td><td>{{t982207db}}</td><td>{{t3e6ae3aa}}</td></tr>
+    <tr><td><strong>{{t67a6fdf9}}</strong></td><td>{{t29784498}}</td><td>{{t3e6ae3aa}}</td></tr>
+    <tr><td><strong>{{t5c70ce94}}</strong></td><td>{{t896ca34f}}</td><td>{{t3e6ae3aa}}</td></tr>
+    <tr><td><strong>{{tcb0022e8}}</strong></td><td>{{tcc52b1cc}}</td><td>{{ta4775196}}</td></tr>
+    <tr><td><strong>{{t671de8f8}}</strong></td><td>{{t70a64073}}</td><td>{{t3e6ae3aa}}</td></tr>
+    <tr><td><strong>{{t3010815b}}</strong></td><td>{{t554ff366}}</td><td>{{t4c2568f5}}</td></tr>
+    <tr><td><strong>{{tb950e1fe}}</strong></td><td>{{t4befc0f6}}</td><td>{{tf693ca32}}</td></tr>
+    <tr><td><strong>{{tbe311335}}</strong></td><td>{{t73e6b3e2}}</td><td>{{tf693ca32}}</td></tr>
+    <tr><td><strong>{{t1863f289}}</strong></td><td>{{t9537116e}}</td><td><strong>{{tc91ab6ad}}</strong> {{t7e954ef7}}</td></tr>
+    <tr><th colspan="3">{{t29ce2309}}</th></tr>
+    <tr><td><strong>{{tfdbdfecf}}</strong></td><td>{{tbde9a443}}</td><td>{{t119fc99d}}</td></tr>
+    <tr><td><strong>{{t1f4a145d}}</strong></td><td>{{t3d84b0d5}}</td><td>{{t119fc99d}}</td></tr>
+    <tr><td><strong>{{tfcb3e5a3}}</strong></td><td>{{t7e210fb6}}</td><td>{{t119fc99d}}</td></tr>
+    <tr><td><strong>{{t07ed0f36}}</strong></td><td>{{t3b0077af}}</td><td>{{tf7bb85f0}}</td></tr>
+    <tr><td><strong>{{tb4b0e86e}}</strong></td><td>{{t1adcc52e}}</td><td>{{t119fc99d}}</td></tr>
+    <tr><td><strong>{{t9fa9401d}}</strong></td><td>{{tde7e8469}}</td><td>{{t119fc99d}}</td></tr>
+    <tr><td><strong>{{tcfb9208e}}</strong></td><td>{{t4b325bb4}}</td><td>{{t119fc99d}}</td></tr>
+    <tr><td><strong>{{t9d4777bc}}</strong></td><td>{{t995d1c9b}}</td><td>{{tf7bb85f0}}</td></tr>
+    <tr><td><strong>{{t58d21eed}}</strong></td><td>{{t65e6c5a9}}</td><td>{{t119fc99d}}</td></tr>
+    <tr><td><strong>{{t54e16a32}}</strong></td><td>{{tc20afaef}}</td><td>{{td5457127}}</td></tr>
+    <tr><td><strong>{{t53c0faf0}}</strong></td><td>{{t2a8fab28}}</td><td>{{tf7bb85f0}}</td></tr>
+    <tr><td><strong>{{t3c50d312}}</strong></td><td>{{t2dc799e1}}</td><td>{{t119fc99d}}</td></tr>
+    <tr><td><strong>{{tf923097e}}</strong></td><td>{{td33ff2c3}}</td><td>{{t119fc99d}}</td></tr>
+    <tr><td><strong>{{t440071d5}}</strong></td><td>{{t2efadeb6}}</td><td>{{t119fc99d}}</td></tr>
+    <tr><td><strong>{{t5a5904d6}}</strong></td><td>{{td0485715}}</td><td>{{tf7bb85f0}}</td></tr>
+    <tr><td><strong>{{t886dc61a}}</strong></td><td>{{t81c73e0a}}</td><td>{{tf7bb85f0}}</td></tr>
+    <tr><td><strong>{{t4a8d7366}}</strong></td><td>{{ta4e5e048}}</td><td>{{tf7bb85f0}}</td></tr>
+    <tr><td><strong>{{t3bec9600}}</strong></td><td>{{t8a72327a}}</td><td>{{tf7bb85f0}}</td></tr>
+    <tr><td><strong>{{t98c5419f}}</strong></td><td>{{t20a5a997}}</td><td>{{tf7bb85f0}}</td></tr>
+    <tr><td><strong>{{t80229903}}</strong></td><td>{{t2ac2f81d}}</td><td>{{tf7bb85f0}}</td></tr>
+    <tr><th colspan="3">{{tf6ebb566}}</th></tr>
+    <tr><td><strong>{{td9c3da8a}}</strong></td><td>{{t6f813dd4}}</td><td>{{t9c4ed8e3}}</td></tr>
+    <tr><td><strong>{{t65ac2fe4}}</strong></td><td>{{t17c1a301}}</td><td>{{t508aeae3}}</td></tr>
+    <tr><td><strong>{{t94535f33}}</strong></td><td>{{tfcc8c8a4}}</td><td>{{t508aeae3}}</td></tr>
+    <tr><td><strong>{{tdbaf0a5f}}</strong></td><td>{{tee1cd66f}}</td><td><strong>{{tc91ab6ad}}</strong> {{t7e954ef7}}</td></tr>
+    <tr><td><strong>{{t69a4d2ee}}</strong></td><td>{{ta0dfbdf9}}</td><td><strong>{{tc91ab6ad}}</strong> {{t7e954ef7}}</td></tr>
+    <tr><th colspan="3">{{td92b8115}}</th></tr>
+    <tr><td><strong>{{tfc4de1b1}}</strong></td><td>{{t53ec97bf}}</td><td>{{t9d1f2aab}}</td></tr>
+    <tr><td><strong>{{t09638c32}}</strong></td><td>{{t99ca8a09}}</td><td>{{t94dab0eb}}</td></tr>
+    <tr><td><strong>{{tfdd72a50}}</strong></td><td>{{t97b48649}}</td><td>{{t9d1f2aab}}</td></tr>
+    <tr><td><strong>{{t25184321}}</strong></td><td>{{t52335c81}}</td><td>{{t94dab0eb}}</td></tr>
+    <tr><td><strong>{{t167007dd}}</strong></td><td>{{tb4b15128}}</td><td>{{t94dab0eb}}</td></tr>
+    <tr><td><strong>{{tff0a379e}}</strong></td><td>{{t705f147a}}</td><td>{{t9d1f2aab}}</td></tr>
+    <tr><td><strong>{{t9afaca41}}</strong></td><td>{{t368cf944}}</td><td>{{t94dab0eb}}</td></tr>
+    <tr><td><strong>{{tdc11e1d4}}</strong></td><td>{{t7b187735}}</td><td>{{t94dab0eb}}</td></tr>
+    <tr><td><strong>{{t5d4cbf76}}</strong></td><td>{{t20417e37}}</td><td>{{t94dab0eb}}</td></tr>
+    <tr><td><strong>{{t92d10f78}}</strong></td><td>{{ta59295e0}}</td><td>{{t1f8848ec}}</td></tr>
+    <tr><td><strong>{{t487e043c}}</strong></td><td>{{te395adce}}</td><td>{{t94dab0eb}}</td></tr>
+    <tr><td><strong>{{t01eebc82}}</strong></td><td>{{t865d8ee7}}</td><td>{{t94dab0eb}}</td></tr>
+    <tr><td><strong>{{te5f38d8f}}</strong></td><td>{{ta2e138e8}}</td><td>{{t94dab0eb}}</td></tr>
+    <tr><th colspan="3">{{t40f07323}}</th></tr>
+    <tr><td><strong>{{t338754f4}}</strong></td><td>{{t741f6090}}</td><td>{{t94cbaa38}}</td></tr>
+    <tr><td><strong>{{t89c2c210}}</strong></td><td>{{t769ed99d}}</td><td>{{t94cbaa38}}</td></tr>
+    <tr><td><strong>{{t4bb314e4}}</strong></td><td>{{tdf522595}}</td><td>{{t94cbaa38}}</td></tr>
+    <tr><td><strong>{{t6b1d00b6}}</strong></td><td>{{tcac98817}}</td><td>{{t94cbaa38}}</td></tr>
+    <tr><td><strong>{{t98df07ad}}</strong></td><td>{{t20b6fd3b}}</td><td>{{t94cbaa38}}</td></tr>
+    <tr><td><strong>{{tf9d09ad5}}</strong></td><td>{{t572b8185}}</td><td>{{t94cbaa38}}</td></tr>
+    <tr><td><strong>{{t4314a2dd}}</strong></td><td>{{t12a81214}}</td><td><strong>{{tc91ab6ad}}</strong> {{t7e954ef7}}</td></tr>
+    <tr><td><strong>{{t49bdeff1}}</strong></td><td>{{t33e55231}}</td><td><strong>{{tc91ab6ad}}</strong> {{t7e954ef7}}</td></tr>
+    <tr><td><strong>{{t63037398}}</strong></td><td>{{ted6fb5c3}}</td><td>{{t94cbaa38}}</td></tr>
+    <tr><td><strong>{{t4f92bf15}}</strong></td><td>{{t3915a8a5}}</td><td>{{t94cbaa38}}</td></tr>
+    <tr><th colspan="3">{{t16f2c712}}</th></tr>
+    <tr><td><strong>{{t9dab4f47}}</strong></td><td>{{t0c892f02}}</td><td>{{t7938781c}}</td></tr>
+    <tr><td><strong>{{t29af2a2e}}</strong></td><td>{{te019a273}}</td><td>{{t7938781c}}</td></tr>
+    <tr><td><strong>{{t737d3729}}</strong></td><td>{{t2c224eb6}}</td><td>{{td9236a3e}}</td></tr>
+    <tr><td><strong>{{t4fbbb64c}}</strong></td><td>{{t29536153}}</td><td>{{tf388e21c}}</td></tr>
+    <tr><td><strong>{{tcad7b4c8}}</strong></td><td>{{t7eb94cc9}}</td><td>{{t04f478b2}}</td></tr>
+    <tr><td><strong>{{t15b66b4e}}</strong></td><td>{{t275971a2}}</td><td>{{td9236a3e}}</td></tr>
+    <tr><td><strong>{{t5e786c6b}}</strong></td><td>{{tc8b4f0e0}}</td><td>{{tf388e21c}}</td></tr>
+    <tr><td><strong>{{t03bac124}}</strong></td><td>{{tc4b014e9}}</td><td><strong>{{tc91ab6ad}}</strong> {{t7e954ef7}}</td></tr>
+    <tr><th colspan="3">{{t8d3ce108}}</th></tr>
+    <tr><td><strong>{{t40f47860}}</strong></td><td>{{t795e9ba8}}</td><td>{{tc25a5e72}}</td></tr>
+    <tr><td><strong>{{t7e428261}}</strong></td><td>{{t0745aeef}}</td><td>{{tc25a5e72}}</td></tr>
+    <tr><th colspan="3">{{te011da47}}</th></tr>
+    <tr><td><strong>{{t48150ac4}}</strong></td><td>{{t56e9b194}}</td><td>{{t4f03b225}}</td></tr>
+    <tr><td><strong>{{t22dd289b}}</strong></td><td>{{tc1006c05}}</td><td>{{te011da47}}</td></tr>
+    <tr><td><strong>{{te1b1798e}}</strong></td><td>{{t4dbac546}}</td><td><strong>{{tc91ab6ad}}</strong> {{t7e954ef7}}</td></tr>
+    <tr><th colspan="3">{{t06a3897f}}</th></tr>
+    <tr><td><strong>{{t645c8e45}}</strong></td><td>{{t71b09c08}}</td><td>{{tb0559a5a}}</td></tr>
+    <tr><td><strong>{{tb077abb6}}</strong></td><td>{{te8259d14}}</td><td>{{tb0559a5a}}</td></tr>
+    <tr><td><strong>{{tc86e76eb}}</strong></td><td>{{td3fd8692}}</td><td>{{t04f478b2}}</td></tr>
+    <tr><td><strong>{{t57388ca3}}</strong></td><td>{{te3bf81a8}}</td><td>{{t04f478b2}}</td></tr>
+    <tr><td><strong>{{t9e3d9b4e}}</strong></td><td>{{t0656e459}}</td><td>{{t04f478b2}}</td></tr>
+    <tr><td><strong>{{t8de0c676}}</strong></td><td>{{t3f5bb6b8}}</td><td>{{t04f478b2}}</td></tr>
+    <tr><td><strong>{{taf0a2962}}</strong></td><td>{{t1049fb37}}</td><td>{{t380831d9}}</td></tr>
+    <tr><td><strong>{{te5cf3414}}</strong></td><td>{{tce2f5fa9}}</td><td><strong>{{tc91ab6ad}}</strong> {{t7e954ef7}}</td></tr>
+    <tr><td><strong>{{t31138a07}}</strong></td><td>{{t139c1b24}}</td><td>{{t04f478b2}}</td></tr>
+    <tr><td><strong>{{tb734561c}}</strong></td><td>{{t6869d52a}}</td><td>{{t04f478b2}}</td></tr>
+    <tr><td><strong>{{td08dddcb}}</strong></td><td>{{te7247f48}}</td><td><strong>{{tc91ab6ad}}</strong> {{t7e954ef7}}</td></tr>
+  </tbody></table>
 
   <h3>{{t36105829}}</h3>
   <span class="ruta">{{tf3b7037e}}</span>
@@ -2565,6 +2766,10 @@ footer{
     {{t43f007fb}}
   </p>
 
+  <p>
+    {{tcb8bc87e}} <strong>{{tc3551023}}</strong>{{tb2daa0f2}}<em>{{t4b7f904c}}</em>{{ta1e19773}}<em>{{t891b142e}}</em>{{t82960dd6}}
+  </p>
+
   <h4 id="presencia-enlaces">{{tc493ad67}}</h4>
 
   <p>
@@ -2682,6 +2887,17 @@ footer{
     {{t58a3a31b}} <em>{{t6266a080}}</em>{{t168d5531}} <em>{{t4b0816bb}}</em> {{tf53d4b0b}} <strong>{{tba302df9}}</strong>{{t59ce1b67}} <strong>{{t3b97f2b6}}</strong> {{tc4e5a1b7}}
     <strong>{{tddfe92aa}}</strong>{{t3e575dd6}} <strong>{{t71d32bc7}}</strong>{{t6fd8cc91}}
   </p>
+
+  <h4 id="calendario-cerrar-mes">{{ta53deaab}}</h4>
+  <p>
+    {{tcf30a19d}} <em>{{t1573521f}}</em>{{t08cbd548}} <em>{{t1b88a9d0}}</em> {{tda4dc790}} <strong>{{t0086601f}}</strong>{{tf41b2e4d}} <strong>{{t4fe289b6}}</strong>{{tea357fa2}}
+  </p>
+  <p>
+    {{t4065d125}} <em>{{tf9ade367}}</em> {{tc40a06b2}} <strong>{{t46b76145}}</strong>{{t909cc890}} <em>{{t3a7b783c}}</em> {{t3866986e}}
+  </p>
+  <div class="ojo">
+    <p><strong>{{td26e49c8}}</strong>{{te34a11a6}}</p>
+  </div>
 
   <h4>{{tf999f13f}}</h4>
   <p>
@@ -2920,6 +3136,43 @@ footer{
   </figure>
 
 </section>
+<section id="activaciones">
+  <h2>{{t5f96e84f}}</h2>
+  <p>
+    {{td7c12d5c}} <strong>{{tbcd12494}}</strong> {{te2af1966}}
+    <em>{{t8d3ce108}}</em>.
+  </p>
+
+  <h3>{{tcbbb0a76}}</h3>
+  <ol>
+    <li>{{tc6cdf102}} <strong>{{tf4c4ee6e}}</strong> {{tc3492fa5}} <strong>{{t45e7a1c3}}</strong>
+      {{t48fcac05}}</li>
+    <li>{{t514aa7db}}
+      <strong>{{t4832ec78}}</strong> {{t5da78f45}} <strong>{{t94690ec4}}</strong>{{t83d6e4e3}}</li>
+    <li>{{t3f826144}} <strong>{{t33eb6a08}}</strong>{{t2bbd7716}}</li>
+    <li>{{t73a3cb5d}} <strong>{{t92f57e92}}</strong> {{tc4fcd725}} <strong>{{t68181a89}}</strong>{{t97c6d3b1}}</li>
+  </ol>
+
+  <h3>{{t44c238d0}}</h3>
+  <p>
+    {{t62131b1f}} <strong>{{t7b0fd23a}}</strong>{{te01e0304}} <strong>{{tbdc7b3f6}}</strong>{{t1702c452}} <code>{{t9e445dd4}}</code> {{t4b63e2fc}}
+  </p>
+  <p>
+    {{t2bdd2b15}} <strong>{{t9c613f46}}</strong> {{t094b0fe0}} <em>{{t54e2ab16}}</em>{{t1a5b37c7}}
+    <em>{{t8d3ce108}}</em>{{te6499f3a}}
+  </p>
+
+  <h3>{{t93a8611d}}</h3>
+  <p>
+    {{t1d047b9b}} <strong>{{t97b2180f}}</strong> {{t59ae1b24}} <strong>{{t6118da46}}</strong> {{t76bdc4cc}} <strong>{{taf45d93f}}</strong>{{te5ce0221}} <em>{{t121b1ea9}}</em> {{t3e03c156}}
+  </p>
+
+  <h3>{{t721ad2b5}}</h3>
+  <p>
+    {{t5cc13cf3}} <em>{{t3ddc4dd6}}</em> {{t95cb0bfd}} <em>{{t988fe181}}</em>{{tbbdc2f48}} <strong>{{t8d3ce108}}</strong>
+    {{tc3c8091e}}
+  </p>
+</section>
 <section id="problemas">
   <h2>{{ta975f33f}}</h2>
 
@@ -3108,6 +3361,145 @@ footer{
     <span><a href="/legal">{{t34ba9886}}</a> · <a href="/">{{tcd7c8586}}</a></span>
   </div>
 </footer>
+<script id="buscador-js">
+(function () {
+  var campo = document.getElementById('buscador-texto');
+  var contenido = document.querySelector('.contenido');
+  if (!campo || !contenido) return;
+
+  var cuenta = document.getElementById('buscador-cuenta');
+  var anterior = document.getElementById('buscador-anterior');
+  var siguiente = document.getElementById('buscador-siguiente');
+  var textoDe = document.getElementById('buscador-de').textContent.trim();
+  var textoSinResultados = document.getElementById('buscador-sin-resultados').textContent.trim();
+  var BLOQUES = 'p,li,td,th,h1,h2,h3,h4,h5,h6,figcaption,dt,dd,pre,div,summary,footer';
+  var MINIMO_DE_LETRAS = 2;
+  var puedeResaltar = typeof Highlight === 'function' && window.CSS && CSS.highlights;
+  var coincidencias = [];
+  var actual = -1;
+  var espera;
+
+  // Sin mayusculas, sin acentos y con los espacios y saltos de linea de una pieza, para que "camion" encuentre
+  // "Camión" y "es un" encuentre "es\n    un". Guarda de cada letra normalizada de donde viene.
+  function normalizar(cadena) {
+    var texto = '';
+    var origen = [];
+    for (var i = 0; i < cadena.length; i++) {
+      var letra = cadena.charAt(i);
+      if (/\s/.test(letra)) {
+        if (texto.charAt(texto.length - 1) !== ' ') { texto += ' '; origen.push(i); }
+        continue;
+      }
+      var plana = letra.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+      for (var j = 0; j < plana.length; j++) { texto += plana.charAt(j); origen.push(i); }
+    }
+    return { texto: texto, origen: origen };
+  }
+
+  function nodosDeTexto() {
+    var nodos = [];
+    var recorrido = document.createTreeWalker(contenido, NodeFilter.SHOW_TEXT);
+    while (recorrido.nextNode()) {
+      var nodo = recorrido.currentNode;
+      var padre = nodo.parentElement;
+      if (padre && !padre.closest('script,style')) nodos.push(nodo);
+    }
+    return nodos;
+  }
+
+  // Un texto partido por <strong> o <em> sigue siendo una frase: se busca dentro de cada bloque, no nodo a nodo.
+  function bloquesDeTexto() {
+    var bloques = [];
+    var porElemento = new Map();
+    nodosDeTexto().forEach(function (nodo) {
+      var bloque = nodo.parentElement.closest(BLOQUES) || contenido;
+      if (!porElemento.has(bloque)) { porElemento.set(bloque, []); bloques.push(porElemento.get(bloque)); }
+      porElemento.get(bloque).push(nodo);
+    });
+    return bloques;
+  }
+
+  function rangosDe(nodos, consulta) {
+    var texto = '';
+    var procedencia = [];
+    nodos.forEach(function (nodo) {
+      var normal = normalizar(nodo.data);
+      var sobraElEspacio = texto.charAt(texto.length - 1) === ' ' && normal.texto.charAt(0) === ' ';
+      var desde = sobraElEspacio ? 1 : 0;
+      for (var i = desde; i < normal.texto.length; i++) {
+        procedencia.push({ nodo: nodo, desplazamiento: normal.origen[i] });
+      }
+      texto += normal.texto.slice(desde);
+    });
+    var rangos = [];
+    var desde = texto.indexOf(consulta);
+    while (desde !== -1) {
+      var principio = procedencia[desde];
+      var fin = procedencia[desde + consulta.length - 1];
+      var rango = document.createRange();
+      rango.setStart(principio.nodo, principio.desplazamiento);
+      rango.setEnd(fin.nodo, fin.desplazamiento + 1);
+      rangos.push(rango);
+      desde = texto.indexOf(consulta, desde + consulta.length);
+    }
+    return rangos;
+  }
+
+  function limpiar() {
+    coincidencias = [];
+    actual = -1;
+    if (puedeResaltar) { CSS.highlights.delete('buscador'); CSS.highlights.delete('buscador-actual'); }
+  }
+
+  function pintarCuenta() {
+    var hay = coincidencias.length > 0;
+    anterior.disabled = !hay;
+    siguiente.disabled = !hay;
+    if (campo.value.trim() === '' || normalizar(campo.value).texto.length < MINIMO_DE_LETRAS) cuenta.textContent = '';
+    else cuenta.textContent = hay ? (actual + 1) + ' ' + textoDe + ' ' + coincidencias.length : textoSinResultados;
+  }
+
+  function ir(posicion) {
+    if (coincidencias.length === 0) return;
+    actual = (posicion + coincidencias.length) % coincidencias.length;
+    var rango = coincidencias[actual];
+    if (puedeResaltar) CSS.highlights.set('buscador-actual', new Highlight(rango));
+    else { var seleccion = window.getSelection(); seleccion.removeAllRanges(); seleccion.addRange(rango); }
+    var caja = rango.getBoundingClientRect();
+    window.scrollTo({ top: window.scrollY + caja.top - window.innerHeight / 3 });
+    pintarCuenta();
+  }
+
+  function buscar() {
+    limpiar();
+    var consulta = normalizar(campo.value).texto.trim();
+    if (consulta.length >= MINIMO_DE_LETRAS) {
+      bloquesDeTexto().forEach(function (nodos) {
+        coincidencias = coincidencias.concat(rangosDe(nodos, consulta));
+      });
+      if (puedeResaltar && coincidencias.length > 0) CSS.highlights.set('buscador', new Highlight(...coincidencias));
+    }
+    if (coincidencias.length > 0) ir(0); else pintarCuenta();
+  }
+
+  campo.addEventListener('input', function () { clearTimeout(espera); espera = setTimeout(buscar, 150); });
+  campo.addEventListener('keydown', function (evento) {
+    if (evento.key === 'Enter') { evento.preventDefault(); ir(actual + (evento.shiftKey ? -1 : 1)); }
+    if (evento.key === 'Escape') { campo.value = ''; buscar(); }
+  });
+  anterior.addEventListener('click', function () { ir(actual - 1); });
+  siguiente.addEventListener('click', function () { ir(actual + 1); });
+  document.addEventListener('keydown', function (evento) {
+    var escribiendo = /^(INPUT|TEXTAREA|SELECT)$/.test(evento.target.tagName) || evento.target.isContentEditable;
+    if (evento.key === '/' && !escribiendo && !evento.ctrlKey && !evento.metaKey && !evento.altKey) {
+      evento.preventDefault();
+      campo.focus();
+      campo.select();
+    }
+  });
+  pintarCuenta();
+})();
+</script>
 
 
 </body></html>

@@ -62,6 +62,26 @@ salida = salida.slice(0, abreContenido)
   + '<div class="contenido">\n' + conRutasAbsolutas(cuerpo) + '\n</div>\n'
   + salida.slice(cierraMain);
 
+// El buscador del manual (su estilo y su script) vive en el original y viaja con el: ni se duplica ni se
+// desincroniza. Si el sitio ya lo tiene, se sustituye; si no, se inserta antes de cerrar la cabecera y el cuerpo.
+const bloqueDeBuscador = (html, abre, cierra) => {
+  const inicio = html.indexOf(abre);
+  const fin = html.indexOf(cierra, inicio);
+  if (inicio === -1 || fin === -1) throw new Error(`No encuentro ${abre} en el manual.`);
+  return html.slice(inicio, fin + cierra.length);
+};
+const conElBloque = (html, abre, cierra, bloque, antesDe) => {
+  const inicio = html.indexOf(abre);
+  if (inicio !== -1) return html.slice(0, inicio) + bloque + html.slice(html.indexOf(cierra, inicio) + cierra.length);
+  const punto = html.lastIndexOf(antesDe);
+  if (punto === -1) throw new Error(`No encuentro ${antesDe} en el sitio.`);
+  return html.slice(0, punto) + bloque + '\n' + html.slice(punto);
+};
+salida = conElBloque(salida, '<style id="buscador-css">', '</style>',
+  bloqueDeBuscador(manual, '<style id="buscador-css">', '</style>'), '</head>');
+salida = conElBloque(salida, '<script id="buscador-js">', '</script>',
+  bloqueDeBuscador(manual, '<script id="buscador-js">', '</script>'), '</body>');
+
 writeFileSync(destino, salida);
 
 let copiadas = 0;

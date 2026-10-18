@@ -572,6 +572,26 @@ footer{
   .contenido section{break-inside:avoid-page}
 }
 </style>
+<style id="buscador-css">
+  .buscador { position: sticky; top: -1.6rem; z-index: 1; margin: 0 -0.2rem 0.8rem; padding: 0.5rem 0.2rem; background: var(--crudo, #F7F4EE); }
+  .buscador input {
+    width: 100%; padding: 0.5rem 0.7rem; font: inherit; font-size: 0.88rem;
+    color: var(--texto, #23302e); background: var(--fondo, #fff);
+    border: 1px solid var(--linea, #e2ded5); border-radius: 6px;
+  }
+  .buscador input:focus { outline: 2px solid var(--verde, #0E6E62); outline-offset: 1px; }
+  .buscador__estado { display: flex; align-items: center; gap: 0.4rem; min-height: 2rem; margin-top: 0.4rem; font-size: 0.8rem; color: var(--suave, #5b6b68); }
+  .buscador__cuenta { flex: 1; }
+  .buscador button {
+    min-width: 2rem; padding: 0.2rem 0.5rem; font: inherit; line-height: 1.4; cursor: pointer;
+    color: var(--texto, #23302e); background: var(--fondo, #fff);
+    border: 1px solid var(--linea, #e2ded5); border-radius: 6px;
+  }
+  .buscador button:disabled { opacity: 0.4; cursor: default; }
+  ::highlight(buscador) { background-color: #ffe58a; color: #1a1a1a; }
+  ::highlight(buscador-actual) { background-color: #ff9f43; color: #1a1a1a; }
+  @media print { .buscador { display: none; } }
+</style>
 </head>
 <body>
 <header class="site">
@@ -598,7 +618,17 @@ footer{
 <main id="top" class="shell manual">
 <nav class="indice">
   <h2>Manual de Turnera</h2>
-  <p>Actualizado el 14 de octubre de 2026</p>
+  <p>Actualizado el 18 de octubre de 2026</p>
+  <div class="buscador" role="search">
+    <input type="search" id="buscador-texto" placeholder="Buscar en el manual" aria-label="Buscar en el manual" autocomplete="off">
+    <div class="buscador__estado">
+      <span class="buscador__cuenta" id="buscador-cuenta" aria-live="polite"></span>
+      <button type="button" id="buscador-anterior" aria-label="Resultado anterior" title="Resultado anterior">↑</button>
+      <button type="button" id="buscador-siguiente" aria-label="Resultado siguiente" title="Resultado siguiente">↓</button>
+    </div>
+    <span hidden="" id="buscador-de">de</span>
+    <span hidden="" id="buscador-sin-resultados">Sin resultados</span>
+  </div>
   <ol>
     <li><a href="#ayuda">Pedir ayuda</a></li>
     <li><a href="#empezar">1. Entrar y orientarse</a></li>
@@ -645,6 +675,7 @@ footer{
     <li><a href="#cuadro-de-mando" class="sub">El cuadro de mando</a></li>
     <li><a href="#ajustes">9. Ajustes del centro</a></li>
     <li><a href="#roles" class="sub">Roles y permisos</a></li>
+    <li><a href="#roles-permisos" class="sub">Qué permite cada permiso</a></li>
     <li><a href="#tema" class="sub">Cómo se ve la aplicación</a></li>
     <li><a href="#iva" class="sub">El IVA de cada cosa que se vende</a></li>
     <li><a href="#contabilidad" class="sub">El borrador contable</a></li>
@@ -681,6 +712,7 @@ footer{
     <li><a href="#mantenimiento">12. Mantenimiento</a></li>
     <li><a href="#mantenimiento-quien" class="sub">Quién lleva un parte, y soltarlo</a></li>
     <li><a href="#mantenimiento-movil" class="sub">Desde el móvil: la app de los profesionales</a></li>
+    <li><a href="#activaciones">12 bis. Activaciones: puertas y aparatos con QR</a></li>
     <li><a href="#problemas">13. Cuando algo no sale</a></li>
     <li><a href="#app-nativa">14. La aplicación nativa de los profesionales (Android)</a></li>
     <li><a href="#app-entrar" class="sub">Entrar y elegir la sede</a></li>
@@ -2454,20 +2486,37 @@ footer{
     el día que entra alguien nuevo no hay que acordarse de veinte casillas: se le da su rol y ya está.
   </p>
 
-  <p>El centro viene con cuatro roles hechos, que se pueden cambiar y borrar como cualquier otro:</p>
+  <p>El centro viene con roles hechos, que se pueden cambiar y borrar como cualquier otro. Los primeros son
+    trabajos; el resto son <strong>un rol por módulo</strong>:</p>
 
   <ul>
     <li><strong>Recepción</strong>: da horas, atiende el mostrador y cobra.</li>
     <li><strong>Profesional</strong>: su agenda, sus clientes y la historia clínica.</li>
     <li><strong>Dirección</strong>: lleva el centro — catálogo, personal, informes y ajustes — y atiende a los usuarios: cambiarles el nombre o la delegación, desbloquearlos y restablecerles la contraseña.</li>
+    <li><strong>RRHH</strong>: calendarios laborales, profesionales y agenda.</li>
+    <li><strong>Mantenimiento</strong>: lleva los partes de mantenimiento, sus zonas y sus equipos.</li>
+    <li><strong>Activaciones</strong>: lleva los puntos de activación y sus solicitudes.</li>
     <li><strong>Administrador del sistema</strong>: todo, incluidos los permisos delicados.</li>
+  </ul>
+
+  <p>Los roles de módulo llevan todos los permisos de su módulo, menos los delicados:</p>
+
+  <ul>
+    <li><strong>Clientes</strong>: las fichas, sus avisos, sus puntos y el informe de clientes.</li>
+    <li><strong>Catálogo</strong>: servicios, paquetes, productos, proveedores y stock, con sus informes.</li>
+    <li><strong>Agenda</strong>: citas, lista de espera, cabinas, aparatos y el informe de citas.</li>
+    <li><strong>Historia clínica</strong>: la historia clínica y los consentimientos.</li>
+    <li><strong>Caja</strong>: cobrar, devolver, deudas, bonos, tarjetas regalo, cupones, cierre de caja y sus informes.</li>
+    <li><strong>Facturación</strong>: facturas completas, libro de facturas y borrador contable.</li>
+    <li><strong>Portal y avisos</strong>: el portal de reservas y los avisos por WhatsApp.</li>
+    <li><strong>Personal</strong>: calendarios laborales, registro de jornada e incidencias.</li>
   </ul>
 
   <p>
     Para hacer uno a medida se pulsa <strong>Nuevo rol</strong>, se le pone un nombre que no exista y se reparten
     los permisos con las dos listas: a la izquierda los <strong>disponibles</strong>, a la derecha los
     <strong>del rol</strong>. Se pasan de un lado a otro con las flechas o con doble clic, y arriba de cada lista
-    hay un buscador para no recorrer los setenta. <strong>Al pasar el ratón por encima de un permiso, se explica
+    hay un buscador para no recorrer el centenar largo. <strong>Al pasar el ratón por encima de un permiso, se explica
     qué desbloquea</strong>, que no siempre es una pantalla entera: a veces es solo un botón, o que ese botón
     se pueda pulsar. Ver los servicios y cambiar sus precios, por ejemplo, son dos permisos distintos.
   </p>
@@ -2509,6 +2558,174 @@ footer{
     Un rol que lleva alguien no se deja borrar, para que nadie se quede sin permisos sin enterarse: primero se
     les quita a esas personas y después se borra el rol.
   </p>
+
+  <h3 id="roles-que-quita">Qué se pone o se quita al dar o quitar un rol</h3>
+
+  <p>
+    Una persona <strong>puede hacer todo lo que le da cualquiera de sus roles</strong>: los permisos de sus roles se
+    suman. De esa suma salen tres consecuencias que conviene tener claras antes de tocar nada:
+  </p>
+
+  <ul>
+    <li><strong>Dar un rol</strong> le pone de golpe todos los permisos que lleva, es decir, todas las pantallas y todos
+      los botones que esos permisos abren.</li>
+    <li><strong>Quitar un rol</strong> le quita los permisos que ese rol daba y que <em>ningún otro de sus roles</em> le
+      siga dando. Si quien lleva «Agenda» y «Dirección» pierde «Agenda», sigue viendo y moviendo citas, porque
+      Dirección también lo trae. Para que una persona deje de ver un módulo hay que quitarle <em>todos</em> los roles
+      que lo traen.</li>
+    <li><strong>Quitarle todos los roles</strong> a una persona le deja sin permiso para nada: no puede entrar en la
+      aplicación.</li>
+  </ul>
+
+  <p>
+    Cada módulo tiene su <strong>rol de módulo</strong>, que lleva todos los permisos del módulo y solo esos: es la
+    forma más rápida de dar o quitar un módulo entero. Para afinar, no se quita el rol y se improvisa: se crea un rol a
+    medida (<strong>Nuevo rol</strong>) con solo los permisos que se quieren y se le da a la persona en lugar del rol de
+    módulo. Por ejemplo, para que alguien vea los servicios pero no cambie los precios, un rol con «Ver los servicios» y
+    sin «Escribir los servicios».
+  </p>
+
+  <div class="ojo">
+    <p><strong>Los permisos delicados no vienen en ningún rol de módulo.</strong> Solo los trae el Administrador del
+      sistema, así que dar «Caja» o «Clientes» nunca da, por ejemplo, la exportación de la lista de clientes. Si hace
+      falta, se da a mano en un rol a medida.</p>
+  </div>
+
+  <p>
+    Si un módulo está apagado en el centro, sus permisos no sirven a nadie, ni siquiera al administrador, tenga los
+    roles que tenga.
+  </p>
+
+  <h4 id="roles-permisos">Qué permite cada permiso y qué rol lo trae</h4>
+
+  <p>
+    Esta es la lista completa, por módulo. La última columna dice qué roles de fábrica llevan cada permiso: es lo
+    que se pierde al quitar un rol, y lo que se gana al darlo. Los permisos están escritos tal como salen en la
+    pantalla de roles.
+  </p>
+
+  <table>
+    <tbody><tr><th>Permiso</th><th>Qué permite</th><th>Roles que lo traen</th></tr>
+    <tr><th colspan="3">Agenda</th></tr>
+    <tr><td><strong>Ver la agenda</strong></td><td>Abre la agenda y ensena las citas de las columnas que tenga a la vista.</td><td>Recepción, Profesional, Dirección, RRHH, Agenda</td></tr>
+    <tr><td><strong>Poner y mover citas</strong></td><td>Habilita poner una cita nueva y arrastrar una existente a otra hora o columna.</td><td>Recepción, Profesional, Dirección, RRHH, Agenda</td></tr>
+    <tr><td><strong>Anular citas</strong></td><td>Habilita el boton de anular una cita. Ver la agenda no basta para quitar citas.</td><td>Recepción, Dirección, Agenda</td></tr>
+    <tr><td><strong>Citar en dias pasados</strong></td><td>Deja poner o llevar una cita a un dia anterior a hoy. A los dias pasados se puede ir a mirar sin el.</td><td>Agenda</td></tr>
+    <tr><td><strong>Mover citas atendidas</strong></td><td>Deja mover una cita marcada como atendida o como que no vino, que es lo que hace falta cuando se marco por error o la clienta llama para cambiarla. Las cobradas y las anuladas no se mueven.</td><td>Agenda</td></tr>
+    <tr><td><strong>Anular citas ya cobradas</strong></td><td>Deja anular una cita que ya se cobro. El cobro no se deshace: para eso esta devolver el ticket.</td><td>Agenda</td></tr>
+    <tr><td><strong>Cerrar ratos de la agenda</strong></td><td>Deja cerrar ratos de la agenda para que nadie pueda citar ahi.</td><td>Dirección, RRHH, Agenda</td></tr>
+    <tr><td><strong>Imprimir la agenda</strong></td><td>Habilita el boton de imprimir el parte del dia.</td><td>Recepción, Dirección, Agenda</td></tr>
+    <tr><td><strong>Lista de espera</strong></td><td>Apunta clientes en la lista de espera de una hora ocupada y la repasa.</td><td>Recepción, Dirección, Agenda</td></tr>
+    <tr><td><strong>Anotar la sesion del aparato</strong></td><td>Deja anotar la lectura del aparato al terminar la sesion.</td><td>Profesional, Agenda</td></tr>
+    <tr><td><strong>Informe de citas</strong></td><td>Abre el informe de citas.</td><td>Dirección, Agenda</td></tr>
+    <tr><td><strong>Cabinas, pistas y salas</strong></td><td>Gobierna cabinas, pistas y salas, y cuantas se ven en la agenda.</td><td>Dirección, Agenda</td></tr>
+    <tr><td><strong>Dar de alta aparatos</strong></td><td>Da de alta aparatos y decide que servicios los usan.</td><td>Dirección, Agenda</td></tr>
+    <tr><th colspan="3">Clientes</th></tr>
+    <tr><td><strong>Ver las fichas de clientes</strong></td><td>Abre el buscador de clientes y la ficha de cada uno.</td><td>Recepción, Profesional, Dirección, Clientes</td></tr>
+    <tr><td><strong>Dar de alta clientes</strong></td><td>Habilita el boton de nuevo cliente.</td><td>Recepción, Dirección, Clientes</td></tr>
+    <tr><td><strong>Editar la ficha de un cliente</strong></td><td>Deja guardar cambios en una ficha; sin esto la ve en solo lectura.</td><td>Recepción, Dirección, Clientes</td></tr>
+    <tr><td><strong>Ver telefonos y correos</strong></td><td>Ensena el telefono y el correo del cliente; sin esto salen ocultos.</td><td>Recepción, Dirección, Clientes</td></tr>
+    <tr><td><strong>Escribir y retirar avisos</strong></td><td>Escribe y retira los avisos que saltan al citar y al cobrar.</td><td>Recepción, Profesional, Dirección, Clientes</td></tr>
+    <tr><td><strong>Borrar notas de clientes</strong></td><td>Habilita borrar una nota de la ficha. Escribirlas no da derecho a quitarlas.</td><td>Dirección, Clientes</td></tr>
+    <tr><td><strong>Fusionar fichas repetidas</strong></td><td>Fusiona dos fichas repetidas en una sola.</td><td>Dirección, Clientes</td></tr>
+    <tr><td><strong>Borrar los datos de un cliente que lo pide</strong></td><td>Derecho de supresion: borra los datos personales del cliente. Las facturas y la historia clinica se conservan lo que obliga la ley.</td><td>Dirección, Clientes</td></tr>
+    <tr><td><strong>Descargar el historial de un cliente</strong></td><td>Descarga el historial de un cliente en PDF para entregarselo.</td><td>Clientes</td></tr>
+    <tr><td><strong>Exportar la lista de clientes</strong></td><td>Saca la lista entera de clientes a un fichero: es llevarse la base de datos del centro.</td><td><strong>Delicado:</strong> solo el Administrador del sistema</td></tr>
+    <tr><td><strong>Ver los puntos del cliente</strong></td><td>Ensena el saldo de puntos del cliente y su historico.</td><td>Recepción, Profesional, Dirección, Clientes</td></tr>
+    <tr><td><strong>Ajustar puntos a mano</strong></td><td>Suma o resta puntos a mano, sin que vengan de una compra.</td><td><strong>Delicado:</strong> solo el Administrador del sistema</td></tr>
+    <tr><td><strong>Informe de clientes</strong></td><td>Abre el informe de clientes. Sacarlo a fichero pide ademas exportar clientes.</td><td>Dirección, Clientes</td></tr>
+    <tr><td><strong>Importar de otro programa</strong></td><td>Trae de golpe los clientes, servicios, bonos y citas que exporta otro programa, y deja deshacerlo.</td><td><strong>Delicado:</strong> solo el Administrador del sistema</td></tr>
+    <tr><th colspan="3">Historia clínica y consentimientos</th></tr>
+    <tr><td><strong>Ver la historia clinica</strong></td><td>Abre la historia clinica del cliente.</td><td>Profesional, Historia clínica</td></tr>
+    <tr><td><strong>Escribir en la historia clinica</strong></td><td>Escribe evoluciones y antecedentes en la historia clinica.</td><td>Profesional, Historia clínica</td></tr>
+    <tr><td><strong>Imprimir la historia clinica</strong></td><td>Habilita imprimir la historia clinica de una persona.</td><td>Profesional, Historia clínica</td></tr>
+    <tr><td><strong>Pedir una firma</strong></td><td>Pide al cliente la firma de un consentimiento.</td><td>Recepción, Profesional, Dirección, Historia clínica</td></tr>
+    <tr><td><strong>Ver el documento firmado</strong></td><td>Abre el documento ya firmado.</td><td>Profesional, Historia clínica</td></tr>
+    <tr><td><strong>Importar consentimientos firmados</strong></td><td>Sube a la ficha del cliente consentimientos en PDF ya firmados en otra plataforma.</td><td>Recepción, Dirección, Historia clínica</td></tr>
+    <tr><td><strong>Retirar un consentimiento</strong></td><td>Retira un consentimiento dado.</td><td>Dirección, Historia clínica</td></tr>
+    <tr><td><strong>Gobernar las plantillas</strong></td><td>Crea y cambia las plantillas de consentimiento del centro.</td><td>Dirección, Historia clínica</td></tr>
+    <tr><td><strong>Quien abrio que historial</strong></td><td>Consulta quien abrio que historial y cuando.</td><td><strong>Delicado:</strong> solo el Administrador del sistema</td></tr>
+    <tr><th colspan="3">Caja</th></tr>
+    <tr><td><strong>Cobrar en el TPV</strong></td><td>Abre el TPV y deja cerrar un cobro.</td><td>Recepción, Dirección, Caja</td></tr>
+    <tr><td><strong>Aplicar descuentos</strong></td><td>Habilita el campo de descuento dentro del cobro.</td><td>Recepción, Dirección, Caja</td></tr>
+    <tr><td><strong>Dejar a deber</strong></td><td>Deja cerrar un cobro a deber en lugar de cobrarlo entero.</td><td>Recepción, Dirección, Caja</td></tr>
+    <tr><td><strong>Devolver un ticket</strong></td><td>Habilita el boton de devolver lineas de un ticket ya cobrado, en dinero o como saldo a favor.</td><td>Dirección, Caja</td></tr>
+    <tr><td><strong>Ver los cobros pendientes</strong></td><td>Abre la pantalla de cobros pendientes.</td><td>Recepción, Dirección, Caja</td></tr>
+    <tr><td><strong>Saldar una deuda</strong></td><td>Habilita el boton de saldar una deuda.</td><td>Recepción, Dirección, Caja</td></tr>
+    <tr><td><strong>Cuadrar y cerrar la caja</strong></td><td>Abre la caja del dia para contar el efectivo y los resguardos de tarjeta, y deja cerrarla.</td><td>Recepción, Dirección, Caja</td></tr>
+    <tr><td><strong>Reabrir una caja cerrada</strong></td><td>Deja volver a abrir la caja de un dia ya cerrado para corregirla. Queda apuntado quien la reabrio.</td><td>Dirección, Caja</td></tr>
+    <tr><td><strong>Ver las visitas cobradas</strong></td><td>Consulta las visitas ya cobradas y su detalle.</td><td>Recepción, Dirección, Caja</td></tr>
+    <tr><td><strong>Ver los bonos del cliente</strong></td><td>Ensena los bonos del cliente y las sesiones que le quedan.</td><td>Recepción, Profesional, Dirección, Caja</td></tr>
+    <tr><td><strong>Traspasar un bono</strong></td><td>Pasa sesiones de un bono a otra persona.</td><td>Dirección, Caja</td></tr>
+    <tr><td><strong>Ver las tarjetas regalo</strong></td><td>Consulta las tarjetas regalo vendidas, su saldo y lo que queda por gastar entre todas.</td><td>Recepción, Dirección, Caja</td></tr>
+    <tr><td><strong>Vender tarjetas regalo</strong></td><td>Habilita vender una tarjeta regalo, imprimirla y mandarla por correo.</td><td>Recepción, Dirección, Caja</td></tr>
+    <tr><td><strong>Ver los cupones</strong></td><td>Consulta los cupones del centro, su descuento y cuantos quedan por gastar.</td><td>Recepción, Dirección, Caja</td></tr>
+    <tr><td><strong>Crear y retirar cupones</strong></td><td>Habilita inventarse un codigo de campana, ponerle fecha y tope, y retirarlo.</td><td>Dirección, Caja</td></tr>
+    <tr><td><strong>Informe de cobros</strong></td><td>Abre el informe de cobros.</td><td>Dirección, Caja</td></tr>
+    <tr><td><strong>Informe de bonos</strong></td><td>Abre el informe de bonos.</td><td>Dirección, Caja</td></tr>
+    <tr><td><strong>Historico de visitas</strong></td><td>Abre el historico de visitas.</td><td>Dirección, Caja</td></tr>
+    <tr><td><strong>Totales del dia</strong></td><td>Abre los totales del dia.</td><td>Dirección, Caja</td></tr>
+    <tr><td><strong>Cierre de caja</strong></td><td>Abre el cierre de caja.</td><td>Dirección, Caja</td></tr>
+    <tr><th colspan="3">Facturación</th></tr>
+    <tr><td><strong>Hacer factura completa</strong></td><td>Reemite un ticket ya facturado como factura completa, con el NIF y los datos del cliente.</td><td>Recepción, Dirección, Facturación</td></tr>
+    <tr><td><strong>Borrador contable</strong></td><td>Abre el borrador contable.</td><td>Dirección, Facturación</td></tr>
+    <tr><td><strong>Libro de facturas</strong></td><td>Abre el libro de facturas emitidas, como van en la AEAT, y descarga el libro y el asiento resumen.</td><td>Dirección, Facturación</td></tr>
+    <tr><td><strong>Facturacion y VeriFactu</strong></td><td>Activa la facturacion del centro, elige los prefijos de las series y gobierna la remision a la AEAT.</td><td><strong>Delicado:</strong> solo el Administrador del sistema</td></tr>
+    <tr><td><strong>Pasar la facturacion a produccion</strong></td><td>Pasa la facturacion del modo pruebas a produccion: borra las facturas de prueba y la numeracion vuelve a empezar. No tiene vuelta atras.</td><td><strong>Delicado:</strong> solo el Administrador del sistema</td></tr>
+    <tr><th colspan="3">Catálogo</th></tr>
+    <tr><td><strong>Ver los servicios</strong></td><td>Consulta los servicios y sus precios.</td><td>Recepción, Profesional, Dirección, Catálogo</td></tr>
+    <tr><td><strong>Escribir los servicios</strong></td><td>Habilita crear, editar y retirar servicios.</td><td>Dirección, Catálogo</td></tr>
+    <tr><td><strong>Ver los paquetes</strong></td><td>Consulta los paquetes de servicios y productos.</td><td>Recepción, Profesional, Dirección, Catálogo</td></tr>
+    <tr><td><strong>Escribir los paquetes</strong></td><td>Habilita crear y editar paquetes y su precio.</td><td>Dirección, Catálogo</td></tr>
+    <tr><td><strong>Gobernar los grupos de bonos</strong></td><td>Gobierna los grupos que deciden que bono cubre que servicio.</td><td>Dirección, Catálogo</td></tr>
+    <tr><td><strong>Ver los productos</strong></td><td>Consulta los productos de venta.</td><td>Recepción, Profesional, Dirección, Catálogo</td></tr>
+    <tr><td><strong>Escribir los productos</strong></td><td>Habilita crear y editar productos.</td><td>Dirección, Catálogo</td></tr>
+    <tr><td><strong>Ver los proveedores</strong></td><td>Consulta los proveedores.</td><td>Dirección, Catálogo</td></tr>
+    <tr><td><strong>Escribir los proveedores</strong></td><td>Habilita crear y editar proveedores.</td><td>Dirección, Catálogo</td></tr>
+    <tr><td><strong>Ver el stock</strong></td><td>Consulta las existencias.</td><td>Recepción, Dirección, Catálogo</td></tr>
+    <tr><td><strong>Mover unidades de stock</strong></td><td>Habilita las entradas y las salidas de stock.</td><td>Dirección, Catálogo</td></tr>
+    <tr><td><strong>Informe de stock</strong></td><td>Abre el informe de stock.</td><td>Dirección, Catálogo</td></tr>
+    <tr><td><strong>Entradas y salidas de stock</strong></td><td>Abre el informe de entradas y salidas de stock.</td><td>Dirección, Catálogo</td></tr>
+    <tr><th colspan="3">Personal</th></tr>
+    <tr><td><strong>Ver el registro de jornada</strong></td><td>Consulta los fichajes.</td><td>Dirección, RRHH, Personal</td></tr>
+    <tr><td><strong>Ver dónde se fichó</strong></td><td>Consulta desde qué sitio se fichó cada entrada y salida, y si fue dentro o fuera de la zona del centro.</td><td>Dirección, RRHH, Personal</td></tr>
+    <tr><td><strong>Ver los calendarios laborales</strong></td><td>Consulta el calendario laboral de cada profesional, los convenios, los turnos y los festivos.</td><td>Dirección, RRHH, Personal</td></tr>
+    <tr><td><strong>Planificar los calendarios laborales</strong></td><td>Habilita hacer y cambiar los calendarios laborales, los convenios, los turnos, los festivos y los tipos de ausencia.</td><td>Dirección, RRHH, Personal</td></tr>
+    <tr><td><strong>Registrar incidencias</strong></td><td>Consulta, anota y corrige las incidencias del calendario laboral de cada profesional, con sus fotos.</td><td>Dirección, RRHH, Personal</td></tr>
+    <tr><td><strong>Compensar horas fuera de turno</strong></td><td>Anota las horas fuera de turno que se pagan o se devuelven en descanso, y descuenta su saldo de la bolsa.</td><td>Dirección, RRHH, Personal</td></tr>
+    <tr><td><strong>Exportar el registro de jornada</strong></td><td>Saca el registro de jornada de toda la plantilla a un fichero.</td><td><strong>Delicado:</strong> solo el Administrador del sistema</td></tr>
+    <tr><td><strong>Dar acceso al registro de jornada</strong></td><td>Crea y retira los enlaces de solo lectura del registro de jornada para la Inspección de Trabajo y para la representación de la plantilla.</td><td><strong>Delicado:</strong> solo el Administrador del sistema</td></tr>
+    <tr><td><strong>Configurar el reloj de fichar</strong></td><td>Decide cuántas cifras lleva el PIN con el que se ficha.</td><td>Dirección, RRHH, Personal</td></tr>
+    <tr><td><strong>Resumen mensual de jornada por correo</strong></td><td>Activa en la ficha de cada profesional que le llegue cada mes por correo el resumen de su registro de jornada.</td><td>Dirección, RRHH, Personal</td></tr>
+    <tr><th colspan="3">Mantenimiento</th></tr>
+    <tr><td><strong>Ver el mantenimiento</strong></td><td>Abre los partes de mantenimiento con sus fotos y su cronologia.</td><td>Recepción, Profesional, Dirección, RRHH, Mantenimiento</td></tr>
+    <tr><td><strong>Avisar de un problema</strong></td><td>Abre un parte nuevo y le anade fotos y comentarios.</td><td>Recepción, Profesional, Dirección, RRHH, Mantenimiento</td></tr>
+    <tr><td><strong>Gestionar los partes</strong></td><td>Cambia lo que dice un parte, lo asigna y lo lleva de un estado al siguiente hasta darlo por resuelto.</td><td>Dirección, RRHH, Mantenimiento</td></tr>
+    <tr><td><strong>Cerrar y reabrir partes</strong></td><td>Da por bueno un parte resuelto y lo cierra, o reabre uno cerrado con un motivo.</td><td>Dirección, Mantenimiento</td></tr>
+    <tr><td><strong>Anular partes</strong></td><td>Anula un parte con un motivo. Se queda tachado en el historial: nada se borra.</td><td>Dirección</td></tr>
+    <tr><td><strong>Zonas y activos</strong></td><td>Da de alta y de baja las zonas y los activos a los que se refieren los partes.</td><td>Dirección, RRHH, Mantenimiento</td></tr>
+    <tr><td><strong>Exportar el mantenimiento</strong></td><td>Descarga los partes y su cronologia en un fichero CSV.</td><td>Dirección, Mantenimiento</td></tr>
+    <tr><td><strong>Dar acceso al libro de mantenimiento</strong></td><td>Crea y retira los enlaces de solo lectura al libro de mantenimiento para una inspeccion o una auditoria.</td><td><strong>Delicado:</strong> solo el Administrador del sistema</td></tr>
+    <tr><th colspan="3">Activaciones</th></tr>
+    <tr><td><strong>Ver las solicitudes de activación</strong></td><td>Abre los puntos de activación y el historial de solicitudes: quién pidió abrir o encender algo y cuándo.</td><td>Dirección, Activaciones</td></tr>
+    <tr><td><strong>Gestionar los puntos de activación</strong></td><td>Da de alta y de baja los puntos, escribe lo que se pide en cada formulario y elige el canal de aviso.</td><td>Dirección, Activaciones</td></tr>
+    <tr><th colspan="3">Portal y avisos</th></tr>
+    <tr><td><strong>Portal de reservas</strong></td><td>Gobierna el portal donde el cliente pide hora por su cuenta.</td><td>Dirección, Portal y avisos</td></tr>
+    <tr><td><strong>Avisos por WhatsApp</strong></td><td>Configura los avisos por WhatsApp del centro.</td><td>Portal y avisos</td></tr>
+    <tr><td><strong>Conectar programas externos</strong></td><td>Conecta programas externos y ve sus claves de acceso.</td><td><strong>Delicado:</strong> solo el Administrador del sistema</td></tr>
+    <tr><th colspan="3">Núcleo (profesionales, informes generales, ajustes del centro y usuarios)</th></tr>
+    <tr><td><strong>Ver los profesionales</strong></td><td>Consulta la ficha de los profesionales y sus horarios.</td><td>Dirección, RRHH</td></tr>
+    <tr><td><strong>Escribir los profesionales</strong></td><td>Habilita crear y editar profesionales y sus horarios.</td><td>Dirección, RRHH</td></tr>
+    <tr><td><strong>Cuadro de mando</strong></td><td>Abre el cuadro de mando: las cifras de cada modulo que tiene el centro -- caja, agenda, clientes, personal -- con su semaforo.</td><td>Dirección</td></tr>
+    <tr><td><strong>Sacar el fichero de un informe</strong></td><td>Habilita el boton de descargar cualquier informe que ya pueda ver.</td><td>Dirección</td></tr>
+    <tr><td><strong>Preferencias del centro</strong></td><td>Abre las preferencias del centro: nombre, idioma, tema y datos fiscales.</td><td>Dirección</td></tr>
+    <tr><td><strong>Cambiar el logotipo</strong></td><td>Habilita subir y quitar el logotipo del centro.</td><td>Dirección</td></tr>
+    <tr><td><strong>Gobernar las delegaciones</strong></td><td>Crea y edita delegaciones, y deja moverse entre ellas.</td><td>Solo el Administrador del sistema</td></tr>
+    <tr><td><strong>Vaciar el centro</strong></td><td>Vacia el centro de datos. No tiene vuelta atras.</td><td><strong>Delicado:</strong> solo el Administrador del sistema</td></tr>
+    <tr><td><strong>Ver los usuarios</strong></td><td>Abre la lista de usuarios de la instalacion.</td><td>Dirección</td></tr>
+    <tr><td><strong>Dar de alta y editar usuarios</strong></td><td>Habilita dar de alta, editar y desbloquear usuarios, y resetear su contrasena.</td><td>Dirección</td></tr>
+    <tr><td><strong>Gobernar roles y permisos</strong></td><td>Abre la pantalla de roles y deja repartir permisos, incluidos los suyos propios.</td><td><strong>Delicado:</strong> solo el Administrador del sistema</td></tr>
+  </tbody></table>
 
   <h3>Desde qué direcciones IP puede entrar cada usuario</h3>
   <span class="ruta">Administración → Usuarios → (un usuario)</span>
@@ -3367,6 +3584,15 @@ footer{
     registro de jornada. Siempre pueden bajarse: la ley obliga a tenerlos a disposición de la Inspección.
   </p>
 
+  <p>
+    El Excel y los CSV de días y totales llevan también la columna <strong>Código</strong>: el código con el que el
+    programa de nóminas de la gestoría o el ERP conoce a cada persona, que se escribe en su ficha de profesional
+    (<em>Código en nómina o ERP</em>). El de la delegación como empresa (<em>Código de empresa en nómina o
+    ERP</em>, en la ficha de la delegación) sale en la hoja «Empresa y periodo». Con ellos, quien recibe el fichero
+    no tiene que cruzar a mano por nombre. Son opcionales, y dos profesionales de la misma delegación no pueden
+    tener el mismo.
+  </p>
+
   <h4 id="presencia-enlaces">Acceso de la Inspección y de la representación</h4>
 
   <p>
@@ -3550,6 +3776,28 @@ footer{
     <strong>no se reabre</strong>. Un año no se puede cerrar antes del <strong>1 de mayo del siguiente</strong>: hasta
     el 30 de abril aún se pueden dar descansos por sus horas de fuera de turno (ver más abajo).
   </p>
+
+  <h4 id="calendario-cerrar-mes">Cerrar cada mes para la nómina</h4>
+  <p>
+    En <em>Cierres</em>, con el año elegido arriba, salen los meses del año con su estado. Cuando se manda un mes a
+    la gestoría para la nómina, <em>Cerrar el mes</em> lo deja <strong>como se mandó</strong>: mientras esté cerrado
+    no se pueden cambiar sus incidencias, los días de los calendarios de ese mes, las compensaciones fechadas en él
+    ni sus festivos. Tampoco lo que cambia varios meses a la vez y le alcanza: la jornada del calendario, mover el
+    alta o la baja por encima de él, duplicar o borrar el calendario de ese año. Los fichajes nunca se tocaban.
+    Si después se edita un turno que ese mes usaba, el mes cerrado <strong>se queda con el horario que
+    tenía</strong>, igual que un año cerrado.
+  </p>
+  <p>
+    Un mes se cierra a partir del día 1 del siguiente; el que está <em>En curso</em> todavía no. A diferencia del
+    año, <strong>un mes se puede reabrir</strong>, porque una nómina se regulariza: <em>Reabrir</em> pide el motivo, y
+    queda escrito en la lista con la fecha y quién lo hizo. Al terminar la corrección se vuelve a cerrar. Si el año
+    ya está cerrado, sus meses no se cierran ni se reabren.
+  </p>
+  <div class="ojo">
+    <p><strong>El convenio no se bloquea al cerrar un mes</strong>, porque muchas veces se firma con el año
+      empezado. Cambiar sus horas al año cambia las cuentas de todo el año, también las de los meses cerrados: si
+      eso pasa, conviene reabrirlos y avisar a la gestoría.</p>
+  </div>
 
   <h4>Lo ejecutado: horas normales y horas fuera de turno</h4>
   <p>
@@ -3913,6 +4161,58 @@ footer{
   </figure>
 
 </section>
+<section id="activaciones">
+  <h2>12 bis. Activaciones: puertas y aparatos con QR</h2>
+  <p>
+    Pensado para lo que está cerrado o apagado y alguien necesita que una persona del equipo lo abra o lo encienda: la
+    puerta de un polideportivo en invierno, las luces de una pista, un aparato. Es un módulo que se <strong>activa
+    por centro</strong> (viene apagado); con él apagado no hay menú ni página pública. Aparece en el menú como
+    <em>Activaciones</em>.
+  </p>
+
+  <h3>Cómo funciona</h3>
+  <ol>
+    <li>Se da de alta un <strong>punto</strong> (por ejemplo «Puerta del polideportivo») y se imprime su <strong>QR</strong>
+      para pegarlo en la puerta.</li>
+    <li>Quien lo escanea ve el logo y el nombre del centro, para saber que está en el sitio correcto, y escribe su
+      <strong>nombre</strong> y un <strong>código</strong>. La frase que explica qué código se pide (por ejemplo, «el número de
+      su ficha de propietario») la configura el centro en el punto.</li>
+    <li>El equipo recibe un aviso en el móvil, con un botón <strong>Voy</strong>. Quien lo pulsa no queda identificado: los
+      demás ven «Alguien del equipo va de camino».</li>
+    <li>Quien espera ve «En espera de respuesta» hasta que alguien pulsa Voy. Si pasan <strong>5 minutos</strong> (se puede
+      cambiar) sin respuesta, se avisa otra vez con la <strong>máxima prioridad</strong>, y a quien espera se le enseña el
+      texto alternativo del punto (por ejemplo, un teléfono de conserjería).</li>
+  </ol>
+
+  <h3>Los avisos: ntfy</h3>
+  <p>
+    Los avisos van por <strong>ntfy</strong>. Cada punto tiene su <strong>canal</strong>: un nombre largo con un hash, que no se
+    pueda adivinar (por ejemplo <code>mareny-apertura-</code> seguido de 32 letras y números). Cada persona del equipo instala
+    la app de ntfy y se suscribe a ese canal. El canal es un secreto: después de guardarlo solo se ve su final. El servidor
+    de avisos y su clave los configura quien administra la instalación.
+  </p>
+  <p>
+    El canal se puede poner <strong>una vez para todo el centro</strong> en <em>Preferencias</em>, en el grupo
+    <em>Activaciones</em>: los puntos que no traen un canal propio avisan por ese. Un punto con canal propio usa el suyo.
+    Quien gestiona las activaciones ve el nombre entero en esa pantalla, para dárselo al equipo; quien solo las consulta ve
+    únicamente su final. Si el nombre se filtra, se cambia ahí y el equipo vuelve a suscribirse.
+  </p>
+
+  <h3>Lo que protege el punto</h3>
+  <p>
+    El código <strong>no se comprueba</strong> contra ninguna lista: solo evita que cualquiera con un móvil mande peticiones al
+    azar. Para que no se abuse, un punto solo tiene <strong>una solicitud abierta</strong> a la vez (quien llega después mira la
+    misma y no vuelve a avisar), una misma conexión no puede pedir más de <strong>3 veces por hora</strong>, y una solicitud
+    sin atender caduca a la hora. El botón <em>Probar</em> de cada punto manda un aviso de prueba al canal.
+  </p>
+
+  <h3>Quién lo lleva</h3>
+  <p>
+    Los permisos son <em>Ver activaciones</em> y <em>Gestionar activaciones</em>. El rol de fábrica <strong>Activaciones</strong>
+    los reúne, para darlos a una persona de una vez; Dirección también los tiene. En el listado se ve cada solicitud: quién
+    la hizo, con qué código, si se avisó, si se reavisó y si la atendieron.
+  </p>
+</section>
 <section id="problemas">
   <h2>13. Cuando algo no sale</h2>
 
@@ -4128,6 +4428,145 @@ footer{
     <span><a href="/legal">Aviso legal y privacidad</a> · <a href="/">devel.es</a></span>
   </div>
 </footer>
+<script id="buscador-js">
+(function () {
+  var campo = document.getElementById('buscador-texto');
+  var contenido = document.querySelector('.contenido');
+  if (!campo || !contenido) return;
+
+  var cuenta = document.getElementById('buscador-cuenta');
+  var anterior = document.getElementById('buscador-anterior');
+  var siguiente = document.getElementById('buscador-siguiente');
+  var textoDe = document.getElementById('buscador-de').textContent.trim();
+  var textoSinResultados = document.getElementById('buscador-sin-resultados').textContent.trim();
+  var BLOQUES = 'p,li,td,th,h1,h2,h3,h4,h5,h6,figcaption,dt,dd,pre,div,summary,footer';
+  var MINIMO_DE_LETRAS = 2;
+  var puedeResaltar = typeof Highlight === 'function' && window.CSS && CSS.highlights;
+  var coincidencias = [];
+  var actual = -1;
+  var espera;
+
+  // Sin mayusculas, sin acentos y con los espacios y saltos de linea de una pieza, para que "camion" encuentre
+  // "Camión" y "es un" encuentre "es\n    un". Guarda de cada letra normalizada de donde viene.
+  function normalizar(cadena) {
+    var texto = '';
+    var origen = [];
+    for (var i = 0; i < cadena.length; i++) {
+      var letra = cadena.charAt(i);
+      if (/\s/.test(letra)) {
+        if (texto.charAt(texto.length - 1) !== ' ') { texto += ' '; origen.push(i); }
+        continue;
+      }
+      var plana = letra.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+      for (var j = 0; j < plana.length; j++) { texto += plana.charAt(j); origen.push(i); }
+    }
+    return { texto: texto, origen: origen };
+  }
+
+  function nodosDeTexto() {
+    var nodos = [];
+    var recorrido = document.createTreeWalker(contenido, NodeFilter.SHOW_TEXT);
+    while (recorrido.nextNode()) {
+      var nodo = recorrido.currentNode;
+      var padre = nodo.parentElement;
+      if (padre && !padre.closest('script,style')) nodos.push(nodo);
+    }
+    return nodos;
+  }
+
+  // Un texto partido por <strong> o <em> sigue siendo una frase: se busca dentro de cada bloque, no nodo a nodo.
+  function bloquesDeTexto() {
+    var bloques = [];
+    var porElemento = new Map();
+    nodosDeTexto().forEach(function (nodo) {
+      var bloque = nodo.parentElement.closest(BLOQUES) || contenido;
+      if (!porElemento.has(bloque)) { porElemento.set(bloque, []); bloques.push(porElemento.get(bloque)); }
+      porElemento.get(bloque).push(nodo);
+    });
+    return bloques;
+  }
+
+  function rangosDe(nodos, consulta) {
+    var texto = '';
+    var procedencia = [];
+    nodos.forEach(function (nodo) {
+      var normal = normalizar(nodo.data);
+      var sobraElEspacio = texto.charAt(texto.length - 1) === ' ' && normal.texto.charAt(0) === ' ';
+      var desde = sobraElEspacio ? 1 : 0;
+      for (var i = desde; i < normal.texto.length; i++) {
+        procedencia.push({ nodo: nodo, desplazamiento: normal.origen[i] });
+      }
+      texto += normal.texto.slice(desde);
+    });
+    var rangos = [];
+    var desde = texto.indexOf(consulta);
+    while (desde !== -1) {
+      var principio = procedencia[desde];
+      var fin = procedencia[desde + consulta.length - 1];
+      var rango = document.createRange();
+      rango.setStart(principio.nodo, principio.desplazamiento);
+      rango.setEnd(fin.nodo, fin.desplazamiento + 1);
+      rangos.push(rango);
+      desde = texto.indexOf(consulta, desde + consulta.length);
+    }
+    return rangos;
+  }
+
+  function limpiar() {
+    coincidencias = [];
+    actual = -1;
+    if (puedeResaltar) { CSS.highlights.delete('buscador'); CSS.highlights.delete('buscador-actual'); }
+  }
+
+  function pintarCuenta() {
+    var hay = coincidencias.length > 0;
+    anterior.disabled = !hay;
+    siguiente.disabled = !hay;
+    if (campo.value.trim() === '' || normalizar(campo.value).texto.length < MINIMO_DE_LETRAS) cuenta.textContent = '';
+    else cuenta.textContent = hay ? (actual + 1) + ' ' + textoDe + ' ' + coincidencias.length : textoSinResultados;
+  }
+
+  function ir(posicion) {
+    if (coincidencias.length === 0) return;
+    actual = (posicion + coincidencias.length) % coincidencias.length;
+    var rango = coincidencias[actual];
+    if (puedeResaltar) CSS.highlights.set('buscador-actual', new Highlight(rango));
+    else { var seleccion = window.getSelection(); seleccion.removeAllRanges(); seleccion.addRange(rango); }
+    var caja = rango.getBoundingClientRect();
+    window.scrollTo({ top: window.scrollY + caja.top - window.innerHeight / 3 });
+    pintarCuenta();
+  }
+
+  function buscar() {
+    limpiar();
+    var consulta = normalizar(campo.value).texto.trim();
+    if (consulta.length >= MINIMO_DE_LETRAS) {
+      bloquesDeTexto().forEach(function (nodos) {
+        coincidencias = coincidencias.concat(rangosDe(nodos, consulta));
+      });
+      if (puedeResaltar && coincidencias.length > 0) CSS.highlights.set('buscador', new Highlight(...coincidencias));
+    }
+    if (coincidencias.length > 0) ir(0); else pintarCuenta();
+  }
+
+  campo.addEventListener('input', function () { clearTimeout(espera); espera = setTimeout(buscar, 150); });
+  campo.addEventListener('keydown', function (evento) {
+    if (evento.key === 'Enter') { evento.preventDefault(); ir(actual + (evento.shiftKey ? -1 : 1)); }
+    if (evento.key === 'Escape') { campo.value = ''; buscar(); }
+  });
+  anterior.addEventListener('click', function () { ir(actual - 1); });
+  siguiente.addEventListener('click', function () { ir(actual + 1); });
+  document.addEventListener('keydown', function (evento) {
+    var escribiendo = /^(INPUT|TEXTAREA|SELECT)$/.test(evento.target.tagName) || evento.target.isContentEditable;
+    if (evento.key === '/' && !escribiendo && !evento.ctrlKey && !evento.metaKey && !evento.altKey) {
+      evento.preventDefault();
+      campo.focus();
+      campo.select();
+    }
+  });
+  pintarCuenta();
+})();
+</script>
 
 
 </body></html>

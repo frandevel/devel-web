@@ -572,6 +572,26 @@ footer{
   .contenido section{break-inside:avoid-page}
 }
 </style>
+<style id="buscador-css">
+  .buscador { position: sticky; top: -1.6rem; z-index: 1; margin: 0 -0.2rem 0.8rem; padding: 0.5rem 0.2rem; background: var(--crudo, #F7F4EE); }
+  .buscador input {
+    width: 100%; padding: 0.5rem 0.7rem; font: inherit; font-size: 0.88rem;
+    color: var(--texto, #23302e); background: var(--fondo, #fff);
+    border: 1px solid var(--linea, #e2ded5); border-radius: 6px;
+  }
+  .buscador input:focus { outline: 2px solid var(--verde, #0E6E62); outline-offset: 1px; }
+  .buscador__estado { display: flex; align-items: center; gap: 0.4rem; min-height: 2rem; margin-top: 0.4rem; font-size: 0.8rem; color: var(--suave, #5b6b68); }
+  .buscador__cuenta { flex: 1; }
+  .buscador button {
+    min-width: 2rem; padding: 0.2rem 0.5rem; font: inherit; line-height: 1.4; cursor: pointer;
+    color: var(--texto, #23302e); background: var(--fondo, #fff);
+    border: 1px solid var(--linea, #e2ded5); border-radius: 6px;
+  }
+  .buscador button:disabled { opacity: 0.4; cursor: default; }
+  ::highlight(buscador) { background-color: #ffe58a; color: #1a1a1a; }
+  ::highlight(buscador-actual) { background-color: #ff9f43; color: #1a1a1a; }
+  @media print { .buscador { display: none; } }
+</style>
 </head>
 <body>
 <header class="site">
@@ -598,7 +618,17 @@ footer{
 <main id="top" class="shell manual">
 <nav class="indice">
   <h2>Turnera-Handbuch</h2>
-  <p>Aktualisiert am 14. Oktober 2026</p>
+  <p>Aktualisiert am 18. Oktober 2026</p>
+  <div class="buscador" role="search">
+    <input type="search" id="buscador-texto" placeholder="Im Handbuch suchen" aria-label="Im Handbuch suchen" autocomplete="off">
+    <div class="buscador__estado">
+      <span class="buscador__cuenta" id="buscador-cuenta" aria-live="polite"></span>
+      <button type="button" id="buscador-anterior" aria-label="Vorheriges Ergebnis" title="Vorheriges Ergebnis">↑</button>
+      <button type="button" id="buscador-siguiente" aria-label="Nächstes Ergebnis" title="Nächstes Ergebnis">↓</button>
+    </div>
+    <span hidden="" id="buscador-de">von</span>
+    <span hidden="" id="buscador-sin-resultados">Keine Treffer</span>
+  </div>
   <ol>
     <li><a href="#ayuda">Hilfe bekommen</a></li>
     <li><a href="#empezar">1. Anmelden und zurechtfinden</a></li>
@@ -645,6 +675,7 @@ footer{
     <li><a href="#cuadro-de-mando" class="sub">Das Cockpit</a></li>
     <li><a href="#ajustes">9. Einstellungen des Betriebs</a></li>
     <li><a href="#roles" class="sub">Rollen und Berechtigungen</a></li>
+    <li><a href="#roles-permisos" class="sub">Was jede Berechtigung erlaubt</a></li>
     <li><a href="#tema" class="sub">Wie die Anwendung aussieht</a></li>
     <li><a href="#iva" class="sub">Die Mehrwertsteuer von allem, was verkauft wird</a></li>
     <li><a href="#contabilidad" class="sub">Der Buchhaltungsentwurf</a></li>
@@ -681,6 +712,7 @@ footer{
     <li><a href="#mantenimiento">12. Wartung</a></li>
     <li><a href="#mantenimiento-quien" class="sub">Wer einen Auftrag übernimmt, und ihn abgeben</a></li>
     <li><a href="#mantenimiento-movil" class="sub">Vom Handy aus: die App der Mitarbeitenden</a></li>
+    <li><a href="#activaciones">12 bis. Aktivierungen: Türen und Geräte mit QR-Code</a></li>
     <li><a href="#problemas">13. Wenn etwas nicht klappt</a></li>
     <li><a href="#app-nativa">14. Die native App der Mitarbeitenden (Android)</a></li>
     <li><a href="#app-entrar" class="sub">Anmelden und den Standort wählen</a></li>
@@ -2113,18 +2145,34 @@ footer{
     <strong>Berechtigungen</strong> in sich, die diese Tätigkeit braucht, und einer Person gibt man Rollen, keine einzelnen Berechtigungen. So muss man am Tag, an dem jemand Neues anfängt, nicht an zwanzig Kästchen denken: man gibt ihm seine Rolle, und fertig.
   </p>
 
-  <p>Der Betrieb kommt mit vier fertigen Rollen, die sich wie jede andere ändern und löschen lassen:</p>
+  <p>Das Zentrum wird mit fertigen Rollen geliefert, die man wie jede andere ändern und löschen kann. Die ersten sind Tätigkeiten; die übrigen sind <strong>je Modul eine Rolle</strong>:</p>
 
   <ul>
     <li><strong>Empfang</strong>: vergibt Termine, betreut den Tresen und kassiert.</li>
     <li><strong>Fachkraft</strong>: der eigene Terminkalender, die eigenen Kunden und die Krankenakte.</li>
     <li><strong>Leitung</strong>: führt das Zentrum — Katalog, Personal, Berichte und Einstellungen — und betreut die Benutzer: Namen oder Standort ändern, sie entsperren und ihr Passwort zurücksetzen.</li>
+    <li><strong>RRHH</strong>: Arbeitskalender, Mitarbeiter und Terminkalender.</li>
+    <li><strong>Wartung</strong>: betreut die Wartungsaufträge, ihre Bereiche und ihre Anlagen.</li>
+    <li><strong>Aktivierungen</strong>: betreut die Aktivierungspunkte und ihre Anfragen.</li>
     <li><strong>Systemadministrator</strong>: alles, heikle Berechtigungen eingeschlossen.</li>
+  </ul>
+
+  <p>Modulrollen enthalten alle Berechtigungen ihres Moduls, außer den heiklen:</p>
+
+  <ul>
+    <li><strong>Kunden</strong>: die Kundenakten, ihre Hinweise, ihre Punkte und der Kundenbericht.</li>
+    <li><strong>Katalog</strong>: Leistungen, Pakete, Produkte, Lieferanten und Lagerbestand, mit ihren Berichten.</li>
+    <li><strong>Terminkalender</strong>: Termine, Warteliste, Kabinen, Geräte und der Terminbericht.</li>
+    <li><strong>Patientenakte</strong>: die Patientenakte und die Einwilligungserklärungen.</li>
+    <li><strong>Kasse</strong>: Kassieren, Erstattungen, offene Beträge, Wertkarten, Geschenkkarten, Gutscheincodes, Kassenabschluss und ihre Berichte.</li>
+    <li><strong>Rechnungsstellung</strong>: vollständige Rechnungen, Rechnungsbuch und Buchhaltungsentwurf.</li>
+    <li><strong>Portal und Hinweise</strong>: das Buchungsportal und die WhatsApp-Benachrichtigungen.</li>
+    <li><strong>Personal</strong>: Arbeitskalender, Arbeitszeiterfassung und Vorfälle.</li>
   </ul>
 
   <p>
     Für eine maßgeschneiderte drückt man <strong>Neue Rolle</strong>, gibt ihr einen Namen, den es noch nicht gibt, und verteilt die Berechtigungen mit den zwei Listen: links die <strong>verfügbaren</strong>, rechts die
-    <strong>der Rolle</strong>. Sie wandern mit den Pfeilen oder per Doppelklick von einer Seite zur anderen, und über jeder Liste gibt es ein Suchfeld, damit man nicht alle siebzig durchgehen muss. <strong>Fährt man mit der Maus über eine Berechtigung, wird erklärt, was sie freischaltet</strong>, was nicht immer ein ganzer Bildschirm ist: manchmal ist es nur eine Schaltfläche oder ob sie sich drücken lässt. Die Leistungen zu sehen und ihre Preise zu ändern sind zum Beispiel zwei verschiedene Berechtigungen.
+    <strong>der Rolle</strong>. Man verschiebt sie mit den Pfeilen oder per Doppelklick von einer Seite auf die andere, und über jeder Liste gibt es ein Suchfeld, damit man nicht die gut hundert durchgehen muss. <strong>Fährt man mit der Maus über eine Berechtigung, wird erklärt, was sie freischaltet</strong>, was nicht immer ein ganzer Bildschirm ist: manchmal ist es nur eine Schaltfläche oder ob sie sich drücken lässt. Die Leistungen zu sehen und ihre Preise zu ändern sind zum Beispiel zwei verschiedene Berechtigungen.
   </p>
 
   <div class="ojo">
@@ -2153,6 +2201,159 @@ footer{
   <p>
     Eine Rolle, die jemand trägt, lässt sich nicht löschen, damit niemand unbemerkt ohne Berechtigungen dasteht: erst nimmt man sie diesen Personen weg, dann löscht man die Rolle.
   </p>
+
+  <h3 id="roles-que-quita">Was hinzukommt oder wegfällt, wenn man eine Rolle vergibt oder entzieht</h3>
+
+  <p>
+    Eine Person <strong>darf alles tun, was ihr irgendeine ihrer Rollen gibt</strong>: Die Berechtigungen ihrer Rollen addieren sich. Daraus folgen drei Konsequenzen, die man kennen sollte, bevor man etwas ändert:
+  </p>
+
+  <ul>
+    <li><strong>Eine Rolle vergeben</strong> gibt ihr auf einen Schlag alle Berechtigungen, die sie enthält, also alle Bildschirme und Schaltflächen, die diese Berechtigungen öffnen.</li>
+    <li><strong>Eine Rolle entziehen</strong> entzieht die Berechtigungen, die diese Rolle gab und die <em>keine ihrer anderen Rollen</em> ihr noch gibt. Wenn jemand mit „Terminkalender“ und „Leitung“ den „Terminkalender“ verliert, sieht und verschiebt er weiterhin Termine, weil auch die Leitung ihn enthält. Damit eine Person ein Modul nicht mehr sieht, muss man ihr <em>alle</em> Rollen entziehen, die es enthalten.</li>
+    <li><strong>Entzieht man alle Rollen</strong>  einer Person, hat sie keine Berechtigung mehr: Sie kann sich nicht in der Anwendung anmelden.</li>
+  </ul>
+
+  <p>
+    Jedes Modul hat seine <strong>Modulrolle</strong>, die alle Berechtigungen des Moduls enthält und nur diese: Es ist der schnellste Weg, ein ganzes Modul zu vergeben oder zu entziehen. Zum Feinjustieren entzieht man die Rolle nicht und improvisiert, sondern legt eine eigene Rolle an (<strong>Neue Rolle</strong>) mit genau den gewünschten Berechtigungen an und gibt sie der Person anstelle der Modulrolle. Damit jemand zum Beispiel die Leistungen sehen, aber die Preise nicht ändern kann: eine Rolle mit „Leistungen ansehen“ und ohne „Leistungen bearbeiten“.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Heikle Berechtigungen stecken in keiner Modulrolle.</strong> Nur der Systemadministrator hat sie, daher vergibt „Kasse“ oder „Kunden“ nie zum Beispiel den Export der Kundenliste. Bei Bedarf werden sie von Hand in einer eigenen Rolle vergeben.</p>
+  </div>
+
+  <p>
+    Ist ein Modul im Zentrum ausgeschaltet, nützen seine Berechtigungen niemandem, nicht einmal dem Administrator, welche Rollen er auch hat.
+  </p>
+
+  <h4 id="roles-permisos">Was jede Berechtigung erlaubt und welche Rolle sie enthält</h4>
+
+  <p>
+    Dies ist die vollständige Liste, nach Modulen. Die letzte Spalte nennt die Standardrollen, die jede Berechtigung enthalten: Das geht verloren, wenn man eine Rolle entzieht, und das kommt hinzu, wenn man sie vergibt. Die Berechtigungen stehen so, wie sie auf dem Rollenbildschirm erscheinen.
+  </p>
+
+  <table>
+    <tbody><tr><th>Berechtigung</th><th>Was sie erlaubt</th><th>Rollen, die sie enthalten</th></tr>
+    <tr><th colspan="3">Terminkalender</th></tr>
+    <tr><td><strong>Terminkalender ansehen</strong></td><td>Öffnet den Terminkalender und zeigt die Termine der sichtbaren Spalten.</td><td>Empfang, Fachkraft, Leitung, RRHH, Terminkalender</td></tr>
+    <tr><td><strong>Termine anlegen und verschieben</strong></td><td>Erlaubt, einen neuen Termin anzulegen und einen bestehenden auf eine andere Zeit oder Spalte zu ziehen.</td><td>Empfang, Fachkraft, Leitung, RRHH, Terminkalender</td></tr>
+    <tr><td><strong>Termine stornieren</strong></td><td>Aktiviert die Schaltfläche zum Stornieren eines Termins. Den Terminkalender zu sehen reicht nicht, um Termine zu entfernen.</td><td>Empfang, Leitung, Terminkalender</td></tr>
+    <tr><td><strong>Termine an vergangenen Tagen anlegen</strong></td><td>Erlaubt, einen Termin auf einen Tag vor heute zu legen oder zu verschieben. Vergangene Tage kann man auch ohne sie ansehen.</td><td>Terminkalender</td></tr>
+    <tr><td><strong>Erledigte Termine verschieben</strong></td><td>Erlaubt, einen als erledigt oder als nicht erschienen markierten Termin zu verschieben, was nötig ist, wenn er irrtümlich markiert wurde oder der Kunde anruft, um ihn zu ändern. Bezahlte und stornierte Termine lassen sich nicht verschieben.</td><td>Terminkalender</td></tr>
+    <tr><td><strong>Bereits bezahlte Termine stornieren</strong></td><td>Erlaubt, einen bereits bezahlten Termin zu stornieren. Die Zahlung wird dadurch nicht rückgängig gemacht: Dafür gibt es die Erstattung des Belegs.</td><td>Terminkalender</td></tr>
+    <tr><td><strong>Zeitspannen im Terminkalender sperren</strong></td><td>Erlaubt, Zeiten im Terminkalender zu sperren, damit dort niemand buchen kann.</td><td>Leitung, RRHH, Terminkalender</td></tr>
+    <tr><td><strong>Den Terminkalender ausdrucken</strong></td><td>Aktiviert die Schaltfläche zum Drucken des Tagesblatts.</td><td>Empfang, Leitung, Terminkalender</td></tr>
+    <tr><td><strong>Warteliste</strong></td><td>Trägt Kunden auf die Warteliste für eine belegte Zeit ein und geht sie durch.</td><td>Empfang, Leitung, Terminkalender</td></tr>
+    <tr><td><strong>Gerätesitzung erfassen</strong></td><td>Erlaubt, den Gerätestand am Ende der Sitzung zu erfassen.</td><td>Fachkraft, Terminkalender</td></tr>
+    <tr><td><strong>Terminbericht</strong></td><td>Öffnet den Terminbericht.</td><td>Leitung, Terminkalender</td></tr>
+    <tr><td><strong>Kabinen, Plätze und Räume</strong></td><td>Verwaltet Kabinen, Plätze und Räume und wie viele im Terminkalender angezeigt werden.</td><td>Leitung, Terminkalender</td></tr>
+    <tr><td><strong>Geräte anlegen</strong></td><td>Legt Geräte an und bestimmt, welche Leistungen sie nutzen.</td><td>Leitung, Terminkalender</td></tr>
+    <tr><th colspan="3">Kunden</th></tr>
+    <tr><td><strong>Kundenakten ansehen</strong></td><td>Öffnet die Kundensuche und die Akte jedes Kunden.</td><td>Empfang, Fachkraft, Leitung, Kunden</td></tr>
+    <tr><td><strong>Kunden anlegen</strong></td><td>Aktiviert die Schaltfläche „Neuer Kunde“.</td><td>Empfang, Leitung, Kunden</td></tr>
+    <tr><td><strong>Kundenakte bearbeiten</strong></td><td>Erlaubt, Änderungen an einer Akte zu speichern; ohne sie ist die Akte schreibgeschützt.</td><td>Empfang, Leitung, Kunden</td></tr>
+    <tr><td><strong>Telefonnummern und E-Mails sehen</strong></td><td>Zeigt Telefonnummer und E-Mail des Kunden; ohne sie sind sie verborgen.</td><td>Empfang, Leitung, Kunden</td></tr>
+    <tr><td><strong>Hinweise schreiben und entfernen</strong></td><td>Schreibt und entfernt die Hinweise, die beim Buchen und Kassieren erscheinen.</td><td>Empfang, Fachkraft, Leitung, Kunden</td></tr>
+    <tr><td><strong>Kundennotizen löschen</strong></td><td>Aktiviert das Löschen einer Notiz in der Akte. Wer sie schreiben darf, darf sie nicht automatisch entfernen.</td><td>Leitung, Kunden</td></tr>
+    <tr><td><strong>Doppelte Akten zusammenführen</strong></td><td>Führt zwei doppelte Akten zu einer zusammen.</td><td>Leitung, Kunden</td></tr>
+    <tr><td><strong>Daten eines Kunden löschen, der es verlangt</strong></td><td>Recht auf Löschung: löscht die personenbezogenen Daten des Kunden. Rechnungen und Patientenakte werden so lange aufbewahrt, wie das Gesetz es verlangt.</td><td>Leitung, Kunden</td></tr>
+    <tr><td><strong>Verlauf eines Kunden herunterladen</strong></td><td>Lädt den Verlauf eines Kunden als PDF herunter, um ihn ihm auszuhändigen.</td><td>Kunden</td></tr>
+    <tr><td><strong>Kundenliste exportieren</strong></td><td>Exportiert die gesamte Kundenliste in eine Datei: Das heißt, die Datenbank des Zentrums mitzunehmen.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
+    <tr><td><strong>Punkte des Kunden ansehen</strong></td><td>Zeigt den Punktestand des Kunden und seinen Verlauf.</td><td>Empfang, Fachkraft, Leitung, Kunden</td></tr>
+    <tr><td><strong>Punkte von Hand anpassen</strong></td><td>Addiert oder subtrahiert Punkte von Hand, ohne dass sie aus einem Kauf stammen.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
+    <tr><td><strong>Kundenbericht</strong></td><td>Öffnet den Kundenbericht. Ihn in eine Datei zu exportieren erfordert zusätzlich die Berechtigung, Kunden zu exportieren.</td><td>Leitung, Kunden</td></tr>
+    <tr><td><strong>Aus einem anderen Programm importieren</strong></td><td>Übernimmt auf einen Schlag die Kunden, Leistungen, Wertkarten und Termine, die ein anderes Programm exportiert, und lässt sich rückgängig machen.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
+    <tr><th colspan="3">Patientenakte und Einwilligungserklärungen</th></tr>
+    <tr><td><strong>Patientenakte ansehen</strong></td><td>Öffnet die Patientenakte des Kunden.</td><td>Fachkraft, Patientenakte</td></tr>
+    <tr><td><strong>In die Patientenakte schreiben</strong></td><td>Schreibt Verlaufseinträge und Vorgeschichte in die Patientenakte.</td><td>Fachkraft, Patientenakte</td></tr>
+    <tr><td><strong>Patientenakte drucken</strong></td><td>Aktiviert das Drucken der Patientenakte einer Person.</td><td>Fachkraft, Patientenakte</td></tr>
+    <tr><td><strong>Unterschrift anfordern</strong></td><td>Fordert vom Kunden die Unterschrift unter eine Einwilligungserklärung an.</td><td>Empfang, Fachkraft, Leitung, Patientenakte</td></tr>
+    <tr><td><strong>Unterschriebenes Dokument ansehen</strong></td><td>Öffnet das bereits unterschriebene Dokument.</td><td>Fachkraft, Patientenakte</td></tr>
+    <tr><td><strong>Unterschriebene Einwilligungen importieren</strong></td><td>Lädt in die Kundenakte Einwilligungen hoch, die auf einer anderen Plattform bereits unterschrieben wurden (als PDF).</td><td>Empfang, Leitung, Patientenakte</td></tr>
+    <tr><td><strong>Einwilligung widerrufen</strong></td><td>Widerruft eine erteilte Einwilligung.</td><td>Leitung, Patientenakte</td></tr>
+    <tr><td><strong>Vorlagen verwalten</strong></td><td>Erstellt und ändert die Einwilligungsvorlagen des Zentrums.</td><td>Leitung, Patientenakte</td></tr>
+    <tr><td><strong>Wer welche Akte geöffnet hat</strong></td><td>Zeigt, wer welche Akte wann geöffnet hat.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
+    <tr><th colspan="3">Kasse</th></tr>
+    <tr><td><strong>An der Kasse kassieren</strong></td><td>Öffnet die Kasse und erlaubt den Abschluss einer Zahlung.</td><td>Empfang, Leitung, Kasse</td></tr>
+    <tr><td><strong>Rabatte gewähren</strong></td><td>Aktiviert das Rabattfeld im Bezahlvorgang.</td><td>Empfang, Leitung, Kasse</td></tr>
+    <tr><td><strong>Auf Rechnung lassen</strong></td><td>Erlaubt, eine Zahlung als offen abzuschließen, statt sie vollständig zu kassieren.</td><td>Empfang, Leitung, Kasse</td></tr>
+    <tr><td><strong>Einen Beleg erstatten</strong></td><td>Aktiviert die Schaltfläche, um Positionen eines bereits kassierten Belegs zu erstatten, in Geld oder als Guthaben.</td><td>Leitung, Kasse</td></tr>
+    <tr><td><strong>Offene Zahlungen ansehen</strong></td><td>Öffnet den Bildschirm der offenen Zahlungen.</td><td>Empfang, Leitung, Kasse</td></tr>
+    <tr><td><strong>Eine Schuld begleichen</strong></td><td>Aktiviert die Schaltfläche zum Begleichen einer Schuld.</td><td>Empfang, Leitung, Kasse</td></tr>
+    <tr><td><strong>Kasse abrechnen und abschließen</strong></td><td>Öffnet die Tageskasse, um das Bargeld und die Kartenbelege zu zählen, und erlaubt, sie abzuschließen.</td><td>Empfang, Leitung, Kasse</td></tr>
+    <tr><td><strong>Abgeschlossene Kasse wieder öffnen</strong></td><td>Erlaubt, die Kasse eines bereits abgeschlossenen Tages zur Korrektur wieder zu öffnen. Es wird vermerkt, wer sie wieder geöffnet hat.</td><td>Leitung, Kasse</td></tr>
+    <tr><td><strong>Bezahlte Besuche ansehen</strong></td><td>Zeigt die bereits bezahlten Besuche und ihre Details.</td><td>Empfang, Leitung, Kasse</td></tr>
+    <tr><td><strong>Wertkarten des Kunden ansehen</strong></td><td>Zeigt die Wertkarten des Kunden und die verbleibenden Sitzungen.</td><td>Empfang, Fachkraft, Leitung, Kasse</td></tr>
+    <tr><td><strong>Wertkarte übertragen</strong></td><td>Überträgt Sitzungen einer Wertkarte auf eine andere Person.</td><td>Leitung, Kasse</td></tr>
+    <tr><td><strong>Geschenkkarten ansehen</strong></td><td>Zeigt die verkauften Geschenkkarten, ihr Guthaben und was insgesamt noch einzulösen ist.</td><td>Empfang, Leitung, Kasse</td></tr>
+    <tr><td><strong>Geschenkkarten verkaufen</strong></td><td>Aktiviert den Verkauf einer Geschenkkarte, ihren Druck und den Versand per E-Mail.</td><td>Empfang, Leitung, Kasse</td></tr>
+    <tr><td><strong>Gutscheincodes ansehen</strong></td><td>Zeigt die Gutscheincodes des Zentrums, ihren Rabatt und wie viele noch einlösbar sind.</td><td>Empfang, Leitung, Kasse</td></tr>
+    <tr><td><strong>Gutscheincodes erstellen und zurückziehen</strong></td><td>Erlaubt, einen Aktionscode zu erfinden, ihm ein Datum und eine Obergrenze zu geben und ihn zurückzuziehen.</td><td>Leitung, Kasse</td></tr>
+    <tr><td><strong>Zahlungsbericht</strong></td><td>Öffnet den Zahlungsbericht.</td><td>Leitung, Kasse</td></tr>
+    <tr><td><strong>Wertkartenbericht</strong></td><td>Öffnet den Wertkartenbericht.</td><td>Leitung, Kasse</td></tr>
+    <tr><td><strong>Besuchsverlauf</strong></td><td>Öffnet den Besuchsverlauf.</td><td>Leitung, Kasse</td></tr>
+    <tr><td><strong>Tagessummen</strong></td><td>Öffnet die Tagessummen.</td><td>Leitung, Kasse</td></tr>
+    <tr><td><strong>Kassenabschluss</strong></td><td>Öffnet den Kassenabschluss.</td><td>Leitung, Kasse</td></tr>
+    <tr><th colspan="3">Rechnungsstellung</th></tr>
+    <tr><td><strong>Hacer factura completa (vollständige Rechnung ausstellen)</strong></td><td>Stellt einen bereits abgerechneten Beleg als vollständige Rechnung neu aus, mit Steuernummer und den Daten des Kunden.</td><td>Empfang, Leitung, Rechnungsstellung</td></tr>
+    <tr><td><strong>Buchhaltungsentwurf</strong></td><td>Öffnet den Buchhaltungsentwurf.</td><td>Leitung, Rechnungsstellung</td></tr>
+    <tr><td><strong>Libro de facturas (Rechnungsbuch)</strong></td><td>Öffnet das Buch der ausgestellten Rechnungen, wie sie an die Steuerbehörde (AEAT) gehen, und lädt das Buch und die Sammelbuchung herunter.</td><td>Leitung, Rechnungsstellung</td></tr>
+    <tr><td><strong>Rechnungsstellung und VeriFactu</strong></td><td>Aktiviert die Rechnungsstellung des Zentrums, wählt die Präfixe der Serien und steuert die Übermittlung an die AEAT.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
+    <tr><td><strong>Rechnungsstellung in den Produktivbetrieb überführen</strong></td><td>Überführt die Rechnungsstellung vom Testmodus in den Produktivbetrieb: Die Testrechnungen werden gelöscht und die Nummerierung beginnt von vorn. Es gibt kein Zurück.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
+    <tr><th colspan="3">Katalog</th></tr>
+    <tr><td><strong>Leistungen ansehen</strong></td><td>Zeigt die Leistungen und ihre Preise.</td><td>Empfang, Fachkraft, Leitung, Katalog</td></tr>
+    <tr><td><strong>Leistungen bearbeiten</strong></td><td>Aktiviert das Anlegen, Bearbeiten und Entfernen von Leistungen.</td><td>Leitung, Katalog</td></tr>
+    <tr><td><strong>Pakete ansehen</strong></td><td>Zeigt die Pakete aus Leistungen und Produkten.</td><td>Empfang, Fachkraft, Leitung, Katalog</td></tr>
+    <tr><td><strong>Pakete bearbeiten</strong></td><td>Aktiviert das Anlegen und Bearbeiten von Paketen und ihrem Preis.</td><td>Leitung, Katalog</td></tr>
+    <tr><td><strong>Wertkartengruppen verwalten</strong></td><td>Verwaltet die Gruppen, die festlegen, welche Wertkarte welche Leistung abdeckt.</td><td>Leitung, Katalog</td></tr>
+    <tr><td><strong>Produkte ansehen</strong></td><td>Zeigt die Verkaufsprodukte.</td><td>Empfang, Fachkraft, Leitung, Katalog</td></tr>
+    <tr><td><strong>Produkte bearbeiten</strong></td><td>Aktiviert das Anlegen und Bearbeiten von Produkten.</td><td>Leitung, Katalog</td></tr>
+    <tr><td><strong>Lieferanten ansehen</strong></td><td>Zeigt die Lieferanten.</td><td>Leitung, Katalog</td></tr>
+    <tr><td><strong>Lieferanten bearbeiten</strong></td><td>Aktiviert das Anlegen und Bearbeiten von Lieferanten.</td><td>Leitung, Katalog</td></tr>
+    <tr><td><strong>Lagerbestand ansehen</strong></td><td>Zeigt den vorhandenen Bestand.</td><td>Empfang, Leitung, Katalog</td></tr>
+    <tr><td><strong>Lagerbestand bewegen</strong></td><td>Aktiviert Wareneingänge und -ausgänge.</td><td>Leitung, Katalog</td></tr>
+    <tr><td><strong>Lagerbericht</strong></td><td>Öffnet den Lagerbericht.</td><td>Leitung, Katalog</td></tr>
+    <tr><td><strong>Wareneingänge und -ausgänge</strong></td><td>Öffnet den Bericht über Wareneingänge und -ausgänge.</td><td>Leitung, Katalog</td></tr>
+    <tr><th colspan="3">Personal</th></tr>
+    <tr><td><strong>Arbeitszeiterfassung ansehen</strong></td><td>Zeigt die Stempelungen.</td><td>Leitung, RRHH, Personal</td></tr>
+    <tr><td><strong>Sehen, wo gestempelt wurde</strong></td><td>Zeigt, von wo aus jede Ein- und Ausstempelung erfolgte und ob innerhalb oder außerhalb des Bereichs des Zentrums.</td><td>Leitung, RRHH, Personal</td></tr>
+    <tr><td><strong>Arbeitskalender ansehen</strong></td><td>Zeigt den Arbeitskalender jedes Mitarbeiters, die Tarifverträge, die Schichten und die Feiertage.</td><td>Leitung, RRHH, Personal</td></tr>
+    <tr><td><strong>Arbeitskalender planen</strong></td><td>Aktiviert das Erstellen und Ändern der Arbeitskalender, der Tarifverträge, der Schichten, der Feiertage und der Abwesenheitsarten.</td><td>Leitung, RRHH, Personal</td></tr>
+    <tr><td><strong>Vorfälle erfassen</strong></td><td>Zeigt, erfasst und korrigiert die Vorfälle im Arbeitskalender jedes Mitarbeiters, mit ihren Fotos.</td><td>Leitung, RRHH, Personal</td></tr>
+    <tr><td><strong>Stunden außerhalb der Schicht ausgleichen</strong></td><td>Erfasst die Stunden außerhalb der Schicht, die bezahlt oder als Freizeit zurückgegeben werden, und zieht ihren Saldo vom Stundenkonto ab.</td><td>Leitung, RRHH, Personal</td></tr>
+    <tr><td><strong>Arbeitszeiterfassung exportieren</strong></td><td>Exportiert die Arbeitszeiterfassung der gesamten Belegschaft in eine Datei.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
+    <tr><td><strong>Zugang zur Arbeitszeiterfassung geben</strong></td><td>Erstellt und widerruft die schreibgeschützten Links zur Arbeitszeiterfassung für die Arbeitsinspektion und für die Vertretung der Belegschaft.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
+    <tr><td><strong>Stempeluhr konfigurieren</strong></td><td>Legt fest, wie viele Stellen die PIN zum Stempeln hat.</td><td>Leitung, RRHH, Personal</td></tr>
+    <tr><td><strong>Monatliche Arbeitszeit-Zusammenfassung per E-Mail</strong></td><td>Aktiviert in der Akte jedes Mitarbeiters, dass ihm jeden Monat per E-Mail die Zusammenfassung seiner Arbeitszeiterfassung zugeht.</td><td>Leitung, RRHH, Personal</td></tr>
+    <tr><th colspan="3">Wartung</th></tr>
+    <tr><td><strong>Wartung ansehen</strong></td><td>Öffnet die Wartungsaufträge mit ihren Fotos und ihrem Verlauf.</td><td>Empfang, Fachkraft, Leitung, RRHH, Wartung</td></tr>
+    <tr><td><strong>Ein Problem melden</strong></td><td>Öffnet einen neuen Auftrag und fügt ihm Fotos und Kommentare hinzu.</td><td>Empfang, Fachkraft, Leitung, RRHH, Wartung</td></tr>
+    <tr><td><strong>Aufträge verwalten</strong></td><td>Ändert, was ein Auftrag sagt, weist ihn zu und führt ihn von einem Status zum nächsten, bis er erledigt ist.</td><td>Leitung, RRHH, Wartung</td></tr>
+    <tr><td><strong>Aufträge abschließen und wieder öffnen</strong></td><td>Nimmt einen erledigten Auftrag ab und schließt ihn oder öffnet einen abgeschlossenen mit einer Begründung wieder.</td><td>Leitung, Wartung</td></tr>
+    <tr><td><strong>Aufträge stornieren</strong></td><td>Storniert einen Auftrag mit einer Begründung. Er bleibt im Verlauf durchgestrichen: Nichts wird gelöscht.</td><td>Leitung</td></tr>
+    <tr><td><strong>Bereiche und Anlagen</strong></td><td>Legt die Bereiche und Anlagen an und entfernt sie, auf die sich die Aufträge beziehen.</td><td>Leitung, RRHH, Wartung</td></tr>
+    <tr><td><strong>Wartung exportieren</strong></td><td>Lädt die Wartungsaufträge und ihren Verlauf als CSV-Datei herunter.</td><td>Leitung, Wartung</td></tr>
+    <tr><td><strong>Zugang zum Wartungsbuch geben</strong></td><td>Erstellt und widerruft die schreibgeschützten Links zum Wartungsbuch für eine Inspektion oder ein Audit.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
+    <tr><th colspan="3">Aktivierungen</th></tr>
+    <tr><td><strong>Aktivierungsanfragen ansehen</strong></td><td>Öffnet die Aktivierungspunkte und den Anfrageverlauf: wer darum gebeten hat, etwas zu öffnen oder einzuschalten, und wann.</td><td>Leitung, Aktivierungen</td></tr>
+    <tr><td><strong>Aktivierungspunkte verwalten</strong></td><td>Legt Punkte an und entfernt sie, schreibt, was jedes Formular abfragt, und wählt den Benachrichtigungskanal.</td><td>Leitung, Aktivierungen</td></tr>
+    <tr><th colspan="3">Portal und Hinweise</th></tr>
+    <tr><td><strong>Buchungsportal</strong></td><td>Verwaltet das Portal, in dem der Kunde selbst einen Termin bucht.</td><td>Leitung, Portal und Hinweise</td></tr>
+    <tr><td><strong>WhatsApp-Erinnerungen</strong></td><td>Konfiguriert die WhatsApp-Benachrichtigungen des Zentrums.</td><td>Portal und Hinweise</td></tr>
+    <tr><td><strong>Externe Programme verbinden</strong></td><td>Verbindet externe Programme und zeigt ihre Zugangsschlüssel.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
+    <tr><th colspan="3">Kern (Mitarbeiter, allgemeine Berichte, Zentrumseinstellungen und Benutzer)</th></tr>
+    <tr><td><strong>Mitarbeiter ansehen</strong></td><td>Zeigt die Mitarbeiterakten und ihre Arbeitszeiten.</td><td>Leitung, RRHH</td></tr>
+    <tr><td><strong>Mitarbeiter bearbeiten</strong></td><td>Aktiviert das Anlegen und Bearbeiten von Mitarbeitern und ihren Arbeitszeiten.</td><td>Leitung, RRHH</td></tr>
+    <tr><td><strong>Cockpit</strong></td><td>Öffnet das Cockpit: die Kennzahlen jedes Moduls, das das Zentrum hat – Kasse, Terminkalender, Kunden, Personal – mit ihrer Ampel.</td><td>Leitung</td></tr>
+    <tr><td><strong>Bericht als Datei herunterladen</strong></td><td>Aktiviert die Schaltfläche zum Herunterladen jedes Berichts, den man bereits sehen darf.</td><td>Leitung</td></tr>
+    <tr><td><strong>Zentrumseinstellungen</strong></td><td>Öffnet die Einstellungen des Zentrums: Name, Sprache, Design und Steuerdaten.</td><td>Leitung</td></tr>
+    <tr><td><strong>Logo ändern</strong></td><td>Aktiviert das Hochladen und Entfernen des Logos des Zentrums.</td><td>Leitung</td></tr>
+    <tr><td><strong>Filialen verwalten</strong></td><td>Legt Filialen an und bearbeitet sie und erlaubt den Wechsel zwischen ihnen.</td><td>Nur der Systemadministrator</td></tr>
+    <tr><td><strong>Zentrum leeren</strong></td><td>Leert das Zentrum von Daten. Es gibt kein Zurück.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
+    <tr><td><strong>Benutzer ansehen</strong></td><td>Öffnet die Liste der Benutzer der Installation.</td><td>Leitung</td></tr>
+    <tr><td><strong>Benutzer anlegen und bearbeiten</strong></td><td>Aktiviert das Anlegen, Bearbeiten und Entsperren von Benutzern und das Zurücksetzen ihres Passworts.</td><td>Leitung</td></tr>
+    <tr><td><strong>Rollen und Berechtigungen verwalten</strong></td><td>Öffnet den Rollenbildschirm und erlaubt, Berechtigungen zu vergeben, auch die eigenen.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
+  </tbody></table>
 
   <h3>Von welchen IP-Adressen sich jeder Benutzer anmelden darf</h3>
   <span class="ruta">Verwaltung → Benutzer → (ein Benutzer)</span>
@@ -2869,6 +3070,10 @@ footer{
     Arbeitszeiterfassung hat. Sie lassen sich immer herunterladen: das Gesetz verlangt, sie der Arbeitsinspektion zur Verfügung zu halten.
   </p>
 
+  <p>
+    Die Excel- und CSV-Dateien der Tage und Summen enthalten außerdem die Spalte <strong>Code</strong>: den Code, unter dem die Lohnbuchhaltungssoftware der Steuerkanzlei oder das ERP jede Person kennt; er wird in ihrer Mitarbeiterakte eingetragen (<em>Code in Lohnabrechnung oder ERP</em>). Der Code der Filiale als Unternehmen (<em>Unternehmenscode in Lohnabrechnung oder ERP</em>, in der Akte der Filiale) steht im Blatt „Unternehmen und Zeitraum“. Damit muss, wer die Datei erhält, nicht mehr von Hand nach Namen abgleichen. Sie sind optional, und zwei Mitarbeiter derselben Filiale dürfen nicht denselben haben.
+  </p>
+
   <h4 id="presencia-enlaces">Zugang für Arbeitsinspektion und Belegschaftsvertretung</h4>
 
   <p>
@@ -3019,6 +3224,17 @@ footer{
     Wenn ein Jahr zu Ende und geprüft ist, wählen Sie unter <em>Kalender</em>dieses Jahr aus; <em>Abschließen</em> lässt es <strong>so, wie es ist, für die Arbeitsinspektion</strong>: Ab dann ändert sich in diesem Zentrum nichts mehr an diesem Jahr — weder die Kalender und ihre Tage noch die Vorfälle, Ausgleiche, Feiertage oder der Tarifvertrag dieses Jahres. Es lässt sich ansehen und drucken. Wird später eine Schicht bearbeitet, die dieses Jahr verwendet hat, <strong>behält das abgeschlossene Jahr die bisherigen Zeiten</strong> (Turnera bewahrt eine stillgelegte Kopie der Schicht auf), und die Toleranz für Stunden außerhalb der Schicht, die gilt, ist die zum Zeitpunkt des Abschlusses. Bestätigt wird durch Eintippen des Jahres und
     <strong>wird nicht wieder geöffnet</strong>. Ein Jahr kann nicht abgeschlossen werden vor dem <strong>1. Mai des Folgejahres</strong>: Bis zum 30. April können noch Ruhetage für die Stunden außerhalb der Schicht gewährt werden (siehe unten).
   </p>
+
+  <h4 id="calendario-cerrar-mes">Jeden Monat für die Lohnabrechnung abschließen</h4>
+  <p>
+    Beschreiben Sie unter <em>Abschlüsse</em>, mit dem oben gewählten Jahr erscheinen die Monate des Jahres mit ihrem Status. Wenn ein Monat zur Lohnabrechnung an die Steuerkanzlei geschickt wird, <em>Monat abschließen</em> belässt ihn <strong>so, wie er verschickt wurde</strong>: Solange er abgeschlossen ist, können seine Vorfälle, die Tage der Kalender dieses Monats, die darin datierten Ausgleiche und seine Feiertage nicht geändert werden. Auch nichts, was mehrere Monate gleichzeitig ändert und ihn betrifft: die Arbeitszeit des Kalenders, das Verschieben von Ein- oder Austritt über ihn hinweg, das Duplizieren oder Löschen des Kalenders dieses Jahres. Die Stempelungen wurden nie angetastet. Wird danach eine Schicht bearbeitet, die dieser Monat verwendet hat, behält der abgeschlossene Monat <strong>seinen damaligen Zeitplan</strong>, genau wie ein abgeschlossenes Jahr.
+  </p>
+  <p>
+    Ein Monat wird ab dem 1. des Folgemonats abgeschlossen; der, der <em>in Behandlung</em> noch nicht. Anders als beim Jahr <strong>kann ein Monat wieder geöffnet werden</strong>, denn eine Lohnabrechnung wird berichtigt: <em>Wieder öffnen</em> fragt nach dem Grund, und dieser wird mit Datum und Verantwortlichem in der Liste festgehalten. Nach der Korrektur wird er wieder abgeschlossen. Ist das Jahr bereits abgeschlossen, werden seine Monate weder abgeschlossen noch wieder geöffnet.
+  </p>
+  <div class="ojo">
+    <p><strong>Der Tarifvertrag wird beim Abschluss eines Monats nicht gesperrt</strong>, denn er wird oft erst unterschrieben, wenn das Jahr schon begonnen hat. Eine Änderung seiner Stunden im Jahr ändert die Zahlen des gesamten Jahres, auch die der abgeschlossenen Monate: Dann sollte man sie wieder öffnen und die Steuerkanzlei informieren.</p>
+  </div>
 
   <h4>Das Geleistete: normale Stunden und Stunden außerhalb der Schicht</h4>
   <p>
@@ -3282,6 +3498,43 @@ footer{
   </figure>
 
 </section>
+<section id="activaciones">
+  <h2>12 bis. Aktivierungen: Türen und Geräte mit QR-Code</h2>
+  <p>
+    Gedacht für alles, was geschlossen oder ausgeschaltet ist und wofür jemand eine Person aus dem Team braucht, die es öffnet oder einschaltet: die Tür einer Sporthalle im Winter, das Licht eines Platzes, ein Gerät. Es ist ein Modul, das <strong>je Zentrum aktiviert wird</strong> (es ist standardmäßig ausgeschaltet); solange es aus ist, gibt es weder Menü noch öffentliche Seite. Im Menü erscheint es als
+    <em>Aktivierungen</em>.
+  </p>
+
+  <h3>So funktioniert es</h3>
+  <ol>
+    <li>Man legt einen <strong>Punkt</strong> (zum Beispiel „Tür der Sporthalle“) an und druckt seinen <strong>QR-Code</strong>
+      aus, um ihn an die Tür zu kleben.</li>
+    <li>Wer ihn scannt, sieht das Logo und den Namen des Zentrums, um zu wissen, dass er am richtigen Ort ist, und gibt seinen
+      <strong>Namen</strong> und ein <strong>Code</strong>. Der Satz, der erklärt, welcher Code verlangt wird (zum Beispiel „die Nummer Ihrer Eigentümerakte“), wird vom Zentrum am Punkt eingestellt.</li>
+    <li>Das Team erhält eine Benachrichtigung aufs Handy, mit einer <strong>Ich komme</strong>Schaltfläche. Wer sie drückt, wird nicht identifiziert: Die anderen sehen „Jemand aus dem Team ist unterwegs“.</li>
+    <li>Wer wartet, sieht „Warten auf Antwort“, bis jemand „Ich komme“ drückt. Wenn <strong>5 Minuten</strong> (änderbar) ohne Antwort vergehen, wird erneut mit <strong>höchster Priorität</strong> benachrichtigt, und der wartenden Person wird der Alternativtext des Punkts angezeigt (zum Beispiel eine Telefonnummer der Hausverwaltung).</li>
+  </ol>
+
+  <h3>Die Benachrichtigungen: ntfy</h3>
+  <p>
+    Die Benachrichtigungen laufen über <strong>ntfy</strong>. Jeder Punkt hat seinen <strong>Kanal</strong>: ein langer Name mit einem Hash, der nicht erraten werden kann (zum Beispiel <code>mareny-apertura-</code> gefolgt von 32 Buchstaben und Zahlen). Jedes Teammitglied installiert die ntfy-App und abonniert diesen Kanal. Der Kanal ist ein Geheimnis: Nach dem Speichern ist nur sein Ende zu sehen. Den Benachrichtigungsserver und seinen Schlüssel konfiguriert, wer die Installation verwaltet.
+  </p>
+  <p>
+    Der Kanal wird <strong>einmal für das ganze Zentrum</strong> festgelegt, in den <em>Einstellungen</em>, in der Gruppe
+    <em>Aktivierungen</em>: Punkte ohne eigenen Kanal benachrichtigen über diesen. Ein Punkt mit eigenem Kanal verwendet seinen. Wer die Aktivierungen verwaltet, sieht auf diesem Bildschirm den ganzen Namen, um ihn dem Team zu geben; wer sie nur einsieht, sieht lediglich sein Ende. Wird der Name bekannt, ändert man ihn dort, und das Team abonniert erneut.
+  </p>
+
+  <h3>Was den Punkt schützt</h3>
+  <p>
+    Der Code <strong>wird nicht geprüft</strong> gegen irgendeine Liste: Er verhindert nur, dass jeder mit einem Handy wahllos Anfragen schickt. Um Missbrauch zu verhindern, hat ein Punkt immer nur <strong>eine offene Anfrage</strong> gleichzeitig (wer später kommt, sieht dieselbe und löst keine neue Benachrichtigung aus), eine Verbindung darf nicht öfter als <strong>3-mal pro Stunde</strong> anfragen, und eine unbeantwortete Anfrage verfällt nach einer Stunde. Die Schaltfläche <em>Testen</em> jedes Punkts sendet eine Testbenachrichtigung an den Kanal.
+  </p>
+
+  <h3>Wer es übernimmt</h3>
+  <p>
+    Die Berechtigungen sind <em>Aktivierungen ansehen</em> und <em>Aktivierungen verwalten</em>. Die Standardrolle <strong>Aktivierungen</strong>
+    fasst sie zusammen, um sie einer Person auf einmal zu geben; die Leitung hat sie ebenfalls. In der Liste sieht man jede Anfrage: wer sie gestellt hat, mit welchem Code, ob benachrichtigt wurde, ob erneut benachrichtigt wurde und ob sie bearbeitet wurde.
+  </p>
+</section>
 <section id="problemas">
   <h2>13. Wenn etwas nicht klappt</h2>
 
@@ -3476,6 +3729,145 @@ footer{
     <span><a href="/de/legal">Impressum und Datenschutz</a> · <a href="/de/">devel.es</a></span>
   </div>
 </footer>
+<script id="buscador-js">
+(function () {
+  var campo = document.getElementById('buscador-texto');
+  var contenido = document.querySelector('.contenido');
+  if (!campo || !contenido) return;
+
+  var cuenta = document.getElementById('buscador-cuenta');
+  var anterior = document.getElementById('buscador-anterior');
+  var siguiente = document.getElementById('buscador-siguiente');
+  var textoDe = document.getElementById('buscador-de').textContent.trim();
+  var textoSinResultados = document.getElementById('buscador-sin-resultados').textContent.trim();
+  var BLOQUES = 'p,li,td,th,h1,h2,h3,h4,h5,h6,figcaption,dt,dd,pre,div,summary,footer';
+  var MINIMO_DE_LETRAS = 2;
+  var puedeResaltar = typeof Highlight === 'function' && window.CSS && CSS.highlights;
+  var coincidencias = [];
+  var actual = -1;
+  var espera;
+
+  // Sin mayusculas, sin acentos y con los espacios y saltos de linea de una pieza, para que "camion" encuentre
+  // "Camión" y "es un" encuentre "es\n    un". Guarda de cada letra normalizada de donde viene.
+  function normalizar(cadena) {
+    var texto = '';
+    var origen = [];
+    for (var i = 0; i < cadena.length; i++) {
+      var letra = cadena.charAt(i);
+      if (/\s/.test(letra)) {
+        if (texto.charAt(texto.length - 1) !== ' ') { texto += ' '; origen.push(i); }
+        continue;
+      }
+      var plana = letra.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+      for (var j = 0; j < plana.length; j++) { texto += plana.charAt(j); origen.push(i); }
+    }
+    return { texto: texto, origen: origen };
+  }
+
+  function nodosDeTexto() {
+    var nodos = [];
+    var recorrido = document.createTreeWalker(contenido, NodeFilter.SHOW_TEXT);
+    while (recorrido.nextNode()) {
+      var nodo = recorrido.currentNode;
+      var padre = nodo.parentElement;
+      if (padre && !padre.closest('script,style')) nodos.push(nodo);
+    }
+    return nodos;
+  }
+
+  // Un texto partido por <strong> o <em> sigue siendo una frase: se busca dentro de cada bloque, no nodo a nodo.
+  function bloquesDeTexto() {
+    var bloques = [];
+    var porElemento = new Map();
+    nodosDeTexto().forEach(function (nodo) {
+      var bloque = nodo.parentElement.closest(BLOQUES) || contenido;
+      if (!porElemento.has(bloque)) { porElemento.set(bloque, []); bloques.push(porElemento.get(bloque)); }
+      porElemento.get(bloque).push(nodo);
+    });
+    return bloques;
+  }
+
+  function rangosDe(nodos, consulta) {
+    var texto = '';
+    var procedencia = [];
+    nodos.forEach(function (nodo) {
+      var normal = normalizar(nodo.data);
+      var sobraElEspacio = texto.charAt(texto.length - 1) === ' ' && normal.texto.charAt(0) === ' ';
+      var desde = sobraElEspacio ? 1 : 0;
+      for (var i = desde; i < normal.texto.length; i++) {
+        procedencia.push({ nodo: nodo, desplazamiento: normal.origen[i] });
+      }
+      texto += normal.texto.slice(desde);
+    });
+    var rangos = [];
+    var desde = texto.indexOf(consulta);
+    while (desde !== -1) {
+      var principio = procedencia[desde];
+      var fin = procedencia[desde + consulta.length - 1];
+      var rango = document.createRange();
+      rango.setStart(principio.nodo, principio.desplazamiento);
+      rango.setEnd(fin.nodo, fin.desplazamiento + 1);
+      rangos.push(rango);
+      desde = texto.indexOf(consulta, desde + consulta.length);
+    }
+    return rangos;
+  }
+
+  function limpiar() {
+    coincidencias = [];
+    actual = -1;
+    if (puedeResaltar) { CSS.highlights.delete('buscador'); CSS.highlights.delete('buscador-actual'); }
+  }
+
+  function pintarCuenta() {
+    var hay = coincidencias.length > 0;
+    anterior.disabled = !hay;
+    siguiente.disabled = !hay;
+    if (campo.value.trim() === '' || normalizar(campo.value).texto.length < MINIMO_DE_LETRAS) cuenta.textContent = '';
+    else cuenta.textContent = hay ? (actual + 1) + ' ' + textoDe + ' ' + coincidencias.length : textoSinResultados;
+  }
+
+  function ir(posicion) {
+    if (coincidencias.length === 0) return;
+    actual = (posicion + coincidencias.length) % coincidencias.length;
+    var rango = coincidencias[actual];
+    if (puedeResaltar) CSS.highlights.set('buscador-actual', new Highlight(rango));
+    else { var seleccion = window.getSelection(); seleccion.removeAllRanges(); seleccion.addRange(rango); }
+    var caja = rango.getBoundingClientRect();
+    window.scrollTo({ top: window.scrollY + caja.top - window.innerHeight / 3 });
+    pintarCuenta();
+  }
+
+  function buscar() {
+    limpiar();
+    var consulta = normalizar(campo.value).texto.trim();
+    if (consulta.length >= MINIMO_DE_LETRAS) {
+      bloquesDeTexto().forEach(function (nodos) {
+        coincidencias = coincidencias.concat(rangosDe(nodos, consulta));
+      });
+      if (puedeResaltar && coincidencias.length > 0) CSS.highlights.set('buscador', new Highlight(...coincidencias));
+    }
+    if (coincidencias.length > 0) ir(0); else pintarCuenta();
+  }
+
+  campo.addEventListener('input', function () { clearTimeout(espera); espera = setTimeout(buscar, 150); });
+  campo.addEventListener('keydown', function (evento) {
+    if (evento.key === 'Enter') { evento.preventDefault(); ir(actual + (evento.shiftKey ? -1 : 1)); }
+    if (evento.key === 'Escape') { campo.value = ''; buscar(); }
+  });
+  anterior.addEventListener('click', function () { ir(actual - 1); });
+  siguiente.addEventListener('click', function () { ir(actual + 1); });
+  document.addEventListener('keydown', function (evento) {
+    var escribiendo = /^(INPUT|TEXTAREA|SELECT)$/.test(evento.target.tagName) || evento.target.isContentEditable;
+    if (evento.key === '/' && !escribiendo && !evento.ctrlKey && !evento.metaKey && !evento.altKey) {
+      evento.preventDefault();
+      campo.focus();
+      campo.select();
+    }
+  });
+  pintarCuenta();
+})();
+</script>
 
 
 </body></html>

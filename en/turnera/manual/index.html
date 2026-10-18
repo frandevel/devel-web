@@ -572,6 +572,26 @@ footer{
   .contenido section{break-inside:avoid-page}
 }
 </style>
+<style id="buscador-css">
+  .buscador { position: sticky; top: -1.6rem; z-index: 1; margin: 0 -0.2rem 0.8rem; padding: 0.5rem 0.2rem; background: var(--crudo, #F7F4EE); }
+  .buscador input {
+    width: 100%; padding: 0.5rem 0.7rem; font: inherit; font-size: 0.88rem;
+    color: var(--texto, #23302e); background: var(--fondo, #fff);
+    border: 1px solid var(--linea, #e2ded5); border-radius: 6px;
+  }
+  .buscador input:focus { outline: 2px solid var(--verde, #0E6E62); outline-offset: 1px; }
+  .buscador__estado { display: flex; align-items: center; gap: 0.4rem; min-height: 2rem; margin-top: 0.4rem; font-size: 0.8rem; color: var(--suave, #5b6b68); }
+  .buscador__cuenta { flex: 1; }
+  .buscador button {
+    min-width: 2rem; padding: 0.2rem 0.5rem; font: inherit; line-height: 1.4; cursor: pointer;
+    color: var(--texto, #23302e); background: var(--fondo, #fff);
+    border: 1px solid var(--linea, #e2ded5); border-radius: 6px;
+  }
+  .buscador button:disabled { opacity: 0.4; cursor: default; }
+  ::highlight(buscador) { background-color: #ffe58a; color: #1a1a1a; }
+  ::highlight(buscador-actual) { background-color: #ff9f43; color: #1a1a1a; }
+  @media print { .buscador { display: none; } }
+</style>
 </head>
 <body>
 <header class="site">
@@ -598,7 +618,17 @@ footer{
 <main id="top" class="shell manual">
 <nav class="indice">
   <h2>The Turnera manual</h2>
-  <p>Updated on 14 October 2026</p>
+  <p>Updated on 18 October 2026</p>
+  <div class="buscador" role="search">
+    <input type="search" id="buscador-texto" placeholder="Search the manual" aria-label="Search the manual" autocomplete="off">
+    <div class="buscador__estado">
+      <span class="buscador__cuenta" id="buscador-cuenta" aria-live="polite"></span>
+      <button type="button" id="buscador-anterior" aria-label="Previous result" title="Previous result">↑</button>
+      <button type="button" id="buscador-siguiente" aria-label="Next result" title="Next result">↓</button>
+    </div>
+    <span hidden="" id="buscador-de">of</span>
+    <span hidden="" id="buscador-sin-resultados">No results</span>
+  </div>
   <ol>
     <li><a href="#ayuda">Getting help</a></li>
     <li><a href="#empezar">1. Logging in and finding your way around</a></li>
@@ -645,6 +675,7 @@ footer{
     <li><a href="#cuadro-de-mando" class="sub">The scorecard</a></li>
     <li><a href="#ajustes">9. Centre settings</a></li>
     <li><a href="#roles" class="sub">Roles and permissions</a></li>
+    <li><a href="#roles-permisos" class="sub">What each permission allows</a></li>
     <li><a href="#tema" class="sub">How the application looks</a></li>
     <li><a href="#iva" class="sub">The VAT of each thing that is sold</a></li>
     <li><a href="#contabilidad" class="sub">The draft accounting summary</a></li>
@@ -681,6 +712,7 @@ footer{
     <li><a href="#mantenimiento">12. Maintenance</a></li>
     <li><a href="#mantenimiento-quien" class="sub">Who handles an order, and releasing it</a></li>
     <li><a href="#mantenimiento-movil" class="sub">From the phone: the professionals’ app</a></li>
+    <li><a href="#activaciones">12 bis. Activations: doors and devices with a QR code</a></li>
     <li><a href="#problemas">13. When something goes wrong</a></li>
     <li><a href="#app-nativa">14. The professionals’ native app (Android)</a></li>
     <li><a href="#app-entrar" class="sub">Signing in and choosing the site</a></li>
@@ -2110,18 +2142,34 @@ footer{
     <strong>permissions</strong> that the job needs, and a person is given roles, not loose permissions. That way, the day somebody new starts, nobody has to remember twenty tick boxes: you give them their role and that is that.
   </p>
 
-  <p>The centre comes with four roles already made, which can be changed and deleted like any other:</p>
+  <p>The centre comes with ready-made roles, which can be changed and deleted like any other. The first ones are jobs; the rest are <strong>one role per module</strong>:</p>
 
   <ul>
     <li><strong>Reception</strong>: gives out times, minds the counter and charges.</li>
     <li><strong>Professional</strong>: their agenda, their customers and the clinical record.</li>
     <li><strong>Management</strong>: runs the centre — catalogue, staff, reports and settings — and looks after the users: changing their name or branch, unlocking them and resetting their password.</li>
+    <li><strong>HR</strong>: work calendars, staff and agenda.</li>
+    <li><strong>Maintenance</strong>: handles maintenance orders, their zones and their equipment.</li>
+    <li><strong>Activations</strong>: handles the activation points and their requests.</li>
     <li><strong>System administrator</strong>: everything, delicate permissions included.</li>
+  </ul>
+
+  <p>Module roles carry all the permissions of their module, except the delicate ones:</p>
+
+  <ul>
+    <li><strong>Customers</strong>: customer records, their alerts, their points and the customer report.</li>
+    <li><strong>Catalogue</strong>: services, packages, products, suppliers and stock, with their reports.</li>
+    <li><strong>Agenda</strong>: appointments, waiting list, rooms, equipment and the appointments report.</li>
+    <li><strong>Clinical record</strong>: the clinical record and consent forms.</li>
+    <li><strong>Till</strong>: charging, refunds, debts, vouchers, gift cards, coupons, till closing and their reports.</li>
+    <li><strong>Invoicing</strong>: full invoices, invoice book and accounting draft.</li>
+    <li><strong>Portal and alerts</strong>: the booking portal and WhatsApp alerts.</li>
+    <li><strong>Staff</strong>: work calendars, working-time record and incidents.</li>
   </ul>
 
   <p>
     To make one to measure, press <strong>New role</strong>, give it a name that does not exist yet and share out the permissions with the two lists: on the left the <strong>available ones</strong>, on the right the
-    <strong>ones of the role</strong>. They move from one side to the other with the arrows or a double click, and above each list there is a search box, so you do not have to run through all seventy. <strong>Hovering over a permission explains what it unlocks</strong>, which is not always a whole screen: sometimes it is just a button, or whether that button can be pressed. Seeing the services and changing their prices, for example, are two different permissions.
+    <strong>ones of the role</strong>. They are moved from one side to the other with the arrows or by double-clicking, and above each list there is a search box so you do not have to go through the hundred-odd. <strong>Hovering over a permission explains what it unlocks</strong>, which is not always a whole screen: sometimes it is just a button, or whether that button can be pressed. Seeing the services and changing their prices, for example, are two different permissions.
   </p>
 
   <div class="ojo">
@@ -2150,6 +2198,159 @@ footer{
   <p>
     A role that somebody carries will not let itself be deleted, so that nobody is left without permissions without noticing: first take it off those people, then delete the role.
   </p>
+
+  <h3 id="roles-que-quita">What is added or removed when you give or remove a role</h3>
+
+  <p>
+    A person <strong>can do everything that any of their roles gives them</strong>: the permissions of their roles add up. Three consequences follow, which are worth being clear about before touching anything:
+  </p>
+
+  <ul>
+    <li><strong>Giving a role</strong> gives them at once all the permissions it carries, that is, all the screens and buttons those permissions open.</li>
+    <li><strong>Removing a role</strong> takes away the permissions that role gave and that <em>none of their other roles</em> still gives them. If someone who has “Agenda” and “Management” loses “Agenda”, they can still see and move appointments, because Management also carries it. For a person to stop seeing a module, you must remove <em>all</em> the roles that carry it.</li>
+    <li><strong>Removing all the roles</strong> from a person leaves them without permission to do anything: they cannot sign in to the application.</li>
+  </ul>
+
+  <p>
+    Each module has its <strong>module role</strong>, which carries all the permissions of the module and only those: it is the quickest way to give or remove a whole module. To fine-tune, do not remove the role and improvise: create a custom role (<strong>New role</strong>) with only the permissions you want and give it to the person instead of the module role. For example, so that someone can see the services but not change the prices, a role with “See the services” and without “Edit the services”.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Delicate permissions are not in any module role.</strong> Only the System administrator carries them, so giving “Till” or “Customers” never gives, for example, the export of the customer list. If needed, they are given by hand in a custom role.</p>
+  </div>
+
+  <p>
+    If a module is switched off in the centre, its permissions are of no use to anyone, not even the administrator, whatever roles they have.
+  </p>
+
+  <h4 id="roles-permisos">What each permission allows and which role carries it</h4>
+
+  <p>
+    This is the complete list, by module. The last column says which factory roles carry each permission: it is what is lost when a role is removed, and what is gained when it is given. The permissions are written as they appear on the roles screen.
+  </p>
+
+  <table>
+    <tbody><tr><th>Permission</th><th>What it allows</th><th>Roles that carry it</th></tr>
+    <tr><th colspan="3">Agenda</th></tr>
+    <tr><td><strong>See the agenda</strong></td><td>Opens the agenda and shows the appointments of the columns in view.</td><td>Reception, Professional, Management, HR, Agenda</td></tr>
+    <tr><td><strong>Book and move appointments</strong></td><td>Enables booking a new appointment and dragging an existing one to another time or column.</td><td>Reception, Professional, Management, HR, Agenda</td></tr>
+    <tr><td><strong>Cancel appointments</strong></td><td>Enables the button to cancel an appointment. Seeing the agenda is not enough to remove appointments.</td><td>Reception, Management, Agenda</td></tr>
+    <tr><td><strong>Book on past days</strong></td><td>Allows booking or moving an appointment to a day before today. Past days can be looked at without it.</td><td>Agenda</td></tr>
+    <tr><td><strong>Move attended appointments</strong></td><td>Allows moving an appointment marked as attended or as no-show, which is what is needed when it was marked by mistake or the customer calls to change it. Charged and cancelled ones cannot be moved.</td><td>Agenda</td></tr>
+    <tr><td><strong>Cancel appointments already charged</strong></td><td>Allows cancelling an appointment that has already been charged. The charge is not undone: for that there is refunding the ticket.</td><td>Agenda</td></tr>
+    <tr><td><strong>Closing stretches in the agenda</strong></td><td>Allows blocking off slots of the agenda so nobody can book there.</td><td>Management, HR, Agenda</td></tr>
+    <tr><td><strong>Printing the agenda</strong></td><td>Enables the button to print the day sheet.</td><td>Reception, Management, Agenda</td></tr>
+    <tr><td><strong>Waiting list</strong></td><td>Puts customers on the waiting list for a busy time slot and reviews it.</td><td>Reception, Management, Agenda</td></tr>
+    <tr><td><strong>Record the device session</strong></td><td>Allows recording the device reading at the end of the session.</td><td>Professional, Agenda</td></tr>
+    <tr><td><strong>Appointments report</strong></td><td>Opens the appointments report.</td><td>Management, Agenda</td></tr>
+    <tr><td><strong>Rooms, courts and studios</strong></td><td>Manages rooms, courts and cabins, and how many are shown in the agenda.</td><td>Management, Agenda</td></tr>
+    <tr><td><strong>Register devices</strong></td><td>Registers devices and decides which services use them.</td><td>Management, Agenda</td></tr>
+    <tr><th colspan="3">Customers</th></tr>
+    <tr><td><strong>See customer records</strong></td><td>Opens the customer search and each customer’s record.</td><td>Reception, Professional, Management, Customers</td></tr>
+    <tr><td><strong>Register customers</strong></td><td>Enables the new customer button.</td><td>Reception, Management, Customers</td></tr>
+    <tr><td><strong>Edit a customer’s record</strong></td><td>Allows saving changes to a record; without it the record is read-only.</td><td>Reception, Management, Customers</td></tr>
+    <tr><td><strong>See phones and emails</strong></td><td>Shows the customer’s phone and email; without it they are hidden.</td><td>Reception, Management, Customers</td></tr>
+    <tr><td><strong>Write and remove alerts</strong></td><td>Writes and removes the alerts that pop up when booking and charging.</td><td>Reception, Professional, Management, Customers</td></tr>
+    <tr><td><strong>Delete customer notes</strong></td><td>Enables deleting a note from the record. Being able to write them does not give the right to remove them.</td><td>Management, Customers</td></tr>
+    <tr><td><strong>Merge duplicate records</strong></td><td>Merges two duplicate records into one.</td><td>Management, Customers</td></tr>
+    <tr><td><strong>Delete the data of a customer who requests it</strong></td><td>Right to erasure: deletes the customer’s personal data. Invoices and the clinical record are kept for as long as the law requires.</td><td>Management, Customers</td></tr>
+    <tr><td><strong>Download a customer’s history</strong></td><td>Downloads a customer’s history as a PDF to hand it over to them.</td><td>Customers</td></tr>
+    <tr><td><strong>Export the customer list</strong></td><td>Takes the whole customer list out to a file: it is walking away with the centre’s database.</td><td><strong>Delicate:</strong> only the System administrator</td></tr>
+    <tr><td><strong>See the customer’s points</strong></td><td>Shows the customer’s points balance and history.</td><td>Reception, Professional, Management, Customers</td></tr>
+    <tr><td><strong>Adjust points by hand</strong></td><td>Adds or subtracts points by hand, without them coming from a purchase.</td><td><strong>Delicate:</strong> only the System administrator</td></tr>
+    <tr><td><strong>Customers report</strong></td><td>Opens the customers report. Taking it out to a file also requires the permission to export customers.</td><td>Management, Customers</td></tr>
+    <tr><td><strong>Import from another program</strong></td><td>Brings in at once the customers, services, vouchers and appointments exported by another program, and lets you undo it.</td><td><strong>Delicate:</strong> only the System administrator</td></tr>
+    <tr><th colspan="3">Clinical record and consent forms</th></tr>
+    <tr><td><strong>See the clinical record</strong></td><td>Opens the customer’s clinical record.</td><td>Professional, Clinical record</td></tr>
+    <tr><td><strong>Write in the clinical record</strong></td><td>Writes progress notes and history in the clinical record.</td><td>Professional, Clinical record</td></tr>
+    <tr><td><strong>Print the clinical record</strong></td><td>Enables printing a person’s clinical record.</td><td>Professional, Clinical record</td></tr>
+    <tr><td><strong>Ask for a signature</strong></td><td>Asks the customer to sign a consent form.</td><td>Reception, Professional, Management, Clinical record</td></tr>
+    <tr><td><strong>See the signed document</strong></td><td>Opens the already signed document.</td><td>Professional, Clinical record</td></tr>
+    <tr><td><strong>Import signed consent forms</strong></td><td>Uploads to the customer’s record consent forms already signed on another platform, as PDFs.</td><td>Reception, Management, Clinical record</td></tr>
+    <tr><td><strong>Withdraw a consent</strong></td><td>Withdraws a consent that was given.</td><td>Management, Clinical record</td></tr>
+    <tr><td><strong>Manage the templates</strong></td><td>Creates and changes the centre’s consent templates.</td><td>Management, Clinical record</td></tr>
+    <tr><td><strong>Who opened which record</strong></td><td>Shows who opened which record and when.</td><td><strong>Delicate:</strong> only the System administrator</td></tr>
+    <tr><th colspan="3">Till</th></tr>
+    <tr><td><strong>Charge at the point of sale</strong></td><td>Opens the point of sale and allows closing a charge.</td><td>Reception, Management, Till</td></tr>
+    <tr><td><strong>Apply discounts</strong></td><td>Enables the discount field within the charge.</td><td>Reception, Management, Till</td></tr>
+    <tr><td><strong>Leave on credit</strong></td><td>Allows closing a charge as owed instead of charging it in full.</td><td>Reception, Management, Till</td></tr>
+    <tr><td><strong>Refunding a ticket</strong></td><td>Enables the button to refund lines of a ticket already charged, in money or as credit balance.</td><td>Management, Till</td></tr>
+    <tr><td><strong>See pending payments</strong></td><td>Opens the pending payments screen.</td><td>Reception, Management, Till</td></tr>
+    <tr><td><strong>Settle a debt</strong></td><td>Enables the button to settle a debt.</td><td>Reception, Management, Till</td></tr>
+    <tr><td><strong>Balance and close the till</strong></td><td>Opens the day’s till to count the cash and the card slips, and allows closing it.</td><td>Reception, Management, Till</td></tr>
+    <tr><td><strong>Reopen a closed till</strong></td><td>Allows reopening the till of a day already closed to correct it. It is recorded who reopened it.</td><td>Management, Till</td></tr>
+    <tr><td><strong>See the visits charged</strong></td><td>Shows the visits already charged and their detail.</td><td>Reception, Management, Till</td></tr>
+    <tr><td><strong>See the customer’s vouchers</strong></td><td>Shows the customer’s vouchers and the sessions they have left.</td><td>Reception, Professional, Management, Till</td></tr>
+    <tr><td><strong>Transfer a voucher</strong></td><td>Moves sessions from a voucher to another person.</td><td>Management, Till</td></tr>
+    <tr><td><strong>See gift cards</strong></td><td>Shows the gift cards sold, their balance and what is left to spend across all of them.</td><td>Reception, Management, Till</td></tr>
+    <tr><td><strong>Sell gift cards</strong></td><td>Enables selling a gift card, printing it and sending it by email.</td><td>Reception, Management, Till</td></tr>
+    <tr><td><strong>See coupons</strong></td><td>Shows the centre’s coupons, their discount and how many are left to use.</td><td>Reception, Management, Till</td></tr>
+    <tr><td><strong>Create and withdraw coupons</strong></td><td>Enables making up a campaign code, giving it a date and a cap, and withdrawing it.</td><td>Management, Till</td></tr>
+    <tr><td><strong>Payments report</strong></td><td>Opens the payments report.</td><td>Management, Till</td></tr>
+    <tr><td><strong>Vouchers report</strong></td><td>Opens the vouchers report.</td><td>Management, Till</td></tr>
+    <tr><td><strong>Visit history</strong></td><td>Opens the visit history.</td><td>Management, Till</td></tr>
+    <tr><td><strong>Day totals</strong></td><td>Opens the day totals.</td><td>Management, Till</td></tr>
+    <tr><td><strong>Till closing</strong></td><td>Opens the till closing.</td><td>Management, Till</td></tr>
+    <tr><th colspan="3">Invoicing</th></tr>
+    <tr><td><strong>Hacer factura completa (issue a full invoice)</strong></td><td>Reissues a ticket already invoiced as a full invoice, with the tax ID and the customer’s details.</td><td>Reception, Management, Invoicing</td></tr>
+    <tr><td><strong>Accounting draft</strong></td><td>Opens the accounting draft.</td><td>Management, Invoicing</td></tr>
+    <tr><td><strong>Libro de facturas (invoice book)</strong></td><td>Opens the book of invoices issued, as they go to the tax agency (AEAT), and downloads the book and the summary entry.</td><td>Management, Invoicing</td></tr>
+    <tr><td><strong>Invoicing and VeriFactu</strong></td><td>Switches on the centre’s invoicing, chooses the series prefixes and governs submission to the AEAT.</td><td><strong>Delicate:</strong> only the System administrator</td></tr>
+    <tr><td><strong>Move invoicing to production</strong></td><td>Moves invoicing from test mode to production: it deletes the test invoices and the numbering starts again. There is no going back.</td><td><strong>Delicate:</strong> only the System administrator</td></tr>
+    <tr><th colspan="3">Catalogue</th></tr>
+    <tr><td><strong>See the services</strong></td><td>Shows the services and their prices.</td><td>Reception, Professional, Management, Catalogue</td></tr>
+    <tr><td><strong>Edit the services</strong></td><td>Enables creating, editing and withdrawing services.</td><td>Management, Catalogue</td></tr>
+    <tr><td><strong>See the packages</strong></td><td>Shows the packages of services and products.</td><td>Reception, Professional, Management, Catalogue</td></tr>
+    <tr><td><strong>Edit the packages</strong></td><td>Enables creating and editing packages and their price.</td><td>Management, Catalogue</td></tr>
+    <tr><td><strong>Manage voucher groups</strong></td><td>Manages the groups that decide which voucher covers which service.</td><td>Management, Catalogue</td></tr>
+    <tr><td><strong>See the products</strong></td><td>Shows the products for sale.</td><td>Reception, Professional, Management, Catalogue</td></tr>
+    <tr><td><strong>Edit the products</strong></td><td>Enables creating and editing products.</td><td>Management, Catalogue</td></tr>
+    <tr><td><strong>See the suppliers</strong></td><td>Shows the suppliers.</td><td>Management, Catalogue</td></tr>
+    <tr><td><strong>Edit the suppliers</strong></td><td>Enables creating and editing suppliers.</td><td>Management, Catalogue</td></tr>
+    <tr><td><strong>See the stock</strong></td><td>Shows the stock on hand.</td><td>Reception, Management, Catalogue</td></tr>
+    <tr><td><strong>Move stock units</strong></td><td>Enables stock entries and exits.</td><td>Management, Catalogue</td></tr>
+    <tr><td><strong>Stock report</strong></td><td>Opens the stock report.</td><td>Management, Catalogue</td></tr>
+    <tr><td><strong>Stock in and out</strong></td><td>Opens the report of stock entries and exits.</td><td>Management, Catalogue</td></tr>
+    <tr><th colspan="3">Staff</th></tr>
+    <tr><td><strong>See the working-time record</strong></td><td>Shows the clock-ins.</td><td>Management, HR, Staff</td></tr>
+    <tr><td><strong>See where people clocked in</strong></td><td>Shows from where each clock-in and clock-out was made, and whether it was inside or outside the centre’s area.</td><td>Management, HR, Staff</td></tr>
+    <tr><td><strong>See the work calendars</strong></td><td>Shows each staff member’s work calendar, the collective agreements, the shifts and the holidays.</td><td>Management, HR, Staff</td></tr>
+    <tr><td><strong>Plan the work calendars</strong></td><td>Enables making and changing the work calendars, the collective agreements, the shifts, the holidays and the types of absence.</td><td>Management, HR, Staff</td></tr>
+    <tr><td><strong>Record incidents</strong></td><td>Shows, records and corrects each staff member’s work-calendar incidents, with their photos.</td><td>Management, HR, Staff</td></tr>
+    <tr><td><strong>Compensate out-of-shift hours</strong></td><td>Records the out-of-shift hours that are paid or given back as time off, and deducts their balance from the pool.</td><td>Management, HR, Staff</td></tr>
+    <tr><td><strong>Export the working-time record</strong></td><td>Takes the working-time record of the whole workforce out to a file.</td><td><strong>Delicate:</strong> only the System administrator</td></tr>
+    <tr><td><strong>Give access to the working-time record</strong></td><td>Creates and withdraws the read-only links to the working-time record for the Labour Inspectorate and for the workforce representatives.</td><td><strong>Delicate:</strong> only the System administrator</td></tr>
+    <tr><td><strong>Configure the clock-in device</strong></td><td>Decides how many digits the clock-in PIN has.</td><td>Management, HR, Staff</td></tr>
+    <tr><td><strong>Monthly working-time summary by email</strong></td><td>Switches on, in each staff member’s record, a monthly email with the summary of their working-time record.</td><td>Management, HR, Staff</td></tr>
+    <tr><th colspan="3">Maintenance</th></tr>
+    <tr><td><strong>See maintenance</strong></td><td>Opens the maintenance orders with their photos and their timeline.</td><td>Reception, Professional, Management, HR, Maintenance</td></tr>
+    <tr><td><strong>Report a problem</strong></td><td>Opens a new order and adds photos and comments to it.</td><td>Reception, Professional, Management, HR, Maintenance</td></tr>
+    <tr><td><strong>Manage the orders</strong></td><td>Changes what an order says, assigns it and takes it from one status to the next until it is resolved.</td><td>Management, HR, Maintenance</td></tr>
+    <tr><td><strong>Close and reopen orders</strong></td><td>Accepts a resolved order as good and closes it, or reopens a closed one with a reason.</td><td>Management, Maintenance</td></tr>
+    <tr><td><strong>Cancel orders</strong></td><td>Cancels an order with a reason. It stays struck through in the history: nothing is deleted.</td><td>Management</td></tr>
+    <tr><td><strong>Zones and assets</strong></td><td>Creates and removes the zones and assets that the orders refer to.</td><td>Management, HR, Maintenance</td></tr>
+    <tr><td><strong>Export maintenance</strong></td><td>Downloads the maintenance orders and their timeline in a CSV file.</td><td>Management, Maintenance</td></tr>
+    <tr><td><strong>Give access to the maintenance book</strong></td><td>Creates and withdraws the read-only links to the maintenance book for an inspection or an audit.</td><td><strong>Delicate:</strong> only the System administrator</td></tr>
+    <tr><th colspan="3">Activations</th></tr>
+    <tr><td><strong>See activation requests</strong></td><td>Opens the activation points and the request history: who asked for something to be opened or switched on, and when.</td><td>Management, Activations</td></tr>
+    <tr><td><strong>Manage activation points</strong></td><td>Creates and removes points, writes what each form asks for, and chooses the alert channel.</td><td>Management, Activations</td></tr>
+    <tr><th colspan="3">Portal and alerts</th></tr>
+    <tr><td><strong>Booking portal</strong></td><td>Manages the portal where the customer books on their own.</td><td>Management, Portal and alerts</td></tr>
+    <tr><td><strong>WhatsApp reminders</strong></td><td>Configures the centre’s WhatsApp alerts.</td><td>Portal and alerts</td></tr>
+    <tr><td><strong>Connect external programs</strong></td><td>Connects external programs and shows their access keys.</td><td><strong>Delicate:</strong> only the System administrator</td></tr>
+    <tr><th colspan="3">Core (staff, general reports, centre settings and users)</th></tr>
+    <tr><td><strong>See the staff</strong></td><td>Shows the staff records and their schedules.</td><td>Management, HR</td></tr>
+    <tr><td><strong>Edit the staff</strong></td><td>Enables creating and editing staff and their schedules.</td><td>Management, HR</td></tr>
+    <tr><td><strong>Scorecard</strong></td><td>Opens the dashboard: the figures of each module the centre has — till, agenda, customers, staff — with their traffic light.</td><td>Management</td></tr>
+    <tr><td><strong>Download a report as a file</strong></td><td>Enables the button to download any report you can already see.</td><td>Management</td></tr>
+    <tr><td><strong>Centre preferences</strong></td><td>Opens the centre’s preferences: name, language, theme and tax details.</td><td>Management</td></tr>
+    <tr><td><strong>Change the logo</strong></td><td>Enables uploading and removing the centre’s logo.</td><td>Management</td></tr>
+    <tr><td><strong>Manage the branches</strong></td><td>Creates and edits branches, and allows moving between them.</td><td>Only the System administrator</td></tr>
+    <tr><td><strong>Wipe the centre</strong></td><td>Empties the centre of data. There is no going back.</td><td><strong>Delicate:</strong> only the System administrator</td></tr>
+    <tr><td><strong>See the users</strong></td><td>Opens the list of the installation’s users.</td><td>Management</td></tr>
+    <tr><td><strong>Create and edit users</strong></td><td>Enables creating, editing and unlocking users, and resetting their password.</td><td>Management</td></tr>
+    <tr><td><strong>Manage roles and permissions</strong></td><td>Opens the roles screen and allows handing out permissions, including your own.</td><td><strong>Delicate:</strong> only the System administrator</td></tr>
+  </tbody></table>
 
   <h3>Which IP addresses each user can sign in from</h3>
   <span class="ruta">Administration → Users → (a user)</span>
@@ -2862,6 +3063,10 @@ footer{
     working time record. They can always be downloaded: the law requires keeping them available to the labour inspectorate.
   </p>
 
+  <p>
+    The Excel and the CSV files of days and totals also include the column <strong>Code</strong>: the code by which the payroll software of the accountancy firm or the ERP knows each person, written in their staff record (<em>Payroll or ERP code</em>). The branch’s code as a company (<em>Company payroll or ERP code</em>, in the branch record) appears in the “Company and period” sheet. With them, whoever receives the file does not have to cross-check by name by hand. They are optional, and two staff members of the same branch cannot have the same one.
+  </p>
+
   <h4 id="presencia-enlaces">Access for the labour inspectorate and the worker representatives</h4>
 
   <p>
@@ -3013,6 +3218,17 @@ footer{
     When a year has ended and has been reviewed, in <em>Calendars</em>, with that year selected, <em>Close</em> leaves it <strong>as it is, for the labour inspection</strong>: from then on nothing of that year changes in the centre — not the calendars or their days, the incidents, the compensations, the holidays or that year's agreement. It can be viewed and printed. If a shift that year used is edited later, the closed year <strong>keeps the hours it had</strong> (Turnera keeps a retired copy of the shift), and the out-of-shift hours margin that applies is the one in force when it was closed. You confirm by typing the year and
     <strong>cannot be reopened</strong>. A year cannot be closed before <strong>1 May of the following year</strong>: until 30 April rest days can still be given for its out-of-shift hours (see below).
   </p>
+
+  <h4 id="calendario-cerrar-mes">Close each month for payroll</h4>
+  <p>
+    In <em>Closings</em>, with the year chosen at the top, the months of the year appear with their status. When a month is sent to the accountancy firm for payroll, <em>Close the month</em> leaves it <strong>as it was sent</strong>: while it is closed its incidents cannot be changed, nor the days of the calendars for that month, the compensations dated in it, or its holidays. Nor anything that changes several months at once and affects it: the calendar’s working hours, moving the start or end date past it, duplicating or deleting that year’s calendar. Clock-ins were never touched. If a shift that month used is edited afterwards, the closed month <strong>keeps the schedule it had</strong>, just like a closed year.
+  </p>
+  <p>
+    A month is closed from day 1 of the following one; the one that is <em>In progress</em> is not yet. Unlike the year, <strong>a month can be reopened</strong>, because a payroll gets regularised: <em>Reopen</em> asks for the reason, and it is written in the list with the date and who did it. When the correction is finished it is closed again. If the year is already closed, its months can be neither closed nor reopened.
+  </p>
+  <div class="ojo">
+    <p><strong>The collective agreement is not locked when a month is closed</strong>, because it is often signed with the year already under way. Changing its hours for the year changes the figures of the whole year, closed months included: if that happens, reopen them and tell the accountancy firm.</p>
+  </div>
 
   <h4>What was done: normal hours and out-of-shift hours</h4>
   <p>
@@ -3276,6 +3492,43 @@ footer{
   </figure>
 
 </section>
+<section id="activaciones">
+  <h2>12 bis. Activations: doors and devices with a QR code</h2>
+  <p>
+    Designed for what is closed or switched off and someone needs a person on the team to open or switch it on: a sports hall door in winter, the lights of a court, a device. It is a module that is <strong>switched on per centre</strong> (it comes switched off); with it off there is no menu or public page. It appears in the menu as
+    <em>Activations</em>.
+  </p>
+
+  <h3>How it works</h3>
+  <ol>
+    <li>A <strong>point</strong> (for example “Sports hall door”) is registered and its <strong>QR</strong>
+      code is printed to stick on the door.</li>
+    <li>Whoever scans it sees the centre’s logo and name, to know they are in the right place, and writes their
+      <strong>name</strong> and a <strong>code</strong>. The sentence explaining which code is requested (for example, “your owner file number”) is configured by the centre on the point.</li>
+    <li>The team receives an alert on their phone, with an <strong>On my way</strong>button. Whoever presses it is not identified: the others see “Someone from the team is on the way”.</li>
+    <li>Whoever is waiting sees “Waiting for a reply” until someone presses On my way. If <strong>5 minutes</strong> (can be changed) go by without a reply, another alert is sent with <strong>top priority</strong>, and the person waiting is shown the point’s alternative text (for example, a concierge phone number).</li>
+  </ol>
+
+  <h3>Alerts: ntfy</h3>
+  <p>
+    Alerts go through <strong>ntfy</strong>. Each point has its <strong>channel</strong>: a long name with a hash that cannot be guessed (for example <code>mareny-apertura-</code> followed by 32 letters and numbers). Each team member installs the ntfy app and subscribes to that channel. The channel is a secret: after saving it only its end is shown. The alert server and its key are configured by whoever administers the installation.
+  </p>
+  <p>
+    The channel can be set <strong>once for the whole centre</strong> in <em>Preferences</em>, in the group
+    <em>Activations</em>: points without their own channel alert through that one. A point with its own channel uses its own. Whoever manages the activations sees the whole name on that screen, to give it to the team; whoever only views them sees just its end. If the name leaks, change it there and the team subscribes again.
+  </p>
+
+  <h3>What protects the point</h3>
+  <p>
+    The code <strong>is not checked</strong> against any list: it only stops anyone with a phone from sending random requests. To prevent abuse, a point only has <strong>one open request</strong> at a time (whoever arrives later looks at the same one and does not trigger another alert), one connection cannot request more than <strong>3 times per hour</strong>, and a request left unattended expires after an hour. The <em>Test</em> button of each point sends a test alert to the channel.
+  </p>
+
+  <h3>Who carries it</h3>
+  <p>
+    The permissions are <em>See activations</em> and <em>Manage activations</em>. The factory role <strong>Activations</strong>
+    brings them together, to give them to a person at once; Management has them too. The list shows each request: who made it, with what code, whether an alert was sent, whether it was re-alerted and whether it was attended.
+  </p>
+</section>
 <section id="problemas">
   <h2>13. When something goes wrong</h2>
 
@@ -3470,6 +3723,145 @@ footer{
     <span><a href="/en/legal">Legal notice and privacy</a> · <a href="/en/">devel.es</a></span>
   </div>
 </footer>
+<script id="buscador-js">
+(function () {
+  var campo = document.getElementById('buscador-texto');
+  var contenido = document.querySelector('.contenido');
+  if (!campo || !contenido) return;
+
+  var cuenta = document.getElementById('buscador-cuenta');
+  var anterior = document.getElementById('buscador-anterior');
+  var siguiente = document.getElementById('buscador-siguiente');
+  var textoDe = document.getElementById('buscador-de').textContent.trim();
+  var textoSinResultados = document.getElementById('buscador-sin-resultados').textContent.trim();
+  var BLOQUES = 'p,li,td,th,h1,h2,h3,h4,h5,h6,figcaption,dt,dd,pre,div,summary,footer';
+  var MINIMO_DE_LETRAS = 2;
+  var puedeResaltar = typeof Highlight === 'function' && window.CSS && CSS.highlights;
+  var coincidencias = [];
+  var actual = -1;
+  var espera;
+
+  // Sin mayusculas, sin acentos y con los espacios y saltos de linea de una pieza, para que "camion" encuentre
+  // "Camión" y "es un" encuentre "es\n    un". Guarda de cada letra normalizada de donde viene.
+  function normalizar(cadena) {
+    var texto = '';
+    var origen = [];
+    for (var i = 0; i < cadena.length; i++) {
+      var letra = cadena.charAt(i);
+      if (/\s/.test(letra)) {
+        if (texto.charAt(texto.length - 1) !== ' ') { texto += ' '; origen.push(i); }
+        continue;
+      }
+      var plana = letra.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+      for (var j = 0; j < plana.length; j++) { texto += plana.charAt(j); origen.push(i); }
+    }
+    return { texto: texto, origen: origen };
+  }
+
+  function nodosDeTexto() {
+    var nodos = [];
+    var recorrido = document.createTreeWalker(contenido, NodeFilter.SHOW_TEXT);
+    while (recorrido.nextNode()) {
+      var nodo = recorrido.currentNode;
+      var padre = nodo.parentElement;
+      if (padre && !padre.closest('script,style')) nodos.push(nodo);
+    }
+    return nodos;
+  }
+
+  // Un texto partido por <strong> o <em> sigue siendo una frase: se busca dentro de cada bloque, no nodo a nodo.
+  function bloquesDeTexto() {
+    var bloques = [];
+    var porElemento = new Map();
+    nodosDeTexto().forEach(function (nodo) {
+      var bloque = nodo.parentElement.closest(BLOQUES) || contenido;
+      if (!porElemento.has(bloque)) { porElemento.set(bloque, []); bloques.push(porElemento.get(bloque)); }
+      porElemento.get(bloque).push(nodo);
+    });
+    return bloques;
+  }
+
+  function rangosDe(nodos, consulta) {
+    var texto = '';
+    var procedencia = [];
+    nodos.forEach(function (nodo) {
+      var normal = normalizar(nodo.data);
+      var sobraElEspacio = texto.charAt(texto.length - 1) === ' ' && normal.texto.charAt(0) === ' ';
+      var desde = sobraElEspacio ? 1 : 0;
+      for (var i = desde; i < normal.texto.length; i++) {
+        procedencia.push({ nodo: nodo, desplazamiento: normal.origen[i] });
+      }
+      texto += normal.texto.slice(desde);
+    });
+    var rangos = [];
+    var desde = texto.indexOf(consulta);
+    while (desde !== -1) {
+      var principio = procedencia[desde];
+      var fin = procedencia[desde + consulta.length - 1];
+      var rango = document.createRange();
+      rango.setStart(principio.nodo, principio.desplazamiento);
+      rango.setEnd(fin.nodo, fin.desplazamiento + 1);
+      rangos.push(rango);
+      desde = texto.indexOf(consulta, desde + consulta.length);
+    }
+    return rangos;
+  }
+
+  function limpiar() {
+    coincidencias = [];
+    actual = -1;
+    if (puedeResaltar) { CSS.highlights.delete('buscador'); CSS.highlights.delete('buscador-actual'); }
+  }
+
+  function pintarCuenta() {
+    var hay = coincidencias.length > 0;
+    anterior.disabled = !hay;
+    siguiente.disabled = !hay;
+    if (campo.value.trim() === '' || normalizar(campo.value).texto.length < MINIMO_DE_LETRAS) cuenta.textContent = '';
+    else cuenta.textContent = hay ? (actual + 1) + ' ' + textoDe + ' ' + coincidencias.length : textoSinResultados;
+  }
+
+  function ir(posicion) {
+    if (coincidencias.length === 0) return;
+    actual = (posicion + coincidencias.length) % coincidencias.length;
+    var rango = coincidencias[actual];
+    if (puedeResaltar) CSS.highlights.set('buscador-actual', new Highlight(rango));
+    else { var seleccion = window.getSelection(); seleccion.removeAllRanges(); seleccion.addRange(rango); }
+    var caja = rango.getBoundingClientRect();
+    window.scrollTo({ top: window.scrollY + caja.top - window.innerHeight / 3 });
+    pintarCuenta();
+  }
+
+  function buscar() {
+    limpiar();
+    var consulta = normalizar(campo.value).texto.trim();
+    if (consulta.length >= MINIMO_DE_LETRAS) {
+      bloquesDeTexto().forEach(function (nodos) {
+        coincidencias = coincidencias.concat(rangosDe(nodos, consulta));
+      });
+      if (puedeResaltar && coincidencias.length > 0) CSS.highlights.set('buscador', new Highlight(...coincidencias));
+    }
+    if (coincidencias.length > 0) ir(0); else pintarCuenta();
+  }
+
+  campo.addEventListener('input', function () { clearTimeout(espera); espera = setTimeout(buscar, 150); });
+  campo.addEventListener('keydown', function (evento) {
+    if (evento.key === 'Enter') { evento.preventDefault(); ir(actual + (evento.shiftKey ? -1 : 1)); }
+    if (evento.key === 'Escape') { campo.value = ''; buscar(); }
+  });
+  anterior.addEventListener('click', function () { ir(actual - 1); });
+  siguiente.addEventListener('click', function () { ir(actual + 1); });
+  document.addEventListener('keydown', function (evento) {
+    var escribiendo = /^(INPUT|TEXTAREA|SELECT)$/.test(evento.target.tagName) || evento.target.isContentEditable;
+    if (evento.key === '/' && !escribiendo && !evento.ctrlKey && !evento.metaKey && !evento.altKey) {
+      evento.preventDefault();
+      campo.focus();
+      campo.select();
+    }
+  });
+  pintarCuenta();
+})();
+</script>
 
 
 </body></html>
