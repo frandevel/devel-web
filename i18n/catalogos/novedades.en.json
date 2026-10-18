@@ -683,5 +683,18 @@
   "ta438db05": "By default everything active that has a price is shown. Whoever can edit services, packages or products can, from the same box,",
   "t967f8c71": "and hide from the lookup whatever the centre does not want to give out this way. The catalogue does not change.",
   "t783180d1": "choose what is shown",
-  "t95842cac": "A package without its own price is worth the sum of its services and products. Lookups leave no trace."
+  "t95842cac": "A package without its own price is worth the sum of its services and products. Lookups leave no trace.",
+  "tcce5a492": "18 October 2026 · Creating a user by copy",
+  "t2dc2b60f": "Adding someone who will do the same as another person",
+  "td1b7fa3f": ", the",
+  "t8a6220db": "button on each row opens a new user that already carries",
+  "tf0ab32d1": "of that person. All you have to do is enter the username and the password, and before saving you can remove or add whatever is needed.",
+  "tad801964": "Administration → Users",
+  "t88541077": "Copy",
+  "td04daa78": "the roles, custom permissions, delegation and allowed IP addresses",
+  "t737d9408": "The password is not copied, and afterwards each user changes on its own: what is later taken away from one is not taken away from the other.",
+  "t4c00c775": "Since copying is handing out permissions, the button is only visible to whoever has the permission",
+  "t3742071b": ", and nobody can copy someone with more power than they have themselves.",
+  "td08dddcb": "Manage roles and permissions",
+  "t5ca9b8e4": "2026.10.151-f62f710"
 }

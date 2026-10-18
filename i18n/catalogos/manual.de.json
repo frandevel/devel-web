@@ -2704,5 +2704,12 @@
   "t1c8a5749": "Auswählen, was angezeigt wird:",
   "t859f89bd": "Auswählen, was angezeigt wird",
   "t9c6ffe5b": "Abfragen hinterlassen keine Spur.",
-  "tc7dd4415": "Was nicht gespeichert wird:"
+  "tc7dd4415": "Was nicht gespeichert wird:",
+  "t2cb0a469": "Wenn jemand kommt, der dasselbe tun wird wie eine andere Person, drückt man in",
+  "tb64283f3": "auf",
+  "t55366bcb": "in der Zeile dieser Person. Es öffnet sich das Formular eines neuen Benutzers, bereits mit",
+  "tb558827c": "; man muss nur den Benutzernamen und ein Passwort eingeben. Vor dem Speichern kann jede Rolle entfernt oder hinzugefügt werden. Das Passwort wird nicht kopiert, und danach ändert sich jeder Benutzer für sich: Was dem einen später entzogen wird, wird dem anderen nicht entzogen. Da Kopieren das Vergeben von Berechtigungen ist, sieht die Schaltfläche nur, wer die Berechtigung „Rollen und Berechtigungen verwalten“ hat.",
+  "t9fe1546d": "Einen Benutzer per Kopie anlegen.",
+  "t9ef26247": "seine Rollen, individuellen Berechtigungen, seinen Standort und seine erlaubten IP-Adressen",
+  "ta740196f": "Öffnet die schnelle Preisauskunft: Sie sucht eine Leistung, ein Paket oder ein Produkt und zeigt nur Name und Preis. Sie gibt keinen Zugriff auf die Karteikarten, die Kosten oder irgendetwas Abgerechnetes."
 }

@@ -8,6 +8,7 @@
 <link rel="alternate" hreflang="es" href="https://devel.es/turnera/manual">
 <link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/manual">
 <link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/manual">
+<link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/manual">
 <link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/manual">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="article">
@@ -606,7 +607,7 @@ footer{
       <a href="/en/turnera#demo">Demo</a>
       <a href="/en/turnera/integrators">Integrators</a>
     </nav>
-    <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/turnera/manual" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera/manual" lang="en" aria-current="true">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera/manual" lang="de">DE<span class="idiomas__nombre">Deutsch</span></a></div>
+    <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache / Língua"><a class="idiomas__opcion" href="/turnera/manual" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera/manual" lang="en" aria-current="true">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera/manual" lang="de">DE<span class="idiomas__nombre">Deutsch</span></a><a class="idiomas__opcion" href="/pt/turnera/manual" lang="pt">PT<span class="idiomas__nombre">Português</span></a></div>
     <nav class="nav-sec">
       <a href="/en/turnera/manual" aria-current="page">User manual</a>
       <a href="/en/turnera/novedades">What's new</a>
@@ -2195,6 +2196,11 @@ footer{
     Roles are given to a person on their record, in <span class="ruta">Administration → Users → (a user)</span>, with the same two lists. A user may carry several: whoever works the counter and also looks after the stock does not need a role invented for them alone.
   </p>
 
+  <p id="usuario-copia">
+    <strong>Creating a user by copy.</strong> When someone joins who will do the same as another person, in
+    <span class="ruta">Administration → Users</span> press <em>Copy</em> on that person's row. The form of a new user opens already with <strong>their roles, custom permissions, delegation and allowed IP addresses</strong>; all you have to do is enter the username and a password. Before saving you can remove or add any role. The password is not copied, and afterwards each user changes on its own: what is later taken away from one is not taken away from the other. Since copying is handing out permissions, the button is only visible to whoever has the permission “Manage roles and permissions”.
+  </p>
+
   <p>
     On screen, a permission you do not have shows in two ways: either the option does not appear in the menu, or the button is there but will not be pressed. In the catalogue, for example, whoever can see the services but not change them does not see the button to create one, and the edit and retire buttons come out greyed.
   </p>
@@ -2318,6 +2324,7 @@ footer{
     <tr><td><strong>See the packages</strong></td><td>Shows the packages of services and products.</td><td>Reception, Professional, Management, Catalogue</td></tr>
     <tr><td><strong>Edit the packages</strong></td><td>Enables creating and editing packages and their price.</td><td>Management, Catalogue</td></tr>
     <tr><td><strong>Manage voucher groups</strong></td><td>Manages the groups that decide which voucher covers which service.</td><td>Management, Catalogue</td></tr>
+    <tr><td><strong>Look up prices</strong></td><td>Opens the quick price lookup: searches for a service, a package or a product and shows only its name and price. It gives no access to the records, the costs or anything that is charged.</td><td>Reception, Professional, Management, Catalogue</td></tr>
     <tr><td><strong>See the products</strong></td><td>Shows the products for sale.</td><td>Reception, Professional, Management, Catalogue</td></tr>
     <tr><td><strong>Edit the products</strong></td><td>Enables creating and editing products.</td><td>Management, Catalogue</td></tr>
     <tr><td><strong>See the suppliers</strong></td><td>Shows the suppliers.</td><td>Management, Catalogue</td></tr>

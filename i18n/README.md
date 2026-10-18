@@ -65,6 +65,7 @@ El selector, los `hreflang` y el sitemap salen solos.
 
 ## Lo que hay que saber
 
+- **El portugués (de Portugal) es el cuarto idioma.** Tiene catálogos de manual, novedades, Turnera, Recursos Humanos y DEVEL, pero **no del aviso legal**: un texto jurídico traducido sin revisar es más riesgo que su falta, y desde /pt/ los enlaces a /legal llevan a la versión en español. Las capturas del manual en portugués son las inglesas y la sección de integradores enlaza a la inglesa. Cada texto nuevo del manual o de las novedades se traduce ahora a **cuatro** idiomas.
 - **El predeterminado va en la raíz**, sin prefijo: `/`, `/turnera` y `/turnera/manual`. Los otros bajo `/en/`
   y `/de/`.
 - **El manual sale del programa, no de aquí.** El original vive en el repositorio de Turnera, en

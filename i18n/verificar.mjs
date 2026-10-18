@@ -7,8 +7,9 @@ const navegador = await chromium.launch(
 const PAGINAS = ['/', '/en/', '/de/', '/turnera/', '/en/turnera/', '/de/turnera/',
                  '/turnera/manual/', '/en/turnera/manual/', '/de/turnera/manual/',
                  '/turnera/novedades/', '/en/turnera/novedades/', '/de/turnera/novedades/',
-                 '/legal/', '/en/legal/', '/de/legal/'];
-const PREFIJO = { es: '', en: '/en', de: '/de' };
+                 '/legal/', '/en/legal/', '/de/legal/',
+                 '/pt/', '/pt/turnera/', '/pt/turnera/manual/', '/pt/turnera/novedades/', '/pt/turnera/recursos-humanos/'];
+const PREFIJO = { es: '', en: '/en', de: '/de', pt: '/pt' };
 
 let problemas = 0;
 for (const ruta of PAGINAS) {
@@ -29,12 +30,13 @@ for (const ruta of PAGINAS) {
 
   // El selector tiene que llevar a las otras dos versiones de ESTA página, no a la misma ni a la portada:
   // que el botón ES devolviera a la página alemana fue un fallo real y silencioso.
-  const sinPrefijo = ruta.replace(/^\/(en|de)/, '');
-  const esperados = ['es', 'en', 'de'].map((i) => PREFIJO[i] + sinPrefijo);
+  const sinPrefijo = ruta.replace(/^\/(en|de|pt)/, '');
+  const idiomasDeLaPagina = sinPrefijo.startsWith('/legal') ? ['es', 'en', 'de'] : ['es', 'en', 'de', 'pt'];
+  const esperados = idiomasDeLaPagina.map((i) => PREFIJO[i] + sinPrefijo);
   const selectorMal = info.selector.some((href, n) => href.replace('*', '').replace(/\/$/, '') !== esperados[n].replace(/\/$/, ''));
 
   const mal = info.sinTraducir > 0 || fallos.length > 0 || respuesta.status() !== 200
-    || info.selector.length !== 3 || selectorMal;
+    || info.selector.length !== idiomasDeLaPagina.length || selectorMal;
   if (mal) problemas++;
   console.log(`${mal ? 'MAL' : ' OK'} ${ruta}  lang=${info.idioma}  og=${info.ogLocale}`);
   console.log(`     "${info.titulo}"`);

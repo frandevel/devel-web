@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync, mkdirSync, copyFileSync, existsSync, readdirSync } from 'fs';
 import { dirname, join } from 'path';
 
-const IDIOMAS = ['es', 'en', 'de'];
+const IDIOMAS = ['es', 'en', 'de', 'pt'];
 const PREDETERMINADO = 'es';
 const SITIO = 'https://devel.es';
 
@@ -11,35 +11,45 @@ const PAGINAS = [
   { plantilla: 'plantillas/recursos-humanos.html', catalogo: 'recursos-humanos', ruta: 'turnera/recursos-humanos' },
   { plantilla: 'plantillas/manual.html',  catalogo: 'manual',  ruta: 'turnera/manual' },
   { plantilla: 'plantillas/novedades.html', catalogo: 'novedades', ruta: 'turnera/novedades' },
-  { plantilla: 'plantillas/legal.html',   catalogo: 'legal',   ruta: 'legal' }
+  // El aviso legal no esta en portugues: un texto juridico traducido sin revisar es mas riesgo que su falta. Desde
+  // las paginas en portugues los enlaces a /legal siguen llevando a la version en espanol.
+  { plantilla: 'plantillas/legal.html',   catalogo: 'legal',   ruta: 'legal', idiomas: ['es', 'en', 'de'] }
 ];
 
 /** La dirección de una página en un idioma: el predeterminado va en la raíz y los demás bajo su prefijo. */
+/** Los idiomas en que existe una pagina: todos, salvo que ella diga otra cosa. */
+function idiomasDe(pagina) {
+  return pagina.idiomas ?? IDIOMAS;
+}
+
 function direccionDe(idioma, ruta) {
   const prefijo = idioma === PREDETERMINADO ? '' : '/' + idioma;
   return prefijo + '/' + ruta;
 }
 
-function bloqueDeAlternativas(ruta) {
-  const lineas = IDIOMAS.map((idioma) =>
+function bloqueDeAlternativas(pagina) {
+  const ruta = pagina.ruta;
+  const lineas = idiomasDe(pagina).map((idioma) =>
     `<link rel="alternate" hreflang="${idioma}" href="${SITIO}${direccionDe(idioma, ruta)}">`);
   lineas.push(`<link rel="alternate" hreflang="x-default" href="${SITIO}${direccionDe(PREDETERMINADO, ruta)}">`);
   return lineas.join('\n');
 }
 
-const NOMBRES = { es: 'Español', en: 'English', de: 'Deutsch' };
+const NOMBRES = { es: 'Español', en: 'English', de: 'Deutsch', pt: 'Português' };
 
 /** La seccion de integradores la genera traer-integradores.mjs, y cada idioma tiene su propia carpeta. */
-const INTEGRADORES = { es: '/turnera/integradores', en: '/en/turnera/integrators', de: '/de/turnera/integratoren' };
+const INTEGRADORES = { es: '/turnera/integradores', en: '/en/turnera/integrators', de: '/de/turnera/integratoren', pt: '/en/turnera/integrators' };
+const IDIOMAS_DE_INTEGRADORES = ['es', 'en', 'de'];
 
-function selectorDeIdioma(idiomaActual, ruta) {
-  const opciones = IDIOMAS.map((idioma) => {
+function selectorDeIdioma(idiomaActual, pagina) {
+  const ruta = pagina.ruta;
+  const opciones = idiomasDe(pagina).map((idioma) => {
     const actual = idioma === idiomaActual;
     return `<a class="idiomas__opcion" href="${direccionDe(idioma, ruta)}" lang="${idioma}"`
       + (actual ? ' aria-current="true"' : '')
       + `>${idioma.toUpperCase()}<span class="idiomas__nombre">${NOMBRES[idioma]}</span></a>`;
   }).join('');
-  return `<div class="idiomas" role="group" aria-label="Idioma / Language / Sprache">${opciones}</div>`;
+  return `<div class="idiomas" role="group" aria-label="Idioma / Language / Sprache / Língua">${opciones}</div>`;
 }
 
 /**
@@ -51,7 +61,7 @@ function selectorDeIdioma(idiomaActual, ruta) {
  */
 function conLosEnlacesInternosEnSuIdioma(html, idioma) {
   if (idioma === PREDETERMINADO) return html;
-  const rutasInternas = ['', ...PAGINAS.map((pagina) => pagina.ruta)];
+  const rutasInternas = ['', ...PAGINAS.filter((pagina) => idiomasDe(pagina).includes(idioma)).map((pagina) => pagina.ruta)];
   for (const ruta of rutasInternas) {
     const original = '/' + ruta;
     const traducida = direccionDe(idioma, ruta);
@@ -70,7 +80,7 @@ function conLosEnlacesInternosEnSuIdioma(html, idioma) {
  * en vez de salir rota.
  */
 const CAPTURAS = '/turnera/manual/imagenes/';
-const IDIOMA_DE_LAS_CAPTURAS = { es: null, en: 'en', de: 'en' };
+const IDIOMA_DE_LAS_CAPTURAS = { es: null, en: 'en', de: 'en', pt: 'en' };
 
 function conLasCapturasEnSuIdioma(html, idioma) {
   const carpeta = IDIOMA_DE_LAS_CAPTURAS[idioma];
@@ -82,7 +92,7 @@ function conLasCapturasEnSuIdioma(html, idioma) {
 function construir() {
   for (const pagina of PAGINAS) {
     const plantilla = readFileSync(pagina.plantilla, 'utf8');
-    for (const idioma of IDIOMAS) {
+    for (const idioma of idiomasDe(pagina)) {
       const catalogo = JSON.parse(readFileSync(`catalogos/${pagina.catalogo}.${idioma}.json`, 'utf8'));
 
       let html = plantilla.replace(/\{\{(t[0-9a-f]{8})\}\}/g, (coincidencia, clave) => {
@@ -95,18 +105,18 @@ function construir() {
 
       html = html.replace('<html lang="es">', `<html lang="${idioma}">`);
       html = html.replace(/<link rel="canonical" href="[^"]*">/,
-        `<link rel="canonical" href="${SITIO}${direccionDe(idioma, pagina.ruta)}">\n${bloqueDeAlternativas(pagina.ruta)}`);
+        `<link rel="canonical" href="${SITIO}${direccionDe(idioma, pagina.ruta)}">\n${bloqueDeAlternativas(pagina)}`);
       html = html.replace(/<meta property="og:url" content="[^"]*">/,
         `<meta property="og:url" content="${SITIO}${direccionDe(idioma, pagina.ruta)}">`);
       html = html.replace(/<meta property="og:locale" content="[^"]*">/,
-        `<meta property="og:locale" content="${{ es: 'es_ES', en: 'en_GB', de: 'de_DE' }[idioma]}">`);
+        `<meta property="og:locale" content="${{ es: 'es_ES', en: 'en_GB', de: 'de_DE', pt: 'pt_PT' }[idioma]}">`);
       // El selector se pone despues de traducir los enlaces, y no antes: es el unico sitio de la pagina donde
       // un enlace a `/turnera` tiene que seguir llevando al espanol estando en la version alemana, que es
       // justo lo que hace el selector. Al reves, la traduccion se lo llevaba por delante y el boton ES
       // devolvia a la misma pagina.
       html = conLosEnlacesInternosEnSuIdioma(html, idioma);
       html = conLasCapturasEnSuIdioma(html, idioma);
-      html = html.replace('<!--selector-de-idioma-->', selectorDeIdioma(idioma, pagina.ruta));
+      html = html.replace('<!--selector-de-idioma-->', selectorDeIdioma(idioma, pagina));
 
       const destino = join('..', direccionDe(idioma, pagina.ruta).replace(/^\//, ''), 'index.html');
       mkdirSync(dirname(destino), { recursive: true });
@@ -118,8 +128,8 @@ function construir() {
 
 function sitemap() {
   const hoy = new Date().toISOString().slice(0, 10);
-  const entradas = PAGINAS.flatMap((pagina) => IDIOMAS.map((idioma) => {
-    const alternativas = IDIOMAS.map((otro) =>
+  const entradas = PAGINAS.flatMap((pagina) => idiomasDe(pagina).map((idioma) => {
+    const alternativas = idiomasDe(pagina).map((otro) =>
       `    <xhtml:link rel="alternate" hreflang="${otro}" href="${SITIO}${direccionDe(otro, pagina.ruta)}"/>`).join('\n');
     return `  <url>
     <loc>${SITIO}${direccionDe(idioma, pagina.ruta)}</loc>
@@ -129,8 +139,8 @@ ${alternativas}
   }));
   // La seccion de integradores la genera traer-integradores.mjs y cada idioma tiene su propia direccion.
   const integradores = INTEGRADORES;
-  for (const idioma of IDIOMAS) {
-    const alternativas = IDIOMAS.map((otro) =>
+  for (const idioma of IDIOMAS_DE_INTEGRADORES) {
+    const alternativas = IDIOMAS_DE_INTEGRADORES.map((otro) =>
       `    <xhtml:link rel="alternate" hreflang="${otro}" href="${SITIO}${integradores[otro]}"/>`).join('\n');
     entradas.push(`  <url>\n    <loc>${SITIO}${integradores[idioma]}</loc>\n    <lastmod>${hoy}</lastmod>\n${alternativas}\n  </url>`);
   }

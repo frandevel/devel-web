@@ -683,5 +683,18 @@
   "ta438db05": "Standardmäßig wird alles Aktive mit Preis angezeigt. Wer Leistungen, Pakete oder Produkte bearbeiten darf, kann im selben Fenster",
   "t967f8c71": "und aus der Preisauskunft ausblenden, was das Zentrum auf diesem Weg nicht preisgeben möchte. Der Katalog ändert sich nicht.",
   "t783180d1": "auswählen, was angezeigt wird",
-  "t95842cac": "Ein Paket ohne eigenen Preis kostet so viel wie die Summe seiner Leistungen und Produkte. Abfragen hinterlassen keine Spur."
+  "t95842cac": "Ein Paket ohne eigenen Preis kostet so viel wie die Summe seiner Leistungen und Produkte. Abfragen hinterlassen keine Spur.",
+  "tcce5a492": "18. Oktober 2026 · Benutzer per Kopie anlegen",
+  "t2dc2b60f": "Jemanden anlegen, der dasselbe tun wird wie eine andere Person",
+  "td1b7fa3f": ", die Schaltfläche",
+  "t8a6220db": "in jeder Zeile öffnet einen neuen Benutzer, der bereits Folgendes mitbringt:",
+  "tf0ab32d1": "dieser Person. Man muss nur den Benutzernamen und das Passwort eingeben; vor dem Speichern lässt sich entfernen oder hinzufügen, was nötig ist.",
+  "tad801964": "Verwaltung → Benutzer",
+  "t88541077": "Kopieren",
+  "td04daa78": "die Rollen, individuellen Berechtigungen, den Standort und die erlaubten IP-Adressen",
+  "t737d9408": "Das Passwort wird nicht kopiert, und danach ändert sich jeder Benutzer für sich: Was dem einen später entzogen wird, wird dem anderen nicht entzogen.",
+  "t4c00c775": "Da Kopieren das Vergeben von Berechtigungen ist, sieht die Schaltfläche nur, wer die Berechtigung hat",
+  "t3742071b": ", und niemand kann jemanden kopieren, der mehr Befugnisse hat als er selbst.",
+  "td08dddcb": "Rollen und Berechtigungen verwalten",
+  "t5ca9b8e4": "2026.10.151-f62f710"
 }

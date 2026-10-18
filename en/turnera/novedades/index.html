@@ -8,6 +8,7 @@
 <link rel="alternate" hreflang="es" href="https://devel.es/turnera/novedades">
 <link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/novedades">
 <link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/novedades">
+<link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/novedades">
 <link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/novedades">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
@@ -617,7 +618,7 @@ footer{
       <a href="/en/turnera#demo">Demo</a>
       <a href="/en/turnera/integrators">Integrators</a>
     </nav>
-    <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/turnera/novedades" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera/novedades" lang="en" aria-current="true">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera/novedades" lang="de">DE<span class="idiomas__nombre">Deutsch</span></a></div>
+    <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache / Língua"><a class="idiomas__opcion" href="/turnera/novedades" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera/novedades" lang="en" aria-current="true">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera/novedades" lang="de">DE<span class="idiomas__nombre">Deutsch</span></a><a class="idiomas__opcion" href="/pt/turnera/novedades" lang="pt">PT<span class="idiomas__nombre">Português</span></a></div>
     <nav class="nav-sec">
       <a href="/en/turnera/manual">User manual</a>
       <a href="/en/turnera/novedades" aria-current="page">What's new</a>
@@ -630,7 +631,8 @@ footer{
   <h2>What's new in Turnera</h2>
   <p>Latest first</p>
   <ol>
-    <li><a href="#2026-10-18-precios">18 October 2026 · Quick price lookup</a></li>
+    <li><a href="#2026-10-18-usuario-copia">18 October 2026 · Creating a user by copy</a></li>
+<li><a href="#2026-10-18-precios">18 October 2026 · Quick price lookup</a></li>
 <li><a href="#2026-10-16-nomina">16 October 2026 · Payroll code and closing each month</a></li>
     <li><a href="#2026-10-13-agenda">13 October 2026 · Closed stretches that repeat and can be dragged, and a cleaner agenda</a></li>
     <li><a href="#2026-10-12-ausencias">12 October 2026 · Reopening closed stretches and partial absences</a></li>
@@ -667,10 +669,26 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Bugs fixed</strong>: what failed, and no longer does.</span></li>
 </ul>
 
+<section id="2026-10-18-usuario-copia" class="version">
+  <div class="version__cabecera">
+    <h2>18 October 2026 · Creating a user by copy</h2>
+    <span class="version__sello">Latest release</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">2026.10.151-f62f710</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Adding someone who will do the same as another person</h4>
+    <ul>
+      <li>In <em>Administration → Users</em>, the <strong>Copy</strong> button on each row opens a new user that already carries <strong>the roles, custom permissions, delegation and allowed IP addresses</strong> of that person. All you have to do is enter the username and the password, and before saving you can remove or add whatever is needed.</li>
+      <li>The password is not copied, and afterwards each user changes on its own: what is later taken away from one is not taken away from the other.</li>
+      <li>Since copying is handing out permissions, the button is only visible to whoever has the permission <em>Manage roles and permissions</em>, and nobody can copy someone with more power than they have themselves.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-10-18-precios" class="version">
   <div class="version__cabecera">
     <h2>18 October 2026 · Quick price lookup</h2>
-    <span class="version__sello">Latest release</span>
   </div>
   <p class="version__numero">Version <span translate="no">2026.10.149-fdb8744</span></p>
 

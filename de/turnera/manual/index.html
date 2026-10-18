@@ -8,6 +8,7 @@
 <link rel="alternate" hreflang="es" href="https://devel.es/turnera/manual">
 <link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/manual">
 <link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/manual">
+<link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/manual">
 <link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/manual">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="article">
@@ -606,7 +607,7 @@ footer{
       <a href="/de/turnera#demo">Demo</a>
       <a href="/de/turnera/integratoren">Integratoren</a>
     </nav>
-    <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/turnera/manual" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera/manual" lang="en">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera/manual" lang="de" aria-current="true">DE<span class="idiomas__nombre">Deutsch</span></a></div>
+    <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache / Língua"><a class="idiomas__opcion" href="/turnera/manual" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera/manual" lang="en">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera/manual" lang="de" aria-current="true">DE<span class="idiomas__nombre">Deutsch</span></a><a class="idiomas__opcion" href="/pt/turnera/manual" lang="pt">PT<span class="idiomas__nombre">Português</span></a></div>
     <nav class="nav-sec">
       <a href="/de/turnera/manual" aria-current="page">Benutzerhandbuch</a>
       <a href="/de/turnera/novedades">Neuigkeiten</a>
@@ -2198,6 +2199,11 @@ footer{
     Rollen gibt man einer Person in ihrer Akte, unter <span class="ruta">Verwaltung → Benutzer → (ein Benutzer)</span>, mit denselben zwei Listen. Ein Benutzer kann mehrere tragen: wer am Empfang arbeitet und zusätzlich das Lager führt, braucht keine eigens erfundene Rolle.
   </p>
 
+  <p id="usuario-copia">
+    <strong>Einen Benutzer per Kopie anlegen.</strong> Wenn jemand kommt, der dasselbe tun wird wie eine andere Person, drückt man in
+    <span class="ruta">Verwaltung → Benutzer</span> auf <em>Kopieren</em> in der Zeile dieser Person. Es öffnet sich das Formular eines neuen Benutzers, bereits mit <strong>seine Rollen, individuellen Berechtigungen, seinen Standort und seine erlaubten IP-Adressen</strong>; man muss nur den Benutzernamen und ein Passwort eingeben. Vor dem Speichern kann jede Rolle entfernt oder hinzugefügt werden. Das Passwort wird nicht kopiert, und danach ändert sich jeder Benutzer für sich: Was dem einen später entzogen wird, wird dem anderen nicht entzogen. Da Kopieren das Vergeben von Berechtigungen ist, sieht die Schaltfläche nur, wer die Berechtigung „Rollen und Berechtigungen verwalten“ hat.
+  </p>
+
   <p>
     Auf dem Bildschirm zeigt sich eine fehlende Berechtigung auf zwei Arten: entweder erscheint die Option nicht im Menü, oder die Schaltfläche ist da, lässt sich aber nicht drücken. Im Katalog sieht zum Beispiel jemand, der die Leistungen sehen, aber nicht ändern darf, die Schaltfläche zum Anlegen nicht, und die zum Bearbeiten und Stilllegen sind ausgegraut.
   </p>
@@ -2321,6 +2327,7 @@ footer{
     <tr><td><strong>Pakete ansehen</strong></td><td>Zeigt die Pakete aus Leistungen und Produkten.</td><td>Empfang, Fachkraft, Leitung, Katalog</td></tr>
     <tr><td><strong>Pakete bearbeiten</strong></td><td>Aktiviert das Anlegen und Bearbeiten von Paketen und ihrem Preis.</td><td>Leitung, Katalog</td></tr>
     <tr><td><strong>Wertkartengruppen verwalten</strong></td><td>Verwaltet die Gruppen, die festlegen, welche Wertkarte welche Leistung abdeckt.</td><td>Leitung, Katalog</td></tr>
+    <tr><td><strong>Preise nachschlagen</strong></td><td>Öffnet die schnelle Preisauskunft: Sie sucht eine Leistung, ein Paket oder ein Produkt und zeigt nur Name und Preis. Sie gibt keinen Zugriff auf die Karteikarten, die Kosten oder irgendetwas Abgerechnetes.</td><td>Empfang, Fachkraft, Leitung, Katalog</td></tr>
     <tr><td><strong>Produkte ansehen</strong></td><td>Zeigt die Verkaufsprodukte.</td><td>Empfang, Fachkraft, Leitung, Katalog</td></tr>
     <tr><td><strong>Produkte bearbeiten</strong></td><td>Aktiviert das Anlegen und Bearbeiten von Produkten.</td><td>Leitung, Katalog</td></tr>
     <tr><td><strong>Lieferanten ansehen</strong></td><td>Zeigt die Lieferanten.</td><td>Leitung, Katalog</td></tr>

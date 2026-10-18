@@ -2704,5 +2704,12 @@
   "t1c8a5749": "Choosing what is shown:",
   "t859f89bd": "Choose what is shown",
   "t9c6ffe5b": "lookups leave no trace.",
-  "tc7dd4415": "What is not stored:"
+  "tc7dd4415": "What is not stored:",
+  "t2cb0a469": "When someone joins who will do the same as another person, in",
+  "tb64283f3": "press",
+  "t55366bcb": "on that person's row. The form of a new user opens already with",
+  "tb558827c": "; all you have to do is enter the username and a password. Before saving you can remove or add any role. The password is not copied, and afterwards each user changes on its own: what is later taken away from one is not taken away from the other. Since copying is handing out permissions, the button is only visible to whoever has the permission “Manage roles and permissions”.",
+  "t9fe1546d": "Creating a user by copy.",
+  "t9ef26247": "their roles, custom permissions, delegation and allowed IP addresses",
+  "ta740196f": "Opens the quick price lookup: searches for a service, a package or a product and shows only its name and price. It gives no access to the records, the costs or anything that is charged."
 }

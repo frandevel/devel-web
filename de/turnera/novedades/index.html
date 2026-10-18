@@ -8,6 +8,7 @@
 <link rel="alternate" hreflang="es" href="https://devel.es/turnera/novedades">
 <link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/novedades">
 <link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/novedades">
+<link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/novedades">
 <link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/novedades">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
@@ -617,7 +618,7 @@ footer{
       <a href="/de/turnera#demo">Demo</a>
       <a href="/de/turnera/integratoren">Integratoren</a>
     </nav>
-    <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/turnera/novedades" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera/novedades" lang="en">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera/novedades" lang="de" aria-current="true">DE<span class="idiomas__nombre">Deutsch</span></a></div>
+    <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache / Língua"><a class="idiomas__opcion" href="/turnera/novedades" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera/novedades" lang="en">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera/novedades" lang="de" aria-current="true">DE<span class="idiomas__nombre">Deutsch</span></a><a class="idiomas__opcion" href="/pt/turnera/novedades" lang="pt">PT<span class="idiomas__nombre">Português</span></a></div>
     <nav class="nav-sec">
       <a href="/de/turnera/manual">Benutzerhandbuch</a>
       <a href="/de/turnera/novedades" aria-current="page">Neuigkeiten</a>
@@ -630,7 +631,8 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
-    <li><a href="#2026-10-18-precios">18. Oktober 2026 · Schnelle Preisauskunft</a></li>
+    <li><a href="#2026-10-18-usuario-copia">18. Oktober 2026 · Benutzer per Kopie anlegen</a></li>
+<li><a href="#2026-10-18-precios">18. Oktober 2026 · Schnelle Preisauskunft</a></li>
 <li><a href="#2026-10-16-nomina">16. Oktober 2026 · Lohncode und Abschluss jedes Monats</a></li>
     <li><a href="#2026-10-13-agenda">13. Oktober 2026 · Gesperrte Zeitspannen, die sich wiederholen und verschieben lassen, und eine aufgeräumtere Agenda</a></li>
     <li><a href="#2026-10-12-ausencias">12. Oktober 2026 · Gesperrte Zeitspannen wieder öffnen und Teilabwesenheiten</a></li>
@@ -667,10 +669,26 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-10-18-usuario-copia" class="version">
+  <div class="version__cabecera">
+    <h2>18. Oktober 2026 · Benutzer per Kopie anlegen</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">2026.10.151-f62f710</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Jemanden anlegen, der dasselbe tun wird wie eine andere Person</h4>
+    <ul>
+      <li>Unter <em>Verwaltung → Benutzer</em>, die Schaltfläche <strong>Kopieren</strong> in jeder Zeile öffnet einen neuen Benutzer, der bereits Folgendes mitbringt: <strong>die Rollen, individuellen Berechtigungen, den Standort und die erlaubten IP-Adressen</strong> dieser Person. Man muss nur den Benutzernamen und das Passwort eingeben; vor dem Speichern lässt sich entfernen oder hinzufügen, was nötig ist.</li>
+      <li>Das Passwort wird nicht kopiert, und danach ändert sich jeder Benutzer für sich: Was dem einen später entzogen wird, wird dem anderen nicht entzogen.</li>
+      <li>Da Kopieren das Vergeben von Berechtigungen ist, sieht die Schaltfläche nur, wer die Berechtigung hat <em>Rollen und Berechtigungen verwalten</em>, und niemand kann jemanden kopieren, der mehr Befugnisse hat als er selbst.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-10-18-precios" class="version">
   <div class="version__cabecera">
     <h2>18. Oktober 2026 · Schnelle Preisauskunft</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">2026.10.149-fdb8744</span></p>
 

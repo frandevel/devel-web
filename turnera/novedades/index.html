@@ -8,6 +8,7 @@
 <link rel="alternate" hreflang="es" href="https://devel.es/turnera/novedades">
 <link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/novedades">
 <link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/novedades">
+<link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/novedades">
 <link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/novedades">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
@@ -617,7 +618,7 @@ footer{
       <a href="/turnera#demo">Demo</a>
       <a href="/turnera/integradores">Integradores</a>
     </nav>
-    <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache"><a class="idiomas__opcion" href="/turnera/novedades" lang="es" aria-current="true">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera/novedades" lang="en">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera/novedades" lang="de">DE<span class="idiomas__nombre">Deutsch</span></a></div>
+    <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache / Língua"><a class="idiomas__opcion" href="/turnera/novedades" lang="es" aria-current="true">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera/novedades" lang="en">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera/novedades" lang="de">DE<span class="idiomas__nombre">Deutsch</span></a><a class="idiomas__opcion" href="/pt/turnera/novedades" lang="pt">PT<span class="idiomas__nombre">Português</span></a></div>
     <nav class="nav-sec">
       <a href="/turnera/manual">Manual de usuario</a>
       <a href="/turnera/novedades" aria-current="page">Novedades</a>
@@ -630,7 +631,8 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
-    <li><a href="#2026-10-18-precios">18 de octubre de 2026 · Consulta rápida de precios</a></li>
+    <li><a href="#2026-10-18-usuario-copia">18 de octubre de 2026 · Crear un usuario por copia</a></li>
+<li><a href="#2026-10-18-precios">18 de octubre de 2026 · Consulta rápida de precios</a></li>
 <li><a href="#2026-10-16-nomina">16 de octubre de 2026 · Código de nómina y cierre de cada mes</a></li>
     <li><a href="#2026-10-13-agenda">13 de octubre de 2026 · Ratos cerrados que se repiten y se arrastran, y una agenda más limpia</a></li>
     <li><a href="#2026-10-12-ausencias">12 de octubre de 2026 · Reabrir ratos cerrados y ausencias parciales</a></li>
@@ -668,10 +670,26 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-10-18-usuario-copia" class="version">
+  <div class="version__cabecera">
+    <h2>18 de octubre de 2026 · Crear un usuario por copia</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">2026.10.151-f62f710</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
+    <h4>Dar de alta a alguien que va a hacer lo mismo que otra persona</h4>
+    <ul>
+      <li>En <em>Administración → Usuarios</em>, el botón <strong>Copiar</strong> de cada fila abre un usuario nuevo que ya lleva <strong>los roles, los permisos a medida, la delegación y las direcciones IP autorizadas</strong> de esa persona. Solo hay que poner el nombre de usuario y la contraseña, y antes de guardar se puede quitar o añadir lo que haga falta.</li>
+      <li>La contraseña no se copia, y después cada usuario cambia por su lado: lo que se le quite luego a uno no se le quita al otro.</li>
+      <li>Como copiar es repartir permisos, el botón solo lo ve quien tiene el permiso <em>Gobernar roles y permisos</em>, y nadie puede copiar a alguien con más poder del que él tiene.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-10-18-precios" class="version">
   <div class="version__cabecera">
     <h2>18 de octubre de 2026 · Consulta rápida de precios</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">2026.10.149-fdb8744</span></p>
 
