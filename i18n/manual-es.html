@@ -570,19 +570,18 @@ footer{
 }
 </style>
 <style id="buscador-css">
-  .buscador { position: sticky; top: -1.6rem; z-index: 1; margin: 0 -0.2rem 0.8rem; padding: 0.5rem 0.2rem; background: var(--crudo, #F7F4EE); }
+  .buscador { position: sticky; top: -1.6rem; z-index: 1; margin: 0 -0.2rem 0.8rem; padding: 0.5rem 0.2rem; background-color: inherit; }
   .buscador input {
-    width: 100%; padding: 0.5rem 0.7rem; font: inherit; font-size: 0.88rem;
-    color: var(--texto, #23302e); background: var(--fondo, #fff);
-    border: 1px solid var(--linea, #e2ded5); border-radius: 6px;
+    width: 100%; padding: 0.5rem 0.7rem; font: inherit; font-size: 0.88rem; color: inherit;
+    background: rgba(127, 127, 127, 0.12); border: 1px solid rgba(127, 127, 127, 0.35); border-radius: 6px;
   }
+  .buscador input::placeholder { color: inherit; opacity: 0.55; }
   .buscador input:focus { outline: 2px solid var(--verde, #0E6E62); outline-offset: 1px; }
-  .buscador__estado { display: flex; align-items: center; gap: 0.4rem; min-height: 2rem; margin-top: 0.4rem; font-size: 0.8rem; color: var(--suave, #5b6b68); }
+  .buscador__estado { display: flex; align-items: center; gap: 0.4rem; min-height: 2rem; margin-top: 0.4rem; font-size: 0.8rem; opacity: 0.8; }
   .buscador__cuenta { flex: 1; }
   .buscador button {
-    min-width: 2rem; padding: 0.2rem 0.5rem; font: inherit; line-height: 1.4; cursor: pointer;
-    color: var(--texto, #23302e); background: var(--fondo, #fff);
-    border: 1px solid var(--linea, #e2ded5); border-radius: 6px;
+    min-width: 2rem; padding: 0.2rem 0.5rem; font: inherit; line-height: 1.4; cursor: pointer; color: inherit;
+    background: rgba(127, 127, 127, 0.12); border: 1px solid rgba(127, 127, 127, 0.35); border-radius: 6px;
   }
   .buscador button:disabled { opacity: 0.4; cursor: default; }
   ::highlight(buscador) { background-color: #ffe58a; color: #1a1a1a; }
