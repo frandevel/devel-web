@@ -694,6 +694,7 @@ footer{
     <li><a href="#profesionales" class="sub">Staff</a></li>
     <li><a href="#presencia" class="sub">Clocking in and working time</a></li>
     <li><a href="#cifras-pin" class="sub sub">How many digits the PIN has</a></li>
+    <li><a href="#pin-bloqueado" class="sub sub">Locked PIN</a></li>
     <li><a href="#fichar-donde" class="sub sub">Where clocking in happens from</a></li>
     <li><a href="#fichar-lo-mio" class="sub sub">What each person sees after their PIN</a></li>
     <li><a href="#presencia-enlaces" class="sub sub">Access for the labour inspectorate and the worker representatives</a></li>
@@ -2351,6 +2352,7 @@ footer{
     <tr><td><strong>Export the working-time record</strong></td><td>Takes the working-time record of the whole workforce out to a file.</td><td><strong>Delicate:</strong> only the System administrator</td></tr>
     <tr><td><strong>Give access to the working-time record</strong></td><td>Creates and withdraws the read-only links to the working-time record for the Labour Inspectorate and for the workforce representatives.</td><td><strong>Delicate:</strong> only the System administrator</td></tr>
     <tr><td><strong>Configure the clock-in device</strong></td><td>Decides how many digits the clock-in PIN has.</td><td>Management, HR, Staff</td></tr>
+    <tr><td><strong>Unlock the clocking PIN</strong></td><td>Unlocks a professional's PIN that got locked after five wrong attempts in a row, so they can clock in and sign their summary again. Who unlocks it is recorded.</td><td>Management, HR, Staff</td></tr>
     <tr><td><strong>Monthly working-time summary by email</strong></td><td>Switches on, in each staff member’s record, a monthly email with the summary of their working-time record.</td><td>Management, HR, Staff</td></tr>
     <tr><th colspan="3">Maintenance</th></tr>
     <tr><td><strong>See maintenance</strong></td><td>Opens the maintenance orders with their photos and their timeline.</td><td>Reception, Professional, Management, HR, Maintenance</td></tr>
@@ -2363,7 +2365,9 @@ footer{
     <tr><td><strong>Give access to the maintenance book</strong></td><td>Creates and withdraws the read-only links to the maintenance book for an inspection or an audit.</td><td><strong>Delicate:</strong> only the System administrator</td></tr>
     <tr><th colspan="3">Activations</th></tr>
     <tr><td><strong>See activation requests</strong></td><td>Opens the activation points and the request history: who asked for something to be opened or switched on, and when.</td><td>Management, Activations</td></tr>
-    <tr><td><strong>Manage activation points</strong></td><td>Creates and removes points, writes what each form asks for, and sees the whole alert channel, to give it to the team and generate another.</td><td>Management, Activations</td></tr>
+    <tr><td><strong>Manage activation points</strong></td><td>Creates and removes points, writes what each form asks for, and requests another alert channel when needed. Seeing it in full is for the “See the notification channels” permission.</td><td>Management, Activations</td></tr>
+    <tr><td><strong>See the notification channels</strong></td><td>Sees in full, at any time, the alert channel of the centre and of each point, with the link and the QR to subscribe in the ntfy app. It does not allow changing them.</td><td>Management</td></tr>
+    <tr><td><strong>Delete activation points</strong></td><td>Really deletes a point, active or withdrawn, with all its requests, and its QR stops existing. There is no going back: it is for the start-up, when test or misconfigured points are left over.</td><td><strong>Delicate:</strong> only the System administrator</td></tr>
     <tr><th colspan="3">Portal and alerts</th></tr>
     <tr><td><strong>Booking portal</strong></td><td>Manages the portal where the customer books on their own.</td><td>Management, Portal and alerts</td></tr>
     <tr><td><strong>WhatsApp reminders</strong></td><td>Configures the centre’s WhatsApp alerts.</td><td>Portal and alerts</td></tr>
@@ -2997,9 +3001,8 @@ footer{
 
   <p>
     The centre decides whether the PIN has from <strong>four to eight digits</strong>. Four are typed in a moment,
-    but whoever is in front of the reception screen could guess a colleague's by trying for a few hours,
-    even though Turnera only allows ten tries a minute. Each extra digit multiplies that time by ten: with six it is already
-    more than a month. It is changed by whoever has the «Configure the time clock» permission, which Management and HR have out of the box.
+    and Turnera only allows ten tries a minute and <strong>locks the PIN at the fifth failure in a row</strong> (see
+    <a href="#pin-bloqueado">Locked PIN</a>), so guessing a colleague's by trying is not worth it. Each extra digit makes it even harder to get right first time. It is changed by whoever has the «Configure the clock-in device» permission, which Management and HR have out of the box.
   </p>
 
   <p>
@@ -3021,6 +3024,26 @@ footer{
     A PIN that <strong>administration sets or resets</strong> is <strong>temporary</strong>, because whoever set it knows it. With it the person cannot clock in, neither on the web nor in the professionals’ app, nor sign their monthly summary: when they type it, Turnera asks them to <strong>choose their own</strong> (different from the temporary one and from the digits the centre requires), and from then on it is theirs alone. That way HR never gets to know the PIN someone signs with. PINs that were already set before this improvement are left untouched.
   </p>
 
+  <h4 id="pin-bloqueado">Locked PIN</h4>
+  <span class="ruta">Staff → Professionals → Clocking PIN</span>
+
+  <p>
+    If <strong>a wrong PIN is typed five times in a row</strong>, that person's PIN becomes
+    <strong>locked</strong>. Failures add up wherever they happen —the web time clock, the professionals' app and the monthly summary signing link— and the lock applies to all of them: while locked, the PIN does not work to clock in or to sign, even if the right one is typed afterwards. A correct PIN before the fifth failure resets the count. On the third and fourth failure the screen says how many attempts are left, and when it locks it says «The PIN of <em>name</em> is locked after too many wrong attempts. Ask HR to unlock it».
+  </p>
+
+  <p>
+    When it locks, <strong>an alert reaches the HR email</strong> (the work calendar one; if there is none, the summary signing one, and failing that, the administration one) saying who, when and from where: the clock, with the user and IP it was typed from, or the signing link, with its IP.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Anyone at reception can lock a colleague's PIN</strong> by deliberately typing five random PINs under their name. It cannot be prevented —without the lock, the PIN could be guessed by trying—, so when the alert arrives it is best to <strong>unlock it straight away</strong> and, if it was not that person, give them a new PIN and find out who was at the desk.</p>
+  </div>
+
+  <p>
+    In <em>Staff</em>, the button <em>clocking PIN</em> of anyone whose PIN is locked shows a warning, and inside it shows <strong>«PIN locked since …»</strong> with the button <strong>Unlock</strong>, which keeps the same PIN and resets the count. It needs the «Unlock the clocking PIN» permission, which Management, HR and Staff have out of the box (and the System administrator); without it, the window says which permission is missing. <strong>Setting a new PIN also unlocks it</strong> (and it is temporary, as always when administration sets it). Every lock and every unlock is recorded —who unlocked it, when and how— and that trail is not deleted.
+  </p>
+
   <h4 id="firma-resumen">Signing the monthly summary</h4>
   <span class="ruta">Administration → Attendance control → Monthly summary signing</span>
 
@@ -3035,7 +3058,9 @@ footer{
   </p>
 
   <p>
-    If <strong>a wrong PIN is typed five times in a row</strong> on the link, the link is cancelled and an alert reaches the HR email: it may be a slip, or the link may have reached the wrong person. Those failures do not count for the time clock, which keeps working as usual.
+    If <strong>a wrong PIN is typed five times in a row</strong> on the link, the link is cancelled and an alert reaches the HR email: it may be a slip, or the link may have reached the wrong person. Those failures
+    <strong>also count for the PIN</strong>, added to the clock's: at the fifth in a row the PIN is locked and cannot be used to clock in or to open another link until HR unlocks it (see
+    <a href="#pin-bloqueado">Locked PIN</a>). So asking for a new link does not give new attempts.
   </p>
 
   <p>
@@ -3552,11 +3577,17 @@ footer{
 
   <h3>Alerts: ntfy</h3>
   <p>
-    Alerts go through <strong>ntfy</strong>, to a <strong>channel</strong>. The channel name is the only key: whoever knows it can read the alerts without any account. That is why it <strong>is not typed in</strong>: Turnera generates it from the centre’s short name and 22 random characters (for example <code>mareny-</code> followed by letters, numbers, hyphens and underscores), impossible to guess and different in each centre. Each team member installs the ntfy app and subscribes to that channel. Whoever manages the activations sees it in full, with the <strong>Copy channel</strong> button, to give it to the team; whoever only views them sees just its end. The alert server and its key are configured by whoever administers the installation.
+    Alerts go through <strong>ntfy</strong>, to a <strong>channel</strong>. The channel name is the only key: whoever knows it can read the alerts without any account. That is why it <strong>is not typed in</strong>: Turnera generates it from the centre’s short name and 22 random characters (for example <code>mareny-</code> followed by letters, numbers, hyphens and underscores), impossible to guess and different in each centre. Each team member installs the ntfy app and subscribes to that channel. Only whoever has the permission <em>See the notification channels</em> (by default, Management and the administrator) sees it in full; everyone else sees only its end and a notice saying that permission is needed. The alert server and its key are configured by whoever administers the installation.
+  </p>
+  <p>
+    To subscribe the team there is no need to copy the channel by hand: in <em>Activations</em>, the button
+    <strong>Centre channel</strong> at the top and the button <strong>Subscribe</strong> on each point open its channel with
+    <strong>Copy channel</strong>, <strong>Copy subscription link</strong> and a <strong>QR</strong>. The link and the QR lead to that channel on the alert server: on the phone they open the ntfy app or, if it is not installed, its website. It can be opened at any time, not only when the channel is created, and seeing it does not allow changing it: requesting another one or removing it is for
+    <em>Manage activation points</em>. Whoever manages without seeing the channels can request another one, but cannot read it.
   </p>
   <p>
     The channel is requested <strong>once for the whole centre</strong> in <em>Preferences</em>, in the group
-    <em>Activations</em>, with <strong>Generate channel</strong>: points without their own channel alert through that one. If a point has to alert other people, switch on <strong>Own alert channel</strong> on the point and Turnera generates one just for it, shown when you save. If the name leaks, <strong>Generate another channel</strong> gives a new one: the old one stops receiving alerts and the team has to subscribe again.
+    <em>Activations</em>, with <strong>Generate channel</strong>: points without their own channel alert through that one. If a point has to alert other people, switch on <strong>Own alert channel</strong> on the point and Turnera generates one just for it, which whoever sees the channels has at hand when saving. If the name leaks, <strong>Generate another channel</strong> gives a new one: the old one stops receiving alerts and the team has to subscribe again.
   </p>
   <p>
     Channels that were typed in by hand before Turnera generated them <strong>still work</strong>, so that nobody is left without alerts, but they carry the mark <em>Guessable</em> and a warning: “This channel was typed in by hand and can be guessed: generate a new one and subscribe again”. It is best to do it as soon as possible.
@@ -3569,8 +3600,16 @@ footer{
 
   <h3>Who carries it</h3>
   <p>
-    The permissions are <em>See activations</em> and <em>Manage activations</em>. The factory role <strong>Activations</strong>
-    brings them together, to give them to a person at once; Management has them too. The list shows each request: who made it, with what code, whether an alert was sent, whether it was re-alerted and whether it was attended.
+    The permissions are <em>See activation requests</em>, <em>Manage activation points</em> and <em>See the notification channels</em>. The factory role <strong>Activations</strong> brings together the first two, to give them to a person at once; Management has all three. Seeing the channels is given separately, to whoever has to hand them out, and also needs seeing the requests to get into the screen. The list shows each request: who made it, with what code, whether an alert was sent, whether it was re-alerted and whether it was attended.
+  </p>
+
+  <h3>Withdrawing or deleting a point</h3>
+  <p>
+    The usual thing is to <strong>withdraw</strong> a point with the switch on its row: it stops accepting requests and its QR stops working, but its old requests stay and still say where they came from. It can be put back into service.
+  </p>
+  <p>
+    At start-up there are often test points left over, misconfigured or with the wrong channel. That is what
+    <strong>Delete</strong>is for, on each point's row, and only with the permission <em>Delete activation points</em>, which by default only the administrator has. Before doing it, it says how many requests go with it («The point and its N requests will be deleted, and its QR will stop working. This cannot be undone.») and asks for confirmation. It works the same for an active point as for a withdrawn one. Once deleted, its QR leads nowhere and cannot be recovered, and the application log records who deleted it and with how many requests.
   </p>
 </section>
 <section id="problemas">
@@ -3635,7 +3674,8 @@ footer{
   <h3 id="app-fichar">Clocking in with the PIN</h3>
   <p>
     In <em>Clock</em> shows the professionals of the site. Each one taps their name and types their PIN. Whoever does not have a PIN yet appears greyed out, with <em>no PIN</em>: it has to be given on the web, in <em>Staff</em>. If the PIN was set by management, it is <strong>temporary</strong> and the app asks them to choose their own the first time (see
-    <a href="#pin-provisional">Temporary PIN</a>).
+    <a href="#pin-provisional">Temporary PIN</a>). Wrong PINs count just as on the web: on the third and fourth failure in a row it says how many attempts are left, and at the fifth the PIN is locked (see
+    <a href="#pin-bloqueado">Locked PIN</a>).
   </p>
   <figure>
     <img src="/turnera/manual/imagenes/45-app-fichar-lista.png" alt="The list of the site’s professionals, with “no PIN” on those who do not have one yet" loading="lazy">

@@ -694,6 +694,7 @@ footer{
     <li><a href="#profesionales" class="sub">Profissionais</a></li>
     <li><a href="#presencia" class="sub">Picar o ponto e controlo de assiduidade</a></li>
     <li><a href="#cifras-pin" class="sub sub">Quantos algarismos tem o PIN</a></li>
+    <li><a href="#pin-bloqueado" class="sub sub">PIN bloqueado</a></li>
     <li><a href="#fichar-donde" class="sub sub">De onde se pica o ponto</a></li>
     <li><a href="#fichar-lo-mio" class="sub sub">O que cada um vê depois do seu PIN</a></li>
     <li><a href="#presencia-enlaces" class="sub sub">Acesso da Inspeção e da representação dos trabalhadores</a></li>
@@ -2734,6 +2735,7 @@ footer{
     <tr><td><strong>Exportar o registo de jornada</strong></td><td>Extrai o registo de jornada de toda a equipa para um ficheiro.</td><td><strong>Sensível:</strong> apenas o Administrador do sistema</td></tr>
     <tr><td><strong>Dar acesso ao registo de jornada</strong></td><td>Cria e retira as ligações só de leitura ao registo de jornada para a Inspeção do Trabalho e para a representação da equipa.</td><td><strong>Sensível:</strong> apenas o Administrador do sistema</td></tr>
     <tr><td><strong>Configurar o relógio de ponto</strong></td><td>Decide quantos dígitos tem o PIN com que se pica o ponto.</td><td>Direção, RH, Pessoal</td></tr>
+    <tr><td><strong>Desbloquear o PIN de picagem</strong></td><td>Desbloqueia o PIN de um profissional que ficou bloqueado após cinco tentativas erradas seguidas, para que volte a picar o ponto e a assinar o resumo. Fica registado quem o desbloqueia.</td><td>Direção, RH, Pessoal</td></tr>
     <tr><td><strong>Resumo mensal de jornada por e-mail</strong></td><td>Ativa, na ficha de cada profissional, que lhe chegue todos os meses por e-mail o resumo do seu registo de jornada.</td><td>Direção, RH, Pessoal</td></tr>
     <tr><th colspan="3">Manutenção</th></tr>
     <tr><td><strong>Ver a manutenção</strong></td><td>Abre as ordens de manutenção com as suas fotos e a sua cronologia.</td><td>Receção, Profissional, Direção, RH, Manutenção</td></tr>
@@ -2746,7 +2748,9 @@ footer{
     <tr><td><strong>Dar acesso ao livro de manutenção</strong></td><td>Cria e retira as ligações só de leitura ao livro de manutenção para uma inspeção ou uma auditoria.</td><td><strong>Sensível:</strong> apenas o Administrador do sistema</td></tr>
     <tr><th colspan="3">Ativações</th></tr>
     <tr><td><strong>Ver os pedidos de ativação</strong></td><td>Abre os pontos de ativação e o histórico de pedidos: quem pediu para abrir ou ligar algo e quando.</td><td>Direção, Ativações</td></tr>
-    <tr><td><strong>Gerir os pontos de ativação</strong></td><td>Cria e desativa os pontos, escreve o que se pede em cada formulário e vê o canal de aviso inteiro, para o dar à equipa e gerar outro.</td><td>Direção, Ativações</td></tr>
+    <tr><td><strong>Gerir os pontos de ativação</strong></td><td>Cria e desativa os pontos, escreve o que se pede em cada formulário e pede outro canal de aviso quando é preciso. Vê-lo inteiro é coisa da permissão «Ver os canais de aviso».</td><td>Direção, Ativações</td></tr>
+    <tr><td><strong>Ver os canais de aviso</strong></td><td>Vê inteiro, a qualquer momento, o canal de aviso do centro e o de cada ponto, com a ligação e o QR para subscrever na app do ntfy. Não permite alterá-los.</td><td>Direção</td></tr>
+    <tr><td><strong>Apagar pontos de ativação</strong></td><td>Apaga de vez um ponto, esteja ativo ou retirado, com todos os seus pedidos, e o seu QR deixa de existir. Não tem volta atrás: serve para o arranque, quando ficam pontos de teste ou mal configurados.</td><td><strong>Sensível:</strong> apenas o Administrador do sistema</td></tr>
     <tr><th colspan="3">Portal e avisos</th></tr>
     <tr><td><strong>Portal de reservas</strong></td><td>Gere o portal onde o cliente pede marcação por sua conta.</td><td>Direção, Portal e avisos</td></tr>
     <tr><td><strong>Avisos por WhatsApp</strong></td><td>Configura os avisos por WhatsApp do centro.</td><td>Portal e avisos</td></tr>
@@ -3505,10 +3509,9 @@ footer{
   <span class="ruta">Administração → Controlo de assiduidade → Relógio de ponto</span>
 
   <p>
-    O centro decide se o PIN leva de <strong>quatro a oito algarismos</strong>. Quatro teclam-se num instante, mas quem
-    tem à frente o ecrã do balcão pode acertar no de um colega a tentar durante algumas horas, mesmo
-    que o Turnera só deixe tentar dez por minuto. Cada algarismo a mais multiplica esse tempo por dez: com seis
-    já é mais de um mês. Altera-o quem tiver a permissão «Configurar o relógio de ponto», que de origem trazem Direção e RH.
+    O centro decide se o PIN leva de <strong>quatro a oito algarismos</strong>. Quatro teclam-se num instante,
+    e o Turnera só deixa tentar dez por minuto e <strong>bloqueia o PIN à quinta falha seguida</strong> (ver
+    <a href="#pin-bloqueado">PIN bloqueado</a>), por isso adivinhar o de um colega a tentar não compensa. Cada algarismo a mais torna ainda mais difícil acertar à primeira. Altera-o quem tiver a permissão «Configurar o relógio de ponto», que de origem trazem Direção e RH.
   </p>
 
   <p>
@@ -3534,6 +3537,26 @@ footer{
     alguém assina. Os PIN que já estavam definidos antes desta melhoria não se tocam.
   </p>
 
+  <h4 id="pin-bloqueado">PIN bloqueado</h4>
+  <span class="ruta">Pessoal → Profissionais → PIN de picagem</span>
+
+  <p>
+    Se alguém escrever <strong>cinco vezes seguidas um PIN errado</strong>, o PIN dessa pessoa fica
+    <strong>bloqueado</strong>. As falhas somam-se estejam onde estiverem —o relógio de ponto da web, a aplicação dos profissionais e o link de assinatura do resumo mensal— e o bloqueio vale em todos: bloqueado, o PIN não serve para picar o ponto nem para assinar, mesmo que depois se escreva o certo. Um acerto antes da quinta falha põe a contagem a zero. Na terceira e na quarta falha o ecrã avisa de quantas tentativas restam, e ao bloquear diz «O PIN de <em>nome</em> está bloqueado por demasiadas tentativas erradas. Peça aos RH que o desbloqueiem».
+  </p>
+
+  <p>
+    Ao bloquear chega <strong>um aviso ao email dos RH</strong> (o do calendário laboral; se não houver, o da assinatura do resumo, e se também não, o da administração) com quem, quando e de onde: o relógio, com o utilizador e o IP de onde se teclou, ou o link de assinatura, com o seu IP.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Qualquer pessoa na receção pode bloquear o PIN de um colega</strong> teclando de propósito cinco PIN ao acaso com o nome dele. Não se impede —sem bloqueio, o PIN poderia adivinhar-se a tentar—, por isso, quando chegar o aviso, convém <strong>desbloqueá-lo logo</strong> e, se não foi essa pessoa, definir-lhe um PIN novo e averiguar quem estava no balcão.</p>
+  </div>
+
+  <p>
+    Em <em>Profissionais</em>, o botão <em>PIN de picagem</em> de quem o tem bloqueado aparece com um aviso, e dentro vê-se <strong>«PIN bloqueado desde …»</strong> com o botão <strong>Desbloquear</strong>, que mantém o mesmo PIN e põe a contagem a zero. É precisa a permissão «Desbloquear o PIN de picagem», que de origem trazem Direção, RH e Pessoal (e o Administrador do sistema); sem ela, a janela diz que permissão falta. <strong>Definir um PIN novo também o desbloqueia</strong> (e é provisório, como sempre que o define a administração). Cada bloqueio e cada desbloqueio fica registado —quem o desbloqueou, quando e como— e esse rasto não se apaga.
+  </p>
+
   <h4 id="firma-resumen">Assinatura do resumo mensal</h4>
   <span class="ruta">Administração → Controlo de assiduidade → Assinatura do resumo mensal</span>
 
@@ -3551,7 +3574,9 @@ footer{
   </p>
 
   <p>
-    Se no link se escrever <strong>cinco vezes seguidas um PIN errado</strong>, o link é anulado e chega um aviso ao email dos RH: pode ser uma distração ou o link ter chegado a quem não devia. Essas falhas não contam para o relógio de picar o ponto, que continua a funcionar normalmente.
+    Se no link se escrever <strong>cinco vezes seguidas um PIN errado</strong>, o link é anulado e chega um aviso ao email dos RH: pode ser uma distração ou o link ter chegado a quem não devia. Essas falhas
+    <strong>contam também para o PIN</strong>, somadas às do relógio: à quinta seguida o PIN fica bloqueado e também não serve para picar o ponto nem para abrir outro link até que os RH o desbloqueiem (ver
+    <a href="#pin-bloqueado">PIN bloqueado</a>). Pedir um link novo, portanto, não dá tentativas novas.
   </p>
 
   <p>
@@ -4229,11 +4254,17 @@ footer{
 
   <h3>Os avisos: ntfy</h3>
   <p>
-    Os avisos vão por <strong>ntfy</strong>, para um <strong>canal</strong>. O nome do canal é a única chave: quem o sabe lê os avisos sem conta nenhuma. Por isso <strong>não se escreve</strong>: o Turnera gera-o com o nome curto do centro e 22 caracteres ao acaso (por exemplo <code>mareny-</code> seguido de letras, números, hífenes e sublinhados), impossível de adivinhar e diferente em cada centro. Cada pessoa da equipa instala a app do ntfy e subscreve esse canal. Quem gere as ativações vê-o inteiro, com o botão <strong>Copiar canal</strong>, para o dar à equipa; quem só as consulta vê apenas o seu final. O servidor de avisos e a sua chave são configurados por quem administra a instalação.
+    Os avisos vão por <strong>ntfy</strong>, para um <strong>canal</strong>. O nome do canal é a única chave: quem o sabe lê os avisos sem conta nenhuma. Por isso <strong>não se escreve</strong>: o Turnera gera-o com o nome curto do centro e 22 caracteres ao acaso (por exemplo <code>mareny-</code> seguido de letras, números, hífenes e sublinhados), impossível de adivinhar e diferente em cada centro. Cada pessoa da equipa instala a app do ntfy e subscreve esse canal. Só o vê inteiro quem tem a permissão <em>Ver os canais de aviso</em> (de origem, a Direção e o administrador); os outros veem apenas o seu final e o aviso de que é precisa essa permissão. O servidor de avisos e a sua chave são configurados por quem administra a instalação.
+  </p>
+  <p>
+    Para subscrever a equipa não é preciso andar a copiar o canal à mão: em <em>Ativações</em>, o botão
+    <strong>Canal do centro</strong> de cima e o botão <strong>Subscrever</strong> de cada ponto abrem o seu canal com
+    <strong>Copiar canal</strong>, <strong>Copiar ligação de subscrição</strong> e um <strong>QR</strong>. A ligação e o QR levam a esse canal no servidor de avisos: no telemóvel abrem a app do ntfy ou, se não estiver instalada, a sua web. Pode abrir-se a qualquer momento, não só ao criar o canal, e vê-lo não permite alterá-lo: pedir outro ou retirá-lo é coisa de
+    <em>Gerir os pontos de ativação</em>. Quem gere sem ver os canais pode pedir outro, mas não o lê.
   </p>
   <p>
     O canal pede-se <strong>uma vez para todo o centro</strong> em <em>Preferências</em>, no grupo
-    <em>Ativações</em>, com <strong>Gerar canal</strong>: os pontos que não trazem um canal próprio avisam por esse. Se um ponto tiver de avisar outras pessoas, no ponto ativa-se <strong>Canal de avisos próprio</strong> e o Turnera gera um só para ele, que se vê ao guardar. Se o nome for divulgado, <strong>Gerar outro canal</strong> dá um novo: o anterior deixa de receber avisos e a equipa tem de subscrever outra vez.
+    <em>Ativações</em>, com <strong>Gerar canal</strong>: os pontos que não trazem um canal próprio avisam por esse. Se um ponto tiver de avisar outras pessoas, no ponto ativa-se <strong>Canal de avisos próprio</strong> e o Turnera gera um só para ele, que quem vê os canais tem à mão ao guardar. Se o nome for divulgado, <strong>Gerar outro canal</strong> dá um novo: o anterior deixa de receber avisos e a equipa tem de subscrever outra vez.
   </p>
   <p>
     Os canais que foram escritos à mão antes de o Turnera os gerar <strong>continuam a funcionar</strong>, para não deixar ninguém sem avisos, mas levam a marca <em>Adivinhável</em> e um aviso: «Este canal foi escrito à mão e pode ser adivinhado: gere um novo e voltem a subscrever». Convém fazê-lo quanto antes.
@@ -4248,9 +4279,16 @@ footer{
 
   <h3>Quem o leva</h3>
   <p>
-    As permissões são <em>Ver ativações</em> e <em>Gerir ativações</em>. A função de origem <strong>Ativações</strong>
-    reúne-as, para as dar a uma pessoa de uma vez; a Direção também as tem. Na lista vê-se cada pedido: quem o
-    fez, com que código, se foi avisado, se foi reavisado e se foi atendido.
+    As permissões são <em>Ver os pedidos de ativação</em>, <em>Gerir os pontos de ativação</em> e <em>Ver os canais de aviso</em>. A função de origem <strong>Ativações</strong> reúne as duas primeiras, para as dar a uma pessoa de uma vez; a Direção tem as três. Ver os canais dá-se à parte, a quem os tenha de distribuir, e precisa também de ver os pedidos para entrar no ecrã. Na lista vê-se cada pedido: quem o fez, com que código, se foi avisado, se foi reavisado e se foi atendido.
+  </p>
+
+  <h3>Retirar ou apagar um ponto</h3>
+  <p>
+    O normal é <strong>retirar</strong> um ponto com o interruptor da sua linha: deixa de aceitar pedidos e o seu QR deixa de funcionar, mas os seus pedidos antigos ficam e continuam a dizer de onde vinham. Pode voltar a pôr-se em funcionamento.
+  </p>
+  <p>
+    No arranque costumam ficar pontos de teste, mal configurados ou com o canal errado. Para esses existe
+    <strong>Apagar</strong>, na linha de cada ponto, e só com a permissão <em>Apagar pontos de ativação</em>, que de origem só o administrador tem. Antes de o fazer diz quantos pedidos vão com ele («O ponto e os seus N pedidos serão apagados, e o seu QR deixará de funcionar. Não é possível desfazer.») e pede confirmação. Serve igual para um ponto ativo e para um retirado. Apagado, o seu QR já não leva a lado nenhum e não se pode recuperar, e no registo da aplicação fica quem o apagou e com quantos pedidos.
   </p>
 </section>
 <section id="problemas">
@@ -4321,7 +4359,8 @@ footer{
     Em <em>Picar o ponto</em> aparecem os profissionais da unidade. Cada um toca no seu nome e escreve o seu PIN. Quem ainda não
     tem PIN aparece apagado, com <em>sem PIN</em>: é preciso atribuí-lo a partir da web, em <em>Pessoal</em>. Se o PIN foi
     definido pela direção, é <strong>provisório</strong> e a aplicação pede para escolher um próprio da primeira vez (ver
-    <a href="#pin-provisional">PIN provisório</a>).
+    <a href="#pin-provisional">PIN provisório</a>). Os PIN errados contam tal como na web: na terceira e na quarta falha seguida avisa das tentativas que restam, e à quinta o PIN fica bloqueado (ver
+    <a href="#pin-bloqueado">PIN bloqueado</a>).
   </p>
   <figure>
     <img src="/turnera/manual/imagenes/45-app-fichar-lista.png" alt="A lista de profissionais da unidade, com «sem PIN» em quem ainda não o tem" loading="lazy">

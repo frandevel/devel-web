@@ -694,6 +694,7 @@ footer{
     <li><a href="#profesionales" class="sub">Mitarbeiter</a></li>
     <li><a href="#presencia" class="sub">Stempeln und Arbeitszeiterfassung</a></li>
     <li><a href="#cifras-pin" class="sub sub">Wie viele Ziffern die PIN hat</a></li>
+    <li><a href="#pin-bloqueado" class="sub sub">Gesperrte PIN</a></li>
     <li><a href="#fichar-donde" class="sub sub">Von wo aus gestempelt wird</a></li>
     <li><a href="#fichar-lo-mio" class="sub sub">Was jede Person nach ihrer PIN sieht</a></li>
     <li><a href="#presencia-enlaces" class="sub sub">Zugang für Arbeitsinspektion und Belegschaftsvertretung</a></li>
@@ -2354,6 +2355,7 @@ footer{
     <tr><td><strong>Arbeitszeiterfassung exportieren</strong></td><td>Exportiert die Arbeitszeiterfassung der gesamten Belegschaft in eine Datei.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
     <tr><td><strong>Zugang zur Arbeitszeiterfassung geben</strong></td><td>Erstellt und widerruft die schreibgeschützten Links zur Arbeitszeiterfassung für die Arbeitsinspektion und für die Vertretung der Belegschaft.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
     <tr><td><strong>Stempeluhr konfigurieren</strong></td><td>Legt fest, wie viele Stellen die PIN zum Stempeln hat.</td><td>Leitung, RRHH, Personal</td></tr>
+    <tr><td><strong>Stempel-PIN entsperren</strong></td><td>Entsperrt die PIN einer Fachkraft, die nach fünf falschen Versuchen in Folge gesperrt wurde, damit sie wieder stempeln und ihre Übersicht unterschreiben kann. Wer sie entsperrt, wird festgehalten.</td><td>Leitung, RRHH, Personal</td></tr>
     <tr><td><strong>Monatliche Arbeitszeit-Zusammenfassung per E-Mail</strong></td><td>Aktiviert in der Akte jedes Mitarbeiters, dass ihm jeden Monat per E-Mail die Zusammenfassung seiner Arbeitszeiterfassung zugeht.</td><td>Leitung, RRHH, Personal</td></tr>
     <tr><th colspan="3">Wartung</th></tr>
     <tr><td><strong>Wartung ansehen</strong></td><td>Öffnet die Wartungsaufträge mit ihren Fotos und ihrem Verlauf.</td><td>Empfang, Fachkraft, Leitung, RRHH, Wartung</td></tr>
@@ -2366,7 +2368,9 @@ footer{
     <tr><td><strong>Zugang zum Wartungsbuch geben</strong></td><td>Erstellt und widerruft die schreibgeschützten Links zum Wartungsbuch für eine Inspektion oder ein Audit.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
     <tr><th colspan="3">Aktivierungen</th></tr>
     <tr><td><strong>Aktivierungsanfragen ansehen</strong></td><td>Öffnet die Aktivierungspunkte und den Anfrageverlauf: wer darum gebeten hat, etwas zu öffnen oder einzuschalten, und wann.</td><td>Leitung, Aktivierungen</td></tr>
-    <tr><td><strong>Aktivierungspunkte verwalten</strong></td><td>Legt Punkte an und entfernt sie, schreibt, was jedes Formular abfragt, und sieht den Benachrichtigungskanal vollständig, um ihn dem Team zu geben und einen neuen zu erzeugen.</td><td>Leitung, Aktivierungen</td></tr>
+    <tr><td><strong>Aktivierungspunkte verwalten</strong></td><td>Legt Punkte an und entfernt sie, schreibt, was jedes Formular abfragt, und fordert bei Bedarf einen neuen Benachrichtigungskanal an. Ihn vollständig zu sehen ist Sache der Berechtigung „Die Benachrichtigungskanäle sehen“.</td><td>Leitung, Aktivierungen</td></tr>
+    <tr><td><strong>Die Benachrichtigungskanäle sehen</strong></td><td>Sieht jederzeit den vollständigen Benachrichtigungskanal des Zentrums und jedes Punktes, mit dem Link und dem QR-Code zum Abonnieren in der ntfy-App. Ändern kann man sie damit nicht.</td><td>Leitung</td></tr>
+    <tr><td><strong>Aktivierungspunkte löschen</strong></td><td>Löscht einen Punkt endgültig, ob aktiv oder zurückgezogen, mit allen seinen Anfragen, und sein QR-Code hört auf zu existieren. Das lässt sich nicht rückgängig machen: gedacht für die Inbetriebnahme, wenn Test- oder falsch eingerichtete Punkte übrig bleiben.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
     <tr><th colspan="3">Portal und Hinweise</th></tr>
     <tr><td><strong>Buchungsportal</strong></td><td>Verwaltet das Portal, in dem der Kunde selbst einen Termin bucht.</td><td>Leitung, Portal und Hinweise</td></tr>
     <tr><td><strong>WhatsApp-Erinnerungen</strong></td><td>Konfiguriert die WhatsApp-Benachrichtigungen des Zentrums.</td><td>Portal und Hinweise</td></tr>
@@ -3004,9 +3008,8 @@ footer{
 
   <p>
     Das Zentrum legt fest, ob die PIN <strong>vier bis acht Ziffern</strong> hat. Vier sind schnell getippt,
-    aber wer vor dem Bildschirm am Empfang steht, könnte die eines Kollegen in ein paar Stunden durch Ausprobieren erraten,
-    obwohl Turnera nur zehn Versuche pro Minute zulässt. Jede weitere Ziffer verzehnfacht diese Zeit: Mit sechs ist es schon
-    mehr als ein Monat. Ändern kann es, wer die Berechtigung «Stempeluhr einrichten» hat, die ab Werk Leitung und Personalabteilung haben.
+    und Turnera lässt nur zehn Versuche pro Minute zu und <strong>sperrt die PIN beim fünften Fehlversuch in Folge</strong> (siehe
+    <a href="#pin-bloqueado">Gesperrte PIN</a>), sodass es sich nicht lohnt, die eines Kollegen durch Ausprobieren zu erraten. Jede weitere Ziffer macht es noch schwerer, sie auf Anhieb zu treffen. Ändern kann es, wer die Berechtigung «Stempeluhr konfigurieren» hat, die ab Werk Leitung und Personalabteilung haben.
   </p>
 
   <p>
@@ -3028,6 +3031,26 @@ footer{
     Eine PIN, die <strong>die Verwaltung setzt oder zurücksetzt</strong> ist <strong>vorläufig</strong>, weil sie derjenige kennt, der sie gesetzt hat. Mit ihr kann die Person weder stempeln, weder im Web noch in der App der Mitarbeitenden, noch ihre Monatsübersicht unterschreiben: Beim Eintippen fordert Turnera sie auf, <strong>eine eigene zu wählen</strong> (anders als die vorläufige und als die Stellenzahl, die der Betrieb verlangt), und von da an gehört sie allein ihr. So lernt die Personalabteilung nie die PIN kennen, mit der jemand unterschreibt. PINs, die schon vor dieser Verbesserung gesetzt waren, bleiben unberührt.
   </p>
 
+  <h4 id="pin-bloqueado">Gesperrte PIN</h4>
+  <span class="ruta">Personal → Mitarbeitende → Stempel-PIN</span>
+
+  <p>
+    Gibt jemand <strong>fünfmal hintereinander eine falsche PIN</strong> ein, ist die PIN dieser Person
+    <strong>gesperrt</strong>. Die Fehlversuche zählen zusammen, egal wo sie passieren —an der Stempeluhr im Web, in der App der Mitarbeitenden und im Link zum Unterschreiben der Monatsübersicht—, und die Sperre gilt überall: Gesperrt taugt die PIN weder zum Stempeln noch zum Unterschreiben, auch wenn danach die richtige eingegeben wird. Ein Treffer vor dem fünften Fehlversuch setzt die Zählung zurück. Beim dritten und vierten Fehlversuch zeigt der Bildschirm, wie viele Versuche bleiben, und beim Sperren heißt es «Die PIN von <em>Namen</em> ist nach zu vielen falschen Versuchen gesperrt. Bitten Sie die Personalabteilung, sie zu entsperren».
+  </p>
+
+  <p>
+    Beim Sperren geht <strong>eine Benachrichtigung an die E-Mail der Personalabteilung</strong> (die des Arbeitskalenders; gibt es keine, die der Unterschrift der Monatsübersicht, und sonst die der Verwaltung) mit wer, wann und von wo: die Stempeluhr mit dem Benutzer und der IP, von denen aus getippt wurde, oder der Unterschriftslink mit seiner IP.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Jeder am Empfang kann die PIN eines Kollegen sperren</strong> , indem er absichtlich fünf zufällige PINs unter dessen Namen eingibt. Das lässt sich nicht verhindern —ohne Sperre ließe sich die PIN durch Ausprobieren erraten—, deshalb sollte man, wenn die Benachrichtigung kommt, <strong>sie sofort entsperren</strong> und, falls es nicht diese Person war, ihr eine neue PIN geben und herausfinden, wer am Empfang war.</p>
+  </div>
+
+  <p>
+    Unter <em>Mitarbeiter</em>mit der Schaltfläche <em>Stempel-PIN</em> : Bei wem die PIN gesperrt ist, zeigt sie einen Hinweis, und darin steht <strong>«PIN seit … gesperrt»</strong> mit der Schaltfläche <strong>Entsperren</strong>, die dieselbe PIN behält und die Zählung zurücksetzt. Dafür braucht es die Berechtigung «Stempel-PIN entsperren», die ab Werk Leitung, RRHH und Personal haben (und der Systemadministrator); ohne sie sagt das Fenster, welche Berechtigung fehlt. <strong>Eine neue PIN entsperrt sie ebenfalls</strong> (und sie ist vorläufig, wie immer, wenn die Verwaltung sie vergibt). Jede Sperre und jede Entsperrung wird festgehalten —wer entsperrt hat, wann und wie— und diese Spur wird nicht gelöscht.
+  </p>
+
   <h4 id="firma-resumen">Unterschrift der Monatsübersicht</h4>
   <span class="ruta">Verwaltung → Zeiterfassung → Unterschrift der Monatsübersicht</span>
 
@@ -3042,7 +3065,9 @@ footer{
   </p>
 
   <p>
-    Wird über den Link <strong>fünfmal hintereinander eine falsche PIN</strong> eingegeben, wird der Link gesperrt und an die E-Mail der Personalabteilung geht eine Benachrichtigung: Das kann ein Versehen sein, oder der Link ist bei der falschen Person gelandet. Diese Fehlversuche zählen nicht für die Stempeluhr, die ganz normal weiterfunktioniert.
+    Wird über den Link <strong>fünfmal hintereinander eine falsche PIN</strong> eingegeben, wird der Link gesperrt und an die E-Mail der Personalabteilung geht eine Benachrichtigung: Das kann ein Versehen sein, oder der Link ist bei der falschen Person gelandet. Diese Fehlversuche
+    <strong>zählen auch für die PIN</strong>, zusammen mit denen an der Stempeluhr: Beim fünften in Folge wird die PIN gesperrt und taugt weder zum Stempeln noch zum Öffnen eines weiteren Links, bis die Personalabteilung sie entsperrt (siehe
+    <a href="#pin-bloqueado">Gesperrte PIN</a>). Ein neuer Link bringt also keine neuen Versuche.
   </p>
 
   <p>
@@ -3558,11 +3583,17 @@ footer{
 
   <h3>Die Benachrichtigungen: ntfy</h3>
   <p>
-    Die Benachrichtigungen laufen über <strong>ntfy</strong>, an einen <strong>Kanal</strong>. Der Name des Kanals ist der einzige Schlüssel: Wer ihn kennt, liest die Benachrichtigungen ohne jedes Konto. Deshalb <strong>wird er nicht eingegeben</strong>: Turnera erzeugt ihn aus dem Kurznamen des Zentrums und 22 zufälligen Zeichen (zum Beispiel <code>mareny-</code> gefolgt von Buchstaben, Zahlen, Binde- und Unterstrichen), unmöglich zu erraten und in jedem Zentrum anders. Jedes Teammitglied installiert die ntfy-App und abonniert diesen Kanal. Wer die Aktivierungen verwaltet, sieht ihn vollständig, mit der Schaltfläche <strong>Kanal kopieren</strong>, um ihn dem Team zu geben; wer sie nur einsieht, sieht lediglich sein Ende. Den Benachrichtigungsserver und seinen Schlüssel konfiguriert, wer die Installation verwaltet.
+    Die Benachrichtigungen laufen über <strong>ntfy</strong>, an einen <strong>Kanal</strong>. Der Name des Kanals ist der einzige Schlüssel: Wer ihn kennt, liest die Benachrichtigungen ohne jedes Konto. Deshalb <strong>wird er nicht eingegeben</strong>: Turnera erzeugt ihn aus dem Kurznamen des Zentrums und 22 zufälligen Zeichen (zum Beispiel <code>mareny-</code> gefolgt von Buchstaben, Zahlen, Binde- und Unterstrichen), unmöglich zu erraten und in jedem Zentrum anders. Jedes Teammitglied installiert die ntfy-App und abonniert diesen Kanal. Vollständig sieht ihn nur, wer die Berechtigung <em>Die Benachrichtigungskanäle sehen</em> hat (standardmäßig Leitung und der Administrator); alle anderen sehen nur sein Ende und den Hinweis, dass dafür diese Berechtigung nötig ist. Den Benachrichtigungsserver und seinen Schlüssel konfiguriert, wer die Installation verwaltet.
+  </p>
+  <p>
+    Um das Team anzumelden, muss man den Kanal nicht von Hand abschreiben: Unter <em>Aktivierungen</em>mit der Schaltfläche
+    <strong>Kanal des Zentrums</strong> oben und mit der Schaltfläche <strong>Abonnieren</strong> bei jedem Punkt öffnet sich dessen Kanal mit
+    <strong>Kanal kopieren</strong>, <strong>Abo-Link kopieren</strong> und ein <strong>QR-Code</strong>. Link und QR-Code führen zu diesem Kanal auf dem Benachrichtigungsserver: Auf dem Handy öffnen sie die ntfy-App oder, wenn sie nicht installiert ist, deren Website. Er lässt sich jederzeit öffnen, nicht nur beim Erzeugen, und ihn zu sehen erlaubt nicht, ihn zu ändern: Einen neuen anfordern oder ihn entfernen ist Sache von
+    <em>Aktivierungspunkte verwalten</em>. Wer verwaltet, ohne die Kanäle zu sehen, kann einen neuen anfordern, ihn aber nicht lesen.
   </p>
   <p>
     Der Kanal wird <strong>einmal für das ganze Zentrum</strong> festgelegt, in den <em>Einstellungen</em>, in der Gruppe
-    <em>Aktivierungen</em>, mit <strong>Kanal erzeugen</strong>: Punkte ohne eigenen Kanal benachrichtigen über diesen. Soll ein Punkt andere Personen benachrichtigen, schaltet man im Punkt <strong>Eigener Benachrichtigungskanal</strong> ein, und Turnera erzeugt einen nur für ihn, der beim Speichern angezeigt wird. Wird der Name bekannt, liefert <strong>Anderen Kanal erzeugen</strong> einen neuen: Der alte erhält keine Benachrichtigungen mehr, und das Team muss neu abonnieren.
+    <em>Aktivierungen</em>, mit <strong>Kanal erzeugen</strong>: Punkte ohne eigenen Kanal benachrichtigen über diesen. Soll ein Punkt andere Personen benachrichtigen, schaltet man im Punkt <strong>Eigener Benachrichtigungskanal</strong> ein, und Turnera erzeugt einen nur für ihn; wer die Kanäle sehen darf, hat ihn beim Speichern gleich zur Hand. Wird der Name bekannt, liefert <strong>Anderen Kanal erzeugen</strong> einen neuen: Der alte erhält keine Benachrichtigungen mehr, und das Team muss neu abonnieren.
   </p>
   <p>
     Kanäle, die von Hand eingegeben wurden, bevor Turnera sie erzeugte, <strong>funktionieren weiter</strong>, damit niemand ohne Benachrichtigungen bleibt, tragen aber die Markierung <em>Erratbar</em> und einen Hinweis: „Dieser Kanal wurde von Hand eingegeben und kann erraten werden: Erzeugen Sie einen neuen und abonnieren Sie ihn erneut.“ Das sollte man so bald wie möglich tun.
@@ -3575,8 +3606,16 @@ footer{
 
   <h3>Wer es übernimmt</h3>
   <p>
-    Die Berechtigungen sind <em>Aktivierungen ansehen</em> und <em>Aktivierungen verwalten</em>. Die Standardrolle <strong>Aktivierungen</strong>
-    fasst sie zusammen, um sie einer Person auf einmal zu geben; die Leitung hat sie ebenfalls. In der Liste sieht man jede Anfrage: wer sie gestellt hat, mit welchem Code, ob benachrichtigt wurde, ob erneut benachrichtigt wurde und ob sie bearbeitet wurde.
+    Die Berechtigungen sind <em>Aktivierungsanfragen ansehen</em>, <em>Aktivierungspunkte verwalten</em> und <em>Die Benachrichtigungskanäle sehen</em>. Die Standardrolle <strong>Aktivierungen</strong> fasst die ersten beiden zusammen, um sie einer Person auf einmal zu geben; die Leitung hat alle drei. Die Kanäle zu sehen wird gesondert vergeben, an wen sie verteilen muss, und setzt außerdem voraus, die Anfragen sehen zu dürfen, um die Seite zu öffnen. In der Liste sieht man jede Anfrage: wer sie gestellt hat, mit welchem Code, ob benachrichtigt wurde, ob erneut benachrichtigt wurde und ob sie bearbeitet wurde.
+  </p>
+
+  <h3>Einen Punkt zurückziehen oder löschen</h3>
+  <p>
+    Normalerweise <strong>zieht man</strong> einen Punkt mit dem Schalter in seiner Zeile zurück: Er nimmt keine Anfragen mehr an und sein QR-Code funktioniert nicht mehr, aber seine alten Anfragen bleiben und zeigen weiterhin, woher sie kamen. Er lässt sich wieder in Betrieb nehmen.
+  </p>
+  <p>
+    Bei der Inbetriebnahme bleiben oft Testpunkte, falsch eingerichtete Punkte oder solche mit dem falschen Kanal übrig. Dafür gibt es
+    <strong>Löschen</strong>, in der Zeile jedes Punktes, und nur mit der Berechtigung <em>Aktivierungspunkte löschen</em>, die standardmäßig nur der Administrator hat. Vorher sagt es, wie viele Anfragen mit ihm verschwinden («Der Punkt und seine N Anfragen werden gelöscht, und sein QR-Code funktioniert nicht mehr. Das lässt sich nicht rückgängig machen.»), und fragt nach einer Bestätigung. Das geht bei aktiven wie bei zurückgezogenen Punkten gleich. Gelöscht führt sein QR-Code nirgendwohin mehr und lässt sich nicht wiederherstellen, und im Protokoll der Anwendung steht, wer ihn mit wie vielen Anfragen gelöscht hat.
   </p>
 </section>
 <section id="problemas">
@@ -3641,7 +3680,8 @@ footer{
   <h3 id="app-fichar">Mit der PIN stempeln</h3>
   <p>
     Unter <em>Stempeln</em> zeigt die Mitarbeitenden des Standorts. Jede Person tippt auf ihren Namen und gibt ihre PIN ein. Wer noch keine PIN hat, erscheint abgeblendet, mit <em>ohne PIN</em>: Sie muss im Web vergeben werden, unter <em>Personal</em>. Wenn die Leitung die PIN gesetzt hat, ist sie <strong>vorläufig</strong> und die App fordert beim ersten Mal auf, eine eigene zu wählen (siehe
-    <a href="#pin-provisional">Vorläufige PIN</a>).
+    <a href="#pin-provisional">Vorläufige PIN</a>). Falsche PINs zählen wie im Web: Beim dritten und vierten Fehlversuch in Folge zeigt sie an, wie viele Versuche bleiben, und beim fünften wird die PIN gesperrt (siehe
+    <a href="#pin-bloqueado">Gesperrte PIN</a>).
   </p>
   <figure>
     <img src="/turnera/manual/imagenes/45-app-fichar-lista.png" alt="Die Liste der Mitarbeitenden des Standorts, mit „ohne PIN“ bei denen, die noch keine haben" loading="lazy">

@@ -627,6 +627,7 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-10-19-canales-pin">19 de octubre de 2026 · Canales de aviso siempre a mano, borrar puntos de prueba y PIN de fichar protegido</a></li>
     <li><a href="#2026-10-19-firma-huella">19 de octubre de 2026 · Cómo va la firma de cada mes y entrar con huella más seguro</a></li>
     <li><a href="#2026-10-19-partes-canales">19 de octubre de 2026 · Quién apuntó cada paso de un parte y canales de aviso seguros</a></li>
     <li><a href="#2026-10-18-usuario-copia">18 de octubre de 2026 · Crear un usuario por copia</a></li>
@@ -668,10 +669,45 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-10-19-canales-pin" class="version">
+  <div class="version__cabecera">
+    <h2>19 de octubre de 2026 · Canales de aviso siempre a mano, borrar puntos de prueba y PIN de fichar protegido</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">2026.10.185-230e64f</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"/></svg></span>Nuevas características</h3>
+    <h4>Activaciones: los canales de aviso, a mano en cualquier momento</h4>
+    <ul>
+      <li>Quien tiene el permiso nuevo <strong>Ver los canales de aviso</strong>, que de serie tienen Dirección y el administrador, ve en cualquier momento el canal completo del centro y el de cada punto, para dárselo al equipo.</li>
+      <li>Junto a cada canal están <strong>Copiar canal</strong>, <strong>Copiar enlace de suscripción</strong> y un QR que, escaneado con el móvil, lo deja suscrito a los avisos.</li>
+    </ul>
+    <h4>Activaciones: borrar puntos de prueba o mal configurados</h4>
+    <ul>
+      <li>El administrador puede borrar con <strong>Borrar</strong> un punto de activación que se creó de prueba o quedó mal configurado. Se borra con todas sus solicitudes y su QR deja de funcionar.</li>
+      <li>Antes de borrarlo, Turnera avisa de cuántas solicitudes se van con él, porque no se puede deshacer.</li>
+      <li>Hace falta el permiso <strong>Borrar puntos de activación</strong>.</li>
+    </ul>
+    <h4>Control de presencia: el PIN de fichar se bloquea tras cinco intentos equivocados</h4>
+    <ul>
+      <li>Tras cinco intentos equivocados seguidos, el PIN de fichar se bloquea: en el reloj de fichar, en la app del móvil y en el enlace para firmar el resumen mensual.</li>
+      <li>A partir del tercer intento equivocado, Turnera avisa de cuántos quedan antes del bloqueo.</li>
+      <li>RRHH recibe un aviso y lo desbloquea desde la ficha del profesional con <strong>Desbloquear</strong>, para lo que hace falta el permiso <strong>Desbloquear el PIN de fichar</strong>. Ponerle un PIN nuevo también lo desbloquea.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>Mejoras</h3>
+    <h4>Activaciones: el canal entero, solo para quien lo reparte</h4>
+    <ul>
+      <li>Gestionar los puntos de activación ya no enseña el canal entero: para verlo hace falta el permiso <strong>Ver los canales de aviso</strong>.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-10-19-firma-huella" class="version">
   <div class="version__cabecera">
     <h2>19 de octubre de 2026 · Cómo va la firma de cada mes y entrar con huella más seguro</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">2026.10.181-a35a827</span></p>
 

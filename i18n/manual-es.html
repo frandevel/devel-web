@@ -690,6 +690,7 @@ footer{
     <li><a href="#profesionales" class="sub">Profesionales</a></li>
     <li><a href="#presencia" class="sub">Fichar y control de presencia</a></li>
     <li><a href="#cifras-pin" class="sub sub">Cuántas cifras lleva el PIN</a></li>
+    <li><a href="#pin-bloqueado" class="sub sub">PIN bloqueado</a></li>
     <li><a href="#fichar-donde" class="sub sub">Desde dónde se ficha</a></li>
     <li><a href="#fichar-lo-mio" class="sub sub">Lo que ve cada uno tras su PIN</a></li>
     <li><a href="#presencia-enlaces" class="sub sub">Acceso de la Inspección y de la representación</a></li>
@@ -2743,6 +2744,7 @@ footer{
     <tr><td><strong>Exportar el registro de jornada</strong></td><td>Saca el registro de jornada de toda la plantilla a un fichero.</td><td><strong>Delicado:</strong> solo el Administrador del sistema</td></tr>
     <tr><td><strong>Dar acceso al registro de jornada</strong></td><td>Crea y retira los enlaces de solo lectura del registro de jornada para la Inspección de Trabajo y para la representación de la plantilla.</td><td><strong>Delicado:</strong> solo el Administrador del sistema</td></tr>
     <tr><td><strong>Configurar el reloj de fichar</strong></td><td>Decide cuántas cifras lleva el PIN con el que se ficha.</td><td>Dirección, RRHH, Personal</td></tr>
+    <tr><td><strong>Desbloquear el PIN de fichar</strong></td><td>Desbloquea el PIN de un profesional que se ha bloqueado tras cinco intentos equivocados seguidos, para que vuelva a fichar y a firmar su resumen. Queda apuntado quién lo desbloquea.</td><td>Dirección, RRHH, Personal</td></tr>
     <tr><td><strong>Resumen mensual de jornada por correo</strong></td><td>Activa en la ficha de cada profesional que le llegue cada mes por correo el resumen de su registro de jornada.</td><td>Dirección, RRHH, Personal</td></tr>
     <tr><th colspan="3">Mantenimiento</th></tr>
     <tr><td><strong>Ver el mantenimiento</strong></td><td>Abre los partes de mantenimiento con sus fotos y su cronologia.</td><td>Recepción, Profesional, Dirección, RRHH, Mantenimiento</td></tr>
@@ -2755,7 +2757,9 @@ footer{
     <tr><td><strong>Dar acceso al libro de mantenimiento</strong></td><td>Crea y retira los enlaces de solo lectura al libro de mantenimiento para una inspeccion o una auditoria.</td><td><strong>Delicado:</strong> solo el Administrador del sistema</td></tr>
     <tr><th colspan="3">Activaciones</th></tr>
     <tr><td><strong>Ver las solicitudes de activación</strong></td><td>Abre los puntos de activación y el historial de solicitudes: quién pidió abrir o encender algo y cuándo.</td><td>Dirección, Activaciones</td></tr>
-    <tr><td><strong>Gestionar los puntos de activación</strong></td><td>Da de alta y de baja los puntos, escribe lo que se pide en cada formulario y ve entero el canal de aviso, para darlo al equipo y generar otro.</td><td>Dirección, Activaciones</td></tr>
+    <tr><td><strong>Gestionar los puntos de activación</strong></td><td>Da de alta y de baja los puntos, escribe lo que se pide en cada formulario y pide otro canal de aviso cuando hace falta. Verlo entero es cosa de ver los canales de aviso.</td><td>Dirección, Activaciones</td></tr>
+    <tr><td><strong>Ver los canales de aviso</strong></td><td>Ve entero, en cualquier momento, el canal de aviso del centro y el de cada punto, con el enlace y el QR para suscribirse en la app de ntfy. No deja cambiarlos.</td><td>Dirección</td></tr>
+    <tr><td><strong>Borrar puntos de activación</strong></td><td>Borra de verdad un punto, este activo o retirado, con todas sus solicitudes, y su QR deja de existir. No tiene vuelta atrás: para la puesta en marcha, cuando quedan puntos de prueba o mal configurados.</td><td><strong>Delicado:</strong> solo el Administrador del sistema</td></tr>
     <tr><th colspan="3">Portal y avisos</th></tr>
     <tr><td><strong>Portal de reservas</strong></td><td>Gobierna el portal donde el cliente pide hora por su cuenta.</td><td>Dirección, Portal y avisos</td></tr>
     <tr><td><strong>Avisos por WhatsApp</strong></td><td>Configura los avisos por WhatsApp del centro.</td><td>Portal y avisos</td></tr>
@@ -3517,9 +3521,9 @@ footer{
 
   <p>
     El centro decide si el PIN lleva de <strong>cuatro a ocho cifras</strong>. Cuatro se teclean en un momento,
-    pero quien tiene delante la pantalla del mostrador puede acertar el de un compañero probando en unas horas,
-    aunque Turnera solo deje probar diez por minuto. Cada cifra más multiplica ese tiempo por diez: con seis ya es
-    más de un mes. Lo cambia quien tenga el permiso «Configurar el reloj de fichar», que de fábrica traen Dirección y RRHH.
+    y Turnera solo deja probar diez por minuto y <strong>bloquea el PIN al quinto fallo seguido</strong> (ver
+    <a href="#pin-bloqueado">PIN bloqueado</a>), así que adivinar el de un compañero probando no sale a cuenta. Cada
+    cifra más hace aún más difícil acertarlo a la primera. Lo cambia quien tenga el permiso «Configurar el reloj de fichar», que de fábrica traen Dirección y RRHH.
   </p>
 
   <p>
@@ -3545,6 +3549,40 @@ footer{
     alguien firma. Los PIN que ya estaban puestos antes de esta mejora no se tocan.
   </p>
 
+  <h4 id="pin-bloqueado">PIN bloqueado</h4>
+  <span class="ruta">Personal → Profesionales → PIN de fichaje</span>
+
+  <p>
+    Si alguien escribe <strong>cinco veces seguidas un PIN equivocado</strong>, el PIN de esa persona queda
+    <strong>bloqueado</strong>. Los fallos se suman estén donde estén —el reloj de fichar de la web, la aplicación de
+    los profesionales y el enlace de firma del resumen mensual— y el bloqueo vale en todos: bloqueado, el PIN no sirve
+    para fichar ni para firmar, aunque luego se escriba el bueno. Un acierto antes del quinto fallo pone la cuenta a
+    cero. En el tercer y el cuarto fallo la pantalla avisa de cuántos intentos quedan, y al bloquearse dice
+    «El PIN de <em>nombre</em> está bloqueado por demasiados intentos equivocados. Pídale a RRHH que lo desbloquee».
+  </p>
+
+  <p>
+    Al bloquearse llega <strong>un aviso al correo de RRHH</strong> (el del calendario laboral; si no hay, el de la
+    firma del resumen, y si tampoco, el de administración) con quién, cuándo y desde dónde: el reloj, con el usuario y
+    la IP desde los que se tecleó, o el enlace de firma, con su IP.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Cualquiera en recepción puede bloquear el PIN de un compañero</strong> tecleando a propósito cinco PIN
+      al azar con su nombre. No se impide —sin bloqueo, el PIN se podría adivinar probando—, así que cuando llegue el
+      aviso conviene <strong>desbloquearlo enseguida</strong> y, si no fue esa persona, ponerle un PIN nuevo y averiguar
+      quién estaba en el mostrador.</p>
+  </div>
+
+  <p>
+    En <em>Profesionales</em>, el botón <em>PIN de fichaje</em> de quien lo tiene bloqueado sale con un aviso, y dentro
+    se ve <strong>«PIN bloqueado desde …»</strong> con el botón <strong>Desbloquear</strong>, que deja el mismo PIN y la
+    cuenta a cero. Hace falta el permiso «Desbloquear el PIN de fichar», que de fábrica traen Dirección, RRHH y Personal
+    (y el Administrador del sistema); sin él, la ventana dice qué permiso falta. <strong>Poner un PIN nuevo también lo
+    desbloquea</strong> (y es provisional, como siempre que lo pone administración). Cada bloqueo y cada desbloqueo
+    queda apuntado —quién lo desbloqueó, cuándo y cómo— y ese rastro no se borra.
+  </p>
+
   <h4 id="firma-resumen">Firma del resumen mensual</h4>
   <span class="ruta">Administración → Control de presencia → Firma del resumen mensual</span>
 
@@ -3564,8 +3602,10 @@ footer{
 
   <p>
     Si en el enlace se escribe <strong>cinco veces seguidas un PIN equivocado</strong>, el enlace se anula y llega un
-    aviso al correo de RRHH: puede ser un despiste o que el enlace haya llegado a quien no debía. Esos fallos no
-    cuentan para el reloj de fichar, que sigue funcionando con normalidad.
+    aviso al correo de RRHH: puede ser un despiste o que el enlace haya llegado a quien no debía. Esos fallos
+    <strong>cuentan también para el PIN</strong>, sumados a los del reloj: al quinto seguido el PIN queda bloqueado y
+    tampoco sirve para fichar ni para abrir otro enlace hasta que RRHH lo desbloquee (ver
+    <a href="#pin-bloqueado">PIN bloqueado</a>). Pedir un enlace nuevo, por tanto, no da intentos nuevos.
   </p>
 
   <p>
@@ -4256,15 +4296,23 @@ footer{
     sabe lee los avisos sin cuenta ninguna. Por eso <strong>no se escribe</strong>: lo genera Turnera con el nombre corto
     del centro y 22 caracteres al azar (por ejemplo <code>mareny-</code> seguido de letras, números, guiones y guiones
     bajos), imposible de adivinar y distinto en cada centro. Cada persona del equipo instala la app de ntfy y se suscribe
-    a ese canal. Quien gestiona las activaciones lo ve entero, con el botón <strong>Copiar canal</strong>, para dárselo al
-    equipo; quien solo las consulta ve únicamente su final. El servidor de avisos y su clave los configura quien
-    administra la instalación.
+    a ese canal. Solo lo ve entero quien tiene el permiso <em>Ver los canales de aviso</em> (de serie, Dirección y el
+    administrador); los demás ven únicamente su final y el aviso «hace falta el permiso «Ver los canales de aviso»».
+    El servidor de avisos y su clave los configura quien administra la instalación.
+  </p>
+  <p>
+    Para suscribir al equipo no hace falta ir copiando el canal a mano: en <em>Activaciones</em>, el botón
+    <strong>Canal del centro</strong> de arriba y el botón <strong>Suscribirse</strong> de cada punto abren su canal con
+    <strong>Copiar canal</strong>, <strong>Copiar enlace de suscripción</strong> y un <strong>QR</strong>. El enlace y el QR
+    llevan a ese canal en el servidor de avisos: en el móvil abren la app de ntfy o, si no está instalada, su web. Se puede
+    abrir en cualquier momento, no solo al crear el canal, y verlo no deja cambiarlo: pedir otro o quitarlo es cosa de
+    <em>Gestionar los puntos de activación</em>. Quien gestiona sin ver los canales puede pedir otro, pero no lo lee.
   </p>
   <p>
     El canal se pide <strong>una vez para todo el centro</strong> en <em>Preferencias</em>, en el grupo
     <em>Activaciones</em>, con <strong>Generar canal</strong>: los puntos que no traen un canal propio avisan por ese. Si un
     punto debe avisar a otras personas, en el punto se enciende <strong>Canal de avisos propio</strong> y Turnera le genera
-    uno solo para él, que se ve al guardarlo. Si el nombre se filtra, <strong>Generar otro canal</strong> da uno nuevo: el
+    uno solo para él, que quien ve los canales tiene a mano al guardarlo. Si el nombre se filtra, <strong>Generar otro canal</strong> da uno nuevo: el
     anterior deja de recibir avisos y el equipo tiene que suscribirse otra vez.
   </p>
   <p>
@@ -4284,9 +4332,26 @@ footer{
 
   <h3>Quién lo lleva</h3>
   <p>
-    Los permisos son <em>Ver activaciones</em> y <em>Gestionar activaciones</em>. El rol de fábrica <strong>Activaciones</strong>
-    los reúne, para darlos a una persona de una vez; Dirección también los tiene. En el listado se ve cada solicitud: quién
+    Los permisos son <em>Ver las solicitudes de activación</em>, <em>Gestionar los puntos de activación</em> y <em>Ver los
+    canales de aviso</em>. El rol de fábrica <strong>Activaciones</strong> reúne los dos primeros, para darlos a una persona
+    de una vez; Dirección tiene los tres. Ver los canales se da aparte, a quien tenga que repartirlos, y necesita además ver
+    las solicitudes para entrar en la pantalla. En el listado se ve cada solicitud: quién
     la hizo, con qué código, si se avisó, si se reavisó y si la atendieron.
+  </p>
+
+  <h3>Retirar o borrar un punto</h3>
+  <p>
+    Lo normal es <strong>retirar</strong> un punto con el interruptor de su fila: deja de aceptar solicitudes y su QR
+    deja de funcionar, pero sus solicitudes viejas se quedan y siguen diciendo de dónde venían. Se puede
+    volver a poner en marcha.
+  </p>
+  <p>
+    En la puesta en marcha suelen quedar puntos de prueba, mal configurados o con el canal equivocado. Para esos está
+    <strong>Borrar</strong>, en la fila de cada punto, y solo con el permiso <em>Borrar puntos de activación</em>, que de
+    serie solo tiene el administrador. Antes de hacerlo dice cuántas solicitudes se van con él («Se borrará el punto y sus
+    N solicitudes, y su QR dejará de funcionar. No se puede deshacer.») y pide confirmarlo. Sirve igual para un punto
+    activo que para uno retirado. Borrado, su QR ya no lleva a ninguna parte y no se puede recuperar, y en el registro de la
+    aplicación queda quién lo borró y con cuántas solicitudes.
   </p>
 </section>
 <section id="problemas">
@@ -4357,7 +4422,9 @@ footer{
     En <em>Fichar</em> salen los profesionales de la sede. Cada uno toca su nombre y escribe su PIN. Quien todavía no
     tiene PIN aparece apagado, con <em>sin PIN</em>: hay que dárselo desde la web, en <em>Personal</em>. Si el PIN lo
     puso la dirección, es <strong>provisional</strong> y la aplicación pide elegir uno propio la primera vez (véase
-    <a href="#pin-provisional">PIN provisional</a>).
+    <a href="#pin-provisional">PIN provisional</a>). Los PIN equivocados cuentan igual que en la web: en el tercer y el
+    cuarto fallo seguido avisa de los intentos que quedan, y al quinto el PIN se bloquea (véase
+    <a href="#pin-bloqueado">PIN bloqueado</a>).
   </p>
   <figure>
     <img src="/turnera/manual/imagenes/45-app-fichar-lista.png" alt="La lista de profesionales de la sede, con «sin PIN» en quien aún no lo tiene" loading="lazy">
