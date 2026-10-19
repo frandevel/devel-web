@@ -7,6 +7,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/"/>
   </url>
   <url>
     <loc>https://devel.es/en/</loc>
@@ -15,6 +16,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/"/>
   </url>
   <url>
     <loc>https://devel.es/de/</loc>
@@ -23,6 +25,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/"/>
   </url>
   <url>
     <loc>https://devel.es/pt/</loc>
@@ -31,6 +34,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/"/>
   </url>
   <url>
     <loc>https://devel.es/turnera</loc>
@@ -39,6 +43,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera"/>
   </url>
   <url>
     <loc>https://devel.es/en/turnera</loc>
@@ -47,6 +52,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera"/>
   </url>
   <url>
     <loc>https://devel.es/de/turnera</loc>
@@ -55,6 +61,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera"/>
   </url>
   <url>
     <loc>https://devel.es/pt/turnera</loc>
@@ -63,6 +70,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera"/>
   </url>
   <url>
     <loc>https://devel.es/turnera/recursos-humanos</loc>
@@ -71,6 +79,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/recursos-humanos"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/recursos-humanos"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/recursos-humanos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/recursos-humanos"/>
   </url>
   <url>
     <loc>https://devel.es/en/turnera/recursos-humanos</loc>
@@ -79,6 +88,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/recursos-humanos"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/recursos-humanos"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/recursos-humanos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/recursos-humanos"/>
   </url>
   <url>
     <loc>https://devel.es/de/turnera/recursos-humanos</loc>
@@ -87,6 +97,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/recursos-humanos"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/recursos-humanos"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/recursos-humanos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/recursos-humanos"/>
   </url>
   <url>
     <loc>https://devel.es/pt/turnera/recursos-humanos</loc>
@@ -95,6 +106,115 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/recursos-humanos"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/recursos-humanos"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/recursos-humanos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/recursos-humanos"/>
+  </url>
+  <url>
+    <loc>https://devel.es/turnera/clinicas</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/clinicas"/>
+  </url>
+  <url>
+    <loc>https://devel.es/en/turnera/clinicas</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/clinicas"/>
+  </url>
+  <url>
+    <loc>https://devel.es/de/turnera/clinicas</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/clinicas"/>
+  </url>
+  <url>
+    <loc>https://devel.es/pt/turnera/clinicas</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/clinicas"/>
+  </url>
+  <url>
+    <loc>https://devel.es/turnera/centros-deportivos</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/centros-deportivos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/centros-deportivos"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/centros-deportivos"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/centros-deportivos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/centros-deportivos"/>
+  </url>
+  <url>
+    <loc>https://devel.es/en/turnera/centros-deportivos</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/centros-deportivos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/centros-deportivos"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/centros-deportivos"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/centros-deportivos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/centros-deportivos"/>
+  </url>
+  <url>
+    <loc>https://devel.es/de/turnera/centros-deportivos</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/centros-deportivos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/centros-deportivos"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/centros-deportivos"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/centros-deportivos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/centros-deportivos"/>
+  </url>
+  <url>
+    <loc>https://devel.es/pt/turnera/centros-deportivos</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/centros-deportivos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/centros-deportivos"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/centros-deportivos"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/centros-deportivos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/centros-deportivos"/>
+  </url>
+  <url>
+    <loc>https://devel.es/turnera/academias</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/academias"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/academias"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/academias"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/academias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/academias"/>
+  </url>
+  <url>
+    <loc>https://devel.es/en/turnera/academias</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/academias"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/academias"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/academias"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/academias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/academias"/>
+  </url>
+  <url>
+    <loc>https://devel.es/de/turnera/academias</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/academias"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/academias"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/academias"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/academias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/academias"/>
+  </url>
+  <url>
+    <loc>https://devel.es/pt/turnera/academias</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/academias"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/academias"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/academias"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/academias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/academias"/>
   </url>
   <url>
     <loc>https://devel.es/turnera/manual</loc>
@@ -103,6 +223,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/manual"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/manual"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/manual"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/manual"/>
   </url>
   <url>
     <loc>https://devel.es/en/turnera/manual</loc>
@@ -111,6 +232,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/manual"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/manual"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/manual"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/manual"/>
   </url>
   <url>
     <loc>https://devel.es/de/turnera/manual</loc>
@@ -119,6 +241,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/manual"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/manual"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/manual"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/manual"/>
   </url>
   <url>
     <loc>https://devel.es/pt/turnera/manual</loc>
@@ -127,6 +250,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/manual"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/manual"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/manual"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/manual"/>
   </url>
   <url>
     <loc>https://devel.es/turnera/novedades</loc>
@@ -135,6 +259,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/novedades"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/novedades"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/novedades"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/novedades"/>
   </url>
   <url>
     <loc>https://devel.es/en/turnera/novedades</loc>
@@ -143,6 +268,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/novedades"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/novedades"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/novedades"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/novedades"/>
   </url>
   <url>
     <loc>https://devel.es/de/turnera/novedades</loc>
@@ -151,6 +277,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/novedades"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/novedades"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/novedades"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/novedades"/>
   </url>
   <url>
     <loc>https://devel.es/pt/turnera/novedades</loc>
@@ -159,6 +286,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/novedades"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/novedades"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/novedades"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/novedades"/>
   </url>
   <url>
     <loc>https://devel.es/legal</loc>
@@ -166,6 +294,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/legal"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/legal"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/legal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/legal"/>
   </url>
   <url>
     <loc>https://devel.es/en/legal</loc>
@@ -173,6 +302,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/legal"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/legal"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/legal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/legal"/>
   </url>
   <url>
     <loc>https://devel.es/de/legal</loc>
@@ -180,6 +310,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/legal"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/legal"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/legal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/legal"/>
   </url>
   <url>
     <loc>https://devel.es/turnera/integradores</loc>

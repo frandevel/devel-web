@@ -1,0 +1,923 @@
+<!-- Generado por i18n/construir.mjs: no editar a mano, se pierde. -->
+<!DOCTYPE html><html lang="pt"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Software para academias de música, línguas e explicações · Turnera</title>
+<meta name="description" content="Software de gestão para academias: horário por sala e por professor, aulas particulares e de grupo com lugares, aulas que se repetem, pacotes de aulas, notas de cada aluno e cobranças pendentes.">
+<link rel="canonical" href="https://devel.es/pt/turnera/academias">
+<link rel="alternate" hreflang="es" href="https://devel.es/turnera/academias">
+<link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/academias">
+<link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/academias">
+<link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/academias">
+<link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/academias">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DEVEL">
+<meta property="og:title" content="Turnera para academias de música, línguas e explicações">
+<meta property="og:description" content="Horário por sala e por professor, aulas com lugares, pacotes de aulas e cobranças, sem comissão por marcação.">
+<meta property="og:url" content="https://devel.es/pt/turnera/academias">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:image" content="https://devel.es/turnera/turnera-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Turnera: a agenda, a ficha e a caixa no mesmo ecrã">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Turnera para academias de música, línguas e explicações">
+<meta name="twitter:description" content="Horário por sala e por professor, aulas com lugares, pacotes de aulas e cobranças, sem comissão por marcação.">
+<meta name="twitter:image" content="https://devel.es/turnera/turnera-og.png">
+<link rel="icon" href="/turnera/isotipo.svg" type="image/svg+xml">
+<style>*{box-sizing:border-box}html,body{margin:0}img{max-width:100%}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&amp;family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+:root{
+  --navy:#10283F;
+  --brand:#265786;
+  --accent:#006699;
+  --accent-lift:#3E9BC8;
+  --steel:#6789AB;
+  --mist:#A8BCCF;
+  --haze:#D4DDE7;
+
+  --bg:#F6F8FB;
+  --surface:#FFFFFF;
+  --surface-sunk:#EDF2F7;
+  --line:#DCE5EE;
+  --text:#152C42;
+  --text-dim:#4F6883;
+  --link:var(--accent);
+
+  --display:"Quicksand",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --tg-aspa:#265786;
+  --tg-check:#006699;
+  --tu-anillo:#0E6E62;
+  --tu-sobre-anillo:#FFFFFF;
+  --tu-turno:#E08154;
+
+  --shell:1120px;
+  --step:clamp(1rem,.6rem + 1.6vw,1.6rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B1B2B;
+    --surface:#10283F;
+    --surface-sunk:#0E2337;
+    --line:#1E3D5B;
+    --text:#E6EEF6;
+    --text-dim:#9DB4CA;
+    --link:var(--accent-lift);
+    --tg-aspa:#8FB2D2;
+    --tg-check:#4FA8D8;
+    --tu-anillo:#54BFAE;
+    --tu-sobre-anillo:#06231F;
+    --tu-turno:#EFA37B;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B1B2B;
+  --surface:#10283F;
+  --surface-sunk:#0E2337;
+  --line:#1E3D5B;
+  --text:#E6EEF6;
+  --text-dim:#9DB4CA;
+  --link:var(--accent-lift);
+  --tg-aspa:#8FB2D2;
+  --tg-check:#4FA8D8;
+  --tu-anillo:#54BFAE;
+  --tu-sobre-anillo:#06231F;
+  --tu-turno:#EFA37B;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:var(--display);font-weight:600;text-wrap:balance;margin:0;line-height:1.12;letter-spacing:-.01em}
+p{margin:0}
+a{color:var(--link)}
+:focus-visible{outline:2px solid var(--accent-lift);outline-offset:3px;border-radius:4px}
+
+.shell{width:min(100% - 2.5rem,var(--shell));margin-inline:auto}
+
+.eyebrow{
+  font-family:var(--mono);
+  font-size:.72rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--steel);
+  display:flex;align-items:center;gap:.7rem;
+}
+.eyebrow::before{
+  content:"";width:9px;height:9px;flex:none;
+  background:var(--accent);
+  border-radius:3px;
+  transform:rotate(45deg);
+}
+
+/* ---------- cabecera ---------- */
+.site{
+  position:sticky;top:0;z-index:20;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.site__inner{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding-block:.85rem}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit}
+.mark{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMsAAADLCAYAAADA+2czAAAxe0lEQVR42u2dX2hky53fvzN78Zr15vp4bW6sdZbbQsk4BoV7OnleppsIkrAPt5VEjB4Ctzsho7ws0508iGjZqDsPE/QQuieGQN+HdE/Ig4QM6gFnzYKgz2DysCzrPsMKb1ZY6NwYR2Zhc4/Xxo6zfyYP/TujUqn+nzqtlqYLmkGj1vlTVZ/fv/rVr+69fv0ai7Zoi6Zv9xddsGiLtoBl0RbNa3uH/eHevXuLHimwPXj0tASgRD+GAALm1+8zvxO1GMCPmJ8T+gBAfHqwky56uJiWuSr3WJ9lAYtXICoAPk9QlDQg+GoxgBTAS/o3Pj3YiRajsoBlHsAICIoQwEOBtpiXlhBILxcALWCZNRwPGUhua4sIntHpwU68GN0FLL7MqhqADwmQu9hSACMGnoX/s4DFGpCPbrn2cG0jAC8W4CxgUZlYNQBP3lJAZG0I4MXpwc5oActbDsuDR09DAqQ2p875PAUJngPovW3a5q2H5cGjp3UysyoLDpy0zbO3JTDwVsJCpladNElpMedztwhA566Hot8qWAiSJkGyMLUW0CxgkYDSnjNIEvqkAF4x/59iunAoagEXdPg883M4R+92J6G587CQT7J7Q+ZWNvFjAJ/Qv8npwU5ScKAiIB/sfYIovEFoWnfFp7mzsDx49LRCkMzScY9pgrwCEBUJhWN/hLhMx5ml8BgSNOkClvnzS7rkwM/ClIowXbiLbtNkIA1UIXhqM9KyndODnd4ClvmYAE3SJkHBgIwAPL9LIdMHj57WME3lqRXcfzGAxm3suzsBC6WlDAo0uVIyJZ6/DWsKBM5HBWuczunBTnsBy93RJpkGGeEtbDNYj7pVWubWwkIDOShA+mVa5Nk8OehzEiB4UpC2uRVa5lbCQgN35FmbJHhLc54cTN5d+A+gRADW57nvbx0stLi46xmSzunBznCBwo1DkxIw0QKW+TK7UjK12oupP3fQtOYxxHwrYKE1gQH8rUR3FuZWIWPUhb+I5BBztpA597B49k8iTKMvC8e9uPGqETQlD5eLAVTnBZi5hoXyugae/JKWSQh4a+8wxOU24pCBNMJlZZSov71xJ7XS1t5hBZd5ZSVu4hq9O5Pd7cO3TAmYeAGLvMO71OF5W48c+FQzSeowT7hMAaz3tzeiOwRJjQSTiQYfAniue3+P5vNcADOXsDx49HTgwWFMyOSKLCAZkfSMaYA/gDz9I+pvb1TvECznCkGRadUfYbotoEbfjQA0+tsbiWY82560TOMmo5ZzB4snUEbUsanG3Moc0g6AoWzQt/YOm/TdK9K1v73RuEOwjAXOeae/vdFWmGtZVnePvpvOQMvcGDAZI3NRGNwDKCl15roGlDaACf243N/eaOuko+A+nTvmrnQkDraw9bc3Ms26TppmQgAJG5lQVTLh8rQB+bI31m5cs3gAJYYmz2hr77DESLdOf3ujZ+jwjxlTLAVQ7W9vXLnP/vGkRFK2JHm2aHOtPLOgwP7xJAtQGD8PmaQDTigs6xz6rb3DgLRME0Cvv73RMgjcdJEvwjlzDTMXZpgHUEzMrsyBTcg5TwxA4Qc1+9uYAeQJY8ObAP1sc608LAgQl+d5DmCYgSN4Z6FwyNvHZJYdIV+IeabA3DgsHkDRJuFt7R1m99BKPYGkvAJkf3sjJam9C/dsggRAxxc0BEmeVfSU3q+zuVZOSAMfcf5Fy1ATs9q70d/eGCnGPiCtHd4GYG4UFg+gKDuKGfSSbuA4s4uVeGn2t/vHkwDqXZgxfR8wO14iFzQGz8NHtKB5tpQ0X5vx7Xa5a6ybrDFt7R12LcyyvPOgPIuw8o3BknPBMYUm7s74GjZmFz85WG2SmRiBwAR8LvIBSOLXoa8qEwNobK6VYwtQ2obXFZp9jI8lKlP75nmoH9koVmoheLI+i3WQ5Qwva+fDrYVlBqBk1x+S+WDioB7hMnSaZgEAkt6iBM5hZrZ4NJMaOi1Dz6MzXaw01v7xpAJxcY8Oo2X4RWJTkzbT1BlkcYHzYrnI1JiZw0KO3dgxEmIFisk6CIU72dyzOBtUmkQDzmRJaFJHjr6FbvuzFBgDUK6YUQ7P18T1XacRPVMiWOWPTbQ2CaMJ/V21QGBiFJhLNtN1FsahCxw7YtkQlBiAidRrcs8zzAaTzJwxB8oQQNkFFADYXCsnm2vlbG1CNqADgkrUdhWgjAAsu4JCz9cDUMbV9ZUKgMn+8aRGptcy4/+EmK6vKAMdpNnX6ccxaRthIx/UdbE3xPXFY+9tJprlwaOnE8fIh1ZikIYY04/rKpuaJB1rWqVkrg1Jeh9x0j8l6Try1RcExJGkP4aba+WG4PvnsohgHkgkzyfKzettrpVbErNMutov8AkTAGWND5NHwxSyTXlmmoUiHi6gpNCsoWQSmYv2qLTPOQNKQtpkSCHhcw6UmLTJyGd/kK8j034iSS0z3SLfoNDztTBdcWf7vbl/PJnsH08C8lcazO93t/YOlav4XKRQCUJODbNLWztun2bJISWMohyClWfwzr0kq5iNdgmvwUt4323/eCJMYNxcK98TRL92XYICOZ9P5CelAKqSaFnm53SyrGSBJs9aWbfYmXPulH3uXcoYeadgh75bFCgKTVIHUNvaO4xxvWj2m2gXTQg+zp8CaBU5CZkW3PDf6zRMCqDMmWUB+TGNzbXycGvvsIqri7gVAJWtvcOENHcoec4aFPlnmYZhti7b9suAtKPXVqQZNnAcUJt6UrGiwyrc/Yck0VSgVGcBCmkzUd9EFu/4ZBbBGTLLGoJgRL2/vZGSWVbF9cXPimL8jQIl5H+4jEeF1m/m3wzLsdBkncIgMcWuaSpW7QtMmzfmxQxAKeEynGpkWu0fTz6VfP+N4z0jwPl+rrIRQsmWhmvv2N/eGFrOpzHc9vh7WeEvzMFnqtjbtqEOlJOzi9rJ2UX75OzijflFHd/QqeXf/vhbIQ266PnWZwRKCHldgUSh1Z5J/r9J4M9Cwwwx3b/CtiPybfCv/9OLumbcU9LsQ2Y8SydnF5WTswudBbJOZp1tO6Jli/nTLPRgE9hnlManBztlBSQVXF0kTAFUV1eWYk7DSNO/f/VL76Zfff+9dVxfbCzcmWcgVRXgqKrWcfaPJ6rw+4i0UlrwO4jGtwPg87//R99v/uSnPzfW7idnFyGurnV1APRWV5ZShQ/sslbXOz3YyaV9i9IsTQdQUpUzdnJ2Ucf1RcIAwBErkUhi8SFPAMCXv/guvvr+e4HgOtkgFQ1KWzPQJpkBwndjHOYxaa6inX5ey+0CaJYffAW//Eu/KPMrlzWgZNcZs1YD57/EMFhwFs1JX+Fkb7AQ+S7ml3R3I4EyUETCxhwwMT+p/sZ7Ab5Wek9278QkxyuPJN4/now1/WIUAqaJWlWYIyEBUy+YfaG5+s4v3Ef5wVfwpeBz/Her7CKkBBT2HSb0HWGETGAKmrTuXMHi+EDS8wcZUBLySSLZBJEB87XSX8ff+rUvqe5fKhCUENcXOnmNum4TfSO/qqyIJgUUqRoUCIu0z975hfv4OytL+PIX381MQxtQRhT5Cvgx5YBpQRN2Fs0TH9ExLz6L4wKS1E85ObuokX0/BNBaXVlKqfNk/tBwdWVJlCZyBH32gPfFPUnkiJe4jTxBBUlaCn+Pdd+akzSlzqy55gfS+MmSQePVlaUyB1RCfmnqyX9J4bhY6c1nYY6ns/VT1iWghDTRhqsrS42ss+hfmSNePzm7GHBSOCENo5uQXZ+2Pkl1FShDeAhTU8hYlZgZYrqA6PvdfIMCdi5Q0KYKRWoM+S+2vqbLPPWrWRyL4gkLQDPaI1ldWapKYHotu+inP/7p8NfDlYYggqPbB5IiZ8Kk4X1alOHr29zT5d/l0p6SJFOj+xiAEonGmtEwz1ZXltqSueey/lK1rdbvRbNQOoItKJGiUvqAlzRcByp9jP/2u39Qp8RNkWMca6TOkatzzPgnoQLGqm9QGD+mSja/rDn7MWTOjl1AefDoafCPdwbj8Xe+F9r6QKRhWgB2ySwX3lOhWWXNuehfXjPM5cYtCQhNTEOg67JYOxQ7Dv/Lf/89jL/zPQCo8/WlDIHJJlXXcjI1NfZzjBx7YQyBSTfXyusa06ROmcMlSyFgsr1CCEqmUb7+jW9nYyOEhdbRRMBk0a+BSFCS//HMsrsqrvXHnGEhrWJ7044o/YBUbpec+VgCU4DLfKgr/sv4O9/DN//Hd69MegUwOlOruX88ebMyrZhIFXJ2VXWwRqRREsygUcp+Q+PHnO8fT9oG76cTAqzGlILyRph98/dwfvF/ZD6rVOiuriy1yNmX+S9t2K/uO2kXZ5/FwV5MKBqRSvyUeHVlaV32xydnF23mJTurK0vtk7OL9vg739v9+je+LZV4ohQaQRKlbCIMMT3rPt5cK6e0Ch/istq+qs0sb0uiEUyiRSNc1nh+I3np/UoG/XMtUKEqc/S5z34G7X/xD9OVr3yxurqyFJ+cXbBzqLq6shQpzO+JzH+hRcexZTcZ5yHm2oNPWuXcx8NRFKsCoCwzv5jOCmiQlrPvGpTTyQOMa2vMKM0/b8DBtVmDIhoPMr+ySf4mfCyZAzUKMpRF1seDR0+PYFfPLTk92FmehYNvq8YiCSg1mrANhZ8CXM2pajCghAYScCBKd6Dwpu8JnZB/cqOgcGZnbxagMAEaHZwPSdiCNEn2fCFZDzJzbESacGDjC6sCC7a+izUsrr6KxAfpYpo8FykkSpcZgCF1WrYNYGJoCh4RWEUCMyJQYsxJI8dftx5j02IZKKThTSR7HcCETgrL5kZ2PVXkK4t+lURQkbNvKxis9gRZm2EOVQSj04OdqsQHecKaVArV+2agVleWUsdKhikkOzBzmmQJpusnIx8TnPaysyeQAdP0lpdQHI9haJbxpWldQEk9zIkrJhmXBpOSqZVo5sQy/x0yA89ht7KvXXdx8ll8PQz5IOdkUg0lnSLswJwlP1XAVHA9fV8HyXNy5FMPkGQRQZ2m7EFzJooGmhLs6iOnUNQk81WKlxeMGv9lDCAVBYQcNh6OTg921ouApQm7lAGZVhkAqKyuLC0rOoSN76+vriyNJPePMI21x/T9J5oJJwWGJlMNwIcQn/wVESQvfFZ9MdjtKQJ13aTCvUbT1AA8JAER4uqpATG95zCHlZGSLzE6PdhJyfQS1UCrnh7sRGRyZ5qvR2Fj0dzIAgPXImiOAn1ZlTPmCss57DJ1RVolAPApKPyr8FOyTuusriy1BeHBlKTSyHEQ5+JwT0EdLhst2bLdouur5eljgdBLQUmOXDh5PfNRBXPkHNNUmYYH7aLcIGYdDSOpYANKJLEF64xDLLNJs8kTESglRkWzAyG8xunBjiylP2sBd72bAmWQw4cIAAxIK80alKaB6bUuE0aU7tSQjAcbjBgothyPME2gFf3eVoAY9aFNNOxDywd4prqOKFZOLz5ggMhsSTZ0bKoV1qFObynd5LFrzNkxQkFDz79Mnwbkq9QzBYbMHJ3U1h6AKyimFz549LRLwZ51A6H2kv6tSSJjNsAEJnPhvkUH2QxIojh7vsI4+dcGHtx6CmU1h9xAaM0nyhTQhUx35wyUFNMNU9X+9saov72R0GeI6aav4RwAU9f4Ax3TlXHBzsfmg0dPa9z6S4XyBq8JO/r3oaWwdlYGppql5kOrcNtFK9zvmsx9euTQ1zgzpaeAEBIJo9q7XmLi/fMCilAiU42uBuTJkrMC5iPF74a2tYbJV2DfefDg0dMSOfeZUNwVbDX+gIOGv24Mw/pk2RzPFkvzwmJb0G2osLPBSwSKbnSZSEyHHnzA+UDWuVYGG4UezhEoWo1JRbgbNwEMjUmoiNC55sKxFgBrejXY/+P8k0zYhorrPrd8jlouWDQdJJMuqcmDUd2oJhflylL0B5yfsu46yORQymz+8LaAwgDDmy88MEW9k0ryPnM9H4UxmVn/pU1+bYe595jqjFVwtSyWysyzeaaP8moWWzPlheJ3MadlznE1hNhZXVmKKdpS4SIrac6BHuGGGoWHvYDCANNSaPAxFeWeZcvVvxQQYC2A3QePnoa0vBAxgm3MCdfE43OFKlPMBBabKJjKsc/20cteLmbCxLucnxJ5GMxPbgiUOsThYWdQGGAaEg0TwP2ME9fJnni4RpvzM7KKkqo9Orr+s3X0a06w0INWPEuXSDJxMjV85Ti2vNUELTq1CFBCyaTNDQqnYUTA1Ao0x0Tv46uxYJQANCkHTOanvTLwWW1AfuiqWWxNMBOH6qVo4lDeV42D02dZ1coNQFQoKBwwsYfAjKvA8WbykYZiBeQTio6NJPPBREDbmGI1WX3k+66USUww7QSgxMkho2XYzTxX/BfP6SgfuEimnOaXSLJ7BYXtLwsB4TqRpWa0zxO3yDGPGBB3mbnDVuXU7YOyEeLafrvv8kcW5pUMmMbqytK91ZWlapZmzaXTpPC/aamS97ktm8jXGxYECiRnaZYKuFXkwbe1hb+eSfvVlaVodWVpmebP0BC+2NJUfGgFi+EuRLa9yNk5bNhu6POYZkplEKnWyOdxagYm7HMU2yIU32TvUPesxSLO7Mt7fRtTzFqzhJYvN8oxmQNucj3zPMC7ntRzXulf9GSuFP0ONIlF7xEUcNrWM4kwdWk2wjwU+S33PfkrkcdBTnxKexpAkYaMbU8Zm+cmOZM+Leh2soyIJ7qUkRyaMsx5MFGUY05qYbGRUi9zdsrDIkwJzTEYrRuY0GGBl9/NaXrYahfRtQN43PpAQjP1oTnJrLfxF0MjWIjgUoHUqh7sE0+gBJDXkvK10KlqscYv8wlhW2I2F2lmyhYKQ76Ersd+zCtsbMb8oalmsfVXZuFYuoASSDq/M4PHEPldTd/ahULUIq0SFekjkaSWnmpAKUvz1mwsIGMzrFIQrSaa5fMerteVAJ9iuh8mncHAjCSS98hX3pZi775qIvsEZgR5flrX0/YHnz6QjRkGvnyWDJYPinoAg2tU8lxIs+W1Nat991R9pSUZ/NyJjpoiF+t8ySQ6sq9OdZzP948nr/ePJ5/uH0/G+8eTpk3BcA6YhmIODET12izGsuQTFoEPZAXqfQ80+14BD10jKrSK3FX4KcO8D3dydhGcnF3U6Yjx7FMX7fykVPqRRJM6A6MBpcGbX1Tk+5z+psaMb0DCqYtpwfCBrmC4pMnOugwIGFfBUJ+RL2nk5PvwWRIPL5AYRHZM/BRZJGaUNyGTIOliWplmQM+YfQYAzk/OLkRHI8gkrxMwBqAMOW2iq/TPT07r08I0W7hDOGRA03g+KcCKsfFbPlDCYivVPTn3rwQOoq05pnLoGzlBqZFkbhpMtnO2vCiZY1UfwNiCArNDiERWxcT2YCcyb2Ub9GoODn9TMJ6+TX5dC3SaxQYWH1oFElNl10IKqRz6XBvH6NTkI9hl1u6enF1Msm2whsCEGlCaDqCEOcZk4ABMBPn6VddUAJLAvqZVPC1W28yFig6WWZtgmePFa6iKSTRFUNTiiqObp4OpcqbrmkEI5ohqQ2CavJbZ2jusbO0djhW+mC0oQ0wLmN+DQZklB2B6igjZkaH/sisQTs89zTUrS4h93vs61TODSFjWRGsfXc2LqOzhVh4TkUCpK4TEkJ65B/X+flNgAnrfT7f2Dsf0+VRjStmAEhMkb44U31wrJ5tr5eHmWnlZMcFdgGko3vHIIEhTF2iDoce5lloKPSks71tc6Ee+nl6SoFciE0tG/EAC91BxyGseUFJM91As0zaD9urKUotqNjcUDq4pMKz6r2gEly0oyuPE6fiNhi9gIC9BVZGt8CuOiX/meW3MScjn9Vl8ahaZdmnyziFJn4liYrQKAqUq20PBbEzyBYxKKlYdQNFONioC7gUYQcUWPoAzZoNJilPDUvjf22RrTkthKUqduWqXzDmcPHj0tP3g0dMJdWrJt0NvAIpyctPviwQmAlBm11F8gWIBTGg5ni2F9jx/8OjpEWka2dHozwrIuLAJHwe+HPy0AJI7CsJ3oT+vMLkJUAoEJiHJmpV1TYoCxRCYsc3CJZnDI8VXapCXhE1uWKtozTCbjvBthqnSv7WQuW5A8wVKQcAEAJ5LkiKPfINiAEwA+whhw9HkbBWUx2dzzQ98mWFFNdvO7dnW2GVAqfsEpQBgAgjWYSiFpVIEKBwwIh+tRiel2fgvtibnMM/uW4++djDXsDDp37GBhGi4prLQyvzANygzAma3SFAYYGTj8JHDmJqenjyk8PNctXnVLJmJJ+vclCRe2TU5kjsLxjsoHDDrCj/MGJhf/dK74/3jSUhH+QWi5/YJisaPrLkIQRJsVYmpnZDwa8zjnLxyTN5XN/9DBfLdhdde7PRgZ3lWD8qmSvjIR6P8LZF0LvsChbufanExJkBTAKBV/CuO+5e/+C6+VnovgyISTNaO7JBUH23/ePJaoHXu5RzTgHnHdFbbJwRHLqpa9Mf7/7YKAO/kuGcyS6oL2I0pqtbYKQIUas8VsGQaprq6spT2tzfSrb3DagYMA0pmkomk+ggzbvvHk1C10GlomkW4Je0+3sJGRxaIzJhegbfVCRehSbb0pXdjBhSVbxEXCEUw63suYJmfJpLwsWEpUNcWGHznGjB/+/33XFf6fbbaTVsWC1jmq70s+PqmddhCAGM87gckvVVOPyv9SwVqle48mH033d7JIS3CGTr3JbpfSDZu3kJ8SY7J7GL2BRCv5TQg2MX44g+/nwFTxcdb6eZaOd0/nlShTr2vAyjCwZclqz7zMK4hLhNGY0zL6abzCst9zuGymYDBDCAJmLyhI0yjV2Nc5hS5AiuS0hXJCco+mmh/RiJKvnzxh9/Hb/3OxEXD7NpuBzbQKgOJCdbZXCsnOca1/uDR03NMk2G71D9HNK7tWwHLPDUC4RzyPSU1ABOXzqWIl2iwuwVolTrEm9OeM89SBZAyoLiaZEeOBSdkoIj6PnINUZPwG5O2KkkE8C4lzQYLWAw7FfI99dckqmMFROFCm+TM9TygDCRmYI+F93f/5/+u/tbvTNKcPkwJlomOlqDEcDwIlxF+FUMTf7CAxazZ7nmv2wJDJpBownVpkhcFSorLE5nftH/zG38vhiY1xhCYMA8wGlCcMgQshd8bwVVgVcuKxXcTFSyJRSdUfL8FXdPlunU6h8WmyXY3DvIAowAFAFrXFj4f9yt43B9oJlThwBQBCjVbUFir4abNsU+8wFKgMyxqQzKdhqrIjY3TT5NWutHJBRgNKI0rOy0f9wM87ndpMtUNJlRhwBQFCmn8UCG1ezSuicSHKUK7OJUIzmuGeY0ekWYQaZXG6cFO4/Rgp01JdssqJ9dGGikO9rQGxhqUKSS2k8EFmPCGQKkrAjS904Od5dODnRaNq6xoxpMCtEto8V2lGRbfFCwSrdLhM4spxK1ycq3OCKFJnAsYR1DCHINtC0yb1zL7x5Pa/vHkvCBQQsijiy3RtgpJVZiitIsXWGwqtrzv64lICvHwxbJNXcz+CNFgVmRVYXIAM8jSUDhIAk19MVtQWNOkA02ZJUNgAhJEn+4fTyZUDPw1CZVSAaAEiiCNrvLO+gy0i41PnPryWXxqFtFmIuWmLk0Fkaatw68Bpo5padbuydlFjT7ZgmndAyjTaNjHW8v4eKuFj7fa9FmGuo6wbWpMqJkseZ35zKGXQagb00xYFKJdbKFjtw3khSX09AIlwQBGJmn5BiVDQ4/AZIN2RB+VU+4Civh9P94awT6sHDkMRZQXFIVDn8L8bJyO4F19nZpmMx9SnYNv47MEntRjTTTZLOjvQXHGoe0zMsC4ThoXUNT3+ngrtgFmc61cJSFi+g6dzbVyXlBUDn3DdHMXAcXnnpU8He5qA0ushMUhkc2HdvlAYNcmthNUohVLMN8VxwNTtdS0CaY7Lf2CYgMM0zbXyj1MI4cdBTRDAMt5d1nS+thAEfkaWZo/bUHf+5hr71uOp1KzwFKF+3iBkkANw7JzU5Vt75ISQ+swZc1ky9R1B/yWZJ+gmAIzXbdhgUk318rtzbXyF+hdqtlnc618j2ofJzlBCSGPQEY5zsbpFDDXbK5x5TDgd0yIstQKeZvz0QKnBzvxg0dPWxIJV3/w6OkntiWTKC2lDaBN1WBC5p1f0aSPrm0cKwIUFpjH/Sxlnzcxm3jcfyHyf4rY2aiJfCVwzCWjNoL/HDGbSFhkolleFUSq9QM6ADOEfHvwbp4UndWVpREVA1+nT5v+TzTpdwsBxUzD7GJ2TRZ+TpHzbBz628Qj2LZzNTaBxUYChZ5j4Lkr85Pal9nIR4XnGz3uVyAOdfoB5Sow60Lp+bgfFk0JJTrKhI+vw24Tj49s0ycJD/p9yWSzle4VzF9TnRFSdPr3E4mk9QfKJTCRRBvXCgYlhHyFvuPjsFtJH+ZpNrthr82d+zZf9vQQovbStw/EVLUUdXCtiIxpxlcRTdSWd1Au24sCxkTXZKCMXEvpGgji2OO1dO2VDSxRQQ+hA9Ob+UBmgCyyVpR2CYWmxMdbwwInbowZNkXCayagCvEx8tSOozWaUh7f+b6htDfxW0o5JvWI0QClHHvrRdfuScAvOex/cRUco4Lnb4jZtl2Fn+JTe9Y89mHNct5YwTJrv2WksfnztGcWvkUR7UcFX/+Dgh1jVkLXJBI6KcBP+Uhjahblrwjn/n2NzW+j3j/M+TLsabR1T6kNIs3lTSNamEQfFIbJ434J4hSTFwXd8SNLgZTH1Ct5BNFGs7y0gqVIv4XS3V+fnF2MT84uQkbtRQaq3ofmclbPjrDUaFLPytFOKPmyiFbxZImoQAm48X/OzJ3mydnFpzR/6obXq/mYKzpYbKRTYPJQVGe4znT8mP4PnDNe9xyx+kTy/+97nUofbyUSYLyXWaJ9+6I+bxVBCWnhQBFM8dWarFYBLTLTlgi2KGFXtMcop9UjreZ/38DJsXHYPnT4TgDg6OTsIhQckTfwuIAYzdA5fibRLk3PoIgk67BArVKy0KauQIacVumcHuykdERIXTB3TMbPRrNI++5+nj8WtLrB5Ba9XAZMgKtrIyWPEjnErNo0TCzWLo/79QJBiYvSKrPoWybP7I2AOz3YGZLlseti/pPvYyNwX+SBxbZgto7iikJqdZnFRBbAuoex+GDGE0haZikXMGpQqgUufJqYaHkbW6kyBdBQnNBmOq62gadoVppFFS25ZhtiuteCTQasn5xd1Ch6xd63m2fthSRWbaazZ5q3Jd3T7wTMnIKSjV1O2OrcGGXHtHcZgCIAX8DVfLhAA7CVCaZaJ9LCQn88tImWGEqZaHVlKVldWYo4YAaMOZYwHZLHf2kqOvVlgcCMvAEzH6CofBPnohKCPLPh6cHOiLZEZO8cr64sVVdXllIqX1UEwMqA1n0fFxF1nI15xxW7CwAMBMUoQhf/hSJ0ux41p4v/ogKmeUtA0a298f6GrZ+SgZYAaHHmV0ICVWQuJR6sHGAaBRvmhkWxqOfi6CciKUXSopf5PSdnF00K4bVc/ReSWCp7N5nJoZ9qYLp43B9k++c5SEp43J/Mmen1TGNV2Obc8RX1sz0wLEANwZ6hTNi+UghJGz9KKzRtKlLamGKBQgVGir/rMBDtUji5h+vh5IqhxNLV2O3MbIqpgakDOMfj/jRa9rjfxuP+EaZllsJ58lFI+iYaQdk2FGZdgZ8S00kG2Rj3yFS3dchtU5me+4TFNp3hicakuzaJSXpcMccE/gsw3cAV5gQlKmjPhSswAflWAzIbawq/4aadeV14eldnAdDGsSbnpwwpo6PL+CktRRQsEZ0u7VBcPjHJaL5vIVES2KU0CLN6ydxKIQnp0cu3WD9FUIwiwPQgo6ZCtYcaR1W5N3z/eBLsH08q2acAYFwme6Gg7B9PSibvSma5LhV/IMrooAONjjj/M2b8lMzvSWX3oO/VFALctsaYkSK49/r168sf7t3Tqc067PaBJFTwmX/ZNknPL8hOCD45uzhipGtrdWWpJ7l/gssypyXSaDpQqqIQIdUCrmmuEZF2HOaq2jjd9ntkYVdPJ6gnUKhY+EeQV6iMmfdMJPOhDX0OX4+xJirUt6zGTwGUTw92kpOzizHzLFdrr12fP08ALPPzhyKx5zaOPYBlVcg4Y8QKFnqYc0vHqcGbOyQZJgCer64stRXSY8Lcq7y6shQ7AMuDVZaA0oT47EedH9dyhmbq1DcFE4h/5pavFJb940md3rPk4z3Joa87Pk5KgitmBCgADFdXllRa5RzAM9HccXieIRUkRxGwmEgTE+2STfrl1ZWlRNIxIQHzRgKsriyljsC8GRjBBMo74B0qaOfeHvdrJOUf0jVfAYikJV3dNEkX7vuOUkxrjcWegGFBqTHmVwygqrA4ugBqqytLy4LnYOeLaVvWld7KA0tGto0EboicaVK7WF1Zqsr+kDvKIcq+S/bwwPA5hKAwZ7zXPczHCEDugnUF+SK2Aq5oYGIm8lWiCR5kJplCeFYocFMVRcjocFcbYaDVKiws1ocZSerQ6lpXsu7SABCqDj0luzUzQSrZd8nJXIY+Pq4CZewJlMwen+wfT2pzBEmwfzwZw9/eoACSw5Fo0plEFzunBztlZjxYgddQgBLQd3sSUGwjYIBBuNgpGiZw2lLLTm4KQMic8262CUymmZj77Wbn1Z8e7KSf/9xngxyghJ7nZ4Dp8drdOQAlhPnpwC7A1F2A+bX3goSzGrLnG2nSWLI+7Wh+b2wJ2BbAcILFUbvsinLGVleWeqQdBrKNPGS/tpjB2s3s13/3z/9B5XOf/Yzsnus5QEkI0mWqCXwP0yQ+Ewna3D+eDHydSe/oxOvWmRISelXm/Zbp/SIDYAa2wCwv/Qqe/qvfGJycXVRorLuMUGtoTPE6BKc8k1ZpOgg+6wVpa58lp+8SnR7sVBURjpEsCkLfYyNxrayzx9/5Hr7+jW9r/SQLUDq6qvL7x5MSQVvX2OZ5Dwby7Z8k9H5DzXUqMDtivSG6Fu/DvPeFX8Z//M0PQYItJQGZ/b6jiIqGNGay6Je3eejdZ8mpXSqihSqSFuuYpujXDaXBG7Vb/bt/E7/5T3/dFygNk+MXNtfKyeZauQF5vWHQvc51B6B69E+ONKAMAZR1oND7RZhW3Y81X1VpmBgAPvfZz2D7n/19MBZAwAmZnsZPiWUwWQR52Oa0QS7vacW2vgsgSbUnp61D5phsckltWgYYV1CySM/Q5mUMJlVAjn+9QFBK9H41jRBo2Gg5iuyZnCI2II12bVj+2i/9Yvzv/+U/wvLSr0ilvCxMjMu9LOsS66YC+31KQ9fkWWczjHngOuzXPEanBzvrEmlyRE7fsqgTT84uXssu+sf/6096/6T6QUvg6OpWyjNQ4hwTNrPBVVAMSRv5BEVnLqUA1gnqPPcxCQ1fez/SDipBFYmWDijq2QV/5s1V82sCu8XVFJQtYPPuuc0wRt0OYV+woKaoBJMlTY55h5+pAiMcKAkoY02HJuTEx3n6gQ4NamgcxzqdFhx4AqWtceRjMruivPcyeLfs/QYCE1t1KGyYRTc5h76LaSg51mgdm/bM9ewfL7DksAFl5lgWGSkRMCXOfhWCwgcGfvvjb4UGEaHMPPHmgJO/s27gx1Rm4J9UfS6S0rvpwKv/12/9/mBr7zAwBCYAs2mM0l4GNKZDiTVTg/36WAL5uT2zMcNk0Y+8UQkmCpINfElin45WV5aumHRbe4chgPGXv/hu8LXSe7oJcA8FNPIjjjR+Uss2TcbQrGzlTr+R319pdv/FX/4VJqc/wE9++vMYQLW/vZEammQxgVOCIjeMlh8mDk79uu25lt7NME672EroimyjEKnfDKSmBJQYXHx+a++wkmmUH/7pn+GPkj/BTTTGOVYFDLq82WIAisqsTMns6hX4atIx/slPf47f/+738ZOf/jzToGOBhpGe+6kDhdqRAygjV1CKMMMgKGFk2qRH1zHApBJQriTcbe0d1nnT64d/+meYnP4Af/GXfyUcaK97VeR+jGr/St0EGAYU2USJfPheBu1DGSiT0x/g//6/P79mcpKmz8Y0UYxpTwUK7awMHeD2ElTxqVkgKGFk2o5kFWEImGVOQqfg9mUTKMJJl/74Z/ju+Q+zQeJt7sLPX6RwtMrJratyyiggoJKouc+wtzAteVO78bOf/3mLEUgin2TMAcMLwYgEX0sBSh3iowd1rePrGAxvPgvzUgHsV1TfaArVi5GzX8J0O2liAgozGOv97Y2UBpy3eRu26yuujrnCZk9JM4i0X1cxUWby7PQcfFZvtLlWrgLA9n/+ZiX98c90IexWf3tj6DCnTIM1IvNrPe97F+Gz5DXHQmiS4bI6Y5agAMDzzNEkX4KXYINZrLITCFWICz4EogAJATYPoAw4UK6Mc/rjn8Ua/ywAMKDxshW+LqB4M78KMcM4c8xlEOtklxo1Q1BAg3ROzn9mFvEdWegqOwdMy8IfkJln0YxBqXMT8U1YemvvsE3WRNNwLMKCQQGmmRzp3MPCRMdcnM2mRW0wWVQowTSmHnPfHW/tHXa39g4DCTCDWaTXb66VRxIHt2Lxjs9nAEmwfzzh65YlBEq8tXcYbu0dTnB1O3ZKgrIDeckk08mvC73LWs9H9GtmsGhOC9ZKH0NgRB3S629vLPe3N1r97Y2yIDjQzBxOAqbMPWNz/3gyvqn0ekszo0hQKrhetyzCNDQdM5HHkHmeDoDl/vZGo7+90e5vbyzj+kJg0t/eiAy0ygBue3Hi04OdQk4SKFKzQFBR0isw/e2NmAOm1d/eaHHfSfrbGw2CImL8o/HW3mGdQq3LnBaqIOcqu2Yi1iTSNTH8P6DA8zAlaTS9LOK2tXc4wNVs3x5B0mYXIan/WxwwLUNQ6o4CZL2ofikUFgJm6Oi/mGoYvoC4FKz+9kYVl/lNmcPZpfWQMjeoAaY7AtueJ2Ko8LOeG2pPAKjYLGgaPltJsA05xTQRs7W1d1gis6vO+i6kxVNN8CbT+qOCQAGmq/RJUXPZe+hY0QkTuG/jbaiqR2bpLfRjlTSOKjBQwdV1ixjT0HJCUp/fIxHThElyTMQsqrWrkIqy0HFb8XcxRcXinKAo33tr75D/fUR9lmr6Onv2IWn4okBpUalf7825uksOWALk2/fuG5iAgKkwk7XR394YMYuAFW4yO5U8MqzVVVVlBwvWOPg2pOdLHCAWnU35Zrfo1t4hv87T481dSR/X6dpFg2JUpeXWwEIdEsI9FGgCTAmXSYZaYDjJx066Fi1gNnF97SeBwbZcxkne1UzyFIZ7aQz2lKSY7l7t6VbzGU3HF/hLSFNFJIAGnBO/buKgM/3a6W9vtDVCNE85KqstwrcGFk/AdE4PdtoajZFFUoxWjMksY48+SEjLRIyPEQqgGQF4wWoEmoQVmoS6AMEQlhUtyVzS7eVI6drPWQiZZ/uQNAk/Bj0SBOnW3mFmMtqaXcb978HaiKHJ+rjVsFAn1eFegtVI7bK2cqYpDAeZNUfeSEXH8q6yNiJI8vhAJqadsXQmSCLSzgPOPO30tzd6BkInxOXelHWVZmfOznEFJYGkFO+dgsUTMFqpwjjymaYwMct4RzbO/pYxXT5ynKRvJqXHCFYeaCLSPkPGx+iK3t2g3zKTdUR/kyrGng+w2LYUklK8dxIWT8AkENQGkzjyoYWELOH66nGDNSnIHJKZMyJz7VmRpV0Jmg+hL+AQM5DEzDvz/pCtRq6Y9C/V+MqTJTFTUOYGFk/AaB1/W8nHTIKxChhmopZIsmefJPvcRO1j8rMCevaAAEkBxCL/SADKqL+9sW4gVDItrNXcHhz5GwFlrmDxCMwImuQ5JrpTMpGCNBn4Q0WrJtGg29IE0UAA+IJKmJDmzY64U0a7PPknNwYKC8v9eRgw0gp54+Q1TE8Dk0agaBW/jOkq/i5lItcVE0KUBfwEd6uJ3meQZWjzwoa0ULZfadkAlCam+4duJShsmwvN4lnDAJrwMmNmZWZBSnb8KwDvk/0tc5iNTJRbpFk+1fhcmRbNTLqEfJmRZixLuBpVyxPIKTSN5VaZYQKVnWcdhu3klq5SOmmQJwSN7p4RTZT4DsESQn3gK+vwPzfMGG7CT5g9xgzWUW4tLJ6BAWihzaTDyfSokHYp4fIErhhApAsK3BFwQkarpgBiUx+Nxi3P6WJWPugClqvRE19nqKSkZYZYtKLGahduBSWEAq6oPSl3EhZmEHwdY2dsmi2a1Ri1oT5A1rY15k2o3QpYOBvY53bfiEyzBTT5gjG+0m0AgwXmBSw348csoJkfSLJxWJ8H/+ROwMKYZaK9Fwtoiu/3WgGQAAZh/gUs+c0yXxnAvCnQwbQ4W7qA5GkJ5mH1O2N23SlYGLMsbwqFrKWg5MfbMJgFmVomSZmurQePZVUXsJgPbBt+ozEiCfiMtE1yhwGpYLr1oFZwXzZum7l7Z2BhzAUfqRW6FgN4QeDEdwCQGmmQSgG+yDXfBNP1k1tn3t4pWLjB785g4DMpGQF4iek+8OQW9E9IYDws0MTiW4Tp2tatFS53EhaaEAHUJYeKhucVplURoznoBxaOsEDzStYfrSLKqC5gKcY024W/1X9Xsy0l7ZPQJ/UpZZktCRUAnycoZg0GHxx5Nu/h4AUscmi6MzQ7XGBiJ9orwfcecj+XZmRqWkNyW/2SBSzXJfBHN6xp7mK7s5C8tbDMmXl2F1qCaW3m3l1fwH1rYREEAlzLGr2tLSafZPi2vPBbDwsHTp2gqSxYkJpaI7ylGQ0LWOQmWg3TjICFtqHytHjLc+UWsOjBCXGZ/lF6ywB5iWmJ3HQxExawuGqcD++gqZYygCyyrReweIenhstV8cothCPCZZpOvBjRBSyzhKdC4HyAyxX0eWkRphGsLA1nAccClrn0eUoETpaGEhQAUorLw2NfMj8nd3lLwQKWt88P4gMHGVB8S8CdWrzYAr2AZdEWbW5hub/oikVbNLP2/wFM4Ab9RXs8HAAAAABJRU5ErkJggg==");background-size:contain;background-position:center;background-repeat:no-repeat}
+.brand .mark{width:32px;height:32px;flex:none}
+.brand span{font-family:var(--display);font-weight:700;font-size:1.35rem;letter-spacing:.01em;color:var(--brand)}
+:root[data-theme="dark"] .brand span{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand span{color:var(--mist)}}
+.site nav{display:flex;gap:1.8rem;font-size:.94rem}
+.site nav a{color:var(--text-dim);text-decoration:none}
+.site nav a:hover{color:var(--link)}
+/* Manual y novedades: para quien ya es cliente, detrás del idioma y en pequeño. */
+.site nav.nav-sec{gap:1rem;font-size:.8rem;margin-left:1.1rem}
+.site nav.nav-sec a{color:var(--steel)}
+.site nav a[aria-current="page"]{color:var(--text)}
+@media (max-width:640px){
+  .site__inner{gap:1rem}
+  .brand span:not(.mark){display:none}
+  .site nav{gap:1.15rem;font-size:.85rem}
+}
+
+/* ---------- hero ---------- */
+.hero{
+  background:
+    radial-gradient(120% 90% at 88% 12%,#1C4468 0%,transparent 58%),
+    linear-gradient(168deg,#10283F 0%,#0A1B2B 100%);
+  color:#E8F0F8;
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+}
+.hero__inner{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  align-items:center;
+  gap:clamp(2rem,5vw,4.5rem);
+  padding-block:clamp(3.5rem,7vw,6rem);
+}
+.hero .eyebrow{color:var(--mist)}
+.hero h1{
+  font-size:clamp(2.3rem,1.4rem + 3.4vw,3.9rem);
+  margin-top:1.1rem;
+  color:#FFFFFF;
+}
+.hero h1 em{font-style:normal;color:var(--accent-lift)}
+.lede{
+  margin-top:1.4rem;
+  font-size:1.09rem;
+  color:#C3D5E6;
+  max-width:34em;
+  font-weight:300;
+}
+.actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.4rem}
+.btn{
+  display:inline-flex;align-items:center;
+  padding:.78rem 1.5rem;
+  border-radius:9px;
+  font-family:var(--display);font-weight:600;font-size:.98rem;
+  text-decoration:none;
+  border:1px solid transparent;
+  transition:background .18s ease,border-color .18s ease,transform .18s ease;
+}
+.btn--solid{background:var(--accent);color:#FFFFFF}
+.btn--solid:hover{background:#0578AE}
+.btn--ghost{border-color:#3C6486;color:#D6E4F0}
+.btn--ghost:hover{border-color:var(--accent-lift);color:#FFFFFF}
+.hero__mark{display:flex;justify-content:center}
+.hero__mark .mark{width:min(100%,290px);aspect-ratio:1;filter:drop-shadow(0 16px 34px rgba(0,0,0,.45))}
+@media (max-width:820px){
+  .hero__inner{grid-template-columns:1fr}
+  .hero__mark{order:-1;justify-content:flex-start}
+  .hero__mark .mark{width:150px}
+}
+
+/* ---------- secciones ---------- */
+section{padding-block:clamp(3.2rem,6vw,5.5rem)}
+.section__head{max-width:44ch}
+.section__head h2{font-size:clamp(1.7rem,1.2rem + 1.6vw,2.4rem);margin-top:1rem}
+.section__head p{margin-top:.9rem;color:var(--text-dim)}
+
+.pillars{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(255px,1fr));
+  gap:1.5rem;
+  margin-top:2.8rem;
+}
+.pillar{
+  padding-top:1.5rem;
+  border-top:2px solid var(--line);
+}
+.pillar h3{font-size:1.14rem;margin-bottom:.6rem;color:var(--brand)}
+:root[data-theme="dark"] .pillar h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pillar h3{color:var(--mist)}}
+.pillar p{color:var(--text-dim);font-size:.97rem}
+.pillar:first-child{border-top-color:var(--accent)}
+
+.modulo-explica{padding:1.3rem 1.5rem;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--tu-anillo);border-radius:8px;max-width:60rem}
+.modulo-explica h3{font-size:1.14rem;margin-bottom:.5rem;color:var(--brand)}
+:root[data-theme="dark"] .modulo-explica h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .modulo-explica h3{color:var(--mist)}}
+.modulo-explica p{color:var(--text-dim);font-size:.97rem}
+.modulo-explica p+p{margin-top:.7rem}
+.precios__tabla-sola{display:flex;flex-direction:column;gap:.9rem}
+.precios__tabla-sola h3{font-size:1.14rem;color:var(--brand)}
+:root[data-theme="dark"] .precios__tabla-sola h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .precios__tabla-sola h3{color:var(--mist)}}
+.precios__tabla-sola p{color:var(--text-dim);font-size:.97rem}
+.rrhh-cta{margin-top:1.6rem}
+/* ---------- productos ---------- */
+#productos{background:var(--surface-sunk);border-block:1px solid var(--line)}
+.products{display:grid;gap:1.5rem;margin-top:2.8rem}
+@media (min-width:900px){.products{grid-template-columns:1.25fr 1fr}}
+.product{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:clamp(1.6rem,3vw,2.3rem);
+  display:flex;flex-direction:column;gap:1rem;
+}
+.product__name{
+  font-family:var(--display);font-weight:700;
+  font-size:1.6rem;letter-spacing:-.01em;
+  color:var(--brand);
+}
+:root[data-theme="dark"] .product__name{color:#BFD3E5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .product__name{color:#BFD3E5}}
+.product__head{display:flex;align-items:center;gap:1.05rem}
+.product__logo{width:clamp(46px,7vw,58px);aspect-ratio:1;flex:none}
+.product__logo svg{width:100%;height:100%;display:block}
+.product__kind{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--steel);
+}
+.product p{color:var(--text-dim);font-size:.99rem}
+.specs{
+  list-style:none;margin:0;padding:0;
+  display:flex;flex-direction:column;gap:.55rem;
+  font-size:.93rem;
+}
+.specs li{display:flex;gap:.7rem;align-items:baseline;color:var(--text-dim)}
+.specs li::before{
+  content:"";width:7px;height:7px;flex:none;
+  background:var(--mist);border-radius:2px;transform:rotate(45deg) translateY(-1px);
+}
+.product--lead .specs li::before{background:var(--accent)}
+.tag{
+  align-self:flex-start;margin-top:auto;
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;
+  color:var(--accent);
+  border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);
+  border-radius:100px;padding:.3rem .8rem;
+}
+:root[data-theme="dark"] .tag{color:var(--accent-lift);border-color:#2C5C7E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tag{color:var(--accent-lift);border-color:#2C5C7E}}
+
+/* ---------- contacto ---------- */
+.contact{
+  display:grid;gap:2.5rem;
+  grid-template-columns:minmax(0,1fr);
+  align-items:start;
+}
+@media (min-width:820px){.contact{grid-template-columns:1.1fr .9fr}}
+.contact h2{font-size:clamp(1.7rem,1.2rem + 1.6vw,2.4rem);margin-top:1rem}
+.contact p{margin-top:.9rem;color:var(--text-dim);max-width:38ch}
+.card-contact{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:clamp(1.5rem,3vw,2rem);
+  display:flex;flex-direction:column;gap:1.4rem;
+}
+.field{display:flex;flex-direction:column;gap:.45rem}
+.field label{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel)}
+.field input,.field textarea{
+  font-family:inherit;font-size:1rem;color:var(--text);
+  background:var(--bg);
+  border:1px solid var(--line);
+  border-radius:9px;
+  padding:.7rem .85rem;
+  width:100%;
+  transition:border-color .16s ease,box-shadow .16s ease;
+}
+.field textarea{resize:vertical;min-height:7rem;line-height:1.55}
+.field input:focus,.field textarea:focus{
+  outline:none;
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent);
+}
+.field input[aria-invalid="true"],.field textarea[aria-invalid="true"]{border-color:#C0453C}
+.trampa{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+#formulario .btn{align-self:flex-start;margin-top:.6rem;cursor:pointer;font-size:1rem}
+#formulario .btn[disabled]{opacity:.62;cursor:progress}
+.aviso{font-size:.92rem;min-height:1.2rem}
+.aviso[data-estado="error"]{color:#C0453C}
+.aviso[data-estado="ok"]{color:#1C7A5E}
+:root[data-theme="dark"] .aviso[data-estado="error"]{color:#F09189}
+:root[data-theme="dark"] .aviso[data-estado="ok"]{color:#66C6A6}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .aviso[data-estado="error"]{color:#F09189}
+  :root:not([data-theme="light"]) .aviso[data-estado="ok"]{color:#66C6A6}
+}
+.legal{font-size:.78rem;line-height:1.5;color:var(--steel);margin-top:.2rem}
+
+footer{
+  border-top:1px solid var(--line);
+  padding-block:2rem;
+  font-size:.86rem;color:var(--text-dim);
+}
+.footer__inner{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:center}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+
+/* ---------- lo propio de la pagina de Turnera ---------- */
+.hero--turnera{
+  background:
+    radial-gradient(115% 85% at 82% 14%,#12463F 0%,transparent 60%),
+    linear-gradient(168deg,#0F3B36 0%,#08211E 100%);
+}
+.hero--turnera{--tu-isotipo:#0E6E62}
+.hero--turnera h1 em{color:#7ED0BF}
+.hero--turnera .btn--solid{background:var(--tu-anillo);color:#06231F}
+.hero__lockup{
+  display:block;width:min(100%,330px);margin-bottom:1.6rem;
+  /* El fondo del hero es verde oscuro: la palabra va en claro y el aro conserva su color. */
+  --tu-anillo:#F2F8F5;
+}
+.hero__lockup svg{width:100%;height:auto;display:block}
+.hero--turnera .btn--ghost{border-color:#3E7A6F;color:#D8EDE7}
+.hero--turnera .btn--ghost:hover{border-color:#7ED0BF;color:#FFFFFF}
+.hero--turnera .eyebrow{color:#8FC7BA}
+.hero--turnera .eyebrow::before{background:var(--tu-turno)}
+.hero--turnera .lede{color:#BFDCD4}
+.hero--turnera .isotipo{width:min(100%,270px);height:auto;display:block;filter:drop-shadow(0 16px 34px rgba(0,0,0,.42))}
+@media (max-width:820px){.hero--turnera .hero__mark{display:none}}
+
+.site nav a{white-space:nowrap}
+.migas{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
+.migas a{color:var(--steel);text-decoration:none}
+.migas a:hover{color:var(--link)}
+
+.jornada{display:grid;gap:1.5rem;margin-top:2.8rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));counter-reset:paso}
+.paso{padding-top:1.5rem;border-top:2px solid var(--line)}
+.paso:first-child{border-top-color:var(--tu-anillo)}
+.paso h3{font-size:1.1rem;margin-bottom:.6rem;color:var(--brand)}
+.paso h3::before{
+  counter-increment:paso;content:counter(paso);
+  font-family:var(--mono);font-size:.72rem;color:var(--tu-anillo);
+  margin-right:.6rem;vertical-align:.15em;
+}
+.paso p{color:var(--text-dim);font-size:.97rem}
+:root[data-theme="dark"] .paso h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .paso h3{color:var(--mist)}}
+
+#pantallas{background:var(--surface-sunk);border-block:1px solid var(--line)}
+.pantallas{display:flex;flex-direction:column;gap:clamp(2.5rem,5vw,4rem);margin-top:2.8rem}
+.pantalla{display:grid;gap:1.2rem}
+@media (min-width:900px){
+  .pantalla{grid-template-columns:minmax(0,1fr) minmax(0,15rem);gap:2rem;align-items:start}
+  .pantalla figcaption{margin-top:0;padding-top:.4rem}
+}
+.pantalla figure{margin:0;display:contents}
+.pantalla img{
+  width:100%;height:auto;display:block;
+  border:1px solid var(--line);border-radius:12px;
+  background:var(--surface);
+  box-shadow:0 10px 30px rgba(10,30,50,.10);
+}
+:root[data-theme="dark"] .pantalla img{box-shadow:0 10px 30px rgba(0,0,0,.38)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pantalla img{box-shadow:0 10px 30px rgba(0,0,0,.38)}}
+.pantalla figcaption{margin-top:.9rem;font-size:.96rem;color:var(--text-dim);line-height:1.6}
+.pantalla b{color:var(--text);font-weight:600}
+@media (min-width:900px){.pantalla--alta{grid-template-columns:minmax(0,36rem) minmax(0,15rem)}}
+
+/* ---------- recorrido en vídeo ---------- */
+.recorrido{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.4rem 2rem;margin-top:2.8rem}
+.recorrido__video{margin:0}
+.recorrido video{
+  width:100%;height:auto;aspect-ratio:16/9;display:block;
+  border:1px solid var(--line);border-radius:12px;
+  background:var(--navy);
+  box-shadow:0 10px 30px rgba(10,30,50,.10);
+}
+:root[data-theme="dark"] .recorrido video{box-shadow:0 10px 30px rgba(0,0,0,.38)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .recorrido video{box-shadow:0 10px 30px rgba(0,0,0,.38)}}
+.recorrido h3{margin-top:.9rem;font-family:var(--display);font-size:1.15rem;color:var(--text)}
+.recorrido p{margin-top:.3rem;font-size:.96rem;color:var(--text-dim);line-height:1.6}
+.recorrido__nota{margin-top:2rem;font-size:.92rem;color:var(--text-dim);max-width:60ch}
+@media (max-width:820px){.recorrido{grid-template-columns:1fr}}
+
+/* ---------- perfiles de centro, en pestanas ---------- */
+.perfiles{margin-top:2.8rem}
+.perfiles__botones{
+  display:flex;flex-wrap:wrap;gap:.6rem;
+  border-bottom:1px solid var(--line);
+  padding-bottom:1.1rem;
+}
+.perfil__boton{
+  font-family:var(--display);font-weight:600;font-size:.95rem;
+  color:var(--text-dim);
+  background:transparent;
+  border:1px solid var(--line);border-radius:100px;
+  padding:.55rem 1.1rem;cursor:pointer;
+  transition:border-color .16s ease,color .16s ease,background .16s ease;
+}
+.perfil__boton:hover{color:var(--text);border-color:var(--steel)}
+.perfil__boton[aria-selected="true"]{
+  color:var(--tu-sobre-anillo);
+  background:var(--tu-anillo);
+  border-color:var(--tu-anillo);
+}
+.perfil{padding-top:2rem;display:grid;gap:2rem}
+@media (min-width:900px){.perfil{grid-template-columns:minmax(0,1fr) minmax(0,20rem);align-items:start}}
+.perfil[hidden]{display:none}
+.perfil h3{font-size:1.35rem;margin-bottom:.9rem;color:var(--brand)}
+:root[data-theme="dark"] .perfil h3{color:#BFD3E5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .perfil h3{color:#BFD3E5}}
+.perfil__texto p{color:var(--text-dim);font-size:1rem}
+.perfil__texto p + p{margin-top:.9rem}
+.perfil__montaje{
+  background:var(--surface);border:1px solid var(--line);border-radius:14px;
+  padding:1.4rem 1.5rem;
+}
+.perfil__montaje h4{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--steel);margin:0 0 .9rem;font-weight:500;
+}
+.montaje{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7rem;font-size:.93rem}
+.montaje li{display:grid;grid-template-columns:auto 1fr;gap:.7rem;align-items:baseline;color:var(--text-dim)}
+.montaje li::before{
+  content:"";width:7px;height:7px;
+  background:var(--tu-turno);border-radius:2px;transform:rotate(45deg) translateY(-1px);
+}
+.montaje b{color:var(--text);font-weight:600}
+
+.abierto{display:grid;gap:1.5rem;margin-top:2.8rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.abierto .pillar:first-child{border-top-color:var(--tu-anillo)}
+
+
+
+/* ---------- preguntas frecuentes ---------- */
+#preguntas{background:var(--surface-sunk);border-block:1px solid var(--line)}
+.faq{margin-top:2.8rem;display:grid;gap:2.6rem 3.5rem}
+@media (min-width:900px){.faq{grid-template-columns:1fr 1fr;align-items:start}}
+.faq__columna{display:flex;flex-direction:column;gap:2.6rem}
+.faq__grupo h3{font-size:1.1rem;color:var(--brand);padding-bottom:.7rem;border-bottom:2px solid var(--tu-anillo)}
+:root[data-theme="dark"] .faq__grupo h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .faq__grupo h3{color:var(--mist)}}
+.faq__item{border-bottom:1px solid var(--line)}
+.faq__item summary{
+  list-style:none;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+  padding:.85rem 0;
+  font-family:var(--display);font-weight:600;font-size:1rem;color:var(--text);
+}
+.faq__item summary::-webkit-details-marker{display:none}
+.faq__item summary::after{
+  content:"+";flex:none;
+  font-family:var(--mono);font-size:1.1rem;line-height:1;color:var(--tu-anillo);
+  transition:transform .18s ease;
+}
+.faq__item[open] summary::after{transform:rotate(45deg)}
+.faq__item summary:hover{color:var(--link)}
+.faq__respuesta{padding-bottom:1.15rem;color:var(--text-dim);font-size:.96rem;display:flex;flex-direction:column;gap:.75rem}
+.faq__respuesta b{color:var(--text);font-weight:600}
+.faq__lista{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.45rem}
+.faq__aviso{
+  border-left:3px solid var(--tu-turno);
+  background:var(--surface);border-radius:0 8px 8px 0;
+  padding:.65rem .9rem;color:var(--text);
+}
+.faq__tabla{border-collapse:collapse;width:100%;max-width:36rem;font-size:.92rem;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.faq__tabla s{color:var(--text-dim);font-weight:400;margin-right:.3rem}
+.faq__tabla th,.faq__tabla td{padding:.45rem .8rem;text-align:left;border-bottom:1px solid var(--line)}
+.faq__tabla th{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);font-weight:500}
+.faq__tabla td:not(:first-child),.faq__tabla th:not(:first-child){text-align:right;font-variant-numeric:tabular-nums}
+.faq__tabla tr:last-child td{border-bottom:none}
+.faq__tabla td:last-child{color:var(--accent);font-weight:600}.faq__tabla td{white-space:nowrap}
+@media (max-width:480px){.faq__tabla s{color:var(--text-dim);font-weight:400;margin-right:.3rem}
+.faq__tabla th,.faq__tabla td{padding:.4rem .45rem}.faq__tabla th{letter-spacing:.06em}}
+.faq__pie{margin-top:.5rem;font-size:1rem}
+.precios{display:grid;gap:2.2rem 3rem;margin-top:2.8rem;align-items:start}
+@media (min-width:900px){.precios{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.precios__calculo{display:flex;flex-direction:column;gap:.9rem}
+.precios__nota{font-size:.85rem;color:var(--steel)}
+.precios__tabla summary{cursor:pointer;color:var(--link);font-size:.92rem}
+.precios__tabla[open] summary{margin-bottom:.7rem}
+.precios__claves{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.precios__claves .pillar:first-child{border-top-color:var(--tu-anillo)}
+.precios__claves .pillar b{color:var(--text);font-weight:600}
+.precio-config{max-width:36rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.8rem;color:var(--text)}
+.precio-config__cabecera{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.precio-config__cabecera label{font-weight:600}
+.precio-config__cabecera output{font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--tu-anillo);font-variant-numeric:tabular-nums}
+.precio-config input[type=range]{width:100%;accent-color:var(--tu-anillo);cursor:pointer;margin:0}
+.precio-config__escala{position:relative;height:1.1em;margin:0 .5rem;font-family:var(--mono);font-size:.72rem;color:var(--steel)}
+.precio-config__escala span{position:absolute;transform:translateX(-50%)}
+.precio-config__modo{display:flex;gap:.5rem;flex-wrap:wrap}
+.precio-config__modo button{font:inherit;font-size:.88rem;padding:.4rem .9rem;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--text-dim);cursor:pointer}
+.precio-config__modo button[aria-pressed="true"]{background:var(--tu-anillo);border-color:var(--tu-anillo);color:var(--tu-sobre-anillo)}
+.precio-config__resultado{border-top:1px solid var(--line);padding-top:.8rem}
+.precio-config__resultado p{margin:0}
+.precio-config__cifra{font-size:1rem;color:var(--text-dim)}
+.precio-config__cifra #precio-cifra,[data-cuando="consulta"] .precio-config__cifra{font-family:var(--display);font-size:2rem;font-weight:700;color:var(--text)}
+.precio-config__detalle{margin-top:.35rem!important;font-size:.92rem;color:var(--text-dim)}
+.precio-config__detalle s{margin-right:.3rem}
+.faq__nota{margin-top:.8rem;font-size:.82rem;color:var(--steel);max-width:60ch}
+
+/* ---------- selector de idioma ---------- */
+.idiomas{display:flex;align-items:center;gap:.15rem;margin-left:1.4rem;padding-left:1.4rem;
+  border-left:1px solid var(--line)}
+.idiomas__opcion{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.76rem;letter-spacing:.06em;
+  color:var(--steel);text-decoration:none;
+  padding:.3rem .45rem;border-radius:6px;
+  transition:color .16s ease,background .16s ease;
+}
+.idiomas__opcion:hover{color:var(--text);background:var(--surface)}
+.idiomas__opcion[aria-current="true"]{color:var(--text);font-weight:500}
+/* El nombre completo solo lo lee quien usa lector de pantalla: en la barra caben dos letras, no «Deutsch». */
+.idiomas__nombre{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media (max-width:560px){.idiomas{margin-left:.7rem;padding-left:.7rem}.idiomas__opcion{padding:.3rem .3rem}}
+
+
+/* En pantallas estrechas el selector es lo primero que necesita quien llega en el idioma que no es el suyo,
+   así que la barra envuelve y la navegación cede el sitio, en lugar de empujarlo fuera de la pantalla. */
+@media (max-width:640px){
+  .site__inner{flex-wrap:wrap;justify-content:flex-start;gap:.5rem 1rem}
+  .site nav{order:3;width:100%;flex-wrap:wrap;justify-content:flex-start;gap:.35rem 1rem}
+  .idiomas{margin-left:auto;padding-left:.8rem}
+  .site nav.nav-sec{order:4;width:100%;margin-left:0}
+}
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://devel.es/pt/turnera/academias#pagina",
+      "url": "https://devel.es/pt/turnera/academias",
+      "name": "Software para academias de música, línguas e explicações · Turnera",
+      "description": "Software de gestão para academias: horário por sala e por professor, aulas particulares e de grupo com lugares, aulas que se repetem, pacotes de aulas, notas de cada aluno e cobranças pendentes.",
+      "inLanguage": "pt-PT",
+      "isPartOf": {
+        "@id": "https://devel.es/#web"
+      },
+      "about": {
+        "@id": "https://devel.es/turnera#producto"
+      },
+      "breadcrumb": {
+        "@id": "https://devel.es/pt/turnera/academias#migas"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quanto custa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "39 € por mês com dois recursos incluídos. Cada recurso adicional custa um pouco menos que o anterior, e com dez paga 90 €. A partir daí, 5 € por cada recurso adicional até vinte. Com mais de vinte, falamos. Preços sem IVA, e se pagar o ano adiantado oferecemos-lhe dois meses. Calcule o seu em Preços."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que conta como recurso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cada espaço que pode estar ocupado em simultâneo na sua agenda. Se no seu centro se podem atender três pessoas ao mesmo tempo, são três recursos. Duas cabines onde se trabalha em paralelo são dois recursos. Se dois profissionais se revezam na mesma cabine e nunca coincidem, é um. Quatro boxes com quatro fisioterapeutas em simultâneo são quatro, ainda que no quadro haja seis pessoas. Seis campos reserváveis são seis. Os monitores e quem está na receção não contam."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Há fidelização?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Se paga ao mês, cancela quando quiser: continua a entrar até ao fim do mês que já tem pago e não volta a ser cobrado. Se pagou o ano adiantado e sair antes do tempo, devolvemos-lhe o que não utilizou, contando os meses que utilizou ao preço mensal. O desconto de dois meses é o que se paga por se comprometer durante um ano, pelo que se perde se o ano não se cumprir; o dinheiro dos meses que não vai utilizar volta para a sua conta. Com um centro de 56 € por mês: paga 560 € pelo ano e sai aos três meses. Esses três meses custam 168 €, pelo que lhe devolvemos 392 €."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Os meus clientes podem marcar sozinhos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. O seu centro tem o seu próprio portal de marcações, no seu endereço do Turnera, onde os clientes veem o que está livre, marcam e anulam. Entram com o e-mail, sem palavras-passe para recordar. As regras define-as o utilizador nas preferências: com quantos dias de antecedência máxima se pode marcar, com que antecedência mínima, até quando se pode anular, quem pode marcar sem pacote de sessões e se alguém com dívida pendente pode continuar a marcar. O utilizador decide quando o ativa e que serviços e cabines são reserváveis pela internet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso experimentar antes de pagar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trinta dias, sem cartão. Entra com dados de exemplo já carregados — clientes, serviços, marcações de hoje — para ver como se comporta cheio e não perante um ecrã vazio. Quando começar com os verdadeiros, apagam-se com um clique."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo demora a ter o centro a funcionar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O teste, minutos. Com arranque e sem dados para trazer, um par de dias. Se for preciso migrar de outro programa, contamos entre uma e três semanas, quase tudo à espera de que o seu atual fornecedor lhe entregue os dados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Estou noutro programa. Podem trazer o que tenho?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, e é a primeira coisa que fazemos. Trazemos clientes, serviços e tarifas, produtos, profissionais, pacotes de sessões e sessões pendentes, marcações, visitas feitas e processo clínico. Basta-nos folhas de Excel ou CSV, que é o que todos os programas do setor sabem exportar."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://devel.es/pt/turnera/academias#migas",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "DEVEL",
+          "item": "https://devel.es/pt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Turnera",
+          "item": "https://devel.es/pt/turnera"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Academias",
+          "item": "https://devel.es/pt/turnera/academias"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="shell site__inner">
+    <a class="brand" href="/pt/">
+      <span class="mark" role="img" aria-label="Logótipo da DEVEL"></span>
+      <span>devel</span>
+    </a>
+    <nav>
+      <a href="/pt/turnera">Turnera</a>
+      <a href="#funciones">O que inclui</a>
+      <a href="#pantallas">Ecrãs</a>
+      <a href="#preguntas">Perguntas</a>
+      <a href="/pt/turnera#precios">Preços</a>
+      <a href="/pt/turnera#demo">Demo</a>
+    </nav>
+    <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache / Língua"><a class="idiomas__opcion" href="/turnera/academias" lang="es">ES<span class="idiomas__nombre">Español</span></a><a class="idiomas__opcion" href="/en/turnera/academias" lang="en">EN<span class="idiomas__nombre">English</span></a><a class="idiomas__opcion" href="/de/turnera/academias" lang="de">DE<span class="idiomas__nombre">Deutsch</span></a><a class="idiomas__opcion" href="/pt/turnera/academias" lang="pt" aria-current="true">PT<span class="idiomas__nombre">Português</span></a></div>
+    <nav class="nav-sec">
+      <a href="/pt/turnera/manual">Manual do utilizador</a>
+      <a href="/pt/turnera/novedades">Novidades</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero--turnera">
+    <div class="shell hero__inner">
+      <div>
+        <p class="migas"><a href="/pt/">devel</a> · <a href="/pt/turnera">Turnera</a> · academias</p>
+        <span class="hero__lockup"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374 120" role="img" aria-label="Turnera">
+<g><path d="M80.19 22.03 A43.00 43.00 0 1 1 39.81 22.03" fill="none" stroke="var(--tu-isotipo)" stroke-width="13" stroke-linecap="round"></path>
+<path d="M51.06 17.94 A43.00 43.00 0 0 1 68.94 17.94" fill="none" stroke="var(--tu-turno)" stroke-width="13" stroke-linecap="round"></path></g>
+<g transform="translate(146.00 82.00) scale(0.03027 -0.03027)"><path d="M427 0Q329 0 271.0 52.5Q213 105 213 197V892H51V1080H213V1297L460 1355V1080H666V892H460V244Q460 210 469.5 199.0Q479 188 510 188H675V0Z" fill="var(--tu-anillo)"></path></g>
+<g transform="translate(168.61 82.00) scale(0.03027 -0.03027)"><path d="M495 -25Q375 -25 293.5 29.5Q212 84 171.0 183.0Q130 282 130 413V1080H377V440Q377 309 424.0 238.0Q471 167 580 167Q652 167 710.0 204.5Q768 242 803.0 323.0Q838 404 838 535V1080H1086V0H848V254L855 209Q809 103 717.5 39.0Q626 -25 495 -25Z" fill="var(--tu-anillo)"></path></g>
+<g transform="translate(206.00 82.00) scale(0.03027 -0.03027)"><path d="M150 0V1080H387V842L378 872Q428 989 522.0 1047.0Q616 1105 722 1105Q752 1105 782.5 1100.0Q813 1095 841 1083L819 866Q758 884 700 884Q657 884 604.5 868.5Q552 853 505.0 811.0Q458 769 427.5 690.5Q397 612 397 487V0Z" fill="var(--tu-anillo)"></path></g>
+<g transform="translate(233.04 82.00) scale(0.03027 -0.03027)"><path d="M150 0V1080H387V833L380 877Q427 979 518.0 1042.0Q609 1105 739 1105Q860 1105 941.5 1050.5Q1023 996 1064.5 897.5Q1106 799 1106 667V0H858V650Q858 772 813.5 842.5Q769 913 664 913Q543 913 470.0 815.0Q397 717 397 522V0Z" fill="var(--tu-anillo)"></path></g>
+<g transform="translate(270.42 82.00) scale(0.03027 -0.03027)"><path d="M621 -25Q464 -25 343.0 44.0Q222 113 153.0 240.0Q84 367 84 540Q84 713 152.0 840.0Q220 967 340.0 1036.0Q460 1105 617 1105Q705 1105 794.5 1078.0Q884 1051 958.5 982.5Q1033 914 1079.0 793.5Q1125 673 1125 488H243V645H905L867 588Q861 709 825.5 782.5Q790 856 734.5 889.5Q679 923 611 923Q525 923 466.0 876.5Q407 830 376.5 743.5Q346 657 346 539Q346 363 415.0 263.5Q484 164 619 164Q711 164 776.0 211.0Q841 258 873 351L1103 287Q1064 182 992.0 113.0Q920 44 824.0 9.5Q728 -25 621 -25Z" fill="var(--tu-anillo)"></path></g>
+<g transform="translate(306.84 82.00) scale(0.03027 -0.03027)"><path d="M150 0V1080H387V842L378 872Q428 989 522.0 1047.0Q616 1105 722 1105Q752 1105 782.5 1100.0Q813 1095 841 1083L819 866Q758 884 700 884Q657 884 604.5 868.5Q552 853 505.0 811.0Q458 769 427.5 690.5Q397 612 397 487V0Z" fill="var(--tu-anillo)"></path></g>
+<g transform="translate(333.88 82.00) scale(0.03027 -0.03027)"><path d="M444 -25Q339 -25 255.0 13.0Q171 51 122.0 123.5Q73 196 73 297Q73 406 136.5 487.5Q200 569 324.5 614.0Q449 659 633 659H795L777 635V696Q777 812 733.0 871.0Q689 930 587 930Q490 930 438.0 879.0Q386 828 378 738L119 787Q132 876 191.5 948.0Q251 1020 354.0 1063.0Q457 1106 602 1106Q740 1106 833.0 1059.0Q926 1012 972.5 913.5Q1019 815 1019 659V244Q1019 210 1028.5 199.0Q1038 188 1069 188H1123V0H994Q896 0 841.0 52.5Q786 105 786 197V258L828 246Q814 203 787.0 156.0Q760 109 715.0 68.0Q670 27 603.5 1.0Q537 -25 444 -25ZM512 154Q587 154 647.5 189.5Q708 225 743.5 298.5Q779 372 779 484V502H637Q520 502 454.0 471.5Q388 441 361.0 396.5Q334 352 334 308Q334 270 351.5 234.5Q369 199 408.0 176.5Q447 154 512 154Z" fill="var(--tu-anillo)"></path></g>
+</svg></span>
+        <h1>Software para academias<br><em>de música, línguas ou explicações.</em></h1>
+        <p class="lede">Aulas particulares e de grupo, cada uma na sua sala, e o dia visto sala a sala ou professor a professor. A ficha do aluno tem as suas notas, o seu programa e o seu pacote de aulas, e a aplicação fala como uma academia: alunos, professores, salas e aulas.</p>
+        <div class="actions">
+          <a class="btn btn--solid" href="/pt/turnera#demo">Pedir uma demo</a>
+          <a class="btn btn--ghost" href="/pt/turnera#precios">Ver preços</a>
+        </div>
+      </div>
+      <div class="hero__mark">
+        <svg class="isotipo" viewBox="0 0 120 120" role="img" aria-label="Isótipo do Turnera">
+          <path d="M80.19 22.03 A43 43 0 1 1 39.81 22.03" fill="none" stroke="var(--tu-isotipo)" stroke-width="13" stroke-linecap="round"></path>
+          <path d="M51.06 17.94 A43 43 0 0 1 68.94 17.94" fill="none" stroke="var(--tu-turno)" stroke-width="13" stroke-linecap="round"></path>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="funciones">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">O que inclui</p>
+        <h2>O que uma academia usa todos os dias.</h2>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Horário por sala e por professor</h3>
+          <p>O dia em colunas, uma por sala ou uma por professor, e a semana de cada professor para encontrar vaga a quem pergunta pela semana que vem.</p>
+        </div>
+        <div class="pillar">
+          <h3>Aulas particulares e de grupo</h3>
+          <p>A aula particular é de um aluno e a de grupo tem os seus lugares. O cartão de cada aula diz quantos estão ocupados, e lá dentro está a lista de alunos.</p>
+        </div>
+        <div class="pillar">
+          <h3>Aulas que se repetem</h3>
+          <p>A aula de todas as terças cria-se uma vez. Antes de guardar, a agenda mostra que dias cabem e porque salta os outros: um feriado, outra aula à mesma hora.</p>
+        </div>
+        <div class="pillar">
+          <h3>Pacotes de aulas</h3>
+          <p>O pacote compra-se de uma vez e vai sendo gasto sozinho. Na receção vê-se num relance a quem restam aulas e quem tem algo por pagar.</p>
+        </div>
+        <div class="pillar">
+          <h3>Notas e programa de cada aluno</h3>
+          <p>Na ficha do aluno, os seus programas com o objetivo e o plano de trabalho, e as notas de cada aula: o que se trabalhou e como correu.</p>
+        </div>
+        <div class="pillar">
+          <h3>Cobrança e faturação</h3>
+          <p>Um talão com as aulas e o material, as cobranças pendentes ordenadas por antiguidade, o fecho de caixa e as faturas como pede o VeriFactu.</p>
+        </div>
+        <div class="pillar">
+          <h3>Marcações online</h3>
+          <p>Os seus alunos marcam e desmarcam no portal da sua academia, entrando com o e-mail e sem palavras-passe, com as regras que definir.</p>
+        </div>
+        <div class="pillar">
+          <h3>Professores</h3>
+          <p>Picam o ponto com o seu PIN, e a sua escala e o seu calendário laboral estão na mesma aplicação.</p>
+        </div>
+        <div class="pillar">
+          <h3>Relatórios em Excel</h3>
+          <p>Marcações, clientes, cobranças, caixa diária, pacotes, histórico, existências e movimentos, e todos se descarregam em Excel para o seu contabilista.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pantallas">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Ecrãs</p>
+        <h2>Isto é a aplicação, sem retoques.</h2>
+        <p>Capturas de uma instalação real com dados de demonstração. Nem esboços nem maquetes.</p>
+      </div>
+      <div class="pantallas">
+        <div class="pantalla">
+          <figure>
+            <img src="/turnera/inicio.jpg" alt="Ecrã inicial do Turnera com a caixa do dia, as marcações de hoje e os valores em dívida" width="1440" height="900" loading="lazy" decoding="async">
+            <figcaption><b>Início.</b> O que é preciso saber ao abrir: a caixa do dia, as marcações que faltam, o que está por cobrar e o stock que está a acabar.</figcaption>
+          </figure>
+        </div>
+        <div class="pantalla">
+          <figure>
+            <img src="/turnera/agenda.jpg" alt="A agenda de um dia repartida em colunas por profissional, com o estado de cada marcação a cores" width="1440" height="900" loading="lazy" decoding="async">
+            <figcaption><b>Agenda.</b> O dia em colunas, uma por profissional ou por sala. A cor diz em que estado está cada marcação sem a abrir.</figcaption>
+          </figure>
+        </div>
+        <div class="pantalla">
+          <figure>
+            <img src="/turnera/tpv.jpg" alt="O ponto de venda com um talão de dois serviços, desconto, forma de pagamento e troco" width="1440" height="900" loading="lazy" decoding="async">
+            <figcaption><b>Ponto de venda.</b> O talão do cliente que está ao balcão, com os seus pacotes de sessões à vista e o troco calculado.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="preguntas">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Perguntas frequentes</p>
+        <h2>O que nos perguntam antes de decidir.</h2>
+      </div>
+
+      <div class="faq">
+
+        <div class="faq__columna">
+
+        <div class="faq__grupo">
+          <h3>Preço e faturação</h3>
+
+          <details class="faq__item">
+            <summary>Quanto custa?</summary>
+            <div class="faq__respuesta">
+              <p>39 € por mês com dois recursos incluídos. Cada recurso adicional custa um pouco menos que o anterior, e com dez paga 90 €. A partir daí, 5 € por cada recurso adicional até vinte. Com mais de vinte, falamos. Preços sem IVA, e se pagar o ano adiantado <b>oferecemos-lhe dois meses</b>. Calcule o seu em <a href="/pt/turnera#precios">Preços</a>.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>O que conta como recurso?</summary>
+            <div class="faq__respuesta">
+              <p>Cada espaço que pode estar ocupado em simultâneo na sua agenda. Se no seu centro se podem atender três pessoas ao mesmo tempo, são três recursos.</p>
+              <ul class="faq__lista">
+                <li>Duas cabines onde se trabalha em paralelo são dois recursos. Se dois profissionais se revezam na mesma cabine e nunca coincidem, é um.</li>
+                <li>Quatro boxes com quatro fisioterapeutas em simultâneo são quatro, ainda que no quadro haja seis pessoas.</li>
+                <li>Seis campos reserváveis são seis. Os monitores e quem está na receção não contam.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Há fidelização?</summary>
+            <div class="faq__respuesta">
+              <p>Não. Se paga ao mês, cancela quando quiser: continua a entrar até ao fim do mês que já tem pago e não volta a ser cobrado.</p>
+              <p>Se pagou o ano adiantado e sair antes do tempo, <b>devolvemos-lhe o que não utilizou, contando os meses que utilizou ao preço mensal</b>. O desconto de dois meses é o que se paga por se comprometer durante um ano, pelo que se perde se o ano não se cumprir; o dinheiro dos meses que não vai utilizar volta para a sua conta.</p>
+              <p>Com um centro de 56 € por mês: paga 560 € pelo ano e sai aos três meses. Esses três meses custam 168 €, pelo que lhe devolvemos 392 €.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>O dia a dia</h3>
+
+          <details class="faq__item">
+            <summary>Os meus clientes podem marcar sozinhos?</summary>
+            <div class="faq__respuesta">
+              <p>Sim. O seu centro tem o seu próprio portal de marcações, no seu endereço do Turnera, onde os clientes veem o que está livre, marcam e anulam. Entram com o e-mail, sem palavras-passe para recordar.</p>
+              <p>As regras define-as o utilizador nas preferências: com quantos dias de antecedência máxima se pode marcar, com que antecedência mínima, até quando se pode anular, quem pode marcar sem pacote de sessões e se alguém com dívida pendente pode continuar a marcar. O utilizador decide quando o ativa e que serviços e cabines são reserváveis pela internet.</p>
+            </div>
+          </details>
+        </div>
+
+        </div>
+
+        <div class="faq__columna">
+
+        <div class="faq__grupo">
+          <h3>Teste e registo</h3>
+
+          <details class="faq__item">
+            <summary>Posso experimentar antes de pagar?</summary>
+            <div class="faq__respuesta">
+              <p>Trinta dias, sem cartão. Entra com dados de exemplo já carregados — clientes, serviços, marcações de hoje — para ver como se comporta cheio e não perante um ecrã vazio. Quando começar com os verdadeiros, apagam-se com um clique.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Quanto tempo demora a ter o centro a funcionar?</summary>
+            <div class="faq__respuesta">
+              <p>O teste, minutos. Com arranque e sem dados para trazer, um par de dias. Se for preciso migrar de outro programa, contamos entre uma e três semanas, quase tudo à espera de que o seu atual fornecedor lhe entregue os dados.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__grupo">
+          <h3>Trazer os meus dados de outro programa</h3>
+
+          <details class="faq__item">
+            <summary>Estou noutro programa. Podem trazer o que tenho?</summary>
+            <div class="faq__respuesta">
+              <p>Sim, e é a primeira coisa que fazemos. Trazemos clientes, serviços e tarifas, produtos, profissionais, pacotes de sessões e sessões pendentes, marcações, visitas feitas e processo clínico. Basta-nos folhas de Excel ou CSV, que é o que todos os programas do setor sabem exportar.</p>
+            </div>
+          </details>
+        </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="demo">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Demo</p>
+        <h2>Mostramos-lhe e diga-nos o que acha.</h2>
+        <p>Conte-nos que centro tem e com o que se debate agora. Mostramos-lhe o Turnera a funcionar com dados reais e falamos sobre se lhe serve. Lê quem conhece o programa por dentro, não um comercial.</p>
+        <p>O Turnera também é para <a href="/pt/turnera/clinicas">clínicas</a>, <a href="/pt/turnera/centros-deportivos">centros de treino e clubes</a> e o <a href="/pt/turnera/recursos-humanos">controlo de assiduidade da equipa</a>.</p>
+      </div>
+      <div class="actions rrhh-cta">
+        <a class="btn btn--solid" href="/pt/turnera#demo">Pedir uma demo</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="shell footer__inner">
+    <span>© 2026 DEVEL · Valência, Espanha · O Turnera é um produto da DEVEL</span>
+    <span><a href="/legal">Aviso legal e privacidade</a> · <a href="/pt/">devel.es</a></span>
+  </div>
+</footer>
+
+
+</body></html>

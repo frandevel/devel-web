@@ -9,6 +9,9 @@ const PAGINAS = [
   { plantilla: 'plantillas/devel.html',   catalogo: 'devel',   ruta: '' },
   { plantilla: 'plantillas/turnera.html', catalogo: 'turnera', ruta: 'turnera' },
   { plantilla: 'plantillas/recursos-humanos.html', catalogo: 'recursos-humanos', ruta: 'turnera/recursos-humanos' },
+  { plantilla: 'plantillas/clinicas.html', catalogo: 'clinicas', ruta: 'turnera/clinicas' },
+  { plantilla: 'plantillas/centros-deportivos.html', catalogo: 'centros-deportivos', ruta: 'turnera/centros-deportivos' },
+  { plantilla: 'plantillas/academias.html', catalogo: 'academias', ruta: 'turnera/academias' },
   { plantilla: 'plantillas/manual.html',  catalogo: 'manual',  ruta: 'turnera/manual' },
   { plantilla: 'plantillas/novedades.html', catalogo: 'novedades', ruta: 'turnera/novedades' },
   // El aviso legal no esta en portugues: un texto juridico traducido sin revisar es mas riesgo que su falta. Desde
@@ -89,6 +92,69 @@ function conLasCapturasEnSuIdioma(html, idioma) {
     existsSync(join('..', CAPTURAS, carpeta, nombre)) ? `"${CAPTURAS}${carpeta}/${nombre}"` : coincidencia);
 }
 
+/** El nombre corto de cada pagina en las migas de pan de los datos estructurados. */
+const NOMBRES_DE_PAGINA = {
+  '': { es: 'DEVEL' },
+  'turnera': { es: 'Turnera' },
+  'turnera/recursos-humanos': { es: 'Recursos Humanos', en: 'Human Resources', de: 'Personal', pt: 'Recursos Humanos' },
+  'turnera/clinicas': { es: 'Clínicas', en: 'Clinics', de: 'Praxen und Kliniken', pt: 'Clínicas' },
+  'turnera/centros-deportivos': { es: 'Centros deportivos', en: 'Training centres and clubs', de: 'Trainingszentren und Vereine', pt: 'Centros desportivos' },
+  'turnera/academias': { es: 'Academias', en: 'Academies', de: 'Schulen und Akademien', pt: 'Academias' },
+  'turnera/manual': { es: 'Manual', en: 'Manual', de: 'Handbuch', pt: 'Manual' },
+  'turnera/novedades': { es: 'Novedades', en: "What's new", de: 'Neuigkeiten', pt: 'Novidades' },
+  'legal': { es: 'Información legal', en: 'Legal information', de: 'Rechtliche Hinweise' }
+};
+const IDIOMA_DE_LOS_DATOS = { es: 'es', en: 'en', de: 'de', pt: 'pt-PT' };
+
+function textoPlano(html) {
+  return html.replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g, ' ').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+    .replace(/&amp;/g, '&')
+    .replace(/\s+/g, ' ').replace(/ ([.,;:)])/g, '$1').trim();
+}
+
+/** `turnera/clinicas` cuelga de `turnera`, que cuelga de la portada. */
+function rutasDeLasMigas(ruta) {
+  const tramos = ruta === '' ? [] : ruta.split('/');
+  return [''].concat(tramos.map((_, n) => tramos.slice(0, n + 1).join('/')));
+}
+
+/**
+ * Los datos estructurados de cada pagina salen de la propia pagina ya traducida: su titulo, su descripcion, sus
+ * migas y, si tiene preguntas frecuentes a la vista, esas mismas preguntas. Asi no hay un texto en los datos que
+ * no este en la pagina, ni una version en espanol escondida en la alemana.
+ */
+function conLosDatosEstructurados(html, idioma, pagina) {
+  const url = SITIO + direccionDe(idioma, pagina.ruta);
+  const titulo = textoPlano((html.match(/<title>([\s\S]*?)<\/title>/) || [])[1] || '');
+  const descripcion = textoPlano((html.match(/<meta name="description" content="([^"]*)"/) || [])[1] || '');
+  const preguntas = [...html.matchAll(/<details class="faq__item">\s*<summary>([\s\S]*?)<\/summary>\s*<div class="faq__respuesta">([\s\S]*?)<\/div>\s*<\/details>/g)]
+    .map(([, pregunta, respuesta]) => ({
+      '@type': 'Question', name: textoPlano(pregunta), acceptedAnswer: { '@type': 'Answer', text: textoPlano(respuesta) }
+    }));
+  const estaPagina = {
+    '@type': preguntas.length > 0 ? 'FAQPage' : 'WebPage', '@id': url + '#pagina', url, name: titulo,
+    description: descripcion, inLanguage: IDIOMA_DE_LOS_DATOS[idioma], isPartOf: { '@id': SITIO + '/#web' }
+  };
+  if (pagina.ruta.startsWith('turnera')) estaPagina.about = { '@id': SITIO + '/turnera#producto' };
+  const grafo = [estaPagina];
+  const migas = rutasDeLasMigas(pagina.ruta);
+  if (migas.length > 1) {
+    estaPagina.breadcrumb = { '@id': url + '#migas' };
+    grafo.push({
+      '@type': 'BreadcrumbList', '@id': url + '#migas',
+      itemListElement: migas.map((ruta, posicion) => ({
+        '@type': 'ListItem', position: posicion + 1,
+        name: NOMBRES_DE_PAGINA[ruta][idioma] ?? NOMBRES_DE_PAGINA[ruta].es,
+        item: SITIO + direccionDe(idioma, ruta)
+      }))
+    });
+  }
+  if (preguntas.length > 0) estaPagina.mainEntity = preguntas;
+  const json = JSON.stringify({ '@context': 'https://schema.org', '@graph': grafo }, null, 2).replace(/</g, '\\u003c');
+  return html.replace('</head>', `<script type="application/ld+json">\n${json}\n</script>\n</head>`);
+}
+
 function construir() {
   for (const pagina of PAGINAS) {
     const plantilla = readFileSync(pagina.plantilla, 'utf8');
@@ -117,6 +183,7 @@ function construir() {
       html = conLosEnlacesInternosEnSuIdioma(html, idioma);
       html = conLasCapturasEnSuIdioma(html, idioma);
       html = html.replace('<!--selector-de-idioma-->', selectorDeIdioma(idioma, pagina));
+      html = conLosDatosEstructurados(html, idioma, pagina);
 
       const destino = join('..', direccionDe(idioma, pagina.ruta).replace(/^\//, ''), 'index.html');
       mkdirSync(dirname(destino), { recursive: true });
@@ -130,7 +197,8 @@ function sitemap() {
   const hoy = new Date().toISOString().slice(0, 10);
   const entradas = PAGINAS.flatMap((pagina) => idiomasDe(pagina).map((idioma) => {
     const alternativas = idiomasDe(pagina).map((otro) =>
-      `    <xhtml:link rel="alternate" hreflang="${otro}" href="${SITIO}${direccionDe(otro, pagina.ruta)}"/>`).join('\n');
+      `    <xhtml:link rel="alternate" hreflang="${otro}" href="${SITIO}${direccionDe(otro, pagina.ruta)}"/>`)
+      .concat(`    <xhtml:link rel="alternate" hreflang="x-default" href="${SITIO}${direccionDe(PREDETERMINADO, pagina.ruta)}"/>`).join('\n');
     return `  <url>
     <loc>${SITIO}${direccionDe(idioma, pagina.ruta)}</loc>
     <lastmod>${hoy}</lastmod>

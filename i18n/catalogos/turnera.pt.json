@@ -1,5 +1,5 @@
 {
-  "t56d338c7": "Software de gestão para clínicas e estética · Turnera",
+  "t0c8264b5": "Software para clínicas, centros de treino e academias · Turnera",
   "t21a6cafa": "devel",
   "t86ef57e7": "O que faz",
   "t628c066b": "Preços",
@@ -11,7 +11,7 @@
   "t91d5663d": "· produto",
   "t403bdd18": "A agenda, a ficha e a caixa.",
   "td840d303": "No mesmo ecrã.",
-  "t201b79c3": "O Turnera é a aplicação de gestão para negócios que atendem por marcação: clínicas, centros de estética, fisioterapia, podologia, veterinária, clubes desportivos e academias de música, idiomas ou explicações. O que um balcão faz num dia cabe em três ecrãs, e nenhum obriga a sair dele para cobrar.",
+  "t75b6d183": "O Turnera é o software de gestão para negócios que atendem por marcação: clínicas, centros de estética, fisioterapia, podologia, veterinária, centros de treino, clubes desportivos e academias de música, línguas ou explicações. O que um balcão faz num dia cabe em três ecrãs, e nenhum o obriga a sair dele para cobrar.",
   "td44582c6": "Pedir uma demo",
   "t30db8ed3": "Ver como é",
   "ta22b32a8": "O dia de um centro",
@@ -72,6 +72,7 @@
   "t643ff745": "Clínica, estética, fisioterapia",
   "t40c4ac90": "Uma pessoa por cabine e uma hora reservada para ela. A ficha guarda os seus antecedentes, as suas alergias, o caso aberto e a evolução de cada sessão, e o pacote de dez tratamentos vai sendo descontado sozinho à medida que vem.",
   "t38d5e9e7": "É de onde vem o Turnera: podologia, veterinária, dentária e fisioterapia usam o mesmo.",
+  "t7c77e27c": "Ver o Turnera para clínicas",
   "tc4e91ba2": "Como se monta",
   "t7e322096": "clínica.",
   "t89fe2039": "Atividade:",
@@ -83,6 +84,7 @@
   "t4359992f": "E ainda:",
   "t9bbd34c8": "Um a um, e quase sempre por pacotes de sessões: dez sessões que se compram de uma vez e se gastam ao longo de dois meses. A ficha do aluno leva as suas notas de acompanhamento e o seu saldo, pelo que se sabe de relance quantas sessões lhe restam e quando expiram.",
   "t5dbcc774": "Se trabalha em vários locais, cada sala é um recurso e a agenda mostra-lhe o dia inteiro de uma só vez.",
+  "t97e2807d": "Ver o Turnera para centros de treino",
   "t35288d79": "treino.",
   "tc5368c28": "a sua sala ou a do ginásio, capacidade 1.",
   "t18cace90": "pacotes de sessões com validade.",
@@ -102,6 +104,7 @@
   "ta2fb14c9": "Academia de música, idiomas ou explicações",
   "tae7505f6": "A aula particular é de um aluno e a de grupo tem os seus lugares, cada uma na sua sala, e o dia vê-se sala a sala ou professor a professor. A ficha do aluno leva as suas notas de aula, o seu programa e o seu pacote de aulas, e na receção vê-se de relance a quem restam aulas e quem tem algo por pagar.",
   "te6955754": "E a aplicação fala como uma academia: alunos, professores, salas e aulas, não pacientes nem cabines.",
+  "tb0dfaba5": "Ver o Turnera para academias",
   "tfddf3734": "academia.",
   "t985e479f": "uma sala por sala, com os seus lugares.",
   "t730dcf30": "aula particular lotação 1, grupo com a sua lotação.",
@@ -345,7 +348,7 @@
   "tccb13fe5": "© 2026 DEVEL · Valência, Espanha · O Turnera é um produto da DEVEL",
   "t34ba9886": "Aviso legal e privacidade",
   "tcd7c8586": "devel.es",
-  "t03489b01": "Agenda por profissional, ficha com histórico clínico, pacotes de sessões, TPV e relatórios. Para clínicas, estética, fisioterapia, clubes desportivos e academias. Sem comissão por marcação.",
+  "t22eb863c": "Marcações online, ficha com histórico clínico, pacotes de sessões, TPV e picagem de ponto do pessoal. Para clínicas, estética, fisioterapia, centros de treino e academias. Sem comissão por marcação.",
   "td1011557": "Turnera — Software de gestão para negócios que atendem por marcação",
   "t29713b45": "Agenda, ficha do cliente, pacotes de sessões e cobrança num só ecrã. Sem comissão por marcação.",
   "ta950f224": "Turnera: a agenda, a ficha e a caixa no mesmo ecrã",
@@ -357,5 +360,8 @@
   "t3d5749b8": "O ponto de venda com um talão de dois serviços, desconto, forma de pagamento e troco",
   "tf8791510": "Tipos de centro",
   "t73568c2e": "Como paga",
-  "t6b50c5b5": "Uma clínica de fisioterapia com três cabines, neste momento com agenda em papel…"
+  "t6b50c5b5": "Uma clínica de fisioterapia com três cabines, neste momento com agenda em papel…",
+  "t56d338c7": "Software de gestão para clínicas e estética · Turnera",
+  "t201b79c3": "O Turnera é a aplicação de gestão para negócios que atendem por marcação: clínicas, centros de estética, fisioterapia, podologia, veterinária, clubes desportivos e academias de música, idiomas ou explicações. O que um balcão faz num dia cabe em três ecrãs, e nenhum obriga a sair dele para cobrar.",
+  "t03489b01": "Agenda por profissional, ficha com histórico clínico, pacotes de sessões, TPV e relatórios. Para clínicas, estética, fisioterapia, clubes desportivos e academias. Sem comissão por marcação."
 }

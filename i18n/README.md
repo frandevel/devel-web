@@ -73,5 +73,13 @@ El selector, los `hreflang` y el sitemap salen solos.
   en la plantilla del sitio: cuando el manual cambie, hay que traer el contenido, volver a extraer y traducir lo
   que sea nuevo.
 - Cada página declara sus tres alternativas más `x-default`, que apunta al español.
+- **Páginas por tipo de centro.** `clinicas-es.html`, `centros-deportivos-es.html` y `academias-es.html` son las
+  páginas de aterrizaje de `/turnera/clinicas`, `/turnera/centros-deportivos` y `/turnera/academias`. Reutilizan a
+  propósito frases y preguntas de la página de Turnera copiadas tal cual: con el mismo texto sale la misma clave y la
+  traducción ya existe. Si cambias una de esas preguntas en Turnera, cámbiala también en ellas.
+- **Los datos estructurados de cada página los añade `construir.mjs`** (WebPage, o FAQPage si la página tiene
+  preguntas `faq__item` a la vista, y las migas de pan), sacándolos del título, la descripción y las preguntas ya
+  traducidas. No se escriben a mano en la plantilla; lo que sí va a mano es el producto (SoftwareApplication) en
+  `turnera-es.html` y la organización en `devel-es.html`. Nada de valoraciones ni reseñas: solo lo que se ve en la web.
 - **Las rutas de las imágenes tienen que ser absolutas** (`/turnera/inicio.jpg`), porque las páginas viven a
   distinta profundidad y Vercel sirve `/turnera` sin barra final.

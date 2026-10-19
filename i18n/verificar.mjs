@@ -8,7 +8,10 @@ const PAGINAS = ['/', '/en/', '/de/', '/turnera/', '/en/turnera/', '/de/turnera/
                  '/turnera/manual/', '/en/turnera/manual/', '/de/turnera/manual/',
                  '/turnera/novedades/', '/en/turnera/novedades/', '/de/turnera/novedades/',
                  '/legal/', '/en/legal/', '/de/legal/',
-                 '/pt/', '/pt/turnera/', '/pt/turnera/manual/', '/pt/turnera/novedades/', '/pt/turnera/recursos-humanos/'];
+                 '/pt/', '/pt/turnera/', '/pt/turnera/manual/', '/pt/turnera/novedades/', '/pt/turnera/recursos-humanos/',
+                 '/turnera/recursos-humanos/', '/en/turnera/recursos-humanos/', '/de/turnera/recursos-humanos/',
+                 ...['clinicas', 'centros-deportivos', 'academias'].flatMap((ruta) =>
+                   ['', '/en', '/de', '/pt'].map((prefijo) => `${prefijo}/turnera/${ruta}/`))];
 const PREFIJO = { es: '', en: '/en', de: '/de', pt: '/pt' };
 
 let problemas = 0;
@@ -25,7 +28,12 @@ for (const ruta of PAGINAS) {
     alternativas: [...document.querySelectorAll('link[rel=alternate]')].map(l => `${l.hreflang}:${new URL(l.href).pathname}`),
     selector: [...document.querySelectorAll('.idiomas__opcion')].map(a => a.getAttribute('href') + (a.getAttribute('aria-current') ? '*' : '')),
     sinTraducir: (document.body.innerHTML.match(/\{\{t[0-9a-f]{8}\}\}/g) || []).length,
-    ogLocale: document.querySelector('meta[property="og:locale"]')?.content
+    ogLocale: document.querySelector('meta[property="og:locale"]')?.content,
+    descripcion: document.querySelector('meta[name="description"]')?.content ?? '',
+    datos: [...document.querySelectorAll('script[type="application/ld+json"]')].map((bloque) => {
+      try { return (JSON.parse(bloque.textContent)['@graph'] ?? []).map((nodo) => [].concat(nodo['@type']).join('+')).join(','); }
+      catch { return 'NO ES JSON'; }
+    })
   }));
 
   // El selector tiene que llevar a las otras dos versiones de ESTA página, no a la misma ni a la portada:
@@ -35,14 +43,16 @@ for (const ruta of PAGINAS) {
   const esperados = idiomasDeLaPagina.map((i) => PREFIJO[i] + sinPrefijo);
   const selectorMal = info.selector.some((href, n) => href.replace('*', '').replace(/\/$/, '') !== esperados[n].replace(/\/$/, ''));
 
-  const mal = info.sinTraducir > 0 || fallos.length > 0 || respuesta.status() !== 200
+  const datosMal = info.datos.some((tipos) => tipos === 'NO ES JSON') || info.datos.length === 0;
+  const mal = info.sinTraducir > 0 || fallos.length > 0 || respuesta.status() !== 200 || datosMal
+    || !info.titulo || !info.descripcion
     || info.selector.length !== idiomasDeLaPagina.length || selectorMal;
   if (mal) problemas++;
   console.log(`${mal ? 'MAL' : ' OK'} ${ruta}  lang=${info.idioma}  og=${info.ogLocale}`);
   console.log(`     "${info.titulo}"`);
   console.log(`     canonica ${new URL(info.canonica).pathname} | alt ${info.alternativas.join(' ')}`);
   console.log(`     selector ${info.selector.join(' ')}${selectorMal ? '  <-- NO LLEVA A LA MISMA PAGINA' : ''}`);
-  console.log(`     sin traducir ${info.sinTraducir} | errores ${fallos.length}`);
+  console.log(`     sin traducir ${info.sinTraducir} | errores ${fallos.length} | datos ${info.datos.join(' / ')}${datosMal ? '  <-- DATOS ESTRUCTURADOS MAL' : ''}`);
   await contexto.close();
 }
 console.log(problemas === 0 ? `\nlas ${PAGINAS.length} correctas` : `\n${problemas} con problemas`);

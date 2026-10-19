@@ -47,7 +47,7 @@
       "@id": "https://devel.es/#web",
       "url": "https://devel.es/",
       "name": "DEVEL",
-      "inLanguage": ["es", "en", "de"],
+      "inLanguage": ["es", "en", "de", "pt"],
       "publisher": { "@id": "https://devel.es/#organizacion" }
     }
   ]
@@ -384,6 +384,24 @@ footer{
 }
 
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://devel.es/#pagina",
+      "url": "https://devel.es/",
+      "name": "DEVEL · Software a medida, trading cuantitativo e IA",
+      "description": "Desarrollo de software a medida, estrategias automáticas de trading cuantitativo y consultoría de IA desde Valencia. Cuéntanos tu proyecto: te contesta quien lo va a construir.",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@id": "https://devel.es/#web"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <header class="site">
@@ -488,12 +506,13 @@ footer{
               <h3 class="product__name">Turnera</h3>
             </div>
           </div>
-          <p>Agenda, ficha de cliente, bonos y cobro para negocios que atienden con cita: clínicas, centros de estética, fisioterapia y entrenadores. Encuentra el hueco y coloca ahí la cita.</p>
+          <p>Agenda, ficha de cliente, bonos y cobro para negocios que atienden con cita: clínicas, centros de estética, fisioterapia, centros de entrenamiento y academias. Encuentra el hueco y coloca ahí la cita.</p>
           <ul class="specs">
             <li>Citas, servicios, productos y caja en una sola pantalla</li>
             <li>Bonos de sesiones y saldo pendiente por cliente</li>
             <li>Portal donde el propio cliente reserva su hora</li>
             <li>Una instalación por negocio, con sus datos en su casa</li>
+            <li>Fichaje, cuadrante y registro de jornada de la plantilla</li>
           </ul>
           <span class="tag">Mejorando cada día</span>
           <a class="product__link" href="/turnera">Ver Turnera por dentro →</a>

@@ -2,8 +2,8 @@
 <!DOCTYPE html><html lang="de"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Praxissoftware für Praxen und Kosmetikstudios · Turnera</title>
-<meta name="description" content="Kalender pro Fachkraft, Akte mit Krankengeschichte, Mehrfachkarten, Kasse und Berichte. Für Kliniken, Kosmetik, Physiotherapie, Sportvereine und Schulen. Ohne Buchungsprovision.">
+<title>Software für Praxen, Trainingszentren und Schulen · Turnera</title>
+<meta name="description" content="Online-Terminbuchung, Akte mit Krankengeschichte, Mehrfachkarten, Kasse und Zeiterfassung des Personals. Für Praxen, Kosmetik, Physiotherapie, Trainingszentren und Schulen. Ohne Buchungsprovision.">
 <link rel="canonical" href="https://devel.es/de/turnera">
 <link rel="alternate" hreflang="es" href="https://devel.es/turnera">
 <link rel="alternate" hreflang="en" href="https://devel.es/en/turnera">
@@ -561,23 +561,41 @@ footer{
       "@id": "https://devel.es/turnera#producto",
       "name": "Turnera",
       "applicationCategory": "BusinessApplication",
-      "applicationSubCategory": "Software de gestión de citas y clientes",
-      "operatingSystem": "Navegador web",
+      "applicationSubCategory": "Software de gestión de citas, clientes y personal",
+      "operatingSystem": "Navegador web, Android",
       "url": "https://devel.es/turnera",
       "image": "https://devel.es/turnera/turnera-og.png",
       "inLanguage": ["es", "en"],
-      "description": "Software de gestión para clínicas, centros de estética, fisioterapia, clubes deportivos y academias: agenda por profesional, ficha de cliente con historia clínica, bonos, punto de venta e informes.",
+      "description": "Software de gestión para clínicas, centros de estética, fisioterapia, centros de entrenamiento, clubes deportivos y academias: agenda por profesional y por sala, reservas online, ficha de cliente con historia clínica, bonos, punto de venta, facturación con VeriFactu, informes y control horario del personal.",
       "featureList": [
         "Agenda por profesional y por sala",
+        "Portal de reservas online",
         "Ficha de cliente e historia clínica",
+        "Consentimientos informados",
         "Bonos y paquetes de sesiones",
-        "Punto de venta y cobros pendientes",
         "Clases colectivas con aforo",
-        "Informes exportables a Excel"
+        "Punto de venta y cobros pendientes",
+        "Facturación con VeriFactu",
+        "Informes exportables a Excel",
+        "Fichaje con PIN, cuadrante y calendario laboral",
+        "Registro de jornada"
       ],
       "audience": {
         "@type": "BusinessAudience",
-        "name": "Clínicas, centros de estética, fisioterapia, podología, veterinaria, entrenadores personales, clubes deportivos y academias"
+        "name": "Clínicas, centros de estética, fisioterapia, podología, veterinaria, entrenadores personales, centros de entrenamiento, clubes deportivos, academias y equipos de trabajo"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://devel.es/turnera#precios",
+        "price": "39",
+        "priceCurrency": "EUR",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "39",
+          "priceCurrency": "EUR",
+          "unitCode": "MON",
+          "valueAddedTaxIncluded": false
+        }
       },
       "publisher": { "@id": "https://devel.es/#organizacion" }
     },
@@ -586,18 +604,424 @@ footer{
       "@id": "https://devel.es/#organizacion",
       "name": "DEVEL",
       "url": "https://devel.es/",
+      "logo": "https://devel.es/devel-isotipo.png",
       "email": "hola@devel.es",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Valencia",
         "addressCountry": "ES"
       }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://devel.es/de/turnera#pagina",
+      "url": "https://devel.es/de/turnera",
+      "name": "Software für Praxen, Trainingszentren und Schulen · Turnera",
+      "description": "Online-Terminbuchung, Akte mit Krankengeschichte, Mehrfachkarten, Kasse und Zeiterfassung des Personals. Für Praxen, Kosmetik, Physiotherapie, Trainingszentren und Schulen. Ohne Buchungsprovision.",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@id": "https://devel.es/#web"
+      },
+      "about": {
+        "@id": "https://devel.es/turnera#producto"
+      },
+      "breadcrumb": {
+        "@id": "https://devel.es/de/turnera#migas"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was kostet es?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "39 € im Monat mit zwei Ressourcen inklusive. Jede weitere Ressource kostet etwas weniger als die vorherige, und mit zehn zahlen Sie 90 €. Ab dann 5 € für jede weitere Ressource bis zwanzig. Bei mehr als zwanzig sprechen wir darüber. Preise zzgl. MwSt., und wenn Sie das Jahr im Voraus zahlen, schenken wir Ihnen zwei Monate. Berechnen Sie Ihren Preis unter Preise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was zählt als Ressource?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jede Lücke in Ihrem Kalender, die gleichzeitig belegt sein kann. Wenn Ihr Betrieb drei Personen gleichzeitig behandeln kann, sind das drei Ressourcen. Zwei Kabinen, in denen parallel gearbeitet wird, sind zwei Ressourcen. Wechseln sich zwei Mitarbeiter in derselben Kabine ab und überschneiden sich nie, ist es eine. Vier Boxen mit vier Physiotherapeuten gleichzeitig sind vier, auch wenn sechs Leute auf der Gehaltsliste stehen. Sechs buchbare Plätze sind sechs. Trainer und wer am Empfang sitzt, zählen nicht."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Berechnen Sie pro Benutzer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Benutzer sind in jeder Größe unbegrenzt, und das ist keine Großzügigkeit: Wer pro Benutzer berechnet, treibt die Leute dazu, Passwörter zu teilen, und in einem Programm mit Patientenakten muss man wissen, wer welche Akte geöffnet hat. Ein Benutzer pro Person gehört dazu, wenn das System ernst gemeint ist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Und nach der Zahl der Kunden in meiner Datenbank?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Auch nicht. Das hieße, Ihnen zehn Jahre Arbeit in Rechnung zu stellen, und obendrein würde es Sie dazu drängen, Akten zu löschen, die Sie gesetzlich aufbewahren müssen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Nehmen Sie einen Anteil vom Umsatz des Betriebs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Weder vom Umsatz noch von jeder Buchung, noch von jeder Zahlung, noch von neuen Kunden, die über das Portal kommen. Ihre Kunden gehören Ihnen, und was Sie einnehmen, gehört ganz Ihnen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert, wenn ich eine Kabine eröffne oder einen Platz schließe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Ressourcen werden am Tag Ihrer Verlängerung gezählt, also gibt es keine krummen Rechnungen mitten im Monat: Eröffnen Sie am 3. eine Kabine, zahlen Sie sie ab dem nächsten Beitrag. Schließen Sie eine, gilt dasselbe umgekehrt. Bei jährlicher Zahlung wird, wenn Sie im Laufe des Jahres wachsen, nur die Differenz für die verbleibenden Monate berechnet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gibt es eine Einrichtungsgebühr?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Wenn Sie bei null anfangen, ist die Einrichtung kostenlos: Wir richten Ihren Betrieb mit Ihnen ein. Bezahlt wird nur, wenn Ihre Daten aus einem anderen Programm übernommen werden müssen: 300 €, einmalig, und die Migration übernehmen wir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie wird bezahlt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Per Karte oder Lastschrift, monatlich oder jährlich, und Sie erhalten Ihre Rechnung automatisch. Keine Überweisungen, an die man denken muss."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gibt es eine Mindestlaufzeit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Wer monatlich zahlt, kündigt, wann er will: Sie behalten den Zugang bis zum Ende des bereits bezahlten Monats, und es wird nichts mehr abgebucht. Wenn Sie das Jahr im Voraus bezahlt haben und vorzeitig gehen, erstatten wir, was Sie nicht genutzt haben, und rechnen die genutzten Monate zum Monatspreis ab. Der Rabatt von zwei Monaten ist der Preis dafür, sich für ein Jahr zu binden, und entfällt daher, wenn das Jahr nicht vollendet wird; das Geld für die Monate, die Sie nicht nutzen, geht zurück auf Ihr Konto. Bei einem Zentrum mit 56 € im Monat: Sie zahlen 560 € für das Jahr und kündigen nach drei Monaten. Diese drei Monate kosten 168 €, also erstatten wir Ihnen 392 €."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ich habe zwei Standorte. Zahle ich doppelt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Die Zahl der Standorte ändert den Preis nicht: Es zählen nur die Ressourcen, egal wo sie sind. Zwei Standorte mit je drei Kabinen sind eine einzige Installation mit sechs Ressourcen, und Sie zahlen 69 € im Monat, genauso viel wie ein Zentrum mit sechs Kabinen unter einem Dach. Jede Filiale hat ihren eigenen Kalender, ihre eigene Kasse und ihre eigenen Berichte, und die Leitung sieht alles zusammen. Einen zweiten Standort zu eröffnen kostet nichts, nur weil Sie ihn eröffnen; es kostet dann, wenn Sie dadurch mehr Menschen gleichzeitig behandeln können, und das ist nur fair."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich es vor dem Bezahlen ausprobieren?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dreißig Tage, ohne Karte. Sie starten mit bereits geladenen Beispieldaten — Kunden, Leistungen, die Termine von heute —, damit Sie sehen, wie es sich gefüllt verhält, und nicht vor einem leeren Bildschirm sitzen. Wenn Sie mit echten Daten anfangen, sind sie mit einem Klick gelöscht."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ruft mich ein Verkäufer an?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Sie testen allein, ohne dass Ihnen jemand hinterherläuft. Aber bevor Sie zahlender Kunde werden, sprechen wir einmal miteinander, und zwar mit Absicht: In Turnera werden Sie die Patientenakten Ihrer Patienten aufbewahren, und das macht uns rechtlich mitverantwortlich. Wir wollen wissen, wen wir freischalten, und Sie sollen wissen, mit wem Sie es zu tun haben. Es ist ein Anruf, kein Verfahren."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie lange dauert es, bis der Betrieb läuft?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Testphase: Minuten. Mit Inbetriebnahme und ohne mitzubringende Daten: ein paar Tage. Bei einer Migration aus einem anderen Programm rechnen Sie mit ein bis drei Wochen, fast ausschließlich Wartezeit, bis Ihr bisheriger Anbieter die Daten herausgibt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie kündige ich, falls es dazu kommt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Über Ihr Konto, mit einem Knopf: Sie müssen niemanden anrufen und keinen Brief schicken. Sie behalten den Zugang bis zum Ende des bezahlten Zeitraums, und Ihre Daten werden dann nicht sofort gelöscht: Sie haben 30 Tage, um sie vollständig zu exportieren, und am Tag vor Ablauf der Frist erinnern wir Sie per E-Mail. Nach den 30 Tagen werden sie vom Server entfernt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ich nutze ein anderes Programm. Können Sie übernehmen, was ich habe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, und das ist das Erste, was wir tun. Wir übernehmen Kunden, Leistungen und Preise, Produkte, Mitarbeiter, Behandlungspakete und offene Sitzungen, Termine, erledigte Besuche und Krankengeschichten. Excel- oder CSV-Tabellen reichen uns, denn das kann jedes Programm der Branche exportieren."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Und wenn sich etwas nicht übernehmen lässt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Das passiert immer: Es gibt Felder, die es im anderen Programm nicht gibt oder die nur halb ausgefüllt sind. Deshalb bekommen Sie, bevor wir irgendetwas anfassen, einen Bericht darüber, was übernommen wird, was aussortiert wird und warum, und welche Akten wie Duplikate aussehen. Sie prüfen ihn, und erst dann wird wirklich importiert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Muss ich den Betrieb am Tag der Umstellung schließen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Wir übernehmen Ihre Daten ein paar Wochen vorher, und am Tag der Umstellung nur das, was in der Zwischenzeit passiert ist. Sie arbeiten bis zum letzten Tag in Ihrem Programm weiter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was kostet die Migration?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "300 €, einmalig, die Einrichtung ist inklusive. Wenn Sie von einem anderen Betrieb empfohlen wurden, 150 €. Es wird weder pro Datensatz noch pro Stunde abgerechnet, und es spielt keine Rolle, wie viele Jahre an Daten Sie mitbringen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mein bisheriges Programm lässt mich nichts exportieren. Was tun?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sie haben ein Recht auf Ihre Daten, auch wenn Ihr Anbieter keinen Knopf dafür anbietet: Das ist das Recht auf Datenübertragbarkeit nach Artikel 20 der DSGVO. Man beantragt es schriftlich, und der Anbieter ist verpflichtet, die Daten in einem maschinenlesbaren Format herauszugeben. Fordern Sie die Daten an, bevor Sie kündigen, nicht danach. Mehrere Programme der Branche löschen die Daten wenige Monate nach der Kündigung endgültig, und ihr Vertrag sagt das auch. Erst die Daten in der Hand, dann die Kündigung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wem gehören meine Daten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ihnen, und das ist kein Spruch. Sie können sie jederzeit vollständig aus dem Programm exportieren, ohne um Erlaubnis zu fragen, ohne zu zahlen und ohne uns Bescheid zu geben."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wo werden sie gespeichert?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Auf Servern innerhalb der Europäischen Union. Mit Patientenakten darin ist das keine technische Vorliebe, sondern das, was Ihnen ein unangenehmes Gespräch erspart, falls jemals jemand nachfragt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Unterschreiben wir etwas zum Datenschutz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, und das ist für uns beide Pflicht: ein Auftragsverarbeitungsvertrag. Sie sind der Verantwortliche für die Daten Ihrer Patienten, und wir verarbeiten sie in Ihrem Auftrag. Sie bekommen ihn zu Beginn unterschrieben, zusammen mit dem, was Sie für Ihr Verzeichnis der Verarbeitungstätigkeiten brauchen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann die Person am Empfang die Patientenakten sehen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein, es sei denn, Sie erlauben es ausdrücklich. Turnera unterscheidet vier Profile — Leitung, Empfang, Behandler und Leserecht —, und das des Empfangs enthält klinische Daten von Haus aus nicht. Sie können es freigeben, wenn es in Ihrem Betrieb sinnvoll ist, aber als Ihre Entscheidung und nicht aus Nachlässigkeit unsererseits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich nachsehen, wer die Akte eines Patienten geöffnet hat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Wer welche Akte wann öffnet, wird protokolliert, und die Leitung des Betriebs kann es einsehen. Das ist Ihre Pflicht als Verantwortlicher für diese Daten, also liefern wir es Ihnen lieber fertig."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gibt es Sicherungskopien?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Täglich, mit einer Woche Verlauf und Momentaufnahmen des ganzen Servers. Und sie werden durch Wiederherstellen geprüft, denn eine Sicherung, die nie wiederhergestellt wurde, ist keine Sicherung, sondern ein Ordner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Erfüllen Sie VeriFactu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Turnera stellt Rechnungen so aus, wie es VeriFactu verlangt: Jeder Verkauf erhält seine Nummer, seinen QR-Code und seinen verketteten Datensatz, und keine Rechnung kann gelöscht oder geändert werden: Korrekturen erfolgen per Korrekturrechnung, wie es die Vorschrift will. Die automatische Übermittlung an die spanische Steuerbehörde schalten wir für jedes Zentrum ein, sobald es uns bevollmächtigt. Nach dem geltenden Zeitplan sind Gesellschaften ab dem 1. Januar 2027 und Selbstständige ab dem 1. Juli 2027 verpflichtet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich meinem Steuerberater etwas geben?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Die Berichte zu Zahlungen, Tageskasse und Bewegungen gibt es als Excel oder CSV, das jede Steuerberatung öffnen kann, mit den Zahlungen nach Zahlungsart getrennt, damit die Kasse mit dem Kartenterminal übereinstimmt. Und wenn Sie mit Turnera Rechnungen stellen, gibt es das Buch der ausgestellten Rechnungen mit Nummerierung, MwSt.-Aufschlüsselung und täglicher Sammelbuchung mit einem Klick als Excel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist im Preis enthalten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alles. Es gibt keine Tarife mit beschnittenen Funktionen und keine Module, die man extra kauft: Kalender, Kundenakte, Krankengeschichte, Kasse und Kassenabschluss, Behandlungspakete und offene Posten, Produkte und Bestand, Berichte und mehrere Filialen. Und was als Nächstes kommt — das Buchungsportal, WhatsApp-Erinnerungen, die App für Behandler — kommt für alle. Mit der Größe ändert sich der Preis, nicht das, was Sie tun können."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Können Terminerinnerungen per WhatsApp verschickt werden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es ist auf dem Weg und das Nächste, was kommt, denn es erreicht die Leute dort, wo sie wirklich lesen. Jeder Tarif wird eine Zahl von Nachrichten pro Monat enthalten; wer mehr verschickt, zahlt sie zum Selbstkostenpreis, einzeln auf der Rechnung ausgewiesen. Es ist das Einzige, was nach Verbrauch abgerechnet wird, weil es das Einzige mit echten Kosten pro Nachricht ist. Die Erinnerung enthält den Namen Ihres Betriebs, Datum und Uhrzeit, und der Patient kann antworten, um zu bestätigen oder abzusagen. Was sie nie enthalten wird, ist die Behandlung: WhatsApp erlaubt es nicht, das Datenschutzrecht rät davon ab, und es gibt keinen Umweg, der gut ausgeht."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Und per E-Mail?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Per E-Mail ja, vom ersten Tag an: Terminerinnerungen und alles, was nicht eilt, gehen so hinaus, in der Sprache des Kunden, der sie bekommt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Können meine Kunden selbst buchen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Ihr Zentrum hat ein eigenes Buchungsportal unter Ihrer Turnera-Adresse, auf dem Ihre Kunden sehen, was frei ist, buchen und stornieren. Sie melden sich mit ihrer E-Mail an, ohne Passwörter, die man sich merken muss. Die Regeln legen Sie in den Einstellungen fest: wie viele Tage im Voraus gebucht werden kann, mit welchem Vorlauf, bis wann storniert werden kann, wer ohne Gutschein buchen darf und ob jemand mit offenen Schulden weiter buchen kann. Sie entscheiden, wann Sie es einschalten und welche Leistungen und Kabinen online buchbar sind."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gibt es eine App für Behandler?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sie ist auf dem Weg: eine abgespeckte Version fürs Handy mit dem, was an dem Tag ansteht, den Terminen und wenig mehr. Gedacht für Menschen, die im Stehen arbeiten und keinen Computer vor sich haben."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Funktioniert es mit meinem Kartenterminal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Turnera erfasst die Zahlung und die Zahlungsart, und der Kassenbericht stimmt mit dem überein, was Ihr Terminal sagt. Wir wickeln kein Geld ab: Sie kassieren, auf Ihr Konto, mit dem Zahlungsanbieter, den Sie schon haben."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich meinem Steuerberater Zugang geben?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es gibt ein Profil mit reinem Leserecht für Abrechnung und Berichte, ohne Zugang zu irgendetwas Klinischem. Wenn Sie einem Außenstehenden lieber keinen Zugang geben, exportieren Sie und schicken es ihm: Für viele Betriebe ist das die sauberere Lösung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Lässt sich Turnera mit meinem ERP oder meiner Buchhaltungssoftware verbinden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Turnera hat eine Integrations-API, über die Ihr ERP oder das Ihres Steuerberaters den Katalog, die Kunden, die Verkäufe und eine Buchungsübersicht nach Tag und Steuersatz direkt liest. Ohne Export von Hand und ohne Dateien per E-Mail. Die Dokumentation ist öffentlich, mit Beispielen, unter devel.es/turnera/integradores. Wer die Verbindung programmiert, findet dort alles, was er braucht, ohne darauf zu warten, dass wir ihm etwas schicken."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Und mit einer Marketing- oder Buchungsplattform?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Auch das. Eine Plattform, die Ihnen über ihre Kampagnen Kunden bringt, kann die freien Termine in Ihrem Kalender abfragen und den Termin sofort buchen, mit denselben Regeln wie Ihr Buchungsportal: der Vorlauf und die Tage im Voraus, die Sie festlegen. Hat der Empfang den Termin inzwischen vergeben, erfährt es die Plattform, und es gibt nie zwei Termine gleichzeitig. Jeder so gebuchte Termin ist mit der Plattform markiert, von der er kommt, damit Sie wissen, wie viel Ihnen jede bringt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist das sicher? Was kann dieses Programm sehen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nur das, was Sie ihm geben. Jede Verbindung legen Sie selbst in der Verwaltung von Turnera an und entscheiden, was sie lesen darf und ob sie buchen darf. Sie meldet sich mit eigenen Zugangsdaten an, nur von den Adressen, die Sie freigeben, und Sie schalten sie ab, wann Sie wollen. Die Patientenakte verlässt Turnera nie über die API: Das ist keine Berechtigung, die ausgeschaltet ist, es gibt sie schlicht nicht."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kostet das extra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Die API ist im Preis enthalten, wie alles andere. Was derjenige berechnet, der die Verbindung in Ihrem ERP oder Ihrer Plattform programmiert, ist seine Sache."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wenn ich nicht weiterkomme, an wen wende ich mich?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An uns, per E-Mail, auf Spanisch und aus Valencia, ohne Bot dazwischen. Und im Programm schickt uns die Rettungsring-Schaltfläche auf jeder Ansicht Ihren Vorfall mit der Ansicht, in der Sie waren, und Ihrer Version, damit Sie nichts Technisches erklären müssen. Die Antwort erhalten Sie per E-Mail."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gibt es ein Handbuch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, und es ist frei zugänglich: Sie müssen kein Kunde sein, um das Handbuch zu lesen, Sie können also vorab hineinschauen. Es lässt sich auch direkt in der Anwendung öffnen und wird mit jeder Version aktualisiert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist eine Schulung enthalten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eine Schulung nicht, aber der technische Support schon. Wenn Sie eine Frage haben, wie etwas geht, schreiben Sie uns eine E-Mail, und wir antworten Ihnen. Und jede Ansicht wird Schritt für Schritt erklärt im Handbuch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mir fehlt eine Funktion. Was tun?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sagen Sie es uns. Turnera entsteht aus dem, was die Betriebe verlangen, die es nutzen: Wenn das, was Sie brauchen, auch anderen dienen kann und nicht zu speziell für Ihr Geschäft ist, prüfen wir es für die Entwicklung, und wenn es kommt, kommt es für alle Kunden ohne Aufpreis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Und wenn ein Fehler auftaucht?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sie sagen es uns, und wir beheben ihn. Turnera ist ein lebendiges Programm mit regelmäßig neuen Versionen, und Verbesserungen erreichen alle Kunden ohne Aufpreis und ohne ein Update, das Sie installieren müssten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sind Sie ein großes Unternehmen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein, und das sollten Sie vor der Unterschrift wissen. Wir sind ein kleines Team in Valencia, und das hat zwei Seiten: Wenn Sie schreiben, antwortet Ihnen jemand, der das Programm von innen kennt, und wenn Sie etwas Vernünftiges wünschen, kann es in Wochen umgesetzt sein. Dafür bieten wir weder telefonischen Support noch ein 24-Stunden-Callcenter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert mit meinem Betrieb, wenn Ihnen etwas zustößt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Das ist die richtige Frage. Ihre Daten lassen sich jederzeit vollständig exportieren, ohne uns zu fragen, in einem Format, das andere Programme importieren können: Gibt es uns eines Tages nicht mehr, nehmen Sie sie in ein anderes Programm mit. Sie sind nicht davon abhängig, dass es uns weiter gibt, und was Sie an Turnera bindet, muss sein, dass es für Sie funktioniert, und nicht, was ein Wechsel kosten würde."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum heißt es Turnera?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Von „turno“, dem spanischen Wort für Termin oder Schicht, denn das ist es, was einen Betrieb wirklich ordnet: wer kommt, wann und mit wem. Alles andere — die Akte, die Zahlung, der Bericht — hängt daran."
+          }
+        }
+      ]
     },
     {
       "@type": "BreadcrumbList",
+      "@id": "https://devel.es/de/turnera#migas",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "DEVEL", "item": "https://devel.es/" },
-        { "@type": "ListItem", "position": 2, "name": "Turnera", "item": "https://devel.es/turnera" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "DEVEL",
+          "item": "https://devel.es/de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Turnera",
+          "item": "https://devel.es/de/turnera"
+        }
       ]
     }
   ]
@@ -643,7 +1067,7 @@ footer{
 <g transform="translate(333.88 82.00) scale(0.03027 -0.03027)"><path d="M444 -25Q339 -25 255.0 13.0Q171 51 122.0 123.5Q73 196 73 297Q73 406 136.5 487.5Q200 569 324.5 614.0Q449 659 633 659H795L777 635V696Q777 812 733.0 871.0Q689 930 587 930Q490 930 438.0 879.0Q386 828 378 738L119 787Q132 876 191.5 948.0Q251 1020 354.0 1063.0Q457 1106 602 1106Q740 1106 833.0 1059.0Q926 1012 972.5 913.5Q1019 815 1019 659V244Q1019 210 1028.5 199.0Q1038 188 1069 188H1123V0H994Q896 0 841.0 52.5Q786 105 786 197V258L828 246Q814 203 787.0 156.0Q760 109 715.0 68.0Q670 27 603.5 1.0Q537 -25 444 -25ZM512 154Q587 154 647.5 189.5Q708 225 743.5 298.5Q779 372 779 484V502H637Q520 502 454.0 471.5Q388 441 361.0 396.5Q334 352 334 308Q334 270 351.5 234.5Q369 199 408.0 176.5Q447 154 512 154Z" fill="var(--tu-anillo)"></path></g>
 </svg></span>
         <h1>Kalender, Akte und Kasse.<br><em>Auf einem Bildschirm.</em></h1>
-        <p class="lede">Turnera ist die Verwaltungsanwendung für Betriebe, die mit Termin arbeiten: Kliniken, Kosmetikstudios, Physiotherapie, Podologie, Tierarztpraxen, Sportvereine sowie Musik-, Sprach- und Nachhilfeschulen. Was ein Empfang an einem Tag erledigt, passt in drei Ansichten, und keine zwingt Sie, sie zum Kassieren zu verlassen.</p>
+        <p class="lede">Turnera ist die Verwaltungssoftware für Betriebe, die mit Termin arbeiten: Praxen und Kliniken, Kosmetikstudios, Physiotherapie, Podologie, Tierarztpraxen, Trainingszentren, Sportvereine sowie Musik-, Sprach- und Nachhilfeschulen. Was ein Empfang an einem Tag erledigt, passt auf drei Bildschirme, und keiner zwingt Sie, ihn zum Kassieren zu verlassen.</p>
         <div class="actions">
           <a class="btn btn--solid" href="#demo">Demo anfragen</a>
           <a class="btn btn--ghost" href="#pantallas">Ansehen</a>
@@ -862,6 +1286,7 @@ footer{
             <h3>Praxis, Kosmetik, Physiotherapie</h3>
             <p>Eine Person je Kabine und eine Stunde, die für sie reserviert ist. Die Akte enthält Vorerkrankungen, Allergien, den offenen Fall und den Verlauf jeder Sitzung, und das Zehnerpaket zählt sich von allein herunter, während der Kunde kommt.</p>
             <p>Daher kommt Turnera: Podologie, Tiermedizin, Zahnmedizin und Physiotherapie nutzen dasselbe.</p>
+            <p><a href="/de/turnera/clinicas">Turnera für Praxen ansehen</a></p>
           </div>
           <div class="perfil__montaje">
             <h4>So wird es eingerichtet</h4>
@@ -879,6 +1304,7 @@ footer{
             <h3>Personal Trainer</h3>
             <p>Eins zu eins, und fast immer über Pakete: zehn Sitzungen, auf einmal gekauft und über zwei Monate genutzt. Die Akte des Kunden führt die Verlaufsnotizen und den Saldo, sodass Sie auf einen Blick sehen, wie viele Sitzungen bleiben und wann sie verfallen.</p>
             <p>Wenn Sie an mehreren Orten arbeiten, ist jeder Raum eine Ressource und der Kalender zeigt Ihnen den ganzen Tag auf einmal.</p>
+            <p><a href="/de/turnera/centros-deportivos">Turnera für Trainingszentren ansehen</a></p>
           </div>
           <div class="perfil__montaje">
             <h4>So wird es eingerichtet</h4>
@@ -896,6 +1322,7 @@ footer{
             <h3>Spinning, Functional, Yoga, Pilates</h3>
             <p>Der Raum hat seine Plätze und der Kurs hat seine eigenen, und der kleinere gewinnt: zwanzig Räder mit einem Kurs für fünfzehn sind fünfzehn. Die Kurskarte zeigt <b>12 von 15</b> ohne sie zu öffnen, und darin steht, wer kommt, wer da war und wer nicht erschienen ist.</p>
             <p>Derselbe Teilnehmer kann nicht in zwei Kursen sein, die sich überschneiden, auch wenn in beiden Plätze frei sind. Und ein Betrieb ohne Gruppenkurse merkt gar nicht, dass es das gibt: ohne etwas zu ändern, ist ein Termin ein Platz.</p>
+            <p><a href="/de/turnera/centros-deportivos">Turnera für Trainingszentren ansehen</a></p>
           </div>
           <div class="perfil__montaje">
             <h4>So wird es eingerichtet</h4>
@@ -913,6 +1340,7 @@ footer{
             <h3>Padel- oder Tennisverein</h3>
             <p>Die Plätze sind die Ressourcen und der Tag wird Platz für Platz angezeigt. Einzelmiete, Privatstunde und Vierergruppe stehen nebeneinander, denn was sich zwischen ihnen ändert, ist eine Zahl im Katalog und kein eigenes Modul.</p>
             <p>Und was Sie nicht zahlen werden: Provision je Buchung. Der Beitrag ist der Beitrag, und Ihre Mitglieder gehören Ihnen.</p>
+            <p><a href="/de/turnera/centros-deportivos">Turnera für Trainingszentren ansehen</a></p>
           </div>
           <div class="perfil__montaje">
             <h4>So wird es eingerichtet</h4>
@@ -930,6 +1358,7 @@ footer{
             <h3>Musik-, Sprach- oder Nachhilfeschule</h3>
             <p>Eine Einzelstunde ist für einen Schüler, eine Gruppenstunde hat ihre Plätze, jede in ihrem Unterrichtsraum, und der Tag wird Raum für Raum oder Lehrer für Lehrer angezeigt. Die Akte des Schülers enthält seine Unterrichtsnotizen, sein Programm und seine Stundenkarte, und am Empfang sieht man auf einen Blick, wem noch Stunden bleiben und wer noch etwas zu bezahlen hat.</p>
             <p>Und die Anwendung spricht wie eine Schule: Schüler, Lehrer, Unterrichtsräume und Stunden, keine Patienten und keine Kabinen.</p>
+            <p><a href="/de/turnera/academias">Turnera für Schulen ansehen</a></p>
           </div>
           <div class="perfil__montaje">
             <h4>So wird es eingerichtet</h4>

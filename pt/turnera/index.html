@@ -2,8 +2,8 @@
 <!DOCTYPE html><html lang="pt"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Software de gestão para clínicas e estética · Turnera</title>
-<meta name="description" content="Agenda por profissional, ficha com histórico clínico, pacotes de sessões, TPV e relatórios. Para clínicas, estética, fisioterapia, clubes desportivos e academias. Sem comissão por marcação.">
+<title>Software para clínicas, centros de treino e academias · Turnera</title>
+<meta name="description" content="Marcações online, ficha com histórico clínico, pacotes de sessões, TPV e picagem de ponto do pessoal. Para clínicas, estética, fisioterapia, centros de treino e academias. Sem comissão por marcação.">
 <link rel="canonical" href="https://devel.es/pt/turnera">
 <link rel="alternate" hreflang="es" href="https://devel.es/turnera">
 <link rel="alternate" hreflang="en" href="https://devel.es/en/turnera">
@@ -561,23 +561,41 @@ footer{
       "@id": "https://devel.es/turnera#producto",
       "name": "Turnera",
       "applicationCategory": "BusinessApplication",
-      "applicationSubCategory": "Software de gestión de citas y clientes",
-      "operatingSystem": "Navegador web",
+      "applicationSubCategory": "Software de gestión de citas, clientes y personal",
+      "operatingSystem": "Navegador web, Android",
       "url": "https://devel.es/turnera",
       "image": "https://devel.es/turnera/turnera-og.png",
       "inLanguage": ["es", "en"],
-      "description": "Software de gestión para clínicas, centros de estética, fisioterapia, clubes deportivos y academias: agenda por profesional, ficha de cliente con historia clínica, bonos, punto de venta e informes.",
+      "description": "Software de gestión para clínicas, centros de estética, fisioterapia, centros de entrenamiento, clubes deportivos y academias: agenda por profesional y por sala, reservas online, ficha de cliente con historia clínica, bonos, punto de venta, facturación con VeriFactu, informes y control horario del personal.",
       "featureList": [
         "Agenda por profesional y por sala",
+        "Portal de reservas online",
         "Ficha de cliente e historia clínica",
+        "Consentimientos informados",
         "Bonos y paquetes de sesiones",
-        "Punto de venta y cobros pendientes",
         "Clases colectivas con aforo",
-        "Informes exportables a Excel"
+        "Punto de venta y cobros pendientes",
+        "Facturación con VeriFactu",
+        "Informes exportables a Excel",
+        "Fichaje con PIN, cuadrante y calendario laboral",
+        "Registro de jornada"
       ],
       "audience": {
         "@type": "BusinessAudience",
-        "name": "Clínicas, centros de estética, fisioterapia, podología, veterinaria, entrenadores personales, clubes deportivos y academias"
+        "name": "Clínicas, centros de estética, fisioterapia, podología, veterinaria, entrenadores personales, centros de entrenamiento, clubes deportivos, academias y equipos de trabajo"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://devel.es/turnera#precios",
+        "price": "39",
+        "priceCurrency": "EUR",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "39",
+          "priceCurrency": "EUR",
+          "unitCode": "MON",
+          "valueAddedTaxIncluded": false
+        }
       },
       "publisher": { "@id": "https://devel.es/#organizacion" }
     },
@@ -586,18 +604,424 @@ footer{
       "@id": "https://devel.es/#organizacion",
       "name": "DEVEL",
       "url": "https://devel.es/",
+      "logo": "https://devel.es/devel-isotipo.png",
       "email": "hola@devel.es",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Valencia",
         "addressCountry": "ES"
       }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://devel.es/pt/turnera#pagina",
+      "url": "https://devel.es/pt/turnera",
+      "name": "Software para clínicas, centros de treino e academias · Turnera",
+      "description": "Marcações online, ficha com histórico clínico, pacotes de sessões, TPV e picagem de ponto do pessoal. Para clínicas, estética, fisioterapia, centros de treino e academias. Sem comissão por marcação.",
+      "inLanguage": "pt-PT",
+      "isPartOf": {
+        "@id": "https://devel.es/#web"
+      },
+      "about": {
+        "@id": "https://devel.es/turnera#producto"
+      },
+      "breadcrumb": {
+        "@id": "https://devel.es/pt/turnera#migas"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quanto custa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "39 € por mês com dois recursos incluídos. Cada recurso adicional custa um pouco menos que o anterior, e com dez paga 90 €. A partir daí, 5 € por cada recurso adicional até vinte. Com mais de vinte, falamos. Preços sem IVA, e se pagar o ano adiantado oferecemos-lhe dois meses. Calcule o seu em Preços."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que conta como recurso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cada espaço que pode estar ocupado em simultâneo na sua agenda. Se no seu centro se podem atender três pessoas ao mesmo tempo, são três recursos. Duas cabines onde se trabalha em paralelo são dois recursos. Se dois profissionais se revezam na mesma cabine e nunca coincidem, é um. Quatro boxes com quatro fisioterapeutas em simultâneo são quatro, ainda que no quadro haja seis pessoas. Seis campos reserváveis são seis. Os monitores e quem está na receção não contam."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cobram por utilizador?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Os utilizadores são ilimitados em qualquer dimensão, e não é generosidade: cobrar por utilizador empurra para partilhar palavras-passe, e num programa que guarda processos clínicos é preciso saber quem abriu cada ficha. Um utilizador por pessoa faz parte de o sistema ser sério."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "E pelo número de clientes na minha base de dados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Também não. Seria cobrar-lhe por trabalhar há dez anos, e além disso empurrá-lo-ia a apagar históricos que a lei o obriga a conservar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ficam com uma percentagem do que o centro fatura?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Nem do que fatura, nem de cada reserva, nem de cada cobrança, nem dos novos clientes que entrem pelo portal. Os seus clientes são seus e o que cobra é seu por inteiro."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que acontece se abrir uma cabine ou fechar um campo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O número de recursos conta-se no dia em que lhe toca renovar, pelo que não há cálculos estranhos a meio do mês: se abrir uma cabine no dia 3, começa a pagá-la na mensalidade seguinte. Se fechar uma, é igual mas ao contrário. Com pagamento anual, se crescer durante o ano fatura-se apenas a diferença pelos meses que restarem."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Há taxa de adesão?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Se começar do zero, o arranque é grátis: configuramos o seu centro consigo. Só se paga se for preciso trazer os seus dados de outro programa: 300 €, uma única vez, e a migração fazemo-la nós."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como se paga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Com cartão ou débito direto, todos os meses ou todos os anos, e recebe a sua fatura automaticamente. Nada de transferências que é preciso recordar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Há fidelização?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Se paga ao mês, cancela quando quiser: continua a entrar até ao fim do mês que já tem pago e não volta a ser cobrado. Se pagou o ano adiantado e sair antes do tempo, devolvemos-lhe o que não utilizou, contando os meses que utilizou ao preço mensal. O desconto de dois meses é o que se paga por se comprometer durante um ano, pelo que se perde se o ano não se cumprir; o dinheiro dos meses que não vai utilizar volta para a sua conta. Com um centro de 56 € por mês: paga 560 € pelo ano e sai aos três meses. Esses três meses custam 168 €, pelo que lhe devolvemos 392 €."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Tenho dois centros. Pago duas vezes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O número de centros não altera o preço: só contam os recursos, estejam onde estiverem. Dois locais com três cabines cada um são uma única instalação de seis recursos, e paga 69 € por mês, o mesmo que um centro com seis cabines sob o mesmo teto. Cada unidade tem a sua agenda, a sua caixa e os seus relatórios em separado, com a direção a ver tudo em conjunto. Abrir um segundo local não lhe custa nada pelo facto de o abrir; custa-lhe se, ao abri-lo, puder atender mais gente em simultâneo, o que é razoável."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso experimentar antes de pagar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trinta dias, sem cartão. Entra com dados de exemplo já carregados — clientes, serviços, marcações de hoje — para ver como se comporta cheio e não perante um ecrã vazio. Quando começar com os verdadeiros, apagam-se com um clique."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vai ligar-me um comercial?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Experimenta sozinho, sem que ninguém o persiga. Mas antes de passar a cliente pago falamos uma vez, e é de propósito: dentro do Turnera vai guardar processos clínicos dos seus pacientes, e isso torna-nos legalmente responsáveis consigo. Queremos saber a quem registamos e que saiba com quem está a tratar. É uma chamada, não um processo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo demora a ter o centro a funcionar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O teste, minutos. Com arranque e sem dados para trazer, um par de dias. Se for preciso migrar de outro programa, contamos entre uma e três semanas, quase tudo à espera de que o seu atual fornecedor lhe entregue os dados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como cancelo, se for caso disso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A partir da sua conta, com um botão: não é preciso ligar a ninguém nem enviar uma carta. Continua a entrar até ao fim do período que tem pago, e os seus dados não são apagados nesse momento: tem 30 dias para os exportar na íntegra, e no dia anterior ao fim do prazo avisamos por e-mail. Passados os 30 dias, são eliminados do servidor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Estou noutro programa. Podem trazer o que tenho?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, e é a primeira coisa que fazemos. Trazemos clientes, serviços e tarifas, produtos, profissionais, pacotes de sessões e sessões pendentes, marcações, visitas feitas e processo clínico. Basta-nos folhas de Excel ou CSV, que é o que todos os programas do setor sabem exportar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "E se algo não se puder trazer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acontece sempre: há campos que no outro programa não existem ou estão incompletos. Por isso, antes de mexer em nada entregamos-lhe um relatório do que vai entrar, do que se descarta e porquê, e de que fichas parecem duplicadas. Reveja-o e só então se importa a sério."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Tenho de fechar o centro no dia da mudança?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Trazemos os seus dados duas semanas antes e no dia da mudança trazemos apenas o que tiver acontecido entretanto. Continua a trabalhar no seu programa até ao último dia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto custa a migração?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "300 €, uma única vez, e o arranque está incluído. Se vier recomendado por outro centro, 150 €. Não se cobra por registo nem por hora, e tanto faz quantos anos de dados traga."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O meu programa atual não me deixa exportar. O que faço?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tem direito aos seus dados mesmo que o seu fornecedor não lhe disponibilize um botão: é a portabilidade do artigo 20.º do Regulamento Geral sobre a Proteção de Dados (RGPD). Pede-se por escrito e são obrigados a entregar-lhos num formato que possa ser lido por uma máquina. Peça-os antes de cancelar, não depois. Vários programas do setor apagam definitivamente os dados poucos meses depois de cancelar o serviço, e o seu contrato di-lo. Primeiro os dados na sua mão, depois o cancelamento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De quem são os meus dados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Seus, e não é uma frase feita. Pode exportá-los na íntegra a partir do programa quando quiser, sem pedir licença, sem pagar e sem nos avisar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Onde estão alojados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Em servidores dentro da União Europeia. Com históricos clínicos lá dentro, isso não é uma preferência técnica: é o que evita uma conversa incómoda se um dia alguém perguntar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Assinamos alguma coisa por causa da proteção de dados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, e é obrigatório para ambas as partes: um contrato de subcontratação de tratamento de dados. O utilizador é o responsável pelos dados dos seus pacientes e nós tratamo-los por sua conta. Entregamo-lo assinado no início, juntamente com o que precisa para o seu registo de atividades de tratamento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A pessoa da receção pode ver os históricos clínicos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não, a menos que o utilizador o permita expressamente. O Turnera distingue quatro perfis —direção, receção, profissional e consulta— e o da receção não inclui a parte clínica por defeito. Pode atribuir-lho se no seu centro fizer sentido, mas como decisão sua e não por descuido nosso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso saber quem abriu a ficha de um paciente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Fica registado quem entra em cada ficha e quando, e a direção do centro pode consultá-lo. É uma obrigação sua como responsável por esses dados, por isso preferimos entregá-lo já tratado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Existem cópias de segurança?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Diárias, com uma semana de histórico e cópias instantâneas do servidor inteiro. E são testadas restaurando-as, porque uma cópia que nunca foi restaurada não é uma cópia: é uma pasta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Estão adaptados ao VeriFactu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. O Turnera emite as faturas como o VeriFactu exige: cada venda sai com o seu número, o seu código QR e o seu registo encadeado, e nenhuma pode ser apagada nem alterada: as correções fazem-se com fatura retificativa, como manda a norma. O envio automático para a Agência Tributária espanhola é ativado em cada centro quando nos autoriza. Segundo o calendário em vigor, as sociedades ficam obrigadas a 1 de janeiro de 2027 e os trabalhadores independentes a 1 de julho de 2027."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso dar algo ao meu contabilista?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Os relatórios de recebimentos, caixa diária e movimentos saem em Excel ou CSV, que é o que qualquer gabinete de contabilidade sabe abrir, com os recebimentos separados por forma de pagamento para que a caixa bata certo com o TPA. E se fatura com o Turnera, o livro de faturas emitidas, com a sua numeração, a sua discriminação de IVA e o lançamento resumo diário, sai em Excel com um clique."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que está incluído no preço?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tudo. Não há planos com funções limitadas nem módulos que se comprem à parte: agenda, ficha do cliente, histórico clínico, TPV e fecho de caixa, pacotes de sessões e pagamentos em prestações, produtos e stock, relatórios e várias unidades. E o que for chegando —o portal de marcações, os avisos por WhatsApp, a app do profissional— chega a todos. O que muda com a dimensão é o preço, não o que pode fazer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "É possível avisar as marcações por WhatsApp?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Está a caminho e é a próxima novidade, porque chega por onde as pessoas realmente leem. Cada plano incluirá um número de mensagens por mês; se enviar mais, são cobradas ao que nos custam e aparecem discriminadas na sua fatura. É a única coisa que se fatura por utilização, porque é a única que tem um custo real por mensagem. O aviso levará o nome do seu centro, a data e a hora, e o paciente poderá responder para confirmar ou anular. O que nunca incluirá é o tratamento: nem o WhatsApp o permite nem a lei de proteção de dados o aconselha, e não há maneira de o contornar que corra bem."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "E por e-mail?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Por e-mail sim, desde o primeiro dia: os avisos de marcação e o que não tem urgência saem por aí, no idioma do cliente que os recebe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Os meus clientes podem marcar sozinhos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. O seu centro tem o seu próprio portal de marcações, no seu endereço do Turnera, onde os clientes veem o que está livre, marcam e anulam. Entram com o e-mail, sem palavras-passe para recordar. As regras define-as o utilizador nas preferências: com quantos dias de antecedência máxima se pode marcar, com que antecedência mínima, até quando se pode anular, quem pode marcar sem pacote de sessões e se alguém com dívida pendente pode continuar a marcar. O utilizador decide quando o ativa e que serviços e cabines são reserváveis pela internet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Existe app para o profissional?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Está a caminho: uma versão reduzida para o telemóvel com o que o profissional tem nesse dia, as suas marcações e pouco mais. Pensada para quem trabalha de pé e não tem um computador à frente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Funciona com o meu TPA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O Turnera regista a cobrança e a forma de pagamento, e o relatório de caixa bate certo com o que o seu terminal de pagamento indicar. Não intermediamos o dinheiro: cobra o utilizador, na sua conta, com a plataforma de pagamentos que já tiver."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso ter o gabinete de contabilidade lá dentro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Existe um perfil só de leitura para faturação e relatórios, sem acesso a nada clínico. Se preferir não dar acesso a alguém de fora, exporta e envia-lhe: para muitos centros é a opção mais limpa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "É possível ligar o Turnera ao meu ERP ou ao meu programa de contabilidade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. O Turnera tem uma API de integração com a qual o seu ERP, ou o do seu gabinete de contabilidade, lê diretamente o catálogo, os clientes, as vendas e um resumo contabilístico por dia e por tipo de IVA. Sem exportar à mão nem enviar ficheiros por e-mail. A documentação é pública, com exemplos, em devel.es/turnera/api. Quem programar a ligação tem aí tudo o que precisa, sem esperar que lhe enviemos nada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "E com uma plataforma de marketing ou de marcações?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Também. Uma plataforma que lhe traz clientes com as suas campanhas pode consultar as vagas livres da sua agenda e fazer a marcação no momento, com as mesmas regras do seu portal de marcações: a antecedência e os dias de margem que o utilizador decidir. Se entretanto a receção ocupou essa vaga, a plataforma é informada e não há duas marcações em simultâneo. Cada marcação que entra assim fica identificada com a plataforma de onde vem, para que saiba quanto lhe traz cada uma."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "É seguro? O que pode ver esse programa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Apenas o que o utilizador lhe der. Cada ligação é criada por si, na administração do Turnera, e decide o que pode ler e se pode marcar. Entra com as suas próprias credenciais, apenas a partir dos endereços que autorizar, e pode desligá-la quando quiser. O histórico clínico nunca sai pela API: não é uma permissão que venha desativada, é que não existe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Custa alguma coisa à parte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. A API está incluída no preço, como tudo o resto. O que cobrar quem programar a ligação ao seu ERP ou à sua plataforma é assunto dessa pessoa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Se ficar bloqueado, a quem recorro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A nós, por e-mail, em espanhol e a partir de Valência, sem passar por um robô. E dentro do programa, o botão do salva-vidas, em todos os ecrãs, envia-nos a sua ocorrência com o ecrã em que estava e a versão que tem, para que não precise de explicar nada técnico. A resposta chega-lhe por e-mail."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Existe manual?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, e é aberto: não é preciso ser cliente para ler o manual, por isso pode dar-lhe uma vista de olhos antes de se decidir. Também se abre a partir da própria aplicação e é atualizado a cada versão."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A formação está incluída?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A formação não, mas o suporte técnico sim. Se tiver uma dúvida sobre como se faz alguma coisa, escreva-nos um e-mail e respondemos. E cada ecrã está explicado passo a passo no manual."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Falta-me uma funcionalidade. O que faço?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Conte-nos. O Turnera faz-se com o que pedem os centros que o utilizam: se o que precisa pode servir a mais gente e não é demasiado específico do seu negócio, avaliamos para desenvolvimento e, quando entra, entra para todos os clientes sem custo adicional."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "E se aparecer uma falha?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Conte-nos e corrigimos. O Turnera é um programa vivo, com versões novas a cada pouco tempo, e as melhorias chegam a todos os clientes sem custo nem atualização que tenha de instalar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "São uma empresa grande?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não, e convém que o saiba antes de assinar. Somos uma equipa pequena, em Valência, e isso tem duas faces: quando escrever, vai responder-lhe alguém que conhece o programa por dentro, e quando pedir algo razoável pode estar feito em semanas. Em contrapartida, não damos suporte por telefone nem temos um centro de atendimento 24 horas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que acontece ao meu centro se vos acontecer alguma coisa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "É a pergunta certa. Os seus dados exportam-se por inteiro quando quiser, sem nos pedir autorização, num formato que outros programas sabem importar: se um dia faltarmos, leva-os para outro programa. Não fica preso ao facto de nós continuarmos cá, e o que o prende ao Turnera tem de ser o facto de funcionar bem, não o que custa sair."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Porque se chama Turnera?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Por «turno», que é o que realmente organiza um centro: quem entra, quando e com quem. Tudo o resto —a ficha, a cobrança, o relatório— depende daí."
+          }
+        }
+      ]
     },
     {
       "@type": "BreadcrumbList",
+      "@id": "https://devel.es/pt/turnera#migas",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "DEVEL", "item": "https://devel.es/" },
-        { "@type": "ListItem", "position": 2, "name": "Turnera", "item": "https://devel.es/turnera" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "DEVEL",
+          "item": "https://devel.es/pt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Turnera",
+          "item": "https://devel.es/pt/turnera"
+        }
       ]
     }
   ]
@@ -643,7 +1067,7 @@ footer{
 <g transform="translate(333.88 82.00) scale(0.03027 -0.03027)"><path d="M444 -25Q339 -25 255.0 13.0Q171 51 122.0 123.5Q73 196 73 297Q73 406 136.5 487.5Q200 569 324.5 614.0Q449 659 633 659H795L777 635V696Q777 812 733.0 871.0Q689 930 587 930Q490 930 438.0 879.0Q386 828 378 738L119 787Q132 876 191.5 948.0Q251 1020 354.0 1063.0Q457 1106 602 1106Q740 1106 833.0 1059.0Q926 1012 972.5 913.5Q1019 815 1019 659V244Q1019 210 1028.5 199.0Q1038 188 1069 188H1123V0H994Q896 0 841.0 52.5Q786 105 786 197V258L828 246Q814 203 787.0 156.0Q760 109 715.0 68.0Q670 27 603.5 1.0Q537 -25 444 -25ZM512 154Q587 154 647.5 189.5Q708 225 743.5 298.5Q779 372 779 484V502H637Q520 502 454.0 471.5Q388 441 361.0 396.5Q334 352 334 308Q334 270 351.5 234.5Q369 199 408.0 176.5Q447 154 512 154Z" fill="var(--tu-anillo)"></path></g>
 </svg></span>
         <h1>A agenda, a ficha e a caixa.<br><em>No mesmo ecrã.</em></h1>
-        <p class="lede">O Turnera é a aplicação de gestão para negócios que atendem por marcação: clínicas, centros de estética, fisioterapia, podologia, veterinária, clubes desportivos e academias de música, idiomas ou explicações. O que um balcão faz num dia cabe em três ecrãs, e nenhum obriga a sair dele para cobrar.</p>
+        <p class="lede">O Turnera é o software de gestão para negócios que atendem por marcação: clínicas, centros de estética, fisioterapia, podologia, veterinária, centros de treino, clubes desportivos e academias de música, línguas ou explicações. O que um balcão faz num dia cabe em três ecrãs, e nenhum o obriga a sair dele para cobrar.</p>
         <div class="actions">
           <a class="btn btn--solid" href="#demo">Pedir uma demo</a>
           <a class="btn btn--ghost" href="#pantallas">Ver como é</a>
@@ -862,6 +1286,7 @@ footer{
             <h3>Clínica, estética, fisioterapia</h3>
             <p>Uma pessoa por cabine e uma hora reservada para ela. A ficha guarda os seus antecedentes, as suas alergias, o caso aberto e a evolução de cada sessão, e o pacote de dez tratamentos vai sendo descontado sozinho à medida que vem.</p>
             <p>É de onde vem o Turnera: podologia, veterinária, dentária e fisioterapia usam o mesmo.</p>
+            <p><a href="/pt/turnera/clinicas">Ver o Turnera para clínicas</a></p>
           </div>
           <div class="perfil__montaje">
             <h4>Como se monta</h4>
@@ -879,6 +1304,7 @@ footer{
             <h3>Personal trainer</h3>
             <p>Um a um, e quase sempre por pacotes de sessões: dez sessões que se compram de uma vez e se gastam ao longo de dois meses. A ficha do aluno leva as suas notas de acompanhamento e o seu saldo, pelo que se sabe de relance quantas sessões lhe restam e quando expiram.</p>
             <p>Se trabalha em vários locais, cada sala é um recurso e a agenda mostra-lhe o dia inteiro de uma só vez.</p>
+            <p><a href="/pt/turnera/centros-deportivos">Ver o Turnera para centros de treino</a></p>
           </div>
           <div class="perfil__montaje">
             <h4>Como se monta</h4>
@@ -896,6 +1322,7 @@ footer{
             <h3>Spinning, funcional, ioga, pilates</h3>
             <p>A sala tem os seus lugares e a aula tem os seus, e manda o mais pequeno: vinte bicicletas com uma aula de quinze são quinze. O cartão da aula mostra <b>12 de 15</b> sem a abrir, e lá dentro está a lista com quem vem, quem veio e quem não apareceu.</p>
             <p>O mesmo aluno não pode estar em duas aulas que se sobrepõem, mesmo que em ambas sobrem lugares. E uma instalação que não dá aulas coletivas nem dá conta de que isto existe: sem mexer em nada, uma marcação é de um lugar.</p>
+            <p><a href="/pt/turnera/centros-deportivos">Ver o Turnera para centros de treino</a></p>
           </div>
           <div class="perfil__montaje">
             <h4>Como se monta</h4>
@@ -913,6 +1340,7 @@ footer{
             <h3>Clube de padel ou ténis</h3>
             <p>Os campos são os recursos e o dia vê-se campo a campo. Convivem o aluguer avulso, a aula particular e a de grupo de quatro, porque o que muda entre uma e outra é um número do catálogo e não um módulo à parte.</p>
             <p>E o que não vai pagar: comissão por reserva. A mensalidade é a mensalidade, e os seus alunos são seus.</p>
+            <p><a href="/pt/turnera/centros-deportivos">Ver o Turnera para centros de treino</a></p>
           </div>
           <div class="perfil__montaje">
             <h4>Como se monta</h4>
@@ -930,6 +1358,7 @@ footer{
             <h3>Academia de música, idiomas ou explicações</h3>
             <p>A aula particular é de um aluno e a de grupo tem os seus lugares, cada uma na sua sala, e o dia vê-se sala a sala ou professor a professor. A ficha do aluno leva as suas notas de aula, o seu programa e o seu pacote de aulas, e na receção vê-se de relance a quem restam aulas e quem tem algo por pagar.</p>
             <p>E a aplicação fala como uma academia: alunos, professores, salas e aulas, não pacientes nem cabines.</p>
+            <p><a href="/pt/turnera/academias">Ver o Turnera para academias</a></p>
           </div>
           <div class="perfil__montaje">
             <h4>Como se monta</h4>
