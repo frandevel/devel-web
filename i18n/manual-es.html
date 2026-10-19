@@ -915,18 +915,15 @@ footer{
   </p>
   <p>
     Se escribe lo que se busca -- el nombre de un servicio, un bono, un paquete o un producto, en el orden y con
-    los acentos que sea -- y salen el nombre y el precio, con el IVA incluido. Sólo salen las cosas activas y con
-    precio. Un paquete sin precio propio vale lo que suman sus servicios y productos. No se ve nada más: ni costes,
-    ni IVA, ni stock, ni la ficha.
+    los acentos que sea -- y salen el nombre y el precio, con el IVA incluido. Salen todas las cosas activas y con
+    precio; lo que no se quiera ofrecer se desactiva o se deja sin precio en su ficha del catálogo. Un paquete sin
+    precio propio vale lo que suman sus servicios y productos. No se ve nada más: ni costes, ni IVA, ni stock, ni la
+    ficha.
   </p>
   <ul>
     <li><strong>Quién la ve:</strong> quien tenga el permiso <em>Consultar precios</em>. Lo traen Recepción,
       Profesional, Dirección y el rol del módulo Catálogo. Un rol que ya existía no lo recibe solo: se marca en
       <em>Administración → Roles</em>. Es lo que permite que un profesional dé un precio sin poder entrar en las tarifas.</li>
-    <li><strong>Elegir lo que se muestra:</strong> por defecto sale todo. Quien puede editar servicios, paquetes o
-      productos ve al pie del diálogo <em>Elegir lo que se muestra</em>: aparece un interruptor en cada fila de lo que
-      puede editar, y apagarlo lo esconde de la consulta (en el catálogo sigue igual). Lo escondido se ve atenuado
-      mientras se elige, para poder volver a mostrarlo.</li>
     <li><strong>Qué no se guarda:</strong> las consultas no dejan rastro.</li>
   </ul>
 
@@ -1864,9 +1861,17 @@ footer{
 
   <p>
     Alguien paga hoy y otra persona lo gasta otro día. Se vende con <strong>Vender tarjeta regalo</strong>: quién la
-    paga, quién la vende, el importe, la forma de pago y, si se quiere, para quién es, su correo, una dedicatoria y
-    hasta cuándo vale (sin fecha, no caduca). Al cobrarla sale un código del estilo <code>RG-7K2M-Q9TX</code>, que
-    se imprime en una tarjeta para regalar o se manda por correo con la tarjeta en PDF.
+    paga, quién la vende, el importe, la forma de pago y, si se quiere, para quién es, una dedicatoria y hasta
+    cuándo vale (sin fecha, no caduca). Al cobrarla sale un código del estilo <code>RG-7K2M-Q9TX</code>, que se
+    imprime en una tarjeta para regalar o se manda por correo con la tarjeta en PDF.
+  </p>
+
+  <p>
+    El <strong>correo al que enviar la tarjeta</strong> va aparte, y sale ya con el de quien la paga si su ficha lo
+    tiene. Es lo normal: así decide ella cuándo darla, y nadie recibe el regalo antes de tiempo. Se puede cambiar
+    por el de la persona que la recibe, y entonces le llega en ese momento. El correo se escribe para quien lo
+    recibe: a quien la compró le dice «aquí tiene la tarjeta regalo para…», y a quien se la regalan, que tiene una
+    tarjeta para gastar en el centro.
   </p>
 
   <div class="ojo">
@@ -3484,7 +3489,8 @@ footer{
   <p>
     Cada profesional necesita un <strong>PIN</strong>, de cuatro cifras si el centro no decide otra cosa, que se le
     pone en <em>Profesionales → PIN de fichaje</em>. Al pulsar su botón sale un teclado y lo teclea: con la última
-    cifra se abre lo suyo, sin pulsar nada más. Es lo que hace que
+    cifra se abre lo suyo, sin pulsar nada más. Desde un ordenador el PIN también se teclea con el teclado, el
+    numérico incluido: <em>Retroceso</em> borra la última cifra e <em>Intro</em> confirma. Es lo que hace que
     pulsar el botón de otro no sea fichar por otro, y sin ello la lista de nombres no probaría gran cosa ante
     una inspección.
   </p>

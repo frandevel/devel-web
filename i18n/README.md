@@ -52,6 +52,12 @@ cambios agrupados por lo que gana quien usa Turnera, contados para el mostrador 
    - `<div class="grupo grupo--arreglo">` · **Errores corregidos**: lo que fallaba. Una sola lista, sin
      subtítulos, y sin empezar por «Arreglado:», que ya lo dice el grupo.
    En los dos primeros, cada tema lleva su `<h4>` y su lista.
+   Debajo de la cabecera va el número de la versión desplegada, tal cual lo enseña Turnera en «Versión»:
+   `<p class="version__numero">Versión <span translate="no">1.0.0-7a239ce</span></p>`. Desde el 19/10/2026
+   (1.0.0) la numeración es **semver** (`1.0.0`, `1.1.0`, `1.0.1`...) seguida del commit; las fichas anteriores
+   llevan la de antes (`2026.10.185-230e64f`) y se dejan así. Ningún script interpreta el número: es un texto más
+   del catálogo, que se copia igual en `en`, `de` y `pt`. El `id` de la ficha sigue siendo la fecha, con un sufijo
+   si ese día hay varias (`2026-10-19-version-1`).
 2. **El sello `Última versión` se mueve** a la nueva: se quita el `<span class="version__sello">` de la
    anterior. El filo de color lo pone el CSS a la primera ficha, solo.
 3. Añade la fecha al índice de la izquierda, también arriba.

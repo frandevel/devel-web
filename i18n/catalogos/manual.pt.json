@@ -2818,5 +2818,15 @@
   "td7b82b21": "Apagar",
   "td0784412": ", na linha de cada ponto, e só com a permissão",
   "t1ca89278": ", que de origem só o administrador tem. Antes de o fazer diz quantos pedidos vão com ele («O ponto e os seus N pedidos serão apagados, e o seu QR deixará de funcionar. Não é possível desfazer.») e pede confirmação. Serve igual para um ponto ativo e para um retirado. Apagado, o seu QR já não leva a lado nenhum e não se pode recuperar, e no registo da aplicação fica quem o apagou e com quantos pedidos.",
-  "tcdf6dbf2": "). Os PIN errados contam tal como na web: na terceira e na quarta falha seguida avisa das tentativas que restam, e à quinta o PIN fica bloqueado (ver"
+  "tcdf6dbf2": "). Os PIN errados contam tal como na web: na terceira e na quarta falha seguida avisa das tentativas que restam, e à quinta o PIN fica bloqueado (ver",
+  "tfb43b1f3": "Escreve-se o que se procura -- o nome de um serviço, um pacote de sessões, um pacote ou um produto, por qualquer ordem e com ou sem acentos -- e aparecem o nome e o preço, com IVA incluído. Aparece tudo o que está ativo e tem preço; o que não se quiser oferecer desativa-se ou deixa-se sem preço na sua ficha do catálogo. Um pacote sem preço próprio vale a soma dos seus serviços e produtos. Não se vê mais nada: nem custos, nem IVA, nem stock, nem a ficha.",
+  "t69e79af0": ": quem o paga, quem o vende, o montante, a forma de pagamento e, se se quiser, para quem é, uma dedicatória e até quando vale (sem data, não caduca). Ao cobrá-lo sai um código do género",
+  "t235c7532": ", que se imprime num cartão para oferecer ou se envia por e-mail com o cartão em PDF.",
+  "t3246d72b": "e-mail para onde enviar o cartão",
+  "tea6731d4": "é à parte, e já vem preenchido com o de quem o paga, se a sua ficha o tiver. É o normal: assim é ela que decide quando o oferecer, e ninguém recebe o presente antes do tempo. Pode trocar-se pelo da pessoa que o recebe, e então chega-lhe nesse momento. O e-mail é escrito para quem o recebe: a quem o comprou diz «aqui tem o cartão-oferta para…», e a quem o oferecem, que tem um cartão para gastar no centro.",
+  "tda6d4cc0": ". Ao carregar no seu botão aparece um teclado e digita-o: com o último algarismo abre-se o que é seu, sem carregar em mais nada. Num computador, o PIN também se digita no teclado, incluindo o numérico:",
+  "t9e67a2aa": "Retrocesso",
+  "t8dac5132": "apaga o último algarismo e",
+  "tb4e6a310": "Enter",
+  "teafe81b1": "confirma. É o que faz com que carregar no botão de outra pessoa não seja picar o ponto por ela, e sem isso a lista de nomes pouco provaria perante uma inspeção."
 }

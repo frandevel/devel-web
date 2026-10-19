@@ -2818,5 +2818,15 @@
   "td7b82b21": "Delete",
   "td0784412": "is for, on each point's row, and only with the permission",
   "t1ca89278": ", which by default only the administrator has. Before doing it, it says how many requests go with it («The point and its N requests will be deleted, and its QR will stop working. This cannot be undone.») and asks for confirmation. It works the same for an active point as for a withdrawn one. Once deleted, its QR leads nowhere and cannot be recovered, and the application log records who deleted it and with how many requests.",
-  "tcdf6dbf2": "). Wrong PINs count just as on the web: on the third and fourth failure in a row it says how many attempts are left, and at the fifth the PIN is locked (see"
+  "tcdf6dbf2": "). Wrong PINs count just as on the web: on the third and fourth failure in a row it says how many attempts are left, and at the fifth the PIN is locked (see",
+  "tfb43b1f3": "You type what you are looking for -- the name of a service, a voucher, a package or a product, in any order and with or without accents -- and the name and price appear, VAT included. Everything active with a price appears; whatever you do not want to offer is deactivated or left without a price in its catalogue record. A package without its own price is worth the sum of its services and products. Nothing else is shown: no costs, no VAT, no stock, no record.",
+  "t69e79af0": ": who pays for it, who sells it, the amount, the payment method and, if you like, who it is for, a dedication and how long it is valid (with no date, it does not expire). When it is charged you get a code like",
+  "t235c7532": ", which is printed on a card to give away or emailed with the card as a PDF.",
+  "t3246d72b": "email to send the card to",
+  "tea6731d4": "is separate, and it already comes filled in with the payer’s if their record has one. That is the usual choice: this way they decide when to give it, and nobody receives the present too early. It can be changed to the recipient’s, and then it reaches them straight away. The email is written for whoever receives it: to the buyer it says “here is the gift card for…”, and to the recipient, that they have a card to spend at the centre.",
+  "tda6d4cc0": ". Pressing their button brings up a keypad and they type it: with the last digit their screen opens, with nothing else to press. From a computer the PIN can also be typed on the keyboard, numeric keypad included:",
+  "t9e67a2aa": "Backspace",
+  "t8dac5132": "deletes the last digit and",
+  "tb4e6a310": "Enter",
+  "teafe81b1": "confirms. This is what makes pressing someone else’s button not the same as clocking in for them, and without it the list of names would not prove much to an inspector."
 }

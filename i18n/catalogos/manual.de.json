@@ -2818,5 +2818,15 @@
   "td7b82b21": "Löschen",
   "td0784412": ", in der Zeile jedes Punktes, und nur mit der Berechtigung",
   "t1ca89278": ", die standardmäßig nur der Administrator hat. Vorher sagt es, wie viele Anfragen mit ihm verschwinden («Der Punkt und seine N Anfragen werden gelöscht, und sein QR-Code funktioniert nicht mehr. Das lässt sich nicht rückgängig machen.»), und fragt nach einer Bestätigung. Das geht bei aktiven wie bei zurückgezogenen Punkten gleich. Gelöscht führt sein QR-Code nirgendwohin mehr und lässt sich nicht wiederherstellen, und im Protokoll der Anwendung steht, wer ihn mit wie vielen Anfragen gelöscht hat.",
-  "tcdf6dbf2": "). Falsche PINs zählen wie im Web: Beim dritten und vierten Fehlversuch in Folge zeigt sie an, wie viele Versuche bleiben, und beim fünften wird die PIN gesperrt (siehe"
+  "tcdf6dbf2": "). Falsche PINs zählen wie im Web: Beim dritten und vierten Fehlversuch in Folge zeigt sie an, wie viele Versuche bleiben, und beim fünften wird die PIN gesperrt (siehe",
+  "tfb43b1f3": "Man tippt, was man sucht -- den Namen einer Leistung, einer Zehnerkarte, eines Pakets oder eines Produkts, in beliebiger Reihenfolge und mit oder ohne Akzente -- und Name und Preis erscheinen, inklusive MwSt. Es erscheint alles, was aktiv ist und einen Preis hat; was man nicht anbieten möchte, wird deaktiviert oder in seinem Katalogeintrag ohne Preis gelassen. Ein Paket ohne eigenen Preis kostet so viel wie seine Leistungen und Produkte zusammen. Mehr ist nicht zu sehen: keine Kosten, keine MwSt., kein Lagerbestand, kein Eintrag.",
+  "t69e79af0": ": wer bezahlt, wer verkauft, der Betrag, die Zahlungsart und, wenn gewünscht, für wen er ist, eine Widmung und bis wann er gilt (ohne Datum verfällt er nicht). Beim Kassieren entsteht ein Code wie",
+  "t235c7532": ", der auf eine Karte zum Verschenken gedruckt oder per E-Mail mit dem Gutschein als PDF verschickt wird.",
+  "t3246d72b": "Eintrag „E-Mail-Adresse für den Versand“",
+  "tea6731d4": "steht für sich und ist schon mit der Adresse der zahlenden Person ausgefüllt, wenn ihr Eintrag eine hat. Das ist der Normalfall: So entscheidet sie, wann sie ihn verschenkt, und niemand bekommt das Geschenk zu früh. Man kann sie durch die der beschenkten Person ersetzen, dann erhält diese ihn sofort. Die E-Mail ist an die Person gerichtet, die sie bekommt: Der Käuferin sagt sie „hier ist der Geschenkgutschein für …“, der beschenkten Person, dass sie einen Gutschein hat, den sie im Zentrum einlösen kann.",
+  "tda6d4cc0": ". Ein Druck auf ihre Schaltfläche öffnet ein Tastenfeld, und sie tippt sie ein: Mit der letzten Ziffer öffnet sich ihr Bereich, ohne weiteren Klick. Am Computer lässt sich die PIN auch über die Tastatur eingeben, der Ziffernblock eingeschlossen:",
+  "t9e67a2aa": "Rücktaste",
+  "t8dac5132": "löscht die letzte Ziffer und",
+  "tb4e6a310": "Enter",
+  "teafe81b1": "bestätigt. Dadurch ist ein Druck auf die Schaltfläche einer anderen Person noch kein Stempeln für sie, und ohne das würde die Namensliste bei einer Prüfung wenig beweisen."
 }
