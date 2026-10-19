@@ -1306,6 +1306,20 @@ footer{
     erscheint ein Hinweis, und beim Speichern bleiben die Kontaktdaten unverändert.
   </p>
 
+  <h3 id="clientes-foto">Das Foto des Kunden</h3>
+  <span class="ruta">Kundenakte → Foto</span>
+  <p>
+    Die Akte enthält ein Foto des Kunden, damit man ihn am Empfang erkennt. Solange keines vorhanden ist, erscheint eine Silhouette. Wer Akten bearbeiten darf, klickt auf <em>Foto</em>, unter den Daten, und wählt:
+  </p>
+  <ul>
+    <li><strong>Foto hochladen</strong>: ein JPEG- oder PNG-Foto vom Computer. Turnera verkleinert es und entfernt vor dem Speichern die Daten, die die Kamera hineinschreibt (wo und womit es aufgenommen wurde).</li>
+    <li><strong>Foto mit der Kamera aufnehmen</strong>: mit der Webcam des Computers. Das Live-Bild öffnet sich; gibt es mehr als eine Kamera, wählt man sie oben aus. <em>Foto aufnehmen</em> hält es fest, <em>Wiederholen</em> kehrt zum Live-Bild zurück und <em>Speichern</em> übernimmt es in die Akte. Gespeichert wird nur das sichtbare Quadrat, deshalb sollte das Gesicht in der Mitte sein. Die Option erscheint nicht, wenn der Browser keine Kameras verwenden kann.</li>
+    <li><strong>Foto entfernen</strong>: Die Akte zeigt wieder die Silhouette. Das Foto wird gelöscht.</li>
+  </ul>
+  <p>
+    Beim ersten Mal fragt der Browser, ob er die Kamera verwenden darf: Das muss bestätigt werden. Wurde es abgelehnt, ist keine Kamera angeschlossen oder wird sie von einem anderen Programm verwendet (zum Beispiel einem Videoanruf), sagt Turnera es und lässt es erneut versuchen. Die Kamera schaltet sich aus, sobald das Foto aufgenommen oder das Fenster geschlossen wird. Das Foto sieht jeder, der die Akte sieht.
+  </p>
+
   <h3 id="clientes-baja">Einen Kunden abmelden</h3>
 
   <p>
@@ -1323,7 +1337,7 @@ footer{
   <h3 id="clientes-supresion">Wenn der Kunde die Löschung seiner Daten verlangt</h3>
   <span class="ruta">Kundenakte → Seine Daten löschen</span>
   <p>
-    Es handelt sich um das <strong>Recht auf Löschung</strong> nach der DSGVO. Das macht, wer die Berechtigung <em>Daten eines Kunden auf Wunsch löschen</em> hat (standardmäßig die Leitung). Gelöscht werden Name, Ausweis, Telefonnummern, E-Mail, Adresse, Geburtsdatum, Notizen, Hinweise, Warteliste und Portalzugang, und die Termine ab heute werden abgesagt. Die Akte bleibt, mit dem Namen <em>Datos borrados</em> und ihrer Nummer, denn ihre Besuche, Zahlungen und Wertkarten verweisen darauf und bleiben in der Buchhaltung des Zentrums.
+    Es handelt sich um das <strong>Recht auf Löschung</strong> nach der DSGVO. Das macht, wer die Berechtigung <em>Daten eines Kunden auf Wunsch löschen</em> hat (standardmäßig die Leitung). Gelöscht werden Name, Ausweis, Telefonnummern, E-Mail, Adresse, Geburtsdatum, Foto, Notizen, Hinweise, Warteliste und Portalzugang, und die Termine ab heute werden abgesagt. Die Akte bleibt, mit dem Namen <em>Datos borrados</em> und ihrer Nummer, denn ihre Besuche, Zahlungen und Wertkarten verweisen darauf und bleiben in der Buchhaltung des Zentrums.
   </p>
   <p>
     Was das Gesetz aufzubewahren verlangt, <strong>bleibt erhalten</strong>: die <strong>Rechnungen</strong>, unverändert, und die
@@ -1404,8 +1418,7 @@ footer{
   <h3>Doppelte Kundenakten</h3>
   <p>
     Das passiert in jedem Betrieb: dieselbe Person zweimal angelegt, bei einer davon der Nachname falsch geschrieben.
-    Turnera kann die beiden Akten <strong>zusammenführen</strong> , und dabei kommt alles von der einen auf die richtige:
-    Termine, Besuche, Wertkarten und Patientenakte. Es geht nichts verloren.
+    Turnera kann die beiden Akten <strong>zusammenführen</strong> , und dabei kommt alles von der einen auf die richtige: Termine, Besuche, Wertkarten und Patientenakte. Es geht nichts verloren. Das Foto der doppelten Akte geht auf die richtige über, wenn diese keines hatte; hatten beide eines, bleibt das der richtigen.
   </p>
 
   <div class="ojo">
@@ -2332,7 +2345,7 @@ footer{
     <tr><th colspan="3">Kunden</th></tr>
     <tr><td><strong>Kundenakten ansehen</strong></td><td>Öffnet die Kundensuche und die Akte jedes Kunden.</td><td>Empfang, Fachkraft, Leitung, Kunden</td></tr>
     <tr><td><strong>Kunden anlegen</strong></td><td>Aktiviert die Schaltfläche „Neuer Kunde“.</td><td>Empfang, Leitung, Kunden</td></tr>
-    <tr><td><strong>Kundenakte bearbeiten</strong></td><td>Erlaubt, Änderungen an einer Akte zu speichern; ohne sie ist die Akte schreibgeschützt.</td><td>Empfang, Leitung, Kunden</td></tr>
+    <tr><td><strong>Kundenakte bearbeiten</strong></td><td>Erlaubt, Änderungen an einer Akte zu speichern und ihr Foto hinzuzufügen oder zu entfernen; ohne sie ist die Akte schreibgeschützt.</td><td>Empfang, Leitung, Kunden</td></tr>
     <tr><td><strong>Telefonnummern und E-Mails sehen</strong></td><td>Zeigt Telefonnummer und E-Mail des Kunden; ohne sie sind sie verborgen.</td><td>Empfang, Leitung, Kunden</td></tr>
     <tr><td><strong>Hinweise schreiben und entfernen</strong></td><td>Schreibt und entfernt die Hinweise, die beim Buchen und Kassieren erscheinen.</td><td>Empfang, Fachkraft, Leitung, Kunden</td></tr>
     <tr><td><strong>Kundennotizen löschen</strong></td><td>Aktiviert das Löschen einer Notiz in der Akte. Wer sie schreiben darf, darf sie nicht automatisch entfernen.</td><td>Leitung, Kunden</td></tr>
@@ -2993,6 +3006,18 @@ footer{
   <p>
     <strong>Deaktivieren löscht nicht.</strong> Die Fachkraft verschwindet aus dem Terminkalender, aber ihre Termine, Besuche und klinischen Fälle zeigen sie weiterhin an, und durch Bearbeiten lässt sie sich wieder aktivieren. Hat sie ab heute Termine, fragt Turnera, welche Fachkraft sie übernimmt, und überträgt sie alle auf einmal; überschneidet sich eine mit einem Termin, den die übernehmende Person schon hat, meldet es das, damit man sie danach neu einplanen kann. Die Liste zeigt nur aktive Mitarbeiter: Wenn man <em>Nur aktive</em> abwählt, erscheinen auch die ausgeschiedenen.
   </p>
+
+  <h4 id="profesionales-proteccion-datos">Datenschutz der Fachkraft</h4>
+  <p>
+    Beim Anlegen einer Fachkraft erscheint in der Bestätigung <em>Datenschutzdokument zum Unterschreiben herunterladen</em>: die Informationen, die der Person gesetzlich über die Verarbeitung ihrer Daten zu geben sind (Art. 13 DSGVO), bereits ausgefüllt mit Vor- und Nachnamen, Ausweisnummer, Arbeitsort und Datum sowie mit den Daten des Zentrums aus den Einstellungen. <strong>Eine Einwilligung wird nicht eingeholt</strong> für das, was die Arbeit selbst erfordert —Grundlage sind der Vertrag und das Gesetz—: Die Person wird informiert und unterschreibt, dass sie die Informationen erhalten hat. Freiwillig ist nur ein Kästchen, mit dem sie die Verwendung ihres Bildes und Namens gegenüber der Öffentlichkeit erlaubt oder nicht, und eine Ablehnung hat keinerlei Folgen. Hat das Zentrum die Zeiterfassung eingeschaltet, enthält das Dokument immer den Hinweis auf den Standort beim Stempeln mit dem Handy, den Artikel 90 des spanischen LOPDGDD verlangt, auch wenn es noch keine Zone des Zentrums und keine Stempelungen gibt. Was Turnera nicht weiß —die Stelle, der Datenschutzbeauftragte oder die Steuernummer und der Kontakt, wenn sie nicht in den Einstellungen stehen— erscheint als Lücke zum Ausfüllen von Hand.
+  </p>
+  <p>
+    Derselbe Download steht immer in der Akte bereit, unter <em>Datenschutz</em>, wo sich die Sprache des Dokuments wählen lässt. Wenn die Person es unterschrieben zurückbringt, <em>Unterschriebene Aushändigung vermerken</em> vermerkt das Datum, ob sie ihr Bild erlaubt hat oder nicht und, wenn gewünscht, das eingescannte Papier (PDF, JPEG oder PNG, bis 20 MB). Festgehalten wird, wer es wann vermerkt hat, und es
+    <strong>wird nicht gelöscht</strong>: Ändert die Person ihre Meinung über ihr Bild, wird eine weitere Aushändigung vermerkt, und es gilt die letzte. Für das Herunterladen des Dokuments und das Vermerken der Aushändigung ist die Berechtigung zum Bearbeiten von Fachkräften nötig.
+  </p>
+  <div class="ojo">
+    <p>Das Dokument ist eine <strong>unverbindliche Vorlage</strong>: Lassen Sie sie vor der Verwendung von Ihrer Datenschutzberatung prüfen.</p>
+  </div>
 
   <h3 id="presencia">Arbeitszeiterfassung (stempeln)</h3>
   <span class="ruta">Menü → Stempeln · Menü → Personal → Arbeitszeiterfassung</span>

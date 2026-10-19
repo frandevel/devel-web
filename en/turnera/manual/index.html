@@ -1305,6 +1305,20 @@ footer{
     saving leaves the contact details as they were.
   </p>
 
+  <h3 id="clientes-foto">The customer's photo</h3>
+  <span class="ruta">Customer record → Photo</span>
+  <p>
+    The record carries a photo of the customer, so they can be recognised at the front desk. Until there is one, a silhouette is shown. Whoever can edit records presses <em>Photo</em>, below the details, and chooses:
+  </p>
+  <ul>
+    <li><strong>Upload photo</strong>: a JPEG or PNG photo from the computer. Turnera reduces it and removes the data the camera writes into it (where and with what it was taken) before saving it.</li>
+    <li><strong>Take photo with the camera</strong>: with the computer's webcam. The live image opens; if there is more than one camera, it is chosen at the top. <em>Take photo</em> freezes it, <em>Retake</em> goes back to the live image and <em>Save</em> puts it on the record. Only the square you see is kept, so it is best to keep the face in the centre. The option does not appear if the browser cannot use cameras.</li>
+    <li><strong>Remove photo</strong>: the record goes back to the silhouette. The photo is deleted.</li>
+  </ul>
+  <p>
+    The first time, the browser asks whether it may use the camera: you have to accept. If permission was refused, if no camera is connected or if another program is using it (a video call, for example), Turnera says so and lets you try again. The camera switches off as soon as the photo is taken or the window is closed. Everyone who can see the record can see the photo.
+  </p>
+
   <h3 id="clientes-baja">Deactivating a customer</h3>
 
   <p>
@@ -1322,7 +1336,7 @@ footer{
   <h3 id="clientes-supresion">When the customer asks for their data to be erased</h3>
   <span class="ruta">Customer record → Erase their data</span>
   <p>
-    This is the <strong>right to erasure</strong> under the GDPR. It is done by whoever has the permission <em>Erase the data of a customer who asks for it</em> (by default, management). Their name, ID document, phone numbers, email, address, date of birth, notes, alerts, waiting list and portal access are erased, and their appointments from today on are cancelled. The record stays, with the name <em>Datos borrados</em> and its number, because its visits, payments and vouchers refer to it, and they stay in the centre's accounts.
+    This is the <strong>right to erasure</strong> under the GDPR. It is done by whoever has the permission <em>Erase the data of a customer who asks for it</em> (by default, management). Their name, ID document, phone numbers, email, address, date of birth, photo, notes, alerts, waiting list and portal access are erased, and their appointments from today on are cancelled. The record stays, with the name <em>Datos borrados</em> and its number, because its visits, payments and vouchers refer to it, and they stay in the centre's accounts.
   </p>
   <p>
     What the law requires to be kept <strong>is kept</strong>: the <strong>invoices</strong>, as they are, and the
@@ -1403,8 +1417,7 @@ footer{
   <h3>Duplicate records</h3>
   <p>
     It happens in every centre: the same person added twice, with the surname misspelt one of the times.
-    Turnera lets you <strong>merge</strong> the two records, and in doing so everything from the other one is carried over to the good one:
-    appointments, visits, vouchers and clinical record. Nothing is lost.
+    Turnera lets you <strong>merge</strong> the two records, and in doing so everything from the other one is carried over to the good one: appointments, visits, vouchers and clinical record. Nothing is lost. The duplicate's photo passes to the good one if it had none; if both had one, the good one's is kept.
   </p>
 
   <div class="ojo">
@@ -2329,7 +2342,7 @@ footer{
     <tr><th colspan="3">Customers</th></tr>
     <tr><td><strong>See customer records</strong></td><td>Opens the customer search and each customer’s record.</td><td>Reception, Professional, Management, Customers</td></tr>
     <tr><td><strong>Register customers</strong></td><td>Enables the new customer button.</td><td>Reception, Management, Customers</td></tr>
-    <tr><td><strong>Edit a customer’s record</strong></td><td>Allows saving changes to a record; without it the record is read-only.</td><td>Reception, Management, Customers</td></tr>
+    <tr><td><strong>Edit a customer’s record</strong></td><td>Allows saving changes to a record and adding or removing its photo; without it the record is read-only.</td><td>Reception, Management, Customers</td></tr>
     <tr><td><strong>See phones and emails</strong></td><td>Shows the customer’s phone and email; without it they are hidden.</td><td>Reception, Management, Customers</td></tr>
     <tr><td><strong>Write and remove alerts</strong></td><td>Writes and removes the alerts that pop up when booking and charging.</td><td>Reception, Professional, Management, Customers</td></tr>
     <tr><td><strong>Delete customer notes</strong></td><td>Enables deleting a note from the record. Being able to write them does not give the right to remove them.</td><td>Management, Customers</td></tr>
@@ -2986,6 +2999,18 @@ footer{
   <p>
     <strong>Deactivating does not delete.</strong> The practitioner leaves the agenda, but their appointments, visits and clinical cases still show them, and they can be reactivated by editing them. If they have appointments from today on, Turnera asks which practitioner takes them over and moves them all at once; if one clashes with another the receiver already has, it says so so you can rearrange it afterwards. The list shows only those who are active: by clearing <em>Active only</em> the inactive ones show too.
   </p>
+
+  <h4 id="profesionales-proteccion-datos">The professional's data protection</h4>
+  <p>
+    When a professional is registered, the confirmation offers <em>Download data protection document to sign</em>: the information the law requires them to be given about the processing of their data (art. 13 GDPR), already filled in with their name, surnames, ID number, workplace and date, and with the centre's details held in the preferences. <strong>They are not asked for consent</strong> for what the job itself requires —the basis is the contract and the law—: they are informed and sign that they have received it. The only voluntary part is a box to authorise, or not, the use of their image and name towards the public, and refusing has no consequence at all. If the centre has time clocking switched on, the document always includes the notice about location when clocking in with a mobile phone required by article 90 of the LOPDGDD, even if there is no centre zone or clocking yet. What Turnera does not know —the job title, the data protection officer, or the tax ID and contact if they are not in the preferences— appears as a blank to fill in by hand.
+  </p>
+  <p>
+    The same download is always available in their record, under <em>Data protection</em>, where the language of the document can be chosen. When they bring it back signed, <em>Record signed delivery</em> records the date, whether or not they authorised their image and, optionally, the scanned paper (PDF, JPEG or PNG, up to 20 MB). Who recorded it and when is kept, and it
+    <strong>is never deleted</strong>: if they change their mind about their image, another delivery is recorded and the latest one counts. Downloading the document and recording the delivery require the permission to edit professionals.
+  </p>
+  <div class="ojo">
+    <p>The document is a <strong>guidance template</strong>: review it with your data protection adviser before using it.</p>
+  </div>
 
   <h3 id="presencia">Working time (clocking in)</h3>
   <span class="ruta">Menu → Clock in · Menu → Staff → Working time</span>

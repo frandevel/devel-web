@@ -1427,6 +1427,20 @@ footer{
     o contacto fica como estava.
   </p>
 
+  <h3 id="clientes-foto">A foto do cliente</h3>
+  <span class="ruta">Ficha do cliente → Foto</span>
+  <p>
+    A ficha tem uma foto do cliente, para o reconhecer na receção. Enquanto não tiver, aparece uma silhueta. Quem pode editar fichas carrega em <em>Foto</em>, por baixo dos dados, e escolhe:
+  </p>
+  <ul>
+    <li><strong>Carregar foto</strong>: uma foto JPEG ou PNG do computador. O Turnera reduz-a e retira-lhe os dados que a câmara escreve (onde e com quê foi tirada) antes de a guardar.</li>
+    <li><strong>Tirar foto com a câmara</strong>: com a webcam do computador. Abre-se a imagem em direto; se houver mais de uma câmara, escolhe-se em cima. <em>Tirar foto</em> congela-a, <em>Repetir</em> volta à imagem em direto e <em>Guardar</em> coloca-a na ficha. Só se guarda o quadrado que se vê, por isso convém deixar a cara ao centro. A opção não aparece se o navegador não puder usar câmaras.</li>
+    <li><strong>Retirar foto</strong>: a ficha volta à silhueta. A foto é apagada.</li>
+  </ul>
+  <p>
+    Da primeira vez, o navegador pergunta se pode usar a câmara: é preciso aceitar. Se se disse que não, se não houver câmara ligada ou se outro programa a estiver a usar (uma videochamada, por exemplo), o Turnera avisa e deixa tentar de novo. A câmara desliga-se assim que se tira a foto ou se fecha a janela. A foto é vista por todos os que veem a ficha.
+  </p>
+
   <h3 id="clientes-baja">Desativar um cliente</h3>
 
   <p>
@@ -1446,9 +1460,7 @@ footer{
   <span class="ruta">Ficha do cliente → Apagar os dados</span>
   <p>
     Trata-se do <strong>direito ao apagamento</strong> do RGPD. Fá-lo quem tem a permissão <em>Apagar os dados de um
-    cliente que o pede</em> (por predefinição, a direção). Apagam-se o seu nome, documento, telefones, e-mail, morada, data de
-    nascimento, notas, avisos, lista de espera e acesso ao portal, e anulam-se as suas marcações de hoje em
-    diante. A ficha permanece, com o nome <em>Dados apagados</em> e o seu número, porque é nomeada pelas suas
+    cliente que o pede</em> (por predefinição, a direção). Apagam-se o seu nome, documento, telefones, e-mail, morada, data de nascimento, foto, notas, avisos, lista de espera e acesso ao portal, e anulam-se as suas marcações de hoje em diante. A ficha permanece, com o nome <em>Dados apagados</em> e o seu número, porque é nomeada pelas suas
     visitas, cobranças e pacotes de sessões, que continuam nas contas do centro.
   </p>
   <p>
@@ -1558,8 +1570,7 @@ footer{
   <h3>Fichas duplicadas</h3>
   <p>
     Acontece em todos os centros: a mesma pessoa registada duas vezes, com o apelido mal escrito numa delas.
-    O Turnera permite <strong>fundir</strong> as duas fichas, e ao fazê-lo passa tudo o que é da outra para a
-    boa: marcações, visitas, pacotes de sessões e processo clínico. Não se perde nada.
+    O Turnera permite <strong>fundir</strong> as duas fichas, e ao fazê-lo passa tudo o que é da outra para a boa: marcações, visitas, pacotes de sessões e processo clínico. Não se perde nada. A foto da repetida passa para a boa se esta não tinha; se as duas tinham, fica a da boa.
   </p>
 
   <div class="ojo">
@@ -2703,7 +2714,7 @@ footer{
     <tr><th colspan="3">Clientes</th></tr>
     <tr><td><strong>Ver as fichas de clientes</strong></td><td>Abre a pesquisa de clientes e a ficha de cada um.</td><td>Receção, Profissional, Direção, Clientes</td></tr>
     <tr><td><strong>Registar clientes</strong></td><td>Ativa o botão de novo cliente.</td><td>Receção, Direção, Clientes</td></tr>
-    <tr><td><strong>Editar a ficha de um cliente</strong></td><td>Permite guardar alterações numa ficha; sem isto, fica só em leitura.</td><td>Receção, Direção, Clientes</td></tr>
+    <tr><td><strong>Editar a ficha de um cliente</strong></td><td>Permite guardar alterações numa ficha e pôr-lhe ou retirar-lhe a foto; sem isto, fica só em leitura.</td><td>Receção, Direção, Clientes</td></tr>
     <tr><td><strong>Ver telefones e e-mails</strong></td><td>Mostra o telefone e o e-mail do cliente; sem isto, aparecem ocultos.</td><td>Receção, Direção, Clientes</td></tr>
     <tr><td><strong>Escrever e retirar avisos</strong></td><td>Escreve e retira os avisos que surgem ao marcar e ao cobrar.</td><td>Receção, Profissional, Direção, Clientes</td></tr>
     <tr><td><strong>Apagar notas de clientes</strong></td><td>Permite apagar uma nota da ficha. Escrevê-las não dá direito a eliminá-las.</td><td>Direção, Clientes</td></tr>
@@ -3479,6 +3490,18 @@ footer{
     quem as recebe, di-lo para a recolocar depois. A lista mostra só os que estão ativos: retirando <em>Só
     ativos</em> aparecem também os inativos.
   </p>
+
+  <h4 id="profesionales-proteccion-datos">Proteção de dados do profissional</h4>
+  <p>
+    Ao registar um profissional, a confirmação oferece <em>Descarregar documento de proteção de dados para assinar</em>: a informação que a lei obriga a dar-lhe sobre o tratamento dos seus dados (art. 13.º do RGPD), já preenchida com o nome, apelidos, número de identificação, centro de trabalho e data, e com os dados do centro que constem das preferências. <strong>Não se lhe pede consentimento</strong> para o que é próprio do trabalho —a base é o contrato e a lei—: é informado e assina que a recebeu. O único voluntário é uma caixa para autorizar, ou não, a utilização da sua imagem e do seu nome perante o público, e recusar não tem qualquer consequência. Se o centro tiver o registo de ponto ligado, o documento inclui sempre o aviso sobre a localização ao picar o ponto com o telemóvel exigido pelo artigo 90.º da LOPDGDD, mesmo que ainda não haja zona do centro nem registos de ponto. O que o Turnera não sabe —a função, o encarregado da proteção de dados, ou o NIF e o contacto se não estiverem nas preferências— aparece como um espaço para preencher à mão.
+  </p>
+  <p>
+    A mesma descarga está sempre na ficha, em <em>Proteção de dados</em>, onde se pode escolher o idioma do documento. Quando o trouxer assinado, <em>Registar entrega assinada</em> anota a data, se autorizou ou não a sua imagem e, se se quiser, o papel digitalizado (PDF, JPEG ou PNG, até 20 MB). Fica registado quem o anotou e quando, e
+    <strong>não se apaga</strong>: se mudar de opinião sobre a sua imagem, regista-se outra entrega e vale a última. Descarregar o documento e registar a entrega exigem a permissão de editar profissionais.
+  </p>
+  <div class="ojo">
+    <p>O documento é um <strong>modelo orientativo</strong>: reveja-o com o seu consultor de proteção de dados antes de o utilizar.</p>
+  </div>
 
   <h3 id="presencia">Controlo de assiduidade (picar o ponto)</h3>
   <span class="ruta">Menu → Picar o ponto · Menu → Pessoal → Controlo de assiduidade</span>

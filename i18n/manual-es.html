@@ -1387,6 +1387,28 @@ footer{
     contacto se queda como estaba.
   </p>
 
+  <h3 id="clientes-foto">La foto del cliente</h3>
+  <span class="ruta">Ficha del cliente → Foto</span>
+  <p>
+    La ficha lleva una foto del cliente, para reconocerlo en el mostrador. Mientras no tenga, sale una silueta. Quien
+    puede editar fichas pulsa <em>Foto</em>, debajo de los datos, y elige:
+  </p>
+  <ul>
+    <li><strong>Subir foto</strong>: una foto JPEG o PNG del ordenador. Turnera la reduce y le quita los datos que
+      escribe la cámara (dónde y con qué se hizo) antes de guardarla.</li>
+    <li><strong>Hacer foto con la cámara</strong>: con la webcam del ordenador. Se abre la imagen en directo; si hay
+      más de una cámara, se elige arriba. <em>Hacer foto</em> la congela, <em>Repetir</em> vuelve a la imagen en
+      directo y <em>Guardar</em> la pone en la ficha. Se guarda solo el cuadrado que se ve, así que conviene dejar la
+      cara en el centro. La opción no sale si el navegador no puede usar cámaras.</li>
+    <li><strong>Quitar foto</strong>: la ficha vuelve a la silueta. La foto se borra.</li>
+  </ul>
+  <p>
+    La primera vez el navegador pregunta si deja usar la cámara: hay que aceptar. Si se dijo que no, si no hay cámara
+    conectada o si la tiene ocupada otro programa (una videollamada, por ejemplo), Turnera lo dice y deja volver a
+    intentarlo. La cámara se apaga en cuanto se hace la foto o se cierra la ventana. La foto la ve todo el que ve la
+    ficha.
+  </p>
+
   <h3 id="clientes-baja">Dar de baja a un cliente</h3>
 
   <p>
@@ -1407,7 +1429,7 @@ footer{
   <p>
     Se trata del <strong>derecho de supresión</strong> del RGPD. Lo hace quien tiene el permiso <em>Borrar los datos de un
     cliente que lo pide</em> (de serie, dirección). Se borran su nombre, documento, teléfonos, correo, dirección,
-    fecha de nacimiento, notas, avisos, lista de espera y acceso al portal, y se anulan sus citas de hoy en
+    fecha de nacimiento, foto, notas, avisos, lista de espera y acceso al portal, y se anulan sus citas de hoy en
     adelante. La ficha se queda, con el nombre <em>Datos borrados</em> y su número, porque la nombran sus visitas,
     cobros y bonos, que siguen en las cuentas del centro.
   </p>
@@ -1519,7 +1541,8 @@ footer{
   <p>
     Pasa en todos los centros: la misma persona dada de alta dos veces, con el apellido mal escrito una de ellas.
     Turnera permite <strong>fusionar</strong> las dos fichas, y al hacerlo se lleva a la buena todo lo de la otra:
-    citas, visitas, bonos e historia clínica. No se pierde nada.
+    citas, visitas, bonos e historia clínica. No se pierde nada. La foto de la repetida pasa a la buena si esta no
+    tenía; si las dos tenían, se queda la de la buena.
   </p>
 
   <div class="ojo">
@@ -2675,7 +2698,7 @@ footer{
     <tr><th colspan="3">Clientes</th></tr>
     <tr><td><strong>Ver las fichas de clientes</strong></td><td>Abre el buscador de clientes y la ficha de cada uno.</td><td>Recepción, Profesional, Dirección, Clientes</td></tr>
     <tr><td><strong>Dar de alta clientes</strong></td><td>Habilita el boton de nuevo cliente.</td><td>Recepción, Dirección, Clientes</td></tr>
-    <tr><td><strong>Editar la ficha de un cliente</strong></td><td>Deja guardar cambios en una ficha; sin esto la ve en solo lectura.</td><td>Recepción, Dirección, Clientes</td></tr>
+    <tr><td><strong>Editar la ficha de un cliente</strong></td><td>Deja guardar cambios en una ficha y ponerle o quitarle la foto; sin esto la ve en solo lectura.</td><td>Recepción, Dirección, Clientes</td></tr>
     <tr><td><strong>Ver telefonos y correos</strong></td><td>Ensena el telefono y el correo del cliente; sin esto salen ocultos.</td><td>Recepción, Dirección, Clientes</td></tr>
     <tr><td><strong>Escribir y retirar avisos</strong></td><td>Escribe y retira los avisos que saltan al citar y al cobrar.</td><td>Recepción, Profesional, Dirección, Clientes</td></tr>
     <tr><td><strong>Borrar notas de clientes</strong></td><td>Habilita borrar una nota de la ficha. Escribirlas no da derecho a quitarlas.</td><td>Dirección, Clientes</td></tr>
@@ -3453,6 +3476,30 @@ footer{
     recibe, lo dice para recolocarla después. La lista enseña solo a los que están en activo: quitando <em>Solo en
     activo</em> salen también los de baja.
   </p>
+
+  <h4 id="profesionales-proteccion-datos">Protección de datos del profesional</h4>
+  <p>
+    Al dar de alta a un profesional, la confirmación ofrece <em>Descargar documento de protección de datos para
+    firmar</em>: la información que la ley obliga a darle sobre el tratamiento de sus datos (art. 13 del RGPD), ya
+    rellena con su nombre, apellidos, DNI, centro de trabajo y fecha, y con los datos del centro que estén en las
+    preferencias. <strong>No se le pide consentimiento</strong> para lo propio del trabajo —la base es el contrato y
+    la ley—: se le informa y firma que lo ha recibido. Lo único voluntario es una casilla para autorizar, o no, el uso
+    de su imagen y su nombre de cara al público, y negarse no tiene ninguna consecuencia. Si el centro tiene encendido el
+    fichaje, el documento incluye siempre el aviso sobre la ubicación al fichar con el móvil que exige el artículo 90
+    de la LOPDGDD, aunque aún no haya zona del centro ni fichajes. Lo que Turnera no sabe —el puesto, el delegado de protección de datos, o
+    el CIF y el contacto si no están en las preferencias— sale como un hueco para rellenar a mano.
+  </p>
+  <p>
+    La misma descarga está siempre en la ficha, en <em>Protección de datos</em>, donde se puede elegir el idioma del
+    documento. Cuando lo traiga firmado, <em>Registrar entrega firmada</em> anota la fecha, si autorizó o no su imagen
+    y, si se quiere, el papel escaneado (PDF, JPEG o PNG, hasta 20 MB). Queda quién lo anotó y cuándo, y
+    <strong>no se borra</strong>: si cambia de opinión sobre su imagen, se registra otra entrega y vale la última.
+    Descargar el documento y registrar la entrega piden el permiso de editar profesionales.
+  </p>
+  <div class="ojo">
+    <p>El documento es un <strong>modelo orientativo</strong>: revíselo con su asesor en protección de datos antes de
+      usarlo.</p>
+  </div>
 
   <h3 id="presencia">Control de presencia (fichar)</h3>
   <span class="ruta">Menú → Fichar · Menú → Personal → Control de presencia</span>
