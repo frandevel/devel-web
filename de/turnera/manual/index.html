@@ -2358,7 +2358,7 @@ footer{
     <tr><td><strong>Zugang zum Wartungsbuch geben</strong></td><td>Erstellt und widerruft die schreibgeschützten Links zum Wartungsbuch für eine Inspektion oder ein Audit.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
     <tr><th colspan="3">Aktivierungen</th></tr>
     <tr><td><strong>Aktivierungsanfragen ansehen</strong></td><td>Öffnet die Aktivierungspunkte und den Anfrageverlauf: wer darum gebeten hat, etwas zu öffnen oder einzuschalten, und wann.</td><td>Leitung, Aktivierungen</td></tr>
-    <tr><td><strong>Aktivierungspunkte verwalten</strong></td><td>Legt Punkte an und entfernt sie, schreibt, was jedes Formular abfragt, und wählt den Benachrichtigungskanal.</td><td>Leitung, Aktivierungen</td></tr>
+    <tr><td><strong>Aktivierungspunkte verwalten</strong></td><td>Legt Punkte an und entfernt sie, schreibt, was jedes Formular abfragt, und sieht den Benachrichtigungskanal vollständig, um ihn dem Team zu geben und einen neuen zu erzeugen.</td><td>Leitung, Aktivierungen</td></tr>
     <tr><th colspan="3">Portal und Hinweise</th></tr>
     <tr><td><strong>Buchungsportal</strong></td><td>Verwaltet das Portal, in dem der Kunde selbst einen Termin bucht.</td><td>Leitung, Portal und Hinweise</td></tr>
     <tr><td><strong>WhatsApp-Erinnerungen</strong></td><td>Konfiguriert die WhatsApp-Benachrichtigungen des Zentrums.</td><td>Portal und Hinweise</td></tr>
@@ -3491,7 +3491,8 @@ footer{
   <p>
     Das Wartungspersonal muss nicht vor dem Computer sitzen. In der <strong>App</strong> (Android) tippt jede Person unter der Option <em>Wartung</em>auf ihren Namen und tippt ihre
     <strong>PIN</strong> ein, dieselbe, mit der sie stempelt. Sie sieht die Liste der Aufträge mit Priorität, Frist und Zuständigem (überfällige in Rot); in jedem Auftrag sieht sie den Verlauf und die Fotos, <strong>macht Fotos je Phase</strong>
-    direkt mit der Kamera, übernimmt einen nicht zugewiesenen Auftrag und gibt ihn mit Begründung ab, wenn sie ihn nicht beenden kann. Was in der App geschieht, steht im selben Verlauf wie das, was im Web geschieht, mit der Person, die ihre PIN eingegeben hat, als Urheberin. Das Handbuch der App, Bildschirm für Bildschirm, steht in <a href="#app-nativa">Abschnitt 14</a>.
+    direkt mit der Kamera, übernimmt einen nicht zugewiesenen Auftrag und gibt ihn mit Begründung ab, wenn sie ihn nicht beenden kann. Was in der App geschieht, steht im selben Verlauf wie das, was im Web geschieht, mit der Person, die ihre PIN eingegeben hat, als Urheberin. Daneben, in Klammern, vermerkt der Verlauf auch <strong>den Benutzer, mit dem die Sitzung geöffnet war</strong>
+    („vom Benutzer …“), wenn es nicht der eigene dieser Person ist, damit man weiß, von welchem Handy aus es geschah. Ein Benutzer, der mit einem Mitarbeitenden verknüpft ist, handelt nur als diese Person: Er kann einen Auftrag nicht im Namen einer anderen Person übernehmen, weiterführen, kommentieren oder fotografieren und den einer anderen Person nur abgeben, wenn er die Berechtigung <em>Verwalten</em> hat. Das Handbuch der App, Bildschirm für Bildschirm, steht in <a href="#app-nativa">Abschnitt 14</a>.
   </p>
 
   <figure>
@@ -3539,16 +3540,19 @@ footer{
 
   <h3>Die Benachrichtigungen: ntfy</h3>
   <p>
-    Die Benachrichtigungen laufen über <strong>ntfy</strong>. Jeder Punkt hat seinen <strong>Kanal</strong>: ein langer Name mit einem Hash, der nicht erraten werden kann (zum Beispiel <code>mareny-apertura-</code> gefolgt von 32 Buchstaben und Zahlen). Jedes Teammitglied installiert die ntfy-App und abonniert diesen Kanal. Der Kanal ist ein Geheimnis: Nach dem Speichern ist nur sein Ende zu sehen. Den Benachrichtigungsserver und seinen Schlüssel konfiguriert, wer die Installation verwaltet.
+    Die Benachrichtigungen laufen über <strong>ntfy</strong>, an einen <strong>Kanal</strong>. Der Name des Kanals ist der einzige Schlüssel: Wer ihn kennt, liest die Benachrichtigungen ohne jedes Konto. Deshalb <strong>wird er nicht eingegeben</strong>: Turnera erzeugt ihn aus dem Kurznamen des Zentrums und 22 zufälligen Zeichen (zum Beispiel <code>mareny-</code> gefolgt von Buchstaben, Zahlen, Binde- und Unterstrichen), unmöglich zu erraten und in jedem Zentrum anders. Jedes Teammitglied installiert die ntfy-App und abonniert diesen Kanal. Wer die Aktivierungen verwaltet, sieht ihn vollständig, mit der Schaltfläche <strong>Kanal kopieren</strong>, um ihn dem Team zu geben; wer sie nur einsieht, sieht lediglich sein Ende. Den Benachrichtigungsserver und seinen Schlüssel konfiguriert, wer die Installation verwaltet.
   </p>
   <p>
     Der Kanal wird <strong>einmal für das ganze Zentrum</strong> festgelegt, in den <em>Einstellungen</em>, in der Gruppe
-    <em>Aktivierungen</em>: Punkte ohne eigenen Kanal benachrichtigen über diesen. Ein Punkt mit eigenem Kanal verwendet seinen. Wer die Aktivierungen verwaltet, sieht auf diesem Bildschirm den ganzen Namen, um ihn dem Team zu geben; wer sie nur einsieht, sieht lediglich sein Ende. Wird der Name bekannt, ändert man ihn dort, und das Team abonniert erneut.
+    <em>Aktivierungen</em>, mit <strong>Kanal erzeugen</strong>: Punkte ohne eigenen Kanal benachrichtigen über diesen. Soll ein Punkt andere Personen benachrichtigen, schaltet man im Punkt <strong>Eigener Benachrichtigungskanal</strong> ein, und Turnera erzeugt einen nur für ihn, der beim Speichern angezeigt wird. Wird der Name bekannt, liefert <strong>Anderen Kanal erzeugen</strong> einen neuen: Der alte erhält keine Benachrichtigungen mehr, und das Team muss neu abonnieren.
+  </p>
+  <p>
+    Kanäle, die von Hand eingegeben wurden, bevor Turnera sie erzeugte, <strong>funktionieren weiter</strong>, damit niemand ohne Benachrichtigungen bleibt, tragen aber die Markierung <em>Erratbar</em> und einen Hinweis: „Dieser Kanal wurde von Hand eingegeben und kann erraten werden: Erzeugen Sie einen neuen und abonnieren Sie ihn erneut.“ Das sollte man so bald wie möglich tun.
   </p>
 
   <h3>Was den Punkt schützt</h3>
   <p>
-    Der Code <strong>wird nicht geprüft</strong> gegen irgendeine Liste: Er verhindert nur, dass jeder mit einem Handy wahllos Anfragen schickt. Um Missbrauch zu verhindern, hat ein Punkt immer nur <strong>eine offene Anfrage</strong> gleichzeitig (wer später kommt, sieht dieselbe und löst keine neue Benachrichtigung aus), eine Verbindung darf nicht öfter als <strong>3-mal pro Stunde</strong> anfragen, und eine unbeantwortete Anfrage verfällt nach einer Stunde. Die Schaltfläche <em>Testen</em> jedes Punkts sendet eine Testbenachrichtigung an den Kanal.
+    Der Code <strong>wird nicht geprüft</strong> gegen irgendeine Liste: Er verhindert nur, dass jeder mit einem Handy wahllos Anfragen schickt. Um Missbrauch zu verhindern, hat ein Punkt immer nur <strong>eine offene Anfrage</strong> gleichzeitig (wer später kommt, sieht dieselbe und öffnet keine neue; das Team erhält eine lautlose Benachrichtigung mit Name und Code dieser Person, „Wartet auch: …“, damit es weiß, wen es antreffen wird), eine Verbindung darf nicht öfter als <strong>3-mal pro Stunde</strong> anfragen, und eine unbeantwortete Anfrage verfällt nach einer Stunde. Die Schaltfläche <em>Testen</em> jedes Punkts sendet eine Testbenachrichtigung an den Kanal.
   </p>
 
   <h3>Wer es übernimmt</h3>

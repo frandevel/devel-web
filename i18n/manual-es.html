@@ -2739,7 +2739,7 @@ footer{
     <tr><td><strong>Dar acceso al libro de mantenimiento</strong></td><td>Crea y retira los enlaces de solo lectura al libro de mantenimiento para una inspeccion o una auditoria.</td><td><strong>Delicado:</strong> solo el Administrador del sistema</td></tr>
     <tr><th colspan="3">Activaciones</th></tr>
     <tr><td><strong>Ver las solicitudes de activación</strong></td><td>Abre los puntos de activación y el historial de solicitudes: quién pidió abrir o encender algo y cuándo.</td><td>Dirección, Activaciones</td></tr>
-    <tr><td><strong>Gestionar los puntos de activación</strong></td><td>Da de alta y de baja los puntos, escribe lo que se pide en cada formulario y elige el canal de aviso.</td><td>Dirección, Activaciones</td></tr>
+    <tr><td><strong>Gestionar los puntos de activación</strong></td><td>Da de alta y de baja los puntos, escribe lo que se pide en cada formulario y ve entero el canal de aviso, para darlo al equipo y generar otro.</td><td>Dirección, Activaciones</td></tr>
     <tr><th colspan="3">Portal y avisos</th></tr>
     <tr><td><strong>Portal de reservas</strong></td><td>Gobierna el portal donde el cliente pide hora por su cuenta.</td><td>Dirección, Portal y avisos</td></tr>
     <tr><td><strong>Avisos por WhatsApp</strong></td><td>Configura los avisos por WhatsApp del centro.</td><td>Portal y avisos</td></tr>
@@ -4163,6 +4163,10 @@ footer{
     lleva (los vencidos, en rojo); en cada parte ve la historia y las fotos, <strong>saca fotos por fase</strong>
     directamente con la cámara, se queda con un parte sin asignar y lo suelta con su motivo si no puede acabarlo. Lo que
     se hace en la app queda en la misma historia que lo que se hace en la web, con la persona que puso su PIN como autora.
+    Al lado, entre paréntesis, la historia apunta también <strong>el usuario con el que estaba abierta la sesión</strong>
+    («desde el usuario …») cuando no es el de esa persona, para saber desde qué móvil se hizo. Un usuario que está
+    vinculado a un profesional solo actúa como ese profesional: no puede quedarse, avanzar, comentar ni fotografiar un
+    parte en nombre de otra persona, ni soltar el de otro si no tiene el permiso de <em>Gestionar</em>.
     El manual de la aplicación, pantalla a pantalla, está en el <a href="#app-nativa">apartado 14</a>.
   </p>
 
@@ -4217,23 +4221,33 @@ footer{
 
   <h3>Los avisos: ntfy</h3>
   <p>
-    Los avisos van por <strong>ntfy</strong>. Cada punto tiene su <strong>canal</strong>: un nombre largo con un hash, que no se
-    pueda adivinar (por ejemplo <code>mareny-apertura-</code> seguido de 32 letras y números). Cada persona del equipo instala
-    la app de ntfy y se suscribe a ese canal. El canal es un secreto: después de guardarlo solo se ve su final. El servidor
-    de avisos y su clave los configura quien administra la instalación.
+    Los avisos van por <strong>ntfy</strong>, a un <strong>canal</strong>. El nombre del canal es la única llave: quien lo
+    sabe lee los avisos sin cuenta ninguna. Por eso <strong>no se escribe</strong>: lo genera Turnera con el nombre corto
+    del centro y 22 caracteres al azar (por ejemplo <code>mareny-</code> seguido de letras, números, guiones y guiones
+    bajos), imposible de adivinar y distinto en cada centro. Cada persona del equipo instala la app de ntfy y se suscribe
+    a ese canal. Quien gestiona las activaciones lo ve entero, con el botón <strong>Copiar canal</strong>, para dárselo al
+    equipo; quien solo las consulta ve únicamente su final. El servidor de avisos y su clave los configura quien
+    administra la instalación.
   </p>
   <p>
-    El canal se puede poner <strong>una vez para todo el centro</strong> en <em>Preferencias</em>, en el grupo
-    <em>Activaciones</em>: los puntos que no traen un canal propio avisan por ese. Un punto con canal propio usa el suyo.
-    Quien gestiona las activaciones ve el nombre entero en esa pantalla, para dárselo al equipo; quien solo las consulta ve
-    únicamente su final. Si el nombre se filtra, se cambia ahí y el equipo vuelve a suscribirse.
+    El canal se pide <strong>una vez para todo el centro</strong> en <em>Preferencias</em>, en el grupo
+    <em>Activaciones</em>, con <strong>Generar canal</strong>: los puntos que no traen un canal propio avisan por ese. Si un
+    punto debe avisar a otras personas, en el punto se enciende <strong>Canal de avisos propio</strong> y Turnera le genera
+    uno solo para él, que se ve al guardarlo. Si el nombre se filtra, <strong>Generar otro canal</strong> da uno nuevo: el
+    anterior deja de recibir avisos y el equipo tiene que suscribirse otra vez.
+  </p>
+  <p>
+    Los canales que se escribieron a mano antes de que Turnera los generara <strong>siguen funcionando</strong>, para no
+    dejar a nadie sin avisos, pero llevan la marca <em>Adivinable</em> y un aviso: «Este canal se escribió a mano y se
+    puede adivinar: genere uno nuevo y vuelvan a suscribirse». Conviene hacerlo cuanto antes.
   </p>
 
   <h3>Lo que protege el punto</h3>
   <p>
     El código <strong>no se comprueba</strong> contra ninguna lista: solo evita que cualquiera con un móvil mande peticiones al
     azar. Para que no se abuse, un punto solo tiene <strong>una solicitud abierta</strong> a la vez (quien llega después mira la
-    misma y no vuelve a avisar), una misma conexión no puede pedir más de <strong>3 veces por hora</strong>, y una solicitud
+    misma y no abre otra; el equipo recibe un aviso que no suena con su nombre y su código, «También espera: …», para
+    saber a quién encontrará), una misma conexión no puede pedir más de <strong>3 veces por hora</strong>, y una solicitud
     sin atender caduca a la hora. El botón <em>Probar</em> de cada punto manda un aviso de prueba al canal.
   </p>
 

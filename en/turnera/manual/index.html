@@ -2355,7 +2355,7 @@ footer{
     <tr><td><strong>Give access to the maintenance book</strong></td><td>Creates and withdraws the read-only links to the maintenance book for an inspection or an audit.</td><td><strong>Delicate:</strong> only the System administrator</td></tr>
     <tr><th colspan="3">Activations</th></tr>
     <tr><td><strong>See activation requests</strong></td><td>Opens the activation points and the request history: who asked for something to be opened or switched on, and when.</td><td>Management, Activations</td></tr>
-    <tr><td><strong>Manage activation points</strong></td><td>Creates and removes points, writes what each form asks for, and chooses the alert channel.</td><td>Management, Activations</td></tr>
+    <tr><td><strong>Manage activation points</strong></td><td>Creates and removes points, writes what each form asks for, and sees the whole alert channel, to give it to the team and generate another.</td><td>Management, Activations</td></tr>
     <tr><th colspan="3">Portal and alerts</th></tr>
     <tr><td><strong>Booking portal</strong></td><td>Manages the portal where the customer books on their own.</td><td>Management, Portal and alerts</td></tr>
     <tr><td><strong>WhatsApp reminders</strong></td><td>Configures the centre’s WhatsApp alerts.</td><td>Portal and alerts</td></tr>
@@ -3485,7 +3485,8 @@ footer{
   <p>
     Maintenance staff do not have to sit in front of the computer. In the professionals’ <strong>app</strong> (Android), under the <em>Maintenance</em>option, each person taps their name and types their
     <strong>PIN</strong>, the same one they clock in with. They see the list of orders with their priority, due date and who is handling them (overdue ones in red); in each order they see the history and the photos, <strong>take photos by stage</strong>
-    directly with the camera, take an unassigned order and release it with a reason if they cannot finish it. What is done in the app goes into the same history as what is done on the web, with the person who typed their PIN as the author. The app’s manual, screen by screen, is in <a href="#app-nativa">section 14</a>.
+    directly with the camera, take an unassigned order and release it with a reason if they cannot finish it. What is done in the app goes into the same history as what is done on the web, with the person who typed their PIN as the author. Next to it, in brackets, the history also records <strong>the user the session was open with</strong>
+    (“from user …”) when it is not that person’s own, so you know which phone it was done from. A user linked to a member of staff only acts as that person: they cannot take, move forward, comment on or photograph an order on someone else’s behalf, nor release someone else’s without the permission to <em>Manage</em>. The app’s manual, screen by screen, is in <a href="#app-nativa">section 14</a>.
   </p>
 
   <figure>
@@ -3533,16 +3534,19 @@ footer{
 
   <h3>Alerts: ntfy</h3>
   <p>
-    Alerts go through <strong>ntfy</strong>. Each point has its <strong>channel</strong>: a long name with a hash that cannot be guessed (for example <code>mareny-apertura-</code> followed by 32 letters and numbers). Each team member installs the ntfy app and subscribes to that channel. The channel is a secret: after saving it only its end is shown. The alert server and its key are configured by whoever administers the installation.
+    Alerts go through <strong>ntfy</strong>, to a <strong>channel</strong>. The channel name is the only key: whoever knows it can read the alerts without any account. That is why it <strong>is not typed in</strong>: Turnera generates it from the centre’s short name and 22 random characters (for example <code>mareny-</code> followed by letters, numbers, hyphens and underscores), impossible to guess and different in each centre. Each team member installs the ntfy app and subscribes to that channel. Whoever manages the activations sees it in full, with the <strong>Copy channel</strong> button, to give it to the team; whoever only views them sees just its end. The alert server and its key are configured by whoever administers the installation.
   </p>
   <p>
-    The channel can be set <strong>once for the whole centre</strong> in <em>Preferences</em>, in the group
-    <em>Activations</em>: points without their own channel alert through that one. A point with its own channel uses its own. Whoever manages the activations sees the whole name on that screen, to give it to the team; whoever only views them sees just its end. If the name leaks, change it there and the team subscribes again.
+    The channel is requested <strong>once for the whole centre</strong> in <em>Preferences</em>, in the group
+    <em>Activations</em>, with <strong>Generate channel</strong>: points without their own channel alert through that one. If a point has to alert other people, switch on <strong>Own alert channel</strong> on the point and Turnera generates one just for it, shown when you save. If the name leaks, <strong>Generate another channel</strong> gives a new one: the old one stops receiving alerts and the team has to subscribe again.
+  </p>
+  <p>
+    Channels that were typed in by hand before Turnera generated them <strong>still work</strong>, so that nobody is left without alerts, but they carry the mark <em>Guessable</em> and a warning: “This channel was typed in by hand and can be guessed: generate a new one and subscribe again”. It is best to do it as soon as possible.
   </p>
 
   <h3>What protects the point</h3>
   <p>
-    The code <strong>is not checked</strong> against any list: it only stops anyone with a phone from sending random requests. To prevent abuse, a point only has <strong>one open request</strong> at a time (whoever arrives later looks at the same one and does not trigger another alert), one connection cannot request more than <strong>3 times per hour</strong>, and a request left unattended expires after an hour. The <em>Test</em> button of each point sends a test alert to the channel.
+    The code <strong>is not checked</strong> against any list: it only stops anyone with a phone from sending random requests. To prevent abuse, a point only has <strong>one open request</strong> at a time (whoever arrives later looks at the same one and does not open another; the team receives a silent alert with their name and code, “Also waiting: …”, so they know who they will find), one connection cannot request more than <strong>3 times per hour</strong>, and a request left unattended expires after an hour. The <em>Test</em> button of each point sends a test alert to the channel.
   </p>
 
   <h3>Who carries it</h3>
