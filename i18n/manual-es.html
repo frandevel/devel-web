@@ -818,7 +818,23 @@ footer{
     nueva. Al cambiarla <strong>se cierran todas las demás sesiones</strong> de ese usuario —la del móvil, la del
     ordenador de casa, la que alguien pudiera tener abierta con la vieja— y sólo sigue dentro quien la ha cambiado.
     Se cambia una contraseña porque se sospecha que otro la conoce, y eso no serviría de nada si su sesión siguiera
-    abierta. Lo mismo pasa cuando administración le restablece la contraseña a alguien, o lo desactiva.
+    abierta. Lo mismo pasa cuando administración le restablece la contraseña a alguien, o lo desactiva. En los tres
+    casos <strong>se quitan también los equipos registrados para entrar con la huella</strong>, y hay que volver a
+    registrarlos.
+  </p>
+
+  <h3 id="huella">Entrar con la huella</h3>
+  <p>
+    Si el centro lo tiene activado (Preferencias, grupo Acceso), en el menú de la sesión está <strong>Entrar con
+    huella</strong>, para registrar el equipo y entrar con la huella, la cara o el PIN del propio equipo, sin escribir
+    la contraseña. Para
+    registrarlo se pide <strong>la contraseña de ahora</strong>: así nadie puede dejar puesto su equipo en la cuenta
+    de otro aprovechando una sesión que se quedó abierta. La contraseña sigue valiendo siempre.
+  </p>
+  <p>
+    En <span class="ruta">Administración → Usuarios → (un usuario)</span> se ve, al final de la ficha, con qué
+    equipos entra esa persona con la huella, y se puede <strong>quitar</strong> el que no se reconozca o el de un
+    equipo perdido. Registrar uno nuevo sólo lo puede hacer la propia persona, desde su equipo.
   </p>
 
   <h3 id="aviso-general">Avisos de Turnera</h3>
@@ -3542,8 +3558,23 @@ footer{
 
   <p>
     El enlace vale 30 días y se firma una sola vez. Si alguien no firma, <strong>no se le vuelve a mandar ni se le
-    recuerda</strong> solo; si el enlace caduca, RRHH tiene que reenviarlo. Quien tenga todavía el PIN provisional
-    tiene que cambiarlo en el reloj antes de poder firmar.
+    recuerda</strong> solo. Quien tenga todavía el PIN provisional tiene que cambiarlo en el reloj antes de poder
+    firmar.
+  </p>
+
+  <p>
+    Si en el enlace se escribe <strong>cinco veces seguidas un PIN equivocado</strong>, el enlace se anula y llega un
+    aviso al correo de RRHH: puede ser un despiste o que el enlace haya llegado a quien no debía. Esos fallos no
+    cuentan para el reloj de fichar, que sigue funcionando con normalidad.
+  </p>
+
+  <p>
+    En el mismo apartado, debajo del correo de RRHH, está <strong>Cómo va la firma de cada mes</strong>: se elige el
+    mes y sale cada profesional con el estado de su enlace —sin enviar, pendiente de firma, firmado, caducado o
+    <strong>anulado por PIN equivocados</strong>—. Si a alguien se le caducó, se le perdió o se le anuló, se pulsa
+    <strong>Reenviar enlace</strong> en su fila: le llega un correo nuevo, igual que el del día 1, y el enlace de antes
+    deja de valer. Se puede reenviar como mucho <strong>cinco veces por persona y mes</strong>, y nunca un resumen ya
+    firmado ni a quien no tiene correo en su ficha.
   </p>
   <h4 id="fichar-donde">Desde dónde se ficha</h4>
   <span class="ruta">Administración → Control de presencia → Zona del centro</span>

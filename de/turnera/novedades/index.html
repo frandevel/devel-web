@@ -631,6 +631,7 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-10-19-firma-huella">19. Oktober 2026 · Stand der Unterschriften pro Monat und sicherere Anmeldung per Fingerabdruck</a></li>
     <li><a href="#2026-10-19-partes-canales">19. Oktober 2026 · Wer jeden Schritt eines Auftrags eingetragen hat, und sichere Benachrichtigungskanäle</a></li>
     <li><a href="#2026-10-18-usuario-copia">18. Oktober 2026 · Benutzer per Kopie anlegen</a></li>
 <li><a href="#2026-10-18-precios">18. Oktober 2026 · Schnelle Preisauskunft</a></li>
@@ -670,10 +671,55 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-10-19-firma-huella" class="version">
+  <div class="version__cabecera">
+    <h2>19. Oktober 2026 · Stand der Unterschriften pro Monat und sicherere Anmeldung per Fingerabdruck</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">2026.10.181-a35a827</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Zeiterfassung: Stand der Unterschriften pro Monat</h4>
+    <ul>
+      <li>Unter <strong>Stand der Unterschriften pro Monat</strong> wählt die Personalabteilung den Monat und sieht, wie weit die Monatsübersicht jeder Person ist: <em>Nicht gesendet</em>, <em>Unterschrift ausstehend</em>, <em>Unterschrieben</em>, <em>Abgelaufen</em> oder <em>Nach falschen PINs gesperrt</em>.</li>
+      <li>Ist der Link einer Person abgelaufen, verloren gegangen oder gesperrt worden, bekommt sie mit <strong>Link erneut senden</strong> einen neuen, und der alte gilt nicht mehr. Das geht bis zu fünfmal pro Person und Monat.</li>
+    </ul>
+    <h4>Benutzer: die Geräte, mit denen sich jede Person per Fingerabdruck anmeldet</h4>
+    <ul>
+      <li>In der Akte jedes Benutzers stehen jetzt die <strong>Geräte, mit denen sich die Person per Fingerabdruck anmeldet</strong>, jeweils mit der letzten Verwendung.</li>
+      <li>Mit <strong>Entfernen</strong> lässt sich ein Gerät austragen, das man nicht kennt oder das verloren gegangen ist.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Anmeldung per Fingerabdruck: besser geschützt</h4>
+    <ul>
+      <li>Um den Fingerabdruck eines neuen Geräts zu registrieren, fragt Turnera zuerst nach dem Passwort. So kann niemand eine offene Sitzung ausnutzen, um sein eigenes Gerät im Konto einer anderen Person einzutragen.</li>
+      <li>Wird das Passwort geändert oder zurückgesetzt, werden die registrierten Fingerabdrücke entfernt; neu einrichten lassen sie sich über <strong>Mit Fingerabdruck anmelden</strong>.</li>
+    </ul>
+    <h4>Unterschrift der Monatsübersicht: geschützt gegen das Durchprobieren von PINs</h4>
+    <ul>
+      <li>Nach fünf falschen PINs in Folge wird der Link zum Schutz der Person gesperrt, und die Personalabteilung erhält eine Benachrichtigung, um einen neuen zu senden.</li>
+      <li>Die Stempeluhr funktioniert ganz normal weiter.</li>
+    </ul>
+    <h4>Fotos: richtig ausgerichtet und ohne versteckte Daten</h4>
+    <ul>
+      <li>Fotos werden richtig ausgerichtet gespeichert, ohne die versteckten Daten, die die Kamera hinzufügt, etwa den Aufnahmeort.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Behobene Fehler</h3>
+    <ul>
+      <li>Mögliche Sicherheitslücken behoben.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-10-19-partes-canales" class="version">
   <div class="version__cabecera">
     <h2>19. Oktober 2026 · Wer jeden Schritt eines Auftrags eingetragen hat, und sichere Benachrichtigungskanäle</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">2026.10.167-3cfc85f</span></p>
 
@@ -695,7 +741,7 @@ footer{
     </ul>
     <h4>Aktivierungen: ein Benachrichtigungskanal, den niemand erraten kann</h4>
     <ul>
-      <li>Der Benachrichtigungskanal wird nicht mehr eingegeben: Turnera erzeugt ihn zufällig, damit ihn niemand erraten kann. Mit <strong>Kanal kopieren</strong> gibt man ihn dem Team, und wenn er bekannt wird, liefert <strong>Anderen Kanal erzeugen</strong> einen neuen.</li>
+      <li>Der Benachrichtigungskanal wird nicht mehr eingegeben: Turnera erzeugt ihn zufällig, damit ihn niemand erraten kann. Mit <strong>Kanal kopieren</strong> gibt man ihn dem Team, und wenn er bekannt wird, liefert <strong>Neuen Kanal erzeugen</strong> einen neuen.</li>
       <li>Von Hand eingegebene Kanäle funktionieren weiter, damit niemand ohne Benachrichtigungen bleibt, tragen aber die Markierung <em>Erratbar</em> als Anstoß, sie so bald wie möglich zu ändern.</li>
     </ul>
   </div>

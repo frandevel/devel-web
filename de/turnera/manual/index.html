@@ -740,7 +740,7 @@ footer{
   </p>
   <ol>
     <li>Klicken Sie auf den Rettungsring. <em>Problem melden</em>.</li>
-    <li>Beschreiben Sie unter <em>Was ist passiert?</em>, was Sie gerade taten, was Sie erwartet haben und was stattdessen passiert ist.
+    <li>Unter <em>Was ist passiert?</em> beschreiben Sie, was Sie gerade taten, was Sie erwartet haben und was stattdessen passiert ist.
       Mit einem Satz wie „geht nicht“ lässt sich der Fehler nicht nachstellen, deshalb bittet die Anwendung um
       etwas mehr.</li>
     <li>Wählen Sie die <strong>Dringlichkeit</strong>: <em>Niedrig</em> , wenn es warten kann, <em>Normal</em> , wenn es stört, aber
@@ -819,7 +819,15 @@ footer{
     neuen. Beim Ändern <strong>werden alle anderen Sitzungen</strong> dieses Benutzers beendet —die auf dem Handy, die auf dem
     Rechner zu Hause, die, die jemand mit dem alten noch offen haben könnte— und nur wer es geändert hat, bleibt angemeldet.
     Ein Passwort ändert man, weil man vermutet, dass jemand anderes es kennt, und das wäre sinnlos, wenn dessen Sitzung
-    offen bliebe. Dasselbe geschieht, wenn die Verwaltung jemandem das Passwort zurücksetzt oder ihn deaktiviert.
+    offen bliebe. Dasselbe geschieht, wenn die Verwaltung jemandem das Passwort zurücksetzt oder ihn deaktiviert. In allen drei Fällen <strong>werden auch die für die Anmeldung per Fingerabdruck registrierten Geräte entfernt</strong>, und sie müssen neu registriert werden.
+  </p>
+
+  <h3 id="huella">Anmeldung per Fingerabdruck</h3>
+  <p>
+    Wenn das Zentrum es aktiviert hat (Einstellungen, Gruppe Anmeldung im Web), steht im Sitzungsmenü <strong>Mit Fingerabdruck anmelden</strong>, um das Gerät zu registrieren und sich mit dem Fingerabdruck, dem Gesicht oder der PIN des Geräts anzumelden, ohne das Passwort einzugeben. Zum Registrieren wird <strong>das aktuelle Passwort</strong> verlangt: So kann niemand eine offen gebliebene Sitzung nutzen, um sein Gerät im Konto einer anderen Person einzutragen. Das Passwort gilt weiterhin immer.
+  </p>
+  <p>
+    Unter <span class="ruta">Verwaltung → Benutzer → (ein Benutzer)</span> sieht man am Ende der Akte, mit welchen Geräten sich diese Person per Fingerabdruck anmeldet; mit <strong>Entfernen</strong> lässt sich ein unbekanntes oder verlorenes Gerät austragen. Ein neues kann nur die Person selbst registrieren, von ihrem eigenen Gerät aus.
   </p>
 
   <h3 id="aviso-general">Hinweise von Turnera</h3>
@@ -2941,7 +2949,7 @@ footer{
   </div>
 
   <p>
-    Beschreiben Sie unter <em>Stempeln</em> im Menü stehen alle Fachkräfte des Zentrums, jede mit ihrer Schaltfläche
+    Unter <em>Stempeln</em> im Menü stehen alle Fachkräfte des Zentrums, jede mit ihrer Schaltfläche
     <em>Stempeln</em>. Die Liste <strong>zeigt nur Namen</strong>: wer da ist und seit wann, gehört zur
     Arbeitszeiterfassung, und den Bildschirm sieht jeder, der am Empfang vorbeikommt. Das sieht jede Person erst nach
     Eingabe ihrer PIN, zusammen mit dem, was ansteht: <em>Kommen</em> oder <em>Gehen</em> und <em>Pause</em> , wenn sie schon
@@ -3030,7 +3038,17 @@ footer{
   </p>
 
   <p>
-    Der Link gilt 30 Tage und wird nur einmal unterschrieben. Wer nicht unterschreibt, <strong>bekommt ihn nicht erneut und wird auch nicht erinnert</strong> von selbst; läuft der Link ab, muss die Personalabteilung ihn neu senden. Wer noch die vorläufige PIN hat, muss sie an der Stempeluhr ändern, bevor er unterschreiben kann.
+    Der Link gilt 30 Tage und wird nur einmal unterschrieben. Wer nicht unterschreibt, <strong>bekommt ihn nicht erneut und wird auch nicht erinnert</strong> von selbst. Wer noch die vorläufige PIN hat, muss sie an der Stempeluhr ändern, bevor er unterschreiben kann.
+  </p>
+
+  <p>
+    Wird über den Link <strong>fünfmal hintereinander eine falsche PIN</strong> eingegeben, wird der Link gesperrt und an die E-Mail der Personalabteilung geht eine Benachrichtigung: Das kann ein Versehen sein, oder der Link ist bei der falschen Person gelandet. Diese Fehlversuche zählen nicht für die Stempeluhr, die ganz normal weiterfunktioniert.
+  </p>
+
+  <p>
+    Im selben Bereich, unter der E-Mail der Personalabteilung, steht <strong>Stand der Unterschriften pro Monat</strong>: Man wählt den Monat, und jede Fachkraft erscheint mit dem Stand ihres Links —nicht gesendet, Unterschrift ausstehend, unterschrieben, abgelaufen oder
+    <strong>nach falschen PINs gesperrt</strong>—. Ist der Link einer Person abgelaufen, verloren gegangen oder gesperrt, klickt man in ihrer Zeile auf
+    <strong>Link erneut senden</strong> und sie bekommt eine neue E-Mail, wie die vom 1., und der alte Link gilt nicht mehr. Erneut gesendet werden kann er höchstens <strong>fünfmal pro Person und Monat</strong>, und nie für eine bereits unterschriebene Übersicht oder an jemanden ohne E-Mail in der Akte.
   </p>
   <h4 id="fichar-donde">Von wo aus gestempelt wird</h4>
   <span class="ruta">Verwaltung → Zeiterfassung → Zone des Betriebs</span>
@@ -3067,7 +3085,7 @@ footer{
   </ul>
 
   <p>
-    Beschreiben Sie unter <em>Personal → Arbeitszeiterfassung</em> im Menü steht der Rest: wählen Sie einen Zeitraum und, wenn Sie wollen, eine Person.
+    Unter <em>Personal → Arbeitszeiterfassung</em> im Menü steht der Rest: wählen Sie einen Zeitraum und, wenn Sie wollen, eine Person.
     Oben erscheinen die <strong>Summen jeder Person und jedes Monats</strong>: erfasste Tage, geplante,
     gearbeitete, reguläre Stunden und Überstunden laut Arbeitskalender, die in dem Monat ausgezahlten oder in Freizeit ausgeglichenen
     Überstunden, und wie viele von der Personalabteilung erfasste Stunden auf Zustimmung warten oder abgelehnt wurden. Darunter jeder Tag mit
@@ -3207,7 +3225,7 @@ footer{
 
   <h4>Der Kalender jeder Fachkraft</h4>
   <p>
-    Beschreiben Sie unter <em>Kalender</em> zeigt alle Fachkräfte des Zentrums und wie ihr Kalender im gewählten Jahr steht.
+    Unter <em>Kalender</em> zeigt alle Fachkräfte des Zentrums und wie ihr Kalender im gewählten Jahr steht.
     <em>Anlegen</em> übernimmt den Tarifvertrag des Jahres und fragt nach der Arbeitszeit (100 % Vollzeit, 50 % halbtags) und,
     falls sie im Jahr liegen, nach den Daten von <strong>Eintritt und Austritt</strong>: Damit werden Stunden und Urlaub automatisch anteilig berechnet,
     was für eine Abrechnung nötig ist. In Halbtagsarbeit gibt es gleich viel Urlaub
@@ -3249,7 +3267,7 @@ footer{
 
   <h4 id="calendario-cerrar-mes">Jeden Monat für die Lohnabrechnung abschließen</h4>
   <p>
-    Beschreiben Sie unter <em>Abschlüsse</em>, mit dem oben gewählten Jahr erscheinen die Monate des Jahres mit ihrem Status. Wenn ein Monat zur Lohnabrechnung an die Steuerkanzlei geschickt wird, <em>Monat abschließen</em> belässt ihn <strong>so, wie er verschickt wurde</strong>: Solange er abgeschlossen ist, können seine Vorfälle, die Tage der Kalender dieses Monats, die darin datierten Ausgleiche und seine Feiertage nicht geändert werden. Auch nichts, was mehrere Monate gleichzeitig ändert und ihn betrifft: die Arbeitszeit des Kalenders, das Verschieben von Ein- oder Austritt über ihn hinweg, das Duplizieren oder Löschen des Kalenders dieses Jahres. Die Stempelungen wurden nie angetastet. Wird danach eine Schicht bearbeitet, die dieser Monat verwendet hat, behält der abgeschlossene Monat <strong>seinen damaligen Zeitplan</strong>, genau wie ein abgeschlossenes Jahr.
+    Unter <em>Abschlüsse</em>, mit dem oben gewählten Jahr erscheinen die Monate des Jahres mit ihrem Status. Wenn ein Monat zur Lohnabrechnung an die Steuerkanzlei geschickt wird, <em>Monat abschließen</em> belässt ihn <strong>so, wie er verschickt wurde</strong>: Solange er abgeschlossen ist, können seine Vorfälle, die Tage der Kalender dieses Monats, die darin datierten Ausgleiche und seine Feiertage nicht geändert werden. Auch nichts, was mehrere Monate gleichzeitig ändert und ihn betrifft: die Arbeitszeit des Kalenders, das Verschieben von Ein- oder Austritt über ihn hinweg, das Duplizieren oder Löschen des Kalenders dieses Jahres. Die Stempelungen wurden nie angetastet. Wird danach eine Schicht bearbeitet, die dieser Monat verwendet hat, behält der abgeschlossene Monat <strong>seinen damaligen Zeitplan</strong>, genau wie ein abgeschlossenes Jahr.
   </p>
   <p>
     Ein Monat wird ab dem 1. des Folgemonats abgeschlossen; der, der <em>in Behandlung</em> noch nicht. Anders als beim Jahr <strong>kann ein Monat wieder geöffnet werden</strong>, denn eine Lohnabrechnung wird berichtigt: <em>Wieder öffnen</em> fragt nach dem Grund, und dieser wird mit Datum und Verantwortlichem in der Liste festgehalten. Nach der Korrektur wird er wieder abgeschlossen. Ist das Jahr bereits abgeschlossen, werden seine Monate weder abgeschlossen noch wieder geöffnet.
@@ -3260,7 +3278,7 @@ footer{
 
   <h4>Das Geleistete: normale Stunden und Stunden außerhalb der Schicht</h4>
   <p>
-    Beschreiben Sie unter <em>Ist-Zeiten</em> wird jeder gestempelte Tag eingefärbt: grün, wenn alles <strong>reguläre Stunden</strong>
+    Unter <em>Ist-Zeiten</em> wird jeder gestempelte Tag eingefärbt: grün, wenn alles <strong>reguläre Stunden</strong>
     waren, und orange, wenn es <strong>Stunden außerhalb der Schicht</strong>gab. Mit der Maus darüber sieht man die gestempelten Stunden. Die Regeln:
   </p>
   <ul>
@@ -3622,7 +3640,7 @@ footer{
 
   <h3 id="app-fichar">Mit der PIN stempeln</h3>
   <p>
-    Beschreiben Sie unter <em>Stempeln</em> zeigt die Mitarbeitenden des Standorts. Jede Person tippt auf ihren Namen und gibt ihre PIN ein. Wer noch keine PIN hat, erscheint abgeblendet, mit <em>ohne PIN</em>: Sie muss im Web vergeben werden, unter <em>Personal</em>. Wenn die Leitung die PIN gesetzt hat, ist sie <strong>vorläufig</strong> und die App fordert beim ersten Mal auf, eine eigene zu wählen (siehe
+    Unter <em>Stempeln</em> zeigt die Mitarbeitenden des Standorts. Jede Person tippt auf ihren Namen und gibt ihre PIN ein. Wer noch keine PIN hat, erscheint abgeblendet, mit <em>ohne PIN</em>: Sie muss im Web vergeben werden, unter <em>Personal</em>. Wenn die Leitung die PIN gesetzt hat, ist sie <strong>vorläufig</strong> und die App fordert beim ersten Mal auf, eine eigene zu wählen (siehe
     <a href="#pin-provisional">Vorläufige PIN</a>).
   </p>
   <figure>
@@ -3675,7 +3693,7 @@ footer{
 
   <h3 id="app-mantenimiento">Wartungsaufträge</h3>
   <p>
-    Beschreiben Sie unter <em>Wartung</em> jede Person tippt auf ihren Namen, gibt ihre PIN ein und sieht die Aufträge: die <strong>nicht zugewiesenen</strong>, ihre eigenen und die anderer Personen, mit Priorität, Frist und der roten Warnung bei überfälligen. Tippt man auf einen, öffnet er sich mit dem Ziel, seinen Fotos je Phase und seinem Verlauf. Was hier geschieht, steht im selben Verlauf wie das, was im Web geschieht (siehe <a href="#mantenimiento">Wartung</a>).
+    Unter <em>Wartung</em> jede Person tippt auf ihren Namen, gibt ihre PIN ein und sieht die Aufträge: die <strong>nicht zugewiesenen</strong>, ihre eigenen und die anderer Personen, mit Priorität, Frist und der roten Warnung bei überfälligen. Tippt man auf einen, öffnet er sich mit dem Ziel, seinen Fotos je Phase und seinem Verlauf. Was hier geschieht, steht im selben Verlauf wie das, was im Web geschieht (siehe <a href="#mantenimiento">Wartung</a>).
   </p>
   <figure>
     <img src="/turnera/manual/imagenes/49-app-mantenimiento.png" alt="Die Liste der Wartungsaufträge in der App, mit einem überfälligen in Rot" loading="lazy">
