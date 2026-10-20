@@ -816,5 +816,15 @@
   "t558f968a": "Data protection",
   "tda65a1cc": "Record signed delivery",
   "t7844ec5c": "Recorded deliveries are never deleted: if they change their mind about their image, another one is recorded and the latest one counts.",
-  "t2d690ab7": "The document is a guidance template: it is advisable to review it with the centre's data protection adviser."
+  "t2d690ab7": "The document is a guidance template: it is advisable to review it with the centre's data protection adviser.",
+  "tcb21fc2f": "20 October 2026 · Turnera 1.1.1: confirm before removing the photo, and a fixed header",
+  "tfca1cf74": "1.1.1-7761ff0",
+  "t0266e31b": "Customers: removing the photo asks for confirmation",
+  "tb14746ec": "When you choose",
+  "t3b272601": "on the customer's record, Turnera first asks “Remove the photo of…?”, with their name, and only removes it once you confirm.",
+  "t9f165072": "leaves it as it was.",
+  "t0cfa07e2": "Remove photo",
+  "tc111e0ab": "Cancel",
+  "t292528cb": "The header, always in view",
+  "te6646a58": "The header stays fixed at the top as you scroll and stands out better from the content, on mobile too."
 }
