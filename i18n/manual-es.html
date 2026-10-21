@@ -1414,7 +1414,7 @@ footer{
     La primera vez el navegador pregunta si deja usar la cámara: hay que aceptar. Si se dijo que no, si no hay cámara
     conectada o si la tiene ocupada otro programa (una videollamada, por ejemplo), Turnera lo dice y deja volver a
     intentarlo. La cámara se apaga en cuanto se hace la foto o se cierra la ventana. La foto la ve todo el que ve la
-    ficha.
+    ficha, y se lleva también en la <a href="#irse">exportación de los datos del centro</a>.
   </p>
 
   <h3 id="clientes-baja">Dar de baja a un cliente</h3>
@@ -2482,7 +2482,8 @@ footer{
     <em>Agenda y reservas</em>, <em>Avisos a los clientes</em>, <em>Cobros y fidelización</em> y <em>Apariencia</em>.
     Cerrado, cada grupo dice en una línea cómo está, así que para comprobar algo no hace falta abrirlo. Si un grupo
     cerrado tiene cambios, lo marca con <em>Sin guardar</em>, y si al guardar algo no vale, se abre solo. Al final, y
-    siempre cerrada, la <em>Zona delicada</em>: exportar todos los datos y vaciar la demostración. Un centro con
+    siempre cerrada, la <em>Zona delicada</em>: exportar todos los datos, fotos y documentos incluidos (ver
+    <a href="#irse">Llevarse los datos del centro</a>), y vaciar la demostración. Un centro con
     fichajes de personal real o con años de calendario cerrados no se puede vaciar: la ley obliga a conservar
     el registro de jornada, así que para cerrar un centro se pide su baja a Devel y se guarda lo que haya que guardar.
   </p>
@@ -3424,8 +3425,13 @@ footer{
       orden, y con ella se puede volver a Turnera o pasar los datos a otro programa.</li>
     <li><strong>Una hoja por tabla</strong> —clientes, citas, cobros, bonos, historia clínica…—, que se abre con
       doble clic en Excel.</li>
-    <li><strong>Los documentos</strong>: los consentimientos firmados en PDF y el logotipo, cada uno en su
-      fichero.</li>
+    <li><strong>Todas las imágenes y documentos guardados</strong>, cada uno en su fichero normal (JPG, PNG o PDF)
+      dentro de la carpeta <em>ficheros/</em>, ordenados por tabla: las fotos de clientes y profesionales, las fotos
+      de la historia clínica (evoluciones), los consentimientos firmados y sus firmas, los documentos de protección
+      de datos firmados de los profesionales y el logotipo. Van también las fotos de los partes de mantenimiento y de
+      las incidencias del calendario laboral, y las firmas de los resúmenes mensuales de jornada. La hoja de cada
+      tabla dice qué fichero corresponde a cada fila, y todos van además dentro de <em>turnera.sql</em>, para quien
+      restaure la base.</li>
   </ul>
   <p>
     No van las contraseñas, los PIN de fichar ni los secretos de las integraciones: fuera de Turnera no sirven para
@@ -3502,6 +3508,7 @@ footer{
     documento. Cuando lo traiga firmado, <em>Registrar entrega firmada</em> anota la fecha, si autorizó o no su imagen
     y, si se quiere, el papel escaneado (PDF, JPEG o PNG, hasta 20 MB). Queda quién lo anotó y cuándo, y
     <strong>no se borra</strong>: si cambia de opinión sobre su imagen, se registra otra entrega y vale la última.
+    El papel escaneado se lleva también en la <a href="#irse">exportación de los datos del centro</a>.
     Descargar el documento y registrar la entrega piden el permiso de editar profesionales.
   </p>
   <div class="ojo">
@@ -4215,7 +4222,7 @@ footer{
     <li>Turnera reduce cada foto antes de subirla, y de paso le quita lo que la cámara escribe dentro, como el sitio
       donde se hizo.</li>
     <li>Son datos de salud: las ve quien puede ver la historia clínica y nadie más, y viajan con la copia de
-      seguridad y con la exportación de los datos del centro.</li>
+      seguridad y con la <a href="#irse">exportación de los datos del centro</a>.</li>
     <li>En la página del caso salen en pequeño bajo cada evolución; pulsando una se ve en grande.</li>
   </ul>
 

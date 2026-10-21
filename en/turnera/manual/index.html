@@ -1321,7 +1321,7 @@ footer{
   as it was.</li>
   </ul>
   <p>
-    The first time, the browser asks whether it may use the camera: you have to accept. If permission was refused, if no camera is connected or if another program is using it (a video call, for example), Turnera says so and lets you try again. The camera switches off as soon as the photo is taken or the window is closed. Everyone who can see the record can see the photo.
+    The first time, the browser asks whether it may use the camera: you have to accept. If permission was refused, if no camera is connected or if another program is using it (a video call, for example), Turnera says so and lets you try again. The camera switches off as soon as the photo is taken or the window is closed. Everyone who can see the record can see the photo, and it also goes in the <a href="#irse">export of the centre's data</a>.
   </p>
 
   <h3 id="clientes-baja">Deactivating a customer</h3>
@@ -2163,7 +2163,8 @@ footer{
 
   <p>
     <strong>Preferences is organised in groups that open and close</strong>, in order of use: <em>The centre</em>,
-    <em>Agenda and bookings</em>, <em>Messages to customers</em>, <em>Payments and loyalty</em> and <em>Appearance</em>. Closed, each group says in one line how it stands, so there is no need to open it to check something. If a closed group has changes, it is marked <em>Not saved</em>, and if something is not valid when saving, it opens by itself. At the end, and always closed, the <em>Danger zone</em>: export all data and empty the demo. A centre with real staff clock-ins or closed calendar years cannot be emptied: the law requires keeping the working time register, so to close a centre you ask Devel for its deregistration and what has to be kept is kept.
+    <em>Agenda and bookings</em>, <em>Messages to customers</em>, <em>Payments and loyalty</em> and <em>Appearance</em>. Closed, each group says in one line how it stands, so there is no need to open it to check something. If a closed group has changes, it is marked <em>Not saved</em>, and if something is not valid when saving, it opens by itself. At the end, and always closed, the <em>Danger zone</em>: export all data, photos and documents included (see
+    <a href="#irse">Taking the centre's data</a>), and empty the demo. A centre with real staff clock-ins or closed calendar years cannot be emptied: the law requires keeping the working time register, so to close a centre you ask Devel for its deregistration and what has to be kept is kept.
   </p>
 
   <h3>The agenda</h3>
@@ -2965,7 +2966,7 @@ footer{
   <ul>
     <li><strong>turnera.sql</strong>, the whole database. Any IT person loads it into MySQL with one command, and with it you can come back to Turnera or move the data to another program.</li>
     <li><strong>One spreadsheet per table</strong> —customers, appointments, payments, vouchers, clinical records…—, which opens in Excel with a double click.</li>
-    <li><strong>The documents</strong>: the signed consents as PDF and the logo, each in its own file.</li>
+    <li><strong>All stored images and documents</strong>, each in its usual file (JPG, PNG or PDF) inside the folder <em>ficheros/</em>, sorted by table: photos of customers and professionals, clinical record photos (progress notes), signed consents and their signatures, the professionals' signed data protection documents and the logo. The photos of maintenance orders and of work calendar incidents, and the signatures of the monthly working-time summaries, go too. Each table's spreadsheet says which file belongs to each row, and all of them are also inside <em>turnera.sql</em>, for whoever restores the database.</li>
   </ul>
   <p>
     Passwords, clock-in PINs and integration secrets are left out: outside Turnera they are useless, and in the wrong hands someone could try to crack them.
@@ -3011,7 +3012,7 @@ footer{
   </p>
   <p>
     The same download is always available in their record, under <em>Data protection</em>, where the language of the document can be chosen. When they bring it back signed, <em>Record signed delivery</em> records the date, whether or not they authorised their image and, optionally, the scanned paper (PDF, JPEG or PNG, up to 20 MB). Who recorded it and when is kept, and it
-    <strong>is never deleted</strong>: if they change their mind about their image, another delivery is recorded and the latest one counts. Downloading the document and recording the delivery require the permission to edit professionals.
+    <strong>is never deleted</strong>: if they change their mind about their image, another delivery is recorded and the latest one counts. The scanned paper also goes in the <a href="#irse">export of the centre's data</a>. Downloading the document and recording the delivery require the permission to edit professionals.
   </p>
   <div class="ojo">
     <p>The document is a <strong>guidance template</strong>: review it with your data protection adviser before using it.</p>
@@ -3557,7 +3558,7 @@ footer{
   </p>
   <ul>
     <li>Turnera reduces each photo before uploading it, and strips what the camera writes inside, such as where it was taken.</li>
-    <li>They are health data: only those who can see the clinical record see them, and they travel with the backup and with the export of the centre's data.</li>
+    <li>They are health data: only those who can see the clinical record see them, and they travel with the backup and with the <a href="#irse">export of the centre's data</a>.</li>
     <li>On the case page they appear small under each progress note; click one to see it full size.</li>
   </ul>
 

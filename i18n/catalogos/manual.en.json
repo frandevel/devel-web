@@ -2870,5 +2870,17 @@
   "t29416188": "On a computer the menu stays fixed on the left even when you scroll down the page, and the button at the bottom collapses it to show only the icons. On a phone and on a tablet held upright it is hidden: it opens with the",
   "tc4b8a077": "button at the top left and closes when you choose an entry, when you tap outside it or with the",
   "tda86fe09": "☰",
-  "t1f7a4f9e": "Esc"
+  "t1f7a4f9e": "Esc",
+  "t6023193b": "The first time, the browser asks whether it may use the camera: you have to accept. If permission was refused, if no camera is connected or if another program is using it (a video call, for example), Turnera says so and lets you try again. The camera switches off as soon as the photo is taken or the window is closed. Everyone who can see the record can see the photo, and it also goes in the",
+  "ta52d293b": "export of the centre's data",
+  "t9869208d": ": export all data, photos and documents included (see",
+  "t8bc3762b": "), and empty the demo. A centre with real staff clock-ins or closed calendar years cannot be emptied: the law requires keeping the working time register, so to close a centre you ask Devel for its deregistration and what has to be kept is kept.",
+  "tee47c239": "All stored images and documents",
+  "t620a6765": ", each in its usual file (JPG, PNG or PDF) inside the folder",
+  "t419df862": "ficheros/",
+  "t0d76305a": ", sorted by table: photos of customers and professionals, clinical record photos (progress notes), signed consents and their signatures, the professionals' signed data protection documents and the logo. The photos of maintenance orders and of work calendar incidents, and the signatures of the monthly working-time summaries, go too. Each table's spreadsheet says which file belongs to each row, and all of them are also inside",
+  "tbe38b2d7": ", for whoever restores the database.",
+  "te66051d1": ": if they change their mind about their image, another delivery is recorded and the latest one counts. The scanned paper also goes in the",
+  "t9468d102": ". Downloading the document and recording the delivery require the permission to edit professionals.",
+  "tb91c5605": "They are health data: only those who can see the clinical record see them, and they travel with the backup and with the"
 }

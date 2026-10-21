@@ -844,5 +844,9 @@
   "t7a5578e9": "Auf Touchscreens sind die Schaltflächen des Kalenders, die Kontrollkästchen und die Rabatte in der Kasse größer, das Terminfenster nutzt normale Schriftgröße und das PIN-Feld hat größere, gleich breite Tasten.",
   "tfe125f3b": "Im Kalender überlagert die aktuelle Uhrzeit nicht mehr die Stunde der Spalte, und in der Wochenansicht wird ein geschlossener Tag nicht über seinen Namen gemalt.",
   "t7c69234a": "Die Support-Schaltfläche verdeckt nicht mehr das Ende der Seite.",
-  "t68698a4f": "Im Terminbericht und in seiner Excel-Datei zeigte die Spalte der Fachkraft die Nachnamen des Kunden. Jetzt zeigt sie die der Fachkraft."
+  "t68698a4f": "Im Terminbericht und in seiner Excel-Datei zeigte die Spalte der Fachkraft die Nachnamen des Kunden. Jetzt zeigt sie die der Fachkraft.",
+  "tca5705fe": "21. Oktober 2026 · Turnera 1.1.3: Der Export des Zentrums sagt, was alles drin ist",
+  "t45513fbd": "1.1.3-16e8872",
+  "t767f1b9b": "Die Daten des Zentrums mitnehmen",
+  "tae60e031": "Der Export der Daten des Zentrums erklärt jetzt, dass er alle Fotos und Dokumente enthält (Kunden, Fachkräfte, Krankenakte, Einwilligungen), jedes in einer eigenen Datei."
 }

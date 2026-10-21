@@ -2870,5 +2870,17 @@
   "t29416188": "Am Computer bleibt das Menü links stehen, auch wenn man auf der Seite nach unten scrollt, und die Schaltfläche unten klappt es ein, sodass nur die Symbole bleiben. Auf dem Handy und auf dem Tablet im Hochformat ist es versteckt: Es öffnet sich mit der Schaltfläche",
   "tc4b8a077": "oben links und schließt sich, wenn man einen Eintrag wählt, daneben tippt oder mit der Taste",
   "tda86fe09": "☰",
-  "t1f7a4f9e": "Esc"
+  "t1f7a4f9e": "Esc",
+  "t6023193b": "Beim ersten Mal fragt der Browser, ob er die Kamera verwenden darf: Das muss bestätigt werden. Wurde es abgelehnt, ist keine Kamera angeschlossen oder wird sie von einem anderen Programm verwendet (zum Beispiel einem Videoanruf), sagt Turnera es und lässt es erneut versuchen. Die Kamera schaltet sich aus, sobald das Foto aufgenommen oder das Fenster geschlossen wird. Das Foto sieht jeder, der die Akte sieht, und es gehört auch zum",
+  "ta52d293b": "Export der Daten des Zentrums",
+  "t9869208d": ": alle Daten exportieren, Fotos und Dokumente inbegriffen (siehe",
+  "t8bc3762b": "), und die Demo leeren. Ein Zentrum mit echten Stempelungen des Personals oder abgeschlossenen Kalenderjahren kann nicht geleert werden: Das Gesetz verlangt, die Arbeitszeiterfassung aufzubewahren. Um ein Zentrum zu schließen, beantragt man bei Devel seine Abmeldung, und was aufbewahrt werden muss, wird aufbewahrt.",
+  "tee47c239": "Alle gespeicherten Bilder und Dokumente",
+  "t620a6765": ", jedes als normale Datei (JPG, PNG oder PDF) im Ordner",
+  "t419df862": "ficheros/",
+  "t0d76305a": ", nach Tabellen geordnet: Fotos von Kunden und Fachkräften, Fotos der Krankenakte (Verlaufseinträge), unterschriebene Einwilligungen und ihre Unterschriften, die unterschriebenen Datenschutzdokumente der Fachkräfte und das Logo. Auch die Fotos der Wartungsaufträge und der Vorfälle des Arbeitskalenders sowie die Unterschriften der monatlichen Arbeitszeitübersichten sind dabei. Die Tabelle jeder Datenbanktabelle gibt an, welche Datei zu welcher Zeile gehört, und alle stecken außerdem in",
+  "tbe38b2d7": ", für alle, die die Datenbank wiederherstellen.",
+  "te66051d1": ": Ändert die Person ihre Meinung über ihr Bild, wird eine weitere Aushändigung vermerkt, und es gilt die letzte. Das eingescannte Papier gehört ebenfalls zum",
+  "t9468d102": ". Für das Herunterladen des Dokuments und das Vermerken der Aushändigung ist die Berechtigung zum Bearbeiten von Fachkräften nötig.",
+  "tb91c5605": "Es sind Gesundheitsdaten: Sie sieht nur, wer die Krankenakte sehen darf, und sie sind in der Sicherung enthalten und gehören zum"
 }

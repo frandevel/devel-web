@@ -844,5 +844,9 @@
   "t7a5578e9": "On touch screens, the agenda buttons, the checkboxes and the discounts in the POS are larger, the appointment window uses normal-sized text and the PIN pad has bigger keys of the same width.",
   "tfe125f3b": "In the agenda, the current time no longer overlaps the hour of the column, and in the week view a closed day is not painted over its name.",
   "t7c69234a": "The support button no longer covers the bottom of the page.",
-  "t68698a4f": "In the appointment report, and in its Excel file, the professional column showed the customer's surnames. It now shows the professional's."
+  "t68698a4f": "In the appointment report, and in its Excel file, the professional column showed the customer's surnames. It now shows the professional's.",
+  "tca5705fe": "21 October 2026 · Turnera 1.1.3: the centre export says everything it contains",
+  "t45513fbd": "1.1.3-16e8872",
+  "t767f1b9b": "Taking the centre's data",
+  "tae60e031": "The export of the centre's data now explains that it includes all photos and documents (customers, professionals, clinical records, consents), each in its own file."
 }

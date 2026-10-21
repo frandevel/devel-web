@@ -1322,7 +1322,7 @@ footer{
   so, wie es war.</li>
   </ul>
   <p>
-    Beim ersten Mal fragt der Browser, ob er die Kamera verwenden darf: Das muss bestätigt werden. Wurde es abgelehnt, ist keine Kamera angeschlossen oder wird sie von einem anderen Programm verwendet (zum Beispiel einem Videoanruf), sagt Turnera es und lässt es erneut versuchen. Die Kamera schaltet sich aus, sobald das Foto aufgenommen oder das Fenster geschlossen wird. Das Foto sieht jeder, der die Akte sieht.
+    Beim ersten Mal fragt der Browser, ob er die Kamera verwenden darf: Das muss bestätigt werden. Wurde es abgelehnt, ist keine Kamera angeschlossen oder wird sie von einem anderen Programm verwendet (zum Beispiel einem Videoanruf), sagt Turnera es und lässt es erneut versuchen. Die Kamera schaltet sich aus, sobald das Foto aufgenommen oder das Fenster geschlossen wird. Das Foto sieht jeder, der die Akte sieht, und es gehört auch zum <a href="#irse">Export der Daten des Zentrums</a>.
   </p>
 
   <h3 id="clientes-baja">Einen Kunden abmelden</h3>
@@ -2166,7 +2166,8 @@ footer{
 
   <p>
     <strong>Die Einstellungen sind in auf- und zuklappbare Gruppen gegliedert</strong>, nach Häufigkeit der Nutzung: <em>Das Zentrum</em>,
-    <em>Kalender und Buchungen</em>, <em>Nachrichten an Kunden</em>, <em>Zahlungen und Kundenbindung</em> und <em>Erscheinungsbild</em>. Zugeklappt zeigt jede Gruppe in einer Zeile ihren Stand, man muss sie also nicht öffnen, um etwas zu prüfen. Hat eine geschlossene Gruppe Änderungen, trägt sie den Hinweis <em>Nicht gespeichert</em>, und ist beim Speichern etwas ungültig, öffnet sie sich von selbst. Ganz unten, und immer geschlossen, der <em>Gefahrenbereich</em>: alle Daten exportieren und die Demo leeren. Ein Zentrum mit echten Stempelungen des Personals oder abgeschlossenen Kalenderjahren kann nicht geleert werden: Das Gesetz verlangt, die Arbeitszeiterfassung aufzubewahren. Um ein Zentrum zu schließen, beantragt man bei Devel seine Abmeldung, und was aufbewahrt werden muss, wird aufbewahrt.
+    <em>Kalender und Buchungen</em>, <em>Nachrichten an Kunden</em>, <em>Zahlungen und Kundenbindung</em> und <em>Erscheinungsbild</em>. Zugeklappt zeigt jede Gruppe in einer Zeile ihren Stand, man muss sie also nicht öffnen, um etwas zu prüfen. Hat eine geschlossene Gruppe Änderungen, trägt sie den Hinweis <em>Nicht gespeichert</em>, und ist beim Speichern etwas ungültig, öffnet sie sich von selbst. Ganz unten, und immer geschlossen, der <em>Gefahrenbereich</em>: alle Daten exportieren, Fotos und Dokumente inbegriffen (siehe
+    <a href="#irse">Die Daten des Zentrums mitnehmen</a>), und die Demo leeren. Ein Zentrum mit echten Stempelungen des Personals oder abgeschlossenen Kalenderjahren kann nicht geleert werden: Das Gesetz verlangt, die Arbeitszeiterfassung aufzubewahren. Um ein Zentrum zu schließen, beantragt man bei Devel seine Abmeldung, und was aufbewahrt werden muss, wird aufbewahrt.
   </p>
 
   <h3>Der Terminkalender</h3>
@@ -2972,7 +2973,7 @@ footer{
   <ul>
     <li><strong>turnera.sql</strong>, die ganze Datenbank. Jede IT-Fachkraft lädt sie mit einem Befehl in MySQL, und damit kann man zu Turnera zurückkehren oder die Daten in ein anderes Programm übernehmen.</li>
     <li><strong>Eine Tabelle pro Datenbanktabelle</strong> —Kunden, Termine, Zahlungen, Gutscheine, Krankenakte…—, die sich per Doppelklick in Excel öffnet.</li>
-    <li><strong>Die Dokumente</strong>: die unterschriebenen Einwilligungen als PDF und das Logo, jeweils in einer eigenen Datei.</li>
+    <li><strong>Alle gespeicherten Bilder und Dokumente</strong>, jedes als normale Datei (JPG, PNG oder PDF) im Ordner <em>ficheros/</em>, nach Tabellen geordnet: Fotos von Kunden und Fachkräften, Fotos der Krankenakte (Verlaufseinträge), unterschriebene Einwilligungen und ihre Unterschriften, die unterschriebenen Datenschutzdokumente der Fachkräfte und das Logo. Auch die Fotos der Wartungsaufträge und der Vorfälle des Arbeitskalenders sowie die Unterschriften der monatlichen Arbeitszeitübersichten sind dabei. Die Tabelle jeder Datenbanktabelle gibt an, welche Datei zu welcher Zeile gehört, und alle stecken außerdem in <em>turnera.sql</em>, für alle, die die Datenbank wiederherstellen.</li>
   </ul>
   <p>
     Passwörter, Stempel-PINs und die Geheimnisse der Integrationen sind nicht dabei: außerhalb von Turnera nützen sie nichts, und in falschen Händen könnte jemand versuchen, sie zu knacken.
@@ -3018,7 +3019,7 @@ footer{
   </p>
   <p>
     Derselbe Download steht immer in der Akte bereit, unter <em>Datenschutz</em>, wo sich die Sprache des Dokuments wählen lässt. Wenn die Person es unterschrieben zurückbringt, <em>Unterschriebene Aushändigung vermerken</em> vermerkt das Datum, ob sie ihr Bild erlaubt hat oder nicht und, wenn gewünscht, das eingescannte Papier (PDF, JPEG oder PNG, bis 20 MB). Festgehalten wird, wer es wann vermerkt hat, und es
-    <strong>wird nicht gelöscht</strong>: Ändert die Person ihre Meinung über ihr Bild, wird eine weitere Aushändigung vermerkt, und es gilt die letzte. Für das Herunterladen des Dokuments und das Vermerken der Aushändigung ist die Berechtigung zum Bearbeiten von Fachkräften nötig.
+    <strong>wird nicht gelöscht</strong>: Ändert die Person ihre Meinung über ihr Bild, wird eine weitere Aushändigung vermerkt, und es gilt die letzte. Das eingescannte Papier gehört ebenfalls zum <a href="#irse">Export der Daten des Zentrums</a>. Für das Herunterladen des Dokuments und das Vermerken der Aushändigung ist die Berechtigung zum Bearbeiten von Fachkräften nötig.
   </p>
   <div class="ojo">
     <p>Das Dokument ist eine <strong>unverbindliche Vorlage</strong>: Lassen Sie sie vor der Verwendung von Ihrer Datenschutzberatung prüfen.</p>
@@ -3563,7 +3564,7 @@ footer{
   </p>
   <ul>
     <li>Turnera verkleinert jedes Foto vor dem Hochladen und entfernt dabei, was die Kamera hineinschreibt, etwa den Aufnahmeort.</li>
-    <li>Es sind Gesundheitsdaten: Sie sieht nur, wer die Krankenakte sehen darf, und sie sind in der Sicherung und im Export der Daten des Zentrums enthalten.</li>
+    <li>Es sind Gesundheitsdaten: Sie sieht nur, wer die Krankenakte sehen darf, und sie sind in der Sicherung enthalten und gehören zum <a href="#irse">Export der Daten des Zentrums</a>.</li>
     <li>Auf der Seite des Falls erscheinen sie klein unter jedem Verlaufseintrag; ein Klick zeigt sie groß.</li>
   </ul>
 

@@ -2870,5 +2870,17 @@
   "t29416188": "No computador o menu fica fixo à esquerda mesmo quando se percorre a página, e o botão de baixo recolhe-o para deixar só os ícones. No telemóvel e num tablet na vertical está escondido: abre-se com o botão",
   "tc4b8a077": "no canto superior esquerdo e fecha-se ao escolher uma entrada, ao tocar fora dele ou com a tecla",
   "tda86fe09": "☰",
-  "t1f7a4f9e": "Esc"
+  "t1f7a4f9e": "Esc",
+  "t6023193b": "Da primeira vez, o navegador pergunta se pode usar a câmara: é preciso aceitar. Se se disse que não, se não houver câmara ligada ou se outro programa a estiver a usar (uma videochamada, por exemplo), o Turnera avisa e deixa tentar de novo. A câmara desliga-se assim que se tira a foto ou se fecha a janela. A foto é vista por todos os que veem a ficha, e também vai na",
+  "ta52d293b": "exportação dos dados do centro",
+  "t9869208d": ": exportar todos os dados, fotografias e documentos incluídos (ver",
+  "t8bc3762b": "), e esvaziar a demonstração. Um centro com picagens de ponto de pessoal reais ou com anos de calendário fechados não se pode esvaziar: a lei obriga a conservar o registo de jornada, por isso para encerrar um centro pede-se a sua desativação à Devel e guarda-se o que houver a guardar.",
+  "tee47c239": "Todas as imagens e documentos guardados",
+  "t620a6765": ", cada um no seu ficheiro normal (JPG, PNG ou PDF) dentro da pasta",
+  "t419df862": "ficheros/",
+  "t0d76305a": ", ordenados por tabela: as fotografias de clientes e profissionais, as fotografias do processo clínico (evoluções), os consentimentos assinados e as respetivas assinaturas, os documentos de proteção de dados assinados dos profissionais e o logótipo. Vão também as fotografias das ordens de manutenção e das ocorrências do calendário laboral, e as assinaturas dos resumos mensais de jornada. A folha de cada tabela indica que ficheiro corresponde a cada linha, e todos vão ainda dentro do",
+  "tbe38b2d7": ", para quem restaure a base de dados.",
+  "te66051d1": ": se mudar de opinião sobre a sua imagem, regista-se outra entrega e vale a última. O papel digitalizado também vai na",
+  "t9468d102": ". Descarregar o documento e registar a entrega exigem a permissão de editar profissionais.",
+  "tb91c5605": "São dados de saúde: vê-as quem pode ver o processo clínico e mais ninguém, e viajam com a cópia de segurança e com a"
 }
