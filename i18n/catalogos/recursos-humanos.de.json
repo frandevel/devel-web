@@ -112,5 +112,6 @@
   "tf356ce0e": "Bildschirmfotos einer echten Installation mit Beispieldaten. Keine Entwürfe, keine Attrappen.",
   "t9e188e7a": "Die Stempeluhr am Eingang: Jede Person tippt auf ihren Namen, gibt ihre PIN ein und stempelt Ein, Pause oder Aus. Wer noch keine PIN hat, fällt sofort auf, und die Verwaltung vergibt sie im Profil der Person.",
   "t01356d7a": "Der Tarifvertrag jeder Person, ihre Schichten und rechts die Rechnung: Stunden des Tarifvertrags gegenüber den geplanten, verbleibender Urlaub und das bis heute Gestempelte.",
-  "tef5d1c82": "Der Arbeitskalender einer Fachkraft mit ihrem Tarifvertrag, den verfügbaren Schichten und den Stunden- und Urlaubsständen"
+  "tef5d1c82": "Der Arbeitskalender einer Fachkraft mit ihrem Tarifvertrag, den verfügbaren Schichten und den Stunden- und Urlaubsständen",
+  "t12324b90": "Ist der Monat abgeschlossen, gehen die Stunden der Belegschaft von einem einzigen Bildschirm aus an Ihre Steuerkanzlei, mit einem Link, der abläuft: Sie sehen, wer seine Zusammenfassung unterschrieben hat, erinnern die Fehlenden, und was noch ohne Unterschrift ist, geht entsprechend gekennzeichnet mit. Es ist optional und wird erst aktiv, wenn Sie die E-Mail-Adresse Ihrer Steuerkanzlei eintragen."
 }

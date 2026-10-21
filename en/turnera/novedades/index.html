@@ -679,6 +679,7 @@ footer{
   <h2>What's new in Turnera</h2>
   <p>Latest first</p>
   <ol>
+    <li><a href="#2026-10-21-version-1-2-0">21 October 2026 · Turnera 1.2.0: the month's hours, from Turnera to the payroll advisor</a></li>
     <li><a href="#2026-10-21-version-1-1-3">21 October 2026 · Turnera 1.1.3: the centre export says everything it contains</a></li>
     <li><a href="#2026-10-20-version-1-1-2">20 October 2026 · Turnera 1.1.2: easier on tablets and touch screens</a></li>
     <li><a href="#2026-10-20-version-1-1-1">20 October 2026 · Turnera 1.1.1: confirm before removing the photo, and a fixed header</a></li>
@@ -725,10 +726,43 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Bugs fixed</strong>: what failed, and no longer does.</span></li>
 </ul>
 
+<section id="2026-10-21-version-1-2-0" class="version">
+  <div class="version__cabecera">
+    <h2>21 October 2026 · Turnera 1.2.0: the month's hours, from Turnera to the payroll advisor</h2>
+    <span class="version__sello">Latest release</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.2.0-6e1926f</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Send the month's hours to the payroll advisor</h4>
+    <ul>
+      <li>Once the month is closed, the staff's hours are sent to the advisor who prepares the payslips from a single screen, <strong>Send to payroll advisor</strong>: you see who has signed their summary and who has not, you remind whoever is missing, and you send.</li>
+      <li>The email carries no attachments with personal data: it carries a <strong>single-use link that expires</strong> after the number of days the centre decides. The advisor opens it without an account and downloads a zip with the <strong>PDF of each person</strong>, the <strong>hours sheet</strong> in Excel and CSV, the day-by-day detail and an explanation of every column.</li>
+      <li>If someone has not signed, their hours go anyway, marked as <strong>NOT SIGNED</strong>. Whoever does not have to sign is marked “no signature asked”.</li>
+      <li>If something in the month changes after the send, the screen warns you and lets you send a <strong>correction</strong> with only the people affected.</li>
+      <li>Every send and every download is recorded in a history that is never deleted, and Human Resources gets a notice when the advisor downloads. If the link expires unused, another one is sent from the history.</li>
+      <li>Only those with the “Send the hours to the payroll advisor” permission see it and do it; by default Management and Human Resources have it.</li>
+      <li>It is optional: <strong>it only switches on when the advisor's email is entered</strong> in the Human Resources settings. Without it there is no screen, no menu entry and no notices.</li>
+    </ul>
+    <h4>Sign the monthly summary at the centre's time clock</h4>
+    <ul>
+      <li>After clocking with their PIN, a person sees a notice if the summary of a closed month is still unsigned (the last three) and can <strong>review and sign it right there</strong>, at the centre's time clock, without waiting to open the link in the email.</li>
+      <li>It is the same review and the same signature as by email, and the signed PDF reaches Human Resources just the same. While they sign, the time clock does not close for inactivity.</li>
+      <li>The Android app also shows the notice that a summary is waiting for a signature.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Bugs fixed</h3>
+    <ul>
+      <li>In the hours summary, a night shift that started on the last day of the month lost the exit time of the following day.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-10-21-version-1-1-3" class="version">
   <div class="version__cabecera">
     <h2>21 October 2026 · Turnera 1.1.3: the centre export says everything it contains</h2>
-    <span class="version__sello">Latest release</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.1.3-16e8872</span></p>
 

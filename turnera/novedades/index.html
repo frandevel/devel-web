@@ -679,6 +679,7 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-10-21-version-1-2-0">21 de octubre de 2026 · Turnera 1.2.0: las horas del mes, de Turnera a la asesoría</a></li>
     <li><a href="#2026-10-21-version-1-1-3">21 de octubre de 2026 · Turnera 1.1.3: la exportación del centro dice todo lo que lleva</a></li>
     <li><a href="#2026-10-20-version-1-1-2">20 de octubre de 2026 · Turnera 1.1.2: más cómoda en tablet y con el dedo</a></li>
     <li><a href="#2026-10-20-version-1-1-1">20 de octubre de 2026 · Turnera 1.1.1: confirmar antes de quitar la foto y cabecera fija</a></li>
@@ -726,10 +727,43 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-10-21-version-1-2-0" class="version">
+  <div class="version__cabecera">
+    <h2>21 de octubre de 2026 · Turnera 1.2.0: las horas del mes, de Turnera a la asesoría</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">1.2.0-6e1926f</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
+    <h4>Enviar las horas del mes a la asesoría</h4>
+    <ul>
+      <li>Una vez cerrado el mes, las horas de la plantilla se mandan a la asesoría que hace las nóminas desde una sola pantalla, <strong>Envío a la asesoría</strong>: se ve quién ha firmado su resumen y quién no, se avisa a quien falta y se envía.</li>
+      <li>El correo no lleva adjuntos con datos personales: lleva un <strong>enlace de un solo uso que caduca</strong> a los días que el centro decida. La asesoría lo abre sin cuenta y descarga un zip con el <strong>PDF de cada persona</strong>, la <strong>hoja de horas</strong> en Excel y en CSV, el detalle día a día y una explicación de cada columna.</li>
+      <li>Si alguien no ha firmado, sus horas van igualmente, marcadas como <strong>SIN FIRMAR</strong>. Quien no tiene que firmar va marcado como «No se pide firma».</li>
+      <li>Si después del envío cambia algo del mes, la pantalla lo avisa y permite mandar un <strong>rectificativo</strong> solo con las personas afectadas.</li>
+      <li>Cada envío y cada descarga quedan apuntados en un historial que no se borra, y Recursos Humanos recibe un aviso cuando la asesoría descarga. Si el enlace caduca sin usarse, se reenvía otro desde el historial.</li>
+      <li>Solo lo ven y lo hacen quienes tengan el permiso «Enviar las horas a la asesoría», que de fábrica traen Dirección y Recursos Humanos.</li>
+      <li>Es opcional: <strong>solo se activa cuando se indica el correo de la asesoría</strong> en la configuración de Recursos Humanos. Sin él no aparece ni la pantalla, ni el menú, ni los avisos.</li>
+    </ul>
+    <h4>Firmar el resumen mensual en el reloj del centro</h4>
+    <ul>
+      <li>Al fichar con su PIN, la persona ve un aviso si tiene el resumen de algún mes cerrado sin firmar (los tres últimos) y puede <strong>revisarlo y firmarlo allí mismo</strong>, en el reloj del centro, sin esperar a abrir el enlace del correo.</li>
+      <li>Es la misma revisión y la misma firma que por correo, y el PDF firmado llega igualmente a Recursos Humanos. Mientras firma, el reloj no se cierra por inactividad.</li>
+      <li>La aplicación de Android muestra también el aviso de que hay un resumen pendiente de firma.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Errores corregidos</h3>
+    <ul>
+      <li>En el resumen de horas, un turno de noche que empezaba el último día del mes perdía la hora de salida del día siguiente.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-10-21-version-1-1-3" class="version">
   <div class="version__cabecera">
     <h2>21 de octubre de 2026 · Turnera 1.1.3: la exportación del centro dice todo lo que lleva</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">1.1.3-16e8872</span></p>
 

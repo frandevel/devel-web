@@ -747,6 +747,7 @@ footer{
     <li><a href="#fichar-lo-mio" class="sub sub">What each person sees after their PIN</a></li>
     <li><a href="#presencia-enlaces" class="sub sub">Access for the labour inspectorate and the worker representatives</a></li>
     <li><a href="#presencia-resumen-mensual" class="sub sub">The monthly summary by email</a></li>
+    <li><a href="#envio-asesoria" class="sub sub">Send the hours to the payroll advisor</a></li>
     <li><a href="#calendario-laboral" class="sub">Work calendar</a></li>
     <li><a href="#calendario-cerrar" class="sub sub">Closing the year</a></li>
     <li><a href="#calendario-ausencias-parciales" class="sub sub">Partial absences</a></li>
@@ -2424,6 +2425,7 @@ footer{
     <tr><td><strong>Configure the clock-in device</strong></td><td>Decides how many digits the clock-in PIN has.</td><td>Management, HR, Staff</td></tr>
     <tr><td><strong>Unlock the clocking PIN</strong></td><td>Unlocks a professional's PIN that got locked after five wrong attempts in a row, so they can clock in and sign their summary again. Who unlocks it is recorded.</td><td>Management, HR, Staff</td></tr>
     <tr><td><strong>Monthly working-time summary by email</strong></td><td>Switches on, in each staff member’s record, a monthly email with the summary of their working-time record.</td><td>Management, HR, Staff</td></tr>
+    <tr><td><strong>Send the hours to the payroll advisor</strong></td><td>Sets up the advisor who prepares the payslips, reviews each closed month to see who has signed their summary, and sends them the hours with a download link that expires. Every send and every download is recorded.</td><td>Management, HR</td></tr>
     <tr><th colspan="3">Maintenance</th></tr>
     <tr><td><strong>See maintenance</strong></td><td>Opens the maintenance orders with their photos and their timeline.</td><td>Reception, Professional, Management, HR, Maintenance</td></tr>
     <tr><td><strong>Report a problem</strong></td><td>Opens a new order and adds photos and comments to it.</td><td>Reception, Professional, Management, HR, Maintenance</td></tr>
@@ -3133,7 +3135,7 @@ footer{
   </p>
 
   <p>
-    The link is valid for 30 days and can be signed only once. If someone does not sign, <strong>they are not sent it again or reminded</strong> by itself. Whoever still has the temporary PIN has to change it on the clock before being able to sign.
+    The link is valid for 30 days and can be signed only once. If someone does not sign, <strong>it is not sent to them again by email on its own</strong>; even so, the time clock reminds them every time they type their PIN (below). Anyone who still has the provisional PIN has to change it at the time clock before they can sign.
   </p>
 
   <p>
@@ -3146,6 +3148,12 @@ footer{
     In the same section, below the HR email, is <strong>How each month's signing is going</strong>: pick the month and each professional appears with the state of their link —not sent, waiting for signature, signed, expired or
     <strong>cancelled after wrong PINs</strong>—. If someone's link expired, got lost or was cancelled, press
     <strong>Resend link</strong> on their row: they get a new email, just like the one on the 1st, and the previous link stops working. It can be resent at most <strong>five times per person and month</strong>, and never for a summary already signed or to someone with no email in their record.
+  </p>
+
+  <p>
+    <strong>It can also be signed at the centre's time clock.</strong> When the month is already closed in the work calendar, whoever has their summary unsigned sees it as soon as they type their PIN to clock in (see
+    <a href="#fichar-lo-mio">What each person sees after their PIN</a>): <em>Review and sign</em> opens the same review as the link —the days, the total, the two boxes and the signature with a finger— and it is recorded just the same, with the channel
+    <em>signed at the centre time clock</em>. This way, <strong>whoever has no email</strong> can also sign, which they could not before: their signed PDF goes only to the HR email. The time clock offers the last three closed months that are still unsigned, from the oldest to the newest. In <em>How each month's signing is going</em> and in the send to the payroll advisor you can see where each person signed.
   </p>
   <h4 id="fichar-donde">Where clocking in happens from</h4>
   <span class="ruta">Administration → Attendance control → Centre zone</span>
@@ -3179,7 +3187,18 @@ footer{
       down).</li>
     <li><strong>My records</strong>: their month, day by day, with the breaks, the hours and the total, and the previous
       months. They can <strong>email it to themselves</strong> as a PDF or download it.</li>
+    <li><strong>The unsigned summary of the month</strong>, if there is one: “You have the summary of September 2026 unsigned”, with <em>Review and sign</em>. While they review and sign, the window <strong>does not come back to the list on its own</strong>: signing takes a while. See <a href="#firma-resumen">Signing the monthly summary</a>.</li>
   </ul>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/65-reloj-resumen-pendiente.png" alt="A practitioner's page after her PIN, with the notice that she has the month's summary unsigned and the Review and sign button" loading="lazy">
+    <figcaption>After the PIN, the notice of the unsigned summary. They see it whether or not they have an email.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/66-reloj-firmar-resumen.png" alt="The summary review at the time clock: the days of the month, the total, the two boxes and the box to sign with a finger" loading="lazy">
+    <figcaption>The same review and signature as the email link, at the centre's time clock.</figcaption>
+  </figure>
 
   <p>
     In <em>Staff → Working time</em>, in the menu, is everything else: choose a range and, if you like, a person.
@@ -3241,6 +3260,122 @@ footer{
     start of each month they get the PDF of the previous month. Their record needs an email. It is the copy the law
     requires handing over with the payslip to part-time workers, and that the draft Royal Decree extends to
     everyone.
+  </p>
+
+  <h4 id="envio-asesoria">Send the hours to the payroll advisor</h4>
+  <span class="ruta">Menu → Staff → Send to payroll advisor</span>
+
+  <p>
+    Every month, once it is closed, the staff's hours are sent to the <strong>payroll advisor that prepares the payslips</strong>
+    from a single screen: you see who has signed their summary and who has not, you remind whoever is missing, you decide what goes and you send. You need the “Send the hours to the payroll advisor” permission, which Management and HR have by default.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Unsigned is fine too.</strong> The working-time record is valid without the worker's signature: the signature is their agreement with the summary, not a requirement for paying the payslip. That is why the hours can be sent even if a signature is missing, and then they go marked <strong>NOT SIGNED</strong> so the advisor knows. The advisor handles this data as <strong>data processor</strong> (art. 28 GDPR): the centre, which is the controller, must have signed that agreement with it.</p>
+  </div>
+
+  <h5>1. Set up the payroll advisor</h5>
+  <span class="ruta">Administration → Attendance control → Payroll advisor</span>
+
+  <p>
+    It all starts with the <strong>payroll advisor's email</strong>: entering it switches on the monthly send of the hours. Without it there is no send screen, no menu entry, no notice on the 1st on the home panel and no correction notice. With the email entered, the rest of the settings appear:
+  </p>
+  <ul>
+    <li><strong>Copy email</strong>, optional: it receives the same email with the same link.</li>
+    <li><strong>Language of the send</strong>: the centre's or the one chosen for the advisor (Spanish, English, German or Portuguese). The email, the sheet and the README are in it.</li>
+    <li><strong>Days the link works</strong>: 7 by default, from 1 to 30.</li>
+    <li>The box <strong>“I have signed the data processing agreement with this advisor (art. 28 GDPR)”</strong>. It does not block the send, but the send screen reminds you until it is ticked.</li>
+  </ul>
+  <p>
+    If the email is deleted after sends have been made, <strong>the history is not lost</strong>: it stays in the database and in the centre's export, and it reappears whole as soon as an email is entered again.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/60-asesoria-configuracion-sin-correo.png" alt="The payroll advisor settings with no email: only the email field and the sentence explaining that entering it switches on the send" loading="lazy">
+    <figcaption>With no advisor email the send is off and only the email field is shown.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/61-asesoria-configuracion.png" alt="The payroll advisor settings with an email, copy, language, days of the link and the box for the data processing agreement" loading="lazy">
+    <figcaption>With the email entered: the copy, the language, the days of the link and the box for the data processing agreement.</figcaption>
+  </figure>
+
+  <h5>2. Review the month</h5>
+  <p>
+    In <em>Send to payroll advisor</em> you choose the month (the previous one comes up). It has to be <strong>closed</strong> in the work calendar, which is what guarantees it does not change afterwards; if it is not, the screen explains it and takes you to close it. Below, each practitioner of the month appears with the state of their signature: <em>Signed</em> (with the date and whether it was with the email link or at the centre's time clock), <em>Pending signature</em>, <em>No clock-ins</em>,
+    <em>Link expired</em>, <em>Cancelled by PIN</em> or <em>No signature asked</em>, if the centre does not ask them to sign the summary.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/62-asesoria-envio.png" alt="The send screen with signed and pending practitioners, the Include unsigned box and the remind and send buttons" loading="lazy">
+    <figcaption>The month with who has signed and who has not. What is signed goes on its own; what is pending, only if ticked.</figcaption>
+  </figure>
+
+  <h5>3. Remind whoever is missing</h5>
+  <p>
+    <em>Remind to sign</em>, on each row or for all the pending ones at once, sends the link again by email to whoever has an email, with the same limit as always (five times per person and month). Whoever has no email will see it at the time clock the next time they type their PIN, and the screen says so: <em>will see it when clocking in</em>.
+  </p>
+
+  <h5>4. Decide and send</h5>
+  <p>
+    What is signed always goes. Each pending person has the box <strong>Include unsigned</strong>, unticked by default: ticked, they go in the send with their summary and their row marked <strong>NOT SIGNED</strong>. <em>Send to payroll advisor</em> opens a confirmation that says who it goes to, how many are signed, how many unsigned and who is left out; while it works, the button says <em>Sending…</em>.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/63-asesoria-confirmar.png" alt="The send confirmation dialog with the recipients, the signed, the unsigned and who is left out" loading="lazy">
+    <figcaption>Before sending: who it goes to and what goes.</figcaption>
+  </figure>
+
+  <h5>5. What the payroll advisor receives and how they download it</h5>
+  <p>
+    The email <strong>has no attachments with personal data</strong>: it carries the name of the centre, the month and the tax ID, and a
+    <strong>single-use link</strong> that expires after the configured number of days (the email itself says so). The link opens a page in Turnera with no account and a button <em>Download</em>; opening it uses nothing up, the download does. When and from which address it was downloaded is recorded, and a notice reaches the HR email. The zip contains:
+  </p>
+  <ul>
+    <li><strong>The summary of each practitioner as a PDF</strong>: the signed one if it is signed; if not, the same one marked “NOT SIGNED”.</li>
+    <li><strong>The month sheet</strong>, in Excel and CSV, with one row per practitioner: first name, surname, national ID, employee code, workplace, working time (%) and planned working time, hours worked, ordinary and overtime, overtime paid and compensated with time off in the month, night hours (10 pm to 6 am), Sunday and public holiday hours, days worked, holidays, each type of absence in the work calendar with its days and dates (sick leave, paid and unpaid leave), partial absences, days with a shift but no clocking or absence, days with no exit, incidents, hours declared by HR without agreement, and the state of the signature.</li>
+    <li><strong>The detail</strong>: one row per day and practitioner, with what the calendar said, the entries and exits, the breaks and the hours of that day.</li>
+    <li>A <strong>README</strong> that explains every column.</li>
+  </ul>
+  <p>
+    If the link expires without being downloaded, another one is sent from the history with <em>Send the link again</em>; the zip is the same, because what was sent does not change.
+  </p>
+
+
+  <figure>
+    <img src="/turnera/manual/imagenes/67-asesoria-correo.png" alt="The email the advisor receives with the centre, the month, the tax ID and the download link" loading="lazy">
+    <figcaption>The email the advisor receives: no attachments, with a single-use link.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/69-asesoria-descarga.png" alt="The download page the advisor opens, with the centre, the month, until when the link works and the Download button" loading="lazy">
+    <figcaption>What the advisor sees when opening the link: no account, and the download can only be done once.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/68-asesoria-hoja.png" alt="The month sheet opened, with one row per practitioner and their hours" loading="lazy">
+    <figcaption>The month sheet: one row per practitioner, with everything the payroll needs.</figcaption>
+  </figure>
+
+  <h5>6. Corrections</h5>
+  <p>
+    If something in the month changes after a send —the month is reopened and a clocking, an incident or an absence is corrected—, the screen warns you: “There are changes after the send of 3/10/2026 in: Ana Ruiz”. <em>Send correction</em> sends only to those affected, marked <strong>CORRECTION</strong> in the email, in the zip and in the sheet, and with the date of the send it corrects.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/70-asesoria-cambios.png" alt="The notice of changes after a send, with the person affected and the Send correction button" loading="lazy">
+    <figcaption>Something has changed for a practitioner after the send: the correction goes with her alone.</figcaption>
+  </figure>
+
+  <h5>7. The history</h5>
+  <p>
+    Below, all the sends of the month, the latest on top: when and who did it, who it was sent to, which practitioners were in it and what their signature was like, whether it was a correction and whether it was downloaded, when and from where. <strong>It is never deleted</strong>: none of this is edited.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/64-asesoria-historial.png" alt="The history of the month's sends with a downloaded send and a correction" loading="lazy">
+    <figcaption>The history of the month: what was sent, to whom and whether it was downloaded.</figcaption>
+  </figure>
+
+  <p>
+    On the <strong>home panel</strong>, from the 1st and while the previous month is closed and not yet sent, whoever has the permission sees a discreet notice: “The hours of September 2026 have not been sent to the payroll advisor yet (2 pending signature)”.
   </p>
 
   <figure>
@@ -3764,6 +3899,10 @@ footer{
   <p>
     After the PIN the person’s status is shown (<em>In</em>, <em>On a break</em> or <em>Out</em>), since when, and the buttons that apply at that moment: <em>In</em>, <em>Break</em> or <em>Out</em>. The app records
     <strong>where the clocking is done from, only at that moment</strong>, and does not follow anybody. <em>Back</em> leaves the screen ready for the next person.
+  </p>
+  <p>
+    If they have the summary of a closed month <strong>unsigned</strong>, below their state the notice “You have the summary of September 2026 unsigned. Sign it at the centre's time clock or with the email link” appears. The app only warns: signing is done at the centre's time clock or with the link (see
+    <a href="#firma-resumen">Signing the monthly summary</a>).
   </p>
   <figure>
     <img src="/turnera/manual/imagenes/46-app-panel.png" alt="The panel of a professional who is in, with the Out and Break buttons" loading="lazy">

@@ -29,6 +29,7 @@
   "tc03f58ac": "Lo fichado fuera de turno se anota como hora extra en la bolsa de cada profesional, y tú decides si se paga en nómina o se compensa con descanso. Si en el año se pasan de las 80 horas que permite el Estatuto de los Trabajadores, la pantalla te avisa.",
   "tba2483a8": "Cierre del mes para la nómina",
   "tbb5c42df": "Cada mes se cierra para la nómina y se puede reabrir para regularizarla, dejando escrito el motivo. Cada persona lleva el código con el que la conoce tu gestoría.",
+  "t12324b90": "Con el mes cerrado, las horas de la plantilla salen hacia la gestoría desde una sola pantalla, con un enlace que caduca: ves quién ha firmado su resumen, avisas a quien falta y lo que sigue sin firma va marcado como tal. Es opcional y solo se activa cuando indicas el correo de la gestoría.",
   "t6589e72a": "Listo para la Inspección",
   "t60318f9a": "El registro completo sale en Excel, CSV y en PDF mensual con hueco para las firmas. Y puedes dar un enlace de solo lectura, que caduca y deja rastro de cada consulta, a la Inspección de Trabajo o a la representación de los trabajadores.",
   "t23c929de": "Así se ve por dentro.",

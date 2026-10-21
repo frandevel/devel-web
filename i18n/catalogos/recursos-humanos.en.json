@@ -112,5 +112,6 @@
   "tf356ce0e": "Screenshots of a real installation with demonstration data. No sketches, no mockups.",
   "t9e188e7a": "The time clock by the entrance: each person taps their name, types their PIN and clocks in, goes on a break or clocks out. Anyone without a PIN yet is easy to spot, and administration sets it on their record.",
   "t01356d7a": "Each person’s agreement, their shifts and, on the right, the figures: agreement hours against planned hours, holiday left and what has been clocked so far.",
-  "tef5d1c82": "A professional’s work calendar with their agreement, the available shifts and the hours and holiday figures"
+  "tef5d1c82": "A professional’s work calendar with their agreement, the available shifts and the hours and holiday figures",
+  "t12324b90": "Once the month is closed, the staff's hours go to your accountant from a single screen, with a link that expires: you see who has signed their summary, you remind whoever is missing, and whatever is still unsigned goes marked as such. It is optional and only switches on when you enter your accountant's email."
 }

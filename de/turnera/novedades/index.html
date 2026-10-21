@@ -679,6 +679,7 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-10-21-version-1-2-0">21. Oktober 2026 · Turnera 1.2.0: die Stunden des Monats, von Turnera direkt ans Lohnbüro</a></li>
     <li><a href="#2026-10-21-version-1-1-3">21. Oktober 2026 · Turnera 1.1.3: Der Export des Zentrums sagt, was alles drin ist</a></li>
     <li><a href="#2026-10-20-version-1-1-2">20. Oktober 2026 · Turnera 1.1.2: angenehmer auf dem Tablet und mit dem Finger</a></li>
     <li><a href="#2026-10-20-version-1-1-1">20. Oktober 2026 · Turnera 1.1.1: Bestätigung vor dem Entfernen des Fotos und feste Kopfzeile</a></li>
@@ -725,10 +726,43 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-10-21-version-1-2-0" class="version">
+  <div class="version__cabecera">
+    <h2>21. Oktober 2026 · Turnera 1.2.0: die Stunden des Monats, von Turnera direkt ans Lohnbüro</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.2.0-6e1926f</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Die Stunden des Monats ans Lohnbüro schicken</h4>
+    <ul>
+      <li>Ist der Monat abgeschlossen, werden die Stunden der Belegschaft von einem einzigen Bildschirm aus an das Lohnbüro geschickt, das die Gehaltsabrechnungen macht, <strong>Versand ans Lohnbüro</strong>: man sieht, wer seine Zusammenfassung unterschrieben hat und wer nicht, erinnert die Fehlenden und schickt ab.</li>
+      <li>Die E-Mail enthält keine Anhänge mit personenbezogenen Daten, sondern einen <strong>Einmal-Link mit Ablaufdatum</strong> nach der vom Zentrum festgelegten Anzahl Tage. Das Lohnbüro öffnet ihn ohne Konto und lädt ein Zip herunter mit dem <strong>PDF jeder Person</strong>, der <strong>Stundentabelle</strong> in Excel und CSV, der Tagesübersicht und einer Erklärung jeder Spalte.</li>
+      <li>Hat jemand nicht unterschrieben, gehen die Stunden trotzdem mit, gekennzeichnet als <strong>NICHT UNTERSCHRIEBEN</strong>. Wer nicht unterschreiben muss, ist mit „keine Unterschrift verlangt“ gekennzeichnet.</li>
+      <li>Ändert sich nach dem Versand etwas im Monat, weist der Bildschirm darauf hin und erlaubt, eine <strong>Korrektur</strong> nur mit den betroffenen Personen zu schicken.</li>
+      <li>Jeder Versand und jeder Download wird in einem Verlauf festgehalten, der nie gelöscht wird, und die Personalabteilung erhält eine Nachricht, wenn das Lohnbüro herunterlädt. Läuft der Link ungenutzt ab, wird aus dem Verlauf ein neuer geschickt.</li>
+      <li>Nur wer die Berechtigung „Die Stunden ans Lohnbüro schicken“ hat, sieht und macht das; werkseitig haben sie Leitung und Personalabteilung.</li>
+      <li>Es ist optional: <strong>es wird erst aktiv, wenn die E-Mail-Adresse des Lohnbüros eingetragen ist</strong> in den Einstellungen der Personalabteilung. Ohne sie gibt es weder den Bildschirm noch den Menüpunkt noch die Hinweise.</li>
+    </ul>
+    <h4>Die Monatszusammenfassung an der Stempeluhr des Zentrums unterschreiben</h4>
+    <ul>
+      <li>Nach dem Stempeln mit der PIN sieht die Person einen Hinweis, wenn die Zusammenfassung eines abgeschlossenen Monats noch nicht unterschrieben ist (die letzten drei), und kann sie <strong>gleich dort prüfen und unterschreiben</strong>, an der Stempeluhr des Zentrums, ohne den Link aus der E-Mail abzuwarten.</li>
+      <li>Es ist dieselbe Prüfung und dieselbe Unterschrift wie per E-Mail, und das unterschriebene PDF geht ebenso an die Personalabteilung. Während der Unterschrift schließt sich die Stempeluhr nicht wegen Inaktivität.</li>
+      <li>Die Android-App zeigt ebenfalls den Hinweis, dass eine Zusammenfassung auf Unterschrift wartet.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Behobene Fehler</h3>
+    <ul>
+      <li>In der Stundenübersicht verlor eine Nachtschicht, die am letzten Tag des Monats begann, die Ausgangszeit des Folgetags.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-10-21-version-1-1-3" class="version">
   <div class="version__cabecera">
     <h2>21. Oktober 2026 · Turnera 1.1.3: Der Export des Zentrums sagt, was alles drin ist</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.1.3-16e8872</span></p>
 

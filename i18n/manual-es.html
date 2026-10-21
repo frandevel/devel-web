@@ -695,6 +695,7 @@ footer{
     <li><a href="#fichar-lo-mio" class="sub sub">Lo que ve cada uno tras su PIN</a></li>
     <li><a href="#presencia-enlaces" class="sub sub">Acceso de la Inspección y de la representación</a></li>
     <li><a href="#presencia-resumen-mensual" class="sub sub">El resumen mensual por correo</a></li>
+    <li><a href="#envio-asesoria" class="sub sub">Enviar las horas a la asesoría</a></li>
     <li><a href="#calendario-laboral" class="sub">Calendario laboral</a></li>
     <li><a href="#calendario-cerrar" class="sub sub">Cerrar el año</a></li>
     <li><a href="#calendario-ausencias-parciales" class="sub sub">Ausencias parciales</a></li>
@@ -2783,6 +2784,7 @@ footer{
     <tr><td><strong>Configurar el reloj de fichar</strong></td><td>Decide cuántas cifras lleva el PIN con el que se ficha.</td><td>Dirección, RRHH, Personal</td></tr>
     <tr><td><strong>Desbloquear el PIN de fichar</strong></td><td>Desbloquea el PIN de un profesional que se ha bloqueado tras cinco intentos equivocados seguidos, para que vuelva a fichar y a firmar su resumen. Queda apuntado quién lo desbloquea.</td><td>Dirección, RRHH, Personal</td></tr>
     <tr><td><strong>Resumen mensual de jornada por correo</strong></td><td>Activa en la ficha de cada profesional que le llegue cada mes por correo el resumen de su registro de jornada.</td><td>Dirección, RRHH, Personal</td></tr>
+    <tr><td><strong>Enviar las horas a la asesoría</strong></td><td>Configura la asesoría que hace las nóminas, revisa cada mes cerrado quién ha firmado su resumen y le manda las horas con un enlace de descarga que caduca. Queda apuntado cada envío y cada descarga.</td><td>Dirección, RRHH</td></tr>
     <tr><th colspan="3">Mantenimiento</th></tr>
     <tr><td><strong>Ver el mantenimiento</strong></td><td>Abre los partes de mantenimiento con sus fotos y su cronologia.</td><td>Recepción, Profesional, Dirección, RRHH, Mantenimiento</td></tr>
     <tr><td><strong>Avisar de un problema</strong></td><td>Abre un parte nuevo y le anade fotos y comentarios.</td><td>Recepción, Profesional, Dirección, RRHH, Mantenimiento</td></tr>
@@ -3663,9 +3665,9 @@ footer{
   </p>
 
   <p>
-    El enlace vale 30 días y se firma una sola vez. Si alguien no firma, <strong>no se le vuelve a mandar ni se le
-    recuerda</strong> solo. Quien tenga todavía el PIN provisional tiene que cambiarlo en el reloj antes de poder
-    firmar.
+    El enlace vale 30 días y se firma una sola vez. Si alguien no firma, <strong>no se le vuelve a mandar por correo
+    solo</strong>; eso sí, el reloj se lo recuerda cada vez que teclea su PIN (más abajo). Quien tenga todavía el PIN
+    provisional tiene que cambiarlo en el reloj antes de poder firmar.
   </p>
 
   <p>
@@ -3683,6 +3685,17 @@ footer{
     <strong>Reenviar enlace</strong> en su fila: le llega un correo nuevo, igual que el del día 1, y el enlace de antes
     deja de valer. Se puede reenviar como mucho <strong>cinco veces por persona y mes</strong>, y nunca un resumen ya
     firmado ni a quien no tiene correo en su ficha.
+  </p>
+
+  <p>
+    <strong>También se firma en el reloj del centro.</strong> Cuando el mes ya está cerrado en el calendario laboral,
+    quien tiene su resumen sin firmar lo ve en cuanto teclea su PIN para fichar (ver
+    <a href="#fichar-lo-mio">Lo que ve cada uno tras su PIN</a>): <em>Revisar y firmar</em> abre la misma revisión que
+    el enlace —los días, el total, las dos casillas y la firma con el dedo— y queda registrado igual, con el canal
+    <em>firmado en el reloj del centro</em>. Así firma también <strong>quien no tiene correo</strong>, que antes no
+    podía: su PDF firmado va solo al correo de RRHH. El reloj ofrece los tres últimos meses cerrados que falten por
+    firmar, del más antiguo al más reciente. En <em>Cómo va la firma de cada mes</em> y en el envío a la asesoría se ve
+    por dónde firmó cada uno.
   </p>
   <h4 id="fichar-donde">Desde dónde se ficha</h4>
   <span class="ruta">Administración → Control de presencia → Zona del centro</span>
@@ -3726,7 +3739,20 @@ footer{
       abajo).</li>
     <li><strong>Mis fichajes</strong>: su mes, día a día, con las pausas, las horas y el total, y los meses
       anteriores. Se lo puede <strong>enviar a su correo</strong> en PDF o descargarlo.</li>
+    <li><strong>El resumen del mes sin firmar</strong>, si lo tiene: «Tienes el resumen de septiembre de 2026 sin
+      firmar», con <em>Revisar y firmar</em>. Mientras revisa y firma, la ventana <strong>no vuelve sola a la
+      lista</strong>: firmar lleva su rato. Ver <a href="#firma-resumen">Firma del resumen mensual</a>.</li>
   </ul>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/65-reloj-resumen-pendiente.png" alt="La ficha de una profesional tras su PIN, con el aviso de que tiene el resumen del mes sin firmar y el botón Revisar y firmar" loading="lazy">
+    <figcaption>Tras el PIN, el aviso del resumen sin firmar. Lo ve tenga o no correo.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/66-reloj-firmar-resumen.png" alt="La revisión del resumen en el reloj: los días del mes, el total, las dos casillas y el recuadro para firmar con el dedo" loading="lazy">
+    <figcaption>La misma revisión y firma que el enlace del correo, en el reloj del centro.</figcaption>
+  </figure>
 
   <p>
     En <em>Personal → Control de presencia</em>, en el menú, está lo demás: elija un rango y, si quiere, una persona.
@@ -3793,6 +3819,158 @@ footer{
     primeros de cada mes le llega el PDF del mes anterior. Necesita tener correo en su ficha. Es la copia que la ley
     pide entregar con la nómina a quien trabaja a tiempo parcial, y que el borrador del Real Decreto extiende a
     todos.
+  </p>
+
+  <h4 id="envio-asesoria">Enviar las horas a la asesoría</h4>
+  <span class="ruta">Menú → Personal → Envío a la asesoría</span>
+
+  <p>
+    Cada mes, una vez cerrado, las horas de la plantilla se mandan a la <strong>asesoría que hace las nóminas</strong>
+    desde una sola pantalla: se ve quién ha firmado su resumen y quién no, se avisa a quien falta, se decide qué va y se
+    manda. Hace falta el permiso «Enviar las horas a la asesoría», que de fábrica traen Dirección y RRHH.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Sin firma también vale.</strong> El registro de jornada es válido sin la firma de la persona
+      trabajadora: la firma es su conformidad con el resumen, no un requisito para pagar la nómina. Por eso se pueden
+      mandar las horas aunque falte alguna firma, y entonces van marcadas <strong>SIN FIRMAR</strong> para que la
+      asesoría lo sepa. La asesoría trata estos datos como <strong>encargada del tratamiento</strong> (art. 28 RGPD):
+      el centro, que es el responsable, tiene que tener firmado con ella ese contrato.</p>
+  </div>
+
+  <h5>1. Configurar la asesoría</h5>
+  <span class="ruta">Administración → Control de presencia → Asesoría laboral</span>
+
+  <p>
+    Todo empieza por el <strong>correo de la asesoría</strong>: al indicarlo se activa el envío mensual de las horas.
+    Sin él no sale la pantalla de envío, ni su entrada en el menú, ni el aviso del día 1 en el panel, ni el de
+    rectificativo. Con el correo puesto aparecen el resto de datos:
+  </p>
+  <ul>
+    <li><strong>Correo en copia</strong>, opcional: le llega el mismo correo con el mismo enlace.</li>
+    <li><strong>Idioma del envío</strong>: el del centro o el que se elija para la asesoría (español, inglés, alemán o
+      portugués). En él van el correo, la hoja y el LEEME.</li>
+    <li><strong>Días que vale el enlace</strong>: 7 de fábrica, de 1 a 30.</li>
+    <li>La casilla <strong>«Tengo firmado con esta asesoría el contrato de encargado del tratamiento (art. 28
+      RGPD)»</strong>. No bloquea el envío, pero mientras no se marque la pantalla de envío lo recuerda.</li>
+  </ul>
+  <p>
+    Si se borra el correo después de haber hecho envíos, <strong>el historial no se pierde</strong>: sigue en la base de
+    datos y en la exportación del centro, y reaparece entero en cuanto se vuelve a poner un correo.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/60-asesoria-configuracion-sin-correo.png" alt="La configuración de la asesoría sin correo: solo el campo del correo y la frase que explica que al indicarlo se activa el envío" loading="lazy">
+    <figcaption>Sin correo de la asesoría, el envío está apagado y solo se ve el campo del correo.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/61-asesoria-configuracion.png" alt="La configuración de la asesoría con correo, copia, idioma, días del enlace y la casilla del contrato de encargado" loading="lazy">
+    <figcaption>Con el correo puesto: la copia, el idioma, los días del enlace y la casilla del contrato de encargado.</figcaption>
+  </figure>
+
+  <h5>2. Revisar el mes</h5>
+  <p>
+    En <em>Envío a la asesoría</em> se elige el mes (sale el anterior). Tiene que estar <strong>cerrado</strong> en el
+    calendario laboral, que es lo que garantiza que no cambia después; si no lo está, la pantalla lo explica y lleva a
+    cerrarlo. Debajo sale cada profesional del mes con el estado de su firma: <em>Firmado</em> (con la fecha y si fue
+    con el enlace del correo o en el reloj del centro), <em>Pendiente de firma</em>, <em>Sin fichajes</em>,
+    <em>Enlace caducado</em>, <em>Anulado por PIN</em> o <em>No se pide firma</em>, si el centro no le pide firmar el
+    resumen.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/62-asesoria-envio.png" alt="La pantalla de envío con profesionales firmados y pendientes, la casilla Incluir sin firmar y los botones de avisar y enviar" loading="lazy">
+    <figcaption>El mes con quién ha firmado y quién no. Lo firmado va solo; lo pendiente, solo si se marca.</figcaption>
+  </figure>
+
+  <h5>3. Avisar a quien falta</h5>
+  <p>
+    <em>Avisar para que firme</em>, en cada fila o para todos los pendientes a la vez, reenvía el enlace por correo a
+    quien tiene correo, con el mismo tope de siempre (cinco veces por persona y mes). Quien no tiene correo lo verá en
+    el reloj la próxima vez que teclee su PIN, y la pantalla lo dice: <em>lo verá al fichar</em>.
+  </p>
+
+  <h5>4. Decidir y enviar</h5>
+  <p>
+    Lo firmado va siempre. Cada pendiente tiene la casilla <strong>Incluir sin firmar</strong>, desmarcada de fábrica:
+    marcada, va en el envío con su resumen y su fila marcados <strong>SIN FIRMAR</strong>. <em>Enviar a la
+    asesoría</em> abre una confirmación que dice a quién se manda, cuántos van firmados, cuántos sin firmar y quién se
+    queda fuera; mientras trabaja, el botón dice <em>Enviando…</em>.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/63-asesoria-confirmar.png" alt="El diálogo de confirmación del envío con los destinatarios, los firmados, los sin firmar y quién no va" loading="lazy">
+    <figcaption>Antes de enviar: a quién va y qué va.</figcaption>
+  </figure>
+
+  <h5>5. Qué recibe la asesoría y cómo lo descarga</h5>
+  <p>
+    El correo <strong>no lleva adjuntos con datos personales</strong>: lleva el nombre del centro, el mes y el CIF, y un
+    <strong>enlace de un solo uso</strong> que caduca a los días configurados (lo explica el propio correo). El enlace
+    abre una página sin cuenta en Turnera con un botón <em>Descargar</em>; abrirla no gasta nada, lo gasta la descarga.
+    Queda apuntado cuándo y desde qué dirección se descargó, y llega un aviso al correo de RRHH. El zip lleva:
+  </p>
+  <ul>
+    <li><strong>El resumen de cada profesional en PDF</strong>: el firmado si lo está; si no, el mismo marcado
+      «SIN FIRMAR».</li>
+    <li><strong>La hoja del mes</strong>, en Excel y en CSV, con una fila por profesional: nombre, apellidos, DNI/NIE,
+      código de empleado, centro de trabajo, jornada (%) y jornada planificada, horas trabajadas, ordinarias y extra,
+      extra pagadas y compensadas con descanso en el mes, horas nocturnas (22 a 6 h), en domingo y en festivo, días
+      trabajados, vacaciones, cada tipo de ausencia del calendario laboral con sus días y sus fechas (la baja por
+      incapacidad temporal, los permisos retribuidos y sin sueldo), ausencias parciales, días con turno sin fichar ni
+      ausencia, jornadas sin salida, incidencias, horas declaradas por RRHH sin conformidad y el estado de la firma.</li>
+    <li><strong>El detalle</strong>: una fila por día y profesional, con lo que decía el calendario, las entradas y
+      salidas, las pausas y las horas de ese día.</li>
+    <li>Un <strong>LEEME</strong> que explica cada columna.</li>
+  </ul>
+  <p>
+    Si el enlace caduca sin descargarse, se manda otro desde el historial con <em>Reenviar el enlace</em>; el zip es el
+    mismo, porque lo enviado no cambia.
+  </p>
+
+
+  <figure>
+    <img src="/turnera/manual/imagenes/67-asesoria-correo.png" alt="El correo que recibe la asesoría con el centro, el mes, el CIF y el enlace de descarga" loading="lazy">
+    <figcaption>El correo de la asesoría: sin adjuntos, con un enlace de un solo uso.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/69-asesoria-descarga.png" alt="La página de descarga que abre la asesoría, con el centro, el mes, hasta cuándo vale el enlace y el botón Descargar" loading="lazy">
+    <figcaption>Lo que ve la asesoría al abrir el enlace: sin cuenta, y la descarga solo se puede hacer una vez.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/68-asesoria-hoja.png" alt="La hoja del mes abierta, con una fila por profesional y sus horas" loading="lazy">
+    <figcaption>La hoja del mes: una fila por profesional, con todo lo que la nómina necesita.</figcaption>
+  </figure>
+
+  <h5>6. Rectificativos</h5>
+  <p>
+    Si después de un envío cambia algo del mes —se reabre el mes y se corrige un fichaje, una incidencia o una
+    ausencia—, la pantalla lo avisa: «Hay cambios después del envío del 3/10/2026 en: Ana Ruiz». <em>Enviar
+    rectificativo</em> manda solo a los afectados, marcado <strong>RECTIFICATIVO</strong> en el correo, en el zip y en
+    la hoja, y con la fecha del envío que corrige.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/70-asesoria-cambios.png" alt="El aviso de cambios después de un envío, con la persona afectada y el botón Enviar rectificativo" loading="lazy">
+    <figcaption>Ha cambiado algo de una profesional después del envío: el rectificativo va solo con ella.</figcaption>
+  </figure>
+
+  <h5>7. El historial</h5>
+  <p>
+    Debajo, todos los envíos del mes, el último arriba: cuándo y quién lo hizo, a quién se mandó, qué profesionales
+    iban y cómo estaba su firma, si era rectificativo y si se descargó, cuándo y desde dónde. <strong>No se borra
+    nunca</strong>: nada de esto se edita.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/64-asesoria-historial.png" alt="El historial de envíos del mes con un envío descargado y un rectificativo" loading="lazy">
+    <figcaption>El historial del mes: lo que se mandó, a quién y si se descargó.</figcaption>
+  </figure>
+
+  <p>
+    En el <strong>panel de inicio</strong>, a partir del día 1 y mientras el mes anterior esté cerrado y sin enviar,
+    quien tiene el permiso ve un aviso discreto: «Las horas de septiembre de 2026 aún no se han enviado a la asesoría
+    (2 pendientes de firma)».
   </p>
 
   <figure>
@@ -4504,6 +4682,12 @@ footer{
     botones que tocan en ese momento: <em>Entrada</em>, <em>Pausa</em> o <em>Salida</em>. La aplicación anota
     <strong>desde dónde se ficha, solo en ese momento</strong>, y no sigue a nadie. <em>Volver</em> deja la pantalla lista
     para la siguiente persona.
+  </p>
+  <p>
+    Si tiene el resumen de un mes cerrado <strong>sin firmar</strong>, debajo de su estado sale el aviso «Tienes el
+    resumen de septiembre de 2026 sin firmar. Fírmalo en el reloj del centro o en el enlace del correo». En la
+    aplicación solo se avisa: la firma se hace en el reloj del centro o con el enlace (ver
+    <a href="#firma-resumen">Firma del resumen mensual</a>).
   </p>
   <figure>
     <img src="/turnera/manual/imagenes/46-app-panel.png" alt="El panel de una profesional que está dentro, con los botones Salida y Pausa" loading="lazy">

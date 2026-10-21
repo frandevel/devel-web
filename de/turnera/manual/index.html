@@ -747,6 +747,7 @@ footer{
     <li><a href="#fichar-lo-mio" class="sub sub">Was jede Person nach ihrer PIN sieht</a></li>
     <li><a href="#presencia-enlaces" class="sub sub">Zugang für Arbeitsinspektion und Belegschaftsvertretung</a></li>
     <li><a href="#presencia-resumen-mensual" class="sub sub">Die Monatsübersicht per E-Mail</a></li>
+    <li><a href="#envio-asesoria" class="sub sub">Die Stunden ans Lohnbüro schicken</a></li>
     <li><a href="#calendario-laboral" class="sub">Arbeitskalender</a></li>
     <li><a href="#calendario-cerrar" class="sub sub">Das Jahr abschließen</a></li>
     <li><a href="#calendario-ausencias-parciales" class="sub sub">Teilabwesenheiten</a></li>
@@ -2427,6 +2428,7 @@ footer{
     <tr><td><strong>Stempeluhr konfigurieren</strong></td><td>Legt fest, wie viele Stellen die PIN zum Stempeln hat.</td><td>Leitung, RRHH, Personal</td></tr>
     <tr><td><strong>Stempel-PIN entsperren</strong></td><td>Entsperrt die PIN einer Fachkraft, die nach fünf falschen Versuchen in Folge gesperrt wurde, damit sie wieder stempeln und ihre Übersicht unterschreiben kann. Wer sie entsperrt, wird festgehalten.</td><td>Leitung, RRHH, Personal</td></tr>
     <tr><td><strong>Monatliche Arbeitszeit-Zusammenfassung per E-Mail</strong></td><td>Aktiviert in der Akte jedes Mitarbeiters, dass ihm jeden Monat per E-Mail die Zusammenfassung seiner Arbeitszeiterfassung zugeht.</td><td>Leitung, RRHH, Personal</td></tr>
+    <tr><td><strong>Die Stunden ans Lohnbüro schicken</strong></td><td>Richtet das Lohnbüro ein, das die Gehaltsabrechnungen macht, prüft jeden abgeschlossenen Monat darauf, wer seine Zusammenfassung unterschrieben hat, und schickt ihm die Stunden mit einem Download-Link, der abläuft. Jeder Versand und jeder Download wird festgehalten.</td><td>Leitung, RRHH</td></tr>
     <tr><th colspan="3">Wartung</th></tr>
     <tr><td><strong>Wartung ansehen</strong></td><td>Öffnet die Wartungsaufträge mit ihren Fotos und ihrem Verlauf.</td><td>Empfang, Fachkraft, Leitung, RRHH, Wartung</td></tr>
     <tr><td><strong>Ein Problem melden</strong></td><td>Öffnet einen neuen Auftrag und fügt ihm Fotos und Kommentare hinzu.</td><td>Empfang, Fachkraft, Leitung, RRHH, Wartung</td></tr>
@@ -3140,7 +3142,7 @@ footer{
   </p>
 
   <p>
-    Der Link gilt 30 Tage und wird nur einmal unterschrieben. Wer nicht unterschreibt, <strong>bekommt ihn nicht erneut und wird auch nicht erinnert</strong> von selbst. Wer noch die vorläufige PIN hat, muss sie an der Stempeluhr ändern, bevor er unterschreiben kann.
+    Der Link gilt 30 Tage und wird nur einmal unterschrieben. Wer nicht unterschreibt, <strong>wird es ihm nicht von allein noch einmal per E-Mail geschickt</strong>; trotzdem erinnert die Stempeluhr jedes Mal daran, wenn die PIN eingegeben wird (weiter unten). Wer noch die vorläufige PIN hat, muss sie an der Stempeluhr ändern, bevor er unterschreiben kann.
   </p>
 
   <p>
@@ -3153,6 +3155,12 @@ footer{
     Im selben Bereich, unter der E-Mail der Personalabteilung, steht <strong>Stand der Unterschriften pro Monat</strong>: Man wählt den Monat, und jede Fachkraft erscheint mit dem Stand ihres Links —nicht gesendet, Unterschrift ausstehend, unterschrieben, abgelaufen oder
     <strong>nach falschen PINs gesperrt</strong>—. Ist der Link einer Person abgelaufen, verloren gegangen oder gesperrt, klickt man in ihrer Zeile auf
     <strong>Link erneut senden</strong> und sie bekommt eine neue E-Mail, wie die vom 1., und der alte Link gilt nicht mehr. Erneut gesendet werden kann er höchstens <strong>fünfmal pro Person und Monat</strong>, und nie für eine bereits unterschriebene Übersicht oder an jemanden ohne E-Mail in der Akte.
+  </p>
+
+  <p>
+    <strong>Man kann auch an der Stempeluhr des Zentrums unterschreiben.</strong> Ist der Monat im Arbeitskalender schon abgeschlossen, sieht jede Person, deren Zusammenfassung noch nicht unterschrieben ist, es, sobald sie zum Stempeln ihre PIN eingibt (siehe
+    <a href="#fichar-lo-mio">Was jede Person nach ihrer PIN sieht</a>): <em>Prüfen und unterschreiben</em> öffnet dieselbe Prüfung wie der Link —die Tage, die Summe, die beiden Kästchen und die Unterschrift mit dem Finger— und wird genauso festgehalten, mit dem Kanal
+    <em>an der Stempeluhr des Zentrums unterschrieben</em>. So kann auch <strong>wer keine E-Mail hat</strong> unterschreiben, was vorher nicht möglich war: Das unterschriebene PDF geht nur an die E-Mail der Personalabteilung. Die Stempeluhr bietet die letzten drei abgeschlossenen Monate an, die noch nicht unterschrieben sind, vom ältesten zum neuesten. In <em>Stand der Unterschriften pro Monat</em> und im Versand ans Lohnbüro sieht man, wo jede Person unterschrieben hat.
   </p>
   <h4 id="fichar-donde">Von wo aus gestempelt wird</h4>
   <span class="ruta">Verwaltung → Zeiterfassung → Zone des Betriebs</span>
@@ -3186,7 +3194,18 @@ footer{
       unten).</li>
     <li><strong>Meine Zeiten</strong>: ihr Monat, Tag für Tag, mit den Pausen, den Stunden und der Summe, und die
       Vormonate. Sie kann ihn sich <strong>per E-Mail schicken</strong> als PDF oder herunterladen.</li>
+    <li><strong>Die nicht unterschriebene Monatszusammenfassung</strong>, falls vorhanden: „Sie haben die Zusammenfassung für September 2026 nicht unterschrieben“, mit <em>Prüfen und unterschreiben</em>. Während geprüft und unterschrieben wird, das Fenster <strong>kehrt nicht von allein in die Liste zurück</strong>: Unterschreiben dauert seine Zeit. Siehe <a href="#firma-resumen">Unterschrift der Monatsübersicht</a>.</li>
   </ul>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/65-reloj-resumen-pendiente.png" alt="Die Seite einer Fachkraft nach ihrer PIN, mit dem Hinweis, dass die Monatszusammenfassung nicht unterschrieben ist, und dem Knopf Prüfen und unterschreiben" loading="lazy">
+    <figcaption>Nach der PIN der Hinweis auf die nicht unterschriebene Zusammenfassung. Man sieht ihn mit oder ohne E-Mail.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/66-reloj-firmar-resumen.png" alt="Die Prüfung der Zusammenfassung an der Stempeluhr: die Tage des Monats, die Summe, die beiden Kästchen und das Feld zum Unterschreiben mit dem Finger" loading="lazy">
+    <figcaption>Dieselbe Prüfung und Unterschrift wie über den Link in der E-Mail, an der Stempeluhr des Zentrums.</figcaption>
+  </figure>
 
   <p>
     Unter <em>Personal → Arbeitszeiterfassung</em> im Menü steht der Rest: wählen Sie einen Zeitraum und, wenn Sie wollen, eine Person.
@@ -3247,6 +3266,122 @@ footer{
     zu Beginn jedes Monats das PDF des Vormonats. Das Profil braucht eine E-Mail. Es ist die Kopie, die das Gesetz
     Teilzeitbeschäftigten mit der Lohnabrechnung zu übergeben verlangt und die der Dekretentwurf auf alle
     ausweitet.
+  </p>
+
+  <h4 id="envio-asesoria">Die Stunden ans Lohnbüro schicken</h4>
+  <span class="ruta">Menü → Personal → Versand ans Lohnbüro</span>
+
+  <p>
+    Jeden Monat werden die Stunden der Belegschaft, sobald der Monat abgeschlossen ist, an das <strong>Lohnbüro, das die Gehaltsabrechnungen macht</strong>
+    von einem einzigen Bildschirm aus geschickt: Man sieht, wer seine Zusammenfassung unterschrieben hat und wer nicht, erinnert die Fehlenden, entscheidet, was mitgeht, und schickt ab. Dafür braucht man die Berechtigung „Die Stunden ans Lohnbüro schicken“, die werkseitig Leitung und Personalabteilung haben.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Auch ohne Unterschrift geht es.</strong> Die Arbeitszeiterfassung ist auch ohne die Unterschrift der arbeitenden Person gültig: Die Unterschrift ist ihr Einverständnis mit der Zusammenfassung, keine Voraussetzung für die Gehaltsabrechnung. Deshalb können die Stunden auch geschickt werden, wenn eine Unterschrift fehlt; dann gehen sie mit der Kennzeichnung <strong>NICHT UNTERSCHRIEBEN</strong> , damit das Lohnbüro es weiß. Das Lohnbüro verarbeitet diese Daten als <strong>Auftragsverarbeiter</strong> (Art. 28 DSGVO): Das Zentrum als Verantwortlicher muss diesen Vertrag mit ihm unterschrieben haben.</p>
+  </div>
+
+  <h5>1. Das Lohnbüro einrichten</h5>
+  <span class="ruta">Verwaltung → Zeiterfassung → Lohnbüro</span>
+
+  <p>
+    Alles beginnt mit der <strong>E-Mail des Lohnbüros</strong>: Mit der Eingabe wird der monatliche Versand der Stunden eingeschaltet. Ohne sie gibt es weder den Versandbildschirm noch seinen Menüpunkt, weder den Hinweis am 1. auf dem Startbildschirm noch den Hinweis auf eine Korrektur. Ist die E-Mail eingetragen, erscheinen die übrigen Angaben:
+  </p>
+  <ul>
+    <li><strong>E-Mail in Kopie</strong>, optional: erhält dieselbe E-Mail mit demselben Link.</li>
+    <li><strong>Sprache des Versands</strong>: die des Zentrums oder die für das Lohnbüro gewählte (Spanisch, Englisch, Deutsch oder Portugiesisch). Darin sind die E-Mail, die Tabelle und das README.</li>
+    <li><strong>Gültigkeit des Links in Tagen</strong>: werkseitig 7, von 1 bis 30.</li>
+    <li>Das Kästchen <strong>„Ich habe mit diesem Lohnbüro den Auftragsverarbeitungsvertrag unterschrieben (Art. 28 DSGVO)“</strong>. Es blockiert den Versand nicht, aber der Versandbildschirm erinnert daran, bis es angekreuzt ist.</li>
+  </ul>
+  <p>
+    Wird die E-Mail gelöscht, nachdem schon Sendungen erfolgt sind, <strong>geht der Verlauf nicht verloren</strong>: Er bleibt in der Datenbank und im Export des Zentrums und erscheint vollständig wieder, sobald wieder eine E-Mail eingetragen wird.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/60-asesoria-configuracion-sin-correo.png" alt="Die Einstellungen des Lohnbüros ohne E-Mail: nur das E-Mail-Feld und der Satz, der erklärt, dass mit der Eingabe der Versand eingeschaltet wird" loading="lazy">
+    <figcaption>Ohne E-Mail des Lohnbüros ist der Versand ausgeschaltet und nur das E-Mail-Feld zu sehen.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/61-asesoria-configuracion.png" alt="Die Einstellungen des Lohnbüros mit E-Mail, Kopie, Sprache, Tagen des Links und dem Kästchen für den Auftragsverarbeitungsvertrag" loading="lazy">
+    <figcaption>Mit eingetragener E-Mail: die Kopie, die Sprache, die Tage des Links und das Kästchen für den Auftragsverarbeitungsvertrag.</figcaption>
+  </figure>
+
+  <h5>2. Den Monat prüfen</h5>
+  <p>
+    Unter <em>Versand ans Lohnbüro</em> wählt man den Monat (der vorherige wird angeboten). Er muss <strong>abgeschlossen</strong> im Arbeitskalender sein, denn das garantiert, dass er sich danach nicht mehr ändert; ist er es nicht, erklärt der Bildschirm das und führt zum Abschließen. Darunter erscheint jede Fachkraft des Monats mit dem Stand ihrer Unterschrift: <em>Unterschrieben</em> (mit Datum und ob über den Link in der E-Mail oder an der Stempeluhr des Zentrums), <em>Wartet auf Unterschrift</em>, <em>Keine Stempelungen</em>,
+    <em>Link abgelaufen</em>, <em>Wegen PIN gesperrt</em> oder <em>Keine Unterschrift verlangt</em>, wenn das Zentrum nicht verlangt, dass die Zusammenfassung unterschrieben wird.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/62-asesoria-envio.png" alt="Der Versandbildschirm mit unterschriebenen und wartenden Fachkräften, dem Kästchen Ohne Unterschrift mitschicken und den Knöpfen zum Erinnern und Senden" loading="lazy">
+    <figcaption>Der Monat mit den Unterschriebenen und den Fehlenden. Was unterschrieben ist, geht von allein mit; was aussteht, nur wenn es angekreuzt ist.</figcaption>
+  </figure>
+
+  <h5>3. Die Fehlenden erinnern</h5>
+  <p>
+    <em>Zum Unterschreiben erinnern</em>, in jeder Zeile oder für alle Wartenden auf einmal, schickt den Link per E-Mail erneut an alle, die eine E-Mail haben, mit der üblichen Grenze (fünfmal pro Person und Monat). Wer keine E-Mail hat, sieht es an der Stempeluhr, sobald er das nächste Mal seine PIN eingibt, und der Bildschirm sagt das: <em>sieht es beim Stempeln</em>.
+  </p>
+
+  <h5>4. Entscheiden und senden</h5>
+  <p>
+    Was unterschrieben ist, geht immer mit. Jede wartende Person hat das Kästchen <strong>Ohne Unterschrift mitschicken</strong>, standardmäßig nicht angekreuzt: angekreuzt geht die Person mit, ihre Zusammenfassung und ihre Zeile sind gekennzeichnet als <strong>NICHT UNTERSCHRIEBEN</strong>. <em>Ans Lohnbüro senden</em> öffnet eine Bestätigung, die sagt, an wen es geht, wie viele unterschrieben und wie viele nicht unterschrieben sind und wer draußen bleibt; während gearbeitet wird, steht auf dem Knopf <em>Wird gesendet…</em>.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/63-asesoria-confirmar.png" alt="Der Bestätigungsdialog des Versands mit den Empfängern, den Unterschriebenen, den Nicht-Unterschriebenen und wer nicht mitgeht" loading="lazy">
+    <figcaption>Vor dem Senden: an wen es geht und was mitgeht.</figcaption>
+  </figure>
+
+  <h5>5. Was das Lohnbüro erhält und wie es herunterlädt</h5>
+  <p>
+    Die E-Mail <strong>enthält keine Anhänge mit personenbezogenen Daten</strong>: Sie enthält den Namen des Zentrums, den Monat und die Steuernummer sowie einen
+    <strong>Einmal-Link</strong> , der nach der eingestellten Anzahl Tage abläuft (die E-Mail selbst sagt es). Der Link öffnet eine Seite in Turnera ohne Konto mit einem Knopf <em>Download</em>; das Öffnen verbraucht nichts, der Download schon. Es wird festgehalten, wann und von welcher Adresse heruntergeladen wurde, und eine Nachricht geht an die E-Mail der Personalabteilung. Das Zip enthält:
+  </p>
+  <ul>
+    <li><strong>Die Zusammenfassung jeder Fachkraft als PDF</strong>: die unterschriebene, wenn es sie gibt; sonst dieselbe, gekennzeichnet als „NICHT UNTERSCHRIEBEN“.</li>
+    <li><strong>Die Monatstabelle</strong>, in Excel und CSV, mit einer Zeile pro Fachkraft: Vorname, Nachname, Ausweisnummer, Mitarbeitercode, Arbeitsstätte, Arbeitszeit (%) und geplante Arbeitszeit, gearbeitete Stunden, reguläre und Überstunden, im Monat bezahlte und durch Freizeit ausgeglichene Überstunden, Nachtstunden (22 bis 6 Uhr), Sonntags- und Feiertagsstunden, gearbeitete Tage, Urlaub, jede Art von Abwesenheit des Arbeitskalenders mit ihren Tagen und Daten (Krankschreibung, bezahlte und unbezahlte Freistellung), teilweise Abwesenheiten, Tage mit Schicht ohne Stempelung oder Abwesenheit, Tage ohne Ausgang, Vorfälle, von der Personalabteilung erklärte Stunden ohne Einverständnis und der Stand der Unterschrift.</li>
+    <li><strong>Die Tagesübersicht</strong>: eine Zeile pro Tag und Fachkraft, mit dem, was der Kalender vorsah, den Ein- und Ausgängen, den Pausen und den Stunden dieses Tages.</li>
+    <li>Eine <strong>README</strong> das jede Spalte erklärt.</li>
+  </ul>
+  <p>
+    Läuft der Link ab, ohne heruntergeladen worden zu sein, wird aus dem Verlauf ein neuer geschickt mit <em>Link erneut senden</em>; das Zip ist dasselbe, denn das Gesendete ändert sich nicht.
+  </p>
+
+
+  <figure>
+    <img src="/turnera/manual/imagenes/67-asesoria-correo.png" alt="Die E-Mail, die das Lohnbüro erhält, mit dem Zentrum, dem Monat, der Steuernummer und dem Download-Link" loading="lazy">
+    <figcaption>Die E-Mail, die das Lohnbüro erhält: ohne Anhänge, mit einem Einmal-Link.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/69-asesoria-descarga.png" alt="Die Download-Seite, die das Lohnbüro öffnet, mit dem Zentrum, dem Monat, der Gültigkeit des Links und dem Knopf Herunterladen" loading="lazy">
+    <figcaption>Was das Lohnbüro beim Öffnen des Links sieht: ohne Konto, und der Download ist nur einmal möglich.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/68-asesoria-hoja.png" alt="Die geöffnete Monatstabelle, mit einer Zeile pro Fachkraft und ihren Stunden" loading="lazy">
+    <figcaption>Die Monatstabelle: eine Zeile pro Fachkraft, mit allem, was die Gehaltsabrechnung braucht.</figcaption>
+  </figure>
+
+  <h5>6. Korrekturen</h5>
+  <p>
+    Ändert sich nach einem Versand etwas im Monat —der Monat wird wieder geöffnet und eine Stempelung, ein Vorfall oder eine Abwesenheit korrigiert—, weist der Bildschirm darauf hin: „Es gibt Änderungen nach dem Versand vom 3.10.2026 bei: Ana Ruiz“. <em>Korrektur senden</em> schickt nur an die Betroffenen, gekennzeichnet als <strong>KORREKTUR</strong> in der E-Mail, im Zip und in der Tabelle, und mit dem Datum des Versands, den es korrigiert.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/70-asesoria-cambios.png" alt="Der Hinweis auf Änderungen nach einem Versand, mit der betroffenen Person und dem Knopf Korrektur senden" loading="lazy">
+    <figcaption>Bei einer Fachkraft hat sich nach dem Versand etwas geändert: Die Korrektur geht nur mit ihr.</figcaption>
+  </figure>
+
+  <h5>7. Der Verlauf</h5>
+  <p>
+    Darunter alle Versendungen des Monats, die letzte oben: wann und wer sie gemacht hat, an wen sie ging, welche Fachkräfte dabei waren und wie ihre Unterschrift stand, ob es eine Korrektur war und ob, wann und von wo heruntergeladen wurde. <strong>Er wird nie gelöscht</strong>: nichts davon wird bearbeitet.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/64-asesoria-historial.png" alt="Der Verlauf der Versendungen des Monats mit einem heruntergeladenen Versand und einer Korrektur" loading="lazy">
+    <figcaption>Der Verlauf des Monats: was gesendet wurde, an wen und ob heruntergeladen wurde.</figcaption>
+  </figure>
+
+  <p>
+    Auf dem <strong>Startbildschirm</strong>, ab dem 1. und solange der Vormonat abgeschlossen und noch nicht versendet ist, sieht, wer die Berechtigung hat, einen dezenten Hinweis: „Die Stunden für September 2026 wurden noch nicht ans Lohnbüro gesendet (2 warten auf Unterschrift)“.
   </p>
 
   <figure>
@@ -3770,6 +3905,10 @@ footer{
   <p>
     Nach der PIN sieht man den Status der Person (<em>Anwesend</em>, <em>In Pause</em> oder <em>Abwesend</em>), seit wann, und die Schaltflächen, die in diesem Moment gelten: <em>Kommen</em>, <em>Pause</em> oder <em>Gehen</em>. Die App hält fest,
     <strong>von wo aus gestempelt wird, nur in diesem Moment</strong>, und folgt niemandem. <em>Zurück</em> lässt den Bildschirm für die nächste Person bereit.
+  </p>
+  <p>
+    Hat jemand die Zusammenfassung eines abgeschlossenen Monats <strong>nicht unterschrieben</strong>, erscheint unter dem Status der Hinweis „Sie haben die Zusammenfassung für September 2026 nicht unterschrieben. Unterschreiben Sie sie an der Stempeluhr des Zentrums oder über den Link in der E-Mail“. Die App weist nur darauf hin: Unterschrieben wird an der Stempeluhr des Zentrums oder über den Link (siehe
+    <a href="#firma-resumen">Unterschrift der Monatsübersicht</a>).
   </p>
   <figure>
     <img src="/turnera/manual/imagenes/46-app-panel.png" alt="Das Panel einer anwesenden Mitarbeiterin, mit den Schaltflächen Ausstempeln und Pause" loading="lazy">

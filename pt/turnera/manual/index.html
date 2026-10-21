@@ -747,6 +747,7 @@ footer{
     <li><a href="#fichar-lo-mio" class="sub sub">O que cada um vê depois do seu PIN</a></li>
     <li><a href="#presencia-enlaces" class="sub sub">Acesso da Inspeção e da representação dos trabalhadores</a></li>
     <li><a href="#presencia-resumen-mensual" class="sub sub">O resumo mensal por e-mail</a></li>
+    <li><a href="#envio-asesoria" class="sub sub">Enviar as horas ao gabinete de salários</a></li>
     <li><a href="#calendario-laboral" class="sub">Calendário laboral</a></li>
     <li><a href="#calendario-cerrar" class="sub sub">Fechar o ano</a></li>
     <li><a href="#calendario-ausencias-parciales" class="sub sub">Ausências parciais</a></li>
@@ -2794,6 +2795,7 @@ footer{
     <tr><td><strong>Configurar o relógio de ponto</strong></td><td>Decide quantos dígitos tem o PIN com que se pica o ponto.</td><td>Direção, RH, Pessoal</td></tr>
     <tr><td><strong>Desbloquear o PIN de picagem</strong></td><td>Desbloqueia o PIN de um profissional que ficou bloqueado após cinco tentativas erradas seguidas, para que volte a picar o ponto e a assinar o resumo. Fica registado quem o desbloqueia.</td><td>Direção, RH, Pessoal</td></tr>
     <tr><td><strong>Resumo mensal de jornada por e-mail</strong></td><td>Ativa, na ficha de cada profissional, que lhe chegue todos os meses por e-mail o resumo do seu registo de jornada.</td><td>Direção, RH, Pessoal</td></tr>
+    <tr><td><strong>Enviar as horas ao gabinete de salários</strong></td><td>Configura o gabinete que processa os salários, revê cada mês fechado para ver quem assinou o seu resumo e envia-lhe as horas com uma ligação de descarga que caduca. Fica registado cada envio e cada descarga.</td><td>Direção, RH</td></tr>
     <tr><th colspan="3">Manutenção</th></tr>
     <tr><td><strong>Ver a manutenção</strong></td><td>Abre as ordens de manutenção com as suas fotos e a sua cronologia.</td><td>Receção, Profissional, Direção, RH, Manutenção</td></tr>
     <tr><td><strong>Avisar de um problema</strong></td><td>Abre uma ordem nova e adiciona-lhe fotos e comentários.</td><td>Receção, Profissional, Direção, RH, Manutenção</td></tr>
@@ -3634,8 +3636,7 @@ footer{
   </p>
 
   <p>
-    A ligação vale 30 dias e assina-se uma única vez. Se alguém não assinar, <strong>não se lhe volta a enviar nem se lhe
-    lembra</strong> automaticamente. Quem ainda tiver o PIN provisório tem de o alterar no relógio antes de poder assinar.
+    A ligação vale 30 dias e assina-se uma única vez. Se alguém não assinar, <strong>não lhe volta a ser enviado por e-mail por si só</strong>; ainda assim, o relógio de ponto lembra-lho sempre que teclam o PIN (mais abaixo). Quem ainda tenha o PIN provisório tem de o mudar no relógio antes de poder assinar.
   </p>
 
   <p>
@@ -3648,6 +3649,12 @@ footer{
     Na mesma secção, por baixo do email dos RH, está <strong>Como vai a assinatura de cada mês</strong>: escolhe-se o mês e aparece cada profissional com o estado do seu link —por enviar, à espera de assinatura, assinado, caducado ou
     <strong>anulado por PIN errados</strong>—. Se o link de alguém caducou, se perdeu ou foi anulado, carrega-se em
     <strong>Reenviar link</strong> na sua linha: chega-lhe um email novo, igual ao do dia 1, e o link anterior deixa de valer. Pode reenviar-se no máximo <strong>cinco vezes por pessoa e por mês</strong>, e nunca um resumo já assinado nem a quem não tem email na ficha.
+  </p>
+
+  <p>
+    <strong>Também se assina no relógio de ponto do centro.</strong> Quando o mês já está fechado no calendário laboral, quem tem o resumo por assinar vê-o assim que tecla o PIN para picar o ponto (ver
+    <a href="#fichar-lo-mio">O que cada um vê depois do seu PIN</a>): <em>Rever e assinar</em> abre a mesma revisão que a ligação —os dias, o total, as duas caixas e a assinatura com o dedo— e fica registado da mesma forma, com o canal
+    <em>assinado no relógio de ponto do centro</em>. Assim assina também <strong>quem não tem e-mail</strong>, o que antes não podia: o seu PDF assinado vai só para o e-mail dos RH. O relógio oferece os três últimos meses fechados que falte assinar, do mais antigo ao mais recente. Em <em>Como vai a assinatura de cada mês</em> e no envio ao gabinete de salários vê-se onde assinou cada um.
   </p>
   <h4 id="fichar-donde">De onde se pica o ponto</h4>
   <span class="ruta">Administração → Controlo de assiduidade → Zona do centro</span>
@@ -3691,7 +3698,18 @@ footer{
       abaixo).</li>
     <li><strong>As minhas picagens</strong>: o seu mês, dia a dia, com as pausas, as horas e o total, e
       os meses anteriores. Pode <strong>enviá-lo para o seu e-mail</strong> em PDF ou descarregá-lo.</li>
+    <li><strong>O resumo do mês por assinar</strong>, se existir: «Tem o resumo de setembro de 2026 por assinar», com <em>Rever e assinar</em>. Enquanto revê e assina, a janela <strong>não volta sozinha à lista</strong>: assinar leva o seu tempo. Ver <a href="#firma-resumen">Assinatura do resumo mensal</a>.</li>
   </ul>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/65-reloj-resumen-pendiente.png" alt="A ficha de uma profissional depois do PIN, com o aviso de que tem o resumo do mês por assinar e o botão Rever e assinar" loading="lazy">
+    <figcaption>Depois do PIN, o aviso do resumo por assinar. Vê-o quem tenha ou não e-mail.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/66-reloj-firmar-resumen.png" alt="A revisão do resumo no relógio: os dias do mês, o total, as duas caixas e o quadro para assinar com o dedo" loading="lazy">
+    <figcaption>A mesma revisão e assinatura que a ligação do e-mail, no relógio de ponto do centro.</figcaption>
+  </figure>
 
   <p>
     Em <em>Pessoal → Controlo de assiduidade</em>, no menu, está o resto: escolha um intervalo e, se quiser, uma pessoa. Em
@@ -3758,6 +3776,122 @@ footer{
     início de cada mês chega-lhe o PDF do mês anterior. É preciso ter e-mail na ficha. É a cópia que a lei pede que se
     entregue com o recibo de vencimento a quem trabalha a tempo parcial, e que o projeto de Real Decreto estende a
     todos.
+  </p>
+
+  <h4 id="envio-asesoria">Enviar as horas ao gabinete de salários</h4>
+  <span class="ruta">Menu → Pessoal → Envio ao gabinete de salários</span>
+
+  <p>
+    Todos os meses, depois de fechado, as horas da equipa são enviadas ao <strong>gabinete que processa os salários</strong>
+    a partir de um único ecrã: vê-se quem assinou o seu resumo e quem não, avisa-se quem falta, decide-se o que vai e envia-se. É preciso a permissão «Enviar as horas ao gabinete de salários», que de origem têm a Direção e os RH.
+  </p>
+
+  <div class="ojo">
+    <p><strong>Sem assinatura também vale.</strong> O registo de jornada é válido sem a assinatura do trabalhador: a assinatura é a sua concordância com o resumo, não um requisito para pagar o salário. Por isso podem enviar-se as horas mesmo que falte alguma assinatura, e então vão marcadas como <strong>NÃO ASSINADO</strong> para que o gabinete o saiba. O gabinete trata estes dados como <strong>subcontratante</strong> (art. 28 RGPD): o centro, que é o responsável, tem de ter assinado esse contrato com ele.</p>
+  </div>
+
+  <h5>1. Configurar o gabinete de salários</h5>
+  <span class="ruta">Administração → Controlo de assiduidade → Gabinete de salários</span>
+
+  <p>
+    Tudo começa pelo <strong>e-mail do gabinete</strong>: ao indicá-lo ativa-se o envio mensal das horas. Sem ele não aparece o ecrã de envio, nem a sua entrada no menu, nem o aviso do dia 1 no painel de início, nem o de retificativo. Com o e-mail indicado aparecem os restantes dados:
+  </p>
+  <ul>
+    <li><strong>E-mail em cópia</strong>, opcional: recebe o mesmo e-mail com a mesma ligação.</li>
+    <li><strong>Idioma do envio</strong>: o do centro ou o que se escolher para o gabinete (espanhol, inglês, alemão ou português). Nele vão o e-mail, a folha e o LEIAME.</li>
+    <li><strong>Dias de validade da ligação</strong>: 7 de origem, de 1 a 30.</li>
+    <li>A caixa <strong>«Tenho assinado com este gabinete o contrato de subcontratante (art. 28 RGPD)»</strong>. Não bloqueia o envio, mas enquanto não for marcada o ecrã de envio lembra-o.</li>
+  </ul>
+  <p>
+    Se o e-mail for apagado depois de feitos envios, <strong>o histórico não se perde</strong>: continua na base de dados e na exportação do centro, e reaparece inteiro assim que se volta a indicar um e-mail.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/60-asesoria-configuracion-sin-correo.png" alt="A configuração do gabinete sem e-mail: só o campo do e-mail e a frase que explica que ao indicá-lo se ativa o envio" loading="lazy">
+    <figcaption>Sem e-mail do gabinete, o envio está desligado e só se vê o campo do e-mail.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/61-asesoria-configuracion.png" alt="A configuração do gabinete com e-mail, cópia, idioma, dias da ligação e a caixa do contrato de subcontratante" loading="lazy">
+    <figcaption>Com o e-mail indicado: a cópia, o idioma, os dias da ligação e a caixa do contrato de subcontratante.</figcaption>
+  </figure>
+
+  <h5>2. Rever o mês</h5>
+  <p>
+    Em <em>Envio ao gabinete de salários</em> escolhe-se o mês (aparece o anterior). Tem de estar <strong>fechado</strong> no calendário laboral, que é o que garante que depois não muda; se não estiver, o ecrã explica-o e leva a fechá-lo. Em baixo aparece cada profissional do mês com o estado da sua assinatura: <em>Assinado</em> (com a data e se foi com a ligação do e-mail ou no relógio de ponto do centro), <em>À espera de assinatura</em>, <em>Sem picagens</em>,
+    <em>Ligação expirada</em>, <em>Anulado por PIN</em> ou <em>Assinatura não pedida</em>, se o centro não lhe pede para assinar o resumo.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/62-asesoria-envio.png" alt="O ecrã de envio com profissionais assinados e pendentes, a caixa Incluir sem assinar e os botões de avisar e enviar" loading="lazy">
+    <figcaption>O mês com quem assinou e quem não. O que está assinado vai sozinho; o que está pendente, só se for marcado.</figcaption>
+  </figure>
+
+  <h5>3. Avisar quem falta</h5>
+  <p>
+    <em>Avisar para assinar</em>, em cada linha ou para todos os pendentes de uma vez, reenvia a ligação por e-mail a quem tem e-mail, com o mesmo limite de sempre (cinco vezes por pessoa e mês). Quem não tem e-mail vê-o no relógio da próxima vez que teclar o PIN, e o ecrã di-lo: <em>vai vê-lo ao picar</em>.
+  </p>
+
+  <h5>4. Decidir e enviar</h5>
+  <p>
+    O que está assinado vai sempre. Cada pendente tem a caixa <strong>Incluir sem assinar</strong>, desmarcada de origem: marcada, vai no envio com o seu resumo e a sua linha marcados <strong>NÃO ASSINADO</strong>. <em>Enviar ao gabinete</em> abre uma confirmação que diz a quem se envia, quantos vão assinados, quantos sem assinar e quem fica de fora; enquanto trabalha, o botão diz <em>A enviar…</em>.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/63-asesoria-confirmar.png" alt="O diálogo de confirmação do envio com os destinatários, os assinados, os sem assinar e quem fica de fora" loading="lazy">
+    <figcaption>Antes de enviar: a quem vai e o que vai.</figcaption>
+  </figure>
+
+  <h5>5. O que recebe o gabinete e como o descarrega</h5>
+  <p>
+    O e-mail <strong>não leva anexos com dados pessoais</strong>: leva o nome do centro, o mês e o NIF, e uma
+    <strong>ligação de utilização única</strong> que caduca ao fim dos dias configurados (o próprio e-mail di-lo). A ligação abre uma página no Turnera sem conta com um botão <em>Transferir</em>; abri-la não gasta nada, gasta-a a descarga. Fica registado quando e de que endereço se descarregou, e chega um aviso ao e-mail dos RH. O zip leva:
+  </p>
+  <ul>
+    <li><strong>O resumo de cada profissional em PDF</strong>: o assinado, se o estiver; se não, o mesmo marcado «NÃO ASSINADO».</li>
+    <li><strong>A folha do mês</strong>, em Excel e CSV, com uma linha por profissional: nome, apelidos, NIF/NIE, código de funcionário, local de trabalho, jornada (%) e jornada planeada, horas trabalhadas, ordinárias e extra, extra pagas e compensadas com descanso no mês, horas noturnas (das 22 às 6 h), ao domingo e em feriado, dias trabalhados, férias, cada tipo de ausência do calendário laboral com os seus dias e datas (a baixa por incapacidade temporária, as licenças remuneradas e sem vencimento), ausências parciais, dias com turno sem picagem nem ausência, jornadas sem saída, ocorrências, horas declaradas pelos RH sem concordância e o estado da assinatura.</li>
+    <li><strong>O detalhe</strong>: uma linha por dia e profissional, com o que dizia o calendário, as entradas e saídas, as pausas e as horas desse dia.</li>
+    <li>Uma <strong>LEIAME</strong> que explica cada coluna.</li>
+  </ul>
+  <p>
+    Se a ligação caducar sem ser descarregada, envia-se outra a partir do histórico com <em>Reenviar a ligação</em>; o zip é o mesmo, porque o que foi enviado não muda.
+  </p>
+
+
+  <figure>
+    <img src="/turnera/manual/imagenes/67-asesoria-correo.png" alt="O e-mail que o gabinete recebe com o centro, o mês, o NIF e a ligação de descarga" loading="lazy">
+    <figcaption>O e-mail que o gabinete recebe: sem anexos, com uma ligação de utilização única.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/69-asesoria-descarga.png" alt="A página de descarga que o gabinete abre, com o centro, o mês, até quando vale a ligação e o botão Descarregar" loading="lazy">
+    <figcaption>O que o gabinete vê ao abrir a ligação: sem conta, e a descarga só se pode fazer uma vez.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/68-asesoria-hoja.png" alt="A folha do mês aberta, com uma linha por profissional e as suas horas" loading="lazy">
+    <figcaption>A folha do mês: uma linha por profissional, com tudo o que o processamento salarial precisa.</figcaption>
+  </figure>
+
+  <h5>6. Retificativos</h5>
+  <p>
+    Se depois de um envio mudar algo no mês —reabre-se o mês e corrige-se uma picagem, uma ocorrência ou uma ausência—, o ecrã avisa: «Há alterações depois do envio de 3/10/2026 em: Ana Ruiz». <em>Enviar retificativo</em> envia só aos afetados, marcado <strong>RETIFICATIVO</strong> no e-mail, no zip e na folha, e com a data do envio que retifica.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/70-asesoria-cambios.png" alt="O aviso de alterações depois de um envio, com a pessoa afetada e o botão Enviar retificativo" loading="lazy">
+    <figcaption>Algo mudou para uma profissional depois do envio: o retificativo vai só com ela.</figcaption>
+  </figure>
+
+  <h5>7. O histórico</h5>
+  <p>
+    Em baixo, todos os envios do mês, o último em cima: quando e quem o fez, a quem se enviou, que profissionais iam e como estava a sua assinatura, se era retificativo e se foi descarregado, quando e de onde. <strong>Nunca se apaga</strong>: nada disto se edita.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/64-asesoria-historial.png" alt="O histórico dos envios do mês com um envio descarregado e um retificativo" loading="lazy">
+    <figcaption>O histórico do mês: o que se enviou, a quem e se foi descarregado.</figcaption>
+  </figure>
+
+  <p>
+    No <strong>painel de início</strong>, a partir do dia 1 e enquanto o mês anterior estiver fechado e por enviar, quem tem a permissão vê um aviso discreto: «As horas de setembro de 2026 ainda não foram enviadas ao gabinete de salários (2 por assinar)».
   </p>
 
   <figure>
@@ -4436,6 +4570,10 @@ footer{
     botões que correspondem nesse momento: <em>Entrada</em>, <em>Pausa</em> ou <em>Saída</em>. A aplicação anota
     <strong>de onde se pica o ponto, só nesse momento</strong>, e não segue ninguém. <em>Voltar</em> deixa o ecrã pronto
     para a pessoa seguinte.
+  </p>
+  <p>
+    Se tiver o resumo de um mês fechado <strong>por assinar</strong>, por baixo do seu estado aparece o aviso «Tem o resumo de setembro de 2026 por assinar. Assine-o no relógio de ponto do centro ou na ligação do e-mail». Na aplicação só se avisa: a assinatura faz-se no relógio de ponto do centro ou com a ligação (ver
+    <a href="#firma-resumen">Assinatura do resumo mensal</a>).
   </p>
   <figure>
     <img src="/turnera/manual/imagenes/46-app-panel.png" alt="O painel de uma profissional que está dentro, com os botões Saída e Pausa" loading="lazy">
