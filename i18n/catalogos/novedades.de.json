@@ -883,5 +883,11 @@
   "ted08d81b": "1.2.1-506e0f5",
   "t2850e406": "21. Oktober 2026 · Turnera 1.2.1: Hinweis auf die Monatsübersicht in der Android-App",
   "t75ad1ad0": "Android-App 0.2.3",
-  "tb4d930cf": "Android-App 0.2.3: Hinweis auf eine offene Monatsübersicht nach der PIN-Eingabe."
+  "tb4d930cf": "Android-App 0.2.3: Hinweis auf eine offene Monatsübersicht nach der PIN-Eingabe.",
+  "t01341ac2": "21. Oktober 2026 · Turnera 1.2.2: Der Empfang sieht die Fachkräfte, ohne deren Akte zu öffnen",
+  "te4fbf7b9": "1.2.2-bf0d42d",
+  "t9d8af4c7": "Berechtigungen der Personalabteilung",
+  "t53070e0d": "Die Rolle der Personalabteilung (RRHH) kann keine Termine mehr setzen oder verschieben. Sie sieht weiterhin den Terminkalender, sperrt darin Zeiten und führt die Personalakte wie bisher.",
+  "t2bd66fa1": "Mit der Rolle des Empfangs meldete „Tag nach Fachkraft“ im Terminkalender, es gebe keine aktiven Fachkräfte. Jetzt sieht der Empfang die Fachkräfte im Terminkalender, an der Kasse, bei den Geschenkkarten, bei den Sperrzeiten und in der Krankenakte, ohne Zugriff auf deren persönliche Daten.",
+  "t0add6bdf": "Wenn die Liste der Fachkräfte nicht geladen werden kann, weist der Terminkalender darauf hin, statt zu behaupten, es gebe keine."
 }

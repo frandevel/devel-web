@@ -883,5 +883,11 @@
   "ted08d81b": "1.2.1-506e0f5",
   "t2850e406": "21 October 2026 · Turnera 1.2.1: monthly summary notice in the Android app",
   "t75ad1ad0": "Android app 0.2.3",
-  "tb4d930cf": "Android app 0.2.3: notice of a pending monthly summary after the PIN."
+  "tb4d930cf": "Android app 0.2.3: notice of a pending monthly summary after the PIN.",
+  "t01341ac2": "21 October 2026 · Turnera 1.2.2: reception sees the professionals without opening their file",
+  "te4fbf7b9": "1.2.2-bf0d42d",
+  "t9d8af4c7": "HR permissions",
+  "t53070e0d": "The HR role can no longer book or move appointments. It still sees the agenda and closes slots in it, and it handles the staff file as before.",
+  "t2bd66fa1": "With the reception role, \"Day by professional\" in the agenda said there were no active professionals. Now reception sees the professionals in the agenda, the checkout, gift cards, blocks and the clinical history, without access to their personal data.",
+  "t0add6bdf": "If the list of professionals cannot be loaded, the agenda says so instead of claiming there are none."
 }

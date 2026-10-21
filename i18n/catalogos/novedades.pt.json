@@ -879,5 +879,11 @@
   "ted08d81b": "1.2.1-506e0f5",
   "t2850e406": "21 de outubro de 2026 · Turnera 1.2.1: aviso do resumo mensal na aplicação Android",
   "t75ad1ad0": "Aplicação Android 0.2.3",
-  "tb4d930cf": "Aplicação Android 0.2.3: aviso de resumo mensal pendente após o PIN."
+  "tb4d930cf": "Aplicação Android 0.2.3: aviso de resumo mensal pendente após o PIN.",
+  "t01341ac2": "21 de outubro de 2026 · Turnera 1.2.2: a receção vê os profissionais sem abrir a sua ficha",
+  "te4fbf7b9": "1.2.2-bf0d42d",
+  "t9d8af4c7": "Permissões de RH",
+  "t53070e0d": "O perfil de RH deixa de poder marcar ou mover marcações. Continua a ver a agenda e a bloquear horários nela, e trata a ficha do pessoal como antes.",
+  "t2bd66fa1": "Com o perfil de receção, «Dia por profissional» na agenda dizia que não havia profissionais ativos. Agora a receção vê os profissionais na agenda, na caixa, nos cartões-oferta, nos bloqueios e no historial clínico, sem acesso aos seus dados pessoais.",
+  "t0add6bdf": "Se a lista de profissionais não puder ser carregada, a agenda avisa disso em vez de dizer que não há nenhum."
 }
