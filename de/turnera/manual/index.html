@@ -724,7 +724,17 @@ footer{
     <li><a href="#cuadro-de-mando" class="sub">Das Cockpit</a></li>
     <li><a href="#ajustes">9. Einstellungen des Betriebs</a></li>
     <li><a href="#roles" class="sub">Rollen und Berechtigungen</a></li>
+    <li><a href="#roles-de-fabrica" class="sub sub">Rollen ab Werk und was jede mitbringt</a></li>
+    <li><a href="#roles-paso-a-paso" class="sub sub">Eine Rolle anlegen oder ändern</a></li>
+    <li><a href="#roles-ver-no-es-editar" class="sub sub">Ansehen ist nicht dasselbe wie Ändern</a></li>
+    <li><a href="#roles-tipicos" class="sub sub">Typische Beispiele</a></li>
+    <li><a href="#roles-sensibles" class="sub sub">Sensible Berechtigungen</a></li>
+    <li><a href="#roles-modulo" class="sub sub">Berechtigungen und Module</a></li>
+    <li><a href="#roles-sesion" class="sub sub">Was passiert, wenn Berechtigungen geändert werden</a></li>
     <li><a href="#roles-permisos" class="sub">Was jede Berechtigung erlaubt</a></li>
+    <li><a href="#roles-por-rol" class="sub">Die Berechtigungen jeder Rolle</a></li>
+    <li><a href="#roles-matriz" class="sub">Matrix aus Rollen und Berechtigungen</a></li>
+    <li><a href="#roles-adicionales" class="sub">Zusätzliche Berechtigungen</a></li>
     <li><a href="#tema" class="sub">Wie die Anwendung aussieht</a></li>
     <li><a href="#iva" class="sub">Die Mehrwertsteuer von allem, was verkauft wird</a></li>
     <li><a href="#contabilidad" class="sub">Der Buchhaltungsentwurf</a></li>
@@ -2065,7 +2075,7 @@ footer{
     <tr><td><strong>Zahlungen</strong></td><td>Das in einem Zeitraum Kassierte, aufgeteilt nach Zahlungsart.</td></tr>
     <tr><td><strong>Termine</strong></td><td>Die Termine eines Zeitraums, mit Filter nach Erstbesuch.</td></tr>
     <tr><td><strong>Stornierungen</strong></td><td>Wie viele vom Kunden, vom Zentrum und aus externen Gründen storniert wurden, und welche Kunden am meisten stornieren.</td></tr>
-    <tr><td><strong>Kunden</strong></td><td>Neuanmeldungen, Geburtstage und woher sie kommen.</td></tr>
+    <tr><td><strong><a href="#rol-clientes">Kunden</a></strong></td><td>Neuanmeldungen, Geburtstage und woher sie kommen.</td></tr>
     <tr><td><strong>Wertkarten</strong></td><td>Was verkauft ist, was noch offen ist und was demnächst abläuft.</td></tr>
     <tr><td><strong>Lager</strong></td><td>Was fehlt und was zu- und abgegangen ist.</td></tr>
   </tbody></table>
@@ -2267,7 +2277,7 @@ footer{
 
   <p>
     Für eine maßgeschneiderte drückt man <strong>Neue Rolle</strong>, gibt ihr einen Namen, den es noch nicht gibt, und verteilt die Berechtigungen mit den zwei Listen: links die <strong>verfügbaren</strong>, rechts die
-    <strong>der Rolle</strong>. Man verschiebt sie mit den Pfeilen oder per Doppelklick von einer Seite auf die andere, und über jeder Liste gibt es ein Suchfeld, damit man nicht die gut hundert durchgehen muss. <strong>Fährt man mit der Maus über eine Berechtigung, wird erklärt, was sie freischaltet</strong>, was nicht immer ein ganzer Bildschirm ist: manchmal ist es nur eine Schaltfläche oder ob sie sich drücken lässt. Die Leistungen zu sehen und ihre Preise zu ändern sind zum Beispiel zwei verschiedene Berechtigungen.
+    <strong>der Rolle</strong>. Man verschiebt sie mit den Pfeilen oder per Doppelklick von einer Seite auf die andere, und über jeder Liste gibt es ein Suchfeld, damit man nicht die gut hundert durchgehen muss. <strong>Unter dem Namen jeder Berechtigung steht, immer sichtbar, was sie freischaltet</strong> und, wo Verwechslungen möglich sind, was sie nicht freischaltet. Das ist nicht immer ein ganzer Bildschirm: manchmal nur eine Schaltfläche oder die Möglichkeit, diese Schaltfläche zu drücken. Die Suche berücksichtigt auch diese Erklärung. Oben auf dem Rollenbildschirm gibt es einen Link zu genau diesem Abschnitt des Handbuchs. Die Leistungen anzusehen und ihre Preise zu ändern sind zum Beispiel zwei verschiedene Berechtigungen.
   </p>
 
   <div class="ojo">
@@ -2302,6 +2312,131 @@ footer{
     Eine Rolle, die jemand trägt, lässt sich nicht löschen, damit niemand unbemerkt ohne Berechtigungen dasteht: erst nimmt man sie diesen Personen weg, dann löscht man die Rolle.
   </p>
 
+    <h3 id="roles-de-fabrica">Rollen ab Werk und was jede mitbringt</h3>
+
+  <p>
+    Jedes neue Zentrum bringt diese Rollen fertig mit. Sie lassen sich wie alle anderen bearbeiten und löschen. Die letzte Spalte zählt die Berechtigungen, die eine Rolle ab Werk mitbringt; um zu sehen, welche das sind, klicken Sie auf den Namen der Rolle (Sie erhalten ihre
+    <a href="#roles-por-rol">Liste der Berechtigungen</a>), sehen Sie sich die <a href="#roles-matriz">Matrix</a> an oder suchen Sie den Namen in der letzten Spalte der <a href="#roles-permisos">Berechtigungstabelle</a>.
+  </p>
+
+  <div class="tabla-envoltorio">
+  <table>
+    <tbody><tr><th>Rolle</th><th>Wofür sie gut ist</th><th>Berechtigungen ab Werk</th></tr>
+    <tr><td><strong><a href="#rol-recepcion">Empfang</a></strong></td><td>Vergibt Termine, betreut den Empfang und kassiert.</td><td>32</td></tr>
+    <tr><td><strong><a href="#rol-profesional">Fachkraft</a></strong></td><td>Der eigene Terminkalender, die eigenen Kunden und die Patientenakte.</td><td>18</td></tr>
+    <tr><td><strong><a href="#rol-direccion">Leitung</a></strong></td><td>Führt das Zentrum: Katalog, Personal, Berichte und Einstellungen. Kümmert sich auch um die Benutzer: Namen oder Filiale ändern, sie entsperren und ihr Passwort zurücksetzen.</td><td>95</td></tr>
+    <tr><td><strong><a href="#rol-rrhh">RRHH</a></strong></td><td>Arbeitskalender, Behandler und Terminkalender.</td><td>18</td></tr>
+    <tr><td><strong><a href="#rol-mantenimiento">Wartung</a></strong></td><td>Betreut die Wartungsaufträge, ihre Bereiche und ihre Anlagen.</td><td>7</td></tr>
+    <tr><td><strong><a href="#rol-activaciones">Aktivierungen</a></strong></td><td>Betreut die Aktivierungspunkte und ihre Anfragen.</td><td>2</td></tr>
+    <tr><td><strong><a href="#rol-clientes">Kunden</a></strong></td><td>Modulrolle: die Karteikarten, ihre Hinweise, ihre Punkte und der Kundenbericht.</td><td>11</td></tr>
+    <tr><td><strong><a href="#rol-catalogo">Katalog</a></strong></td><td>Modulrolle: Leistungen, Pakete, Produkte, Lieferanten und Bestand samt Berichten.</td><td>14</td></tr>
+    <tr><td><strong><a href="#rol-agenda">Terminkalender</a></strong></td><td>Modulrolle: Termine, Warteliste, Kabinen, Geräte und der Terminbericht.</td><td>13</td></tr>
+    <tr><td><strong><a href="#rol-historia-clinica">Patientenakte</a></strong></td><td>Modulrolle: die Patientenakte und die Einwilligungen.</td><td>8</td></tr>
+    <tr><td><strong><a href="#rol-caja">Kasse</a></strong></td><td>Modulrolle: Kassieren, Rückerstattungen, Schulden, Mehrfachkarten, Geschenkgutscheine, Gutscheincodes, Kassenabschluss und die zugehörigen Berichte.</td><td>20</td></tr>
+    <tr><td><strong><a href="#rol-facturacion">Rechnungsstellung</a></strong></td><td>Modulrolle: vollständige Rechnungen, Rechnungsbuch und Buchhaltungsentwurf.</td><td>3</td></tr>
+    <tr><td><strong><a href="#rol-portal-y-avisos">Portal und Hinweise</a></strong></td><td>Modulrolle: das Buchungsportal und die WhatsApp-Erinnerungen.</td><td>2</td></tr>
+    <tr><td><strong><a href="#rol-personal">Personal</a></strong></td><td>Modulrolle: Arbeitskalender, Zeiterfassung und Vorfälle.</td><td>10</td></tr>
+    <tr><td><strong><a href="#rol-administrador-del-sistema">Systemadministrator</a></strong></td><td>Alles, einschließlich der <a href="#roles-sensibles">sensiblen Berechtigungen</a>. Sie ist die einzige Rolle, die sie mitbringt.</td><td>119 (alle)</td></tr>
+  </tbody></table>
+  </div>
+
+  <p>
+    Die Zahlen gelten für den vollständigen Katalog; in einem Zentrum mit abgeschaltetem Modul zeigt der Rollenbildschirm weniger an (<a href="#roles-modulo">weiter unten</a> wird erklärt, warum).
+  </p>
+
+  <h3 id="roles-paso-a-paso">Eine Rolle anlegen oder ändern, Schritt für Schritt</h3>
+  <span class="ruta">Verwaltung → Rollen</span>
+
+  <ol>
+    <li>Melden Sie sich bei <strong>Verwaltung → Rollen</strong>. Sie sehen die Liste der Rollen des Zentrums mit der Anzahl der Berechtigungen jeder Rolle und der Personen, die sie haben.</li>
+    <li>Für eine neue klicken Sie auf <strong>Neue Rolle</strong>. Um eine vorhandene zu ändern —auch die ab Werk—, klicken Sie auf <strong>Bearbeiten</strong> in ihrer Zeile.</li>
+    <li>Geben Sie den <strong>Namen</strong> ein (bis zu 60 Zeichen, und noch von keiner anderen Rolle verwendet) und, wenn Sie möchten, wofür sie gedacht ist. Die Beschreibung erscheint in der Liste.</li>
+    <li>Verteilen Sie die Berechtigungen mit den beiden Listen: links die <strong>verfügbaren</strong>, rechts die
+      <strong>der Rolle</strong>. Man verschiebt sie mit den Pfeilen oder per Doppelklick von einer Seite auf die andere. Unter jeder Berechtigung steht, was sie erlaubt; lesen Sie es, bevor Sie sie verschieben, vor allem wenn der Name genauso beginnt wie ein anderer (Ansehen und Ändern sind verschiedene Berechtigungen: <a href="#roles-ver-no-es-editar">weiter unten erklärt</a>).</li>
+    <li>Nutzen Sie die Suche jeder Liste, wenn Sie etwas Bestimmtes suchen: Sie findet über den Namen, den Bereich und die Erklärung. Die <a href="#roles-sensibles">sensiblen</a> Berechtigungen tragen das Etikett <em>Sensibel</em>.</li>
+    <li>Klicken Sie auf <strong>Speichern</strong>. Die Schaltfläche wird erst aktiv, wenn die Rolle einen Namen und mindestens eine Berechtigung hat.</li>
+    <li>Damit jemand die Rolle erhält, gehen Sie zu <strong>Verwaltung → Benutzer → (ein Benutzer)</strong> und verschieben Sie sie in die Rollenliste dieser Person. <a href="#roles-sesion">Die Änderung wird wirksam, wenn sich diese Person erneut anmeldet.</a></li>
+  </ol>
+
+  <p>
+    Eine Rolle zu bearbeiten ändert, was <strong>alle Personen, die sie haben,</strong>tun können, nicht nur eine. Wenn nur eine einzelne Person etwas anderes tun soll, legt man eine eigene Rolle mit den Berechtigungen an, die sie braucht, und gibt sie ihr anstelle der überzähligen. Eine Rolle, die jemand hat, lässt sich nicht löschen: Zuerst nimmt man sie diesen Personen weg. Der Benutzerbildschirm arbeitet mit Rollen; einzelne Berechtigungen, die ein Benutzer von früher haben könnte, werden beim Anlegen eines Benutzers per Kopie mit kopiert.
+  </p>
+
+  <h3 id="roles-ver-no-es-editar">Ansehen ist nicht dasselbe wie Ändern, Stornieren oder Herunterladen</h3>
+
+  <p>
+    Die meisten Dinge haben eine Berechtigung zum Ansehen und eine oder mehrere zum Verändern. Die erste schließt die zweite nicht ein, und deshalb kann eine Rolle jemandem Einsicht geben, ohne dass er etwas kaputt machen kann. Einige Beispiele für das, was das Handbuch mehr als einmal wiederholt:
+  </p>
+
+  <ul>
+    <li><strong>Terminkalender.</strong> <a href="#perm-appointments-view">„Terminkalender ansehen“</a> zeigt nur an. Anlegen oder Verschieben ist <a href="#perm-appointments-book">„Termine anlegen und verschieben“</a>; Stornieren ist <a href="#perm-appointments-cancel">„Termine stornieren“</a>; eine bereits abgerechnete zu stornieren erfordert zusätzlich <a href="#perm-appointments-cancel-charged">„Abgerechnete Termine stornieren“</a>; für einen vergangenen Tag: <a href="#perm-appointments-book-past">«Citar en días pasados» (an vergangenen Tagen buchen)</a>; um eine erledigte zu verschieben: <a href="#perm-appointments-move-closed">«Mover citas atendidas» (erledigte Termine verschieben)</a>.</li>
+    <li><strong>Kunden.</strong> <a href="#perm-customers-view">„Karteikarten der Kunden ansehen“</a> zeigt die Karteikarte nur zum Lesen. Ändern ist
+      <a href="#perm-customers-edit">„Karteikarten der Kunden bearbeiten“</a>; Telefon und E-Mail sind verborgen ohne <a href="#perm-customers-contact-details">„Telefonnummern und E-Mails sehen“</a>; Notizen kann schreiben, wer bearbeitet, aber sie zu löschen ist <a href="#perm-customers-notes-delete">„Notizen der Kunden löschen“</a>.</li>
+    <li><strong>Berichte.</strong> Einen Bericht zu öffnen ist die Berechtigung dieses Berichts, zum Beispiel
+      <a href="#perm-reports-payments">„Zahlungsbericht“</a>. Ihn als Datei herunterzuladen erfordert zusätzlich <a href="#perm-reports-export">„Berichte als Datei herunterladen“</a>; und der Kundenbericht als Datei erfordert <a href="#perm-customers-export">„Liste der Kunden exportieren“</a>, die sensibel ist.</li>
+    <li><strong>Katalog.</strong> <a href="#perm-services-view">„Leistungen ansehen“</a> zeigt die Leistungen und ihre Preise;
+      <a href="#perm-services-write">„Leistungen anlegen und bearbeiten“</a> erlaubt es, sie zu ändern. Mit bloßem Ansehen sind die Schaltflächen zum Anlegen, Bearbeiten und Zurückziehen ausgegraut oder fehlen.</li>
+    <li><strong>Kasse.</strong> Kassieren ist <a href="#perm-checkout-charge">„An der Kasse kassieren“</a>; einen Rabatt gewähren: <a href="#perm-checkout-discount">„Rabatte gewähren“</a>; etwas offen lassen: <a href="#perm-checkout-debt">„Offen lassen“</a>; ein Ticket zurückerstatten: <a href="#perm-checkout-refund">„Ticket zurückerstatten“</a>. Niemand am Empfang öffnet eine geschlossene Kasse wieder ohne <a href="#perm-cash-reopen">«Geschlossene Kasse wieder öffnen»</a>.</li>
+    <li><strong>Wartung.</strong> <a href="#perm-maintenance-view">„Instandhaltung ansehen“</a> liest die Aufträge; einen zu öffnen ist
+      <a href="#perm-maintenance-report">„Ein Problem melden“</a>; ihn von einem Status in den nächsten zu bringen ist <a href="#perm-maintenance-manage">„Aufträge bearbeiten“</a>; ihn abzuschließen:
+      <a href="#perm-maintenance-close">„Aufträge schließen und wieder öffnen“</a>.</li>
+  </ul>
+
+  <h3 id="roles-tipicos">Drei typische Beispiele</h3>
+
+  <p>
+    <strong>Empfang.</strong> Die Rolle „Empfang“ ab Werk legt Termine an und verschiebt sie, betreut die Karteikarte des Kunden (bearbeitet sie auch und sieht die Telefonnummer), kassiert, gewährt Rabatte und stimmt die Kasse ab. Sie erstattet keine Tickets zurück, öffnet keine geschlossenen Kassen wieder, storniert keine bereits abgerechneten Termine und verschiebt keine erledigten, führt keine Karteikarten zusammen, löscht keine Kunden und sieht die Berichte nicht. Wenn in einem Zentrum die Person am Empfang zusätzlich Tickets zurückerstatten soll, bekommt sie eine eigene Rolle mit
+    <a href="#perm-checkout-refund">„Ticket zurückerstatten“</a> statt der ganzen Rolle „Leitung“.
+  </p>
+
+  <p>
+    <strong>Fachkraft.</strong> Die Rolle „Fachkraft“ sieht und verschiebt ihren eigenen Terminkalender, sieht sich die Karteikarten an, schreibt und druckt die Patientenakte und fordert Unterschriften für Einwilligungen an. Sie kassiert nicht, bearbeitet die Karteikarte nicht, sieht weder Telefonnummer noch E-Mail und storniert keine Termine. Das ist meist das, was jemand braucht, der die Leistung erbringt und nicht am Empfang arbeitet.
+  </p>
+
+  <p>
+    <strong>Wer nur Berichte sieht.</strong> Eine solche Rolle gibt es nicht ab Werk. Man legt sie mit <strong>Neue Rolle</strong> an (zum Beispiel „Nur Berichte“) und weist ihr die Berechtigungen für die Berichte zu, die sie sehen soll —<a href="#perm-reports-payments">„Zahlungsbericht“</a>,
+    <a href="#perm-reports-totals">„Tagessummen“</a>, <a href="#perm-reports-scorecard">„Kennzahlen“</a>, usw. —. Gibt man ihr nicht <a href="#perm-reports-export">„Berichte als Datei herunterladen“</a>, sieht sie die Berichte auf dem Bildschirm, kann sie aber nicht herunterladen. Die Berichte eines abgeschalteten Moduls erscheinen nicht in der Liste.
+  </p>
+
+  <h3 id="roles-sensibles">Sensible Berechtigungen: welche es sind und warum</h3>
+
+  <p>
+    Eine Berechtigung ist <strong>sensibel</strong> wenn sie die Daten vieler Menschen auf einen Schlag aus dem Zentrum herausgibt oder etwas bewirkt, das sich nicht rückgängig machen lässt. Auf dem Rollenbildschirm tragen sie das Etikett <em>Sensibel</em>. <strong>Keine Rolle ab Werk bringt sie mit, nicht einmal die Modulrollen</strong>: nur der Systemadministrator. Um sie jemandem zu geben, muss man sie von Hand in eine eigene Rolle aufnehmen, und das sollte man nur bei Personen tun, die das Zentrum leiten. Es sind diese:
+  </p>
+
+  <ul>
+    <li><a href="#perm-customers-export">„Liste der Kunden exportieren“</a>: nimmt die gesamte Kundenliste mit ihren Kontaktdaten mit.</li>
+    <li><a href="#perm-club-credits-adjust">„Punkte manuell anpassen“</a>: erlaubt es, Punkte ohne zugrunde liegenden Kauf zu verschenken oder abzuziehen.</li>
+    <li><a href="#perm-time-entries-export">„Zeiterfassung exportieren“</a>: gibt die Zeiterfassung der gesamten Belegschaft heraus.</li>
+    <li><a href="#perm-time-entries-access-links">„Zugang zur Zeiterfassung geben“</a>: öffnet die Zeiterfassung über einen Link für Personen außerhalb des Zentrums.</li>
+    <li><a href="#perm-maintenance-access-links">„Zugang zum Instandhaltungsbuch geben“</a>: öffnet das Wartungsbuch über einen Link für Personen außerhalb des Zentrums.</li>
+    <li><a href="#perm-actions-delete-points">„Aktivierungspunkte löschen“</a>: löscht einen Punkt mit allen seinen Anfragen endgültig und lässt sich nicht wiederherstellen.</li>
+    <li><a href="#perm-centre-integrations">„Externe Programme verbinden“</a>: gibt die Schlüssel, mit denen ein externes Programm in das Zentrum gelangt.</li>
+    <li><a href="#perm-centre-record-accesses">„Wer welche Akte geöffnet hat“</a>: zeigt, wer wessen Karteikarte oder Patientenakte angesehen hat.</li>
+    <li><a href="#perm-centre-invoicing">„Rechnungsstellung und VeriFactu“</a>: aktiviert die Rechnungsstellung und steuert, was an die AEAT gesendet wird.</li>
+    <li><a href="#perm-centre-invoicing-production">„Rechnungsstellung in Produktion nehmen“</a>: nimmt die Rechnungsstellung in Produktion: Die Testrechnungen werden gelöscht, und es gibt kein Zurück.</li>
+    <li><a href="#perm-centre-wipe">„Zentrum leeren“</a>: löscht alle Daten des Zentrums, und es gibt kein Zurück.</li>
+    <li><a href="#perm-centre-import">«Aus einem anderen Programm importieren»</a>: holt die Daten eines anderen Programms auf einen Schlag herein.</li>
+    <li><a href="#perm-users-permissions">„Rollen und Berechtigungen verwalten“</a>: Wer Berechtigungen vergibt, kann sie sich selbst geben.</li>
+  </ul>
+
+  <p>
+    Den Verlauf <em>einer</em> Person herunterzuladen ist nicht sensibel: Er wird in der Sprechstunde ausgedruckt und ihr ausgehändigt.
+  </p>
+
+  <h3 id="roles-modulo">Eine Berechtigung hängt von den Modulen des Zentrums ab</h3>
+
+  <p>
+    Jede Berechtigung gehört zu einem Modul: Terminkalender, Kunden, Kasse, Rechnungsstellung, Personal, Wartung usw. Der Rollenbildschirm <strong>zeigt nur die Berechtigungen der Module an, die das Zentrum eingeschaltet hat</strong>, und wenn ein Modul später abgeschaltet wird, nützen seine Berechtigungen niemandem mehr, auch dem Administrator nicht, egal welche Rollen er hat. Manche Module brauchen andere: Terminkalender, Kasse und Patientenakte brauchen Kunden; Terminkalender und Kasse brauchen den Katalog; die Rechnungsstellung die Kasse; das Portal den Terminkalender; und IoT lebt innerhalb der Wartung. Aktivierungen und IoT sind nicht standardmäßig eingeschaltet. Wenn Ihnen die Berechtigungen für einen Teil der Anwendung fehlen, prüfen Sie zuerst, ob das Zentrum dieses Modul hat.
+  </p>
+
+  <h3 id="roles-sesion">Was passiert, wenn Berechtigungen geändert werden</h3>
+
+  <p>
+    Was jede Person tun kann, steckt in ihrer Sitzung. Wenn eine Rolle oder die Rollen einer Person geändert werden, wird die Änderung
+    <strong>wirksam, wenn sich diese Person abmeldet (<em>Abmelden</em>) und wieder anmeldet</strong>. Bis dahin arbeitet sie mit dem weiter, was sie hatte. Wenn es dringend ist, jemandem, der gerade arbeitet, etwas zu entziehen, bitten Sie ihn, sich ab- und wieder anzumelden.
+  </p>
+
   <h3 id="roles-que-quita">Was hinzukommt oder wegfällt, wenn man eine Rolle vergibt oder entzieht</h3>
 
   <p>
@@ -2332,133 +2467,925 @@ footer{
     Dies ist die vollständige Liste, nach Modulen. Die letzte Spalte nennt die Standardrollen, die jede Berechtigung enthalten: Das geht verloren, wenn man eine Rolle entzieht, und das kommt hinzu, wenn man sie vergibt. Die Berechtigungen stehen so, wie sie auf dem Rollenbildschirm erscheinen.
   </p>
 
+  <p>
+    Zu einem Modul: <a href="#permisos-agenda">Terminkalender</a> · <a href="#permisos-clientes">Kunden</a> · <a href="#permisos-historia-clinica-y-consentimientos">Patientenakte und Einwilligungserklärungen</a> · <a href="#permisos-caja">Kasse</a> · <a href="#permisos-facturacion">Rechnungsstellung</a> · <a href="#permisos-catalogo">Katalog</a> · <a href="#permisos-personal">Personal</a> · <a href="#permisos-mantenimiento">Wartung</a> · <a href="#permisos-activaciones">Aktivierungen</a> · <a href="#permisos-iot">IoT</a> · <a href="#permisos-portal-y-avisos">Portal und Hinweise</a> · <a href="#permisos-nucleo">Kern</a>. Jede Zeile hat außerdem ihren eigenen Link (zum Beispiel <code>#perm-appointments-view</code>), und die
+    <a href="#roles-sensibles">sensiblen</a> Berechtigungen sind markiert. Um zu sehen, wie sie verteilt werden, lesen Sie
+    <a href="#roles-paso-a-paso">wie man eine Rolle anlegt</a>, und um zu wissen, welche Rollen ein Zentrum mitbringt, lesen Sie
+    <a href="#roles-de-fabrica">die Rollen ab Werk</a>. Wenn Sie die Berechtigungen lieber <em>nach Rolle</em>sehen möchten, finden Sie sie
+    <a href="#roles-por-rol">nach Rollen gruppiert</a>, in einer <a href="#roles-matriz">Matrix</a> und mit
+    <a href="#roles-adicionales">denen, die keine Rolle mitbringt</a>.
+  </p>
+
+  <div class="tabla-envoltorio">
   <table>
-    <tbody><tr><th>Berechtigung</th><th>Was sie erlaubt</th><th>Rollen, die sie enthalten</th></tr>
-    <tr><th colspan="3">Terminkalender</th></tr>
-    <tr><td><strong>Terminkalender ansehen</strong></td><td>Öffnet den Terminkalender und zeigt die Termine der sichtbaren Spalten.</td><td>Empfang, Fachkraft, Leitung, RRHH, Terminkalender</td></tr>
-    <tr><td><strong>Termine anlegen und verschieben</strong></td><td>Erlaubt, einen neuen Termin anzulegen und einen bestehenden auf eine andere Zeit oder Spalte zu ziehen.</td><td>Empfang, Fachkraft, Leitung, Terminkalender</td></tr>
-    <tr><td><strong>Termine stornieren</strong></td><td>Aktiviert die Schaltfläche zum Stornieren eines Termins. Den Terminkalender zu sehen reicht nicht, um Termine zu entfernen.</td><td>Empfang, Leitung, Terminkalender</td></tr>
-    <tr><td><strong>Termine an vergangenen Tagen anlegen</strong></td><td>Erlaubt, einen Termin auf einen Tag vor heute zu legen oder zu verschieben. Vergangene Tage kann man auch ohne sie ansehen.</td><td>Terminkalender</td></tr>
-    <tr><td><strong>Erledigte Termine verschieben</strong></td><td>Erlaubt, einen als erledigt oder als nicht erschienen markierten Termin zu verschieben, was nötig ist, wenn er irrtümlich markiert wurde oder der Kunde anruft, um ihn zu ändern. Bezahlte und stornierte Termine lassen sich nicht verschieben.</td><td>Terminkalender</td></tr>
-    <tr><td><strong>Bereits bezahlte Termine stornieren</strong></td><td>Erlaubt, einen bereits bezahlten Termin zu stornieren. Die Zahlung wird dadurch nicht rückgängig gemacht: Dafür gibt es die Erstattung des Belegs.</td><td>Terminkalender</td></tr>
-    <tr><td><strong>Zeitspannen im Terminkalender sperren</strong></td><td>Erlaubt, Zeiten im Terminkalender zu sperren, damit dort niemand buchen kann.</td><td>Leitung, RRHH, Terminkalender</td></tr>
-    <tr><td><strong>Den Terminkalender ausdrucken</strong></td><td>Aktiviert die Schaltfläche zum Drucken des Tagesblatts.</td><td>Empfang, Leitung, Terminkalender</td></tr>
-    <tr><td><strong>Warteliste</strong></td><td>Trägt Kunden auf die Warteliste für eine belegte Zeit ein und geht sie durch.</td><td>Empfang, Leitung, Terminkalender</td></tr>
-    <tr><td><strong>Gerätesitzung erfassen</strong></td><td>Erlaubt, den Gerätestand am Ende der Sitzung zu erfassen.</td><td>Fachkraft, Terminkalender</td></tr>
-    <tr><td><strong>Terminbericht</strong></td><td>Öffnet den Terminbericht.</td><td>Leitung, Terminkalender</td></tr>
-    <tr><td><strong>Kabinen, Plätze und Räume</strong></td><td>Verwaltet Kabinen, Plätze und Räume und wie viele im Terminkalender angezeigt werden.</td><td>Leitung, Terminkalender</td></tr>
-    <tr><td><strong>Geräte anlegen</strong></td><td>Legt Geräte an und bestimmt, welche Leistungen sie nutzen.</td><td>Leitung, Terminkalender</td></tr>
-    <tr><th colspan="3">Kunden</th></tr>
-    <tr><td><strong>Kundenakten ansehen</strong></td><td>Öffnet die Kundensuche und die Akte jedes Kunden.</td><td>Empfang, Fachkraft, Leitung, Kunden</td></tr>
-    <tr><td><strong>Kunden anlegen</strong></td><td>Aktiviert die Schaltfläche „Neuer Kunde“.</td><td>Empfang, Leitung, Kunden</td></tr>
-    <tr><td><strong>Kundenakte bearbeiten</strong></td><td>Erlaubt, Änderungen an einer Akte zu speichern und ihr Foto hinzuzufügen oder zu entfernen; ohne sie ist die Akte schreibgeschützt.</td><td>Empfang, Leitung, Kunden</td></tr>
-    <tr><td><strong>Telefonnummern und E-Mails sehen</strong></td><td>Zeigt Telefonnummer und E-Mail des Kunden; ohne sie sind sie verborgen.</td><td>Empfang, Leitung, Kunden</td></tr>
-    <tr><td><strong>Hinweise schreiben und entfernen</strong></td><td>Schreibt und entfernt die Hinweise, die beim Buchen und Kassieren erscheinen.</td><td>Empfang, Fachkraft, Leitung, Kunden</td></tr>
-    <tr><td><strong>Kundennotizen löschen</strong></td><td>Aktiviert das Löschen einer Notiz in der Akte. Wer sie schreiben darf, darf sie nicht automatisch entfernen.</td><td>Leitung, Kunden</td></tr>
-    <tr><td><strong>Doppelte Akten zusammenführen</strong></td><td>Führt zwei doppelte Akten zu einer zusammen.</td><td>Leitung, Kunden</td></tr>
-    <tr><td><strong>Daten eines Kunden löschen, der es verlangt</strong></td><td>Recht auf Löschung: löscht die personenbezogenen Daten des Kunden. Rechnungen und Patientenakte werden so lange aufbewahrt, wie das Gesetz es verlangt.</td><td>Leitung, Kunden</td></tr>
-    <tr><td><strong>Verlauf eines Kunden herunterladen</strong></td><td>Lädt den Verlauf eines Kunden als PDF herunter, um ihn ihm auszuhändigen.</td><td>Kunden</td></tr>
-    <tr><td><strong>Kundenliste exportieren</strong></td><td>Exportiert die gesamte Kundenliste in eine Datei: Das heißt, die Datenbank des Zentrums mitzunehmen.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
-    <tr><td><strong>Punkte des Kunden ansehen</strong></td><td>Zeigt den Punktestand des Kunden und seinen Verlauf.</td><td>Empfang, Fachkraft, Leitung, Kunden</td></tr>
-    <tr><td><strong>Punkte von Hand anpassen</strong></td><td>Addiert oder subtrahiert Punkte von Hand, ohne dass sie aus einem Kauf stammen.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
-    <tr><td><strong>Kundenbericht</strong></td><td>Öffnet den Kundenbericht. Ihn in eine Datei zu exportieren erfordert zusätzlich die Berechtigung, Kunden zu exportieren.</td><td>Leitung, Kunden</td></tr>
-    <tr><td><strong>Aus einem anderen Programm importieren</strong></td><td>Übernimmt auf einen Schlag die Kunden, Leistungen, Wertkarten und Termine, die ein anderes Programm exportiert, und lässt sich rückgängig machen.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
-    <tr><th colspan="3">Patientenakte und Einwilligungserklärungen</th></tr>
-    <tr><td><strong>Patientenakte ansehen</strong></td><td>Öffnet die Patientenakte des Kunden.</td><td>Fachkraft, Patientenakte</td></tr>
-    <tr><td><strong>In die Patientenakte schreiben</strong></td><td>Schreibt Verlaufseinträge und Vorgeschichte in die Patientenakte.</td><td>Fachkraft, Patientenakte</td></tr>
-    <tr><td><strong>Patientenakte drucken</strong></td><td>Aktiviert das Drucken der Patientenakte einer Person.</td><td>Fachkraft, Patientenakte</td></tr>
-    <tr><td><strong>Unterschrift anfordern</strong></td><td>Fordert vom Kunden die Unterschrift unter eine Einwilligungserklärung an.</td><td>Empfang, Fachkraft, Leitung, Patientenakte</td></tr>
-    <tr><td><strong>Unterschriebenes Dokument ansehen</strong></td><td>Öffnet das bereits unterschriebene Dokument.</td><td>Fachkraft, Patientenakte</td></tr>
-    <tr><td><strong>Unterschriebene Einwilligungen importieren</strong></td><td>Lädt in die Kundenakte Einwilligungen hoch, die auf einer anderen Plattform bereits unterschrieben wurden (als PDF).</td><td>Empfang, Leitung, Patientenakte</td></tr>
-    <tr><td><strong>Einwilligung widerrufen</strong></td><td>Widerruft eine erteilte Einwilligung.</td><td>Leitung, Patientenakte</td></tr>
-    <tr><td><strong>Vorlagen verwalten</strong></td><td>Erstellt und ändert die Einwilligungsvorlagen des Zentrums.</td><td>Leitung, Patientenakte</td></tr>
-    <tr><td><strong>Wer welche Akte geöffnet hat</strong></td><td>Zeigt, wer welche Akte wann geöffnet hat.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
-    <tr><th colspan="3">Kasse</th></tr>
-    <tr><td><strong>An der Kasse kassieren</strong></td><td>Öffnet die Kasse und erlaubt den Abschluss einer Zahlung.</td><td>Empfang, Leitung, Kasse</td></tr>
-    <tr><td><strong>Rabatte gewähren</strong></td><td>Aktiviert das Rabattfeld im Bezahlvorgang.</td><td>Empfang, Leitung, Kasse</td></tr>
-    <tr><td><strong>Auf Rechnung lassen</strong></td><td>Erlaubt, eine Zahlung als offen abzuschließen, statt sie vollständig zu kassieren.</td><td>Empfang, Leitung, Kasse</td></tr>
-    <tr><td><strong>Einen Beleg erstatten</strong></td><td>Aktiviert die Schaltfläche, um Positionen eines bereits kassierten Belegs zu erstatten, in Geld oder als Guthaben.</td><td>Leitung, Kasse</td></tr>
-    <tr><td><strong>Offene Zahlungen ansehen</strong></td><td>Öffnet den Bildschirm der offenen Zahlungen.</td><td>Empfang, Leitung, Kasse</td></tr>
-    <tr><td><strong>Eine Schuld begleichen</strong></td><td>Aktiviert die Schaltfläche zum Begleichen einer Schuld.</td><td>Empfang, Leitung, Kasse</td></tr>
-    <tr><td><strong>Kasse abrechnen und abschließen</strong></td><td>Öffnet die Tageskasse, um das Bargeld und die Kartenbelege zu zählen, und erlaubt, sie abzuschließen.</td><td>Empfang, Leitung, Kasse</td></tr>
-    <tr><td><strong>Abgeschlossene Kasse wieder öffnen</strong></td><td>Erlaubt, die Kasse eines bereits abgeschlossenen Tages zur Korrektur wieder zu öffnen. Es wird vermerkt, wer sie wieder geöffnet hat.</td><td>Leitung, Kasse</td></tr>
-    <tr><td><strong>Bezahlte Besuche ansehen</strong></td><td>Zeigt die bereits bezahlten Besuche und ihre Details.</td><td>Empfang, Leitung, Kasse</td></tr>
-    <tr><td><strong>Wertkarten des Kunden ansehen</strong></td><td>Zeigt die Wertkarten des Kunden und die verbleibenden Sitzungen.</td><td>Empfang, Fachkraft, Leitung, Kasse</td></tr>
-    <tr><td><strong>Wertkarte übertragen</strong></td><td>Überträgt Sitzungen einer Wertkarte auf eine andere Person.</td><td>Leitung, Kasse</td></tr>
-    <tr><td><strong>Geschenkkarten ansehen</strong></td><td>Zeigt die verkauften Geschenkkarten, ihr Guthaben und was insgesamt noch einzulösen ist.</td><td>Empfang, Leitung, Kasse</td></tr>
-    <tr><td><strong>Geschenkkarten verkaufen</strong></td><td>Aktiviert den Verkauf einer Geschenkkarte, ihren Druck und den Versand per E-Mail.</td><td>Empfang, Leitung, Kasse</td></tr>
-    <tr><td><strong>Gutscheincodes ansehen</strong></td><td>Zeigt die Gutscheincodes des Zentrums, ihren Rabatt und wie viele noch einlösbar sind.</td><td>Empfang, Leitung, Kasse</td></tr>
-    <tr><td><strong>Gutscheincodes erstellen und zurückziehen</strong></td><td>Erlaubt, einen Aktionscode zu erfinden, ihm ein Datum und eine Obergrenze zu geben und ihn zurückzuziehen.</td><td>Leitung, Kasse</td></tr>
-    <tr><td><strong>Zahlungsbericht</strong></td><td>Öffnet den Zahlungsbericht.</td><td>Leitung, Kasse</td></tr>
-    <tr><td><strong>Wertkartenbericht</strong></td><td>Öffnet den Wertkartenbericht.</td><td>Leitung, Kasse</td></tr>
-    <tr><td><strong>Besuchsverlauf</strong></td><td>Öffnet den Besuchsverlauf.</td><td>Leitung, Kasse</td></tr>
-    <tr><td><strong>Tagessummen</strong></td><td>Öffnet die Tagessummen.</td><td>Leitung, Kasse</td></tr>
-    <tr><td><strong>Kassenabschluss</strong></td><td>Öffnet den Kassenabschluss.</td><td>Leitung, Kasse</td></tr>
-    <tr><th colspan="3">Rechnungsstellung</th></tr>
-    <tr><td><strong>Hacer factura completa (vollständige Rechnung ausstellen)</strong></td><td>Stellt einen bereits abgerechneten Beleg als vollständige Rechnung neu aus, mit Steuernummer und den Daten des Kunden.</td><td>Empfang, Leitung, Rechnungsstellung</td></tr>
-    <tr><td><strong>Buchhaltungsentwurf</strong></td><td>Öffnet den Buchhaltungsentwurf.</td><td>Leitung, Rechnungsstellung</td></tr>
-    <tr><td><strong>Libro de facturas (Rechnungsbuch)</strong></td><td>Öffnet das Buch der ausgestellten Rechnungen, wie sie an die Steuerbehörde (AEAT) gehen, und lädt das Buch und die Sammelbuchung herunter.</td><td>Leitung, Rechnungsstellung</td></tr>
-    <tr><td><strong>Rechnungsstellung und VeriFactu</strong></td><td>Aktiviert die Rechnungsstellung des Zentrums, wählt die Präfixe der Serien und steuert die Übermittlung an die AEAT.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
-    <tr><td><strong>Rechnungsstellung in den Produktivbetrieb überführen</strong></td><td>Überführt die Rechnungsstellung vom Testmodus in den Produktivbetrieb: Die Testrechnungen werden gelöscht und die Nummerierung beginnt von vorn. Es gibt kein Zurück.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
-    <tr><th colspan="3">Katalog</th></tr>
-    <tr><td><strong>Leistungen ansehen</strong></td><td>Zeigt die Leistungen und ihre Preise.</td><td>Empfang, Fachkraft, Leitung, Katalog</td></tr>
-    <tr><td><strong>Leistungen bearbeiten</strong></td><td>Aktiviert das Anlegen, Bearbeiten und Entfernen von Leistungen.</td><td>Leitung, Katalog</td></tr>
-    <tr><td><strong>Pakete ansehen</strong></td><td>Zeigt die Pakete aus Leistungen und Produkten.</td><td>Empfang, Fachkraft, Leitung, Katalog</td></tr>
-    <tr><td><strong>Pakete bearbeiten</strong></td><td>Aktiviert das Anlegen und Bearbeiten von Paketen und ihrem Preis.</td><td>Leitung, Katalog</td></tr>
-    <tr><td><strong>Wertkartengruppen verwalten</strong></td><td>Verwaltet die Gruppen, die festlegen, welche Wertkarte welche Leistung abdeckt.</td><td>Leitung, Katalog</td></tr>
-    <tr><td><strong>Preise nachschlagen</strong></td><td>Öffnet die schnelle Preisauskunft: Sie sucht eine Leistung, ein Paket oder ein Produkt und zeigt nur Name und Preis. Sie gibt keinen Zugriff auf die Karteikarten, die Kosten oder irgendetwas Abgerechnetes.</td><td>Empfang, Fachkraft, Leitung, Katalog</td></tr>
-    <tr><td><strong>Produkte ansehen</strong></td><td>Zeigt die Verkaufsprodukte.</td><td>Empfang, Fachkraft, Leitung, Katalog</td></tr>
-    <tr><td><strong>Produkte bearbeiten</strong></td><td>Aktiviert das Anlegen und Bearbeiten von Produkten.</td><td>Leitung, Katalog</td></tr>
-    <tr><td><strong>Lieferanten ansehen</strong></td><td>Zeigt die Lieferanten.</td><td>Leitung, Katalog</td></tr>
-    <tr><td><strong>Lieferanten bearbeiten</strong></td><td>Aktiviert das Anlegen und Bearbeiten von Lieferanten.</td><td>Leitung, Katalog</td></tr>
-    <tr><td><strong>Lagerbestand ansehen</strong></td><td>Zeigt den vorhandenen Bestand.</td><td>Empfang, Leitung, Katalog</td></tr>
-    <tr><td><strong>Lagerbestand bewegen</strong></td><td>Aktiviert Wareneingänge und -ausgänge.</td><td>Leitung, Katalog</td></tr>
-    <tr><td><strong>Lagerbericht</strong></td><td>Öffnet den Lagerbericht.</td><td>Leitung, Katalog</td></tr>
-    <tr><td><strong>Wareneingänge und -ausgänge</strong></td><td>Öffnet den Bericht über Wareneingänge und -ausgänge.</td><td>Leitung, Katalog</td></tr>
-    <tr><th colspan="3">Personal</th></tr>
-    <tr><td><strong>Arbeitszeiterfassung ansehen</strong></td><td>Zeigt die Stempelungen.</td><td>Leitung, RRHH, Personal</td></tr>
-    <tr><td><strong>Sehen, wo gestempelt wurde</strong></td><td>Zeigt, von wo aus jede Ein- und Ausstempelung erfolgte und ob innerhalb oder außerhalb des Bereichs des Zentrums.</td><td>Leitung, RRHH, Personal</td></tr>
-    <tr><td><strong>Arbeitskalender ansehen</strong></td><td>Zeigt den Arbeitskalender jedes Mitarbeiters, die Tarifverträge, die Schichten und die Feiertage.</td><td>Leitung, RRHH, Personal</td></tr>
-    <tr><td><strong>Arbeitskalender planen</strong></td><td>Aktiviert das Erstellen und Ändern der Arbeitskalender, der Tarifverträge, der Schichten, der Feiertage und der Abwesenheitsarten.</td><td>Leitung, RRHH, Personal</td></tr>
-    <tr><td><strong>Vorfälle erfassen</strong></td><td>Zeigt, erfasst und korrigiert die Vorfälle im Arbeitskalender jedes Mitarbeiters, mit ihren Fotos.</td><td>Leitung, RRHH, Personal</td></tr>
-    <tr><td><strong>Stunden außerhalb der Schicht ausgleichen</strong></td><td>Erfasst die Stunden außerhalb der Schicht, die bezahlt oder als Freizeit zurückgegeben werden, und zieht ihren Saldo vom Stundenkonto ab.</td><td>Leitung, RRHH, Personal</td></tr>
-    <tr><td><strong>Arbeitszeiterfassung exportieren</strong></td><td>Exportiert die Arbeitszeiterfassung der gesamten Belegschaft in eine Datei.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
-    <tr><td><strong>Zugang zur Arbeitszeiterfassung geben</strong></td><td>Erstellt und widerruft die schreibgeschützten Links zur Arbeitszeiterfassung für die Arbeitsinspektion und für die Vertretung der Belegschaft.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
-    <tr><td><strong>Stempeluhr konfigurieren</strong></td><td>Legt fest, wie viele Stellen die PIN zum Stempeln hat.</td><td>Leitung, RRHH, Personal</td></tr>
-    <tr><td><strong>Stempel-PIN entsperren</strong></td><td>Entsperrt die PIN einer Fachkraft, die nach fünf falschen Versuchen in Folge gesperrt wurde, damit sie wieder stempeln und ihre Übersicht unterschreiben kann. Wer sie entsperrt, wird festgehalten.</td><td>Leitung, RRHH, Personal</td></tr>
-    <tr><td><strong>Monatliche Arbeitszeit-Zusammenfassung per E-Mail</strong></td><td>Aktiviert in der Akte jedes Mitarbeiters, dass ihm jeden Monat per E-Mail die Zusammenfassung seiner Arbeitszeiterfassung zugeht.</td><td>Leitung, RRHH, Personal</td></tr>
-    <tr><td><strong>Die Stunden ans Lohnbüro schicken</strong></td><td>Richtet das Lohnbüro ein, das die Gehaltsabrechnungen macht, prüft jeden abgeschlossenen Monat darauf, wer seine Zusammenfassung unterschrieben hat, und schickt ihm die Stunden mit einem Download-Link, der abläuft. Jeder Versand und jeder Download wird festgehalten.</td><td>Leitung, RRHH</td></tr>
-    <tr><th colspan="3">Wartung</th></tr>
-    <tr><td><strong>Wartung ansehen</strong></td><td>Öffnet die Wartungsaufträge mit ihren Fotos und ihrem Verlauf.</td><td>Empfang, Fachkraft, Leitung, RRHH, Wartung</td></tr>
-    <tr><td><strong>Ein Problem melden</strong></td><td>Öffnet einen neuen Auftrag und fügt ihm Fotos und Kommentare hinzu.</td><td>Empfang, Fachkraft, Leitung, RRHH, Wartung</td></tr>
-    <tr><td><strong>Aufträge verwalten</strong></td><td>Ändert, was ein Auftrag sagt, weist ihn zu und führt ihn von einem Status zum nächsten, bis er erledigt ist.</td><td>Leitung, RRHH, Wartung</td></tr>
-    <tr><td><strong>Aufträge abschließen und wieder öffnen</strong></td><td>Nimmt einen erledigten Auftrag ab und schließt ihn oder öffnet einen abgeschlossenen mit einer Begründung wieder.</td><td>Leitung, Wartung</td></tr>
-    <tr><td><strong>Aufträge stornieren</strong></td><td>Storniert einen Auftrag mit einer Begründung. Er bleibt im Verlauf durchgestrichen: Nichts wird gelöscht.</td><td>Leitung</td></tr>
-    <tr><td><strong>Bereiche und Anlagen</strong></td><td>Legt die Bereiche und Anlagen an und entfernt sie, auf die sich die Aufträge beziehen.</td><td>Leitung, RRHH, Wartung</td></tr>
-    <tr><td><strong>Wartung exportieren</strong></td><td>Lädt die Wartungsaufträge und ihren Verlauf als CSV-Datei herunter.</td><td>Leitung, Wartung</td></tr>
-    <tr><td><strong>Zugang zum Wartungsbuch geben</strong></td><td>Erstellt und widerruft die schreibgeschützten Links zum Wartungsbuch für eine Inspektion oder ein Audit.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
-    <tr><th colspan="3">Aktivierungen</th></tr>
-    <tr><td><strong>Aktivierungsanfragen ansehen</strong></td><td>Öffnet die Aktivierungspunkte und den Anfrageverlauf: wer darum gebeten hat, etwas zu öffnen oder einzuschalten, und wann.</td><td>Leitung, Aktivierungen</td></tr>
-    <tr><td><strong>Aktivierungspunkte verwalten</strong></td><td>Legt Punkte an und entfernt sie, schreibt, was jedes Formular abfragt, und fordert bei Bedarf einen neuen Benachrichtigungskanal an. Ihn vollständig zu sehen ist Sache der Berechtigung „Die Benachrichtigungskanäle sehen“.</td><td>Leitung, Aktivierungen</td></tr>
-    <tr><td><strong>Die Benachrichtigungskanäle sehen</strong></td><td>Sieht jederzeit den vollständigen Benachrichtigungskanal des Zentrums und jedes Punktes, mit dem Link und dem QR-Code zum Abonnieren in der ntfy-App. Ändern kann man sie damit nicht.</td><td>Leitung</td></tr>
-    <tr><td><strong>Aktivierungspunkte löschen</strong></td><td>Löscht einen Punkt endgültig, ob aktiv oder zurückgezogen, mit allen seinen Anfragen, und sein QR-Code hört auf zu existieren. Das lässt sich nicht rückgängig machen: gedacht für die Inbetriebnahme, wenn Test- oder falsch eingerichtete Punkte übrig bleiben.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
-    <tr><th colspan="3">Portal und Hinweise</th></tr>
-    <tr><td><strong>Buchungsportal</strong></td><td>Verwaltet das Portal, in dem der Kunde selbst einen Termin bucht.</td><td>Leitung, Portal und Hinweise</td></tr>
-    <tr><td><strong>WhatsApp-Erinnerungen</strong></td><td>Konfiguriert die WhatsApp-Benachrichtigungen des Zentrums.</td><td>Portal und Hinweise</td></tr>
-    <tr><td><strong>Externe Programme verbinden</strong></td><td>Verbindet externe Programme und zeigt ihre Zugangsschlüssel.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
-    <tr><th colspan="3">Kern (Mitarbeiter, allgemeine Berichte, Zentrumseinstellungen und Benutzer)</th></tr>
-    <tr><td><strong>Mitarbeiter ansehen</strong></td><td>Zeigt die Mitarbeiterakten und ihre Arbeitszeiten.</td><td>Leitung, RRHH</td></tr>
-    <tr><td><strong>Mitarbeiter bearbeiten</strong></td><td>Aktiviert das Anlegen und Bearbeiten von Mitarbeitern und ihren Arbeitszeiten.</td><td>Leitung, RRHH</td></tr>
-    <tr><td><strong>Cockpit</strong></td><td>Öffnet das Cockpit: die Kennzahlen jedes Moduls, das das Zentrum hat – Kasse, Terminkalender, Kunden, Personal – mit ihrer Ampel.</td><td>Leitung</td></tr>
-    <tr><td><strong>Bericht als Datei herunterladen</strong></td><td>Aktiviert die Schaltfläche zum Herunterladen jedes Berichts, den man bereits sehen darf.</td><td>Leitung</td></tr>
-    <tr><td><strong>Zentrumseinstellungen</strong></td><td>Öffnet die Einstellungen des Zentrums: Name, Sprache, Design und Steuerdaten.</td><td>Leitung</td></tr>
-    <tr><td><strong>Logo ändern</strong></td><td>Aktiviert das Hochladen und Entfernen des Logos des Zentrums.</td><td>Leitung</td></tr>
-    <tr><td><strong>Filialen verwalten</strong></td><td>Legt Filialen an und bearbeitet sie und erlaubt den Wechsel zwischen ihnen.</td><td>Nur der Systemadministrator</td></tr>
-    <tr><td><strong>Zentrum leeren</strong></td><td>Leert das Zentrum von Daten. Es gibt kein Zurück.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
-    <tr><td><strong>Benutzer ansehen</strong></td><td>Öffnet die Liste der Benutzer der Installation.</td><td>Leitung</td></tr>
-    <tr><td><strong>Benutzer anlegen und bearbeiten</strong></td><td>Aktiviert das Anlegen, Bearbeiten und Entsperren von Benutzern und das Zurücksetzen ihres Passworts.</td><td>Leitung</td></tr>
-    <tr><td><strong>Rollen und Berechtigungen verwalten</strong></td><td>Öffnet den Rollenbildschirm und erlaubt, Berechtigungen zu vergeben, auch die eigenen.</td><td><strong>Heikel:</strong> nur der Systemadministrator</td></tr>
+    <tbody><tr><th>Berechtigung</th><th>Was sie erlaubt</th><th><a href="#roles-de-fabrica">Rollen, die sie enthalten</a></th></tr>
+    <tr id="permisos-agenda"><th colspan="3">Terminkalender</th></tr>
+    <tr id="perm-appointments-view"><td><strong>Terminkalender ansehen</strong></td><td>Öffnet den Terminkalender und zeigt die Termine der sichtbaren Spalten. Nur zum Ansehen: Anlegen, Verschieben oder Stornieren ist damit nicht möglich.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr id="perm-appointments-book"><td><strong>Termine anlegen und verschieben</strong></td><td>Erlaubt, neue Termine anzulegen und bestehende per Ziehen auf eine andere Uhrzeit oder Spalte zu verschieben. Gilt nur für heute und künftige Tage: für vergangene Tage braucht es „An vergangenen Tagen buchen“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr id="perm-appointments-cancel"><td><strong>Termine stornieren</strong></td><td>Erlaubt es, Termine über die Schaltfläche zum Stornieren abzusagen. Der Terminkalender allein reicht dafür nicht. Sind sie bereits abgerechnet, braucht es zusätzlich „Abgerechnete Termine stornieren“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr id="perm-appointments-book-past"><td><strong>An vergangenen Tagen buchen</strong></td><td>Erlaubt, Termine auf einen Tag vor heute zu legen oder dorthin zu verschieben. Zum bloßen Ansehen vergangener Tage ist es nicht nötig.</td><td><a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr id="perm-appointments-move-closed"><td><strong>Erledigte Termine verschieben</strong></td><td>Erlaubt, Termine zu verschieben, die als erledigt oder als nicht erschienen markiert sind. Nötig, wenn sie versehentlich so markiert wurden oder ein Kunde anruft, um sie zu ändern. Abgerechnete und stornierte lassen sich nicht verschieben.</td><td><a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr id="perm-appointments-cancel-charged"><td><strong>Bereits bezahlte Termine stornieren</strong></td><td>Erlaubt, bereits abgerechnete Termine zu stornieren. Die Zahlung wird dadurch nicht rückgängig gemacht: Dafür gibt es die Rückerstattung des Tickets.</td><td><a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr id="perm-appointments-block"><td><strong>Zeitspannen im Terminkalender sperren</strong></td><td>Erlaubt, Zeiträume im Terminkalender zu sperren, damit dort niemand Termine anlegen kann.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr id="perm-appointments-print"><td><strong>Den Terminkalender ausdrucken</strong></td><td>Erlaubt die Schaltfläche zum Drucken des Tagesblatts.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr id="perm-waiting-list-manage"><td><strong>Warteliste</strong></td><td>Erlaubt, Kunden auf die Warteliste für eine belegte Uhrzeit zu setzen und diese Liste einzusehen.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr id="perm-equipment-readings-write"><td><strong>Gerätesitzung erfassen</strong></td><td>Erlaubt, den Gerätewert am Ende der Sitzung zu erfassen.</td><td><a href="#rol-profesional">Fachkraft</a>, <a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr id="perm-reports-appointments"><td><strong>Terminbericht</strong></td><td>Öffnet den Bericht über Termine. Als Datei herunterzuladen erfordert zusätzlich „Berichte als Datei herunterladen“.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr id="perm-centre-resources"><td><strong>Kabinen, Plätze und Räume</strong></td><td>Erlaubt, die Kabinen, Plätze und Räume zu verwalten und festzulegen, wie viele davon im Terminkalender erscheinen.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr id="perm-centre-equipment"><td><strong>Geräte anlegen</strong></td><td>Erlaubt, Geräte anzulegen und festzulegen, welche Leistungen sie nutzen.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr id="permisos-clientes"><th colspan="3">Kunden</th></tr>
+    <tr id="perm-customers-view"><td><strong>Kundenakten ansehen</strong></td><td>Öffnet die Suche nach Kunden und die Karteikarte jedes Einzelnen. Nur zum Ansehen: Für Änderungen braucht es „Karteikarten der Kunden bearbeiten“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
+    <tr id="perm-customers-create"><td><strong>Kunden anlegen</strong></td><td>Erlaubt die Schaltfläche zum Anlegen neuer Kunden.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
+    <tr id="perm-customers-edit"><td><strong>Karteikarten der Kunden bearbeiten</strong></td><td>Erlaubt, Änderungen an einer Karteikarte zu speichern und das Foto zu setzen oder zu entfernen. Ohne diese Berechtigung ist die Karteikarte schreibgeschützt.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
+    <tr id="perm-customers-contact-details"><td><strong>Telefonnummern und E-Mails sehen</strong></td><td>Zeigt Telefon, E-Mail und Adresse der Kunden. Ohne diese Berechtigung sind sie verborgen und lassen sich auch nicht ändern.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
+    <tr id="perm-customers-alerts"><td><strong>Hinweise schreiben und entfernen</strong></td><td>Erlaubt, die Hinweise zu schreiben und zu entfernen, die beim Buchen und beim Kassieren erscheinen.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
+    <tr id="perm-customers-notes-delete"><td><strong>Kundennotizen löschen</strong></td><td>Erlaubt, eine Notiz aus der Karteikarte zu löschen. Wer Notizen schreiben darf, darf sie damit noch nicht löschen.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
+    <tr id="perm-customers-merge"><td><strong>Doppelte Akten zusammenführen</strong></td><td>Führt zwei doppelte Karteikarten zu einer zusammen. Alles aus der verworfenen Karteikarte geht auf die behaltene über, und die verworfene wird gelöscht.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
+    <tr id="perm-customers-erase"><td><strong>Daten der Kunden auf Verlangen löschen</strong></td><td>Recht auf Löschung: löscht die personenbezogenen Daten und anonymisiert die Karteikarte. Rechnungen und Patientenakte bleiben so lange erhalten, wie das Gesetz es vorschreibt.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
+    <tr id="perm-customers-history-download"><td><strong>Verlauf einer Person herunterladen</strong></td><td>Erlaubt, den Verlauf als PDF herunterzuladen, um ihn auszuhändigen.</td><td><a href="#rol-clientes">Kunden</a></td></tr>
+    <tr id="perm-customers-export"><td><strong>Kundenliste exportieren</strong></td><td>Exportiert die vollständige Liste der Kunden in eine Datei – das kommt dem Mitnehmen der Datenbank des Zentrums gleich.</td><td><strong><a href="#roles-sensibles">Sensibel</a>:</strong> nur der Systemadministrator</td></tr>
+    <tr id="perm-club-credits-view"><td><strong>Punkte der Kunden ansehen</strong></td><td>Zeigt den Punktestand jeder Karteikarte und seinen Verlauf. Ändern lässt sich damit nichts.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
+    <tr id="perm-club-credits-adjust"><td><strong>Punkte von Hand anpassen</strong></td><td>Addiert oder subtrahiert Punkte von Hand, ohne dass sie aus einem Kauf stammen.</td><td><strong><a href="#roles-sensibles">Sensibel</a>:</strong> nur der Systemadministrator</td></tr>
+    <tr id="perm-reports-customers"><td><strong>Kundenbericht</strong></td><td>Öffnet den Bericht über Kunden. Ihn als Datei auszugeben erfordert zusätzlich „Liste der Kunden exportieren“.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
+    <tr id="perm-centre-import"><td><strong>Aus einem anderen Programm importieren</strong></td><td>Übernimmt auf einen Schlag die Kunden, Leistungen, Mehrfachkarten und Termine, die ein anderes Programm exportiert, und lässt sich rückgängig machen.</td><td><strong><a href="#roles-sensibles">Sensibel</a>:</strong> nur der Systemadministrator</td></tr>
+    <tr id="permisos-historia-clinica-y-consentimientos"><th colspan="3">Patientenakte und Einwilligungserklärungen</th></tr>
+    <tr id="perm-clinic-view"><td><strong>Patientenakte ansehen</strong></td><td>Öffnet die Patientenakte einer Person. Nur zum Ansehen: Zum Schreiben braucht es „In die Patientenakte schreiben“.</td><td><a href="#rol-profesional">Fachkraft</a>, <a href="#rol-historia-clinica">Patientenakte</a></td></tr>
+    <tr id="perm-clinic-write"><td><strong>In die Patientenakte schreiben</strong></td><td>Erlaubt, Verlaufseinträge und Vorgeschichte in die Patientenakte zu schreiben.</td><td><a href="#rol-profesional">Fachkraft</a>, <a href="#rol-historia-clinica">Patientenakte</a></td></tr>
+    <tr id="perm-clinic-print"><td><strong>Krankenakte drucken</strong></td><td>Erlaubt, die Patientenakte einer Person zu drucken.</td><td><a href="#rol-profesional">Fachkraft</a>, <a href="#rol-historia-clinica">Patientenakte</a></td></tr>
+    <tr id="perm-consents-request"><td><strong>Unterschrift anfordern</strong></td><td>Bittet um die Unterschrift unter einer Einwilligung.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-historia-clinica">Patientenakte</a></td></tr>
+    <tr id="perm-consents-read"><td><strong>Unterschriebenes Dokument ansehen</strong></td><td>Öffnet das bereits unterschriebene Einwilligungsdokument. Die Unterschrift anfordern zu dürfen genügt dafür nicht.</td><td><a href="#rol-profesional">Fachkraft</a>, <a href="#rol-historia-clinica">Patientenakte</a></td></tr>
+    <tr id="perm-consents-import"><td><strong>Unterschriebene Einwilligungen importieren</strong></td><td>Lädt Einwilligungen, die bereits auf einer anderen Plattform unterschrieben wurden, als PDF in die Karteikarte hoch.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-historia-clinica">Patientenakte</a></td></tr>
+    <tr id="perm-consents-withdraw"><td><strong>Einwilligung widerrufen</strong></td><td>Widerruft eine bereits erteilte Einwilligung.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-historia-clinica">Patientenakte</a></td></tr>
+    <tr id="perm-consents-templates"><td><strong>Vorlagen verwalten</strong></td><td>Erstellt und ändert die Einwilligungsvorlagen des Zentrums.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-historia-clinica">Patientenakte</a></td></tr>
+    <tr id="perm-centre-record-accesses"><td><strong>Wer welche Akte geöffnet hat</strong></td><td>Zeigt, wer die Karteikarte oder Patientenakte jeder Person geöffnet hat, und wann.</td><td><strong><a href="#roles-sensibles">Sensibel</a>:</strong> nur der Systemadministrator</td></tr>
+    <tr id="permisos-caja"><th colspan="3">Kasse</th></tr>
+    <tr id="perm-checkout-charge"><td><strong>An der Kasse kassieren</strong></td><td>Öffnet die Kasse und erlaubt, einen Zahlvorgang abzuschließen.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-checkout-discount"><td><strong>Rabatte gewähren</strong></td><td>Schaltet das Rabattfeld innerhalb des Zahlvorgangs frei.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-checkout-debt"><td><strong>Auf Rechnung lassen</strong></td><td>Erlaubt, einen Zahlvorgang mit offenem Restbetrag abzuschließen, statt ihn vollständig zu kassieren. Der Betrag erscheint danach unter „Offene Beträge ansehen“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-checkout-refund"><td><strong>Einen Beleg erstatten</strong></td><td>Erlaubt die Schaltfläche, um Positionen eines bereits abgerechneten Tickets zu erstatten, als Geld oder als Guthaben.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-debts-view"><td><strong>Offene Zahlungen ansehen</strong></td><td>Öffnet die Ansicht der offenen Beträge. Eine Schuld zu begleichen ist eine eigene Berechtigung: „Schuld begleichen“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-debts-settle"><td><strong>Eine Schuld begleichen</strong></td><td>Erlaubt die Schaltfläche zum Begleichen einer Schuld.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-cash-close"><td><strong>Kasse abrechnen und abschließen</strong></td><td>Öffnet die Tageskasse zum Zählen von Bargeld und Kartenbelegen und erlaubt den Abschluss.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-cash-reopen"><td><strong>Abgeschlossene Kasse wieder öffnen</strong></td><td>Erlaubt, die Kasse eines bereits abgeschlossenen Tages zur Korrektur wieder zu öffnen. Es wird festgehalten, wer sie geöffnet hat.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-visits-view"><td><strong>Bezahlte Besuche ansehen</strong></td><td>Zeigt die bereits bezahlten Besuche und ihre Details.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-vouchers-view"><td><strong>Mehrfachkarten der Kunden ansehen</strong></td><td>Zeigt die Mehrfachkarten und die noch verbleibenden Einheiten.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-vouchers-transfer"><td><strong>Wertkarte übertragen</strong></td><td>Überträgt Sitzungen einer Wertkarte auf eine andere Person.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-gift-cards-view"><td><strong>Geschenkkarten ansehen</strong></td><td>Zeigt die verkauften Geschenkkarten, ihr Guthaben und was insgesamt noch einzulösen ist.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-gift-cards-sell"><td><strong>Geschenkkarten verkaufen</strong></td><td>Erlaubt, einen Geschenkgutschein zu verkaufen, zu drucken und per E-Mail zu senden.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-coupons-view"><td><strong>Gutscheincodes ansehen</strong></td><td>Zeigt die Gutscheincodes des Zentrums, ihren Rabatt und wie viele noch einlösbar sind.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-coupons-write"><td><strong>Gutscheincodes erstellen und zurückziehen</strong></td><td>Erlaubt, einen Kampagnencode anzulegen, ihm ein Datum und eine Obergrenze zu geben und ihn zurückzuziehen.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-reports-payments"><td><strong>Zahlungsbericht</strong></td><td>Öffnet den Zahlungsbericht. Als Datei herunterzuladen erfordert zusätzlich „Berichte als Datei herunterladen“.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-reports-vouchers"><td><strong>Wertkartenbericht</strong></td><td>Öffnet den Wertkartenbericht.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-reports-visit-history"><td><strong>Verlauf der Besuche</strong></td><td>Öffnet den Verlauf der Besuche.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-reports-totals"><td><strong>Tagessummen</strong></td><td>Öffnet die Tagessummen. Als Datei herunterzuladen erfordert zusätzlich „Berichte als Datei herunterladen“.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-reports-daily-cash"><td><strong>Kassenabschluss</strong></td><td>Öffnet den Bericht zum Kassenabschluss. Das ist nur der Bericht: Die Kasse abzustimmen und zu schließen ist „Kasse abstimmen und schließen“.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="permisos-facturacion"><th colspan="3">Rechnungsstellung</th></tr>
+    <tr id="perm-invoices-full"><td><strong>Hacer factura completa (vollständige Rechnung ausstellen)</strong></td><td>Stellt ein bereits abgerechnetes Ticket erneut als vollständige Rechnung aus, mit NIF und den Angaben aus der Karteikarte.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-facturacion">Rechnungsstellung</a></td></tr>
+    <tr id="perm-reports-accounting-draft"><td><strong>Buchhaltungsentwurf</strong></td><td>Öffnet den Buchhaltungsentwurf. Als Datei herunterzuladen erfordert zusätzlich „Berichte als Datei herunterladen“.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-facturacion">Rechnungsstellung</a></td></tr>
+    <tr id="perm-invoices-view"><td><strong>Libro de facturas (Rechnungsbuch)</strong></td><td>Öffnet das Buch der ausgestellten Rechnungen, wie sie an die AEAT (die spanische Steuerbehörde) gemeldet werden, und erlaubt, das Buch und die Sammelbuchung herunterzuladen.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-facturacion">Rechnungsstellung</a></td></tr>
+    <tr id="perm-centre-invoicing"><td><strong>Rechnungen und VeriFactu</strong></td><td>Aktiviert die Rechnungsstellung des Zentrums, wählt die Präfixe der Serien und verwaltet die Übermittlung an die AEAT.</td><td><strong><a href="#roles-sensibles">Sensibel</a>:</strong> nur der Systemadministrator</td></tr>
+    <tr id="perm-centre-invoicing-production"><td><strong>Pasar la facturación a producción (Rechnungsstellung in die Produktion überführen)</strong></td><td>Stellt die Rechnungsstellung vom Testmodus auf Produktion um: Die Testrechnungen werden gelöscht und die Nummerierung beginnt von vorn. Es gibt kein Zurück.</td><td><strong><a href="#roles-sensibles">Sensibel</a>:</strong> nur der Systemadministrator</td></tr>
+    <tr id="permisos-catalogo"><th colspan="3">Katalog</th></tr>
+    <tr id="perm-services-view"><td><strong>Leistungen ansehen</strong></td><td>Zeigt die Leistungen und ihre Preise. Nur zum Ansehen: Für Änderungen braucht es „Leistungen anlegen und bearbeiten“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="perm-services-write"><td><strong>Leistungen anlegen und bearbeiten</strong></td><td>Erlaubt, Leistungen anzulegen, zu bearbeiten und zu entfernen.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="perm-packages-view"><td><strong>Pakete ansehen</strong></td><td>Zeigt die Pakete aus Leistungen und Produkten. Nur zum Ansehen.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="perm-packages-write"><td><strong>Pakete anlegen und bearbeiten</strong></td><td>Erlaubt, Pakete und ihren Preis anzulegen und zu bearbeiten.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="perm-service-groups-write"><td><strong>Mehrfachkarten-Gruppen verwalten</strong></td><td>Verwaltet die Gruppen, die festlegen, welche Mehrfachkarte welche Leistung abdeckt.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="perm-prices-lookup"><td><strong>Preise nachschlagen</strong></td><td>Öffnet die Schnellabfrage der Preise: Man sucht eine Leistung, ein Paket oder ein Produkt und sieht nur Name und Preis. Kein Zugriff auf Karteikarten, Kosten oder auf irgendetwas, das kassiert wird.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="perm-products-view"><td><strong>Produkte ansehen</strong></td><td>Zeigt die Verkaufsprodukte. Nur zum Ansehen.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="perm-products-write"><td><strong>Produkte anlegen und bearbeiten</strong></td><td>Erlaubt, Produkte anzulegen und zu bearbeiten.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="perm-providers-view"><td><strong>Lieferanten ansehen</strong></td><td>Zeigt die Lieferanten. Nur zum Ansehen.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="perm-providers-write"><td><strong>Lieferanten anlegen und bearbeiten</strong></td><td>Erlaubt, Lieferanten anzulegen und zu bearbeiten.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="perm-stock-view"><td><strong>Lagerbestand ansehen</strong></td><td>Zeigt die Bestände. Nur zum Ansehen: Für Zu- oder Abgänge braucht es „Lagerbewegungen buchen“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="perm-stock-move"><td><strong>Lagerbestand bewegen</strong></td><td>Erlaubt, Zu- und Abgänge im Bestand zu erfassen.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="perm-reports-stock"><td><strong>Lagerbericht</strong></td><td>Öffnet den Lagerbericht.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="perm-reports-stock-movements"><td><strong>Wareneingänge und -ausgänge</strong></td><td>Öffnet den Bericht über Wareneingänge und -ausgänge.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="permisos-personal"><th colspan="3">Personal</th></tr>
+    <tr id="perm-time-entries-view"><td><strong>Arbeitszeiterfassung ansehen</strong></td><td>Zeigt die Stempelungen der Belegschaft. Um zu sehen, von wo aus gestempelt wurde, braucht es zusätzlich „Stempelort ansehen“.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-personal">Personal</a></td></tr>
+    <tr id="perm-time-entries-locations"><td><strong>Sehen, wo gestempelt wurde</strong></td><td>Zeigt, von wo aus jede Ein- und Ausstempelung erfolgte und ob innerhalb oder außerhalb des Bereichs des Zentrums.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-personal">Personal</a></td></tr>
+    <tr id="perm-work-calendars-view"><td><strong>Arbeitskalender ansehen</strong></td><td>Zeigt den Arbeitskalender pro Behandler, die Tarifverträge, Schichten und Feiertage. Nur zum Ansehen: Zum Planen braucht es „Arbeitskalender planen“.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-personal">Personal</a></td></tr>
+    <tr id="perm-work-calendars-write"><td><strong>Arbeitskalender planen</strong></td><td>Erlaubt, Arbeitskalender, Tarifverträge, Schichten, Feiertage und Abwesenheitsarten anzulegen und zu ändern.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-personal">Personal</a></td></tr>
+    <tr id="perm-work-calendars-incidents"><td><strong>Vorfälle erfassen</strong></td><td>Erlaubt, die Vorfälle im Arbeitskalender pro Behandler samt Fotos einzusehen, zu erfassen und zu korrigieren.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-personal">Personal</a></td></tr>
+    <tr id="perm-work-calendars-overtime"><td><strong>Stunden außerhalb der Schicht ausgleichen</strong></td><td>Erlaubt, Stunden außerhalb der Schicht zu erfassen, die ausbezahlt oder als Freizeit ausgeglichen werden, und zieht sie vom Stundenkonto ab.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-personal">Personal</a></td></tr>
+    <tr id="perm-time-entries-export"><td><strong>Arbeitszeiterfassung exportieren</strong></td><td>Exportiert die Arbeitszeiterfassung der gesamten Belegschaft in eine Datei.</td><td><strong><a href="#roles-sensibles">Sensibel</a>:</strong> nur der Systemadministrator</td></tr>
+    <tr id="perm-time-entries-access-links"><td><strong>Zugang zur Arbeitszeiterfassung geben</strong></td><td>Erstellt und widerruft Nur-Lese-Links zur Zeiterfassung für die Arbeitsinspektion und die Arbeitnehmervertretung.</td><td><strong><a href="#roles-sensibles">Sensibel</a>:</strong> nur der Systemadministrator</td></tr>
+    <tr id="perm-time-clock-settings"><td><strong>Stempeluhr konfigurieren</strong></td><td>Legt fest, wie viele Stellen die PIN zum Einstempeln hat.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-personal">Personal</a></td></tr>
+    <tr id="perm-time-clock-unlock-pin"><td><strong>Stempel-PIN entsperren</strong></td><td>Entsperrt eine PIN, die nach fünf falschen Versuchen in Folge gesperrt wurde, damit die Person wieder einstempeln und ihre Übersicht unterschreiben kann. Es wird festgehalten, wer sie entsperrt.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-personal">Personal</a></td></tr>
+    <tr id="perm-employees-time-summary"><td><strong>Monatliche Arbeitszeit-Zusammenfassung per E-Mail</strong></td><td>Schaltet in der Karteikarte ein, dass die Person jeden Monat die Übersicht ihrer Zeiterfassung per E-Mail erhält.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-personal">Personal</a></td></tr>
+    <tr id="perm-time-entries-payroll-send"><td><strong>Die Stunden ans Lohnbüro schicken</strong></td><td>Richtet das Lohnbüro ein, das die Gehaltsabrechnung macht, prüft jeden abgeschlossenen Monat, wer seine Übersicht unterschrieben hat, und sendet ihm die Stunden mit einem ablaufenden Download-Link. Jeder Versand und jeder Download wird festgehalten.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-personal">Personal</a></td></tr>
+    <tr id="permisos-mantenimiento"><th colspan="3">Wartung</th></tr>
+    <tr id="perm-maintenance-view"><td><strong>Wartung ansehen</strong></td><td>Öffnet die Instandhaltungsaufträge mit Fotos und Verlauf. Nur zum Ansehen: Einen neuen zu eröffnen erfordert „Ein Problem melden“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-mantenimiento">Wartung</a></td></tr>
+    <tr id="perm-maintenance-report"><td><strong>Ein Problem melden</strong></td><td>Eröffnet einen neuen Auftrag und ergänzt Fotos und Kommentare.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-mantenimiento">Wartung</a></td></tr>
+    <tr id="perm-maintenance-manage"><td><strong>Aufträge verwalten</strong></td><td>Ändert den Inhalt eines Auftrags, weist ihn zu und führt ihn von Status zu Status bis zur Erledigung. Endgültiges Schließen erfordert „Aufträge schließen und wieder öffnen“.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-mantenimiento">Wartung</a></td></tr>
+    <tr id="perm-maintenance-close"><td><strong>Aufträge abschließen und wieder öffnen</strong></td><td>Nimmt einen erledigten Auftrag ab und schließt ihn, oder öffnet einen geschlossenen mit einer Begründung wieder.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-mantenimiento">Wartung</a></td></tr>
+    <tr id="perm-maintenance-annul"><td><strong>Aufträge stornieren</strong></td><td>Annulliert einen Auftrag mit Begründung. Er bleibt durchgestrichen im Verlauf: Nichts wird gelöscht.</td><td><a href="#rol-direccion">Leitung</a></td></tr>
+    <tr id="perm-maintenance-catalogue"><td><strong>Bereiche und Anlagen</strong></td><td>Erlaubt, die Bereiche und Anlagen anzulegen und zu entfernen, auf die sich Aufträge beziehen.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-mantenimiento">Wartung</a></td></tr>
+    <tr id="perm-maintenance-export"><td><strong>Wartung exportieren</strong></td><td>Lädt die Aufträge und ihren Verlauf als CSV-Datei herunter.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-mantenimiento">Wartung</a></td></tr>
+    <tr id="perm-maintenance-access-links"><td><strong>Zugang zum Wartungsbuch geben</strong></td><td>Erstellt und widerruft Nur-Lese-Links zum Instandhaltungsbuch für eine Inspektion oder ein Audit.</td><td><strong><a href="#roles-sensibles">Sensibel</a>:</strong> nur der Systemadministrator</td></tr>
+    <tr id="permisos-activaciones"><th colspan="3">Aktivierungen</th></tr>
+    <tr id="perm-actions-view"><td><strong>Aktivierungsanfragen ansehen</strong></td><td>Öffnet die Aktivierungspunkte und den Anfrageverlauf: wer wann darum gebeten hat, etwas zu öffnen oder einzuschalten. Die Links der Benachrichtigungskanäle sind nicht enthalten.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-activaciones">Aktivierungen</a></td></tr>
+    <tr id="perm-actions-manage"><td><strong>Aktivierungspunkte verwalten</strong></td><td>Erlaubt, Punkte anzulegen und zu entfernen, festzulegen, was jedes Formular abfragt, und bei Bedarf einen neuen Benachrichtigungskanal anzufordern. Den ganzen Kanal zu sehen erfordert „Die Benachrichtigungskanäle sehen“.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-activaciones">Aktivierungen</a></td></tr>
+    <tr id="perm-actions-channels-view"><td><strong>Die Benachrichtigungskanäle sehen</strong></td><td>Zeigt jederzeit vollständig den Benachrichtigungskanal des Zentrums und den jedes Punktes, mit Link und QR-Code zum Abonnieren in der ntfy-App. Ändern lassen sie sich damit nicht.</td><td><a href="#rol-direccion">Leitung</a></td></tr>
+    <tr id="perm-actions-delete-points"><td><strong>Aktivierungspunkte löschen</strong></td><td>Löscht einen Punkt endgültig, ob aktiv oder zurückgezogen, samt aller Anfragen; sein QR-Code existiert danach nicht mehr. Es gibt kein Zurück: gedacht für die Einrichtung, wenn Testpunkte oder falsch eingerichtete Punkte übrig bleiben.</td><td><strong><a href="#roles-sensibles">Sensibel</a>:</strong> nur der Systemadministrator</td></tr>
+    <tr id="permisos-iot"><th colspan="3">IoT (Geräte des Tuya-Kontos)</th></tr>
+    <tr id="perm-iot-view"><td><strong>IoT-Geräte ansehen</strong></td><td>Öffnet in der Instandhaltung die Liste der Geräte des Tuya-Kontos des Zentrums mit ihrem Status. Nur zum Ansehen: Zum Ein- und Ausschalten braucht es „IoT-Geräte ein- und ausschalten“.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-mantenimiento">Wartung</a></td></tr>
+    <tr id="perm-iot-manage"><td><strong>IoT-Konto konfigurieren</strong></td><td>Erlaubt, das Tuya-Konto des Zentrums in den Einstellungen einzutragen und zu ändern. Der geheime Schlüssel lässt sich eingeben, wird aber nie wieder angezeigt.</td><td><a href="#rol-direccion">Leitung</a></td></tr>
+    <tr id="perm-iot-control"><td><strong>IoT-Geräte ein- und ausschalten</strong></td><td>Erlaubt, die Schalter der Tuya-Geräte ein- und auszuschalten, stets nach einer Bestätigung, und den Verlauf einzusehen. Schlösser und Türen sind ausgenommen.</td><td><a href="#rol-direccion">Leitung</a></td></tr>
+    <tr id="permisos-portal-y-avisos"><th colspan="3">Portal und Hinweise</th></tr>
+    <tr id="perm-centre-booking-portal"><td><strong>Buchungsportal</strong></td><td>Erlaubt, das Portal zu verwalten, in dem Kunden Termine selbst buchen.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-portal-y-avisos">Portal und Hinweise</a></td></tr>
+    <tr id="perm-centre-whatsapp"><td><strong>WhatsApp-Erinnerungen</strong></td><td>Erlaubt, die WhatsApp-Benachrichtigungen des Zentrums zu konfigurieren.</td><td><a href="#rol-portal-y-avisos">Portal und Hinweise</a></td></tr>
+    <tr id="perm-centre-integrations"><td><strong>Externe Programme verbinden</strong></td><td>Erlaubt, externe Programme zu verbinden und ihre Zugangsschlüssel einzusehen.</td><td><strong><a href="#roles-sensibles">Sensibel</a>:</strong> nur der Systemadministrator</td></tr>
+    <tr id="permisos-nucleo"><th colspan="3">Kern (Behandler, allgemeine Berichte, Einstellungen des Zentrums, Support und Benutzer)</th></tr>
+    <tr id="perm-employees-view"><td><strong>Mitarbeiter ansehen</strong></td><td>Zeigt die Karteikarten der Behandler und ihre Arbeitszeiten. Nur zum Ansehen.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a></td></tr>
+    <tr id="perm-employees-write"><td><strong>Behandler anlegen und bearbeiten</strong></td><td>Erlaubt, Behandler und ihre Arbeitszeiten anzulegen und zu bearbeiten.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a></td></tr>
+    <tr id="perm-reports-scorecard"><td><strong>Cockpit</strong></td><td>Öffnet die Kennzahlen: die Zahlen jedes Moduls, das das Zentrum hat (Kasse, Terminkalender, Kunden, Personal), mit Ampel.</td><td><a href="#rol-direccion">Leitung</a></td></tr>
+    <tr id="perm-reports-export"><td><strong>Berichte als Datei herunterladen</strong></td><td>Erlaubt die Schaltfläche, mit der sich jeder Bericht, den die Person schon sehen kann, als Datei herunterladen lässt. Ohne sie lassen sich Berichte nur am Bildschirm ansehen.</td><td><a href="#rol-direccion">Leitung</a></td></tr>
+    <tr id="perm-centre-preferences"><td><strong>Zentrumseinstellungen</strong></td><td>Öffnet die Einstellungen des Zentrums: Name, Sprache, Design und Steuerdaten.</td><td><a href="#rol-direccion">Leitung</a></td></tr>
+    <tr id="perm-centre-logo"><td><strong>Logo ändern</strong></td><td>Erlaubt, das Logo des Zentrums hochzuladen und zu entfernen.</td><td><a href="#rol-direccion">Leitung</a></td></tr>
+    <tr id="perm-centre-delegations"><td><strong>Standorte verwalten</strong></td><td>Erlaubt, Standorte anzulegen und zu bearbeiten und zwischen ihnen zu wechseln.</td><td>Nur der Systemadministrator</td></tr>
+    <tr id="perm-centre-wipe"><td><strong>Zentrum leeren</strong></td><td>Löscht alle Daten des Zentrums. Es gibt kein Zurück.</td><td><strong><a href="#roles-sensibles">Sensibel</a>:</strong> nur der Systemadministrator</td></tr>
+    <tr id="perm-support-view"><td><strong>Meine Support-Tickets ansehen</strong></td><td>Öffnet den Bereich Support und zeigt die Tickets, die diese Person eröffnet hat.</td><td><a href="#rol-direccion">Leitung</a></td></tr>
+    <tr id="perm-support-write"><td><strong>Support-Tickets öffnen und beantworten</strong></td><td>Erlaubt, ein Support-Ticket zu eröffnen, auf die eigenen zu antworten und sie als erledigt zu markieren. Auf das Ticket einer anderen Person zu antworten oder es zu erledigen, erfordert zusätzlich „Support-Tickets des ganzen Zentrums ansehen“.</td><td><a href="#rol-direccion">Leitung</a></td></tr>
+    <tr id="perm-support-view-all"><td><strong>Die Support-Tickets des gesamten Zentrums ansehen</strong></td><td>Zeigt im Support die Tickets aller Personen des Zentrums, nicht nur die eigenen.</td><td><a href="#rol-direccion">Leitung</a></td></tr>
+    <tr id="perm-users-view"><td><strong>Benutzer ansehen</strong></td><td>Öffnet die Liste der Benutzer der Installation. Nur zum Ansehen.</td><td><a href="#rol-direccion">Leitung</a></td></tr>
+    <tr id="perm-users-write"><td><strong>Benutzer anlegen und bearbeiten</strong></td><td>Erlaubt, Benutzer anzulegen, zu bearbeiten und zu entsperren und ihr Passwort zurückzusetzen.</td><td><a href="#rol-direccion">Leitung</a></td></tr>
+    <tr id="perm-users-permissions"><td><strong>Rollen und Berechtigungen verwalten</strong></td><td>Öffnet die Rollenansicht und erlaubt, Berechtigungen zu vergeben, auch die eigenen. Wer sie hat, kann sich selbst jede Berechtigung geben.</td><td><strong><a href="#roles-sensibles">Sensibel</a>:</strong> nur der Systemadministrator</td></tr>
   </tbody></table>
+  </div>
+
+  <!-- roles-por-rol:inicio -->
+  <h4 id="roles-por-rol">Die Berechtigungen jeder Rolle, Rolle für Rolle</h4>
+
+  <p>
+    Dieselbe Information wie in der Tabelle oben, aber umgekehrt: Jede Rolle ab Werk ist eine Karte mit allem, was sie mitbringt, nach Modulen gruppiert und mit einem Satz dazu, was jede Berechtigung erlaubt. Klicken Sie auf den Namen einer Berechtigung, um ihre vollständige Erklärung zu sehen, in der <a href="#roles-permisos">Tabelle nach Modulen</a>. Es gibt 15 Rollen ab Werk: die allgemeinen, die Dinge aus mehreren Modulen mischen, und die Modulrollen, die ein ganzes Modul mitbringen.
+  </p>
+
+  <nav class="rol-selector" aria-label="Zu einer Rolle">
+    <p class="rol-selector__titulo">Allgemeine Rollen</p>
+    <div class="chips"><a class="chip r-recepcion" href="#rol-recepcion">Empfang <small>32</small></a>
+      <a class="chip r-profesional" href="#rol-profesional">Fachkraft <small>18</small></a>
+      <a class="chip r-direccion" href="#rol-direccion">Leitung <small>95</small></a>
+      <a class="chip r-rrhh" href="#rol-rrhh">RRHH <small>18</small></a>
+      <a class="chip r-mantenimiento" href="#rol-mantenimiento">Wartung <small>7</small></a>
+      <a class="chip r-activaciones" href="#rol-activaciones">Aktivierungen <small>2</small></a></div>
+    <p class="rol-selector__titulo">Modulrollen (alles Nicht-Sensible eines Moduls)</p>
+    <div class="chips"><a class="chip r-clientes" href="#rol-clientes">Kunden <small>11</small></a>
+      <a class="chip r-catalogo" href="#rol-catalogo">Katalog <small>14</small></a>
+      <a class="chip r-agenda" href="#rol-agenda">Terminkalender <small>13</small></a>
+      <a class="chip r-historia-clinica" href="#rol-historia-clinica">Patientenakte <small>8</small></a>
+      <a class="chip r-caja" href="#rol-caja">Kasse <small>20</small></a>
+      <a class="chip r-facturacion" href="#rol-facturacion">Rechnungsstellung <small>3</small></a>
+      <a class="chip r-portal-y-avisos" href="#rol-portal-y-avisos">Portal und Hinweise <small>2</small></a>
+      <a class="chip r-personal" href="#rol-personal">Personal <small>10</small></a></div>
+    <p class="rol-selector__titulo">Systemrolle</p>
+    <div class="chips"><a class="chip r-administrador-del-sistema" href="#rol-administrador-del-sistema">Systemadministrator <small>119</small></a></div>
+    <p class="rol-selector__titulo">Und was keine Rolle mitbringt</p>
+    <div class="chips"><a class="chip r-adicionales" href="#permisos-adicionales">Zusätzliche Berechtigungen <small>14</small></a><a class="chip r-matriz" href="#roles-matriz">Zusammenfassung als Matrix</a></div>
+  </nav>
+
+  <article class="rol-card r-recepcion familia-general" id="rol-recepcion">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Empfang</h5><span class="rc-cuenta">32 Berechtigungen</span><span class="rc-familia">Allgemeine Rolle</span></div>
+      <p class="rc-para">Für alle am Empfang: vergibt Termine, betreut den Kunden und kassiert.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <h6 class="rc-modulo"><a href="#permisos-agenda">Terminkalender</a> <span class="n">· 5</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-appointments-view">Terminkalender ansehen</a><span class="rc-desc">Öffnet den Terminkalender und zeigt die Termine der sichtbaren Spalten.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-book">Termine anlegen und verschieben</a><span class="rc-desc">Erlaubt, neue Termine anzulegen und bestehende per Ziehen auf eine andere Uhrzeit oder Spalte zu verschieben.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-cancel">Termine stornieren</a><span class="rc-desc">Erlaubt es, Termine über die Schaltfläche zum Stornieren abzusagen.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-print">Den Terminkalender ausdrucken</a><span class="rc-desc">Erlaubt die Schaltfläche zum Drucken des Tagesblatts.</span></li>
+        <li class="rc-perm"><a href="#perm-waiting-list-manage">Warteliste</a><span class="rc-desc">Erlaubt, Kunden auf die Warteliste für eine belegte Uhrzeit zu setzen und diese Liste einzusehen.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-clientes">Kunden</a> <span class="n">· 6</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-customers-view">Kundenakten ansehen</a><span class="rc-desc">Öffnet die Kundensuche und die Akte jedes Kunden.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-create">Kunden anlegen</a><span class="rc-desc">Erlaubt die Schaltfläche zum Anlegen neuer Kunden.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-edit">Karteikarten der Kunden bearbeiten</a><span class="rc-desc">Erlaubt, Änderungen an einer Karteikarte zu speichern und das Foto zu setzen oder zu entfernen.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-contact-details">Telefonnummern und E-Mails sehen</a><span class="rc-desc">Zeigt Telefon, E-Mail und Adresse der Kunden.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-alerts">Hinweise schreiben und entfernen</a><span class="rc-desc">Erlaubt, die Hinweise zu schreiben und zu entfernen, die beim Buchen und beim Kassieren erscheinen.</span></li>
+        <li class="rc-perm"><a href="#perm-club-credits-view">Punkte der Kunden ansehen</a><span class="rc-desc">Zeigt den Punktestand jeder Karteikarte und seinen Verlauf.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-historia-clinica-y-consentimientos">Patientenakte und Einwilligungserklärungen</a> <span class="n">· 2</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-consents-request">Unterschrift anfordern</a><span class="rc-desc">Bittet um die Unterschrift unter einer Einwilligung.</span></li>
+        <li class="rc-perm"><a href="#perm-consents-import">Unterschriebene Einwilligungen importieren</a><span class="rc-desc">Lädt Einwilligungen, die bereits auf einer anderen Plattform unterschrieben wurden, als PDF in die Karteikarte hoch.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-caja">Kasse</a> <span class="n">· 11</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-checkout-charge">An der Kasse kassieren</a><span class="rc-desc">Öffnet die Kasse und erlaubt, einen Zahlvorgang abzuschließen.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-discount">Rabatte gewähren</a><span class="rc-desc">Schaltet das Rabattfeld innerhalb des Zahlvorgangs frei.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-debt">Auf Rechnung lassen</a><span class="rc-desc">Erlaubt, einen Zahlvorgang mit offenem Restbetrag abzuschließen, statt ihn vollständig zu kassieren.</span></li>
+        <li class="rc-perm"><a href="#perm-debts-view">Offene Zahlungen ansehen</a><span class="rc-desc">Öffnet den Bildschirm der offenen Zahlungen.</span></li>
+        <li class="rc-perm"><a href="#perm-debts-settle">Eine Schuld begleichen</a><span class="rc-desc">Erlaubt die Schaltfläche zum Begleichen einer Schuld.</span></li>
+        <li class="rc-perm"><a href="#perm-cash-close">Kasse abrechnen und abschließen</a><span class="rc-desc">Öffnet die Tageskasse zum Zählen von Bargeld und Kartenbelegen und erlaubt den Abschluss.</span></li>
+        <li class="rc-perm"><a href="#perm-visits-view">Bezahlte Besuche ansehen</a><span class="rc-desc">Zeigt die bereits bezahlten Besuche und ihre Details.</span></li>
+        <li class="rc-perm"><a href="#perm-vouchers-view">Mehrfachkarten der Kunden ansehen</a><span class="rc-desc">Zeigt die Mehrfachkarten und die noch verbleibenden Einheiten.</span></li>
+        <li class="rc-perm"><a href="#perm-gift-cards-view">Geschenkkarten ansehen</a><span class="rc-desc">Zeigt die verkauften Geschenkkarten, ihr Guthaben und was insgesamt noch einzulösen ist.</span></li>
+        <li class="rc-perm"><a href="#perm-gift-cards-sell">Geschenkkarten verkaufen</a><span class="rc-desc">Erlaubt, einen Geschenkgutschein zu verkaufen, zu drucken und per E-Mail zu senden.</span></li>
+        <li class="rc-perm"><a href="#perm-coupons-view">Gutscheincodes ansehen</a><span class="rc-desc">Zeigt die Gutscheincodes des Zentrums, ihren Rabatt und wie viele noch einlösbar sind.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-facturacion">Rechnungsstellung</a> <span class="n">· 1</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-invoices-full">Hacer factura completa (vollständige Rechnung ausstellen)</a><span class="rc-desc">Stellt ein bereits abgerechnetes Ticket erneut als vollständige Rechnung aus, mit NIF und den Angaben aus der Karteikarte.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-catalogo">Katalog</a> <span class="n">· 5</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-services-view">Leistungen ansehen</a><span class="rc-desc">Zeigt die Leistungen und ihre Preise.</span></li>
+        <li class="rc-perm"><a href="#perm-packages-view">Pakete ansehen</a><span class="rc-desc">Zeigt die Pakete aus Leistungen und Produkten.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Preise nachschlagen</a><span class="rc-desc">Öffnet die Schnellabfrage der Preise: Man sucht eine Leistung, ein Paket oder ein Produkt und sieht nur Name und Preis.</span></li>
+        <li class="rc-perm"><a href="#perm-products-view">Produkte ansehen</a><span class="rc-desc">Zeigt die Verkaufsprodukte.</span></li>
+        <li class="rc-perm"><a href="#perm-stock-view">Lagerbestand ansehen</a><span class="rc-desc">Zeigt den vorhandenen Bestand.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-mantenimiento">Wartung</a> <span class="n">· 2</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-maintenance-view">Wartung ansehen</a><span class="rc-desc">Öffnet die Instandhaltungsaufträge mit Fotos und Verlauf.</span></li>
+        <li class="rc-perm"><a href="#perm-maintenance-report">Ein Problem melden</a><span class="rc-desc">Eröffnet einen neuen Auftrag und ergänzt Fotos und Kommentare.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="rol-card r-profesional familia-general" id="rol-profesional">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Fachkraft</h5><span class="rc-cuenta">18 Berechtigungen</span><span class="rc-familia">Allgemeine Rolle</span></div>
+      <p class="rc-para">Für alle, die die Leistung erbringen: sehen ihren Terminkalender und ihre Kunden und schreiben die Patientenakte.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <h6 class="rc-modulo"><a href="#permisos-agenda">Terminkalender</a> <span class="n">· 3</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-appointments-view">Terminkalender ansehen</a><span class="rc-desc">Öffnet den Terminkalender und zeigt die Termine der sichtbaren Spalten.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-book">Termine anlegen und verschieben</a><span class="rc-desc">Erlaubt, neue Termine anzulegen und bestehende per Ziehen auf eine andere Uhrzeit oder Spalte zu verschieben.</span></li>
+        <li class="rc-perm"><a href="#perm-equipment-readings-write">Gerätesitzung erfassen</a><span class="rc-desc">Erlaubt, den Gerätewert am Ende der Sitzung zu erfassen.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-clientes">Kunden</a> <span class="n">· 3</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-customers-view">Kundenakten ansehen</a><span class="rc-desc">Öffnet die Kundensuche und die Akte jedes Kunden.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-alerts">Hinweise schreiben und entfernen</a><span class="rc-desc">Erlaubt, die Hinweise zu schreiben und zu entfernen, die beim Buchen und beim Kassieren erscheinen.</span></li>
+        <li class="rc-perm"><a href="#perm-club-credits-view">Punkte der Kunden ansehen</a><span class="rc-desc">Zeigt den Punktestand jeder Karteikarte und seinen Verlauf.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-historia-clinica-y-consentimientos">Patientenakte und Einwilligungserklärungen</a> <span class="n">· 5</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-clinic-view">Patientenakte ansehen</a><span class="rc-desc">Öffnet die Patientenakte einer Person.</span></li>
+        <li class="rc-perm"><a href="#perm-clinic-write">In die Patientenakte schreiben</a><span class="rc-desc">Erlaubt, Verlaufseinträge und Vorgeschichte in die Patientenakte zu schreiben.</span></li>
+        <li class="rc-perm"><a href="#perm-clinic-print">Krankenakte drucken</a><span class="rc-desc">Erlaubt, die Patientenakte einer Person zu drucken.</span></li>
+        <li class="rc-perm"><a href="#perm-consents-request">Unterschrift anfordern</a><span class="rc-desc">Bittet um die Unterschrift unter einer Einwilligung.</span></li>
+        <li class="rc-perm"><a href="#perm-consents-read">Unterschriebenes Dokument ansehen</a><span class="rc-desc">Öffnet das bereits unterschriebene Einwilligungsdokument.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-caja">Kasse</a> <span class="n">· 1</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-vouchers-view">Mehrfachkarten der Kunden ansehen</a><span class="rc-desc">Zeigt die Mehrfachkarten und die noch verbleibenden Einheiten.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-catalogo">Katalog</a> <span class="n">· 4</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-services-view">Leistungen ansehen</a><span class="rc-desc">Zeigt die Leistungen und ihre Preise.</span></li>
+        <li class="rc-perm"><a href="#perm-packages-view">Pakete ansehen</a><span class="rc-desc">Zeigt die Pakete aus Leistungen und Produkten.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Preise nachschlagen</a><span class="rc-desc">Öffnet die Schnellabfrage der Preise: Man sucht eine Leistung, ein Paket oder ein Produkt und sieht nur Name und Preis.</span></li>
+        <li class="rc-perm"><a href="#perm-products-view">Produkte ansehen</a><span class="rc-desc">Zeigt die Verkaufsprodukte.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-mantenimiento">Wartung</a> <span class="n">· 2</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-maintenance-view">Wartung ansehen</a><span class="rc-desc">Öffnet die Instandhaltungsaufträge mit Fotos und Verlauf.</span></li>
+        <li class="rc-perm"><a href="#perm-maintenance-report">Ein Problem melden</a><span class="rc-desc">Eröffnet einen neuen Auftrag und ergänzt Fotos und Kommentare.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="rol-card r-direccion familia-general" id="rol-direccion">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Leitung</h5><span class="rc-cuenta">95 Berechtigungen</span><span class="rc-familia">Allgemeine Rolle</span></div>
+      <p class="rc-para">Für alle, die das Zentrum leiten: Katalog, Personal, Berichte und Einstellungen.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <h6 class="rc-modulo"><a href="#permisos-agenda">Terminkalender</a> <span class="n">· 9</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-appointments-view">Terminkalender ansehen</a><span class="rc-desc">Öffnet den Terminkalender und zeigt die Termine der sichtbaren Spalten.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-book">Termine anlegen und verschieben</a><span class="rc-desc">Erlaubt, neue Termine anzulegen und bestehende per Ziehen auf eine andere Uhrzeit oder Spalte zu verschieben.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-cancel">Termine stornieren</a><span class="rc-desc">Erlaubt es, Termine über die Schaltfläche zum Stornieren abzusagen.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-block">Zeitspannen im Terminkalender sperren</a><span class="rc-desc">Erlaubt, Zeiträume im Terminkalender zu sperren, damit dort niemand Termine anlegen kann.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-print">Den Terminkalender ausdrucken</a><span class="rc-desc">Erlaubt die Schaltfläche zum Drucken des Tagesblatts.</span></li>
+        <li class="rc-perm"><a href="#perm-waiting-list-manage">Warteliste</a><span class="rc-desc">Erlaubt, Kunden auf die Warteliste für eine belegte Uhrzeit zu setzen und diese Liste einzusehen.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-appointments">Terminbericht</a><span class="rc-desc">Öffnet den Terminbericht.</span></li>
+        <li class="rc-perm"><a href="#perm-centre-resources">Kabinen, Plätze und Räume</a><span class="rc-desc">Erlaubt, die Kabinen, Plätze und Räume zu verwalten und festzulegen, wie viele davon im Terminkalender erscheinen.</span></li>
+        <li class="rc-perm"><a href="#perm-centre-equipment">Geräte anlegen</a><span class="rc-desc">Erlaubt, Geräte anzulegen und festzulegen, welche Leistungen sie nutzen.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-clientes">Kunden</a> <span class="n">· 10</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-customers-view">Kundenakten ansehen</a><span class="rc-desc">Öffnet die Kundensuche und die Akte jedes Kunden.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-create">Kunden anlegen</a><span class="rc-desc">Erlaubt die Schaltfläche zum Anlegen neuer Kunden.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-edit">Karteikarten der Kunden bearbeiten</a><span class="rc-desc">Erlaubt, Änderungen an einer Karteikarte zu speichern und das Foto zu setzen oder zu entfernen.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-contact-details">Telefonnummern und E-Mails sehen</a><span class="rc-desc">Zeigt Telefon, E-Mail und Adresse der Kunden.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-alerts">Hinweise schreiben und entfernen</a><span class="rc-desc">Erlaubt, die Hinweise zu schreiben und zu entfernen, die beim Buchen und beim Kassieren erscheinen.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-notes-delete">Kundennotizen löschen</a><span class="rc-desc">Erlaubt, eine Notiz aus der Karteikarte zu löschen.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-merge">Doppelte Akten zusammenführen</a><span class="rc-desc">Führt zwei doppelte Akten zu einer zusammen.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-erase">Daten der Kunden auf Verlangen löschen</a><span class="rc-desc">Recht auf Löschung: löscht die personenbezogenen Daten und anonymisiert die Karteikarte.</span></li>
+        <li class="rc-perm"><a href="#perm-club-credits-view">Punkte der Kunden ansehen</a><span class="rc-desc">Zeigt den Punktestand jeder Karteikarte und seinen Verlauf.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-customers">Kundenbericht</a><span class="rc-desc">Öffnet den Bericht über Kunden.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-historia-clinica-y-consentimientos">Patientenakte und Einwilligungserklärungen</a> <span class="n">· 4</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-consents-request">Unterschrift anfordern</a><span class="rc-desc">Bittet um die Unterschrift unter einer Einwilligung.</span></li>
+        <li class="rc-perm"><a href="#perm-consents-import">Unterschriebene Einwilligungen importieren</a><span class="rc-desc">Lädt Einwilligungen, die bereits auf einer anderen Plattform unterschrieben wurden, als PDF in die Karteikarte hoch.</span></li>
+        <li class="rc-perm"><a href="#perm-consents-withdraw">Einwilligung widerrufen</a><span class="rc-desc">Widerruft eine bereits erteilte Einwilligung.</span></li>
+        <li class="rc-perm"><a href="#perm-consents-templates">Vorlagen verwalten</a><span class="rc-desc">Erstellt und ändert die Einwilligungsvorlagen des Zentrums.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-caja">Kasse</a> <span class="n">· 20</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-checkout-charge">An der Kasse kassieren</a><span class="rc-desc">Öffnet die Kasse und erlaubt, einen Zahlvorgang abzuschließen.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-discount">Rabatte gewähren</a><span class="rc-desc">Schaltet das Rabattfeld innerhalb des Zahlvorgangs frei.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-debt">Auf Rechnung lassen</a><span class="rc-desc">Erlaubt, einen Zahlvorgang mit offenem Restbetrag abzuschließen, statt ihn vollständig zu kassieren.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-refund">Einen Beleg erstatten</a><span class="rc-desc">Erlaubt die Schaltfläche, um Positionen eines bereits abgerechneten Tickets zu erstatten, als Geld oder als Guthaben.</span></li>
+        <li class="rc-perm"><a href="#perm-debts-view">Offene Zahlungen ansehen</a><span class="rc-desc">Öffnet den Bildschirm der offenen Zahlungen.</span></li>
+        <li class="rc-perm"><a href="#perm-debts-settle">Eine Schuld begleichen</a><span class="rc-desc">Erlaubt die Schaltfläche zum Begleichen einer Schuld.</span></li>
+        <li class="rc-perm"><a href="#perm-cash-close">Kasse abrechnen und abschließen</a><span class="rc-desc">Öffnet die Tageskasse zum Zählen von Bargeld und Kartenbelegen und erlaubt den Abschluss.</span></li>
+        <li class="rc-perm"><a href="#perm-cash-reopen">Abgeschlossene Kasse wieder öffnen</a><span class="rc-desc">Erlaubt, die Kasse eines bereits abgeschlossenen Tages zur Korrektur wieder zu öffnen.</span></li>
+        <li class="rc-perm"><a href="#perm-visits-view">Bezahlte Besuche ansehen</a><span class="rc-desc">Zeigt die bereits bezahlten Besuche und ihre Details.</span></li>
+        <li class="rc-perm"><a href="#perm-vouchers-view">Mehrfachkarten der Kunden ansehen</a><span class="rc-desc">Zeigt die Mehrfachkarten und die noch verbleibenden Einheiten.</span></li>
+        <li class="rc-perm"><a href="#perm-vouchers-transfer">Wertkarte übertragen</a><span class="rc-desc">Überträgt Sitzungen einer Wertkarte auf eine andere Person.</span></li>
+        <li class="rc-perm"><a href="#perm-gift-cards-view">Geschenkkarten ansehen</a><span class="rc-desc">Zeigt die verkauften Geschenkkarten, ihr Guthaben und was insgesamt noch einzulösen ist.</span></li>
+        <li class="rc-perm"><a href="#perm-gift-cards-sell">Geschenkkarten verkaufen</a><span class="rc-desc">Erlaubt, einen Geschenkgutschein zu verkaufen, zu drucken und per E-Mail zu senden.</span></li>
+        <li class="rc-perm"><a href="#perm-coupons-view">Gutscheincodes ansehen</a><span class="rc-desc">Zeigt die Gutscheincodes des Zentrums, ihren Rabatt und wie viele noch einlösbar sind.</span></li>
+        <li class="rc-perm"><a href="#perm-coupons-write">Gutscheincodes erstellen und zurückziehen</a><span class="rc-desc">Erlaubt, einen Kampagnencode anzulegen, ihm ein Datum und eine Obergrenze zu geben und ihn zurückzuziehen.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-payments">Zahlungsbericht</a><span class="rc-desc">Öffnet den Zahlungsbericht.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-vouchers">Wertkartenbericht</a><span class="rc-desc">Öffnet den Wertkartenbericht.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-visit-history">Verlauf der Besuche</a><span class="rc-desc">Öffnet den Verlauf der Besuche.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-totals">Tagessummen</a><span class="rc-desc">Öffnet die Tagessummen.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-daily-cash">Kassenabschluss</a><span class="rc-desc">Öffnet den Bericht zum Kassenabschluss.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-facturacion">Rechnungsstellung</a> <span class="n">· 3</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-invoices-full">Hacer factura completa (vollständige Rechnung ausstellen)</a><span class="rc-desc">Stellt ein bereits abgerechnetes Ticket erneut als vollständige Rechnung aus, mit NIF und den Angaben aus der Karteikarte.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-accounting-draft">Buchhaltungsentwurf</a><span class="rc-desc">Öffnet den Buchhaltungsentwurf.</span></li>
+        <li class="rc-perm"><a href="#perm-invoices-view">Libro de facturas (Rechnungsbuch)</a><span class="rc-desc">Öffnet das Buch der ausgestellten Rechnungen, wie sie an die AEAT (die spanische Steuerbehörde) gemeldet werden, und erlaubt, das Buch und die Sammelbuchung herunterzuladen.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-catalogo">Katalog</a> <span class="n">· 14</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-services-view">Leistungen ansehen</a><span class="rc-desc">Zeigt die Leistungen und ihre Preise.</span></li>
+        <li class="rc-perm"><a href="#perm-services-write">Leistungen anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Leistungen anzulegen, zu bearbeiten und zu entfernen.</span></li>
+        <li class="rc-perm"><a href="#perm-packages-view">Pakete ansehen</a><span class="rc-desc">Zeigt die Pakete aus Leistungen und Produkten.</span></li>
+        <li class="rc-perm"><a href="#perm-packages-write">Pakete anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Pakete und ihren Preis anzulegen und zu bearbeiten.</span></li>
+        <li class="rc-perm"><a href="#perm-service-groups-write">Mehrfachkarten-Gruppen verwalten</a><span class="rc-desc">Verwaltet die Gruppen, die festlegen, welche Mehrfachkarte welche Leistung abdeckt.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Preise nachschlagen</a><span class="rc-desc">Öffnet die Schnellabfrage der Preise: Man sucht eine Leistung, ein Paket oder ein Produkt und sieht nur Name und Preis.</span></li>
+        <li class="rc-perm"><a href="#perm-products-view">Produkte ansehen</a><span class="rc-desc">Zeigt die Verkaufsprodukte.</span></li>
+        <li class="rc-perm"><a href="#perm-products-write">Produkte anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Produkte anzulegen und zu bearbeiten.</span></li>
+        <li class="rc-perm"><a href="#perm-providers-view">Lieferanten ansehen</a><span class="rc-desc">Zeigt die Lieferanten.</span></li>
+        <li class="rc-perm"><a href="#perm-providers-write">Lieferanten anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Lieferanten anzulegen und zu bearbeiten.</span></li>
+        <li class="rc-perm"><a href="#perm-stock-view">Lagerbestand ansehen</a><span class="rc-desc">Zeigt den vorhandenen Bestand.</span></li>
+        <li class="rc-perm"><a href="#perm-stock-move">Lagerbestand bewegen</a><span class="rc-desc">Erlaubt, Zu- und Abgänge im Bestand zu erfassen.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-stock">Lagerbericht</a><span class="rc-desc">Öffnet den Lagerbericht.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-stock-movements">Wareneingänge und -ausgänge</a><span class="rc-desc">Öffnet den Bericht über Wareneingänge und -ausgänge.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-personal">Personal</a> <span class="n">· 10</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-time-entries-view">Arbeitszeiterfassung ansehen</a><span class="rc-desc">Zeigt die Stempelungen der Belegschaft.</span></li>
+        <li class="rc-perm"><a href="#perm-time-entries-locations">Sehen, wo gestempelt wurde</a><span class="rc-desc">Zeigt, von wo aus jede Ein- und Ausstempelung erfolgte und ob innerhalb oder außerhalb des Bereichs des Zentrums.</span></li>
+        <li class="rc-perm"><a href="#perm-work-calendars-view">Arbeitskalender ansehen</a><span class="rc-desc">Zeigt den Arbeitskalender jedes Mitarbeiters, die Tarifverträge, die Schichten und die Feiertage.</span></li>
+        <li class="rc-perm"><a href="#perm-work-calendars-write">Arbeitskalender planen</a><span class="rc-desc">Erlaubt, Arbeitskalender, Tarifverträge, Schichten, Feiertage und Abwesenheitsarten anzulegen und zu ändern.</span></li>
+        <li class="rc-perm"><a href="#perm-work-calendars-incidents">Vorfälle erfassen</a><span class="rc-desc">Erlaubt, die Vorfälle im Arbeitskalender pro Behandler samt Fotos einzusehen, zu erfassen und zu korrigieren.</span></li>
+        <li class="rc-perm"><a href="#perm-work-calendars-overtime">Stunden außerhalb der Schicht ausgleichen</a><span class="rc-desc">Erlaubt, Stunden außerhalb der Schicht zu erfassen, die ausbezahlt oder als Freizeit ausgeglichen werden, und zieht sie vom Stundenkonto ab.</span></li>
+        <li class="rc-perm"><a href="#perm-time-clock-settings">Stempeluhr konfigurieren</a><span class="rc-desc">Legt fest, wie viele Stellen die PIN zum Einstempeln hat.</span></li>
+        <li class="rc-perm"><a href="#perm-time-clock-unlock-pin">Stempel-PIN entsperren</a><span class="rc-desc">Entsperrt eine PIN, die nach fünf falschen Versuchen in Folge gesperrt wurde, damit die Person wieder einstempeln und ihre Übersicht unterschreiben kann.</span></li>
+        <li class="rc-perm"><a href="#perm-employees-time-summary">Monatliche Arbeitszeit-Zusammenfassung per E-Mail</a><span class="rc-desc">Schaltet in der Karteikarte ein, dass die Person jeden Monat die Übersicht ihrer Zeiterfassung per E-Mail erhält.</span></li>
+        <li class="rc-perm"><a href="#perm-time-entries-payroll-send">Die Stunden ans Lohnbüro schicken</a><span class="rc-desc">Richtet das Lohnbüro ein, das die Gehaltsabrechnung macht, prüft jeden abgeschlossenen Monat, wer seine Übersicht unterschrieben hat, und sendet ihm die Stunden mit einem ablaufenden Download-Link.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-mantenimiento">Wartung</a> <span class="n">· 7</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-maintenance-view">Wartung ansehen</a><span class="rc-desc">Öffnet die Instandhaltungsaufträge mit Fotos und Verlauf.</span></li>
+        <li class="rc-perm"><a href="#perm-maintenance-report">Ein Problem melden</a><span class="rc-desc">Eröffnet einen neuen Auftrag und ergänzt Fotos und Kommentare.</span></li>
+        <li class="rc-perm"><a href="#perm-maintenance-manage">Aufträge verwalten</a><span class="rc-desc">Ändert, was ein Auftrag sagt, weist ihn zu und führt ihn von einem Status zum nächsten, bis er erledigt ist.</span></li>
+        <li class="rc-perm"><a href="#perm-maintenance-close">Aufträge abschließen und wieder öffnen</a><span class="rc-desc">Nimmt einen erledigten Auftrag ab und schließt ihn, oder öffnet einen geschlossenen mit einer Begründung wieder.</span></li>
+        <li class="rc-perm"><a href="#perm-maintenance-annul">Aufträge stornieren</a><span class="rc-desc">Annulliert einen Auftrag mit Begründung.</span></li>
+        <li class="rc-perm"><a href="#perm-maintenance-catalogue">Bereiche und Anlagen</a><span class="rc-desc">Erlaubt, die Bereiche und Anlagen anzulegen und zu entfernen, auf die sich Aufträge beziehen.</span></li>
+        <li class="rc-perm"><a href="#perm-maintenance-export">Wartung exportieren</a><span class="rc-desc">Lädt die Aufträge und ihren Verlauf als CSV-Datei herunter.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-activaciones">Aktivierungen</a> <span class="n">· 3</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-actions-view">Aktivierungsanfragen ansehen</a><span class="rc-desc">Öffnet die Aktivierungspunkte und den Anfrageverlauf: wer darum gebeten hat, etwas zu öffnen oder einzuschalten, und wann.</span></li>
+        <li class="rc-perm"><a href="#perm-actions-manage">Aktivierungspunkte verwalten</a><span class="rc-desc">Erlaubt, Punkte anzulegen und zu entfernen, festzulegen, was jedes Formular abfragt, und bei Bedarf einen neuen Benachrichtigungskanal anzufordern.</span></li>
+        <li class="rc-perm"><a href="#perm-actions-channels-view">Die Benachrichtigungskanäle sehen</a><span class="rc-desc">Zeigt jederzeit vollständig den Benachrichtigungskanal des Zentrums und den jedes Punktes, mit Link und QR-Code zum Abonnieren in der ntfy-App.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-iot">IoT</a> <span class="n">· 3</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-iot-view">IoT-Geräte ansehen</a><span class="rc-desc">Öffnet in der Instandhaltung die Liste der Geräte des Tuya-Kontos des Zentrums mit ihrem Status.</span></li>
+        <li class="rc-perm"><a href="#perm-iot-manage">IoT-Konto konfigurieren</a><span class="rc-desc">Erlaubt, das Tuya-Konto des Zentrums in den Einstellungen einzutragen und zu ändern.</span></li>
+        <li class="rc-perm"><a href="#perm-iot-control">IoT-Geräte ein- und ausschalten</a><span class="rc-desc">Erlaubt, die Schalter der Tuya-Geräte ein- und auszuschalten, stets nach einer Bestätigung, und den Verlauf einzusehen.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-portal-y-avisos">Portal und Hinweise</a> <span class="n">· 1</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-centre-booking-portal">Buchungsportal</a><span class="rc-desc">Erlaubt, das Portal zu verwalten, in dem Kunden Termine selbst buchen.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-nucleo">Kern</a> <span class="n">· 11</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-employees-view">Mitarbeiter ansehen</a><span class="rc-desc">Zeigt die Mitarbeiterakten und ihre Arbeitszeiten.</span></li>
+        <li class="rc-perm"><a href="#perm-employees-write">Behandler anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Behandler und ihre Arbeitszeiten anzulegen und zu bearbeiten.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-scorecard">Cockpit</a><span class="rc-desc">Öffnet die Kennzahlen: die Zahlen jedes Moduls, das das Zentrum hat (Kasse, Terminkalender, Kunden, Personal), mit Ampel.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-export">Berichte als Datei herunterladen</a><span class="rc-desc">Erlaubt die Schaltfläche, mit der sich jeder Bericht, den die Person schon sehen kann, als Datei herunterladen lässt.</span></li>
+        <li class="rc-perm"><a href="#perm-centre-preferences">Zentrumseinstellungen</a><span class="rc-desc">Öffnet die Einstellungen des Zentrums: Name, Sprache, Design und Steuerdaten.</span></li>
+        <li class="rc-perm"><a href="#perm-centre-logo">Logo ändern</a><span class="rc-desc">Erlaubt, das Logo des Zentrums hochzuladen und zu entfernen.</span></li>
+        <li class="rc-perm"><a href="#perm-support-view">Meine Support-Tickets ansehen</a><span class="rc-desc">Öffnet den Bereich Support und zeigt die Tickets, die diese Person eröffnet hat.</span></li>
+        <li class="rc-perm"><a href="#perm-support-write">Support-Tickets öffnen und beantworten</a><span class="rc-desc">Erlaubt, ein Support-Ticket zu eröffnen, auf die eigenen zu antworten und sie als erledigt zu markieren.</span></li>
+        <li class="rc-perm"><a href="#perm-support-view-all">Die Support-Tickets des gesamten Zentrums ansehen</a><span class="rc-desc">Zeigt im Support die Tickets aller Personen des Zentrums, nicht nur die eigenen.</span></li>
+        <li class="rc-perm"><a href="#perm-users-view">Benutzer ansehen</a><span class="rc-desc">Öffnet die Liste der Benutzer der Installation.</span></li>
+        <li class="rc-perm"><a href="#perm-users-write">Benutzer anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Benutzer anzulegen, zu bearbeiten und zu entsperren und ihr Passwort zurückzusetzen.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="rol-card r-rrhh familia-general" id="rol-rrhh">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">RRHH</h5><span class="rc-cuenta">18 Berechtigungen</span><span class="rc-familia">Allgemeine Rolle</span></div>
+      <p class="rc-para">Für alle, die das Personal betreuen: Arbeitskalender, Behandler und Terminkalender.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <h6 class="rc-modulo"><a href="#permisos-agenda">Terminkalender</a> <span class="n">· 2</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-appointments-view">Terminkalender ansehen</a><span class="rc-desc">Öffnet den Terminkalender und zeigt die Termine der sichtbaren Spalten.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-block">Zeitspannen im Terminkalender sperren</a><span class="rc-desc">Erlaubt, Zeiträume im Terminkalender zu sperren, damit dort niemand Termine anlegen kann.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-personal">Personal</a> <span class="n">· 10</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-time-entries-view">Arbeitszeiterfassung ansehen</a><span class="rc-desc">Zeigt die Stempelungen der Belegschaft.</span></li>
+        <li class="rc-perm"><a href="#perm-time-entries-locations">Sehen, wo gestempelt wurde</a><span class="rc-desc">Zeigt, von wo aus jede Ein- und Ausstempelung erfolgte und ob innerhalb oder außerhalb des Bereichs des Zentrums.</span></li>
+        <li class="rc-perm"><a href="#perm-work-calendars-view">Arbeitskalender ansehen</a><span class="rc-desc">Zeigt den Arbeitskalender jedes Mitarbeiters, die Tarifverträge, die Schichten und die Feiertage.</span></li>
+        <li class="rc-perm"><a href="#perm-work-calendars-write">Arbeitskalender planen</a><span class="rc-desc">Erlaubt, Arbeitskalender, Tarifverträge, Schichten, Feiertage und Abwesenheitsarten anzulegen und zu ändern.</span></li>
+        <li class="rc-perm"><a href="#perm-work-calendars-incidents">Vorfälle erfassen</a><span class="rc-desc">Erlaubt, die Vorfälle im Arbeitskalender pro Behandler samt Fotos einzusehen, zu erfassen und zu korrigieren.</span></li>
+        <li class="rc-perm"><a href="#perm-work-calendars-overtime">Stunden außerhalb der Schicht ausgleichen</a><span class="rc-desc">Erlaubt, Stunden außerhalb der Schicht zu erfassen, die ausbezahlt oder als Freizeit ausgeglichen werden, und zieht sie vom Stundenkonto ab.</span></li>
+        <li class="rc-perm"><a href="#perm-time-clock-settings">Stempeluhr konfigurieren</a><span class="rc-desc">Legt fest, wie viele Stellen die PIN zum Einstempeln hat.</span></li>
+        <li class="rc-perm"><a href="#perm-time-clock-unlock-pin">Stempel-PIN entsperren</a><span class="rc-desc">Entsperrt eine PIN, die nach fünf falschen Versuchen in Folge gesperrt wurde, damit die Person wieder einstempeln und ihre Übersicht unterschreiben kann.</span></li>
+        <li class="rc-perm"><a href="#perm-employees-time-summary">Monatliche Arbeitszeit-Zusammenfassung per E-Mail</a><span class="rc-desc">Schaltet in der Karteikarte ein, dass die Person jeden Monat die Übersicht ihrer Zeiterfassung per E-Mail erhält.</span></li>
+        <li class="rc-perm"><a href="#perm-time-entries-payroll-send">Die Stunden ans Lohnbüro schicken</a><span class="rc-desc">Richtet das Lohnbüro ein, das die Gehaltsabrechnung macht, prüft jeden abgeschlossenen Monat, wer seine Übersicht unterschrieben hat, und sendet ihm die Stunden mit einem ablaufenden Download-Link.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-mantenimiento">Wartung</a> <span class="n">· 4</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-maintenance-view">Wartung ansehen</a><span class="rc-desc">Öffnet die Instandhaltungsaufträge mit Fotos und Verlauf.</span></li>
+        <li class="rc-perm"><a href="#perm-maintenance-report">Ein Problem melden</a><span class="rc-desc">Eröffnet einen neuen Auftrag und ergänzt Fotos und Kommentare.</span></li>
+        <li class="rc-perm"><a href="#perm-maintenance-manage">Aufträge verwalten</a><span class="rc-desc">Ändert, was ein Auftrag sagt, weist ihn zu und führt ihn von einem Status zum nächsten, bis er erledigt ist.</span></li>
+        <li class="rc-perm"><a href="#perm-maintenance-catalogue">Bereiche und Anlagen</a><span class="rc-desc">Erlaubt, die Bereiche und Anlagen anzulegen und zu entfernen, auf die sich Aufträge beziehen.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-nucleo">Kern</a> <span class="n">· 2</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-employees-view">Mitarbeiter ansehen</a><span class="rc-desc">Zeigt die Mitarbeiterakten und ihre Arbeitszeiten.</span></li>
+        <li class="rc-perm"><a href="#perm-employees-write">Behandler anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Behandler und ihre Arbeitszeiten anzulegen und zu bearbeiten.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="rol-card r-mantenimiento familia-general" id="rol-mantenimiento">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Wartung</h5><span class="rc-cuenta">7 Berechtigungen</span><span class="rc-familia">Allgemeine Rolle</span></div>
+      <p class="rc-para">Für alle, die die Wartungsaufträge, ihre Bereiche und ihre Anlagen betreuen.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <h6 class="rc-modulo"><a href="#permisos-mantenimiento">Wartung</a> <span class="n">· 6</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-maintenance-view">Wartung ansehen</a><span class="rc-desc">Öffnet die Instandhaltungsaufträge mit Fotos und Verlauf.</span></li>
+        <li class="rc-perm"><a href="#perm-maintenance-report">Ein Problem melden</a><span class="rc-desc">Eröffnet einen neuen Auftrag und ergänzt Fotos und Kommentare.</span></li>
+        <li class="rc-perm"><a href="#perm-maintenance-manage">Aufträge verwalten</a><span class="rc-desc">Ändert, was ein Auftrag sagt, weist ihn zu und führt ihn von einem Status zum nächsten, bis er erledigt ist.</span></li>
+        <li class="rc-perm"><a href="#perm-maintenance-close">Aufträge abschließen und wieder öffnen</a><span class="rc-desc">Nimmt einen erledigten Auftrag ab und schließt ihn, oder öffnet einen geschlossenen mit einer Begründung wieder.</span></li>
+        <li class="rc-perm"><a href="#perm-maintenance-catalogue">Bereiche und Anlagen</a><span class="rc-desc">Erlaubt, die Bereiche und Anlagen anzulegen und zu entfernen, auf die sich Aufträge beziehen.</span></li>
+        <li class="rc-perm"><a href="#perm-maintenance-export">Wartung exportieren</a><span class="rc-desc">Lädt die Aufträge und ihren Verlauf als CSV-Datei herunter.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-iot">IoT</a> <span class="n">· 1</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-iot-view">IoT-Geräte ansehen</a><span class="rc-desc">Öffnet in der Instandhaltung die Liste der Geräte des Tuya-Kontos des Zentrums mit ihrem Status.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="rol-card r-activaciones familia-general" id="rol-activaciones">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Aktivierungen</h5><span class="rc-cuenta">2 Berechtigungen</span><span class="rc-familia">Allgemeine Rolle</span></div>
+      <p class="rc-para">Für alle, die die Aktivierungspunkte und ihre Anfragen betreuen.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <h6 class="rc-modulo"><a href="#permisos-activaciones">Aktivierungen</a> <span class="n">· 2</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-actions-view">Aktivierungsanfragen ansehen</a><span class="rc-desc">Öffnet die Aktivierungspunkte und den Anfrageverlauf: wer darum gebeten hat, etwas zu öffnen oder einzuschalten, und wann.</span></li>
+        <li class="rc-perm"><a href="#perm-actions-manage">Aktivierungspunkte verwalten</a><span class="rc-desc">Erlaubt, Punkte anzulegen und zu entfernen, festzulegen, was jedes Formular abfragt, und bei Bedarf einen neuen Benachrichtigungskanal anzufordern.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="rol-card r-clientes familia-modulo" id="rol-clientes">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Kunden</h5><span class="rc-cuenta">11 Berechtigungen</span><span class="rc-familia">Modulrolle</span></div>
+      <p class="rc-para">Modulrolle für alle, die alles rund um die Karteikarten der Kunden tun können müssen. Sie bringt alle nicht sensiblen Berechtigungen ihres Moduls mit, und nur diese.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <h6 class="rc-modulo"><a href="#permisos-clientes">Kunden</a> <span class="n">· 11</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-customers-view">Kundenakten ansehen</a><span class="rc-desc">Öffnet die Kundensuche und die Akte jedes Kunden.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-create">Kunden anlegen</a><span class="rc-desc">Erlaubt die Schaltfläche zum Anlegen neuer Kunden.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-edit">Karteikarten der Kunden bearbeiten</a><span class="rc-desc">Erlaubt, Änderungen an einer Karteikarte zu speichern und das Foto zu setzen oder zu entfernen.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-contact-details">Telefonnummern und E-Mails sehen</a><span class="rc-desc">Zeigt Telefon, E-Mail und Adresse der Kunden.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-alerts">Hinweise schreiben und entfernen</a><span class="rc-desc">Erlaubt, die Hinweise zu schreiben und zu entfernen, die beim Buchen und beim Kassieren erscheinen.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-notes-delete">Kundennotizen löschen</a><span class="rc-desc">Erlaubt, eine Notiz aus der Karteikarte zu löschen.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-merge">Doppelte Akten zusammenführen</a><span class="rc-desc">Führt zwei doppelte Akten zu einer zusammen.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-erase">Daten der Kunden auf Verlangen löschen</a><span class="rc-desc">Recht auf Löschung: löscht die personenbezogenen Daten und anonymisiert die Karteikarte.</span></li>
+        <li class="rc-perm"><a href="#perm-customers-history-download">Verlauf einer Person herunterladen</a><span class="rc-desc">Erlaubt, den Verlauf als PDF herunterzuladen, um ihn auszuhändigen.</span></li>
+        <li class="rc-perm"><a href="#perm-club-credits-view">Punkte der Kunden ansehen</a><span class="rc-desc">Zeigt den Punktestand jeder Karteikarte und seinen Verlauf.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-customers">Kundenbericht</a><span class="rc-desc">Öffnet den Bericht über Kunden.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="rol-card r-catalogo familia-modulo" id="rol-catalogo">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Katalog</h5><span class="rc-cuenta">14 Berechtigungen</span><span class="rc-familia">Modulrolle</span></div>
+      <p class="rc-para">Modulrolle für alle, die Leistungen, Pakete, Produkte, Lieferanten und Bestand betreuen. Sie bringt alle nicht sensiblen Berechtigungen ihres Moduls mit, und nur diese.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <h6 class="rc-modulo"><a href="#permisos-catalogo">Katalog</a> <span class="n">· 14</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-services-view">Leistungen ansehen</a><span class="rc-desc">Zeigt die Leistungen und ihre Preise.</span></li>
+        <li class="rc-perm"><a href="#perm-services-write">Leistungen anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Leistungen anzulegen, zu bearbeiten und zu entfernen.</span></li>
+        <li class="rc-perm"><a href="#perm-packages-view">Pakete ansehen</a><span class="rc-desc">Zeigt die Pakete aus Leistungen und Produkten.</span></li>
+        <li class="rc-perm"><a href="#perm-packages-write">Pakete anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Pakete und ihren Preis anzulegen und zu bearbeiten.</span></li>
+        <li class="rc-perm"><a href="#perm-service-groups-write">Mehrfachkarten-Gruppen verwalten</a><span class="rc-desc">Verwaltet die Gruppen, die festlegen, welche Mehrfachkarte welche Leistung abdeckt.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Preise nachschlagen</a><span class="rc-desc">Öffnet die Schnellabfrage der Preise: Man sucht eine Leistung, ein Paket oder ein Produkt und sieht nur Name und Preis.</span></li>
+        <li class="rc-perm"><a href="#perm-products-view">Produkte ansehen</a><span class="rc-desc">Zeigt die Verkaufsprodukte.</span></li>
+        <li class="rc-perm"><a href="#perm-products-write">Produkte anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Produkte anzulegen und zu bearbeiten.</span></li>
+        <li class="rc-perm"><a href="#perm-providers-view">Lieferanten ansehen</a><span class="rc-desc">Zeigt die Lieferanten.</span></li>
+        <li class="rc-perm"><a href="#perm-providers-write">Lieferanten anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Lieferanten anzulegen und zu bearbeiten.</span></li>
+        <li class="rc-perm"><a href="#perm-stock-view">Lagerbestand ansehen</a><span class="rc-desc">Zeigt den vorhandenen Bestand.</span></li>
+        <li class="rc-perm"><a href="#perm-stock-move">Lagerbestand bewegen</a><span class="rc-desc">Erlaubt, Zu- und Abgänge im Bestand zu erfassen.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-stock">Lagerbericht</a><span class="rc-desc">Öffnet den Lagerbericht.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-stock-movements">Wareneingänge und -ausgänge</a><span class="rc-desc">Öffnet den Bericht über Wareneingänge und -ausgänge.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="rol-card r-agenda familia-modulo" id="rol-agenda">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Terminkalender</h5><span class="rc-cuenta">13 Berechtigungen</span><span class="rc-familia">Modulrolle</span></div>
+      <p class="rc-para">Modulrolle für alle, die den ganzen Terminkalender betreuen: Termine, Warteliste, Kabinen und Geräte. Sie bringt alle nicht sensiblen Berechtigungen ihres Moduls mit, und nur diese.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <h6 class="rc-modulo"><a href="#permisos-agenda">Terminkalender</a> <span class="n">· 13</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-appointments-view">Terminkalender ansehen</a><span class="rc-desc">Öffnet den Terminkalender und zeigt die Termine der sichtbaren Spalten.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-book">Termine anlegen und verschieben</a><span class="rc-desc">Erlaubt, neue Termine anzulegen und bestehende per Ziehen auf eine andere Uhrzeit oder Spalte zu verschieben.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-cancel">Termine stornieren</a><span class="rc-desc">Erlaubt es, Termine über die Schaltfläche zum Stornieren abzusagen.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-book-past">An vergangenen Tagen buchen</a><span class="rc-desc">Erlaubt, Termine auf einen Tag vor heute zu legen oder dorthin zu verschieben.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-move-closed">Erledigte Termine verschieben</a><span class="rc-desc">Erlaubt, Termine zu verschieben, die als erledigt oder als nicht erschienen markiert sind.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-cancel-charged">Bereits bezahlte Termine stornieren</a><span class="rc-desc">Erlaubt, bereits abgerechnete Termine zu stornieren.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-block">Zeitspannen im Terminkalender sperren</a><span class="rc-desc">Erlaubt, Zeiträume im Terminkalender zu sperren, damit dort niemand Termine anlegen kann.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-print">Den Terminkalender ausdrucken</a><span class="rc-desc">Erlaubt die Schaltfläche zum Drucken des Tagesblatts.</span></li>
+        <li class="rc-perm"><a href="#perm-waiting-list-manage">Warteliste</a><span class="rc-desc">Erlaubt, Kunden auf die Warteliste für eine belegte Uhrzeit zu setzen und diese Liste einzusehen.</span></li>
+        <li class="rc-perm"><a href="#perm-equipment-readings-write">Gerätesitzung erfassen</a><span class="rc-desc">Erlaubt, den Gerätewert am Ende der Sitzung zu erfassen.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-appointments">Terminbericht</a><span class="rc-desc">Öffnet den Terminbericht.</span></li>
+        <li class="rc-perm"><a href="#perm-centre-resources">Kabinen, Plätze und Räume</a><span class="rc-desc">Erlaubt, die Kabinen, Plätze und Räume zu verwalten und festzulegen, wie viele davon im Terminkalender erscheinen.</span></li>
+        <li class="rc-perm"><a href="#perm-centre-equipment">Geräte anlegen</a><span class="rc-desc">Erlaubt, Geräte anzulegen und festzulegen, welche Leistungen sie nutzen.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="rol-card r-historia-clinica familia-modulo" id="rol-historia-clinica">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Patientenakte</h5><span class="rc-cuenta">8 Berechtigungen</span><span class="rc-familia">Modulrolle</span></div>
+      <p class="rc-para">Modulrolle für alle, die die Patientenakte und die Einwilligungen betreuen. Sie bringt alle nicht sensiblen Berechtigungen ihres Moduls mit, und nur diese.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <h6 class="rc-modulo"><a href="#permisos-historia-clinica-y-consentimientos">Patientenakte und Einwilligungserklärungen</a> <span class="n">· 8</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-clinic-view">Patientenakte ansehen</a><span class="rc-desc">Öffnet die Patientenakte einer Person.</span></li>
+        <li class="rc-perm"><a href="#perm-clinic-write">In die Patientenakte schreiben</a><span class="rc-desc">Erlaubt, Verlaufseinträge und Vorgeschichte in die Patientenakte zu schreiben.</span></li>
+        <li class="rc-perm"><a href="#perm-clinic-print">Krankenakte drucken</a><span class="rc-desc">Erlaubt, die Patientenakte einer Person zu drucken.</span></li>
+        <li class="rc-perm"><a href="#perm-consents-request">Unterschrift anfordern</a><span class="rc-desc">Bittet um die Unterschrift unter einer Einwilligung.</span></li>
+        <li class="rc-perm"><a href="#perm-consents-read">Unterschriebenes Dokument ansehen</a><span class="rc-desc">Öffnet das bereits unterschriebene Einwilligungsdokument.</span></li>
+        <li class="rc-perm"><a href="#perm-consents-import">Unterschriebene Einwilligungen importieren</a><span class="rc-desc">Lädt Einwilligungen, die bereits auf einer anderen Plattform unterschrieben wurden, als PDF in die Karteikarte hoch.</span></li>
+        <li class="rc-perm"><a href="#perm-consents-withdraw">Einwilligung widerrufen</a><span class="rc-desc">Widerruft eine bereits erteilte Einwilligung.</span></li>
+        <li class="rc-perm"><a href="#perm-consents-templates">Vorlagen verwalten</a><span class="rc-desc">Erstellt und ändert die Einwilligungsvorlagen des Zentrums.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="rol-card r-caja familia-modulo" id="rol-caja">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Kasse</h5><span class="rc-cuenta">20 Berechtigungen</span><span class="rc-familia">Modulrolle</span></div>
+      <p class="rc-para">Modulrolle für alle, die die Kasse betreuen: Zahlungen, Rückerstattungen, Schulden, Mehrfachkarten, Geschenkgutscheine und Gutscheincodes. Sie bringt alle nicht sensiblen Berechtigungen ihres Moduls mit, und nur diese.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <h6 class="rc-modulo"><a href="#permisos-caja">Kasse</a> <span class="n">· 20</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-checkout-charge">An der Kasse kassieren</a><span class="rc-desc">Öffnet die Kasse und erlaubt, einen Zahlvorgang abzuschließen.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-discount">Rabatte gewähren</a><span class="rc-desc">Schaltet das Rabattfeld innerhalb des Zahlvorgangs frei.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-debt">Auf Rechnung lassen</a><span class="rc-desc">Erlaubt, einen Zahlvorgang mit offenem Restbetrag abzuschließen, statt ihn vollständig zu kassieren.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-refund">Einen Beleg erstatten</a><span class="rc-desc">Erlaubt die Schaltfläche, um Positionen eines bereits abgerechneten Tickets zu erstatten, als Geld oder als Guthaben.</span></li>
+        <li class="rc-perm"><a href="#perm-debts-view">Offene Zahlungen ansehen</a><span class="rc-desc">Öffnet den Bildschirm der offenen Zahlungen.</span></li>
+        <li class="rc-perm"><a href="#perm-debts-settle">Eine Schuld begleichen</a><span class="rc-desc">Erlaubt die Schaltfläche zum Begleichen einer Schuld.</span></li>
+        <li class="rc-perm"><a href="#perm-cash-close">Kasse abrechnen und abschließen</a><span class="rc-desc">Öffnet die Tageskasse zum Zählen von Bargeld und Kartenbelegen und erlaubt den Abschluss.</span></li>
+        <li class="rc-perm"><a href="#perm-cash-reopen">Abgeschlossene Kasse wieder öffnen</a><span class="rc-desc">Erlaubt, die Kasse eines bereits abgeschlossenen Tages zur Korrektur wieder zu öffnen.</span></li>
+        <li class="rc-perm"><a href="#perm-visits-view">Bezahlte Besuche ansehen</a><span class="rc-desc">Zeigt die bereits bezahlten Besuche und ihre Details.</span></li>
+        <li class="rc-perm"><a href="#perm-vouchers-view">Mehrfachkarten der Kunden ansehen</a><span class="rc-desc">Zeigt die Mehrfachkarten und die noch verbleibenden Einheiten.</span></li>
+        <li class="rc-perm"><a href="#perm-vouchers-transfer">Wertkarte übertragen</a><span class="rc-desc">Überträgt Sitzungen einer Wertkarte auf eine andere Person.</span></li>
+        <li class="rc-perm"><a href="#perm-gift-cards-view">Geschenkkarten ansehen</a><span class="rc-desc">Zeigt die verkauften Geschenkkarten, ihr Guthaben und was insgesamt noch einzulösen ist.</span></li>
+        <li class="rc-perm"><a href="#perm-gift-cards-sell">Geschenkkarten verkaufen</a><span class="rc-desc">Erlaubt, einen Geschenkgutschein zu verkaufen, zu drucken und per E-Mail zu senden.</span></li>
+        <li class="rc-perm"><a href="#perm-coupons-view">Gutscheincodes ansehen</a><span class="rc-desc">Zeigt die Gutscheincodes des Zentrums, ihren Rabatt und wie viele noch einlösbar sind.</span></li>
+        <li class="rc-perm"><a href="#perm-coupons-write">Gutscheincodes erstellen und zurückziehen</a><span class="rc-desc">Erlaubt, einen Kampagnencode anzulegen, ihm ein Datum und eine Obergrenze zu geben und ihn zurückzuziehen.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-payments">Zahlungsbericht</a><span class="rc-desc">Öffnet den Zahlungsbericht.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-vouchers">Wertkartenbericht</a><span class="rc-desc">Öffnet den Wertkartenbericht.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-visit-history">Verlauf der Besuche</a><span class="rc-desc">Öffnet den Verlauf der Besuche.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-totals">Tagessummen</a><span class="rc-desc">Öffnet die Tagessummen.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-daily-cash">Kassenabschluss</a><span class="rc-desc">Öffnet den Bericht zum Kassenabschluss.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="rol-card r-facturacion familia-modulo" id="rol-facturacion">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Rechnungsstellung</h5><span class="rc-cuenta">3 Berechtigungen</span><span class="rc-familia">Modulrolle</span></div>
+      <p class="rc-para">Modulrolle für alle, die die vollständigen Rechnungen und das Rechnungsbuch betreuen. Sie bringt alle nicht sensiblen Berechtigungen ihres Moduls mit, und nur diese.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <h6 class="rc-modulo"><a href="#permisos-facturacion">Rechnungsstellung</a> <span class="n">· 3</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-invoices-full">Hacer factura completa (vollständige Rechnung ausstellen)</a><span class="rc-desc">Stellt ein bereits abgerechnetes Ticket erneut als vollständige Rechnung aus, mit NIF und den Angaben aus der Karteikarte.</span></li>
+        <li class="rc-perm"><a href="#perm-reports-accounting-draft">Buchhaltungsentwurf</a><span class="rc-desc">Öffnet den Buchhaltungsentwurf.</span></li>
+        <li class="rc-perm"><a href="#perm-invoices-view">Libro de facturas (Rechnungsbuch)</a><span class="rc-desc">Öffnet das Buch der ausgestellten Rechnungen, wie sie an die AEAT (die spanische Steuerbehörde) gemeldet werden, und erlaubt, das Buch und die Sammelbuchung herunterzuladen.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="rol-card r-portal-y-avisos familia-modulo" id="rol-portal-y-avisos">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Portal und Hinweise</h5><span class="rc-cuenta">2 Berechtigungen</span><span class="rc-familia">Modulrolle</span></div>
+      <p class="rc-para">Modulrolle für alle, die das Buchungsportal und die WhatsApp-Erinnerungen betreuen. Sie bringt alle nicht sensiblen Berechtigungen ihres Moduls mit, und nur diese.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <h6 class="rc-modulo"><a href="#permisos-portal-y-avisos">Portal und Hinweise</a> <span class="n">· 2</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-centre-booking-portal">Buchungsportal</a><span class="rc-desc">Erlaubt, das Portal zu verwalten, in dem Kunden Termine selbst buchen.</span></li>
+        <li class="rc-perm"><a href="#perm-centre-whatsapp">WhatsApp-Erinnerungen</a><span class="rc-desc">Erlaubt, die WhatsApp-Benachrichtigungen des Zentrums zu konfigurieren.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="rol-card r-personal familia-modulo" id="rol-personal">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Personal</h5><span class="rc-cuenta">10 Berechtigungen</span><span class="rc-familia">Modulrolle</span></div>
+      <p class="rc-para">Modulrolle für alle, die Arbeitskalender, Zeiterfassung und Vorfälle betreuen. Sie bringt alle nicht sensiblen Berechtigungen ihres Moduls mit, und nur diese.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <h6 class="rc-modulo"><a href="#permisos-personal">Personal</a> <span class="n">· 10</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-time-entries-view">Arbeitszeiterfassung ansehen</a><span class="rc-desc">Zeigt die Stempelungen der Belegschaft.</span></li>
+        <li class="rc-perm"><a href="#perm-time-entries-locations">Sehen, wo gestempelt wurde</a><span class="rc-desc">Zeigt, von wo aus jede Ein- und Ausstempelung erfolgte und ob innerhalb oder außerhalb des Bereichs des Zentrums.</span></li>
+        <li class="rc-perm"><a href="#perm-work-calendars-view">Arbeitskalender ansehen</a><span class="rc-desc">Zeigt den Arbeitskalender jedes Mitarbeiters, die Tarifverträge, die Schichten und die Feiertage.</span></li>
+        <li class="rc-perm"><a href="#perm-work-calendars-write">Arbeitskalender planen</a><span class="rc-desc">Erlaubt, Arbeitskalender, Tarifverträge, Schichten, Feiertage und Abwesenheitsarten anzulegen und zu ändern.</span></li>
+        <li class="rc-perm"><a href="#perm-work-calendars-incidents">Vorfälle erfassen</a><span class="rc-desc">Erlaubt, die Vorfälle im Arbeitskalender pro Behandler samt Fotos einzusehen, zu erfassen und zu korrigieren.</span></li>
+        <li class="rc-perm"><a href="#perm-work-calendars-overtime">Stunden außerhalb der Schicht ausgleichen</a><span class="rc-desc">Erlaubt, Stunden außerhalb der Schicht zu erfassen, die ausbezahlt oder als Freizeit ausgeglichen werden, und zieht sie vom Stundenkonto ab.</span></li>
+        <li class="rc-perm"><a href="#perm-time-clock-settings">Stempeluhr konfigurieren</a><span class="rc-desc">Legt fest, wie viele Stellen die PIN zum Einstempeln hat.</span></li>
+        <li class="rc-perm"><a href="#perm-time-clock-unlock-pin">Stempel-PIN entsperren</a><span class="rc-desc">Entsperrt eine PIN, die nach fünf falschen Versuchen in Folge gesperrt wurde, damit die Person wieder einstempeln und ihre Übersicht unterschreiben kann.</span></li>
+        <li class="rc-perm"><a href="#perm-employees-time-summary">Monatliche Arbeitszeit-Zusammenfassung per E-Mail</a><span class="rc-desc">Schaltet in der Karteikarte ein, dass die Person jeden Monat die Übersicht ihrer Zeiterfassung per E-Mail erhält.</span></li>
+        <li class="rc-perm"><a href="#perm-time-entries-payroll-send">Die Stunden ans Lohnbüro schicken</a><span class="rc-desc">Richtet das Lohnbüro ein, das die Gehaltsabrechnung macht, prüft jeden abgeschlossenen Monat, wer seine Übersicht unterschrieben hat, und sendet ihm die Stunden mit einem ablaufenden Download-Link.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="rol-card r-administrador-del-sistema familia-admin" id="rol-administrador-del-sistema">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Systemadministrator</h5><span class="rc-cuenta">119 Berechtigungen</span><span class="rc-familia">Systemrolle</span></div>
+      <p class="rc-para">Für alle, die für das ganze Zentrum verantwortlich sind: Sie bringt alles mit, auch die sensiblen Berechtigungen. Sie umfasst <strong>alle 119 Berechtigungen</strong> und ist die einzige Rolle ab Werk, die die 13 <a href="#roles-sensibles">sensiblen</a>Berechtigungen mitbringt. Eine neue Berechtigung kommt von selbst dazu.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <p class="rc-nota">Um nicht die ganze Tabelle zu wiederholen, stehen hier nur die sensiblen. Alle anderen stehen in der <a href="#roles-permisos">Tabelle nach Modulen</a>.</p>
+      <h6 class="rc-modulo"><a href="#permisos-clientes">Kunden</a> <span class="n">· 3</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-customers-export">Kundenliste exportieren</a><span class="insignia">sensibel</span><span class="rc-desc">Exportiert die vollständige Liste der Kunden in eine Datei – das kommt dem Mitnehmen der Datenbank des Zentrums gleich.</span></li>
+        <li class="rc-perm"><a href="#perm-club-credits-adjust">Punkte von Hand anpassen</a><span class="insignia">sensibel</span><span class="rc-desc">Addiert oder subtrahiert Punkte von Hand, ohne dass sie aus einem Kauf stammen.</span></li>
+        <li class="rc-perm"><a href="#perm-centre-import">Aus einem anderen Programm importieren</a><span class="insignia">sensibel</span><span class="rc-desc">Übernimmt auf einen Schlag die Kunden, Leistungen, Mehrfachkarten und Termine, die ein anderes Programm exportiert, und lässt sich rückgängig machen.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-historia-clinica-y-consentimientos">Patientenakte und Einwilligungserklärungen</a> <span class="n">· 1</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-centre-record-accesses">Wer welche Akte geöffnet hat</a><span class="insignia">sensibel</span><span class="rc-desc">Zeigt, wer die Karteikarte oder Patientenakte jeder Person geöffnet hat, und wann.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-facturacion">Rechnungsstellung</a> <span class="n">· 2</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-centre-invoicing">Rechnungen und VeriFactu</a><span class="insignia">sensibel</span><span class="rc-desc">Aktiviert die Rechnungsstellung des Zentrums, wählt die Präfixe der Serien und verwaltet die Übermittlung an die AEAT.</span></li>
+        <li class="rc-perm"><a href="#perm-centre-invoicing-production">Pasar la facturación a producción (Rechnungsstellung in die Produktion überführen)</a><span class="insignia">sensibel</span><span class="rc-desc">Stellt die Rechnungsstellung vom Testmodus auf Produktion um: Die Testrechnungen werden gelöscht und die Nummerierung beginnt von vorn.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-personal">Personal</a> <span class="n">· 2</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-time-entries-export">Arbeitszeiterfassung exportieren</a><span class="insignia">sensibel</span><span class="rc-desc">Exportiert die Arbeitszeiterfassung der gesamten Belegschaft in eine Datei.</span></li>
+        <li class="rc-perm"><a href="#perm-time-entries-access-links">Zugang zur Arbeitszeiterfassung geben</a><span class="insignia">sensibel</span><span class="rc-desc">Erstellt und widerruft Nur-Lese-Links zur Zeiterfassung für die Arbeitsinspektion und die Arbeitnehmervertretung.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-mantenimiento">Wartung</a> <span class="n">· 1</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-maintenance-access-links">Zugang zum Wartungsbuch geben</a><span class="insignia">sensibel</span><span class="rc-desc">Erstellt und widerruft Nur-Lese-Links zum Instandhaltungsbuch für eine Inspektion oder ein Audit.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-activaciones">Aktivierungen</a> <span class="n">· 1</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-actions-delete-points">Aktivierungspunkte löschen</a><span class="insignia">sensibel</span><span class="rc-desc">Löscht einen Punkt endgültig, ob aktiv oder zurückgezogen, samt aller Anfragen; sein QR-Code existiert danach nicht mehr.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-portal-y-avisos">Portal und Hinweise</a> <span class="n">· 1</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-centre-integrations">Externe Programme verbinden</a><span class="insignia">sensibel</span><span class="rc-desc">Erlaubt, externe Programme zu verbinden und ihre Zugangsschlüssel einzusehen.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-nucleo">Kern</a> <span class="n">· 2</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-centre-wipe">Zentrum leeren</a><span class="insignia">sensibel</span><span class="rc-desc">Löscht alle Daten des Zentrums.</span></li>
+        <li class="rc-perm"><a href="#perm-users-permissions">Rollen und Berechtigungen verwalten</a><span class="insignia">sensibel</span><span class="rc-desc">Öffnet die Rollenansicht und erlaubt, Berechtigungen zu vergeben, auch die eigenen.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <h4 id="roles-adicionales">Zusätzliche Berechtigungen: die, die keine Rolle ab Werk mitbringt</h4>
+
+  <p>
+    Von den 119 Berechtigungen <strong>14</strong> bringt keine Rolle ab Werk mit, nur der Systemadministrator. Wenn jemand sie braucht, <strong>legt man eine eigene Rolle an</strong> mit diesen Berechtigungen (<a href="#roles-paso-a-paso">wie man eine Rolle anlegt</a>) und gibt sie dieser Person unter
+    <strong>Verwaltung → Benutzer</strong>. Die sensiblen tragen das Kennzeichen und sollten nur an Personen vergeben werden, die das Zentrum leiten.
+  </p>
+
+  <article class="rol-card r-adicionales familia-adicional" id="permisos-adicionales">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Zusätzliche Berechtigungen</h5><span class="rc-cuenta">14 Berechtigungen</span><span class="rc-familia">Keine Rolle bringt sie mit</span></div>
+      <p class="rc-para">13 sind <a href="#roles-sensibles">sensiblen</a> Berechtigungen, und eine weitere ist eine gewöhnliche Berechtigung eines Moduls, das keine eigene Rolle hat.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <h6 class="rc-modulo"><a href="#permisos-clientes">Kunden</a> <span class="n">· 3</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-customers-export">Kundenliste exportieren</a><span class="insignia">sensibel</span><span class="rc-desc">Exportiert die vollständige Liste der Kunden in eine Datei – das kommt dem Mitnehmen der Datenbank des Zentrums gleich.</span></li>
+        <li class="rc-perm"><a href="#perm-club-credits-adjust">Punkte von Hand anpassen</a><span class="insignia">sensibel</span><span class="rc-desc">Addiert oder subtrahiert Punkte von Hand, ohne dass sie aus einem Kauf stammen.</span></li>
+        <li class="rc-perm"><a href="#perm-centre-import">Aus einem anderen Programm importieren</a><span class="insignia">sensibel</span><span class="rc-desc">Übernimmt auf einen Schlag die Kunden, Leistungen, Mehrfachkarten und Termine, die ein anderes Programm exportiert, und lässt sich rückgängig machen.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-historia-clinica-y-consentimientos">Patientenakte und Einwilligungserklärungen</a> <span class="n">· 1</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-centre-record-accesses">Wer welche Akte geöffnet hat</a><span class="insignia">sensibel</span><span class="rc-desc">Zeigt, wer die Karteikarte oder Patientenakte jeder Person geöffnet hat, und wann.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-facturacion">Rechnungsstellung</a> <span class="n">· 2</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-centre-invoicing">Rechnungen und VeriFactu</a><span class="insignia">sensibel</span><span class="rc-desc">Aktiviert die Rechnungsstellung des Zentrums, wählt die Präfixe der Serien und verwaltet die Übermittlung an die AEAT.</span></li>
+        <li class="rc-perm"><a href="#perm-centre-invoicing-production">Pasar la facturación a producción (Rechnungsstellung in die Produktion überführen)</a><span class="insignia">sensibel</span><span class="rc-desc">Stellt die Rechnungsstellung vom Testmodus auf Produktion um: Die Testrechnungen werden gelöscht und die Nummerierung beginnt von vorn.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-personal">Personal</a> <span class="n">· 2</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-time-entries-export">Arbeitszeiterfassung exportieren</a><span class="insignia">sensibel</span><span class="rc-desc">Exportiert die Arbeitszeiterfassung der gesamten Belegschaft in eine Datei.</span></li>
+        <li class="rc-perm"><a href="#perm-time-entries-access-links">Zugang zur Arbeitszeiterfassung geben</a><span class="insignia">sensibel</span><span class="rc-desc">Erstellt und widerruft Nur-Lese-Links zur Zeiterfassung für die Arbeitsinspektion und die Arbeitnehmervertretung.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-mantenimiento">Wartung</a> <span class="n">· 1</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-maintenance-access-links">Zugang zum Wartungsbuch geben</a><span class="insignia">sensibel</span><span class="rc-desc">Erstellt und widerruft Nur-Lese-Links zum Instandhaltungsbuch für eine Inspektion oder ein Audit.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-activaciones">Aktivierungen</a> <span class="n">· 1</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-actions-delete-points">Aktivierungspunkte löschen</a><span class="insignia">sensibel</span><span class="rc-desc">Löscht einen Punkt endgültig, ob aktiv oder zurückgezogen, samt aller Anfragen; sein QR-Code existiert danach nicht mehr.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-portal-y-avisos">Portal und Hinweise</a> <span class="n">· 1</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-centre-integrations">Externe Programme verbinden</a><span class="insignia">sensibel</span><span class="rc-desc">Erlaubt, externe Programme zu verbinden und ihre Zugangsschlüssel einzusehen.</span></li>
+      </ul>
+      <h6 class="rc-modulo"><a href="#permisos-nucleo">Kern</a> <span class="n">· 3</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-centre-delegations">Standorte verwalten</a><span class="rc-desc">Erlaubt, Standorte anzulegen und zu bearbeiten und zwischen ihnen zu wechseln.</span></li>
+        <li class="rc-perm"><a href="#perm-centre-wipe">Zentrum leeren</a><span class="insignia">sensibel</span><span class="rc-desc">Löscht alle Daten des Zentrums.</span></li>
+        <li class="rc-perm"><a href="#perm-users-permissions">Rollen und Berechtigungen verwalten</a><span class="insignia">sensibel</span><span class="rc-desc">Öffnet die Rollenansicht und erlaubt, Berechtigungen zu vergeben, auch die eigenen.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <h4 id="roles-matriz">Auf einen Blick: die Matrix</h4>
+
+  <p>
+    Alle Berechtigungen in einer Tabelle. Ein Haken (✓) bedeutet, dass die Rolle dieser Spalte die Berechtigung mitbringt; die letzte Spalte nennt die Modulrolle, die sie mitbringt, falls es eine gibt. Der Systemadministrator hat keine Spalte, weil er alles mitbringt. Die Karten oben sagen dasselbe ausführlicher.
+  </p>
+
+  <div class="tabla-envoltorio">
+  <table class="matriz">
+    <tbody><tr><th>Berechtigung</th><th title="Empfang"><a href="#rol-recepcion">Empf.</a></th><th title="Fachkraft"><a href="#rol-profesional">Fachkr.</a></th><th title="Leitung"><a href="#rol-direccion">Ltg.</a></th><th title="RRHH"><a href="#rol-rrhh">RRHH</a></th><th title="Wartung"><a href="#rol-mantenimiento">Wart.</a></th><th title="Aktivierungen"><a href="#rol-activaciones">Akt.</a></th><th>Modulrolle</th></tr>
+    <tr><th colspan="8"><a href="#permisos-agenda">Terminkalender</a></th></tr>
+    <tr><td><a href="#perm-appointments-view">Terminkalender ansehen</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td><a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr><td><a href="#perm-appointments-book">Termine anlegen und verschieben</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr><td><a href="#perm-appointments-cancel">Termine stornieren</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr><td><a href="#perm-appointments-book-past">An vergangenen Tagen buchen</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr><td><a href="#perm-appointments-move-closed">Erledigte Termine verschieben</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr><td><a href="#perm-appointments-cancel-charged">Bereits bezahlte Termine stornieren</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr><td><a href="#perm-appointments-block">Zeitspannen im Terminkalender sperren</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td><a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr><td><a href="#perm-appointments-print">Den Terminkalender ausdrucken</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr><td><a href="#perm-waiting-list-manage">Warteliste</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr><td><a href="#perm-equipment-readings-write">Gerätesitzung erfassen</a></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr><td><a href="#perm-reports-appointments">Terminbericht</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr><td><a href="#perm-centre-resources">Kabinen, Plätze und Räume</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr><td><a href="#perm-centre-equipment">Geräte anlegen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr><th colspan="8"><a href="#permisos-clientes">Kunden</a></th></tr>
+    <tr><td><a href="#perm-customers-view">Kundenakten ansehen</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-clientes">Kunden</a></td></tr>
+    <tr><td><a href="#perm-customers-create">Kunden anlegen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-clientes">Kunden</a></td></tr>
+    <tr><td><a href="#perm-customers-edit">Karteikarten der Kunden bearbeiten</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-clientes">Kunden</a></td></tr>
+    <tr><td><a href="#perm-customers-contact-details">Telefonnummern und E-Mails sehen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-clientes">Kunden</a></td></tr>
+    <tr><td><a href="#perm-customers-alerts">Hinweise schreiben und entfernen</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-clientes">Kunden</a></td></tr>
+    <tr><td><a href="#perm-customers-notes-delete">Kundennotizen löschen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-clientes">Kunden</a></td></tr>
+    <tr><td><a href="#perm-customers-merge">Doppelte Akten zusammenführen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-clientes">Kunden</a></td></tr>
+    <tr><td><a href="#perm-customers-erase">Daten der Kunden auf Verlangen löschen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-clientes">Kunden</a></td></tr>
+    <tr><td><a href="#perm-customers-history-download">Verlauf einer Person herunterladen</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-clientes">Kunden</a></td></tr>
+    <tr><td><a href="#perm-customers-export">Kundenliste exportieren</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><em>sensibel</em></td></tr>
+    <tr><td><a href="#perm-club-credits-view">Punkte der Kunden ansehen</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-clientes">Kunden</a></td></tr>
+    <tr><td><a href="#perm-club-credits-adjust">Punkte von Hand anpassen</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><em>sensibel</em></td></tr>
+    <tr><td><a href="#perm-reports-customers">Kundenbericht</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-clientes">Kunden</a></td></tr>
+    <tr><td><a href="#perm-centre-import">Aus einem anderen Programm importieren</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><em>sensibel</em></td></tr>
+    <tr><th colspan="8"><a href="#permisos-historia-clinica-y-consentimientos">Patientenakte und Einwilligungserklärungen</a></th></tr>
+    <tr><td><a href="#perm-clinic-view">Patientenakte ansehen</a></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-historia-clinica">Patientenakte</a></td></tr>
+    <tr><td><a href="#perm-clinic-write">In die Patientenakte schreiben</a></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-historia-clinica">Patientenakte</a></td></tr>
+    <tr><td><a href="#perm-clinic-print">Krankenakte drucken</a></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-historia-clinica">Patientenakte</a></td></tr>
+    <tr><td><a href="#perm-consents-request">Unterschrift anfordern</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-historia-clinica">Patientenakte</a></td></tr>
+    <tr><td><a href="#perm-consents-read">Unterschriebenes Dokument ansehen</a></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-historia-clinica">Patientenakte</a></td></tr>
+    <tr><td><a href="#perm-consents-import">Unterschriebene Einwilligungen importieren</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-historia-clinica">Patientenakte</a></td></tr>
+    <tr><td><a href="#perm-consents-withdraw">Einwilligung widerrufen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-historia-clinica">Patientenakte</a></td></tr>
+    <tr><td><a href="#perm-consents-templates">Vorlagen verwalten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-historia-clinica">Patientenakte</a></td></tr>
+    <tr><td><a href="#perm-centre-record-accesses">Wer welche Akte geöffnet hat</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><em>sensibel</em></td></tr>
+    <tr><th colspan="8"><a href="#permisos-caja">Kasse</a></th></tr>
+    <tr><td><a href="#perm-checkout-charge">An der Kasse kassieren</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-checkout-discount">Rabatte gewähren</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-checkout-debt">Auf Rechnung lassen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-checkout-refund">Einen Beleg erstatten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-debts-view">Offene Zahlungen ansehen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-debts-settle">Eine Schuld begleichen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-cash-close">Kasse abrechnen und abschließen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-cash-reopen">Abgeschlossene Kasse wieder öffnen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-visits-view">Bezahlte Besuche ansehen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-vouchers-view">Mehrfachkarten der Kunden ansehen</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-vouchers-transfer">Wertkarte übertragen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-gift-cards-view">Geschenkkarten ansehen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-gift-cards-sell">Geschenkkarten verkaufen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-coupons-view">Gutscheincodes ansehen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-coupons-write">Gutscheincodes erstellen und zurückziehen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-reports-payments">Zahlungsbericht</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-reports-vouchers">Wertkartenbericht</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-reports-visit-history">Verlauf der Besuche</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-reports-totals">Tagessummen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-reports-daily-cash">Kassenabschluss</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><th colspan="8"><a href="#permisos-facturacion">Rechnungsstellung</a></th></tr>
+    <tr><td><a href="#perm-invoices-full">Hacer factura completa (vollständige Rechnung ausstellen)</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-facturacion">Rechnungsstellung</a></td></tr>
+    <tr><td><a href="#perm-reports-accounting-draft">Buchhaltungsentwurf</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-facturacion">Rechnungsstellung</a></td></tr>
+    <tr><td><a href="#perm-invoices-view">Libro de facturas (Rechnungsbuch)</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-facturacion">Rechnungsstellung</a></td></tr>
+    <tr><td><a href="#perm-centre-invoicing">Rechnungen und VeriFactu</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><em>sensibel</em></td></tr>
+    <tr><td><a href="#perm-centre-invoicing-production">Pasar la facturación a producción (Rechnungsstellung in die Produktion überführen)</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><em>sensibel</em></td></tr>
+    <tr><th colspan="8"><a href="#permisos-catalogo">Katalog</a></th></tr>
+    <tr><td><a href="#perm-services-view">Leistungen ansehen</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr><td><a href="#perm-services-write">Leistungen anlegen und bearbeiten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr><td><a href="#perm-packages-view">Pakete ansehen</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr><td><a href="#perm-packages-write">Pakete anlegen und bearbeiten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr><td><a href="#perm-service-groups-write">Mehrfachkarten-Gruppen verwalten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr><td><a href="#perm-prices-lookup">Preise nachschlagen</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr><td><a href="#perm-products-view">Produkte ansehen</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr><td><a href="#perm-products-write">Produkte anlegen und bearbeiten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr><td><a href="#perm-providers-view">Lieferanten ansehen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr><td><a href="#perm-providers-write">Lieferanten anlegen und bearbeiten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr><td><a href="#perm-stock-view">Lagerbestand ansehen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr><td><a href="#perm-stock-move">Lagerbestand bewegen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr><td><a href="#perm-reports-stock">Lagerbericht</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr><td><a href="#perm-reports-stock-movements">Wareneingänge und -ausgänge</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr><th colspan="8"><a href="#permisos-personal">Personal</a></th></tr>
+    <tr><td><a href="#perm-time-entries-view">Arbeitszeiterfassung ansehen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td><a href="#rol-personal">Personal</a></td></tr>
+    <tr><td><a href="#perm-time-entries-locations">Sehen, wo gestempelt wurde</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td><a href="#rol-personal">Personal</a></td></tr>
+    <tr><td><a href="#perm-work-calendars-view">Arbeitskalender ansehen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td><a href="#rol-personal">Personal</a></td></tr>
+    <tr><td><a href="#perm-work-calendars-write">Arbeitskalender planen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td><a href="#rol-personal">Personal</a></td></tr>
+    <tr><td><a href="#perm-work-calendars-incidents">Vorfälle erfassen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td><a href="#rol-personal">Personal</a></td></tr>
+    <tr><td><a href="#perm-work-calendars-overtime">Stunden außerhalb der Schicht ausgleichen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td><a href="#rol-personal">Personal</a></td></tr>
+    <tr><td><a href="#perm-time-entries-export">Arbeitszeiterfassung exportieren</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><em>sensibel</em></td></tr>
+    <tr><td><a href="#perm-time-entries-access-links">Zugang zur Arbeitszeiterfassung geben</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><em>sensibel</em></td></tr>
+    <tr><td><a href="#perm-time-clock-settings">Stempeluhr konfigurieren</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td><a href="#rol-personal">Personal</a></td></tr>
+    <tr><td><a href="#perm-time-clock-unlock-pin">Stempel-PIN entsperren</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td><a href="#rol-personal">Personal</a></td></tr>
+    <tr><td><a href="#perm-employees-time-summary">Monatliche Arbeitszeit-Zusammenfassung per E-Mail</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td><a href="#rol-personal">Personal</a></td></tr>
+    <tr><td><a href="#perm-time-entries-payroll-send">Die Stunden ans Lohnbüro schicken</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td><a href="#rol-personal">Personal</a></td></tr>
+    <tr><th colspan="8"><a href="#permisos-mantenimiento">Wartung</a></th></tr>
+    <tr><td><a href="#perm-maintenance-view">Wartung ansehen</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-maintenance-report">Ein Problem melden</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-maintenance-manage">Aufträge verwalten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-maintenance-close">Aufträge abschließen und wieder öffnen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-maintenance-annul">Aufträge stornieren</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-maintenance-catalogue">Bereiche und Anlagen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-maintenance-export">Wartung exportieren</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-maintenance-access-links">Zugang zum Wartungsbuch geben</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><em>sensibel</em></td></tr>
+    <tr><th colspan="8"><a href="#permisos-activaciones">Aktivierungen</a></th></tr>
+    <tr><td><a href="#perm-actions-view">Aktivierungsanfragen ansehen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td>—</td></tr>
+    <tr><td><a href="#perm-actions-manage">Aktivierungspunkte verwalten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td>—</td></tr>
+    <tr><td><a href="#perm-actions-channels-view">Die Benachrichtigungskanäle sehen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-actions-delete-points">Aktivierungspunkte löschen</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><em>sensibel</em></td></tr>
+    <tr><th colspan="8"><a href="#permisos-iot">IoT</a></th></tr>
+    <tr><td><a href="#perm-iot-view">IoT-Geräte ansehen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-iot-manage">IoT-Konto konfigurieren</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-iot-control">IoT-Geräte ein- und ausschalten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td>—</td></tr>
+    <tr><th colspan="8"><a href="#permisos-portal-y-avisos">Portal und Hinweise</a></th></tr>
+    <tr><td><a href="#perm-centre-booking-portal">Buchungsportal</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-portal-y-avisos">Portal und Hinweise</a></td></tr>
+    <tr><td><a href="#perm-centre-whatsapp">WhatsApp-Erinnerungen</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-portal-y-avisos">Portal und Hinweise</a></td></tr>
+    <tr><td><a href="#perm-centre-integrations">Externe Programme verbinden</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><em>sensibel</em></td></tr>
+    <tr><th colspan="8"><a href="#permisos-nucleo">Kern</a></th></tr>
+    <tr><td><a href="#perm-employees-view">Mitarbeiter ansehen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-employees-write">Behandler anlegen und bearbeiten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-reports-scorecard">Cockpit</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-reports-export">Berichte als Datei herunterladen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-centre-preferences">Zentrumseinstellungen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-centre-logo">Logo ändern</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-centre-delegations">Standorte verwalten</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-centre-wipe">Zentrum leeren</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><em>sensibel</em></td></tr>
+    <tr><td><a href="#perm-support-view">Meine Support-Tickets ansehen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-support-write">Support-Tickets öffnen und beantworten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-support-view-all">Die Support-Tickets des gesamten Zentrums ansehen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-users-view">Benutzer ansehen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-users-write">Benutzer anlegen und bearbeiten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td>—</td></tr>
+    <tr><td><a href="#perm-users-permissions">Rollen und Berechtigungen verwalten</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><em>sensibel</em></td></tr>
+  </tbody></table>
+  </div>
+<!-- roles-por-rol:fin -->
 
   <h3>Von welchen IP-Adressen sich jeder Benutzer anmelden darf</h3>
   <span class="ruta">Verwaltung → Benutzer → (ein Benutzer)</span>
