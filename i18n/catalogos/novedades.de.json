@@ -926,5 +926,11 @@
   "t431621c6": "Nur diese vier Dinge: keine Farben, Größen, Links oder Bilder. Wenn du Text von woanders einfügst, bleibt nur das, was die Schaltflächen verstehen.",
   "td65eface": "Frühere Nachrichten sehen aus wie immer, und was das Team schreibt, ändert sich nicht.",
   "t016ee150": "Sauberere E-Mail-Benachrichtigungen",
-  "t939839a8": "Wenn das Team auf ein Ticket antwortet, das du über den Support eröffnet hast, enthält die E-Mail die Antwort nicht mehr: Sie weist nur darauf hin, dass es eine neue gibt, und enthält den Link zum Ticket in Turnera, damit du sie dort lesen und beantworten kannst."
+  "t939839a8": "Wenn das Team auf ein Ticket antwortet, das du über den Support eröffnet hast, enthält die E-Mail die Antwort nicht mehr: Sie weist nur darauf hin, dass es eine neue gibt, und enthält den Link zum Ticket in Turnera, damit du sie dort lesen und beantworten kannst.",
+  "t4ff55ab3": "22. Oktober 2026 · Turnera 1.3.2: Wer einen Kunden über seine Nummer sucht, sieht nur diesen Kunden",
+  "t3e473b09": "1.3.2-50b82734",
+  "t99c524c3": "Im Bildschirm",
+  "tfaa224a9": ": Gab man im Suchfeld eine Kundennummer ein (zum Beispiel 4466), erschienen auch alle Kunden, die diese Ziffern in ihrem Telefon oder ihrer Steuernummer haben, und der gesuchte ging darin unter. Wenn Sie jetzt nur Ziffern eingeben und es weniger als 9 sind, versteht die Suche, dass es eine Kundennummer ist, und zeigt Ihnen, falls es sie gibt, nur diesen Kunden.",
+  "t1c8a5342": "Hat niemand diese Nummer, sucht das Suchfeld wie gewohnt und schaut auch in Telefonen und Steuernummern. Bei 9 Ziffern oder mehr oder bei Buchstaben ändert sich nichts.",
+  "t2c27d9cc": "Es ist dieselbe Suche, die auch Termine und Zahlungen verwenden; dort erscheint der Kunde also ebenfalls auf Anhieb."
 }

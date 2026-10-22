@@ -627,6 +627,7 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-10-22-version-1-3-2">22 de octubre de 2026 · Turnera 1.3.2: al buscar un cliente por su número, sale solo ese cliente</a></li>
     <li><a href="#2026-10-22-version-1-3-1">22 de octubre de 2026 · Turnera 1.3.1: negrita, cursiva y listas al escribir en Soporte</a></li>
     <li><a href="#2026-10-21-version-1-3-0">21 de octubre de 2026 · Turnera 1.3.0: Soporte dentro de Turnera, con las respuestas a la vista</a></li>
     <li><a href="#2026-10-21-version-1-2-2">21 de octubre de 2026 · Turnera 1.2.2: la recepción ve a los profesionales sin entrar en su ficha</a></li>
@@ -679,6 +680,21 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-10-22-version-1-3-2" class="version">
+  <div class="version__cabecera">
+    <h2>22 de octubre de 2026 · Turnera 1.3.2: al buscar un cliente por su número, sale solo ese cliente</h2>
+  </div>
+  <p class="version__numero">Versión <span translate="no">1.3.2-50b82734</span></p>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span>Errores corregidos</h3>
+    <ul>
+      <li>En la pantalla <strong>Clientes</strong>, al escribir en el buscador un número de cliente (por ejemplo, 4466) salían también todos los clientes que llevaban esas cifras dentro del teléfono o del NIF, y el que buscabas quedaba perdido entre ellos. Ahora, si escribes solo cifras y son menos de 9, el buscador entiende que es un número de cliente y, si existe, te enseña únicamente a ese cliente.</li>
+      <li>Si nadie tiene ese número, el buscador sigue como siempre y lo busca también en teléfonos y NIF. Con 9 cifras o más, o con letras, no cambia nada.</li>
+      <li>Es el mismo buscador que usan la cita y el cobro, así que allí también sale el cliente al primer intento.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-10-22-version-1-3-1" class="version">
   <div class="version__cabecera">
     <h2>22 de octubre de 2026 · Turnera 1.3.1: negrita, cursiva y listas al escribir en Soporte</h2>

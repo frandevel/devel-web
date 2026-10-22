@@ -3069,5 +3069,10 @@
   "tca73ab65": "I",
   "t4f30e603": "Wenn das Team auf ein Ticket antwortet, das du über den Support eröffnet hast, bleibt die Antwort hier, und du erhältst eine",
   "t2aff1449": "mit dem Link zum Ticket. Die E-Mail enthält weder das, was dir geschrieben wurde, noch die Anhänge: Um die Antwort zu lesen und zu beantworten, rufst du Turnera über den Link auf. Wenn du auf diese E-Mail antwortest, erhalten wir sie ebenfalls und sie landet im selben Ticket, am bequemsten ist es aber, es von hier aus zu tun. Wenn in deiner Mitarbeiterkarte keine E-Mail-Adresse steht, kannst du in Turnera Tickets eröffnen und die Antworten lesen, aber das Team kann dich nicht per E-Mail benachrichtigen: Es empfiehlt sich, eine hinterlegt zu haben.",
-  "t451aedf9": "Benachrichtigungs-E-Mail"
+  "t451aedf9": "Benachrichtigungs-E-Mail",
+  "t90124b48": ": «iba» findet Ibáñez, aber nicht Arribas, und «ana gar» findet Ana García. Telefon und Steuernummer werden über jeden Teil gefunden; die Kundennummer muss exakt sein. Wenn Sie",
+  "tdeb08f21": "nur Ziffern und weniger als 9",
+  "t19328065": " eingeben, versteht die Suche, dass es eine Kundennummer ist (eine Telefonnummer hat 9 Ziffern): Gibt es einen Kunden mit dieser Nummer, erscheint",
+  "tce907902": "nur dieser Kunde",
+  "t30c5c2a0": ", nicht die, bei denen sie im Telefon oder in der Steuernummer steckt; und wenn niemand sie hat, wird wie gewohnt gesucht. Bei 9 Ziffern oder mehr oder bei Buchstaben ändert sich nichts. Es ist dieselbe Suche wie beim Termin und an der Kasse. Die Liste wird sortiert, indem Sie auf die Überschrift einer Spalte klicken ("
 }

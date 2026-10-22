@@ -1365,7 +1365,10 @@ footer{
     El buscador de arriba busca por nombre, apellidos, teléfono, NIF o <strong>número de cliente</strong>. Del nombre
     y los apellidos basta con <strong>el principio de cada palabra</strong>: «iba» encuentra a Ibáñez, pero no a
     Arribas, y «ana gar» encuentra a Ana García. El teléfono y el NIF se encuentran con cualquier trozo; el número
-    de cliente va exacto. Es el mismo buscador que el de la cita y el del cobro. La lista se ordena pulsando la cabecera de cualquier
+    de cliente va exacto. Si escribe <strong>solo cifras y son menos de 9</strong>, el buscador entiende que es un número de
+    cliente (un teléfono tiene 9): si hay un cliente con ese número, le sale <strong>únicamente ese cliente</strong>, sin los
+    que lo llevan dentro del teléfono o del NIF; y si nadie lo tiene, busca como siempre. Con 9 cifras o más, o con
+    letras, no cambia nada. Es el mismo buscador que el de la cita y el del cobro. La lista se ordena pulsando la cabecera de cualquier
     columna (<a href="#ordenar">cómo</a>).
   </p>
 

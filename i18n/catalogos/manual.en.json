@@ -3069,5 +3069,10 @@
   "tca73ab65": "I",
   "t4f30e603": "When the team replies to a ticket you opened from Support, the reply stays here and you receive a",
   "t2aff1449": "with the link to the ticket. The email does not include what they wrote to you or the attachments: to read it and reply, you go into Turnera using the link. If you reply to that email, we also receive it and it lands in the same ticket, but the most convenient way is to do it from here. If there is no email on your employee record, you will be able to open tickets and read the replies in Turnera, but the team will not be able to notify you by email: it is a good idea to have one filled in.",
-  "t451aedf9": "notification email"
+  "t451aedf9": "notification email",
+  "t90124b48": " is enough: «iba» finds Ibáñez but not Arribas, and «ana gar» finds Ana García. Phone and tax ID are found by any fragment; the customer number must be exact. If you type",
+  "tdeb08f21": "only digits, and fewer than 9 of them",
+  "t19328065": ", the search understands it is a customer number (a phone number has 9): if there is a customer with that number, you get",
+  "tce907902": "only that customer",
+  "t30c5c2a0": ", without those who have it inside their phone or tax ID; and if nobody has it, it searches as usual. With 9 digits or more, or with letters, nothing changes. It is the same search as in the appointment and at the till. The list is sorted by clicking the header of any column ("
 }

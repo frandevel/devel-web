@@ -3069,5 +3069,10 @@
   "tca73ab65": "I",
   "t4f30e603": "Quando a equipa responde a um ticket que abriste a partir do Suporte, a resposta fica aqui e recebes um",
   "t2aff1449": "com a ligação para o ticket. O e-mail não inclui o que te escreveram nem os anexos: para o leres e responderes, entras na Turnera com a ligação. Se respondes a esse e-mail, nós também o recebemos e cai no mesmo ticket, mas o mais cómodo é fazê-lo a partir daqui. Se na tua ficha de funcionário não houver e-mail, poderás abrir tickets e ler as respostas na Turnera, mas a equipa não poderá avisar-te por e-mail: convém que o tenhas preenchido.",
-  "t451aedf9": "e-mail de aviso"
+  "t451aedf9": "e-mail de aviso",
+  "t90124b48": ": «iba» encontra Ibáñez, mas não Arribas, e «ana gar» encontra Ana García. O telefone e o NIF encontram-se com qualquer parte; o número de cliente tem de ser exato. Se escrever",
+  "tdeb08f21": "apenas algarismos e menos de 9",
+  "t19328065": ", a pesquisa entende que é um número de cliente (um telefone tem 9): se houver um cliente com esse número, aparece",
+  "tce907902": "apenas esse cliente",
+  "t30c5c2a0": ", sem os que o têm dentro do telefone ou do NIF; e se ninguém o tiver, pesquisa como sempre. Com 9 algarismos ou mais, ou com letras, nada muda. É a mesma pesquisa que a da marcação e a da cobrança. A lista ordena-se premindo o cabeçalho de qualquer coluna ("
 }
