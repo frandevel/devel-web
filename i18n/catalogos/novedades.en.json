@@ -932,5 +932,19 @@
   "t99c524c3": "On the",
   "tfaa224a9": " screen, typing a customer number in the search box (for example, 4466) also brought up every customer with those digits inside their phone or tax ID, and the one you were looking for got lost among them. Now, if you type only digits and fewer than 9 of them, the search understands it is a customer number and, if it exists, shows you only that customer.",
   "t1c8a5342": "If nobody has that number, the search works as usual and also looks in phones and tax IDs. With 9 digits or more, or with letters, nothing changes.",
-  "t2c27d9cc": "It is the same search used by appointments and payments, so the customer shows up at the first try there too."
+  "t2c27d9cc": "It is the same search used by appointments and payments, so the customer shows up at the first try there too.",
+  "taceb9957": "22 October 2026 · Turnera 1.3.3: the help button opens the ticket in Support",
+  "tef9168c3": "High",
+  "tafb2a36f": "Blocking",
+  "te3140221": "1.3.3-aff3a1b8",
+  "t72ec848d": "The lifebuoy button now opens a ticket in Support",
+  "t06832457": "If you report an incident with the",
+  "tb40458ae": "button and you have permission to open and view Support tickets, it opens as a ticket in",
+  "t66191f2c": ", just like with",
+  "t5d7e6d7a": ": with its number, its status and the team's replies in view. When you send it, a button takes you straight to it.",
+  "t9e0b125b": "The screen you were on, your delegation, the last error and your phone number go inside the ticket, and the urgencies",
+  "tef0ead21": "mark it as",
+  "t415a8c3b": "The screenshots you attach are stored in the ticket and only the support team sees them: try not to show customer data.",
+  "tc65c5029": "If you do not have that permission, the incident still goes by email, as always. And if the ticket service is not available at that moment, it also goes by email and the window tells you that you will not see it in Support.",
+  "tee8fbd2d": "lifebuoy"
 }

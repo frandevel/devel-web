@@ -932,5 +932,19 @@
   "t99c524c3": "Im Bildschirm",
   "tfaa224a9": ": Gab man im Suchfeld eine Kundennummer ein (zum Beispiel 4466), erschienen auch alle Kunden, die diese Ziffern in ihrem Telefon oder ihrer Steuernummer haben, und der gesuchte ging darin unter. Wenn Sie jetzt nur Ziffern eingeben und es weniger als 9 sind, versteht die Suche, dass es eine Kundennummer ist, und zeigt Ihnen, falls es sie gibt, nur diesen Kunden.",
   "t1c8a5342": "Hat niemand diese Nummer, sucht das Suchfeld wie gewohnt und schaut auch in Telefonen und Steuernummern. Bei 9 Ziffern oder mehr oder bei Buchstaben ändert sich nichts.",
-  "t2c27d9cc": "Es ist dieselbe Suche, die auch Termine und Zahlungen verwenden; dort erscheint der Kunde also ebenfalls auf Anhieb."
+  "t2c27d9cc": "Es ist dieselbe Suche, die auch Termine und Zahlungen verwenden; dort erscheint der Kunde also ebenfalls auf Anhieb.",
+  "taceb9957": "22. Oktober 2026 · Turnera 1.3.3: Der Hilfe-Button eröffnet das Ticket im Support",
+  "tef9168c3": "Hoch",
+  "tafb2a36f": "Blockierend",
+  "te3140221": "1.3.3-aff3a1b8",
+  "t72ec848d": "Der Rettungsring eröffnet jetzt ein Ticket im Support",
+  "t06832457": "Wenn du über den",
+  "tb40458ae": "ein Problem meldest und die Berechtigung hast, Tickets im Support zu eröffnen und anzusehen, wird es als Ticket im",
+  "t66191f2c": " eröffnet, genau wie mit",
+  "t5d7e6d7a": ": mit seiner Nummer, seinem Status und den Antworten des Teams auf einen Blick. Nach dem Senden bringt dich eine Schaltfläche direkt dorthin.",
+  "t9e0b125b": "Der Bildschirm, auf dem du warst, dein Standort, der letzte Fehler und deine Telefonnummer stehen im Ticket, und die Dringlichkeiten",
+  "tef0ead21": "markieren es als",
+  "t415a8c3b": "Die Screenshots, die du anhängst, werden im Ticket gespeichert und nur das Support-Team sieht sie: Achte darauf, dass keine Kundendaten zu sehen sind.",
+  "tc65c5029": "Wenn du diese Berechtigung nicht hast, geht die Meldung weiterhin per E-Mail, wie immer. Und wenn der Ticketdienst in diesem Moment nicht verfügbar ist, geht sie ebenfalls per E-Mail, und das Fenster weist dich darauf hin, dass du sie nicht im Support sehen wirst.",
+  "tee8fbd2d": "Rettungsring"
 }

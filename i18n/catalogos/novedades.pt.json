@@ -928,5 +928,19 @@
   "t99c524c3": "No ecrã",
   "tfaa224a9": ", ao escrever no campo de pesquisa um número de cliente (por exemplo, 4466) apareciam também todos os clientes que tinham esses algarismos dentro do telefone ou do NIF, e o que procurava ficava perdido entre eles. Agora, se escrever apenas algarismos e menos de 9, a pesquisa entende que é um número de cliente e, se existir, mostra-lhe apenas esse cliente.",
   "t1c8a5342": "Se ninguém tiver esse número, a pesquisa funciona como sempre e procura também em telefones e NIF. Com 9 algarismos ou mais, ou com letras, nada muda.",
-  "t2c27d9cc": "É a mesma pesquisa que usam a marcação e a cobrança, por isso aí também aparece o cliente à primeira."
+  "t2c27d9cc": "É a mesma pesquisa que usam a marcação e a cobrança, por isso aí também aparece o cliente à primeira.",
+  "taceb9957": "22 de outubro de 2026 · Turnera 1.3.3: o botão de ajuda abre o ticket no Suporte",
+  "tef9168c3": "Alta",
+  "tafb2a36f": "Bloqueante",
+  "te3140221": "1.3.3-aff3a1b8",
+  "t72ec848d": "O botão salva-vidas passa a abrir um ticket no Suporte",
+  "t06832457": "Se contares uma ocorrência com o botão do",
+  "tb40458ae": "e tiveres permissão para abrir e ver tickets do Suporte, abre-se como um ticket do",
+  "t66191f2c": ", tal como com",
+  "t5d7e6d7a": ": com o seu número, o seu estado e as respostas da equipa à vista. Ao enviá-la, um botão leva-te diretamente a ele.",
+  "t9e0b125b": "O ecrã em que estavas, a tua unidade, o último erro e o teu telefone ficam dentro do ticket, e as urgências",
+  "tef0ead21": "marcam-no como",
+  "t415a8c3b": "As capturas de ecrã que anexares ficam guardadas no ticket e só a equipa de suporte as vê: evita que apareçam dados de clientes.",
+  "tc65c5029": "Se não tiveres essa permissão, a ocorrência continua a ir por e-mail, como sempre. E se o serviço de tickets não estiver disponível nesse momento, também vai por e-mail e a janela avisa-te de que não a verás no Suporte.",
+  "tee8fbd2d": "salva-vidas"
 }
