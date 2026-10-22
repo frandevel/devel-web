@@ -3012,7 +3012,7 @@ footer{
     <strong>Geschlecht</strong> angeben: Ohne Foto zeigen Listen und Dienstplan einen Avatar für Frau, Mann oder, wenn nichts angegeben ist, einen neutralen.
   </p>
   <p>
-    In derselben Karteikarte steht ihre <strong>Stempel-PIN</strong> (siehe <a href="#presencia">Arbeitszeiterfassung</a>) und man legt fest, ob ihr jeden Monat per E-Mail die <strong>Zusammenfassung ihres Arbeitstags</strong> zugeschickt wird, wozu eine E-Mail-Adresse in der Karteikarte nötig ist.
+    In derselben Karteikarte steht der Knopf zum Zurücksetzen ihrer <strong>Stempel-PIN</strong> (siehe <a href="#presencia">Arbeitszeiterfassung</a>) und man legt fest, ob ihr jeden Monat per E-Mail die <strong>Zusammenfassung ihres Arbeitstags</strong> zugeschickt wird, wozu eine E-Mail-Adresse in der Karteikarte nötig ist.
   </p>
   <p>
     <strong>Deaktivieren löscht nicht.</strong> Die Fachkraft verschwindet aus dem Terminkalender, aber ihre Termine, Besuche und klinischen Fälle zeigen sie weiterhin an, und durch Bearbeiten lässt sie sich wieder aktivieren. Hat sie ab heute Termine, fragt Turnera, welche Fachkraft sie übernimmt, und überträgt sie alle auf einmal; überschneidet sich eine mit einem Termin, den die übernehmende Person schon hat, meldet es das, damit man sie danach neu einplanen kann. Die Liste zeigt nur aktive Mitarbeiter: Wenn man <em>Nur aktive</em> abwählt, erscheinen auch die ausgeschiedenen.
@@ -3060,24 +3060,20 @@ footer{
   <h4>Die PIN</h4>
 
   <p>
-    Jede Fachkraft braucht eine <strong>PIN</strong>, vierstellig, sofern das Zentrum nichts anderes festlegt, die ihr
-    unter <em>Fachkräfte → Stempel-PIN</em>. Ein Druck auf ihre Schaltfläche öffnet ein Tastenfeld, und sie tippt sie ein: Mit der letzten Ziffer öffnet sich ihr Bereich, ohne weiteren Klick. Am Computer lässt sich die PIN auch über die Tastatur eingeben, der Ziffernblock eingeschlossen: <em>Rücktaste</em> löscht die letzte Ziffer und <em>Enter</em> bestätigt. Dadurch ist ein Druck auf die Schaltfläche einer anderen Person noch kein Stempeln für sie, und ohne das würde die Namensliste bei einer Prüfung wenig beweisen.
+    Jede Fachkraft braucht eine <strong>PIN</strong>, vierstellig, sofern das Zentrum nichts anderes festlegt, die die Verwaltung ihr zurücksetzt, unter <em>Fachkräfte → Stempel-PIN</em>. Ein Druck auf ihre Schaltfläche öffnet ein Tastenfeld, und sie tippt sie ein: Mit der letzten Ziffer öffnet sich ihr Bereich, ohne weiteren Klick. Am Computer lässt sich die PIN auch über die Tastatur eingeben, der Ziffernblock eingeschlossen: <em>Rücktaste</em> löscht die letzte Ziffer und <em>Enter</em> bestätigt. Dadurch ist ein Druck auf die Schaltfläche einer anderen Person noch kein Stempeln für sie, und ohne das würde die Namensliste bei einer Prüfung wenig beweisen.
   </p>
 
   <p>
-    Der Knopf <em>Erzeugen</em> schlägt eine zufällige vor, und das ist besser, als sich eine auszudenken: Es verwirft die, die man
-    auf Anhieb errät —lauter gleiche Ziffern und Folgen wie 1234—, also genau die, die man von Hand wählt.
-    Die PIN ist beim Tippen sichtbar, damit Sie sie der Person diktieren können, die sie benutzen wird;
-    <strong>notieren Sie sie vor dem Speichern</strong>, denn danach lässt sie sich nicht mehr lesen.
+    Der Knopf <em>PIN zurücksetzen</em> erzeugt eine zufällige, mit so vielen Ziffern, wie das Zentrum vorgibt, und zeigt sie
+    <strong>nur einmal</strong>an: Teilen Sie sie der Person mit, die sie beim ersten Stempeln ändern muss. Die Verwaltung kann die PIN von niemandem wählen; sie entscheidet nur, wann sie zurückgesetzt wird.
   </p>
 
   <div class="ojo">
-    <p><strong>Ohne PIN wird nicht gestempelt.</strong> Wer keine hat, sieht seine Schaltfläche deaktiviert, mit dem Hinweis, dass die Verwaltung sie in seiner Karteikarte setzt. So sagt das Register immer, wer gestempelt hat und nicht nur an welchem Schalter, was das Gesetz von einer Arbeitszeiterfassung erwartet. Verteilen Sie die PINs, bevor Sie die Uhr in einem Zentrum in Betrieb nehmen.</p>
+    <p><strong>Ohne PIN wird nicht gestempelt.</strong> Wer keine hat, sieht seine Schaltfläche deaktiviert, mit dem Hinweis, dass die Verwaltung sie in seiner Karteikarte zurücksetzt. So sagt das Register immer, wer gestempelt hat und nicht nur an welchem Schalter, was das Gesetz von einer Arbeitszeiterfassung erwartet. Verteilen Sie die PINs, bevor Sie die Uhr in einem Zentrum in Betrieb nehmen.</p>
   </div>
 
   <p>
-    Die PIN wird verschlüsselt gespeichert und <strong>lässt sich nicht mehr lesen</strong>, auch nicht von der Verwaltung: vergisst sie
-    jemand, bekommt er eine neue. Entfernt wird sie mit <em>PIN entfernen</em>, und diese Person kann erst wieder stempeln, wenn sie eine neue hat.
+    Die PIN wird verschlüsselt gespeichert und <strong>lässt sich nicht mehr lesen</strong>, auch nicht von der Verwaltung: Vergisst sie jemand, wird sie zurückgesetzt. Entfernt wird sie mit <em>PIN entfernen</em>, und diese Person kann erst wieder stempeln, wenn sie zurückgesetzt wird. Zurücksetzen, Entfernen und die Änderung durch die Person werden festgehalten, mit Angabe, wer es getan hat, wann und von welcher IP-Adresse aus; diese Spur wird nicht gelöscht.
   </p>
 
   <p>
@@ -3112,7 +3108,7 @@ footer{
   <span class="ruta">Personal → Mitarbeitende → Stempel-PIN</span>
 
   <p>
-    Eine PIN, die <strong>die Verwaltung setzt oder zurücksetzt</strong> ist <strong>vorläufig</strong>, weil sie derjenige kennt, der sie gesetzt hat. Mit ihr kann die Person weder stempeln, weder im Web noch in der App der Mitarbeitenden, noch ihre Monatsübersicht unterschreiben: Beim Eintippen fordert Turnera sie auf, <strong>eine eigene zu wählen</strong> (anders als die vorläufige und als die Stellenzahl, die der Betrieb verlangt), und von da an gehört sie allein ihr. So lernt die Personalabteilung nie die PIN kennen, mit der jemand unterschreibt. PINs, die schon vor dieser Verbesserung gesetzt waren, bleiben unberührt.
+    Eine PIN, die <strong>die Verwaltung zurücksetzt</strong> ist <strong>vorläufig</strong>, weil sie derjenige kennt, der sie zurückgesetzt hat. Mit ihr kann die Person weder stempeln, weder im Web noch in der App der Mitarbeitenden, noch ihre Monatsübersicht unterschreiben: Beim Eintippen fordert Turnera sie auf, <strong>eine eigene zu wählen</strong> (anders als die vorläufige und als die Stellenzahl, die der Betrieb verlangt), und von da an gehört sie allein ihr. So lernt die Personalabteilung nie die PIN kennen, mit der jemand unterschreibt. PINs, die schon vor dieser Verbesserung gesetzt waren, bleiben unberührt.
   </p>
 
   <h4 id="pin-bloqueado">Gesperrte PIN</h4>
@@ -3128,11 +3124,11 @@ footer{
   </p>
 
   <div class="ojo">
-    <p><strong>Jeder am Empfang kann die PIN eines Kollegen sperren</strong> , indem er absichtlich fünf zufällige PINs unter dessen Namen eingibt. Das lässt sich nicht verhindern —ohne Sperre ließe sich die PIN durch Ausprobieren erraten—, deshalb sollte man, wenn die Benachrichtigung kommt, <strong>sie sofort entsperren</strong> und, falls es nicht diese Person war, ihr eine neue PIN geben und herausfinden, wer am Empfang war.</p>
+    <p><strong>Jeder am Empfang kann die PIN eines Kollegen sperren</strong> , indem er absichtlich fünf zufällige PINs unter dessen Namen eingibt. Das lässt sich nicht verhindern —ohne Sperre ließe sich die PIN durch Ausprobieren erraten—, deshalb sollte man, wenn die Benachrichtigung kommt, <strong>sie sofort entsperren</strong> und, falls es nicht diese Person war, ihre PIN zurücksetzen und herausfinden, wer am Empfang war.</p>
   </div>
 
   <p>
-    Unter <em>Mitarbeiter</em>mit der Schaltfläche <em>Stempel-PIN</em> : Bei wem die PIN gesperrt ist, zeigt sie einen Hinweis, und darin steht <strong>«PIN seit … gesperrt»</strong> mit der Schaltfläche <strong>Entsperren</strong>, die dieselbe PIN behält und die Zählung zurücksetzt. Dafür braucht es die Berechtigung «Stempel-PIN entsperren», die ab Werk Leitung, RRHH und Personal haben (und der Systemadministrator); ohne sie sagt das Fenster, welche Berechtigung fehlt. <strong>Eine neue PIN entsperrt sie ebenfalls</strong> (und sie ist vorläufig, wie immer, wenn die Verwaltung sie vergibt). Jede Sperre und jede Entsperrung wird festgehalten —wer entsperrt hat, wann und wie— und diese Spur wird nicht gelöscht.
+    Unter <em>Mitarbeiter</em>mit der Schaltfläche <em>Stempel-PIN</em> : Bei wem die PIN gesperrt ist, zeigt sie einen Hinweis, und darin steht <strong>«PIN seit … gesperrt»</strong> mit der Schaltfläche <strong>Entsperren</strong>, die dieselbe PIN behält und die Zählung zurücksetzt. Dafür braucht es die Berechtigung «Stempel-PIN entsperren», die ab Werk Leitung, RRHH und Personal haben (und der Systemadministrator); ohne sie sagt das Fenster, welche Berechtigung fehlt. <strong>Ein Zurücksetzen der PIN entsperrt sie ebenfalls</strong> (und sie ist vorläufig, wie immer, wenn die Verwaltung sie zurücksetzt). Jede Sperre und jede Entsperrung wird festgehalten —wer entsperrt hat, wann und wie— und diese Spur wird nicht gelöscht.
   </p>
 
   <h4 id="firma-resumen">Unterschrift der Monatsübersicht</h4>
@@ -3947,7 +3943,7 @@ footer{
 
   <h3 id="app-fichar">Mit der PIN stempeln</h3>
   <p>
-    Unter <em>Stempeln</em> zeigt die Mitarbeitenden des Standorts. Jede Person tippt auf ihren Namen und gibt ihre PIN ein. Wer noch keine PIN hat, erscheint abgeblendet, mit <em>ohne PIN</em>: Sie muss im Web vergeben werden, unter <em>Personal</em>. Wenn die Leitung die PIN gesetzt hat, ist sie <strong>vorläufig</strong> und die App fordert beim ersten Mal auf, eine eigene zu wählen (siehe
+    Unter <em>Stempeln</em> zeigt die Mitarbeitenden des Standorts. Jede Person tippt auf ihren Namen und gibt ihre PIN ein. Wer noch keine PIN hat, erscheint abgeblendet, mit <em>ohne PIN</em>: Sie muss im Web zurückgesetzt werden, unter <em>Personal</em>. Wenn die Leitung die PIN zurückgesetzt hat, ist sie <strong>vorläufig</strong> und die App fordert beim ersten Mal auf, eine eigene zu wählen (siehe
     <a href="#pin-provisional">Vorläufige PIN</a>). Falsche PINs zählen wie im Web: Beim dritten und vierten Fehlversuch in Folge zeigt sie an, wie viele Versuche bleiben, und beim fünften wird die PIN gesperrt (siehe
     <a href="#pin-bloqueado">Gesperrte PIN</a>).
   </p>

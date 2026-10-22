@@ -3005,7 +3005,7 @@ footer{
     <strong>gender</strong>: without a photo, lists and the roster show a woman’s, a man’s or, if not stated, a neutral avatar.
   </p>
   <p>
-    The same record holds their <strong>clocking PIN</strong> (see <a href="#presencia">Working time</a>) and you tick whether the <strong>summary of their working day</strong> is emailed to them every month, which needs an email address on the record.
+    The same record is where you reset their <strong>clocking PIN</strong> (see <a href="#presencia">Working time</a>) and you tick whether the <strong>summary of their working day</strong> is emailed to them every month, which needs an email address on the record.
   </p>
   <p>
     <strong>Deactivating does not delete.</strong> The practitioner leaves the agenda, but their appointments, visits and clinical cases still show them, and they can be reactivated by editing them. If they have appointments from today on, Turnera asks which practitioner takes them over and moves them all at once; if one clashes with another the receiver already has, it says so so you can rearrange it afterwards. The list shows only those who are active: by clearing <em>Active only</em> the inactive ones show too.
@@ -3053,24 +3053,20 @@ footer{
   <h4>The PIN</h4>
 
   <p>
-    Every professional needs a <strong>PIN</strong>, four digits unless the centre decides otherwise, which is set
-    in <em>Professionals → Clocking PIN</em>. Pressing their button brings up a keypad and they type it: with the last digit their screen opens, with nothing else to press. From a computer the PIN can also be typed on the keyboard, numeric keypad included: <em>Backspace</em> deletes the last digit and <em>Enter</em> confirms. This is what makes pressing someone else’s button not the same as clocking in for them, and without it the list of names would not prove much to an inspector.
+    Every professional needs a <strong>PIN</strong>, four digits unless the centre decides otherwise, which administration resets in <em>Professionals → Clocking PIN</em>. Pressing their button brings up a keypad and they type it: with the last digit their screen opens, with nothing else to press. From a computer the PIN can also be typed on the keyboard, numeric keypad included: <em>Backspace</em> deletes the last digit and <em>Enter</em> confirms. This is what makes pressing someone else’s button not the same as clocking in for them, and without it the list of names would not prove much to an inspector.
   </p>
 
   <p>
-    The <em>Generate</em> suggests a random one, and it is a better idea than making one up: it discards the ones that can be guessed
-    in one go —all the same digits and sequences like 1234— which are exactly the ones people come up with when
-    choosing by hand. The PIN is visible while you type it, so you can read it out to whoever is going to use it;
-    <strong>write it down before saving</strong>, because afterwards it cannot be read again.
+    The <em>Reset PIN</em> button generates a random one, with the digits the centre asks for, and shows it
+    <strong>only once</strong>: tell it to the person, who will have to change it the first time they clock in. Administration cannot choose anyone’s PIN; the only thing it decides is when to reset it.
   </p>
 
   <div class="ojo">
-    <p><strong>Without a PIN there is no clocking in.</strong> Whoever does not have one sees their button disabled, with a notice that administration sets it on their record. That way the register always says who clocked in and not only from which counter, which is what the law expects of a working time register. When you start using the clock in a centre, hand out the PINs first.</p>
+    <p><strong>Without a PIN there is no clocking in.</strong> Whoever does not have one sees their button disabled, with a notice that administration resets it on their record. That way the register always says who clocked in and not only from which counter, which is what the law expects of a working time register. When you start using the clock in a centre, hand out the PINs first.</p>
   </div>
 
   <p>
-    The PIN is stored encrypted and <strong>cannot be read again</strong>, not even from administration: if somebody
-    forgets it, they are given a new one. It is cleared with <em>Clear the PIN</em>, and that person cannot clock in until they have another one.
+    The PIN is stored encrypted and <strong>cannot be read again</strong>, not even from administration: if somebody forgets it, it is reset. It is cleared with <em>Clear the PIN</em>, and that person cannot clock in until it is reset. Resetting it, clearing it and the person changing it are recorded with who did it, when and from which IP address, and that trail is not deleted.
   </p>
 
   <p>
@@ -3105,7 +3101,7 @@ footer{
   <span class="ruta">Staff → Professionals → Clocking PIN</span>
 
   <p>
-    A PIN that <strong>administration sets or resets</strong> is <strong>temporary</strong>, because whoever set it knows it. With it the person cannot clock in, neither on the web nor in the professionals’ app, nor sign their monthly summary: when they type it, Turnera asks them to <strong>choose their own</strong> (different from the temporary one and from the digits the centre requires), and from then on it is theirs alone. That way HR never gets to know the PIN someone signs with. PINs that were already set before this improvement are left untouched.
+    A PIN that <strong>administration resets</strong> is <strong>temporary</strong>, because whoever reset it knows it. With it the person cannot clock in, neither on the web nor in the professionals’ app, nor sign their monthly summary: when they type it, Turnera asks them to <strong>choose their own</strong> (different from the temporary one and from the digits the centre requires), and from then on it is theirs alone. That way HR never gets to know the PIN someone signs with. PINs that were already set before this improvement are left untouched.
   </p>
 
   <h4 id="pin-bloqueado">Locked PIN</h4>
@@ -3121,11 +3117,11 @@ footer{
   </p>
 
   <div class="ojo">
-    <p><strong>Anyone at reception can lock a colleague's PIN</strong> by deliberately typing five random PINs under their name. It cannot be prevented —without the lock, the PIN could be guessed by trying—, so when the alert arrives it is best to <strong>unlock it straight away</strong> and, if it was not that person, give them a new PIN and find out who was at the desk.</p>
+    <p><strong>Anyone at reception can lock a colleague's PIN</strong> by deliberately typing five random PINs under their name. It cannot be prevented —without the lock, the PIN could be guessed by trying—, so when the alert arrives it is best to <strong>unlock it straight away</strong> and, if it was not that person, reset their PIN and find out who was at the desk.</p>
   </div>
 
   <p>
-    In <em>Staff</em>, the button <em>clocking PIN</em> of anyone whose PIN is locked shows a warning, and inside it shows <strong>«PIN locked since …»</strong> with the button <strong>Unlock</strong>, which keeps the same PIN and resets the count. It needs the «Unlock the clocking PIN» permission, which Management, HR and Staff have out of the box (and the System administrator); without it, the window says which permission is missing. <strong>Setting a new PIN also unlocks it</strong> (and it is temporary, as always when administration sets it). Every lock and every unlock is recorded —who unlocked it, when and how— and that trail is not deleted.
+    In <em>Staff</em>, the button <em>clocking PIN</em> of anyone whose PIN is locked shows a warning, and inside it shows <strong>«PIN locked since …»</strong> with the button <strong>Unlock</strong>, which keeps the same PIN and resets the count. It needs the «Unlock the clocking PIN» permission, which Management, HR and Staff have out of the box (and the System administrator); without it, the window says which permission is missing. <strong>Resetting the PIN also unlocks it</strong> (and it is temporary, as always when administration resets it). Every lock and every unlock is recorded —who unlocked it, when and how— and that trail is not deleted.
   </p>
 
   <h4 id="firma-resumen">Signing the monthly summary</h4>
@@ -3941,7 +3937,7 @@ footer{
 
   <h3 id="app-fichar">Clocking in with the PIN</h3>
   <p>
-    In <em>Clock</em> shows the professionals of the site. Each one taps their name and types their PIN. Whoever does not have a PIN yet appears greyed out, with <em>no PIN</em>: it has to be given on the web, in <em>Staff</em>. If the PIN was set by management, it is <strong>temporary</strong> and the app asks them to choose their own the first time (see
+    In <em>Clock</em> shows the professionals of the site. Each one taps their name and types their PIN. Whoever does not have a PIN yet appears greyed out, with <em>no PIN</em>: it has to be reset on the web, in <em>Staff</em>. If the PIN was reset by management, it is <strong>temporary</strong> and the app asks them to choose their own the first time (see
     <a href="#pin-provisional">Temporary PIN</a>). Wrong PINs count just as on the web: on the third and fourth failure in a row it says how many attempts are left, and at the fifth the PIN is locked (see
     <a href="#pin-bloqueado">Locked PIN</a>).
   </p>

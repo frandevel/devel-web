@@ -3546,7 +3546,7 @@ footer{
     indicar, uno neutro.
   </p>
   <p>
-    En la misma ficha se pone el <strong>PIN de fichaje</strong> (ver <a href="#presencia">Control de
+    En la misma ficha se restablece el <strong>PIN de fichaje</strong> (ver <a href="#presencia">Control de
     presencia</a>) y se marca si se le manda cada mes por correo el <strong>resumen de su jornada</strong>, para lo
     que hace falta un correo en la ficha.
   </p>
@@ -3616,8 +3616,8 @@ footer{
   <h4>El PIN</h4>
 
   <p>
-    Cada profesional necesita un <strong>PIN</strong>, de cuatro cifras si el centro no decide otra cosa, que se le
-    pone en <em>Profesionales → PIN de fichaje</em>. Al pulsar su botón sale un teclado y lo teclea: con la última
+    Cada profesional necesita un <strong>PIN</strong>, de cuatro cifras si el centro no decide otra cosa, que administración
+    le restablece en <em>Profesionales → PIN de fichaje</em>. Al pulsar su botón sale un teclado y lo teclea: con la última
     cifra se abre lo suyo, sin pulsar nada más. Desde un ordenador el PIN también se teclea con el teclado, el
     numérico incluido: <em>Retroceso</em> borra la última cifra e <em>Intro</em> confirma. Es lo que hace que
     pulsar el botón de otro no sea fichar por otro, y sin ello la lista de nombres no probaría gran cosa ante
@@ -3625,23 +3625,23 @@ footer{
   </p>
 
   <p>
-    El botón <em>Generar</em> propone uno al azar, y es mejor idea que pensarlo: descarta los que se adivinan
-    de una pasada —todas las cifras iguales y las escaleras tipo 1234— que son justo los que salen cuando uno
-    los elige a mano. El PIN se ve mientras lo escribe, para que pueda dictárselo a quien va a usarlo;
-    <strong>apúntelo antes de guardar</strong>, porque después ya no se puede volver a leer.
+    El botón <em>Restablecer PIN</em> genera uno al azar, con las cifras que pida el centro, y lo enseña
+    <strong>una sola vez</strong>: dígaselo a la persona, que tendrá que cambiarlo la primera vez que fiche.
+    Administración no puede elegir el PIN de nadie; lo único que decide es cuándo restablecerlo.
   </p>
 
   <div class="ojo">
     <p><strong>Sin PIN no se ficha.</strong> Quien no lo tiene ve su botón desactivado, con el aviso de que
-      administración se lo pone en su ficha. Así el registro dice siempre quién fichó y no sólo desde qué
+      administración se lo restablece en su ficha. Así el registro dice siempre quién fichó y no sólo desde qué
       mostrador, que es lo que la ley espera de un registro de jornada. Al estrenar el reloj en un centro,
       reparta antes los PIN.</p>
   </div>
 
   <p>
     El PIN se guarda cifrado y <strong>no se puede volver a leer</strong>, ni desde administración: si alguien
-    lo olvida se le pone uno nuevo. Se retira con <em>Quitar el PIN</em>, y esa persona no podrá fichar hasta
-    que tenga otro.
+    lo olvida se le restablece. Se retira con <em>Quitar el PIN</em>, y esa persona no podrá fichar hasta
+    que se le restablezca. Restablecerlo, retirarlo y que la persona lo cambie quedan apuntados con quién lo hizo,
+    cuándo y desde qué dirección IP, y ese rastro no se borra.
   </p>
 
   <p>
@@ -3677,8 +3677,8 @@ footer{
   <span class="ruta">Personal → Profesionales → PIN de fichaje</span>
 
   <p>
-    Un PIN que <strong>pone o restablece administración</strong> es <strong>provisional</strong>, porque lo conoce
-    quien lo puso. Con él la persona no ficha, ni en la web ni en la aplicación de los profesionales, ni firma su
+    Un PIN que <strong>restablece administración</strong> es <strong>provisional</strong>, porque lo conoce
+    quien lo restableció. Con él la persona no ficha, ni en la web ni en la aplicación de los profesionales, ni firma su
     resumen mensual: al teclearlo, Turnera le pide <strong>elegir uno suyo</strong> (distinto del provisional y de
     las cifras que pida el centro), y a partir de ahí es solo suyo. Así RRHH nunca llega a conocer el PIN con el que
     alguien firma. Los PIN que ya estaban puestos antes de esta mejora no se tocan.
@@ -3705,7 +3705,7 @@ footer{
   <div class="ojo">
     <p><strong>Cualquiera en recepción puede bloquear el PIN de un compañero</strong> tecleando a propósito cinco PIN
       al azar con su nombre. No se impide —sin bloqueo, el PIN se podría adivinar probando—, así que cuando llegue el
-      aviso conviene <strong>desbloquearlo enseguida</strong> y, si no fue esa persona, ponerle un PIN nuevo y averiguar
+      aviso conviene <strong>desbloquearlo enseguida</strong> y, si no fue esa persona, restablecerle el PIN y averiguar
       quién estaba en el mostrador.</p>
   </div>
 
@@ -3713,8 +3713,8 @@ footer{
     En <em>Profesionales</em>, el botón <em>PIN de fichaje</em> de quien lo tiene bloqueado sale con un aviso, y dentro
     se ve <strong>«PIN bloqueado desde …»</strong> con el botón <strong>Desbloquear</strong>, que deja el mismo PIN y la
     cuenta a cero. Hace falta el permiso «Desbloquear el PIN de fichar», que de fábrica traen Dirección, RRHH y Personal
-    (y el Administrador del sistema); sin él, la ventana dice qué permiso falta. <strong>Poner un PIN nuevo también lo
-    desbloquea</strong> (y es provisional, como siempre que lo pone administración). Cada bloqueo y cada desbloqueo
+    (y el Administrador del sistema); sin él, la ventana dice qué permiso falta. <strong>Restablecer el PIN también lo
+    desbloquea</strong> (y es provisional, como siempre que lo restablece administración). Cada bloqueo y cada desbloqueo
     queda apuntado —quién lo desbloqueó, cuándo y cómo— y ese rastro no se borra.
   </p>
 
@@ -4801,8 +4801,8 @@ footer{
   <h3 id="app-fichar">Fichar con el PIN</h3>
   <p>
     En <em>Fichar</em> salen los profesionales de la sede. Cada uno toca su nombre y escribe su PIN. Quien todavía no
-    tiene PIN aparece apagado, con <em>sin PIN</em>: hay que dárselo desde la web, en <em>Personal</em>. Si el PIN lo
-    puso la dirección, es <strong>provisional</strong> y la aplicación pide elegir uno propio la primera vez (véase
+    tiene PIN aparece apagado, con <em>sin PIN</em>: hay que restablecérselo desde la web, en <em>Personal</em>. Si el PIN lo
+    restableció la dirección, es <strong>provisional</strong> y la aplicación pide elegir uno propio la primera vez (véase
     <a href="#pin-provisional">PIN provisional</a>). Los PIN equivocados cuentan igual que en la web: en el tercer y el
     cuarto fallo seguido avisa de los intentos que quedan, y al quinto el PIN se bloquea (véase
     <a href="#pin-bloqueado">PIN bloqueado</a>).

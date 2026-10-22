@@ -942,5 +942,19 @@
   "tef0ead21": "marcam-no como",
   "t415a8c3b": "As capturas de ecrã que anexares ficam guardadas no ticket e só a equipa de suporte as vê: evita que apareçam dados de clientes.",
   "tc65c5029": "Se não tiveres essa permissão, a ocorrência continua a ir por e-mail, como sempre. E se o serviço de tickets não estiver disponível nesse momento, também vai por e-mail e a janela avisa-te de que não a verás no Suporte.",
-  "tee8fbd2d": "salva-vidas"
+  "tee8fbd2d": "salva-vidas",
+  "tc2e33294": "22 de outubro de 2026 · Turnera 1.3.4: a administração repõe o PIN de picagem, mas já não o escolhe",
+  "tcbc7c775": ": o Turnera gera um PIN provisório ao acaso, com os algarismos que o centro tenha decidido, e mostra-o",
+  "t389ff385": "oferece agora",
+  "t74c53ac3": "para que o diga à pessoa. A administração já não pode escolher o PIN de ninguém.",
+  "t422697b6": "PIN de picagem",
+  "tf9fc5de1": "Repor PIN",
+  "t6c8ad012": "uma só vez",
+  "t81cf4b7a": "O Turnera gera o PIN de picagem, e cada pessoa altera o seu",
+  "t2250fe49": "O PIN reposto é provisório: a pessoa altera-o para um seu na primeira vez que registar o ponto e, a partir daí, só ela o sabe. Alterá-lo quando quiser continua a ser coisa de cada profissional, a partir do ecrã de registo de ponto.",
+  "t1b015c5a": "Repor o PIN também desbloqueia o que estivesse bloqueado, e",
+  "tf2640ec2": "continua a removê-lo.",
+  "t520a1f8d": "Remover o PIN",
+  "t3d73106c": "Fica registado, e não se pode apagar, quem repôs ou removeu um PIN, quando e a partir de que endereço, e também de cada vez que um profissional altera o seu.",
+  "t17ed0210": "1.3.4-ce3f86a"
 }

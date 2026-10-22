@@ -946,5 +946,19 @@
   "tef0ead21": "markieren es als",
   "t415a8c3b": "Die Screenshots, die du anhängst, werden im Ticket gespeichert und nur das Support-Team sieht sie: Achte darauf, dass keine Kundendaten zu sehen sind.",
   "tc65c5029": "Wenn du diese Berechtigung nicht hast, geht die Meldung weiterhin per E-Mail, wie immer. Und wenn der Ticketdienst in diesem Moment nicht verfügbar ist, geht sie ebenfalls per E-Mail, und das Fenster weist dich darauf hin, dass du sie nicht im Support sehen wirst.",
-  "tee8fbd2d": "Rettungsring"
+  "tee8fbd2d": "Rettungsring",
+  "tc2e33294": "22. Oktober 2026 · Turnera 1.3.4: Die Verwaltung setzt die PIN zum Stempeln zurück, wählt sie aber nicht mehr selbst",
+  "tcbc7c775": ": Turnera erzeugt eine zufällige vorläufige PIN mit so vielen Ziffern, wie das Zentrum festgelegt hat, und zeigt sie",
+  "t389ff385": "bietet jetzt",
+  "t74c53ac3": "an, damit Sie sie der Person mitteilen können. Die Verwaltung kann die PIN von niemandem mehr selbst wählen.",
+  "t422697b6": "PIN für die Zeiterfassung",
+  "tf9fc5de1": "PIN zurücksetzen",
+  "t6c8ad012": "nur einmal",
+  "t81cf4b7a": "Turnera erzeugt die PIN zum Stempeln, und jede Person ändert ihre selbst",
+  "t2250fe49": "Die zurückgesetzte PIN ist vorläufig: Die Person ersetzt sie beim ersten Stempeln durch eine eigene, und danach kennt nur noch sie sie. Sie jederzeit zu ändern bleibt Sache jeder einzelnen Fachkraft, direkt auf dem Stempelbildschirm.",
+  "t1b015c5a": "Das Zurücksetzen der PIN entsperrt auch eine gesperrte PIN, und",
+  "tf2640ec2": "entfernt sie weiterhin.",
+  "t520a1f8d": "PIN entfernen",
+  "t3d73106c": "Es wird dauerhaft festgehalten, wer eine PIN zurückgesetzt oder entfernt hat, wann und von welcher Adresse aus, sowie jedes Mal, wenn eine Fachkraft ihre eigene ändert.",
+  "t17ed0210": "1.3.4-ce3f86a"
 }
