@@ -796,7 +796,7 @@ footer{
       mais.</li>
     <li>Escolha a <strong>urgência</strong>: <em>Baixa</em> se pode esperar, <em>Normal</em> se incomoda mas
       se consegue trabalhar, <em>Alta</em> se há algo que não se consegue fazer e <em>Bloqueante</em> se o centro está parado.</li>
-    <li>Se ajudar, <strong>anexe uma captura de ecrã</strong> ou um ficheiro até 5 MB (até cinco). Ficam guardados na ocorrência e só a equipa de suporte os vê: evite que na captura de ecrã apareçam dados de clientes.</li>
+    <li>Se ajudar, <strong>anexe uma captura de ecrã</strong> ou outra imagem até 5 MB (até cinco; só se aceitam imagens). Ficam guardadas na ocorrência e só a equipa de suporte as vê: evite que na captura de ecrã apareçam dados de clientes.</li>
     <li>Indique o seu nome e o e-mail para onde quer que lhe respondamos. O telefone é opcional, para o caso de em
       algum momento ser preciso falar consigo.</li>
     <li>Prima <em>Enviar</em>. A aplicação dá-lhe o <strong>número da ocorrência</strong>: guarde-o para o caso de
@@ -1111,18 +1111,14 @@ footer{
     <li><strong>Alterar a duração:</strong> arraste a margem de baixo.</li>
     <li><strong>Anulá-la:</strong> abra-a, prima <em>Anular</em> e indique <strong>quem a anula</strong>: o
       cliente, o centro (o profissional não pode, a cabine ou o campo não está disponível, uma avaria) ou uma
-      <strong>causa externa</strong> (a chuva num campo descoberto, um corte de eletricidade). É obrigatório, porque
-      só o que o cliente anula conta no seu histórico e nas marcações perdidas. Pode ainda escrever o motivo
-      pelas suas palavras, que fica nos comentários da marcação.</li>
+      <strong>causa externa</strong> (a chuva num campo descoberto, um corte de eletricidade). É obrigatório, porque só o que o cliente anula conta no seu histórico e nas marcações perdidas. Pode ainda escrever o motivo pelas suas palavras, que fica nos comentários da marcação. Fica também registado <strong>quem a anulou e com que função</strong> (por exemplo, <em>ana (Receção)</em>), com o dia e a hora: a ficha da marcação anulada di-lo numa linha. Se a anula o cliente a partir do portal de reservas, consta <em>Portal de reservas</em>, sem função. As anuladas antes de existir este dado não o têm e não se inventa.</li>
       <li><strong>Uma marcação já cobrada</strong> só a anula quem tem a permissão <strong>«Anular marcações já
       cobradas»</strong>, que de fábrica tem apenas o administrador. Para os outros, <em>Anular</em> aparece desligado
       e, ao passar o rato, diz porquê. Anulá-la não devolve o dinheiro: para isso existe
       <a href="#devoluciones">reembolsar o talão</a>. Pelo portal de reservas, o cliente também não pode anular
       uma marcação que já pagou: tem de ligar para o centro.</li>
       <li><strong>Retirar uma marcação feita por engano:</strong> nos <strong>15 minutos</strong> seguintes à sua criação,
-      ao anulá-la aparece uma quarta opção, <em>Criada por engano</em>. A marcação desaparece da agenda e não conta
-      em nenhum relatório, porque nunca chegou a ser uma reserva. Passado esse tempo já não se oferece: é uma anulação de alguém,
-      e é preciso dizer de quem.</li>
+      ao anulá-la aparece uma quarta opção, <em>Criada por engano</em>. A marcação desaparece da agenda e não conta em nenhum relatório, porque nunca chegou a ser uma reserva. Passado esse tempo já não se oferece: é uma anulação de alguém, e é preciso dizer de quem. Embora desapareça da agenda, também fica registado quem a retirou e com que função, e quem tem a permissão <em>Relatório de marcações</em> vê-a com o botão <em>Anulações</em> no cabeçalho da agenda, que leva ao relatório de anulações com as criadas por engano nos últimos 30 dias.</li>
     <li><strong>Retirar as anuladas da vista:</strong> assinale <em>Ocultar canceladas</em>, por baixo do
       cabeçalho. A agenda recorda a opção, por isso da próxima vez encontrá-la-á como a deixou.</li>
   </ul>
@@ -1153,11 +1149,7 @@ footer{
   </p>
 
   <p>
-    <strong>O serviço define a duração.</strong> Ao escolher os serviços da marcação, a duração ajusta-se
-    sozinha ao que somam, arredondando para cima ao passo dessa cabine: dois serviços de vinte minutos numa
-    cabine que avança de quinze em quinze ocupam quarenta e cinco, não quarenta. Assim que tocar
-    no seletor de duração manualmente, passa a mandar o utilizador e deixamos de lhe mexer. Numa marcação que já existe também não se
-    recalcula nada: a sua duração é a que tem.
+    <strong>O serviço define a duração.</strong> Uma marcação nova arranca com a duração em <em>0 minutos</em> e os serviços que se lhe acrescentam vão-na somando. Se se guarda sem serviços e sem mexer na duração, a marcação fica com o passo mínimo do centro (a <em>Duração mínima de uma marcação</em>). Ao escolher os serviços da marcação, a duração ajusta-se sozinha ao que somam, arredondando para cima ao passo dessa cabine: dois serviços de vinte minutos numa cabine que avança de quinze em quinze ocupam quarenta e cinco, não quarenta. Assim que tocar no seletor de duração manualmente, passa a mandar o utilizador e deixamos de lhe mexer. Numa marcação que já existe também não se recalcula nada: a sua duração é a que tem.
   </p>
 
   <p>
@@ -2458,9 +2450,7 @@ footer{
     anulações, mas se esse número crescer, convém saber porquê.
   </p>
   <p>
-    Com o filtro <strong>Causa</strong> o relatório deixa o ranking e lista uma a uma as marcações anuladas por essa
-    causa: o dia, o cliente, o profissional, quando foi criada, quando foi anulada e os comentários. É a forma de
-    rever o que foi marcado como engano.
+    Com o filtro <strong>Causa</strong> o relatório deixa o ranking e lista uma a uma as marcações anuladas por essa causa: o dia, o cliente, o profissional, quando foi criada, quando foi anulada, <strong>quem a anulou e com que função</strong> e os comentários. É a forma de rever o que foi marcado como engano.
   </p>
   <p>
     Por baixo, <strong>que clientes mais anulam</strong>. Aqui só conta o que o próprio cliente anula: se a aula
@@ -4503,7 +4493,7 @@ footer{
 
   <h3>Comunicar uma ocorrência com o salva-vidas</h3>
   <p>
-    O botão do <strong>salva-vidas</strong>, em baixo à direita em todos os ecrãs, abre um ticket sem sair de onde está: conte o que aconteceu, escolha a urgência e, se ajudar, anexe uma captura de ecrã. Com permissão para abrir e ver tickets, o resultado é mais um ticket de Suporte, com o seu número <em>T-n</em>, o seu estado e as respostas da equipa; o aviso da janela tem um botão <em>Ver em Suporte</em>. O ecrã em que estava, a sua unidade, o último erro e o seu telefone (se o indicou) ficam escritos no fim da primeira mensagem. Quem não tem essas permissões continua a comunicar a ocorrência por e-mail e, se o serviço de tickets não estiver disponível nesse momento, a aplicação avisa-o de que foi por e-mail e de que não a verá no Suporte.
+    O botão do <strong>salva-vidas</strong>, em baixo à direita em todos os ecrãs, abre um ticket sem sair de onde está: conte o que aconteceu, escolha a urgência e, se ajudar, anexe uma captura de ecrã (só imagens). Com permissão para abrir e ver tickets, o resultado é mais um ticket de Suporte, com o seu número <em>T-n</em>, o seu estado e as respostas da equipa; o aviso da janela tem um botão <em>Ver em Suporte</em>. O ecrã em que estava, a sua unidade, o último erro e o seu telefone (se o indicou) ficam escritos no fim da primeira mensagem. Quem não tem essas permissões continua a comunicar a ocorrência por e-mail e, se o serviço de tickets não estiver disponível nesse momento, a aplicação avisa-o de que foi por e-mail e de que não a verá no Suporte.
   </p>
 
   <h3>Acompanhar um ticket</h3>
@@ -4515,7 +4505,7 @@ footer{
     <li><strong>Fechado</strong>: resolvido há mais de duas semanas.</li>
   </ul>
   <p>
-    Dentro de um ticket vê a conversa (o seu à direita, o da equipa à esquerda), pode descarregar os ficheiros, <strong>Anexar ficheiro</strong>, <strong>Enviar resposta</strong> e, quando já
+    Dentro de um ticket vê a conversa (o seu à direita, o da equipa à esquerda), pode descarregar os ficheiros, <strong>Anexar ficheiro</strong> (só imagens; a equipa de suporte pode enviar-lhe ficheiros de qualquer tipo), <strong>Enviar resposta</strong> e, quando já
     estiver resolvido, <strong>Marcar como resolvido</strong>. Cada pessoa pode enviar até 5 tickets novos por hora.
   </p>
   <p>

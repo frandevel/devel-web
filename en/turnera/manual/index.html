@@ -796,7 +796,7 @@ footer{
       little more.</li>
     <li>Choose the <strong>urgency</strong>: <em>Low</em> if it can wait, <em>Normal</em> if it is annoying but you can
       work, <em>High</em> if something cannot be done and <em>Blocking</em> if the centre has stopped.</li>
-    <li>If it helps, <strong>attach a screenshot</strong> or a file of up to 5 MB (up to five). They stay with the incident and only the support team sees them: make sure no customer data shows in the screenshot.</li>
+    <li>If it helps, <strong>attach a screenshot</strong> or another image of up to 5 MB (up to five; only images are accepted). They stay with the incident and only the support team sees them: make sure no customer data shows in the screenshot.</li>
     <li>Enter your name and the email address you want us to reply to. The phone number is optional, in case we ever needed to talk to you.</li>
     <li>Click <em>Send</em>. The application gives you the <strong>incident number</strong>: keep it in case
       you need to refer to it.</li>
@@ -1073,13 +1073,13 @@ footer{
       room, depending on the view you are in.</li>
     <li><strong>Changing how long it lasts:</strong> drag the bottom edge.</li>
     <li><strong>Cancelling it:</strong> open it, press <em>Cancel</em> and say <strong>who is calling it off</strong>: the customer, the centre (the professional cannot make it, the cabin or the court is unavailable, something broke) or an
-      <strong>external cause</strong> (rain on an outdoor court, a power cut). It is required, because only what the customer calls off counts in their history and in lost appointments. You can also write the reason in your own words, which is kept in the comments of the appointment.</li>
+      <strong>external cause</strong> (rain on an outdoor court, a power cut). It is required, because only what the customer calls off counts in their history and in lost appointments. You can also write the reason in your own words, which is kept in the comments of the appointment. It also records <strong>who cancelled it and with what role</strong> (for example, <em>ana (Reception)</em>), with the day and time: the record of the cancelled appointment says so in one line. If the customer cancels it from the booking portal, it shows <em>Booking portal</em>, with no role. Those cancelled before this information existed do not have it, and it is not made up.</li>
       <li><strong>An appointment already charged</strong> can only be cancelled by whoever has the <strong>«Anular citas ya
       cobradas» (cancel charged appointments)</strong> permission, which out of the box only the administrator has. For everyone else, <em>Cancel</em> is greyed out
       and, when you hover over it, says why. Cancelling it does not give the money back: for that, use
       <a href="#devoluciones">the ticket refund</a>. Through the booking portal, the customer cannot cancel
       an appointment already paid either: they have to call the centre.</li>
-      <li><strong>Removing an appointment made by mistake:</strong> within the <strong>15 minutes</strong> after creating it, a fourth option appears when cancelling it, <em>Created by mistake</em>. The appointment disappears from the agenda and counts in no report, because it was never a booking. After that time it is no longer offered: it is a cancellation by someone, and you have to say by whom.</li>
+      <li><strong>Removing an appointment made by mistake:</strong> within the <strong>15 minutes</strong> after creating it, a fourth option appears when cancelling it, <em>Created by mistake</em>. The appointment disappears from the agenda and counts in no report, because it was never a booking. After that time it is no longer offered: it is a cancellation by someone, and you have to say by whom. Even though it disappears from the agenda, it also records who removed it and with what role, and whoever has the permission <em>Appointments report</em> can see it with the button <em>Cancellations</em> in the header of the agenda, which leads to the cancellations report with the appointments created by mistake in the last 30 days.</li>
     <li><strong>Taking cancelled appointments off the view:</strong> tick <em>Hide cancelled</em>, under the header. The agenda remembers the box, so next time you will find it as you left it.</li>
   </ul>
 
@@ -1100,11 +1100,7 @@ footer{
   </p>
 
   <p>
-    <strong>The service sets the duration.</strong> When you pick the services for the appointment, the duration adjusts
-    itself to what they add up to, rounding up to the slot of that room: two twenty-minute services in a room
-    that runs in fifteens take forty-five, not forty. The moment you touch the duration selector by hand, you
-    are in charge and we stop touching it. On an appointment that already exists nothing is recalculated
-    either: its duration is the one it has.
+    <strong>The service sets the duration.</strong> A new appointment starts with its length at <em>0 minutes</em> and the services added to it build it up. If it is saved with no services and without touching the length, the appointment keeps the minimum step of the centre (the <em>Minimum length of an appointment</em>). When you pick the services for the appointment, the duration adjusts itself to what they add up to, rounding up to the slot of that room: two twenty-minute services in a room that runs in fifteens take forty-five, not forty. The moment you touch the duration selector by hand, you are in charge and we stop touching it. On an appointment that already exists nothing is recalculated either: its duration is the one it has.
   </p>
 
   <p>
@@ -2141,7 +2137,7 @@ footer{
     At the top, <strong>how many were cancelled and who called them off</strong>: the customer, the centre or an external cause. The centre's are broken down by professional, and the external ones by cabin or court, which is where you see whether an outdoor court loses many more classes to the rain than a covered one. Those cancelled before this distinction existed appear as <em>not stated</em>. Those <em>created by mistake</em> are counted separately: they are not cancellations, but if that number grows, it is worth knowing why.
   </p>
   <p>
-    With the <strong>Cause</strong> filter, the report leaves the ranking and lists one by one the appointments cancelled for that cause: the day, the customer, the professional, when it was created, when it was cancelled and the comments. It is how you review what was marked as a mistake.
+    With the <strong>Cause</strong> the report leaves the ranking and lists one by one the appointments cancelled for that cause: the day, the customer, the professional, when it was created, when it was cancelled, <strong>who cancelled it and with what role</strong> and the comments. It is how you review what was marked as a mistake.
   </p>
   <p>
     Below, <strong>which customers cancel the most</strong>. Only what the customer calls off counts here: if a class is called off because of rain, it does not push them up the list. It is sorted by number of cancellations and, when tied, by proportion: someone who cancelled three out of three is more of a problem than someone who cancelled three out of forty.
@@ -3850,7 +3846,7 @@ footer{
 
   <h3>Report an incident with the lifebuoy</h3>
   <p>
-    The button with the <strong>lifebuoy</strong>, at the bottom right on every screen, opens a ticket without leaving where you are: you say what happened, choose the urgency and, if it helps, attach a screenshot. With permission to open and view tickets, the result is one more Support ticket, with its number <em>T-n</em>, its status and the team's replies; the notice in the window has a button <em>Open in Support</em>. The screen you were on, your delegation, the last error and your phone number (if you entered it) are written at the end of the first message. Whoever does not have those permissions keeps reporting incidents by email, and if the ticket service is not available at that moment the application tells you it went by email and that you will not see it in Support.
+    The button with the <strong>lifebuoy</strong>, at the bottom right on every screen, opens a ticket without leaving where you are: you say what happened, choose the urgency and, if it helps, attach a screenshot (images only). With permission to open and view tickets, the result is one more Support ticket, with its number <em>T-n</em>, its status and the team's replies; the notice in the window has a button <em>Open in Support</em>. The screen you were on, your delegation, the last error and your phone number (if you entered it) are written at the end of the first message. Whoever does not have those permissions keeps reporting incidents by email, and if the ticket service is not available at that moment the application tells you it went by email and that you will not see it in Support.
   </p>
 
   <h3>Following a ticket</h3>
@@ -3862,7 +3858,7 @@ footer{
     <li><strong>Closed</strong>: resolved more than two weeks ago.</li>
   </ul>
   <p>
-    Inside a ticket you see the conversation (yours on the right, the team's on the left), you can download the files, <strong>Attach file</strong>, <strong>Send reply</strong> and, once it is solved, <strong>Mark as resolved</strong>. Each person can send up to 5 new tickets per hour.
+    Inside a ticket you see the conversation (yours on the right, the team's on the left), you can download the files, <strong>Attach file</strong> (images only; the support team can send you files of any type), <strong>Send reply</strong> and, once it is solved, <strong>Mark as resolved</strong>. Each person can send up to 5 new tickets per hour.
   </p>
   <p>
     The boxes for <em>New ticket</em> and for <strong>Send reply</strong> have four buttons at the top: <strong>bold</strong>,

@@ -796,7 +796,7 @@ footer{
       más.</li>
     <li>Elija la <strong>urgencia</strong>: <em>Baja</em> si puede esperar, <em>Normal</em> si molesta pero se
       trabaja, <em>Alta</em> si hay algo que no se puede hacer y <em>Bloqueante</em> si el centro está parado.</li>
-    <li>Si ayuda, <strong>adjunte un pantallazo</strong> o un fichero de hasta 5 MB (hasta cinco). Quedan en la incidencia y solo los ve el equipo de
+    <li>Si ayuda, <strong>adjunte un pantallazo</strong> u otra imagen de hasta 5 MB (hasta cinco; solo se aceptan imágenes). Quedan en la incidencia y solo los ve el equipo de
       soporte: procure que en el pantallazo no salgan datos de clientes.</li>
     <li>Ponga su nombre y el correo al que quiere que le respondamos. El teléfono es opcional, por si en algún
       momento hiciera falta hablar con usted.</li>
@@ -1136,7 +1136,10 @@ footer{
       cliente, el centro (el profesional no puede, la cabina o la pista no está disponible, una avería) o una
       <strong>causa externa</strong> (la lluvia en una pista descubierta, un corte de luz). Es obligatorio, porque
       solo lo que anula el cliente cuenta en su historial y en las citas perdidas. Además puede escribir el motivo
-      con sus palabras, que queda en los comentarios de la cita.</li>
+      con sus palabras, que queda en los comentarios de la cita. Queda también <strong>quién la anuló y con qué
+      rol</strong> (por ejemplo, <em>ana (Recepción)</em>), con el día y la hora: la ficha de la cita anulada lo
+      dice en una línea. Si la anula el cliente desde el portal de reservas consta <em>Portal de reservas</em>, sin
+      rol. Las anuladas antes de existir este dato no lo tienen y no se inventa.</li>
       <li><strong>Una cita ya cobrada</strong> solo la anula quien tiene el permiso <strong>«Anular citas ya
       cobradas»</strong>, que de fábrica lleva solo el administrador. Para los demás, <em>Anular</em> sale apagado
       y, al pasar el ratón, dice por qué. Anularla no devuelve el dinero: para eso está
@@ -1145,7 +1148,9 @@ footer{
       <li><strong>Quitar una cita puesta por error:</strong> en los <strong>15 minutos</strong> siguientes a crearla,
       al anularla aparece una cuarta opción, <em>Creada por error</em>. La cita desaparece de la agenda y no cuenta
       en ningún informe, porque nunca fue una reserva. Pasado ese rato ya no se ofrece: es una anulación de alguien,
-      y hay que decir de quién.</li>
+      y hay que decir de quién. Aunque desaparezca de la agenda, también queda quién la quitó y con qué rol, y
+      quien tiene el permiso de <em>Informe de citas</em> la ve con el botón <em>Anulaciones</em> de la cabecera de
+      la agenda, que lleva al informe de cancelaciones con las creadas por error de los últimos 30 días.</li>
     <li><strong>Quitar las anuladas de la vista:</strong> marque <em>Ocultar canceladas</em>, debajo de la
       cabecera. La agenda recuerda la casilla, así que la próxima vez la encontrará como la dejó.</li>
   </ul>
@@ -1176,7 +1181,9 @@ footer{
   </p>
 
   <p>
-    <strong>El servicio pone la duración.</strong> Al elegir los servicios de la cita, la duración se ajusta
+    <strong>El servicio pone la duración.</strong> Una cita nueva arranca con la duración en <em>0 minutos</em> y
+    la van sumando los servicios que se le añaden. Si se guarda sin servicios y sin tocar la duración, la cita se
+    queda con el paso mínimo del centro (la <em>Duración mínima de una cita</em>). Al elegir los servicios de la cita, la duración se ajusta
     sola a lo que suman, redondeando hacia arriba al paso de esa cabina: dos servicios de veinte minutos en
     una cabina que va de quince en quince ocupan cuarenta y cinco, no cuarenta. En cuanto usted toque el
     selector de duración a mano, manda usted y dejamos de tocarlo. En una cita que ya existe tampoco se
@@ -2511,8 +2518,8 @@ footer{
   </p>
   <p>
     Con el filtro <strong>Causa</strong> el informe deja el ranking y lista una a una las citas anuladas por esa
-    causa: el día, el cliente, el profesional, cuándo se creó, cuándo se anuló y los comentarios. Es la forma de
-    revisar qué se marcó como error.
+    causa: el día, el cliente, el profesional, cuándo se creó, cuándo se anuló, <strong>quién la anuló y con qué
+    rol</strong> y los comentarios. Es la forma de revisar qué se marcó como error.
   </p>
   <p>
     Debajo, <strong>qué clientes anulan más</strong>. Aquí solo cuenta lo que anula el propio cliente: si la clase
@@ -4695,7 +4702,7 @@ footer{
   <h3>Contar una incidencia con el salvavidas</h3>
   <p>
     El botón del <strong>salvavidas</strong>, abajo a la derecha en todas las pantallas, abre un ticket sin salir de donde
-    estás: cuentas qué ha pasado, eliges la urgencia y, si ayuda, adjuntas un pantallazo. Con permiso para abrir y ver
+    estás: cuentas qué ha pasado, eliges la urgencia y, si ayuda, adjuntas un pantallazo (solo imágenes). Con permiso para abrir y ver
     tickets, el resultado es un ticket más de Soporte, con su número <em>T-n</em>, su estado y las respuestas del
     equipo; el aviso de la ventana tiene un botón <em>Ver en Soporte</em>. La pantalla en la que estabas, tu delegación,
     el último error y tu teléfono (si lo pusiste) quedan escritos al final del primer mensaje. Quien no tiene esos
@@ -4713,7 +4720,7 @@ footer{
   </ul>
   <p>
     Dentro de un ticket ves la conversación (lo tuyo a la derecha, lo del equipo a la izquierda), puedes descargar los
-    archivos, <strong>Adjuntar archivo</strong>, <strong>Enviar respuesta</strong> y, cuando ya
+    archivos, <strong>Adjuntar archivo</strong> (solo imágenes; el equipo de soporte sí puede enviarte ficheros de cualquier tipo), <strong>Enviar respuesta</strong> y, cuando ya
     está solucionado, <strong>Marcar como resuelto</strong>. Cada persona puede enviar hasta 5 tickets nuevos por hora.
   </p>
   <p>

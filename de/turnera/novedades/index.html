@@ -679,6 +679,7 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-10-22-version-1-3-5">22. Oktober 2026 · Turnera 1.3.5: Ein neuer Termin addiert seine Dauer aus den Leistungen, und es wird festgehalten, wer jeden Termin storniert</a></li>
     <li><a href="#2026-10-22-version-1-3-4">22. Oktober 2026 · Turnera 1.3.4: Die Verwaltung setzt die PIN zum Stempeln zurück, wählt sie aber nicht mehr selbst</a></li>
     <li><a href="#2026-10-22-version-1-3-3">22. Oktober 2026 · Turnera 1.3.3: Der Hilfe-Button eröffnet das Ticket im Support</a></li>
     <li><a href="#2026-10-22-version-1-3-2">22. Oktober 2026 · Turnera 1.3.2: Wer einen Kunden über seine Nummer sucht, sieht nur diesen Kunden</a></li>
@@ -733,10 +734,41 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-10-22-version-1-3-5" class="version">
+  <div class="version__cabecera">
+    <h2>22. Oktober 2026 · Turnera 1.3.5: Ein neuer Termin addiert seine Dauer aus den Leistungen, und es wird festgehalten, wer jeden Termin storniert</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.3.5-dac192b</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Stornierte Termine: wer sie storniert hat und mit welcher Rolle</h4>
+    <ul>
+      <li>Jedes Mal, wenn ein Termin storniert wird, wird festgehalten, <strong>wer ihn storniert hat und mit welcher Rolle</strong>, auch wenn er storniert wird, weil er versehentlich angelegt wurde. So muss man nicht raten, wenn jemand fragt, was mit einem Termin passiert ist.</li>
+      <li>Die Karteikarte eines stornierten Termins nennt es in einer Zeile, und der Stornierungsbericht ergänzt eine Spalte mit der Angabe, wer ihn storniert hat. Was der Kunde über sein Buchungsportal storniert, erscheint als <strong>Buchungsportal</strong>.</li>
+      <li>Im Kalender gibt es eine neue Schaltfläche, <strong>Stornierungen</strong>, die die in den letzten 30 Tagen stornierten Termine zeigt, auch die versehentlich angelegten, die bisher auf keinem Bildschirm zu sehen waren. Sehen kann sie, wer die Berechtigung für den Terminbericht hat.</li>
+      <li>Vor dieser Version stornierte Termine bleiben ohne diese Angabe: Sie lässt sich nachträglich nicht mehr herausfinden.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Neuer Termin: Die Dauer ergibt sich aus den Leistungen</h4>
+    <ul>
+      <li>Ein neuer Termin beginnt mit einer Dauer von <strong>0 Minuten</strong> und die Leistungen, die du hinzufügst, addieren sie nach und nach, sodass der Termin genau so lange dauert, wie er muss, und nicht eine Ausgangsdauer, die man danach korrigieren muss.</li>
+      <li>Wenn du den Termin ohne Leistungen und ohne eingetragene Dauer speicherst, wird er mit dem Mindestschritt deines Zentrums gespeichert, damit nie ein Termin ohne Zeit entsteht.</li>
+    </ul>
+    <h4>Support: Bilder in jedem Format anhängen</h4>
+    <ul>
+      <li>Beim Eröffnen eines Tickets oder beim Antworten im <strong>Support</strong> kannst du Bilder in jedem Format anhängen (Screenshots vom Handy oder vom Computer gehen alle).</li>
+      <li>Wenn das Turnera-Team dir antwortet, kann es dir jede Art von Datei zurückschicken: ein Dokument, eine Tabelle oder was auch immer nötig ist, um deinen Fall zu lösen.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-10-22-version-1-3-4" class="version">
   <div class="version__cabecera">
     <h2>22. Oktober 2026 · Turnera 1.3.4: Die Verwaltung setzt die PIN zum Stempeln zurück, wählt sie aber nicht mehr selbst</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.3.4-ce3f86a</span></p>
 

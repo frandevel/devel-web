@@ -627,6 +627,7 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-10-22-version-1-3-5">22 de octubre de 2026 · Turnera 1.3.5: la cita nueva suma su duración con los servicios y queda anotado quién anula cada cita</a></li>
     <li><a href="#2026-10-22-version-1-3-4">22 de octubre de 2026 · Turnera 1.3.4: administración restablece el PIN de fichar, pero ya no lo elige</a></li>
     <li><a href="#2026-10-22-version-1-3-3">22 de octubre de 2026 · Turnera 1.3.3: el botón de ayuda abre el ticket en Soporte</a></li>
     <li><a href="#2026-10-22-version-1-3-2">22 de octubre de 2026 · Turnera 1.3.2: al buscar un cliente por su número, sale solo ese cliente</a></li>
@@ -682,10 +683,41 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-10-22-version-1-3-5" class="version">
+  <div class="version__cabecera">
+    <h2>22 de octubre de 2026 · Turnera 1.3.5: la cita nueva suma su duración con los servicios y queda anotado quién anula cada cita</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">1.3.5-dac192b</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"/></svg></span>Nuevas características</h3>
+    <h4>Citas anuladas: quién las anuló y con qué rol</h4>
+    <ul>
+      <li>Cada vez que se anula una cita queda anotado <strong>quién la anuló y con qué rol</strong>, también cuando se anula por haberla creado por error. Así, si alguien pregunta qué pasó con una cita, ya no hay que adivinarlo.</li>
+      <li>La ficha de una cita anulada lo dice en una línea, y el informe de anulaciones añade una columna con quién la anuló. Las que anula el cliente desde su portal de reservas constan como <strong>Portal de reservas</strong>.</li>
+      <li>En la agenda hay un botón nuevo, <strong>Anulaciones</strong>, que enseña las citas anuladas de los últimos 30 días, incluidas las creadas por error, que hasta ahora no se veían en ninguna pantalla. Lo ve quien tiene el permiso del informe de citas.</li>
+      <li>Las citas anuladas antes de esta versión se quedan sin ese dato: no se puede saber a posteriori.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>Mejoras</h3>
+    <h4>Cita nueva: la duración la ponen los servicios</h4>
+    <ul>
+      <li>La cita nueva empieza con la duración en <strong>0 minutos</strong> y los servicios que añadas la van sumando, así la cita dura justo lo que tiene que durar y no un tiempo de partida que luego hay que corregir.</li>
+      <li>Si guardas la cita sin servicios y sin haber puesto una duración, se guarda con el paso mínimo de tu centro, para que nunca quede una cita sin tiempo.</li>
+    </ul>
+    <h4>Soporte: adjuntar imágenes en cualquier formato</h4>
+    <ul>
+      <li>Al abrir un ticket o responder en <strong>Soporte</strong> puedes adjuntar imágenes de cualquier formato (las capturas del móvil o del ordenador valen todas).</li>
+      <li>El equipo de Turnera, cuando te contesta, puede devolverte cualquier tipo de fichero: un documento, una hoja de cálculo o lo que haga falta para resolver tu caso.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-10-22-version-1-3-4" class="version">
   <div class="version__cabecera">
     <h2>22 de octubre de 2026 · Turnera 1.3.4: administración restablece el PIN de fichar, pero ya no lo elige</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">1.3.4-ce3f86a</span></p>
 

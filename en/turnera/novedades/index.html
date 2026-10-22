@@ -679,6 +679,7 @@ footer{
   <h2>What's new in Turnera</h2>
   <p>Latest first</p>
   <ol>
+    <li><a href="#2026-10-22-version-1-3-5">22 October 2026 · Turnera 1.3.5: a new appointment adds up its length from its services, and it is recorded who cancels each appointment</a></li>
     <li><a href="#2026-10-22-version-1-3-4">22 October 2026 · Turnera 1.3.4: administration resets the clocking PIN, but no longer chooses it</a></li>
     <li><a href="#2026-10-22-version-1-3-3">22 October 2026 · Turnera 1.3.3: the help button opens the ticket in Support</a></li>
     <li><a href="#2026-10-22-version-1-3-2">22 October 2026 · Turnera 1.3.2: searching for a customer by number shows only that customer</a></li>
@@ -733,10 +734,41 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Bugs fixed</strong>: what failed, and no longer does.</span></li>
 </ul>
 
+<section id="2026-10-22-version-1-3-5" class="version">
+  <div class="version__cabecera">
+    <h2>22 October 2026 · Turnera 1.3.5: a new appointment adds up its length from its services, and it is recorded who cancels each appointment</h2>
+    <span class="version__sello">Latest release</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.3.5-dac192b</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Cancelled appointments: who cancelled them and with what role</h4>
+    <ul>
+      <li>Every time an appointment is cancelled, it is recorded <strong>who cancelled it and with what role</strong>, also when it is cancelled for having been created by mistake. That way, if someone asks what happened to an appointment, there is no need to guess.</li>
+      <li>The record of a cancelled appointment says so in one line, and the cancellations report adds a column showing who cancelled it. Those the customer cancels from their booking portal appear as <strong>Booking portal</strong>.</li>
+      <li>There is a new button in the agenda, <strong>Cancellations</strong>, which shows the appointments cancelled in the last 30 days, including those created by mistake, which until now could not be seen on any screen. Whoever has the appointments report permission can see it.</li>
+      <li>Appointments cancelled before this version are left without that information: it cannot be known after the fact.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Improvements</h3>
+    <h4>New appointment: the services set the length</h4>
+    <ul>
+      <li>A new appointment starts with its length at <strong>0 minutes</strong> and the services you add build it up, so the appointment lasts exactly as long as it needs to, not a starting time that then has to be corrected.</li>
+      <li>If you save the appointment with no services and without having set a length, it is saved with your centre's minimum step, so that an appointment is never left without time.</li>
+    </ul>
+    <h4>Support: attach images in any format</h4>
+    <ul>
+      <li>When opening a ticket or replying in <strong>Support</strong> you can attach images in any format (screenshots from your phone or computer are all fine).</li>
+      <li>When the Turnera team replies, it can send you back any type of file: a document, a spreadsheet or whatever is needed to solve your case.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-10-22-version-1-3-4" class="version">
   <div class="version__cabecera">
     <h2>22 October 2026 · Turnera 1.3.4: administration resets the clocking PIN, but no longer chooses it</h2>
-    <span class="version__sello">Latest release</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.3.4-ce3f86a</span></p>
 
