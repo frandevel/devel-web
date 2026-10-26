@@ -52,5 +52,7 @@
   "t58805743": "DEVEL logo",
   "t68274d17": "TradegunCharts logo",
   "t3d1dadfd": "ES footprint chart with a position open, gamma levels, macro calendar and two side charts.",
-  "tf43cf7c3": "TradegunCharts screen: ES footprint chart with an open position, accounts panel, macro calendar and two side charts."
+  "tf43cf7c3": "TradegunCharts screen: ES footprint chart with an open position, accounts panel, macro calendar and two side charts.",
+  "td5ef3265": "Options chain with a two-leg strategy: maximum profit and loss, breakeven point and the curve at expiry.",
+  "t777c3e76": "TradegunCharts options chain with a two-leg strategy and its profit and loss curve."
 }
