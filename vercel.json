@@ -15,6 +15,12 @@
       "has": [{ "type": "host", "value": "(www\\.)?turnera\\.es" }],
       "destination": "https://devel.es/turnera",
       "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "tradeguncharts\\.devel\\.es" }],
+      "destination": "https://devel.es/tradeguncharts",
+      "permanent": true
     }
   ]
 }

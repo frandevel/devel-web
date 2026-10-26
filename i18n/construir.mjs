@@ -12,6 +12,7 @@ const PAGINAS = [
   { plantilla: 'plantillas/clinicas.html', catalogo: 'clinicas', ruta: 'turnera/clinicas' },
   { plantilla: 'plantillas/centros-deportivos.html', catalogo: 'centros-deportivos', ruta: 'turnera/centros-deportivos' },
   { plantilla: 'plantillas/academias.html', catalogo: 'academias', ruta: 'turnera/academias' },
+  { plantilla: 'plantillas/tradeguncharts.html', catalogo: 'tradeguncharts', ruta: 'tradeguncharts', idiomas: ['es', 'en'], respaldo: 'en' },
   { plantilla: 'plantillas/manual.html',  catalogo: 'manual',  ruta: 'turnera/manual' },
   { plantilla: 'plantillas/novedades.html', catalogo: 'novedades', ruta: 'turnera/novedades' },
   // El aviso legal no esta en portugues: un texto juridico traducido sin revisar es mas riesgo que su falta. Desde
@@ -64,6 +65,10 @@ function selectorDeIdioma(idiomaActual, pagina) {
  */
 function conLosEnlacesInternosEnSuIdioma(html, idioma) {
   if (idioma === PREDETERMINADO) return html;
+  // Una pagina que no existe en este idioma y tiene `respaldo` se enlaza a su version en ese otro idioma.
+  for (const pagina of PAGINAS.filter((p) => p.respaldo && !idiomasDe(p).includes(idioma))) {
+    html = html.split('href="/' + pagina.ruta + '"').join('href="' + direccionDe(pagina.respaldo, pagina.ruta) + '"');
+  }
   const rutasInternas = ['', ...PAGINAS.filter((pagina) => idiomasDe(pagina).includes(idioma)).map((pagina) => pagina.ruta)];
   for (const ruta of rutasInternas) {
     const original = '/' + ruta;
@@ -96,6 +101,7 @@ function conLasCapturasEnSuIdioma(html, idioma) {
 const NOMBRES_DE_PAGINA = {
   '': { es: 'DEVEL' },
   'turnera': { es: 'Turnera' },
+  'tradeguncharts': { es: 'TradegunCharts', en: 'TradegunCharts' },
   'turnera/recursos-humanos': { es: 'Recursos Humanos', en: 'Human Resources', de: 'Personal', pt: 'Recursos Humanos' },
   'turnera/clinicas': { es: 'Clínicas', en: 'Clinics', de: 'Praxen und Kliniken', pt: 'Clínicas' },
   'turnera/centros-deportivos': { es: 'Centros deportivos', en: 'Training centres and clubs', de: 'Trainingszentren und Vereine', pt: 'Centros desportivos' },

@@ -217,6 +217,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/academias"/>
   </url>
   <url>
+    <loc>https://devel.es/tradeguncharts</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/tradeguncharts"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/tradeguncharts"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/tradeguncharts"/>
+  </url>
+  <url>
+    <loc>https://devel.es/en/tradeguncharts</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/tradeguncharts"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/tradeguncharts"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/tradeguncharts"/>
+  </url>
+  <url>
     <loc>https://devel.es/turnera/manual</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/manual"/>
