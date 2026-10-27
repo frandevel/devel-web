@@ -56,8 +56,13 @@ cambios agrupados por lo que gana quien usa Turnera, contados para el mostrador 
    `<p class="version__numero">Versión <span translate="no">1.0.0-7a239ce</span></p>`. Desde el 19/10/2026
    (1.0.0) la numeración es **semver** (`1.0.0`, `1.1.0`, `1.0.1`...) seguida del commit; las fichas anteriores
    llevan la de antes (`2026.10.185-230e64f`) y se dejan así. Ningún script interpreta el número: es un texto más
-   del catálogo, que se copia igual en `en`, `de` y `pt`. El `id` de la ficha sigue siendo la fecha, con un sufijo
-   si ese día hay varias (`2026-10-19-version-1`).
+   del catálogo, que se copia igual en `en`, `de` y `pt`. El `id` de la ficha es su fecha (`2026-10-22`).
+
+   **Una sola ficha por día (regla de Fran, 27/10/2026).** Si ese día ya hay ficha, no se crea otra: se añaden los
+   cambios dentro de sus grupos (y el número de versión pasa a ser el último del día). Si se te han juntado
+   varias, `node unificar-dias.mjs` las fusiona (deja la fecha como título y la versión más reciente), y
+   `node indice-novedades.mjs` rehace el índice de arriba, que tiene una línea por ficha; después extrae, añade
+   la fecha en `en`/`de`/`pt` si es nueva, construye y verifica.
 2. **El sello `Última versión` se mueve** a la nueva: se quita el `<span class="version__sello">` de la
    anterior. El filo de color lo pone el CSS a la primera ficha, solo.
 3. Añade la fecha al índice de la izquierda, también arriba.
