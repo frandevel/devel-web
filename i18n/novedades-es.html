@@ -627,6 +627,8 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-10-27">27 de octubre de 2026</a></li>
+    <li><a href="#2026-10-23">23 de octubre de 2026</a></li>
     <li><a href="#2026-10-22">22 de octubre de 2026</a></li>
     <li><a href="#2026-10-21">21 de octubre de 2026</a></li>
     <li><a href="#2026-10-20">20 de octubre de 2026</a></li>
@@ -659,10 +661,67 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-10-27" class="version">
+  <div class="version__cabecera">
+    <h2>27 de octubre de 2026</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">1.4.0-305fb0b</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"/></svg></span>Nuevas características</h3>
+    <h4>Consentimientos: campos que se rellenan al pedir la firma</h4>
+    <ul>
+      <li>Además de los datos del cliente que se rellenan solos, ahora puedes crear tus propios campos en cada plantilla: texto, fecha, casilla, desplegable o selección múltiple. Se arrastran desde un panel a la derecha del editor hasta el sitio del documento donde deben salir.</li>
+      <li>Al pedir la firma, recepción rellena esos campos, y lo que escribe sale en negrita en el documento que firma el cliente. Los campos obligatorios no dejan pedir la firma hasta que se rellenan.</li>
+    </ul>
+    <h4>Firma en la tablet: una pantalla propia</h4>
+    <ul>
+      <li>La pantalla de firmas se ve sola: solo lleva el logo de Turnera, sin menú, sin cambio de idioma y sin forma de cambiar de usuario ni de cerrar la sesión.</li>
+      <li>Al firmar, el documento desaparece y la tablet da las gracias con un visto verde grande y un botón de cerrar.</li>
+      <li>Al pedir la firma, Turnera enseña la dirección de la tablet para poder copiarla, y el manual explica cómo prepararla.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>Mejoras</h3>
+    <h4>Firma en la tablet: más segura ante cortes</h4>
+    <ul>
+      <li>Si la tablet pierde la conexión, lo dice en lugar de decir que no hay nada que firmar, y se recupera sola cuando vuelve. Si se corta al firmar, avisa a los 20 segundos y se puede volver a firmar.</li>
+      <li>La petición de firma caduca ahora a los cinco minutos, en lugar de a los quince.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span>Errores corregidos</h3>
+    <ul>
+      <li>Al elegir el documento en «Pedir firma», el desplegable ya no se separa del cuadro al hacer scroll.</li>
+    </ul>
+  </div>
+</section>
+<section id="2026-10-23" class="version">
+  <div class="version__cabecera">
+    <h2>23 de octubre de 2026</h2>
+  </div>
+  <p class="version__numero">Versión <span translate="no">1.3.5-f719034</span></p>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>Mejoras</h3>
+    <h4>Soporte: vídeos y avisos más visibles</h4>
+    <ul>
+      <li>En Soporte puedes adjuntar vídeos MP4, MOV y WebM, también cuando abres una incidencia desde el botón de ayuda.</li>
+      <li>Los avisos de Turnera sobre una actualización o un mantenimiento se ven el doble de grandes, para que se vean a la primera.</li>
+    </ul>
+    <h4>Cita y actualizaciones</h4>
+    <ul>
+      <li>En la cita, la hora de fin se alinea con el texto de los campos de al lado.</li>
+      <li>Mientras Turnera se actualiza, sale una página que lo explica en lugar de un error en blanco.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-10-22" class="version">
   <div class="version__cabecera">
     <h2>22 de octubre de 2026</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">1.3.5-f45201a</span></p>
 
