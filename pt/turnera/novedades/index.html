@@ -719,7 +719,7 @@ footer{
     <h2>28 de outubro de 2026</h2>
     <span class="version__sello">Última versão</span>
   </div>
-  <p class="version__numero">Versão <span translate="no">1.5.0-8072af6</span></p>
+  <p class="version__numero">Versão <span translate="no">1.5.0-8dcafc8</span></p>
 
   <div class="grupo grupo--nuevo">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Novas funcionalidades</h3>
@@ -727,7 +727,7 @@ footer{
     <ul>
       <li>Numa marcação com várias vagas, como uma aula de ténis, de pilates ou um grupo, cada pessoa da lista tem o seu botão <strong>Cobrar</strong>, que abre o TPV com ela e com os serviços da aula.</li>
       <li>Quem já pagou fica marcado como <strong>Cobrada</strong>: não se lhe pode cobrar duas vezes nem retirar da lista. A quem não veio ou cancelou a inscrição não se cobra.</li>
-      <li>Nestas marcações o estado é registado pessoa a pessoa, no seu menu, por isso já não aparecem os botões de estado nem o «Cobrar» da marcação inteira.</li>
+      <li>Com mais de uma pessoa inscrita, o estado é registado pessoa a pessoa, no seu menu, por isso não aparecem os botões de estado nem o «Cobrar» da marcação inteira. Se voltar a ficar só uma, voltam a aparecer.</li>
       <li>No TPV, «Por cobrar» mostra um a um os alunos que vieram e ainda não pagaram.</li>
     </ul>
   </div>
@@ -736,6 +736,8 @@ footer{
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Erros corrigidos</h3>
     <ul>
       <li>As marcações dadas a partir da agenda voltam a aparecer em «Por cobrar» no TPV quando estão atendidas ou em curso.</li>
+      <li>Ao dividir um pagamento entre várias formas de pagamento, o troco calcula-se só com a parte paga em dinheiro. Se na divisão não houver dinheiro, não se pede «Paga com».</li>
+      <li>Numa marcação com vários lugares, o cliente da marcação aparece sempre na lista de baixo, com o seu botão de cobrar; nas marcações antigas que não o tinham, é acrescentado ao abri-la, se houver lugar.</li>
     </ul>
   </div>
 </section>

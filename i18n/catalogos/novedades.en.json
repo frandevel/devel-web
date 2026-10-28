@@ -1046,5 +1046,9 @@
   "ta090eb05": "Billed",
   "t7b42bd2f": "In these appointments the status is kept person by person, in their drop-down, so the status buttons and the «Charge» of the whole appointment no longer appear.",
   "t3a781629": "At the till, «To charge» shows one by one the students who came and have not paid yet.",
-  "taf8f1e1c": "Appointments given from the agenda show up again in «To charge» at the till when they are attended or in progress."
+  "taf8f1e1c": "Appointments given from the agenda show up again in «To charge» at the till when they are attended or in progress.",
+  "t19c231cc": "1.5.0-8dcafc8",
+  "tc52c0b28": "With more than one person signed up, the status is kept person by person, in their drop-down, so the status buttons and the “Charge” of the whole appointment are not shown. If only one is left, they come back.",
+  "t05001c00": "When a payment is split between several methods, the change is worked out only from the part paid in cash. If there is no cash in the split, “Paid with” is not asked for.",
+  "tcf2ec6d1": "In an appointment with several places, the customer of the appointment always appears in the list below, with their own charge button; older appointments that did not have them add them when opened, if there is room."
 }

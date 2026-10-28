@@ -1046,5 +1046,9 @@
   "ta090eb05": "Kassiert",
   "t7b42bd2f": "Bei diesen Terminen wird der Status Person für Person in ihrer Auswahlliste geführt, daher erscheinen die Statusschaltflächen und das «Kassieren» des ganzen Termins nicht mehr.",
   "t3a781629": "An der Kasse zeigt «Noch zu kassieren» einzeln die Teilnehmer, die gekommen sind und noch nicht bezahlt haben.",
-  "taf8f1e1c": "Termine, die im Terminkalender vergeben wurden, erscheinen wieder unter «Noch zu kassieren» an der Kasse, wenn sie erledigt oder in Behandlung sind."
+  "taf8f1e1c": "Termine, die im Terminkalender vergeben wurden, erscheinen wieder unter «Noch zu kassieren» an der Kasse, wenn sie erledigt oder in Behandlung sind.",
+  "t19c231cc": "1.5.0-8dcafc8",
+  "tc52c0b28": "Sind mehrere Personen angemeldet, wird der Status Person für Person in ihrem Auswahlfeld geführt; deshalb erscheinen weder die Statusschaltflächen noch „Kassieren“ für den ganzen Termin. Bleibt nur eine Person übrig, sind sie wieder da.",
+  "t05001c00": "Wird eine Zahlung auf mehrere Zahlungsarten aufgeteilt, berechnet sich das Rückgeld nur aus dem bar gezahlten Teil. Ist kein Bargeld dabei, wird „Bezahlt mit“ nicht abgefragt.",
+  "tcf2ec6d1": "Bei einem Termin mit mehreren Plätzen steht der Kunde des Termins immer in der Liste darunter, mit seiner eigenen Kassieren-Schaltfläche; ältere Termine, bei denen er fehlte, nehmen ihn beim Öffnen auf, wenn noch Platz ist."
 }
