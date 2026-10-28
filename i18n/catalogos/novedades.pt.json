@@ -1061,5 +1061,11 @@
   "t23df091c": "Entrar e pedir ajuda",
   "tf13ca90a": "Quem não tem permissão para ver a agenda entra no Início, em vez de num ecrã de «Sem permissões».",
   "t4a61d33b": "O botão de ajuda em baixo à direita tem a sua própria permissão, «Avisar o suporte», que de origem só tem o administrador.",
-  "t9aaf2de8": "Nos cartões de aniversários e de clientes recentes, o nome já não se parte letra a letra quando falta espaço."
+  "t9aaf2de8": "Nos cartões de aniversários e de clientes recentes, o nome já não se parte letra a letra quando falta espaço.",
+  "t2993bf52": "1.9.0-c9a476d",
+  "t68fb8a49": "Cobrar uma parte hoje e deixar o resto em dívida",
+  "t04bc436d": "No TPV, a caixa «Cobrar só uma parte agora» permite cobrar um valor (numa ou em várias formas de pagamento) e deixar o resto como dívida. Serve quando o cliente não leva dinheiro suficiente ou o cartão não lhe permite pagar tudo.",
+  "t30604d64": "Essa dívida salda-se mais tarde num ou em vários pagamentos: ao cobrá-la, o valor vem com o que está pendente e pode escrever-se um menor. Cada cobrança conta na caixa do dia em que se faz.",
+  "tf40e1c11": "O desconto e os vales aplicam-se ao pagar o resto, e a fatura continua a ser uma só, pelo total da venda. Nas dívidas vê-se o que já foi cobrado por conta e cada pagamento parcial.",
+  "t7e6a93b8": "Ao abrir a consulta de preços, com o ícone do euro ou com Alt+P, o cursor fica logo na caixa, pronto para escrever."
 }

@@ -707,6 +707,7 @@ footer{
     <li><a href="#cupones" class="sub">Cupões</a></li>
     <li><a href="#cobrar-bono" class="sub">Cobrar com pacote de sessões</a></li>
     <li><a href="#cobrar-partido" class="sub">Pagar com duas formas de pagamento</a></li>
+    <li><a href="#cobrar-parcial" class="sub">Cobrar só uma parte</a></li>
     <li><a href="#cobrar-deudas" class="sub">Valores em dívida</a></li>
     <li><a href="#devoluciones" class="sub">Reembolsar um talão</a></li>
     <li><a href="#tarjetas-regalo" class="sub">Cartões-oferta</a></li>
@@ -1881,6 +1882,18 @@ footer{
     duas formas, não a mete inteira numa.
   </p>
 
+  <h3 id="cobrar-parcial">Cobrar só uma parte agora</h3>
+
+  <p>
+    O cliente paga algo grande e deixa um serviço pequeno porque não leva dinheiro suficiente ou o limite do cartão não lho permite. Em vez de deixar tudo em dívida, marque
+    <strong>«Cobrar só uma parte agora»</strong>, junto a <em>Cobrar agora</em>, e escreva o valor que se cobra. Por baixo verá o resumo: <em>cobram-se tantos euros agora e ficam tantos em dívida</em>. O valor tem de ser maior que zero e menor que o total; enquanto não for, o botão de cobrar não se acende.
+  </p>
+
+  <p>
+    Essa parte pode repartir-se por várias formas de pagamento, como no ponto anterior, mas <strong>a repartição tem de somar o valor que se cobra agora, não o total</strong>. O dinheiro entregue e o troco calculam-se sobre a parte que vai em dinheiro. Um pagamento parcial só admite formas de pagamento que trazem dinheiro: não se combina com deixar a venda em dívida, com o pagamento por ligação, com o cartão-presente, com o saldo a favor nem com as formas de pagamento que trazem o seu próprio desconto, e também não gasta vales. Essas opções desativam-se sozinhas, com uma nota que explica o motivo. Ao cobrar, a confirmação diz quanto fica em dívida, e a venda passa a ser uma dívida de
+    <em>Valores em dívida</em> por esse valor.
+  </p>
+
   <h3 id="cobrar-deudas">Valores em dívida</h3>
   <figure>
     <img src="/turnera/manual/imagenes/en/09-cobros-pendientes.png" alt="A lista de visitas atendidas que ainda não foram cobradas" loading="lazy">
@@ -1906,6 +1919,16 @@ footer{
     a zero, com a etiqueta <em>Pacote de sessões</em>, e a sessão desconta-se ao saldar. Se ficar mais alguma coisa, escolhe-se com que se
     paga o resto. Se o pacote de sessões paga tudo, não há nada a cobrar nem talão a imprimir: só se gasta a sessão.
     E se o cliente preferir pagar e guardar a sessão, escolhe-se qualquer outra forma de pagamento e o pacote de sessões não é tocado.
+  </p>
+
+  <p>
+    <strong>Uma dívida pode saldar-se num ou em vários pagamentos.</strong> Na caixa de diálogo de cobrança, o campo
+    <em>Valor a cobrar</em> aparece com tudo o que está pendente; se escrever menos, o que se regista é um
+    <strong>pagamento parcial</strong> e o botão passa a dizer <em>Cobrar</em> seguido do valor. A dívida continua na lista com o que falta pagar e, por baixo, o que está <em>cobrado por conta</em>; com o botão <em>Ver pagamentos parciais</em> vê-se a data, a forma de pagamento e o valor de cada um. A ficha do cliente e o painel de início contam sempre o que falta cobrar, já descontados os pagamentos parciais.
+  </p>
+
+  <p>
+    <strong>O desconto e os vales não se aplicam num pagamento parcial: o desconto aplica-se ao pagar o resto</strong>, sobre o que falta cobrar. Uma conta que já tem pagamentos parciais também não admite vale, e o que falta paga-se com dinheiro. A fatura continua a ser uma só, pelo total da venda: os pagamentos parciais não geram faturas novas, e a fatura e os pontos seguem o seu curso habitual quando se salda a conta inteira.
   </p>
 
   <h3 id="devoluciones">Reembolsar um talão</h3>

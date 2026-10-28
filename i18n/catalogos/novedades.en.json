@@ -1065,5 +1065,11 @@
   "t23df091c": "Signing in and asking for help",
   "tf13ca90a": "Anyone without permission to see the agenda lands on Home, instead of a “No permissions” screen.",
   "t4a61d33b": "The help button at the bottom right has its own permission, “Notify support”, which by default only the administrator has.",
-  "t9aaf2de8": "On the birthday and recent customer cards, the name no longer breaks letter by letter when space is tight."
+  "t9aaf2de8": "On the birthday and recent customer cards, the name no longer breaks letter by letter when space is tight.",
+  "t2993bf52": "1.9.0-c9a476d",
+  "t68fb8a49": "Charge part today and leave the rest owing",
+  "t04bc436d": "At the till, the “Charge only part now” box lets you charge an amount (in one or several payment methods) and leave the rest as a debt. It is useful when the customer does not have enough cash or their card does not allow paying everything.",
+  "t30604d64": "That debt is settled later in one or several payments: when collecting it, the amount comes filled in with what is pending and you can type a smaller one. Each payment counts in the cash of the day it is made.",
+  "tf40e1c11": "The discount and vouchers are applied when paying the rest, and the invoice is still a single one, for the sale total. In the debts list you can see what has already been paid on account and each part payment.",
+  "t7e6a93b8": "When the price lookup opens, with the euro icon or Alt+P, the cursor is already in the box, ready to type."
 }

@@ -707,6 +707,7 @@ footer{
     <li><a href="#cupones" class="sub">Gutscheincodes</a></li>
     <li><a href="#cobrar-bono" class="sub">Mit Gutschein bezahlen</a></li>
     <li><a href="#cobrar-partido" class="sub">Mit zwei Zahlungsarten bezahlen</a></li>
+    <li><a href="#cobrar-parcial" class="sub">Nur einen Teil kassieren</a></li>
     <li><a href="#cobrar-deudas" class="sub">Offene Zahlungen</a></li>
     <li><a href="#devoluciones" class="sub">Einen Beleg erstatten</a></li>
     <li><a href="#tarjetas-regalo" class="sub">Geschenkkarten</a></li>
@@ -1673,6 +1674,18 @@ footer{
     beiden Zahlungsarten auf, statt sie ganz einer zuzuschlagen.
   </p>
 
+  <h3 id="cobrar-parcial">Jetzt nur einen Teil kassieren</h3>
+
+  <p>
+    Die Person bezahlt etwas Größeres und lässt eine kleine Leistung offen, weil sie nicht genug Bargeld dabei hat oder ihr Kartenlimit es nicht zulässt. Statt alles offen zu lassen, haken Sie
+    <strong>„Jetzt nur einen Teil kassieren“</strong>an, neben <em>Jetzt kassieren</em>an und geben den Betrag ein, der kassiert wird. Darunter sehen Sie die Zusammenfassung: <em>so viele Euro werden jetzt kassiert und so viele bleiben offen</em>. Der Betrag muss größer als null und kleiner als der Gesamtbetrag sein; solange er es nicht ist, bleibt die Schaltfläche zum Kassieren ausgeschaltet.
+  </p>
+
+  <p>
+    Dieser Teil kann wie im vorigen Abschnitt auf mehrere Zahlungsarten aufgeteilt werden, aber <strong>die Aufteilung muss den jetzt kassierten Betrag ergeben, nicht den Gesamtbetrag</strong>. Das übergebene Bargeld und das Wechselgeld werden auf den bar bezahlten Teil berechnet. Eine Teilzahlung akzeptiert nur Zahlungsarten, die Geld einbringen: Sie lässt sich nicht kombinieren mit dem Offenlassen des Verkaufs, mit der Zahlung per Link, mit der Geschenkkarte, mit Guthaben oder mit Zahlungsarten, die einen eigenen Rabatt mitbringen, und sie verbraucht auch keine Gutscheine. Diese Optionen schalten sich von selbst ab, mit einem Hinweis, der den Grund erklärt. Beim Kassieren sagt die Bestätigung, wie viel offen bleibt, und der Verkauf wird zu einer offenen Forderung über
+    <em>Offene Zahlungen</em> in dieser Höhe.
+  </p>
+
   <h3 id="cobrar-deudas">Offene Zahlungen</h3>
   <figure>
     <img src="/turnera/manual/imagenes/en/09-cobros-pendientes.png" alt="Die Liste der Besuche, die stattgefunden haben und noch nicht kassiert wurden" loading="lazy">
@@ -1692,6 +1705,16 @@ footer{
 
   <p>
     <strong>Beim Begleichen wird erneut geprüft, ob der Kunde eine Mehrfachkarte hat</strong>, denn er kann sie gekauft haben, nachdem der Betrag offen blieb. Deckt eine Mehrfachkarte eine Position, steht als Zahlungsart <em>Gutschein</em>: diese Positionen gehen auf null, mit der Markierung <em>Gutschein</em>, und die Sitzung wird beim Begleichen abgebucht. Bleibt noch etwas offen, wählen Sie, womit der Rest bezahlt wird. Deckt die Mehrfachkarte alles, gibt es nichts zu kassieren und keinen Beleg zu drucken: Es wird nur die Sitzung verbraucht. Und will der Kunde lieber zahlen und die Sitzung behalten, wählen Sie eine andere Zahlungsart, und die Mehrfachkarte bleibt unberührt.
+  </p>
+
+  <p>
+    <strong>Eine offene Forderung kann in einer oder mehreren Zahlungen beglichen werden.</strong> Im Zahlungsdialog erscheint das Feld
+    <em>Zu kassierender Betrag</em> mit dem gesamten offenen Betrag; geben Sie weniger ein, wird eine
+    <strong>Teilzahlung</strong> und die Schaltfläche lautet dann <em>Kassieren</em> gefolgt vom Betrag. Die Forderung bleibt in der Liste mit dem, was noch zu zahlen ist, und darunter dem, was <em>angezahlt</em>; mit der Schaltfläche <em>Teilzahlungen ansehen</em> sehen Sie Datum, Zahlungsart und Betrag jeder einzelnen. Die Kundenakte und das Startfenster zählen immer, was noch zu kassieren ist, abzüglich der Teilzahlungen.
+  </p>
+
+  <p>
+    <strong>Rabatt und Gutscheine gelten nicht für eine Teilzahlung: Der Rabatt wird beim Bezahlen des Restbetrags angewendet</strong>, auf das, was noch zu kassieren ist. Ein Konto, das bereits Teilzahlungen hat, akzeptiert ebenfalls keinen Gutschein, und der Rest wird mit Geld bezahlt. Die Rechnung bleibt eine einzige über den Gesamtbetrag des Verkaufs: Teilzahlungen erzeugen keine neuen Rechnungen, und Rechnung und Punkte nehmen ihren üblichen Lauf, wenn das ganze Konto beglichen ist.
   </p>
 
   <h3 id="devoluciones">Einen Beleg erstatten</h3>

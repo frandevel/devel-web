@@ -707,6 +707,7 @@ footer{
     <li><a href="#cupones" class="sub">Coupons</a></li>
     <li><a href="#cobrar-bono" class="sub">Paying with a voucher</a></li>
     <li><a href="#cobrar-partido" class="sub">Paying by two methods</a></li>
+    <li><a href="#cobrar-parcial" class="sub">Charging only part</a></li>
     <li><a href="#cobrar-deudas" class="sub">Unpaid visits</a></li>
     <li><a href="#devoluciones" class="sub">Refunding a ticket</a></li>
     <li><a href="#tarjetas-regalo" class="sub">Gift cards</a></li>
@@ -1672,6 +1673,18 @@ footer{
     between the two methods, it does not put it all into one.
   </p>
 
+  <h3 id="cobrar-parcial">Charge only part now</h3>
+
+  <p>
+    The customer pays for something big and leaves a small service because they do not have enough cash or their card limit does not allow it. Instead of leaving everything owing, tick
+    <strong>“Charge only part now”</strong>, next to <em>Take payment now</em>, and type the amount to be charged. Below you will see the summary: <em>so many euros are charged now and so many are left owing</em>. The amount has to be greater than zero and less than the total; until it is, the charge button stays off.
+  </p>
+
+  <p>
+    That part can be split between several payment methods, as in the previous section, but <strong>the split has to add up to the amount charged now, not the total</strong>. The cash handed over and the change are calculated on the part paid in cash. A part payment only accepts payment methods that bring in money: it cannot be combined with leaving the sale owing, with payment by link, with the gift card, with credit balance or with payment methods that carry their own discount, and it does not spend vouchers either. Those options switch themselves off, with a note explaining why. When charging, the confirmation says how much is left owing, and the sale becomes a debt of
+    <em>Unpaid visits</em> for that amount.
+  </p>
+
   <h3 id="cobrar-deudas">Unpaid visits</h3>
   <figure>
     <img src="/turnera/manual/imagenes/en/09-cobros-pendientes.png" alt="The list of visits that were seen and have not been charged yet" loading="lazy">
@@ -1691,6 +1704,16 @@ footer{
 
   <p>
     <strong>When it is settled, Turnera checks again whether the customer has a voucher</strong>, because they may have bought one after leaving it owed. If a voucher covers any line, the payment method shows <em>Voucher</em>: those lines go to zero, labelled <em>Voucher</em>, and the session is deducted on settling. If anything else is left, you choose how the rest is paid. If the voucher pays for everything, there is nothing to charge and no ticket to print: only the session is used up. And if the customer prefers to pay and keep the session, choose any other payment method and the voucher is left untouched.
+  </p>
+
+  <p>
+    <strong>A debt can be settled in one or several payments.</strong> In the payment dialog, the field
+    <em>Amount to charge</em> appears with everything that is pending; if you type less, what is recorded is a
+    <strong>part payment</strong> and the button now says <em>Charge</em> followed by the amount. The debt stays in the list with what is left to pay and, below, what is <em>paid on account</em>; with the button <em>View part payments</em> you can see the date, payment method and amount of each one. The customer record and the home panel always count what is left to collect, with part payments already deducted.
+  </p>
+
+  <p>
+    <strong>The discount and vouchers do not apply to a part payment: the discount is applied when paying the rest</strong>, on what is left to collect. An account that already has part payments does not accept a voucher either, and what is left is paid in money. The invoice is still a single one, for the sale total: part payments do not generate new invoices, and the invoice and points follow their usual course when the whole account is settled.
   </p>
 
   <h3 id="devoluciones">Refunding a ticket</h3>

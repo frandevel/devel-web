@@ -1065,5 +1065,11 @@
   "t23df091c": "Anmelden und Hilfe holen",
   "tf13ca90a": "Wer keine Berechtigung für die Agenda hat, landet auf der Startseite statt auf einer Seite „Keine Berechtigungen“.",
   "t4a61d33b": "Die Hilfe-Schaltfläche unten rechts hat ihre eigene Berechtigung, „Support benachrichtigen“, die standardmäßig nur der Administrator hat.",
-  "t9aaf2de8": "Auf den Karten für Geburtstage und neue Kunden wird der Name bei Platzmangel nicht mehr Buchstabe für Buchstabe umgebrochen."
+  "t9aaf2de8": "Auf den Karten für Geburtstage und neue Kunden wird der Name bei Platzmangel nicht mehr Buchstabe für Buchstabe umgebrochen.",
+  "t2993bf52": "1.9.0-c9a476d",
+  "t68fb8a49": "Heute einen Teil kassieren und den Rest offen lassen",
+  "t04bc436d": "In der Kasse können Sie mit dem Kästchen „Jetzt nur einen Teil kassieren“ einen Betrag (mit einer oder mehreren Zahlungsarten) kassieren und den Rest als offene Forderung lassen. Das hilft, wenn die Person nicht genug Bargeld dabei hat oder ihre Karte nicht für alles reicht.",
+  "t30604d64": "Diese Forderung wird später in einer oder mehreren Zahlungen beglichen: Beim Kassieren erscheint der offene Betrag vorausgefüllt, und Sie können einen kleineren eingeben. Jede Zahlung zählt in der Kasse des Tages, an dem sie erfolgt.",
+  "tf40e1c11": "Rabatt und Gutscheine werden beim Bezahlen des Restbetrags angewendet, und die Rechnung bleibt eine einzige über den Gesamtbetrag des Verkaufs. In den offenen Forderungen sehen Sie, was bereits angezahlt wurde, und jede einzelne Teilzahlung.",
+  "t7e6a93b8": "Beim Öffnen der Preisabfrage, mit dem Euro-Symbol oder mit Alt+P, steht der Cursor bereits im Feld und Sie können sofort tippen."
 }

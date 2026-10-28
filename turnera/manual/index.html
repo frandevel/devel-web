@@ -707,6 +707,7 @@ footer{
     <li><a href="#cupones" class="sub">Cupones</a></li>
     <li><a href="#cobrar-bono" class="sub">Cobrar con bono</a></li>
     <li><a href="#cobrar-partido" class="sub">Pagar con dos formas</a></li>
+    <li><a href="#cobrar-parcial" class="sub">Cobrar solo una parte</a></li>
     <li><a href="#cobrar-deudas" class="sub">Cobros pendientes</a></li>
     <li><a href="#devoluciones" class="sub">Devolver un ticket</a></li>
     <li><a href="#tarjetas-regalo" class="sub">Tarjetas regalo</a></li>
@@ -1969,6 +1970,26 @@ footer{
     dos formas, no lo mete entero en una.
   </p>
 
+  <h3 id="cobrar-parcial">Cobrar solo una parte ahora</h3>
+
+  <p>
+    El cliente paga algo grande y deja un servicio pequeño porque no lleva suficiente efectivo o el límite de su
+    tarjeta no se lo permite. En lugar de dejarlo todo a deber, marque
+    <strong>«Cobrar solo una parte ahora»</strong>, junto a <em>Cobrar ahora</em>, y escriba el importe que se
+    cobra. Debajo verá el resumen: <em>se cobran tantos euros ahora y quedan tantos a deber</em>. El importe tiene
+    que ser mayor que cero y menor que el total; mientras no lo sea, el botón de cobrar no se enciende.
+  </p>
+
+  <p>
+    Esa parte se puede repartir entre varias formas de pago, como en el apartado anterior, pero <strong>el reparto
+    tiene que sumar el importe que se cobra ahora, no el total</strong>. El efectivo entregado y el cambio se
+    calculan sobre la parte que va en efectivo. Un cobro parcial solo admite formas de pago con dinero: no se
+    combina con dejar la venta a deber, con el pago por enlace, con la tarjeta regalo, con el saldo a favor ni con
+    las formas de pago que llevan su propio descuento, y tampoco gasta bonos. Esas opciones se desactivan solas, con
+    una nota que explica el motivo. Al cobrar, la confirmación dice cuánto queda a deber, y la venta pasa a
+    <em>Cobros pendientes</em> por esa cantidad.
+  </p>
+
   <h3 id="cobrar-deudas">Cobros pendientes</h3>
   <figure>
     <img src="/turnera/manual/imagenes/09-cobros-pendientes.png" alt="La lista de visitas atendidas que todavia no se han cobrado" loading="lazy">
@@ -1994,6 +2015,22 @@ footer{
     cero, con la etiqueta <em>Bono</em>, y la sesión se descuenta al saldar. Si queda algo más, se elige con qué se
     paga el resto. Si el bono lo paga todo, no hay nada que cobrar ni ticket que imprimir: solo se gasta la sesión.
     Y si el cliente prefiere pagar y guardarse la sesión, se elige cualquier otra forma de pago y el bono no se toca.
+  </p>
+
+  <p>
+    <strong>Una deuda se puede saldar en uno o varios pagos.</strong> En el diálogo de cobro, el campo
+    <em>Importe a cobrar</em> aparece con todo lo pendiente; si escribe menos, lo que se registra es un
+    <strong>abono</strong> y el botón pasa a decir <em>Cobrar</em> seguido del importe. La deuda sigue en la lista
+    con lo que queda por pagar y, debajo, lo <em>cobrado a cuenta</em>; con el botón <em>Ver abonos</em> se ven la
+    fecha, la forma de pago y el importe de cada uno. La ficha del cliente y el panel de inicio cuentan siempre lo
+    que queda por cobrar, ya descontados los abonos.
+  </p>
+
+  <p>
+    <strong>El descuento y los bonos no se aplican en un abono: el descuento se aplica al pagar el resto</strong>,
+    sobre lo que quede por cobrar. Una cuenta que ya tiene abonos tampoco admite bono, y lo que queda se paga con
+    dinero. La factura sigue siendo una sola, por el total de la venta: los abonos no generan facturas nuevas, y la
+    factura y los puntos siguen su curso de siempre cuando se salda la cuenta entera.
   </p>
 
   <h3 id="devoluciones">Devolver un ticket</h3>
