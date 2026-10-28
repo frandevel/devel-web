@@ -681,7 +681,8 @@ footer{
     <li><a href="#ayuda">Pedir ajuda</a></li>
     <li><a href="#empezar">1. Entrar e orientar-se</a></li>
     <li><a href="#contrasena" class="sub">Alterar a palavra-passe</a></li>
-    <li><a href="#aviso-general" class="sub">Avisos do Turnera</a></li>
+    <li><a href="#puestos-compartidos" class="sub">Postos partilhados: entrar com a ficha e o PIN</a></li>
+        <li><a href="#aviso-general" class="sub">Avisos do Turnera</a></li>
     <li><a href="#ordenar" class="sub">Ordenar qualquer lista</a></li>
     <li><a href="#idiomas" class="sub">Idiomas</a></li>
     <li><a href="#recomienda" class="sub">Recomendar o Turnera</a></li>
@@ -799,8 +800,9 @@ footer{
 
   <p>
     Se algo não funcionar como deveria, <strong>comunique-o a partir da própria aplicação</strong>: em baixo, à direita, em
-    todos os ecrãs, está o botão redondo do <strong>salva-vidas</strong>. Qualquer utilizador o tem, sem
-    nenhuma permissão especial, porque quem se depara com a falha costuma ser quem está ao balcão.
+    todos os ecrãs, está o botão redondo do <strong>salva-vidas</strong>. Vê-o quem tem a permissão
+    <strong>Avisar o suporte</strong>. De origem só a tem o administrador, e dá-se a quem se quiser em
+    <span class="ruta">Administração → Funções</span>: quem se depara com a falha costuma ser quem está ao balcão.
   </p>
   <ol>
     <li>Prima o salva-vidas. Abre-se <em>Comunicar uma ocorrência</em>.</li>
@@ -899,6 +901,37 @@ footer{
   </p>
   <p>
     Em <span class="ruta">Administração → Utilizadores → (um utilizador)</span> vê-se, no fim da ficha, com que equipamentos essa pessoa entra com a impressão digital, e pode <strong>remover-se</strong> o que não se reconheça ou o de um equipamento perdido. Registar um novo só o pode fazer a própria pessoa, a partir do seu equipamento.
+  </p>
+
+  <h3 id="puestos-compartidos">Postos partilhados: entrar com a ficha e o PIN</h3>
+  <p>
+    Para os equipamentos que várias pessoas usam ao longo do dia —o tablet de uma cabina, o computador de uma sala— a Turnera pode mostrar no ecrã de entrada <strong>uma ficha por profissional</strong>: toca-se na própria, escreve-se o PIN e entra-se. Para sair basta o botão <strong>Sair</strong> de cima, e se o equipamento ficar
+    <strong>três minutos sem uso</strong> a sessão fecha-se sozinha e voltam as fichas. É o mesmo PIN do relógio de ponto, com as mesmas tentativas: cinco falhas seguidas bloqueiam-no para as duas coisas, e os RH recebem o aviso de que equipamento foi.
+  </p>
+  <p>
+    Vem desligado de origem. Liga-se em <span class="ruta">Administração → Preferências</span>, grupo
+    <em>Acesso</em>, com <strong>Postos partilhados</strong>. Enquanto estiver desligado a Turnera funciona como sempre; ao ligá-lo aparece <span class="ruta">Administração → Equipamentos</span>. Os equipamentos que não sejam registados continuam a entrar com utilizador e palavra-passe.
+  </p>
+  <h4>Registar um equipamento</h4>
+  <ol>
+    <li>Em <span class="ruta">Administração → Equipamentos</span>, <strong>Adicionar equipamento</strong>: dá-se-lhe um nome («Cabina 1») e o modo <em>Posto partilhado</em>. Sai um <strong>código</strong> de oito letras e algarismos, por exemplo <code>K7M4-9QXD</code>.</li>
+    <li>No próprio equipamento, no ecrã de entrada, prime-se <strong>Registar este equipamento</strong> e escreve-se o código. Não é preciso entrar antes: o código já leva a permissão.</li>
+  </ol>
+  <p>
+    Também o pode fazer quem administra <strong>mesmo que não esteja no centro</strong>: tira o código de casa e dita-o por telefone a quem estiver à frente do equipamento. O código vale <strong>uma só vez</strong> e caduca aos <strong>15 minutos</strong>; se não se usar a tempo, <strong>Novo código</strong> dá outro. O equipamento fica na delegação com que se entrou ao registá-lo e mostra as fichas dessa delegação.
+  </p>
+  <h4>Quem aparece nas fichas</h4>
+  <p>
+    Os profissionais ativos dessa delegação que têm um <strong>PIN</strong> e um <strong>utilizador da Turnera</strong> associado. O utilizador associa-se em <span class="ruta">Administração → Utilizadores → (um
+    utilizador)</span>, campo <strong>Profissional</strong>; um profissional só pode estar associado a um utilizador. Ao entrar com o seu PIN, cada um trabalha com as permissões desse utilizador.
+  </p>
+  <h4>Alterar ou retirar um equipamento</h4>
+  <p>
+    Na lista vê-se o estado de cada equipamento, quando foi usado pela última vez e quem entrou. A partir daí pode-se
+    <strong>mudar-lhe o nome</strong>, passar para o modo <em>Normal</em> (continua na lista, mas entra-se com utilizador e palavra-passe) ou <strong>revogá-lo</strong>: deixa de ser reconhecido e quem estivesse dentro sai na ação seguinte. É o que se deve fazer com um tablet perdido. Um equipamento revogado volta com um código novo, e o mesmo acontece com um a que se tenham apagado os dados do navegador.
+  </p>
+  <p>
+    Num posto partilhado não se oferece registar a impressão digital: esse equipamento é de todos. A impressão digital é para o telemóvel ou o portátil de cada um (ver <a href="#huella">Entrar com a impressão digital</a>).
   </p>
 
   <h3 id="aviso-general">Avisos do Turnera</h3>
@@ -1447,6 +1480,10 @@ footer{
     Quem pode editar fichas mas não tem a permissão «Ver telefones e e-mails» não vê o contacto do cliente
     ao editá-lo —telefone, telemóvel, e-mail e morada— nem o pode alterar: em seu lugar aparece um aviso, e ao guardar
     o contacto fica como estava.
+  </p>
+
+  <p>
+    O que foi cobrado em cada visita —o valor e o botão <em>Talão</em> do histórico— vê-o quem tem a permissão «Ver os valores e os talões do histórico». Se a retirar a um perfil ou a uma pessoa, o histórico continua a mostrar o que foi feito e quando, mas sem valores nem talão. Dá-se de origem a quem já pode ver as fichas.
   </p>
 
   <h3 id="clientes-foto">A foto do cliente</h3>
@@ -2875,6 +2912,7 @@ footer{
     <tr id="perm-customers-merge"><td><strong>Fundir fichas repetidas</strong></td><td>Funde duas fichas repetidas numa só. Tudo o que a ficha descartada tinha passa para a que se mantém, e a descartada é apagada.</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-clientes">Clientes</a></td></tr>
     <tr id="perm-customers-erase"><td><strong>Apagar os dados de clientes que o peçam</strong></td><td>Direito ao apagamento: apaga os dados pessoais da pessoa e anonimiza a sua ficha. As faturas e o processo clínico mantêm-se durante o prazo que a lei obriga.</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-clientes">Clientes</a></td></tr>
     <tr id="perm-customers-history-download"><td><strong>Descarregar o historial de uma pessoa</strong></td><td>Permite descarregar em PDF o historial da pessoa para lho entregar.</td><td><a href="#rol-clientes">Clientes</a></td></tr>
+<tr id="perm-customers-history-amounts"><td><strong>Ver os valores e os talões do histórico</strong></td><td>No histórico de uma pessoa mostra o que foi cobrado em cada visita e o botão para obter o talão. Sem ela, o histórico mostra o que foi feito e quando, mas não quanto custou.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-profesional">Profissional</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-clientes">Clientes</a></td></tr>
     <tr id="perm-customers-export"><td><strong>Exportar a lista de clientes</strong></td><td>Exporta a lista completa de clientes para um ficheiro: equivale a levar a base de dados do centro.</td><td><strong><a href="#roles-sensibles">Sensível</a>:</strong> apenas o Administrador do sistema</td></tr>
     <tr id="perm-club-credits-view"><td><strong>Ver os pontos dos clientes</strong></td><td>Mostra o saldo de pontos de cada ficha e o seu historial. Não permite alterá-los.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-profesional">Profissional</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-clientes">Clientes</a></td></tr>
     <tr id="perm-club-credits-adjust"><td><strong>Ajustar pontos manualmente</strong></td><td>Soma ou subtrai pontos à mão, sem que venham de uma compra.</td><td><strong><a href="#roles-sensibles">Sensível</a>:</strong> apenas o Administrador do sistema</td></tr>
@@ -3922,24 +3960,26 @@ footer{
     está. Sem prefixo o botão não pode abrir a conversa.
   </p>
 
-  <h4>O texto do aviso</h4>
+  <h4>A mensagem da marcação</h4>
 
   <p>
-    É o utilizador que o escreve, com campos entre chavetas que se preenchem sozinhos com os dados da marcação:
-    <code>{nombre}</code>, <code>{apellidos}</code>, <code>{servicio}</code>, <code>{profesional}</code>,
-    <code>{fecha}</code>, <code>{hora}</code>, <code>{centro}</code>, <code>{telefono}</code> e
-    <code>{enlace}</code>. Por baixo verá como o cliente o lerá. Um campo que não exista fica escrito tal
-    qual para que o veja ao rever, em vez de desaparecer e deixar uma mensagem estranha.
+    É o texto que aparece já escrito ao premir o botão de WhatsApp de uma marcação: serve para a confirmar ou para a lembrar, conforme o redija. Por cima do texto estão os campos da marcação; arraste um para o ponto do texto onde o quer, ou clique nele para o pôr onde está o cursor.
+  </p>
+
+  <p>
+    Escreve-o você, e os dados da marcação (nome, apelidos, serviço, profissional, data, hora, centro, telefone do centro e ligação) aparecem dentro do texto como <strong>etiquetas coloridas</strong> que se preenchem sozinhas ao abrir a conversa. Para tirar uma, apaga-se como se fosse uma letra. Por baixo verá como o cliente o vai ler.
+  </p>
+
+  <h4 id="whatsapp-cumpleanos">Os parabéns de aniversário</h4>
+
+  <p>
+    Por baixo da mensagem da marcação há outra igual para dar os parabéns no aniversário, com as suas próprias etiquetas (nome, apelidos, centro, telefone do centro e ligação). Não se envia sozinha: no <strong>Início</strong>, cada cliente do cartão de aniversários tem um botão de WhatsApp que abre a conversa com os parabéns já escritos, e é você quem os envia, à mão. O botão só aparece a quem pode ver os dados de contacto do cliente; se o cliente não tiver telefone, avisa em vez de abrir fosse o que fosse.
   </p>
 
   <h4 id="whatsapp-idiomas">O aviso noutros idiomas</h4>
 
   <p>
-    Por baixo do texto principal há uma secção por idioma, opcional. Ao cliente que tenha um desses idiomas na
-    ficha abre-se-lhe a conversa com esse texto; aos restantes, com o principal. Os campos podem escrever-se
-    com o nome que têm nesse idioma -- <code>{Vorname}</code> e <code>{Datum}</code> em alemão,
-    <code>{nome}</code> e <code>{data}</code> em português -- e a data escreve-se como se lê lá: em alemão, com
-    pontos (22.09.2026). A pré-visualização de cada idioma aparece ao guardar.
+    Por baixo do texto principal há uma secção por idioma, opcional. Ao cliente que tenha um desses idiomas na ficha abre-se-lhe a conversa com esse texto; aos outros, com o principal. As etiquetas funcionam igual em cada idioma, e a data escreve-se como se lê aí: em alemão, com pontos (22.09.2026). A pré-visualização de cada idioma aparece ao guardar.
   </p>
 
   <h3 id="stripe">Cobrança por ligação com Stripe</h3>
@@ -5479,7 +5519,8 @@ footer{
 
   <h3>Comunicar uma ocorrência com o salva-vidas</h3>
   <p>
-    O botão do <strong>salva-vidas</strong>, em baixo à direita em todos os ecrãs, abre um ticket sem sair de onde está: conte o que aconteceu, escolha a urgência e, se ajudar, anexe uma captura de ecrã (só imagens). Com permissão para abrir e ver tickets, o resultado é mais um ticket de Suporte, com o seu número <em>T-n</em>, o seu estado e as respostas da equipa; o aviso da janela tem um botão <em>Ver em Suporte</em>. O ecrã em que estava, a sua unidade, o último erro e o seu telefone (se o indicou) ficam escritos no fim da primeira mensagem. Quem não tem essas permissões continua a comunicar a ocorrência por e-mail e, se o serviço de tickets não estiver disponível nesse momento, a aplicação avisa-o de que foi por e-mail e de que não a verá no Suporte.
+    O botão do <strong>salva-vidas</strong>, em baixo à direita em todos os ecrãs para quem tem a permissão
+    <em>Avisar o suporte</em>, abre um ticket sem sair de onde está: conta o que aconteceu, escolhe a urgência e, se ajudar, anexa uma captura de ecrã (só imagens). Com permissão para abrir e ver tickets, o resultado é mais um ticket de Suporte, com o seu número <em>T-n</em>, o seu estado e as respostas da equipa; o aviso da janela tem um botão <em>Ver em Suporte</em>. O ecrã em que estava, a sua unidade, o último erro e o seu telefone (se o indicou) ficam escritos no fim da primeira mensagem. Quem não tem essas permissões continua a comunicar a ocorrência por e-mail e, se o serviço de tickets não estiver disponível nesse momento, a aplicação avisa-o de que foi por e-mail e de que não a verá no Suporte.
   </p>
 
   <h3>Acompanhar um ticket</h3>

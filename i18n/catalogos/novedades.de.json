@@ -1050,5 +1050,20 @@
   "t19c231cc": "1.5.0-8dcafc8",
   "tc52c0b28": "Sind mehrere Personen angemeldet, wird der Status Person für Person in ihrem Auswahlfeld geführt; deshalb erscheinen weder die Statusschaltflächen noch „Kassieren“ für den ganzen Termin. Bleibt nur eine Person übrig, sind sie wieder da.",
   "t05001c00": "Wird eine Zahlung auf mehrere Zahlungsarten aufgeteilt, berechnet sich das Rückgeld nur aus dem bar gezahlten Teil. Ist kein Bargeld dabei, wird „Bezahlt mit“ nicht abgefragt.",
-  "tcf2ec6d1": "Bei einem Termin mit mehreren Plätzen steht der Kunde des Termins immer in der Liste darunter, mit seiner eigenen Kassieren-Schaltfläche; ältere Termine, bei denen er fehlte, nehmen ihn beim Öffnen auf, wenn noch Platz ist."
+  "tcf2ec6d1": "Bei einem Termin mit mehreren Plätzen steht der Kunde des Termins immer in der Liste darunter, mit seiner eigenen Kassieren-Schaltfläche; ältere Termine, bei denen er fehlte, nehmen ihn beim Öffnen auf, wenn noch Platz ist.",
+  "t5ba6b07e": "1.8.0-e7421c5",
+  "tdbab3a1b": "Gemeinsame Geräte: jede Fachkraft meldet sich mit ihrer Karte und ihrer PIN an",
+  "t655e0b55": "Auf dem Tablet einer Kabine oder dem Computer eines Raums tippt jede Fachkraft auf ihre Karte, gibt ihre PIN ein und ist drin; danach meldet sie sich im Handumdrehen ab und das Gerät ist für die nächste Person bereit.",
+  "t136fea40": "Es wird in den Einstellungen aktiviert, und jedes Gerät wird mit einem Einmalcode registriert. Ein nicht registriertes Gerät meldet sich weiterhin mit Benutzername und Passwort an.",
+  "t1b41f920": "Geburtstagsglückwünsche per WhatsApp senden",
+  "td5f23d77": "Auf der Startseite hat jede Person auf der Geburtstagskarte eine WhatsApp-Schaltfläche, die das Gespräch mit bereits geschriebenem Glückwunsch öffnet; Sie senden ihn von Hand.",
+  "te82cec2a": "Der Text wird in den Einstellungen unter der Terminnachricht festgelegt. Die Schaltfläche erscheint nur für Personen, die die Kontaktdaten der Kunden sehen dürfen.",
+  "ta4c4a057": "Die WhatsApp-Nachricht zum Termin nach Ihrem Geschmack",
+  "t495ea746": "Die Nachricht entsteht, indem Sie die Termindaten —Name, Leistung, Datum, Uhrzeit...— an die gewünschte Stelle im Text ziehen. Sie erscheinen als farbige Marken statt als Wörter in geschweiften Klammern.",
+  "tf3373690": "Beträge und Belege im Verlauf, mit eigener Berechtigung",
+  "t9915788e": "Zu sehen, was bei jedem Besuch abgerechnet wurde, und den Beleg aus dem Verlauf der Person zu holen, ist jetzt die Berechtigung „Beträge und Belege im Verlauf sehen“. Beim Update haben sie alle, die bereits die Kundenakten sehen konnten; entziehen Sie sie jemandem, der keine Beträge sehen soll, und sein Verlauf zeigt weiter, was getan wurde und wann.",
+  "t23df091c": "Anmelden und Hilfe holen",
+  "tf13ca90a": "Wer keine Berechtigung für die Agenda hat, landet auf der Startseite statt auf einer Seite „Keine Berechtigungen“.",
+  "t4a61d33b": "Die Hilfe-Schaltfläche unten rechts hat ihre eigene Berechtigung, „Support benachrichtigen“, die standardmäßig nur der Administrator hat.",
+  "t9aaf2de8": "Auf den Karten für Geburtstage und neue Kunden wird der Name bei Platzmangel nicht mehr Buchstabe für Buchstabe umgebrochen."
 }

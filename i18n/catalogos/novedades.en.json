@@ -1050,5 +1050,20 @@
   "t19c231cc": "1.5.0-8dcafc8",
   "tc52c0b28": "With more than one person signed up, the status is kept person by person, in their drop-down, so the status buttons and the “Charge” of the whole appointment are not shown. If only one is left, they come back.",
   "t05001c00": "When a payment is split between several methods, the change is worked out only from the part paid in cash. If there is no cash in the split, “Paid with” is not asked for.",
-  "tcf2ec6d1": "In an appointment with several places, the customer of the appointment always appears in the list below, with their own charge button; older appointments that did not have them add them when opened, if there is room."
+  "tcf2ec6d1": "In an appointment with several places, the customer of the appointment always appears in the list below, with their own charge button; older appointments that did not have them add them when opened, if there is room.",
+  "t5ba6b07e": "1.8.0-e7421c5",
+  "tdbab3a1b": "Shared devices: each professional signs in with their card and PIN",
+  "t655e0b55": "On a booth tablet or a room computer, each professional taps their card, types their PIN and gets in; when done they sign out in a moment and the device is ready for the next person.",
+  "t136fea40": "It is switched on in Preferences, and each device is registered with a one-time code. A device that is not registered keeps signing in with username and password.",
+  "t1b41f920": "Send birthday greetings by WhatsApp",
+  "td5f23d77": "On Home, each customer on the birthday card has a WhatsApp button that opens the conversation with the greeting already written; you send it by hand.",
+  "te82cec2a": "The text is set up in Preferences, below the appointment message. The button only appears for people who can see customers’ contact details.",
+  "ta4c4a057": "The appointment WhatsApp message, your way",
+  "t495ea746": "The message is put together by dragging the appointment details —name, service, date, time...— to the spot in the text where you want them. They show as coloured tags, instead of words between braces.",
+  "tf3373690": "Amounts and tickets in the history, with their own permission",
+  "t9915788e": "Seeing what was charged on each visit and getting its ticket from the customer’s history is now the permission “View amounts and tickets in the history”. On update, everyone who could already see customer records has it; remove it from anyone who should not see amounts and their history will keep showing what was done and when.",
+  "t23df091c": "Signing in and asking for help",
+  "tf13ca90a": "Anyone without permission to see the agenda lands on Home, instead of a “No permissions” screen.",
+  "t4a61d33b": "The help button at the bottom right has its own permission, “Notify support”, which by default only the administrator has.",
+  "t9aaf2de8": "On the birthday and recent customer cards, the name no longer breaks letter by letter when space is tight."
 }

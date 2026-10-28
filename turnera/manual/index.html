@@ -681,7 +681,8 @@ footer{
     <li><a href="#ayuda">Pedir ayuda</a></li>
     <li><a href="#empezar">1. Entrar y orientarse</a></li>
     <li><a href="#contrasena" class="sub">Cambiar la contraseña</a></li>
-    <li><a href="#aviso-general" class="sub">Avisos de Turnera</a></li>
+    <li><a href="#puestos-compartidos" class="sub">Puestos compartidos: entrar con la ficha y el PIN</a></li>
+        <li><a href="#aviso-general" class="sub">Avisos de Turnera</a></li>
     <li><a href="#ordenar" class="sub">Ordenar cualquier lista</a></li>
     <li><a href="#idiomas" class="sub">Idiomas</a></li>
     <li><a href="#recomienda" class="sub">Recomienda Turnera</a></li>
@@ -799,8 +800,9 @@ footer{
 
   <p>
     Si algo no funciona como debería, <strong>cuéntelo desde la propia aplicación</strong>: abajo a la derecha, en
-    todas las pantallas, está el botón redondo del <strong>salvavidas</strong>. Lo tiene cualquier usuario, sin
-    ningún permiso especial, porque quien se encuentra el fallo suele ser quien está en el mostrador.
+    todas las pantallas, está el botón redondo del <strong>salvavidas</strong>. Lo ve quien tiene el permiso
+    <strong>Avisar a soporte</strong>. De fábrica solo lo tiene el administrador, y se le da a quien se quiera en
+    <span class="ruta">Administración → Roles</span>: quien se encuentra el fallo suele ser quien está en el mostrador.
   </p>
   <ol>
     <li>Pulse el salvavidas. Se abre <em>Contar una incidencia</em>.</li>
@@ -918,6 +920,55 @@ footer{
     En <span class="ruta">Administración → Usuarios → (un usuario)</span> se ve, al final de la ficha, con qué
     equipos entra esa persona con la huella, y se puede <strong>quitar</strong> el que no se reconozca o el de un
     equipo perdido. Registrar uno nuevo sólo lo puede hacer la propia persona, desde su equipo.
+  </p>
+
+  <h3 id="puestos-compartidos">Puestos compartidos: entrar con la ficha y el PIN</h3>
+  <p>
+    Para los equipos que usan varias personas a lo largo del día —la tablet de una cabina, el ordenador de una sala—
+    Turnera puede enseñar en la pantalla de entrada <strong>una ficha por profesional</strong>: se toca la propia, se
+    teclea el PIN y se entra. Para salir basta el botón <strong>Salir</strong> de arriba, y si el equipo se queda
+    <strong>tres minutos sin usar</strong> la sesión se cierra sola y vuelven las fichas. Es el mismo PIN que el del
+    reloj de fichar, con los mismos intentos: cinco fallos seguidos lo bloquean para las dos cosas, y RRHH recibe el
+    aviso de desde qué equipo fue.
+  </p>
+  <p>
+    Va apagado de fábrica. Se enciende en <span class="ruta">Administración → Preferencias</span>, grupo
+    <em>Acceso</em>, con <strong>Puestos compartidos</strong>. Mientras está apagado Turnera funciona como siempre;
+    al encenderlo aparece <span class="ruta">Administración → Equipos</span>. Los equipos que no se den de alta
+    siguen entrando con usuario y contraseña.
+  </p>
+  <h4>Dar de alta un equipo</h4>
+  <ol>
+    <li>En <span class="ruta">Administración → Equipos</span>, <strong>Añadir equipo</strong>: se le pone un nombre
+      («Cabina 1») y el modo <em>Puesto compartido</em>. Sale un <strong>código</strong> de ocho letras y
+      cifras, por ejemplo <code>K7M4-9QXD</code>.</li>
+    <li>En el propio equipo, en la pantalla de entrada, se pulsa <strong>Dar de alta este equipo</strong> y se
+      escribe el código. No hace falta entrar antes: el código ya lleva el permiso.</li>
+  </ol>
+  <p>
+    Así lo puede hacer quien administra <strong>aunque no esté en el centro</strong>: saca el código desde casa y se
+    lo dicta por teléfono a quien esté delante del equipo. El código vale <strong>una sola vez</strong> y caduca a
+    los <strong>15 minutos</strong>; si no se usa a tiempo, <strong>Nuevo código</strong> da otro. El equipo queda en
+    la delegación con la que se entró al darlo de alta, y enseña las fichas de esa delegación.
+  </p>
+  <h4>Quién sale en las fichas</h4>
+  <p>
+    Los profesionales activos de esa delegación que tienen <strong>PIN</strong> y un <strong>usuario de
+    Turnera</strong> asociado. El usuario se asocia en <span class="ruta">Administración → Usuarios → (un
+    usuario)</span>, campo <strong>Profesional</strong>; un profesional solo puede estar asociado a un usuario. Al
+    entrar con su PIN, cada uno trabaja con los permisos de ese usuario.
+  </p>
+  <h4>Cambiar o quitar un equipo</h4>
+  <p>
+    En la lista se ve el estado de cada equipo, cuándo se usó por última vez y quién entró. Desde ahí se
+    <strong>renombra</strong>, se pasa a modo <em>Normal</em> (sigue en la lista, pero se entra con usuario y
+    contraseña) o se <strong>revoca</strong>: deja de reconocerse y quien estuviera dentro sale en su siguiente
+    acción. Es lo que hay que hacer con una tablet perdida. Un equipo revocado vuelve con un código nuevo, y lo
+    mismo uno al que se le han borrado los datos del navegador.
+  </p>
+  <p>
+    En un puesto compartido no se ofrece registrar la huella: ese equipo es de todos. La huella es para el móvil o
+    el portátil de cada uno (ver <a href="#huella">Entrar con la huella</a>).
   </p>
 
   <h3 id="aviso-general">Avisos de Turnera</h3>
@@ -1503,6 +1554,12 @@ footer{
     Quien puede editar fichas pero no tiene el permiso «Ver teléfonos y correos» no ve el contacto del cliente al
     editarlo —teléfono, móvil, correo y dirección— ni lo puede cambiar: en su lugar sale un aviso, y al guardar el
     contacto se queda como estaba.
+  </p>
+
+  <p>
+    Lo cobrado en cada visita —el importe y el botón <em>Ticket</em> del historial— lo ve quien tiene el permiso
+    «Ver los importes y los tickets del historial». Si se lo quita a un rol o a una persona, su historial sigue
+    enseñando qué se hizo y cuándo, pero sin cantidades ni ticket. Se da de fábrica a quien ya puede ver las fichas.
   </p>
 
   <h3 id="clientes-foto">La foto del cliente</h3>
@@ -3007,6 +3064,7 @@ footer{
     <tr id="perm-customers-merge"><td><strong>Fusionar fichas repetidas</strong></td><td>Fusiona dos fichas repetidas en una sola. Todo lo de la ficha descartada pasa a la que se conserva, y la descartada se elimina.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-clientes">Clientes</a></td></tr>
     <tr id="perm-customers-erase"><td><strong>Borrar los datos de clientes que lo piden</strong></td><td>Derecho de supresión: borra los datos personales de la persona y anonimiza su ficha. Las facturas y la historia clínica se conservan durante el plazo que obliga la ley.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-clientes">Clientes</a></td></tr>
     <tr id="perm-customers-history-download"><td><strong>Descargar el historial de una persona</strong></td><td>Permite descargar en PDF el historial de la persona para entregárselo.</td><td><a href="#rol-clientes">Clientes</a></td></tr>
+<tr id="perm-customers-history-amounts"><td><strong>Ver los importes y los tickets del historial</strong></td><td>En el historial de una persona muestra lo cobrado en cada visita y el botón para sacar su ticket. Sin él, el historial enseña qué se hizo y cuándo, pero no cuánto costó.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-clientes">Clientes</a></td></tr>
     <tr id="perm-customers-export"><td><strong>Exportar la lista de clientes</strong></td><td>Saca la lista completa de clientes a un fichero: equivale a llevarse la base de datos del centro.</td><td><strong><a href="#roles-sensibles">Delicado</a>:</strong> solo el Administrador del sistema</td></tr>
     <tr id="perm-club-credits-view"><td><strong>Ver los puntos de clientes</strong></td><td>Muestra el saldo de puntos de cada ficha y su historial. No permite modificarlos.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-clientes">Clientes</a></td></tr>
     <tr id="perm-club-credits-adjust"><td><strong>Ajustar puntos a mano</strong></td><td>Suma o resta puntos a mano, sin que provengan de una compra.</td><td><strong><a href="#roles-sensibles">Delicado</a>:</strong> solo el Administrador del sistema</td></tr>
@@ -4062,23 +4120,36 @@ footer{
     está. Sin prefijo el botón no puede abrir la conversación.
   </p>
 
-  <h4>El texto del aviso</h4>
+  <h4>El mensaje de la cita</h4>
 
   <p>
-    Lo escribe usted, con huecos entre llaves que se rellenan solos con los datos de la cita:
-    <code>{nombre}</code>, <code>{apellidos}</code>, <code>{servicio}</code>, <code>{profesional}</code>,
-    <code>{fecha}</code>, <code>{hora}</code>, <code>{centro}</code>, <code>{telefono}</code> y
-    <code>{enlace}</code>. Debajo verá cómo lo leerá el cliente. Un hueco que no exista se queda escrito tal
-    cual para que lo vea al revisar, en vez de desaparecer y dejar un mensaje raro.
+    Es el texto que sale ya escrito al pulsar el botón de WhatsApp de una cita: sirve para confirmarla o para
+    recordarla, según lo redacte. Encima del texto están los campos de la cita; arrastre uno al punto del texto
+    donde lo quiera, o púlselo para ponerlo donde está el cursor.
+  </p>
+
+  <p>
+    Lo escribe usted, y los datos de la cita (nombre, apellidos, servicio, profesional, fecha, hora, centro,
+    teléfono del centro y enlace) aparecen dentro del texto como <strong>etiquetas de color</strong> que se
+    rellenan solas al abrir la conversación. Para quitar una, se borra como si fuera una letra. Debajo verá
+    cómo lo leerá el cliente.
+  </p>
+
+  <h4 id="whatsapp-cumpleanos">La felicitación de cumpleaños</h4>
+
+  <p>
+    Debajo del mensaje de la cita hay otro igual para felicitar el cumpleaños, con sus propias etiquetas (nombre,
+    apellidos, centro, teléfono del centro y enlace). No se envía solo: en <strong>Inicio</strong>, cada cliente de
+    la tarjeta de cumpleaños tiene un botón de WhatsApp que abre la conversación con la felicitación ya escrita,
+    y usted la envía a mano. El botón sale solo a quien puede ver los datos de contacto del cliente; si el
+    cliente no tiene teléfono, avisa en lugar de abrir nada.
   </p>
 
   <h4 id="whatsapp-idiomas">El aviso en otros idiomas</h4>
 
   <p>
     Debajo del texto principal hay un apartado por idioma, opcional. Al cliente que tenga uno de esos idiomas en
-    su ficha se le abre la conversación con ese texto; a los demás, con el principal. Los huecos se pueden escribir
-    con el nombre que tienen en ese idioma -- <code>{Vorname}</code> y <code>{Datum}</code> en alemán,
-    <code>{nome}</code> y <code>{data}</code> en portugués -- y la fecha se escribe como se lee allí: en alemán, con
+    su ficha se le abre la conversación con ese texto; a los demás, con el principal. Las etiquetas funcionan igual en cada idioma, y la fecha se escribe como se lee allí: en alemán, con
     puntos (22.09.2026). La vista previa de cada idioma aparece al guardar.
   </p>
 
@@ -5790,7 +5861,8 @@ footer{
 
   <h3>Contar una incidencia con el salvavidas</h3>
   <p>
-    El botón del <strong>salvavidas</strong>, abajo a la derecha en todas las pantallas, abre un ticket sin salir de donde
+    El botón del <strong>salvavidas</strong>, abajo a la derecha en todas las pantallas para quien tiene el permiso
+    <em>Avisar a soporte</em>, abre un ticket sin salir de donde
     estás: cuentas qué ha pasado, eliges la urgencia y, si ayuda, adjuntas un pantallazo (solo imágenes). Con permiso para abrir y ver
     tickets, el resultado es un ticket más de Soporte, con su número <em>T-n</em>, su estado y las respuestas del
     equipo; el aviso de la ventana tiene un botón <em>Ver en Soporte</em>. La pantalla en la que estabas, tu delegación,

@@ -1046,5 +1046,20 @@
   "t19c231cc": "1.5.0-8dcafc8",
   "tc52c0b28": "Com mais de uma pessoa inscrita, o estado é registado pessoa a pessoa, no seu menu, por isso não aparecem os botões de estado nem o «Cobrar» da marcação inteira. Se voltar a ficar só uma, voltam a aparecer.",
   "t05001c00": "Ao dividir um pagamento entre várias formas de pagamento, o troco calcula-se só com a parte paga em dinheiro. Se na divisão não houver dinheiro, não se pede «Paga com».",
-  "tcf2ec6d1": "Numa marcação com vários lugares, o cliente da marcação aparece sempre na lista de baixo, com o seu botão de cobrar; nas marcações antigas que não o tinham, é acrescentado ao abri-la, se houver lugar."
+  "tcf2ec6d1": "Numa marcação com vários lugares, o cliente da marcação aparece sempre na lista de baixo, com o seu botão de cobrar; nas marcações antigas que não o tinham, é acrescentado ao abri-la, se houver lugar.",
+  "t5ba6b07e": "1.8.0-e7421c5",
+  "tdbab3a1b": "Postos partilhados: cada profissional entra com a sua ficha e o seu PIN",
+  "t655e0b55": "No tablet de uma cabina ou no computador de uma sala, cada profissional toca na sua ficha, escreve o seu PIN e entra; ao terminar, sai num instante e o equipamento fica pronto para o seguinte.",
+  "t136fea40": "Ativa-se em Preferências e cada equipamento é registado com um código de utilização única. Um equipamento que não esteja registado continua a entrar com utilizador e palavra-passe.",
+  "t1b41f920": "Dar os parabéns por WhatsApp",
+  "td5f23d77": "No Início, cada cliente do cartão de aniversários tem um botão de WhatsApp que abre a conversa com os parabéns já escritos; é você quem os envia, à mão.",
+  "te82cec2a": "O texto configura-se em Preferências, por baixo da mensagem da marcação. O botão só aparece a quem pode ver os dados de contacto dos clientes.",
+  "ta4c4a057": "A mensagem de WhatsApp da marcação, à sua maneira",
+  "t495ea746": "A mensagem compõe-se arrastando os dados da marcação —nome, serviço, data, hora...— para o ponto do texto onde os quer. Aparecem como etiquetas coloridas, em vez de palavras entre chavetas.",
+  "tf3373690": "Valores e talões do histórico, com permissão própria",
+  "t9915788e": "Ver o que foi cobrado em cada visita e obter o talão a partir do histórico do cliente passa a ser a permissão «Ver os valores e os talões do histórico». Ao atualizar, tem-na quem já podia ver as fichas; retire-a a quem não deva ver valores e o histórico continuará a mostrar o que foi feito e quando.",
+  "t23df091c": "Entrar e pedir ajuda",
+  "tf13ca90a": "Quem não tem permissão para ver a agenda entra no Início, em vez de num ecrã de «Sem permissões».",
+  "t4a61d33b": "O botão de ajuda em baixo à direita tem a sua própria permissão, «Avisar o suporte», que de origem só tem o administrador.",
+  "t9aaf2de8": "Nos cartões de aniversários e de clientes recentes, o nome já não se parte letra a letra quando falta espaço."
 }

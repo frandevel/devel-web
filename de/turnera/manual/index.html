@@ -681,7 +681,8 @@ footer{
     <li><a href="#ayuda">Hilfe bekommen</a></li>
     <li><a href="#empezar">1. Anmelden und zurechtfinden</a></li>
     <li><a href="#contrasena" class="sub">Das Passwort ändern</a></li>
-    <li><a href="#aviso-general" class="sub">Hinweise von Turnera</a></li>
+    <li><a href="#puestos-compartidos" class="sub">Gemeinsame Geräte: Anmelden mit Karte und PIN</a></li>
+        <li><a href="#aviso-general" class="sub">Hinweise von Turnera</a></li>
     <li><a href="#ordenar" class="sub">Jede Liste sortieren</a></li>
     <li><a href="#idiomas" class="sub">Sprachen</a></li>
     <li><a href="#recomienda" class="sub">Turnera empfehlen</a></li>
@@ -799,8 +800,9 @@ footer{
 
   <p>
     Wenn etwas nicht so funktioniert, wie es sollte, <strong>melden Sie es direkt aus der Anwendung</strong>: unten rechts auf
-    jedem Bildschirm finden Sie den runden <strong>Rettungsring</strong>-Knopf. Jeder Benutzer hat ihn, ohne
-    besondere Berechtigung, denn wer auf den Fehler stößt, ist meist die Person am Empfang.
+    jedem Bildschirm finden Sie den runden <strong>Rettungsring</strong>. Sie sieht, wer die Berechtigung
+    <strong>Support benachrichtigen</strong>. Standardmäßig hat nur der Administrator sie, und sie wird vergeben, an wen Sie möchten, unter
+    <span class="ruta">Verwaltung → Rollen</span>: Wer auf das Problem stößt, ist meist die Person am Empfang.
   </p>
   <ol>
     <li>Klicken Sie auf den Rettungsring. <em>Problem melden</em>.</li>
@@ -897,6 +899,36 @@ footer{
   </p>
   <p>
     Unter <span class="ruta">Verwaltung → Benutzer → (ein Benutzer)</span> sieht man am Ende der Akte, mit welchen Geräten sich diese Person per Fingerabdruck anmeldet; mit <strong>Entfernen</strong> lässt sich ein unbekanntes oder verlorenes Gerät austragen. Ein neues kann nur die Person selbst registrieren, von ihrem eigenen Gerät aus.
+  </p>
+
+  <h3 id="puestos-compartidos">Gemeinsame Geräte: Anmelden mit Karte und PIN</h3>
+  <p>
+    Für Geräte, die tagsüber mehrere Personen nutzen —das Tablet einer Kabine, der Computer eines Raums— kann Turnera auf dem Anmeldebildschirm Folgendes zeigen: <strong>eine Karte pro Fachkraft</strong>: Man tippt auf die eigene, gibt die PIN ein und ist drin. Zum Abmelden genügt die Schaltfläche <strong>Abmelden</strong> oben, und wenn das Gerät
+    <strong>drei Minuten unbenutzt bleibt</strong> wird die Sitzung von selbst beendet und die Karten erscheinen wieder. Es ist dieselbe PIN wie bei der Zeiterfassung, mit denselben Versuchen: fünf Fehlversuche in Folge sperren sie für beides, und die Personalabteilung erfährt, von welchem Gerät aus.
+  </p>
+  <p>
+    Es ist standardmäßig ausgeschaltet. Sie schalten es ein unter <span class="ruta">Verwaltung → Einstellungen</span>, Gruppe
+    <em>Zugang</em>, mit <strong>Gemeinsame Geräte</strong>. Solange es aus ist, arbeitet Turnera wie gewohnt; wenn Sie es einschalten, erscheint <span class="ruta">Verwaltung → Geräte</span>. Nicht registrierte Geräte melden sich weiterhin mit Benutzername und Passwort an.
+  </p>
+  <h4>Ein Gerät registrieren</h4>
+  <ol>
+    <li>Unter <span class="ruta">Verwaltung → Geräte</span>, <strong>Gerät hinzufügen</strong>: Sie geben ihm einen Namen („Kabine 1“) und den Modus <em>Gemeinsames Gerät</em>. Es erscheint ein <strong>Code</strong> aus acht Buchstaben und Ziffern, zum Beispiel <code>K7M4-9QXD</code>.</li>
+    <li>Auf dem Gerät selbst drücken Sie auf dem Anmeldebildschirm <strong>Dieses Gerät registrieren</strong> und geben den Code ein. Sie müssen sich vorher nicht anmelden: Der Code bringt die Berechtigung schon mit.</li>
+  </ol>
+  <p>
+    Auch wer verwaltet, kann das tun <strong>auch wenn Sie nicht im Zentrum sind</strong>: den Code von zu Hause holen und ihn der Person vor dem Gerät telefonisch diktieren. Der Code gilt <strong>nur einmal</strong> und läuft nach <strong>15 Minuten</strong>; wird er nicht rechtzeitig verwendet, <strong>Neuer Code</strong> gibt es einen neuen. Das Gerät bleibt in der Filiale, mit der Sie sich bei der Registrierung angemeldet haben, und zeigt die Karten dieser Filiale.
+  </p>
+  <h4>Wer auf den Karten erscheint</h4>
+  <p>
+    Die aktiven Fachkräfte dieser Filiale, denen ein <strong>PIN</strong> und ein <strong>Turnera-Benutzer</strong> zugeordnet ist. Der Benutzer wird zugeordnet unter <span class="ruta">Verwaltung → Benutzer → (ein Benutzer)</span>, Feld <strong>Fachkraft</strong>; eine Fachkraft kann nur einem Benutzer zugeordnet sein. Beim Anmelden mit der PIN arbeitet jede Person mit den Berechtigungen dieses Benutzers.
+  </p>
+  <h4>Ein Gerät ändern oder entfernen</h4>
+  <p>
+    In der Liste sehen Sie den Status jedes Geräts, wann es zuletzt benutzt wurde und wer sich angemeldet hat. Von dort aus können Sie es
+    <strong>umbenennen</strong>, in den Modus <em>Normal</em> umstellen (es bleibt in der Liste, meldet sich aber mit Benutzername und Passwort an) oder <strong>widerrufen</strong>: Es wird nicht mehr erkannt, und wer angemeldet war, wird bei der nächsten Aktion abgemeldet. Das ist bei einem verlorenen Tablet zu tun. Ein widerrufenes Gerät kommt mit einem neuen Code zurück, ebenso eines, dessen Browserdaten gelöscht wurden.
+  </p>
+  <p>
+    Auf einem gemeinsamen Gerät wird das Registrieren eines Fingerabdrucks nicht angeboten: Dieses Gerät gehört allen. Der Fingerabdruck ist für das Handy oder den Laptop jeder einzelnen Person (siehe <a href="#huella">Anmeldung per Fingerabdruck</a>).
   </p>
 
   <h3 id="aviso-general">Hinweise von Turnera</h3>
@@ -1334,6 +1366,10 @@ footer{
     Wer Karteikarten bearbeiten darf, aber nicht die Berechtigung «Telefonnummern und E-Mails sehen» hat, sieht beim
     Bearbeiten die Kontaktdaten des Kunden —Telefon, Handy, E-Mail und Adresse— nicht und kann sie nicht ändern: Stattdessen
     erscheint ein Hinweis, und beim Speichern bleiben die Kontaktdaten unverändert.
+  </p>
+
+  <p>
+    Was bei jedem Besuch abgerechnet wurde —der Betrag und die Schaltfläche <em>Beleg</em> des Verlaufs— sieht, wer die Berechtigung „Beträge und Belege im Verlauf sehen“ hat. Entziehen Sie sie einer Rolle oder einer Person, zeigt deren Verlauf weiterhin, was getan wurde und wann, aber ohne Beträge und Beleg. Standardmäßig erhält sie, wer bereits die Kundenakten sehen kann.
   </p>
 
   <h3 id="clientes-foto">Das Foto des Kunden</h3>
@@ -2520,6 +2556,7 @@ footer{
     <tr id="perm-customers-merge"><td><strong>Doppelte Akten zusammenführen</strong></td><td>Führt zwei doppelte Karteikarten zu einer zusammen. Alles aus der verworfenen Karteikarte geht auf die behaltene über, und die verworfene wird gelöscht.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
     <tr id="perm-customers-erase"><td><strong>Daten der Kunden auf Verlangen löschen</strong></td><td>Recht auf Löschung: löscht die personenbezogenen Daten und anonymisiert die Karteikarte. Rechnungen und Patientenakte bleiben so lange erhalten, wie das Gesetz es vorschreibt.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
     <tr id="perm-customers-history-download"><td><strong>Verlauf einer Person herunterladen</strong></td><td>Erlaubt, den Verlauf als PDF herunterzuladen, um ihn auszuhändigen.</td><td><a href="#rol-clientes">Kunden</a></td></tr>
+<tr id="perm-customers-history-amounts"><td><strong>Beträge und Belege im Verlauf sehen</strong></td><td>Zeigt im Verlauf einer Person, was bei jedem Besuch abgerechnet wurde, und die Schaltfläche für den Beleg. Ohne diese Berechtigung zeigt der Verlauf, was getan wurde und wann, aber nicht, was es gekostet hat.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
     <tr id="perm-customers-export"><td><strong>Kundenliste exportieren</strong></td><td>Exportiert die vollständige Liste der Kunden in eine Datei – das kommt dem Mitnehmen der Datenbank des Zentrums gleich.</td><td><strong><a href="#roles-sensibles">Sensibel</a>:</strong> nur der Systemadministrator</td></tr>
     <tr id="perm-club-credits-view"><td><strong>Punkte der Kunden ansehen</strong></td><td>Zeigt den Punktestand jeder Karteikarte und seinen Verlauf. Ändern lässt sich damit nichts.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
     <tr id="perm-club-credits-adjust"><td><strong>Punkte von Hand anpassen</strong></td><td>Addiert oder subtrahiert Punkte von Hand, ohne dass sie aus einem Kauf stammen.</td><td><strong><a href="#roles-sensibles">Sensibel</a>:</strong> nur der Systemadministrator</td></tr>
@@ -3560,24 +3597,26 @@ footer{
     er ist. Ohne Vorwahl kann die Schaltfläche das Gespräch nicht öffnen.
   </p>
 
-  <h4>Der Text der Erinnerung</h4>
+  <h4>Die Terminnachricht</h4>
 
   <p>
-    Sie schreiben ihn selbst, mit Platzhaltern in geschweiften Klammern, die von selbst mit den Termindaten gefüllt werden:
-    <code>{nombre}</code>, <code>{apellidos}</code>, <code>{servicio}</code>, <code>{profesional}</code>,
-    <code>{fecha}</code>, <code>{hora}</code>, <code>{centro}</code>, <code>{telefono}</code> und
-    <code>{enlace}</code>. Darunter sehen Sie, wie der Kunde ihn lesen wird. Ein Platzhalter, den es nicht gibt, bleibt so
-    stehen, damit Sie ihn beim Durchsehen bemerken, statt zu verschwinden und eine seltsame Nachricht zu hinterlassen.
+    Das ist der Text, der beim Drücken der WhatsApp-Schaltfläche eines Termins schon geschrieben erscheint: Er dient zur Bestätigung oder zur Erinnerung, je nachdem, wie Sie ihn formulieren. Über dem Text stehen die Terminfelder; ziehen Sie eines an die gewünschte Stelle im Text oder klicken Sie darauf, um es an der Cursorposition einzufügen.
+  </p>
+
+  <p>
+    Sie schreiben ihn, und die Termindaten (Vorname, Nachname, Leistung, Fachkraft, Datum, Uhrzeit, Zentrum, Telefon des Zentrums und Link) erscheinen im Text als <strong>farbige Marken</strong> die sich beim Öffnen des Gesprächs von selbst füllen. Zum Entfernen löschen Sie sie wie einen Buchstaben. Darunter sehen Sie, wie die Person es lesen wird.
+  </p>
+
+  <h4 id="whatsapp-cumpleanos">Der Geburtstagsglückwunsch</h4>
+
+  <p>
+    Unter der Terminnachricht gibt es eine gleichartige, um zum Geburtstag zu gratulieren, mit eigenen Marken (Vorname, Nachname, Zentrum, Telefon des Zentrums und Link). Sie wird nicht von selbst gesendet: auf der Seite <strong>Start</strong> hat jede Person auf der Geburtstagskarte eine WhatsApp-Schaltfläche, die das Gespräch mit bereits geschriebenem Glückwunsch öffnet, und Sie senden ihn von Hand. Die Schaltfläche erscheint nur für Personen, die die Kontaktdaten der Kunden sehen dürfen; hat die Person kein Telefon, erscheint ein Hinweis, statt etwas zu öffnen.
   </p>
 
   <h4 id="whatsapp-idiomas">Die Erinnerung in anderen Sprachen</h4>
 
   <p>
-    Unter dem Haupttext gibt es einen optionalen Abschnitt pro Sprache. Wer eine dieser Sprachen in der
-    Karteikarte hat, bekommt das Gespräch mit diesem Text geöffnet; alle anderen mit dem Haupttext. Die Platzhalter
-    lassen sich mit ihrem Namen in dieser Sprache schreiben -- <code>{Vorname}</code> und <code>{Datum}</code> auf Deutsch,
-    <code>{nome}</code> und <code>{data}</code> auf Portugiesisch -- und das Datum wird so geschrieben, wie man es dort liest: auf Deutsch
-    mit Punkten (22.09.2026). Die Vorschau jeder Sprache erscheint nach dem Speichern.
+    Unter dem Haupttext gibt es einen optionalen Abschnitt pro Sprache. Bei einem Kunden, der eine dieser Sprachen in seiner Akte hat, öffnet sich das Gespräch mit diesem Text; bei allen anderen mit dem Haupttext. Die Marken funktionieren in jeder Sprache gleich, und das Datum wird so geschrieben, wie es dort gelesen wird: auf Deutsch mit Punkten (22.09.2026). Die Vorschau jeder Sprache erscheint beim Speichern.
   </p>
 
   <h3 id="stripe">Zahlung per Link mit Stripe</h3>
@@ -4839,7 +4878,8 @@ footer{
 
   <h3>Ein Problem mit dem Rettungsring melden</h3>
   <p>
-    Die Schaltfläche mit dem <strong>Rettungsring</strong>(unten rechts auf jedem Bildschirm) eröffnet ein Ticket, ohne dass Sie den aktuellen Bildschirm verlassen: Sie schildern, was passiert ist, wählen die Dringlichkeit und hängen bei Bedarf einen Screenshot an (nur Bilder). Mit der Berechtigung, Tickets zu eröffnen und anzusehen, ist das Ergebnis ein weiteres Support-Ticket mit seiner Nummer <em>T-n</em>, Status und den Antworten des Teams; die Meldung im Fenster enthält die Schaltfläche <em>Im Support öffnen</em>. Der Bildschirm, auf dem Sie waren, Ihr Standort, der letzte Fehler und Ihre Telefonnummer (falls angegeben) stehen am Ende der ersten Nachricht. Wer diese Berechtigungen nicht hat, meldet Probleme weiterhin per E-Mail; und wenn der Ticketdienst in diesem Moment nicht verfügbar ist, weist Sie die Anwendung darauf hin, dass die Meldung per E-Mail gegangen ist und Sie sie nicht im Support sehen werden.
+    Die Schaltfläche mit dem <strong>Rettungsring</strong>, unten rechts auf jedem Bildschirm für alle mit der Berechtigung
+    <em>Support benachrichtigen</em>, öffnet ein Ticket, ohne dass Sie die aktuelle Stelle verlassen: Sie schildern, was passiert ist, wählen die Dringlichkeit und hängen, wenn es hilft, einen Screenshot an (nur Bilder). Mit der Berechtigung, Tickets zu öffnen und einzusehen, ist das Ergebnis ein weiteres Support-Ticket mit seiner Nummer <em>T-n</em>, Status und den Antworten des Teams; die Meldung im Fenster enthält die Schaltfläche <em>Im Support öffnen</em>. Der Bildschirm, auf dem Sie waren, Ihr Standort, der letzte Fehler und Ihre Telefonnummer (falls angegeben) stehen am Ende der ersten Nachricht. Wer diese Berechtigungen nicht hat, meldet Probleme weiterhin per E-Mail; und wenn der Ticketdienst in diesem Moment nicht verfügbar ist, weist Sie die Anwendung darauf hin, dass die Meldung per E-Mail gegangen ist und Sie sie nicht im Support sehen werden.
   </p>
 
   <h3>Ein Ticket verfolgen</h3>

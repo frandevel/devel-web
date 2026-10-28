@@ -681,7 +681,8 @@ footer{
     <li><a href="#ayuda">Getting help</a></li>
     <li><a href="#empezar">1. Logging in and finding your way around</a></li>
     <li><a href="#contrasena" class="sub">Changing the password</a></li>
-    <li><a href="#aviso-general" class="sub">Notices from Turnera</a></li>
+    <li><a href="#puestos-compartidos" class="sub">Shared devices: signing in with the card and PIN</a></li>
+        <li><a href="#aviso-general" class="sub">Notices from Turnera</a></li>
     <li><a href="#ordenar" class="sub">Sorting any list</a></li>
     <li><a href="#idiomas" class="sub">Languages</a></li>
     <li><a href="#recomienda" class="sub">Recommend Turnera</a></li>
@@ -799,8 +800,9 @@ footer{
 
   <p>
     If something does not work as it should, <strong>report it from the application itself</strong>: at the bottom right of
-    every screen there is the round <strong>lifebuoy</strong> button. Every user has it, with no
-    special permission, because whoever runs into the problem is usually the person at the front desk.
+    every screen there is the round <strong>lifebuoy</strong>. It is seen by whoever has the permission
+    <strong>Notify support</strong>. By default only the administrator has it, and it is given to whoever you want in
+    <span class="ruta">Administration → Roles</span>: whoever runs into the problem is usually the person at the front desk.
   </p>
   <ol>
     <li>Click the lifebuoy. <em>Report an incident</em>.</li>
@@ -896,6 +898,36 @@ footer{
   </p>
   <p>
     In <span class="ruta">Administration → Users → (a user)</span> you can see, at the end of the record, which devices that person signs in with by fingerprint, and you can <strong>remove</strong> any you do not recognise or one from a lost device. Only the person themselves can register a new one, from their own device.
+  </p>
+
+  <h3 id="puestos-compartidos">Shared devices: signing in with the card and PIN</h3>
+  <p>
+    For devices that several people use during the day —a booth tablet, a room computer— Turnera can show on the sign-in screen <strong>one card per professional</strong>: you tap your own, type the PIN and you are in. To sign out, just press the button <strong>Sign out</strong> at the top, and if the device sits
+    <strong>three minutes unused</strong> the session closes by itself and the cards come back. It is the same PIN as the time clock, with the same attempts: five failures in a row lock it for both, and HR is told which device it came from.
+  </p>
+  <p>
+    It is off by default. You switch it on in <span class="ruta">Administration → Preferences</span>, group
+    <em>Access</em>, with <strong>Shared devices</strong>. While it is off Turnera works as usual; when you switch it on <span class="ruta">Administration → Devices</span>. Devices that are not registered keep signing in with username and password.
+  </p>
+  <h4>Registering a device</h4>
+  <ol>
+    <li>In <span class="ruta">Administration → Devices</span>, <strong>Add device</strong>: you give it a name (“Booth 1”) and the mode <em>Shared device</em>. A <strong>code</strong> of eight letters and digits comes out, for example <code>K7M4-9QXD</code>.</li>
+    <li>On the device itself, on the sign-in screen, press <strong>Register this device</strong> and type the code. You do not need to sign in first: the code already carries the permission.</li>
+  </ol>
+  <p>
+    The person who administers can also do it <strong>even if you are not at the centre</strong>: get the code from home and dictate it by phone to whoever is in front of the device. The code is valid for <strong>only once</strong> and expires after <strong>15 minutes</strong>; if it is not used in time, <strong>New code</strong> gives another. The device stays in the branch you were signed in with when registering it, and shows that branch’s cards.
+  </p>
+  <h4>Who appears on the cards</h4>
+  <p>
+    The active professionals of that branch who have an <strong>PIN</strong> and a <strong>Turnera user</strong> associated. The user is associated in <span class="ruta">Administration → Users → (a user)</span>, field <strong>Professional</strong>; a professional can only be associated with one user. On signing in with their PIN, each person works with that user’s permissions.
+  </p>
+  <h4>Changing or removing a device</h4>
+  <p>
+    The list shows the status of each device, when it was last used and who signed in. From there you can
+    <strong>rename it</strong>, switch it to mode <em>Normal</em> (it stays in the list, but signs in with username and password) or <strong>revoke it</strong>: it is no longer recognised and whoever was signed in is signed out on their next action. This is what to do with a lost tablet. A revoked device comes back with a new code, and so does one whose browser data has been deleted.
+  </p>
+  <p>
+    On a shared device, registering a fingerprint is not offered: that device belongs to everyone. The fingerprint is for each person’s phone or laptop (see <a href="#huella">Signing in with your fingerprint</a>).
   </p>
 
   <h3 id="aviso-general">Notices from Turnera</h3>
@@ -1333,6 +1365,10 @@ footer{
     Whoever can edit records but does not have the «See phones and emails» permission does not see the customer's contact
     details when editing them —phone, mobile, email and address— nor can change them: a notice appears instead, and
     saving leaves the contact details as they were.
+  </p>
+
+  <p>
+    What was charged on each visit —the amount and the <em>Ticket</em> of the history— is seen by whoever has the permission “View amounts and tickets in the history”. If you remove it from a role or a person, their history still shows what was done and when, but without amounts or ticket. It is given by default to anyone who can already see customer records.
   </p>
 
   <h3 id="clientes-foto">The customer's photo</h3>
@@ -2517,6 +2553,7 @@ footer{
     <tr id="perm-customers-merge"><td><strong>Merge duplicate records</strong></td><td>Merges two duplicate records into one. Everything on the discarded record moves to the one that is kept, and the discarded one is deleted.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-clientes">Customers</a></td></tr>
     <tr id="perm-customers-erase"><td><strong>Erase the data of clients who request it</strong></td><td>Right to erasure: deletes the person’s personal data and anonymises the record. Invoices and the clinical record are kept for as long as the law requires.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-clientes">Customers</a></td></tr>
     <tr id="perm-customers-history-download"><td><strong>Download a person’s history</strong></td><td>Allows downloading the person’s history as a PDF to hand over.</td><td><a href="#rol-clientes">Customers</a></td></tr>
+<tr id="perm-customers-history-amounts"><td><strong>View amounts and tickets in the history</strong></td><td>In a person’s history it shows what was charged on each visit and the button to get its ticket. Without it, the history shows what was done and when, but not what it cost.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-profesional">Professional</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-clientes">Customers</a></td></tr>
     <tr id="perm-customers-export"><td><strong>Export the customer list</strong></td><td>Exports the complete list of clients to a file: it amounts to taking the centre’s database away.</td><td><strong><a href="#roles-sensibles">Delicate</a>:</strong> only the System administrator</td></tr>
     <tr id="perm-club-credits-view"><td><strong>See clients’ points</strong></td><td>Shows the points balance of each record and its history. It does not allow changing them.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-profesional">Professional</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-clientes">Customers</a></td></tr>
     <tr id="perm-club-credits-adjust"><td><strong>Adjust points by hand</strong></td><td>Adds or subtracts points manually, without them coming from a purchase.</td><td><strong><a href="#roles-sensibles">Delicate</a>:</strong> only the System administrator</td></tr>
@@ -3558,24 +3595,26 @@ footer{
     it is. Without a code the button cannot open the conversation.
   </p>
 
-  <h4>The text of the reminder</h4>
+  <h4>The appointment message</h4>
 
   <p>
-    You write it, with gaps in braces that are filled in by themselves with the appointment's details:
-    <code>{nombre}</code>, <code>{apellidos}</code>, <code>{servicio}</code>, <code>{profesional}</code>,
-    <code>{fecha}</code>, <code>{hora}</code>, <code>{centro}</code>, <code>{telefono}</code> and
-    <code>{enlace}</code>. Below you will see how the customer will read it. A gap that does not exist is left written as
-    it is so you notice it when reviewing, instead of vanishing and leaving an odd message.
+    This is the text that comes already written when you press the WhatsApp button of an appointment: it serves to confirm it or to remind about it, depending on how you word it. Above the text are the appointment fields; drag one to the spot in the text where you want it, or click it to put it where the cursor is.
+  </p>
+
+  <p>
+    You write it, and the appointment data (first name, surname, service, professional, date, time, centre, centre phone and link) appear inside the text as <strong>coloured tags</strong> that fill themselves in when the conversation opens. To remove one, delete it as if it were a letter. Below you will see how the customer will read it.
+  </p>
+
+  <h4 id="whatsapp-cumpleanos">The birthday greeting</h4>
+
+  <p>
+    Below the appointment message there is another like it for congratulating on a birthday, with its own tags (first name, surname, centre, centre phone and link). It is not sent by itself: on <strong>Home</strong>, each customer on the birthday card has a WhatsApp button that opens the conversation with the greeting already written, and you send it by hand. The button only appears for people who can see the customer’s contact details; if the customer has no phone, it warns instead of opening anything.
   </p>
 
   <h4 id="whatsapp-idiomas">The reminder in other languages</h4>
 
   <p>
-    Below the main text there is one optional section per language. Customers with one of those languages on
-    their record get the conversation opened with that text; everyone else, with the main one. The gaps can be
-    written with their name in that language -- <code>{Vorname}</code> and <code>{Datum}</code> in German,
-    <code>{nome}</code> and <code>{data}</code> in Portuguese -- and the date is written the way it is read there: in German, with
-    dots (22.09.2026). The preview for each language appears once saved.
+    Below the main text there is an optional section per language. A customer who has one of those languages on their record gets the conversation opened with that text; everyone else, with the main one. The tags work the same in each language, and the date is written as it is read there: in German, with dots (22.09.2026). The preview of each language appears on saving.
   </p>
 
   <h3 id="stripe">Payment links with Stripe</h3>
@@ -4834,7 +4873,8 @@ footer{
 
   <h3>Report an incident with the lifebuoy</h3>
   <p>
-    The button with the <strong>lifebuoy</strong>, at the bottom right on every screen, opens a ticket without leaving where you are: you say what happened, choose the urgency and, if it helps, attach a screenshot (images only). With permission to open and view tickets, the result is one more Support ticket, with its number <em>T-n</em>, its status and the team's replies; the notice in the window has a button <em>Open in Support</em>. The screen you were on, your delegation, the last error and your phone number (if you entered it) are written at the end of the first message. Whoever does not have those permissions keeps reporting incidents by email, and if the ticket service is not available at that moment the application tells you it went by email and that you will not see it in Support.
+    The button with the <strong>lifebuoy</strong>, at the bottom right on every screen for whoever has the permission
+    <em>Notify support</em>, opens a ticket without leaving where you are: you tell what happened, choose the urgency and, if it helps, attach a screenshot (images only). With permission to open and view tickets, the result is one more Support ticket, with its number <em>T-n</em>, its status and the team's replies; the notice in the window has a button <em>Open in Support</em>. The screen you were on, your delegation, the last error and your phone number (if you entered it) are written at the end of the first message. Whoever does not have those permissions keeps reporting incidents by email, and if the ticket service is not available at that moment the application tells you it went by email and that you will not see it in Support.
   </p>
 
   <h3>Following a ticket</h3>
