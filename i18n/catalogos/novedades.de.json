@@ -1035,5 +1035,16 @@
   "tfdfe20a7": "Die Hinweise von Turnera zu einem Update oder einer Wartung sind doppelt so groß, damit man sie auf den ersten Blick sieht.",
   "t0302b306": "Termine und Updates",
   "t389c03c7": "Im Termin ist die Endzeit am Text der benachbarten Felder ausgerichtet.",
-  "t62f2e9a3": "Während Turnera aktualisiert wird, erklärt eine Seite, was los ist, statt eines leeren Fehlers."
+  "t62f2e9a3": "Während Turnera aktualisiert wird, erklärt eine Seite, was los ist, statt eines leeren Fehlers.",
+  "t7cc27867": "28. Oktober 2026",
+  "ta59d3c7f": "1.5.0-8072af6",
+  "ta8cf1d41": "Kurse: Jeder Teilnehmer zahlt seinen Teil direkt aus dem Termin",
+  "ta5e8a0dc": "Bei einem Termin mit mehreren Plätzen, etwa einem Tennis- oder Pilateskurs oder einer Gruppe, hat jede Person auf der Liste ihre eigene Schaltfläche",
+  "tea417e41": ", die die Kasse mit ihr und den Leistungen des Kurses öffnet.",
+  "tb4ffd6b7": "Wer schon bezahlt hat, wird als",
+  "t94e33763": " markiert: Er kann weder zweimal kassiert noch von der Liste entfernt werden. Wer nicht gekommen ist oder sich abgemeldet hat, wird nicht kassiert.",
+  "ta090eb05": "Kassiert",
+  "t7b42bd2f": "Bei diesen Terminen wird der Status Person für Person in ihrer Auswahlliste geführt, daher erscheinen die Statusschaltflächen und das «Kassieren» des ganzen Termins nicht mehr.",
+  "t3a781629": "An der Kasse zeigt «Noch zu kassieren» einzeln die Teilnehmer, die gekommen sind und noch nicht bezahlt haben.",
+  "taf8f1e1c": "Termine, die im Terminkalender vergeben wurden, erscheinen wieder unter «Noch zu kassieren» an der Kasse, wenn sie erledigt oder in Behandlung sind."
 }

@@ -1035,5 +1035,16 @@
   "tfdfe20a7": "Turnera notices about an update or maintenance are twice as large, so you see them at first glance.",
   "t0302b306": "Appointments and updates",
   "t389c03c7": "In the appointment, the end time lines up with the text of the neighbouring fields.",
-  "t62f2e9a3": "While Turnera is updating, a page explains it instead of a blank error."
+  "t62f2e9a3": "While Turnera is updating, a page explains it instead of a blank error.",
+  "t7cc27867": "28 October 2026",
+  "ta59d3c7f": "1.5.0-8072af6",
+  "ta8cf1d41": "Classes: each student pays their own from the appointment",
+  "ta5e8a0dc": "In an appointment with several places, such as a tennis or pilates class or a group, each person on the list has their own",
+  "tea417e41": " button, which opens the till with them and the services of the class.",
+  "tb4ffd6b7": "Whoever has already paid is marked as",
+  "t94e33763": ": they cannot be charged twice or removed from the list. Whoever did not come or withdrew is not charged.",
+  "ta090eb05": "Billed",
+  "t7b42bd2f": "In these appointments the status is kept person by person, in their drop-down, so the status buttons and the «Charge» of the whole appointment no longer appear.",
+  "t3a781629": "At the till, «To charge» shows one by one the students who came and have not paid yet.",
+  "taf8f1e1c": "Appointments given from the agenda show up again in «To charge» at the till when they are attended or in progress."
 }

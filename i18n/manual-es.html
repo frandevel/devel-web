@@ -637,6 +637,7 @@ footer{
     <li><a href="#agenda">2. La agenda</a></li>
     <li><a href="#agenda-ahora" class="sub">La raya de la hora</a></li>
     <li><a href="#agenda-citas" class="sub">Poner, mover y anular citas</a></li>
+    <li><a href="#agenda-plazas" class="sub">Clases: citas de varias plazas</a></li>
     <li><a href="#agenda-repetir" class="sub">Citas que se repiten</a></li>
     <li><a href="#agenda-senales" class="sub">Lo que dice cada tarjeta</a></li>
     <li><a href="#espera" class="sub">Lista de espera</a></li>
@@ -690,7 +691,9 @@ footer{
     <li><a href="#whatsapp-idiomas" class="sub sub">El aviso en otros idiomas</a></li>
     <li><a href="#stripe" class="sub">Cobro por enlace con Stripe</a></li>
     <li><a href="#consentimientos" class="sub">Consentimientos informados</a></li>
+    <li><a href="#consentimientos-tablet" class="sub sub">Preparar la tablet de las firmas</a></li>
     <li><a href="#consentimientos-idiomas" class="sub sub">Consentimientos en otros idiomas</a></li>
+    <li><a href="#consentimientos-campos" class="sub sub">Campos a rellenar en el documento</a></li>
     <li><a href="#consentimientos-importar" class="sub sub">Traer los que ya se firmaron en otra plataforma</a></li>
     <li><a href="#integraciones" class="sub">Conectar un programa externo (ERP)</a></li>
     <li><a href="#desactivar-centro" class="sub">Desactivar un centro</a></li>
@@ -1180,6 +1183,32 @@ footer{
     <img src="/turnera/manual/imagenes/05-cita.png" alt="La ficha de una cita con el cliente, el profesional, la hora y los servicios" loading="lazy">
     <figcaption>La ficha de una cita. Abajo, el estado, confirmar, cobrar y anular.</figcaption>
   </figure>
+
+  <h3 id="agenda-plazas">Clases: citas de varias plazas</h3>
+  <p>
+    Una clase de tenis, de pilates o un grupo de presoterapia son una sola cita con varios clientes. Para que una
+    cita admita a más de uno hacen falta dos cosas: que el sitio tenga sitio para ellos
+    (<span class="ruta">Administración → Cabinas → (una) → Capacidad</span>) y que el servicio tenga plazas
+    (<em>Catálogo → Servicios</em>, campo <em>Plazas</em>). Manda el número más pequeño de los dos: un servicio de
+    dos plazas en una cabina de una sigue siendo de una.
+  </p>
+  <ul>
+    <li><strong>Apuntar.</strong> Al abrir una cita ya guardada que admite a varios sale, debajo de los comentarios,
+      la lista de quién va. Se busca al cliente y se pulsa <em>Apuntar</em>, hasta llenar las plazas. El primero es
+      quien tenía la cita.</li>
+    <li><strong>Quién vino.</strong> Cada uno lleva su estado en su desplegable: <em>Inscrito</em>, <em>Vino</em>,
+      <em>No vino</em> o <em>Se dio de baja</em>. Por eso en estas citas no salen los botones de estado de la cita
+      entera: dirían lo mismo dos veces.</li>
+    <li><strong>Cobrar.</strong> Cada uno paga lo suyo con el botón <em>Cobrar</em> de su fila, que abre el TPV con
+      él y con los servicios de la clase. Cobrado, su fila dice <em>Cobrada</em> y ya no se le puede volver a cobrar,
+      quitar de la lista ni cambiar el estado. En el TPV, arriba, en <em>Por cobrar</em>, sale uno por uno quien
+      vino y aún no ha pagado.</li>
+  </ul>
+  <p>
+    Si lo que se quiere es atender a varias personas seguidas —servicios de cinco minutos, una a las 10:00 y otra a
+    las 10:10— no hace falta nada de esto: basta con bajar el paso de la agenda de esa cabina (ver <em>El paso de
+    cada cabina</em>, en Administración) y dar una cita a cada una.
+  </p>
 
   <h3 id="agenda-repetir">Citas que se repiten</h3>
 
@@ -4094,20 +4123,55 @@ footer{
   <span class="ruta">Ficha del cliente → Documentación firmada · Administración → Consentimientos</span>
 
   <p>
-    El cliente firma en el <strong>iPad del mostrador</strong>. No se le manda nada por correo ni por WhatsApp,
+    El cliente firma en la <strong>tablet del mostrador</strong>. No se le manda nada por correo ni por WhatsApp,
     y no se firma en su móvil: pantallas pequeñas, navegadores distintos y clientes mayores.
   </p>
 
   <h4>Cómo se firma</h4>
 
   <ol>
-    <li>El iPad está siempre abierto en <em>Firmas</em>, con su propia sesión de recepción. Pregunta solo cada
+    <li>La tablet está siempre abierta en <em>Firmas</em>, con su propia sesión de recepción. Pregunta solo cada
       pocos segundos si hay algo que firmar.</li>
     <li>En la ficha del cliente, recepción pulsa <em>Pedir firma</em> y elige el documento.</li>
-    <li>El documento aparece solo en el iPad, ya con el nombre y el NIF puestos. El cliente lo lee y firma con
+    <li>El documento aparece solo en la tablet, ya con el nombre y el NIF puestos. El cliente lo lee y firma con
       el dedo.</li>
     <li>Se guarda el PDF, el trazo, la hora, la versión del texto y una huella del documento.</li>
   </ol>
+
+  <h4 id="consentimientos-tablet">Preparar la tablet de las firmas</h4>
+  <span class="ruta">Administración → Usuarios · tablet → /firmas</span>
+
+  <p>
+    La tablet no necesita nada especial: es un navegador con la pantalla <em>Firmas</em> abierta y una sesión
+    de recepción. No hay un usuario «firmas» predefinido; lo más limpio es crear uno propio.
+  </p>
+
+  <ol>
+    <li>En <em>Administración → Usuarios</em>, crea un usuario solo para la tablet (por ejemplo, <code>tablet</code>)
+      con el rol <strong>Recepción</strong> y la delegación del mostrador. Así no comparte sesión con
+      nadie. Hace falta que pueda pedir firmas y cobrar, porque la pantalla <em>Firmas</em> lo exige.</li>
+    <li>En la tablet, abre la dirección de Turnera seguida de <code>/firmas</code>. Al pedir una firma en la ficha
+      del cliente, Turnera te enseña esa dirección completa y puedes copiarla.</li>
+    <li>Entra con ese usuario, elige la delegación y marca <em>Recordarme en este equipo</em> para que la sesión
+      no se cierre al cerrar el navegador.</li>
+    <li>Opcional: en el navegador de la tablet, añade la página a la pantalla de inicio para abrirla a pantalla completa.</li>
+  </ol>
+
+  <ul>
+    <li>La tablet pregunta cada tres segundos por la firma más antigua pendiente <strong>de su delegación</strong>.
+      Cada petición vale cinco minutos y se firma una sola vez.</li>
+    <li>La sesión de recepción no abre los consentimientos ya firmados.</li>
+    <li>La pantalla <em>Firmas</em> se ve <strong>sola</strong>: solo lleva el logo de Turnera, sin menú, sin
+      cambio de idioma y sin forma de cambiar de usuario ni de cerrar la sesión. Quien tiene la tablet delante es
+      el cliente. Para cambiar de usuario o salir, abre <code>/inicio</code> desde el navegador de la tablet.</li>
+    <li>Al firmar, el documento desaparece y la tablet muestra, con un visto verde grande, un «Documento firmado»
+      en el idioma que se ha leído, junto a un botón <em>Cerrar</em> que cierra la pestaña. Si nadie lo pulsa, a
+      los 20 segundos vuelve sola a esperar. Si el navegador no deja cerrar la pestaña, el botón la deja en
+      blanco.</li>
+    <li>Si la tablet pierde la conexión con Turnera, lo dice («Sin conexión») en lugar de decir que no hay
+      nada que firmar, y se recupera sola cuando vuelve. Si se corta al firmar, a los 20 segundos avisa y se
+      puede volver a firmar.</li>
+  </ul>
 
   <h4 id="consentimientos-idiomas">Consentimientos en otros idiomas</h4>
   <p>
@@ -4117,21 +4181,21 @@ footer{
     <code>{{centro}}</code>, <code>{{fecha}}</code> y <code>{{tratamiento}}</code>.
   </p>
   <ul>
-    <li>Si el cliente tiene en su ficha un idioma que la plantilla tiene escrito, el iPad le enseña ese texto, y
+    <li>Si el cliente tiene en su ficha un idioma que la plantilla tiene escrito, la tablet le enseña ese texto, y
       también los botones y el aviso de abajo están en su idioma. El PDF firmado sale igual.</li>
     <li>Si no lo tiene, firma el texto principal, en el idioma del centro.</li>
     <li>Cada firma guarda en qué idioma se firmó y el texto exacto que se leyó.</li>
   </ul>
 
   <div class="ojo">
-    <p><strong>La petición caduca a los quince minutos</strong> y sirve una sola vez. Es a propósito: una
+    <p><strong>La petición caduca a los cinco minutos</strong> y sirve una sola vez. Es a propósito: una
       petición olvidada encima del mostrador es una firma esperando a quien no debe. Si caduca, se vuelve a
       pedir desde la ficha.</p>
   </div>
 
   <figure>
-    <img src="/turnera/manual/imagenes/24-ipad-de-firmas.png" alt="La pantalla del iPad con un consentimiento y el recuadro para firmar con el dedo" loading="lazy">
-    <figcaption>El iPad del mostrador con el documento puesto: el nombre y el NIF ya vienen rellenos.</figcaption>
+    <img src="/turnera/manual/imagenes/24-ipad-de-firmas.png" alt="La pantalla de la tablet con un consentimiento y el recuadro para firmar con el dedo" loading="lazy">
+    <figcaption>La tablet del mostrador con el documento puesto: el nombre y el NIF ya vienen rellenos.</figcaption>
   </figure>
 
   <h4>Las plantillas</h4>
@@ -4159,6 +4223,37 @@ footer{
     tratamiento, no después.
   </p>
 
+  <h4 id="consentimientos-campos">Campos a rellenar en el documento</h4>
+  <span class="ruta">Administración → Consentimientos → Nueva versión</span>
+
+  <p>
+    Además de los datos que Turnera pone sola (cliente, NIF, centro, fecha y tratamiento), cada documento puede
+    llevar sus <strong>propios campos</strong>: por ejemplo las <em>zonas</em> que el cliente acepta que se le
+    depilen, una casilla de aceptación o una fecha. Lo que se elige aparece escrito en el PDF firmado.
+  </p>
+
+  <ol>
+    <li>Al editar el texto, a la derecha está el panel <em>Campos</em>. Los <strong>verdes</strong> los rellena
+      Turnera; los <strong>naranjas</strong> son los del documento.</li>
+    <li>Pulsa <em>Nuevo campo</em>, ponle nombre y elige el tipo: texto (de una o varias líneas), fecha, casilla,
+      desplegable o selección múltiple. En los desplegables, las opciones se escriben una por línea.</li>
+    <li>Arrastra el campo al sitio del texto donde debe salir, o pulsa <em>+</em> para ponerlo donde esté el
+      cursor. Los de Turnera se colocan igual.</li>
+    <li>Al pedir la firma, recepción rellena los campos que el documento usa y la tablet enseña el texto ya
+      completo.</li>
+  </ol>
+
+  <ul>
+    <li>Los valores salen <strong>en negrita</strong> dentro del texto: una selección múltiple, separada por
+      comas y en el orden de la lista; una fecha como dd/mm/aaaa; una casilla como «Sí» o «No»; lo
+      opcional que se deja vacío, como «—».</li>
+    <li>Si renombras un campo, cambia en todos los textos y en todos los idiomas. Si lo borras, desaparece de
+      todos ellos. Las firmas ya hechas no cambian nunca.</li>
+    <li>No se puede guardar un texto que use un campo que la plantilla no define.</li>
+    <li>Como cualquier cambio de una plantilla, esto crea una <strong>versión nueva</strong> y la anterior
+      queda apagada.</li>
+  </ul>
+
   <h4 id="consentimientos-importar">Traer los que ya se firmaron en otra plataforma</h4>
   <p>
     Los consentimientos firmados antes de usar Turnera, en otro programa o en papel escaneado, se suben en PDF a la
@@ -4170,12 +4265,25 @@ footer{
     <strong>«Importar consentimientos firmados»</strong>, que traen Recepción y Dirección.
   </p>
 
+  <h4 id="consentimientos-importar-muchos">Traer muchos de golpe</h4>
+  <p>
+    Si son decenas o cientos, en <em>Importar de otro programa</em> hay una tarjeta <strong>Consentimientos firmados
+    en PDF</strong>. Se elige la carpeta (o los PDF) y se pulsa <em>Ensayar</em>: cada PDF se une a su cliente por el
+    <strong>número de cliente</strong> que lleva la carpeta que lo contiene (una carpeta llamada <em>26033</em>) o su
+    nombre, y se comprueba que el nombre del cliente aparece en el fichero. Si el nombre del fichero empieza por una
+    fecha en formato <em>aammdd</em> (<em>261016_…</em>), esa es la fecha del documento. El ensayo dice, fichero a
+    fichero, cuáles entran y cuáles se quedan fuera y por qué (nombre distinto, cliente que no existe, sin número, PDF
+    no válido); no guarda nada. Al importar, cada uno queda en la ficha igual que si se hubiera subido a mano, y
+    importar el mismo PDF dos veces no lo duplica. Necesita el permiso de importar de otro programa y el de
+    importar consentimientos firmados. Esta importación no se deshace en bloque: un consentimiento mal puesto se
+    retira desde la ficha del cliente.
+  </p>
   <h4>Quién puede ver lo firmado</h4>
 
   <p>
     Recepción puede pedir la firma y acompañarla, pero <strong>descargar un consentimiento firmado necesita el
     permiso de la historia clínica y queda registrado</strong> en el rastro de accesos, igual que abrir un caso.
-    Un consentimiento firmado es dato de salud. Así el iPad del mostrador puede estar todo el día abierto con
+    Un consentimiento firmado es dato de salud. Así la tablet del mostrador puede estar todo el día abierta con
     su sesión sin que esa sesión abra los documentos de nadie.
   </p>
 
@@ -5622,8 +5730,8 @@ footer{
   <ol>
     <li>Pulsa <strong>Nuevo ticket</strong>.</li>
     <li>Escribe el <strong>asunto</strong> y qué ocurre. Si te ayuda a explicarte, puedes poner <strong>negrita</strong>,
-      <strong>cursiva</strong> y <strong>listas</strong> (con viñetas o numeradas). Puedes <strong>arrastrar archivos</strong> (hasta 5, de 10 MB como
-      máximo; imágenes, PDF o texto) o elegirlos.</li>
+      <strong>cursiva</strong> y <strong>listas</strong> (con viñetas o numeradas). Puedes <strong>arrastrar archivos</strong> (hasta 5 y 40 MB en total:
+      imágenes de hasta 10 MB o vídeos cortos MP4, MOV o WebM de hasta 30 MB cada uno) o elegirlos.</li>
     <li>Marca <strong>Me impide trabajar</strong> solo si no puedes seguir: el ticket se atiende antes.</li>
     <li>Pulsa <strong>Enviar ticket</strong>. Tu centro, tu usuario y la versión de Turnera viajan solos con él.</li>
   </ol>
@@ -5649,7 +5757,7 @@ footer{
   </ul>
   <p>
     Dentro de un ticket ves la conversación (lo tuyo a la derecha, lo del equipo a la izquierda), puedes descargar los
-    archivos, <strong>Adjuntar archivo</strong> (solo imágenes; el equipo de soporte sí puede enviarte ficheros de cualquier tipo), <strong>Enviar respuesta</strong> y, cuando ya
+    archivos, <strong>Adjuntar archivo</strong> (imágenes o vídeos, con los mismos límites; el equipo de soporte sí puede enviarte ficheros de cualquier tipo), <strong>Enviar respuesta</strong> y, cuando ya
     está solucionado, <strong>Marcar como resuelto</strong>. Cada persona puede enviar hasta 5 tickets nuevos por hora.
   </p>
   <p>

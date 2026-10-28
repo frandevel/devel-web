@@ -689,6 +689,7 @@ footer{
     <li><a href="#agenda">2. Der Terminkalender</a></li>
     <li><a href="#agenda-ahora" class="sub">Die Linie der aktuellen Uhrzeit</a></li>
     <li><a href="#agenda-citas" class="sub">Termine eintragen, verschieben und stornieren</a></li>
+    <li><a href="#agenda-plazas" class="sub">Kurse: Termine mit mehreren Plätzen</a></li>
     <li><a href="#agenda-repetir" class="sub">Wiederkehrende Termine</a></li>
     <li><a href="#agenda-senales" class="sub">Was jede Karte anzeigt</a></li>
     <li><a href="#espera" class="sub">Warteliste</a></li>
@@ -742,7 +743,9 @@ footer{
     <li><a href="#whatsapp-idiomas" class="sub sub">Die Erinnerung in anderen Sprachen</a></li>
     <li><a href="#stripe" class="sub">Zahlung per Link mit Stripe</a></li>
     <li><a href="#consentimientos" class="sub">Einwilligungserklärungen</a></li>
+    <li><a href="#consentimientos-tablet" class="sub sub">Das Unterschriften-Tablet einrichten</a></li>
     <li><a href="#consentimientos-idiomas" class="sub sub">Einwilligungen in anderen Sprachen</a></li>
+    <li><a href="#consentimientos-campos" class="sub sub">Felder, die im Dokument ausgefüllt werden</a></li>
     <li><a href="#consentimientos-importar" class="sub sub">Bereits auf einer anderen Plattform unterschriebene übernehmen</a></li>
     <li><a href="#integraciones" class="sub">Ein externes Programm anbinden (ERP)</a></li>
     <li><a href="#desactivar-centro" class="sub">Ein Zentrum deaktivieren</a></li>
@@ -1139,6 +1142,20 @@ footer{
     <img src="/turnera/manual/imagenes/en/05-cita.png" alt="Ein Termin mit Kunde, Mitarbeiter, Uhrzeit und Leistungen" loading="lazy">
     <figcaption>Ein Termin. Darunter der Status, Bestätigen, Kassieren und Stornieren.</figcaption>
   </figure>
+
+  <h3 id="agenda-plazas">Kurse: Termine mit mehreren Plätzen</h3>
+  <p>
+    Ein Tennis- oder Pilateskurs oder eine Pressotherapie-Gruppe ist ein einziger Termin mit mehreren Kunden. Damit ein Termin mehr als einen aufnimmt, braucht es zwei Dinge: Der Ort muss Platz für sie haben (<span class="ruta">Verwaltung → Kabinen → (eine) → Kapazität</span>) und die Leistung muss Plätze haben (<em>Katalog → Leistungen</em>, Feld <em>Plätze</em>). Es gilt die kleinere der beiden Zahlen: Eine Leistung mit zwei Plätzen in einer Kabine für eine Person bleibt bei einem Platz.
+  </p>
+  <ul>
+    <li><strong>Anmelden.</strong> Wenn ein bereits gespeicherter Termin geöffnet wird, der mehrere Personen aufnimmt, erscheint unter den Kommentaren die Liste der Teilnehmer. Kunden suchen und <em>Anmelden</em> drücken, bis die Plätze voll sind. Der Erste ist, wer den Termin hatte.</li>
+    <li><strong>Wer gekommen ist.</strong> Jede Person hat ihren eigenen Status in ihrer Auswahlliste: <em>Angemeldet</em>, <em>Erschienen</em>,
+      <em>Nicht erschienen</em> oder <em>Abgemeldet</em>. Deshalb erscheinen bei diesen Terminen die Statusschaltflächen des ganzen Termins nicht: Sie würden dasselbe zweimal sagen.</li>
+    <li><strong>Kassieren.</strong> Jede Person zahlt ihren Teil mit der Schaltfläche <em>Kassieren</em> in ihrer Zeile, die die Kasse mit ihr und den Leistungen des Kurses öffnet. Nach dem Kassieren steht in der Zeile <em>Kassiert</em> und sie kann weder erneut kassiert noch von der Liste entfernt noch im Status geändert werden. An der Kasse erscheint oben unter <em>Zu kassieren</em> einzeln jede Person, die gekommen ist und noch nicht bezahlt hat.</li>
+  </ul>
+  <p>
+    Wenn mehrere Personen nacheinander behandelt werden sollen —Leistungen von fünf Minuten, eine um 10:00 und eine um 10:10—, braucht es nichts davon: Es genügt, das Raster des Terminkalenders dieser Kabine zu verkleinern (siehe <em>Das Raster jeder Kabine</em> unter Verwaltung) und jeder einen Termin zu geben.
+  </p>
 
   <h3 id="agenda-repetir">Wiederkehrende Termine</h3>
 
@@ -3642,13 +3659,34 @@ footer{
   <h4>Wie unterschrieben wird</h4>
 
   <ol>
-    <li>Das Tablet ist immer auf <em>Unterschriften</em>geöffnet, mit seiner eigenen Empfangssitzung. Es fragt von
+    <li>Das Tablet ist immer geöffnet unter <em>Unterschriften</em>geöffnet, mit seiner eigenen Empfangssitzung. Es fragt von
       selbst alle paar Sekunden, ob es etwas zu unterschreiben gibt.</li>
     <li>In der Kundenakte drückt der Empfang <em>Unterschrift anfordern</em> und wählt das Dokument.</li>
-    <li>Das Dokument erscheint von selbst auf dem Tablet, mit Namen und Steuernummer bereits eingesetzt. Der
-      Kunde liest es und unterschreibt mit dem Finger.</li>
+    <li>Das Dokument erscheint von selbst auf dem Tablet, mit Name und Steuernummer bereits ausgefüllt. Der Kunde liest es und unterschreibt mit dem Finger.</li>
     <li>Gespeichert werden das PDF, der Schriftzug, die Uhrzeit, die Version des Textes und ein Fingerabdruck des Dokuments.</li>
   </ol>
+
+  <h4 id="consentimientos-tablet">Das Unterschriften-Tablet einrichten</h4>
+  <span class="ruta">Verwaltung → Benutzer · Tablet → /firmas</span>
+
+  <p>
+    Das Tablet braucht nichts Besonderes: Es ist ein Browser mit der geöffneten Seite <em>Unterschriften</em> und einer Sitzung des Empfangs. Es gibt keinen vordefinierten Benutzer «Unterschriften»; am saubersten ist es, einen eigenen anzulegen.
+  </p>
+
+  <ol>
+    <li>Unter <em>Verwaltung → Benutzer</em> einen Benutzer nur für das Tablet anlegen (zum Beispiel <code>tablet</code>) mit der Rolle <strong>Empfang</strong> und der Filiale des Empfangs. So teilt es mit niemandem eine Sitzung. Es muss Unterschriften anfordern und kassieren können, weil die Seite <em>Unterschriften</em> es verlangt.</li>
+    <li>Auf dem Tablet die Adresse von Turnera öffnen, gefolgt von <code>/firmas</code>. Beim Anfordern einer Unterschrift in der Kundenakte zeigt Turnera diese vollständige Adresse an, und sie kann kopiert werden.</li>
+    <li>Mit diesem Benutzer anmelden, die Filiale wählen und <em>Auf diesem Gerät angemeldet bleiben</em> ankreuzen, damit die Sitzung beim Schließen des Browsers nicht endet.</li>
+    <li>Optional: Im Browser des Tablets die Seite zum Startbildschirm hinzufügen, um sie im Vollbild zu öffnen.</li>
+  </ol>
+
+  <ul>
+    <li>Alle drei Sekunden fragt das Tablet nach der ältesten offenen Unterschrift <strong>seiner Filiale</strong>. Jede Anforderung gilt fünf Minuten und wird nur einmal unterschrieben.</li>
+    <li>Die Sitzung des Empfangs öffnet keine bereits unterschriebenen Einwilligungen.</li>
+    <li>Die Seite <em>Unterschriften</em> wird <strong>allein</strong> angezeigt: nur mit dem Turnera-Logo, ohne Menü, ohne Sprachwechsel und ohne Möglichkeit, den Benutzer zu wechseln oder sich abzumelden. Wer das Tablet vor sich hat, ist der Kunde. Zum Wechseln des Benutzers oder Abmelden <code>/inicio</code> im Browser des Tablets öffnen.</li>
+    <li>Nach dem Unterschreiben verschwindet das Dokument, und das Tablet zeigt mit einem großen grünen Haken ein «Dokument unterschrieben» in der gelesenen Sprache, neben einer Schaltfläche <em>Abschließen</em> , die den Tab schließt. Drückt sie niemand, wartet es nach 20 Sekunden wieder von selbst. Lässt der Browser das Schließen des Tabs nicht zu, macht die Schaltfläche ihn leer.</li>
+    <li>Verliert das Tablet die Verbindung zu Turnera, sagt es das («Keine Verbindung»), statt zu melden, dass nichts zu unterschreiben ist, und erholt sich von selbst, sobald die Verbindung zurück ist. Bricht sie beim Unterschreiben ab, warnt es nach 20 Sekunden, und es kann erneut unterschrieben werden.</li>
+  </ul>
 
   <h4 id="consentimientos-idiomas">Einwilligungen in anderen Sprachen</h4>
   <p>
@@ -3658,21 +3696,20 @@ footer{
     <code>{{centro}}</code>, <code>{{fecha}}</code> und <code>{{tratamiento}}</code>.
   </p>
   <ul>
-    <li>Hat der Kunde in seiner Karteikarte eine Sprache, in der die Vorlage geschrieben ist, zeigt das iPad diesen Text,
-      und auch die Knöpfe und der Hinweis darunter sind in seiner Sprache. Das unterschriebene PDF ebenso.</li>
+    <li>Hat der Kunde in seiner Akte eine Sprache, in der die Vorlage geschrieben ist, zeigt ihm das Tablet diesen Text, und auch die Schaltflächen und der Hinweis darunter sind in seiner Sprache. Das unterschriebene PDF ist genauso.</li>
     <li>Sonst unterschreibt er den Haupttext, in der Sprache des Zentrums.</li>
     <li>Jede Unterschrift speichert, in welcher Sprache unterschrieben wurde, und den genauen Text, der gelesen wurde.</li>
   </ul>
 
   <div class="ojo">
-    <p><strong>Die Anforderung läuft nach fünfzehn Minuten ab</strong> und gilt nur einmal. Das ist Absicht: eine
+    <p><strong>Die Anforderung läuft nach fünf Minuten ab</strong> und gilt nur einmal. Das ist Absicht: eine
       vergessene Anforderung auf dem Tresen ist eine Unterschrift, die auf die Falschen wartet. Läuft sie ab,
       fordern Sie sie aus der Akte erneut an.</p>
   </div>
 
   <figure>
-    <img src="/turnera/manual/imagenes/en/24-ipad-de-firmas.png" alt="Der iPad-Bildschirm mit einer Einwilligungserklärung und dem Feld zum Unterschreiben mit dem Finger" loading="lazy">
-    <figcaption>Das iPad am Empfang mit dem aufgerufenen Dokument: Name und Ausweisnummer sind schon ausgefüllt.</figcaption>
+    <img src="/turnera/manual/imagenes/en/24-ipad-de-firmas.png" alt="Der Bildschirm des Tablets mit einer Einwilligung und dem Feld zum Unterschreiben mit dem Finger" loading="lazy">
+    <figcaption>Das Tablet am Empfang mit dem geladenen Dokument: Name und Steuernummer sind bereits ausgefüllt.</figcaption>
   </figure>
 
   <h4>Die Vorlagen</h4>
@@ -3701,20 +3738,43 @@ footer{
     der Behandlung zu merken, nicht danach.
   </p>
 
+  <h4 id="consentimientos-campos">Felder, die im Dokument ausgefüllt werden</h4>
+  <span class="ruta">Verwaltung → Einwilligungen → Neue Version</span>
+
+  <p>
+    Neben den Daten, die Turnera selbst einsetzt (Kunde, Steuernummer, Betrieb, Datum und Behandlung), kann jedes Dokument seine <strong>eigenen Felder</strong> enthalten: zum Beispiel die <em>Zonen</em> , die der Kunde behandeln lassen möchte, ein Ankreuzfeld zur Zustimmung oder ein Datum. Was gewählt wird, steht im unterschriebenen PDF.
+  </p>
+
+  <ol>
+    <li>Beim Bearbeiten des Textes steht rechts das Feld <em>Felder</em>. Die <strong>grünen</strong> füllt Turnera aus; die <strong>orangefarbenen</strong> gehören zum Dokument.</li>
+    <li>Klicken Sie auf <em>Neues Feld</em>, ihm einen Namen geben und den Typ wählen: Text (eine oder mehrere Zeilen), Datum, Ankreuzfeld, Auswahlliste oder Mehrfachauswahl. Bei Auswahllisten wird jede Option in eine eigene Zeile geschrieben.</li>
+    <li>Das Feld an die Stelle im Text ziehen, an der es erscheinen soll, oder <em>+</em> drücken, um es an der Cursorposition einzufügen. Die Felder von Turnera werden genauso gesetzt.</li>
+    <li>Beim Anfordern der Unterschrift füllt der Empfang die Felder aus, die das Dokument verwendet, und das Tablet zeigt den Text bereits vollständig.</li>
+  </ol>
+
+  <ul>
+    <li>Die Werte erscheinen <strong>fett</strong> im Text: eine Mehrfachauswahl durch Kommas getrennt und in der Reihenfolge der Liste; ein Datum als TT/MM/JJJJ; ein Ankreuzfeld als «Ja» oder «Nein»; ein leer gelassenes optionales Feld als «—».</li>
+    <li>Wird ein Feld umbenannt, ändert es sich in allen Texten und allen Sprachen. Wird es gelöscht, verschwindet es aus allen. Bereits geleistete Unterschriften ändern sich nie.</li>
+    <li>Ein Text, der ein Feld verwendet, das die Vorlage nicht definiert, kann nicht gespeichert werden.</li>
+    <li>Wie jede Änderung einer Vorlage erzeugt dies eine <strong>neue Version</strong> , und die vorherige wird abgeschaltet.</li>
+  </ul>
+
   <h4 id="consentimientos-importar">Bereits auf einer anderen Plattform unterschriebene übernehmen</h4>
   <p>
     Einwilligungen, die vor Turnera in einem anderen Programm oder auf eingescanntem Papier unterschrieben wurden, werden als PDF in die Kundenakte hochgeladen mit <em>Unterschriebene importieren</em>. Man wählt <strong>bis zu 5 auf einmal</strong>, und für jede kann man den Namen, das <strong>Datum des Dokuments</strong> und die <strong>zugehörige Vorlage</strong>angeben. Wird die Vorlage angegeben, zählt sie als unterschrieben und der Hinweis auf die fehlende Einwilligung verschwindet. In der Liste sind sie markiert als <em>Importiert</em>, mit der Datei und dem Tag des Hochladens; sie werden wie die hier unterschriebenen heruntergeladen und widerrufen. Jede PDF darf bis zu 20 MB groß sein. Importieren ist die Berechtigung
     <strong>«Unterschriebene Einwilligungen importieren»</strong>, die Empfang und Leitung haben.
   </p>
 
+  <h4 id="consentimientos-importar-muchos">Viele auf einmal übernehmen</h4>
+  <p>
+    Sind es Dutzende oder Hunderte, gibt es unter <em>Aus einem anderen Programm importieren</em> eine Karte <strong>Unterschriebene Einwilligungen als PDF</strong>. Den Ordner (oder die PDFs) wählen und <em>Probelauf</em> drücken: Jedes PDF wird seinem Kunden über die
+    <strong>Kundennummer</strong>  zugeordnet, die der Ordner trägt, in dem es liegt (ein Ordner namens <em>26033</em>) oder über seinen Namen, und es wird geprüft, dass der Name des Kunden in der Datei vorkommt. Beginnt der Dateiname mit einem Datum im Format <em>JJMMTT</em> (<em>261016_…</em>), ist das das Datum des Dokuments. Der Probelauf sagt Datei für Datei, welche übernommen werden und welche nicht und warum (anderer Name, Kunde existiert nicht, keine Nummer, ungültiges PDF); er speichert nichts. Beim Import landet jedes in der Akte, als wäre es von Hand hochgeladen worden, und dasselbe PDF zweimal zu importieren verdoppelt es nicht. Nötig sind die Berechtigung zum Import aus einem anderen Programm und die zum Import unterschriebener Einwilligungen. Dieser Import wird nicht als Ganzes rückgängig gemacht: Eine falsch zugeordnete Einwilligung wird in der Kundenakte entfernt.
+  </p>
   <h4>Wer das Unterschriebene sehen darf</h4>
 
   <p>
     Der Empfang darf die Unterschrift anfordern und begleiten, aber <strong>das Herunterladen einer unterschriebenen Einwilligung
-    braucht die Berechtigung für die Krankengeschichte und wird</strong> in der Zugriffsspur festgehalten, genau wie das
-    Öffnen eines Falls. Eine unterschriebene Einwilligung ist ein Gesundheitsdatum. So kann das Tablet am
-    Empfang den ganzen Tag mit seiner Sitzung offen stehen, ohne dass diese Sitzung die Dokumente von
-    irgendjemandem öffnet.
+    braucht die Berechtigung für die Krankengeschichte und wird</strong> in der Zugriffsspur, genau wie das Öffnen eines Falls. Eine unterschriebene Einwilligung ist ein Gesundheitsdatum. So kann das Tablet am Empfang den ganzen Tag mit seiner Sitzung offen sein, ohne dass diese Sitzung die Dokumente von irgendjemandem öffnet.
   </p>
 
   <h4>Eine Unterschrift zurücknehmen</h4>
@@ -4772,7 +4832,7 @@ footer{
   <ol>
     <li>Klicken Sie auf <strong>Neues Ticket</strong>.</li>
     <li>Geben Sie den <strong>Betreff</strong> und was passiert. Wenn es dir beim Erklären hilft, kannst du <strong>Fett</strong>,
-      <strong>Kursiv</strong> und <strong>Listen</strong> (mit Aufzählungszeichen oder nummeriert) verwenden. Du kannst <strong>Dateien hineinziehen</strong> (bis zu 5, höchstens je 10 MB; Bilder, PDF oder Text) oder sie auswählen.</li>
+      <strong>Kursiv</strong> und <strong>Listen</strong> (mit Aufzählungszeichen oder nummeriert) verwenden. Du kannst <strong>Dateien hineinziehen</strong> (bis zu 5 und insgesamt 40 MB: Bilder bis 10 MB oder kurze MP4-, MOV- oder WebM-Videos bis je 30 MB) oder auswählen.</li>
     <li>Aktivieren Sie <strong>Das hindert mich am Arbeiten</strong> nur, wenn Sie nicht weiterarbeiten können: Das Ticket wird dann früher bearbeitet.</li>
     <li>Klicken Sie auf <strong>Ticket senden</strong>. Ihr Zentrum, Ihr Benutzer und die Turnera-Version werden automatisch mitgesendet.</li>
   </ol>
@@ -4791,7 +4851,7 @@ footer{
     <li><strong>Geschlossen</strong>: vor mehr als zwei Wochen gelöst.</li>
   </ul>
   <p>
-    In einem Ticket sehen Sie die Unterhaltung (Ihre Beiträge rechts, die des Teams links), können die Dateien herunterladen, <strong>Datei anhängen</strong> (nur Bilder; das Support-Team kann Ihnen Dateien jeder Art schicken), <strong>Antwort senden</strong> und, sobald das Problem gelöst ist, <strong>Als gelöst markieren</strong>. Jede Person kann bis zu 5 neue Tickets pro Stunde senden.
+    In einem Ticket sehen Sie die Unterhaltung (Ihre Beiträge rechts, die des Teams links), können die Dateien herunterladen, <strong>Datei anhängen</strong> (Bilder oder Videos, mit denselben Grenzen; das Support-Team kann Ihnen Dateien jeder Art senden), <strong>Antwort senden</strong> und, sobald das Problem gelöst ist, <strong>Als gelöst markieren</strong>. Jede Person kann bis zu 5 neue Tickets pro Stunde senden.
   </p>
   <p>
     Die Felder von <em>Neues Ticket</em> und von <strong>Antwort senden</strong> haben oben vier Schaltflächen: <strong>Fett</strong>,

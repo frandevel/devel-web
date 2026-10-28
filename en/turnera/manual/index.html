@@ -689,6 +689,7 @@ footer{
     <li><a href="#agenda">2. The agenda</a></li>
     <li><a href="#agenda-ahora" class="sub">The line of the hour</a></li>
     <li><a href="#agenda-citas" class="sub">Booking, moving and cancelling appointments</a></li>
+    <li><a href="#agenda-plazas" class="sub">Classes: appointments with several places</a></li>
     <li><a href="#agenda-repetir" class="sub">Repeating appointments</a></li>
     <li><a href="#agenda-senales" class="sub">What each card tells you</a></li>
     <li><a href="#espera" class="sub">Waiting list</a></li>
@@ -742,7 +743,9 @@ footer{
     <li><a href="#whatsapp-idiomas" class="sub sub">The reminder in other languages</a></li>
     <li><a href="#stripe" class="sub">Payment links with Stripe</a></li>
     <li><a href="#consentimientos" class="sub">Informed consent</a></li>
+    <li><a href="#consentimientos-tablet" class="sub sub">Setting up the signing tablet</a></li>
     <li><a href="#consentimientos-idiomas" class="sub sub">Consent forms in other languages</a></li>
+    <li><a href="#consentimientos-campos" class="sub sub">Fields to fill in the document</a></li>
     <li><a href="#consentimientos-importar" class="sub sub">Bringing in those already signed on another platform</a></li>
     <li><a href="#integraciones" class="sub">Connecting an outside program (ERP)</a></li>
     <li><a href="#desactivar-centro" class="sub">Disabling a centre</a></li>
@@ -1138,6 +1141,20 @@ footer{
     <img src="/turnera/manual/imagenes/en/05-cita.png" alt="An appointment with the customer, the member of staff, the time and the services" loading="lazy">
     <figcaption>An appointment. Below it, the status, confirm, charge and cancel.</figcaption>
   </figure>
+
+  <h3 id="agenda-plazas">Classes: appointments with several places</h3>
+  <p>
+    A tennis class, a pilates class or a pressotherapy group are a single appointment with several customers. For an appointment to take more than one, two things are needed: the place must have room for them (<span class="ruta">Administration → Rooms → (one) → Capacity</span>) and the service must have places (<em>Catalogue → Services</em>, field <em>Capacity</em>). The smaller of the two numbers rules: a two-place service in a one-place room is still a one-place appointment.
+  </p>
+  <ul>
+    <li><strong>Enrol.</strong> When you open an already saved appointment that takes several people, the list of who is coming appears under the comments. Look up the customer and press <em>Enrol</em>, until the places are full. The first one is whoever had the appointment.</li>
+    <li><strong>Who came.</strong> Each person has their own status in their drop-down: <em>Enrolled</em>, <em>Attended</em>,
+      <em>No show</em> or <em>Withdrew</em>. That is why these appointments do not show the status buttons of the whole appointment: they would say the same thing twice.</li>
+    <li><strong>Charge.</strong> Each person pays their own with the <em>Charge</em> button on their row, which opens the till with them and the services of the class. Once charged, their row says <em>Billed</em> and they can no longer be charged again, removed from the list or have their status changed. At the till, at the top, under <em>To charge</em>, everyone who came and has not paid yet appears one by one.</li>
+  </ul>
+  <p>
+    If what you want is to see several people one after another —five-minute services, one at 10:00 and another at 10:10— you need none of this: just lower the agenda step of that room (see <em>Each room's step</em>, under Administration) and give each one an appointment.
+  </p>
 
   <h3 id="agenda-repetir">Repeating appointments</h3>
 
@@ -3632,20 +3649,41 @@ footer{
   <span class="ruta">Customer record → Signed paperwork · Administration → Consents</span>
 
   <p>
-    The customer signs on the <strong>tablet on the counter</strong>. Nothing is sent to them by e-mail or by WhatsApp,
+    The customer signs on the <strong>front-desk tablet</strong>. Nothing is sent to them by e-mail or by WhatsApp,
     and they do not sign on their own phone: small screens, different browsers and older customers.
   </p>
 
   <h4>How it gets signed</h4>
 
   <ol>
-    <li>The tablet is always open on <em>Signatures</em>, with its own reception session. It asks by itself every
+    <li>The tablet is always open at <em>Signatures</em>, with its own reception session. It asks by itself every
       few seconds whether there is anything to sign.</li>
     <li>On the customer record, reception presses <em>Ask for signature</em> and chooses the document.</li>
-    <li>The document appears on the tablet by itself, with the name and the tax number already filled in. The
-      customer reads it and signs with a finger.</li>
+    <li>The document appears on the tablet by itself, with the name and tax ID already filled in. The customer reads it and signs with a finger.</li>
     <li>The PDF, the stroke, the time, the version of the text and a fingerprint of the document are stored.</li>
   </ol>
+
+  <h4 id="consentimientos-tablet">Setting up the signing tablet</h4>
+  <span class="ruta">Administration → Users · tablet → /firmas</span>
+
+  <p>
+    The tablet needs nothing special: it is a browser with the <em>Signatures</em> screen open and a front-desk session. There is no predefined «signatures» user; the cleanest way is to create one of your own.
+  </p>
+
+  <ol>
+    <li>In <em>Administration → Users</em>, create a user just for the tablet (for example, <code>tablet</code>) with the role <strong>Reception</strong> and the front-desk delegation. That way it shares a session with nobody. It must be able to request signatures and charge, because the <em>Signatures</em> screen requires it.</li>
+    <li>On the tablet, open the Turnera address followed by <code>/firmas</code>. When you request a signature from the customer record, Turnera shows you that full address and you can copy it.</li>
+    <li>Log in with that user, choose the delegation and tick <em>Remember me on this device</em> so the session does not end when the browser is closed.</li>
+    <li>Optional: in the tablet's browser, add the page to the home screen to open it full screen.</li>
+  </ol>
+
+  <ul>
+    <li>Every three seconds the tablet asks for the oldest pending signature <strong>of its delegation</strong>. Each request is valid for five minutes and is signed only once.</li>
+    <li>The front-desk session does not open consents that are already signed.</li>
+    <li>The <em>Signatures</em> screen is shown <strong>on its own</strong>: it only carries the Turnera logo, with no menu, no language switch and no way to change user or log out. Whoever has the tablet in front of them is the customer. To change user or log out, open <code>/inicio</code> from the tablet's browser.</li>
+    <li>After signing, the document disappears and the tablet shows, with a big green tick, a «Document signed» in the language that was read, next to a <em>Close</em> button that closes the tab. If nobody presses it, after 20 seconds it goes back to waiting by itself. If the browser does not allow closing the tab, the button leaves it blank.</li>
+    <li>If the tablet loses its connection to Turnera, it says so («No connection») instead of saying there is nothing to sign, and it recovers by itself when the connection returns. If it drops while signing, it warns after 20 seconds and the customer can sign again.</li>
+  </ul>
 
   <h4 id="consentimientos-idiomas">Consent forms in other languages</h4>
   <p>
@@ -3655,21 +3693,20 @@ footer{
     <code>{{centro}}</code>, <code>{{fecha}}</code> and <code>{{tratamiento}}</code>.
   </p>
   <ul>
-    <li>If the customer's record has a language the template is written in, the iPad shows that text, and
-      the buttons and the notice below are in their language too. The signed PDF comes out the same.</li>
+    <li>If the customer's record has a language the template is written in, the tablet shows them that text, and the buttons and the notice below are in their language too. The signed PDF comes out the same.</li>
     <li>If not, they sign the main text, in the centre's language.</li>
     <li>Each signature keeps the language it was signed in and the exact text that was read.</li>
   </ul>
 
   <div class="ojo">
-    <p><strong>The request expires after fifteen minutes</strong> and works once only. That is deliberate: a
+    <p><strong>The request expires after five minutes</strong> and works once only. That is deliberate: a
       request left lying on the counter is a signature waiting for the wrong person. If it expires, ask for it
       again from the record.</p>
   </div>
 
   <figure>
-    <img src="/turnera/manual/imagenes/en/24-ipad-de-firmas.png" alt="The iPad screen with a consent form and the box for signing with a finger" loading="lazy">
-    <figcaption>The counter iPad with the document up: the name and the ID number already come filled in.</figcaption>
+    <img src="/turnera/manual/imagenes/en/24-ipad-de-firmas.png" alt="The tablet screen with a consent and the box to sign with a finger" loading="lazy">
+    <figcaption>The front-desk tablet with the document loaded: the name and tax ID are already filled in.</figcaption>
   </figure>
 
   <h4>The templates</h4>
@@ -3697,19 +3734,43 @@ footer{
     treatment, not afterwards.
   </p>
 
+  <h4 id="consentimientos-campos">Fields to fill in the document</h4>
+  <span class="ruta">Administration → Consents → New version</span>
+
+  <p>
+    Besides the data Turnera fills in by itself (customer, tax ID, centre, date and treatment), each document can carry its <strong>own fields</strong>: for example the <em>areas</em> the customer agrees to have treated, an acceptance tick box or a date. Whatever is chosen appears written in the signed PDF.
+  </p>
+
+  <ol>
+    <li>When editing the text, on the right is the <em>Fields</em> panel. The <strong>green</strong> ones are filled in by Turnera; the <strong>orange</strong> ones belong to the document.</li>
+    <li>Press <em>New field</em>, give it a name and choose the type: text (one or several lines), date, tick box, drop-down or multiple choice. In drop-downs, the options are written one per line.</li>
+    <li>Drag the field to the spot in the text where it should appear, or press <em>+</em> to place it where the cursor is. Turnera's fields are placed the same way.</li>
+    <li>When requesting the signature, the front desk fills in the fields the document uses and the tablet shows the text already complete.</li>
+  </ol>
+
+  <ul>
+    <li>The values appear <strong>in bold</strong> within the text: a multiple choice, separated by commas and in the order of the list; a date as dd/mm/yyyy; a tick box as «Yes» or «No»; an optional field left empty, as «—».</li>
+    <li>If you rename a field, it changes in every text and every language. If you delete it, it disappears from all of them. Signatures already made never change.</li>
+    <li>A text that uses a field the template does not define cannot be saved.</li>
+    <li>Like any change to a template, this creates a <strong>new version</strong> and the previous one is switched off.</li>
+  </ul>
+
   <h4 id="consentimientos-importar">Bringing in those already signed on another platform</h4>
   <p>
     Consents signed before using Turnera, in another program or on scanned paper, are uploaded as PDF to the customer record with <em>Import signed</em>. You can choose <strong>up to 5 at once</strong>, and for each one set the name, the <strong>document date</strong> and the <strong>template it matches</strong>. If the template is given, it counts as signed and the missing-consent warning stops appearing. In the list they are marked as <em>Imported</em>, with the file and the day they were uploaded; they are downloaded and withdrawn like those signed here. Each PDF can be up to 20 MB. Importing is the permission
     <strong>«Import signed consents»</strong>, which Reception and Management have.
   </p>
 
+  <h4 id="consentimientos-importar-muchos">Bringing in many at once</h4>
+  <p>
+    If there are dozens or hundreds, in <em>Import from another program</em> there is a card <strong>Signed consents as PDF</strong>. Choose the folder (or the PDFs) and press <em>Try it</em>: each PDF is matched to its customer by the
+    <strong>customer number</strong> carried by the folder that contains it (a folder called <em>26033</em>) or its name, and the customer's name is checked to appear in the file. If the file name starts with a date in <em>yymmdd</em> (<em>261016_…</em>), that is the date of the document. The trial run says, file by file, which go in and which stay out and why (different name, customer that does not exist, no number, invalid PDF); it saves nothing. When importing, each one ends up in the record just as if it had been uploaded by hand, and importing the same PDF twice does not duplicate it. It needs the permission to import from another program and the one to import signed consents. This import is not undone in one go: a consent put in the wrong place is removed from the customer record.
+  </p>
   <h4>Who can see what has been signed</h4>
 
   <p>
     Reception can ask for the signature and accompany it, but <strong>downloading a signed consent needs the
-    clinical history permission and is written down</strong> in the access trail, just like opening a case.
-    A signed consent is health data. That way the tablet on the counter can stay open all day with its session
-    without that session opening anybody's documents.
+    clinical history permission and is written down</strong> in the access trail, just like opening a case. A signed consent is health data. That way the front-desk tablet can stay open all day with its session without that session opening anyone's documents.
   </p>
 
   <h4>Withdrawing a signature</h4>
@@ -4766,7 +4827,7 @@ footer{
   <ol>
     <li>Press <strong>New ticket</strong>.</li>
     <li>Write the <strong>subject</strong> and what is happening. If it helps you explain yourself, you can use <strong>bold</strong>,
-      <strong>italics</strong> and <strong>lists</strong> (bulleted or numbered). You can <strong>drag files in</strong> (up to 5, 10 MB at most each; images, PDF or text) or choose them.</li>
+      <strong>italics</strong> and <strong>lists</strong> (bulleted or numbered). You can <strong>drag files in</strong> (up to 5 and 40 MB in total: images up to 10 MB or short MP4, MOV or WebM videos up to 30 MB each) or choose them.</li>
     <li>Tick <strong>It stops me working</strong> only if you cannot carry on: the ticket is dealt with sooner.</li>
     <li>Press <strong>Send ticket</strong>. Your centre, your user and the Turnera version travel with it automatically.</li>
   </ol>
@@ -4785,7 +4846,7 @@ footer{
     <li><strong>Closed</strong>: resolved more than two weeks ago.</li>
   </ul>
   <p>
-    Inside a ticket you see the conversation (yours on the right, the team's on the left), you can download the files, <strong>Attach file</strong> (images only; the support team can send you files of any type), <strong>Send reply</strong> and, once it is solved, <strong>Mark as resolved</strong>. Each person can send up to 5 new tickets per hour.
+    Inside a ticket you see the conversation (yours on the right, the team's on the left), you can download the files, <strong>Attach file</strong> (images or videos, with the same limits; the support team can send you files of any type), <strong>Send reply</strong> and, once it is solved, <strong>Mark as resolved</strong>. Each person can send up to 5 new tickets per hour.
   </p>
   <p>
     The boxes for <em>New ticket</em> and for <strong>Send reply</strong> have four buttons at the top: <strong>bold</strong>,

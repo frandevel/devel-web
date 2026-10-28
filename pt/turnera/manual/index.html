@@ -689,6 +689,7 @@ footer{
     <li><a href="#agenda">2. A agenda</a></li>
     <li><a href="#agenda-ahora" class="sub">A linha da hora</a></li>
     <li><a href="#agenda-citas" class="sub">Marcar, mover e anular marcações</a></li>
+    <li><a href="#agenda-plazas" class="sub">Aulas: marcações com várias vagas</a></li>
     <li><a href="#agenda-repetir" class="sub">Marcações que se repetem</a></li>
     <li><a href="#agenda-senales" class="sub">O que diz cada cartão</a></li>
     <li><a href="#espera" class="sub">Lista de espera</a></li>
@@ -742,7 +743,9 @@ footer{
     <li><a href="#whatsapp-idiomas" class="sub sub">O aviso noutros idiomas</a></li>
     <li><a href="#stripe" class="sub">Cobrança por ligação com Stripe</a></li>
     <li><a href="#consentimientos" class="sub">Consentimentos informados</a></li>
+    <li><a href="#consentimientos-tablet" class="sub sub">Preparar o tablet das assinaturas</a></li>
     <li><a href="#consentimientos-idiomas" class="sub sub">Consentimentos noutros idiomas</a></li>
+    <li><a href="#consentimientos-campos" class="sub sub">Campos a preencher no documento</a></li>
     <li><a href="#consentimientos-importar" class="sub sub">Trazer os que já foram assinados noutra plataforma</a></li>
     <li><a href="#integraciones" class="sub">Ligar um programa externo (ERP)</a></li>
     <li><a href="#desactivar-centro" class="sub">Desativar um centro</a></li>
@@ -1194,6 +1197,20 @@ footer{
     <img src="/turnera/manual/imagenes/en/05-cita.png" alt="A ficha de uma marcação com o cliente, o profissional, a hora e os serviços" loading="lazy">
     <figcaption>A ficha de uma marcação. Em baixo, o estado, confirmar, cobrar e anular.</figcaption>
   </figure>
+
+  <h3 id="agenda-plazas">Aulas: marcações com várias vagas</h3>
+  <p>
+    Uma aula de ténis, de pilates ou um grupo de pressoterapia são uma só marcação com vários clientes. Para que uma marcação admita mais do que um são precisas duas coisas: que o espaço tenha lugar para eles (<span class="ruta">Administração → Cabines → (uma) → Capacidade</span>) e que o serviço tenha vagas (<em>Catálogo → Serviços</em>, campo <em>Vagas</em>). Manda o número mais pequeno dos dois: um serviço de duas vagas numa cabine de uma continua a ser de uma.
+  </p>
+  <ul>
+    <li><strong>Inscrever.</strong> Ao abrir uma marcação já guardada que admite vários, aparece, por baixo dos comentários, a lista de quem vem. Procura-se o cliente e carrega-se em <em>Inscrever</em>, até preencher as vagas. O primeiro é quem tinha a marcação.</li>
+    <li><strong>Quem veio.</strong> Cada pessoa tem o seu estado no seu menu: <em>Inscrito</em>, <em>Veio</em>,
+      <em>Não veio</em> ou <em>Cancelou a inscrição</em>. Por isso nestas marcações não aparecem os botões de estado da marcação inteira: diriam o mesmo duas vezes.</li>
+    <li><strong>Cobrar.</strong> Cada pessoa paga o seu com o botão <em>Cobrar</em> da sua linha, que abre o TPV com ela e com os serviços da aula. Cobrada, a sua linha diz <em>Cobrada</em> e já não se lhe pode voltar a cobrar, retirar da lista nem mudar o estado. No TPV, em cima, em <em>Por cobrar</em>, aparece um a um quem veio e ainda não pagou.</li>
+  </ul>
+  <p>
+    Se o que se quer é atender várias pessoas seguidas —serviços de cinco minutos, uma às 10:00 e outra às 10:10— não é preciso nada disto: basta baixar o passo da agenda dessa cabine (ver <em>O passo de cada cabine</em>, em Administração) e dar uma marcação a cada uma.
+  </p>
 
   <h3 id="agenda-repetir">Marcações que se repetem</h3>
 
@@ -4018,20 +4035,41 @@ footer{
   <span class="ruta">Ficha do cliente → Documentação assinada · Administração → Consentimentos</span>
 
   <p>
-    O cliente assina no <strong>iPad do balcão</strong>. Não lhe é enviado nada por e-mail nem por WhatsApp,
+    O cliente assina no <strong>tablet da receção</strong>. Não lhe é enviado nada por e-mail nem por WhatsApp,
     e não se assina no telemóvel: ecrãs pequenos, navegadores diferentes e clientes de idade avançada.
   </p>
 
   <h4>Como se assina</h4>
 
   <ol>
-    <li>O iPad está sempre aberto em <em>Assinaturas</em>, com a sua própria sessão de receção. Pergunta apenas de poucos em poucos
+    <li>O tablet está sempre aberto em <em>Assinaturas</em>, com a sua própria sessão de receção. Pergunta apenas de poucos em poucos
       segundos se há algo para assinar.</li>
     <li>Na ficha do cliente, a receção prime <em>Pedir assinatura</em> e escolhe o documento.</li>
-    <li>O documento aparece sozinho no iPad, já com o nome e o NIF preenchidos. O cliente lê-o e assina com
-      o dedo.</li>
+    <li>O documento aparece sozinho no tablet, já com o nome e o NIF preenchidos. O cliente lê-o e assina com o dedo.</li>
     <li>Guarda-se o PDF, o traço, a hora, a versão do texto e uma impressão digital do documento.</li>
   </ol>
+
+  <h4 id="consentimientos-tablet">Preparar o tablet das assinaturas</h4>
+  <span class="ruta">Administração → Utilizadores · tablet → /firmas</span>
+
+  <p>
+    O tablet não precisa de nada especial: é um navegador com o ecrã <em>Assinaturas</em> aberto e uma sessão da receção. Não há um utilizador «assinaturas» predefinido; o mais limpo é criar um próprio.
+  </p>
+
+  <ol>
+    <li>Em <em>Administração → Utilizadores</em>, crie um utilizador só para o tablet (por exemplo, <code>tablet</code>) com a função <strong>Receção</strong> e a unidade da receção. Assim não partilha sessão com ninguém. Precisa de poder pedir assinaturas e cobrar, porque o ecrã <em>Assinaturas</em> o exige.</li>
+    <li>No tablet, abra o endereço do Turnera seguido de <code>/firmas</code>. Ao pedir uma assinatura na ficha do cliente, o Turnera mostra-lhe esse endereço completo e pode copiá-lo.</li>
+    <li>Entre com esse utilizador, escolha a unidade e marque <em>Memorizar neste computador</em> para que a sessão não termine ao fechar o navegador.</li>
+    <li>Opcional: no navegador do tablet, adicione a página ao ecrã principal para a abrir em ecrã completo.</li>
+  </ol>
+
+  <ul>
+    <li>O tablet pergunta a cada três segundos pela assinatura pendente mais antiga <strong>da sua unidade</strong>. Cada pedido vale cinco minutos e assina-se uma só vez.</li>
+    <li>A sessão da receção não abre os consentimentos já assinados.</li>
+    <li>O ecrã <em>Assinaturas</em> aparece <strong>sozinho</strong>: só tem o logótipo do Turnera, sem menu, sem mudança de idioma e sem forma de mudar de utilizador nem de terminar a sessão. Quem tem o tablet à frente é o cliente. Para mudar de utilizador ou sair, abra <code>/inicio</code> a partir do navegador do tablet.</li>
+    <li>Ao assinar, o documento desaparece e o tablet mostra, com um visto verde grande, um «Documento assinado» no idioma em que foi lido, junto a um botão <em>Fechar</em> que fecha o separador. Se ninguém carregar, ao fim de 20 segundos volta sozinho a esperar. Se o navegador não deixar fechar o separador, o botão deixa-o em branco.</li>
+    <li>Se o tablet perder a ligação ao Turnera, di-lo («Sem ligação») em vez de dizer que não há nada para assinar, e recupera sozinho quando a ligação volta. Se cair ao assinar, avisa ao fim de 20 segundos e pode voltar a assinar-se.</li>
+  </ul>
 
   <h4 id="consentimientos-idiomas">Consentimentos noutros idiomas</h4>
   <p>
@@ -4041,21 +4079,20 @@ footer{
     <code>{{centro}}</code>, <code>{{fecha}}</code> e <code>{{tratamiento}}</code>.
   </p>
   <ul>
-    <li>Se o cliente tiver na ficha um idioma que o modelo tenha escrito, o iPad mostra-lhe esse texto, e
-      também os botões e o aviso de baixo estão no seu idioma. O PDF assinado sai igual.</li>
+    <li>Se o cliente tiver na ficha um idioma em que o modelo está escrito, o tablet mostra-lhe esse texto, e também os botões e o aviso de baixo estão no seu idioma. O PDF assinado sai igual.</li>
     <li>Se não o tiver, assina o texto principal, no idioma do centro.</li>
     <li>Cada assinatura guarda em que idioma foi assinada e o texto exato que foi lido.</li>
   </ul>
 
   <div class="ojo">
-    <p><strong>O pedido expira aos quinze minutos</strong> e serve uma só vez. É de propósito: um
+    <p><strong>O pedido caduca ao fim de cinco minutos</strong> e serve uma só vez. É de propósito: um
       pedido esquecido em cima do balcão é uma assinatura à espera de quem não deve. Se expirar, volta a
       pedir-se a partir da ficha.</p>
   </div>
 
   <figure>
-    <img src="/turnera/manual/imagenes/en/24-ipad-de-firmas.png" alt="O ecrã do iPad com um consentimento e o quadro para assinar com o dedo" loading="lazy">
-    <figcaption>O iPad do balcão com o documento apresentado: o nome e o NIF já vêm preenchidos.</figcaption>
+    <img src="/turnera/manual/imagenes/en/24-ipad-de-firmas.png" alt="O ecrã do tablet com um consentimento e a caixa para assinar com o dedo" loading="lazy">
+    <figcaption>O tablet da receção com o documento carregado: o nome e o NIF já vêm preenchidos.</figcaption>
   </figure>
 
   <h4>Os modelos</h4>
@@ -4083,6 +4120,27 @@ footer{
     tratamento, não depois.
   </p>
 
+  <h4 id="consentimientos-campos">Campos a preencher no documento</h4>
+  <span class="ruta">Administração → Consentimentos → Nova versão</span>
+
+  <p>
+    Além dos dados que o Turnera preenche sozinho (cliente, NIF, centro, data e tratamento), cada documento pode ter os seus <strong>próprios campos</strong>: por exemplo as <em>zonas</em> que o cliente aceita depilar, uma caixa de aceitação ou uma data. O que se escolhe aparece escrito no PDF assinado.
+  </p>
+
+  <ol>
+    <li>Ao editar o texto, à direita está o painel <em>Campos</em>. Os <strong>verdes</strong> preenche-os o Turnera; os <strong>laranja</strong> são os do documento.</li>
+    <li>Prima <em>Novo campo</em>, dê-lhe um nome e escolha o tipo: texto (de uma ou várias linhas), data, caixa, lista ou seleção múltipla. Nas listas, as opções escrevem-se uma por linha.</li>
+    <li>Arraste o campo para o sítio do texto onde deve aparecer, ou carregue em <em>+</em> para o pôr onde estiver o cursor. Os do Turnera colocam-se da mesma forma.</li>
+    <li>Ao pedir a assinatura, a receção preenche os campos que o documento usa e o tablet mostra o texto já completo.</li>
+  </ol>
+
+  <ul>
+    <li>Os valores aparecem <strong>a negrito</strong> dentro do texto: uma seleção múltipla, separada por vírgulas e pela ordem da lista; uma data como dd/mm/aaaa; uma caixa como «Sim» ou «Não»; o opcional deixado vazio, como «—».</li>
+    <li>Se mudar o nome de um campo, muda em todos os textos e em todos os idiomas. Se o apagar, desaparece de todos. As assinaturas já feitas nunca mudam.</li>
+    <li>Não se pode guardar um texto que use um campo que o modelo não define.</li>
+    <li>Como qualquer alteração de um modelo, isto cria uma <strong>versão nova</strong> e a anterior fica desligada.</li>
+  </ul>
+
   <h4 id="consentimientos-importar">Trazer os que já foram assinados noutra plataforma</h4>
   <p>
     Os consentimentos assinados antes de usar o Turnera, noutro programa ou em papel digitalizado, carregam-se em PDF na
@@ -4094,13 +4152,16 @@ footer{
     <strong>«Importar consentimentos assinados»</strong>, que a Receção e a Direção têm de origem.
   </p>
 
+  <h4 id="consentimientos-importar-muchos">Trazer muitos de uma vez</h4>
+  <p>
+    Se forem dezenas ou centenas, em <em>Importar de outro programa</em> há um cartão <strong>Consentimentos assinados em PDF</strong>. Escolhe-se a pasta (ou os PDF) e carrega-se em <em>Ensaiar</em>: cada PDF junta-se ao seu cliente pelo
+    <strong>número de cliente</strong> que tem a pasta que o contém (uma pasta chamada <em>26033</em>) ou o seu nome, e verifica-se que o nome do cliente aparece no ficheiro. Se o nome do ficheiro começar por uma data no formato <em>aammdd</em> (<em>261016_…</em>), essa é a data do documento. O ensaio diz, ficheiro a ficheiro, quais entram e quais ficam de fora e porquê (nome diferente, cliente que não existe, sem número, PDF inválido); não guarda nada. Ao importar, cada um fica na ficha igual a se tivesse sido carregado à mão, e importar o mesmo PDF duas vezes não o duplica. Precisa da permissão de importar de outro programa e da de importar consentimentos assinados. Esta importação não se desfaz em bloco: um consentimento mal colocado retira-se a partir da ficha do cliente.
+  </p>
   <h4>Quem pode ver o que está assinado</h4>
 
   <p>
     A receção pode pedir a assinatura e acompanhá-la, mas <strong>descarregar um consentimento assinado exige a
-    permissão do processo clínico e fica registado</strong> no registo de acessos, tal como abrir um caso.
-    Um consentimento assinado é um dado de saúde. Assim o iPad do balcão pode estar todo o dia aberto com
-    a sua sessão sem que essa sessão abra os documentos de ninguém.
+    permissão do processo clínico e fica registado</strong> no registo de acessos, tal como abrir um caso. Um consentimento assinado é um dado de saúde. Assim o tablet da receção pode estar aberto todo o dia com a sua sessão sem que essa sessão abra os documentos de ninguém.
   </p>
 
   <h4>Retirar uma assinatura</h4>
@@ -5411,7 +5472,7 @@ footer{
   <ol>
     <li>Prima <strong>Novo ticket</strong>.</li>
     <li>Escreva o <strong>assunto</strong> e o que se passa. Se te ajudar a explicares, podes usar <strong>negrito</strong>,
-      <strong>itálico</strong> e <strong>listas</strong> (com marcadores ou numeradas). Podes <strong>arrastar ficheiros</strong> (até 5, de 10 MB no máximo cada; imagens, PDF ou texto) ou escolhê-los.</li>
+      <strong>itálico</strong> e <strong>listas</strong> (com marcadores ou numeradas). Podes <strong>arrastar ficheiros</strong> (até 5 e 40 MB no total: imagens até 10 MB ou vídeos curtos MP4, MOV ou WebM até 30 MB cada) ou escolhê-los.</li>
     <li>Assinale <strong>Impede-me de trabalhar</strong> apenas se não puder continuar: o ticket é atendido mais cedo.</li>
     <li>Prima <strong>Enviar ticket</strong>. O seu centro, o seu utilizador e a versão da Turnera seguem automaticamente com ele.</li>
   </ol>
@@ -5430,7 +5491,7 @@ footer{
     <li><strong>Fechado</strong>: resolvido há mais de duas semanas.</li>
   </ul>
   <p>
-    Dentro de um ticket vê a conversa (o seu à direita, o da equipa à esquerda), pode descarregar os ficheiros, <strong>Anexar ficheiro</strong> (só imagens; a equipa de suporte pode enviar-lhe ficheiros de qualquer tipo), <strong>Enviar resposta</strong> e, quando já
+    Dentro de um ticket vê a conversa (o seu à direita, o da equipa à esquerda), pode descarregar os ficheiros, <strong>Anexar ficheiro</strong> (imagens ou vídeos, com os mesmos limites; a equipa de suporte pode enviar-lhe ficheiros de qualquer tipo), <strong>Enviar resposta</strong> e, quando já
     estiver resolvido, <strong>Marcar como resolvido</strong>. Cada pessoa pode enviar até 5 tickets novos por hora.
   </p>
   <p>
