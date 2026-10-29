@@ -417,8 +417,13 @@ footer{
 .descargas .btn{align-self:flex-start;margin-top:1rem;display:inline-flex;align-items:center;gap:.65rem}
 .descargas .btn svg{width:1.25rem;height:1.25rem;flex:none}
 .descargas__nota{margin-top:1.6rem;font-size:.9rem;color:var(--text-dim)}
-.descargas__comando{margin:.2rem 0 0;padding:.7rem .9rem;border:1px solid var(--line);border-radius:8px;background:var(--bg);overflow-x:auto}
-.descargas__comando code{font-family:var(--mono);font-size:.85rem;color:var(--text)}
+.comando{display:flex;align-items:center;justify-content:space-between;gap:.8rem;margin:.2rem 0 0;padding:.5rem .6rem .5rem .9rem;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
+.comando code{font-family:var(--mono);font-size:.85rem;color:var(--text);overflow-x:auto;white-space:nowrap}
+.comando__copiar{display:inline-flex;align-items:center;gap:.4rem;flex:none;font:inherit;font-size:.8rem;padding:.35rem .55rem;border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--text-dim);cursor:pointer}
+.comando__copiar:hover{color:var(--text);border-color:var(--accent-lift)}
+.comando__copiar svg{width:1rem;height:1rem}
+.comando__ok{display:none}
+.comando__copiar.copiado .comando__ok{display:inline;color:var(--accent-lift)}
 #descargar:not(.linux) .solo-linux,#descargar.linux .solo-windows{display:none}
 .plan--destacado .specs li::before{background:var(--accent)}
 .precios__pie{list-style:none;padding:0;margin:2rem 0 0;display:flex;flex-direction:column;gap:.35rem;font-size:.9rem;color:var(--text-dim)}
@@ -650,7 +655,7 @@ footer{
             <li>Se instala desde la Terminal, sin permisos de administrador</li>
             <li>Crea su entrada en el menú de aplicaciones, con su icono</li>
           </ul>
-          <pre class="descargas__comando"><code>sh TradegunCharts-Setup-linux-x64.run</code></pre>
+          <div class="comando"><code>sh TradegunCharts-Setup-linux-x64.run</code><button type="button" class="comando__copiar" aria-label="Copiar comando"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V6a2 2 0 0 1 2-2h9"></path></svg><span class="comando__ok" role="status">¡Copiado!</span></button></div>
           <a class="btn btn--solid" href="https://descargas.tradegun.devel.es/linux/releases/TradegunCharts-Setup-linux-x64.run"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2c-2.6 0-4 2.2-4 5 0 1.2.3 2.2-.4 3.6C6.5 12.6 5 15 5 17.5c0 1.2.6 1.9 1.6 2.2.5 1.3 1.6 2.3 3 2.3h4.8c1.4 0 2.5-1 3-2.3 1-.3 1.6-1 1.6-2.2 0-2.5-1.5-4.9-2.6-6.9C16.7 9.2 17 8.2 17 7c0-2.8-1.4-5-5-5z"></path><ellipse cx="12" cy="15.6" rx="3.3" ry="4.6" fill="var(--accent)"></ellipse><circle cx="10.4" cy="6.7" r=".9" fill="var(--accent)"></circle><circle cx="13.6" cy="6.7" r=".9" fill="var(--accent)"></circle><path fill="#F5A524" d="M10.5 8.3 12 9.9l1.5-1.6z"></path><ellipse cx="8.8" cy="21.7" rx="2.2" ry=".9" fill="#F5A524"></ellipse><ellipse cx="15.2" cy="21.7" rx="2.2" ry=".9" fill="#F5A524"></ellipse></svg>Descargar para Linux</a>
         </article>
       </div>
@@ -1090,6 +1095,17 @@ document.querySelectorAll('.periodo__opcion').forEach(function (opcion) {
   opciones.forEach(function (opcion) { opcion.addEventListener('click', function () { elegir(opcion.dataset.sistema); }); });
   if (/Linux/.test(navigator.userAgent) && !/Android/.test(navigator.userAgent)) elegir('linux');
 })();
+</script>
+<script>
+document.querySelectorAll('.comando__copiar').forEach(function (boton) {
+  boton.addEventListener('click', function () {
+    var comando = boton.closest('.comando').querySelector('code').textContent;
+    navigator.clipboard.writeText(comando).then(function () {
+      boton.classList.add('copiado');
+      setTimeout(function () { boton.classList.remove('copiado'); }, 1800);
+    });
+  });
+});
 </script>
 
 
