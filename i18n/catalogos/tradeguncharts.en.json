@@ -159,5 +159,17 @@
   "t725a8553": "A long position on the chart with its stop, its target, a pending limit order and a drawn zone.",
   "t0159e5ae": "Chart with VWAP, an exponential moving average, SMC market structure and a marked CRT.",
   "t9d476425": "Volume profile of a stretch of the chart with its POC, VAH, VAL, single prints and anchored VWAP.",
-  "t777c3e76": "TradegunCharts options chain with a two-leg strategy and its profit and loss curve."
+  "t777c3e76": "TradegunCharts options chain with a two-leg strategy and its profit and loss curve.",
+  "te7c7659f": "Free, with no expiry date",
+  "t3c0d71cd": "Standard indicators: EMA, SMA, VWAP, Bollinger, FVG, Big Trades, Stacked imbalance, Elliott Waves",
+  "tb01ecf88": "Drawings, volume profile and sound alarms",
+  "t11952155": "Trading from the chart with Interactive Brokers and Rithmic",
+  "t92fb0244": "Trading journal",
+  "tc4630b94": "Option chain and greeks",
+  "te5f31bbe": "Strategies and automatic hedging",
+  "tbb50fbf0": "Order copy groups across accounts",
+  "t5f9a8584": "Desk",
+  "ta7596792": "Everything in the Pro plan",
+  "t03a5ba1b": "TradegunCharts' own indicators: CRT, SMC, order blocks, BOS, Valhalla, absorptions, delta divergences and Key Candle",
+  "t2b316cdb": "Windows platform for professional derivatives trading: footprint charts, trading from the chart, order-flow indicators, option chain and phone alerts. With Interactive Brokers and Rithmic. Essential plan free; Pro and Desk from €19 a month, with a 14-day trial."
 }
