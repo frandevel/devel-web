@@ -386,7 +386,13 @@ footer{
 .funcion__texto .specs li::before{background:var(--accent)}
 #funciones .pillars{margin-top:clamp(3rem,6vw,4.5rem)}
 #precios{background:var(--surface-sunk);border-block:1px solid var(--line)}
-.planes{display:grid;gap:1.5rem;margin-top:2.8rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));align-items:start}
+.periodo{display:inline-flex;margin-top:2.2rem;padding:.25rem;border:1px solid var(--line);border-radius:100px;background:var(--surface);gap:.25rem}
+.periodo__opcion{font:inherit;font-size:.92rem;border:0;border-radius:100px;padding:.5rem 1.2rem;background:transparent;color:var(--text-dim);cursor:pointer}
+.periodo__opcion em{font-style:normal;font-size:.78rem;margin-left:.35rem;color:var(--accent-lift)}
+.periodo__opcion[aria-pressed="true"]{background:var(--accent);color:#fff}
+.periodo__opcion[aria-pressed="true"] em{color:#fff;opacity:.85}
+#precios:not(.anual) .solo-anual,#precios.anual .solo-mensual{display:none}
+.planes{display:grid;gap:1.5rem;margin-top:1.8rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));align-items:start}
 .plan{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.6rem 1.5rem;display:flex;flex-direction:column;gap:.7rem;position:relative}
 .plan--destacado{border:2px solid var(--accent)}
 .plan__sello{position:absolute;top:-.8rem;left:1.4rem;background:var(--accent);color:#fff;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .7rem;border-radius:100px}
@@ -631,6 +637,10 @@ footer{
         <h2>{{t6ea0e259}}</h2>
         <p>{{t3af5ffdd}}</p>
       </div>
+      <div class="periodo" role="group" aria-label="{{t1a4d3a16}}">
+        <button type="button" class="periodo__opcion" data-periodo="mensual" aria-pressed="true">{{tf1a87869}}</button>
+        <button type="button" class="periodo__opcion" data-periodo="anual" aria-pressed="false">{{tc87bca91}} <em>{{t7234635f}}</em></button>
+      </div>
       <div class="planes">
         <article class="plan">
           <h3 class="plan__nombre">{{tb4183cae}}</h3>
@@ -640,21 +650,23 @@ footer{
             <li>{{t96456b5e}}</li>
             <li>{{t3c0d71cd}}</li>
             <li>{{tb01ecf88}}</li>
-            <li>{{t6a44fa1f}}</li>
-            <li>{{te2a4e5ed}}</li>
-            <li>{{t92fb0244}}</li>
             <li>{{t5d99691d}}</li>
           </ul>
         </article>
         <article class="plan">
           <h3 class="plan__nombre">{{t66d0c5e6}}</h3>
-          <p class="plan__precio"><span>19 €</span> {{tbf486f3f}}</p>
-          <p class="plan__nota">{{t5947c720}}</p>
+          <p class="plan__precio solo-mensual"><span>19 €</span> {{tbf486f3f}}</p>
+          <p class="plan__nota solo-mensual">{{t75142403}}</p>
+          <p class="plan__precio solo-anual"><span>15 €</span> {{tbf486f3f}}</p>
+          <p class="plan__nota solo-anual">{{t94735ac5}}</p>
           <ul class="specs">
             <li>{{t7cebf5f7}}</li>
+            <li>{{tbd82ead9}}</li>
+            <li>{{te2a4e5ed}}</li>
+            <li>{{t92fb0244}}</li>
+            <li>{{tcdf278e7}}</li>
             <li>{{t99d7fa12}}</li>
             <li>{{tc4630b94}}</li>
-            <li>{{t03a9b9e4}}</li>
             <li>{{t05a4f0d8}}</li>
             <li>{{te5f31bbe}}</li>
             <li>{{tbb50fbf0}}</li>
@@ -663,10 +675,13 @@ footer{
         <article class="plan plan--destacado">
           <p class="plan__sello">{{t0705eab6}}</p>
           <h3 class="plan__nombre">{{t5f9a8584}}</h3>
-          <p class="plan__precio"><span>39 €</span> {{tbf486f3f}}</p>
-          <p class="plan__nota">{{t3a5135dc}}</p>
+          <p class="plan__precio solo-mensual"><span>39 €</span> {{tbf486f3f}}</p>
+          <p class="plan__nota solo-mensual">{{t88c0f170}}</p>
+          <p class="plan__precio solo-anual"><span>29 €</span> {{tbf486f3f}}</p>
+          <p class="plan__nota solo-anual">{{tcc53f111}}</p>
           <ul class="specs">
             <li>{{ta7596792}}</li>
+            <li>{{t03a9b9e4}}</li>
             <li>{{t03a5ba1b}}</li>
             <li>{{t32d17fee}}</li>
           </ul>
@@ -676,7 +691,7 @@ footer{
         <li>{{t255b4514}}</li>
         <li>{{t601fa612}}</li>
         <li>{{t254c5060}}</li>
-        <li>{{t411dfae2}}</li>
+        <li>{{tcb0e0fb6}}</li>
       </ul>
       <div class="actions"><a class="btn btn--solid" href="#contacto">{{t68ece815}}</a></div>
     </div>
@@ -892,6 +907,15 @@ formulario.addEventListener("submit", async (evento) => {
     boton.disabled = false;
     boton.textContent = textoBotonEnReposo;
   }
+});
+</script>
+<script>
+document.querySelectorAll('.periodo__opcion').forEach(function (opcion) {
+  opcion.addEventListener('click', function () {
+    var anual = opcion.dataset.periodo === 'anual';
+    document.getElementById('precios').classList.toggle('anual', anual);
+    document.querySelectorAll('.periodo__opcion').forEach(function (otra) { otra.setAttribute('aria-pressed', String(otra === opcion)); });
+  });
 });
 </script>
 

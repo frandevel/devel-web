@@ -390,7 +390,13 @@ footer{
 .funcion__texto .specs li::before{background:var(--accent)}
 #funciones .pillars{margin-top:clamp(3rem,6vw,4.5rem)}
 #precios{background:var(--surface-sunk);border-block:1px solid var(--line)}
-.planes{display:grid;gap:1.5rem;margin-top:2.8rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));align-items:start}
+.periodo{display:inline-flex;margin-top:2.2rem;padding:.25rem;border:1px solid var(--line);border-radius:100px;background:var(--surface);gap:.25rem}
+.periodo__opcion{font:inherit;font-size:.92rem;border:0;border-radius:100px;padding:.5rem 1.2rem;background:transparent;color:var(--text-dim);cursor:pointer}
+.periodo__opcion em{font-style:normal;font-size:.78rem;margin-left:.35rem;color:var(--accent-lift)}
+.periodo__opcion[aria-pressed="true"]{background:var(--accent);color:#fff}
+.periodo__opcion[aria-pressed="true"] em{color:#fff;opacity:.85}
+#precios:not(.anual) .solo-anual,#precios.anual .solo-mensual{display:none}
+.planes{display:grid;gap:1.5rem;margin-top:1.8rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));align-items:start}
 .plan{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.6rem 1.5rem;display:flex;flex-direction:column;gap:.7rem;position:relative}
 .plan--destacado{border:2px solid var(--accent)}
 .plan__sello{position:absolute;top:-.8rem;left:1.4rem;background:var(--accent);color:#fff;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .7rem;border-radius:100px}
@@ -740,6 +746,10 @@ footer{
         <h2>One licence per computer, no small print.</h2>
         <p>Pay monthly or yearly, and try any paid plan free for 14 days. No lock-in: if you stop, it doesn't renew.</p>
       </div>
+      <div class="periodo" role="group" aria-label="Billing period">
+        <button type="button" class="periodo__opcion" data-periodo="mensual" aria-pressed="true">Monthly</button>
+        <button type="button" class="periodo__opcion" data-periodo="anual" aria-pressed="false">Yearly <em>save up to 26%</em></button>
+      </div>
       <div class="planes">
         <article class="plan">
           <h3 class="plan__nombre">Essential</h3>
@@ -749,21 +759,23 @@ footer{
             <li>Footprint charts for futures</li>
             <li>Standard indicators: EMA, SMA, VWAP, Bollinger, FVG, Big Trades, Stacked imbalance, Elliott Waves</li>
             <li>Drawings, volume profile and sound alarms</li>
-            <li>Trading from the chart with Interactive Brokers</li>
-            <li>Rithmic: in certification, not yet available</li>
-            <li>Trading journal</li>
             <li>Unlimited windows</li>
           </ul>
         </article>
         <article class="plan">
           <h3 class="plan__nombre">Pro</h3>
-          <p class="plan__precio"><span>19 €</span> per month</p>
-          <p class="plan__nota">or €15 per month paid yearly (€180)</p>
+          <p class="plan__precio solo-mensual"><span>19 €</span> per month</p>
+          <p class="plan__nota solo-mensual">or €15 a month paid yearly</p>
+          <p class="plan__precio solo-anual"><span>15 €</span> per month</p>
+          <p class="plan__nota solo-anual">€180 a year, in a single payment</p>
           <ul class="specs">
             <li>Everything in Essential</li>
+            <li>Trading from the chart and order panel with Interactive Brokers</li>
+            <li>Rithmic: in certification, not yet available</li>
+            <li>Trading journal</li>
+            <li>Watchlist with quotes</li>
             <li>Phone notifications</li>
             <li>Option chain and greeks</li>
-            <li>Gamma levels and regime</li>
             <li>Macroeconomic calendar</li>
             <li>Strategies and automatic hedging</li>
             <li>Order copy groups across accounts</li>
@@ -772,10 +784,13 @@ footer{
         <article class="plan plan--destacado">
           <p class="plan__sello">Most complete</p>
           <h3 class="plan__nombre">Desk</h3>
-          <p class="plan__precio"><span>39 €</span> per month</p>
-          <p class="plan__nota">or €29 per month paid yearly (€348)</p>
+          <p class="plan__precio solo-mensual"><span>39 €</span> per month</p>
+          <p class="plan__nota solo-mensual">or €29 a month paid yearly</p>
+          <p class="plan__precio solo-anual"><span>29 €</span> per month</p>
+          <p class="plan__nota solo-anual">€348 a year, in a single payment</p>
           <ul class="specs">
             <li>Everything in the Pro plan</li>
+            <li>Gamma levels and regime</li>
             <li>TradegunCharts' own indicators: CRT, SMC, order blocks, BOS, Valhalla, absorptions, delta divergences and Key Candle</li>
             <li>Automation and strategy engine, when they arrive</li>
           </ul>
@@ -785,7 +800,7 @@ footer{
         <li>Prices exclude VAT.</li>
         <li>Each licence is activated on one computer. To move it to another, release it from Help → Licence.</li>
         <li>You subscribe to market data with your broker: TradegunCharts doesn't resell it.</li>
-        <li>Today the connection is with Interactive Brokers. Rithmic is in certification and can't be used yet; it will come to every plan at no extra cost.</li>
+        <li>Today the connection is with Interactive Brokers. Rithmic is in certification and can't be used yet; it will come to the Pro and Desk plans at no extra cost.</li>
       </ul>
       <div class="actions"><a class="btn btn--solid" href="#contacto">Start the 14-day trial</a></div>
     </div>
@@ -1001,6 +1016,15 @@ formulario.addEventListener("submit", async (evento) => {
     boton.disabled = false;
     boton.textContent = textoBotonEnReposo;
   }
+});
+</script>
+<script>
+document.querySelectorAll('.periodo__opcion').forEach(function (opcion) {
+  opcion.addEventListener('click', function () {
+    var anual = opcion.dataset.periodo === 'anual';
+    document.getElementById('precios').classList.toggle('anual', anual);
+    document.querySelectorAll('.periodo__opcion').forEach(function (otra) { otra.setAttribute('aria-pressed', String(otra === opcion)); });
+  });
 });
 </script>
 

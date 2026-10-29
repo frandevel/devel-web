@@ -388,7 +388,13 @@ footer{
 .funcion__texto .specs li::before{background:var(--accent)}
 #funciones .pillars{margin-top:clamp(3rem,6vw,4.5rem)}
 #precios{background:var(--surface-sunk);border-block:1px solid var(--line)}
-.planes{display:grid;gap:1.5rem;margin-top:2.8rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));align-items:start}
+.periodo{display:inline-flex;margin-top:2.2rem;padding:.25rem;border:1px solid var(--line);border-radius:100px;background:var(--surface);gap:.25rem}
+.periodo__opcion{font:inherit;font-size:.92rem;border:0;border-radius:100px;padding:.5rem 1.2rem;background:transparent;color:var(--text-dim);cursor:pointer}
+.periodo__opcion em{font-style:normal;font-size:.78rem;margin-left:.35rem;color:var(--accent-lift)}
+.periodo__opcion[aria-pressed="true"]{background:var(--accent);color:#fff}
+.periodo__opcion[aria-pressed="true"] em{color:#fff;opacity:.85}
+#precios:not(.anual) .solo-anual,#precios.anual .solo-mensual{display:none}
+.planes{display:grid;gap:1.5rem;margin-top:1.8rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));align-items:start}
 .plan{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.6rem 1.5rem;display:flex;flex-direction:column;gap:.7rem;position:relative}
 .plan--destacado{border:2px solid var(--accent)}
 .plan__sello{position:absolute;top:-.8rem;left:1.4rem;background:var(--accent);color:#fff;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .7rem;border-radius:100px}
@@ -633,6 +639,10 @@ footer{
         <h2>Una licencia por equipo, sin letra pequeña.</h2>
         <p>Paga al mes o al año, y prueba gratis cualquiera de los planes de pago durante 14 días. Sin permanencia: si lo dejas, no se renueva.</p>
       </div>
+      <div class="periodo" role="group" aria-label="Periodo de pago">
+        <button type="button" class="periodo__opcion" data-periodo="mensual" aria-pressed="true">Mensual</button>
+        <button type="button" class="periodo__opcion" data-periodo="anual" aria-pressed="false">Anual <em>ahorra hasta un 26 %</em></button>
+      </div>
       <div class="planes">
         <article class="plan">
           <h3 class="plan__nombre">Essential</h3>
@@ -642,21 +652,23 @@ footer{
             <li>Gráficos footprint de futuros</li>
             <li>Indicadores estándar: EMA, SMA, VWAP, Bollinger, FVG, Big Trades, Stacked imbalance, Ondas de Elliott</li>
             <li>Dibujos, perfil de volumen y alarmas con sonido</li>
-            <li>Operativa en el gráfico con Interactive Brokers</li>
-            <li>Rithmic: en certificación, todavía no disponible</li>
-            <li>Diario de operaciones</li>
             <li>Ventanas ilimitadas</li>
           </ul>
         </article>
         <article class="plan">
           <h3 class="plan__nombre">Pro</h3>
-          <p class="plan__precio"><span>19 €</span> al mes</p>
-          <p class="plan__nota">o 15 € al mes pagando el año (180 €)</p>
+          <p class="plan__precio solo-mensual"><span>19 €</span> al mes</p>
+          <p class="plan__nota solo-mensual">o 15 € al mes pagando el año</p>
+          <p class="plan__precio solo-anual"><span>15 €</span> al mes</p>
+          <p class="plan__nota solo-anual">180 € al año, en un solo pago</p>
           <ul class="specs">
             <li>Todo lo del plan Essential</li>
+            <li>Operativa en el gráfico y panel de órdenes con Interactive Brokers</li>
+            <li>Rithmic: en certificación, todavía no disponible</li>
+            <li>Diario de operaciones</li>
+            <li>Lista de seguimiento con cotizaciones</li>
             <li>Avisos al móvil</li>
             <li>Cadena de opciones y griegas</li>
-            <li>Niveles y régimen de gamma</li>
             <li>Calendario macroeconómico</li>
             <li>Estrategias y cobertura automática</li>
             <li>Grupos de copia de órdenes entre cuentas</li>
@@ -665,10 +677,13 @@ footer{
         <article class="plan plan--destacado">
           <p class="plan__sello">El más completo</p>
           <h3 class="plan__nombre">Desk</h3>
-          <p class="plan__precio"><span>39 €</span> al mes</p>
-          <p class="plan__nota">o 29 € al mes pagando el año (348 €)</p>
+          <p class="plan__precio solo-mensual"><span>39 €</span> al mes</p>
+          <p class="plan__nota solo-mensual">o 29 € al mes pagando el año</p>
+          <p class="plan__precio solo-anual"><span>29 €</span> al mes</p>
+          <p class="plan__nota solo-anual">348 € al año, en un solo pago</p>
           <ul class="specs">
             <li>Todo lo del plan Pro</li>
+            <li>Niveles y régimen de gamma</li>
             <li>Los indicadores propios de TradegunCharts: CRT, SMC, order blocks, BOS, Valhalla, absorciones, divergencias de delta y Key Candle</li>
             <li>Automatismos y motor de estrategias, cuando lleguen</li>
           </ul>
@@ -678,7 +693,7 @@ footer{
         <li>Precios sin IVA.</li>
         <li>Cada licencia se activa en un equipo. Para pasarla a otro, la liberas desde Ayuda → Licencia.</li>
         <li>Los datos de mercado los contratas con tu bróker: TradegunCharts no los revende.</li>
-        <li>Hoy la conexión es con Interactive Brokers. Rithmic está en certificación y aún no se puede usar; llegará a todos los planes sin coste adicional.</li>
+        <li>Hoy la conexión es con Interactive Brokers. Rithmic está en certificación y aún no se puede usar; llegará a los planes Pro y Desk sin coste adicional.</li>
       </ul>
       <div class="actions"><a class="btn btn--solid" href="#contacto">Empezar la prueba de 14 días</a></div>
     </div>
@@ -894,6 +909,15 @@ formulario.addEventListener("submit", async (evento) => {
     boton.disabled = false;
     boton.textContent = textoBotonEnReposo;
   }
+});
+</script>
+<script>
+document.querySelectorAll('.periodo__opcion').forEach(function (opcion) {
+  opcion.addEventListener('click', function () {
+    var anual = opcion.dataset.periodo === 'anual';
+    document.getElementById('precios').classList.toggle('anual', anual);
+    document.querySelectorAll('.periodo__opcion').forEach(function (otra) { otra.setAttribute('aria-pressed', String(otra === opcion)); });
+  });
 });
 </script>
 </body>
