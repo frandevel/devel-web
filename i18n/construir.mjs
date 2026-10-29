@@ -13,6 +13,7 @@ const PAGINAS = [
   { plantilla: 'plantillas/centros-deportivos.html', catalogo: 'centros-deportivos', ruta: 'turnera/centros-deportivos' },
   { plantilla: 'plantillas/academias.html', catalogo: 'academias', ruta: 'turnera/academias' },
   { plantilla: 'plantillas/tradeguncharts.html', catalogo: 'tradeguncharts', ruta: 'tradeguncharts', idiomas: ['es', 'en'], respaldo: 'en' },
+  { plantilla: 'plantillas/tradeguncharts-novedades.html', catalogo: 'tradeguncharts-novedades', ruta: 'tradeguncharts/novedades', idiomas: ['es', 'en'], respaldo: 'en' },
   { plantilla: 'plantillas/manual.html',  catalogo: 'manual',  ruta: 'turnera/manual' },
   { plantilla: 'plantillas/novedades.html', catalogo: 'novedades', ruta: 'turnera/novedades' },
   // El aviso legal no esta en portugues: un texto juridico traducido sin revisar es mas riesgo que su falta. Desde
@@ -102,6 +103,7 @@ const NOMBRES_DE_PAGINA = {
   '': { es: 'DEVEL' },
   'turnera': { es: 'Turnera' },
   'tradeguncharts': { es: 'TradegunCharts', en: 'TradegunCharts' },
+  'tradeguncharts/novedades': { es: 'Novedades', en: "What's new" },
   'turnera/recursos-humanos': { es: 'Recursos Humanos', en: 'Human Resources', de: 'Personal', pt: 'Recursos Humanos' },
   'turnera/clinicas': { es: 'Clínicas', en: 'Clinics', de: 'Praxen und Kliniken', pt: 'Clínicas' },
   'turnera/centros-deportivos': { es: 'Centros deportivos', en: 'Training centres and clubs', de: 'Trainingszentren und Vereine', pt: 'Centros desportivos' },

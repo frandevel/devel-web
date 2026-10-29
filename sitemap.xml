@@ -231,6 +231,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/tradeguncharts"/>
   </url>
   <url>
+    <loc>https://devel.es/tradeguncharts/novedades</loc>
+    <lastmod>2026-10-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/tradeguncharts/novedades"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/tradeguncharts/novedades"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/tradeguncharts/novedades"/>
+  </url>
+  <url>
+    <loc>https://devel.es/en/tradeguncharts/novedades</loc>
+    <lastmod>2026-10-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/tradeguncharts/novedades"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/tradeguncharts/novedades"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/tradeguncharts/novedades"/>
+  </url>
+  <url>
     <loc>https://devel.es/turnera/manual</loc>
     <lastmod>2026-10-29</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/manual"/>
