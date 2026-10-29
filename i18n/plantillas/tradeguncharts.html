@@ -403,10 +403,16 @@ footer{
 .plan__precio span{font-family:var(--display);font-size:2.3rem;font-weight:700;color:var(--text);margin-right:.25rem}
 .plan__nota{font-size:.86rem;color:var(--steel);margin-top:-.4rem}
 .plan .specs{margin-top:.6rem}
-.descargas{display:grid;gap:1.5rem;margin-top:1.8rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start}
+.sistema{display:flex;gap:1.8rem;margin-top:2.2rem}
+.sistema__opcion{font:inherit;font-size:1rem;border:0;border-bottom:2px solid var(--line);border-radius:0;padding:.35rem .1rem .55rem;min-width:4.2rem;background:transparent;color:var(--text-dim);cursor:pointer}
+.sistema__opcion:hover{color:var(--text)}
+.sistema__opcion[aria-pressed="true"]{color:var(--text);border-bottom-color:var(--text)}
+.descargas{margin-top:1.8rem;max-width:560px}
 .descargas .btn{align-self:flex-start;margin-top:1rem}
 .descargas__nota{margin-top:1.6rem;font-size:.9rem;color:var(--text-dim)}
-.descargas code{font-family:var(--mono);font-size:.85em}
+.descargas__comando{margin:.2rem 0 0;padding:.7rem .9rem;border:1px solid var(--line);border-radius:8px;background:var(--bg);overflow-x:auto}
+.descargas__comando code{font-family:var(--mono);font-size:.85rem;color:var(--text)}
+#descargar:not(.linux) .solo-linux,#descargar.linux .solo-windows{display:none}
 .plan--destacado .specs li::before{background:var(--accent)}
 .precios__pie{list-style:none;padding:0;margin:2rem 0 0;display:flex;flex-direction:column;gap:.35rem;font-size:.9rem;color:var(--text-dim)}
 #precios .actions{margin-top:1.8rem}
@@ -510,8 +516,12 @@ footer{
         <h2>{{t4d72a5e4}}</h2>
         <p>{{t26e029c4}}</p>
       </div>
+      <div class="sistema" role="group" aria-label="{{ta3993861}}">
+        <button type="button" class="sistema__opcion" data-sistema="windows" aria-pressed="true">{{t26d9c28d}}</button>
+        <button type="button" class="sistema__opcion" data-sistema="linux" aria-pressed="false">{{t83ad8510}}</button>
+      </div>
       <div class="descargas">
-        <article class="plan">
+        <article class="plan solo-windows">
           <h3 class="plan__nombre">{{t26d9c28d}}</h3>
           <p class="plan__nota">{{t051a8970}}</p>
           <ul class="specs">
@@ -520,13 +530,14 @@ footer{
           </ul>
           <a class="btn btn--solid" href="https://descargas.tradegun.devel.es/releases/TradegunCharts-Setup.exe">{{t9b50f4c2}}</a>
         </article>
-        <article class="plan">
+        <article class="plan solo-linux">
           <h3 class="plan__nombre">{{t83ad8510}}</h3>
           <p class="plan__nota">{{tba8398c1}}</p>
           <ul class="specs">
-            <li>{{tc418dab1}} <code>{{taaa70a15}}</code></li>
+            <li>{{t16643706}}</li>
             <li>{{t8d110322}}</li>
           </ul>
+          <pre class="descargas__comando"><code>{{taaa70a15}}</code></pre>
           <a class="btn btn--solid" href="https://descargas.tradegun.devel.es/linux/releases/TradegunCharts-Setup-linux-x64.run">{{t85926787}}</a>
         </article>
       </div>
@@ -954,6 +965,18 @@ document.querySelectorAll('.periodo__opcion').forEach(function (opcion) {
     document.querySelectorAll('.periodo__opcion').forEach(function (otra) { otra.setAttribute('aria-pressed', String(otra === opcion)); });
   });
 });
+</script>
+<script>
+(function () {
+  var seccion = document.getElementById('descargar');
+  var opciones = document.querySelectorAll('.sistema__opcion');
+  function elegir(sistema) {
+    seccion.classList.toggle('linux', sistema === 'linux');
+    opciones.forEach(function (opcion) { opcion.setAttribute('aria-pressed', String(opcion.dataset.sistema === sistema)); });
+  }
+  opciones.forEach(function (opcion) { opcion.addEventListener('click', function () { elegir(opcion.dataset.sistema); }); });
+  if (/Linux/.test(navigator.userAgent) && !/Android/.test(navigator.userAgent)) elegir('linux');
+})();
 </script>
 
 
