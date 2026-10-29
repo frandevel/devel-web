@@ -1,13 +1,13 @@
 <!DOCTYPE html><html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{{t5913226c}}</title>
-<meta name="description" content="{{t534cc906}}">
+<title>{{t7424c966}}</title>
+<meta name="description" content="{{ta8304056}}">
 <link rel="canonical" href="https://devel.es/tradeguncharts">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DEVEL">
-<meta property="og:title" content="{{t5913226c}}">
+<meta property="og:title" content="{{t7424c966}}">
 <meta property="og:description" content="{{t00c57ef3}}">
 <meta property="og:url" content="https://devel.es/tradeguncharts">
 <meta property="og:locale" content="es_ES">
@@ -16,7 +16,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="{{t78398371}}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{t5913226c}}">
+<meta name="twitter:title" content="{{t7424c966}}">
 <meta name="twitter:description" content="{{t00c57ef3}}">
 <meta name="twitter:image" content="https://devel.es/devel-og.png">
 <link rel="icon" href="/devel-isotipo.png" type="image/png">
@@ -365,6 +365,70 @@ footer{
   .idiomas{margin-left:auto;padding-left:.8rem}
 }
 
+
+/* ---------- producto: datos, funciones, planes, novedades, preguntas, riesgo ---------- */
+.datos{list-style:none;margin:2rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.datos li{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:#C3D5E6;border:1px solid #2C5C7E;border-radius:100px;padding:.3rem .8rem}
+.figura{margin:0}
+.figura img,.figura video{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:#14171c}
+.figura figcaption{margin-top:.8rem;font-size:.9rem;color:var(--text-dim)}
+.funcion{display:grid;gap:1.6rem 3rem;align-items:center;margin-top:clamp(2.8rem,6vw,4.5rem)}
+@media (min-width:900px){
+  .funcion{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr)}
+  .funcion--invertida{grid-template-columns:minmax(0,1fr) minmax(0,1.45fr)}
+  .funcion--invertida .figura{order:2}
+}
+.funcion__texto h3{font-size:1.45rem;color:var(--brand)}
+:root[data-theme="dark"] .funcion__texto h3{color:#BFD3E5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .funcion__texto h3{color:#BFD3E5}}
+.funcion__texto p{margin-top:.8rem;color:var(--text-dim)}
+.funcion__texto .specs{margin-top:1.1rem}
+.funcion__texto .specs li::before{background:var(--accent)}
+#funciones .pillars{margin-top:clamp(3rem,6vw,4.5rem)}
+#precios{background:var(--surface-sunk);border-block:1px solid var(--line)}
+.planes{display:grid;gap:1.5rem;margin-top:2.8rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));align-items:start}
+.plan{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.6rem 1.5rem;display:flex;flex-direction:column;gap:.7rem;position:relative}
+.plan--destacado{border:2px solid var(--accent)}
+.plan__sello{position:absolute;top:-.8rem;left:1.4rem;background:var(--accent);color:#fff;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .7rem;border-radius:100px}
+.plan__nombre{font-size:1.3rem;color:var(--brand)}
+:root[data-theme="dark"] .plan__nombre{color:#BFD3E5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .plan__nombre{color:#BFD3E5}}
+.plan__precio{color:var(--text-dim)}
+.plan__precio span{font-family:var(--display);font-size:2.3rem;font-weight:700;color:var(--text);margin-right:.25rem}
+.plan__nota{font-size:.86rem;color:var(--steel);margin-top:-.4rem}
+.plan .specs{margin-top:.6rem}
+.plan--destacado .specs li::before{background:var(--accent)}
+.precios__pie{list-style:none;padding:0;margin:2rem 0 0;display:flex;flex-direction:column;gap:.35rem;font-size:.9rem;color:var(--text-dim)}
+#precios .actions{margin-top:1.8rem}
+.cambios{list-style:none;padding:0;margin:2.4rem 0 0;display:flex;flex-direction:column;max-width:52rem}
+.cambios li{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--line)}
+.cambios time{font-family:var(--mono);font-size:.8rem;color:var(--steel);padding-top:.15rem}
+.cambios p{color:var(--text-dim)}
+.cambios b{color:var(--text);font-weight:600}
+@media (max-width:560px){.cambios li{grid-template-columns:1fr;gap:.2rem}}
+#preguntas{background:var(--surface-sunk);border-block:1px solid var(--line)}
+.faq{margin-top:2.8rem;display:grid;gap:2.6rem 3.5rem}
+@media (min-width:900px){.faq{grid-template-columns:1fr 1fr;align-items:start}}
+.faq__columna{display:flex;flex-direction:column;gap:2.6rem}
+.faq__grupo h3{font-size:1.1rem;color:var(--brand);padding-bottom:.7rem;border-bottom:2px solid var(--accent)}
+:root[data-theme="dark"] .faq__grupo h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .faq__grupo h3{color:var(--mist)}}
+.faq__item{border-bottom:1px solid var(--line)}
+.faq__item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.85rem 0;font-family:var(--display);font-weight:600;font-size:1rem;color:var(--text)}
+.faq__item summary::-webkit-details-marker{display:none}
+.faq__item summary::after{content:"+";flex:none;font-family:var(--mono);font-size:1.1rem;line-height:1;color:var(--accent-lift);transition:transform .18s ease}
+.faq__item[open] summary::after{transform:rotate(45deg)}
+.faq__item summary:hover{color:var(--link)}
+.faq__respuesta{padding-bottom:1.15rem;color:var(--text-dim);font-size:.96rem}
+.condiciones{display:grid;gap:2rem 3rem;margin-top:2.4rem}
+@media (min-width:900px){.condiciones{grid-template-columns:1fr 1fr;align-items:start}}
+.condiciones h3{font-size:1.1rem;margin-bottom:.8rem;color:var(--brand)}
+:root[data-theme="dark"] .condiciones h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .condiciones h3{color:var(--mist)}}
+.aviso-riesgo{border-left:3px solid #D9822B;background:var(--surface);border-radius:0 10px 10px 0;padding:1.2rem 1.4rem}
+.aviso-riesgo p{color:var(--text-dim);font-size:.95rem}
+.condiciones .specs li{align-items:flex-start}
+.condiciones .specs li::before{margin-top:.55em}
 </style>
 </head>
 <body>
@@ -375,8 +439,9 @@ footer{
       <span>{{t21a6cafa}}</span>
     </a>
     <nav>
-      <a href="#que-ofrece">{{tda20f4de}}</a>
-      <a href="#licencias">{{tea98045f}}</a>
+      <a href="#funciones">{{t1f49791d}}</a>
+      <a href="#precios">{{t628c066b}}</a>
+      <a href="#preguntas">{{t1df9a6fc}}</a>
       <a href="#contacto">{{td8a53e1f}}</a>
     </nav>
     <!--selector-de-idioma-->
@@ -387,13 +452,19 @@ footer{
   <section class="hero">
     <div class="shell hero__inner">
       <div>
-        <h1 class="eyebrow">{{t937e5360}}</h1>
+        <h1 class="eyebrow">{{tf1133511}}</h1>
         <p class="hero__lema">{{t4cdbe1d5}}<br><em>{{t4332a157}}</em></p>
-        <p class="lede">{{tb404511a}}</p>
+        <p class="lede">{{t1ba9c6c9}}</p>
         <div class="actions">
-          <a class="btn btn--solid" href="#contacto">{{tbc7d40e9}}</a>
-          <a class="btn btn--ghost" href="#que-ofrece">{{t25b0c07f}}</a>
+          <a class="btn btn--solid" href="#contacto">{{t044c1589}}</a>
+          <a class="btn btn--ghost" href="#precios">{{te397d0cf}}</a>
         </div>
+        <ul class="datos">
+          <li>{{tdf37d252}}</li>
+          <li>{{t9d3571bc}}</li>
+          <li>{{tdd749e3e}}</li>
+          <li>{{t971e42d2}}</li>
+        </ul>
       </div>
       <div class="hero__mark">
         <span class="product__logo" style="width:min(100%,230px)" aria-hidden="true">
@@ -412,59 +483,292 @@ footer{
 
   <section id="captura">
     <div class="shell">
-      <figure style="margin:0">
-        <img src="/tradeguncharts/captura.jpg" width="2463" height="1305" alt="{{tf43cf7c3}}" style="display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line)">
-        <figcaption style="margin-top:.8rem;font-size:.9rem;color:var(--text-dim)">{{t3d1dadfd}}</figcaption>
-      </figure>
-      <figure style="margin:2.4rem 0 0">
-        <img src="/tradeguncharts/opciones.jpg" width="1303" height="890" loading="lazy" alt="{{t777c3e76}}" style="display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line)">
-        <figcaption style="margin-top:.8rem;font-size:.9rem;color:var(--text-dim)">{{td5ef3265}}</figcaption>
+      <figure class="figura">
+        <img src="/tradeguncharts/captura.jpg" width="2463" height="1305" alt="{{tf43cf7c3}}">
+        <figcaption>{{t6d642574}}</figcaption>
       </figure>
     </div>
   </section>
 
-  <section id="que-ofrece">
+  <section id="funciones">
     <div class="shell">
       <div class="section__head">
-        <p class="eyebrow">{{tda20f4de}}</p>
+        <p class="eyebrow">{{t1f49791d}}</p>
         <h2>{{t5d5d2fc3}}</h2>
-        <p>{{t899f01f7}}</p>
+        <p>{{t5ec10aa6}}</p>
       </div>
+
+      <div class="funcion">
+        <figure class="figura">
+          <img src="/tradeguncharts/footprint.jpg" width="1600" height="900" loading="lazy" alt="{{tb20de31e}}">
+        </figure>
+        <div class="funcion__texto">
+          <h3>{{t70cbb524}}</h3>
+          <p>{{te1744a7c}}</p>
+          <ul class="specs">
+            <li>{{t6236192b}}</li>
+            <li>{{t5f736df3}}</li>
+            <li>{{tf064542f}}</li>
+            <li>{{t3941a9bd}}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="funcion funcion--invertida">
+        <figure class="figura">
+          <video src="/tradeguncharts/en-vivo.mp4" poster="/tradeguncharts/en-vivo-poster.jpg" width="1200" height="720" autoplay="" muted="" loop="" playsinline="" aria-label="{{t4261f67a}}"></video>
+        </figure>
+        <div class="funcion__texto">
+          <h3>{{t0414b787}}</h3>
+          <p>{{t0ec8d103}}</p>
+          <ul class="specs">
+            <li>{{t4ef795d6}}</li>
+            <li>{{t25040605}}</li>
+            <li>{{t070d09af}}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="funcion">
+        <figure class="figura">
+          <img src="/tradeguncharts/operativa.jpg" width="1600" height="900" loading="lazy" alt="{{t725a8553}}">
+        </figure>
+        <div class="funcion__texto">
+          <h3>{{t809ff09d}}</h3>
+          <p>{{ta6295777}}</p>
+          <ul class="specs">
+            <li>{{t8b39df80}}</li>
+            <li>{{tc4e674a6}}</li>
+            <li>{{t05d508ae}}</li>
+            <li>{{tca779028}}</li>
+            <li>{{tc6dc41f0}}</li>
+            <li>{{td3430d61}}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="funcion funcion--invertida">
+        <figure class="figura">
+          <img src="/tradeguncharts/indicadores.jpg" width="1600" height="900" loading="lazy" alt="{{t0159e5ae}}">
+        </figure>
+        <div class="funcion__texto">
+          <h3>{{tb08b59cc}}</h3>
+          <p>{{t3693c96a}}</p>
+          <ul class="specs">
+            <li>{{t346c2139}}</li>
+            <li>{{t90cca24a}}</li>
+            <li>{{te2c656df}}</li>
+            <li>{{t2783cc0a}}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="funcion">
+        <figure class="figura">
+          <img src="/tradeguncharts/perfil.jpg" width="1600" height="900" loading="lazy" alt="{{t9d476425}}">
+        </figure>
+        <div class="funcion__texto">
+          <h3>{{tee1aa7e2}}</h3>
+          <p>{{t9feae06f}}</p>
+          <ul class="specs">
+            <li>{{tef42f1cf}}</li>
+            <li>{{t2462ed91}}</li>
+            <li>{{ta83e7061}}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="funcion funcion--invertida">
+        <figure class="figura">
+          <img src="/tradeguncharts/opciones.jpg" width="1303" height="890" loading="lazy" alt="{{t777c3e76}}">
+        </figure>
+        <div class="funcion__texto">
+          <h3>{{t9b0b6b65}}</h3>
+          <p>{{t494141aa}}</p>
+          <ul class="specs">
+            <li>{{tdcdf305d}}</li>
+            <li>{{t13282f02}}</li>
+            <li>{{t4313e45d}}</li>
+            <li>{{t4c556502}}</li>
+          </ul>
+        </div>
+      </div>
+
       <div class="pillars">
         <article class="pillar">
-          <h3>{{t70cbb524}}</h3>
-          <p>{{t5b2f4a8d}}</p>
+          <h3>{{t7379e2f1}}</h3>
+          <p>{{t188e58fd}}</p>
         </article>
         <article class="pillar">
-          <h3>{{t288c456a}}</h3>
-          <p>{{t15ad3ce2}}</p>
+          <h3>{{t99d7fa12}}</h3>
+          <p>{{t60d31309}}</p>
         </article>
         <article class="pillar">
-          <h3>{{te9c385af}}</h3>
-          <p>{{t670fe09e}}</p>
+          <h3>{{t92a8be4b}}</h3>
+          <p>{{t0cd73067}}</p>
         </article>
         <article class="pillar">
-          <h3>{{t809ff09d}}</h3>
-          <p>{{t55f88da4}}</p>
+          <h3>{{tc1022733}}</h3>
+          <p>{{td1ccf1ab}}</p>
         </article>
         <article class="pillar">
-          <h3>{{t1e7c3cd8}}</h3>
-          <p>{{t77d34edd}}</p>
+          <h3>{{t880ffea5}}</h3>
+          <p>{{td9b90e9c}}</p>
         </article>
         <article class="pillar">
           <h3>{{tfdfbd2de}}</h3>
-          <p>{{t837fb434}}</p>
+          <p>{{tf0c1b16b}}</p>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="licencias">
+  <section id="precios">
     <div class="shell">
       <div class="section__head">
-        <p class="eyebrow">{{tea98045f}}</p>
-        <h2>{{t5490c92e}}</h2>
-        <p>{{te96fd9ca}}</p>
+        <p class="eyebrow">{{t628c066b}}</p>
+        <h2>{{t6ea0e259}}</h2>
+        <p>{{t3af5ffdd}}</p>
+      </div>
+      <div class="planes">
+        <article class="plan">
+          <h3 class="plan__nombre">{{t75f52718}}</h3>
+          <p class="plan__precio"><span>0 €</span></p>
+          <p class="plan__nota">{{t03862a54}}</p>
+          <ul class="specs">
+            <li>{{t96456b5e}}</li>
+            <li>{{t7488b73d}}</li>
+            <li>{{t15ead77d}}</li>
+          </ul>
+        </article>
+        <article class="plan">
+          <h3 class="plan__nombre">{{tb4183cae}}</h3>
+          <p class="plan__precio"><span>19 €</span> {{tbf486f3f}}</p>
+          <p class="plan__nota">{{t5947c720}}</p>
+          <ul class="specs">
+            <li>{{t2ee7e13a}}</li>
+            <li>{{tff989a20}}</li>
+            <li>{{te56ee905}}</li>
+            <li>{{tf19c196b}}</li>
+            <li>{{tb391b07a}}</li>
+          </ul>
+        </article>
+        <article class="plan plan--destacado">
+          <p class="plan__sello">{{t0705eab6}}</p>
+          <h3 class="plan__nombre">{{t66d0c5e6}}</h3>
+          <p class="plan__precio"><span>39 €</span> {{tbf486f3f}}</p>
+          <p class="plan__nota">{{t3a5135dc}}</p>
+          <ul class="specs">
+            <li>{{t7cebf5f7}}</li>
+            <li>{{t1371696f}}</li>
+            <li>{{t03a9b9e4}}</li>
+            <li>{{t05a4f0d8}}</li>
+            <li>{{t5d99691d}}</li>
+            <li>{{t32d17fee}}</li>
+          </ul>
+        </article>
+      </div>
+      <ul class="precios__pie">
+        <li>{{t255b4514}}</li>
+        <li>{{t601fa612}}</li>
+        <li>{{t254c5060}}</li>
+      </ul>
+      <div class="actions"><a class="btn btn--solid" href="#contacto">{{t68ece815}}</a></div>
+    </div>
+  </section>
+
+  <section id="novedades">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">{{t5c371423}}</p>
+        <h2>{{te412bfb6}}</h2>
+        <p>{{t5e0b440a}}</p>
+      </div>
+      <ol class="cambios">
+        <li><time datetime="2026-10-29">{{t101d125e}}</time><p><b>1.4</b> {{tee3b56b7}}</p></li>
+        <li><time datetime="2026-10-29">{{t101d125e}}</time><p><b>1.2</b> {{t6813a263}}</p></li>
+        <li><time datetime="2026-10-29">{{t101d125e}}</time><p><b>1.1</b> {{tb954af90}}</p></li>
+        <li><time datetime="2026-10-28">{{t1b674111}}</time><p><b>{{tcc08d6a0}}</b> {{t9c68357f}}</p></li>
+        <li><time datetime="2026-10-28">{{t1b674111}}</time><p><b>0.45</b> {{t598a1117}}</p></li>
+        <li><time datetime="2026-10-27">{{t6bebf229}}</time><p><b>0.42</b> {{tdd7ea029}}</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="preguntas">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">{{ta4d114c5}}</p>
+        <h2>{{t78da6e75}}</h2>
+      </div>
+      <div class="faq">
+        <div class="faq__columna">
+          <div class="faq__grupo">
+            <h3>{{t049bc2a4}}</h3>
+            <details class="faq__item">
+              <summary>{{tdf1d8958}}</summary>
+              <div class="faq__respuesta"><p>{{te25f1d86}}</p></div>
+            </details>
+            <details class="faq__item">
+              <summary>{{t1f992a4a}}</summary>
+              <div class="faq__respuesta"><p>{{t6676e145}}</p></div>
+            </details>
+            <details class="faq__item">
+              <summary>{{tecb59081}}</summary>
+              <div class="faq__respuesta"><p>{{tc001f0a1}}</p></div>
+            </details>
+            <details class="faq__item">
+              <summary>{{tfef23a3d}}</summary>
+              <div class="faq__respuesta"><p>{{tf98f00b4}}</p></div>
+            </details>
+          </div>
+        </div>
+        <div class="faq__columna">
+          <div class="faq__grupo">
+            <h3>{{te295ef9b}}</h3>
+            <details class="faq__item">
+              <summary>{{t1c7b7535}}</summary>
+              <div class="faq__respuesta"><p>{{t392d6994}}</p></div>
+            </details>
+            <details class="faq__item">
+              <summary>{{t5d4f03b6}}</summary>
+              <div class="faq__respuesta"><p>{{t66017499}}</p></div>
+            </details>
+            <details class="faq__item">
+              <summary>{{tf2e2b661}}</summary>
+              <div class="faq__respuesta"><p>{{t97c228ee}}</p></div>
+            </details>
+            <details class="faq__item">
+              <summary>{{t2833c623}}</summary>
+              <div class="faq__respuesta"><p>{{t3bf0a58a}} <a href="mailto:hola@devel.es">{{t7ea5da81}}</a>{{t7b71fdbe}}</p></div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="riesgo">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">{{t7842ffa7}}</p>
+        <h2>{{t4b503b7f}}</h2>
+      </div>
+      <div class="condiciones">
+        <div class="aviso-riesgo">
+          <h3>{{td01fb299}}</h3>
+          <p>{{t954f6af9}}</p>
+        </div>
+        <div>
+          <h3>{{t30986a7c}}</h3>
+          <ul class="specs">
+            <li>{{tfd2efa4e}}</li>
+            <li>{{tedefbd48}}</li>
+            <li>{{t2a46cf87}}</li>
+            <li>{{t2f2113d2}}</li>
+            <li><span>{{t5a3b3a50}} <a href="/legal">{{t9c097f6c}}</a>.</span></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -473,8 +777,8 @@ footer{
     <div class="shell contact">
       <div>
         <p class="eyebrow">{{td8a53e1f}}</p>
-        <h2>{{tb92b2a20}}</h2>
-        <p>{{t80441ee6}}</p>
+        <h2>{{t1330b379}}</h2>
+        <p>{{t15d182a8}}</p>
       </div>
       <form class="card-contact" id="formulario" novalidate="">
         <div class="field">
@@ -506,8 +810,8 @@ footer{
 
 <footer>
   <div class="shell footer__inner">
-    <span>{{t967bcf49}}</span>
-    <span>{{tb4c42e63}} <a href="/legal">{{t34ba9886}}</a></span>
+    <span>{{tb26a2489}}</span>
+    <span>{{tb4c42e63}} <a href="#riesgo">{{ta71b42bc}}</a> · <a href="/legal">{{t34ba9886}}</a></span>
   </div>
 </footer>
 

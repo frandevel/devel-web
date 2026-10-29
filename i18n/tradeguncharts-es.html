@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TradegunCharts · Gráficos footprint para futuros y opciones</title>
-<meta name="description" content="Plataforma de gráficos footprint para operar futuros y opciones con Interactive Brokers: flujo de órdenes, cadena de opciones con curva de beneficio y pérdida, y panel de trading en el gráfico.">
+<title>TradegunCharts · Footprint, opciones y ejecución para futuros</title>
+<meta name="description" content="Plataforma para Windows de operativa profesional en derivados: gráficos footprint, operativa en el gráfico, indicadores de flujo de órdenes, cadena de opciones y avisos al móvil. Con Interactive Brokers. Desde 19 € al mes, con 14 días de prueba.">
 <link rel="canonical" href="https://devel.es/tradeguncharts">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DEVEL">
-<meta property="og:title" content="TradegunCharts · Gráficos footprint para futuros y opciones">
+<meta property="og:title" content="TradegunCharts · Footprint, opciones y ejecución para futuros">
 <meta property="og:description" content="Gráficos footprint, cadena de opciones y ejecución con Interactive Brokers, en una sola plataforma para Windows.">
 <meta property="og:url" content="https://devel.es/tradeguncharts">
 <meta property="og:locale" content="es_ES">
@@ -18,7 +18,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="TradegunCharts: gráficos footprint y opciones">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="TradegunCharts · Gráficos footprint para futuros y opciones">
+<meta name="twitter:title" content="TradegunCharts · Footprint, opciones y ejecución para futuros">
 <meta name="twitter:description" content="Gráficos footprint, cadena de opciones y ejecución con Interactive Brokers, en una sola plataforma para Windows.">
 <meta name="twitter:image" content="https://devel.es/devel-og.png">
 <link rel="icon" href="/devel-isotipo.png" type="image/png">
@@ -367,6 +367,70 @@ footer{
   .idiomas{margin-left:auto;padding-left:.8rem}
 }
 
+
+/* ---------- producto: datos, funciones, planes, novedades, preguntas, riesgo ---------- */
+.datos{list-style:none;margin:2rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.datos li{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:#C3D5E6;border:1px solid #2C5C7E;border-radius:100px;padding:.3rem .8rem}
+.figura{margin:0}
+.figura img,.figura video{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:#14171c}
+.figura figcaption{margin-top:.8rem;font-size:.9rem;color:var(--text-dim)}
+.funcion{display:grid;gap:1.6rem 3rem;align-items:center;margin-top:clamp(2.8rem,6vw,4.5rem)}
+@media (min-width:900px){
+  .funcion{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr)}
+  .funcion--invertida{grid-template-columns:minmax(0,1fr) minmax(0,1.45fr)}
+  .funcion--invertida .figura{order:2}
+}
+.funcion__texto h3{font-size:1.45rem;color:var(--brand)}
+:root[data-theme="dark"] .funcion__texto h3{color:#BFD3E5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .funcion__texto h3{color:#BFD3E5}}
+.funcion__texto p{margin-top:.8rem;color:var(--text-dim)}
+.funcion__texto .specs{margin-top:1.1rem}
+.funcion__texto .specs li::before{background:var(--accent)}
+#funciones .pillars{margin-top:clamp(3rem,6vw,4.5rem)}
+#precios{background:var(--surface-sunk);border-block:1px solid var(--line)}
+.planes{display:grid;gap:1.5rem;margin-top:2.8rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));align-items:start}
+.plan{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.6rem 1.5rem;display:flex;flex-direction:column;gap:.7rem;position:relative}
+.plan--destacado{border:2px solid var(--accent)}
+.plan__sello{position:absolute;top:-.8rem;left:1.4rem;background:var(--accent);color:#fff;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .7rem;border-radius:100px}
+.plan__nombre{font-size:1.3rem;color:var(--brand)}
+:root[data-theme="dark"] .plan__nombre{color:#BFD3E5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .plan__nombre{color:#BFD3E5}}
+.plan__precio{color:var(--text-dim)}
+.plan__precio span{font-family:var(--display);font-size:2.3rem;font-weight:700;color:var(--text);margin-right:.25rem}
+.plan__nota{font-size:.86rem;color:var(--steel);margin-top:-.4rem}
+.plan .specs{margin-top:.6rem}
+.plan--destacado .specs li::before{background:var(--accent)}
+.precios__pie{list-style:none;padding:0;margin:2rem 0 0;display:flex;flex-direction:column;gap:.35rem;font-size:.9rem;color:var(--text-dim)}
+#precios .actions{margin-top:1.8rem}
+.cambios{list-style:none;padding:0;margin:2.4rem 0 0;display:flex;flex-direction:column;max-width:52rem}
+.cambios li{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--line)}
+.cambios time{font-family:var(--mono);font-size:.8rem;color:var(--steel);padding-top:.15rem}
+.cambios p{color:var(--text-dim)}
+.cambios b{color:var(--text);font-weight:600}
+@media (max-width:560px){.cambios li{grid-template-columns:1fr;gap:.2rem}}
+#preguntas{background:var(--surface-sunk);border-block:1px solid var(--line)}
+.faq{margin-top:2.8rem;display:grid;gap:2.6rem 3.5rem}
+@media (min-width:900px){.faq{grid-template-columns:1fr 1fr;align-items:start}}
+.faq__columna{display:flex;flex-direction:column;gap:2.6rem}
+.faq__grupo h3{font-size:1.1rem;color:var(--brand);padding-bottom:.7rem;border-bottom:2px solid var(--accent)}
+:root[data-theme="dark"] .faq__grupo h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .faq__grupo h3{color:var(--mist)}}
+.faq__item{border-bottom:1px solid var(--line)}
+.faq__item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.85rem 0;font-family:var(--display);font-weight:600;font-size:1rem;color:var(--text)}
+.faq__item summary::-webkit-details-marker{display:none}
+.faq__item summary::after{content:"+";flex:none;font-family:var(--mono);font-size:1.1rem;line-height:1;color:var(--accent-lift);transition:transform .18s ease}
+.faq__item[open] summary::after{transform:rotate(45deg)}
+.faq__item summary:hover{color:var(--link)}
+.faq__respuesta{padding-bottom:1.15rem;color:var(--text-dim);font-size:.96rem}
+.condiciones{display:grid;gap:2rem 3rem;margin-top:2.4rem}
+@media (min-width:900px){.condiciones{grid-template-columns:1fr 1fr;align-items:start}}
+.condiciones h3{font-size:1.1rem;margin-bottom:.8rem;color:var(--brand)}
+:root[data-theme="dark"] .condiciones h3{color:var(--mist)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .condiciones h3{color:var(--mist)}}
+.aviso-riesgo{border-left:3px solid #D9822B;background:var(--surface);border-radius:0 10px 10px 0;padding:1.2rem 1.4rem}
+.aviso-riesgo p{color:var(--text-dim);font-size:.95rem}
+.condiciones .specs li{align-items:flex-start}
+.condiciones .specs li::before{margin-top:.55em}
 </style>
 </head>
 <body>
@@ -377,8 +441,9 @@ footer{
       <span>devel</span>
     </a>
     <nav>
-      <a href="#que-ofrece">Qué ofrece</a>
-      <a href="#licencias">Licencias</a>
+      <a href="#funciones">Funciones</a>
+      <a href="#precios">Precios</a>
+      <a href="#preguntas">Preguntas</a>
       <a href="#contacto">Contacto</a>
     </nav>
     <!--selector-de-idioma-->
@@ -389,13 +454,19 @@ footer{
   <section class="hero">
     <div class="shell hero__inner">
       <div>
-        <h1 class="eyebrow">TradegunCharts · Plataforma de gráficos para Windows</h1>
+        <h1 class="eyebrow">TradegunCharts · Operativa profesional en el mercado de derivados</h1>
         <p class="hero__lema">Lee el flujo de órdenes.<br><em>Opera desde el gráfico.</em></p>
-        <p class="lede">Footprint, cadena de opciones y ejecución con Interactive Brokers en una sola plataforma, hecha por quien opera con ella cada día. Ligera, rápida y pensada para traders y family offices que trabajan con derivados y coberturas.</p>
+        <p class="lede">Footprint, cadena de opciones y ejecución en una sola plataforma para Windows, hecha por quien opera con ella cada día. Ligera, rápida y pensada para traders y family offices que trabajan con futuros, opciones y coberturas.</p>
         <div class="actions">
-          <a class="btn btn--solid" href="#contacto">Pedir acceso</a>
-          <a class="btn btn--ghost" href="#que-ofrece">Ver qué ofrece</a>
+          <a class="btn btn--solid" href="#contacto">Prueba 14 días</a>
+          <a class="btn btn--ghost" href="#precios">Ver precios</a>
         </div>
+        <ul class="datos">
+          <li>Windows 10 y 11 · 64 bits</li>
+          <li>Interactive Brokers</li>
+          <li>Rithmic · en certificación</li>
+          <li>Actualizaciones automáticas</li>
+        </ul>
       </div>
       <div class="hero__mark">
         <span class="product__logo" style="width:min(100%,230px)" aria-hidden="true">
@@ -414,59 +485,292 @@ footer{
 
   <section id="captura">
     <div class="shell">
-      <figure style="margin:0">
-        <img src="/tradeguncharts/captura.jpg" width="2463" height="1305" alt="Pantalla de TradegunCharts: gráfico footprint del ES con una posición abierta, panel de cuentas, calendario macro y dos gráficos laterales." style="display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line)">
-        <figcaption style="margin-top:.8rem;font-size:.9rem;color:var(--text-dim)">Gráfico footprint del ES con una posición en marcha, niveles de gamma, calendario macro y dos gráficos laterales.</figcaption>
-      </figure>
-      <figure style="margin:2.4rem 0 0">
-        <img src="/tradeguncharts/opciones.jpg" width="1303" height="890" loading="lazy" alt="Cadena de opciones de TradegunCharts con una estrategia de dos patas y su curva de beneficio y pérdida." style="display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line)">
-        <figcaption style="margin-top:.8rem;font-size:.9rem;color:var(--text-dim)">Cadena de opciones con una estrategia de dos patas: beneficio y pérdida máximos, punto de equilibrio y curva al vencimiento.</figcaption>
+      <figure class="figura">
+        <img src="/tradeguncharts/captura.jpg" width="2463" height="1305" alt="Pantalla de TradegunCharts: gráfico footprint del ES con una posición abierta, panel de cuentas, calendario macro y dos gráficos laterales.">
+        <figcaption>El espacio de trabajo: gráfico footprint del ES con niveles de gamma, calendario macro, panel de cuentas y dos gráficos laterales en otras temporalidades.</figcaption>
       </figure>
     </div>
   </section>
 
-  <section id="que-ofrece">
+  <section id="funciones">
     <div class="shell">
       <div class="section__head">
-        <p class="eyebrow">Qué ofrece</p>
+        <p class="eyebrow">Funciones</p>
         <h2>Lo que necesitas para operar, sin lo que sobra.</h2>
-        <p>Una plataforma nativa que arranca rápido y no se arrastra con varios gráficos abiertos.</p>
+        <p>Una plataforma nativa que arranca rápido y no se arrastra con varios gráficos abiertos. Todas las capturas son de la aplicación con datos reales del futuro del S&amp;P 500.</p>
       </div>
+
+      <div class="funcion">
+        <figure class="figura">
+          <img src="/tradeguncharts/footprint.jpg" width="1600" height="900" loading="lazy" alt="Gráfico footprint del ES con el volumen por precio de cada vela en forma de histograma y el punto de control marcado.">
+        </figure>
+        <div class="funcion__texto">
+          <h3>Footprint y flujo de órdenes</h3>
+          <p>Cada vela enseña dónde se negoció: volumen y delta por nivel de precio, punto de control y desequilibrios apilados. El detalle cambia solo con el zoom.</p>
+          <ul class="specs">
+            <li>Velas, histograma por nivel o cifras de compra y venta, sin saltos al pasar de uno a otro</li>
+            <li>Delta y volumen de cada barra, con el panel de facilidad (esfuerzo contra resultado)</li>
+            <li>POC de cada vela también en la vista de solo velas</li>
+            <li>Los ticks se graban en tu equipo y rehacen el footprint del histórico</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="funcion funcion--invertida">
+        <figure class="figura">
+          <video src="/tradeguncharts/en-vivo.mp4" poster="/tradeguncharts/en-vivo-poster.jpg" width="1200" height="720" autoplay muted loop playsinline aria-label="La vela en curso del ES formándose tick a tick en el footprint."></video>
+        </figure>
+        <div class="funcion__texto">
+          <h3>En vivo, tick a tick</h3>
+          <p>La vela en curso se construye con cada operación que llega del mercado. Un motor propio agrega los ticks en su propio hilo, así que la interfaz no se frena aunque el mercado se acelere.</p>
+          <ul class="specs">
+            <li>Repintado configurable y aviso si los datos llegan con retraso</li>
+            <li>Temporizador de la vela y ventana flotante con la temporalidad inferior</li>
+            <li>Cruceta sincronizada entre todos los gráficos</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="funcion">
+        <figure class="figura">
+          <img src="/tradeguncharts/operativa.jpg" width="1600" height="900" loading="lazy" alt="Posición larga en el gráfico con su stop, su objetivo, una orden límite pendiente y una zona dibujada.">
+        </figure>
+        <div class="funcion__texto">
+          <h3>Operativa en el gráfico</h3>
+          <p>Coloca, mueve y cancela órdenes sobre el propio gráfico. Stop, objetivo y break even van ligados a la posición y se arrastran con el ratón, con sus ticks a la vista.</p>
+          <ul class="specs">
+            <li>Órdenes límite, stop y a mercado con atajos de teclado configurables</li>
+            <li>Stop y objetivo automáticos al entrar, y break even con desplazamiento</li>
+            <li>Cierre de la posición en un clic, sin confirmaciones que cuestan ticks</li>
+            <li>Paso del contrato grande al micro (ES → MES) con un botón</li>
+            <li>Varias cuentas a la vez y grupos de copia maestro y esclavas</li>
+            <li>Cuenta simulada para practicar con datos reales</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="funcion funcion--invertida">
+        <figure class="figura">
+          <img src="/tradeguncharts/indicadores.jpg" width="1600" height="900" loading="lazy" alt="Gráfico con VWAP, media exponencial, estructura de mercado SMC y un CRT marcado.">
+        </figure>
+        <div class="funcion__texto">
+          <h3>Indicadores pensados para el flujo de órdenes</h3>
+          <p>Un catálogo en el que cada indicador se añade, se configura y se puede repetir con otros ajustes. Todos se calculan en tiempo real sin frenar el gráfico.</p>
+          <ul class="specs">
+            <li>Absorciones, Big Trades, Stacked Imbalances y divergencias de delta</li>
+            <li>CRT (Candle Range Theory) con sus estadísticas, SMC, BOS y bloques de órdenes</li>
+            <li>Valhalla y Drakaris: perfiles de sesión, VAH, VAL, POC y nodos de volumen</li>
+            <li>VWAP, EMA, SMA, bandas de Bollinger, FVG, ondas de Elliott y Key Candle</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="funcion">
+        <figure class="figura">
+          <img src="/tradeguncharts/perfil.jpg" width="1600" height="900" loading="lazy" alt="Perfil de volumen de un tramo del gráfico con su POC, VAH, VAL, single prints y VWAP anclada.">
+        </figure>
+        <div class="funcion__texto">
+          <h3>Perfil de volumen de cualquier tramo</h3>
+          <p>Marca un rango con el ratón y obtén su perfil: área de valor, punto de control, nodos de volumen, single prints y VWAP anclada al inicio del tramo.</p>
+          <ul class="specs">
+            <li>Líneas, rectángulos, Fibonacci, largos y cortos con su riesgo y beneficio</li>
+            <li>Alarmas en líneas y rectángulos, con sonido y aviso al móvil</li>
+            <li>Dibujos bloqueables, con color de línea y de texto</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="funcion funcion--invertida">
+        <figure class="figura">
+          <img src="/tradeguncharts/opciones.jpg" width="1303" height="890" loading="lazy" alt="Cadena de opciones de TradegunCharts con una estrategia de dos patas y su curva de beneficio y pérdida.">
+        </figure>
+        <div class="funcion__texto">
+          <h3>Opciones y coberturas</h3>
+          <p>Cadena con todos los vencimientos, 0DTE incluido. Pulsa el bid o el ask para montar la estrategia y mira su beneficio y pérdida antes de enviar nada.</p>
+          <ul class="specs">
+            <li>Griegas, volatilidad implícita e interés abierto por strike</li>
+            <li>Beneficio y pérdida máximos, puntos de equilibrio y curva al vencimiento</li>
+            <li>Niveles de gamma sobre el gráfico y régimen de gamma del mercado</li>
+            <li>Cobertura de cartera con micros, en simulación o con órdenes reales</li>
+          </ul>
+        </div>
+      </div>
+
       <div class="pillars">
         <article class="pillar">
-          <h3>Footprint y flujo de órdenes</h3>
-          <p>Volumen por precio dentro de cada vela, delta, punto de control y perfiles de volumen, con niveles de detalle que cambian solos según el zoom.</p>
+          <h3>Calendario macro</h3>
+          <p>Eventos económicos con previsto, anterior y dato publicado, en el panel y marcados sobre el gráfico.</p>
         </article>
         <article class="pillar">
-          <h3>Cadena de opciones</h3>
-          <p>Vencimientos y strikes con compra y venta, griegas e interés abierto. Pulsa una celda y empieza a montar la estrategia.</p>
+          <h3>Avisos al móvil</h3>
+          <p>Órdenes ejecutadas y rechazadas, alarmas de dibujos y alertas de indicadores, por sonido y por notificación push. Tú eliges cuáles.</p>
         </article>
         <article class="pillar">
-          <h3>Curva de beneficio y pérdida</h3>
-          <p>Para cada estrategia de varias patas: beneficio y pérdida máximos, puntos de equilibrio y la curva al vencimiento, antes de enviar nada.</p>
+          <h3>Diario de trades</h3>
+          <p>Cada operación queda registrada con su resultado, y las entradas y salidas se pueden ver sobre el gráfico.</p>
         </article>
         <article class="pillar">
-          <h3>Operativa en el gráfico</h3>
-          <p>Panel de trading con órdenes y límite de pérdida y objetivo ligados a la posición, conexión con Interactive Brokers y varias cuentas a la vez.</p>
+          <h3>Lista de seguimiento</h3>
+          <p>Tus activos con su divisa, el cambio del día, un minigráfico y el estado del mercado de cada uno.</p>
         </article>
         <article class="pillar">
-          <h3>Niveles de gamma y calendario</h3>
-          <p>Niveles de gamma de las opciones sobre el gráfico y calendario macroeconómico con previsto, anterior y dato publicado.</p>
+          <h3>Varias ventanas y monitores</h3>
+          <p>Una ventana por activo y por monitor, paneles laterales en otras temporalidades y el espacio de trabajo guardado.</p>
         </article>
         <article class="pillar">
           <h3>Tus datos, en tu equipo</h3>
-          <p>Se conecta a tu propio Gateway de Interactive Brokers: tus credenciales no pasan por nosotros. Varias ventanas, una por monitor, y el espacio de trabajo se guarda.</p>
+          <p>Te conectas con tu propia cuenta: tus credenciales no pasan por nosotros. Sin conexión, el gráfico sigue disponible con las velas guardadas.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="licencias">
+  <section id="precios">
     <div class="shell">
       <div class="section__head">
-        <p class="eyebrow">Licencias</p>
-        <h2>Una clave por equipo, sin letra pequeña.</h2>
-        <p>Estamos preparando las licencias para traders y family offices, con varias ediciones y un precio pensado para estar por debajo de las plataformas de siempre. Si quieres probarla antes, cuéntanos cómo operas y te damos acceso.</p>
+        <p class="eyebrow">Precios</p>
+        <h2>Una licencia por equipo, sin letra pequeña.</h2>
+        <p>Paga al mes o al año, y prueba gratis cualquiera de los planes de pago durante 14 días. Sin permanencia: si lo dejas, no se renueva.</p>
+      </div>
+      <div class="planes">
+        <article class="plan">
+          <h3 class="plan__nombre">Free</h3>
+          <p class="plan__precio"><span>0 €</span></p>
+          <p class="plan__nota">Para conocer la plataforma</p>
+          <ul class="specs">
+            <li>Gráficos footprint de futuros</li>
+            <li>Indicadores y dibujos</li>
+            <li>Solo lectura: sin envío de órdenes</li>
+          </ul>
+        </article>
+        <article class="plan">
+          <h3 class="plan__nombre">Essential</h3>
+          <p class="plan__precio"><span>19 €</span> al mes</p>
+          <p class="plan__nota">o 15 € al mes pagando el año (180 €)</p>
+          <ul class="specs">
+            <li>Todo lo del plan Free</li>
+            <li>Operativa en el gráfico y panel de órdenes</li>
+            <li>Conexión con Interactive Brokers</li>
+            <li>Alarmas y avisos al móvil</li>
+            <li>Hasta 2 ventanas</li>
+          </ul>
+        </article>
+        <article class="plan plan--destacado">
+          <p class="plan__sello">El más completo</p>
+          <h3 class="plan__nombre">Pro</h3>
+          <p class="plan__precio"><span>39 €</span> al mes</p>
+          <p class="plan__nota">o 29 € al mes pagando el año (348 €)</p>
+          <ul class="specs">
+            <li>Todo lo del plan Essential</li>
+            <li>Cadena de opciones, griegas y estrategias</li>
+            <li>Niveles y régimen de gamma</li>
+            <li>Calendario macroeconómico</li>
+            <li>Ventanas ilimitadas</li>
+            <li>Automatismos y motor de estrategias, cuando lleguen</li>
+          </ul>
+        </article>
+      </div>
+      <ul class="precios__pie">
+        <li>Precios sin IVA.</li>
+        <li>Cada licencia se activa en un equipo. Para pasarla a otro, la liberas desde Ayuda → Licencia.</li>
+        <li>Los datos de mercado los contratas con tu bróker: TradegunCharts no los revende.</li>
+      </ul>
+      <div class="actions"><a class="btn btn--solid" href="#contacto">Empezar la prueba de 14 días</a></div>
+    </div>
+  </section>
+
+  <section id="novedades">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Novedades</p>
+        <h2>Una versión nueva cada pocos días.</h2>
+        <p>La aplicación se actualiza sola. Puedes quedarte en el canal estable o recibir antes las novedades en el canal beta.</p>
+      </div>
+      <ol class="cambios">
+        <li><time datetime="2026-10-29">29/10/2026</time><p><b>1.4</b> · Avisos al móvil configurables por tipo, con las órdenes ejecutadas y rechazadas. Menú Ayuda con la licencia y «Acerca de».</p></li>
+        <li><time datetime="2026-10-29">29/10/2026</time><p><b>1.2</b> · El botón Auto encaja el número de velas que elijas, a lo ancho y a lo alto del panel.</p></li>
+        <li><time datetime="2026-10-29">29/10/2026</time><p><b>1.1</b> · Punto de control de cada vela en la vista de solo velas.</p></li>
+        <li><time datetime="2026-10-28">28/10/2026</time><p><b>1.0 beta</b> · Primera versión candidata a la 1.0, con canales de actualización estable y beta.</p></li>
+        <li><time datetime="2026-10-28">28/10/2026</time><p><b>0.45</b> · Alarmas en los rectángulos, color del texto de los dibujos y cierre de la posición sin confirmación.</p></li>
+        <li><time datetime="2026-10-27">27/10/2026</time><p><b>0.42</b> · Ondas de Elliott, SMC y detector de bloques de órdenes fuertes.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="preguntas">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Preguntas frecuentes</p>
+        <h2>Lo que nos preguntan antes de probarla.</h2>
+      </div>
+      <div class="faq">
+        <div class="faq__columna">
+          <div class="faq__grupo">
+            <h3>Brókers y datos</h3>
+            <details class="faq__item">
+              <summary>¿Con qué brókers funciona?</summary>
+              <div class="faq__respuesta"><p>Con Interactive Brokers, a través de tu propio TWS o IB Gateway. La conexión con Rithmic, que usan muchas cuentas de fondeo, está en proceso de certificación. También tiene una cuenta simulada para practicar con datos reales.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary>¿Tengo que pagar los datos de mercado aparte?</summary>
+              <div class="faq__respuesta"><p>Sí. Los datos los contratas con tu bróker, como en cualquier plataforma profesional. TradegunCharts usa tu suscripción y no revende datos.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary>¿Mis credenciales pasan por vuestros servidores?</summary>
+              <div class="faq__respuesta"><p>No. La aplicación se conecta directamente desde tu equipo a tu bróker. Nuestro servidor solo comprueba la licencia, y para eso no necesita saber nada de tu cuenta.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary>¿Qué mercados puedo operar?</summary>
+              <div class="faq__respuesta"><p>Futuros (índices, metales, energía, divisas…) y sus micros, opciones y acciones o ETFs con Interactive Brokers. El footprint tiene más sentido en futuros, donde se ve todo el volumen del mercado.</p></div>
+            </details>
+          </div>
+        </div>
+        <div class="faq__columna">
+          <div class="faq__grupo">
+            <h3>Licencia y uso</h3>
+            <details class="faq__item">
+              <summary>¿En cuántos equipos puedo usarla?</summary>
+              <div class="faq__respuesta"><p>Cada licencia se activa en un equipo. Si cambias de ordenador, la liberas desde Ayuda → Licencia y la activas en el nuevo.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary>¿Funciona sin conexión a internet?</summary>
+              <div class="faq__respuesta"><p>Para operar necesitas conexión con tu bróker. Sin ella puedes seguir analizando el gráfico con las velas guardadas, y la licencia aguanta varios días sin comprobarse.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary>¿Qué necesito para instalarla?</summary>
+              <div class="faq__respuesta"><p>Windows 10 u 11 de 64 bits. El instalador lleva todo lo necesario y las actualizaciones se instalan solas. La aplicación está en español.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary>¿Hay soporte?</summary>
+              <div class="faq__respuesta"><p>Sí, por correo en <a href="mailto:hola@devel.es">hola@devel.es</a>. Te contesta quien la desarrolla, que la usa a diario para operar.</p></div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="riesgo">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Aviso de riesgo y condiciones</p>
+        <h2>Antes de operar.</h2>
+      </div>
+      <div class="condiciones">
+        <div class="aviso-riesgo">
+          <h3>Aviso de riesgo</h3>
+          <p>Operar con futuros, opciones y otros derivados conlleva un riesgo elevado de pérdidas, que pueden superar el capital depositado, y no es adecuado para todos los inversores. TradegunCharts es una herramienta de análisis y ejecución: no presta asesoramiento de inversión ni recomienda operaciones, y sus indicadores, alertas y estadísticas no garantizan resultados. Los resultados pasados no garantizan resultados futuros. Cada usuario es el único responsable de las órdenes que envía y de sus consecuencias.</p>
+        </div>
+        <div>
+          <h3>Condiciones de uso</h3>
+          <ul class="specs">
+            <li>TradegunCharts es un programa de DEVEL Consultoría y Servicios Informáticos, S.L. La licencia da derecho a usarlo, no a copiarlo, revenderlo ni descompilarlo.</li>
+            <li>La licencia es personal, se activa en un equipo y no se puede ceder a terceros.</li>
+            <li>Los datos de mercado y la ejecución dependen de tu bróker y de tu conexión. No respondemos de sus cortes, retrasos o errores.</li>
+            <li>El programa se ofrece tal cual. DEVEL no responde de pérdidas derivadas de su uso, de fallos técnicos ni de decisiones de inversión.</li>
+            <li><span>Se rige por la ley española. Más información en el <a href="/legal">aviso legal</a>.</span></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -475,8 +779,8 @@ footer{
     <div class="shell contact">
       <div>
         <p class="eyebrow">Contacto</p>
-        <h2>Pide acceso a TradegunCharts.</h2>
-        <p>Cuéntanos qué operas y con qué bróker. Te contesta quien la ha construido, y te decimos cuándo puedes probarla.</p>
+        <h2>Pide tu prueba de 14 días.</h2>
+        <p>Cuéntanos qué operas y con qué bróker. Te contesta quien la ha construido y te enviamos el instalador y tu clave de prueba.</p>
       </div>
       <form class="card-contact" id="formulario" novalidate>
         <div class="field">
@@ -508,8 +812,8 @@ footer{
 
 <footer>
   <div class="shell footer__inner">
-    <span>© 2026 DEVEL</span>
-    <span>Valencia, España · <a href="/legal">Aviso legal y privacidad</a></span>
+    <span>© 2026 DEVEL Consultoría y Servicios Informáticos, S.L.</span>
+    <span>Valencia, España · <a href="#riesgo">Aviso de riesgo y condiciones de uso</a> · <a href="/legal">Aviso legal y privacidad</a></span>
   </div>
 </footer>
 
