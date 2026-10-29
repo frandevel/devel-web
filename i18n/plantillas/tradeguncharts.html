@@ -403,6 +403,10 @@ footer{
 .plan__precio span{font-family:var(--display);font-size:2.3rem;font-weight:700;color:var(--text);margin-right:.25rem}
 .plan__nota{font-size:.86rem;color:var(--steel);margin-top:-.4rem}
 .plan .specs{margin-top:.6rem}
+.descargas{display:grid;gap:1.5rem;margin-top:1.8rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start}
+.descargas .btn{align-self:flex-start;margin-top:1rem}
+.descargas__nota{margin-top:1.6rem;font-size:.9rem;color:var(--text-dim)}
+.descargas code{font-family:var(--mono);font-size:.85em}
 .plan--destacado .specs li::before{background:var(--accent)}
 .precios__pie{list-style:none;padding:0;margin:2rem 0 0;display:flex;flex-direction:column;gap:.35rem;font-size:.9rem;color:var(--text-dim)}
 #precios .actions{margin-top:1.8rem}
@@ -446,6 +450,7 @@ footer{
     </a>
     <nav>
       <a href="#funciones">{{t1f49791d}}</a>
+      <a href="#descargar">{{t8b98cb1d}}</a>
       <a href="#precios">{{t628c066b}}</a>
       <a href="#preguntas">{{t1df9a6fc}}</a>
       <a href="/tradeguncharts/novedades">{{t5c371423}}</a>
@@ -495,6 +500,37 @@ footer{
         <img src="/tradeguncharts/captura.jpg" width="2463" height="1305" alt="{{tf43cf7c3}}">
         <figcaption>{{t6d642574}}</figcaption>
       </figure>
+    </div>
+  </section>
+
+  <section id="descargar">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">{{t8b98cb1d}}</p>
+        <h2>{{t4d72a5e4}}</h2>
+        <p>{{t26e029c4}}</p>
+      </div>
+      <div class="descargas">
+        <article class="plan">
+          <h3 class="plan__nombre">{{t26d9c28d}}</h3>
+          <p class="plan__nota">{{t051a8970}}</p>
+          <ul class="specs">
+            <li>{{t9e024471}}</li>
+            <li>{{tddb6f329}}</li>
+          </ul>
+          <a class="btn btn--solid" href="https://descargas.tradegun.devel.es/releases/TradegunCharts-Setup.exe">{{t9b50f4c2}}</a>
+        </article>
+        <article class="plan">
+          <h3 class="plan__nombre">{{t83ad8510}}</h3>
+          <p class="plan__nota">{{tba8398c1}}</p>
+          <ul class="specs">
+            <li>{{tc418dab1}} <code>{{taaa70a15}}</code></li>
+            <li>{{t8d110322}}</li>
+          </ul>
+          <a class="btn btn--solid" href="https://descargas.tradegun.devel.es/linux/releases/TradegunCharts-Setup-linux-x64.run">{{t85926787}}</a>
+        </article>
+      </div>
+      <p class="descargas__nota">{{t16917b2d}}</p>
     </div>
   </section>
 
@@ -654,7 +690,8 @@ footer{
             <li>{{t5d99691d}}</li>
           </ul>
         </article>
-        <article class="plan">
+        <article class="plan plan--destacado">
+          <p class="plan__sello">{{t792c72ae}}</p>
           <h3 class="plan__nombre">{{t66d0c5e6}}</h3>
           <p class="plan__precio solo-mensual"><span>19 €</span> {{tbf486f3f}}</p>
           <p class="plan__nota solo-mensual">{{t75142403}}</p>
@@ -673,8 +710,7 @@ footer{
             <li>{{tbb50fbf0}}</li>
           </ul>
         </article>
-        <article class="plan plan--destacado">
-          <p class="plan__sello">{{t0705eab6}}</p>
+        <article class="plan">
           <h3 class="plan__nombre">{{t5f9a8584}}</h3>
           <p class="plan__precio solo-mensual"><span>39 €</span> {{tbf486f3f}}</p>
           <p class="plan__nota solo-mensual">{{t88c0f170}}</p>

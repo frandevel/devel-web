@@ -405,6 +405,10 @@ footer{
 .plan__precio span{font-family:var(--display);font-size:2.3rem;font-weight:700;color:var(--text);margin-right:.25rem}
 .plan__nota{font-size:.86rem;color:var(--steel);margin-top:-.4rem}
 .plan .specs{margin-top:.6rem}
+.descargas{display:grid;gap:1.5rem;margin-top:1.8rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start}
+.descargas .btn{align-self:flex-start;margin-top:1rem}
+.descargas__nota{margin-top:1.6rem;font-size:.9rem;color:var(--text-dim)}
+.descargas code{font-family:var(--mono);font-size:.85em}
 .plan--destacado .specs li::before{background:var(--accent)}
 .precios__pie{list-style:none;padding:0;margin:2rem 0 0;display:flex;flex-direction:column;gap:.35rem;font-size:.9rem;color:var(--text-dim)}
 #precios .actions{margin-top:1.8rem}
@@ -448,6 +452,7 @@ footer{
     </a>
     <nav>
       <a href="#funciones">Funciones</a>
+      <a href="#descargar">Descargar</a>
       <a href="#precios">Precios</a>
       <a href="#preguntas">Preguntas</a>
       <a href="/tradeguncharts/novedades">Novedades</a>
@@ -497,6 +502,37 @@ footer{
         <img src="/tradeguncharts/captura.jpg" width="2463" height="1305" alt="Pantalla de TradegunCharts: gráfico footprint del ES con una posición abierta, panel de cuentas, calendario macro y dos gráficos laterales.">
         <figcaption>El espacio de trabajo: gráfico footprint del ES con niveles de gamma, calendario macro, panel de cuentas y dos gráficos laterales en otras temporalidades.</figcaption>
       </figure>
+    </div>
+  </section>
+
+  <section id="descargar">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Descargar</p>
+        <h2>Instálala y empieza gratis con Essential.</h2>
+        <p>El instalador lleva todo lo necesario y la app se actualiza sola. El plan Essential no caduca; para probar un plan de pago durante 14 días, pídelo desde Contacto.</p>
+      </div>
+      <div class="descargas">
+        <article class="plan">
+          <h3 class="plan__nombre">Windows</h3>
+          <p class="plan__nota">Windows 10 y 11 · 64 bits · 53 MB</p>
+          <ul class="specs">
+            <li>Instalador con asistente en español</li>
+            <li>Se instala para tu usuario, sin tocar el resto del equipo</li>
+          </ul>
+          <a class="btn btn--solid" href="https://descargas.tradegun.devel.es/releases/TradegunCharts-Setup.exe">Descargar para Windows</a>
+        </article>
+        <article class="plan">
+          <h3 class="plan__nombre">Linux</h3>
+          <p class="plan__nota">Ubuntu y derivadas · 64 bits · 47 MB</p>
+          <ul class="specs">
+            <li>Se instala con un solo comando, sin permisos de administrador: <code>sh TradegunCharts-Setup-linux-x64.run</code></li>
+            <li>Crea su entrada en el menú de aplicaciones, con su icono</li>
+          </ul>
+          <a class="btn btn--solid" href="https://descargas.tradegun.devel.es/linux/releases/TradegunCharts-Setup-linux-x64.run">Descargar para Linux</a>
+        </article>
+      </div>
+      <p class="descargas__nota">Siempre se descarga la versión estable. Si quieres las últimas novedades antes que nadie, puedes cambiar al canal beta desde Preferencias, pero es una versión experimental que puede tener errores con frecuencia.</p>
     </div>
   </section>
 
@@ -656,7 +692,8 @@ footer{
             <li>Ventanas ilimitadas</li>
           </ul>
         </article>
-        <article class="plan">
+        <article class="plan plan--destacado">
+          <p class="plan__sello">El más popular</p>
           <h3 class="plan__nombre">Pro</h3>
           <p class="plan__precio solo-mensual"><span>19 €</span> al mes</p>
           <p class="plan__nota solo-mensual">o 15 € al mes pagando el año</p>
@@ -675,8 +712,7 @@ footer{
             <li>Grupos de copia de órdenes entre cuentas</li>
           </ul>
         </article>
-        <article class="plan plan--destacado">
-          <p class="plan__sello">El más completo</p>
+        <article class="plan">
           <h3 class="plan__nombre">Desk</h3>
           <p class="plan__precio solo-mensual"><span>39 €</span> al mes</p>
           <p class="plan__nota solo-mensual">o 29 € al mes pagando el año</p>

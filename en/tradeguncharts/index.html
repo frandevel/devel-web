@@ -407,6 +407,10 @@ footer{
 .plan__precio span{font-family:var(--display);font-size:2.3rem;font-weight:700;color:var(--text);margin-right:.25rem}
 .plan__nota{font-size:.86rem;color:var(--steel);margin-top:-.4rem}
 .plan .specs{margin-top:.6rem}
+.descargas{display:grid;gap:1.5rem;margin-top:1.8rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start}
+.descargas .btn{align-self:flex-start;margin-top:1rem}
+.descargas__nota{margin-top:1.6rem;font-size:.9rem;color:var(--text-dim)}
+.descargas code{font-family:var(--mono);font-size:.85em}
 .plan--destacado .specs li::before{background:var(--accent)}
 .precios__pie{list-style:none;padding:0;margin:2rem 0 0;display:flex;flex-direction:column;gap:.35rem;font-size:.9rem;color:var(--text-dim)}
 #precios .actions{margin-top:1.8rem}
@@ -555,6 +559,7 @@ footer{
     </a>
     <nav>
       <a href="#funciones">Features</a>
+      <a href="#descargar">Download</a>
       <a href="#precios">Pricing</a>
       <a href="#preguntas">FAQ</a>
       <a href="/en/tradeguncharts/novedades">What's new</a>
@@ -604,6 +609,37 @@ footer{
         <img src="/tradeguncharts/captura.jpg" width="2463" height="1305" alt="TradegunCharts screen: ES footprint chart with an open position, accounts panel, macro calendar and two side charts.">
         <figcaption>The workspace: an ES footprint chart with gamma levels, the macro calendar, the accounts panel and two side charts on other timeframes.</figcaption>
       </figure>
+    </div>
+  </section>
+
+  <section id="descargar">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Download</p>
+        <h2>Install it and start free with Essential.</h2>
+        <p>The installer includes everything you need and the app updates itself. The Essential plan never expires; to try a paid plan for 14 days, request it from Contact.</p>
+      </div>
+      <div class="descargas">
+        <article class="plan">
+          <h3 class="plan__nombre">Windows</h3>
+          <p class="plan__nota">Windows 10 and 11 · 64-bit · 53 MB</p>
+          <ul class="specs">
+            <li>Installer wizard in Spanish</li>
+            <li>Installs for your user account, without touching the rest of the computer</li>
+          </ul>
+          <a class="btn btn--solid" href="https://descargas.tradegun.devel.es/releases/TradegunCharts-Setup.exe">Download for Windows</a>
+        </article>
+        <article class="plan">
+          <h3 class="plan__nombre">Linux</h3>
+          <p class="plan__nota">Ubuntu and derivatives · 64-bit · 47 MB</p>
+          <ul class="specs">
+            <li>Installs with a single command, no administrator rights needed: <code>sh TradegunCharts-Setup-linux-x64.run</code></li>
+            <li>Adds its own entry to the applications menu, with its icon</li>
+          </ul>
+          <a class="btn btn--solid" href="https://descargas.tradegun.devel.es/linux/releases/TradegunCharts-Setup-linux-x64.run">Download for Linux</a>
+        </article>
+      </div>
+      <p class="descargas__nota">You always download the stable version. If you want the latest features before anyone else, you can switch to the beta channel in Preferences, but it is an experimental version that may often have errors.</p>
     </div>
   </section>
 
@@ -763,7 +799,8 @@ footer{
             <li>Unlimited windows</li>
           </ul>
         </article>
-        <article class="plan">
+        <article class="plan plan--destacado">
+          <p class="plan__sello">Most popular</p>
           <h3 class="plan__nombre">Pro</h3>
           <p class="plan__precio solo-mensual"><span>19 €</span> per month</p>
           <p class="plan__nota solo-mensual">or €15 a month paid yearly</p>
@@ -782,8 +819,7 @@ footer{
             <li>Order copy groups across accounts</li>
           </ul>
         </article>
-        <article class="plan plan--destacado">
-          <p class="plan__sello">Most complete</p>
+        <article class="plan">
           <h3 class="plan__nombre">Desk</h3>
           <p class="plan__precio solo-mensual"><span>39 €</span> per month</p>
           <p class="plan__nota solo-mensual">or €29 a month paid yearly</p>
