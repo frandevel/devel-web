@@ -1073,7 +1073,7 @@
   "tf40e1c11": "The discount and vouchers are applied when paying the rest, and the invoice is still a single one, for the sale total. In the debts list you can see what has already been paid on account and each part payment.",
   "t7e6a93b8": "When the price lookup opens, with the euro icon or Alt+P, the cursor is already in the box, ready to type.",
   "tdd0d5a74": "29 October 2026",
-  "t3c222bdd": "1.10.0-0b2324f",
+  "t3c222bdd": "1.10.0-c72d69e",
   "t7ec92a4a": "POS with tabs: Products, Vouchers and Packages",
   "t92eb141c": "The POS now has three tabs:",
   "t75856336": ". Services are no longer searched for there: they come with the appointment, when you press",
