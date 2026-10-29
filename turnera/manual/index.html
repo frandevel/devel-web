@@ -979,6 +979,20 @@ footer{
     entrar en mantenimiento. Si es <strong>roja</strong>, es urgente. No se puede cerrar y desaparece sola cuando
     deja de hacer falta.
   </p>
+  <p>
+    Mientras se instala una versión nueva, el aviso dice que durante unos minutos la aplicación puede interrumpirse
+    un momento y que, cuando termine la instalación, se avisará en el mismo sitio. Entonces sale un aviso con el
+    botón <em>Recargar ahora</em>: guarde lo que esté haciendo y recargue la página para tener la versión nueva.
+  </p>
+
+  <h3 id="buscar-palabras">Buscar por palabras en cualquier lista</h3>
+  <p>
+    Los buscadores de las listas —productos, bonos, servicios, proveedores, profesionales, grupos de servicios,
+    mantenimiento, cobros pendientes, usuarios…— funcionan todos igual: cada palabra que se escribe separada por un
+    espacio es un filtro más. Se buscan las palabras <strong>en cualquier orden</strong> y sin importar mayúsculas
+    ni tildes, y solo salen los que cumplen todas. Con «bono 3 depi» salen los bonos de 3 sesiones de
+    depilación, aunque el nombre diga «Depilación láser · bono de 3».
+  </p>
 
   <h3 id="ordenar">Ordenar cualquier lista</h3>
   <p>
@@ -1167,6 +1181,13 @@ footer{
     <img src="/turnera/manual/imagenes/04-agenda.png" alt="La agenda del día con una columna por profesional y las citas pintadas por estado" loading="lazy">
     <figcaption>La agenda del día, una columna por profesional. La barra naranja y la estrella marcan una primera visita.</figcaption>
   </figure>
+
+  <h3 id="agenda-hora-inicio">La hora de inicio de un hueco</h3>
+  <p>
+    Cuando los tramos de la agenda son de menos de una hora y se pasa el ratón por un hueco libre, aparece
+    su hora de inicio, para saber a qué hora caería la cita si se pone ahí. Recepción ve las mismas horas de la
+    agenda que el resto del equipo.
+  </p>
 
   <h3 id="agenda-citas">Poner, mover y anular citas</h3>
 
@@ -1737,8 +1758,17 @@ footer{
   <span class="ruta">Menú → TPV</span>
 
   <p>
-    Se elige el cliente y el profesional, y a partir de ahí se van añadiendo servicios y productos al ticket. La
-    forma de pago sale de la lista de las que el centro tiene activas.
+    Se elige el cliente y el profesional, y a partir de ahí se van añadiendo al ticket productos, bonos y paquetes,
+    en las tres pestañas de arriba: <em>Productos</em>, <em>Bonos</em> y <em>Paquetes</em>. Los servicios no se
+    buscan en el TPV: llegan con la cita, cuando se pulsa <em>Cobrar</em> en la agenda. En <em>Productos</em> salen
+    solo los que se venden; lo que el centro gasta en las sesiones (los consumibles) no aparece. La forma de pago
+    sale de la lista de las que el centro tiene activas.
+  </p>
+
+  <p>
+    <strong>Volver a la cita.</strong> Si el ticket viene de una cita, la tarjeta del ticket lleva arriba el botón
+    <em>Volver a la cita</em>, que lleva a la agenda y abre esa misma cita, por si hay que cambiarle algo antes de
+    cobrar.
   </p>
 
   <p>
@@ -1792,7 +1822,7 @@ footer{
   </p>
 
   <p>
-    <strong>Consultar sin perder el ticket.</strong> El icono <em>i</em> de cada servicio o producto del buscador,
+    <strong>Consultar sin perder el ticket.</strong> El icono <em>i</em> de cada producto, bono o paquete del buscador,
     y el nombre de cada línea del ticket, abren su ficha en un panel a la derecha: precio, IVA, duración, código,
     unidades que quedan en este centro… Se cierra y el ticket sigue igual. Y si hace falta salir del TPV —a la
     ficha del cliente, a la agenda—, <strong>el ticket a medias se queda guardado en ese puesto</strong>: al volver
@@ -1833,7 +1863,7 @@ footer{
   </p>
 
   <p>
-    Para venderlo, el TPV tiene una tercera pestaña, <em>Paquetes</em>, junto a servicios y productos. Se añade
+    Para venderlo, el TPV tiene una tercera pestaña, <em>Paquetes</em>, junto a <em>Productos</em> y <em>Bonos</em>. Se añade
     igual que lo demás y sale en el ticket con su nombre; la casilla del bono se comporta como en un servicio
     suelto, por si el cliente prefiere pagarlo y guardarse la sesión.
   </p>
@@ -2438,16 +2468,17 @@ footer{
     servicio se anota («Láser axilas · Láser de diodo»). Si la cita lleva dos servicios con el mismo aparato, sus
     parámetros salen dos veces, una por servicio, y así queda claro cuántos julios se pusieron en cada zona. Junto a
     cada parámetro, <strong>con cuánto se le trató a ese cliente la vez anterior en ese mismo servicio</strong>. Se
-    guarda con su propio botón, «Guardar lo anotado», sin tener que guardar
-    la cita entera; un parámetro que se deja en blanco se entiende como «no se anotó» y no queda escrito.
+    guarda junto con la cita, al pulsar <em>Guardar</em>; un parámetro que se deja en blanco se entiende como «no se anotó» y no queda escrito.
+    Los parámetros se piden aquí, en la cita, y no en el TPV. Si se cambian los servicios de la cita, el apartado
+    se actualiza solo: aparecen las líneas del servicio nuevo y desaparecen las del que se quita.
   </p>
   <p>
     Si la cita no lleva ningún servicio con aparato, el apartado no aparece.
   </p>
   <p>
-    <strong>También se pide de camino al cobro.</strong> Al pulsar <em>Cobrar</em> en la cita, el TPV enseña encima
-    del ticket los mismos parámetros de la sesión. Si falta alguno obligatorio, no deja cobrar hasta anotarlo y
-    guardarlo (a quien no tiene permiso para anotar se le avisa, pero puede cobrar).
+    <strong>Sin los obligatorios no se cobra.</strong> Una cita con parámetros obligatorios sin rellenar se puede
+    guardar, pero no cobrar: al pulsar <em>Cobrar</em> avisa de cuáles faltan, y tampoco se llega al TPV por otro
+    camino hasta anotarlos (a quien no tiene permiso para anotar se le avisa, pero puede cobrar).
   </p>
   <p>
     <strong>Dónde se ve después.</strong> En la ficha del cliente, la tarjeta <em>Sesiones con aparato</em> lista
@@ -2736,6 +2767,11 @@ footer{
     cuánto pasará a ser la cuota: el cambio se aplica <strong>desde el mes siguiente al alta</strong>. Desactivarlo la
     baja, también desde el mes siguiente. Cada alta, reactivación, baja o borrado que cambia cuántos hay activos
     queda anotado con la fecha y quién lo hizo, y le llega a DEVEL por correo para ajustar la cuota.
+  </p>
+
+  <p>
+    Los recursos dados de baja no salen en la lista: el interruptor <em>Mostrar los que están de baja</em>, con
+    cuántos hay, los enseña.
   </p>
 
   <h3>Otros</h3>

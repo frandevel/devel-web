@@ -938,6 +938,14 @@ footer{
     go into maintenance. If it is <strong>red</strong>, it is urgent. It cannot be closed and it disappears on its own when
     it is no longer needed.
   </p>
+  <p>
+    While a new version is being installed, the notice says that for a few minutes the application may be interrupted for a moment and that, when the installation finishes, you will be told in the same place. Then a notice appears with the button <em>Reload now</em>: save what you are doing and reload the page to get the new version.
+  </p>
+
+  <h3 id="buscar-palabras">Search by words in any list</h3>
+  <p>
+    The search boxes of the lists —products, vouchers, services, suppliers, professionals, service groups, maintenance, outstanding payments, users…— all work the same way: each word typed after a space is one more filter. The words are searched <strong>in any order</strong> and capitals and accents do not matter; only items that match every word appear. With “voucher 3 hair”, the 3-session hair-removal vouchers appear, even if the name says “Laser hair removal · voucher of 3”.
+  </p>
 
   <h3 id="ordenar">Sorting any list</h3>
   <p>
@@ -1092,6 +1100,11 @@ footer{
     <img src="/turnera/manual/imagenes/en/04-agenda.png" alt="The day's agenda with one column per member of staff and the appointments painted by status" loading="lazy">
     <figcaption>The day's agenda, one column per member of staff. The orange bar and the star mark a first visit.</figcaption>
   </figure>
+
+  <h3 id="agenda-hora-inicio">The start time of a slot</h3>
+  <p>
+    When the agenda’s time steps are shorter than an hour and you hover over a free slot, its start time appears, so you know what time the appointment would fall at if you place it there. Reception sees the same agenda hours as the rest of the team.
+  </p>
 
   <h3 id="agenda-citas">Booking, moving and cancelling appointments</h3>
 
@@ -1503,7 +1516,12 @@ footer{
   <span class="ruta">Menu → Point of sale</span>
 
   <p>
-    You choose the customer and the professional, and from there you add services and products to the ticket. The payment method comes from the list of those the centre has enabled.
+    You choose the client and the professional, and from there products, vouchers and packages are added to the ticket, in the three tabs at the top: <em>Products</em>, <em>Vouchers</em> and <em>Packages</em>. Services are not searched for in the POS: they come with the appointment, when you press <em>Charge</em> in the agenda. In <em>Products</em> only those that are sold appear; what the centre uses up in sessions (consumables) does not appear. The payment method comes from the list of those the centre has active.
+  </p>
+
+  <p>
+    <strong>Back to the appointment.</strong> If the ticket comes from an appointment, the ticket card has at the top the button
+    <em>Back to the appointment</em>, which goes to the agenda and opens that same appointment, in case something needs changing before charging.
   </p>
 
   <p>
@@ -1543,7 +1561,7 @@ footer{
   </p>
 
   <p>
-    <strong>Look things up without losing the ticket.</strong> The icon <em>i</em> of each service or product in the search, and the name of each ticket line, open its record in a panel on the right: price, VAT, duration, code, units left in this centre… It closes and the ticket stays the same. And if you need to leave the checkout —to the customer record, to the agenda—, <strong>the half-finished ticket stays saved on that workstation</strong>: when you come back it appears as it was, with the notice <em>The ticket has been recovered</em> and the button <em>Discard it</em> to start a clean one. It belongs to each user and each centre, it is deleted when the sale is charged and it expires after twelve hours.
+    <strong>Look things up without losing the ticket.</strong> The icon <em>i</em> of each product, voucher or package in the search box, and the name of each ticket line, open its sheet in a panel on the right: price, VAT, duration, code, units left at this centre… Close it and the ticket stays as it was. And if you need to leave the POS —to the client’s record, to the agenda—, <strong>the half-finished ticket stays saved on that workstation</strong>: when you come back it appears as it was, with the notice <em>The ticket has been recovered</em> and the button <em>Discard it</em> to start a clean one. It belongs to each user and each centre, it is deleted when the sale is charged and it expires after twelve hours.
   </p>
 
   <figure>
@@ -1571,7 +1589,7 @@ footer{
   </p>
 
   <p>
-    To sell one, the point of sale has a third tab, <em>Packages</em>, next to services and products. It is added like everything else and appears on the ticket under its name; the voucher box behaves as it does on a single service, in case the customer would rather pay for it and keep the session.
+    To sell one, the point of sale has a third tab, <em>Packages</em>, next to <em>Products</em> and <em>Vouchers</em>. It is added like everything else and appears on the ticket with its name; the voucher checkbox behaves as on a single service, in case the client prefers to pay for it and keep the session.
   </p>
 
   <p>
@@ -2053,13 +2071,13 @@ footer{
   <h3 id="aparatos-sesion">Recording the session</h3>
   <span class="ruta">Agenda → (an appointment) → Equipment for the session</span>
   <p>
-    On appointments that include a service with a device, below the appointment details there is a section with the parameters to record, <strong>grouped by service and device</strong>: each group says which service it is for (“Armpit laser · Diode laser”). If the appointment has two services with the same device, its parameters appear twice, once per service, so it is clear how many joules were used on each area. Next to each parameter, <strong>how that customer was treated the previous time in that same service</strong>. It is saved with its own button, “Save what was noted”, without having to save the whole appointment; a parameter left blank is understood as “not recorded” and is not written.
+    On appointments that include a service with a device, below the appointment details there is a section with the parameters to record, <strong>grouped by service and device</strong>: each group says which service it is for (“Armpit laser · Diode laser”). If the appointment has two services with the same device, its parameters appear twice, once per service, so it is clear how many joules were used on each area. Next to each parameter, <strong>how that customer was treated the previous time in that same service</strong>. It is saved together with the appointment, when you press <em>Save</em>; a parameter left blank is understood as “not noted” and is not written. The parameters are asked for here, in the appointment, and not in the POS. If the appointment’s services are changed, the section updates by itself: the lines of the new service appear and those of the one removed disappear.
   </p>
   <p>
     If the appointment has no service with a device, the section does not appear.
   </p>
   <p>
-    <strong>It is also asked for on the way to charging.</strong> When you press <em>Charge</em> in the appointment, the till shows the same session parameters above the ticket. If a compulsory one is missing, it will not let you charge until it is recorded and saved (someone without permission to record is warned, but can still charge).
+    <strong>No charging without the required ones.</strong> An appointment with required parameters left blank can be saved but not charged: when you press <em>Charge</em> it tells you which ones are missing, and the POS cannot be reached by any other route either until they are noted (whoever lacks permission to note them is warned, but can charge).
   </p>
   <p>
     <strong>Where you see it afterwards.</strong> In the customer's record, the <em>Sessions with equipment</em> lists each session, newest first, with the day and time, the service, the device, the parameters with their unit and who did it. It is where a laser treatment is followed session by session. If nothing was ever noted for the customer, the card does not appear.
@@ -2294,6 +2312,10 @@ footer{
     what the fee will become: the change applies <strong>from the month after it is added</strong>. Deactivating one lowers
     it, also from the following month. Every addition, reactivation, deactivation or deletion that changes how many are active
     is recorded with the date and who did it, and DEVEL receives it by email to adjust the fee.
+  </p>
+
+  <p>
+    Retired resources do not appear in the list: the switch <em>Show retired</em>, with how many there are, shows them.
   </p>
 
   <h3>Others</h3>

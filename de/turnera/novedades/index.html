@@ -679,6 +679,7 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-10-29">29. Oktober 2026</a></li>
     <li><a href="#2026-10-28">28. Oktober 2026</a></li>
     <li><a href="#2026-10-27">27. Oktober 2026</a></li>
     <li><a href="#2026-10-23">23. Oktober 2026</a></li>
@@ -713,10 +714,61 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-10-29" class="version">
+  <div class="version__cabecera">
+    <h2>29. Oktober 2026</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.10.0-0b2324f</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Kasse mit Reitern: Produkte, Wertkarten und Pakete</h4>
+    <ul>
+      <li>Die Kasse hat jetzt drei Reiter: <strong>Produkte</strong>, <strong>Wertkarten</strong> und <strong>Pakete</strong>. Leistungen werden dort nicht mehr gesucht: Sie kommen mit dem Termin, sobald Sie auf <strong>Kassieren</strong> in der Agenda drücken.</li>
+      <li>Unter <strong>Produkte</strong> erscheint nur, was verkauft wird; die Verbrauchsmaterialien des Zentrums erscheinen nicht.</li>
+      <li>Stammt der Beleg aus einem Termin, hat seine Karte die Schaltfläche <strong>Zurück zum Termin</strong>, die in der Agenda genau diesen Termin öffnet, falls vor dem Kassieren noch etwas zu ändern ist.</li>
+    </ul>
+    <h4>Die Geräteparameter werden im Termin erfasst</h4>
+    <ul>
+      <li>Die Parameter der Sitzung (Joule, Leistung ...) werden im Termin abgefragt und mit ihm gespeichert, sobald Sie auf <strong>Speichern</strong>drücken. Die Kasse fragt sie nicht mehr ab.</li>
+      <li>Ändern Sie die Leistungen des Termins, ändern sich die auszufüllenden Zeilen von selbst: Die der neuen Leistung erscheinen, die der entfernten verschwinden.</li>
+      <li>Ein Termin mit nicht ausgefüllten Pflichtparametern lässt sich speichern, aber nicht kassieren: Wenn Sie auf <strong>Kassieren</strong> drücken, erfahren Sie, welche fehlen; zur Kasse kommen Sie erst, wenn sie erfasst sind.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Nach Wörtern suchen, in beliebiger Reihenfolge</h4>
+    <ul>
+      <li>In den Suchfeldern für Produkte, Wertkarten, Leistungen, Lieferanten, Fachkräfte, Leistungsgruppen, Wartung, offene Zahlungen, Benutzer und weitere Listen ist jedes durch ein Leerzeichen getrennte Wort ein weiterer Filter.</li>
+      <li>Die Wörter werden in beliebiger Reihenfolge gesucht, ohne Rücksicht auf Groß- und Kleinschreibung oder Akzente: „Wertkarte 3 Haar“ findet die Wertkarte mit 3 Sitzungen zur Haarentfernung. Es erscheinen nur Treffer, die alle Wörter enthalten.</li>
+    </ul>
+    <h4>Agenda: die Anfangszeit jedes freien Feldes</h4>
+    <ul>
+      <li>Sind die Zeitabschnitte der Agenda kürzer als eine Stunde, erscheint beim Darüberfahren mit der Maus über ein freies Feld dessen Anfangszeit.</li>
+    </ul>
+    <h4>Stillgelegte Ressourcen</h4>
+    <ul>
+      <li>Stillgelegte Ressourcen verstopfen die Liste nicht mehr: Sie erscheinen nur, wenn Sie den Schalter <strong>Stillgelegte anzeigen</strong>einschalten, der anzeigt, wie viele es sind.</li>
+    </ul>
+    <h4>Versionshinweise</h4>
+    <ul>
+      <li>Während eine neue Version installiert wird, erklärt der Hinweis oben, dass die Anwendung kurz unterbrochen werden kann und dass Sie dort Bescheid bekommen, sobald die Installation beendet ist.</li>
+      <li>Ist sie fertig, erscheint ein Hinweis mit der Schaltfläche <strong>Jetzt neu laden</strong> mit der Sie zur neuen Version wechseln, wann Sie möchten.</li>
+    </ul>
+  </div>
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Behobene Fehler</h3>
+    <ul>
+      <li>Die Suche nach Wertkarten in der Kasse findet sie wieder nach dem Namen.</li>
+      <li>Der Empfang sieht dieselben Agenda-Zeiten wie der Rest des Teams.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-10-28" class="version">
   <div class="version__cabecera">
     <h2>28. Oktober 2026</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.9.0-c9a476d</span></p>
 

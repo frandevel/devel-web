@@ -939,6 +939,14 @@ footer{
     nötig ist. Ist er <strong>rot</strong>, ist es dringend. Er lässt sich nicht schließen und verschwindet von selbst, wenn
     er nicht mehr gebraucht wird.
   </p>
+  <p>
+    Während eine neue Version installiert wird, steht im Hinweis, dass die Anwendung einige Minuten lang kurz unterbrochen werden kann und dass Sie nach der Installation an derselben Stelle benachrichtigt werden. Dann erscheint ein Hinweis mit der Schaltfläche <em>Jetzt neu laden</em>: speichern Sie, was Sie gerade tun, und laden Sie die Seite neu, um die neue Version zu erhalten.
+  </p>
+
+  <h3 id="buscar-palabras">In jeder Liste nach Wörtern suchen</h3>
+  <p>
+    Die Suchfelder der Listen —Produkte, Wertkarten, Leistungen, Lieferanten, Fachkräfte, Leistungsgruppen, Wartung, offene Zahlungen, Benutzer …— funktionieren alle gleich: Jedes durch ein Leerzeichen getrennte Wort ist ein weiterer Filter. Die Wörter werden gesucht <strong>in beliebiger Reihenfolge</strong> und Groß-/Kleinschreibung und Akzente spielen keine Rolle; es erscheinen nur Treffer, die alle Wörter enthalten. Mit „Wertkarte 3 Haar“ erscheinen die Wertkarten mit 3 Sitzungen zur Haarentfernung, auch wenn der Name „Laser-Haarentfernung · Wertkarte mit 3“ lautet.
+  </p>
 
   <h3 id="ordenar">Jede Liste sortieren</h3>
   <p>
@@ -1093,6 +1101,11 @@ footer{
     <img src="/turnera/manual/imagenes/en/04-agenda.png" alt="Der Terminkalender des Tages mit einer Spalte je Mitarbeiter und nach Status eingefärbten Terminen" loading="lazy">
     <figcaption>Der Terminkalender des Tages, eine Spalte je Mitarbeiter. Der orange Balken und der Stern kennzeichnen einen Erstbesuch.</figcaption>
   </figure>
+
+  <h3 id="agenda-hora-inicio">Die Anfangszeit eines freien Feldes</h3>
+  <p>
+    Sind die Zeitabschnitte der Agenda kürzer als eine Stunde und fahren Sie mit der Maus über ein freies Feld, erscheint dessen Anfangszeit, damit Sie wissen, um wie viel Uhr der Termin dort läge. Der Empfang sieht dieselben Agenda-Zeiten wie der Rest des Teams.
+  </p>
 
   <h3 id="agenda-citas">Termine eintragen, verschieben und stornieren</h3>
 
@@ -1504,7 +1517,12 @@ footer{
   <span class="ruta">Menü → Kasse</span>
 
   <p>
-    Man wählt Kunde und Fachkraft und fügt dann Leistungen und Produkte zum Beleg hinzu. Die Zahlungsart kommt aus der Liste der vom Zentrum aktivierten.
+    Man wählt Kunde und Fachkraft, und von da an werden dem Beleg Produkte, Wertkarten und Pakete hinzugefügt, in den drei Reitern oben: <em>Produkte</em>, <em>Wertkarten</em> und <em>Pakete</em>. Leistungen werden nicht in der Kasse gesucht: Sie kommen mit dem Termin, wenn Sie auf <em>Kassieren</em> in der Agenda drücken. Unter <em>Produkte</em> erscheint nur, was verkauft wird; was das Zentrum bei den Sitzungen verbraucht (die Verbrauchsmaterialien), erscheint nicht. Die Zahlungsart stammt aus der Liste der Zahlungsarten, die das Zentrum aktiviert hat.
+  </p>
+
+  <p>
+    <strong>Zurück zum Termin.</strong> Stammt der Beleg aus einem Termin, hat die Belegkarte oben die Schaltfläche
+    <em>Zurück zum Termin</em>, die zur Agenda führt und genau diesen Termin öffnet, falls vor dem Kassieren etwas zu ändern ist.
   </p>
 
   <p>
@@ -1544,7 +1562,7 @@ footer{
   </p>
 
   <p>
-    <strong>Nachschlagen, ohne den Bon zu verlieren.</strong> Das Symbol <em>i</em> bei jeder Leistung oder jedem Produkt in der Suche und der Name jeder Bonzeile öffnen die Karte in einem Seitenpanel: Preis, MwSt., Dauer, Code, verbleibende Einheiten in diesem Zentrum… Es schließt sich, und der Bon bleibt, wie er war. Und wenn man die Kasse verlassen muss —zur Kundenakte, zum Kalender—, <strong>bleibt der halbfertige Bon an diesem Arbeitsplatz gespeichert</strong>: Beim Zurückkommen erscheint er unverändert, mit dem Hinweis <em>Der Bon wurde wiederhergestellt</em> und der Schaltfläche <em>Verwerfen</em> zum Neubeginnen. Er gehört zu jedem Benutzer und jedem Zentrum, wird beim Kassieren gelöscht und verfällt nach zwölf Stunden.
+    <strong>Nachschlagen, ohne den Bon zu verlieren.</strong> Das Symbol <em>i</em> jedes Produkts, jeder Wertkarte oder jedes Pakets im Suchfeld und der Name jeder Belegzeile öffnen ihr Blatt in einem Panel rechts: Preis, MwSt., Dauer, Code, im Zentrum verbleibende Stückzahl … Man schließt es, und der Beleg bleibt unverändert. Und wenn man die Kasse verlassen muss —zur Kundenakte, zur Agenda—, <strong>bleibt der halbfertige Bon an diesem Arbeitsplatz gespeichert</strong>: Beim Zurückkommen erscheint er unverändert, mit dem Hinweis <em>Der Bon wurde wiederhergestellt</em> und der Schaltfläche <em>Verwerfen</em> zum Neubeginnen. Er gehört zu jedem Benutzer und jedem Zentrum, wird beim Kassieren gelöscht und verfällt nach zwölf Stunden.
   </p>
 
   <figure>
@@ -1572,7 +1590,7 @@ footer{
   </p>
 
   <p>
-    Zum Verkaufen hat die Kasse einen dritten Reiter, <em>Pakete</em>, neben Leistungen und Produkten. Es wird wie alles andere hinzugefügt und erscheint mit seinem Namen auf dem Beleg; das Kästchen für den Gutschein verhält sich wie bei einer einzelnen Leistung, falls der Kunde lieber bezahlt und sich die Sitzung aufhebt.
+    Zum Verkaufen hat die Kasse einen dritten Reiter, <em>Pakete</em>an, neben <em>Produkte</em> und <em>Wertkarten</em>. Es wird wie alles andere hinzugefügt und erscheint mit seinem Namen auf dem Beleg; das Wertkarten-Kästchen verhält sich wie bei einer einzelnen Leistung, falls der Kunde lieber zahlt und sich die Sitzung aufhebt.
   </p>
 
   <p>
@@ -2056,13 +2074,13 @@ footer{
   <h3 id="aparatos-sesion">Die Sitzung erfassen</h3>
   <span class="ruta">Terminkalender → (ein Termin) → Geräte der Sitzung</span>
   <p>
-    Bei Terminen mit einer Leistung, die ein Gerät benötigt, erscheint unter den Termindaten ein Abschnitt mit den zu erfassenden Parametern, <strong>gruppiert nach Leistung und Gerät</strong>: Jede Gruppe nennt die Leistung, für die erfasst wird („Achsel-Laser · Diodenlaser“). Hat der Termin zwei Leistungen mit demselben Gerät, erscheinen seine Parameter zweimal, einmal je Leistung, sodass klar ist, wie viele Joule an jeder Zone eingestellt wurden. Neben jedem Parameter steht, <strong>womit dieser Kunde beim letzten Mal in derselben Leistung behandelt wurde</strong>. Gespeichert wird mit einer eigenen Schaltfläche, „Erfasstes speichern“, ohne den ganzen Termin speichern zu müssen; ein leer gelassener Parameter gilt als „nicht erfasst“ und wird nicht geschrieben.
+    Bei Terminen mit einer Leistung, die ein Gerät benötigt, erscheint unter den Termindaten ein Abschnitt mit den zu erfassenden Parametern, <strong>gruppiert nach Leistung und Gerät</strong>: Jede Gruppe nennt die Leistung, für die erfasst wird („Achsel-Laser · Diodenlaser“). Hat der Termin zwei Leistungen mit demselben Gerät, erscheinen seine Parameter zweimal, einmal je Leistung, sodass klar ist, wie viele Joule an jeder Zone eingestellt wurden. Neben jedem Parameter steht, <strong>womit dieser Kunde beim letzten Mal in derselben Leistung behandelt wurde</strong>. Sie werden zusammen mit dem Termin gespeichert, sobald Sie auf <em>Speichern</em>drücken; ein leer gelassener Parameter gilt als „nicht erfasst“ und wird nicht geschrieben. Die Parameter werden hier im Termin abgefragt und nicht in der Kasse. Ändert man die Leistungen des Termins, aktualisiert sich der Bereich von selbst: Die Zeilen der neuen Leistung erscheinen, die der entfernten verschwinden.
   </p>
   <p>
     Wenn der Termin keine Leistung mit Gerät enthält, erscheint der Abschnitt nicht.
   </p>
   <p>
-    <strong>Sie werden auch auf dem Weg zum Kassieren abgefragt.</strong> Wenn man im Termin auf <em>Kassieren</em> im Termin zeigt die Kasse über dem Beleg dieselben Sitzungsparameter an. Fehlt ein Pflichtparameter, lässt sie das Kassieren erst zu, wenn er erfasst und gespeichert ist (wer keine Berechtigung zum Erfassen hat, wird gewarnt, kann aber trotzdem kassieren).
+    <strong>Ohne die Pflichtparameter wird nicht kassiert.</strong> Ein Termin mit nicht ausgefüllten Pflichtparametern lässt sich speichern, aber nicht kassieren: Wenn Sie auf <em>Kassieren</em> drücken, erfahren Sie, welche fehlen, und auch auf anderem Weg kommt man nicht zur Kasse, bevor sie erfasst sind (wer keine Berechtigung zum Erfassen hat, wird gewarnt, kann aber kassieren).
   </p>
   <p>
     <strong>Wo man es danach sieht.</strong> In der Kundenakte listet die Karte <em>Sitzungen mit Gerät</em> listet jede Sitzung auf, die neueste zuerst, mit Tag und Uhrzeit, Leistung, Gerät, den Parametern mit ihrer Einheit und wer sie durchgeführt hat. Dort verfolgt man eine Laserbehandlung Sitzung für Sitzung. Wurde für den Kunden nie etwas notiert, erscheint die Karte nicht.
@@ -2297,6 +2315,10 @@ footer{
     wie hoch die Gebühr dann wird: Die Änderung gilt <strong>ab dem Monat nach der Anlage</strong>. Eine zu deaktivieren senkt
     sie, ebenfalls ab dem Folgemonat. Jede Neuanlage, Reaktivierung, Deaktivierung oder Löschung, die die Zahl der aktiven Ressourcen ändert,
     wird mit Datum und Benutzer festgehalten und geht per E-Mail an DEVEL, damit die Gebühr angepasst wird.
+  </p>
+
+  <p>
+    Stillgelegte Ressourcen erscheinen nicht in der Liste: Der Schalter <em>Stillgelegte anzeigen</em>mit der Angabe, wie viele es sind, zeigt sie an.
   </p>
 
   <h3>Sonstiges</h3>

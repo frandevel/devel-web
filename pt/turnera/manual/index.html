@@ -942,6 +942,14 @@ footer{
     entrar em manutenção. Se for <strong>vermelha</strong>, é urgente. Não se pode fechar e desaparece sozinha quando
     deixa de ser necessária.
   </p>
+  <p>
+    Enquanto se instala uma versão nova, o aviso diz que durante alguns minutos a aplicação pode interromper-se por um momento e que, quando a instalação terminar, será avisado no mesmo sítio. Então aparece um aviso com o botão <em>Recarregar agora</em>: guarde o que estiver a fazer e recarregue a página para ter a versão nova.
+  </p>
+
+  <h3 id="buscar-palabras">Pesquisar por palavras em qualquer lista</h3>
+  <p>
+    As pesquisas das listas —produtos, pacotes de sessões, serviços, fornecedores, profissionais, grupos de serviços, manutenção, valores em dívida, utilizadores…— funcionam todas da mesma maneira: cada palavra escrita depois de um espaço é mais um filtro. As palavras procuram-se <strong>em qualquer ordem</strong> e sem importar maiúsculas nem acentos; só aparecem os que cumprem todas as palavras. Com «pacote 3 depi» aparecem os pacotes de 3 sessões de depilação, ainda que o nome diga «Depilação laser · pacote de 3».
+  </p>
 
   <h3 id="ordenar">Ordenar qualquer lista</h3>
   <p>
@@ -1126,6 +1134,11 @@ footer{
     <img src="/turnera/manual/imagenes/en/04-agenda.png" alt="A agenda do dia com uma coluna por profissional e as marcações pintadas por estado" loading="lazy">
     <figcaption>A agenda do dia, uma coluna por profissional. A barra laranja e a estrela assinalam uma primeira visita.</figcaption>
   </figure>
+
+  <h3 id="agenda-hora-inicio">A hora de início de um espaço</h3>
+  <p>
+    Quando os intervalos da agenda são de menos de uma hora e se passa o rato por um espaço livre, aparece a sua hora de início, para saber a que horas ficaria a marcação se a pusermos aí. A receção vê as mesmas horas da agenda que o resto da equipa.
+  </p>
 
   <h3 id="agenda-citas">Marcar, mover e anular marcações</h3>
 
@@ -1649,8 +1662,12 @@ footer{
   <span class="ruta">Menu → TPV</span>
 
   <p>
-    Escolhe-se o cliente e o profissional, e a partir daí vão-se adicionando serviços e produtos ao talão. A forma
-    de pagamento sai da lista das que o centro tem ativas.
+    Escolhe-se o cliente e o profissional, e a partir daí vão-se juntando ao talão produtos, pacotes de sessões e pacotes, nos três separadores de cima: <em>Produtos</em>, <em>Pacotes de sessões</em> e <em>Pacotes</em>. Os serviços não se procuram no TPV: chegam com a marcação, quando se carrega em <em>Cobrar</em> na agenda. Em <em>Produtos</em> só aparecem os que se vendem; o que o centro gasta nas sessões (os consumíveis) não aparece. A forma de pagamento sai da lista das que o centro tem ativas.
+  </p>
+
+  <p>
+    <strong>Voltar à marcação.</strong> Se o talão vem de uma marcação, o cartão do talão tem em cima o botão
+    <em>Voltar à marcação</em>, que leva à agenda e abre essa mesma marcação, caso seja preciso mudar-lhe algo antes de cobrar.
   </p>
 
   <p>
@@ -1704,10 +1721,7 @@ footer{
   </p>
 
   <p>
-    <strong>Consultar sem perder o talão.</strong> O ícone <em>i</em> de cada serviço ou produto da pesquisa, e
-    o nome de cada linha do talão, abrem a sua ficha num painel à direita: preço, IVA, duração, código, unidades
-    que restam neste centro… Fecha-se e o talão fica igual. E se for preciso sair do TPV —para a
-    ficha do cliente, para a agenda—, <strong>o talão a meio fica guardado nesse posto</strong>: ao voltar
+    <strong>Consultar sem perder o talão.</strong> O ícone <em>i</em> de cada produto, pacote de sessões ou pacote da pesquisa, e o nome de cada linha do talão, abrem a sua ficha num painel à direita: preço, IVA, duração, código, unidades que restam neste centro… Fecha-se e o talão fica igual. E se for preciso sair do TPV —para a ficha do cliente, para a agenda—, <strong>o talão a meio fica guardado nesse posto</strong>: ao voltar
     aparece tal e qual, com o aviso <em>O talão foi recuperado</em> e o botão <em>Descartá-lo</em> para
     começar um limpo. É de cada utilizador e de cada centro, apaga-se ao cobrar e caduca às doze horas.
   </p>
@@ -1745,9 +1759,7 @@ footer{
   </p>
 
   <p>
-    Para o vender, o TPV tem um terceiro separador, <em>Pacotes</em>, junto a serviços e produtos. Adiciona-se como
-    o resto e aparece no talão com o seu nome; a caixa do pacote de sessões comporta-se como num serviço
-    avulso, para o caso de o cliente preferir pagá-lo e guardar a sessão.
+    Para o vender, o TPV tem um terceiro separador, <em>Pacotes</em>, junto a <em>Produtos</em> e <em>Pacotes de sessões</em>. Junta-se como tudo o resto e aparece no talão com o seu nome; a caixa do pacote de sessões comporta-se como num serviço avulso, caso o cliente prefira pagá-lo e guardar a sessão.
   </p>
 
   <p>
@@ -2327,16 +2339,13 @@ footer{
     parâmetros a registar, <strong>agrupados por serviço e aparelho</strong>: cada grupo indica para que
     serviço se regista («Laser axilas · Laser de díodo»). Se a marcação leva dois serviços com o mesmo aparelho, os seus
     parâmetros aparecem duas vezes, uma por serviço, e assim fica claro quantos joules se aplicaram em cada zona. Junto a
-    cada parâmetro, <strong>com quanto se tratou esse cliente da vez anterior nesse mesmo serviço</strong>. Guarda-se
-    com o seu próprio botão, «Guardar o registado», sem ter de guardar a marcação inteira; um parâmetro que se deixa em branco entende-se como «não foi registado» e não fica escrito.
+    cada parâmetro, <strong>com quanto se tratou esse cliente da vez anterior nesse mesmo serviço</strong>. Guarda-se junto com a marcação, ao carregar em <em>Guardar</em>; um parâmetro deixado em branco entende-se como «não anotado» e não fica escrito. Os parâmetros pedem-se aqui, na marcação, e não no TPV. Se se mudarem os serviços da marcação, a secção atualiza-se sozinha: aparecem as linhas do serviço novo e desaparecem as do que se tira.
   </p>
   <p>
     Se a marcação não leva nenhum serviço com aparelho, a secção não aparece.
   </p>
   <p>
-    <strong>Também é pedido a caminho da cobrança.</strong> Ao carregar em <em>Cobrar</em> na marcação, o TPV mostra por cima
-    do talão os mesmos parâmetros da sessão. Se faltar algum obrigatório, não deixa cobrar até ser registado e
-    guardado (a quem não tem permissão para registar é-lhe dado um aviso, mas pode cobrar).
+    <strong>Sem os obrigatórios não se cobra.</strong> Uma marcação com parâmetros obrigatórios por preencher pode guardar-se, mas não cobrar-se: ao carregar em <em>Cobrar</em> avisa quais faltam, e também não se chega ao TPV por outro caminho enquanto não forem anotados (a quem não tem permissão para anotar avisa-se, mas pode cobrar).
   </p>
   <p>
     <strong>Onde se vê depois.</strong> Na ficha do cliente, o cartão <em>Sessões com aparelho</em> lista
@@ -2619,6 +2628,10 @@ footer{
     quanto passará a ser a mensalidade: a alteração aplica-se <strong>a partir do mês seguinte ao registo</strong>. Desativá-lo
     baixa-a, também a partir do mês seguinte. Cada registo, reativação, desativação ou eliminação que altere quantos há ativos
     fica anotado com a data e quem o fez, e chega à DEVEL por e-mail para ajustar a mensalidade.
+  </p>
+
+  <p>
+    Os recursos desativados não aparecem na lista: o interruptor <em>Mostrar os desativados</em>, com quantos há, mostra-os.
   </p>
 
   <h3>Outros</h3>

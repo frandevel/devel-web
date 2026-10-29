@@ -679,6 +679,7 @@ footer{
   <h2>Novidades do Turnera</h2>
   <p>O mais recente, em cima</p>
   <ol>
+    <li><a href="#2026-10-29">29 de outubro de 2026</a></li>
     <li><a href="#2026-10-28">28 de outubro de 2026</a></li>
     <li><a href="#2026-10-27">27 de outubro de 2026</a></li>
     <li><a href="#2026-10-23">23 de outubro de 2026</a></li>
@@ -714,10 +715,61 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Erros corrigidos</strong>: o que falhava e já não falha.</span></li>
 </ul>
 
+<section id="2026-10-29" class="version">
+  <div class="version__cabecera">
+    <h2>29 de outubro de 2026</h2>
+    <span class="version__sello">Última versão</span>
+  </div>
+  <p class="version__numero">Versão <span translate="no">1.10.0-0b2324f</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Novas funcionalidades</h3>
+    <h4>TPV com separadores: Produtos, Pacotes de sessões e Pacotes</h4>
+    <ul>
+      <li>O TPV tem agora três separadores: <strong>Produtos</strong>, <strong>Pacotes de sessões</strong> e <strong>Pacotes</strong>. Os serviços já não se procuram aí: chegam com a marcação, ao carregar em <strong>Cobrar</strong> na agenda.</li>
+      <li>Em <strong>Produtos</strong> só aparecem os que se vendem; os consumíveis do centro não aparecem.</li>
+      <li>Se o talão vem de uma marcação, o seu cartão tem o botão <strong>Voltar à marcação</strong>, que abre na agenda essa mesma marcação, caso seja preciso mudar-lhe algo antes de cobrar.</li>
+    </ul>
+    <h4>Os parâmetros do aparelho anotam-se na marcação</h4>
+    <ul>
+      <li>Os parâmetros da sessão (joules, potência...) pedem-se na marcação e guardam-se com ela, ao carregar em <strong>Guardar</strong>. O TPV já não os pede.</li>
+      <li>Ao mudar os serviços da marcação, as linhas a anotar mudam sozinhas: aparecem as do serviço novo e desaparecem as do que se tira.</li>
+      <li>Uma marcação com parâmetros obrigatórios por preencher pode guardar-se, mas não cobrar-se: ao carregar em <strong>Cobrar</strong> avisa quais faltam, e não se chega ao TPV enquanto não forem anotados.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Melhorias</h3>
+    <h4>Pesquisar por palavras, em qualquer ordem</h4>
+    <ul>
+      <li>Nas pesquisas de produtos, pacotes de sessões, serviços, fornecedores, profissionais, grupos de serviços, manutenção, valores em dívida, utilizadores e outras listas, cada palavra separada por um espaço é mais um filtro.</li>
+      <li>As palavras procuram-se em qualquer ordem, sem distinguir maiúsculas nem acentos: «pacote 3 depi» encontra o pacote de 3 sessões de depilação. Só aparecem os que cumprem todas as palavras.</li>
+    </ul>
+    <h4>Agenda: a hora de cada espaço</h4>
+    <ul>
+      <li>Quando os intervalos da agenda são de menos de uma hora, ao passar o rato por um espaço livre aparece a sua hora de início.</li>
+    </ul>
+    <h4>Recursos desativados</h4>
+    <ul>
+      <li>Os recursos desativados já não enchem a lista: só aparecem se ativar o interruptor <strong>Mostrar os desativados</strong>, que diz quantos são.</li>
+    </ul>
+    <h4>Avisos de versão</h4>
+    <ul>
+      <li>Enquanto se instala uma versão nova, o aviso no topo explica que a aplicação pode interromper-se por um momento e que será avisado aí mesmo quando a instalação terminar.</li>
+      <li>Quando termina, aparece um aviso com o botão <strong>Recarregar agora</strong> para passar à versão nova quando quiser.</li>
+    </ul>
+  </div>
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Erros corrigidos</h3>
+    <ul>
+      <li>A pesquisa de pacotes de sessões no TPV volta a encontrá-los pelo nome.</li>
+      <li>A receção vê as mesmas horas da agenda que o resto da equipa.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-10-28" class="version">
   <div class="version__cabecera">
     <h2>28 de outubro de 2026</h2>
-    <span class="version__sello">Última versão</span>
   </div>
   <p class="version__numero">Versão <span translate="no">1.9.0-c9a476d</span></p>
 
