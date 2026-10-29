@@ -9,7 +9,6 @@
   "tf1133511": "TradegunCharts · Professional trading in the derivatives market",
   "t4cdbe1d5": "Read the order flow.",
   "t4332a157": "Trade from the chart.",
-  "t1ba9c6c9": "Footprint, an options chain and execution in a single Windows platform, built by someone who trades with it every day. Light, fast, and made for traders and family offices who work with futures, options and hedging.",
   "t044c1589": "Try it for 14 days",
   "te397d0cf": "See pricing",
   "tdf37d252": "Windows 10 and 11 · 64-bit",
@@ -112,7 +111,6 @@
   "t5d4f03b6": "Does it work without an internet connection?",
   "t66017499": "To trade you need a connection to your broker. Without one you can keep analysing the chart with the saved candles, and the licence keeps working for several days without being checked.",
   "tf2e2b661": "What do I need to install it?",
-  "t97c228ee": "Windows 10 or 11, 64-bit. The installer includes everything it needs and updates install themselves. The application's interface is in Spanish.",
   "t2833c623": "Is there support?",
   "t3bf0a58a": "Yes, by email at",
   "t7b71fdbe": ". You get an answer from the person who builds it, who uses it every day to trade.",
@@ -149,7 +147,6 @@
   "ta71b42bc": "Risk warning and terms of use",
   "t34ba9886": "Legal notice and privacy",
   "ta8304056": "Windows platform for professional derivatives trading: footprint charts, trading from the chart, order-flow indicators, an options chain and phone notifications. With Interactive Brokers. From €19 per month, with a 14-day trial.",
-  "t00c57ef3": "Footprint charts, an options chain and execution through Interactive Brokers, in a single platform for Windows.",
   "t78398371": "TradegunCharts: footprint charts and options",
   "t58805743": "DEVEL logo",
   "t68274d17": "TradegunCharts logo",
@@ -177,7 +174,6 @@
   "te2a4e5ed": "Rithmic: in certification, not yet available",
   "t411dfae2": "Today the connection is with Interactive Brokers. Rithmic is in certification and can't be used yet; it will come to every plan at no extra cost.",
   "t0331126c": "With Interactive Brokers, through your own TWS or IB Gateway. The Rithmic connection, used by many prop-firm accounts, is not available yet: it is going through certification. There is also a simulated account to practise with real data.",
-  "taa13b826": "Windows platform for professional derivatives trading: footprint charts, trading from the chart, order-flow indicators, option chain and phone alerts. With Interactive Brokers (Rithmic coming soon). Essential plan free; Pro and Desk from €19 a month, with a 14-day trial.",
   "tf1a87869": "Monthly",
   "tc87bca91": "Yearly",
   "t7234635f": "save up to 26%",
@@ -188,5 +184,10 @@
   "t88c0f170": "or €29 a month paid yearly",
   "tcc53f111": "€348 a year, in a single payment",
   "tcb0e0fb6": "Today the connection is with Interactive Brokers. Rithmic is in certification and can't be used yet; it will come to the Pro and Desk plans at no extra cost.",
-  "t1a4d3a16": "Billing period"
+  "t1a4d3a16": "Billing period",
+  "tcf53d44b": "Windows and Linux platform for professional derivatives trading: footprint charts, trading from the chart, order-flow indicators, option chain and phone alerts. With Interactive Brokers (Rithmic coming soon). Essential plan free; Pro and Desk from €19 a month, with a 14-day trial.",
+  "teaacbed8": "Footprint charts, an options chain and execution through Interactive Brokers, in a single platform for Windows and Linux.",
+  "t2e9d92ee": "Footprint, an options chain and execution in a single platform for Windows and Linux, built by someone who trades with it every day. Light, fast, and made for traders and family offices who work with futures, options and hedging.",
+  "taa241f1f": "Windows 10 or 11, 64-bit, or 64-bit Linux based on Ubuntu (Ubuntu, Zorin OS and other derivatives). The installer includes everything it needs and updates install themselves. The application's interface is in Spanish.",
+  "t014d3441": "Linux · Ubuntu and derivatives"
 }
