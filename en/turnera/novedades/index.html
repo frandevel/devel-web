@@ -720,7 +720,7 @@ footer{
     <h2>30 October 2026</h2>
     <span class="version__sello">Latest release</span>
   </div>
-  <p class="version__numero">Version <span translate="no">1.11.0-bf691bb</span></p>
+  <p class="version__numero">Version <span translate="no">1.11.0-PENDIENTE</span></p>
 
   <div class="grupo grupo--nuevo">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
@@ -740,6 +740,28 @@ footer{
       <li>When a single person needs something their role does not carry, a new role is no longer needed: in the user's form, below the roles, the <strong>Additional permissions</strong> section lets you add loose permissions, grouped by area and with a search box.</li>
       <li>What their roles already give is shown ticked and locked, with the name of the role that gives it; here you only add, you never take away what a role brings. In the user list, those with extras carry the mark <strong>+N custom</strong>.</li>
     </ul>
+    <h4>Splitting a payment between methods, with the sums done for you</h4>
+    <ul>
+      <li>The POS and <strong>Outstanding payments</strong> split a payment between several methods <strong>exactly the same way</strong>, and keep the count themselves: what has to be collected, what has been entered and what is left update with every amount typed. Reception does not have to subtract in their head; the charge button does not light up until it adds up to the cent.</li>
+      <li>One of the parts can be paid with a <strong>gift card</strong>, with its balance in view: “Right now the gift card has €X left”, and below, what will be left after the payment.</li>
+    </ul>
+    <h4>Gift cards: copy the code and an email without the amount</h4>
+    <ul>
+      <li>When selling a card, the code appears with a large <strong>Copy code</strong> button that turns green, with a tick, once copied.</li>
+      <li>A checkbox lets you <strong>hide the amount</strong> in the email or on the printed card: only the dedication and the code appear.</li>
+      <li>The email arrives laid out like a gift: with the centre's logo, the dedication in its own box, the code on a coupon, and how to use it and until when it is valid.</li>
+    </ul>
+    <h4>Signing with checkboxes and areas ticked by the customer</h4>
+    <ul>
+      <li>A consent can include yes/no checkboxes and a list of areas to be treated. On the tablet, before signing, the customer ticks them with large buttons, and what is ticked is written in the signed document.</li>
+      <li>Each field says <strong>who fills it in</strong>: reception when asking for the signature, or the signer on the tablet.</li>
+    </ul>
+    <h4>Customer notes, Home and quick selection with their own permissions</h4>
+    <ul>
+      <li><strong>Write customer notes</strong> is a separate permission, and whoever can delete them sees a bin on each note.</li>
+      <li>The customers card on Home is split in two, <strong>Customers</strong> and <strong>Birthdays</strong>, each with its own permission. By default Administration, Management and Reception see them.</li>
+      <li>Choosing services with the quick buttons when booking has its own permission, <strong>Quick service selection</strong>, and no longer requires access to the catalogue.</li>
+    </ul>
   </div>
 
   <div class="grupo grupo--mejora">
@@ -748,6 +770,20 @@ footer{
     <ul>
       <li>The card with the till of the day and the month now has its own permission, <strong>See the till on the Home screen</strong>, separate from <strong>Charge at the point of sale</strong>. So the till can be taken away from a role, such as Reception, without stopping them from charging.</li>
       <li>Nobody loses anything with the change: every role or user who can charge today also receives the new permission. Removing it is each centre's decision, from the roles screen.</li>
+    </ul>
+    <h4>Back to the appointment from any screen</h4>
+    <ul>
+      <li>When you go from an appointment to another area of the application, for example the customer's record, a <strong>calendar icon</strong> appears at the bottom right that reopens the appointment, on its day and as you left it.</li>
+      <li>Session parameters that were already noted, or typed without saving, stay in their boxes when you return; there is no need to type them again.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Bugs fixed</h3>
+    <h4>The agenda left the application unusable</h4>
+    <ul>
+      <li>After visiting the agenda, the main menu stopped responding and a request from the agenda jumped to the last option pressed. Fixed.</li>
+      <li>Opening an appointment prevented going to the customer's record and then froze the screen. Fixed.</li>
     </ul>
   </div>
 </section>

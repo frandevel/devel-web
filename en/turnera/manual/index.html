@@ -856,6 +856,17 @@ footer{
     receptionist has no need to open the clinical record, and the physiotherapist has no need to see the till.
   </p>
 
+  <h3 id="condiciones">Accepting the terms of service</h3>
+  <p>
+    The first time the centre enters Turnera, or when DEVEL prepares a new version of the terms, the application does not open the agenda: it opens the terms screen. At the top is the summary of what has been contracted — the fee the centre starts with, the billing, the set-up — and below, in tabs, each complete document: the service contract with its annexes, the record of processing activities and the set-up checklist. Each one can be read right there and downloaded.
+  </p>
+  <p>
+    Accepted by <strong>whoever administers the centre</strong> (the user who manages the centre's preferences): they mark each document as read, write their name, ID number and position, declare that they can represent the centre and press
+    <strong>I accept</strong>. Turnera saves who accepted, when, from which address and the exact fingerprint of each text, and sends a copy by email to the centre and to DEVEL. Until then <strong>nobody at the centre can use Turnera</strong>: the other users see a notice that the administrator must accept the terms.
+  </p>
+  <p>
+    If the centre prefers to sign on paper, DEVEL sends the documents, signs them and returns them; then the screen does not appear. And if the terms or the fee change later, notice is given in advance and the screen comes back only for the new version, with the previously accepted one kept in the history.
+  </p>
   <h3>The menu on the left</h3>
   <figure>
     <img src="/turnera/manual/imagenes/en/03-menu.png" alt="Turnera's side menu, with the agenda, the point of sale and the unpaid visits at the top" loading="lazy">
@@ -1022,11 +1033,16 @@ footer{
   </p>
 
   <p>
-    The customers block also brings <strong>the last five sign-ups</strong>; click anywhere on the row and the record opens. It is for everyday work: someone registered a customer a while ago, their phone number needs adding or they need an appointment, and searching for them by a surname that may have been misspelt is the long way round.
+    The <strong>customers</strong> and the <strong>birthdays</strong> are two different cards, and each has its own permission, so they can be granted separately. The customers card shows <strong>the five latest registrations</strong>; press anywhere on the row and the record opens. It is for everyday things: someone registered a customer a moment ago, you need to add a phone number or book them in, and searching by a surname that may have been misspelt is the long way round.
   </p>
   <p>
-    Below are the <strong>birthdays of the week</strong>, with the day and the age each customer turns. Today's is highlighted, and the row also leads to the record, in case you want to wish them happy birthday or give them a present.
+    The <strong>birthdays</strong> card shows this week's, with the day and the age each customer turns. Today's is highlighted, and the row also leads to the record, in case you want to congratulate them or give them something. By default reception and management see them: <a href="#perm-dashboard-customers">“See customers on Home”</a>
+    and <a href="#perm-dashboard-birthdays">“See birthdays on Home”</a>.
   </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/78-inicio-clientes-y-cumpleanos.png" alt="Home with the customers and birthdays cards, side by side" loading="lazy">
+    <figcaption>Customers and birthdays, each on its own card and with its own permission.</figcaption>
+  </figure>
   <p>
     The <strong>customers with pending vouchers</strong> card tells you how many customers still have voucher sessions to use and shows the ten most urgent: first whoever has a voucher about to expire, with the sessions left and the date. It is the list to call before those sessions are lost, and each row opens the customer's record. It is shown to whoever can see vouchers or customers.
   </p>
@@ -1048,6 +1064,10 @@ footer{
   <p>
     Not everyone wants to see the same thing when they log in: at the front desk the till is in the way and there is no room for pending payments. The <strong>Customise</strong>button, at the top right, opens the list of cards that person may see and lets you <strong>switch off the ones you do not want and order them with the arrows</strong>, one row up or down at a time. Nothing has to be dragged. The choice is saved for that user, on any computer they log in from, and <em>Reset</em> goes back to the usual Home screen.
   </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/79-inicio-personalizar.png" alt="The dialog to customise Home, with the cards, their switches and the arrows to order them" loading="lazy">
+    <figcaption>Customising Home: switch off what you do not need and order it with the arrows.</figcaption>
+  </figure>
   <p>
     What decides which cards are offered is <strong>permissions</strong>: here you cannot switch on a card the role does not let you see, and if the role later loses a permission, its card disappears by itself. The other way round too: whoever has never customised the Home screen sees, without touching anything, every new card their permissions give them. The till of the day has its own permission, <a href="#perm-dashboard-cash">“See the till on the Home screen”</a>, separate from charging at the till, so it can be taken away from a role without stopping them from charging.
   </p>
@@ -1197,6 +1217,15 @@ footer{
   <figure>
     <img src="/turnera/manual/imagenes/en/05-cita.png" alt="An appointment with the customer, the member of staff, the time and the services" loading="lazy">
     <figcaption>An appointment. Below it, the status, confirm, charge and cancel.</figcaption>
+  </figure>
+
+  <h4 id="agenda-volver">Going to another screen and coming back to the appointment</h4>
+  <p>
+    With an appointment open you can go to the customer's record by pressing their name, for example to look at their notes or history before starting. While you are outside the agenda, at the bottom right and just above the help button, there appears <strong>a calendar icon: <em>Back to the appointment</em></strong>. Press it and the appointment opens again, on its day, just as you left it. The icon disappears by itself when you reach the agenda; it does not appear in the POS because there is already a button for the same thing there.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/80-volver-a-la-cita.png" alt="A customer's record with the floating calendar icon at the bottom right to return to the appointment" loading="lazy">
+    <figcaption>The calendar icon, at the bottom right, returns to the appointment that was open.</figcaption>
   </figure>
 
   <h3 id="agenda-plazas">Classes: appointments with several places</h3>
@@ -1394,6 +1423,19 @@ footer{
 
   <p>
     What was charged on each visit —the amount and the <em>Ticket</em> of the history— is seen by whoever has the permission “View amounts and tickets in the history”. If you remove it from a role or a person, their history still shows what was done and when, but without amounts or ticket. It is given by default to anyone who can already see customer records.
+  </p>
+
+  <h3 id="clientes-notas">Record notes</h3>
+  <span class="ruta">Customer record → Notes</span>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/77-notas-del-cliente.png" alt="The record's notes card, with the box to write in and each note with its bin" loading="lazy">
+    <figcaption>Record notes: whoever can write sees the box; whoever can delete sees the bin on each note.</figcaption>
+  </figure>
+  <p>
+    The record has a notebook for what is worth knowing about that person next time: that they prefer afternoon appointments, that they should be notified by WhatsApp. Each note keeps who wrote it and when.
+  </p>
+  <p>
+    Writing and deleting are <strong>two different permissions</strong>. With <a href="#perm-customers-notes-write">“Write customer notes”</a> you see the box to write in and the button <em>Add note</em>; without it, notes can only be read. With <a href="#perm-customers-notes-delete">“Delete clients’ notes”</a> each note also has a bin, which asks before deleting: <strong>a deleted note cannot be recovered</strong>. Being able to write does not give the right to delete, nor the other way round. By default reception and management write, and management deletes.
   </p>
 
   <h3 id="clientes-foto">The customer's photo</h3>
@@ -1691,10 +1733,19 @@ footer{
     method and how much goes on it. You can add more.
   </p>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/en/71-tpv-cobro-repartido.png" alt="The POS with the payment split between cash and gift card, showing what is left to enter and the card balance" loading="lazy">
+    <figcaption>The split keeps the count: what is collected, what has been entered and what is left, and the gift card balance.</figcaption>
+  </figure>
+
   <p>
-    Below you can see the sum of the split next to the total. <strong>Until it balances to the cent, shown in red, the charge
-    button does not light up.</strong> This is deliberate: a split that does not add up is a discrepancy in the till that turns up
-    weeks later and that by then nobody remembers.
+    While splitting, <strong>the POS does the sums for whoever is charging</strong>. Below the lines you see three figures — what there is <em>To collect</em>, what <em>Entered</em> so far and what <em>Left to enter</em>— and they change with every amount you type, so there is no need to subtract in your head. What is left shows in orange while something is missing; when the split adds up exactly, it turns to <em>Adds up</em>, in green; and if it goes over, it says
+    <em>Over by</em> and by how much, in red. <strong>As long as it does not add up to the cent, the charge button does not light up.</strong> This is deliberate: a split that does not add up is a cash discrepancy that shows up weeks later and that nobody remembers.
+  </p>
+
+  <p>
+    <strong>One of the methods can be a gift card.</strong> When you choose <em>Gift card</em> on one of the lines, the POS shows the customer's cards at a touch (or you type the code) and says how much is left on it:
+    <em>“Right now the gift card has €100.00 left”</em>, and below, what will be left after this payment. The card pays only the part it has been given; if its balance falls short, it says so and asks you to lower that part and pay the rest another way.
   </p>
 
   <p>
@@ -1745,6 +1796,15 @@ footer{
     <strong>The discount and vouchers do not apply to a part payment: the discount is applied when paying the rest</strong>, on what is left to collect. An account that already has part payments does not accept a voucher either, and what is left is paid in money. The invoice is still a single one, for the sale total: part payments do not generate new invoices, and the invoice and points follow their usual course when the whole account is settled.
   </p>
 
+  <p>
+    <strong>Splitting the payment works the same as in the POS.</strong> When settling a whole debt you can tick
+    <em>Split the payment between several methods</em>: the same lines, the same three figures that update by themselves, the same <em>Adds up</em>, and one of the methods can be a gift card with its balance in view. It is offered when the debt is settled in one go: with payments already made, or if one of the parts is the payment link, credit balance, club points, a voucher or a method with a fixed discount, it is not allowed and those options appear switched off with the reason.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/72-cobros-pendientes-reparto.png" alt="The dialog for collecting a debt with the payment split between two methods" loading="lazy">
+    <figcaption>Collecting a split debt: the same split and the same figures as in the POS.</figcaption>
+  </figure>
+
   <h3 id="devoluciones">Refunding a ticket</h3>
   <span class="ruta">Customer record → History → Refund</span>
 
@@ -1790,6 +1850,32 @@ footer{
     Someone pays today and another person spends it another day. It is sold with <strong>Sell a gift card</strong>: who pays for it, who sells it, the amount, the payment method and, if you like, who it is for, a dedication and how long it is valid (with no date, it does not expire). When it is charged you get a code like <code>RG-7K2M-Q9TX</code>, which is printed on a card to give away or emailed with the card as a PDF.
   </p>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/en/73-tarjeta-regalo-venta.png" alt="The dialog for selling a gift card, with the box to hide the amount" loading="lazy">
+    <figcaption>Selling a gift card. The box at the bottom hides the amount in the email and on the printed card.</figcaption>
+  </figure>
+
+  <p>
+    If the gift is a surprise and you do not want what it cost to be known, tick <strong>“Do not show the amount in the email or on the printed card”</strong>only the dedication and the code will appear, without saying how much it is worth. The balance remains the same for the centre, and when it is spent the POS shows it as usual.
+  </p>
+
+  <p>
+    The <strong>email</strong> arrives laid out like a gift: with the centre's logo, the dedication in its own box in a letter-style typeface, the code clearly visible on a coupon and, below, how to use it and until when it is valid. If no dedication was written, the box does not appear.
+  </p>
+
+  <p>
+    After selling it you see the code with a large button, <strong>Copy code</strong>: press it and the code is placed on the clipboard, ready to paste into a message or an email. The button turns green with a tick and says
+    <em>Code copied</em>, so you can see it worked.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/74-tarjeta-regalo-codigo.png" alt="The gift card sold, with its code and the Copy code button" loading="lazy">
+    <figcaption>The code of the card just sold, with the button to copy it.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/75-tarjeta-regalo-codigo-copiado.png" alt="The same button, now green with a tick, saying Code copied" loading="lazy">
+    <figcaption>Once pressed it turns green: the code is already copied.</figcaption>
+  </figure>
+
   <p>
     The <strong>email to send the card to</strong> is separate, and it already comes filled in with the payer’s if their record has one. That is the usual choice: this way they decide when to give it, and nobody receives the present too early. It can be changed to the recipient’s, and then it reaches them straight away. The email is written for whoever receives it: to the buyer it says “here is the gift card for…”, and to the recipient, that they have a card to spend at the centre.
   </p>
@@ -1799,7 +1885,8 @@ footer{
   </div>
 
   <p>
-    To spend it, choose <strong>Gift card</strong> as the payment method at the till and type the code; what is left is shown below. It can be spent in several visits until it runs out, and if it does not cover the whole bill the charge is split: one part with the card and the rest another way. A debt can also be settled with it.
+    To spend it, choose <strong>Gift card</strong> as the payment method and type the code; below it shows what is left on it: <em>“Right now the gift card has €100.00 left”</em>. It is spent over several times until used up, and if it does not cover the whole bill the payment is split: one part with the card and the rest another way, with the sums of what is left done by the POS itself (see
+    <a href="#cobrar-partido">Paying by two methods at once</a>). A debt can also be settled with it, split or in full.
   </p>
 
   <p>
@@ -2083,6 +2170,9 @@ footer{
   <span class="ruta">Agenda → (an appointment) → Equipment for the session</span>
   <p>
     On appointments that include a service with a device, below the appointment details there is a section with the parameters to record, <strong>grouped by service and device</strong>: each group says which service it is for (“Armpit laser · Diode laser”). If the appointment has two services with the same device, its parameters appear twice, once per service, so it is clear how many joules were used on each area. Next to each parameter, <strong>how that customer was treated the previous time in that same service</strong>. It is saved together with the appointment, when you press <em>Save</em>; a parameter left blank is understood as “not noted” and is not written. The parameters are asked for here, in the appointment, and not in the POS. If the appointment’s services are changed, the section updates by itself: the lines of the new service appear and those of the one removed disappear.
+  </p>
+  <p>
+    <strong>What is noted is not lost when leaving and coming back.</strong> The values already entered, and those typed but not yet saved, stay in their boxes when you return to the appointment — for example after going to the customer's record and coming back with the <a href="#agenda-volver">return-to-appointment icon</a>—, as well as showing in the <em>Before:</em> of each parameter. Nobody has to type them again.
   </p>
   <p>
     If the appointment has no service with a device, the section does not appear.
@@ -2482,11 +2572,12 @@ footer{
   <ul>
     <li><strong>Agenda.</strong> <a href="#perm-appointments-view">“View the agenda”</a> only shows. Booking or moving is <a href="#perm-appointments-book">“Book and move appointments”</a>; cancelling is <a href="#perm-appointments-cancel">“Cancel appointments”</a>; cancelling one already charged also needs <a href="#perm-appointments-cancel-charged">“Cancel charged appointments”</a>; going to a past day, <a href="#perm-appointments-book-past">«Citar en días pasados» (book on past days)</a>; moving an attended one, <a href="#perm-appointments-move-closed">«Mover citas atendidas» (move attended appointments)</a>.</li>
     <li><strong>Clients.</strong> <a href="#perm-customers-view">“View clients’ records”</a> lets you see the record read-only. Changing it is
-      <a href="#perm-customers-edit">“Edit clients’ records”</a>; the phone and email are hidden without <a href="#perm-customers-contact-details">“See phones and emails”</a>; notes can be written by whoever edits, but deleting them is <a href="#perm-customers-notes-delete">“Delete clients’ notes”</a>.</li>
+      <a href="#perm-customers-edit">“Edit clients’ records”</a>; the phone and email are hidden without <a href="#perm-customers-contact-details">“See phones and emails”</a>; notes are written with <a href="#perm-customers-notes-write">“Write customer notes”</a> and deleted with <a href="#perm-customers-notes-delete">“Delete clients’ notes”</a>: they are two different permissions.</li>
     <li><strong>Reports.</strong> Opening a report is that report's own permission, for example
       <a href="#perm-reports-payments">“Payments report”</a>. Downloading it to a file also needs <a href="#perm-reports-export">“Download reports as files”</a>; and the clients report to a file needs <a href="#perm-customers-export">“Export the clients list”</a>, which is delicate.</li>
     <li><strong>Catalogue.</strong> <a href="#perm-services-view">“See services”</a> shows the services and their prices;
-      <a href="#perm-services-write">“Create and edit services”</a> is what lets you change them. With looking alone, the buttons to add, edit and withdraw are greyed out or do not appear.</li>
+      <a href="#perm-services-write">“Create and edit services”</a> is what lets you change them. With view-only access, the buttons to add, edit and remove are switched off or do not appear. Choosing services with the quick buttons when booking does not need to see the catalogue: that is another permission,
+      <a href="#perm-services-quick-pick">“Quick service selection”</a>.</li>
     <li><strong>Till.</strong> Charging is <a href="#perm-checkout-charge">“Charge at the point of sale”</a>; applying a discount, <a href="#perm-checkout-discount">“Apply discounts”</a>; leaving something owing, <a href="#perm-checkout-debt">“Leave an amount owing”</a>; refunding a ticket, <a href="#perm-checkout-refund">“Refund a ticket”</a>; seeing what has been charged today and this month on the Home screen,
       <a href="#perm-dashboard-cash">“See the till on the Home screen”</a>. Nobody at reception reopens a closed till without <a href="#perm-cash-reopen">«Reopen a closed cash»</a>.</li>
     <li><strong>Maintenance.</strong> <a href="#perm-maintenance-view">“See maintenance”</a> reads the orders; opening one is
@@ -2611,6 +2702,7 @@ footer{
     <tr id="perm-customers-edit"><td><strong>Edit clients’ records</strong></td><td>Allows saving changes to a record and adding or removing its photo. Without it the record opens read-only.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-clientes">Customers</a></td></tr>
     <tr id="perm-customers-contact-details"><td><strong>See phones and emails</strong></td><td>Shows the phone, email and address of clients. Without it they are hidden and cannot be changed either.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-clientes">Customers</a></td></tr>
     <tr id="perm-customers-alerts"><td><strong>Write and remove alerts</strong></td><td>Allows writing and removing the alerts that pop up when booking and when charging.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-profesional">Professional</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-clientes">Customers</a></td></tr>
+    <tr id="perm-customers-notes-write"><td><strong>Write customer notes</strong></td><td>Allows adding notes on the record. Being able to edit the record is no longer enough: writing notes is a separate permission, and deleting them another.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a></td></tr>
     <tr id="perm-customers-notes-delete"><td><strong>Delete customer notes</strong></td><td>Allows deleting a note from the record. Being able to write notes does not include deleting them.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-clientes">Customers</a></td></tr>
     <tr id="perm-customers-merge"><td><strong>Merge duplicate records</strong></td><td>Merges two duplicate records into one. Everything on the discarded record moves to the one that is kept, and the discarded one is deleted.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-clientes">Customers</a></td></tr>
     <tr id="perm-customers-erase"><td><strong>Erase the data of clients who request it</strong></td><td>Right to erasure: deletes the person’s personal data and anonymises the record. Invoices and the clinical record are kept for as long as the law requires.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-clientes">Customers</a></td></tr>
@@ -2636,6 +2728,8 @@ footer{
     <tr id="perm-checkout-discount"><td><strong>Apply discounts</strong></td><td>Enables the discount field inside a charge.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
     <tr id="perm-checkout-debt"><td><strong>Leave on credit</strong></td><td>Allows closing a charge with an amount outstanding instead of collecting all of it. That amount then shows up under “See outstanding payments”.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
     <tr id="perm-checkout-refund"><td><strong>Refunding a ticket</strong></td><td>Allows using the button to refund lines of a ticket that has already been charged, as money or as credit.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
+    <tr id="perm-dashboard-customers"><td><strong>See customers on Home</strong></td><td>Shows on Home the card with the customers registered this month and the latest arrivals. It does not open the records: that remains under “See customer records”.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a></td></tr>
+    <tr id="perm-dashboard-birthdays"><td><strong>See birthdays on Home</strong></td><td>Shows on Home the card with this week's birthdays, with name and date. Congratulating by WhatsApp also needs “See phones and emails”.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a></td></tr>
     <tr id="perm-dashboard-cash"><td><strong>See the till on the Home screen</strong></td><td>Shows on the Home screen the card with what has been charged today and this month, by payment method. It does not open the point of sale or the point-of-sale report: that stays under “Charge at the point of sale” and “Daily totals”.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
     <tr id="perm-debts-view"><td><strong>See pending payments</strong></td><td>Opens the outstanding payments screen. Settling a debt is a separate permission: “Settle a debt”.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
     <tr id="perm-debts-settle"><td><strong>Settle a debt</strong></td><td>Allows using the button to settle a debt.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
@@ -2660,6 +2754,7 @@ footer{
     <tr id="perm-centre-invoicing"><td><strong>Invoicing and VeriFactu</strong></td><td>Switches on the centre’s invoicing, chooses the series prefixes and manages the submission to the AEAT.</td><td><strong><a href="#roles-sensibles">Delicate</a>:</strong> only the System administrator</td></tr>
     <tr id="perm-centre-invoicing-production"><td><strong>Pasar la facturación a producción (move invoicing to production)</strong></td><td>Moves invoicing from test mode to production: it deletes the test invoices and the numbering starts again. There is no going back.</td><td><strong><a href="#roles-sensibles">Delicate</a>:</strong> only the System administrator</td></tr>
     <tr id="permisos-catalogo"><th colspan="3">Catalogue</th></tr>
+    <tr id="perm-services-quick-pick"><td><strong>Quick service selection</strong></td><td>Allows choosing the services of an appointment with the quick buttons, without needing access to the catalogue. It shows the name, code and duration of each service, but not the price or the records.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a></td></tr>
     <tr id="perm-services-view"><td><strong>See the services</strong></td><td>Shows the services and their prices. View only: changing them needs “Create and edit services”.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-profesional">Professional</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr id="perm-services-write"><td><strong>Create and edit services</strong></td><td>Allows creating, editing and withdrawing services.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr id="perm-packages-view"><td><strong>See the packages</strong></td><td>Shows the packages of services and products. View only.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-profesional">Professional</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
@@ -3851,8 +3946,15 @@ footer{
     <li>When editing the text, on the right is the <em>Fields</em> panel. The <strong>green</strong> ones are filled in by Turnera; the <strong>orange</strong> ones belong to the document.</li>
     <li>Press <em>New field</em>, give it a name and choose the type: text (one or several lines), date, tick box, drop-down or multiple choice. In drop-downs, the options are written one per line.</li>
     <li>Drag the field to the spot in the text where it should appear, or press <em>+</em> to place it where the cursor is. Turnera's fields are placed the same way.</li>
-    <li>When requesting the signature, the front desk fills in the fields the document uses and the tablet shows the text already complete.</li>
+    <li>Choose <em>Who fills it in?</em>. By default, checkboxes, dropdowns and multiple selections are ticked by <strong>the signer, on the tablet</strong>; text and date are written by
+      <strong>reception</strong> when asking for the signature. You can change it field by field.</li>
+    <li>When asking for the signature, reception fills in the fields that are theirs. The tablet shows the text with the customer's fields blank and, before the signature box, a form with large buttons to tick them. “Sign” is not enabled until the required ones are done.</li>
   </ol>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/en/76-firma-con-casillas-y-zonas.png" alt="The signing tablet with yes/no checkboxes and the areas to be treated to tick" loading="lazy">
+    <figcaption>The tablet before signing: the checkboxes and areas are ticked by the signer and appear written in the document.</figcaption>
+  </figure>
 
   <ul>
     <li>The values appear <strong>in bold</strong> within the text: a multiple choice, separated by commas and in the order of the list; a date as dd/mm/yyyy; a tick box as «Yes» or «No»; an optional field left empty, as «—».</li>

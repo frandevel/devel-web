@@ -857,6 +857,17 @@ footer{
     rececionista não tem de entrar no processo clínico, e o fisioterapeuta não tem de ver a caixa.
   </p>
 
+  <h3 id="condiciones">Aceitar as condições do serviço</h3>
+  <p>
+    A primeira vez que o centro entra no Turnera, ou quando a DEVEL prepara uma nova versão das condições, a aplicação não abre a agenda: abre o ecrã das condições. Em cima vai o resumo do contratado — a mensalidade com que o centro começa, a faturação, a colocação em funcionamento — e por baixo, em separadores, cada documento completo: o contrato de serviço com os seus anexos, o registo de atividades e a lista de verificação do arranque. Cada um pode ser lido ali mesmo e descarregado.
+  </p>
+  <p>
+    Quem as aceita é <strong>quem administra o centro</strong> (o utilizador que gere as preferências do centro): marca cada documento como lido, escreve o seu nome, o seu NIF e o seu cargo, declara que pode representar o centro e carrega em
+    <strong>Aceito</strong>. O Turnera guarda quem aceitou, quando, a partir de que endereço e a impressão digital exata de cada texto, e envia uma cópia por email ao centro e à DEVEL. Até esse momento <strong>ninguém do centro pode usar o Turnera</strong>: os restantes utilizadores veem um aviso de que o administrador tem de aceitar as condições.
+  </p>
+  <p>
+    Se o centro preferir assinar em papel, a DEVEL envia-lhe os documentos, assina-os e devolve-os; nesse caso o ecrã não aparece. E se mais tarde mudarem as condições ou a tarifa, avisa-se com antecedência e o ecrã volta a aparecer só para a nova versão, ficando a aceite anteriormente guardada no histórico.
+  </p>
   <h3>O menu da esquerda</h3>
   <figure>
     <img src="/turnera/manual/imagenes/en/03-menu.png" alt="O menu lateral do Turnera, com a agenda, o TPV e os valores em dívida em cima" loading="lazy">
@@ -1040,14 +1051,16 @@ footer{
   </p>
 
   <p>
-    O bloco de clientes traz também <strong>os cinco últimos registos</strong>; prime-se em qualquer ponto da
-    linha e abre-se a ficha. É para o dia a dia: alguém registou um cliente há pouco, é preciso
-    acrescentar-lhe o telefone ou dar-lhe uma marcação, e procurá-lo pelo apelido que talvez se tenha escrito mal é o caminho longo.
+    Os <strong>clientes</strong> e os <strong>aniversários</strong> são dois cartões diferentes, e cada um tem a sua própria permissão, pelo que se podem dar em separado. O de clientes mostra <strong>os cinco últimos registos</strong>; clica-se em qualquer ponto da linha e abre-se a ficha. É para o dia a dia: alguém registou um cliente há pouco, é preciso acrescentar-lhe o telefone ou marcar-lhe uma consulta, e procurá-lo pelo apelido que talvez se escreveu mal é o caminho longo.
   </p>
   <p>
-    Por baixo estão os <strong>aniversários da semana</strong>, com o dia e os anos que cada cliente faz. O
-    de hoje aparece realçado, e a linha também leva à ficha, caso se queira felicitá-lo ou oferecer-lhe algo.
+    O de <strong>aniversários</strong> anos mostra os da semana, com o dia e os anos que cada cliente faz. O de hoje aparece destacado, e a linha também leva à ficha, caso se queira dar os parabéns ou oferecer algo. Por defeito veem-nos a receção e a direção: <a href="#perm-dashboard-customers">“Ver os clientes no Início”</a>
+    e <a href="#perm-dashboard-birthdays">“Ver os aniversários no Início”</a>.
   </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/78-inicio-clientes-y-cumpleanos.png" alt="O Início com os cartões de clientes e de aniversários, lado a lado" loading="lazy">
+    <figcaption>Clientes e aniversários, cada um no seu cartão e com a sua permissão.</figcaption>
+  </figure>
   <p>
     O cartão de <strong>clientes com vales pendentes</strong> diz quantos clientes ainda têm sessões de vale por usar e mostra os dez mais urgentes: primeiro quem tem um vale prestes a caducar, com as sessões que lhe restam e a data. É a lista para ligar antes que se percam, e cada linha abre a ficha do cliente. Vê-o quem pode ver vales ou clientes.
   </p>
@@ -1076,6 +1089,10 @@ footer{
   <p>
     Nem toda a gente quer ver o mesmo ao entrar: a quem está ao balcão sobra a caixa e falta espaço para as cobranças pendentes. O botão <strong>Personalizar</strong>, em cima à direita, abre a lista de cartões que essa pessoa pode ver e permite <strong>desligar os que não quer e ordená-los com as setas</strong>, uma linha para cima ou para baixo de cada vez. Não é preciso arrastar nada. A escolha fica guardada para esse utilizador, em qualquer equipamento a partir do qual entre, e <em>Repor</em> volta ao Início de sempre.
   </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/79-inicio-personalizar.png" alt="A janela para personalizar o Início, com os cartões, os seus interruptores e as setas para os ordenar" loading="lazy">
+    <figcaption>Personalizar o Início: desliga-se o que não faz falta e ordena-se com as setas.</figcaption>
+  </figure>
   <p>
     O que decide quais os cartões oferecidos são as <strong>permissões</strong>: aqui não se pode ligar um cartão que a função não deixa ver, e se mais tarde a função perder uma permissão, o seu cartão desaparece sozinho. Ao contrário também: quem nunca personalizou o Início vê, sem tocar em nada, cada cartão novo que as suas permissões lhe derem. A caixa do dia tem a sua própria permissão, <a href="#perm-dashboard-cash">«Ver a caixa no Início»</a>, separada de cobrar no TPV, para a poder retirar a uma função sem a impedir de cobrar.
   </p>
@@ -1254,6 +1271,15 @@ footer{
   <figure>
     <img src="/turnera/manual/imagenes/en/05-cita.png" alt="A ficha de uma marcação com o cliente, o profissional, a hora e os serviços" loading="lazy">
     <figcaption>A ficha de uma marcação. Em baixo, o estado, confirmar, cobrar e anular.</figcaption>
+  </figure>
+
+  <h4 id="agenda-volver">Ir para outro ecrã e voltar à consulta</h4>
+  <p>
+    Com uma consulta aberta pode ir-se à ficha do cliente carregando no seu nome, por exemplo para ver as notas ou o histórico antes de começar. Enquanto se está fora da agenda aparece, em baixo à direita e mesmo por cima do botão de ajuda, <strong>um ícone de calendário: <em>Voltar à marcação</em></strong>. Carrega-se e a consulta abre-se de novo, no seu dia, tal como ficou. O ícone desaparece sozinho ao chegar à agenda; no TPV não aparece porque ali já existe um botão para o mesmo.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/80-volver-a-la-cita.png" alt="A ficha de um cliente com o ícone flutuante de calendário em baixo à direita para voltar à consulta" loading="lazy">
+    <figcaption>O ícone de calendário, em baixo à direita, volta à consulta que estava aberta.</figcaption>
   </figure>
 
   <h3 id="agenda-plazas">Aulas: marcações com várias vagas</h3>
@@ -1509,6 +1535,19 @@ footer{
 
   <p>
     O que foi cobrado em cada visita —o valor e o botão <em>Talão</em> do histórico— vê-o quem tem a permissão «Ver os valores e os talões do histórico». Se a retirar a um perfil ou a uma pessoa, o histórico continua a mostrar o que foi feito e quando, mas sem valores nem talão. Dá-se de origem a quem já pode ver as fichas.
+  </p>
+
+  <h3 id="clientes-notas">As notas da ficha</h3>
+  <span class="ruta">Ficha do cliente → Notas</span>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/77-notas-del-cliente.png" alt="O cartão de notas da ficha, com a caixa para escrever e cada nota com o seu caixote" loading="lazy">
+    <figcaption>As notas da ficha: quem pode escrever vê a caixa; quem pode apagar vê o caixote em cada nota.</figcaption>
+  </figure>
+  <p>
+    A ficha tem um caderno de notas para o que convém saber dessa pessoa da próxima vez: que prefere consultas da parte da tarde, que é preciso avisá-la por WhatsApp. Cada nota guarda quem a escreveu e quando.
+  </p>
+  <p>
+    Escrever e apagar são <strong>duas permissões diferentes</strong>; com <a href="#perm-customers-notes-write">“Escrever notas de clientes”</a> vê-se a caixa para escrever e o botão <em>Adicionar nota</em>; sem ela, as notas só se leem. Com <a href="#perm-customers-notes-delete">«Apagar notas de clientes»</a> cada nota tem também um caixote, que pergunta antes de apagar: <strong>uma nota apagada não se recupera</strong>. Poder escrever não dá direito a apagar, nem ao contrário. Por defeito escrevem a receção e a direção, e apaga a direção.
   </p>
 
   <h3 id="clientes-foto">A foto do cliente</h3>
@@ -1894,10 +1933,19 @@ footer{
     forma e quanto vai por aí. Podem acrescentar-se mais.
   </p>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/en/71-tpv-cobro-repartido.png" alt="O TPV com a cobrança repartida entre numerário e cartão-oferta, com o que falta indicar e o saldo do cartão" loading="lazy">
+    <figcaption>A repartição leva a conta: o que se cobra, o que está indicado e o que falta, e o saldo do cartão-oferta.</figcaption>
+  </figure>
+
   <p>
-    Por baixo vê-se a soma da repartição junto ao total. <strong>Enquanto não acertar ao cêntimo, a vermelho, o botão de
-    cobrar não se acende.</strong> É de propósito: uma repartição que não soma é um erro de contas na caixa que
-    aparece semanas depois e de que já ninguém se lembra.
+    Enquanto se reparte, <strong>o TPV faz as contas por quem cobra</strong>. Debaixo das linhas veem-se três valores — o que há <em>A cobrar</em>, o que <em>Indicado</em> até agora e o que <em>Falta indicar</em>— e mudam a cada importe que se escreve, pelo que não é preciso subtrair de cabeça. O que falta aparece a laranja enquanto falta algo; quando a repartição soma exatamente, passa a <em>Está certo</em>, a verde; e se passa, diz
+    <em>Excede em</em> e em quanto, a vermelho. <strong>Enquanto não bater ao cêntimo, o botão de cobrar não se acende.</strong> É de propósito: uma repartição que não soma é um descuadre de caixa que aparece semanas depois e de que já ninguém se lembra.
+  </p>
+
+  <p>
+    <strong>Uma das formas pode ser um cartão-oferta.</strong> Ao escolher <em>Cartão-oferta</em> numa das linhas, o TPV mostra os cartões do cliente a um toque (ou escreve-se o código) e diz quanto lhe resta:
+    <em>“Neste momento o cartão-oferta tem 100,00 € de saldo”</em>, e por baixo, o que lhe ficará depois deste pagamento. O cartão paga apenas a parte que lhe foi atribuída; se o saldo não chega, avisa e pede para baixar essa parte e pagar o resto de outra forma.
   </p>
 
   <p>
@@ -1953,6 +2001,15 @@ footer{
   <p>
     <strong>O desconto e os vales não se aplicam num pagamento parcial: o desconto aplica-se ao pagar o resto</strong>, sobre o que falta cobrar. Uma conta que já tem pagamentos parciais também não admite vale, e o que falta paga-se com dinheiro. A fatura continua a ser uma só, pelo total da venda: os pagamentos parciais não geram faturas novas, e a fatura e os pontos seguem o seu curso habitual quando se salda a conta inteira.
   </p>
+
+  <p>
+    <strong>A repartição do pagamento funciona como no TPV.</strong> Ao saldar uma dívida inteira pode marcar-se
+    <em>Repartir a cobrança entre várias formas de pagamento</em>: as mesmas linhas, os mesmos três valores que se atualizam sozinhos, o mesmo <em>Está certo</em>, e uma das formas pode ser um cartão-oferta com o saldo à vista. Oferece-se ao cobrar a dívida de uma vez: com pagamentos parciais já feitos, ou se uma das partes é o pagamento por ligação, o saldo a favor, os pontos do clube, um voucher ou uma forma de pagamento com desconto fixo, não é admitido e essas opções aparecem desligadas com o motivo.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/72-cobros-pendientes-reparto.png" alt="A janela de cobrança de uma dívida com a cobrança repartida entre duas formas de pagamento" loading="lazy">
+    <figcaption>Cobrar uma dívida repartida: a mesma repartição e os mesmos valores que no TPV.</figcaption>
+  </figure>
 
   <h3 id="devoluciones">Reembolsar um talão</h3>
   <span class="ruta">Ficha do cliente → Histórico → Reembolsar</span>
@@ -2021,6 +2078,32 @@ footer{
     Alguém paga hoje e outra pessoa gasta noutro dia. Vende-se com <strong>Vender cartão-oferta</strong>: quem o paga, quem o vende, o montante, a forma de pagamento e, se se quiser, para quem é, uma dedicatória e até quando vale (sem data, não caduca). Ao cobrá-lo sai um código do género <code>RG-7K2M-Q9TX</code>, que se imprime num cartão para oferecer ou se envia por e-mail com o cartão em PDF.
   </p>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/en/73-tarjeta-regalo-venta.png" alt="A janela de venda de um cartão-oferta, com a caixa para não mostrar o valor" loading="lazy">
+    <figcaption>Vender um cartão-oferta. A caixa de baixo oculta o valor no email e no cartão impresso.</figcaption>
+  </figure>
+
+  <p>
+    Se a oferta é uma surpresa e não se quer que se saiba quanto custou, marca-se <strong>“Não mostrar o valor no email nem no cartão impresso”</strong>: aparecerão só a dedicatória e o código, sem dizer quanto vale. O saldo continua a ser o mesmo para o centro, e ao gastá-lo o TPV mostra-o como sempre.
+  </p>
+
+  <p>
+    O <strong>e-mail</strong> chega com a aparência de uma oferta: com o logótipo do centro, a dedicatória na sua própria caixa com letra de carta, o código bem visível num cupão e, por baixo, como usá-lo e até quando vale. Se não se escreveu dedicatória, a caixa não aparece.
+  </p>
+
+  <p>
+    Ao vendê-lo vê-se o código com um botão grande, <strong>Copiar código</strong>: carrega-se e o código fica na área de transferência, pronto para colar numa mensagem ou num email. O botão fica verde com um visto e diz
+    <em>Código copiado</em>, para que se veja que funcionou.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/74-tarjeta-regalo-codigo.png" alt="O cartão-oferta vendido, com o seu código e o botão Copiar código" loading="lazy">
+    <figcaption>O código do cartão acabado de vender, com o botão para o copiar.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/75-tarjeta-regalo-codigo-copiado.png" alt="O mesmo botão, já a verde e com um visto, a dizer Código copiado" loading="lazy">
+    <figcaption>Ao carregar fica verde: o código já está copiado.</figcaption>
+  </figure>
+
   <p>
     O <strong>e-mail para onde enviar o cartão</strong> é à parte, e já vem preenchido com o de quem o paga, se a sua ficha o tiver. É o normal: assim é ela que decide quando o oferecer, e ninguém recebe o presente antes do tempo. Pode trocar-se pelo da pessoa que o recebe, e então chega-lhe nesse momento. O e-mail é escrito para quem o recebe: a quem o comprou diz «aqui tem o cartão-oferta para…», e a quem o oferecem, que tem um cartão para gastar no centro.
   </p>
@@ -2033,9 +2116,8 @@ footer{
   </div>
 
   <p>
-    Para a gastar, no TPV escolhe-se <strong>Cartão-oferta</strong> como forma de pagamento e digita-se o código;
-    por baixo aparece o que lhe resta. Gasta-se em várias vezes até se esgotar, e se não chegar para toda a conta
-    reparte-se a cobrança: uma parte com o cartão e o resto de outra forma. Uma dívida também se pode saldar com ele.
+    Para a gastar, no TPV escolhe-se <strong>Cartão-oferta</strong> como forma de pagamento e escreve-se o código; por baixo aparece o que lhe resta: <em>“Neste momento o cartão-oferta tem 100,00 € de saldo”</em>. Gasta-se em várias vezes até se esgotar, e se não chega para toda a conta reparte-se a cobrança: uma parte com o cartão e o resto de outra forma, com as contas do que falta feitas pelo próprio TPV (ver
+    <a href="#cobrar-partido">Pagar com duas formas ao mesmo tempo</a>). Uma dívida também se pode saldar com ele, repartida ou inteira.
   </p>
 
   <p>
@@ -2351,6 +2433,9 @@ footer{
     serviço se regista («Laser axilas · Laser de díodo»). Se a marcação leva dois serviços com o mesmo aparelho, os seus
     parâmetros aparecem duas vezes, uma por serviço, e assim fica claro quantos joules se aplicaram em cada zona. Junto a
     cada parâmetro, <strong>com quanto se tratou esse cliente da vez anterior nesse mesmo serviço</strong>. Guarda-se junto com a marcação, ao carregar em <em>Guardar</em>; um parâmetro deixado em branco entende-se como «não anotado» e não fica escrito. Os parâmetros pedem-se aqui, na marcação, e não no TPV. Se se mudarem os serviços da marcação, a secção atualiza-se sozinha: aparecem as linhas do serviço novo e desaparecem as do que se tira.
+  </p>
+  <p>
+    <strong>O que se anota não se perde ao sair e voltar.</strong> Os valores já postos, e os que se escreveram e ainda não se guardaram, continuam nas suas caixas ao voltar à consulta — por exemplo depois de ir à ficha do cliente e regressar com o <a href="#agenda-volver">ícone de voltar à consulta</a>—, além de se verem no <em>Antes:</em> de cada parâmetro. Ninguém tem de os escrever outra vez.
   </p>
   <p>
     Se a marcação não leva nenhum serviço com aparelho, a secção não aparece.
@@ -2814,11 +2899,12 @@ footer{
   <ul>
     <li><strong>Agenda.</strong> <a href="#perm-appointments-view">«Ver a agenda»</a> só mostra. Marcar ou mover é <a href="#perm-appointments-book">«Marcar e mover marcações»</a>; anular é <a href="#perm-appointments-cancel">«Anular marcações»</a>; anular uma já cobrada exige além disso <a href="#perm-appointments-cancel-charged">«Cancelar marcações já cobradas»</a>; ir a um dia passado, <a href="#perm-appointments-book-past">«Marcar em dias passados»</a>; mover uma atendida, <a href="#perm-appointments-move-closed">«Mover marcações atendidas»</a>.</li>
     <li><strong>Clientes.</strong> <a href="#perm-customers-view">«Ver as fichas de clientes»</a> deixa ver a ficha só em leitura. Alterá-la é
-      <a href="#perm-customers-edit">«Editar as fichas de clientes»</a>; o telefone e o email ficam ocultos sem <a href="#perm-customers-contact-details">«Ver telefones e emails»</a>; as notas pode escrevê-las quem edita, mas apagá-las é <a href="#perm-customers-notes-delete">«Apagar notas de clientes»</a>.</li>
+      <a href="#perm-customers-edit">«Editar as fichas de clientes»</a>; o telefone e o email ficam ocultos sem <a href="#perm-customers-contact-details">«Ver telefones e emails»</a>; as notas escrevem-se com <a href="#perm-customers-notes-write">“Escrever notas de clientes”</a> e apagam-se com <a href="#perm-customers-notes-delete">«Apagar notas de clientes»</a>: são duas permissões diferentes.</li>
     <li><strong>Relatórios.</strong> Abrir um relatório é a permissão desse relatório, por exemplo
       <a href="#perm-reports-payments">«Relatório de cobranças»</a>. Descarregá-lo para ficheiro exige além disso <a href="#perm-reports-export">«Descarregar relatórios para ficheiro»</a>; e o relatório de clientes para ficheiro exige <a href="#perm-customers-export">«Exportar a lista de clientes»</a>, que é sensível.</li>
     <li><strong>Catálogo.</strong> <a href="#perm-services-view">«Ver os serviços»</a> mostra os serviços e os seus preços;
-      <a href="#perm-services-write">«Criar e editar os serviços»</a> é o que permite alterá-los. Só com ver, os botões de criar, editar e retirar ficam desativados ou não aparecem.</li>
+      <a href="#perm-services-write">«Criar e editar os serviços»</a> é o que permite alterá-los. Só com permissão de ver, os botões de criar, editar e retirar aparecem desligados ou não aparecem. Escolher serviços com os botões rápidos ao marcar uma consulta não precisa de ver o catálogo: é outra permissão,
+      <a href="#perm-services-quick-pick">“Seleção rápida de serviços”</a>.</li>
     <li><strong>Caixa.</strong> Cobrar é <a href="#perm-checkout-charge">«Cobrar na caixa»</a>; aplicar um desconto, <a href="#perm-checkout-discount">«Aplicar descontos»</a>; deixar algo em dívida, <a href="#perm-checkout-debt">«Deixar em dívida»</a>; devolver um ticket, <a href="#perm-checkout-refund">«Devolver um ticket»</a>; ver o cobrado hoje e no mês no Início,
       <a href="#perm-dashboard-cash">«Ver a caixa no Início»</a>. Ninguém da receção reabre uma caixa fechada sem <a href="#perm-cash-reopen">«Reabrir uma caixa fechada»</a>.</li>
     <li><strong>Manutenção.</strong> <a href="#perm-maintenance-view">«Ver a manutenção»</a> lê as ordens; abrir uma é
@@ -2957,6 +3043,7 @@ footer{
     <tr id="perm-customers-edit"><td><strong>Editar as fichas de clientes</strong></td><td>Permite guardar alterações numa ficha e pôr ou tirar a foto. Sem esta permissão a ficha fica só de leitura.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-clientes">Clientes</a></td></tr>
     <tr id="perm-customers-contact-details"><td><strong>Ver telefones e emails</strong></td><td>Mostra o telefone, o email e a morada dos clientes. Sem esta permissão ficam ocultos e também não se podem alterar.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-clientes">Clientes</a></td></tr>
     <tr id="perm-customers-alerts"><td><strong>Escrever e retirar avisos</strong></td><td>Permite escrever e retirar os avisos que aparecem ao marcar e ao cobrar.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-profesional">Profissional</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-clientes">Clientes</a></td></tr>
+    <tr id="perm-customers-notes-write"><td><strong>Escrever notas de clientes</strong></td><td>Permite adicionar notas na ficha. Poder editar a ficha já não basta: escrever notas é uma permissão à parte, e apagá-las, outra.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a></td></tr>
     <tr id="perm-customers-notes-delete"><td><strong>Apagar notas de clientes</strong></td><td>Permite apagar uma nota da ficha. Poder escrever notas não dá o direito de as apagar.</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-clientes">Clientes</a></td></tr>
     <tr id="perm-customers-merge"><td><strong>Fundir fichas repetidas</strong></td><td>Funde duas fichas repetidas numa só. Tudo o que a ficha descartada tinha passa para a que se mantém, e a descartada é apagada.</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-clientes">Clientes</a></td></tr>
     <tr id="perm-customers-erase"><td><strong>Apagar os dados de clientes que o peçam</strong></td><td>Direito ao apagamento: apaga os dados pessoais da pessoa e anonimiza a sua ficha. As faturas e o processo clínico mantêm-se durante o prazo que a lei obriga.</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-clientes">Clientes</a></td></tr>
@@ -2982,6 +3069,8 @@ footer{
     <tr id="perm-checkout-discount"><td><strong>Aplicar descontos</strong></td><td>Ativa o campo de desconto dentro da cobrança.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
     <tr id="perm-checkout-debt"><td><strong>Deixar em dívida</strong></td><td>Permite fechar uma cobrança deixando um valor por pagar, em vez de a cobrar por inteiro. Esse valor aparece depois em «Ver os valores em dívida».</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
     <tr id="perm-checkout-refund"><td><strong>Reembolsar um talão</strong></td><td>Permite usar o botão de devolver linhas de um ticket já cobrado, em dinheiro ou como saldo a favor.</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
+    <tr id="perm-dashboard-customers"><td><strong>Ver os clientes no Início</strong></td><td>Mostra no Início o cartão com os clientes registados este mês e os últimos que chegaram. Não abre as fichas: isso continua em “Ver as fichas de clientes”.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a></td></tr>
+    <tr id="perm-dashboard-birthdays"><td><strong>Ver os aniversários no Início</strong></td><td>Mostra no Início o cartão com os aniversários da semana, com o nome e a data. Dar os parabéns por WhatsApp precisa também de “Ver telefones e emails”.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a></td></tr>
     <tr id="perm-dashboard-cash"><td><strong>Ver a caixa no Início</strong></td><td>Mostra no Início o cartão com o cobrado hoje e no mês, por forma de pagamento. Não abre o TPV nem o relatório de caixa: isso continua em «Cobrar no TPV» e «Totais do dia».</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
     <tr id="perm-debts-view"><td><strong>Ver os valores em dívida</strong></td><td>Abre o ecrã dos valores em dívida. Saldar uma dívida é uma permissão à parte: «Saldar uma dívida».</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
     <tr id="perm-debts-settle"><td><strong>Liquidar uma dívida</strong></td><td>Permite usar o botão de saldar uma dívida.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
@@ -3006,6 +3095,7 @@ footer{
     <tr id="perm-centre-invoicing"><td><strong>Faturação e VeriFactu</strong></td><td>Ativa a faturação do centro, escolhe os prefixos das séries e gere o envio à AEAT.</td><td><strong><a href="#roles-sensibles">Sensível</a>:</strong> apenas o Administrador do sistema</td></tr>
     <tr id="perm-centre-invoicing-production"><td><strong>Passar a faturação para produção</strong></td><td>Passa a faturação do modo de testes para produção: apaga as faturas de teste e a numeração recomeça. Não tem volta atrás.</td><td><strong><a href="#roles-sensibles">Sensível</a>:</strong> apenas o Administrador do sistema</td></tr>
     <tr id="permisos-catalogo"><th colspan="3">Catálogo</th></tr>
+    <tr id="perm-services-quick-pick"><td><strong>Seleção rápida de serviços</strong></td><td>Permite escolher os serviços de uma consulta com os botões rápidos, sem precisar de acesso ao catálogo. Mostra o nome, o código e a duração de cada serviço, mas não o preço nem as fichas.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a></td></tr>
     <tr id="perm-services-view"><td><strong>Ver os serviços</strong></td><td>Consulta os serviços e os seus preços. É só de consulta: para os alterar é preciso «Criar e editar os serviços».</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-profesional">Profissional</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-services-write"><td><strong>Criar e editar os serviços</strong></td><td>Permite criar, editar e retirar serviços.</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-packages-view"><td><strong>Ver os pacotes</strong></td><td>Consulta os pacotes de serviços e produtos. Só de leitura.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-profesional">Profissional</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
@@ -4225,8 +4315,15 @@ footer{
     <li>Ao editar o texto, à direita está o painel <em>Campos</em>. Os <strong>verdes</strong> preenche-os o Turnera; os <strong>laranja</strong> são os do documento.</li>
     <li>Prima <em>Novo campo</em>, dê-lhe um nome e escolha o tipo: texto (de uma ou várias linhas), data, caixa, lista ou seleção múltipla. Nas listas, as opções escrevem-se uma por linha.</li>
     <li>Arraste o campo para o sítio do texto onde deve aparecer, ou carregue em <em>+</em> para o pôr onde estiver o cursor. Os do Turnera colocam-se da mesma forma.</li>
-    <li>Ao pedir a assinatura, a receção preenche os campos que o documento usa e o tablet mostra o texto já completo.</li>
+    <li>Escolhe <em>Quem o preenche?</em>). Por defeito, as caixas, os menus e as seleções múltiplas são marcados por <strong>quem assina, no tablet</strong>; o texto e a data escreve-os
+      <strong>a receção</strong> ao pedir a assinatura. Podes mudá-lo campo a campo.</li>
+    <li>Ao pedir a assinatura, a receção preenche os campos que lhe cabem. O tablet mostra o texto com os campos do cliente em branco e, antes do quadro de assinatura, um formulário com botões grandes para os marcar. “Assinar” só se ativa quando estão os obrigatórios.</li>
   </ol>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/en/76-firma-con-casillas-y-zonas.png" alt="O tablet de assinaturas com caixas de sim ou não e as zonas a tratar para marcar" loading="lazy">
+    <figcaption>O tablet antes de assinar: as caixas e as zonas são marcadas por quem assina e ficam escritas no documento.</figcaption>
+  </figure>
 
   <ul>
     <li>Os valores aparecem <strong>a negrito</strong> dentro do texto: uma seleção múltipla, separada por vírgulas e pela ordem da lista; uma data como dd/mm/aaaa; uma caixa como «Sim» ou «Não»; o opcional deixado vazio, como «—».</li>

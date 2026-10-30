@@ -721,7 +721,7 @@ footer{
     <h2>30 de outubro de 2026</h2>
     <span class="version__sello">Última versão</span>
   </div>
-  <p class="version__numero">Versão <span translate="no">1.11.0-bf691bb</span></p>
+  <p class="version__numero">Versão <span translate="no">1.11.0-PENDIENTE</span></p>
 
   <div class="grupo grupo--nuevo">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Novas funcionalidades</h3>
@@ -741,6 +741,28 @@ footer{
       <li>Quando uma só pessoa precisa de algo que a sua função não traz, já não é preciso uma função nova: no formulário do utilizador, por baixo das funções, a secção <strong>Permissões adicionais</strong> permite acrescentar-lhe permissões soltas, agrupadas por áreas e com pesquisa.</li>
       <li>O que as suas funções já dão aparece marcado e bloqueado, com o nome da função que o dá; aqui só se acrescenta, nunca se retira o que uma função traz. Na lista de utilizadores, os que têm extras levam a marca <strong>+N à medida</strong>.</li>
     </ul>
+    <h4>Cobrar repartindo entre formas de pagamento, com a conta feita</h4>
+    <ul>
+      <li>O TPV e os <strong>Valores em dívida</strong> repartem um pagamento por várias formas de pagamento <strong>exatamente da mesma maneira</strong>, e levam a conta sozinhos: o que há a cobrar, o que está indicado e o que falta atualizam-se a cada importe escrito. A receção não tem de subtrair de cabeça; o botão de cobrar não se acende até bater ao cêntimo.</li>
+      <li>Uma das partes pode pagar-se com um <strong>cartão-oferta</strong>, com o saldo à vista: “Neste momento o cartão-oferta tem X € de saldo”, e por baixo, o que lhe ficará depois do pagamento.</li>
+    </ul>
+    <h4>Cartões-oferta: copiar o código e um email sem o valor</h4>
+    <ul>
+      <li>Ao vender um cartão, o código aparece com um botão grande <strong>Copiar código</strong> que fica verde, com um visto, ao copiar.</li>
+      <li>Uma caixa permite <strong>não mostrar o valor</strong> no email nem no cartão impresso: só aparecem a dedicatória e o código.</li>
+      <li>O email chega com a aparência de uma oferta: com o logótipo do centro, a dedicatória na sua caixa, o código num cupão e como usá-lo e até quando vale.</li>
+    </ul>
+    <h4>Assinatura com caixas e zonas que o cliente marca</h4>
+    <ul>
+      <li>Um consentimento pode levar caixas de sim ou não e uma lista de zonas a tratar. No tablet, antes de assinar, o cliente marca-as com botões grandes, e o que marcar fica escrito no documento assinado.</li>
+      <li>Cada campo indica <strong>quem o preenche</strong>: a receção ao pedir a assinatura, ou quem assina no tablet.</li>
+    </ul>
+    <h4>Notas de clientes, Início e seleção rápida com as suas próprias permissões</h4>
+    <ul>
+      <li><strong>Escrever notas de clientes</strong> é uma permissão à parte, e quem as pode apagar vê um caixote em cada nota.</li>
+      <li>O cartão de clientes do Início divide-se em dois, <strong>Clientes</strong> e <strong>Aniversários</strong>, cada um com a sua permissão. Por defeito veem-nos a Administração, a Direção e a Receção.</li>
+      <li>Escolher serviços com os botões rápidos ao marcar uma consulta tem a sua permissão, <strong>Seleção rápida de serviços</strong>, e já não exige acesso ao catálogo.</li>
+    </ul>
   </div>
 
   <div class="grupo grupo--mejora">
@@ -749,6 +771,20 @@ footer{
     <ul>
       <li>O cartão da caixa do dia e do mês tem agora a sua própria permissão, <strong>Ver a caixa no Início</strong>, separada de <strong>Cobrar no TPV</strong>. Assim pode retirar-se a caixa a uma função, como a Receção, sem a impedir de cobrar.</li>
       <li>Ninguém perde nada com a mudança: toda a função ou utilizador que hoje pode cobrar recebe também a permissão nova. Retirá-la é decisão de cada centro, a partir do ecrã de funções.</li>
+    </ul>
+    <h4>Voltar à consulta a partir de qualquer ecrã</h4>
+    <ul>
+      <li>Ao ir de uma consulta para outra zona da aplicação, por exemplo a ficha do cliente, aparece em baixo à direita um <strong>ícone de calendário</strong> que reabre a consulta, no seu dia e como ficou.</li>
+      <li>Os parâmetros da sessão que já estavam anotados, ou que se tinham escrito sem guardar, continuam nas suas caixas ao voltar; não é preciso escrevê-los outra vez.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Erros corrigidos</h3>
+    <h4>A agenda deixava a aplicação inutilizável</h4>
+    <ul>
+      <li>Depois de visitar a agenda, o menu principal deixava de responder e um pedido da agenda saltava para a última opção premida. Corrigido.</li>
+      <li>Abrir uma consulta impedia ir à ficha do cliente e depois bloqueava o ecrã. Corrigido.</li>
     </ul>
   </div>
 </section>

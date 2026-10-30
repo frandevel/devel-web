@@ -669,7 +669,7 @@ footer{
     <h2>30 de octubre de 2026</h2>
     <span class="version__sello">Última versión</span>
   </div>
-  <p class="version__numero">Versión <span translate="no">1.11.0-bf691bb</span></p>
+  <p class="version__numero">Versión <span translate="no">1.11.0-PENDIENTE</span></p>
 
   <div class="grupo grupo--nuevo">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"/></svg></span>Nuevas características</h3>
@@ -689,6 +689,28 @@ footer{
       <li>Cuando una sola persona necesita algo que su rol no lleva, ya no hace falta un rol nuevo: en el formulario del usuario, debajo de los roles, la sección <strong>Permisos adicionales</strong> deja añadirle permisos sueltos, agrupados por áreas y con buscador.</li>
       <li>Lo que ya dan sus roles sale marcado y bloqueado, con el nombre del rol que lo da; aquí solo se añade, nunca se quita lo que trae un rol. En el listado de usuarios, los que tienen extras llevan la marca <strong>+N a medida</strong>.</li>
     </ul>
+    <h4>Cobrar repartiendo entre formas de pago, con la cuenta hecha</h4>
+    <ul>
+      <li>El TPV y <strong>Cobros pendientes</strong> reparten un cobro entre varias formas de pago <strong>exactamente igual</strong>, y llevan la cuenta solos: lo que hay que cobrar, lo indicado y lo que resta se actualizan con cada importe que se teclea. Recepción no tiene que restar de cabeza; el botón de cobrar no se enciende hasta que cuadra al céntimo.</li>
+      <li>Una de las partes puede pagarse con <strong>tarjeta regalo</strong>, con su saldo a la vista: «Ahora mismo a la tarjeta regalo le quedan X € en saldo», y debajo lo que le quedará tras el cobro.</li>
+    </ul>
+    <h4>Tarjetas regalo: copiar el código y un correo sin importe</h4>
+    <ul>
+      <li>Al vender una tarjeta, el código sale con un botón grande <strong>Copiar código</strong> que se pone verde, con un visto, al copiarlo.</li>
+      <li>Una casilla permite <strong>no mostrar el importe</strong> en el correo ni en la tarjeta impresa: solo salen la dedicatoria y el código.</li>
+      <li>El correo llega maquetado como un regalo: con el logotipo del centro, la dedicatoria en su recuadro, el código en un cupón y cómo usarla y hasta cuándo vale.</li>
+    </ul>
+    <h4>Firma con casillas y zonas que marca el cliente</h4>
+    <ul>
+      <li>Un consentimiento puede llevar casillas de sí o no y una lista de zonas a tratar. En la tablet, antes de firmar, el cliente las marca con botones grandes, y lo marcado queda escrito en el documento firmado.</li>
+      <li>Cada campo indica <strong>quién lo rellena</strong>: recepción al pedir la firma o quien firma en la tablet.</li>
+    </ul>
+    <h4>Notas de cliente, Inicio y selección rápida con sus propios permisos</h4>
+    <ul>
+      <li><strong>Escribir notas de clientes</strong> es un permiso aparte, y quien puede borrarlas ve una papelera en cada nota.</li>
+      <li>La tarjeta de clientes del Inicio se divide en dos, <strong>Clientes</strong> y <strong>Cumpleaños</strong>, cada una con su permiso. De fábrica las ven Administración, Dirección y Recepción.</li>
+      <li>Elegir servicios con los botones rápidos al dar una cita tiene su permiso, <strong>Selección rápida de servicios</strong>, y ya no exige acceso al catálogo.</li>
+    </ul>
   </div>
 
   <div class="grupo grupo--mejora">
@@ -697,6 +719,20 @@ footer{
     <ul>
       <li>La tarjeta de caja del día y del mes tiene ahora su propio permiso, <strong>Ver la caja en el Inicio</strong>, separado de <strong>Cobrar en el TPV</strong>. Así se puede quitar la caja a un rol, como Recepción, sin impedirle cobrar.</li>
       <li>Nadie pierde nada con el cambio: todo rol o usuario que hoy puede cobrar recibe también el permiso nuevo. Quitarlo es decisión de cada centro, desde la pantalla de roles.</li>
+    </ul>
+    <h4>Volver a la cita desde cualquier pantalla</h4>
+    <ul>
+      <li>Al ir desde una cita a otra zona de la aplicación, por ejemplo a la ficha del cliente, aparece un <strong>icono de calendario</strong> abajo a la derecha que reabre la cita, en su día y como se dejó.</li>
+      <li>Los parámetros de la sesión que ya estaban anotados, o que se habían tecleado sin guardar, siguen puestos en sus cajas al volver; no hay que escribirlos otra vez.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span>Errores corregidos</h3>
+    <h4>La agenda dejaba la aplicación inutilizable</h4>
+    <ul>
+      <li>Tras visitar la agenda, el menú principal dejaba de responder y una petición de la agenda saltaba a la última opción pulsada. Corregido.</li>
+      <li>Abrir una cita impedía ir a la ficha del cliente y después bloqueaba la pantalla. Corregido.</li>
     </ul>
   </div>
 </section>

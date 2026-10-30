@@ -856,6 +856,17 @@ footer{
     Empfangskraft muss nicht in die Patientenakte, und der Physiotherapeut muss nicht die Kasse sehen.
   </p>
 
+  <h3 id="condiciones">Die Nutzungsbedingungen akzeptieren</h3>
+  <p>
+    Wenn das Zentrum Turnera zum ersten Mal betritt oder wenn DEVEL eine neue Fassung der Bedingungen vorbereitet, öffnet die Anwendung nicht den Terminkalender, sondern den Bildschirm der Bedingungen. Oben steht die Zusammenfassung des Vereinbarten — der Tarif, mit dem das Zentrum startet, die Abrechnung, die Einrichtung — und darunter, in Reitern, jedes vollständige Dokument: der Dienstleistungsvertrag mit seinen Anlagen, das Verzeichnis der Verarbeitungstätigkeiten und die Checkliste der Einrichtung. Jedes lässt sich dort lesen und herunterladen.
+  </p>
+  <p>
+    Akzeptiert werden sie von <strong>wer das Zentrum verwaltet</strong> (dem Benutzer, der die Einstellungen des Zentrums verwaltet): Er markiert jedes Dokument als gelesen, schreibt seinen Namen, seine Ausweisnummer und seine Funktion, erklärt, dass er das Zentrum vertreten kann, und klickt auf
+    <strong>Ich akzeptiere</strong>. Turnera speichert, wer akzeptiert hat, wann, von welcher Adresse aus und den genauen Fingerabdruck jedes Textes, und schickt dem Zentrum und DEVEL eine Kopie per E-Mail. Bis dahin <strong>niemand im Zentrum kann Turnera nutzen</strong>: Die übrigen Benutzer sehen einen Hinweis, dass der Administrator die Bedingungen akzeptieren muss.
+  </p>
+  <p>
+    Wenn das Zentrum lieber auf Papier unterschreibt, schickt DEVEL ihm die Dokumente, unterschreibt sie und sendet sie zurück; dann erscheint der Bildschirm nicht. Und wenn sich die Bedingungen oder der Tarif später ändern, wird vorher Bescheid gegeben und der Bildschirm erscheint nur für die neue Fassung, die zuvor akzeptierte bleibt im Verlauf gespeichert.
+  </p>
   <h3>Das Menü links</h3>
   <figure>
     <img src="/turnera/manual/imagenes/en/03-menu.png" alt="Das Seitenmenü von Turnera, oben der Terminkalender, die Kasse und die offenen Zahlungen" loading="lazy">
@@ -1023,11 +1034,16 @@ footer{
   </p>
 
   <p>
-    Der Kundenblock bringt außerdem <strong>die fünf letzten Neuanlagen</strong>; ein Klick irgendwo auf die Zeile öffnet die Kundenakte. Das ist für den Alltag: Jemand hat vor Kurzem einen Kunden angelegt, die Telefonnummer fehlt noch oder er braucht einen Termin, und die Suche über einen vielleicht falsch geschriebenen Nachnamen ist der lange Weg.
+    Die <strong>Kunden</strong> und die <strong>Geburtstage</strong> sind zwei verschiedene Karten, und jede hat ihre eigene Berechtigung, sodass sie getrennt vergeben werden können. Die Kundenkarte zeigt <strong>die fünf zuletzt angelegten Kunden</strong>; ein Klick irgendwo auf die Zeile öffnet die Akte. Das ist für den Alltag gedacht: Jemand hat vor einer Weile einen Kunden angelegt, es muss die Telefonnummer ergänzt oder ein Termin vergeben werden, und die Suche nach dem womöglich falsch geschriebenen Nachnamen ist der lange Weg.
   </p>
   <p>
-    Darunter stehen die <strong>Geburtstage der Woche</strong>, mit dem Tag und dem Alter, das jeder Kunde wird. Der Geburtstag von heute ist hervorgehoben, und auch diese Zeile führt zur Kundenakte, falls man gratulieren oder eine Kleinigkeit schenken möchte.
+    Die <strong>Geburtstage</strong> -Karte zeigt die der Woche, mit dem Tag und dem Alter, das jeder Kunde erreicht. Der heutige ist hervorgehoben, und auch die Zeile führt zur Akte, falls man gratulieren oder etwas schenken möchte. Standardmäßig sehen sie Empfang und Leitung: <a href="#perm-dashboard-customers">“Kunden auf der Startseite sehen”</a>
+    und <a href="#perm-dashboard-birthdays">“Geburtstage auf der Startseite sehen”</a>.
   </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/78-inicio-clientes-y-cumpleanos.png" alt="Die Startseite mit den Karten für Kunden und Geburtstage nebeneinander" loading="lazy">
+    <figcaption>Kunden und Geburtstage, jeweils auf einer eigenen Karte und mit eigener Berechtigung.</figcaption>
+  </figure>
   <p>
     Die Karte <strong>Kunden mit offenen Gutscheinen</strong> zeigt, wie viele Kunden noch Gutschein-Sitzungen übrig haben, und nennt die zehn dringendsten: zuerst, wer einen Gutschein hat, der bald abläuft, mit den verbleibenden Sitzungen und dem Datum. Das ist die Liste zum Anrufen, bevor die Sitzungen verfallen, und jede Zeile öffnet die Kundenakte. Sie sieht, wer Gutscheine oder Kunden sehen darf.
   </p>
@@ -1049,6 +1065,10 @@ footer{
   <p>
     Nicht alle wollen beim Anmelden dasselbe sehen: am Empfang stört die Kasse und es fehlt Platz für die offenen Zahlungen. Die Schaltfläche <strong>Anpassen</strong>oben rechts öffnet die Liste der Karten, die diese Person sehen darf, und erlaubt es, <strong>die unerwünschten auszuschalten und sie mit den Pfeilen zu ordnen</strong>, jeweils eine Zeile nach oben oder unten. Es muss nichts gezogen werden. Die Auswahl wird für diesen Benutzer gespeichert, auf jedem Gerät, von dem er sich anmeldet, und <em>Zurücksetzen</em> stellt die gewohnte Startseite wieder her.
   </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/79-inicio-personalizar.png" alt="Der Dialog zum Anpassen der Startseite mit den Karten, ihren Schaltern und den Pfeilen zum Sortieren" loading="lazy">
+    <figcaption>Die Startseite anpassen: Nicht Benötigtes ausschalten und mit den Pfeilen sortieren.</figcaption>
+  </figure>
   <p>
     Welche Karten angeboten werden, entscheiden die <strong>Berechtigungen</strong>: Hier lässt sich keine Karte einschalten, die die Rolle nicht sehen darf, und verliert die Rolle später eine Berechtigung, verschwindet ihre Karte von selbst. Umgekehrt genauso: Wer die Startseite nie angepasst hat, sieht ohne etwas zu tun jede neue Karte, die seine Berechtigungen ihm geben. Die Tageskasse hat ihre eigene Berechtigung, <a href="#perm-dashboard-cash">„Kasse auf der Startseite sehen“</a>, getrennt vom Kassieren, damit man sie einer Rolle wegnehmen kann, ohne ihr das Kassieren zu verwehren.
   </p>
@@ -1198,6 +1218,15 @@ footer{
   <figure>
     <img src="/turnera/manual/imagenes/en/05-cita.png" alt="Ein Termin mit Kunde, Mitarbeiter, Uhrzeit und Leistungen" loading="lazy">
     <figcaption>Ein Termin. Darunter der Status, Bestätigen, Kassieren und Stornieren.</figcaption>
+  </figure>
+
+  <h4 id="agenda-volver">Zu einem anderen Bildschirm wechseln und zum Termin zurückkehren</h4>
+  <p>
+    Bei geöffnetem Termin kann man durch Klick auf den Namen zur Akte des Kunden gehen, zum Beispiel um vor dem Beginn die Notizen oder den Verlauf anzusehen. Solange man sich außerhalb des Terminkalenders befindet, erscheint unten rechts, direkt über der Hilfeschaltfläche, <strong>ein Kalendersymbol: <em>Zurück zum Termin</em></strong>. Ein Klick darauf öffnet den Termin wieder, an seinem Tag, so wie man ihn verlassen hat. Das Symbol verschwindet von selbst, sobald man den Terminkalender erreicht; in der Kasse erscheint es nicht, weil dort schon eine Schaltfläche für dasselbe vorhanden ist.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/80-volver-a-la-cita.png" alt="Die Akte eines Kunden mit dem schwebenden Kalendersymbol unten rechts, um zum Termin zurückzukehren" loading="lazy">
+    <figcaption>Das Kalendersymbol unten rechts führt zum Termin zurück, der geöffnet war.</figcaption>
   </figure>
 
   <h3 id="agenda-plazas">Kurse: Termine mit mehreren Plätzen</h3>
@@ -1395,6 +1424,19 @@ footer{
 
   <p>
     Was bei jedem Besuch abgerechnet wurde —der Betrag und die Schaltfläche <em>Beleg</em> des Verlaufs— sieht, wer die Berechtigung „Beträge und Belege im Verlauf sehen“ hat. Entziehen Sie sie einer Rolle oder einer Person, zeigt deren Verlauf weiterhin, was getan wurde und wann, aber ohne Beträge und Beleg. Standardmäßig erhält sie, wer bereits die Kundenakten sehen kann.
+  </p>
+
+  <h3 id="clientes-notas">Die Notizen der Akte</h3>
+  <span class="ruta">Kundenakte → Notizen</span>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/77-notas-del-cliente.png" alt="Die Notizkarte der Akte mit dem Schreibfeld und dem Papierkorb bei jeder Notiz" loading="lazy">
+    <figcaption>Die Notizen der Akte: Wer schreiben darf, sieht das Feld; wer löschen darf, den Papierkorb bei jeder Notiz.</figcaption>
+  </figure>
+  <p>
+    Die Akte enthält ein Notizbuch für das, was man beim nächsten Mal über die Person wissen sollte: dass sie Nachmittagstermine bevorzugt, dass man sie per WhatsApp benachrichtigen soll. Jede Notiz speichert, wer sie geschrieben hat und wann.
+  </p>
+  <p>
+    Schreiben und Löschen sind <strong>zwei verschiedene Berechtigungen</strong>. Mit <a href="#perm-customers-notes-write">“Kundennotizen schreiben”</a> sieht man das Feld zum Schreiben und die Schaltfläche <em>Notiz hinzufügen</em>; ohne sie können die Notizen nur gelesen werden. Mit <a href="#perm-customers-notes-delete">„Notizen der Kunden löschen“</a> hat außerdem jede Notiz einen Papierkorb, der vor dem Löschen nachfragt: <strong>eine gelöschte Notiz lässt sich nicht wiederherstellen</strong>. Schreiben zu dürfen berechtigt nicht zum Löschen, und umgekehrt. Standardmäßig schreiben Empfang und Leitung, und die Leitung löscht.
   </p>
 
   <h3 id="clientes-foto">Das Foto des Kunden</h3>
@@ -1692,10 +1734,19 @@ footer{
     Zahlungsart und wie viel darauf entfällt. Es lassen sich weitere hinzufügen.
   </p>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/en/71-tpv-cobro-repartido.png" alt="Die Kasse mit der auf Bargeld und Geschenkkarte aufgeteilten Zahlung, mit dem noch zu Erfassenden und dem Kartenguthaben" loading="lazy">
+    <figcaption>Die Aufteilung führt Buch: was zu kassieren ist, was erfasst wurde und was noch offen ist, sowie das Guthaben der Geschenkkarte.</figcaption>
+  </figure>
+
   <p>
-    Darunter sehen Sie die Summe der Aufteilung neben dem Gesamtbetrag. <strong>Solange es nicht auf den Cent stimmt, in Rot, bleibt der Knopf zum
-    Kassieren aus.</strong> Das ist Absicht: Eine Aufteilung, die nicht aufgeht, ist eine Differenz in der Kasse, die
-    Wochen später auffällt und an die sich dann niemand mehr erinnert.
+    Während der Aufteilung <strong>die Kasse rechnet für den, der kassiert</strong>. Unter den Zeilen sieht man drei Zahlen — was <em>Zu kassieren</em>, was <em>Erfasst</em> bisher und was <em>Noch zu erfassen</em>— und sie ändern sich mit jedem eingetippten Betrag, man muss also nicht im Kopf rechnen. Der Rest steht in Orange, solange etwas fehlt; wenn die Aufteilung genau aufgeht, wird daraus <em>Passt</em>, in Grün; und wenn es zu viel ist, steht dort
+    <em>Zu viel um</em> und um wie viel, in Rot. <strong>Solange es nicht auf den Cent genau aufgeht, wird die Schaltfläche zum Kassieren nicht aktiv.</strong> Das ist Absicht: Eine Aufteilung, die nicht aufgeht, ist eine Kassendifferenz, die Wochen später auftaucht und an die sich niemand mehr erinnert.
+  </p>
+
+  <p>
+    <strong>Eine der Zahlungsarten kann eine Geschenkkarte sein.</strong> Wenn man in einer der Zeilen <em>Geschenkkarte</em> wählt, zeigt die Kasse die Karten des Kunden mit einem Klick (oder man tippt den Code) und sagt, wie viel darauf noch übrig ist:
+    <em>„Im Moment sind auf der Geschenkkarte noch 100,00 € Guthaben“</em>, und darunter, was nach dieser Zahlung übrig bleibt. Die Karte zahlt nur den ihr zugewiesenen Teil; reicht ihr Guthaben nicht, weist sie darauf hin und bittet, diesen Teil zu verringern und den Rest anders zu zahlen.
   </p>
 
   <p>
@@ -1746,6 +1797,15 @@ footer{
     <strong>Rabatt und Gutscheine gelten nicht für eine Teilzahlung: Der Rabatt wird beim Bezahlen des Restbetrags angewendet</strong>, auf das, was noch zu kassieren ist. Ein Konto, das bereits Teilzahlungen hat, akzeptiert ebenfalls keinen Gutschein, und der Rest wird mit Geld bezahlt. Die Rechnung bleibt eine einzige über den Gesamtbetrag des Verkaufs: Teilzahlungen erzeugen keine neuen Rechnungen, und Rechnung und Punkte nehmen ihren üblichen Lauf, wenn das ganze Konto beglichen ist.
   </p>
 
+  <p>
+    <strong>Die Aufteilung der Zahlung funktioniert wie in der Kasse.</strong> Beim Begleichen einer ganzen Schuld kann man
+    <em>Zahlung auf mehrere Zahlungsarten aufteilen</em> anhaken: dieselben Zeilen, dieselben drei Zahlen, die sich von selbst aktualisieren, dasselbe <em>Passt</em>, und eine der Zahlungsarten kann eine Geschenkkarte mit sichtbarem Guthaben sein. Angeboten wird es, wenn die Schuld auf einmal beglichen wird: Bei bereits geleisteten Teilzahlungen, oder wenn einer der Teile der Zahlungslink, das Guthaben, Clubpunkte, ein Gutschein oder eine Zahlungsart mit festem Rabatt ist, ist es nicht zulässig, und diese Optionen erscheinen ausgegraut mit der Begründung.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/72-cobros-pendientes-reparto.png" alt="Der Dialog zum Kassieren einer Schuld mit auf zwei Zahlungsarten aufgeteilter Zahlung" loading="lazy">
+    <figcaption>Eine aufgeteilte Schuld kassieren: dieselbe Aufteilung und dieselben Zahlen wie in der Kasse.</figcaption>
+  </figure>
+
   <h3 id="devoluciones">Einen Beleg erstatten</h3>
   <span class="ruta">Kundenkarte → Verlauf → Erstatten</span>
 
@@ -1791,6 +1851,32 @@ footer{
     Jemand bezahlt heute, und eine andere Person gibt es an einem anderen Tag aus. Verkauft wird sie mit <strong>Geschenkkarte verkaufen</strong>: wer bezahlt, wer verkauft, der Betrag, die Zahlungsart und, wenn gewünscht, für wen er ist, eine Widmung und bis wann er gilt (ohne Datum verfällt er nicht). Beim Kassieren entsteht ein Code wie <code>RG-7K2M-Q9TX</code>, der auf eine Karte zum Verschenken gedruckt oder per E-Mail mit dem Gutschein als PDF verschickt wird.
   </p>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/en/73-tarjeta-regalo-venta.png" alt="Der Dialog zum Verkauf einer Geschenkkarte mit dem Kästchen zum Ausblenden des Betrags" loading="lazy">
+    <figcaption>Eine Geschenkkarte verkaufen. Das Kästchen unten blendet den Betrag in der E-Mail und auf der gedruckten Karte aus.</figcaption>
+  </figure>
+
+  <p>
+    Ist das Geschenk eine Überraschung und soll der Preis nicht bekannt werden, hakt man <strong>„Betrag nicht in der E-Mail und auf der gedruckten Karte anzeigen“</strong>an: Es erscheinen nur die Widmung und der Code, ohne den Wert zu nennen. Das Guthaben bleibt für das Zentrum dasselbe, und beim Einlösen zeigt es die Kasse wie gewohnt an.
+  </p>
+
+  <p>
+    Der <strong>E-Mail</strong> kommt gestaltet wie ein Geschenk an: mit dem Logo des Zentrums, der Widmung in einem eigenen Kasten in Briefschrift, dem gut sichtbaren Code auf einem Gutschein und darunter, wie man sie einlöst und bis wann sie gilt. Wurde keine Widmung geschrieben, erscheint der Kasten nicht.
+  </p>
+
+  <p>
+    Nach dem Verkauf sieht man den Code mit einer großen Schaltfläche, <strong>Code kopieren</strong>: Ein Klick und der Code liegt in der Zwischenablage, bereit zum Einfügen in eine Nachricht oder E-Mail. Die Schaltfläche wird grün mit Häkchen und zeigt
+    <em>Code kopiert</em>, damit man sieht, dass es geklappt hat.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/74-tarjeta-regalo-codigo.png" alt="Die verkaufte Geschenkkarte mit ihrem Code und der Schaltfläche „Code kopieren“" loading="lazy">
+    <figcaption>Der Code der soeben verkauften Karte mit der Schaltfläche zum Kopieren.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/75-tarjeta-regalo-codigo-copiado.png" alt="Dieselbe Schaltfläche, jetzt grün mit Häkchen, mit der Anzeige „Code kopiert“" loading="lazy">
+    <figcaption>Nach dem Klick wird sie grün: Der Code ist kopiert.</figcaption>
+  </figure>
+
   <p>
     Der <strong>Eintrag „E-Mail-Adresse für den Versand“</strong> steht für sich und ist schon mit der Adresse der zahlenden Person ausgefüllt, wenn ihr Eintrag eine hat. Das ist der Normalfall: So entscheidet sie, wann sie ihn verschenkt, und niemand bekommt das Geschenk zu früh. Man kann sie durch die der beschenkten Person ersetzen, dann erhält diese ihn sofort. Die E-Mail ist an die Person gerichtet, die sie bekommt: Der Käuferin sagt sie „hier ist der Geschenkgutschein für …“, der beschenkten Person, dass sie einen Gutschein hat, den sie im Zentrum einlösen kann.
   </p>
@@ -1800,7 +1886,8 @@ footer{
   </div>
 
   <p>
-    Zum Einlösen wählt man an der Kasse <strong>Geschenkkarte</strong> als Zahlungsart und gibt den Code ein; darunter steht, was noch übrig ist. Sie kann in mehreren Besuchen ausgegeben werden, bis sie aufgebraucht ist, und reicht sie nicht für die ganze Rechnung, wird der Betrag aufgeteilt: ein Teil mit der Karte, der Rest anders. Auch eine offene Rechnung lässt sich damit begleichen.
+    Zum Einlösen wählt man an der Kasse <strong>Geschenkkarte</strong> als Zahlungsart und tippt den Code ein; darunter erscheint, was darauf übrig ist: <em>„Im Moment sind auf der Geschenkkarte noch 100,00 € Guthaben“</em>. Sie wird in mehreren Schritten aufgebraucht, und reicht sie nicht für die ganze Rechnung, wird die Zahlung aufgeteilt: ein Teil mit der Karte und der Rest anders, wobei die Restrechnung die Kasse selbst übernimmt (siehe
+    <a href="#cobrar-partido">Mit zwei Zahlungsarten gleichzeitig bezahlen</a>). Auch eine Schuld lässt sich damit begleichen, aufgeteilt oder vollständig.
   </p>
 
   <p>
@@ -2086,6 +2173,9 @@ footer{
   <span class="ruta">Terminkalender → (ein Termin) → Geräte der Sitzung</span>
   <p>
     Bei Terminen mit einer Leistung, die ein Gerät benötigt, erscheint unter den Termindaten ein Abschnitt mit den zu erfassenden Parametern, <strong>gruppiert nach Leistung und Gerät</strong>: Jede Gruppe nennt die Leistung, für die erfasst wird („Achsel-Laser · Diodenlaser“). Hat der Termin zwei Leistungen mit demselben Gerät, erscheinen seine Parameter zweimal, einmal je Leistung, sodass klar ist, wie viele Joule an jeder Zone eingestellt wurden. Neben jedem Parameter steht, <strong>womit dieser Kunde beim letzten Mal in derselben Leistung behandelt wurde</strong>. Sie werden zusammen mit dem Termin gespeichert, sobald Sie auf <em>Speichern</em>drücken; ein leer gelassener Parameter gilt als „nicht erfasst“ und wird nicht geschrieben. Die Parameter werden hier im Termin abgefragt und nicht in der Kasse. Ändert man die Leistungen des Termins, aktualisiert sich der Bereich von selbst: Die Zeilen der neuen Leistung erscheinen, die der entfernten verschwinden.
+  </p>
+  <p>
+    <strong>Was eingetragen wird, geht beim Verlassen und Zurückkehren nicht verloren.</strong> Die bereits eingetragenen Werte und die getippten, aber noch nicht gespeicherten bleiben in ihren Feldern, wenn man zum Termin zurückkehrt — zum Beispiel nach dem Besuch der Kundenakte und der Rückkehr über das <a href="#agenda-volver">Symbol „Zurück zum Termin“</a>—, außerdem sind sie in der Anzeige <em>Vorher:</em> jedes Parameters zu sehen. Niemand muss sie noch einmal eingeben.
   </p>
   <p>
     Wenn der Termin keine Leistung mit Gerät enthält, erscheint der Abschnitt nicht.
@@ -2485,11 +2575,12 @@ footer{
   <ul>
     <li><strong>Terminkalender.</strong> <a href="#perm-appointments-view">„Terminkalender ansehen“</a> zeigt nur an. Anlegen oder Verschieben ist <a href="#perm-appointments-book">„Termine anlegen und verschieben“</a>; Stornieren ist <a href="#perm-appointments-cancel">„Termine stornieren“</a>; eine bereits abgerechnete zu stornieren erfordert zusätzlich <a href="#perm-appointments-cancel-charged">„Abgerechnete Termine stornieren“</a>; für einen vergangenen Tag: <a href="#perm-appointments-book-past">«Citar en días pasados» (an vergangenen Tagen buchen)</a>; um eine erledigte zu verschieben: <a href="#perm-appointments-move-closed">«Mover citas atendidas» (erledigte Termine verschieben)</a>.</li>
     <li><strong>Kunden.</strong> <a href="#perm-customers-view">„Karteikarten der Kunden ansehen“</a> zeigt die Karteikarte nur zum Lesen. Ändern ist
-      <a href="#perm-customers-edit">„Karteikarten der Kunden bearbeiten“</a>; Telefon und E-Mail sind verborgen ohne <a href="#perm-customers-contact-details">„Telefonnummern und E-Mails sehen“</a>; Notizen kann schreiben, wer bearbeitet, aber sie zu löschen ist <a href="#perm-customers-notes-delete">„Notizen der Kunden löschen“</a>.</li>
+      <a href="#perm-customers-edit">„Karteikarten der Kunden bearbeiten“</a>; Telefon und E-Mail sind verborgen ohne <a href="#perm-customers-contact-details">„Telefonnummern und E-Mails sehen“</a>; Notizen werden geschrieben mit <a href="#perm-customers-notes-write">„Kundennotizen schreiben“</a> und gelöscht mit <a href="#perm-customers-notes-delete">„Notizen der Kunden löschen“</a>: Das sind zwei verschiedene Berechtigungen.</li>
     <li><strong>Berichte.</strong> Einen Bericht zu öffnen ist die Berechtigung dieses Berichts, zum Beispiel
       <a href="#perm-reports-payments">„Zahlungsbericht“</a>. Ihn als Datei herunterzuladen erfordert zusätzlich <a href="#perm-reports-export">„Berichte als Datei herunterladen“</a>; und der Kundenbericht als Datei erfordert <a href="#perm-customers-export">„Liste der Kunden exportieren“</a>, die sensibel ist.</li>
     <li><strong>Katalog.</strong> <a href="#perm-services-view">„Leistungen ansehen“</a> zeigt die Leistungen und ihre Preise;
-      <a href="#perm-services-write">„Leistungen anlegen und bearbeiten“</a> erlaubt es, sie zu ändern. Mit bloßem Ansehen sind die Schaltflächen zum Anlegen, Bearbeiten und Zurückziehen ausgegraut oder fehlen.</li>
+      <a href="#perm-services-write">„Leistungen anlegen und bearbeiten“</a> erlaubt, sie zu ändern. Mit reinem Lesezugriff sind die Schaltflächen zum Anlegen, Bearbeiten und Entfernen ausgegraut oder fehlen. Das Auswählen von Leistungen mit den Schnelltasten bei der Terminvergabe erfordert keinen Einblick in den Katalog: Dafür gibt es eine andere Berechtigung,
+      <a href="#perm-services-quick-pick">„Schnellauswahl von Leistungen“</a>.</li>
     <li><strong>Kasse.</strong> Kassieren ist <a href="#perm-checkout-charge">„An der Kasse kassieren“</a>; einen Rabatt gewähren: <a href="#perm-checkout-discount">„Rabatte gewähren“</a>; etwas offen lassen: <a href="#perm-checkout-debt">„Offen lassen“</a>; ein Ticket zurückerstatten: <a href="#perm-checkout-refund">„Ticket zurückerstatten“</a>; auf der Startseite sehen, was heute und im Monat kassiert wurde,
       <a href="#perm-dashboard-cash">„Kasse auf der Startseite sehen“</a>. Niemand am Empfang öffnet eine geschlossene Kasse wieder ohne <a href="#perm-cash-reopen">«Geschlossene Kasse wieder öffnen»</a>.</li>
     <li><strong>Wartung.</strong> <a href="#perm-maintenance-view">„Instandhaltung ansehen“</a> liest die Aufträge; einen zu öffnen ist
@@ -2614,6 +2705,7 @@ footer{
     <tr id="perm-customers-edit"><td><strong>Karteikarten der Kunden bearbeiten</strong></td><td>Erlaubt, Änderungen an einer Karteikarte zu speichern und das Foto zu setzen oder zu entfernen. Ohne diese Berechtigung ist die Karteikarte schreibgeschützt.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
     <tr id="perm-customers-contact-details"><td><strong>Telefonnummern und E-Mails sehen</strong></td><td>Zeigt Telefon, E-Mail und Adresse der Kunden. Ohne diese Berechtigung sind sie verborgen und lassen sich auch nicht ändern.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
     <tr id="perm-customers-alerts"><td><strong>Hinweise schreiben und entfernen</strong></td><td>Erlaubt, die Hinweise zu schreiben und zu entfernen, die beim Buchen und beim Kassieren erscheinen.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
+    <tr id="perm-customers-notes-write"><td><strong>Kundennotizen schreiben</strong></td><td>Erlaubt das Hinzufügen von Notizen in der Akte. Die Akte bearbeiten zu dürfen genügt nicht mehr: Das Schreiben von Notizen ist eine eigene Berechtigung, das Löschen eine weitere.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a></td></tr>
     <tr id="perm-customers-notes-delete"><td><strong>Kundennotizen löschen</strong></td><td>Erlaubt, eine Notiz aus der Karteikarte zu löschen. Wer Notizen schreiben darf, darf sie damit noch nicht löschen.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
     <tr id="perm-customers-merge"><td><strong>Doppelte Akten zusammenführen</strong></td><td>Führt zwei doppelte Karteikarten zu einer zusammen. Alles aus der verworfenen Karteikarte geht auf die behaltene über, und die verworfene wird gelöscht.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
     <tr id="perm-customers-erase"><td><strong>Daten der Kunden auf Verlangen löschen</strong></td><td>Recht auf Löschung: löscht die personenbezogenen Daten und anonymisiert die Karteikarte. Rechnungen und Patientenakte bleiben so lange erhalten, wie das Gesetz es vorschreibt.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-clientes">Kunden</a></td></tr>
@@ -2639,6 +2731,8 @@ footer{
     <tr id="perm-checkout-discount"><td><strong>Rabatte gewähren</strong></td><td>Schaltet das Rabattfeld innerhalb des Zahlvorgangs frei.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
     <tr id="perm-checkout-debt"><td><strong>Auf Rechnung lassen</strong></td><td>Erlaubt, einen Zahlvorgang mit offenem Restbetrag abzuschließen, statt ihn vollständig zu kassieren. Der Betrag erscheint danach unter „Offene Beträge ansehen“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
     <tr id="perm-checkout-refund"><td><strong>Einen Beleg erstatten</strong></td><td>Erlaubt die Schaltfläche, um Positionen eines bereits abgerechneten Tickets zu erstatten, als Geld oder als Guthaben.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-dashboard-customers"><td><strong>Kunden auf der Startseite sehen</strong></td><td>Zeigt auf der Startseite die Karte mit den in diesem Monat angelegten und den zuletzt hinzugekommenen Kunden. Die Akten öffnet sie nicht: Das bleibt bei „Kundenakten ansehen“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a></td></tr>
+    <tr id="perm-dashboard-birthdays"><td><strong>Geburtstage auf der Startseite sehen</strong></td><td>Zeigt auf der Startseite die Karte mit den Geburtstagen der Woche, mit Name und Datum. Für Glückwünsche per WhatsApp braucht es zusätzlich „Telefonnummern und E-Mails sehen“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a></td></tr>
     <tr id="perm-dashboard-cash"><td><strong>Kasse auf der Startseite sehen</strong></td><td>Zeigt auf der Startseite die Karte mit dem heute und im Monat Kassierten, nach Zahlungsart. Öffnet weder die Kasse noch den Kassenbericht: Das bleibt bei „An der Kasse kassieren“ und „Tagessummen“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
     <tr id="perm-debts-view"><td><strong>Offene Zahlungen ansehen</strong></td><td>Öffnet die Ansicht der offenen Beträge. Eine Schuld zu begleichen ist eine eigene Berechtigung: „Schuld begleichen“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
     <tr id="perm-debts-settle"><td><strong>Eine Schuld begleichen</strong></td><td>Erlaubt die Schaltfläche zum Begleichen einer Schuld.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
@@ -2663,6 +2757,7 @@ footer{
     <tr id="perm-centre-invoicing"><td><strong>Rechnungen und VeriFactu</strong></td><td>Aktiviert die Rechnungsstellung des Zentrums, wählt die Präfixe der Serien und verwaltet die Übermittlung an die AEAT.</td><td><strong><a href="#roles-sensibles">Sensibel</a>:</strong> nur der Systemadministrator</td></tr>
     <tr id="perm-centre-invoicing-production"><td><strong>Pasar la facturación a producción (Rechnungsstellung in die Produktion überführen)</strong></td><td>Stellt die Rechnungsstellung vom Testmodus auf Produktion um: Die Testrechnungen werden gelöscht und die Nummerierung beginnt von vorn. Es gibt kein Zurück.</td><td><strong><a href="#roles-sensibles">Sensibel</a>:</strong> nur der Systemadministrator</td></tr>
     <tr id="permisos-catalogo"><th colspan="3">Katalog</th></tr>
+    <tr id="perm-services-quick-pick"><td><strong>Schnellauswahl von Leistungen</strong></td><td>Erlaubt es, die Leistungen eines Termins mit den Schnelltasten auszuwählen, ohne Zugriff auf den Katalog zu benötigen. Es zeigt Name, Code und Dauer jeder Leistung, aber weder den Preis noch die Datenblätter.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a></td></tr>
     <tr id="perm-services-view"><td><strong>Leistungen ansehen</strong></td><td>Zeigt die Leistungen und ihre Preise. Nur zum Ansehen: Für Änderungen braucht es „Leistungen anlegen und bearbeiten“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
     <tr id="perm-services-write"><td><strong>Leistungen anlegen und bearbeiten</strong></td><td>Erlaubt, Leistungen anzulegen, zu bearbeiten und zu entfernen.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
     <tr id="perm-packages-view"><td><strong>Pakete ansehen</strong></td><td>Zeigt die Pakete aus Leistungen und Produkten. Nur zum Ansehen.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
@@ -3855,8 +3950,15 @@ footer{
     <li>Beim Bearbeiten des Textes steht rechts das Feld <em>Felder</em>. Die <strong>grünen</strong> füllt Turnera aus; die <strong>orangefarbenen</strong> gehören zum Dokument.</li>
     <li>Klicken Sie auf <em>Neues Feld</em>, ihm einen Namen geben und den Typ wählen: Text (eine oder mehrere Zeilen), Datum, Ankreuzfeld, Auswahlliste oder Mehrfachauswahl. Bei Auswahllisten wird jede Option in eine eigene Zeile geschrieben.</li>
     <li>Das Feld an die Stelle im Text ziehen, an der es erscheinen soll, oder <em>+</em> drücken, um es an der Cursorposition einzufügen. Die Felder von Turnera werden genauso gesetzt.</li>
-    <li>Beim Anfordern der Unterschrift füllt der Empfang die Felder aus, die das Dokument verwendet, und das Tablet zeigt den Text bereits vollständig.</li>
+    <li>Wähle <em>Wer füllt es aus?</em>aus. Standardmäßig werden Kontrollkästchen, Auswahllisten und Mehrfachauswahlen von <strong>der Unterzeichnende, auf dem Tablet</strong>ausgefüllt; Text und Datum schreibt
+      <strong>der Empfang</strong> beim Anfordern der Unterschrift. Man kann es Feld für Feld ändern.</li>
+    <li>Beim Anfordern der Unterschrift füllt der Empfang die Felder aus, die ihm zufallen. Das Tablet zeigt den Text mit den leeren Feldern des Kunden und, vor dem Unterschriftsfeld, ein Formular mit großen Schaltflächen zum Ausfüllen. „Unterschreiben“ wird erst aktiv, wenn die Pflichtfelder ausgefüllt sind.</li>
   </ol>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/en/76-firma-con-casillas-y-zonas.png" alt="Das Unterschriften-Tablet mit Ja/Nein-Kontrollkästchen und den zu behandelnden Zonen zum Ankreuzen" loading="lazy">
+    <figcaption>Das Tablet vor der Unterschrift: Die Kontrollkästchen und Zonen markiert der Unterzeichnende, und sie stehen im Dokument.</figcaption>
+  </figure>
 
   <ul>
     <li>Die Werte erscheinen <strong>fett</strong> im Text: eine Mehrfachauswahl durch Kommas getrennt und in der Reihenfolge der Liste; ein Datum als TT/MM/JJJJ; ein Ankreuzfeld als «Ja» oder «Nein»; ein leer gelassenes optionales Feld als «—».</li>

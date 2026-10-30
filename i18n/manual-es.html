@@ -813,6 +813,26 @@ footer{
     recepcionista no tiene por qué entrar en la historia clínica, y el fisioterapeuta no tiene por qué ver la caja.
   </p>
 
+  <h3 id="condiciones">Aceptar las condiciones del servicio</h3>
+  <p>
+    La primera vez que el centro entra en Turnera, o cuando DEVEL prepara una versión nueva de las condiciones,
+    la aplicación no abre la agenda: abre la pantalla de condiciones. Arriba va el resumen de lo contratado — la
+    cuota con la que empieza el centro, la facturación, la puesta en marcha — y debajo, en pestañas, cada documento
+    completo: el contrato de servicio con sus anexos, el registro de actividades y la lista de comprobación del
+    alta. Cada uno se puede leer ahí mismo y descargar.
+  </p>
+  <p>
+    Las acepta <strong>quien administra el centro</strong> (el usuario que lleva las preferencias del centro): marca
+    cada documento como leído, escribe su nombre, su DNI y su cargo, declara que puede representar al centro y pulsa
+    <strong>Acepto</strong>. Turnera guarda quién ha aceptado, cuándo, desde qué dirección y la huella exacta de
+    cada texto, y envía una copia por correo al centro y a DEVEL. Hasta ese momento <strong>nadie del centro puede
+    usar Turnera</strong>: el resto de usuarios ven un aviso de que el administrador debe aceptar las condiciones.
+  </p>
+  <p>
+    Si el centro prefiere firmar en papel, DEVEL le hace llegar los documentos, los firma y los devuelve; entonces
+    la pantalla no aparece. Y si más adelante cambian las condiciones o la tarifa, se avisa con antelación y la
+    pantalla vuelve a salir sólo para la versión nueva, con la aceptada anterior guardada en el historial.
+  </p>
   <h3>El menú de la izquierda</h3>
   <figure>
     <img src="/turnera/manual/imagenes/03-menu.png" alt="El menú lateral de Turnera, con la agenda, el TPV y los cobros pendientes arriba" loading="lazy">
@@ -1035,14 +1055,22 @@ footer{
   </p>
 
   <p>
-    El bloque de clientes trae además <strong>las cinco últimas altas</strong>; se pulsa en cualquier punto de
-    la fila y se abre la ficha. Es para lo de todos los días: alguien dio de alta a un cliente hace un rato, hay
-    que añadirle el teléfono o darle cita, y buscarlo por el apellido que quizá se escribió mal es el camino largo.
+    Los <strong>clientes</strong> y los <strong>cumpleaños</strong> son dos tarjetas distintas, y cada una tiene su
+    propio permiso, de modo que se pueden dar por separado. La de clientes trae <strong>las cinco últimas
+    altas</strong>; se pulsa en cualquier punto de la fila y se abre la ficha. Es para lo de todos los días: alguien
+    dio de alta a un cliente hace un rato, hay que añadirle el teléfono o darle cita, y buscarlo por el apellido que
+    quizá se escribió mal es el camino largo.
   </p>
   <p>
-    Debajo están los <strong>cumpleaños de la semana</strong>, con el día y los años que cumple cada cliente. El
-    de hoy aparece resaltado, y la fila también lleva a la ficha, por si se le quiere felicitar o regalar algo.
+    La de <strong>cumpleaños</strong> enseña los de la semana, con el día y los años que cumple cada cliente. El
+    de hoy aparece resaltado, y la fila también lleva a la ficha, por si se le quiere felicitar o regalar algo. De
+    fábrica las ven recepción y dirección: <a href="#perm-dashboard-customers">«Ver los clientes en el Inicio»</a>
+    y <a href="#perm-dashboard-birthdays">«Ver los cumpleaños en el Inicio»</a>.
   </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/78-inicio-clientes-y-cumpleanos.png" alt="El Inicio con las tarjetas de clientes y de cumpleaños, una al lado de la otra" loading="lazy">
+    <figcaption>Clientes y cumpleaños, cada uno en su tarjeta y con su permiso.</figcaption>
+  </figure>
   <p>
     La tarjeta de <strong>clientes con bonos pendientes</strong> dice cuántos clientes tienen sesiones de bono
     por disfrutar y enseña a los diez más urgentes: primero quien tiene un bono a punto de caducar, con las sesiones
@@ -1078,6 +1106,10 @@ footer{
     una fila arriba o abajo cada vez. No hay que arrastrar nada. Lo elegido se guarda para ese usuario, en cualquier
     equipo desde el que entre, y <em>Restablecer</em> vuelve al Inicio de siempre.
   </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/79-inicio-personalizar.png" alt="El cuadro para personalizar el Inicio, con las tarjetas, sus interruptores y las flechas para ordenarlas" loading="lazy">
+    <figcaption>Personalizar el Inicio: se apaga lo que sobra y se ordena con las flechas.</figcaption>
+  </figure>
   <p>
     Lo que decide qué tarjetas se ofrecen son los <strong>permisos</strong>: aquí no se puede encender una tarjeta que
     el rol no deja ver, y si más adelante el rol pierde un permiso, su tarjeta desaparece sola. Al revés también:
@@ -1277,6 +1309,19 @@ footer{
   <figure>
     <img src="/turnera/manual/imagenes/05-cita.png" alt="La ficha de una cita con el cliente, el profesional, la hora y los servicios" loading="lazy">
     <figcaption>La ficha de una cita. Abajo, el estado, confirmar, cobrar y anular.</figcaption>
+  </figure>
+
+  <h4 id="agenda-volver">Ir a otra pantalla y volver a la cita</h4>
+  <p>
+    Con una cita abierta se puede ir a la ficha del cliente pulsando su nombre, por ejemplo para mirar sus notas o
+    su historial antes de empezar. Mientras se está fuera de la agenda aparece, abajo a la derecha y justo encima del
+    botón de ayuda, <strong>un icono de calendario: <em>Volver a la cita</em></strong>. Se pulsa y la cita se abre
+    otra vez, en su día, tal como se dejó. El icono desaparece solo al llegar a la agenda; en el TPV no sale porque
+    allí ya hay un botón para lo mismo.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/80-volver-a-la-cita.png" alt="La ficha de un cliente con el icono flotante de calendario abajo a la derecha para volver a la cita" loading="lazy">
+    <figcaption>El icono de calendario, abajo a la derecha, vuelve a la cita que se tenía abierta.</figcaption>
   </figure>
 
   <h3 id="agenda-plazas">Clases: citas de varias plazas</h3>
@@ -1552,6 +1597,24 @@ footer{
     Lo cobrado en cada visita —el importe y el botón <em>Ticket</em> del historial— lo ve quien tiene el permiso
     «Ver los importes y los tickets del historial». Si se lo quita a un rol o a una persona, su historial sigue
     enseñando qué se hizo y cuándo, pero sin cantidades ni ticket. Se da de fábrica a quien ya puede ver las fichas.
+  </p>
+
+  <h3 id="clientes-notas">Las notas de la ficha</h3>
+  <span class="ruta">Ficha del cliente → Notas</span>
+  <figure>
+    <img src="/turnera/manual/imagenes/77-notas-del-cliente.png" alt="La tarjeta de notas de la ficha, con la caja para escribir y cada nota con su papelera" loading="lazy">
+    <figcaption>Las notas de la ficha: quien puede escribir ve la caja; quien puede borrar, la papelera de cada nota.</figcaption>
+  </figure>
+  <p>
+    La ficha lleva un cuaderno de notas para lo que conviene saber de esa persona la próxima vez: que prefiere las
+    citas por la tarde, que hay que avisarla por WhatsApp. Cada nota guarda quién la escribió y cuándo.
+  </p>
+  <p>
+    Escribir y borrar son <strong>dos permisos distintos</strong>. Con <a href="#perm-customers-notes-write">«Escribir
+    notas de clientes»</a> se ve la caja para escribir y el botón <em>Añadir nota</em>; sin él, las notas solo se
+    leen. Con <a href="#perm-customers-notes-delete">«Borrar notas de clientes»</a> cada nota lleva además una
+    papelera, que antes de borrar pregunta: <strong>una nota borrada no se recupera</strong>. Poder escribir no da
+    derecho a borrar, ni al revés. De fábrica escriben recepción y dirección, y borra dirección.
   </p>
 
   <h3 id="clientes-foto">La foto del cliente</h3>
@@ -1959,10 +2022,27 @@ footer{
     forma y cuánto va por ahí. Se pueden añadir más.
   </p>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/71-tpv-cobro-repartido.png" alt="El TPV con el cobro repartido entre efectivo y tarjeta regalo, con lo que resta por indicar y el saldo de la tarjeta" loading="lazy">
+    <figcaption>El reparto lleva la cuenta: lo que se cobra, lo indicado y lo que resta, y el saldo de la tarjeta regalo.</figcaption>
+  </figure>
+
   <p>
-    Debajo se ve la suma del reparto junto al total. <strong>Mientras no cuadre al céntimo, en rojo, el botón de
-    cobrar no se enciende.</strong> Es a propósito: un reparto que no suma es un descuadre en la caja que aparece
-    semanas después y del que ya nadie se acuerda.
+    Mientras se reparte, <strong>el TPV hace las cuentas por quien cobra</strong>. Debajo de las líneas se ven tres
+    cifras —lo que hay <em>A cobrar</em>, lo <em>Indicado</em> hasta ahora y lo que <em>Resta por indicar</em>— y
+    cambian con cada importe que se teclea, así que no hay que restar de cabeza. Lo que resta sale en naranja
+    mientras falta algo; cuando el reparto suma justo, pasa a <em>Cuadra</em>, en verde; y si se pasa, dice
+    <em>Te pasas en</em> y cuánto, en rojo. <strong>Mientras no cuadre al céntimo, el botón de cobrar no se
+    enciende.</strong> Es a propósito: un reparto que no suma es un descuadre en la caja que aparece semanas después
+    y del que ya nadie se acuerda.
+  </p>
+
+  <p>
+    <strong>Una de las formas puede ser una tarjeta regalo.</strong> Al elegir <em>Tarjeta regalo</em> en una de las
+    líneas, el TPV enseña las tarjetas del cliente a un toque (o se teclea el código) y dice cuánto le queda:
+    <em>«Ahora mismo a la tarjeta regalo le quedan 100,00 € en saldo»</em>, y debajo, lo que le quedará después de
+    este cobro. La tarjeta paga solo la parte que se le ha dado; si su saldo no llega, lo avisa y pide bajar esa parte
+    y pagar el resto de otra forma.
   </p>
 
   <p>
@@ -2032,6 +2112,19 @@ footer{
     dinero. La factura sigue siendo una sola, por el total de la venta: los abonos no generan facturas nuevas, y la
     factura y los puntos siguen su curso de siempre cuando se salda la cuenta entera.
   </p>
+
+  <p>
+    <strong>El reparto del cobro funciona igual que en el TPV.</strong> Al saldar una deuda entera se puede marcar
+    <em>Repartir el cobro entre varias formas de pago</em>: las mismas líneas, las mismas tres cifras que se
+    actualizan solas, el mismo <em>Cuadra</em>, y una de las formas puede ser una tarjeta regalo con su saldo a la
+    vista. Se ofrece al cobrar la deuda de una vez: con abonos ya hechos, o si una de las partes es el pago por enlace,
+    el saldo a favor, los puntos del club, un bono o una forma de pago con descuento fijo, no se admite y esas
+    opciones salen apagadas con la razón.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/72-cobros-pendientes-reparto.png" alt="El diálogo de cobro de una deuda con el cobro repartido entre dos formas de pago" loading="lazy">
+    <figcaption>Cobrar una deuda repartida: el mismo reparto y las mismas cifras que en el TPV.</figcaption>
+  </figure>
 
   <h3 id="devoluciones">Devolver un ticket</h3>
   <span class="ruta">Ficha del cliente → Historial → Devolver</span>
@@ -2103,6 +2196,37 @@ footer{
     imprime en una tarjeta para regalar o se manda por correo con la tarjeta en PDF.
   </p>
 
+  <figure>
+    <img src="/turnera/manual/imagenes/73-tarjeta-regalo-venta.png" alt="El diálogo de vender una tarjeta regalo, con la casilla para no mostrar el importe" loading="lazy">
+    <figcaption>Vender una tarjeta regalo. La casilla de abajo oculta el importe en el correo y en la tarjeta impresa.</figcaption>
+  </figure>
+
+  <p>
+    Si el regalo es una sorpresa y no se quiere que se sepa lo que ha costado, se marca <strong>«No mostrar el
+    importe en el correo ni en la tarjeta impresa»</strong>: saldrán solo la dedicatoria y el código, sin decir
+    cuánto vale. El saldo sigue siendo el mismo para el centro, y al gastarla el TPV lo enseña como siempre.
+  </p>
+
+  <p>
+    El <strong>correo</strong> llega maquetado como un regalo: con el logotipo del centro, la dedicatoria en su
+    propio recuadro con letra de carta, el código bien visible en un cupón y, debajo, cómo usarla y hasta cuándo
+    vale. Si no se escribió dedicatoria, el recuadro no sale.
+  </p>
+
+  <p>
+    Al venderla se ve el código con un botón grande, <strong>Copiar código</strong>: se pulsa y el código queda en el
+    portapapeles, listo para pegarlo en un mensaje o en un correo. El botón se pone verde con un visto y dice
+    <em>Código copiado</em>, para que se vea que ha funcionado.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/74-tarjeta-regalo-codigo.png" alt="La tarjeta regalo vendida, con su código y el botón Copiar código" loading="lazy">
+    <figcaption>El código de la tarjeta recién vendida, con el botón para copiarlo.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/75-tarjeta-regalo-codigo-copiado.png" alt="El mismo botón, ya en verde y con un visto, diciendo Código copiado" loading="lazy">
+    <figcaption>Al pulsarlo se pone verde: el código ya está copiado.</figcaption>
+  </figure>
+
   <p>
     El <strong>correo al que enviar la tarjeta</strong> va aparte, y sale ya con el de quien la paga si su ficha lo
     tiene. Es lo normal: así decide ella cuándo darla, y nadie recibe el regalo antes de tiempo. Se puede cambiar
@@ -2120,8 +2244,11 @@ footer{
 
   <p>
     Para gastarla, en el TPV se elige <strong>Tarjeta regalo</strong> como forma de pago y se teclea el código;
-    debajo sale lo que le queda. Se gasta en varias veces hasta agotarla, y si no llega para toda la cuenta se
-    reparte el cobro: una parte con la tarjeta y el resto de otra forma. Una deuda también se puede saldar con ella.
+    debajo sale lo que le queda: <em>«Ahora mismo a la tarjeta regalo le quedan 100,00 € en saldo»</em>. Se gasta en
+    varias veces hasta agotarla, y si no llega para toda la cuenta se reparte el cobro: una parte con la tarjeta y el
+    resto de otra forma, con las cuentas de lo que resta hechas por el propio TPV (ver
+    <a href="#cobrar-partido">Pagar con dos formas a la vez</a>). Una deuda también se puede saldar con ella, repartida
+    o entera.
   </p>
 
   <p>
@@ -2441,6 +2568,12 @@ footer{
     guarda junto con la cita, al pulsar <em>Guardar</em>; un parámetro que se deja en blanco se entiende como «no se anotó» y no queda escrito.
     Los parámetros se piden aquí, en la cita, y no en el TPV. Si se cambian los servicios de la cita, el apartado
     se actualiza solo: aparecen las líneas del servicio nuevo y desaparecen las del que se quita.
+  </p>
+  <p>
+    <strong>Lo que se anota no se pierde al salir y volver.</strong> Los valores que ya se habían puesto, y los que se
+    han tecleado y todavía no se han guardado, siguen puestos en sus cajas al volver a la cita —por ejemplo después de
+    ir a la ficha del cliente y regresar con el <a href="#agenda-volver">icono de volver a la cita</a>—, además de
+    verse en el <em>Antes:</em> de cada parámetro. Nadie tiene que escribirlos otra vez.
   </p>
   <p>
     Si la cita no lleva ningún servicio con aparato, el apartado no aparece.
@@ -2949,13 +3082,14 @@ footer{
       ir a un día pasado, <a href="#perm-appointments-book-past">«Citar en días pasados»</a>; mover una atendida, <a href="#perm-appointments-move-closed">«Mover citas atendidas»</a>.</li>
     <li><strong>Clientes.</strong> <a href="#perm-customers-view">«Ver las fichas de clientes»</a> deja ver la ficha en solo lectura. Cambiarla es
       <a href="#perm-customers-edit">«Editar las fichas de clientes»</a>; el teléfono y el correo salen ocultos sin <a href="#perm-customers-contact-details">«Ver teléfonos y correos»</a>; las notas
-      las puede escribir quien edita, pero borrarlas es <a href="#perm-customers-notes-delete">«Borrar notas de clientes»</a>.</li>
+      se escriben con <a href="#perm-customers-notes-write">«Escribir notas de clientes»</a> y se borran con <a href="#perm-customers-notes-delete">«Borrar notas de clientes»</a>: son dos permisos distintos.</li>
     <li><strong>Informes.</strong> Abrir un informe es el permiso de ese informe, por ejemplo
       <a href="#perm-reports-payments">«Informe de cobros»</a>. Descargarlo a un fichero pide además <a href="#perm-reports-export">«Descargar informes a fichero»</a>; y el informe de clientes a
       fichero pide <a href="#perm-customers-export">«Exportar la lista de clientes»</a>, que es delicado.</li>
     <li><strong>Catálogo.</strong> <a href="#perm-services-view">«Ver los servicios»</a> enseña los servicios y sus precios;
       <a href="#perm-services-write">«Crear y editar los servicios»</a> es lo que deja cambiarlos. Con solo mirar, los botones de dar de alta, editar y retirar
-      salen apagados o no salen.</li>
+      salen apagados o no salen. Elegir servicios con los botones rápidos al dar una cita no necesita ver el catálogo: es otro permiso,
+      <a href="#perm-services-quick-pick">«Selección rápida de servicios»</a>.</li>
     <li><strong>Caja.</strong> Cobrar es <a href="#perm-checkout-charge">«Cobrar en el TPV»</a>; aplicar un descuento, <a href="#perm-checkout-discount">«Aplicar descuentos»</a>;
       dejar algo a deber, <a href="#perm-checkout-debt">«Dejar a deber»</a>; devolver un ticket, <a href="#perm-checkout-refund">«Devolver un ticket»</a>; ver lo cobrado hoy y en el mes en el Inicio,
       <a href="#perm-dashboard-cash">«Ver la caja en el Inicio»</a>. Nadie de recepción
@@ -3117,6 +3251,7 @@ footer{
     <tr id="perm-customers-edit"><td><strong>Editar las fichas de clientes</strong></td><td>Permite guardar cambios en una ficha y poner o quitar su foto. Sin este permiso la ficha se ve en solo lectura.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-clientes">Clientes</a></td></tr>
     <tr id="perm-customers-contact-details"><td><strong>Ver teléfonos y correos</strong></td><td>Muestra el teléfono, el correo y la dirección de los clientes. Sin este permiso salen ocultos y tampoco se pueden cambiar.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-clientes">Clientes</a></td></tr>
     <tr id="perm-customers-alerts"><td><strong>Escribir y retirar avisos</strong></td><td>Permite escribir y retirar los avisos que saltan al citar y al cobrar.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-clientes">Clientes</a></td></tr>
+    <tr id="perm-customers-notes-write"><td><strong>Escribir notas de clientes</strong></td><td>Permite añadir notas en la ficha. Poder editar la ficha ya no basta: escribir notas es un permiso aparte, y borrarlas, otro.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a></td></tr>
     <tr id="perm-customers-notes-delete"><td><strong>Borrar notas de clientes</strong></td><td>Permite borrar una nota de la ficha. Poder escribir notas no da derecho a borrarlas.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-clientes">Clientes</a></td></tr>
     <tr id="perm-customers-merge"><td><strong>Fusionar fichas repetidas</strong></td><td>Fusiona dos fichas repetidas en una sola. Todo lo de la ficha descartada pasa a la que se conserva, y la descartada se elimina.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-clientes">Clientes</a></td></tr>
     <tr id="perm-customers-erase"><td><strong>Borrar los datos de clientes que lo piden</strong></td><td>Derecho de supresión: borra los datos personales de la persona y anonimiza su ficha. Las facturas y la historia clínica se conservan durante el plazo que obliga la ley.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-clientes">Clientes</a></td></tr>
@@ -3142,6 +3277,8 @@ footer{
     <tr id="perm-checkout-discount"><td><strong>Aplicar descuentos</strong></td><td>Activa el campo de descuento dentro del cobro.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-checkout-debt"><td><strong>Dejar a deber</strong></td><td>Permite cerrar un cobro dejando un importe pendiente, en lugar de cobrarlo entero. Ese importe aparece luego en «Ver los cobros pendientes».</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-checkout-refund"><td><strong>Devolver un ticket</strong></td><td>Permite usar el botón de devolver líneas de un ticket ya cobrado, en dinero o como saldo a favor.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
+    <tr id="perm-dashboard-customers"><td><strong>Ver los clientes en el Inicio</strong></td><td>Muestra en el Inicio la tarjeta con los clientes dados de alta este mes y los últimos que han llegado. No abre las fichas: eso sigue en «Ver las fichas de clientes».</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a></td></tr>
+    <tr id="perm-dashboard-birthdays"><td><strong>Ver los cumpleaños en el Inicio</strong></td><td>Muestra en el Inicio la tarjeta con los cumpleaños de la semana, con el nombre y la fecha. Felicitar por WhatsApp necesita además «Ver teléfonos y correos».</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a></td></tr>
     <tr id="perm-dashboard-cash"><td><strong>Ver la caja en el Inicio</strong></td><td>Muestra en el Inicio la tarjeta con lo cobrado hoy y en el mes, por forma de pago. No abre el TPV ni el informe de caja: eso sigue en «Cobrar en el TPV» y «Totales del día».</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-debts-view"><td><strong>Ver los cobros pendientes</strong></td><td>Abre la pantalla de cobros pendientes. Saldar una deuda es un permiso aparte: «Saldar una deuda».</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-debts-settle"><td><strong>Saldar una deuda</strong></td><td>Permite usar el botón de saldar una deuda.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
@@ -3166,6 +3303,7 @@ footer{
     <tr id="perm-centre-invoicing"><td><strong>Facturación y VeriFactu</strong></td><td>Activa la facturación del centro, elige los prefijos de las series y gestiona el envío a la AEAT.</td><td><strong><a href="#roles-sensibles">Delicado</a>:</strong> solo el Administrador del sistema</td></tr>
     <tr id="perm-centre-invoicing-production"><td><strong>Pasar la facturación a producción</strong></td><td>Pasa la facturación del modo de pruebas a producción: borra las facturas de prueba y la numeración vuelve a empezar. No tiene vuelta atrás.</td><td><strong><a href="#roles-sensibles">Delicado</a>:</strong> solo el Administrador del sistema</td></tr>
     <tr id="permisos-catalogo"><th colspan="3">Catálogo</th></tr>
+    <tr id="perm-services-quick-pick"><td><strong>Selección rápida de servicios</strong></td><td>Permite elegir los servicios de una cita con los botones rápidos, sin necesitar acceso al catálogo. Enseña el nombre, el código y la duración de cada servicio, pero no el precio ni las fichas.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a></td></tr>
     <tr id="perm-services-view"><td><strong>Ver los servicios</strong></td><td>Consulta los servicios y sus precios. Es solo de consulta: para cambiarlos hace falta «Crear y editar los servicios».</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-services-write"><td><strong>Crear y editar los servicios</strong></td><td>Permite crear, editar y retirar servicios.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-packages-view"><td><strong>Ver los paquetes</strong></td><td>Consulta los paquetes de servicios y productos. Solo de lectura.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
@@ -4424,9 +4562,18 @@ footer{
       desplegable o selección múltiple. En los desplegables, las opciones se escriben una por línea.</li>
     <li>Arrastra el campo al sitio del texto donde debe salir, o pulsa <em>+</em> para ponerlo donde esté el
       cursor. Los de Turnera se colocan igual.</li>
-    <li>Al pedir la firma, recepción rellena los campos que el documento usa y la tablet enseña el texto ya
-      completo.</li>
+    <li>Elige <em>¿Quién lo rellena?</em>. Por defecto, las casillas, los desplegables y las selecciones
+      múltiples los marca <strong>quien firma, en la tablet</strong>; el texto y la fecha los escribe
+      <strong>recepción</strong> al pedir la firma. Puedes cambiarlo campo a campo.</li>
+    <li>Al pedir la firma, recepción rellena los campos que le tocan. La tablet enseña el texto con los campos
+      del cliente en blanco y, antes del recuadro de firma, un formulario con botones grandes para marcarlos.
+      «Firmar» no se activa hasta que están los obligatorios.</li>
   </ol>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/76-firma-con-casillas-y-zonas.png" alt="La tablet de firmas con casillas de sí o no y las zonas a tratar para marcar" loading="lazy">
+    <figcaption>La tablet antes de firmar: las casillas y las zonas las marca quien firma, y salen escritas en el documento.</figcaption>
+  </figure>
 
   <ul>
     <li>Los valores salen <strong>en negrita</strong> dentro del texto: una selección múltiple, separada por
