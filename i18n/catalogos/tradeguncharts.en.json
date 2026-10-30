@@ -210,5 +210,15 @@
   "tcd6fdcbf": "macOS",
   "ta1ed8a43": "Coming soon",
   "t49254a4a": "Copied!",
-  "t5aa7ff34": "Copy command"
+  "t5aa7ff34": "Copy command",
+  "t3662eaa2": "Intel and Apple Silicon Macs (M1 and later) · macOS 11 or later",
+  "t78734842": "Installs from the Terminal: the same command detects whether your Mac is Intel or Apple Silicon",
+  "t7d5403d5": "For now it is only on the beta channel, and it updates itself",
+  "t8e1fe459": "The Apple Silicon version is experimental: we have not tested it on every machine yet",
+  "t5fc8e5fe": "curl -fsSL https://descargas.tradegun.devel.es/macos/install.sh | sh -s -- beta",
+  "td9b882d5": "Footprint, an options chain and execution in a single platform for Windows, macOS and Linux, built by someone who trades with it every day. Light, fast, and made for traders and family offices who work with futures, options and hedging.",
+  "t8398ce94": "macOS · Intel and Apple Silicon",
+  "t2c00416c": "Windows 10 or 11, 64-bit, macOS 11 or later (Intel and Apple Silicon Macs; the Apple Silicon version is still experimental), or 64-bit Linux based on Ubuntu (Ubuntu, Zorin OS and other derivatives). The installer includes everything it needs and updates install themselves. The application\u0027s interface is in Spanish.",
+  "t1bd4616b": "Windows, macOS and Linux platform for professional derivatives trading: footprint charts, trading from the chart, order-flow indicators, option chain and phone alerts. With Interactive Brokers (Rithmic coming soon). Essential plan free; Pro and Desk from €19 a month, with a 14-day trial.",
+  "t1d9cea6e": "Footprint charts, an options chain and execution through Interactive Brokers, in a single platform for Windows, macOS and Linux."
 }

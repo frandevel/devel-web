@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>TradegunCharts · Footprint, opciones y ejecución para futuros</title>
-<meta name="description" content="Plataforma para Windows y Linux de operativa profesional en derivados: gráficos footprint, operativa en el gráfico, indicadores de flujo de órdenes, cadena de opciones y avisos al móvil. Con Interactive Brokers (Rithmic, próximamente). Plan Essential gratis; Pro y Desk desde 19 € al mes, con 14 días de prueba.">
+<meta name="description" content="Plataforma para Windows, macOS y Linux de operativa profesional en derivados: gráficos footprint, operativa en el gráfico, indicadores de flujo de órdenes, cadena de opciones y avisos al móvil. Con Interactive Brokers (Rithmic, próximamente). Plan Essential gratis; Pro y Desk desde 19 € al mes, con 14 días de prueba.">
 <link rel="canonical" href="https://devel.es/tradeguncharts">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DEVEL">
 <meta property="og:title" content="TradegunCharts · Footprint, opciones y ejecución para futuros">
-<meta property="og:description" content="Gráficos footprint, cadena de opciones y ejecución con Interactive Brokers, en una sola plataforma para Windows y Linux.">
+<meta property="og:description" content="Gráficos footprint, cadena de opciones y ejecución con Interactive Brokers, en una sola plataforma para Windows, macOS y Linux.">
 <meta property="og:url" content="https://devel.es/tradeguncharts">
 <meta property="og:locale" content="es_ES">
 <meta property="og:image" content="https://devel.es/devel-og.png">
@@ -19,7 +19,7 @@
 <meta property="og:image:alt" content="TradegunCharts: gráficos footprint y opciones">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="TradegunCharts · Footprint, opciones y ejecución para futuros">
-<meta name="twitter:description" content="Gráficos footprint, cadena de opciones y ejecución con Interactive Brokers, en una sola plataforma para Windows y Linux.">
+<meta name="twitter:description" content="Gráficos footprint, cadena de opciones y ejecución con Interactive Brokers, en una sola plataforma para Windows, macOS y Linux.">
 <meta name="twitter:image" content="https://devel.es/devel-og.png">
 <link rel="icon" href="/devel-isotipo.png" type="image/png">
 <style>*{box-sizing:border-box}html,body{margin:0}img{max-width:100%}.product__logo--grande{width:min(100%,230px);display:block}
@@ -422,7 +422,7 @@ footer{
 .comando__copiar svg{width:1rem;height:1rem}
 .comando__ok{display:none}
 .comando__copiar.copiado .comando__ok{display:inline;color:var(--accent-lift)}
-#descargar:not(.linux) .solo-linux,#descargar.linux .solo-windows{display:none}
+#descargar:not(.linux) .solo-linux,#descargar:not(.macos) .solo-macos,#descargar.linux .solo-windows,#descargar.macos .solo-windows{display:none}
 .plan--destacado .specs li::before{background:var(--accent)}
 .precios__pie{list-style:none;padding:0;margin:2rem 0 0;display:flex;flex-direction:column;gap:.35rem;font-size:.9rem;color:var(--text-dim)}
 #precios .actions{margin-top:1.8rem}
@@ -482,14 +482,15 @@ footer{
       <div>
         <h1 class="eyebrow">TradegunCharts · Operativa profesional en el mercado de derivados</h1>
         <p class="hero__lema">Lee el flujo de órdenes.<br><em>Opera desde el gráfico.</em></p>
-        <p class="lede">Footprint, cadena de opciones y ejecución en una sola plataforma para Windows y Linux, hecha por quien opera con ella cada día. Ligera, rápida y pensada para traders y family offices que trabajan con futuros, opciones y coberturas.</p>
+        <p class="lede">Footprint, cadena de opciones y ejecución en una sola plataforma para Windows, macOS y Linux, hecha por quien opera con ella cada día. Ligera, rápida y pensada para traders y family offices que trabajan con futuros, opciones y coberturas.</p>
         <div class="actions">
           <a class="btn btn--solid" href="#contacto">Prueba 14 días</a>
           <a class="btn btn--ghost" href="#precios">Ver precios</a>
         </div>
         <ul class="datos">
           <li>Windows 10 y 11 · 64 bits</li>
-          <li>Linux · Ubuntu y derivadas</li>
+          <li>macOS · Intel y Apple Silicon</li>
+<li>Linux · Ubuntu y derivadas</li>
           <li>Interactive Brokers</li>
           <li>Rithmic · próximamente</li>
           <li>Actualizaciones automáticas</li>
@@ -529,7 +530,7 @@ footer{
       <div class="sistema" role="group" aria-label="Sistema operativo">
         <button type="button" class="sistema__opcion" data-sistema="windows" aria-pressed="true">Windows</button>
         <button type="button" class="sistema__opcion" data-sistema="linux" aria-pressed="false">Linux</button>
-        <button type="button" class="sistema__opcion" disabled>macOS <em>Disponible próximamente</em></button>
+        <button type="button" class="sistema__opcion" data-sistema="macos" aria-pressed="false">macOS</button>
       </div>
       <div class="descargas">
         <article class="plan solo-windows">
@@ -550,6 +551,16 @@ footer{
           </ul>
           <div class="comando"><code>sh TradegunCharts-Setup-linux-x64.run</code><button type="button" class="comando__copiar" aria-label="Copiar comando"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span class="comando__ok" role="status">¡Copiado!</span></button></div>
           <a class="btn btn--solid" href="https://descargas.tradegun.devel.es/linux/releases/TradegunCharts-Setup-linux-x64.run"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2c-2.6 0-4 2.2-4 5 0 1.2.3 2.2-.4 3.6C6.5 12.6 5 15 5 17.5c0 1.2.6 1.9 1.6 2.2.5 1.3 1.6 2.3 3 2.3h4.8c1.4 0 2.5-1 3-2.3 1-.3 1.6-1 1.6-2.2 0-2.5-1.5-4.9-2.6-6.9C16.7 9.2 17 8.2 17 7c0-2.8-1.4-5-5-5z"/><ellipse cx="12" cy="15.6" rx="3.3" ry="4.6" fill="var(--accent)"/><circle cx="10.4" cy="6.7" r=".9" fill="var(--accent)"/><circle cx="13.6" cy="6.7" r=".9" fill="var(--accent)"/><path fill="#F5A524" d="M10.5 8.3 12 9.9l1.5-1.6z"/><ellipse cx="8.8" cy="21.7" rx="2.2" ry=".9" fill="#F5A524"/><ellipse cx="15.2" cy="21.7" rx="2.2" ry=".9" fill="#F5A524"/></svg>Descargar para Linux</a>
+        </article>
+        <article class="plan solo-macos">
+          <h3 class="plan__nombre">macOS</h3>
+          <p class="plan__nota">Mac Intel y Apple Silicon (M1 y posteriores) · macOS 11 o superior</p>
+          <ul class="specs">
+            <li>Se instala desde la Terminal: el mismo comando detecta si tu Mac es Intel o Apple Silicon</li>
+            <li>Por ahora solo está en el canal beta, y se actualiza sola</li>
+            <li>La versión para Apple Silicon es experimental: todavía no la hemos probado en todos los equipos</li>
+          </ul>
+          <div class="comando"><code>curl -fsSL https://descargas.tradegun.devel.es/macos/install.sh | sh -s -- beta</code><button type="button" class="comando__copiar" aria-label="Copiar comando"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span class="comando__ok" role="status">¡Copiado!</span></button></div>
         </article>
       </div>
       <p class="descargas__nota">Siempre se descarga la versión estable. Si quieres las últimas novedades antes que nadie, puedes cambiar al canal beta desde Preferencias, pero es una versión experimental que puede tener errores con frecuencia.</p>
@@ -797,7 +808,7 @@ footer{
             </details>
             <details class="faq__item">
               <summary>¿Qué necesito para instalarla?</summary>
-              <div class="faq__respuesta"><p>Windows 10 u 11 de 64 bits, o Linux de 64 bits basado en Ubuntu (Ubuntu, Zorin OS y otras derivadas). El instalador lleva todo lo necesario y las actualizaciones se instalan solas. La aplicación está en español.</p></div>
+              <div class="faq__respuesta"><p>Windows 10 u 11 de 64 bits, macOS 11 o posterior (Mac Intel y Apple Silicon; la versión para Apple Silicon es todavía experimental), o Linux de 64 bits basado en Ubuntu (Ubuntu, Zorin OS y otras derivadas). El instalador lleva todo lo necesario y las actualizaciones se instalan solas. La aplicación está en español.</p></div>
             </details>
             <details class="faq__item">
               <summary>¿Hay soporte?</summary>
@@ -983,10 +994,12 @@ document.querySelectorAll('.periodo__opcion').forEach(function (opcion) {
   var opciones = document.querySelectorAll('.sistema__opcion');
   function elegir(sistema) {
     seccion.classList.toggle('linux', sistema === 'linux');
+    seccion.classList.toggle('macos', sistema === 'macos');
     opciones.forEach(function (opcion) { opcion.setAttribute('aria-pressed', String(opcion.dataset.sistema === sistema)); });
   }
   opciones.forEach(function (opcion) { opcion.addEventListener('click', function () { elegir(opcion.dataset.sistema); }); });
   if (/Linux/.test(navigator.userAgent) && !/Android/.test(navigator.userAgent)) elegir('linux');
+  else if (/Macintosh/.test(navigator.userAgent)) elegir('macos');
 })();
 </script>
 <script>

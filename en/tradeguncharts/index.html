@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>TradegunCharts · Footprint, options and execution for futures</title>
-<meta name="description" content="Windows and Linux platform for professional derivatives trading: footprint charts, trading from the chart, order-flow indicators, option chain and phone alerts. With Interactive Brokers (Rithmic coming soon). Essential plan free; Pro and Desk from €19 a month, with a 14-day trial.">
+<meta name="description" content="Windows, macOS and Linux platform for professional derivatives trading: footprint charts, trading from the chart, order-flow indicators, option chain and phone alerts. With Interactive Brokers (Rithmic coming soon). Essential plan free; Pro and Desk from €19 a month, with a 14-day trial.">
 <link rel="canonical" href="https://devel.es/en/tradeguncharts">
 <link rel="alternate" hreflang="es" href="https://devel.es/tradeguncharts">
 <link rel="alternate" hreflang="en" href="https://devel.es/en/tradeguncharts">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DEVEL">
 <meta property="og:title" content="TradegunCharts · Footprint, options and execution for futures">
-<meta property="og:description" content="Footprint charts, an options chain and execution through Interactive Brokers, in a single platform for Windows and Linux.">
+<meta property="og:description" content="Footprint charts, an options chain and execution through Interactive Brokers, in a single platform for Windows, macOS and Linux.">
 <meta property="og:url" content="https://devel.es/en/tradeguncharts">
 <meta property="og:locale" content="en_GB">
 <meta property="og:image" content="https://devel.es/devel-og.png">
@@ -21,7 +21,7 @@
 <meta property="og:image:alt" content="TradegunCharts: footprint charts and options">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="TradegunCharts · Footprint, options and execution for futures">
-<meta name="twitter:description" content="Footprint charts, an options chain and execution through Interactive Brokers, in a single platform for Windows and Linux.">
+<meta name="twitter:description" content="Footprint charts, an options chain and execution through Interactive Brokers, in a single platform for Windows, macOS and Linux.">
 <meta name="twitter:image" content="https://devel.es/devel-og.png">
 <link rel="icon" href="/devel-isotipo.png" type="image/png">
 <style>*{box-sizing:border-box}html,body{margin:0}img{max-width:100%}.product__logo--grande{width:min(100%,230px);display:block}
@@ -424,7 +424,7 @@ footer{
 .comando__copiar svg{width:1rem;height:1rem}
 .comando__ok{display:none}
 .comando__copiar.copiado .comando__ok{display:inline;color:var(--accent-lift)}
-#descargar:not(.linux) .solo-linux,#descargar.linux .solo-windows{display:none}
+#descargar:not(.linux) .solo-linux,#descargar:not(.macos) .solo-macos,#descargar.linux .solo-windows,#descargar.macos .solo-windows{display:none}
 .plan--destacado .specs li::before{background:var(--accent)}
 .precios__pie{list-style:none;padding:0;margin:2rem 0 0;display:flex;flex-direction:column;gap:.35rem;font-size:.9rem;color:var(--text-dim)}
 #precios .actions{margin-top:1.8rem}
@@ -467,7 +467,7 @@ footer{
       "@id": "https://devel.es/en/tradeguncharts#pagina",
       "url": "https://devel.es/en/tradeguncharts",
       "name": "TradegunCharts · Footprint, options and execution for futures",
-      "description": "Windows and Linux platform for professional derivatives trading: footprint charts, trading from the chart, order-flow indicators, option chain and phone alerts. With Interactive Brokers (Rithmic coming soon). Essential plan free; Pro and Desk from €19 a month, with a 14-day trial.",
+      "description": "Windows, macOS and Linux platform for professional derivatives trading: footprint charts, trading from the chart, order-flow indicators, option chain and phone alerts. With Interactive Brokers (Rithmic coming soon). Essential plan free; Pro and Desk from €19 a month, with a 14-day trial.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://devel.es/#web"
@@ -529,7 +529,7 @@ footer{
           "name": "What do I need to install it?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Windows 10 or 11, 64-bit, or 64-bit Linux based on Ubuntu (Ubuntu, Zorin OS and other derivatives). The installer includes everything it needs and updates install themselves. The application's interface is in Spanish."
+            "text": "Windows 10 or 11, 64-bit, macOS 11 or later (Intel and Apple Silicon Macs; the Apple Silicon version is still experimental), or 64-bit Linux based on Ubuntu (Ubuntu, Zorin OS and other derivatives). The installer includes everything it needs and updates install themselves. The application's interface is in Spanish."
           }
         },
         {
@@ -589,14 +589,15 @@ footer{
       <div>
         <h1 class="eyebrow">TradegunCharts · Professional trading in the derivatives market</h1>
         <p class="hero__lema">Read the order flow.<br><em>Trade from the chart.</em></p>
-        <p class="lede">Footprint, an options chain and execution in a single platform for Windows and Linux, built by someone who trades with it every day. Light, fast, and made for traders and family offices who work with futures, options and hedging.</p>
+        <p class="lede">Footprint, an options chain and execution in a single platform for Windows, macOS and Linux, built by someone who trades with it every day. Light, fast, and made for traders and family offices who work with futures, options and hedging.</p>
         <div class="actions">
           <a class="btn btn--solid" href="#contacto">Try it for 14 days</a>
           <a class="btn btn--ghost" href="#precios">See pricing</a>
         </div>
         <ul class="datos">
           <li>Windows 10 and 11 · 64-bit</li>
-          <li>Linux · Ubuntu and derivatives</li>
+          <li>macOS · Intel and Apple Silicon</li>
+<li>Linux · Ubuntu and derivatives</li>
           <li>Interactive Brokers</li>
           <li>Rithmic · coming soon</li>
           <li>Automatic updates</li>
@@ -636,7 +637,7 @@ footer{
       <div class="sistema" role="group" aria-label="Operating system">
         <button type="button" class="sistema__opcion" data-sistema="windows" aria-pressed="true">Windows</button>
         <button type="button" class="sistema__opcion" data-sistema="linux" aria-pressed="false">Linux</button>
-        <button type="button" class="sistema__opcion" disabled="">macOS <em>Coming soon</em></button>
+        <button type="button" class="sistema__opcion" data-sistema="macos" aria-pressed="false">macOS</button>
       </div>
       <div class="descargas">
         <article class="plan solo-windows">
@@ -657,6 +658,16 @@ footer{
           </ul>
           <div class="comando"><code>sh TradegunCharts-Setup-linux-x64.run</code><button type="button" class="comando__copiar" aria-label="Copy command"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V6a2 2 0 0 1 2-2h9"></path></svg><span class="comando__ok" role="status">Copied!</span></button></div>
           <a class="btn btn--solid" href="https://descargas.tradegun.devel.es/linux/releases/TradegunCharts-Setup-linux-x64.run"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2c-2.6 0-4 2.2-4 5 0 1.2.3 2.2-.4 3.6C6.5 12.6 5 15 5 17.5c0 1.2.6 1.9 1.6 2.2.5 1.3 1.6 2.3 3 2.3h4.8c1.4 0 2.5-1 3-2.3 1-.3 1.6-1 1.6-2.2 0-2.5-1.5-4.9-2.6-6.9C16.7 9.2 17 8.2 17 7c0-2.8-1.4-5-5-5z"></path><ellipse cx="12" cy="15.6" rx="3.3" ry="4.6" fill="var(--accent)"></ellipse><circle cx="10.4" cy="6.7" r=".9" fill="var(--accent)"></circle><circle cx="13.6" cy="6.7" r=".9" fill="var(--accent)"></circle><path fill="#F5A524" d="M10.5 8.3 12 9.9l1.5-1.6z"></path><ellipse cx="8.8" cy="21.7" rx="2.2" ry=".9" fill="#F5A524"></ellipse><ellipse cx="15.2" cy="21.7" rx="2.2" ry=".9" fill="#F5A524"></ellipse></svg>Download for Linux</a>
+        </article>
+        <article class="plan solo-macos">
+          <h3 class="plan__nombre">macOS</h3>
+          <p class="plan__nota">Intel and Apple Silicon Macs (M1 and later) · macOS 11 or later</p>
+          <ul class="specs">
+            <li>Installs from the Terminal: the same command detects whether your Mac is Intel or Apple Silicon</li>
+            <li>For now it is only on the beta channel, and it updates itself</li>
+            <li>The Apple Silicon version is experimental: we have not tested it on every machine yet</li>
+          </ul>
+          <div class="comando"><code>curl -fsSL https://descargas.tradegun.devel.es/macos/install.sh | sh -s -- beta</code><button type="button" class="comando__copiar" aria-label="Copy command"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V6a2 2 0 0 1 2-2h9"></path></svg><span class="comando__ok" role="status">Copied!</span></button></div>
         </article>
       </div>
       <p class="descargas__nota">You always download the stable version. If you want the latest features before anyone else, you can switch to the beta channel in Preferences, but it is an experimental version that may often have errors.</p>
@@ -904,7 +915,7 @@ footer{
             </details>
             <details class="faq__item">
               <summary>What do I need to install it?</summary>
-              <div class="faq__respuesta"><p>Windows 10 or 11, 64-bit, or 64-bit Linux based on Ubuntu (Ubuntu, Zorin OS and other derivatives). The installer includes everything it needs and updates install themselves. The application's interface is in Spanish.</p></div>
+              <div class="faq__respuesta"><p>Windows 10 or 11, 64-bit, macOS 11 or later (Intel and Apple Silicon Macs; the Apple Silicon version is still experimental), or 64-bit Linux based on Ubuntu (Ubuntu, Zorin OS and other derivatives). The installer includes everything it needs and updates install themselves. The application's interface is in Spanish.</p></div>
             </details>
             <details class="faq__item">
               <summary>Is there support?</summary>
@@ -1090,10 +1101,12 @@ document.querySelectorAll('.periodo__opcion').forEach(function (opcion) {
   var opciones = document.querySelectorAll('.sistema__opcion');
   function elegir(sistema) {
     seccion.classList.toggle('linux', sistema === 'linux');
+    seccion.classList.toggle('macos', sistema === 'macos');
     opciones.forEach(function (opcion) { opcion.setAttribute('aria-pressed', String(opcion.dataset.sistema === sistema)); });
   }
   opciones.forEach(function (opcion) { opcion.addEventListener('click', function () { elegir(opcion.dataset.sistema); }); });
   if (/Linux/.test(navigator.userAgent) && !/Android/.test(navigator.userAgent)) elegir('linux');
+  else if (/Macintosh/.test(navigator.userAgent)) elegir('macos');
 })();
 </script>
 <script>
