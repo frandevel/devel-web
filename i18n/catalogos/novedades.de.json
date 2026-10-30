@@ -42,7 +42,7 @@
   "t8d5e27c4": "Behobene Fehler",
   "t75ada48c": "Neueste Version",
   "tc7c836dd": "Version",
-  "t6d808fa7": "1.11.0-0c5042c",
+  "t6d808fa7": "1.11.0-PENDIENTE",
   "td5e86d95": "Jeder Benutzer wählt seine Startseite",
   "t4e6c3fd1": "Die Schaltfläche",
   "t3e325fd7": "oben rechts auf der Startseite öffnet die Liste der Karten, die diese Person sehen darf, und erlaubt es,",
@@ -1102,5 +1102,15 @@
   "tfe78b9ca": "Neues in Turnera, Version für Version.",
   "ta950f224": "Turnera: Kalender, Akte und Kasse auf demselben Bildschirm",
   "t58805743": "DEVEL-Logo",
-  "t8b58fbed": "Arten von Änderungen"
+  "t8b58fbed": "Arten von Änderungen",
+  "t5e6b201e": "In Raten zahlen, mit Nachverfolgung",
+  "t47dbbdd1": "Eine Schuld lässt sich in monatlichen Raten ohne Zinsen stunden, an der Kasse oder über",
+  "tf6fb1d82": ". Bei einer Anzahlung wird diese zuerst kassiert und der Plan deckt den Rest. Jede Zahlung geht auf die älteste Rate; zahlt der Kunde im Voraus, verkürzt sich der Plan am Ende.",
+  "te2b8e2fb": "Die Seite",
+  "t1df95089": "zeigt, wer im Plan ist, wem bald eine Rate fällig wird und wer im Rückstand ist, und die Karte",
+  "t90c10bc0": "fasst es auf der Startseite zusammen. Es ist eine Option des Zentrums,",
+  "tb2d117e6": "Ratenzahlungen",
+  "td7dc551d": "Überfällige Raten",
+  "t6270a7e8": "werkseitig ausgeschaltet",
+  "t55ae20bf": ": Sie wird in den Einstellungen eingeschaltet, und die Berechtigungen zum Ansehen und Verwalten der Pläne haben Leitung und Kasse."
 }

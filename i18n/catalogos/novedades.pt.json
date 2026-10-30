@@ -42,7 +42,7 @@
   "t8d5e27c4": "Erros corrigidos",
   "t75ada48c": "Última versão",
   "tc7c836dd": "Versão",
-  "t6d808fa7": "1.11.0-0c5042c",
+  "t6d808fa7": "1.11.0-PENDIENTE",
   "td5e86d95": "Cada utilizador escolhe o seu Início",
   "t4e6c3fd1": "O botão",
   "t3e325fd7": ", em cima à direita do Início, abre a lista de cartões que essa pessoa pode ver e permite",
@@ -1102,5 +1102,15 @@
   "tfe78b9ca": "As novidades do Turnera, versão a versão.",
   "ta950f224": "Turnera: a agenda, a ficha e a caixa no mesmo ecrã",
   "t58805743": "Logótipo da DEVEL",
-  "t8b58fbed": "Tipos de câmbio"
+  "t8b58fbed": "Tipos de câmbio",
+  "t5e6b201e": "Pagar em prestações, com acompanhamento",
+  "t47dbbdd1": "Uma dívida pode ser adiada em prestações mensais sem juros, a partir do TPV ou de",
+  "tf6fb1d82": ". Com uma entrada, esta cobra-se primeiro e o plano cobre o resto. Cada pagamento vai para a prestação mais antiga; se o cliente adiantar dinheiro, o plano encurta pelo fim.",
+  "te2b8e2fb": "O ecrã",
+  "t1df95089": "mostra quem está em dia, a quem vai vencer em breve e quem se atrasou, e o cartão",
+  "t90c10bc0": "resume-o no Início. É uma opção do centro,",
+  "tb2d117e6": "Pagamentos em prestações",
+  "td7dc551d": "Prestações vencidas",
+  "t6270a7e8": "desligada de origem",
+  "t55ae20bf": ": liga-se nas Preferências, e as permissões de ver e de gerir os planos são da Direção e da Caixa."
 }

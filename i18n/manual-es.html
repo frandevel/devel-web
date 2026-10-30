@@ -657,6 +657,7 @@ footer{
     <li><a href="#cobrar-partido" class="sub">Pagar con dos formas</a></li>
     <li><a href="#cobrar-parcial" class="sub">Cobrar solo una parte</a></li>
     <li><a href="#cobrar-deudas" class="sub">Cobros pendientes</a></li>
+    <li><a href="#cobrar-plazos" class="sub">Pagar en plazos</a></li>
     <li><a href="#devoluciones" class="sub">Devolver un ticket</a></li>
     <li><a href="#tarjetas-regalo" class="sub">Tarjetas regalo</a></li>
     <li><a href="#facturas" class="sub">Facturas y VeriFactu</a></li>
@@ -2126,6 +2127,87 @@ footer{
     <figcaption>Cobrar una deuda repartida: el mismo reparto y las mismas cifras que en el TPV.</figcaption>
   </figure>
 
+  <h3 id="cobrar-plazos">Pagar en plazos</h3>
+  <span class="ruta">Menú → Plazos de pago</span>
+
+  <p>
+    Cuando un cliente no puede pagar de una vez, la deuda se puede aplazar en cuotas mensuales, <strong>sin
+    intereses</strong>, y seguir desde una pantalla si cada cuota se cobra a su tiempo. Es una opción del centro y
+    <strong>viene apagada</strong>: si su centro no financia nada, déjela así y no verá nada de esto. Se enciende en
+    <span class="ruta">Administración → Preferencias</span>, grupo <em>Facturación</em>, con la casilla
+    <strong>«Permitir pagos en plazos»</strong> (hace falta poder cambiar las preferencias del centro).
+  </p>
+
+  <p>
+    <strong>Crear el plan.</strong> Hay dos sitios. En el TPV, al dejar una venta a deber, aparece
+    <em>Pagar el resto en plazos</em>; en <em>Cobros pendientes</em>, cada deuda tiene el botón
+    <em>Pagar en plazos</em>. Se indica en cuántas cuotas (hasta 60) y la fecha de la primera, y Turnera las reparte
+    a partes iguales, con la última absorbiendo los céntimos que sobren. Las fechas se pueden cambiar una a una.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/81-plazos-venta-tpv.png" alt="El diálogo de una venta dejada a deber con el botón de pagar el resto en plazos" loading="lazy">
+    <figcaption>Al dejar una venta a deber en el TPV, se puede pagar el resto en plazos.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/82-plazos-crear-plan.png" alt="El diálogo para crear el plan con el número de cuotas, la primera fecha y el importe de cada cuota" loading="lazy">
+    <figcaption>El número de cuotas y la fecha de la primera; las cuotas salen calculadas y sus fechas se pueden cambiar.</figcaption>
+  </figure>
+
+  <p>
+    <strong>Una parte ahora y el resto en plazos.</strong> Si el cliente deja una entrada, se cobra primero como un
+    <a href="#cobrar-parcial">cobro parcial</a> o un abono, y el plan cubre solo lo que queda. Una cuenta que ya tiene
+    abonos también admite plan: se aplaza únicamente el resto.
+  </p>
+
+  <p>
+    <strong>Cobrar las cuotas.</strong> Se cobran desde <em>Cobros pendientes</em>, como cualquier abono. La deuda
+    sale con su estado (<em>Al día</em>, <em>Próxima cuota</em> o <em>Vencido</em>) y el enlace <em>Ver plan</em>.
+    Lo que se cobra se aplica a la <strong>cuota más antigua que falte</strong>. Si el cliente paga más de lo que pide
+    esa cuota, el sobrante <strong>adelanta las últimas</strong>: el plan se acorta por el final y las cuotas
+    siguientes no cambian de importe. Si se cobra todo lo pendiente de golpe, el plan queda completado.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/83-plazos-cobros-pendientes.png" alt="La lista de Cobros pendientes con una deuda que lleva su plan de pago" loading="lazy">
+    <figcaption>Una deuda con plan lleva su estado y el enlace para ver las cuotas.</figcaption>
+  </figure>
+
+  <p>
+    <strong>La pantalla Plazos de pago</strong> reúne todos los planes. Se filtra por estado (en marcha, vencidos,
+    próximos a vencer, al día, completados o cancelados) y por cliente. Al abrir un plan se ven sus cuotas: cuánto se
+    ha cobrado de cada una, si está <em>cobrada</em>, <em>amortizada</em> (adelantada con un pago mayor),
+    <em>próxima</em>, <em>vencida</em> o <em>pendiente</em>, y cuántos días se retrasó el pago.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/84-plazos-lista.png" alt="La pantalla de Plazos de pago con la lista de planes y su estado" loading="lazy">
+    <figcaption>Todos los planes, con quién va al día y quién se ha retrasado.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/85-plazos-detalle.png" alt="El detalle de un plan con sus cuotas, importes cobrados y estado de cada una" loading="lazy">
+    <figcaption>El detalle de un plan: cada cuota con lo cobrado, su estado y el retraso.</figcaption>
+  </figure>
+
+  <p>
+    Desde el detalle se puede <strong>cambiar la fecha de una cuota</strong> (tiene que quedar entre la anterior y la
+    siguiente) y <strong>cancelar el plan</strong>: la deuda sigue pendiente con lo ya cobrado y se puede volver a
+    aplazar. El importe de las cuotas no se edita una vez creado el plan. Turnera no avisa al cliente ni bloquea nada
+    cuando una cuota vence: solo lo muestra, para que el centro decida qué hacer.
+  </p>
+
+  <p>
+    <strong>En el Inicio</strong> hay una tarjeta, <em>Plazos vencidos</em>, con las cuotas que han pasado su fecha sin
+    cobrarse. Se añade desde <em>Personalizar</em>, como las demás.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/86-plazos-inicio.png" alt="La tarjeta de Plazos vencidos en el Inicio" loading="lazy">
+    <figcaption>La tarjeta de Plazos vencidos, para ver de un vistazo quién se ha retrasado.</figcaption>
+  </figure>
+
+  <p>
+    <strong>Quién puede.</strong> Hay dos permisos, ambos de fábrica solo para <em>Dirección</em> y <em>Caja</em>:
+    <strong>Ver los planes de pago</strong> (la pantalla, el seguimiento y la tarjeta del Inicio) y
+    <strong>Gestionar los planes de pago</strong> (crear planes, cambiar fechas y cancelar). Si apaga la opción con
+    planes en marcha, esos planes se conservan y se siguen viendo hasta que terminen; solo deja de poder crear nuevos.
+  </p>
   <h3 id="devoluciones">Devolver un ticket</h3>
   <span class="ruta">Ficha del cliente → Historial → Devolver</span>
 

@@ -709,6 +709,7 @@ footer{
     <li><a href="#cobrar-partido" class="sub">Mit zwei Zahlungsarten bezahlen</a></li>
     <li><a href="#cobrar-parcial" class="sub">Nur einen Teil kassieren</a></li>
     <li><a href="#cobrar-deudas" class="sub">Offene Zahlungen</a></li>
+    <li><a href="#cobrar-plazos" class="sub">In Raten zahlen</a></li>
     <li><a href="#devoluciones" class="sub">Einen Beleg erstatten</a></li>
     <li><a href="#tarjetas-regalo" class="sub">Geschenkkarten</a></li>
     <li><a href="#facturas" class="sub">Rechnungen und VeriFactu</a></li>
@@ -1806,6 +1807,73 @@ footer{
     <figcaption>Eine aufgeteilte Schuld kassieren: dieselbe Aufteilung und dieselben Zahlen wie in der Kasse.</figcaption>
   </figure>
 
+  <h3 id="cobrar-plazos">In Raten zahlen</h3>
+  <span class="ruta">Menü → Ratenzahlungen</span>
+
+  <p>
+    Wenn ein Kunde nicht auf einmal zahlen kann, lässt sich die Schuld in monatlichen Raten stunden, <strong>ohne Zinsen</strong>, und auf einer Seite lässt sich verfolgen, ob jede Rate rechtzeitig bezahlt wird. Es ist eine Option des Zentrums und
+    <strong>ist anfangs ausgeschaltet</strong>: Wenn Ihr Zentrum nichts in Raten anbietet, lassen Sie es so, und Sie sehen nichts davon. Eingeschaltet wird sie in
+    <span class="ruta">Verwaltung → Einstellungen</span>, Gruppe <em>Rechnungsstellung</em>, mit dem Kästchen
+    <strong>„Ratenzahlungen erlauben“</strong> (dafür muss man die Einstellungen des Zentrums ändern dürfen).
+  </p>
+
+  <p>
+    <strong>Den Plan anlegen.</strong> Es gibt zwei Stellen. An der Kasse erscheint, wenn ein Verkauf offen bleibt,
+    <em>Rest in Raten zahlen</em>; unter <em>Offene Zahlungen</em>, hat jede Schuld die Schaltfläche
+    <em>In Raten zahlen</em>. Man gibt an, in wie viele Raten (bis zu 60) und das Datum der ersten, und Turnera verteilt sie zu gleichen Teilen, wobei die letzte die übrigen Cent aufnimmt. Die Daten lassen sich einzeln ändern.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/81-plazos-venta-tpv.png" alt="Der Dialog eines offen gelassenen Verkaufs mit der Schaltfläche, den Rest in Raten zu zahlen" loading="lazy">
+    <figcaption>Bleibt ein Verkauf an der Kasse offen, lässt sich der Rest in Raten zahlen.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/82-plazos-crear-plan.png" alt="Der Dialog zum Anlegen des Plans mit Anzahl der Raten, erstem Datum und Betrag jeder Rate" loading="lazy">
+    <figcaption>Anzahl der Raten und Datum der ersten; die Raten werden berechnet, und ihre Daten lassen sich ändern.</figcaption>
+  </figure>
+
+  <p>
+    <strong>Ein Teil jetzt, der Rest in Raten.</strong> Hinterlegt der Kunde eine Anzahlung, wird sie zuerst als
+    <a href="#cobrar-parcial">Teilkassierung</a> oder Teilzahlung erfasst, und der Plan deckt nur den Rest. Auch ein Konto mit Teilzahlungen kann einen Plan bekommen: Nur der Rest wird gestundet.
+  </p>
+
+  <p>
+    <strong>Die Raten kassieren.</strong> Sie werden kassiert unter <em>Offene Zahlungen</em>, wie jede Teilzahlung. Die Schuld zeigt ihren Status (<em>Im Plan</em>, <em>Bald fällig</em> oder <em>Überfällig</em>) und den Link <em>Plan ansehen</em>. Was kassiert wird, geht auf die <strong>älteste noch offene Rate</strong>. Zahlt der Kunde mehr, als diese Rate verlangt, tilgt der Überschuss <strong>die letzten Raten vorzeitig</strong>: Der Plan verkürzt sich am Ende, und die folgenden Raten ändern ihren Betrag nicht. Wird alles Offene auf einmal kassiert, ist der Plan abgeschlossen.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/83-plazos-cobros-pendientes.png" alt="Die Liste der offenen Zahlungen mit einer Schuld, die einen Zahlungsplan hat" loading="lazy">
+    <figcaption>Eine Schuld mit Plan zeigt ihren Status und den Link zu den Raten.</figcaption>
+  </figure>
+
+  <p>
+    <strong>Die Seite Ratenzahlungen</strong> führt alle Pläne zusammen. Man filtert nach Status (laufend, überfällig, bald fällig, im Plan, abgeschlossen oder storniert) und nach Kunde. Öffnet man einen Plan, sieht man seine Raten: wie viel von jeder kassiert wurde und welchen Status sie hat: <em>bezahlt</em>, <em>vorzeitig getilgt</em> (durch eine höhere Zahlung vorgezogen),
+    <em>nächste</em>, <em>überfällig</em> oder <em>offen</em>, dazu die Tage Verspätung der Zahlung.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/84-plazos-lista.png" alt="Die Seite Ratenzahlungen mit der Liste der Pläne und ihrem Status" loading="lazy">
+    <figcaption>Alle Pläne – wer im Plan ist und wer im Rückstand.</figcaption>
+  </figure>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/85-plazos-detalle.png" alt="Die Details eines Plans mit Raten, kassierten Beträgen und Status jeder Rate" loading="lazy">
+    <figcaption>Details eines Plans: jede Rate mit dem Kassierten, ihrem Status und der Verspätung.</figcaption>
+  </figure>
+
+  <p>
+    In den Details kann man <strong>das Datum einer Rate ändern</strong> (es muss zwischen der vorherigen und der nächsten liegen) und <strong>den Plan stornieren</strong>: Die Schuld bleibt mit dem bereits Kassierten offen und kann erneut gestundet werden. Der Betrag der Raten lässt sich nach dem Anlegen des Plans nicht mehr ändern. Turnera benachrichtigt den Kunden nicht und sperrt nichts, wenn eine Rate fällig wird: Es zeigt es nur an, damit das Zentrum entscheidet, was zu tun ist.
+  </p>
+
+  <p>
+    <strong>Auf der Startseite</strong> gibt es eine Karte, <em>Überfällige Raten</em>, mit den Raten, deren Datum verstrichen ist, ohne kassiert worden zu sein. Hinzugefügt wird sie über <em>Anpassen</em>, wie die anderen.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/en/86-plazos-inicio.png" alt="Die Karte Überfällige Raten auf der Startseite" loading="lazy">
+    <figcaption>Die Karte Überfällige Raten, um auf einen Blick zu sehen, wer im Rückstand ist.</figcaption>
+  </figure>
+
+  <p>
+    <strong>Wer darf.</strong> Es gibt zwei Berechtigungen, werkseitig nur für <em>Leitung</em> und <em>Kasse</em>:
+    <strong>Zahlungspläne ansehen</strong> (die Seite, die Nachverfolgung und die Karte der Startseite) und
+    <strong>Zahlungspläne verwalten</strong> (Pläne anlegen, Daten ändern und stornieren). Schaltet man die Option bei laufenden Plänen aus, bleiben diese Pläne erhalten und sind weiter sichtbar, bis sie enden; man kann nur keine neuen mehr anlegen.
+  </p>
   <h3 id="devoluciones">Einen Beleg erstatten</h3>
   <span class="ruta">Kundenkarte → Verlauf → Erstatten</span>
 

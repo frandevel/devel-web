@@ -42,7 +42,7 @@
   "t8d5e27c4": "Bugs fixed",
   "t75ada48c": "Latest release",
   "tc7c836dd": "Version",
-  "t6d808fa7": "1.11.0-0c5042c",
+  "t6d808fa7": "1.11.0-PENDIENTE",
   "td5e86d95": "Each user chooses their own Home screen",
   "t4e6c3fd1": "The",
   "t3e325fd7": ", at the top right of the Home screen, opens the list of cards that person may see and lets you",
@@ -1102,5 +1102,15 @@
   "tfe78b9ca": "What's new in Turnera, release by release.",
   "ta950f224": "Turnera: the diary, the record and the till on the same screen",
   "t58805743": "DEVEL logo",
-  "t8b58fbed": "Types of change"
+  "t8b58fbed": "Types of change",
+  "t5e6b201e": "Paying in instalments, with follow-up",
+  "t47dbbdd1": "A debt can be deferred in monthly instalments with no interest, from the till or from",
+  "tf6fb1d82": ". With a down payment, that is collected first and the plan covers the rest. Each payment goes to the oldest instalment; if the customer pays ahead, the plan is shortened from the end.",
+  "te2b8e2fb": "The",
+  "t1df95089": "screen shows who is up to date, who is due soon and who has fallen behind, and the",
+  "t90c10bc0": "card summarises it on the Home screen. It is a centre option,",
+  "tb2d117e6": "Payment plans",
+  "td7dc551d": "Overdue instalments",
+  "t6270a7e8": "switched off by default",
+  "t55ae20bf": ": it is switched on in Preferences, and the permissions to view and to manage the plans belong to Management and Till."
 }
