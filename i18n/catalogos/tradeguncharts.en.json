@@ -220,5 +220,7 @@
   "t8398ce94": "macOS · Intel and Apple Silicon",
   "t2c00416c": "Windows 10 or 11, 64-bit, macOS 11 or later (Intel and Apple Silicon Macs; the Apple Silicon version is still experimental), or 64-bit Linux based on Ubuntu (Ubuntu, Zorin OS and other derivatives). The installer includes everything it needs and updates install themselves. The application\u0027s interface is in Spanish.",
   "t1bd4616b": "Windows, macOS and Linux platform for professional derivatives trading: footprint charts, trading from the chart, order-flow indicators, option chain and phone alerts. With Interactive Brokers (Rithmic coming soon). Essential plan free; Pro and Desk from €19 a month, with a 14-day trial.",
-  "t1d9cea6e": "Footprint charts, an options chain and execution through Interactive Brokers, in a single platform for Windows, macOS and Linux."
+  "t1d9cea6e": "Footprint charts, an options chain and execution through Interactive Brokers, in a single platform for Windows, macOS and Linux.",
+  "t3db66e77": "It updates itself, as on Windows and Linux",
+  "t06f75dcc": "curl -fsSL https://descargas.tradegun.devel.es/macos/install.sh | sh"
 }
