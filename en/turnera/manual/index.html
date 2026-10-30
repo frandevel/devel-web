@@ -666,7 +666,7 @@ footer{
 <main id="top" class="shell manual">
 <nav class="indice">
   <h2>The Turnera manual</h2>
-  <p>Updated on 18 October 2026</p>
+  <p>Updated on 30 October 2026</p>
   <div class="buscador" role="search">
     <input type="search" id="buscador-texto" placeholder="Search the manual" aria-label="Search the manual" autocomplete="off">
     <div class="buscador__estado">
@@ -1027,6 +1027,9 @@ footer{
   <p>
     Below are the <strong>birthdays of the week</strong>, with the day and the age each customer turns. Today's is highlighted, and the row also leads to the record, in case you want to wish them happy birthday or give them a present.
   </p>
+  <p>
+    The <strong>customers with pending vouchers</strong> card tells you how many customers still have voucher sessions to use and shows the ten most urgent: first whoever has a voucher about to expire, with the sessions left and the date. It is the list to call before those sessions are lost, and each row opens the customer's record. It is shown to whoever can see vouchers or customers.
+  </p>
 
   <p>
     In a centre that manages its <strong>staff</strong> (the work calendar and attendance control), the home screen adds cards for it:
@@ -1039,6 +1042,14 @@ footer{
   </ul>
   <p>
     Whoever can look up the clock-ins sees the attendance and hours cards; whoever can see the work calendars sees the holidays and absences card. If nobody has been scheduled yet and nobody has clocked in, they do not appear.
+  </p>
+
+  <h4 id="inicio-personalizar">Customising the Home screen</h4>
+  <p>
+    Not everyone wants to see the same thing when they log in: at the front desk the till is in the way and there is no room for pending payments. The <strong>Customise</strong>button, at the top right, opens the list of cards that person may see and lets you <strong>switch off the ones you do not want and order them with the arrows</strong>, one row up or down at a time. Nothing has to be dragged. The choice is saved for that user, on any computer they log in from, and <em>Reset</em> goes back to the usual Home screen.
+  </p>
+  <p>
+    What decides which cards are offered is <strong>permissions</strong>: here you cannot switch on a card the role does not let you see, and if the role later loses a permission, its card disappears by itself. The other way round too: whoever has never customised the Home screen sees, without touching anything, every new card their permissions give them. The till of the day has its own permission, <a href="#perm-dashboard-cash">“See the till on the Home screen”</a>, separate from charging at the till, so it can be taken away from a role without stopping them from charging.
   </p>
 </section>
 
@@ -2342,7 +2353,7 @@ footer{
 
   <p>
     A <strong>role</strong> is a job: reception, professional, management. Each role carries inside it the
-    <strong>permissions</strong> that the job needs, and a person is given roles, not loose permissions. That way, the day somebody new starts, nobody has to remember twenty tick boxes: you give them their role and that is that.
+    <strong>permissions</strong> that the job needs, and a person is given roles, not loose permissions. That way, the day someone new starts there is no need to remember twenty boxes: they get their role and that is it. For the exception —the receptionist who also looks after the stock— there are the <a href="#usuario-permisos-adicionales">additional permissions</a> of each user.
   </p>
 
   <p>The centre comes with ready-made roles, which can be changed and deleted like any other. The first ones are jobs; the rest are <strong>one role per module</strong>:</p>
@@ -2385,7 +2396,12 @@ footer{
 
   <p id="usuario-copia">
     <strong>Creating a user by copy.</strong> When someone joins who will do the same as another person, in
-    <span class="ruta">Administration → Users</span> press <em>Copy</em> on that person's row. The form of a new user opens already with <strong>their roles, custom permissions, delegation and allowed IP addresses</strong>; all you have to do is enter the username and a password. Before saving you can remove or add any role. The password is not copied, and afterwards each user changes on its own: what is later taken away from one is not taken away from the other. Since copying is handing out permissions, the button is only visible to whoever has the permission “Manage roles and permissions”.
+    <span class="ruta">Administration → Users</span> press <em>Copy</em> on that person's row. The form of a new user opens already with <strong>their roles, custom permissions, delegation and allowed IP addresses</strong>; you only have to enter the username and a password. Before saving you can remove or add any role or additional permission. The password is not copied, and afterwards each user changes on their own: what is later taken from one is not taken from the other. As copying is handing out permissions, the button is only shown to whoever has the “Manage roles and permissions” permission.
+  </p>
+
+  <p id="usuario-permisos-adicionales">
+    <strong>A user's additional permissions.</strong> When a single person needs something their role does not carry, there is no need for a new role: in that user's form, below the roles, there is the
+    <em>Additional permissions</em>section, collapsed and grouped by area as on the roles screen. What their roles already give is shown ticked and locked, with the name of the role that gives it, so you can see where each thing comes from; here you only add, you never take away what a role brings. With many permissions there is a word search. The extras are also shown in the user list, with a “+N custom” mark, so exceptions do not stay hidden. It is the exception, not the rule: if several people need the same thing, a role is better. Giving or removing permissions this way requires, like everything that hands out permissions, “Manage roles and permissions”.
   </p>
 
   <p>
@@ -2417,9 +2433,9 @@ footer{
   <div class="tabla-envoltorio">
   <table>
     <tbody><tr><th>Role</th><th>What it is for</th><th>Built-in permissions</th></tr>
-    <tr><td><strong><a href="#rol-recepcion">Reception</a></strong></td><td>Books appointments, serves the front desk and takes payments.</td><td>32</td></tr>
+    <tr><td><strong><a href="#rol-recepcion">Reception</a></strong></td><td>Books appointments, serves the front desk and takes payments.</td><td>33</td></tr>
     <tr><td><strong><a href="#rol-profesional">Professional</a></strong></td><td>Their own agenda, their clients and the clinical record.</td><td>18</td></tr>
-    <tr><td><strong><a href="#rol-direccion">Management</a></strong></td><td>Runs the centre: catalogue, staff, reports and settings. Also looks after the users: changing their name or delegation, unlocking them and resetting their password.</td><td>95</td></tr>
+    <tr><td><strong><a href="#rol-direccion">Management</a></strong></td><td>Runs the centre: catalogue, staff, reports and settings. Also looks after the users: changing their name or delegation, unlocking them and resetting their password.</td><td>96</td></tr>
     <tr><td><strong><a href="#rol-rrhh">HR</a></strong></td><td>Work calendars, practitioners and agenda.</td><td>18</td></tr>
     <tr><td><strong><a href="#rol-mantenimiento">Maintenance</a></strong></td><td>Handles maintenance orders, their zones and their equipment.</td><td>7</td></tr>
     <tr><td><strong><a href="#rol-activaciones">Activations</a></strong></td><td>Handles the activation points and their requests.</td><td>2</td></tr>
@@ -2427,11 +2443,11 @@ footer{
     <tr><td><strong><a href="#rol-catalogo">Catalogue</a></strong></td><td>Module role: services, packages, products, suppliers and stock, with their reports.</td><td>14</td></tr>
     <tr><td><strong><a href="#rol-agenda">Agenda</a></strong></td><td>Module role: appointments, waiting list, booths, devices and the appointments report.</td><td>13</td></tr>
     <tr><td><strong><a href="#rol-historia-clinica">Clinical record</a></strong></td><td>Module role: the clinical record and consents.</td><td>8</td></tr>
-    <tr><td><strong><a href="#rol-caja">Till</a></strong></td><td>Module role: charging, refunds, debts, vouchers, gift cards, coupons, closing the till and their reports.</td><td>20</td></tr>
+    <tr><td><strong><a href="#rol-caja">Till</a></strong></td><td>Module role: charging, refunds, debts, vouchers, gift cards, coupons, closing the till and their reports.</td><td>21</td></tr>
     <tr><td><strong><a href="#rol-facturacion">Invoicing</a></strong></td><td>Module role: full invoices, invoice book and accounting draft.</td><td>3</td></tr>
     <tr><td><strong><a href="#rol-portal-y-avisos">Portal and alerts</a></strong></td><td>Module role: the booking portal and the WhatsApp reminders.</td><td>2</td></tr>
     <tr><td><strong><a href="#rol-personal">Staff</a></strong></td><td>Module role: work calendars, working-time register and incidents.</td><td>10</td></tr>
-    <tr><td><strong><a href="#rol-administrador-del-sistema">System administrator</a></strong></td><td>Everything, including the <a href="#roles-sensibles">delicate permissions</a>. It is the only one that has them.</td><td>119 (all)</td></tr>
+    <tr><td><strong><a href="#rol-administrador-del-sistema">System administrator</a></strong></td><td>Everything, including the <a href="#roles-sensibles">delicate permissions</a>. It is the only one that has them.</td><td>120 (all)</td></tr>
   </tbody></table>
   </div>
 
@@ -2454,7 +2470,7 @@ footer{
   </ol>
 
   <p>
-    Editing a role changes what <strong>everyone who has it can do</strong>, not just one person. If what is needed is for one person to do something different, a custom role is created with the permissions they need and given to them in place of the one that is too much. A role that somebody has cannot be deleted: first it is taken off those people. The users screen works with roles; any loose permissions a user may have had before are copied when a user is created by copy.
+    Editing a role changes what <strong>everyone who has it can do</strong>, not just one. If what is needed is for a single person to do something different, they are given <a href="#usuario-permisos-adicionales">additional permissions</a> from their user record, or a custom role is created if what they need is a whole other job. A role someone holds cannot be deleted: first it is taken away from those people. A user's additional permissions are copied when another user is created by copying.
   </p>
 
   <h3 id="roles-ver-no-es-editar">Seeing is not the same as changing, cancelling or downloading</h3>
@@ -2471,7 +2487,8 @@ footer{
       <a href="#perm-reports-payments">“Payments report”</a>. Downloading it to a file also needs <a href="#perm-reports-export">“Download reports as files”</a>; and the clients report to a file needs <a href="#perm-customers-export">“Export the clients list”</a>, which is delicate.</li>
     <li><strong>Catalogue.</strong> <a href="#perm-services-view">“See services”</a> shows the services and their prices;
       <a href="#perm-services-write">“Create and edit services”</a> is what lets you change them. With looking alone, the buttons to add, edit and withdraw are greyed out or do not appear.</li>
-    <li><strong>Till.</strong> Charging is <a href="#perm-checkout-charge">“Charge at the point of sale”</a>; applying a discount, <a href="#perm-checkout-discount">“Apply discounts”</a>; leaving something owing, <a href="#perm-checkout-debt">“Leave an amount owing”</a>; refunding a ticket, <a href="#perm-checkout-refund">“Refund a ticket”</a>. Nobody at reception reopens a closed till without <a href="#perm-cash-reopen">«Reopen a closed cash»</a>.</li>
+    <li><strong>Till.</strong> Charging is <a href="#perm-checkout-charge">“Charge at the point of sale”</a>; applying a discount, <a href="#perm-checkout-discount">“Apply discounts”</a>; leaving something owing, <a href="#perm-checkout-debt">“Leave an amount owing”</a>; refunding a ticket, <a href="#perm-checkout-refund">“Refund a ticket”</a>; seeing what has been charged today and this month on the Home screen,
+      <a href="#perm-dashboard-cash">“See the till on the Home screen”</a>. Nobody at reception reopens a closed till without <a href="#perm-cash-reopen">«Reopen a closed cash»</a>.</li>
     <li><strong>Maintenance.</strong> <a href="#perm-maintenance-view">“See maintenance”</a> reads the orders; opening one is
       <a href="#perm-maintenance-report">“Report a problem”</a>; moving it from one state to another is <a href="#perm-maintenance-manage">“Manage orders”</a>; closing it,
       <a href="#perm-maintenance-close">“Close and reopen orders”</a>.</li>
@@ -2619,6 +2636,7 @@ footer{
     <tr id="perm-checkout-discount"><td><strong>Apply discounts</strong></td><td>Enables the discount field inside a charge.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
     <tr id="perm-checkout-debt"><td><strong>Leave on credit</strong></td><td>Allows closing a charge with an amount outstanding instead of collecting all of it. That amount then shows up under “See outstanding payments”.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
     <tr id="perm-checkout-refund"><td><strong>Refunding a ticket</strong></td><td>Allows using the button to refund lines of a ticket that has already been charged, as money or as credit.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
+    <tr id="perm-dashboard-cash"><td><strong>See the till on the Home screen</strong></td><td>Shows on the Home screen the card with what has been charged today and this month, by payment method. It does not open the point of sale or the point-of-sale report: that stays under “Charge at the point of sale” and “Daily totals”.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
     <tr id="perm-debts-view"><td><strong>See pending payments</strong></td><td>Opens the outstanding payments screen. Settling a debt is a separate permission: “Settle a debt”.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
     <tr id="perm-debts-settle"><td><strong>Settle a debt</strong></td><td>Allows using the button to settle a debt.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
     <tr id="perm-cash-close"><td><strong>Balance and close the till</strong></td><td>Opens the day’s till to count the cash and the card slips, and allows closing it.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
@@ -2718,9 +2736,9 @@ footer{
 
   <nav class="rol-selector" aria-label="Go to a role">
     <p class="rol-selector__titulo">General roles</p>
-    <div class="chips"><a class="chip r-recepcion" href="#rol-recepcion">Reception <small>32</small></a>
+    <div class="chips"><a class="chip r-recepcion" href="#rol-recepcion">Reception <small>33</small></a>
       <a class="chip r-profesional" href="#rol-profesional">Professional <small>18</small></a>
-      <a class="chip r-direccion" href="#rol-direccion">Management <small>95</small></a>
+      <a class="chip r-direccion" href="#rol-direccion">Management <small>96</small></a>
       <a class="chip r-rrhh" href="#rol-rrhh">HR <small>18</small></a>
       <a class="chip r-mantenimiento" href="#rol-mantenimiento">Maintenance <small>7</small></a>
       <a class="chip r-activaciones" href="#rol-activaciones">Activations <small>2</small></a></div>
@@ -2729,19 +2747,19 @@ footer{
       <a class="chip r-catalogo" href="#rol-catalogo">Catalogue <small>14</small></a>
       <a class="chip r-agenda" href="#rol-agenda">Agenda <small>13</small></a>
       <a class="chip r-historia-clinica" href="#rol-historia-clinica">Clinical record <small>8</small></a>
-      <a class="chip r-caja" href="#rol-caja">Till <small>20</small></a>
+      <a class="chip r-caja" href="#rol-caja">Till <small>21</small></a>
       <a class="chip r-facturacion" href="#rol-facturacion">Invoicing <small>3</small></a>
       <a class="chip r-portal-y-avisos" href="#rol-portal-y-avisos">Portal and alerts <small>2</small></a>
       <a class="chip r-personal" href="#rol-personal">Staff <small>10</small></a></div>
     <p class="rol-selector__titulo">System role</p>
-    <div class="chips"><a class="chip r-administrador-del-sistema" href="#rol-administrador-del-sistema">System administrator <small>119</small></a></div>
+    <div class="chips"><a class="chip r-administrador-del-sistema" href="#rol-administrador-del-sistema">System administrator <small>120</small></a></div>
     <p class="rol-selector__titulo">And what no role carries</p>
     <div class="chips"><a class="chip r-adicionales" href="#permisos-adicionales">Additional permissions <small>14</small></a><a class="chip r-matriz" href="#roles-matriz">Summary as a matrix</a></div>
   </nav>
 
   <article class="rol-card r-recepcion familia-general" id="rol-recepcion">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Reception</h5><span class="rc-cuenta">32 permissions</span><span class="rc-familia">General role</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Reception</h5><span class="rc-cuenta">33 permissions</span><span class="rc-familia">General role</span></div>
       <p class="rc-para">For whoever works the front desk: books appointments, looks after the client and takes payments.</p>
     </header>
     <div class="rc-cuerpo">
@@ -2767,11 +2785,12 @@ footer{
         <li class="rc-perm"><a href="#perm-consents-request">Ask for a signature</a><span class="rc-desc">Asks the person to sign a consent.</span></li>
         <li class="rc-perm"><a href="#perm-consents-import">Import signed consent forms</a><span class="rc-desc">Uploads to the record consents, as PDFs, that were already signed on another platform.</span></li>
       </ul>
-      <h6 class="rc-modulo"><a href="#permisos-caja">Till</a> <span class="n">· 11</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-caja">Till</a> <span class="n">· 12</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-checkout-charge">Charge at the point of sale</a><span class="rc-desc">Opens the point of sale and allows closing a charge.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Apply discounts</a><span class="rc-desc">Enables the discount field inside a charge.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Leave on credit</a><span class="rc-desc">Allows closing a charge with an amount outstanding instead of collecting all of it.</span></li>
+        <li class="rc-perm"><a href="#perm-dashboard-cash">See the till on the Home screen</a><span class="rc-desc">Shows on the Home screen the card with what has been charged today and this month, by payment method. It does not open the point of sale or the point-of-sale report: that stays under “Charge at the point of sale” and “Daily totals”.</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">See pending payments</a><span class="rc-desc">Opens the pending payments screen.</span></li>
         <li class="rc-perm"><a href="#perm-debts-settle">Settle a debt</a><span class="rc-desc">Allows using the button to settle a debt.</span></li>
         <li class="rc-perm"><a href="#perm-cash-close">Balance and close the till</a><span class="rc-desc">Opens the day’s till to count the cash and the card slips, and allows closing it.</span></li>
@@ -2848,7 +2867,7 @@ footer{
 
   <article class="rol-card r-direccion familia-general" id="rol-direccion">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Management</h5><span class="rc-cuenta">95 permissions</span><span class="rc-familia">General role</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Management</h5><span class="rc-cuenta">96 permissions</span><span class="rc-familia">General role</span></div>
       <p class="rc-para">For whoever runs the centre: catalogue, staff, reports and settings.</p>
     </header>
     <div class="rc-cuerpo">
@@ -2884,12 +2903,13 @@ footer{
         <li class="rc-perm"><a href="#perm-consents-withdraw">Withdraw a consent</a><span class="rc-desc">Withdraws a consent that had already been given.</span></li>
         <li class="rc-perm"><a href="#perm-consents-templates">Manage the templates</a><span class="rc-desc">Creates and changes the centre’s consent templates.</span></li>
       </ul>
-      <h6 class="rc-modulo"><a href="#permisos-caja">Till</a> <span class="n">· 20</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-caja">Till</a> <span class="n">· 21</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-checkout-charge">Charge at the point of sale</a><span class="rc-desc">Opens the point of sale and allows closing a charge.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Apply discounts</a><span class="rc-desc">Enables the discount field inside a charge.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Leave on credit</a><span class="rc-desc">Allows closing a charge with an amount outstanding instead of collecting all of it.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-refund">Refunding a ticket</a><span class="rc-desc">Allows using the button to refund lines of a ticket that has already been charged, as money or as credit.</span></li>
+        <li class="rc-perm"><a href="#perm-dashboard-cash">See the till on the Home screen</a><span class="rc-desc">Shows on the Home screen the card with what has been charged today and this month, by payment method. It does not open the point of sale or the point-of-sale report: that stays under “Charge at the point of sale” and “Daily totals”.</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">See pending payments</a><span class="rc-desc">Opens the pending payments screen.</span></li>
         <li class="rc-perm"><a href="#perm-debts-settle">Settle a debt</a><span class="rc-desc">Allows using the button to settle a debt.</span></li>
         <li class="rc-perm"><a href="#perm-cash-close">Balance and close the till</a><span class="rc-desc">Opens the day’s till to count the cash and the card slips, and allows closing it.</span></li>
@@ -3157,16 +3177,17 @@ footer{
 
   <article class="rol-card r-caja familia-modulo" id="rol-caja">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Till</h5><span class="rc-cuenta">20 permissions</span><span class="rc-familia">Module role</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Till</h5><span class="rc-cuenta">21 permissions</span><span class="rc-familia">Module role</span></div>
       <p class="rc-para">Module role, for whoever handles the till: payments, refunds, debts, vouchers, gift cards and coupons. It carries all the non-delicate permissions of its module and only those.</p>
     </header>
     <div class="rc-cuerpo">
-      <h6 class="rc-modulo"><a href="#permisos-caja">Till</a> <span class="n">· 20</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-caja">Till</a> <span class="n">· 21</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-checkout-charge">Charge at the point of sale</a><span class="rc-desc">Opens the point of sale and allows closing a charge.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Apply discounts</a><span class="rc-desc">Enables the discount field inside a charge.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Leave on credit</a><span class="rc-desc">Allows closing a charge with an amount outstanding instead of collecting all of it.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-refund">Refunding a ticket</a><span class="rc-desc">Allows using the button to refund lines of a ticket that has already been charged, as money or as credit.</span></li>
+        <li class="rc-perm"><a href="#perm-dashboard-cash">See the till on the Home screen</a><span class="rc-desc">Shows on the Home screen the card with what has been charged today and this month, by payment method. It does not open the point of sale or the point-of-sale report: that stays under “Charge at the point of sale” and “Daily totals”.</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">See pending payments</a><span class="rc-desc">Opens the pending payments screen.</span></li>
         <li class="rc-perm"><a href="#perm-debts-settle">Settle a debt</a><span class="rc-desc">Allows using the button to settle a debt.</span></li>
         <li class="rc-perm"><a href="#perm-cash-close">Balance and close the till</a><span class="rc-desc">Opens the day’s till to count the cash and the card slips, and allows closing it.</span></li>
@@ -3240,8 +3261,8 @@ footer{
 
   <article class="rol-card r-administrador-del-sistema familia-admin" id="rol-administrador-del-sistema">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">System administrator</h5><span class="rc-cuenta">119 permissions</span><span class="rc-familia">System role</span></div>
-      <p class="rc-para">For whoever answers for the whole centre: it carries everything, including the delicate permissions. It carries <strong>all 119 permissions</strong> and is the only built-in role that carries the 13 <a href="#roles-sensibles">delicate</a>permissions. A new permission reaches it by itself.</p>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">System administrator</h5><span class="rc-cuenta">120 permissions</span><span class="rc-familia">System role</span></div>
+      <p class="rc-para">For whoever answers for the whole centre: it carries everything, including the delicate permissions. It carries <strong>all 120 permissions</strong> and is the only built-in role that carries the 13 <a href="#roles-sensibles">delicate</a>permissions. A new permission reaches it by itself.</p>
     </header>
     <div class="rc-cuerpo">
       <p class="rc-nota">So as not to repeat the whole table, only the delicate ones are listed here. All the others are in the <a href="#roles-permisos">table by module</a>.</p>
@@ -3288,7 +3309,7 @@ footer{
   <h4 id="roles-adicionales">Additional permissions: the ones no built-in role carries</h4>
 
   <p>
-    Of the 119 permissions, <strong>14</strong> are carried by no built-in role, only by the System administrator. If someone needs them, <strong>create a custom role</strong> with those permissions (<a href="#roles-paso-a-paso">how a role is created</a>) and give it to that person in
+    Of the 120 permissions, <strong>14</strong> are carried by no built-in role, only by the System administrator. If someone needs them, <strong>create a custom role</strong> with those permissions (<a href="#roles-paso-a-paso">how a role is created</a>) and give it to that person in
     <strong>Administration → Users</strong>. The delicate ones carry the badge and should be given only to whoever runs the centre.
   </p>
 
@@ -3392,6 +3413,7 @@ footer{
     <tr><td><a href="#perm-checkout-discount">Apply discounts</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
     <tr><td><a href="#perm-checkout-debt">Leave on credit</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
     <tr><td><a href="#perm-checkout-refund">Refunding a ticket</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
+    <tr><td><a href="#perm-dashboard-cash">See the till on the Home screen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
     <tr><td><a href="#perm-debts-view">See pending payments</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
     <tr><td><a href="#perm-debts-settle">Settle a debt</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
     <tr><td><a href="#perm-cash-close">Balance and close the till</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>

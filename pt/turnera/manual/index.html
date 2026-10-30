@@ -666,7 +666,7 @@ footer{
 <main id="top" class="shell manual">
 <nav class="indice">
   <h2>Manual do Turnera</h2>
-  <p>Atualizado a 18 de outubro de 2026</p>
+  <p>Atualizado a 30 de outubro de 2026</p>
   <div class="buscador" role="search">
     <input type="search" id="buscador-texto" placeholder="Pesquisar no manual" aria-label="Pesquisar no manual" autocomplete="off">
     <div class="buscador__estado">
@@ -1048,6 +1048,9 @@ footer{
     Por baixo estão os <strong>aniversários da semana</strong>, com o dia e os anos que cada cliente faz. O
     de hoje aparece realçado, e a linha também leva à ficha, caso se queira felicitá-lo ou oferecer-lhe algo.
   </p>
+  <p>
+    O cartão de <strong>clientes com vales pendentes</strong> diz quantos clientes ainda têm sessões de vale por usar e mostra os dez mais urgentes: primeiro quem tem um vale prestes a caducar, com as sessões que lhe restam e a data. É a lista para ligar antes que se percam, e cada linha abre a ficha do cliente. Vê-o quem pode ver vales ou clientes.
+  </p>
 
   <p>
     Num centro que usa o <strong>pessoal</strong> (o calendário laboral e o controlo de assiduidade), o
@@ -1067,6 +1070,14 @@ footer{
     Os cartões de presença e de horas vê-os quem pode consultar os registos de ponto; o de férias e baixas, quem
     pode ver os calendários laborais. Se no centro ainda não se planeou ninguém nem se picou o ponto, não
     aparecem.
+  </p>
+
+  <h4 id="inicio-personalizar">Personalizar o Início</h4>
+  <p>
+    Nem toda a gente quer ver o mesmo ao entrar: a quem está ao balcão sobra a caixa e falta espaço para as cobranças pendentes. O botão <strong>Personalizar</strong>, em cima à direita, abre a lista de cartões que essa pessoa pode ver e permite <strong>desligar os que não quer e ordená-los com as setas</strong>, uma linha para cima ou para baixo de cada vez. Não é preciso arrastar nada. A escolha fica guardada para esse utilizador, em qualquer equipamento a partir do qual entre, e <em>Repor</em> volta ao Início de sempre.
+  </p>
+  <p>
+    O que decide quais os cartões oferecidos são as <strong>permissões</strong>: aqui não se pode ligar um cartão que a função não deixa ver, e se mais tarde a função perder uma permissão, o seu cartão desaparece sozinho. Ao contrário também: quem nunca personalizou o Início vê, sem tocar em nada, cada cartão novo que as suas permissões lhe derem. A caixa do dia tem a sua própria permissão, <a href="#perm-dashboard-cash">«Ver a caixa no Início»</a>, separada de cobrar no TPV, para a poder retirar a uma função sem a impedir de cobrar.
   </p>
 </section>
 
@@ -2658,8 +2669,7 @@ footer{
 
   <p>
     Uma <strong>função</strong> é um trabalho: receção, profissional, direção. Cada função leva dentro as
-    <strong>permissões</strong> de que esse trabalho precisa, e a uma pessoa dão-se funções, não permissões soltas. Assim,
-    no dia em que entra alguém novo, não é preciso lembrar-se de vinte caixas: dá-se-lhe a sua função e pronto.
+    <strong>permissões</strong> de que esse trabalho precisa, e a uma pessoa dão-se funções, não permissões soltas. Assim, no dia em que entra alguém novo não é preciso lembrar vinte caixas: dá-se-lhe a sua função e pronto. Para a exceção —a rececionista que também trata do stock— existem as <a href="#usuario-permisos-adicionales">permissões adicionais</a> de cada utilizador.
   </p>
 
   <p>O centro vem com funções feitas, que se podem alterar e apagar como qualquer outra. As primeiras são
@@ -2713,10 +2723,12 @@ footer{
     <strong>Criar um utilizador por cópia.</strong> Quando entra alguém que vai fazer o mesmo que outra pessoa, em
     <span class="ruta">Administração → Utilizadores</span> clica-se em <em>Copiar</em> na linha dessa pessoa. Abre-se o
     formulário de um utilizador novo já com <strong>as suas funções, as suas permissões à medida, a sua unidade e os seus endereços IP
-    autorizados</strong>; só falta indicar o nome de utilizador e uma palavra-passe. Antes de guardar pode retirar-se ou
-    acrescentar-se qualquer função. A palavra-passe não se copia, e depois cada utilizador segue por si: o que se retire
-    a um depois não se retira ao outro. Como copiar é repartir permissões, o botão só o vê quem tem a permissão
-    «Gerir funções e permissões».
+    autorizados</strong>; basta indicar o nome de utilizador e uma palavra-passe. Antes de guardar pode retirar-se ou acrescentar-se qualquer função ou permissão adicional. A palavra-passe não se copia, e depois cada utilizador muda por si: o que mais tarde se retira a um não se retira ao outro. Como copiar é distribuir permissões, o botão só o vê quem tem a permissão «Gerir funções e permissões».
+  </p>
+
+  <p id="usuario-permisos-adicionales">
+    <strong>Permissões adicionais de um utilizador.</strong> Quando uma só pessoa precisa de algo que a sua função não traz, não é preciso uma função nova: no formulário desse utilizador, por baixo das funções, está a secção
+    <em>Permissões adicionais</em>, recolhida e agrupada por áreas como no ecrã de funções. O que as suas funções já dão aparece marcado e bloqueado, com o nome da função que o dá, para se ver de onde vem cada coisa; aqui só se acrescenta, nunca se retira o que uma função traz. Com muitas permissões há um pesquisador por palavras. Os extras veem-se também na lista de utilizadores, com a marca «+N à medida», para que as exceções não fiquem escondidas. É a exceção, não a norma: se várias pessoas precisam do mesmo, é melhor uma função. Dar ou retirar permissões desta forma exige, como tudo o que distribui permissões, «Gerir funções e permissões».
   </p>
 
   <p>
@@ -2753,9 +2765,9 @@ footer{
   <div class="tabla-envoltorio">
   <table>
     <tbody><tr><th>Função</th><th>Para que serve</th><th>Permissões de fábrica</th></tr>
-    <tr><td><strong><a href="#rol-recepcion">Receção</a></strong></td><td>Marca horas, atende ao balcão e cobra.</td><td>32</td></tr>
+    <tr><td><strong><a href="#rol-recepcion">Receção</a></strong></td><td>Marca horas, atende ao balcão e cobra.</td><td>33</td></tr>
     <tr><td><strong><a href="#rol-profesional">Profissional</a></strong></td><td>A sua agenda, os seus clientes e o processo clínico.</td><td>18</td></tr>
-    <tr><td><strong><a href="#rol-direccion">Direção</a></strong></td><td>Dirige o centro: catálogo, pessoal, relatórios e definições. Também trata dos utilizadores: alterar-lhes o nome ou a unidade, desbloqueá-los e repor-lhes a palavra-passe.</td><td>95</td></tr>
+    <tr><td><strong><a href="#rol-direccion">Direção</a></strong></td><td>Dirige o centro: catálogo, pessoal, relatórios e definições. Também trata dos utilizadores: alterar-lhes o nome ou a unidade, desbloqueá-los e repor-lhes a palavra-passe.</td><td>96</td></tr>
     <tr><td><strong><a href="#rol-rrhh">RH</a></strong></td><td>Calendários laborais, profissionais e agenda.</td><td>18</td></tr>
     <tr><td><strong><a href="#rol-mantenimiento">Manutenção</a></strong></td><td>Gere as ordens de manutenção, as suas zonas e os seus equipamentos.</td><td>7</td></tr>
     <tr><td><strong><a href="#rol-activaciones">Ativações</a></strong></td><td>Gere os pontos de ativação e os seus pedidos.</td><td>2</td></tr>
@@ -2763,11 +2775,11 @@ footer{
     <tr><td><strong><a href="#rol-catalogo">Catálogo</a></strong></td><td>Função de módulo: serviços, pacotes, produtos, fornecedores e stock, com os seus relatórios.</td><td>14</td></tr>
     <tr><td><strong><a href="#rol-agenda">Agenda</a></strong></td><td>Função de módulo: marcações, lista de espera, cabinas, aparelhos e o relatório de marcações.</td><td>13</td></tr>
     <tr><td><strong><a href="#rol-historia-clinica">Histórico clínico</a></strong></td><td>Função de módulo: o processo clínico e os consentimentos.</td><td>8</td></tr>
-    <tr><td><strong><a href="#rol-caja">Caixa</a></strong></td><td>Função de módulo: cobrar, devolver, dívidas, pacotes de sessões, cartões-oferta, cupões, fecho de caixa e os seus relatórios.</td><td>20</td></tr>
+    <tr><td><strong><a href="#rol-caja">Caixa</a></strong></td><td>Função de módulo: cobrar, devolver, dívidas, pacotes de sessões, cartões-oferta, cupões, fecho de caixa e os seus relatórios.</td><td>21</td></tr>
     <tr><td><strong><a href="#rol-facturacion">Faturação</a></strong></td><td>Função de módulo: faturas completas, livro de faturas e rascunho contabilístico.</td><td>3</td></tr>
     <tr><td><strong><a href="#rol-portal-y-avisos">Portal e avisos</a></strong></td><td>Função de módulo: o portal de reservas e os avisos por WhatsApp.</td><td>2</td></tr>
     <tr><td><strong><a href="#rol-personal">Pessoal</a></strong></td><td>Função de módulo: calendários laborais, registo de jornada e incidências.</td><td>10</td></tr>
-    <tr><td><strong><a href="#rol-administrador-del-sistema">Administrador do sistema</a></strong></td><td>Tudo, incluindo as <a href="#roles-sensibles">permissões sensíveis</a>. É a única que as traz.</td><td>119 (todas)</td></tr>
+    <tr><td><strong><a href="#rol-administrador-del-sistema">Administrador do sistema</a></strong></td><td>Tudo, incluindo as <a href="#roles-sensibles">permissões sensíveis</a>. É a única que as traz.</td><td>120 (todas)</td></tr>
   </tbody></table>
   </div>
 
@@ -2790,7 +2802,7 @@ footer{
   </ol>
 
   <p>
-    Editar uma função altera o que podem fazer <strong>todas as pessoas que a têm</strong>, não apenas uma. Se o que faz falta é que uma só pessoa faça algo diferente, cria-se uma função à medida com as permissões que lhe cabem e atribui-se-lha em vez da que sobra. Uma função que alguém tem não se pode apagar: primeiro retira-se a essas pessoas. O ecrã de utilizadores trabalha com funções; as permissões soltas que um utilizador pudesse ter de antes copiam-se ao criar um utilizador por cópia.
+    Editar uma função altera o que podem fazer <strong>todas as pessoas que a têm</strong>, não só uma. Se o que é preciso é que uma só pessoa faça algo diferente, dão-se-lhe <a href="#usuario-permisos-adicionales">permissões adicionais</a> a partir da sua ficha de utilizador, ou cria-se uma função à medida se o que precisa é de outro trabalho inteiro. Uma função que alguém tem não se pode apagar: primeiro retira-se a essas pessoas. As permissões adicionais de um utilizador copiam-se ao criar outro utilizador por cópia.
   </p>
 
   <h3 id="roles-ver-no-es-editar">Ver não é o mesmo que alterar, anular ou descarregar</h3>
@@ -2807,7 +2819,8 @@ footer{
       <a href="#perm-reports-payments">«Relatório de cobranças»</a>. Descarregá-lo para ficheiro exige além disso <a href="#perm-reports-export">«Descarregar relatórios para ficheiro»</a>; e o relatório de clientes para ficheiro exige <a href="#perm-customers-export">«Exportar a lista de clientes»</a>, que é sensível.</li>
     <li><strong>Catálogo.</strong> <a href="#perm-services-view">«Ver os serviços»</a> mostra os serviços e os seus preços;
       <a href="#perm-services-write">«Criar e editar os serviços»</a> é o que permite alterá-los. Só com ver, os botões de criar, editar e retirar ficam desativados ou não aparecem.</li>
-    <li><strong>Caixa.</strong> Cobrar é <a href="#perm-checkout-charge">«Cobrar na caixa»</a>; aplicar um desconto, <a href="#perm-checkout-discount">«Aplicar descontos»</a>; deixar algo em dívida, <a href="#perm-checkout-debt">«Deixar em dívida»</a>; devolver um ticket, <a href="#perm-checkout-refund">«Devolver um ticket»</a>. Ninguém da receção reabre uma caixa fechada sem <a href="#perm-cash-reopen">«Reabrir uma caixa fechada»</a>.</li>
+    <li><strong>Caixa.</strong> Cobrar é <a href="#perm-checkout-charge">«Cobrar na caixa»</a>; aplicar um desconto, <a href="#perm-checkout-discount">«Aplicar descontos»</a>; deixar algo em dívida, <a href="#perm-checkout-debt">«Deixar em dívida»</a>; devolver um ticket, <a href="#perm-checkout-refund">«Devolver um ticket»</a>; ver o cobrado hoje e no mês no Início,
+      <a href="#perm-dashboard-cash">«Ver a caixa no Início»</a>. Ninguém da receção reabre uma caixa fechada sem <a href="#perm-cash-reopen">«Reabrir uma caixa fechada»</a>.</li>
     <li><strong>Manutenção.</strong> <a href="#perm-maintenance-view">«Ver a manutenção»</a> lê as ordens; abrir uma é
       <a href="#perm-maintenance-report">«Avisar de um problema»</a>; levá-la de um estado para outro é <a href="#perm-maintenance-manage">«Gerir as ordens»</a>; dá-la por fechada,
       <a href="#perm-maintenance-close">«Fechar e reabrir ordens»</a>.</li>
@@ -2969,6 +2982,7 @@ footer{
     <tr id="perm-checkout-discount"><td><strong>Aplicar descontos</strong></td><td>Ativa o campo de desconto dentro da cobrança.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
     <tr id="perm-checkout-debt"><td><strong>Deixar em dívida</strong></td><td>Permite fechar uma cobrança deixando um valor por pagar, em vez de a cobrar por inteiro. Esse valor aparece depois em «Ver os valores em dívida».</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
     <tr id="perm-checkout-refund"><td><strong>Reembolsar um talão</strong></td><td>Permite usar o botão de devolver linhas de um ticket já cobrado, em dinheiro ou como saldo a favor.</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
+    <tr id="perm-dashboard-cash"><td><strong>Ver a caixa no Início</strong></td><td>Mostra no Início o cartão com o cobrado hoje e no mês, por forma de pagamento. Não abre o TPV nem o relatório de caixa: isso continua em «Cobrar no TPV» e «Totais do dia».</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
     <tr id="perm-debts-view"><td><strong>Ver os valores em dívida</strong></td><td>Abre o ecrã dos valores em dívida. Saldar uma dívida é uma permissão à parte: «Saldar uma dívida».</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
     <tr id="perm-debts-settle"><td><strong>Liquidar uma dívida</strong></td><td>Permite usar o botão de saldar uma dívida.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
     <tr id="perm-cash-close"><td><strong>Acertar e fechar a caixa</strong></td><td>Abre a caixa do dia para contar o dinheiro e os talões de cartão, e permite fechá-la.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
@@ -3068,9 +3082,9 @@ footer{
 
   <nav class="rol-selector" aria-label="Ir para uma função">
     <p class="rol-selector__titulo">Funções gerais</p>
-    <div class="chips"><a class="chip r-recepcion" href="#rol-recepcion">Receção <small>32</small></a>
+    <div class="chips"><a class="chip r-recepcion" href="#rol-recepcion">Receção <small>33</small></a>
       <a class="chip r-profesional" href="#rol-profesional">Profissional <small>18</small></a>
-      <a class="chip r-direccion" href="#rol-direccion">Direção <small>95</small></a>
+      <a class="chip r-direccion" href="#rol-direccion">Direção <small>96</small></a>
       <a class="chip r-rrhh" href="#rol-rrhh">RH <small>18</small></a>
       <a class="chip r-mantenimiento" href="#rol-mantenimiento">Manutenção <small>7</small></a>
       <a class="chip r-activaciones" href="#rol-activaciones">Ativações <small>2</small></a></div>
@@ -3079,19 +3093,19 @@ footer{
       <a class="chip r-catalogo" href="#rol-catalogo">Catálogo <small>14</small></a>
       <a class="chip r-agenda" href="#rol-agenda">Agenda <small>13</small></a>
       <a class="chip r-historia-clinica" href="#rol-historia-clinica">Histórico clínico <small>8</small></a>
-      <a class="chip r-caja" href="#rol-caja">Caixa <small>20</small></a>
+      <a class="chip r-caja" href="#rol-caja">Caixa <small>21</small></a>
       <a class="chip r-facturacion" href="#rol-facturacion">Faturação <small>3</small></a>
       <a class="chip r-portal-y-avisos" href="#rol-portal-y-avisos">Portal e avisos <small>2</small></a>
       <a class="chip r-personal" href="#rol-personal">Pessoal <small>10</small></a></div>
     <p class="rol-selector__titulo">Função de sistema</p>
-    <div class="chips"><a class="chip r-administrador-del-sistema" href="#rol-administrador-del-sistema">Administrador do sistema <small>119</small></a></div>
+    <div class="chips"><a class="chip r-administrador-del-sistema" href="#rol-administrador-del-sistema">Administrador do sistema <small>120</small></a></div>
     <p class="rol-selector__titulo">E o que nenhuma função traz</p>
     <div class="chips"><a class="chip r-adicionales" href="#permisos-adicionales">Permissões adicionais <small>14</small></a><a class="chip r-matriz" href="#roles-matriz">Resumo em matriz</a></div>
   </nav>
 
   <article class="rol-card r-recepcion familia-general" id="rol-recepcion">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Receção</h5><span class="rc-cuenta">32 permissões</span><span class="rc-familia">Função geral</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Receção</h5><span class="rc-cuenta">33 permissões</span><span class="rc-familia">Função geral</span></div>
       <p class="rc-para">Para quem atende ao balcão: marca horas, atende o cliente e cobra.</p>
     </header>
     <div class="rc-cuerpo">
@@ -3117,11 +3131,12 @@ footer{
         <li class="rc-perm"><a href="#perm-consents-request">Pedir uma assinatura</a><span class="rc-desc">Pede à pessoa a assinatura de um consentimento.</span></li>
         <li class="rc-perm"><a href="#perm-consents-import">Importar consentimentos assinados</a><span class="rc-desc">Carrega para a ficha consentimentos em PDF já assinados noutra plataforma.</span></li>
       </ul>
-      <h6 class="rc-modulo"><a href="#permisos-caja">Caixa</a> <span class="n">· 11</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-caja">Caixa</a> <span class="n">· 12</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-checkout-charge">Cobrar no TPV</a><span class="rc-desc">Abre a caixa e permite fechar uma cobrança.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Aplicar descontos</a><span class="rc-desc">Ativa o campo de desconto dentro da cobrança.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Deixar em dívida</a><span class="rc-desc">Permite fechar uma cobrança deixando um valor por pagar, em vez de a cobrar por inteiro.</span></li>
+        <li class="rc-perm"><a href="#perm-dashboard-cash">Ver a caixa no Início</a><span class="rc-desc">Mostra no Início o cartão com o cobrado hoje e no mês, por forma de pagamento. Não abre o TPV nem o relatório de caixa: isso continua em «Cobrar no TPV» e «Totais do dia».</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">Ver os valores em dívida</a><span class="rc-desc">Abre o ecrã de valores em dívida.</span></li>
         <li class="rc-perm"><a href="#perm-debts-settle">Liquidar uma dívida</a><span class="rc-desc">Permite usar o botão de saldar uma dívida.</span></li>
         <li class="rc-perm"><a href="#perm-cash-close">Acertar e fechar a caixa</a><span class="rc-desc">Abre a caixa do dia para contar o dinheiro e os talões de cartão, e permite fechá-la.</span></li>
@@ -3198,7 +3213,7 @@ footer{
 
   <article class="rol-card r-direccion familia-general" id="rol-direccion">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Direção</h5><span class="rc-cuenta">95 permissões</span><span class="rc-familia">Função geral</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Direção</h5><span class="rc-cuenta">96 permissões</span><span class="rc-familia">Função geral</span></div>
       <p class="rc-para">Para quem dirige o centro: catálogo, pessoal, relatórios e definições.</p>
     </header>
     <div class="rc-cuerpo">
@@ -3234,12 +3249,13 @@ footer{
         <li class="rc-perm"><a href="#perm-consents-withdraw">Retirar um consentimento</a><span class="rc-desc">Retira um consentimento que já tinha sido dado.</span></li>
         <li class="rc-perm"><a href="#perm-consents-templates">Gerir os modelos</a><span class="rc-desc">Cria e altera os modelos de consentimento do centro.</span></li>
       </ul>
-      <h6 class="rc-modulo"><a href="#permisos-caja">Caixa</a> <span class="n">· 20</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-caja">Caixa</a> <span class="n">· 21</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-checkout-charge">Cobrar no TPV</a><span class="rc-desc">Abre a caixa e permite fechar uma cobrança.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Aplicar descontos</a><span class="rc-desc">Ativa o campo de desconto dentro da cobrança.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Deixar em dívida</a><span class="rc-desc">Permite fechar uma cobrança deixando um valor por pagar, em vez de a cobrar por inteiro.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-refund">Reembolsar um talão</a><span class="rc-desc">Permite usar o botão de devolver linhas de um ticket já cobrado, em dinheiro ou como saldo a favor.</span></li>
+        <li class="rc-perm"><a href="#perm-dashboard-cash">Ver a caixa no Início</a><span class="rc-desc">Mostra no Início o cartão com o cobrado hoje e no mês, por forma de pagamento. Não abre o TPV nem o relatório de caixa: isso continua em «Cobrar no TPV» e «Totais do dia».</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">Ver os valores em dívida</a><span class="rc-desc">Abre o ecrã de valores em dívida.</span></li>
         <li class="rc-perm"><a href="#perm-debts-settle">Liquidar uma dívida</a><span class="rc-desc">Permite usar o botão de saldar uma dívida.</span></li>
         <li class="rc-perm"><a href="#perm-cash-close">Acertar e fechar a caixa</a><span class="rc-desc">Abre a caixa do dia para contar o dinheiro e os talões de cartão, e permite fechá-la.</span></li>
@@ -3507,16 +3523,17 @@ footer{
 
   <article class="rol-card r-caja familia-modulo" id="rol-caja">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Caixa</h5><span class="rc-cuenta">20 permissões</span><span class="rc-familia">Função de módulo</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Caixa</h5><span class="rc-cuenta">21 permissões</span><span class="rc-familia">Função de módulo</span></div>
       <p class="rc-para">Função de módulo, para quem gere a caixa: cobranças, devoluções, dívidas, pacotes de sessões, cartões-oferta e cupões. Leva todas as permissões não sensíveis do seu módulo, e só essas.</p>
     </header>
     <div class="rc-cuerpo">
-      <h6 class="rc-modulo"><a href="#permisos-caja">Caixa</a> <span class="n">· 20</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-caja">Caixa</a> <span class="n">· 21</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-checkout-charge">Cobrar no TPV</a><span class="rc-desc">Abre a caixa e permite fechar uma cobrança.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Aplicar descontos</a><span class="rc-desc">Ativa o campo de desconto dentro da cobrança.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Deixar em dívida</a><span class="rc-desc">Permite fechar uma cobrança deixando um valor por pagar, em vez de a cobrar por inteiro.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-refund">Reembolsar um talão</a><span class="rc-desc">Permite usar o botão de devolver linhas de um ticket já cobrado, em dinheiro ou como saldo a favor.</span></li>
+        <li class="rc-perm"><a href="#perm-dashboard-cash">Ver a caixa no Início</a><span class="rc-desc">Mostra no Início o cartão com o cobrado hoje e no mês, por forma de pagamento. Não abre o TPV nem o relatório de caixa: isso continua em «Cobrar no TPV» e «Totais do dia».</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">Ver os valores em dívida</a><span class="rc-desc">Abre o ecrã de valores em dívida.</span></li>
         <li class="rc-perm"><a href="#perm-debts-settle">Liquidar uma dívida</a><span class="rc-desc">Permite usar o botão de saldar uma dívida.</span></li>
         <li class="rc-perm"><a href="#perm-cash-close">Acertar e fechar a caixa</a><span class="rc-desc">Abre a caixa do dia para contar o dinheiro e os talões de cartão, e permite fechá-la.</span></li>
@@ -3590,8 +3607,8 @@ footer{
 
   <article class="rol-card r-administrador-del-sistema familia-admin" id="rol-administrador-del-sistema">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Administrador do sistema</h5><span class="rc-cuenta">119 permissões</span><span class="rc-familia">Função de sistema</span></div>
-      <p class="rc-para">Para quem responde por todo o centro: leva tudo, incluindo as permissões sensíveis. Traz <strong>as 119 permissões</strong> e é a única função de fábrica que traz as 13 permissões <a href="#roles-sensibles">sensíveis</a>. Uma permissão nova chega-lhe sozinha.</p>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Administrador do sistema</h5><span class="rc-cuenta">120 permissões</span><span class="rc-familia">Função de sistema</span></div>
+      <p class="rc-para">Para quem responde por todo o centro: leva tudo, incluindo as permissões sensíveis. Traz <strong>as 120 permissões</strong> e é a única função de fábrica que traz as 13 permissões <a href="#roles-sensibles">sensíveis</a>. Uma permissão nova chega-lhe sozinha.</p>
     </header>
     <div class="rc-cuerpo">
       <p class="rc-nota">Para não repetir a tabela inteira, aqui vão só as sensíveis. Todas as outras estão na <a href="#roles-permisos">tabela por módulo</a>.</p>
@@ -3638,7 +3655,7 @@ footer{
   <h4 id="roles-adicionales">Permissões adicionais: as que nenhuma função de fábrica traz</h4>
 
   <p>
-    Das 119 permissões, <strong>14</strong> nenhuma função de fábrica as traz, só o Administrador do sistema. Se alguém precisar delas, <strong>cria-se uma função à medida</strong> com essas permissões (<a href="#roles-paso-a-paso">como se cria uma função</a>) e atribui-se a essa pessoa em
+    Das 120 permissões, <strong>14</strong> nenhuma função de fábrica as traz, só o Administrador do sistema. Se alguém precisar delas, <strong>cria-se uma função à medida</strong> com essas permissões (<a href="#roles-paso-a-paso">como se cria uma função</a>) e atribui-se a essa pessoa em
     <strong>Administração → Utilizadores</strong>. As sensíveis levam o distintivo e convém dá-las apenas a quem dirige o centro.
   </p>
 
@@ -3742,6 +3759,7 @@ footer{
     <tr><td><a href="#perm-checkout-discount">Aplicar descontos</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
     <tr><td><a href="#perm-checkout-debt">Deixar em dívida</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
     <tr><td><a href="#perm-checkout-refund">Reembolsar um talão</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
+    <tr><td><a href="#perm-dashboard-cash">Ver a caixa no Início</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
     <tr><td><a href="#perm-debts-view">Ver os valores em dívida</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
     <tr><td><a href="#perm-debts-settle">Liquidar uma dívida</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
     <tr><td><a href="#perm-cash-close">Acertar e fechar a caixa</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>

@@ -666,7 +666,7 @@ footer{
 <main id="top" class="shell manual">
 <nav class="indice">
   <h2>Turnera-Handbuch</h2>
-  <p>Aktualisiert am 18. Oktober 2026</p>
+  <p>Aktualisiert am 30. Oktober 2026</p>
   <div class="buscador" role="search">
     <input type="search" id="buscador-texto" placeholder="Im Handbuch suchen" aria-label="Im Handbuch suchen" autocomplete="off">
     <div class="buscador__estado">
@@ -1028,6 +1028,9 @@ footer{
   <p>
     Darunter stehen die <strong>Geburtstage der Woche</strong>, mit dem Tag und dem Alter, das jeder Kunde wird. Der Geburtstag von heute ist hervorgehoben, und auch diese Zeile führt zur Kundenakte, falls man gratulieren oder eine Kleinigkeit schenken möchte.
   </p>
+  <p>
+    Die Karte <strong>Kunden mit offenen Gutscheinen</strong> zeigt, wie viele Kunden noch Gutschein-Sitzungen übrig haben, und nennt die zehn dringendsten: zuerst, wer einen Gutschein hat, der bald abläuft, mit den verbleibenden Sitzungen und dem Datum. Das ist die Liste zum Anrufen, bevor die Sitzungen verfallen, und jede Zeile öffnet die Kundenakte. Sie sieht, wer Gutscheine oder Kunden sehen darf.
+  </p>
 
   <p>
     In einem Zentrum, das sein <strong>Personal</strong> (Arbeitskalender und Zeiterfassung) verwaltet, zeigt die Startseite dafür zusätzliche Karten:
@@ -1040,6 +1043,14 @@ footer{
   </ul>
   <p>
     Die Karten zu Anwesenheit und Stunden sieht, wer die Zeiterfassung einsehen darf; die zu Urlaub und Abwesenheiten, wer die Arbeitskalender sehen darf. Ist im Zentrum noch niemand eingeplant und hat niemand eingestempelt, erscheinen sie nicht.
+  </p>
+
+  <h4 id="inicio-personalizar">Die Startseite anpassen</h4>
+  <p>
+    Nicht alle wollen beim Anmelden dasselbe sehen: am Empfang stört die Kasse und es fehlt Platz für die offenen Zahlungen. Die Schaltfläche <strong>Anpassen</strong>oben rechts öffnet die Liste der Karten, die diese Person sehen darf, und erlaubt es, <strong>die unerwünschten auszuschalten und sie mit den Pfeilen zu ordnen</strong>, jeweils eine Zeile nach oben oder unten. Es muss nichts gezogen werden. Die Auswahl wird für diesen Benutzer gespeichert, auf jedem Gerät, von dem er sich anmeldet, und <em>Zurücksetzen</em> stellt die gewohnte Startseite wieder her.
+  </p>
+  <p>
+    Welche Karten angeboten werden, entscheiden die <strong>Berechtigungen</strong>: Hier lässt sich keine Karte einschalten, die die Rolle nicht sehen darf, und verliert die Rolle später eine Berechtigung, verschwindet ihre Karte von selbst. Umgekehrt genauso: Wer die Startseite nie angepasst hat, sieht ohne etwas zu tun jede neue Karte, die seine Berechtigungen ihm geben. Die Tageskasse hat ihre eigene Berechtigung, <a href="#perm-dashboard-cash">„Kasse auf der Startseite sehen“</a>, getrennt vom Kassieren, damit man sie einer Rolle wegnehmen kann, ohne ihr das Kassieren zu verwehren.
   </p>
 </section>
 
@@ -2345,7 +2356,7 @@ footer{
 
   <p>
     Eine <strong>Rolle</strong> ist eine Tätigkeit: Empfang, Fachkraft, Leitung. Jede Rolle trägt die
-    <strong>Berechtigungen</strong> in sich, die diese Tätigkeit braucht, und einer Person gibt man Rollen, keine einzelnen Berechtigungen. So muss man am Tag, an dem jemand Neues anfängt, nicht an zwanzig Kästchen denken: man gibt ihm seine Rolle, und fertig.
+    <strong>Berechtigungen</strong> die diese Arbeit braucht, und eine Person bekommt Rollen, keine einzelnen Berechtigungen. So muss man sich, wenn jemand Neues anfängt, nicht zwanzig Kästchen merken: Die Person bekommt ihre Rolle, fertig. Für die Ausnahme – die Empfangskraft, die zusätzlich den Bestand führt – gibt es die <a href="#usuario-permisos-adicionales">zusätzlichen Berechtigungen</a> jedes Benutzers.
   </p>
 
   <p>Das Zentrum wird mit fertigen Rollen geliefert, die man wie jede andere ändern und löschen kann. Die ersten sind Tätigkeiten; die übrigen sind <strong>je Modul eine Rolle</strong>:</p>
@@ -2388,7 +2399,12 @@ footer{
 
   <p id="usuario-copia">
     <strong>Einen Benutzer per Kopie anlegen.</strong> Wenn jemand kommt, der dasselbe tun wird wie eine andere Person, drückt man in
-    <span class="ruta">Verwaltung → Benutzer</span> auf <em>Kopieren</em> in der Zeile dieser Person. Es öffnet sich das Formular eines neuen Benutzers, bereits mit <strong>seine Rollen, individuellen Berechtigungen, seinen Standort und seine erlaubten IP-Adressen</strong>; man muss nur den Benutzernamen und ein Passwort eingeben. Vor dem Speichern kann jede Rolle entfernt oder hinzugefügt werden. Das Passwort wird nicht kopiert, und danach ändert sich jeder Benutzer für sich: Was dem einen später entzogen wird, wird dem anderen nicht entzogen. Da Kopieren das Vergeben von Berechtigungen ist, sieht die Schaltfläche nur, wer die Berechtigung „Rollen und Berechtigungen verwalten“ hat.
+    <span class="ruta">Verwaltung → Benutzer</span> auf <em>Kopieren</em> in der Zeile dieser Person. Es öffnet sich das Formular eines neuen Benutzers, bereits mit <strong>seine Rollen, individuellen Berechtigungen, seinen Standort und seine erlaubten IP-Adressen</strong>; nur Benutzername und ein Passwort sind einzugeben. Vor dem Speichern kann jede Rolle oder zusätzliche Berechtigung entfernt oder hinzugefügt werden. Das Passwort wird nicht kopiert, und danach ändert sich jeder Benutzer für sich: Was man später dem einen wegnimmt, wird dem anderen nicht weggenommen. Da Kopieren Berechtigungen verteilt, sieht die Schaltfläche nur, wer die Berechtigung „Rollen und Berechtigungen verwalten“ hat.
+  </p>
+
+  <p id="usuario-permisos-adicionales">
+    <strong>Zusätzliche Berechtigungen eines Benutzers.</strong> Wenn eine einzelne Person etwas braucht, das ihre Rolle nicht enthält, ist keine neue Rolle nötig: Im Formular dieses Benutzers, unter den Rollen, gibt es den Abschnitt
+    <em>Zusätzliche Berechtigungen</em>, eingeklappt und nach Bereichen gruppiert wie auf der Rollenseite. Was die Rollen schon geben, ist markiert und gesperrt, mit dem Namen der Rolle, die es gibt, damit man sieht, woher jede Berechtigung kommt; hier wird nur hinzugefügt, nie weggenommen, was eine Rolle mitbringt. Bei vielen Berechtigungen gibt es eine Wortsuche. Die Extras sind auch in der Benutzerliste zu sehen, mit der Markierung „+N individuell“, damit Ausnahmen nicht verborgen bleiben. Es ist die Ausnahme, nicht die Regel: Brauchen mehrere Personen dasselbe, ist eine Rolle besser. Berechtigungen auf diese Weise zu geben oder zu entziehen erfordert, wie alles, was Berechtigungen verteilt, „Rollen und Berechtigungen verwalten“.
   </p>
 
   <p>
@@ -2420,9 +2436,9 @@ footer{
   <div class="tabla-envoltorio">
   <table>
     <tbody><tr><th>Rolle</th><th>Wofür sie gut ist</th><th>Berechtigungen ab Werk</th></tr>
-    <tr><td><strong><a href="#rol-recepcion">Empfang</a></strong></td><td>Vergibt Termine, betreut den Empfang und kassiert.</td><td>32</td></tr>
+    <tr><td><strong><a href="#rol-recepcion">Empfang</a></strong></td><td>Vergibt Termine, betreut den Empfang und kassiert.</td><td>33</td></tr>
     <tr><td><strong><a href="#rol-profesional">Fachkraft</a></strong></td><td>Der eigene Terminkalender, die eigenen Kunden und die Patientenakte.</td><td>18</td></tr>
-    <tr><td><strong><a href="#rol-direccion">Leitung</a></strong></td><td>Führt das Zentrum: Katalog, Personal, Berichte und Einstellungen. Kümmert sich auch um die Benutzer: Namen oder Filiale ändern, sie entsperren und ihr Passwort zurücksetzen.</td><td>95</td></tr>
+    <tr><td><strong><a href="#rol-direccion">Leitung</a></strong></td><td>Führt das Zentrum: Katalog, Personal, Berichte und Einstellungen. Kümmert sich auch um die Benutzer: Namen oder Filiale ändern, sie entsperren und ihr Passwort zurücksetzen.</td><td>96</td></tr>
     <tr><td><strong><a href="#rol-rrhh">RRHH</a></strong></td><td>Arbeitskalender, Behandler und Terminkalender.</td><td>18</td></tr>
     <tr><td><strong><a href="#rol-mantenimiento">Wartung</a></strong></td><td>Betreut die Wartungsaufträge, ihre Bereiche und ihre Anlagen.</td><td>7</td></tr>
     <tr><td><strong><a href="#rol-activaciones">Aktivierungen</a></strong></td><td>Betreut die Aktivierungspunkte und ihre Anfragen.</td><td>2</td></tr>
@@ -2430,11 +2446,11 @@ footer{
     <tr><td><strong><a href="#rol-catalogo">Katalog</a></strong></td><td>Modulrolle: Leistungen, Pakete, Produkte, Lieferanten und Bestand samt Berichten.</td><td>14</td></tr>
     <tr><td><strong><a href="#rol-agenda">Terminkalender</a></strong></td><td>Modulrolle: Termine, Warteliste, Kabinen, Geräte und der Terminbericht.</td><td>13</td></tr>
     <tr><td><strong><a href="#rol-historia-clinica">Patientenakte</a></strong></td><td>Modulrolle: die Patientenakte und die Einwilligungen.</td><td>8</td></tr>
-    <tr><td><strong><a href="#rol-caja">Kasse</a></strong></td><td>Modulrolle: Kassieren, Rückerstattungen, Schulden, Mehrfachkarten, Geschenkgutscheine, Gutscheincodes, Kassenabschluss und die zugehörigen Berichte.</td><td>20</td></tr>
+    <tr><td><strong><a href="#rol-caja">Kasse</a></strong></td><td>Modulrolle: Kassieren, Rückerstattungen, Schulden, Mehrfachkarten, Geschenkgutscheine, Gutscheincodes, Kassenabschluss und die zugehörigen Berichte.</td><td>21</td></tr>
     <tr><td><strong><a href="#rol-facturacion">Rechnungsstellung</a></strong></td><td>Modulrolle: vollständige Rechnungen, Rechnungsbuch und Buchhaltungsentwurf.</td><td>3</td></tr>
     <tr><td><strong><a href="#rol-portal-y-avisos">Portal und Hinweise</a></strong></td><td>Modulrolle: das Buchungsportal und die WhatsApp-Erinnerungen.</td><td>2</td></tr>
     <tr><td><strong><a href="#rol-personal">Personal</a></strong></td><td>Modulrolle: Arbeitskalender, Zeiterfassung und Vorfälle.</td><td>10</td></tr>
-    <tr><td><strong><a href="#rol-administrador-del-sistema">Systemadministrator</a></strong></td><td>Alles, einschließlich der <a href="#roles-sensibles">sensiblen Berechtigungen</a>. Sie ist die einzige Rolle, die sie mitbringt.</td><td>119 (alle)</td></tr>
+    <tr><td><strong><a href="#rol-administrador-del-sistema">Systemadministrator</a></strong></td><td>Alles, einschließlich der <a href="#roles-sensibles">sensiblen Berechtigungen</a>. Sie ist die einzige Rolle, die sie mitbringt.</td><td>120 (alle)</td></tr>
   </tbody></table>
   </div>
 
@@ -2457,7 +2473,7 @@ footer{
   </ol>
 
   <p>
-    Eine Rolle zu bearbeiten ändert, was <strong>alle Personen, die sie haben,</strong>tun können, nicht nur eine. Wenn nur eine einzelne Person etwas anderes tun soll, legt man eine eigene Rolle mit den Berechtigungen an, die sie braucht, und gibt sie ihr anstelle der überzähligen. Eine Rolle, die jemand hat, lässt sich nicht löschen: Zuerst nimmt man sie diesen Personen weg. Der Benutzerbildschirm arbeitet mit Rollen; einzelne Berechtigungen, die ein Benutzer von früher haben könnte, werden beim Anlegen eines Benutzers per Kopie mit kopiert.
+    Eine Rolle zu bearbeiten ändert, was <strong>alle Personen, die sie haben,</strong>, nicht nur eine. Soll eine einzelne Person etwas anderes tun, bekommt sie <a href="#usuario-permisos-adicionales">zusätzlichen Berechtigungen</a> über ihre Benutzerakte, oder es wird eine eigene Rolle angelegt, wenn sie eine ganz andere Arbeit braucht. Eine Rolle, die jemand hat, kann nicht gelöscht werden: Zuerst wird sie diesen Personen entzogen. Die zusätzlichen Berechtigungen eines Benutzers werden mitkopiert, wenn ein weiterer Benutzer per Kopie angelegt wird.
   </p>
 
   <h3 id="roles-ver-no-es-editar">Ansehen ist nicht dasselbe wie Ändern, Stornieren oder Herunterladen</h3>
@@ -2474,7 +2490,8 @@ footer{
       <a href="#perm-reports-payments">„Zahlungsbericht“</a>. Ihn als Datei herunterzuladen erfordert zusätzlich <a href="#perm-reports-export">„Berichte als Datei herunterladen“</a>; und der Kundenbericht als Datei erfordert <a href="#perm-customers-export">„Liste der Kunden exportieren“</a>, die sensibel ist.</li>
     <li><strong>Katalog.</strong> <a href="#perm-services-view">„Leistungen ansehen“</a> zeigt die Leistungen und ihre Preise;
       <a href="#perm-services-write">„Leistungen anlegen und bearbeiten“</a> erlaubt es, sie zu ändern. Mit bloßem Ansehen sind die Schaltflächen zum Anlegen, Bearbeiten und Zurückziehen ausgegraut oder fehlen.</li>
-    <li><strong>Kasse.</strong> Kassieren ist <a href="#perm-checkout-charge">„An der Kasse kassieren“</a>; einen Rabatt gewähren: <a href="#perm-checkout-discount">„Rabatte gewähren“</a>; etwas offen lassen: <a href="#perm-checkout-debt">„Offen lassen“</a>; ein Ticket zurückerstatten: <a href="#perm-checkout-refund">„Ticket zurückerstatten“</a>. Niemand am Empfang öffnet eine geschlossene Kasse wieder ohne <a href="#perm-cash-reopen">«Geschlossene Kasse wieder öffnen»</a>.</li>
+    <li><strong>Kasse.</strong> Kassieren ist <a href="#perm-checkout-charge">„An der Kasse kassieren“</a>; einen Rabatt gewähren: <a href="#perm-checkout-discount">„Rabatte gewähren“</a>; etwas offen lassen: <a href="#perm-checkout-debt">„Offen lassen“</a>; ein Ticket zurückerstatten: <a href="#perm-checkout-refund">„Ticket zurückerstatten“</a>; auf der Startseite sehen, was heute und im Monat kassiert wurde,
+      <a href="#perm-dashboard-cash">„Kasse auf der Startseite sehen“</a>. Niemand am Empfang öffnet eine geschlossene Kasse wieder ohne <a href="#perm-cash-reopen">«Geschlossene Kasse wieder öffnen»</a>.</li>
     <li><strong>Wartung.</strong> <a href="#perm-maintenance-view">„Instandhaltung ansehen“</a> liest die Aufträge; einen zu öffnen ist
       <a href="#perm-maintenance-report">„Ein Problem melden“</a>; ihn von einem Status in den nächsten zu bringen ist <a href="#perm-maintenance-manage">„Aufträge bearbeiten“</a>; ihn abzuschließen:
       <a href="#perm-maintenance-close">„Aufträge schließen und wieder öffnen“</a>.</li>
@@ -2622,6 +2639,7 @@ footer{
     <tr id="perm-checkout-discount"><td><strong>Rabatte gewähren</strong></td><td>Schaltet das Rabattfeld innerhalb des Zahlvorgangs frei.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
     <tr id="perm-checkout-debt"><td><strong>Auf Rechnung lassen</strong></td><td>Erlaubt, einen Zahlvorgang mit offenem Restbetrag abzuschließen, statt ihn vollständig zu kassieren. Der Betrag erscheint danach unter „Offene Beträge ansehen“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
     <tr id="perm-checkout-refund"><td><strong>Einen Beleg erstatten</strong></td><td>Erlaubt die Schaltfläche, um Positionen eines bereits abgerechneten Tickets zu erstatten, als Geld oder als Guthaben.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-dashboard-cash"><td><strong>Kasse auf der Startseite sehen</strong></td><td>Zeigt auf der Startseite die Karte mit dem heute und im Monat Kassierten, nach Zahlungsart. Öffnet weder die Kasse noch den Kassenbericht: Das bleibt bei „An der Kasse kassieren“ und „Tagessummen“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
     <tr id="perm-debts-view"><td><strong>Offene Zahlungen ansehen</strong></td><td>Öffnet die Ansicht der offenen Beträge. Eine Schuld zu begleichen ist eine eigene Berechtigung: „Schuld begleichen“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
     <tr id="perm-debts-settle"><td><strong>Eine Schuld begleichen</strong></td><td>Erlaubt die Schaltfläche zum Begleichen einer Schuld.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
     <tr id="perm-cash-close"><td><strong>Kasse abrechnen und abschließen</strong></td><td>Öffnet die Tageskasse zum Zählen von Bargeld und Kartenbelegen und erlaubt den Abschluss.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
@@ -2721,9 +2739,9 @@ footer{
 
   <nav class="rol-selector" aria-label="Zu einer Rolle">
     <p class="rol-selector__titulo">Allgemeine Rollen</p>
-    <div class="chips"><a class="chip r-recepcion" href="#rol-recepcion">Empfang <small>32</small></a>
+    <div class="chips"><a class="chip r-recepcion" href="#rol-recepcion">Empfang <small>33</small></a>
       <a class="chip r-profesional" href="#rol-profesional">Fachkraft <small>18</small></a>
-      <a class="chip r-direccion" href="#rol-direccion">Leitung <small>95</small></a>
+      <a class="chip r-direccion" href="#rol-direccion">Leitung <small>96</small></a>
       <a class="chip r-rrhh" href="#rol-rrhh">RRHH <small>18</small></a>
       <a class="chip r-mantenimiento" href="#rol-mantenimiento">Wartung <small>7</small></a>
       <a class="chip r-activaciones" href="#rol-activaciones">Aktivierungen <small>2</small></a></div>
@@ -2732,19 +2750,19 @@ footer{
       <a class="chip r-catalogo" href="#rol-catalogo">Katalog <small>14</small></a>
       <a class="chip r-agenda" href="#rol-agenda">Terminkalender <small>13</small></a>
       <a class="chip r-historia-clinica" href="#rol-historia-clinica">Patientenakte <small>8</small></a>
-      <a class="chip r-caja" href="#rol-caja">Kasse <small>20</small></a>
+      <a class="chip r-caja" href="#rol-caja">Kasse <small>21</small></a>
       <a class="chip r-facturacion" href="#rol-facturacion">Rechnungsstellung <small>3</small></a>
       <a class="chip r-portal-y-avisos" href="#rol-portal-y-avisos">Portal und Hinweise <small>2</small></a>
       <a class="chip r-personal" href="#rol-personal">Personal <small>10</small></a></div>
     <p class="rol-selector__titulo">Systemrolle</p>
-    <div class="chips"><a class="chip r-administrador-del-sistema" href="#rol-administrador-del-sistema">Systemadministrator <small>119</small></a></div>
+    <div class="chips"><a class="chip r-administrador-del-sistema" href="#rol-administrador-del-sistema">Systemadministrator <small>120</small></a></div>
     <p class="rol-selector__titulo">Und was keine Rolle mitbringt</p>
     <div class="chips"><a class="chip r-adicionales" href="#permisos-adicionales">Zusätzliche Berechtigungen <small>14</small></a><a class="chip r-matriz" href="#roles-matriz">Zusammenfassung als Matrix</a></div>
   </nav>
 
   <article class="rol-card r-recepcion familia-general" id="rol-recepcion">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Empfang</h5><span class="rc-cuenta">32 Berechtigungen</span><span class="rc-familia">Allgemeine Rolle</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Empfang</h5><span class="rc-cuenta">33 Berechtigungen</span><span class="rc-familia">Allgemeine Rolle</span></div>
       <p class="rc-para">Für alle am Empfang: vergibt Termine, betreut den Kunden und kassiert.</p>
     </header>
     <div class="rc-cuerpo">
@@ -2770,11 +2788,12 @@ footer{
         <li class="rc-perm"><a href="#perm-consents-request">Unterschrift anfordern</a><span class="rc-desc">Bittet um die Unterschrift unter einer Einwilligung.</span></li>
         <li class="rc-perm"><a href="#perm-consents-import">Unterschriebene Einwilligungen importieren</a><span class="rc-desc">Lädt Einwilligungen, die bereits auf einer anderen Plattform unterschrieben wurden, als PDF in die Karteikarte hoch.</span></li>
       </ul>
-      <h6 class="rc-modulo"><a href="#permisos-caja">Kasse</a> <span class="n">· 11</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-caja">Kasse</a> <span class="n">· 12</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-checkout-charge">An der Kasse kassieren</a><span class="rc-desc">Öffnet die Kasse und erlaubt, einen Zahlvorgang abzuschließen.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Rabatte gewähren</a><span class="rc-desc">Schaltet das Rabattfeld innerhalb des Zahlvorgangs frei.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Auf Rechnung lassen</a><span class="rc-desc">Erlaubt, einen Zahlvorgang mit offenem Restbetrag abzuschließen, statt ihn vollständig zu kassieren.</span></li>
+        <li class="rc-perm"><a href="#perm-dashboard-cash">Kasse auf der Startseite sehen</a><span class="rc-desc">Zeigt auf der Startseite die Karte mit dem heute und im Monat Kassierten, nach Zahlungsart. Öffnet weder die Kasse noch den Kassenbericht: Das bleibt bei „An der Kasse kassieren“ und „Tagessummen“.</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">Offene Zahlungen ansehen</a><span class="rc-desc">Öffnet den Bildschirm der offenen Zahlungen.</span></li>
         <li class="rc-perm"><a href="#perm-debts-settle">Eine Schuld begleichen</a><span class="rc-desc">Erlaubt die Schaltfläche zum Begleichen einer Schuld.</span></li>
         <li class="rc-perm"><a href="#perm-cash-close">Kasse abrechnen und abschließen</a><span class="rc-desc">Öffnet die Tageskasse zum Zählen von Bargeld und Kartenbelegen und erlaubt den Abschluss.</span></li>
@@ -2851,7 +2870,7 @@ footer{
 
   <article class="rol-card r-direccion familia-general" id="rol-direccion">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Leitung</h5><span class="rc-cuenta">95 Berechtigungen</span><span class="rc-familia">Allgemeine Rolle</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Leitung</h5><span class="rc-cuenta">96 Berechtigungen</span><span class="rc-familia">Allgemeine Rolle</span></div>
       <p class="rc-para">Für alle, die das Zentrum leiten: Katalog, Personal, Berichte und Einstellungen.</p>
     </header>
     <div class="rc-cuerpo">
@@ -2887,12 +2906,13 @@ footer{
         <li class="rc-perm"><a href="#perm-consents-withdraw">Einwilligung widerrufen</a><span class="rc-desc">Widerruft eine bereits erteilte Einwilligung.</span></li>
         <li class="rc-perm"><a href="#perm-consents-templates">Vorlagen verwalten</a><span class="rc-desc">Erstellt und ändert die Einwilligungsvorlagen des Zentrums.</span></li>
       </ul>
-      <h6 class="rc-modulo"><a href="#permisos-caja">Kasse</a> <span class="n">· 20</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-caja">Kasse</a> <span class="n">· 21</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-checkout-charge">An der Kasse kassieren</a><span class="rc-desc">Öffnet die Kasse und erlaubt, einen Zahlvorgang abzuschließen.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Rabatte gewähren</a><span class="rc-desc">Schaltet das Rabattfeld innerhalb des Zahlvorgangs frei.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Auf Rechnung lassen</a><span class="rc-desc">Erlaubt, einen Zahlvorgang mit offenem Restbetrag abzuschließen, statt ihn vollständig zu kassieren.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-refund">Einen Beleg erstatten</a><span class="rc-desc">Erlaubt die Schaltfläche, um Positionen eines bereits abgerechneten Tickets zu erstatten, als Geld oder als Guthaben.</span></li>
+        <li class="rc-perm"><a href="#perm-dashboard-cash">Kasse auf der Startseite sehen</a><span class="rc-desc">Zeigt auf der Startseite die Karte mit dem heute und im Monat Kassierten, nach Zahlungsart. Öffnet weder die Kasse noch den Kassenbericht: Das bleibt bei „An der Kasse kassieren“ und „Tagessummen“.</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">Offene Zahlungen ansehen</a><span class="rc-desc">Öffnet den Bildschirm der offenen Zahlungen.</span></li>
         <li class="rc-perm"><a href="#perm-debts-settle">Eine Schuld begleichen</a><span class="rc-desc">Erlaubt die Schaltfläche zum Begleichen einer Schuld.</span></li>
         <li class="rc-perm"><a href="#perm-cash-close">Kasse abrechnen und abschließen</a><span class="rc-desc">Öffnet die Tageskasse zum Zählen von Bargeld und Kartenbelegen und erlaubt den Abschluss.</span></li>
@@ -3160,16 +3180,17 @@ footer{
 
   <article class="rol-card r-caja familia-modulo" id="rol-caja">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Kasse</h5><span class="rc-cuenta">20 Berechtigungen</span><span class="rc-familia">Modulrolle</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Kasse</h5><span class="rc-cuenta">21 Berechtigungen</span><span class="rc-familia">Modulrolle</span></div>
       <p class="rc-para">Modulrolle für alle, die die Kasse betreuen: Zahlungen, Rückerstattungen, Schulden, Mehrfachkarten, Geschenkgutscheine und Gutscheincodes. Sie bringt alle nicht sensiblen Berechtigungen ihres Moduls mit, und nur diese.</p>
     </header>
     <div class="rc-cuerpo">
-      <h6 class="rc-modulo"><a href="#permisos-caja">Kasse</a> <span class="n">· 20</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-caja">Kasse</a> <span class="n">· 21</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-checkout-charge">An der Kasse kassieren</a><span class="rc-desc">Öffnet die Kasse und erlaubt, einen Zahlvorgang abzuschließen.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Rabatte gewähren</a><span class="rc-desc">Schaltet das Rabattfeld innerhalb des Zahlvorgangs frei.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Auf Rechnung lassen</a><span class="rc-desc">Erlaubt, einen Zahlvorgang mit offenem Restbetrag abzuschließen, statt ihn vollständig zu kassieren.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-refund">Einen Beleg erstatten</a><span class="rc-desc">Erlaubt die Schaltfläche, um Positionen eines bereits abgerechneten Tickets zu erstatten, als Geld oder als Guthaben.</span></li>
+        <li class="rc-perm"><a href="#perm-dashboard-cash">Kasse auf der Startseite sehen</a><span class="rc-desc">Zeigt auf der Startseite die Karte mit dem heute und im Monat Kassierten, nach Zahlungsart. Öffnet weder die Kasse noch den Kassenbericht: Das bleibt bei „An der Kasse kassieren“ und „Tagessummen“.</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">Offene Zahlungen ansehen</a><span class="rc-desc">Öffnet den Bildschirm der offenen Zahlungen.</span></li>
         <li class="rc-perm"><a href="#perm-debts-settle">Eine Schuld begleichen</a><span class="rc-desc">Erlaubt die Schaltfläche zum Begleichen einer Schuld.</span></li>
         <li class="rc-perm"><a href="#perm-cash-close">Kasse abrechnen und abschließen</a><span class="rc-desc">Öffnet die Tageskasse zum Zählen von Bargeld und Kartenbelegen und erlaubt den Abschluss.</span></li>
@@ -3243,8 +3264,8 @@ footer{
 
   <article class="rol-card r-administrador-del-sistema familia-admin" id="rol-administrador-del-sistema">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Systemadministrator</h5><span class="rc-cuenta">119 Berechtigungen</span><span class="rc-familia">Systemrolle</span></div>
-      <p class="rc-para">Für alle, die für das ganze Zentrum verantwortlich sind: Sie bringt alles mit, auch die sensiblen Berechtigungen. Sie umfasst <strong>alle 119 Berechtigungen</strong> und ist die einzige Rolle ab Werk, die die 13 <a href="#roles-sensibles">sensiblen</a>Berechtigungen mitbringt. Eine neue Berechtigung kommt von selbst dazu.</p>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Systemadministrator</h5><span class="rc-cuenta">120 Berechtigungen</span><span class="rc-familia">Systemrolle</span></div>
+      <p class="rc-para">Für alle, die für das ganze Zentrum verantwortlich sind: Sie bringt alles mit, auch die sensiblen Berechtigungen. Sie umfasst <strong>alle 120 Berechtigungen</strong> und ist die einzige Rolle ab Werk, die die 13 <a href="#roles-sensibles">sensiblen</a>Berechtigungen mitbringt. Eine neue Berechtigung kommt von selbst dazu.</p>
     </header>
     <div class="rc-cuerpo">
       <p class="rc-nota">Um nicht die ganze Tabelle zu wiederholen, stehen hier nur die sensiblen. Alle anderen stehen in der <a href="#roles-permisos">Tabelle nach Modulen</a>.</p>
@@ -3291,7 +3312,7 @@ footer{
   <h4 id="roles-adicionales">Zusätzliche Berechtigungen: die, die keine Rolle ab Werk mitbringt</h4>
 
   <p>
-    Von den 119 Berechtigungen <strong>14</strong> bringt keine Rolle ab Werk mit, nur der Systemadministrator. Wenn jemand sie braucht, <strong>legt man eine eigene Rolle an</strong> mit diesen Berechtigungen (<a href="#roles-paso-a-paso">wie man eine Rolle anlegt</a>) und gibt sie dieser Person unter
+    Von den 120 Berechtigungen <strong>14</strong> bringt keine Rolle ab Werk mit, nur der Systemadministrator. Wenn jemand sie braucht, <strong>legt man eine eigene Rolle an</strong> mit diesen Berechtigungen (<a href="#roles-paso-a-paso">wie man eine Rolle anlegt</a>) und gibt sie dieser Person unter
     <strong>Verwaltung → Benutzer</strong>. Die sensiblen tragen das Kennzeichen und sollten nur an Personen vergeben werden, die das Zentrum leiten.
   </p>
 
@@ -3395,6 +3416,7 @@ footer{
     <tr><td><a href="#perm-checkout-discount">Rabatte gewähren</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
     <tr><td><a href="#perm-checkout-debt">Auf Rechnung lassen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
     <tr><td><a href="#perm-checkout-refund">Einen Beleg erstatten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-dashboard-cash">Kasse auf der Startseite sehen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
     <tr><td><a href="#perm-debts-view">Offene Zahlungen ansehen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
     <tr><td><a href="#perm-debts-settle">Eine Schuld begleichen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
     <tr><td><a href="#perm-cash-close">Kasse abrechnen und abschließen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>

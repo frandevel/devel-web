@@ -627,6 +627,7 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-10-30">30 de octubre de 2026</a></li>
     <li><a href="#2026-10-29">29 de octubre de 2026</a></li>
     <li><a href="#2026-10-28">28 de octubre de 2026</a></li>
     <li><a href="#2026-10-27">27 de octubre de 2026</a></li>
@@ -663,10 +664,45 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-10-30" class="version">
+  <div class="version__cabecera">
+    <h2>30 de octubre de 2026</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">1.11.0-bf691bb</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"/></svg></span>Nuevas características</h3>
+    <h4>Cada usuario elige su Inicio</h4>
+    <ul>
+      <li>El botón <strong>Personalizar</strong>, arriba a la derecha del Inicio, abre la lista de tarjetas que esa persona puede ver y deja <strong>apagar las que no quiere y ordenarlas con las flechas</strong>, una fila arriba o abajo cada vez. No hay que arrastrar nada.</li>
+      <li>Lo elegido se guarda para ese usuario, en cualquier equipo desde el que entre. <strong>Restablecer</strong> vuelve al Inicio de siempre.</li>
+      <li>Solo se ofrecen las tarjetas que los permisos del usuario dejan ver. Quien no ha personalizado nada sigue viendo, sin tocar nada, cada tarjeta nueva que sus permisos le den.</li>
+    </ul>
+    <h4>Clientes con bonos pendientes, en el Inicio</h4>
+    <ul>
+      <li>Una tarjeta nueva dice cuántos clientes tienen sesiones de bono por disfrutar y enseña a los diez más urgentes: primero quien tiene un bono a punto de caducar, con las sesiones que le quedan y la fecha.</li>
+      <li>Cada fila abre la ficha del cliente, para llamar antes de que se pierdan las sesiones. La ve quien puede ver bonos o clientes.</li>
+    </ul>
+    <h4>Permisos adicionales para un usuario</h4>
+    <ul>
+      <li>Cuando una sola persona necesita algo que su rol no lleva, ya no hace falta un rol nuevo: en el formulario del usuario, debajo de los roles, la sección <strong>Permisos adicionales</strong> deja añadirle permisos sueltos, agrupados por áreas y con buscador.</li>
+      <li>Lo que ya dan sus roles sale marcado y bloqueado, con el nombre del rol que lo da; aquí solo se añade, nunca se quita lo que trae un rol. En el listado de usuarios, los que tienen extras llevan la marca <strong>+N a medida</strong>.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>Mejoras</h3>
+    <h4>Ver la caja del Inicio es un permiso aparte</h4>
+    <ul>
+      <li>La tarjeta de caja del día y del mes tiene ahora su propio permiso, <strong>Ver la caja en el Inicio</strong>, separado de <strong>Cobrar en el TPV</strong>. Así se puede quitar la caja a un rol, como Recepción, sin impedirle cobrar.</li>
+      <li>Nadie pierde nada con el cambio: todo rol o usuario que hoy puede cobrar recibe también el permiso nuevo. Quitarlo es decisión de cada centro, desde la pantalla de roles.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-10-29" class="version">
   <div class="version__cabecera">
     <h2>29 de octubre de 2026</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">1.10.0-c72d69e</span></p>
 

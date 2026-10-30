@@ -666,7 +666,7 @@ footer{
 <main id="top" class="shell manual">
 <nav class="indice">
   <h2>Manual de Turnera</h2>
-  <p>Actualizado el 18 de octubre de 2026</p>
+  <p>Actualizado el 30 de octubre de 2026</p>
   <div class="buscador" role="search">
     <input type="search" id="buscador-texto" placeholder="Buscar en el manual" aria-label="Buscar en el manual" autocomplete="off">
     <div class="buscador__estado">
@@ -1095,6 +1095,12 @@ footer{
     Debajo están los <strong>cumpleaños de la semana</strong>, con el día y los años que cumple cada cliente. El
     de hoy aparece resaltado, y la fila también lleva a la ficha, por si se le quiere felicitar o regalar algo.
   </p>
+  <p>
+    La tarjeta de <strong>clientes con bonos pendientes</strong> dice cuántos clientes tienen sesiones de bono
+    por disfrutar y enseña a los diez más urgentes: primero quien tiene un bono a punto de caducar, con las sesiones
+    que le quedan y la fecha. Es la lista para llamar antes de que se pierdan, y cada fila abre la ficha del
+    cliente. La ve quien puede ver bonos o clientes.
+  </p>
 
   <p>
     En un centro que lleva el <strong>personal</strong> (el calendario laboral y el control de presencia), la
@@ -1114,6 +1120,22 @@ footer{
     Las tarjetas de presencia y de horas las ve quien puede consultar los fichajes; la de vacaciones y bajas, quien
     puede ver los calendarios laborales. Si en el centro todavía no se ha planificado a nadie ni se ha fichado, no
     aparecen.
+  </p>
+
+  <h4 id="inicio-personalizar">Personalizar el Inicio</h4>
+  <p>
+    No todo el mundo quiere ver lo mismo al entrar: a quien está en el mostrador le sobra la caja y le falta sitio
+    para los cobros pendientes. El botón <strong>Personalizar</strong>, arriba a la derecha, abre la lista de
+    tarjetas que esa persona puede ver y deja <strong>apagar las que no quiere y ordenarlas con las flechas</strong>,
+    una fila arriba o abajo cada vez. No hay que arrastrar nada. Lo elegido se guarda para ese usuario, en cualquier
+    equipo desde el que entre, y <em>Restablecer</em> vuelve al Inicio de siempre.
+  </p>
+  <p>
+    Lo que decide qué tarjetas se ofrecen son los <strong>permisos</strong>: aquí no se puede encender una tarjeta que
+    el rol no deja ver, y si más adelante el rol pierde un permiso, su tarjeta desaparece sola. Al revés también:
+    quien nunca ha personalizado el Inicio ve, sin tocar nada, cada tarjeta nueva que sus permisos le den. La caja
+    del día tiene su propio permiso, <a href="#perm-dashboard-cash">«Ver la caja en el Inicio»</a>, separado de
+    cobrar en el TPV, para poder quitársela a un rol sin impedirle cobrar.
   </p>
 </section>
 
@@ -2799,7 +2821,9 @@ footer{
   <p>
     Un <strong>rol</strong> es un trabajo: recepción, profesional, dirección. Cada rol lleva dentro los
     <strong>permisos</strong> que ese trabajo necesita, y a una persona se le dan roles, no permisos sueltos. Así
-    el día que entra alguien nuevo no hay que acordarse de veinte casillas: se le da su rol y ya está.
+    el día que entra alguien nuevo no hay que acordarse de veinte casillas: se le da su rol y ya está. Para la
+    excepción —la recepcionista que además lleva el stock— están los <a href="#usuario-permisos-adicionales">permisos
+    adicionales</a> de cada usuario.
   </p>
 
   <p>El centro viene con roles hechos, que se pueden cambiar y borrar como cualquier otro. Los primeros son
@@ -2857,9 +2881,20 @@ footer{
     <span class="ruta">Administración → Usuarios</span> se pulsa <em>Copiar</em> en la fila de esa persona. Se abre el
     formulario de un usuario nuevo ya con <strong>sus roles, sus permisos a medida, su delegación y sus direcciones IP
     autorizadas</strong>; sólo hay que poner el nombre de usuario y una contraseña. Antes de guardar se puede quitar o
-    añadir cualquier rol. La contraseña no se copia, y después cada usuario cambia por su lado: lo que se le quite
+    añadir cualquier rol o permiso adicional. La contraseña no se copia, y después cada usuario cambia por su lado: lo que se le quite
     luego a uno no se le quita al otro. Como copiar es repartir permisos, el botón sólo lo ve quien tiene el permiso
     «Gobernar roles y permisos».
+  </p>
+
+  <p id="usuario-permisos-adicionales">
+    <strong>Permisos adicionales de un usuario.</strong> Cuando una sola persona necesita algo que su rol no lleva,
+    no hace falta un rol nuevo: en el formulario de ese usuario, debajo de los roles, está la sección
+    <em>Permisos adicionales</em>, plegada y agrupada por áreas como en la pantalla de roles. Lo que ya dan sus roles
+    sale marcado y bloqueado, con el nombre del rol que lo da, para que se vea de dónde sale cada cosa; aquí sólo se
+    añade, nunca se quita lo que trae un rol. Con muchos permisos hay un buscador por palabras. Los extras se ven
+    también en el listado de usuarios, con una marca «+N a medida», para que las excepciones no queden escondidas. Es
+    la excepción, no la norma: si varias personas necesitan lo mismo, es mejor un rol. Dar o quitar permisos de esta
+    manera pide, como todo lo que reparte permisos, el de «Gobernar roles y permisos».
   </p>
 
   <p>
@@ -2898,9 +2933,9 @@ footer{
   <div class="tabla-envoltorio">
   <table>
     <tbody><tr><th>Rol</th><th>Para qué sirve</th><th>Permisos de fábrica</th></tr>
-    <tr><td><strong><a href="#rol-recepcion">Recepción</a></strong></td><td>Da horas, atiende el mostrador y cobra.</td><td>32</td></tr>
+    <tr><td><strong><a href="#rol-recepcion">Recepción</a></strong></td><td>Da horas, atiende el mostrador y cobra.</td><td>33</td></tr>
     <tr><td><strong><a href="#rol-profesional">Profesional</a></strong></td><td>Su agenda, sus clientes y la historia clínica.</td><td>18</td></tr>
-    <tr><td><strong><a href="#rol-direccion">Dirección</a></strong></td><td>Lleva el centro: catálogo, personal, informes y ajustes. También atiende a los usuarios: cambiarles el nombre o la delegación, desbloquearlos y restablecerles la contraseña.</td><td>95</td></tr>
+    <tr><td><strong><a href="#rol-direccion">Dirección</a></strong></td><td>Lleva el centro: catálogo, personal, informes y ajustes. También atiende a los usuarios: cambiarles el nombre o la delegación, desbloquearlos y restablecerles la contraseña.</td><td>96</td></tr>
     <tr><td><strong><a href="#rol-rrhh">RRHH</a></strong></td><td>Calendarios laborales, profesionales y agenda.</td><td>18</td></tr>
     <tr><td><strong><a href="#rol-mantenimiento">Mantenimiento</a></strong></td><td>Lleva los partes de mantenimiento, sus zonas y sus equipos.</td><td>7</td></tr>
     <tr><td><strong><a href="#rol-activaciones">Activaciones</a></strong></td><td>Lleva los puntos de activación y sus solicitudes.</td><td>2</td></tr>
@@ -2908,11 +2943,11 @@ footer{
     <tr><td><strong><a href="#rol-catalogo">Catálogo</a></strong></td><td>Rol de módulo: servicios, paquetes, productos, proveedores y stock, con sus informes.</td><td>14</td></tr>
     <tr><td><strong><a href="#rol-agenda">Agenda</a></strong></td><td>Rol de módulo: citas, lista de espera, cabinas, aparatos y el informe de citas.</td><td>13</td></tr>
     <tr><td><strong><a href="#rol-historia-clinica">Historia clínica</a></strong></td><td>Rol de módulo: la historia clínica y los consentimientos.</td><td>8</td></tr>
-    <tr><td><strong><a href="#rol-caja">Caja</a></strong></td><td>Rol de módulo: cobrar, devolver, deudas, bonos, tarjetas regalo, cupones, cierre de caja y sus informes.</td><td>20</td></tr>
+    <tr><td><strong><a href="#rol-caja">Caja</a></strong></td><td>Rol de módulo: cobrar, devolver, deudas, bonos, tarjetas regalo, cupones, cierre de caja y sus informes.</td><td>21</td></tr>
     <tr><td><strong><a href="#rol-facturacion">Facturación</a></strong></td><td>Rol de módulo: facturas completas, libro de facturas y borrador contable.</td><td>3</td></tr>
     <tr><td><strong><a href="#rol-portal-y-avisos">Portal y avisos</a></strong></td><td>Rol de módulo: el portal de reservas y los avisos por WhatsApp.</td><td>2</td></tr>
     <tr><td><strong><a href="#rol-personal">Personal</a></strong></td><td>Rol de módulo: calendarios laborales, registro de jornada e incidencias.</td><td>10</td></tr>
-    <tr><td><strong><a href="#rol-administrador-del-sistema">Administrador del sistema</a></strong></td><td>Todo, incluidos los <a href="#roles-sensibles">permisos delicados</a>. Es el único que los trae.</td><td>119 (todos)</td></tr>
+    <tr><td><strong><a href="#rol-administrador-del-sistema">Administrador del sistema</a></strong></td><td>Todo, incluidos los <a href="#roles-sensibles">permisos delicados</a>. Es el único que los trae.</td><td>120 (todos)</td></tr>
   </tbody></table>
   </div>
 
@@ -2946,10 +2981,10 @@ footer{
 
   <p>
     Editar un rol cambia lo que pueden hacer <strong>todas las personas que lo llevan</strong>, no solo una. Si lo que
-    hace falta es que una sola persona haga algo distinto, se crea un rol a medida con los permisos que le tocan y se le
-    da en lugar del que sobra. Un rol que alguien lleva no se puede borrar: primero se le quita a esas personas. La
-    pantalla de usuarios trabaja con roles; los permisos sueltos que un usuario pudiera tener de antes se copian al
-    crear un usuario por copia.
+    hace falta es que una sola persona haga algo distinto, se le dan <a href="#usuario-permisos-adicionales">permisos
+    adicionales</a> desde su ficha de usuario, o se crea un rol a medida si lo que necesita es otro trabajo entero. Un
+    rol que alguien lleva no se puede borrar: primero se le quita a esas personas. Los permisos adicionales de un
+    usuario se copian al crear otro usuario por copia.
   </p>
 
   <h3 id="roles-ver-no-es-editar">Ver no es lo mismo que cambiar, anular o descargar</h3>
@@ -2974,7 +3009,8 @@ footer{
       <a href="#perm-services-write">«Crear y editar los servicios»</a> es lo que deja cambiarlos. Con solo mirar, los botones de dar de alta, editar y retirar
       salen apagados o no salen.</li>
     <li><strong>Caja.</strong> Cobrar es <a href="#perm-checkout-charge">«Cobrar en el TPV»</a>; aplicar un descuento, <a href="#perm-checkout-discount">«Aplicar descuentos»</a>;
-      dejar algo a deber, <a href="#perm-checkout-debt">«Dejar a deber»</a>; devolver un ticket, <a href="#perm-checkout-refund">«Devolver un ticket»</a>. Nadie de recepción
+      dejar algo a deber, <a href="#perm-checkout-debt">«Dejar a deber»</a>; devolver un ticket, <a href="#perm-checkout-refund">«Devolver un ticket»</a>; ver lo cobrado hoy y en el mes en el Inicio,
+      <a href="#perm-dashboard-cash">«Ver la caja en el Inicio»</a>. Nadie de recepción
       reabre una caja cerrada sin <a href="#perm-cash-reopen">«Reabrir una caja cerrada»</a>.</li>
     <li><strong>Mantenimiento.</strong> <a href="#perm-maintenance-view">«Ver el mantenimiento»</a> lee los partes; abrir uno es
       <a href="#perm-maintenance-report">«Avisar de un problema»</a>; llevarlo de un estado a otro es <a href="#perm-maintenance-manage">«Gestionar los partes»</a>; darlo por cerrado,
@@ -3158,6 +3194,7 @@ footer{
     <tr id="perm-checkout-discount"><td><strong>Aplicar descuentos</strong></td><td>Activa el campo de descuento dentro del cobro.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-checkout-debt"><td><strong>Dejar a deber</strong></td><td>Permite cerrar un cobro dejando un importe pendiente, en lugar de cobrarlo entero. Ese importe aparece luego en «Ver los cobros pendientes».</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-checkout-refund"><td><strong>Devolver un ticket</strong></td><td>Permite usar el botón de devolver líneas de un ticket ya cobrado, en dinero o como saldo a favor.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
+    <tr id="perm-dashboard-cash"><td><strong>Ver la caja en el Inicio</strong></td><td>Muestra en el Inicio la tarjeta con lo cobrado hoy y en el mes, por forma de pago. No abre el TPV ni el informe de caja: eso sigue en «Cobrar en el TPV» y «Totales del día».</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-debts-view"><td><strong>Ver los cobros pendientes</strong></td><td>Abre la pantalla de cobros pendientes. Saldar una deuda es un permiso aparte: «Saldar una deuda».</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-debts-settle"><td><strong>Saldar una deuda</strong></td><td>Permite usar el botón de saldar una deuda.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-cash-close"><td><strong>Cuadrar y cerrar la caja</strong></td><td>Abre la caja del día para contar el efectivo y los resguardos de tarjeta, y permite cerrarla.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
@@ -3260,9 +3297,9 @@ footer{
 
   <nav class="rol-selector" aria-label="Ir a un rol">
     <p class="rol-selector__titulo">Roles generales</p>
-    <div class="chips"><a class="chip r-recepcion" href="#rol-recepcion">Recepción <small>32</small></a>
+    <div class="chips"><a class="chip r-recepcion" href="#rol-recepcion">Recepción <small>33</small></a>
       <a class="chip r-profesional" href="#rol-profesional">Profesional <small>18</small></a>
-      <a class="chip r-direccion" href="#rol-direccion">Dirección <small>95</small></a>
+      <a class="chip r-direccion" href="#rol-direccion">Dirección <small>96</small></a>
       <a class="chip r-rrhh" href="#rol-rrhh">RRHH <small>18</small></a>
       <a class="chip r-mantenimiento" href="#rol-mantenimiento">Mantenimiento <small>7</small></a>
       <a class="chip r-activaciones" href="#rol-activaciones">Activaciones <small>2</small></a></div>
@@ -3271,19 +3308,19 @@ footer{
       <a class="chip r-catalogo" href="#rol-catalogo">Catálogo <small>14</small></a>
       <a class="chip r-agenda" href="#rol-agenda">Agenda <small>13</small></a>
       <a class="chip r-historia-clinica" href="#rol-historia-clinica">Historia clínica <small>8</small></a>
-      <a class="chip r-caja" href="#rol-caja">Caja <small>20</small></a>
+      <a class="chip r-caja" href="#rol-caja">Caja <small>21</small></a>
       <a class="chip r-facturacion" href="#rol-facturacion">Facturación <small>3</small></a>
       <a class="chip r-portal-y-avisos" href="#rol-portal-y-avisos">Portal y avisos <small>2</small></a>
       <a class="chip r-personal" href="#rol-personal">Personal <small>10</small></a></div>
     <p class="rol-selector__titulo">Rol de sistema</p>
-    <div class="chips"><a class="chip r-administrador-del-sistema" href="#rol-administrador-del-sistema">Administrador del sistema <small>119</small></a></div>
+    <div class="chips"><a class="chip r-administrador-del-sistema" href="#rol-administrador-del-sistema">Administrador del sistema <small>120</small></a></div>
     <p class="rol-selector__titulo">Y lo que no trae ningún rol</p>
     <div class="chips"><a class="chip r-adicionales" href="#permisos-adicionales">Permisos adicionales <small>14</small></a><a class="chip r-matriz" href="#roles-matriz">Resumen en matriz</a></div>
   </nav>
 
   <article class="rol-card r-recepcion familia-general" id="rol-recepcion">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Recepción</h5><span class="rc-cuenta">32 permisos</span><span class="rc-familia">Rol general</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Recepción</h5><span class="rc-cuenta">33 permisos</span><span class="rc-familia">Rol general</span></div>
       <p class="rc-para">Para quien atiende el mostrador: da las horas, atiende al cliente y cobra.</p>
     </header>
     <div class="rc-cuerpo">
@@ -3309,11 +3346,12 @@ footer{
         <li class="rc-perm"><a href="#perm-consents-request">Pedir una firma</a><span class="rc-desc">Pide a la persona la firma de un consentimiento.</span></li>
         <li class="rc-perm"><a href="#perm-consents-import">Importar consentimientos firmados</a><span class="rc-desc">Sube a la ficha consentimientos en PDF ya firmados en otra plataforma.</span></li>
       </ul>
-      <h6 class="rc-modulo"><a href="#permisos-caja">Caja</a> <span class="n">· 11</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-caja">Caja</a> <span class="n">· 12</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-checkout-charge">Cobrar en el TPV</a><span class="rc-desc">Abre el TPV y permite cerrar un cobro.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Aplicar descuentos</a><span class="rc-desc">Activa el campo de descuento dentro del cobro.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Dejar a deber</a><span class="rc-desc">Permite cerrar un cobro dejando un importe pendiente, en lugar de cobrarlo entero.</span></li>
+        <li class="rc-perm"><a href="#perm-dashboard-cash">Ver la caja en el Inicio</a><span class="rc-desc">Muestra en el Inicio la tarjeta con lo cobrado hoy y en el mes, por forma de pago. No abre el TPV ni el informe de caja: eso sigue en «Cobrar en el TPV» y «Totales del día».</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">Ver los cobros pendientes</a><span class="rc-desc">Abre la pantalla de cobros pendientes.</span></li>
         <li class="rc-perm"><a href="#perm-debts-settle">Saldar una deuda</a><span class="rc-desc">Permite usar el botón de saldar una deuda.</span></li>
         <li class="rc-perm"><a href="#perm-cash-close">Cuadrar y cerrar la caja</a><span class="rc-desc">Abre la caja del día para contar el efectivo y los resguardos de tarjeta, y permite cerrarla.</span></li>
@@ -3390,7 +3428,7 @@ footer{
 
   <article class="rol-card r-direccion familia-general" id="rol-direccion">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Dirección</h5><span class="rc-cuenta">95 permisos</span><span class="rc-familia">Rol general</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Dirección</h5><span class="rc-cuenta">96 permisos</span><span class="rc-familia">Rol general</span></div>
       <p class="rc-para">Para quien lleva el centro: catálogo, personal, informes y ajustes.</p>
     </header>
     <div class="rc-cuerpo">
@@ -3426,12 +3464,13 @@ footer{
         <li class="rc-perm"><a href="#perm-consents-withdraw">Retirar un consentimiento</a><span class="rc-desc">Retira un consentimiento que ya se había dado.</span></li>
         <li class="rc-perm"><a href="#perm-consents-templates">Gestionar las plantillas</a><span class="rc-desc">Crea y modifica las plantillas de consentimiento del centro.</span></li>
       </ul>
-      <h6 class="rc-modulo"><a href="#permisos-caja">Caja</a> <span class="n">· 20</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-caja">Caja</a> <span class="n">· 21</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-checkout-charge">Cobrar en el TPV</a><span class="rc-desc">Abre el TPV y permite cerrar un cobro.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Aplicar descuentos</a><span class="rc-desc">Activa el campo de descuento dentro del cobro.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Dejar a deber</a><span class="rc-desc">Permite cerrar un cobro dejando un importe pendiente, en lugar de cobrarlo entero.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-refund">Devolver un ticket</a><span class="rc-desc">Permite usar el botón de devolver líneas de un ticket ya cobrado, en dinero o como saldo a favor.</span></li>
+        <li class="rc-perm"><a href="#perm-dashboard-cash">Ver la caja en el Inicio</a><span class="rc-desc">Muestra en el Inicio la tarjeta con lo cobrado hoy y en el mes, por forma de pago. No abre el TPV ni el informe de caja: eso sigue en «Cobrar en el TPV» y «Totales del día».</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">Ver los cobros pendientes</a><span class="rc-desc">Abre la pantalla de cobros pendientes.</span></li>
         <li class="rc-perm"><a href="#perm-debts-settle">Saldar una deuda</a><span class="rc-desc">Permite usar el botón de saldar una deuda.</span></li>
         <li class="rc-perm"><a href="#perm-cash-close">Cuadrar y cerrar la caja</a><span class="rc-desc">Abre la caja del día para contar el efectivo y los resguardos de tarjeta, y permite cerrarla.</span></li>
@@ -3699,16 +3738,17 @@ footer{
 
   <article class="rol-card r-caja familia-modulo" id="rol-caja">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Caja</h5><span class="rc-cuenta">20 permisos</span><span class="rc-familia">Rol de módulo</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Caja</h5><span class="rc-cuenta">21 permisos</span><span class="rc-familia">Rol de módulo</span></div>
       <p class="rc-para">Rol de módulo, para quien lleva la caja: cobros, devoluciones, deudas, bonos, tarjetas regalo y cupones. Lleva todos los permisos no delicados de su módulo y solo esos.</p>
     </header>
     <div class="rc-cuerpo">
-      <h6 class="rc-modulo"><a href="#permisos-caja">Caja</a> <span class="n">· 20</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-caja">Caja</a> <span class="n">· 21</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-checkout-charge">Cobrar en el TPV</a><span class="rc-desc">Abre el TPV y permite cerrar un cobro.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Aplicar descuentos</a><span class="rc-desc">Activa el campo de descuento dentro del cobro.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Dejar a deber</a><span class="rc-desc">Permite cerrar un cobro dejando un importe pendiente, en lugar de cobrarlo entero.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-refund">Devolver un ticket</a><span class="rc-desc">Permite usar el botón de devolver líneas de un ticket ya cobrado, en dinero o como saldo a favor.</span></li>
+        <li class="rc-perm"><a href="#perm-dashboard-cash">Ver la caja en el Inicio</a><span class="rc-desc">Muestra en el Inicio la tarjeta con lo cobrado hoy y en el mes, por forma de pago. No abre el TPV ni el informe de caja: eso sigue en «Cobrar en el TPV» y «Totales del día».</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">Ver los cobros pendientes</a><span class="rc-desc">Abre la pantalla de cobros pendientes.</span></li>
         <li class="rc-perm"><a href="#perm-debts-settle">Saldar una deuda</a><span class="rc-desc">Permite usar el botón de saldar una deuda.</span></li>
         <li class="rc-perm"><a href="#perm-cash-close">Cuadrar y cerrar la caja</a><span class="rc-desc">Abre la caja del día para contar el efectivo y los resguardos de tarjeta, y permite cerrarla.</span></li>
@@ -3782,8 +3822,8 @@ footer{
 
   <article class="rol-card r-administrador-del-sistema familia-admin" id="rol-administrador-del-sistema">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Administrador del sistema</h5><span class="rc-cuenta">119 permisos</span><span class="rc-familia">Rol de sistema</span></div>
-      <p class="rc-para">Para quien responde de todo el centro: lo lleva todo, incluidos los permisos delicados. Trae <strong>los 119 permisos</strong> y es el único rol de fábrica que trae los 13 <a href="#roles-sensibles">delicados</a>. Un permiso nuevo le llega solo.</p>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Administrador del sistema</h5><span class="rc-cuenta">120 permisos</span><span class="rc-familia">Rol de sistema</span></div>
+      <p class="rc-para">Para quien responde de todo el centro: lo lleva todo, incluidos los permisos delicados. Trae <strong>los 120 permisos</strong> y es el único rol de fábrica que trae los 13 <a href="#roles-sensibles">delicados</a>. Un permiso nuevo le llega solo.</p>
     </header>
     <div class="rc-cuerpo">
       <p class="rc-nota">Para no repetir la tabla entera, aquí van solo los delicados. Todos los demás están en la <a href="#roles-permisos">tabla por módulo</a>.</p>
@@ -3830,7 +3870,7 @@ footer{
   <h4 id="roles-adicionales">Permisos adicionales: los que ningún rol de fábrica trae</h4>
 
   <p>
-    De los 119 permisos, <strong>14</strong> no los trae ningún rol de fábrica, solo el
+    De los 120 permisos, <strong>14</strong> no los trae ningún rol de fábrica, solo el
     Administrador del sistema. Si alguien los necesita, <strong>se crea un rol a medida</strong> con esos permisos
     (<a href="#roles-paso-a-paso">cómo se crea un rol</a>) y se le da a esa persona en
     <strong>Administración → Usuarios</strong>. Los delicados llevan la insignia y conviene darlos solo a quien lleva la
@@ -3939,6 +3979,7 @@ footer{
     <tr><td><a href="#perm-checkout-discount">Aplicar descuentos</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
     <tr><td><a href="#perm-checkout-debt">Dejar a deber</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
     <tr><td><a href="#perm-checkout-refund">Devolver un ticket</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
+    <tr><td><a href="#perm-dashboard-cash">Ver la caja en el Inicio</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
     <tr><td><a href="#perm-debts-view">Ver los cobros pendientes</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
     <tr><td><a href="#perm-debts-settle">Saldar una deuda</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
     <tr><td><a href="#perm-cash-close">Cuadrar y cerrar la caja</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
