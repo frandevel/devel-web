@@ -1154,7 +1154,7 @@
   "t7f501112": "1.12.0-c43dd3f",
   "tf6323d7e": "1.11.0-6f096ff",
   "tfedc9215": "1.11.0-33e6b6c",
-  "tdde1888f": "1.12.0-91073a0",
+  "tdde1888f": "1.12.0-5b94bec",
   "t88542417": "Voucher management: who can correct and delete them",
   "tcd8ff2fc": "Correcting a voucher, withdrawing it and taking off a session by hand now have their own permission, Voucher management, which no longer depends on being able to charge.",
   "t28fee486": "Each centre decides which roles get it from the roles screen. With the factory Reception role, vouchers can still be sold and used to charge, but the ones already sold cannot be changed.",
