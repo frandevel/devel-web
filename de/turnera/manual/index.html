@@ -682,6 +682,8 @@ footer{
     <li><a href="#empezar">1. Anmelden und zurechtfinden</a></li>
     <li><a href="#contrasena" class="sub">Das Passwort ändern</a></li>
     <li><a href="#puestos-compartidos" class="sub">Gemeinsame Geräte: Anmelden mit Karte und PIN</a></li>
+    <li><a href="#sala-de-espera" class="sub">Wartezimmer: Bildschirm, der aufruft, wer eintreten kann</a></li>
+    <li><a href="#montar-pantalla-sala" class="sub">Den Wartezimmer-Bildschirm einrichten</a></li>
         <li><a href="#aviso-general" class="sub">Hinweise von Turnera</a></li>
     <li><a href="#ordenar" class="sub">Jede Liste sortieren</a></li>
     <li><a href="#idiomas" class="sub">Sprachen</a></li>
@@ -783,6 +785,7 @@ footer{
     <li><a href="#soporte">12 ter. Support: Kontakt zum Turnera-Team</a></li>
     <li><a href="#problemas">13. Wenn etwas nicht klappt</a></li>
     <li><a href="#app-nativa">14. Die native App der Mitarbeitenden (Android)</a></li>
+    <li><a href="#app-instalar" class="sub">Die App herunterladen und installieren</a></li>
     <li><a href="#app-entrar" class="sub">Anmelden und den Standort wählen</a></li>
     <li><a href="#app-fichar" class="sub">Mit der PIN stempeln</a></li>
     <li><a href="#app-menu" class="sub">Das Menü und die Version</a></li>
@@ -943,6 +946,62 @@ footer{
   <p>
     Auf einem gemeinsamen Gerät wird das Registrieren eines Fingerabdrucks nicht angeboten: Dieses Gerät gehört allen. Der Fingerabdruck ist für das Handy oder den Laptop jeder einzelnen Person (siehe <a href="#huella">Anmeldung per Fingerabdruck</a>).
   </p>
+
+  <h3 id="sala-de-espera">Wartezimmer: Bildschirm, der aufruft, wer eintreten kann</h3>
+  <p>
+    Für Zentren mit viel Publikumsverkehr. Sie ist <strong>ausgeschaltet</strong> bis sie eingeschaltet wird unter
+    <em>Verwaltung → Einstellungen → Zugang</em>, mit <strong>Wartezimmer</strong>. Solange sie ausgeschaltet ist, funktioniert Turnera wie immer, und nichts von dem, was folgt, erscheint.
+  </p>
+  <p>
+    <strong>Der Bildschirm.</strong> Unter <em>Verwaltung → Geräte</em> wird der Fernseher oder das Tablet im Wartezimmer mit dem Modus <em>Wartezimmer-Bildschirm</em> angelegt, wie ein gemeinsamer Arbeitsplatz: Es erscheint ein Code, man öffnet <code>/sala-de-espera</code> auf diesem Gerät und gibt den Code ein. Der Bildschirm meldet niemanden an und kann nur lesen, was gerade aufgerufen wird. Es empfiehlt sich, <strong>Ton einschalten</strong> einmal zu drücken: Die Browser lassen keinen Ton zu, bis jemand den Bildschirm berührt.
+  </p>
+  <p>
+    <strong>Aufrufen.</strong> Die zuständige Person öffnet den Termin und klickt auf <strong>In Raum aufrufen</strong>. Man wählt den Raum (der des Termins ist vorausgewählt), und der Bildschirm zeigt sofort Name und Raum, mit einem Signalton. Jeder Raum hat nur einen Aufruf gleichzeitig: Ruft man denselben Raum erneut auf, ersetzt das den vorherigen. Aufrufe verschwinden nach zehn Minuten von selbst oder früher mit <strong>Aufruf entfernen</strong>.
+  </p>
+  <p>
+    <strong>Nächsten aufrufen.</strong> Das ist der Normalfall am Empfang, und die Warteschlange gilt <strong>pro Fachkraft</strong>. In der Agenda öffnet die Megafon-Schaltfläche die heutige Warteliste, nach Fachkraft gruppiert. Man wählt den Raum, in den aufgerufen wird (eine Ressource oder ein Aufrufraum), und jede Fachkraft hat ihre eigene Schaltfläche <strong>Nächsten aufrufen</strong>: Sie ruft die erste Person aus der Warteschlange der Fachkraft auf, unter deren heutigen Terminen mit dem Status <em>Wartend</em>. Patienten anderer Fachkräfte zählen nicht und ändern die Reihenfolge nicht. Jedes Mal, wenn ein Termin auf <em>Wartend</em> wechselt, speichert Turnera die Ankunftszeit von selbst; man muss nichts eintragen. <strong>Früh zu kommen bringt keinen Vorrang.</strong> Jede Person zählt ab ihrer <em>effektiven Zeit</em>, also der späteren von Terminzeit und Ankunftszeit: Wer vor seinem Termin kommt, zählt ab der Terminzeit, und wer zu spät kommt, ab seiner Ankunft. Aufgerufen wird nach effektiver Zeit, von der frühesten zur spätesten; bei Gleichstand zuerst der frühere Termin und danach der zuerst angelegte. Gibt es keine Ankunftszeit (weil niemand den Termin in Turnera auf <em>Wartend</em> gesetzt hat), zählt die Terminzeit. Der Status des Termins ändert sich nicht, und wer bereits einen Aufruf auf dem Bildschirm hat, wird nicht aufgerufen. Hat die Fachkraft niemanden, erscheint der Hinweis „Niemand wartet“. Drücken zwei Personen am Empfang gleichzeitig, ruft jede eine andere Person auf. Ohne gewählte Fachkraft wird niemand aufgerufen. Die Liste hat dieselbe Reihenfolge wie der Aufruf, sodass die erste Person jeder Fachkraft diejenige ist, die die Schaltfläche aufruft; ein Megafon markiert, wer bereits aufgerufen ist. In derselben Liste hat jede Person ihre Schaltfläche
+    <strong>Aufrufen</strong> , um sie von Hand aufzurufen, und die Schaltfläche <strong>In Raum aufrufen</strong> des Termins selbst bleibt für Einzelfälle erhalten.
+  </p>
+  <p>
+    <strong>Räume ohne Fachkraft.</strong> Kasse, Blutentnahme oder Radiologie haben keine automatische Warteschlange: Der Empfang ruft die jeweilige Person von Hand auf. Wie sie darüber hinaus funktionieren sollen, ist noch nicht entschieden.
+  </p>
+  <p>
+    <strong>Aufrufräume.</strong> Kasse, Blutentnahme oder Pflege sind keine Agenda-Ressourcen, weil Turnera pro Ressource abrechnet. Sie werden separat angelegt, unter <em>Einstellungen → Zugang</em>, unterhalb des Schalters für das Wartezimmer: Sie lassen sich umbenennen, nach oben oder unten verschieben und aktivieren oder deaktivieren, und der Name darf sich nicht wiederholen. Sie zählen nicht für die Gebühr. Beim Aufruf in einen Raum erscheinen zuerst die aktiven Ressourcen, danach die aktiven Aufrufräume.
+  </p>
+  <p>
+    <strong>Was angezeigt wird.</strong> In den Einstellungen wählt man zwischen dem Namen mit abgekürztem Nachnamen („Ana R.“) oder nur einem Code, ganz ohne persönliche Daten. Verliert der Bildschirm die Verbindung zum Server, warnt er in Rot, damit sich niemand auf das Angezeigte verlässt.
+  </p>
+
+  <h3 id="montar-pantalla-sala">Den Wartezimmer-Bildschirm einrichten</h3>
+  <p>
+    <strong>Was noch nicht getestet wurde.</strong> Das Folgende wurde in einem Desktop-Browser geprüft. Auf einem echten Fernseher in einem Wartezimmer wurde es noch nicht getestet: weder der automatische Start des Mini-PCs noch der Kiosk-Modus noch der Ton über die Lautsprecher des Fernsehers. Bis dahin sollte man vor dem Dauerbetrieb einen vollständigen Test machen (Schritt 5).
+  </p>
+  <p>
+    <strong>Der unterstützte Aufbau:</strong> ein Mini-PC (oder ein Stick mit Browser), angeschlossen an den Fernseher im Raum, mit dem Browser im Kiosk-Modus. Das Übertragen des Bildes von einem anderen Gerät („Casting“) ist nicht dokumentiert.
+  </p>
+  <ol>
+    <li>
+      <strong>Das Gerät anlegen.</strong> Unter <em>Verwaltung → Geräte</em> legen Sie einen Arbeitsplatz mit dem Modus
+      <em>Wartezimmer-Bildschirm</em> an. Es erscheint ein Einmalcode, der 15 Minuten gültig ist. Öffnen Sie am Mini-PC
+      <code>https://&lt;Ihr Zentrum&gt;/sala-de-espera</code>, klicken Sie auf <em>Mit einem Code anlegen</em> und geben Sie den Code ein. Der Schlüssel bleibt in diesem Browser gespeichert. Um den Bildschirm nicht mehr anzuerkennen, widerrufen Sie ihn unter
+      <em>Arbeitsplätze</em>.
+    </li>
+    <li>
+      <strong>Von selbst starten.</strong> Richten Sie am Mini-PC ein Systemkonto ein, das sich ohne Passwortabfrage anmeldet, deaktivieren Sie Ruhezustand und Bildschirmschoner und sorgen Sie dafür, dass sich der Browser beim Einschalten im Vollbild mit dieser Adresse öffnet. Beispiel für Chrome:
+      <code>chrome --kiosk --autoplay-policy=no-user-gesture-required https://&lt;Ihr Zentrum&gt;/sala-de-espera</code>. Mit diesem Parameter muss man nicht <em>Ton einschalten</em> drücken. Wird er auf andere Weise geöffnet, drücken Sie
+      <em>Ton einschalten</em> einmal nach jedem Start: Die Browser lassen keinen Ton zu, bis jemand den Bildschirm berührt.
+    </li>
+    <li>
+      <strong>Keine Turnera-Sitzung auf diesem Bildschirm.</strong> Das ist nicht nötig und nicht ratsam: Der Bildschirm liest mit seinem eigenen Schlüssel und braucht keine angemeldete Person. Öffnen Sie Turnera in diesem Browser nicht mit einem Benutzer.
+    </li>
+    <li>
+      <strong>Wenn etwas nicht funktioniert.</strong> Verliert der Bildschirm die Verbindung, erscheint eine rote Warnung, und er erholt sich von selbst, sobald wieder ein Netz vorhanden ist. Wird das Gerät gewechselt (oder die Browserdaten gelöscht), wird unter
+      <em>Arbeitsplätze</em> ein neuer Code ausgestellt und das Gerät erneut angelegt.
+    </li>
+    <li>
+      <strong>Lautstärke und Test.</strong> Stellen Sie die Lautstärke des Fernsehers und des Mini-PC-Systems höher und machen Sie von einem Termin aus einen Testaufruf mit <em>In Raum aufrufen</em> , um den Signalton zu hören und den Namen zu sehen. Entfernen Sie den Aufruf danach mit <em>Aufruf entfernen</em>.
+    </li>
+  </ol>
 
   <h3 id="aviso-general">Hinweise von Turnera</h3>
   <p>
@@ -1382,13 +1441,11 @@ footer{
   <span class="ruta">Terminkalender → Drucken</span>
 
   <p>
-    Gibt den Tag als PDF aus, ein Mitarbeiter pro Blatt, mit Uhrzeit, Kunde, Telefonnummer, Kabine, Leistung und
-    Bemerkungen. Erstbesuche sind auch auf dem Papier markiert.
+    Öffnet das Druckfenster des Browsers mit dem angezeigten Tag, eine Fachkraft pro Blatt. Es wird keine Datei heruntergeladen: Von dort wählt man den Drucker oder, wenn man möchte, „Als PDF speichern“. Jede Zeile enthält die Kundennummer, Vor- und Nachnamen, die Leistung, die Startzeit, die Notizen des Termins und, falls die Person Gutscheinpakete mit Sitzungen hat, welches und wie viele Sitzungen von der verkauften Gesamtzahl noch übrig sind, zum Beispiel
+    <em>4/5</em>. Telefonnummer, Endzeit und Kabine stehen nicht darauf.
   </p>
   <p>
-    Ein Klick auf den Knopf gibt den ganzen Betrieb aus. Über den kleinen Pfeil wählen Sie eine einzelne Person. Das wird
-    morgens ausgedruckt, damit jeder seinen Tag auf der Liege liegen hat und damit der Betrieb weiterläuft,
-    wenn der Strom ausfällt.
+    Beim Klick auf die Schaltfläche wird das gesamte Zentrum gedruckt (Fachkräfte ohne Termine an diesem Tag verbrauchen kein Blatt). Über den kleinen Pfeil wählt man eine einzelne Person, und ihr Blatt wird auch dann gedruckt, wenn sie an dem Tag keine Termine hat. Stornierte Termine und die von nicht erschienenen Personen werden nicht gedruckt. Das druckt man morgens aus, um den Tag bei sich zu haben und damit das Zentrum bei einem Stromausfall weiterarbeiten kann.
   </p>
 </section>
 
@@ -1424,7 +1481,11 @@ footer{
   </p>
 
   <p>
-    Was bei jedem Besuch abgerechnet wurde —der Betrag und die Schaltfläche <em>Beleg</em> des Verlaufs— sieht, wer die Berechtigung „Beträge und Belege im Verlauf sehen“ hat. Entziehen Sie sie einer Rolle oder einer Person, zeigt deren Verlauf weiterhin, was getan wurde und wann, aber ohne Beträge und Beleg. Standardmäßig erhält sie, wer bereits die Kundenakten sehen kann.
+    Was bei jedem Besuch abgerechnet wurde —der Betrag und die Schaltfläche <em>Beleg</em> des Verlaufs, die den Druck startet, sieht, wer die Berechtigung „Beträge und Belege im Verlauf sehen“ hat. Wird sie einer Rolle oder einer Person entzogen, zeigt deren Verlauf weiterhin, was wann gemacht wurde, aber ohne Beträge und Beleg. Standardmäßig erhält sie, wer bereits die Karteien sehen darf.
+  </p>
+
+  <p>
+    Im Verlauf trägt eine Leistung, die mit einem Gutscheinpaket beglichen wurde, ein kleines Ticket-Symbol neben ihrem Namen (beim Darüberfahren erscheint „Mit Gutschein bezahlt“); eine ohne dieses Symbol wurde separat bezahlt. Es ist auch für Personen sichtbar, die die Beträge nicht sehen dürfen, weil es kein Geld ist, und es hilft, auf einen Blick die Sitzungen zu zählen, die aus dem Gutschein stammen.
   </p>
 
   <h3 id="clientes-notas">Die Notizen der Akte</h3>
@@ -1611,8 +1672,7 @@ footer{
   </p>
 
   <p>
-    Der Knopf <em>Kostenvoranschlag</em> gibt als PDF aus, was auf dem Bon steht, ohne etwas zu kassieren, für alle, die noch
-    überlegen.
+    Der Knopf <em>Kostenvoranschlag drucken</em> öffnet direkt das Druckfenster mit dem, was auf dem Beleg steht, ohne etwas zu kassieren, um es jemandem mitzugeben, der es sich noch überlegt; wenn Sie es lieber speichern möchten, wählen Sie <em>Als PDF speichern</em> in demselben Fenster. <em>Kostenvoranschlag per WhatsApp</em> öffnet WhatsApp mit einer kurzen Nachricht (nur der Name des Zentrums, ohne Beträge) und hängt, wenn der Browser es erlaubt, das PDF an; andernfalls muss man es von Hand anhängen, nachdem man es im Druckfenster gespeichert hat.
   </p>
 
   <p>
@@ -1916,7 +1976,7 @@ footer{
   <span class="ruta">Menü → Geschenkkarten</span>
 
   <p>
-    Jemand bezahlt heute, und eine andere Person gibt es an einem anderen Tag aus. Verkauft wird sie mit <strong>Geschenkkarte verkaufen</strong>: wer bezahlt, wer verkauft, der Betrag, die Zahlungsart und, wenn gewünscht, für wen er ist, eine Widmung und bis wann er gilt (ohne Datum verfällt er nicht). Beim Kassieren entsteht ein Code wie <code>RG-7K2M-Q9TX</code>, der auf eine Karte zum Verschenken gedruckt oder per E-Mail mit dem Gutschein als PDF verschickt wird.
+    Jemand bezahlt heute, und eine andere Person gibt es an einem anderen Tag aus. Verkauft wird sie mit <strong>Geschenkkarte verkaufen</strong>: wer bezahlt, wer verkauft, der Betrag, die Zahlungsart und, wenn gewünscht, für wen er ist, eine Widmung und bis wann er gilt (ohne Datum verfällt er nicht). Beim Kassieren entsteht ein Code wie <code>RG-7K2M-Q9TX</code>, der auf eine Karte zum Verschenken gedruckt wird (<em>Drucken</em> öffnet direkt das Druckfenster) oder per E-Mail mit der Karte als PDF verschickt wird. <em>Per WhatsApp senden</em> öffnet WhatsApp mit dem Zentrum, dem Code und dem Betrag (außer die Karte wurde mit verborgenem Betrag verkauft) und hängt das PDF an, wenn der Browser es erlaubt.
   </p>
 
   <figure>
@@ -2102,6 +2162,11 @@ footer{
     in der Kundenakte abgezogen werden, falls jemand behandelt wurde, ohne an der Kasse vorbeizukommen.
   </p>
 
+  <p>
+    Eine Sitzung von Hand abziehen, einen Gutschein korrigieren und ihn stornieren erfordern die Berechtigung
+    <a href="#perm-vouchers-manage">Gutscheinverwaltung</a>, die nicht die zum Kassieren ist: Der Standard-Empfang verkauft Gutscheine und kassiert damit, kann aber bereits verkaufte nicht anfassen. Wenn in Ihrem Zentrum jemand das tun soll, geben Sie dieser Person diese Berechtigung im Rollenbildschirm.
+  </p>
+
   <div class="ojo">
     <p><strong>Einen Termin als behandelt zu markieren verbraucht die Wertkarte nicht.</strong> Die Wertkarte wird beim Kassieren abgezogen, nicht beim
       Behandeln. Wenn in Ihrem Betrieb mit Wertkarte behandelt wird, ohne über die Kasse zu gehen, muss jemand die Sitzung von
@@ -2252,7 +2317,11 @@ footer{
     <strong>Ohne die Pflichtparameter wird nicht kassiert.</strong> Ein Termin mit nicht ausgefüllten Pflichtparametern lässt sich speichern, aber nicht kassieren: Wenn Sie auf <em>Kassieren</em> drücken, erfahren Sie, welche fehlen, und auch auf anderem Weg kommt man nicht zur Kasse, bevor sie erfasst sind (wer keine Berechtigung zum Erfassen hat, wird gewarnt, kann aber kassieren).
   </p>
   <p>
-    <strong>Wo man es danach sieht.</strong> In der Kundenakte listet die Karte <em>Sitzungen mit Gerät</em> listet jede Sitzung auf, die neueste zuerst, mit Tag und Uhrzeit, Leistung, Gerät, den Parametern mit ihrer Einheit und wer sie durchgeführt hat. Dort verfolgt man eine Laserbehandlung Sitzung für Sitzung. Wurde für den Kunden nie etwas notiert, erscheint die Karte nicht.
+    <strong>Wo man es danach sieht.</strong> In der Kundenkartei, im Besuchsverlauf: Unter jeder Leistung, die Parameter hatte, erscheint eine kleine graue Zeile mit dem Gerät und den erfassten Werten, zum Beispiel
+    <em>Diodenlaser · 18 J · 12 ms · Spot 10</em> (solche mit Einheit werden mit dieser gelesen, die ohne mit ihrem Namen davor). Hier verfolgt man die Einstellungen einer Laserbehandlung Sitzung für Sitzung. Beim Klick auf die Zeile des Besuchs öffnet sich das vollständige Detail: jeder Parameter mit Wert und Einheit, wer behandelt hat, wann es erfasst wurde und die Notizen der Zeile. Nicht ausgefüllte Pflichtparameter sieht man nur dort, als „—“.
+  </p>
+  <p>
+    Hatte die Leistung keine Parameter, wird nichts hinzugefügt. Ein noch nicht kassierter Termin erscheint nicht im Verlauf und damit auch nicht das, was darin erfasst wurde: Man sieht es, wenn man den Termin in der Agenda öffnet. Die Parameter sieht nur, wer die Termine der Agenda sehen darf; ohne diese Berechtigung erscheint der Verlauf genauso, aber ohne sie.
   </p>
   <p>
     Das ist der Wert, auf den vor dem Beginn wirklich geschaut wird: Bei der Laser-Haarentfernung steigt die Einstellung von Sitzung zu Sitzung, und
@@ -2481,9 +2550,7 @@ footer{
     <strong>Die aktiven Ressourcen bestimmen die Gebühr.</strong> Die Monatsgebühr hängt davon ab, wie viele
     Terminressourcen im gesamten Zentrum aktiv sind, über alle Filialen zusammengezählt. Oben auf dieser Seite sehen Sie,
     wie viele es sind und was sie im Monat kosten, ohne MwSt. Wenn Sie eine anlegen oder wieder aktivieren, zeigt das Formular vor dem Speichern,
-    wie hoch die Gebühr dann wird: Die Änderung gilt <strong>ab dem Monat nach der Anlage</strong>. Eine zu deaktivieren senkt
-    sie, ebenfalls ab dem Folgemonat. Jede Neuanlage, Reaktivierung, Deaktivierung oder Löschung, die die Zahl der aktiven Ressourcen ändert,
-    wird mit Datum und Benutzer festgehalten und geht per E-Mail an DEVEL, damit die Gebühr angepasst wird.
+    wie hoch die Gebühr dann wird: Die Änderung gilt <strong>ab demselben Tag</strong>, mit tagesgenauer anteiliger Berechnung. Deaktivieren nimmt sie heraus, ebenfalls ab demselben Tag. Die Anpassung wird in der nächsten Rechnung abgerechnet. Jede Aktivierung, Reaktivierung, Deaktivierung oder Löschung, die ändert, wie viele aktiv sind, wird mit Datum und Urheber festgehalten und geht per E-Mail an DEVEL, damit die Gebühr angepasst werden kann.
   </p>
 
   <p>
@@ -2809,6 +2876,7 @@ footer{
     <tr id="perm-visits-view"><td><strong>Bezahlte Besuche ansehen</strong></td><td>Zeigt die bereits bezahlten Besuche und ihre Details.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
     <tr id="perm-vouchers-view"><td><strong>Mehrfachkarten der Kunden ansehen</strong></td><td>Zeigt die Mehrfachkarten und die noch verbleibenden Einheiten.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
     <tr id="perm-vouchers-transfer"><td><strong>Wertkarte übertragen</strong></td><td>Überträgt Sitzungen einer Wertkarte auf eine andere Person.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-vouchers-manage"><td><strong>Gutscheinverwaltung</strong></td><td>Erlaubt, Gutscheine zu korrigieren und zu löschen und Sitzungen von Hand abzuziehen.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
     <tr id="perm-gift-cards-view"><td><strong>Geschenkkarten ansehen</strong></td><td>Zeigt die verkauften Geschenkkarten, ihr Guthaben und was insgesamt noch einzulösen ist.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
     <tr id="perm-gift-cards-sell"><td><strong>Geschenkkarten verkaufen</strong></td><td>Erlaubt, einen Geschenkgutschein zu verkaufen, zu drucken und per E-Mail zu senden.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
     <tr id="perm-coupons-view"><td><strong>Gutscheincodes ansehen</strong></td><td>Zeigt die Gutscheincodes des Zentrums, ihren Rabatt und wie viele noch einlösbar sind.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
@@ -3083,6 +3151,7 @@ footer{
         <li class="rc-perm"><a href="#perm-visits-view">Bezahlte Besuche ansehen</a><span class="rc-desc">Zeigt die bereits bezahlten Besuche und ihre Details.</span></li>
         <li class="rc-perm"><a href="#perm-vouchers-view">Mehrfachkarten der Kunden ansehen</a><span class="rc-desc">Zeigt die Mehrfachkarten und die noch verbleibenden Einheiten.</span></li>
         <li class="rc-perm"><a href="#perm-vouchers-transfer">Wertkarte übertragen</a><span class="rc-desc">Überträgt Sitzungen einer Wertkarte auf eine andere Person.</span></li>
+        <li class="rc-perm"><a href="#perm-vouchers-manage">Gutscheinverwaltung</a><span class="rc-desc">Erlaubt, Gutscheine zu korrigieren und zu löschen und Sitzungen von Hand abzuziehen.</span></li>
         <li class="rc-perm"><a href="#perm-gift-cards-view">Geschenkkarten ansehen</a><span class="rc-desc">Zeigt die verkauften Geschenkkarten, ihr Guthaben und was insgesamt noch einzulösen ist.</span></li>
         <li class="rc-perm"><a href="#perm-gift-cards-sell">Geschenkkarten verkaufen</a><span class="rc-desc">Erlaubt, einen Geschenkgutschein zu verkaufen, zu drucken und per E-Mail zu senden.</span></li>
         <li class="rc-perm"><a href="#perm-coupons-view">Gutscheincodes ansehen</a><span class="rc-desc">Zeigt die Gutscheincodes des Zentrums, ihren Rabatt und wie viele noch einlösbar sind.</span></li>
@@ -3361,6 +3430,7 @@ footer{
         <li class="rc-perm"><a href="#perm-visits-view">Bezahlte Besuche ansehen</a><span class="rc-desc">Zeigt die bereits bezahlten Besuche und ihre Details.</span></li>
         <li class="rc-perm"><a href="#perm-vouchers-view">Mehrfachkarten der Kunden ansehen</a><span class="rc-desc">Zeigt die Mehrfachkarten und die noch verbleibenden Einheiten.</span></li>
         <li class="rc-perm"><a href="#perm-vouchers-transfer">Wertkarte übertragen</a><span class="rc-desc">Überträgt Sitzungen einer Wertkarte auf eine andere Person.</span></li>
+        <li class="rc-perm"><a href="#perm-vouchers-manage">Gutscheinverwaltung</a><span class="rc-desc">Erlaubt, Gutscheine zu korrigieren und zu löschen und Sitzungen von Hand abzuziehen.</span></li>
         <li class="rc-perm"><a href="#perm-gift-cards-view">Geschenkkarten ansehen</a><span class="rc-desc">Zeigt die verkauften Geschenkkarten, ihr Guthaben und was insgesamt noch einzulösen ist.</span></li>
         <li class="rc-perm"><a href="#perm-gift-cards-sell">Geschenkkarten verkaufen</a><span class="rc-desc">Erlaubt, einen Geschenkgutschein zu verkaufen, zu drucken und per E-Mail zu senden.</span></li>
         <li class="rc-perm"><a href="#perm-coupons-view">Gutscheincodes ansehen</a><span class="rc-desc">Zeigt die Gutscheincodes des Zentrums, ihren Rabatt und wie viele noch einlösbar sind.</span></li>
@@ -3587,6 +3657,7 @@ footer{
     <tr><td><a href="#perm-visits-view">Bezahlte Besuche ansehen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
     <tr><td><a href="#perm-vouchers-view">Mehrfachkarten der Kunden ansehen</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
     <tr><td><a href="#perm-vouchers-transfer">Wertkarte übertragen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-vouchers-manage">Gutscheinverwaltung</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
     <tr><td><a href="#perm-gift-cards-view">Geschenkkarten ansehen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
     <tr><td><a href="#perm-gift-cards-sell">Geschenkkarten verkaufen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
     <tr><td><a href="#perm-coupons-view">Gutscheincodes ansehen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
@@ -5187,6 +5258,19 @@ footer{
     <em>Stempeln und Arbeitszeiterfassung</em> und die Aufträge in <em>Wartung</em>.
   </p>
 
+  <h3 id="app-instalar">Die App herunterladen und installieren</h3>
+  <span class="ruta">Menü, ganz unten → App für Fachkräfte</span>
+  <p>
+    Die App lädt man von der Turnera-Website selbst herunter, unter dem Eintrag <em>App für Fachkräfte</em> des Menüs (sichtbar für alle, die mit dem Personalmodul arbeiten). Die Seite nennt die verfügbare Version und ihre Größe und hat die Schaltfläche <strong>App herunterladen</strong>. <strong>Sie funktioniert nur auf Android-Geräten</strong>, ob Handys oder Tablets; für iPhone und iPad gibt es keine Version.
+  </p>
+  <ol>
+    <li>Öffnen Sie diese Seite auf dem Gerät des Zentrums, angemeldet, und klicken Sie auf <em>App herunterladen</em>.</li>
+    <li>Beim Öffnen der Datei fragt Android nach der Erlaubnis, Apps aus dem Browser zu installieren: Sie wird nur für diese Installation erteilt.</li>
+    <li>Auf <em>Installieren</em>, öffnen und mit dem Benutzer des Zentrums anmelden.</li>
+  </ol>
+  <p>
+    Zum Aktualisieren lädt man die neue Version herunter und installiert sie über der vorherigen; nichts geht verloren. Ist auf dem Server noch keine Version veröffentlicht, sagt die Seite das.
+  </p>
   <h3 id="app-entrar">Anmelden und den Standort wählen</h3>
   <p>
     Die App wird <strong>einmal pro Gerät</strong> eingerichtet: Die Leitung des Betriebs meldet sich mit ihrem Benutzer an und wählt den Standort, an dem das Gerät stehen wird. Von da an behält das Gerät diese gemeinsame Sitzung, und jede Person identifiziert sich mit ihrer <strong>PIN</strong>, derselben, mit der sie im Web stempelt.

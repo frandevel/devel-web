@@ -1153,5 +1153,18 @@
   "tf78f2d57": "Auf dem gedruckten Agendablatt erscheinen die Sitzungen jedes Gutscheins als übrig von der Gesamtzahl, zum Beispiel 4/5, und nicht mehr als Anzahl der verbleibenden Sitzungen.",
   "t7f501112": "1.12.0-c43dd3f",
   "tf6323d7e": "1.11.0-6f096ff",
-  "tfedc9215": "1.11.0-33e6b6c"
+  "tfedc9215": "1.11.0-33e6b6c",
+  "tdde1888f": "1.12.0-91073a0",
+  "t88542417": "Gutschein-Verwaltung: wer sie korrigieren und löschen darf",
+  "tcd8ff2fc": "Einen Gutschein zu korrigieren, ihn zu sperren und eine Sitzung von Hand abzuziehen hat jetzt eine eigene Berechtigung, Mehrfachkarten-Verwaltung, die nicht mehr vom Kassieren abhängt.",
+  "t28fee486": "Jedes Zentrum legt in der Rollenverwaltung fest, welche Rollen sie bekommen. Mit der Werksrolle Empfang werden weiterhin Gutscheine verkauft und zum Bezahlen verwendet, bereits verkaufte lassen sich aber nicht ändern.",
+  "td7222580": "Die Schaltflächen Sitzung verwenden, Korrigieren und Sperren erscheinen nur bei Personen mit dieser Berechtigung.",
+  "t565b8ec3": "Der Kundenverlauf kennzeichnet, was mit einem Gutschein bezahlt wurde",
+  "t5e991749": "Mit einem Gutschein bezahlte Leistungen tragen ein Ticket-Symbol mit dem Hinweis Mit Gutschein bezahlt; die ohne Symbol wurden separat kassiert. So lassen sich die Sitzungen, die vom Gutschein abgingen, auf einen Blick zählen.",
+  "t16df64de": "Das Symbol sehen auch Personen, die keine Beträge sehen dürfen.",
+  "t51c787f2": "App für Fachkräfte 0.2.4 und ihre Agenda als PDF",
+  "tfdf80813": "Das Agenda-Blatt, das die App als PDF herunterlädt, enthält jetzt die Kundennummer und die Gutscheine als übrige von der Gesamtzahl, zum Beispiel 4/5, genau wie das der Web-Version.",
+  "tc2420c81": "Die App zeigt eine klare Meldung, wenn das Zentrum zuerst die Servicebedingungen akzeptieren muss, wenn für das Versuchte eine Berechtigung fehlt oder wenn das Zentrum den Namen geändert hat; dann erklärt sie, wie man es mit Zentrum wechseln neu auswählt.",
+  "t27fc0903": "Agenda: der geschlossene Block, mit geschlossenem Vorhängeschloss",
+  "tbe02cea3": "In der Agenda zeigt ein Block Kurz geschlossen ein geschlossenes Vorhängeschloss; die Schaltfläche öffnet ihn weiterhin wieder."
 }

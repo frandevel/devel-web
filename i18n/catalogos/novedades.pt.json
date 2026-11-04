@@ -1153,5 +1153,18 @@
   "tf78f2d57": "Na folha impressa da agenda, as sessões de cada vale aparecem como restantes sobre o total, por exemplo 4/5, e já não como número de sessões restantes.",
   "t7f501112": "1.12.0-c43dd3f",
   "tf6323d7e": "1.11.0-6f096ff",
-  "tfedc9215": "1.11.0-33e6b6c"
+  "tfedc9215": "1.11.0-33e6b6c",
+  "tdde1888f": "1.12.0-91073a0",
+  "t88542417": "Gestão de vales: quem os pode corrigir e apagar",
+  "tcd8ff2fc": "Corrigir um vale, dá-lo de baixa e descontar uma sessão à mão têm agora a sua própria permissão, Gestão de pacotes de sessões, que já não depende de poder cobrar.",
+  "t28fee486": "Cada centro decide a que funções a dá no ecrã de funções. Com a função Receção de fábrica continua a vender-se e a cobrar com vales, mas os já vendidos não se alteram.",
+  "td7222580": "Os botões Usar sessão, Corrigir e Baixa só aparecem a quem tem esta permissão.",
+  "t565b8ec3": "O histórico do cliente assinala o que foi pago com vale",
+  "t5e991749": "Os serviços pagos com vale levam um ícone de bilhete com a ajuda Pago com vale; os que não o levam foram cobrados à parte. Assim contam-se de relance as sessões que saíram do vale.",
+  "t16df64de": "O ícone também o vê quem não tem permissão para ver valores.",
+  "t51c787f2": "Aplicação para profissionais 0.2.4 e a sua agenda em PDF",
+  "tfdf80813": "A folha da agenda que a aplicação descarrega, em PDF, traz agora o número de cliente e os vales como restantes sobre o total, por exemplo 4/5, tal como a da web.",
+  "tc2420c81": "A aplicação mostra uma mensagem clara se o centro tiver de aceitar primeiro as condições do serviço, se faltar uma permissão para o que se tenta ou se o centro mudou de nome; nesse caso explica como o escolher de novo com Mudar de centro.",
+  "t27fc0903": "Agenda: o bloco fechado, com cadeado fechado",
+  "tbe02cea3": "Na agenda, um bloco Fechado por um bocado mostra um cadeado fechado; o botão continua a servir para o reabrir."
 }

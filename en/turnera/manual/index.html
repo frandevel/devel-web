@@ -682,6 +682,8 @@ footer{
     <li><a href="#empezar">1. Logging in and finding your way around</a></li>
     <li><a href="#contrasena" class="sub">Changing the password</a></li>
     <li><a href="#puestos-compartidos" class="sub">Shared devices: signing in with the card and PIN</a></li>
+    <li><a href="#sala-de-espera" class="sub">Waiting room: a screen that calls whoever can go in</a></li>
+    <li><a href="#montar-pantalla-sala" class="sub">Setting up the waiting-room screen</a></li>
         <li><a href="#aviso-general" class="sub">Notices from Turnera</a></li>
     <li><a href="#ordenar" class="sub">Sorting any list</a></li>
     <li><a href="#idiomas" class="sub">Languages</a></li>
@@ -783,6 +785,7 @@ footer{
     <li><a href="#soporte">12 ter. Support: talking to the Turnera team</a></li>
     <li><a href="#problemas">13. When something goes wrong</a></li>
     <li><a href="#app-nativa">14. The professionals’ native app (Android)</a></li>
+    <li><a href="#app-instalar" class="sub">Downloading and installing the app</a></li>
     <li><a href="#app-entrar" class="sub">Signing in and choosing the site</a></li>
     <li><a href="#app-fichar" class="sub">Clocking in with the PIN</a></li>
     <li><a href="#app-menu" class="sub">The menu and the version</a></li>
@@ -942,6 +945,62 @@ footer{
   <p>
     On a shared device, registering a fingerprint is not offered: that device belongs to everyone. The fingerprint is for each person’s phone or laptop (see <a href="#huella">Signing in with your fingerprint</a>).
   </p>
+
+  <h3 id="sala-de-espera">Waiting room: a screen that calls whoever can go in</h3>
+  <p>
+    For centres with a lot of foot traffic. It is <strong>off</strong> until it is turned on in
+    <em>Administration → Preferences → Access</em>, with <strong>Waiting room</strong>. While it is off, Turnera works as usual and nothing described below appears.
+  </p>
+  <p>
+    <strong>The screen.</strong> In <em>Administration → Devices</em> the TV or tablet in the waiting room is registered with the mode <em>Waiting-room screen</em>, just like a shared workstation: a code appears, open <code>/sala-de-espera</code> on that device and type in the code. The screen does not sign anyone in and can only read what is being called. It is best to press <strong>Turn sound on</strong> once: browsers do not let sound play until someone touches the screen.
+  </p>
+  <p>
+    <strong>Calling.</strong> Whoever is attending opens the appointment and presses <strong>Call to room</strong>. Choose the room (the appointment's room comes preselected) and the screen immediately shows the name and the room, with a sound alert. Each room has one call at a time: calling the same room again replaces the previous call. Calls clear themselves after ten minutes, or sooner with <strong>Remove call</strong>.
+  </p>
+  <p>
+    <strong>Calling the next one.</strong> This is the usual way at reception, and the queue is <strong>per professional</strong>. In the agenda, the megaphone button opens today's waiting list, grouped by professional. You choose the room to call to (a resource or a call room) and each professional has their own button <strong>Call the next one</strong>: it calls the first in their queue, among their appointments today with status <em>On hold</em>. Patients of other professionals do not count or change the order. Each time an appointment moves to <em>On hold</em>, Turnera stores the arrival time by itself; nothing needs to be noted. <strong>Arriving early gives no priority.</strong> Each patient counts from their <em>effective time</em>, which is the later of the appointment time and the time they arrived: whoever arrives before their appointment counts from the appointment time, and whoever arrives late counts from when they arrive. Patients are called by effective time, from earliest to latest; if they coincide, the earlier appointment goes first and then the one created first. If there is no arrival time (because nobody moved it to <em>On hold</em> in Turnera), the appointment time counts. The status of the appointment does not change, and nobody who already has a call on screen is called. If that professional has nobody, it shows «Nobody is waiting». If two people at reception press at the same time, each calls a different person. With no professional chosen, nobody is called. The list is in the same order as the calls, so the first of each professional is the one the button will call; a megaphone marks whoever has already been called. In the same list, each patient has a button
+    <strong>Call</strong> to call them by hand, and the appointment's own button <strong>Call to room</strong> is still there for one-off cases.
+  </p>
+  <p>
+    <strong>Rooms without a professional.</strong> Cash desk, blood draws or radiology have no automatic queue: reception calls the specific patient by hand. How they should work beyond that has not been decided.
+  </p>
+  <p>
+    <strong>Call rooms.</strong> Cash desk, blood draws or nursing are not agenda resources, because Turnera charges per resource. They are registered separately, in <em>Preferences → Access</em>, below the waiting-room switch: they can be renamed, moved up or down, and turned on or off, and the name cannot be repeated. They do not count towards the fee. When calling to a room, active resources come first, followed by active call rooms.
+  </p>
+  <p>
+    <strong>What it shows.</strong> In Preferences you choose between the name with the first surname shortened (“Ana R.”) or just a code, with no personal data. If the screen loses its connection to the server, it warns in red so nobody trusts what it shows.
+  </p>
+
+  <h3 id="montar-pantalla-sala">Setting up the waiting-room screen</h3>
+  <p>
+    <strong>What has not been tested yet.</strong> What follows has been checked in a desktop browser. It has not yet been tested on a real television in a waiting room: neither the automatic start of the mini PC, nor kiosk mode, nor sound through the TV speakers. Until then, do a full test before leaving it running (step 5).
+  </p>
+  <p>
+    <strong>The supported setup:</strong> a mini PC (or a browser stick) connected to the television in the room, with the browser in kiosk mode. Sending the image from another device (“casting”) is not documented.
+  </p>
+  <ol>
+    <li>
+      <strong>Registering the device.</strong> In <em>Administration → Devices</em> create a workstation with the mode
+      <em>Waiting-room screen</em>. A one-time code appears, valid for 15 minutes. On the mini PC open
+      <code>https://&lt;your centre&gt;/sala-de-espera</code>, press <em>Register with a code</em> and type in the code. The key stays saved in that browser. To stop recognising the screen, revoke it from
+      <em>Workstations</em>.
+    </li>
+    <li>
+      <strong>Starting by itself.</strong> On the mini PC, set up a system account that signs in without asking for a password, turn off sleep and the screensaver, and make the browser open full screen with that address at start-up. Example for Chrome:
+      <code>chrome --kiosk --autoplay-policy=no-user-gesture-required https://&lt;your centre&gt;/sala-de-espera</code>. With that parameter there is no need to press <em>Turn sound on</em>. If it is opened any other way, press
+      <em>Turn sound on</em> once after every start-up: browsers do not allow sound until someone touches the screen.
+    </li>
+    <li>
+      <strong>No Turnera session on that screen.</strong> It is not needed and not advisable: the screen reads with its own key and does not need anyone to be signed in. Do not open Turnera with a user in that browser.
+    </li>
+    <li>
+      <strong>If something fails.</strong> If the screen loses its connection, a red warning appears and it recovers by itself as soon as there is a network. If the device is changed (or the browser data is deleted), a new code is issued in
+      <em>Workstations</em> and it is registered again.
+    </li>
+    <li>
+      <strong>Volume and test.</strong> Turn up the volume on the television and on the mini PC's system, and make a test call from an appointment with <em>Call to room</em> to hear the alert and see the name. Then remove the call with <em>Remove call</em>.
+    </li>
+  </ol>
 
   <h3 id="aviso-general">Notices from Turnera</h3>
   <p>
@@ -1381,13 +1440,11 @@ footer{
   <span class="ruta">Agenda → Print</span>
 
   <p>
-    It prints the day as a PDF, one member of staff per sheet, with the time, the customer, their phone number, the
-    room, the service and the notes. First visits are marked on the paper too.
+    Opens the browser's print window with the day being viewed, one professional per sheet. It does not download any file: from there you choose the printer or, if you prefer, “Save as PDF”. Each line carries the client number, name and surnames, the service, the start time, the appointment notes and, if the client has vouchers with sessions, which one and how many sessions are left out of the total it was sold with, for example
+    <em>4/5</em>. It carries no phone number, end time or cabin.
   </p>
   <p>
-    Click the button and you get the whole centre. Open the little arrow and you pick a single person. This is what
-    you print in the morning so that everyone has their day beside the couch and so that, if the power goes, the
-    centre keeps running.
+    Pressing the button prints the whole centre (professionals with no appointments that day do not use a sheet). Opening the little arrow lets you choose a single person, and their sheet is printed even if they have no appointments that day. Cancelled appointments and those of no-shows are not included. This is what is printed in the morning to carry the day around and so that, if the power goes out, the centre can keep working.
   </p>
 </section>
 
@@ -1423,7 +1480,11 @@ footer{
   </p>
 
   <p>
-    What was charged on each visit —the amount and the <em>Ticket</em> of the history— is seen by whoever has the permission “View amounts and tickets in the history”. If you remove it from a role or a person, their history still shows what was done and when, but without amounts or ticket. It is given by default to anyone who can already see customer records.
+    What was charged on each visit —the amount and the <em>Ticket</em> of the history, which starts the printing, is seen by whoever has the permission “See the amounts and tickets in the history”. If it is removed from a role or a person, their history still shows what was done and when, but without amounts or ticket. It is given by default to whoever can already see the records.
+  </p>
+
+  <p>
+    In the history, a service that was settled against a voucher carries a small ticket icon next to its name (hovering says “Paid with voucher”); one without it was charged separately. Whoever cannot see the amounts sees it too, because it is not money, and it lets you count at a glance the sessions that came out of the voucher.
   </p>
 
   <h3 id="clientes-notas">Record notes</h3>
@@ -1610,8 +1671,7 @@ footer{
   </p>
 
   <p>
-    The <em>Quote</em> button prints as a PDF what is on the ticket without charging anything, to hand to someone who is
-    still thinking about it.
+    The <em>Print quote</em> directly opens the print dialog with what is on the ticket, without charging anything, to give to someone who is thinking it over; if you prefer to save it, choose <em>Save as PDF</em> in that same dialog. <em>Quote by WhatsApp</em> opens WhatsApp with a short message (just the centre's name, no amounts) and, if the browser allows it, attaches the PDF; if not, you have to attach it by hand after saving it from the print dialog.
   </p>
 
   <p>
@@ -1915,7 +1975,7 @@ footer{
   <span class="ruta">Menu → Gift cards</span>
 
   <p>
-    Someone pays today and another person spends it another day. It is sold with <strong>Sell a gift card</strong>: who pays for it, who sells it, the amount, the payment method and, if you like, who it is for, a dedication and how long it is valid (with no date, it does not expire). When it is charged you get a code like <code>RG-7K2M-Q9TX</code>, which is printed on a card to give away or emailed with the card as a PDF.
+    Someone pays today and another person spends it another day. It is sold with <strong>Sell a gift card</strong>: who pays for it, who sells it, the amount, the payment method and, if you like, who it is for, a dedication and how long it is valid (with no date, it does not expire). When it is charged you get a code like <code>RG-7K2M-Q9TX</code>, which is printed on a card to give as a gift (<em>Print</em> directly opens the print dialog) or sent by email with the card as a PDF. <em>Send by WhatsApp</em> opens WhatsApp with the centre, the code and the amount (unless the card was sold with the amount hidden) and attaches the PDF if the browser allows it.
   </p>
 
   <figure>
@@ -2101,6 +2161,11 @@ footer{
     by hand from the customer's record, for when someone was seen without going through the till.
   </p>
 
+  <p>
+    Deducting a session by hand, correcting a voucher and cancelling it require the permission
+    <a href="#perm-vouchers-manage">Voucher management</a>, which is not the one for charging: the default Reception sells vouchers and charges with them, but cannot touch those already sold. If in your centre you want someone to do it, give them that permission from the roles screen.
+  </p>
+
   <div class="ojo">
     <p><strong>Marking an appointment as seen does not use up the voucher.</strong> The voucher is deducted when you charge, not when you
       see the customer. If in your centre people are seen on a voucher without going through the point of sale, someone
@@ -2249,7 +2314,11 @@ footer{
     <strong>No charging without the required ones.</strong> An appointment with required parameters left blank can be saved but not charged: when you press <em>Charge</em> it tells you which ones are missing, and the POS cannot be reached by any other route either until they are noted (whoever lacks permission to note them is warned, but can charge).
   </p>
   <p>
-    <strong>Where you see it afterwards.</strong> In the customer's record, the <em>Sessions with equipment</em> lists each session, newest first, with the day and time, the service, the device, the parameters with their unit and who did it. It is where a laser treatment is followed session by session. If nothing was ever noted for the customer, the card does not appear.
+    <strong>Where you see it afterwards.</strong> In the client's record, inside the visit history: under each service that carried parameters a small grey line appears with the device and the recorded values, for example
+    <em>Diode laser · 18 J · 12 ms · spot 10</em> (those with a unit are read with it; those without, with their name in front). This is where you follow a laser treatment's settings session by session. Clicking the visit row opens the full detail: each parameter with its value and unit, who attended, when it was recorded and the line's notes. Required ones left unfilled are only seen there, as “—”.
+  </p>
+  <p>
+    If the service had no parameters, nothing is added. An appointment not yet charged does not appear in the history, and therefore neither does what was recorded in it: it can be seen by opening the appointment in the agenda. Parameters are only seen by whoever can see the agenda's appointments; without that permission the history appears the same, without them.
   </p>
   <p>
     That is the figure you really look at before starting: in laser hair removal the settings go up session by session,
@@ -2478,9 +2547,7 @@ footer{
     <strong>Active resources set the fee.</strong> The monthly fee depends on how many
     agenda resources are active in the whole centre, adding up every branch. The top of this screen shows
     how many there are and what they cost per month, before VAT. When you add or reactivate one, before saving, the form tells you
-    what the fee will become: the change applies <strong>from the month after it is added</strong>. Deactivating one lowers
-    it, also from the following month. Every addition, reactivation, deactivation or deletion that changes how many are active
-    is recorded with the date and who did it, and DEVEL receives it by email to adjust the fee.
+    what the fee will become: the change applies <strong>from that same day</strong>, prorated by day. Deactivating it removes it, also from that same day. The adjustment is billed on the next invoice. Every activation, reactivation, deactivation or deletion that changes how many are active is recorded with the date and who did it, and reaches DEVEL by email so the fee can be adjusted.
   </p>
 
   <p>
@@ -2806,6 +2873,7 @@ footer{
     <tr id="perm-visits-view"><td><strong>See the visits charged</strong></td><td>Shows the visits already charged and their detail.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
     <tr id="perm-vouchers-view"><td><strong>See clients’ vouchers</strong></td><td>Shows the vouchers and the sessions left on each.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-profesional">Professional</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
     <tr id="perm-vouchers-transfer"><td><strong>Transfer a voucher</strong></td><td>Moves sessions from a voucher to another person.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
+    <tr id="perm-vouchers-manage"><td><strong>Voucher management</strong></td><td>Allows correcting and deleting vouchers and deducting sessions by hand.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
     <tr id="perm-gift-cards-view"><td><strong>See gift cards</strong></td><td>Shows the gift cards sold, their balance and what is left to spend across all of them.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
     <tr id="perm-gift-cards-sell"><td><strong>Sell gift cards</strong></td><td>Allows selling a gift card, printing it and sending it by email.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
     <tr id="perm-coupons-view"><td><strong>See coupons</strong></td><td>Shows the centre’s coupons, their discount and how many are left to use.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
@@ -3080,6 +3148,7 @@ footer{
         <li class="rc-perm"><a href="#perm-visits-view">See the visits charged</a><span class="rc-desc">Shows the visits already charged and their detail.</span></li>
         <li class="rc-perm"><a href="#perm-vouchers-view">See clients’ vouchers</a><span class="rc-desc">Shows the vouchers and the sessions left on each.</span></li>
         <li class="rc-perm"><a href="#perm-vouchers-transfer">Transfer a voucher</a><span class="rc-desc">Moves sessions from a voucher to another person.</span></li>
+        <li class="rc-perm"><a href="#perm-vouchers-manage">Voucher management</a><span class="rc-desc">Allows correcting and deleting vouchers and deducting sessions by hand.</span></li>
         <li class="rc-perm"><a href="#perm-gift-cards-view">See gift cards</a><span class="rc-desc">Shows the gift cards sold, their balance and what is left to spend across all of them.</span></li>
         <li class="rc-perm"><a href="#perm-gift-cards-sell">Sell gift cards</a><span class="rc-desc">Allows selling a gift card, printing it and sending it by email.</span></li>
         <li class="rc-perm"><a href="#perm-coupons-view">See coupons</a><span class="rc-desc">Shows the centre’s coupons, their discount and how many are left to use.</span></li>
@@ -3358,6 +3427,7 @@ footer{
         <li class="rc-perm"><a href="#perm-visits-view">See the visits charged</a><span class="rc-desc">Shows the visits already charged and their detail.</span></li>
         <li class="rc-perm"><a href="#perm-vouchers-view">See clients’ vouchers</a><span class="rc-desc">Shows the vouchers and the sessions left on each.</span></li>
         <li class="rc-perm"><a href="#perm-vouchers-transfer">Transfer a voucher</a><span class="rc-desc">Moves sessions from a voucher to another person.</span></li>
+        <li class="rc-perm"><a href="#perm-vouchers-manage">Voucher management</a><span class="rc-desc">Allows correcting and deleting vouchers and deducting sessions by hand.</span></li>
         <li class="rc-perm"><a href="#perm-gift-cards-view">See gift cards</a><span class="rc-desc">Shows the gift cards sold, their balance and what is left to spend across all of them.</span></li>
         <li class="rc-perm"><a href="#perm-gift-cards-sell">Sell gift cards</a><span class="rc-desc">Allows selling a gift card, printing it and sending it by email.</span></li>
         <li class="rc-perm"><a href="#perm-coupons-view">See coupons</a><span class="rc-desc">Shows the centre’s coupons, their discount and how many are left to use.</span></li>
@@ -3584,6 +3654,7 @@ footer{
     <tr><td><a href="#perm-visits-view">See the visits charged</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
     <tr><td><a href="#perm-vouchers-view">See clients’ vouchers</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
     <tr><td><a href="#perm-vouchers-transfer">Transfer a voucher</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
+    <tr><td><a href="#perm-vouchers-manage">Voucher management</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
     <tr><td><a href="#perm-gift-cards-view">See gift cards</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
     <tr><td><a href="#perm-gift-cards-sell">Sell gift cards</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
     <tr><td><a href="#perm-coupons-view">See coupons</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
@@ -5182,6 +5253,19 @@ footer{
     <em>Clocking in and working time</em> and orders in <em>Maintenance</em>.
   </p>
 
+  <h3 id="app-instalar">Downloading and installing the app</h3>
+  <span class="ruta">Menu, at the very bottom → App for professionals</span>
+  <p>
+    The app is downloaded from Turnera's own website, in the entry <em>App for professionals</em> of the menu (seen by whoever works with the staff module). The page states the available version and its size, and has the button <strong>Download the app</strong>. <strong>It only works on Android devices</strong>, whether phones or tablets; there is no version for iPhone or iPad.
+  </p>
+  <ol>
+    <li>Open that page on the centre's device, signed in, and press <em>Download the app</em>.</li>
+    <li>When opening the file, Android asks for permission to install apps from the browser: it is granted for this installation only.</li>
+    <li>Press <em>Install</em>, open it and sign in with the centre's user.</li>
+  </ol>
+  <p>
+    To update it, download and install the new version over the previous one; nothing is lost. If no version has been published on the server yet, the page says so.
+  </p>
   <h3 id="app-entrar">Signing in and choosing the site</h3>
   <p>
     The app is set up <strong>once per device</strong>: the centre’s management signs in with its user and chooses the site where it will be. From then on the device keeps that shared session and each professional identifies themselves with their <strong>PIN</strong>, the same one they clock in with on the web.

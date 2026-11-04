@@ -630,6 +630,8 @@ footer{
     <li><a href="#empezar">1. Entrar y orientarse</a></li>
     <li><a href="#contrasena" class="sub">Cambiar la contraseña</a></li>
     <li><a href="#puestos-compartidos" class="sub">Puestos compartidos: entrar con la ficha y el PIN</a></li>
+    <li><a href="#sala-de-espera" class="sub">Sala de espera: pantalla que llama a quien ya puede pasar</a></li>
+    <li><a href="#montar-pantalla-sala" class="sub">Montar la pantalla de sala de espera</a></li>
         <li><a href="#aviso-general" class="sub">Avisos de Turnera</a></li>
     <li><a href="#ordenar" class="sub">Ordenar cualquier lista</a></li>
     <li><a href="#idiomas" class="sub">Idiomas</a></li>
@@ -731,6 +733,7 @@ footer{
     <li><a href="#soporte">12 ter. Soporte: hablar con el equipo de Turnera</a></li>
     <li><a href="#problemas">13. Cuando algo no sale</a></li>
     <li><a href="#app-nativa">14. La aplicación nativa de los profesionales (Android)</a></li>
+    <li><a href="#app-instalar" class="sub">Descargar e instalar la aplicación</a></li>
     <li><a href="#app-entrar" class="sub">Entrar y elegir la sede</a></li>
     <li><a href="#app-fichar" class="sub">Fichar con el PIN</a></li>
     <li><a href="#app-menu" class="sub">El menú y la versión</a></li>
@@ -940,6 +943,103 @@ footer{
     En un puesto compartido no se ofrece registrar la huella: ese equipo es de todos. La huella es para el móvil o
     el portátil de cada uno (ver <a href="#huella">Entrar con la huella</a>).
   </p>
+
+  <h3 id="sala-de-espera">Sala de espera: pantalla que llama a quien ya puede pasar</h3>
+  <p>
+    Para centros con mucho tránsito. Está <strong>apagada</strong> hasta que se activa en
+    <em>Administración → Preferencias → Acceso</em>, con <strong>Sala de espera</strong>. Mientras está apagada
+    Turnera funciona como siempre y no aparece nada de lo que sigue.
+  </p>
+  <p>
+    <strong>La pantalla.</strong> En <em>Administración → Equipos</em> se da de alta el televisor o la tablet de la
+    sala de espera con el modo <em>Pantalla de sala de espera</em>, igual que un puesto compartido: sale un código,
+    se abre <code>/sala-de-espera</code> en ese equipo y se teclea el código. La pantalla no abre sesión de nadie y
+    solo sabe leer lo que se está llamando. Conviene pulsar <strong>Activar sonido</strong> una vez: los
+    navegadores no dejan sonar hasta que alguien toca la pantalla.
+  </p>
+  <p>
+    <strong>Llamar.</strong> Quien atiende abre la cita y pulsa <strong>Llamar a sala</strong>. Elige la sala (viene
+    marcada la de la cita) y la pantalla enseña al momento el nombre y la sala, con un aviso sonoro. Cada sala tiene
+    una llamada a la vez: llamar de nuevo a la misma sala sustituye a la anterior. Las llamadas se quitan solas a los
+    diez minutos, o antes con <strong>Quitar llamada</strong>.
+  </p>
+  <p>
+    <strong>Llamar al siguiente.</strong> Es lo normal en recepción, y la cola es <strong>de cada profesional</strong>.
+    En la agenda, el botón del megáfono abre la lista de espera de hoy, agrupada por profesional. Se elige la sala a la
+    que llamar (un recurso o una sala de llamada) y cada profesional tiene su botón <strong>Llamar al siguiente</strong>:
+    llama al primero de su cola, entre sus citas de hoy en estado <em>En espera</em>. Los pacientes de otros
+    profesionales no cuentan ni cambian el orden. Cada vez que una cita pasa a <em>En espera</em>, Turnera guarda sola
+    la hora de llegada; no hay que apuntar nada. <strong>Llegar pronto no da prioridad.</strong> Cada paciente cuenta
+    desde su <em>hora efectiva</em>, que es la mayor entre la hora de su cita y la hora a la que llegó: quien llega
+    antes de su cita cuenta desde la hora de la cita, y quien llega tarde cuenta desde que llega. Se llama por hora
+    efectiva, de menor a mayor; si coinciden, antes la cita más temprana y después la que se creó primero. Si no hay
+    hora de llegada (porque nadie la pasó por <em>En espera</em> en Turnera), cuenta la hora de la cita. No cambia el
+    estado de la cita y no llama a quien ya tiene una llamada en pantalla. Si ese profesional no tiene a nadie, avisa
+    con «No hay nadie en espera». Si dos personas de recepción pulsan a la vez, cada una llama a una persona distinta.
+    Sin profesional elegido no se llama a nadie. La lista va en el mismo orden en que se llama, así que el primero de cada profesional es a quien llamará el botón;
+    un megáfono marca a quien ya está llamado. En la misma lista, cada paciente tiene su botón
+    <strong>Llamar</strong> para llamarle a mano, y el botón <strong>Llamar a sala</strong> de la propia cita sigue ahí
+    para casos sueltos.
+  </p>
+  <p>
+    <strong>Salas sin profesional.</strong> Caja, extracciones o radiología no tienen cola automática: recepción llama
+    a mano al paciente concreto que toque. Cómo deben funcionar más allá de eso no está decidido.
+  </p>
+  <p>
+    <strong>Salas de llamada.</strong> Caja, extracciones o enfermería no son recursos de agenda, porque Turnera
+    cobra por recurso. Se dan de alta aparte, en <em>Preferencias → Acceso</em>, debajo del interruptor de la sala de
+    espera: se pueden renombrar, subir, bajar y activar o desactivar, y el nombre no se repite. No cuentan para la
+    cuota. Al llamar a sala salen primero los recursos activos y detrás las salas de llamada activas.
+  </p>
+  <p>
+    <strong>Qué se enseña.</strong> En Preferencias se elige entre el nombre con el primer apellido abreviado
+    («Ana R.») o solo un código, sin ningún dato personal. Si la pantalla pierde la conexión con el servidor, lo
+    avisa en rojo para que nadie se fíe de lo que ve.
+  </p>
+
+  <h3 id="montar-pantalla-sala">Montar la pantalla de sala de espera</h3>
+  <p>
+    <strong>Qué no se ha probado todavía.</strong> Lo que sigue está comprobado en un navegador de ordenador. Aún no
+    se ha probado en una televisión real de una sala de espera: ni el arranque automático del mini PC, ni el modo
+    kiosco, ni el sonido por los altavoces de la tele. Hasta entonces, haga una prueba completa antes de dejarlo en
+    marcha (paso 5).
+  </p>
+  <p>
+    <strong>El montaje que se admite:</strong> un mini PC (o un stick con navegador) conectado a la televisión de la
+    sala, con el navegador en modo kiosco. No se documenta enviar la imagen desde otro equipo («casting»).
+  </p>
+  <ol>
+    <li>
+      <strong>Dar de alta el equipo.</strong> En <em>Administración → Equipos</em> cree un equipo con el modo
+      <em>Pantalla de sala de espera</em>. Sale un código de un solo uso, que vale 15 minutos. En el mini PC abra
+      <code>https://&lt;su centro&gt;/sala-de-espera</code>, pulse <em>Dar de alta con un código</em> y teclee el
+      código. La llave queda guardada en ese navegador. Para dejar de reconocer la pantalla, revóquela desde
+      <em>Equipos</em>.
+    </li>
+    <li>
+      <strong>Que arranque sola.</strong> En el mini PC, configure una cuenta del sistema que entre sin pedir
+      contraseña, desactive la suspensión y el salvapantallas, y haga que el navegador se abra a pantalla completa con
+      esa dirección al encender. Ejemplo para Chrome:
+      <code>chrome --kiosk --autoplay-policy=no-user-gesture-required https://&lt;su centro&gt;/sala-de-espera</code>.
+      Con ese parámetro no hace falta pulsar <em>Activar sonido</em>. Si se abre de otra manera, pulse
+      <em>Activar sonido</em> una vez después de cada arranque: los navegadores no dejan sonar hasta que alguien toca
+      la pantalla.
+    </li>
+    <li>
+      <strong>Ninguna sesión de Turnera en esa pantalla.</strong> No hace falta y no conviene: la pantalla lee con su
+      llave y no necesita que nadie haya entrado. No abra Turnera con un usuario en ese navegador.
+    </li>
+    <li>
+      <strong>Si algo falla.</strong> Si la pantalla pierde la conexión, sale un aviso en rojo y vuelve sola en cuanto
+      hay red. Si se cambia el equipo (o se borran los datos del navegador), se saca un código nuevo en
+      <em>Equipos</em> y se vuelve a dar de alta.
+    </li>
+    <li>
+      <strong>Volumen y prueba.</strong> Suba el volumen de la televisión y el del sistema del mini PC, y haga una
+      llamada de prueba desde una cita con <em>Llamar a sala</em> para oír el aviso y ver el nombre. Quite después la
+      llamada con <em>Quitar llamada</em>.
+    </li>
+  </ol>
 
   <h3 id="aviso-general">Avisos de Turnera</h3>
   <p>
@@ -1543,13 +1643,17 @@ footer{
   <span class="ruta">Agenda → Imprimir</span>
 
   <p>
-    Saca el día en PDF, un profesional por hoja, con la hora, el cliente, su teléfono, la cabina, el servicio y
-    las observaciones. Las primeras visitas salen marcadas también en el papel.
+    Abre la ventana de impresión del navegador con el día que se está mirando, un profesional por hoja. No
+    descarga ningún archivo: de ahí se elige la impresora o, si se prefiere, «Guardar como PDF». Cada línea lleva
+    el número de cliente, el nombre y apellidos, el servicio, la hora de inicio, las notas de la cita y, si el
+    cliente tiene bonos con sesiones, cuál es y cuántas le quedan sobre el total con que se vendió, por ejemplo
+    <em>4/5</em>. No lleva teléfono, hora de fin ni cabina.
   </p>
   <p>
-    Pulsando el botón sale el centro entero. Desplegando la flechita se elige a una sola persona. Es lo que se
-    imprime por la mañana para que cada uno tenga su día encima de la camilla y para que, si se va la luz, el
-    centro siga funcionando.
+    Pulsando el botón sale el centro entero (los profesionales sin citas ese día no gastan hoja). Desplegando la
+    flechita se elige a una sola persona, y su hoja sale aunque ese día no tenga citas. No salen las citas
+    anuladas ni las de quien no vino. Es lo que se imprime por la mañana para llevar el día encima y para que, si
+    se va la luz, el centro siga funcionando.
   </p>
 </section>
 
@@ -1595,9 +1699,15 @@ footer{
   </p>
 
   <p>
-    Lo cobrado en cada visita —el importe y el botón <em>Ticket</em> del historial— lo ve quien tiene el permiso
+    Lo cobrado en cada visita —el importe y el botón <em>Ticket</em> del historial, que lanza la impresión,— lo ve quien tiene el permiso
     «Ver los importes y los tickets del historial». Si se lo quita a un rol o a una persona, su historial sigue
     enseñando qué se hizo y cuándo, pero sin cantidades ni ticket. Se da de fábrica a quien ya puede ver las fichas.
+  </p>
+
+  <p>
+    En el historial, el servicio que se ha saldado contra un bono lleva un icono de ticket pequeño junto a su nombre
+    (al pasar el ratón dice «Pagado con bono»); el que no lo lleva se cobró aparte. Lo ve también quien no
+    puede ver los importes, porque no es dinero, y sirve para contar de un vistazo las sesiones que han salido del bono.
   </p>
 
   <h3 id="clientes-notas">Las notas de la ficha</h3>
@@ -1851,8 +1961,11 @@ footer{
   </p>
 
   <p>
-    El botón <em>Presupuesto</em> saca en PDF lo que hay en el ticket sin cobrar nada, para dárselo a quien está
-    pensándoselo.
+    El botón <em>Imprimir presupuesto</em> abre directamente el cuadro de impresión con lo que hay en el ticket, sin
+    cobrar nada, para dárselo a quien está pensándoselo; si prefiere guardarlo, elija <em>Guardar como PDF</em> en
+    ese mismo cuadro. <em>Presupuesto por WhatsApp</em> abre WhatsApp con un mensaje corto (solo el nombre del
+    centro, sin importes) y, si el navegador lo permite, adjunta el PDF; si no, hay que adjuntarlo a mano después de
+    guardarlo desde el cuadro de impresión.
   </p>
 
   <p>
@@ -2275,7 +2388,9 @@ footer{
     Alguien paga hoy y otra persona lo gasta otro día. Se vende con <strong>Vender tarjeta regalo</strong>: quién la
     paga, quién la vende, el importe, la forma de pago y, si se quiere, para quién es, una dedicatoria y hasta
     cuándo vale (sin fecha, no caduca). Al cobrarla sale un código del estilo <code>RG-7K2M-Q9TX</code>, que se
-    imprime en una tarjeta para regalar o se manda por correo con la tarjeta en PDF.
+    imprime en una tarjeta para regalar (<em>Imprimir</em> abre directamente el cuadro de impresión) o se manda
+    por correo con la tarjeta en PDF. <em>Enviar por WhatsApp</em> abre WhatsApp con el centro, el código y el
+    importe (salvo que la tarjeta se vendiera con el importe oculto) y adjunta el PDF si el navegador lo permite.
   </p>
 
   <figure>
@@ -2497,6 +2612,13 @@ footer{
     a mano desde la ficha del cliente, para el caso de haber atendido sin pasar por caja.
   </p>
 
+  <p>
+    Descontar una sesión a mano, corregir un bono y darlo de baja necesitan el permiso
+    <a href="#perm-vouchers-manage">Gestión de bonos</a>, que no es el de cobrar: la Recepción de fábrica vende bonos
+    y cobra con ellos, pero no puede tocar los ya vendidos. Si en su centro quiere que alguien lo haga, se le da
+    ese permiso desde la pantalla de roles.
+  </p>
+
   <div class="ojo">
     <p><strong>Marcar una cita como atendida no gasta el bono.</strong> El bono se descuenta al cobrar, no al
       atender. Si en su centro se atiende con bono sin pasar por el TPV, alguien tiene que descontar la sesión a
@@ -2666,10 +2788,17 @@ footer{
     camino hasta anotarlos (a quien no tiene permiso para anotar se le avisa, pero puede cobrar).
   </p>
   <p>
-    <strong>Dónde se ve después.</strong> En la ficha del cliente, la tarjeta <em>Sesiones con aparato</em> lista
-    cada sesión, de la más reciente a la más antigua, con el día y la hora, el servicio, el aparato, los parámetros con su unidad
-    y quién la hizo. Es donde se sigue la pauta de un tratamiento de láser sesión a sesión. Si al cliente nunca se
-    le anotó nada, la tarjeta no aparece.
+    <strong>Dónde se ve después.</strong> En la ficha del cliente, dentro del historial de visitas: bajo cada servicio
+    que llevó parámetros sale una línea pequeña y gris con el aparato y los valores anotados, por ejemplo
+    <em>Láser diodo · 18 J · 12 ms · spot 10</em> (los que tienen unidad se leen con ella; los que no, con su nombre
+    delante). Es donde se sigue la pauta de un tratamiento de láser sesión a sesión. Al pulsar la fila de la visita se
+    abre el detalle completo: cada parámetro con su valor y su unidad, quién atendió, cuándo se anotó y las notas de
+    la línea. Los obligatorios que se quedaron sin rellenar solo se ven ahí, como «—».
+  </p>
+  <p>
+    Si el servicio no llevó parámetros, no se añade nada. Una cita todavía sin cobrar no sale en el historial, y por
+    tanto tampoco lo anotado en ella: se ve abriendo la cita en la agenda. Los parámetros solo los ve quien puede ver
+    las citas de la agenda; sin ese permiso el historial sale igual, sin ellos.
   </p>
   <p>
     Ése es el dato que de verdad se mira antes de empezar: en depilación láser la pauta sube sesión a sesión, y
@@ -2949,8 +3078,8 @@ footer{
     <strong>Los recursos activos marcan la cuota.</strong> La cuota mensual depende de cuántos
     recursos de agenda hay activos en todo el centro, sumando todas las delegaciones. Arriba de esta pantalla se ve
     cuántos hay y lo que cuestan al mes, sin IVA. Al dar de alta o reactivar uno, antes de guardar, la ficha avisa de
-    cuánto pasará a ser la cuota: el cambio se aplica <strong>desde el mes siguiente al alta</strong>. Desactivarlo la
-    baja, también desde el mes siguiente. Cada alta, reactivación, baja o borrado que cambia cuántos hay activos
+    cuánto pasará a ser la cuota: el cambio se aplica <strong>desde ese mismo día</strong>, con prorrateo diario. Desactivarlo la
+    baja, también desde ese mismo día. El ajuste se factura en la siguiente factura. Cada alta, reactivación, baja o borrado que cambia cuántos hay activos
     queda anotado con la fecha y quién lo hizo, y le llega a DEVEL por correo para ajustar la cuota.
   </p>
 
@@ -3369,6 +3498,7 @@ footer{
     <tr id="perm-visits-view"><td><strong>Ver las visitas cobradas</strong></td><td>Consulta las visitas ya cobradas y su detalle.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-vouchers-view"><td><strong>Ver los bonos de clientes</strong></td><td>Muestra los bonos y las sesiones que quedan en cada uno.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-vouchers-transfer"><td><strong>Traspasar un bono</strong></td><td>Pasa sesiones de un bono a otra persona.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
+    <tr id="perm-vouchers-manage"><td><strong>Gestión de bonos</strong></td><td>Permite corregir y borrar bonos y descontar sesiones a mano.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-gift-cards-view"><td><strong>Ver las tarjetas regalo</strong></td><td>Consulta las tarjetas regalo vendidas, su saldo y lo que queda por gastar entre todas.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-gift-cards-sell"><td><strong>Vender tarjetas regalo</strong></td><td>Permite vender una tarjeta regalo, imprimirla y enviarla por correo.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-coupons-view"><td><strong>Ver los cupones</strong></td><td>Consulta los cupones del centro, su descuento y cuántos quedan por usar.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
@@ -3646,6 +3776,7 @@ footer{
         <li class="rc-perm"><a href="#perm-visits-view">Ver las visitas cobradas</a><span class="rc-desc">Consulta las visitas ya cobradas y su detalle.</span></li>
         <li class="rc-perm"><a href="#perm-vouchers-view">Ver los bonos de clientes</a><span class="rc-desc">Muestra los bonos y las sesiones que quedan en cada uno.</span></li>
         <li class="rc-perm"><a href="#perm-vouchers-transfer">Traspasar un bono</a><span class="rc-desc">Pasa sesiones de un bono a otra persona.</span></li>
+        <li class="rc-perm"><a href="#perm-vouchers-manage">Gestión de bonos</a><span class="rc-desc">Permite corregir y borrar bonos y descontar sesiones a mano.</span></li>
         <li class="rc-perm"><a href="#perm-gift-cards-view">Ver las tarjetas regalo</a><span class="rc-desc">Consulta las tarjetas regalo vendidas, su saldo y lo que queda por gastar entre todas.</span></li>
         <li class="rc-perm"><a href="#perm-gift-cards-sell">Vender tarjetas regalo</a><span class="rc-desc">Permite vender una tarjeta regalo, imprimirla y enviarla por correo.</span></li>
         <li class="rc-perm"><a href="#perm-coupons-view">Ver los cupones</a><span class="rc-desc">Consulta los cupones del centro, su descuento y cuántos quedan por usar.</span></li>
@@ -3924,6 +4055,7 @@ footer{
         <li class="rc-perm"><a href="#perm-visits-view">Ver las visitas cobradas</a><span class="rc-desc">Consulta las visitas ya cobradas y su detalle.</span></li>
         <li class="rc-perm"><a href="#perm-vouchers-view">Ver los bonos de clientes</a><span class="rc-desc">Muestra los bonos y las sesiones que quedan en cada uno.</span></li>
         <li class="rc-perm"><a href="#perm-vouchers-transfer">Traspasar un bono</a><span class="rc-desc">Pasa sesiones de un bono a otra persona.</span></li>
+        <li class="rc-perm"><a href="#perm-vouchers-manage">Gestión de bonos</a><span class="rc-desc">Permite corregir y borrar bonos y descontar sesiones a mano.</span></li>
         <li class="rc-perm"><a href="#perm-gift-cards-view">Ver las tarjetas regalo</a><span class="rc-desc">Consulta las tarjetas regalo vendidas, su saldo y lo que queda por gastar entre todas.</span></li>
         <li class="rc-perm"><a href="#perm-gift-cards-sell">Vender tarjetas regalo</a><span class="rc-desc">Permite vender una tarjeta regalo, imprimirla y enviarla por correo.</span></li>
         <li class="rc-perm"><a href="#perm-coupons-view">Ver los cupones</a><span class="rc-desc">Consulta los cupones del centro, su descuento y cuántos quedan por usar.</span></li>
@@ -4155,6 +4287,7 @@ footer{
     <tr><td><a href="#perm-visits-view">Ver las visitas cobradas</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
     <tr><td><a href="#perm-vouchers-view">Ver los bonos de clientes</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
     <tr><td><a href="#perm-vouchers-transfer">Traspasar un bono</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
+    <tr><td><a href="#perm-vouchers-manage">Gestión de bonos</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
     <tr><td><a href="#perm-gift-cards-view">Ver las tarjetas regalo</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
     <tr><td><a href="#perm-gift-cards-sell">Vender tarjetas regalo</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
     <tr><td><a href="#perm-coupons-view">Ver los cupones</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
@@ -6241,6 +6374,24 @@ footer{
     <em>Fichar y control de presencia</em> y los partes en <em>Mantenimiento</em>.
   </p>
 
+  <h3 id="app-instalar">Descargar e instalar la aplicación</h3>
+  <span class="ruta">Menú, abajo del todo → App para profesionales</span>
+  <p>
+    La aplicación se baja desde la propia web de Turnera, en la entrada <em>App para profesionales</em> del menú (la
+    ve quien trabaja con el módulo de personal). La página dice la versión disponible y lo que ocupa, y tiene el
+    botón <strong>Descargar la app</strong>. <strong>Solo vale para dispositivos Android</strong>, sean móviles o
+    tabletas; no hay versión para iPhone ni para iPad.
+  </p>
+  <ol>
+    <li>Abrir esa página en el dispositivo del centro, con la sesión iniciada, y pulsar <em>Descargar la app</em>.</li>
+    <li>Al abrir el archivo, Android pide permiso para instalar aplicaciones desde el navegador: se concede solo para
+      esta instalación.</li>
+    <li>Pulsar <em>Instalar</em>, abrirla y entrar con el usuario del centro.</li>
+  </ol>
+  <p>
+    Para actualizarla se descarga e instala la versión nueva encima de la anterior; no se pierde nada. Si todavía no
+    hay una versión publicada en el servidor, la página lo dice.
+  </p>
   <h3 id="app-entrar">Entrar y elegir la sede</h3>
   <p>
     La aplicación se prepara <strong>una sola vez por dispositivo</strong>: la dirección del centro entra con su

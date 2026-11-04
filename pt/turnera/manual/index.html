@@ -682,6 +682,8 @@ footer{
     <li><a href="#empezar">1. Entrar e orientar-se</a></li>
     <li><a href="#contrasena" class="sub">Alterar a palavra-passe</a></li>
     <li><a href="#puestos-compartidos" class="sub">Postos partilhados: entrar com a ficha e o PIN</a></li>
+    <li><a href="#sala-de-espera" class="sub">Sala de espera: ecrã que chama quem já pode entrar</a></li>
+    <li><a href="#montar-pantalla-sala" class="sub">Montar o ecrã da sala de espera</a></li>
         <li><a href="#aviso-general" class="sub">Avisos do Turnera</a></li>
     <li><a href="#ordenar" class="sub">Ordenar qualquer lista</a></li>
     <li><a href="#idiomas" class="sub">Idiomas</a></li>
@@ -783,6 +785,7 @@ footer{
     <li><a href="#soporte">12 ter. Suporte: falar com a equipa da Turnera</a></li>
     <li><a href="#problemas">13. Quando algo não corre bem</a></li>
     <li><a href="#app-nativa">14. A aplicação nativa dos profissionais (Android)</a></li>
+    <li><a href="#app-instalar" class="sub">Descarregar e instalar a aplicação</a></li>
     <li><a href="#app-entrar" class="sub">Entrar e escolher a sede</a></li>
     <li><a href="#app-fichar" class="sub">Picar o ponto com o PIN</a></li>
     <li><a href="#app-menu" class="sub">O menu e a versão</a></li>
@@ -946,6 +949,62 @@ footer{
   <p>
     Num posto partilhado não se oferece registar a impressão digital: esse equipamento é de todos. A impressão digital é para o telemóvel ou o portátil de cada um (ver <a href="#huella">Entrar com a impressão digital</a>).
   </p>
+
+  <h3 id="sala-de-espera">Sala de espera: ecrã que chama quem já pode entrar</h3>
+  <p>
+    Para centros com muito movimento. Está <strong>desligada</strong> até ser ativada em
+    <em>Administração → Preferências → Acesso</em>, com <strong>Sala de espera</strong>. Enquanto estiver desligada, o Turnera funciona como sempre e nada do que se segue aparece.
+  </p>
+  <p>
+    <strong>O ecrã.</strong> Em <em>Administração → Equipamentos</em> regista-se a televisão ou o tablet da sala de espera com o modo <em>Ecrã da sala de espera</em>, como um posto partilhado: aparece um código, abre-se <code>/sala-de-espera</code> nesse equipamento e escreve-se o código. O ecrã não inicia sessão de ninguém e só sabe ler o que está a ser chamado. Convém carregar em <strong>Ativar som</strong> uma vez: os navegadores não deixam tocar som até alguém tocar no ecrã.
+  </p>
+  <p>
+    <strong>Chamar.</strong> Quem atende abre a marcação e carrega em <strong>Chamar para a sala</strong>. Escolhe-se a sala (vem marcada a da marcação) e o ecrã mostra logo o nome e a sala, com um aviso sonoro. Cada sala tem uma chamada de cada vez: chamar de novo a mesma sala substitui a anterior. As chamadas desaparecem sozinhas ao fim de dez minutos, ou antes com <strong>Retirar chamada</strong>.
+  </p>
+  <p>
+    <strong>Chamar o seguinte.</strong> É o habitual na receção, e a fila é <strong>de cada profissional</strong>. Na agenda, o botão do megafone abre a lista de espera de hoje, agrupada por profissional. Escolhe-se a sala para onde chamar (um recurso ou uma sala de chamada) e cada profissional tem o seu botão <strong>Chamar o seguinte</strong>: chama o primeiro da sua fila, entre as suas marcações de hoje no estado <em>Em espera</em>. Os pacientes de outros profissionais não contam nem alteram a ordem. Sempre que uma marcação passa a <em>Em espera</em>, o Turnera guarda sozinho a hora de chegada; não é preciso apontar nada. <strong>Chegar cedo não dá prioridade.</strong> Cada paciente conta desde a sua <em>hora efetiva</em>, que é a maior entre a hora da sua marcação e a hora a que chegou: quem chega antes da marcação conta desde a hora da marcação, e quem chega tarde conta desde que chega. Chama-se por hora efetiva, da menor para a maior; se coincidirem, primeiro a marcação mais cedo e depois a que foi criada primeiro. Se não houver hora de chegada (porque ninguém a passou por <em>Em espera</em> no Turnera), conta a hora da marcação. Não altera o estado da marcação e não chama quem já tem uma chamada no ecrã. Se esse profissional não tiver ninguém, avisa com «Ninguém em espera». Se duas pessoas da receção carregarem ao mesmo tempo, cada uma chama uma pessoa diferente. Sem profissional escolhido não se chama ninguém. A lista segue a mesma ordem em que se chama, pelo que o primeiro de cada profissional é quem o botão vai chamar; um megafone assinala quem já foi chamado. Na mesma lista, cada paciente tem o seu botão
+    <strong>Chamar</strong> para o chamar à mão, e o botão <strong>Chamar para a sala</strong> da própria marcação continua lá para casos soltos.
+  </p>
+  <p>
+    <strong>Salas sem profissional.</strong> Caixa, colheitas ou radiologia não têm fila automática: a receção chama à mão o paciente que for. Como devem funcionar para além disso ainda não está decidido.
+  </p>
+  <p>
+    <strong>Salas de chamada.</strong> Caixa, colheitas ou enfermagem não são recursos da agenda, porque o Turnera cobra por recurso. Registam-se à parte, em <em>Preferências → Acesso</em>, por baixo do interruptor da sala de espera: podem renomear-se, subir, descer e ativar ou desativar, e o nome não pode repetir-se. Não contam para a mensalidade. Ao chamar para uma sala aparecem primeiro os recursos ativos e depois as salas de chamada ativas.
+  </p>
+  <p>
+    <strong>O que mostra.</strong> Nas Preferências escolhe-se entre o nome com o primeiro apelido abreviado («Ana R.») ou apenas um código, sem qualquer dado pessoal. Se o ecrã perder a ligação ao servidor, avisa a vermelho para que ninguém confie no que vê.
+  </p>
+
+  <h3 id="montar-pantalla-sala">Montar o ecrã da sala de espera</h3>
+  <p>
+    <strong>O que ainda não foi testado.</strong> O que se segue foi verificado num navegador de computador. Ainda não foi testado numa televisão real de uma sala de espera: nem o arranque automático do mini PC, nem o modo quiosque, nem o som pelas colunas da televisão. Até lá, faça um teste completo antes de o deixar a funcionar (passo 5).
+  </p>
+  <p>
+    <strong>A montagem suportada:</strong> um mini PC (ou uma stick com navegador) ligado à televisão da sala, com o navegador em modo quiosque. Não se documenta enviar a imagem a partir de outro equipamento («casting»).
+  </p>
+  <ol>
+    <li>
+      <strong>Registar o equipamento.</strong> Em <em>Administração → Equipamentos</em> crie um posto com o modo
+      <em>Ecrã da sala de espera</em>. Aparece um código de uso único, válido durante 15 minutos. No mini PC abra
+      <code>https://&lt;o seu centro&gt;/sala-de-espera</code>, carregue em <em>Registar com um código</em> e escreva o código. A chave fica guardada nesse navegador. Para deixar de reconhecer o ecrã, revogue-a em
+      <em>Postos</em>.
+    </li>
+    <li>
+      <strong>Arrancar sozinho.</strong> No mini PC, configure uma conta do sistema que entre sem pedir palavra-passe, desative a suspensão e o protetor de ecrã, e faça com que o navegador abra em ecrã inteiro com esse endereço ao ligar. Exemplo para o Chrome:
+      <code>chrome --kiosk --autoplay-policy=no-user-gesture-required https://&lt;o seu centro&gt;/sala-de-espera</code>. Com esse parâmetro não é preciso carregar em <em>Ativar som</em>. Se for aberto de outra maneira, carregue em
+      <em>Ativar som</em> uma vez depois de cada arranque: os navegadores não deixam tocar som até alguém tocar no ecrã.
+    </li>
+    <li>
+      <strong>Nenhuma sessão do Turnera nesse ecrã.</strong> Não é preciso e não convém: o ecrã lê com a sua chave e não precisa de ninguém com sessão iniciada. Não abra o Turnera com um utilizador nesse navegador.
+    </li>
+    <li>
+      <strong>Se algo falhar.</strong> Se o ecrã perder a ligação, aparece um aviso a vermelho e recupera sozinho assim que haja rede. Se se mudar o equipamento (ou se apagarem os dados do navegador), tira-se um código novo em
+      <em>Postos</em> e regista-se de novo.
+    </li>
+    <li>
+      <strong>Volume e teste.</strong> Suba o volume da televisão e o do sistema do mini PC, e faça uma chamada de teste a partir de uma marcação com <em>Chamar para a sala</em> para ouvir o aviso e ver o nome. Depois retire a chamada com <em>Retirar chamada</em>.
+    </li>
+  </ol>
 
   <h3 id="aviso-general">Avisos do Turnera</h3>
   <p>
@@ -1489,13 +1548,11 @@ footer{
   <span class="ruta">Agenda → Imprimir</span>
 
   <p>
-    Gera o dia em PDF, um profissional por folha, com a hora, o cliente, o seu telefone, a cabine,
-    o serviço e as observações. As primeiras visitas aparecem também assinaladas no papel.
+    Abre a janela de impressão do navegador com o dia que se está a ver, um profissional por folha. Não descarrega nenhum ficheiro: dali escolhe-se a impressora ou, se preferir, «Guardar como PDF». Cada linha leva o número de cliente, o nome e apelidos, o serviço, a hora de início, as notas da marcação e, se o cliente tiver bónus com sessões, qual é e quantas lhe restam sobre o total com que foi vendido, por exemplo
+    <em>4/5</em>. Não leva telefone, hora de fim nem cabine.
   </p>
   <p>
-    Ao premir o botão sai o centro inteiro. Abrindo a setinha escolhe-se uma só pessoa. É o que se imprime de
-    manhã para que cada um tenha o seu dia em cima da marquesa e para que, se faltar a luz,
-    o centro continue a funcionar.
+    Ao carregar no botão sai o centro inteiro (os profissionais sem marcações nesse dia não gastam folha). Abrindo a setinha escolhe-se uma só pessoa, e a sua folha sai mesmo que nesse dia não tenha marcações. Não saem as marcações anuladas nem as de quem faltou. É o que se imprime de manhã para levar o dia consigo e para que, se faltar a luz, o centro continue a funcionar.
   </p>
 </section>
 
@@ -1535,7 +1592,11 @@ footer{
   </p>
 
   <p>
-    O que foi cobrado em cada visita —o valor e o botão <em>Talão</em> do histórico— vê-o quem tem a permissão «Ver os valores e os talões do histórico». Se a retirar a um perfil ou a uma pessoa, o histórico continua a mostrar o que foi feito e quando, mas sem valores nem talão. Dá-se de origem a quem já pode ver as fichas.
+    O que foi cobrado em cada visita —o valor e o botão <em>Talão</em> do histórico, que lança a impressão, vê-o quem tem a permissão «Ver os valores e os talões do histórico». Se se retirar a um perfil ou a uma pessoa, o seu histórico continua a mostrar o que se fez e quando, mas sem valores nem talão. Vem de origem para quem já pode ver as fichas.
+  </p>
+
+  <p>
+    No histórico, o serviço que foi saldado com um bónus leva um pequeno ícone de talão junto ao nome (ao passar o rato diz «Pago com bónus»); o que não o leva foi cobrado à parte. Vê-o também quem não pode ver os valores, porque não é dinheiro, e serve para contar de relance as sessões que saíram do bónus.
   </p>
 
   <h3 id="clientes-notas">As notas da ficha</h3>
@@ -1767,8 +1828,7 @@ footer{
   </p>
 
   <p>
-    O botão <em>Orçamento</em> gera em PDF o que está no talão sem cobrar nada, para entregar a quem
-    está a pensar.
+    O botão <em>Imprimir orçamento</em> abre diretamente a janela de impressão com o que está no talão, sem cobrar nada, para entregar a quem está a pensar; se preferir guardá-lo, escolha <em>Guardar como PDF</em> nessa mesma janela. <em>Orçamento por WhatsApp</em> abre o WhatsApp com uma mensagem curta (só o nome do centro, sem valores) e, se o navegador o permitir, anexa o PDF; se não, é preciso anexá-lo à mão depois de o guardar a partir da janela de impressão.
   </p>
 
   <p>
@@ -2143,7 +2203,7 @@ footer{
   <span class="ruta">Menu → Cartões-oferta</span>
 
   <p>
-    Alguém paga hoje e outra pessoa gasta noutro dia. Vende-se com <strong>Vender cartão-oferta</strong>: quem o paga, quem o vende, o montante, a forma de pagamento e, se se quiser, para quem é, uma dedicatória e até quando vale (sem data, não caduca). Ao cobrá-lo sai um código do género <code>RG-7K2M-Q9TX</code>, que se imprime num cartão para oferecer ou se envia por e-mail com o cartão em PDF.
+    Alguém paga hoje e outra pessoa gasta noutro dia. Vende-se com <strong>Vender cartão-oferta</strong>: quem o paga, quem o vende, o montante, a forma de pagamento e, se se quiser, para quem é, uma dedicatória e até quando vale (sem data, não caduca). Ao cobrá-lo sai um código do género <code>RG-7K2M-Q9TX</code>, que se imprime num cartão para oferecer (<em>Imprimir</em> abre diretamente a janela de impressão) ou se envia por correio eletrónico com o cartão em PDF. <em>Enviar por WhatsApp</em> abre o WhatsApp com o centro, o código e o valor (exceto se o cartão tiver sido vendido com o valor oculto) e anexa o PDF se o navegador o permitir.
   </p>
 
   <figure>
@@ -2352,6 +2412,11 @@ footer{
     manualmente a partir da ficha do cliente, para o caso de ter atendido sem passar pela caixa.
   </p>
 
+  <p>
+    Descontar uma sessão à mão, corrigir um bónus e dá-lo de baixa precisam da permissão
+    <a href="#perm-vouchers-manage">Gestão de bónus</a>, que não é a de cobrar: a Receção de origem vende bónus e cobra com eles, mas não pode mexer nos já vendidos. Se no seu centro quiser que alguém o faça, dá-se-lhe essa permissão no ecrã de perfis.
+  </p>
+
   <div class="ojo">
     <p><strong>Marcar uma marcação como atendida não gasta o pacote.</strong> O pacote é descontado ao cobrar, não ao
       atender. Se no seu centro se atende com pacote sem passar pelo TPV, alguém tem de descontar a sessão
@@ -2512,10 +2577,11 @@ footer{
     <strong>Sem os obrigatórios não se cobra.</strong> Uma marcação com parâmetros obrigatórios por preencher pode guardar-se, mas não cobrar-se: ao carregar em <em>Cobrar</em> avisa quais faltam, e também não se chega ao TPV por outro caminho enquanto não forem anotados (a quem não tem permissão para anotar avisa-se, mas pode cobrar).
   </p>
   <p>
-    <strong>Onde se vê depois.</strong> Na ficha do cliente, o cartão <em>Sessões com aparelho</em> lista
-    cada sessão, da mais recente à mais antiga, com o dia e a hora, o serviço, o aparelho, os parâmetros com a sua unidade
-    e quem a fez. É onde se acompanha a pauta de um tratamento de laser sessão a sessão. Se ao cliente nunca se
-    registou nada, o cartão não aparece.
+    <strong>Onde se vê depois.</strong> Na ficha do cliente, dentro do histórico de visitas: por baixo de cada serviço que levou parâmetros aparece uma linha pequena e cinzenta com o aparelho e os valores anotados, por exemplo
+    <em>Laser díodo · 18 J · 12 ms · spot 10</em> (os que têm unidade leem-se com ela; os que não, com o nome à frente). É onde se acompanha a pauta de um tratamento de laser sessão a sessão. Ao carregar na linha da visita abre-se o detalhe completo: cada parâmetro com o seu valor e unidade, quem atendeu, quando foi anotado e as notas da linha. Os obrigatórios que ficaram por preencher só se veem aí, como «—».
+  </p>
+  <p>
+    Se o serviço não levou parâmetros, não se acrescenta nada. Uma marcação ainda por cobrar não aparece no histórico e, portanto, também não o que nela foi anotado: vê-se abrindo a marcação na agenda. Os parâmetros só os vê quem pode ver as marcações da agenda; sem essa permissão o histórico aparece igual, sem eles.
   </p>
   <p>
     Esse é o dado que realmente se consulta antes de começar: na depilação a laser a pauta sobe sessão a sessão,
@@ -2789,9 +2855,7 @@ footer{
     <strong>Os recursos ativos determinam a mensalidade.</strong> A mensalidade depende de quantos
     recursos de agenda há ativos em todo o centro, somando todas as unidades. Em cima deste ecrã vê-se
     quantos há e o que custam por mês, sem IVA. Ao registar ou reativar um, antes de guardar, a ficha avisa de
-    quanto passará a ser a mensalidade: a alteração aplica-se <strong>a partir do mês seguinte ao registo</strong>. Desativá-lo
-    baixa-a, também a partir do mês seguinte. Cada registo, reativação, desativação ou eliminação que altere quantos há ativos
-    fica anotado com a data e quem o fez, e chega à DEVEL por e-mail para ajustar a mensalidade.
+    quanto passará a ser a mensalidade: a alteração aplica-se <strong>a partir desse mesmo dia</strong>, com proporcional diário. Desativá-lo retira-o, também a partir desse mesmo dia. O ajuste é faturado na fatura seguinte. Cada ativação, reativação, desativação ou eliminação que altere quantos há ativos fica registada com a data e quem a fez, e chega à DEVEL por correio eletrónico para ajustar a mensalidade.
   </p>
 
   <p>
@@ -3147,6 +3211,7 @@ footer{
     <tr id="perm-visits-view"><td><strong>Ver as visitas cobradas</strong></td><td>Consulta as visitas já cobradas e o seu detalhe.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
     <tr id="perm-vouchers-view"><td><strong>Ver os pacotes de sessões dos clientes</strong></td><td>Mostra os pacotes de sessões e as sessões que restam em cada um.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-profesional">Profissional</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
     <tr id="perm-vouchers-transfer"><td><strong>Transferir um pacote de sessões</strong></td><td>Passa sessões de um pacote de sessões para outra pessoa.</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
+    <tr id="perm-vouchers-manage"><td><strong>Gestão de bónus</strong></td><td>Permite corrigir e apagar bónus e descontar sessões à mão.</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
     <tr id="perm-gift-cards-view"><td><strong>Ver os cartões-oferta</strong></td><td>Consulta os cartões-oferta vendidos, o seu saldo e o que resta por gastar entre todos.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
     <tr id="perm-gift-cards-sell"><td><strong>Vender cartões-oferta</strong></td><td>Permite vender um cartão-oferta, imprimi-lo e enviá-lo por email.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
     <tr id="perm-coupons-view"><td><strong>Ver os cupões</strong></td><td>Consulta os cupões do centro, o seu desconto e quantos faltam usar.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
@@ -3421,6 +3486,7 @@ footer{
         <li class="rc-perm"><a href="#perm-visits-view">Ver as visitas cobradas</a><span class="rc-desc">Consulta as visitas já cobradas e o seu detalhe.</span></li>
         <li class="rc-perm"><a href="#perm-vouchers-view">Ver os pacotes de sessões dos clientes</a><span class="rc-desc">Mostra os pacotes de sessões e as sessões que restam em cada um.</span></li>
         <li class="rc-perm"><a href="#perm-vouchers-transfer">Transferir um pacote de sessões</a><span class="rc-desc">Passa sessões de um pacote de sessões para outra pessoa.</span></li>
+        <li class="rc-perm"><a href="#perm-vouchers-manage">Gestão de bónus</a><span class="rc-desc">Permite corrigir e apagar bónus e descontar sessões à mão.</span></li>
         <li class="rc-perm"><a href="#perm-gift-cards-view">Ver os cartões-oferta</a><span class="rc-desc">Consulta os cartões-oferta vendidos, o seu saldo e o que resta por gastar entre todos.</span></li>
         <li class="rc-perm"><a href="#perm-gift-cards-sell">Vender cartões-oferta</a><span class="rc-desc">Permite vender um cartão-oferta, imprimi-lo e enviá-lo por email.</span></li>
         <li class="rc-perm"><a href="#perm-coupons-view">Ver os cupões</a><span class="rc-desc">Consulta os cupões do centro, o seu desconto e quantos faltam usar.</span></li>
@@ -3699,6 +3765,7 @@ footer{
         <li class="rc-perm"><a href="#perm-visits-view">Ver as visitas cobradas</a><span class="rc-desc">Consulta as visitas já cobradas e o seu detalhe.</span></li>
         <li class="rc-perm"><a href="#perm-vouchers-view">Ver os pacotes de sessões dos clientes</a><span class="rc-desc">Mostra os pacotes de sessões e as sessões que restam em cada um.</span></li>
         <li class="rc-perm"><a href="#perm-vouchers-transfer">Transferir um pacote de sessões</a><span class="rc-desc">Passa sessões de um pacote de sessões para outra pessoa.</span></li>
+        <li class="rc-perm"><a href="#perm-vouchers-manage">Gestão de bónus</a><span class="rc-desc">Permite corrigir e apagar bónus e descontar sessões à mão.</span></li>
         <li class="rc-perm"><a href="#perm-gift-cards-view">Ver os cartões-oferta</a><span class="rc-desc">Consulta os cartões-oferta vendidos, o seu saldo e o que resta por gastar entre todos.</span></li>
         <li class="rc-perm"><a href="#perm-gift-cards-sell">Vender cartões-oferta</a><span class="rc-desc">Permite vender um cartão-oferta, imprimi-lo e enviá-lo por email.</span></li>
         <li class="rc-perm"><a href="#perm-coupons-view">Ver os cupões</a><span class="rc-desc">Consulta os cupões do centro, o seu desconto e quantos faltam usar.</span></li>
@@ -3925,6 +3992,7 @@ footer{
     <tr><td><a href="#perm-visits-view">Ver as visitas cobradas</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
     <tr><td><a href="#perm-vouchers-view">Ver os pacotes de sessões dos clientes</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
     <tr><td><a href="#perm-vouchers-transfer">Transferir um pacote de sessões</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
+    <tr><td><a href="#perm-vouchers-manage">Gestão de bónus</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
     <tr><td><a href="#perm-gift-cards-view">Ver os cartões-oferta</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
     <tr><td><a href="#perm-gift-cards-sell">Vender cartões-oferta</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
     <tr><td><a href="#perm-coupons-view">Ver os cupões</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
@@ -5813,6 +5881,19 @@ footer{
     <em>Picar o ponto e controlo de assiduidade</em> e as ordens em <em>Manutenção</em>.
   </p>
 
+  <h3 id="app-instalar">Descarregar e instalar a aplicação</h3>
+  <span class="ruta">Menu, no fim de tudo → Aplicação para profissionais</span>
+  <p>
+    A aplicação descarrega-se do próprio site do Turnera, na entrada <em>Aplicação para profissionais</em> do menu (vê-a quem trabalha com o módulo de pessoal). A página indica a versão disponível e o que ocupa, e tem o botão <strong>Descarregar a aplicação</strong>. <strong>Só serve para dispositivos Android</strong>, sejam telemóveis ou tablets; não há versão para iPhone nem para iPad.
+  </p>
+  <ol>
+    <li>Abrir essa página no equipamento do centro, com a sessão iniciada, e carregar em <em>Descarregar a aplicação</em>.</li>
+    <li>Ao abrir o ficheiro, o Android pede permissão para instalar aplicações a partir do navegador: concede-se só para esta instalação.</li>
+    <li>Carregar em <em>Instalar</em>, abri-la e entrar com o utilizador do centro.</li>
+  </ol>
+  <p>
+    Para a atualizar descarrega-se e instala-se a versão nova por cima da anterior; não se perde nada. Se ainda não houver uma versão publicada no servidor, a página di-lo.
+  </p>
   <h3 id="app-entrar">Entrar e escolher a sede</h3>
   <p>
     A aplicação prepara-se <strong>uma só vez por dispositivo</strong>: a direção do centro entra com o seu

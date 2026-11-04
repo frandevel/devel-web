@@ -1153,5 +1153,18 @@
   "tf78f2d57": "On the printed agenda sheet, the sessions of each voucher show as remaining out of the total, for example 4/5, and no longer as a number of remaining sessions.",
   "t7f501112": "1.12.0-c43dd3f",
   "tf6323d7e": "1.11.0-6f096ff",
-  "tfedc9215": "1.11.0-33e6b6c"
+  "tfedc9215": "1.11.0-33e6b6c",
+  "tdde1888f": "1.12.0-91073a0",
+  "t88542417": "Voucher management: who can correct and delete them",
+  "tcd8ff2fc": "Correcting a voucher, withdrawing it and taking off a session by hand now have their own permission, Voucher management, which no longer depends on being able to charge.",
+  "t28fee486": "Each centre decides which roles get it from the roles screen. With the factory Reception role, vouchers can still be sold and used to charge, but the ones already sold cannot be changed.",
+  "td7222580": "The Use session, Correct and Withdraw buttons only appear for people who have this permission.",
+  "t565b8ec3": "The customer history marks what was paid with a voucher",
+  "t5e991749": "Services paid with a voucher carry a ticket icon with the hint Paid with voucher; those without it were charged separately. That way the sessions taken from the voucher can be counted at a glance.",
+  "t16df64de": "People who cannot see amounts see the icon too.",
+  "t51c787f2": "App for professionals 0.2.4 and its agenda in PDF",
+  "tfdf80813": "The agenda sheet the app downloads, as a PDF, now carries the customer number and vouchers as remaining out of the total, for example 4/5, just like the web one.",
+  "tc2420c81": "The app shows a clear message if the centre must first accept the terms of service, if a permission is missing for what is being attempted, or if the centre has changed its name; in that case it says how to choose it again with Change centre.",
+  "t27fc0903": "Agenda: the closed block, with a closed padlock",
+  "tbe02cea3": "In the agenda, a Closed for a while block shows a closed padlock; the button still reopens it."
 }
