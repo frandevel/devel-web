@@ -679,6 +679,7 @@ footer{
   <h2>What's new in Turnera</h2>
   <p>Latest first</p>
   <ol>
+    <li><a href="#2026-11-04">4 November 2026</a></li>
     <li><a href="#2026-10-30">30 October 2026</a></li>
     <li><a href="#2026-10-29">29 October 2026</a></li>
     <li><a href="#2026-10-28">28 October 2026</a></li>
@@ -715,10 +716,78 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Bugs fixed</strong>: what failed, and no longer does.</span></li>
 </ul>
 
+<section id="2026-11-04" class="version">
+  <div class="version__cabecera">
+    <h2>4 November 2026</h2>
+    <span class="version__sello">Latest release</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.11.0-6de06a6</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Waiting room with room calling</h4>
+    <ul>
+      <li>For busy centres: a screen in the waiting room, a television or a tablet, shows the name of whoever should go in and to which room, with a sound alert. Nobody has to sign in on it.</li>
+      <li>It comes switched off. Each centre turns it on under Administration, Preferences, Access, with the Waiting room option; while it is off, Turnera works as always and none of this appears.</li>
+      <li>Calling rooms, such as the cash desk, blood draws or nursing, are set up separately: they are not agenda resources and they are not charged for.</li>
+      <li>In the agenda, the megaphone button opens today's waiting list, grouped by professional, with a Call the next one button for each. Reception can also call anyone by hand.</li>
+    </ul>
+    <h4>How the waiting room queue is ordered</h4>
+    <ul>
+      <li>Each professional has their own queue, and people are called by appointment time: arriving early does not put anyone ahead. Whoever arrives late counts from the moment they arrive.</li>
+      <li>The arrival time is optional: the appointment stores it by itself when it moves to the Waiting status, with nothing to note down. If a centre does not use that status, the queue is ordered by appointment time.</li>
+    </ul>
+    <h4>Send the gift card and the quote by WhatsApp</h4>
+    <ul>
+      <li>The gift card, on its row and when it is sold, has a Send via WhatsApp button: it opens WhatsApp with the message ready, with the centre, the code and the amount (the amount is left out if the card was sold with the amount hidden).</li>
+      <li>The quote at the point of sale has a Quote via WhatsApp button, with a short message with the name of the centre and no amounts.</li>
+      <li>In browsers that allow it, the PDF is attached. In the others only the text goes out and the PDF is attached by hand, after saving it from the print dialogue. Whoever sends it chooses in WhatsApp who to send it to.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Improvements</h3>
+    <h4>Print opens the print dialogue straight away</h4>
+    <ul>
+      <li>The Print buttons for the sales receipt, the outstanding payments receipt, the customer history receipt, the quote, the gift card and the maintenance report no longer download a PDF: they open the browser's print dialogue.</li>
+      <li>Anyone who wants to save the file can do so from that same dialogue, with Save as PDF.</li>
+      <li>The clinical report and the employees' privacy notice are still downloaded.</li>
+    </ul>
+    <h4>The printed agenda, with what you need for the day</h4>
+    <ul>
+      <li>Printing the agenda now also opens the print dialogue, with nothing downloaded, one professional per page.</li>
+      <li>Each line shows the customer number, full name, service, start time, the appointment notes and, if the customer has vouchers with sessions, how many are left out of the total, for example 4/5. It no longer shows the phone number, the end time or the cabin.</li>
+      <li>Cancelled appointments and those of people who did not show up are left out.</li>
+    </ul>
+    <h4>The customer history shows the device settings</h4>
+    <ul>
+      <li>Under each service that had settings, a grey line shows the device and the values noted. Tapping the visit opens the full detail.</li>
+      <li>It replaces the separate card of sessions with a device. Only whoever can see the agenda appointments sees it.</li>
+    </ul>
+    <h4>Outstanding payments: amount handed over and change</h4>
+    <ul>
+      <li>When settling a debt in cash you can enter what the customer hands over and Turnera works out the change, as at the point of sale. It is only a calculation aid: it is not saved.</li>
+    </ul>
+    <h4>Choosing the services for an appointment</h4>
+    <ul>
+      <li>The service search list no longer shows the abbreviations column: you search by name, and the abbreviations remain in the quick selection.</li>
+    </ul>
+    <h4>Download of the app for professionals</h4>
+    <ul>
+      <li>The download page now says Only for Android devices, because it works on both phones and tablets.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Bugs fixed</h3>
+    <ul>
+      <li>When going back to the appointment from the checkout at the point of sale, the agenda opened on today instead of on the appointment. Fixed: it opens the day, the professional and the appointment the sale came from.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-10-30" class="version">
   <div class="version__cabecera">
     <h2>30 October 2026</h2>
-    <span class="version__sello">Latest release</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.11.0-0c5042c</span></p>
 

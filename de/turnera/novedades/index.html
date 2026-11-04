@@ -679,6 +679,7 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-11-04">4. November 2026</a></li>
     <li><a href="#2026-10-30">30. Oktober 2026</a></li>
     <li><a href="#2026-10-29">29. Oktober 2026</a></li>
     <li><a href="#2026-10-28">28. Oktober 2026</a></li>
@@ -715,10 +716,78 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-11-04" class="version">
+  <div class="version__cabecera">
+    <h2>4. November 2026</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.11.0-6de06a6</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Wartezimmer mit Aufruf in den Behandlungsraum</h4>
+    <ul>
+      <li>Für Zentren mit viel Betrieb: Ein Bildschirm im Wartezimmer, ein Fernseher oder ein Tablet, zeigt den Namen der Person, die aufgerufen wird, und den Raum, dazu ein Signalton. Niemand muss sich dort anmelden.</li>
+      <li>Sie ist standardmäßig ausgeschaltet. Jedes Zentrum schaltet sie unter Verwaltung, Einstellungen, Zugang mit der Option Wartezimmer ein; solange sie aus ist, arbeitet Turnera wie bisher und nichts davon erscheint.</li>
+      <li>Aufrufräume wie Kasse, Blutabnahme oder Pflege werden getrennt angelegt: Sie sind keine Ressourcen der Agenda und werden nicht berechnet.</li>
+      <li>In der Agenda öffnet die Megafon-Schaltfläche die heutige Warteliste, nach Fachkraft gruppiert, mit einer Schaltfläche Nächsten aufrufen für jede. Der Empfang kann auch gezielt jemanden von Hand aufrufen.</li>
+    </ul>
+    <h4>Wie die Warteschlange im Wartezimmer geordnet wird</h4>
+    <ul>
+      <li>Jede Fachkraft hat ihre eigene Warteschlange, und aufgerufen wird nach der Uhrzeit des Termins: Wer früh kommt, überholt niemanden. Wer zu spät kommt, zählt ab dem Moment seines Eintreffens.</li>
+      <li>Die Ankunftszeit ist optional: Der Termin speichert sie selbst, wenn er in den Status Wartend wechselt, ohne dass etwas notiert werden muss. Nutzt ein Zentrum diesen Status nicht, richtet sich die Warteschlange nach der Terminzeit.</li>
+    </ul>
+    <h4>Geschenkkarte und Kostenvoranschlag per WhatsApp senden</h4>
+    <ul>
+      <li>Die Geschenkkarte hat in ihrer Zeile und beim Verkauf die Schaltfläche Per WhatsApp senden: Sie öffnet WhatsApp mit vorbereiteter Nachricht, mit Zentrum, Code und Betrag (der Betrag fehlt, wenn die Karte mit verborgenem Betrag verkauft wurde).</li>
+      <li>Der Kostenvoranschlag an der Kasse hat die Schaltfläche Kostenvoranschlag per WhatsApp, mit einer kurzen Nachricht mit dem Namen des Zentrums und ohne Beträge.</li>
+      <li>In Browsern, die es erlauben, wird das PDF angehängt. In den anderen geht nur der Text hinaus, und das PDF wird von Hand angehängt, nachdem es im Druckdialog gespeichert wurde. Wer sendet, wählt in WhatsApp den Empfänger aus.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Drucken öffnet direkt den Druckdialog</h4>
+    <ul>
+      <li>Die Schaltflächen Drucken für den Kassenbeleg, den Beleg offener Beträge, den Beleg im Kundenverlauf, den Kostenvoranschlag, die Geschenkkarte und den Wartungsbericht laden kein PDF mehr herunter: Sie öffnen den Druckdialog des Browsers.</li>
+      <li>Wer die Datei speichern möchte, kann das im selben Dialog mit PDF speichern tun.</li>
+      <li>Der klinische Bericht und die Datenschutzhinweise der Mitarbeitenden werden weiterhin heruntergeladen.</li>
+    </ul>
+    <h4>Die gedruckte Agenda, mit allem, was man für den Tag braucht</h4>
+    <ul>
+      <li>Auch das Drucken der Agenda öffnet jetzt den Druckdialog, ohne Download, eine Fachkraft pro Seite.</li>
+      <li>Jede Zeile zeigt Kundennummer, vollständigen Namen, Leistung, Beginn, die Notizen zum Termin und, falls der Kunde Gutscheine mit Sitzungen hat, wie viele von der Gesamtzahl übrig sind, zum Beispiel 4/5. Telefonnummer, Ende und Kabine werden nicht mehr gezeigt.</li>
+      <li>Stornierte Termine und die von nicht erschienenen Personen werden nicht aufgeführt.</li>
+    </ul>
+    <h4>Der Kundenverlauf zeigt die Geräteparameter</h4>
+    <ul>
+      <li>Unter jeder Leistung mit Parametern steht eine graue Zeile mit dem Gerät und den notierten Werten. Ein Klick auf den Besuch öffnet die vollständigen Details.</li>
+      <li>Es ersetzt die separate Karte der Sitzungen mit Gerät. Nur wer die Termine der Agenda sehen darf, sieht es.</li>
+    </ul>
+    <h4>Offene Beträge: übergebener Betrag und Wechselgeld</h4>
+    <ul>
+      <li>Beim Begleichen einer Schuld in bar kann man eingeben, was der Kunde übergibt, und Turnera berechnet das Wechselgeld, wie an der Kasse. Es ist nur eine Rechenhilfe: Es wird nicht gespeichert.</li>
+    </ul>
+    <h4>Leistungen für einen Termin auswählen</h4>
+    <ul>
+      <li>Die Suchliste der Leistungen zeigt die Spalte der Abkürzungen nicht mehr: Man sucht nach dem Namen, und die Abkürzungen bleiben in der Schnellauswahl.</li>
+    </ul>
+    <h4>Download der App für Fachkräfte</h4>
+    <ul>
+      <li>Die Download-Seite sagt jetzt Nur für Android-Geräte, denn sie gilt sowohl für Smartphones als auch für Tablets.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Behobene Fehler</h3>
+    <ul>
+      <li>Beim Zurückgehen zum Termin aus dem Kassiervorgang öffnete sich die Agenda am heutigen Tag statt beim Termin. Behoben: Sie öffnet den Tag, die Fachkraft und den Termin, von dem aus kassiert wurde.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-10-30" class="version">
   <div class="version__cabecera">
     <h2>30. Oktober 2026</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.11.0-0c5042c</span></p>
 
