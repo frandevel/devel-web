@@ -1166,5 +1166,17 @@
   "tfdf80813": "The agenda sheet the app downloads, as a PDF, now carries the customer number and vouchers as remaining out of the total, for example 4/5, just like the web one.",
   "tc2420c81": "The app shows a clear message if the centre must first accept the terms of service, if a permission is missing for what is being attempted, or if the centre has changed its name; in that case it says how to choose it again with Change centre.",
   "t27fc0903": "Agenda: the closed block, with a closed padlock",
-  "tbe02cea3": "In the agenda, a Closed for a while block shows a closed padlock; the button still reopens it."
+  "tbe02cea3": "In the agenda, a Closed for a while block shows a closed padlock; the button still reopens it.",
+  "t5d0ca13d": "November 6, 2026",
+  "t9aeaf666": "Agenda: a notice on the appointment when the customer owes money or has a deferred payment",
+  "t171b412f": "The appointment of a customer who owes money carries a red Owes label at the bottom right. If the customer has a deferred payment that is running and up to date, the label is yellow and says Instalments; if any instalment is past its due date and unpaid, it is red and says Instalment overdue.",
+  "tb8f2dfc3": "Hover over the label to see the total pending and, if there are instalments, the next one with its date and amount.",
+  "t1cf1b3f1": "Only people with permission to see debts or deferred payments see it. For everyone else the appointment looks the same as always.",
+  "tc041755f": "Search customers by phone number by typing only digits",
+  "tf80407e8": "When what is typed in the customer search is mostly digits, it also searches by phone, mobile and tax ID comparing only the digits: 666123456 finds a phone stored as 666 12-34 56.",
+  "t58e8dfb4": "The +34 or 0034 prefix does not need to be typed. A short number that is a customer number still finds only that customer.",
+  "t00858aa4": "A signed consent appears on its own in the customer record",
+  "t977958b1": "After signing on the tablet, the signed document appears in the customer record within a few seconds, without leaving it and coming back in, even if the pending-signature notice has been closed.",
+  "t4520bde7": "The tablet tab no longer ends up blank when finished: it shows a message saying it can now be closed.",
+  "t54c6e2b3": "1.12.0-5b94bec"
 }

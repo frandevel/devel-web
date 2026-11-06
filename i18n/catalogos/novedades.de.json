@@ -1166,5 +1166,17 @@
   "tfdf80813": "Das Agenda-Blatt, das die App als PDF herunterlädt, enthält jetzt die Kundennummer und die Gutscheine als übrige von der Gesamtzahl, zum Beispiel 4/5, genau wie das der Web-Version.",
   "tc2420c81": "Die App zeigt eine klare Meldung, wenn das Zentrum zuerst die Servicebedingungen akzeptieren muss, wenn für das Versuchte eine Berechtigung fehlt oder wenn das Zentrum den Namen geändert hat; dann erklärt sie, wie man es mit Zentrum wechseln neu auswählt.",
   "t27fc0903": "Agenda: der geschlossene Block, mit geschlossenem Vorhängeschloss",
-  "tbe02cea3": "In der Agenda zeigt ein Block Kurz geschlossen ein geschlossenes Vorhängeschloss; die Schaltfläche öffnet ihn weiterhin wieder."
+  "tbe02cea3": "In der Agenda zeigt ein Block Kurz geschlossen ein geschlossenes Vorhängeschloss; die Schaltfläche öffnet ihn weiterhin wieder.",
+  "t5d0ca13d": "6. November 2026",
+  "t9aeaf666": "Agenda: Hinweis am Termin, wenn der Kunde etwas schuldet oder eine Ratenzahlung hat",
+  "t171b412f": "Der Termin eines Kunden, der etwas schuldet, trägt unten rechts ein rotes Etikett „Offen“. Hat der Kunde eine laufende Ratenzahlung, die auf dem neuesten Stand ist, ist das Etikett gelb und lautet „Raten“; ist eine Rate überfällig und unbezahlt, ist es rot und lautet „Rate überfällig“.",
+  "tb8f2dfc3": "Fährt man mit der Maus über das Etikett, erscheint der offene Gesamtbetrag und, falls es Raten gibt, die nächste mit Datum und Betrag.",
+  "t1cf1b3f1": "Sie ist nur für Personen sichtbar, die Schulden oder Ratenzahlungen einsehen dürfen. Für alle anderen sieht der Termin aus wie immer.",
+  "tc041755f": "Kunden nach Telefonnummer suchen, indem man nur Ziffern eingibt",
+  "tf80407e8": "Besteht die Eingabe in der Kundensuche überwiegend aus Ziffern, wird auch nach Telefon, Handy und Steuernummer gesucht, wobei nur die Ziffern verglichen werden: 666123456 findet eine als 666 12-34 56 gespeicherte Nummer.",
+  "t58e8dfb4": "Die Vorwahl +34 oder 0034 muss nicht eingegeben werden. Eine kurze Zahl, die eine Kundennummer ist, findet weiterhin nur diesen Kunden.",
+  "t00858aa4": "Die Unterschrift unter einer Einwilligung erscheint von selbst in der Kundenakte",
+  "t977958b1": "Nach der Unterschrift auf dem Tablet erscheint das unterschriebene Dokument innerhalb weniger Sekunden in der Kundenakte, ohne dass man sie verlassen und neu öffnen muss, auch wenn der Hinweis auf die ausstehende Unterschrift geschlossen wurde.",
+  "t4520bde7": "Der Tablet-Tab bleibt am Ende nicht mehr leer: Er zeigt eine Meldung, dass er jetzt geschlossen werden kann.",
+  "t54c6e2b3": "1.12.0-5b94bec"
 }

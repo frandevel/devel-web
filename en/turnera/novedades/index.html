@@ -679,6 +679,7 @@ footer{
   <h2>What's new in Turnera</h2>
   <p>Latest first</p>
   <ol>
+    <li><a href="#2026-11-06">November 6, 2026</a></li>
     <li><a href="#2026-11-04">4 November 2026</a></li>
     <li><a href="#2026-11-02">2 November 2026</a></li>
     <li><a href="#2026-11-01">1 November 2026</a></li>
@@ -718,10 +719,44 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Bugs fixed</strong>: what failed, and no longer does.</span></li>
 </ul>
 
+<section id="2026-11-06" class="version">
+  <div class="version__cabecera">
+    <h2>November 6, 2026</h2>
+    <span class="version__sello">Latest release</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.12.0-9295003</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Agenda: a notice on the appointment when the customer owes money or has a deferred payment</h4>
+    <ul>
+      <li>The appointment of a customer who owes money carries a red Owes label at the bottom right. If the customer has a deferred payment that is running and up to date, the label is yellow and says Instalments; if any instalment is past its due date and unpaid, it is red and says Instalment overdue.</li>
+      <li>Hover over the label to see the total pending and, if there are instalments, the next one with its date and amount.</li>
+      <li>Only people with permission to see debts or deferred payments see it. For everyone else the appointment looks the same as always.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Improvements</h3>
+    <h4>Search customers by phone number by typing only digits</h4>
+    <ul>
+      <li>When what is typed in the customer search is mostly digits, it also searches by phone, mobile and tax ID comparing only the digits: 666123456 finds a phone stored as 666 12-34 56.</li>
+      <li>The +34 or 0034 prefix does not need to be typed. A short number that is a customer number still finds only that customer.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Bugs fixed</h3>
+    <h4>A signed consent appears on its own in the customer record</h4>
+    <ul>
+      <li>After signing on the tablet, the signed document appears in the customer record within a few seconds, without leaving it and coming back in, even if the pending-signature notice has been closed.</li>
+      <li>The tablet tab no longer ends up blank when finished: it shows a message saying it can now be closed.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-11-04" class="version">
   <div class="version__cabecera">
     <h2>4 November 2026</h2>
-    <span class="version__sello">Latest release</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.12.0-5b94bec</span></p>
 

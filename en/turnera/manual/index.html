@@ -767,6 +767,7 @@ footer{
     <li><a href="#presencia-resumen-mensual" class="sub sub">The monthly summary by email</a></li>
     <li><a href="#envio-asesoria" class="sub sub">Send the hours to the payroll advisor</a></li>
     <li><a href="#calendario-laboral" class="sub">Work calendar</a></li>
+    <li><a href="#calendario-vacaciones-pedidas" class="sub sub">Request vacation</a></li>
     <li><a href="#calendario-cerrar" class="sub sub">Closing the year</a></li>
     <li><a href="#calendario-ausencias-parciales" class="sub sub">Partial absences</a></li>
     <li><a href="#mi-calendario" class="sub sub">What each practitioner sees</a></li>
@@ -1354,6 +1355,10 @@ footer{
       <td>The customer has a voucher, and that number is the sessions they have left. <strong>Hover over it</strong>
         and a card appears above the diary showing which voucher each one belongs to, how many are left and when it expires; in orange if it expires in less than a month. It goes away when you move the mouse off the icon.</td>
     </tr>
+    <tr>
+      <td><strong>Red «Owes» label</strong>, yellow «Instalments» or red «Instalment overdue»,<br>bottom right</td>
+      <td>The customer has unpaid visits («Owes»), a deferred payment that is running and up to date («Instalments») or an instalment that is past its due date («Instalment overdue»). <strong>Hover over it</strong> and it shows the total pending and, if there are instalments, the next one with its date. <strong>Only people with permission to see debts or deferred payments can see it</strong>; for everyone else the appointment looks the same as always. Next to the voucher icon, it sits to its left.</td>
+    </tr>
     <tr><td><strong>Circular arrows</strong> next to the name</td><td>The appointment belongs to a series that
       <a href="#agenda-repetir">repeats</a>.</td></tr>
     <tr><td><strong>Green tick</strong></td><td>The appointment is confirmed.</td></tr>
@@ -1453,7 +1458,8 @@ footer{
   <span class="ruta">Menu → Customers</span>
 
   <p>
-    The search box at the top searches by first name, surname, phone, tax ID or <strong>customer number</strong>. For the first name and surnames, <strong>the start of each word</strong> is enough: «iba» finds Ibáñez but not Arribas, and «ana gar» finds Ana García. Phone and tax ID are found by any fragment; the customer number must be exact. If you type <strong>only digits, and fewer than 9 of them</strong>, the search understands it is a customer number (a phone number has 9): if there is a customer with that number, you get <strong>only that customer</strong>, without those who have it inside their phone or tax ID; and if nobody has it, it searches as usual. With 9 digits or more, or with letters, nothing changes. It is the same search as in the appointment and at the till. The list is sorted by clicking the header of any column (<a href="#ordenar">how</a>).
+    The search box at the top searches by first name, surname, phone, tax ID or <strong>customer number</strong>. For the first name and surnames, <strong>the start of each word</strong> is enough: «iba» finds Ibáñez but not Arribas, and «ana gar» finds Ana García. Phone and tax ID are found by any fragment; the customer number must be exact. If you type <strong>only digits, and fewer than 9 of them</strong>, the search understands it is a customer number (a phone number has 9): if there is a customer with that number, you get <strong>only that customer</strong>, without those that have it inside their phone or tax ID; and if nobody has it, it searches as usual. With 9 digits or more, or with letters, nothing changes.
+    <strong>If what is typed is mostly digits</strong> (three or more, and at least half of the text), it also searches by phone, mobile and tax ID comparing only the digits: «666123456» finds a phone stored as «666 12-34 56», and the +34 or 0034 prefix does not need to be typed. It is the same search as the one in appointments and in charging. The list is sorted by clicking the header of any column (<a href="#ordenar">how</a>).
   </p>
 
   <p>
@@ -1477,6 +1483,11 @@ footer{
     Whoever can edit records but does not have the «See phones and emails» permission does not see the customer's contact
     details when editing them —phone, mobile, email and address— nor can change them: a notice appears instead, and
     saving leaves the contact details as they were.
+  </p>
+
+  <p>
+    In the history, sessions settled with a voucher carry a ticket icon: hover over it (or tap it, or use the keyboard) to see which voucher they were from and the sessions used from it, with the date of each. The permission to see vouchers is needed. Old imported sessions with no known voucher only show the icon.
+    The same happens in the customer record’s voucher list: hovering over the ticket icon next to the group, or over the sessions, shows the card of the sessions used from that voucher.
   </p>
 
   <p>
@@ -4022,6 +4033,7 @@ footer{
     <li>The front-desk session does not open consents that are already signed.</li>
     <li>The <em>Signatures</em> screen is shown <strong>on its own</strong>: it only carries the Turnera logo, with no menu, no language switch and no way to change user or log out. Whoever has the tablet in front of them is the customer. To change user or log out, open <code>/inicio</code> from the tablet's browser.</li>
     <li>After signing, the document disappears and the tablet shows, with a big green tick, a «Document signed» in the language that was read, next to a <em>Close</em> button that closes the tab. If nobody presses it, after 20 seconds it goes back to waiting by itself. If the browser does not allow closing the tab, the button leaves it blank.</li>
+    <li>The customer record that reception has open <strong>finds out on its own</strong> of the signature, within a few seconds: the signed document appears in <em>Consents</em> without leaving the record and coming back in, even if the pending-signature notice has been closed.</li>
     <li>If the tablet loses its connection to Turnera, it says so («No connection») instead of saying there is nothing to sign, and it recovers by itself when the connection returns. If it drops while signing, it warns after 20 seconds and the customer can sign again.</li>
   </ul>
 
@@ -4339,6 +4351,9 @@ footer{
     The same record is where you reset their <strong>clocking PIN</strong> (see <a href="#presencia">Working time</a>) and you tick whether the <strong>summary of their working day</strong> is emailed to them every month, which needs an email address on the record.
   </p>
   <p>
+    The record has the <strong>start date</strong>: the day the person started working at the centre. It is not mandatory, and with it the record shows their <strong>length of service</strong> (for example, «3 years and 2 months»).
+  </p>
+  <p>
     <strong>Deactivating does not delete.</strong> The practitioner leaves the agenda, but their appointments, visits and clinical cases still show them, and they can be reactivated by editing them. If they have appointments from today on, Turnera asks which practitioner takes them over and moves them all at once; if one clashes with another the receiver already has, it says so so you can rearrange it afterwards. The list shows only those who are active: by clearing <em>Active only</em> the inactive ones show too.
   </p>
 
@@ -4498,6 +4513,10 @@ footer{
 
   <p>
     The <strong>centre zone</strong> is a point with a radius (150 m by default, up to 5 km). Whoever has the permission “Configure the clock” sets it while at the centre with <em>Use my current location as the centre</em>, changes the radius with <em>Save radius</em> or removes it with <em>Remove the zone</em>. The phones belong to the centre, shared or not; each professional clocks in with their PIN.
+  </p>
+
+  <p>
+    Turnera also records <strong>from which device</strong> clocking in is done, and in the same column <em>Where</em> it is seen by whoever has the permission «See where clocking was done». If clocking is done from a shared device of the centre (the tablet at the counter), it shows <em>Device: Counter</em>. If clocking is done with a mobile phone browser, the browser stores a random code in itself, which is not any data of the phone, and the list marks <em>New device</em> when that person had already clocked in from other devices and never from this one. A person’s first device is not marked, nor is a shared device, because the centre itself registered it. <strong>It never prevents clocking in</strong>: it is a hint for whoever reviews, not proof, and if the browser clears its data the device shows up as new again. It is stored apart from the working-hours register, like the location, and the staff privacy notice mentions it.
   </p>
 
   <h4 id="fichar-lo-mio">What each person sees after their PIN</h4>
@@ -4822,6 +4841,33 @@ footer{
     <em>Delete this calendar</em> removes it with all its days, including past ones, which changes the hours worked and the out-of-shift hours of that year. That is why it asks you to type the professional's name by hand.
   </p>
 
+  <h4 id="calendario-vacaciones-pedidas">Request vacation</h4>
+  <p>
+    Requesting vacation is <strong>switched on by HR</strong> at each location: in <em>Work calendar → Settings</em>,
+    <em>Professionals can request vacation</em>. It comes switched off. While it is off, nobody can request days, neither from the web nor from the mobile app, and <em>My calendar</em> it does not appear in the menu; if it is switched off with pending requests, HR can still approve or reject them and each professional can cancel their own.
+  </p>
+  <p>
+    Once switched on, each professional with a linked user can request vacation from <em>My calendar</em>, if they have the
+    permission <em>Request vacation days</em> (Reception, Professional, Management, HR and Maintenance come with it by default). Click on the calendar the days with a shift that you want, from tomorrow onwards —one single day or several, consecutive or not—, and they are marked <strong>marked</strong> with a border in the brand colour; clicking a day again unmarks it. Below the calendar it shows how many are marked, <em>Clear selection</em> and
+    <strong>Request N days</strong>, which shows the days and how many will be left if it is approved, before sending. The days sent stay <strong>requested</strong>, with a dashed green border, and remain working days until HR replies. Next to it appears <em>My vacations</em>: the days left of those the collective agreement grants, each request with its days and its status, and <em>Cancel</em> to withdraw in full the one still awaiting a reply.
+  </p>
+  <p>
+    A request goes <strong>complete or not at all</strong>: if any day cannot be requested —it has passed, has no shift, is already requested or belongs to a closed month—, none is requested and the notice says which days fail and why. Nor can more days be requested than remain: what is requested and pending already counts as spent. If the collective agreement counts vacation in working days, the marked Saturdays, Sundays and public holidays do not use up days.
+  </p>
+  <p>
+    The same can be done from the <strong>mobile app</strong>, in <em>My vacations</em>, after typing the
+    PIN: the balance, a calendar by months where the days with a shift are tapped, <em>Request N days</em> and the list of requests with their status, the reason if they were rejected and <em>Cancel</em> on the pending ones. The menu shows it if the user the app was signed in with can request vacation. If that user is linked to a professional (<em>Administration → Users → Professional</em>), the app belongs to that person: on opening it does not show the list of colleagues but goes straight to their PIN screen, and after the PIN to their usual panel. An unlinked user (the counter’s) remains a shared device, with the list of everyone. Once the PIN has been typed (for example to clock in), opening another menu option does not ask for it again while the pass remains valid (a few minutes). The language, «Sign out» and «Change centre» are in <em>Settings</em>, at the end of the menu, folded away.
+  </p>
+  <p>
+    HR receives an email for each request, with consecutive days grouped, and in <em>Work calendar</em>,
+    above the sections, there appears <em>Pending vacation requests</em> with who is requesting, their days and the days
+    they have left. Each request is decided <strong>in full</strong>: <strong>Approve</strong> paints all its days
+    as vacation in their calendar, just as if they were marked by hand. <strong>Reject</strong> leaves them as they were
+    and accepts a reason. In both cases, the professional receives an email with the reply if they have one in their record.
+    If on approving they have no days left, it is approved anyway and the screen warns of it: as with the rest of the notices of the
+    Statute, HR decides. In a closed month or year nothing is requested or approved.
+  </p>
+
   <h4 id="calendario-cerrar">Closing the year</h4>
   <p>
     When a year has ended and has been reviewed, in <em>Calendars</em>, with that year selected, <em>Close</em> leaves it <strong>as it is, for the labour inspection</strong>: from then on nothing of that year changes in the centre — not the calendars or their days, the incidents, the compensations, the holidays or that year's agreement. It can be viewed and printed. If a shift that year used is edited later, the closed year <strong>keeps the hours it had</strong> (Turnera keeps a retired copy of the shift), and the out-of-shift hours margin that applies is the one in force when it was closed. You confirm by typing the year and
@@ -4937,7 +4983,12 @@ footer{
 
   <h4 id="mi-calendario">What each practitioner sees</h4>
   <p>
-    Every professional has the right to know their schedule and holidays without needing any permission, and to see what they have clocked, their normal and overtime hours and their hours bank, but not the incidents or the projection. This is meant for the professional's app; on the web, which the office uses, there is no «My calendar» entry in the menu, because the user you sign in with does not belong to any professional.
+    Every professional has the right to know their schedule and vacation without needing any permission, and to see what they have
+    clocked, their regular and overtime hours and their hours bank, but not the incidents or the projection. This is
+    meant for the professional’s app. On the web, <em>My calendar</em> only appears in the menu for whoever signs in with
+    their user linked to a professional (for example with their PIN at the shared device) and has the permission <em>Request
+    vacation days</em>: the office user belongs to no professional. From there vacation is requested
+    (see <a href="#calendario-vacaciones-pedidas">Request vacation</a>).
   </p>
 
 </section>

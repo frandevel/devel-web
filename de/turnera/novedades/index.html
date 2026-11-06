@@ -679,6 +679,7 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-11-06">6. November 2026</a></li>
     <li><a href="#2026-11-04">4. November 2026</a></li>
     <li><a href="#2026-11-02">2. November 2026</a></li>
     <li><a href="#2026-11-01">1. November 2026</a></li>
@@ -718,10 +719,44 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-11-06" class="version">
+  <div class="version__cabecera">
+    <h2>6. November 2026</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.12.0-9295003</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Agenda: Hinweis am Termin, wenn der Kunde etwas schuldet oder eine Ratenzahlung hat</h4>
+    <ul>
+      <li>Der Termin eines Kunden, der etwas schuldet, trägt unten rechts ein rotes Etikett „Offen“. Hat der Kunde eine laufende Ratenzahlung, die auf dem neuesten Stand ist, ist das Etikett gelb und lautet „Raten“; ist eine Rate überfällig und unbezahlt, ist es rot und lautet „Rate überfällig“.</li>
+      <li>Fährt man mit der Maus über das Etikett, erscheint der offene Gesamtbetrag und, falls es Raten gibt, die nächste mit Datum und Betrag.</li>
+      <li>Sie ist nur für Personen sichtbar, die Schulden oder Ratenzahlungen einsehen dürfen. Für alle anderen sieht der Termin aus wie immer.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Kunden nach Telefonnummer suchen, indem man nur Ziffern eingibt</h4>
+    <ul>
+      <li>Besteht die Eingabe in der Kundensuche überwiegend aus Ziffern, wird auch nach Telefon, Handy und Steuernummer gesucht, wobei nur die Ziffern verglichen werden: 666123456 findet eine als 666 12-34 56 gespeicherte Nummer.</li>
+      <li>Die Vorwahl +34 oder 0034 muss nicht eingegeben werden. Eine kurze Zahl, die eine Kundennummer ist, findet weiterhin nur diesen Kunden.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Behobene Fehler</h3>
+    <h4>Die Unterschrift unter einer Einwilligung erscheint von selbst in der Kundenakte</h4>
+    <ul>
+      <li>Nach der Unterschrift auf dem Tablet erscheint das unterschriebene Dokument innerhalb weniger Sekunden in der Kundenakte, ohne dass man sie verlassen und neu öffnen muss, auch wenn der Hinweis auf die ausstehende Unterschrift geschlossen wurde.</li>
+      <li>Der Tablet-Tab bleibt am Ende nicht mehr leer: Er zeigt eine Meldung, dass er jetzt geschlossen werden kann.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-11-04" class="version">
   <div class="version__cabecera">
     <h2>4. November 2026</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.12.0-5b94bec</span></p>
 

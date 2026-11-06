@@ -627,6 +627,7 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-11-06">6 de noviembre de 2026</a></li>
     <li><a href="#2026-11-04">4 de noviembre de 2026</a></li>
     <li><a href="#2026-11-02">2 de noviembre de 2026</a></li>
     <li><a href="#2026-11-01">1 de noviembre de 2026</a></li>
@@ -667,10 +668,44 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-11-06" class="version">
+  <div class="version__cabecera">
+    <h2>6 de noviembre de 2026</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">1.12.0-9295003</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"/></svg></span>Nuevas características</h3>
+    <h4>Agenda: aviso de deuda o de pago aplazado en la cita</h4>
+    <ul>
+      <li>La cita de un cliente que debe dinero lleva, abajo a la derecha, una etiqueta roja Debe. Si tiene un pago aplazado en curso y al día, la etiqueta es amarilla y dice Plazos; si algún plazo ha pasado de fecha sin cobrar, es roja y dice Plazo vencido.</li>
+      <li>Al pasar el ratón por la etiqueta sale lo pendiente en total y, si hay plazos, el próximo con su fecha y su importe.</li>
+      <li>Solo la ven quienes tienen permiso para ver deudas o pagos aplazados. Para el resto, la cita sale igual que siempre.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>Mejoras</h3>
+    <h4>Buscar clientes por teléfono escribiendo solo cifras</h4>
+    <ul>
+      <li>Si lo que se escribe en el buscador de clientes son sobre todo cifras, se busca también por teléfono, móvil y NIF comparando solo las cifras: 666123456 encuentra un teléfono guardado como 666 12-34 56.</li>
+      <li>El prefijo +34 o 0034 no hace falta ponerlo. Un número corto que es el de un cliente sigue encontrando solo a ese cliente.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span>Errores corregidos</h3>
+    <h4>La firma de un consentimiento aparece sola en la ficha del cliente</h4>
+    <ul>
+      <li>Tras firmar en la tablet, el documento firmado aparece en la ficha del cliente en unos segundos, sin salir de ella y volver a entrar, aunque se haya cerrado el aviso de firma pendiente.</li>
+      <li>La pestaña de la tablet ya no se queda en blanco al terminar: muestra un mensaje de que ya se puede cerrar.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-11-04" class="version">
   <div class="version__cabecera">
     <h2>4 de noviembre de 2026</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">1.12.0-5b94bec</span></p>
 

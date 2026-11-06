@@ -1166,5 +1166,17 @@
   "tfdf80813": "A folha da agenda que a aplicação descarrega, em PDF, traz agora o número de cliente e os vales como restantes sobre o total, por exemplo 4/5, tal como a da web.",
   "tc2420c81": "A aplicação mostra uma mensagem clara se o centro tiver de aceitar primeiro as condições do serviço, se faltar uma permissão para o que se tenta ou se o centro mudou de nome; nesse caso explica como o escolher de novo com Mudar de centro.",
   "t27fc0903": "Agenda: o bloco fechado, com cadeado fechado",
-  "tbe02cea3": "Na agenda, um bloco Fechado por um bocado mostra um cadeado fechado; o botão continua a servir para o reabrir."
+  "tbe02cea3": "Na agenda, um bloco Fechado por um bocado mostra um cadeado fechado; o botão continua a servir para o reabrir.",
+  "t5d0ca13d": "6 de novembro de 2026",
+  "t9aeaf666": "Agenda: aviso na marcação quando o cliente deve dinheiro ou tem um pagamento em prestações",
+  "t171b412f": "A marcação de um cliente que deve dinheiro leva, em baixo à direita, uma etiqueta vermelha Deve. Se o cliente tem um pagamento em prestações em curso e em dia, a etiqueta é amarela e diz Prestações; se alguma prestação passou da data sem ser cobrada, é vermelha e diz Prestação em atraso.",
+  "tb8f2dfc3": "Ao passar o rato por cima da etiqueta vê-se o total pendente e, se houver prestações, a próxima com a sua data e o seu valor.",
+  "t1cf1b3f1": "Só a veem quem tem permissão para ver dívidas ou pagamentos em prestações. Para os restantes, a marcação aparece como sempre.",
+  "tc041755f": "Pesquisar clientes pelo telefone escrevendo só algarismos",
+  "tf80407e8": "Quando o que se escreve na pesquisa de clientes são sobretudo algarismos, pesquisa-se também por telefone, telemóvel e NIF comparando só os algarismos: 666123456 encontra um telefone guardado como 666 12-34 56.",
+  "t58e8dfb4": "O indicativo +34 ou 0034 não é preciso escrevê-lo. Um número curto que é o de um cliente continua a encontrar só esse cliente.",
+  "t00858aa4": "A assinatura de um consentimento aparece sozinha na ficha do cliente",
+  "t977958b1": "Depois de assinar no tablet, o documento assinado aparece na ficha do cliente em poucos segundos, sem sair dela e voltar a entrar, mesmo que o aviso de assinatura pendente tenha sido fechado.",
+  "t4520bde7": "O separador do tablet já não fica em branco no fim: mostra uma mensagem a dizer que já se pode fechar.",
+  "t54c6e2b3": "1.12.0-5b94bec"
 }

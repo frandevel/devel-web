@@ -767,6 +767,7 @@ footer{
     <li><a href="#presencia-resumen-mensual" class="sub sub">Die Monatsübersicht per E-Mail</a></li>
     <li><a href="#envio-asesoria" class="sub sub">Die Stunden ans Lohnbüro schicken</a></li>
     <li><a href="#calendario-laboral" class="sub">Arbeitskalender</a></li>
+    <li><a href="#calendario-vacaciones-pedidas" class="sub sub">Urlaub beantragen</a></li>
     <li><a href="#calendario-cerrar" class="sub sub">Das Jahr abschließen</a></li>
     <li><a href="#calendario-ausencias-parciales" class="sub sub">Teilabwesenheiten</a></li>
     <li><a href="#mi-calendario" class="sub sub">Was jede Fachkraft sieht</a></li>
@@ -1355,6 +1356,10 @@ footer{
       <td>Der Kunde hat eine Wertkarte, und diese Zahl sind die Sitzungen, die ihm noch bleiben. <strong>Fahren Sie mit der Maus darüber</strong>
         und über dem Kalender erscheint, zu welchem Gutschein jede gehört, wie viele übrig sind und wann er abläuft; in Orange, wenn er in weniger als einem Monat abläuft. Sie verschwindet, wenn Sie die Maus vom Symbol nehmen.</td>
     </tr>
+    <tr>
+      <td><strong>Rotes Etikett «Offen»</strong>, gelbes «Raten» oder rotes «Rate überfällig»,<br>unten rechts</td>
+      <td>Der Kunde hat unbezahlte Besuche («Offen»), eine laufende Ratenzahlung, die auf dem neuesten Stand ist («Raten»), oder eine Rate, die überfällig ist («Rate überfällig»). <strong>Fahren Sie mit der Maus darüber</strong> und es erscheint der offene Gesamtbetrag und, falls es Raten gibt, die nächste mit ihrem Datum. <strong>Nur Personen mit der Berechtigung, Schulden oder Ratenzahlungen einzusehen, sehen es</strong>; für alle anderen sieht der Termin aus wie immer. Neben dem Symbol der Mehrfachkarte sitzt es links davon.</td>
+    </tr>
     <tr><td><strong>Kreispfeile</strong> neben dem Namen</td><td>Der Termin gehört zu einer Serie, die sich
       <a href="#agenda-repetir">wiederholt</a>.</td></tr>
     <tr><td><strong>Grüner Haken</strong></td><td>Der Termin ist bestätigt.</td></tr>
@@ -1454,7 +1459,8 @@ footer{
   <span class="ruta">Menü → Kunden</span>
 
   <p>
-    Das Suchfeld oben sucht nach Vorname, Nachname, Telefon, Steuernummer oder <strong>Kundennummer</strong>. Bei Vor- und Nachnamen genügt <strong>der Anfang jedes Wortes</strong>: «iba» findet Ibáñez, aber nicht Arribas, und «ana gar» findet Ana García. Telefon und Steuernummer werden über jeden Teil gefunden; die Kundennummer muss exakt sein. Wenn Sie <strong>nur Ziffern und weniger als 9</strong> eingeben, versteht die Suche, dass es eine Kundennummer ist (eine Telefonnummer hat 9 Ziffern): Gibt es einen Kunden mit dieser Nummer, erscheint <strong>nur dieser Kunde</strong>, nicht die, bei denen sie im Telefon oder in der Steuernummer steckt; und wenn niemand sie hat, wird wie gewohnt gesucht. Bei 9 Ziffern oder mehr oder bei Buchstaben ändert sich nichts. Es ist dieselbe Suche wie beim Termin und an der Kasse. Die Liste wird sortiert, indem Sie auf die Überschrift einer Spalte klicken (<a href="#ordenar">wie</a>).
+    Das Suchfeld oben sucht nach Vorname, Nachname, Telefon, Steuernummer oder <strong>Kundennummer</strong>. Bei Vor- und Nachnamen genügt <strong>der Anfang jedes Wortes</strong>: «iba» findet Ibáñez, aber nicht Arribas, und «ana gar» findet Ana García. Telefon und Steuernummer werden über jeden Teil gefunden; die Kundennummer muss exakt sein. Wenn Sie <strong>nur Ziffern und weniger als 9</strong> eingeben, versteht die Suche, dass es eine Kundennummer ist (eine Telefonnummer hat 9 Ziffern): Gibt es einen Kunden mit dieser Nummer, erscheint <strong>nur dieser Kunde</strong>, ohne jene, die sie in der Telefonnummer oder der Steuernummer enthalten; und wenn niemand sie hat, wird wie gewohnt gesucht. Bei 9 oder mehr Ziffern oder bei Buchstaben ändert sich nichts.
+    <strong>Besteht die Eingabe überwiegend aus Ziffern</strong> (drei oder mehr, und mindestens die Hälfte des Textes), wird zusätzlich nach Telefon, Handy und Steuernummer gesucht, wobei nur die Ziffern verglichen werden: «666123456» findet eine als «666 12-34 56» gespeicherte Nummer, und die Vorwahl +34 oder 0034 muss nicht eingegeben werden. Es ist dieselbe Suche wie bei Terminen und beim Kassieren. Die Liste wird sortiert, indem man auf die Kopfzeile einer beliebigen Spalte klickt (<a href="#ordenar">wie</a>).
   </p>
 
   <p>
@@ -1478,6 +1484,11 @@ footer{
     Wer Karteikarten bearbeiten darf, aber nicht die Berechtigung «Telefonnummern und E-Mails sehen» hat, sieht beim
     Bearbeiten die Kontaktdaten des Kunden —Telefon, Handy, E-Mail und Adresse— nicht und kann sie nicht ändern: Stattdessen
     erscheint ein Hinweis, und beim Speichern bleiben die Kontaktdaten unverändert.
+  </p>
+
+  <p>
+    Im Verlauf tragen mit einer Mehrfachkarte beglichene Sitzungen ein Ticket-Symbol: Beim Darüberfahren (oder Antippen oder per Tastatur) sieht man, von welcher Mehrfachkarte sie stammten und welche Sitzungen davon verbraucht wurden, mit dem Datum jeder einzelnen. Dafür ist die Berechtigung zum Ansehen von Mehrfachkarten nötig. Alte importierte Sitzungen ohne bekannte Mehrfachkarte zeigen nur das Symbol.
+    Dasselbe gilt für die Liste der Mehrfachkarten in der Kundenakte: Fährt man mit der Maus über das Ticket-Symbol neben der Gruppe oder über die Sitzungen, erscheint die Karte der verbrauchten Sitzungen dieser Mehrfachkarte.
   </p>
 
   <p>
@@ -4025,6 +4036,7 @@ footer{
     <li>Die Sitzung des Empfangs öffnet keine bereits unterschriebenen Einwilligungen.</li>
     <li>Die Seite <em>Unterschriften</em> wird <strong>allein</strong> angezeigt: nur mit dem Turnera-Logo, ohne Menü, ohne Sprachwechsel und ohne Möglichkeit, den Benutzer zu wechseln oder sich abzumelden. Wer das Tablet vor sich hat, ist der Kunde. Zum Wechseln des Benutzers oder Abmelden <code>/inicio</code> im Browser des Tablets öffnen.</li>
     <li>Nach dem Unterschreiben verschwindet das Dokument, und das Tablet zeigt mit einem großen grünen Haken ein «Dokument unterschrieben» in der gelesenen Sprache, neben einer Schaltfläche <em>Abschließen</em> , die den Tab schließt. Drückt sie niemand, wartet es nach 20 Sekunden wieder von selbst. Lässt der Browser das Schließen des Tabs nicht zu, macht die Schaltfläche ihn leer.</li>
+    <li>Die Kundenakte, die der Empfang geöffnet hat, <strong>bekommt es von selbst mit</strong> von der Unterschrift, innerhalb weniger Sekunden: Das unterschriebene Dokument erscheint unter <em>Einwilligungen</em> ohne die Akte zu verlassen und neu zu öffnen, auch wenn der Hinweis auf die ausstehende Unterschrift geschlossen wurde.</li>
     <li>Verliert das Tablet die Verbindung zu Turnera, sagt es das («Keine Verbindung»), statt zu melden, dass nichts zu unterschreiben ist, und erholt sich von selbst, sobald die Verbindung zurück ist. Bricht sie beim Unterschreiben ab, warnt es nach 20 Sekunden, und es kann erneut unterschrieben werden.</li>
   </ul>
 
@@ -4345,6 +4357,9 @@ footer{
     In derselben Karteikarte steht der Knopf zum Zurücksetzen ihrer <strong>Stempel-PIN</strong> (siehe <a href="#presencia">Arbeitszeiterfassung</a>) und man legt fest, ob ihr jeden Monat per E-Mail die <strong>Zusammenfassung ihres Arbeitstags</strong> zugeschickt wird, wozu eine E-Mail-Adresse in der Karteikarte nötig ist.
   </p>
   <p>
+    Die Akte kennt das <strong>Eintrittsdatum</strong>: den Tag, an dem die Person im Zentrum zu arbeiten begonnen hat. Es ist nicht verpflichtend, und mit ihm zeigt die Akte ihre <strong>Betriebszugehörigkeit</strong> (zum Beispiel «3 Jahre und 2 Monate»).
+  </p>
+  <p>
     <strong>Deaktivieren löscht nicht.</strong> Die Fachkraft verschwindet aus dem Terminkalender, aber ihre Termine, Besuche und klinischen Fälle zeigen sie weiterhin an, und durch Bearbeiten lässt sie sich wieder aktivieren. Hat sie ab heute Termine, fragt Turnera, welche Fachkraft sie übernimmt, und überträgt sie alle auf einmal; überschneidet sich eine mit einem Termin, den die übernehmende Person schon hat, meldet es das, damit man sie danach neu einplanen kann. Die Liste zeigt nur aktive Mitarbeiter: Wenn man <em>Nur aktive</em> abwählt, erscheinen auch die ausgeschiedenen.
   </p>
 
@@ -4504,6 +4519,10 @@ footer{
 
   <p>
     Das <strong>Zone des Betriebs</strong> ist ein Punkt mit einem Radius (standardmäßig 150 m, bis zu 5 km). Wer die Berechtigung „Die Stempeluhr konfigurieren“ hat, legt sie im Betrieb fest mit <em>Meinen aktuellen Standort als Betrieb verwenden</em>, ändert den Radius mit <em>Radius speichern</em> oder entfernt sie mit <em>Zone entfernen</em>. Die Handys gehören dem Betrieb, geteilt oder nicht; jede Person stempelt mit ihrer PIN.
+  </p>
+
+  <p>
+    Turnera hält außerdem fest, <strong>von welchem Gerät</strong> gestempelt wird, und in derselben Spalte <em>Wo</em> sieht es, wer die Berechtigung «Sehen, wo gestempelt wurde» hat. Wird an einem gemeinsamen Gerät des Zentrums gestempelt (dem Tablet am Empfang), steht dort <em>Gerät: Empfang</em>. Wird mit dem Browser eines Handys gestempelt, speichert der Browser darin einen Zufallscode, der keine Angabe zum Telefon ist, und die Liste markiert <em>Neues Gerät</em> wenn diese Person bereits von anderen Geräten und nie von diesem gestempelt hat. Das erste Gerät einer Person wird nicht markiert, ebenso wenig ein gemeinsames Gerät, da das Zentrum es selbst angelegt hat. <strong>Es verhindert nie das Stempeln</strong>: Es ist ein Hinweis für die prüfende Person, kein Beweis, und wenn der Browser seine Daten löscht, erscheint das Gerät wieder als neu. Es wird getrennt vom Arbeitszeitregister gespeichert, wie der Standort, und die Datenschutzerklärung für Mitarbeiter erwähnt es.
   </p>
 
   <h4 id="fichar-lo-mio">Was jede Person nach ihrer PIN sieht</h4>
@@ -4827,6 +4846,33 @@ footer{
     <em>Diesen Kalender löschen</em> entfernt ihn mit allen seinen Tagen, auch den vergangenen, was die geleisteten Stunden und die Stunden außerhalb der Schicht dieses Jahres ändert. Deshalb müssen Sie den Namen der Fachkraft von Hand eintippen.
   </p>
 
+  <h4 id="calendario-vacaciones-pedidas">Urlaub beantragen</h4>
+  <p>
+    Urlaub zu beantragen wird <strong>von der Personalabteilung eingeschaltet</strong> in jeder Filiale <em>Arbeitskalender → Einstellungen</em>,
+    <em>Fachkräfte können Urlaub beantragen</em>. Es ist ausgeschaltet. Solange es ausgeschaltet ist, kann niemand Tage beantragen, weder im Web noch in der mobilen App, und <em>Mein Kalender</em> es erscheint nicht im Menü; wird es bei offenen Anträgen ausgeschaltet, kann die Personalabteilung sie weiterhin genehmigen oder ablehnen und jede Fachkraft ihre eigenen zurückziehen.
+  </p>
+  <p>
+    Ist es eingeschaltet, kann jede Fachkraft mit verknüpftem Benutzer Urlaub beantragen unter <em>Mein Kalender</em>, wenn sie die
+    Berechtigung <em>Urlaubstage beantragen</em> (Empfang, Fachkraft, Leitung, Personalabteilung und Wartung bringen sie ab Werk mit). Im Kalender klickt man die gewünschten Tage mit Schicht an, ab morgen —einen einzelnen oder mehrere, aufeinanderfolgend oder nicht—, und sie sind <strong>markiert</strong> mit einem Rand in der Markenfarbe markiert; erneutes Anklicken eines Tages hebt die Markierung auf. Unter dem Kalender steht, wie viele markiert sind, <em>Auswahl aufheben</em> und
+    <strong>N Tage beantragen</strong>, die die Tage zeigt und wie viele übrig bleiben, wenn der Antrag genehmigt wird, bevor man ihn sendet. Die gesendeten Tage bleiben <strong>beantragt</strong>, mit gestricheltem grünem Rand, und gelten weiterhin als Arbeitstage, bis die Personalabteilung antwortet. Daneben erscheint <em>Mein Urlaub</em>: die verbleibenden Tage von denen, die der Tarifvertrag gewährt, jeder Antrag mit seinen Tagen und seinem Status, und <em>Abbrechen</em> um einen noch unbeantworteten Antrag vollständig zurückzuziehen.
+  </p>
+  <p>
+    Ein Antrag wird <strong>ganz oder gar nicht</strong>: Kann ein Tag nicht beantragt werden —er liegt in der Vergangenheit, hat keine Schicht, ist schon beantragt oder gehört zu einem abgeschlossenen Monat—, wird kein einziger beantragt, und die Meldung sagt, welche Tage scheitern und warum. Es können auch nicht mehr Tage beantragt werden, als übrig sind: Beantragtes und noch Offenes zählt bereits als verbraucht. Zählt der Tarifvertrag den Urlaub in Arbeitstagen, verbrauchen markierte Samstage, Sonntage und Feiertage keine Tage.
+  </p>
+  <p>
+    Dasselbe geht in der <strong>mobilen App</strong>, unter <em>Mein Urlaub</em>, nach Eingabe der
+    PIN: das Guthaben, ein Kalender nach Monaten, in dem man die Tage mit Schicht antippt, <em>N Tage beantragen</em> und die Liste der Anträge mit ihrem Status, dem Grund bei Ablehnung und <em>Abbrechen</em> bei den offenen. Das Menü zeigt es, wenn der Benutzer, mit dem die App angemeldet wurde, Urlaub beantragen darf. Ist dieser Benutzer mit einer Fachkraft verknüpft (<em>Verwaltung → Benutzer → Fachkraft</em>), gehört die App dieser Person: Beim Öffnen erscheint nicht die Liste der Kollegen, sondern direkt ihr PIN-Bildschirm und nach der PIN ihr gewohntes Panel. Ein nicht verknüpfter Benutzer (der des Empfangs) bleibt ein gemeinsames Gerät mit der Liste aller. Nach Eingabe der PIN (zum Beispiel zum Stempeln) wird sie beim Öffnen einer anderen Menüoption nicht erneut verlangt, solange der Pass gültig ist (einige Minuten). Sprache, «Abmelden» und «Zentrum wechseln» stehen unter <em>Einstellungen</em>, am Ende des Menüs, eingeklappt.
+  </p>
+  <p>
+    Die Personalabteilung erhält zu jedem Antrag eine E-Mail, mit zusammengefassten aufeinanderfolgenden Tagen, und in <em>Arbeitskalender</em>,
+    oberhalb der Abschnitte, erscheint <em>Offene Urlaubsanträge</em> mit der antragstellenden Person, ihren Tagen und den Tagen,
+    die ihr bleiben. Jeder Antrag wird <strong>vollständig</strong>: <strong>Genehmigen</strong> färbt alle seine Tage
+    in ihrem Kalender als Urlaub, genau so, als wären sie von Hand markiert worden. <strong>Ablehnen</strong> lässt sie wie zuvor
+    und erlaubt eine Begründung. In beiden Fällen erhält die Fachkraft eine E-Mail mit der Antwort, wenn sie in ihrer Akte eine hinterlegt hat.
+    Bleiben beim Genehmigen keine Tage mehr übrig, wird trotzdem genehmigt und der Bildschirm weist darauf hin: Wie bei den übrigen Hinweisen des
+    Statuts entscheidet die Personalabteilung. In einem abgeschlossenen Monat oder Jahr wird nichts beantragt oder genehmigt.
+  </p>
+
   <h4 id="calendario-cerrar">Das Jahr abschließen</h4>
   <p>
     Wenn ein Jahr zu Ende und geprüft ist, wählen Sie unter <em>Kalender</em>dieses Jahr aus; <em>Abschließen</em> lässt es <strong>so, wie es ist, für die Arbeitsinspektion</strong>: Ab dann ändert sich in diesem Zentrum nichts mehr an diesem Jahr — weder die Kalender und ihre Tage noch die Vorfälle, Ausgleiche, Feiertage oder der Tarifvertrag dieses Jahres. Es lässt sich ansehen und drucken. Wird später eine Schicht bearbeitet, die dieses Jahr verwendet hat, <strong>behält das abgeschlossene Jahr die bisherigen Zeiten</strong> (Turnera bewahrt eine stillgelegte Kopie der Schicht auf), und die Toleranz für Stunden außerhalb der Schicht, die gilt, ist die zum Zeitpunkt des Abschlusses. Bestätigt wird durch Eintippen des Jahres und
@@ -4942,7 +4988,12 @@ footer{
 
   <h4 id="mi-calendario">Was jede Fachkraft sieht</h4>
   <p>
-    Jede Fachkraft hat das Recht, ihren Dienstplan und ihren Urlaub ohne jede Berechtigung einzusehen und zu sehen, was sie gestempelt hat, ihre normalen und Überstunden und ihr Stundenkonto, aber nicht die Vorfälle oder die Prognose. Das ist für die App der Fachkraft gedacht; im Web, das das Büro nutzt, gibt es im Menü keinen Eintrag «Mein Kalender», weil der Benutzer, mit dem man sich anmeldet, keiner Fachkraft gehört.
+    Jede Fachkraft hat das Recht, ihren Dienstplan und ihren Urlaub ohne jede Berechtigung zu kennen und zu sehen, was sie
+    gestempelt hat, ihre normalen Stunden und Überstunden und ihr Stundenkonto, nicht aber die Vorfälle oder die Prognose. Das ist
+    für die App der Fachkraft gedacht. Im Web <em>Mein Kalender</em> erscheint nur im Menü für jemanden, der sich mit
+    seinem mit einer Fachkraft verknüpften Benutzer anmeldet (zum Beispiel mit seiner PIN am gemeinsamen Gerät) und die Berechtigung hat <em>Urlaubstage
+    beantragen</em>: Der Benutzer des Büros gehört zu keiner Fachkraft. Von dort aus wird Urlaub beantragt
+    (siehe <a href="#calendario-vacaciones-pedidas">Urlaub beantragen</a>).
   </p>
 
 </section>

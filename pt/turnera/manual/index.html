@@ -767,6 +767,7 @@ footer{
     <li><a href="#presencia-resumen-mensual" class="sub sub">O resumo mensal por e-mail</a></li>
     <li><a href="#envio-asesoria" class="sub sub">Enviar as horas ao gabinete de salários</a></li>
     <li><a href="#calendario-laboral" class="sub">Calendário laboral</a></li>
+    <li><a href="#calendario-vacaciones-pedidas" class="sub sub">Pedir férias</a></li>
     <li><a href="#calendario-cerrar" class="sub sub">Fechar o ano</a></li>
     <li><a href="#calendario-ausencias-parciales" class="sub sub">Ausências parciais</a></li>
     <li><a href="#mi-calendario" class="sub sub">O que vê cada profissional</a></li>
@@ -1426,6 +1427,10 @@ footer{
         e aparece, por cima da agenda, de que pacote de sessões é cada uma, quantas restam e quando expira; a laranja, se
         expira em menos de um mês. Desaparece ao tirar o rato do ícone.</td>
     </tr>
+    <tr>
+      <td><strong>Etiqueta vermelha «Deve»</strong>, amarela «Prestações» ou vermelha «Prestação em atraso»,<br>em baixo à direita</td>
+      <td>O cliente tem visitas por cobrar («Deve»), um pagamento em prestações em curso e em dia («Prestações») ou alguma prestação que passou da data («Prestação em atraso»). <strong>Passe o rato por cima</strong> e aparece o total pendente e, se houver prestações, a próxima com a sua data. <strong>Só a veem quem tem permissão para ver dívidas ou pagamentos em prestações</strong>; para os restantes a marcação aparece como sempre. Junto ao ícone do pacote, fica à sua esquerda.</td>
+    </tr>
     <tr><td><strong>Setas em círculo</strong> junto ao nome</td><td>A marcação pertence a uma série que
       <a href="#agenda-repetir">se repete</a>.</td></tr>
     <tr><td><strong>Visto verde</strong></td><td>A marcação está confirmada.</td></tr>
@@ -1562,7 +1567,8 @@ footer{
 
   <p>
     A pesquisa no topo procura por nome, apelidos, telefone, NIF ou <strong>número de cliente</strong>. Do nome
-    e dos apelidos basta escrever <strong>o início de cada palavra</strong>: «iba» encontra Ibáñez, mas não Arribas, e «ana gar» encontra Ana García. O telefone e o NIF encontram-se com qualquer parte; o número de cliente tem de ser exato. Se escrever <strong>apenas algarismos e menos de 9</strong>, a pesquisa entende que é um número de cliente (um telefone tem 9): se houver um cliente com esse número, aparece <strong>apenas esse cliente</strong>, sem os que o têm dentro do telefone ou do NIF; e se ninguém o tiver, pesquisa como sempre. Com 9 algarismos ou mais, ou com letras, nada muda. É a mesma pesquisa que a da marcação e a da cobrança. A lista ordena-se premindo o cabeçalho de qualquer coluna (<a href="#ordenar">como</a>).
+    e dos apelidos basta escrever <strong>o início de cada palavra</strong>: «iba» encontra Ibáñez, mas não Arribas, e «ana gar» encontra Ana García. O telefone e o NIF encontram-se com qualquer parte; o número de cliente tem de ser exato. Se escrever <strong>apenas algarismos e menos de 9</strong>, a pesquisa entende que é um número de cliente (um telefone tem 9): se houver um cliente com esse número, aparece <strong>apenas esse cliente</strong>, sem os que a têm dentro do telefone ou do NIF; e se ninguém a tiver, pesquisa como sempre. Com 9 algarismos ou mais, ou com letras, não muda nada.
+    <strong>Se o que se escreve são sobretudo algarismos</strong> (três ou mais, e pelo menos metade do texto), pesquisa também por telefone, telemóvel e NIF comparando só os algarismos: «666123456» encontra um telefone guardado como «666 12-34 56», e o indicativo +34 ou 0034 não é preciso escrevê-lo. É a mesma pesquisa da marcação e da cobrança. A lista ordena-se clicando no cabeçalho de qualquer coluna (<a href="#ordenar">como</a>).
   </p>
 
   <p>
@@ -1589,6 +1595,11 @@ footer{
     Quem pode editar fichas mas não tem a permissão «Ver telefones e e-mails» não vê o contacto do cliente
     ao editá-lo —telefone, telemóvel, e-mail e morada— nem o pode alterar: em seu lugar aparece um aviso, e ao guardar
     o contacto fica como estava.
+  </p>
+
+  <p>
+    No histórico, as sessões saldadas com um pacote levam um ícone de bilhete: ao pousar o rato em cima (ou ao tocar, ou com o teclado) vê-se de que pacote eram e as sessões gastas dele, com a data de cada uma. É preciso a permissão de ver pacotes. As sessões antigas importadas sem pacote conhecido só mostram o ícone.
+    O mesmo acontece na lista de pacotes da ficha: ao pousar o rato no ícone de bilhete junto ao grupo, ou nas sessões, aparece a ficha das sessões usadas desse pacote.
   </p>
 
   <p>
@@ -4388,6 +4399,7 @@ footer{
     <li>A sessão da receção não abre os consentimentos já assinados.</li>
     <li>O ecrã <em>Assinaturas</em> aparece <strong>sozinho</strong>: só tem o logótipo do Turnera, sem menu, sem mudança de idioma e sem forma de mudar de utilizador nem de terminar a sessão. Quem tem o tablet à frente é o cliente. Para mudar de utilizador ou sair, abra <code>/inicio</code> a partir do navegador do tablet.</li>
     <li>Ao assinar, o documento desaparece e o tablet mostra, com um visto verde grande, um «Documento assinado» no idioma em que foi lido, junto a um botão <em>Fechar</em> que fecha o separador. Se ninguém carregar, ao fim de 20 segundos volta sozinho a esperar. Se o navegador não deixar fechar o separador, o botão deixa-o em branco.</li>
+    <li>A ficha do cliente que a receção tem aberta <strong>toma conhecimento sozinha</strong> da assinatura, em poucos segundos: o documento assinado aparece em <em>Consentimentos</em> sem sair da ficha nem voltar a entrar, mesmo que o aviso de assinatura pendente tenha sido fechado.</li>
     <li>Se o tablet perder a ligação ao Turnera, di-lo («Sem ligação») em vez de dizer que não há nada para assinar, e recupera sozinho quando a ligação volta. Se cair ao assinar, avisa ao fim de 20 segundos e pode voltar a assinar-se.</li>
   </ul>
 
@@ -4791,6 +4803,9 @@ footer{
     que é preciso um e-mail na ficha.
   </p>
   <p>
+    A ficha admite a <strong>data de entrada</strong>: o dia em que a pessoa começou a trabalhar no centro. Não é obrigatória, e com ela a ficha mostra a sua <strong>antiguidade</strong> (por exemplo, «3 anos e 2 meses»).
+  </p>
+  <p>
     <strong>Desativar não apaga.</strong> O profissional sai da agenda, mas as suas marcações, visitas e casos
     clínicos continuam a mostrá-lo, e pode voltar a ativar-se editando-o. Se tem marcações de hoje em diante,
     o Turnera pergunta a que profissional passam e passa-as todas de uma vez; se alguma coincide com outra que já tem
@@ -4971,6 +4986,10 @@ footer{
     permissão «Configurar o relógio de ponto» define-a estando no centro com <em>Usar a minha localização atual como centro</em>,
     altera o raio com <em>Guardar raio</em> ou remove-a com <em>Remover a zona</em>. Os telemóveis são do centro, partilhados
     ou não; cada profissional pica o ponto com o seu PIN.
+  </p>
+
+  <p>
+    O Turnera regista também <strong>de que aparelho</strong> se pica o ponto, e na mesma coluna <em>Onde</em> vê-o quem tiver a permissão «Ver onde se picou o ponto». Se se pica o ponto num posto partilhado do centro (o tablet do balcão), aparece <em>Posto: Balcão</em>. Se se pica o ponto com o navegador de um telemóvel, o navegador guarda nele um código aleatório, que não é nenhum dado do telefone, e a lista marca <em>Aparelho novo</em> quando essa pessoa já tinha picado o ponto noutros aparelhos e nunca neste. O primeiro aparelho de uma pessoa não se marca, nem um posto partilhado, porque foi o próprio centro que o registou. <strong>Nunca impede de picar o ponto</strong>: é uma pista para quem revê, não uma prova, e se o navegador apagar os seus dados o aparelho volta a aparecer como novo. Guarda-se à parte do registo de jornada, como a localização, e o aviso de privacidade do pessoal menciona-o.
   </p>
 
   <h4 id="fichar-lo-mio">O que cada um vê depois do seu PIN</h4>
@@ -5326,6 +5345,33 @@ footer{
     feitas e as de fora de turno desse ano. Por isso pede para escrever à mão o nome do profissional.
   </p>
 
+  <h4 id="calendario-vacaciones-pedidas">Pedir férias</h4>
+  <p>
+    Pedir férias é <strong>ligado pelos RH</strong> em cada delegação: em <em>Calendário laboral → Definições</em>,
+    <em>Os profissionais podem pedir férias</em>. Vem desligado. Enquanto estiver, ninguém pode pedir dias, nem pela web nem pela aplicação do telemóvel, e <em>O meu calendário</em> não aparece no menu; se se desligar com pedidos pendentes, os RH continuam a poder aprová-los ou rejeitá-los e cada profissional a cancelar os seus.
+  </p>
+  <p>
+    Ligado, cada profissional com utilizador associado pode pedir férias em <em>O meu calendário</em>, se tiver a
+    permissão <em>Pedir dias de férias</em> (vêm de fábrica Receção, Profissional, Direção, RH e Manutenção). Clicam-se no calendário os dias com turno que se querem, a partir de amanhã —um só ou vários, seguidos ou não—, e ficam <strong>marcados</strong> com uma borda da cor da marca; clicar outra vez num dia desmarca-o. Por baixo do calendário aparece quantos estão marcados, <em>Limpar seleção</em> e
+    <strong>Pedir N dias</strong>, que mostra os dias e quantos restarão se for aprovado, antes de enviar. Os dias enviados ficam <strong>pedidos</strong>, com uma borda verde tracejada, e continuam a ser de trabalho até os RH responderem. Ao lado aparece <em>As minhas férias</em>: os dias que restam dos que dá o convénio, cada pedido com os seus dias e o seu estado, e <em>Cancelar</em> para retirar por inteiro o que ainda espera resposta.
+  </p>
+  <p>
+    Um pedido vai <strong>inteiro ou não vai</strong>: se algum dia não se pode pedir —já passou, não tem turno, já está pedido ou é de um mês fechado—, não se pede nenhum e o aviso diz que dias falham e porquê. Também não se pedem mais dias do que os que restam: o pedido e pendente já conta como gasto. Se o convénio conta as férias em dias úteis, os sábados, domingos e feriados marcados não gastam dias.
+  </p>
+  <p>
+    O mesmo pode fazer-se na <strong>aplicação do telemóvel</strong>, em <em>As minhas férias</em>, depois de teclar o
+    PIN: o saldo, um calendário por meses onde se tocam os dias com turno, <em>Pedir N dias</em> e a lista de pedidos com o seu estado, o motivo se foram rejeitados e <em>Cancelar</em> nos pendentes. O menu mostra-o se o utilizador com que se entrou na aplicação puder pedir férias. Se esse utilizador estiver associado a um profissional (<em>Administração → Utilizadores → Profissional</em>), a aplicação é dessa pessoa: ao entrar não aparece a lista de colegas mas diretamente o seu ecrã de PIN, e depois do PIN o seu painel de sempre. Um utilizador sem associar (o do balcão) continua a ser um posto partilhado, com a lista de todos. Depois de teclado o PIN (por exemplo para picar o ponto), abrir outra opção do menu não o volta a pedir enquanto o passe estiver válido (uns minutos). O idioma, «Terminar sessão» e «Mudar de centro» estão em <em>Definições</em>, no fim do menu, recolhidos.
+  </p>
+  <p>
+    Os RH recebem um email com cada pedido, com os dias seguidos agrupados, e em <em>Calendário laboral</em>,
+    por cima das secções, aparece <em>Pedidos de férias pendentes</em> com quem a pede, os seus dias e os dias
+    que lhe restam. Cada pedido decide-se <strong>inteiro</strong>: <strong>Aprovar</strong> pinta todos os seus dias
+    como férias no calendário da pessoa, tal como se fossem marcados à mão. <strong>Rejeitar</strong> deixa-os como estavam
+    e admite um motivo. Nos dois casos, o profissional recebe um email com a resposta se tiver um na sua ficha.
+    Se ao aprovar já não lhe restam dias, aprova-se na mesma e o ecrã avisa: como com os restantes avisos do
+    Estatuto, quem decide são os RH. Num mês ou ano fechado não se pede nem se aprova nada.
+  </p>
+
   <h4 id="calendario-cerrar">Fechar o ano</h4>
   <p>
     Quando um ano terminou e está revisto, em <em>Calendários</em>, com esse ano escolhido, <em>Fechar</em> deixa-o <strong>tal como está, para a Inspeção do Trabalho</strong>: desde então nada desse ano muda no centro
@@ -5508,10 +5554,12 @@ footer{
 
   <h4 id="mi-calendario">O que vê cada profissional</h4>
   <p>
-    Cada profissional tem direito a saber o seu horário e as suas férias sem precisar de qualquer permissão, e a ver o que
-    picou, as suas horas normais e extra e a sua bolsa de horas, mas não as ocorrências nem a projeção. Isto está
-    pensado para a aplicação do profissional; na web, que é usada pelo escritório, não há entrada «O meu calendário» no
-    menu, porque o utilizador com que se entra não pertence a nenhum profissional.
+    Cada profissional tem direito a saber o seu horário e as suas férias sem precisar de nenhuma permissão, e a ver o que
+    picou, as suas horas normais e extra e a sua bolsa de horas, mas não as incidências nem a projeção. Isto está
+    pensado para a aplicação do profissional. Na web, <em>O meu calendário</em> só aparece no menu a quem entra com
+    o seu utilizador associado a um profissional (por exemplo com o seu PIN no posto partilhado) e tem a permissão <em>Pedir
+    dias de férias</em>: o utilizador do escritório não é de nenhum profissional. Daí pedem-se as férias
+    (ver <a href="#calendario-vacaciones-pedidas">Pedir férias</a>).
   </p>
 
 </section>

@@ -767,6 +767,7 @@ footer{
     <li><a href="#presencia-resumen-mensual" class="sub sub">El resumen mensual por correo</a></li>
     <li><a href="#envio-asesoria" class="sub sub">Enviar las horas a la asesoría</a></li>
     <li><a href="#calendario-laboral" class="sub">Calendario laboral</a></li>
+    <li><a href="#calendario-vacaciones-pedidas" class="sub sub">Pedir vacaciones</a></li>
     <li><a href="#calendario-cerrar" class="sub sub">Cerrar el año</a></li>
     <li><a href="#calendario-ausencias-parciales" class="sub sub">Ausencias parciales</a></li>
     <li><a href="#mi-calendario" class="sub sub">Lo que ve cada profesional</a></li>
@@ -1573,6 +1574,13 @@ footer{
         y sale, por encima de la agenda, de qué bono es cada una, cuántas quedan y cuándo caduca; en naranja, si
         caduca en menos de un mes. Se va al quitar el ratón del icono.</td>
     </tr>
+    <tr>
+      <td><strong>Etiqueta roja «Debe»</strong>, amarilla «Plazos» o roja «Plazo vencido»,<br>abajo a la derecha</td>
+      <td>El cliente tiene visitas sin cobrar («Debe»), un pago aplazado en curso y al día («Plazos») o algún plazo
+        que ha pasado de fecha («Plazo vencido»). <strong>Pase el ratón por encima</strong> y sale lo pendiente en total y,
+        si hay plazos, el próximo con su fecha. <strong>Solo la ven quienes tienen permiso para ver deudas o pagos
+        aplazados</strong>; para el resto la cita sale igual que siempre. Junto al icono de bono se coloca a su izquierda.</td>
+    </tr>
     <tr><td><strong>Flechas en círculo</strong> junto al nombre</td><td>La cita es de una serie que
       <a href="#agenda-repetir">se repite</a>.</td></tr>
     <tr><td><strong>Visto verde</strong></td><td>La cita está confirmada.</td></tr>
@@ -1720,7 +1728,10 @@ footer{
     de cliente va exacto. Si escribe <strong>solo cifras y son menos de 9</strong>, el buscador entiende que es un número de
     cliente (un teléfono tiene 9): si hay un cliente con ese número, le sale <strong>únicamente ese cliente</strong>, sin los
     que lo llevan dentro del teléfono o del NIF; y si nadie lo tiene, busca como siempre. Con 9 cifras o más, o con
-    letras, no cambia nada. Es el mismo buscador que el de la cita y el del cobro. La lista se ordena pulsando la cabecera de cualquier
+    letras, no cambia nada.
+    <strong>Si lo escrito son sobre todo cifras</strong> (tres o más, y al menos la mitad del texto), busca además por
+    teléfono, móvil y NIF comparando solo las cifras: «666123456» encuentra un teléfono guardado como «666 12-34 56», y el
+    prefijo +34 o 0034 no hace falta ponerlo. Es el mismo buscador que el de la cita y el del cobro. La lista se ordena pulsando la cabecera de cualquier
     columna (<a href="#ordenar">cómo</a>).
   </p>
 
@@ -1748,6 +1759,12 @@ footer{
     Quien puede editar fichas pero no tiene el permiso «Ver teléfonos y correos» no ve el contacto del cliente al
     editarlo —teléfono, móvil, correo y dirección— ni lo puede cambiar: en su lugar sale un aviso, y al guardar el
     contacto se queda como estaba.
+  </p>
+
+  <p>
+    En el historial, las sesiones saldadas con un bono llevan un icono de ticket: al posar el ratón encima (o al tocarlo, o con el teclado) se ve de qué bono eran
+    y las sesiones que se han gastado de él, con la fecha de cada una. Para verlo hace falta el permiso de ver bonos; las sesiones antiguas importadas sin bono conocido solo muestran el icono.
+    Lo mismo ocurre en el listado de bonos de la ficha: al posar el ratón sobre el icono de ticket junto al grupo, o sobre las sesiones, aparece la ficha de las sesiones usadas de ese bono.
   </p>
 
   <p>
@@ -4758,6 +4775,9 @@ footer{
       en el idioma que se ha leído, junto a un botón <em>Cerrar</em> que cierra la pestaña. Si nadie lo pulsa, a
       los 20 segundos vuelve sola a esperar. Si el navegador no deja cerrar la pestaña, el botón la deja en
       blanco.</li>
+    <li>La ficha del cliente que recepción tiene abierta <strong>se entera sola</strong> de la firma, en unos segundos:
+      el documento firmado aparece en <em>Consentimientos</em> sin salir de la ficha ni volver a entrar, aunque se
+      haya cerrado el aviso de firma pendiente.</li>
     <li>Si la tablet pierde la conexión con Turnera, lo dice («Sin conexión») en lugar de decir que no hay
       nada que firmar, y se recupera sola cuando vuelve. Si se corta al firmar, a los 20 segundos avisa y se
       puede volver a firmar.</li>
@@ -5194,6 +5214,10 @@ footer{
     que hace falta un correo en la ficha.
   </p>
   <p>
+    La ficha admite la <strong>fecha de alta</strong>: el día en que entró a trabajar en el centro. No es obligatoria,
+    y con ella la ficha muestra su <strong>antigüedad</strong> (por ejemplo, «3 años y 2 meses»).
+  </p>
+  <p>
     <strong>Dar de baja no borra.</strong> El profesional sale de la agenda, pero sus citas, visitas y casos
     clínicos siguen mostrándolo, y se puede volver a activar editándolo. Si tiene citas de hoy en adelante, Turnera
     pide a qué profesional pasan y las pasa todas a la vez; si alguna coincide con otra que ya tiene quien las
@@ -5428,6 +5452,17 @@ footer{
     «Configurar el reloj de fichar» la define estando en el centro con <em>Usar mi ubicación actual como centro</em>,
     cambia el radio con <em>Guardar radio</em> o la quita con <em>Quitar la zona</em>. Los móviles son del centro,
     compartidos o no; cada profesional ficha con su PIN.
+  </p>
+
+  <p>
+    Turnera apunta también <strong>desde qué aparato</strong> se ficha, y en la misma columna <em>Dónde</em> lo ve quien
+    tenga el permiso «Ver dónde se fichó». Si se ficha desde un puesto compartido del centro (la tablet del mostrador),
+    sale <em>Puesto: Mostrador</em>. Si se ficha con el navegador de un móvil, el navegador guarda en él un código al
+    azar, que no es ningún dato del teléfono, y la lista marca <em>Dispositivo nuevo</em> cuando esa persona ya había
+    fichado desde otros aparatos y nunca desde este. El primer aparato de una persona no se marca, ni tampoco un puesto
+    compartido, porque lo dio de alta el propio centro. <strong>Nunca impide fichar</strong>: es una pista para quien
+    revisa, no una prueba, y si el navegador borra sus datos el aparato vuelve a salir como nuevo. Se guarda aparte del
+    registro de jornada, como la ubicación, y el aviso de privacidad del personal lo menciona.
   </p>
 
   <h4 id="fichar-lo-mio">Lo que ve cada uno tras su PIN</h4>
@@ -5821,6 +5856,49 @@ footer{
     hechas y las de fuera de turno de ese año. Por eso pide escribir a mano el nombre del profesional.
   </p>
 
+  <h4 id="calendario-vacaciones-pedidas">Pedir vacaciones</h4>
+  <p>
+    Pedir vacaciones lo <strong>enciende RRHH</strong> en cada delegación: en <em>Calendario laboral → Ajustes</em>,
+    <em>Los profesionales pueden pedir vacaciones</em>. Viene apagado. Mientras lo está, nadie puede pedir días, ni
+    desde la web ni desde la aplicación del móvil, y <em>Mi calendario</em> no sale en el menú; si se apaga con
+    solicitudes pendientes, RRHH las sigue pudiendo aprobar o rechazar y cada profesional, cancelar las suyas.
+  </p>
+  <p>
+    Encendido, cada profesional con su usuario vinculado puede pedir vacaciones desde <em>Mi calendario</em>, si tiene el
+    permiso <em>Pedir días de vacaciones</em> (lo traen de fábrica Recepción, Profesional, Dirección, RRHH y
+    Mantenimiento). Se pulsan en el calendario los días con turno que se quieren, de mañana en adelante —uno suelto o
+    varios, seguidos o no—, y quedan <strong>marcados</strong> con un borde del color de la marca; pulsar otra vez un
+    día lo desmarca. Debajo del calendario sale cuántos hay marcados, <em>Quitar selección</em> y
+    <strong>Pedir N días</strong>, que muestra los días y cuántos le quedarán si se aprueba antes de enviarlo. Los días
+    enviados quedan <strong>pedidos</strong>, con un borde verde discontinuo, y siguen siendo de trabajo hasta que
+    RRHH conteste. Al lado sale <em>Mis vacaciones</em>: los días que le quedan de los que le da el convenio, cada
+    solicitud con sus días y su estado, y <em>Cancelar</em> para retirar entera la que aún espera respuesta.
+  </p>
+  <p>
+    Una solicitud va <strong>entera o no va</strong>: si algún día no se puede pedir —ya ha pasado, no tiene turno, ya
+    está pedido o es de un mes cerrado—, no se pide ninguno y el aviso dice qué días fallan y por qué. Tampoco se
+    piden más días de los que quedan: lo pedido y pendiente ya cuenta como gastado. Si el convenio cuenta las
+    vacaciones en días laborables, los sábados, domingos y festivos marcados no gastan días.
+  </p>
+  <p>
+    Lo mismo se puede hacer desde la <strong>aplicación del móvil</strong>, en <em>Mis vacaciones</em>, tras teclear el
+    PIN: el saldo, un calendario por meses donde se tocan los días con turno, <em>Pedir N días</em> y la lista de
+    solicitudes con su estado, el motivo si se rechazaron y <em>Cancelar</em> en las pendientes. El menú lo enseña si
+    el usuario con el que se entró en la aplicación puede pedir vacaciones. Si ese usuario está vinculado a un
+    profesional (<em>Administración → Usuarios → Profesional</em>), la aplicación es de esa persona: al entrar no sale
+    la lista de compañeros sino directamente su pantalla de PIN, y tras el PIN su panel de siempre. Un usuario sin
+    vincular (el del mostrador) sigue siendo un puesto compartido, con la lista de todos. Una vez tecleado el PIN (por ejemplo para fichar), abrir otra opción del menú no lo vuelve a pedir mientras el pase siga vigente (unos minutos). El idioma, «Cerrar sesión» y «Cambiar de centro» están en <em>Ajustes</em>, al final del menú, plegados.
+  </p>
+  <p>
+    A RRHH le llega un correo con cada solicitud, con los días seguidos agrupados, y en <em>Calendario laboral</em>,
+    encima de las secciones, sale <em>Solicitudes de vacaciones pendientes</em> con quién la pide, sus días y los días
+    que le quedan. Cada solicitud se decide <strong>entera</strong>: <strong>Aprobar</strong> pinta todos sus días
+    como vacaciones en su calendario, igual que si se marcaran a mano. <strong>Rechazar</strong> los deja como estaban
+    y admite un motivo. En los dos casos, al profesional le llega un correo con la respuesta si tiene uno en su ficha.
+    Si al aprobar ya no le quedan días, se aprueba igual y la pantalla lo avisa: como con el resto de avisos del
+    Estatuto, quien decide es RRHH. En un mes o un año cerrado no se pide ni se aprueba nada.
+  </p>
+
   <h4 id="calendario-cerrar">Cerrar el año</h4>
   <p>
     Cuando un año ha terminado y está repasado, en <em>Calendarios</em>, con ese año elegido, <em>Cerrar</em> lo
@@ -6006,8 +6084,10 @@ footer{
   <p>
     Cada profesional tiene derecho a saber su horario y sus vacaciones sin necesitar ningún permiso, y a ver lo que ha
     fichado, sus horas normales y extra y su bolsa de horas, pero no las incidencias ni la proyección. Eso está
-    pensado para la aplicación del profesional; en la web, que usa la oficina, no hay entrada «Mi calendario» en el
-    menú, porque el usuario con el que se entra no es de ningún profesional.
+    pensado para la aplicación del profesional. En la web, <em>Mi calendario</em> solo sale en el menú a quien entra con
+    su usuario vinculado a un profesional (por ejemplo con su PIN en el puesto compartido) y tiene el permiso <em>Pedir
+    días de vacaciones</em>: el usuario de la oficina no es de ningún profesional. Desde ahí se piden las vacaciones
+    (ver <a href="#calendario-vacaciones-pedidas">Pedir vacaciones</a>).
   </p>
 
 </section>
