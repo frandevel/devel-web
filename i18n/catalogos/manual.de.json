@@ -3904,5 +3904,12 @@
   "t29654c8f": "Jede Fachkraft hat das Recht, ihren Dienstplan und ihren Urlaub ohne jede Berechtigung zu kennen und zu sehen, was sie\n    gestempelt hat, ihre normalen Stunden und Überstunden und ihr Stundenkonto, nicht aber die Vorfälle oder die Prognose. Das ist\n    für die App der Fachkraft gedacht. Im Web",
   "t4f007cc5": "erscheint nur im Menü für jemanden, der sich mit\n    seinem mit einer Fachkraft verknüpften Benutzer anmeldet (zum Beispiel mit seiner PIN am gemeinsamen Gerät) und die Berechtigung hat",
   "t35043bb1": ": Der Benutzer des Büros gehört zu keiner Fachkraft. Von dort aus wird Urlaub beantragt\n    (siehe",
-  "t44b4c7b6": "Urlaubstage\n    beantragen"
+  "t44b4c7b6": "Urlaubstage\n    beantragen",
+  "taf9b65ba": ", genau wie ein Gutschein. Deshalb kann man eine Geschenkkarte nicht mit Punkten oder mit einer anderen Karte bezahlen.",
+  "t019969ac": "das eine Rückerstattung hinterlassen hat, sofern es für die ganze Karte reicht: Es ist Geld, das bereits in die Kasse geflossen ist und dem Kunden als Guthaben zurückgegeben wurde. Es erscheint bei der Zahlungsart, mit dem verfügbaren Betrag, und wird von seinem Guthaben abgezogen. So lässt sich ein Verkauf wiederholen: Man verkauft die Karte, erstattet sie und lässt den Betrag als Guthaben stehen und verkauft eine weitere, die mit diesem Guthaben bezahlt wird.",
+  "t3f9e65df": "Mit Guthaben kann man bezahlen",
+  "tfa6c8ff5": "bei jeder Karte in der Liste die Schaltfläche",
+  "t08b3c8bd": "fragt nach der E-Mail-Adresse, an die sie gesendet werden soll (die Versandadresse der Karte erscheint und kann geändert werden), und ob der Betrag sichtbar sein soll. Diese Auswahl gilt nur für diesen Versand: Die Karte bleibt so, wie sie verkauft wurde.",
+  "t09f4226b": "Erneut senden:",
+  "tad195e11": "Erneut senden"
 }

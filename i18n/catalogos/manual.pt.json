@@ -3904,5 +3904,12 @@
   "t29654c8f": "Cada profissional tem direito a saber o seu horário e as suas férias sem precisar de nenhuma permissão, e a ver o que\n    picou, as suas horas normais e extra e a sua bolsa de horas, mas não as incidências nem a projeção. Isto está\n    pensado para a aplicação do profissional. Na web,",
   "t4f007cc5": "só aparece no menu a quem entra com\n    o seu utilizador associado a um profissional (por exemplo com o seu PIN no posto partilhado) e tem a permissão",
   "t35043bb1": ": o utilizador do escritório não é de nenhum profissional. Daí pedem-se as férias\n    (ver",
-  "t44b4c7b6": "Pedir\n    dias de férias"
+  "t44b4c7b6": "Pedir\n    dias de férias",
+  "taf9b65ba": ", tal como um voucher. Por isso, não se pode pagar um cartão-presente com pontos nem com outro cartão.",
+  "t019969ac": "que uma devolução deixou, desde que chegue para o cartão todo: é dinheiro que já entrou na caixa e que foi devolvido ao cliente em forma de saldo. Aparece na forma de pagamento, com o valor disponível, e sai do seu saldo. Serve para refazer uma venda: vende-se o cartão, devolve-se deixando o valor como saldo a favor e vende-se outro pagando com esse saldo.",
+  "t3f9e65df": "Sim, pode pagar-se com o saldo a favor",
+  "tfa6c8ff5": "em cada cartão da lista, o botão",
+  "t08b3c8bd": "pede o e-mail para onde enviar (aparece o de envio do cartão, e pode ser alterado) e se o valor deve ver-se ou não. Essa escolha vale apenas para esse envio: o cartão fica como foi vendido.",
+  "t09f4226b": "Reenviar:",
+  "tad195e11": "Reenviar"
 }

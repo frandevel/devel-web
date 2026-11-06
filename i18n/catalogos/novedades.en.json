@@ -1178,5 +1178,11 @@
   "t00858aa4": "A signed consent appears on its own in the customer record",
   "t977958b1": "After signing on the tablet, the signed document appears in the customer record within a few seconds, without leaving it and coming back in, even if the pending-signature notice has been closed.",
   "t4520bde7": "The tablet tab no longer ends up blank when finished: it shows a message saying it can now be closed.",
-  "t54c6e2b3": "1.12.0-5b94bec"
+  "t54c6e2b3": "1.12.0-5b94bec",
+  "tfbc3785f": "1.12.0-b51166a",
+  "te779b46b": "Gift card: pay with credit and resend it",
+  "t78d2ee06": "A gift card can now be sold by charging it to the customer’s credit. This lets you redo a sale: sell it, refund it leaving the amount as credit, and sell it again paying with that credit.",
+  "te0159a6a": "On each card’s row, the Resend button asks for the email address to send it to and whether the amount should be visible on the card.",
+  "td892f774": "In the POS, a sale with a 100% discount can be charged without choosing a payment method, because there is nothing to pay.",
+  "tdc71abb7": "When selling a gift card, the payment method dropdown no longer shifts out of place if you scroll the screen while it is open."
 }

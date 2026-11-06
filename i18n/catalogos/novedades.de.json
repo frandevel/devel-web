@@ -1178,5 +1178,11 @@
   "t00858aa4": "Die Unterschrift unter einer Einwilligung erscheint von selbst in der Kundenakte",
   "t977958b1": "Nach der Unterschrift auf dem Tablet erscheint das unterschriebene Dokument innerhalb weniger Sekunden in der Kundenakte, ohne dass man sie verlassen und neu öffnen muss, auch wenn der Hinweis auf die ausstehende Unterschrift geschlossen wurde.",
   "t4520bde7": "Der Tablet-Tab bleibt am Ende nicht mehr leer: Er zeigt eine Meldung, dass er jetzt geschlossen werden kann.",
-  "t54c6e2b3": "1.12.0-5b94bec"
+  "t54c6e2b3": "1.12.0-5b94bec",
+  "tfbc3785f": "1.12.0-b51166a",
+  "te779b46b": "Geschenkkarte: mit Guthaben bezahlen und erneut senden",
+  "t78d2ee06": "Eine Geschenkkarte kann jetzt über das Guthaben des Kunden bezahlt werden. So lässt sich ein Verkauf wiederholen: verkaufen, erstatten und den Betrag als Guthaben stehen lassen, dann erneut verkaufen und mit diesem Guthaben bezahlen.",
+  "te0159a6a": "In der Zeile jeder Karte fragt die Schaltfläche Erneut senden nach der E-Mail-Adresse und danach, ob der Betrag auf der Karte sichtbar sein soll.",
+  "td892f774": "An der Kasse kann ein Verkauf mit 100 % Rabatt ohne Auswahl einer Zahlungsart abgeschlossen werden, da nichts zu zahlen ist.",
+  "tdc71abb7": "Beim Verkauf einer Geschenkkarte verrutscht die Auswahlliste der Zahlungsarten nicht mehr, wenn man bei geöffneter Liste scrollt."
 }

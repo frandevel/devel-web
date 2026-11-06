@@ -1178,5 +1178,11 @@
   "t00858aa4": "A assinatura de um consentimento aparece sozinha na ficha do cliente",
   "t977958b1": "Depois de assinar no tablet, o documento assinado aparece na ficha do cliente em poucos segundos, sem sair dela e voltar a entrar, mesmo que o aviso de assinatura pendente tenha sido fechado.",
   "t4520bde7": "O separador do tablet já não fica em branco no fim: mostra uma mensagem a dizer que já se pode fechar.",
-  "t54c6e2b3": "1.12.0-5b94bec"
+  "t54c6e2b3": "1.12.0-5b94bec",
+  "tfbc3785f": "1.12.0-b51166a",
+  "te779b46b": "Cartão-presente: pagar com saldo a favor e voltar a enviar",
+  "t78d2ee06": "Um cartão-presente já pode ser vendido cobrando-o ao saldo a favor do cliente. Assim pode refazer-se uma venda: vende-se, devolve-se deixando o valor como saldo a favor e vende-se de novo pagando com esse saldo.",
+  "te0159a6a": "Na linha de cada cartão, o botão Reenviar pergunta o e-mail para onde enviar e se o valor deve ser visível no cartão.",
+  "td892f774": "No TPV, uma venda com 100 % de desconto pode ser cobrada sem escolher forma de pagamento, porque não há nada a pagar.",
+  "tdc71abb7": "Ao vender um cartão-presente, a lista de formas de pagamento já não se desloca se se mexer no ecrã com ela aberta."
 }
