@@ -707,6 +707,7 @@ footer{
     <li><a href="#cobrar-tpv" class="sub">The point of sale</a></li>
     <li><a href="#paquetes" class="sub">Packages</a></li>
     <li><a href="#cupones" class="sub">Coupons</a></li>
+    <li><a href="#promociones" class="sub">Promotions</a></li>
     <li><a href="#cobrar-bono" class="sub">Paying with a voucher</a></li>
     <li><a href="#cobrar-partido" class="sub">Paying by two methods</a></li>
     <li><a href="#cobrar-parcial" class="sub">Charging only part</a></li>
@@ -1203,7 +1204,12 @@ footer{
   <ul>
     <li><strong>Booking an appointment:</strong> click the free slot where you want it to go. The form opens with the time
       and the member of staff already filled in; all that is missing is the customer and the service.</li>
+    <li><strong>New customer calling on the phone:</strong> while no customer has been chosen, below the search box there is
+      <em>+ New customer</em>. It opens a <strong>first visit</strong> record that only asks for first name, surnames and mobile, and puts the customer straight into the appointment. The rest of the record (ID document, date of birth, email...) is completed when they arrive. Until then the appointment and the record say <strong>First visit</strong> in blue; as soon as the record is opened and the rest of the details are saved, the notice disappears by itself.</li>
     <li><strong>Opening an appointment:</strong> click it.</li>
+    <li><strong>The previous customer, one click away:</strong> clicking the customer box without typing anything shows the last 5 customers you have worked with (in an appointment, at the point of sale or by opening their record). The customer box at the point of sale works the same way.</li>
+    <li><strong>Adding a service to an existing appointment:</strong> the duration grows by the length of the new service (and removing it shortens it), even if it had been adjusted by hand; you can fine-tune it afterwards. If that makes the appointment reach the next one of the same professional or room, it warns you: there would not be time to do everything in that appointment.</li>
+    <li><strong>See what is going to be done without opening it:</strong> rest the mouse on the appointment for a moment. A card appears, like the voucher or “Owes” ones, with the customer and the time at the top, their services one per line and, below, the professional, the status and the appointment's notices. Over the voucher or “Owes” label you get that label's card instead.</li>
     <li><strong>Past days:</strong> you can go to any earlier day to look at it, open its appointments,
       charge them or mark who did not come. What you cannot do is <strong>book a new appointment or move one to a day
       before today</strong>: the agenda says so when you click a slot, and the appointment calendar does not let you pick those
@@ -1359,6 +1365,14 @@ footer{
       <td><strong>Red «Owes» label</strong>, yellow «Instalments» or red «Instalment overdue»,<br>bottom right</td>
       <td>The customer has unpaid visits («Owes»), a deferred payment that is running and up to date («Instalments») or an instalment that is past its due date («Instalment overdue»). <strong>Hover over it</strong> and it shows the total pending and, if there are instalments, the next one with its date. <strong>Only people with permission to see debts or deferred payments can see it</strong>; for everyone else the appointment looks the same as always. Next to the voucher icon, it sits to its left.</td>
     </tr>
+    <tr>
+      <td><strong>Blue “First visit” label</strong>, bottom right</td>
+      <td>The customer record is <strong>incomplete</strong>: it was created when booking with only first name, surnames and mobile. It is not the orange star, which is worked out automatically and says it is their first appointment at the centre. A first-visit customer has no debts or balance, so this label takes the place of “Owes” and “Has”. It goes away by itself when the full record is saved.</td>
+    </tr>
+    <tr>
+      <td><strong>Green “Has €45.00” label</strong>, bottom right</td>
+      <td>The customer has a <strong>credit balance</strong> (from a refund). It is the amount they have available, offered as a payment method when charging. It is visible to anyone who can see records or charge. If they also owe something, it sits to the left of “Owes”. In the customer record, the green balance notice says the same.</td>
+    </tr>
     <tr><td><strong>Circular arrows</strong> next to the name</td><td>The appointment belongs to a series that
       <a href="#agenda-repetir">repeats</a>.</td></tr>
     <tr><td><strong>Green tick</strong></td><td>The appointment is confirmed.</td></tr>
@@ -1496,6 +1510,11 @@ footer{
 
   <p>
     In the history, a service that was settled against a voucher carries a small ticket icon next to its name (hovering says “Paid with voucher”); one without it was charged separately. Whoever cannot see the amounts sees it too, because it is not money, and it lets you count at a glance the sessions that came out of the voucher.
+  </p>
+
+  <h3 id="clientes-menores">Under-age customers: the legal guardian</h3>
+  <p>
+    When the date of birth says the customer <strong>is not yet 18</strong>, the record shows the section <em>Legal guardian details</em> by itself: relationship, first name, surnames, address, phone, ID document type and number, and email. For an adult, or with no date of birth, the section does not appear. In the minor's record, if there is no guardian yet, it says so. As they are another person's contact details, only those with the “See phones and emails” permission can see and change them. When a customer's data is erased at their request, these are erased too.
   </p>
 
   <h3 id="clientes-notas">Record notes</h3>
@@ -1655,6 +1674,10 @@ footer{
   </p>
 
   <p>
+    <strong>A promotion on one service goes on its line.</strong> Each line of the receipt (service, product, voucher or package) has its own <em>Disc.</em> box: 20% off the groin only discounts the groin, and the underarms stay at full price. The receipt discount, if any, is applied afterwards to what is left. On the receipt and the invoice the line shows its total discount: 20% from the promotion and 10% from the receipt show as 28%.
+  </p>
+
+  <p>
     <strong>The short way is from the agenda.</strong> Open the appointment and click <em>Charge</em>: the point of sale opens with the
     customer, the member of staff and that appointment's services already filled in. All you have to say is how they
     pay. And once charged, the appointment is marked as paid — that is the euro icon on the grid.
@@ -1768,6 +1791,21 @@ footer{
   <div class="ojo">
     <p><strong>If a charge does not go through, the notice says why and what to do.</strong> For example, that the customer has no voucher sessions left for the whole ticket and the rest has to be charged another way, or that the business line for sales has not been chosen in <em>Administration → Preferences → The centre</em>. If it is a server failure, the notice carries a <strong>reference</strong> of eight letters and digits: with it, support finds exactly what happened.</p>
   </div>
+
+  <h3 id="promociones">Promotions</h3>
+  <span class="ruta">Menu → Catalogue → Promotions</span>
+
+  <p>
+    A promotion is a <strong>phrase that the point of sale reminds the cashier of</strong> while it lasts: “20% off groin and underarms until the end of the month”, “second pressotherapy session at half price”. It is created with the phrase and two dates, <strong>From</strong> and <strong>To</strong>, both included. While it is running, it appears at the top of the point of sale in a blue box, so that nobody forgets to apply it.
+  </p>
+
+  <p>
+    The promotion <strong>does not discount anything by itself</strong>: it is a reminder. The discount is set on the line of the service, product or voucher with the line percentage, or on the whole receipt, as always. The list marks each promotion as <em>Running</em>, <em>Upcoming</em> or <em>Ended</em>; ended ones stay as history, and can be edited or deleted if they are no longer wanted.
+  </p>
+
+  <p>
+    Managing them requires the permission <a href="#perm-promotions-manage">“Manage promotions”</a>, which by default Management has (and the administrator, who has everything). Seeing the reminder at the point of sale needs nothing more than being able to charge. It is a module of its own, <strong>Promotions</strong>, switched on by default in new centres; it needs Till.
+  </p>
 
   <h3 id="cobrar-bono">Paying with a voucher</h3>
   <p>
@@ -2732,7 +2770,7 @@ footer{
     <li><strong>Catalogue.</strong> <a href="#perm-services-view">“See services”</a> shows the services and their prices;
       <a href="#perm-services-write">“Create and edit services”</a> is what lets you change them. With view-only access, the buttons to add, edit and remove are switched off or do not appear. Choosing services with the quick buttons when booking does not need to see the catalogue: that is another permission,
       <a href="#perm-services-quick-pick">“Quick service selection”</a>.</li>
-    <li><strong>Till.</strong> Charging is <a href="#perm-checkout-charge">“Charge at the point of sale”</a>; applying a discount, <a href="#perm-checkout-discount">“Apply discounts”</a>; leaving something owing, <a href="#perm-checkout-debt">“Leave an amount owing”</a>; refunding a ticket, <a href="#perm-checkout-refund">“Refund a ticket”</a>; seeing what has been charged today and this month on the Home screen,
+    <li><strong>Till.</strong> Charging is <a href="#perm-checkout-charge">“Charge at the point of sale”</a>; applying a discount, <a href="#perm-checkout-discount">“Apply discounts”</a>; leaving something owing, <a href="#perm-checkout-debt">“Leave an amount owing”</a>; printing the receipt, <a href="#perm-checkout-print-ticket">“Print receipts”</a>; giving a quote, <a href="#perm-checkout-budget">“Give quotes”</a>; refunding a ticket, <a href="#perm-checkout-refund">“Refund a ticket”</a>; seeing what has been charged today and this month on the Home screen,
       <a href="#perm-dashboard-cash">“See the till on the Home screen”</a>. Nobody at reception reopens a closed till without <a href="#perm-cash-reopen">«Reopen a closed cash»</a>.</li>
     <li><strong>Maintenance.</strong> <a href="#perm-maintenance-view">“See maintenance”</a> reads the orders; opening one is
       <a href="#perm-maintenance-report">“Report a problem”</a>; moving it from one state to another is <a href="#perm-maintenance-manage">“Manage orders”</a>; closing it,
@@ -2784,7 +2822,7 @@ footer{
   <h3 id="roles-modulo">A permission depends on the centre's modules</h3>
 
   <p>
-    Each permission belongs to a module: agenda, clients, till, invoicing, staff, maintenance, and so on. The roles screen <strong>only shows the permissions of the modules the centre has switched on</strong>, and if a module is switched off later, its permissions stop working for everybody, the administrator included, whatever roles they have. Some modules need others: the agenda, the till and the clinical record need Clients; the agenda and the till, Catalogue; invoicing, Till; the portal, Agenda; and IoT lives inside Maintenance. Activations and IoT do not come switched on as standard. If you miss the permissions for a part of the application, the first thing to do is check whether the centre has that module.
+    Each permission belongs to a module: agenda, clients, till, invoicing, staff, maintenance, and so on. The roles screen <strong>only shows the permissions of the modules the centre has switched on</strong>, and if a module is switched off later, its permissions stop working for everyone, including the administrator, whatever roles they have. Some modules need others: the diary, the till and the clinical record need Customers; the diary and the till, Catalogue; invoicing and promotions, Till; the portal, Diary; and IoT lives inside Maintenance. Activations and IoT are not switched on by default. If you are missing the permissions for a part of the application, the first thing to check is whether the centre has that module.
   </p>
 
   <h3 id="roles-sesion">What happens when permissions change</h3>
@@ -2881,6 +2919,9 @@ footer{
     <tr id="perm-checkout-charge"><td><strong>Charge at the point of sale</strong></td><td>Opens the point of sale and allows closing a charge.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
     <tr id="perm-checkout-discount"><td><strong>Apply discounts</strong></td><td>Enables the discount field inside a charge.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
     <tr id="perm-checkout-debt"><td><strong>Leave on credit</strong></td><td>Allows closing a charge with an amount outstanding instead of collecting all of it. That amount then shows up under “See outstanding payments”.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
+    <tr id="perm-checkout-print-ticket"><td><strong>Print receipts</strong></td><td>Allows printing the receipt of a payment: when charging at the point of sale, when settling a debt and from the customer's history.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
+    <tr id="perm-checkout-budget"><td><strong>Give quotes</strong></td><td>Allows getting a quote for what is on the receipt from the point of sale, printed or by WhatsApp.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
+    <tr id="perm-promotions-manage"><td><strong>Manage promotions</strong></td><td>Allows creating, changing and deleting the centre's promotions: the phrase the point of sale shows between two dates.</td><td><a href="#rol-direccion">Management</a></td></tr>
     <tr id="perm-checkout-refund"><td><strong>Refunding a ticket</strong></td><td>Allows using the button to refund lines of a ticket that has already been charged, as money or as credit.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-caja">Till</a></td></tr>
     <tr id="perm-dashboard-customers"><td><strong>See customers on Home</strong></td><td>Shows on Home the card with the customers registered this month and the latest arrivals. It does not open the records: that remains under “See customer records”.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a></td></tr>
     <tr id="perm-dashboard-birthdays"><td><strong>See birthdays on Home</strong></td><td>Shows on Home the card with this week's birthdays, with name and date. Congratulating by WhatsApp also needs “See phones and emails”.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a></td></tr>
@@ -3040,6 +3081,8 @@ footer{
         <li class="rc-perm"><a href="#perm-checkout-charge">Charge at the point of sale</a><span class="rc-desc">Opens the point of sale and allows closing a charge.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Apply discounts</a><span class="rc-desc">Enables the discount field inside a charge.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Leave on credit</a><span class="rc-desc">Allows closing a charge with an amount outstanding instead of collecting all of it.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-print-ticket">Print receipts</a><span class="rc-desc">Allows printing the receipt of a payment.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-budget">Give quotes</a><span class="rc-desc">Allows getting a quote from the point of sale, printed or by WhatsApp.</span></li>
         <li class="rc-perm"><a href="#perm-dashboard-cash">See the till on the Home screen</a><span class="rc-desc">Shows on the Home screen the card with what has been charged today and this month, by payment method. It does not open the point of sale or the point-of-sale report: that stays under “Charge at the point of sale” and “Daily totals”.</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">See pending payments</a><span class="rc-desc">Opens the pending payments screen.</span></li>
         <li class="rc-perm"><a href="#perm-debts-settle">Settle a debt</a><span class="rc-desc">Allows using the button to settle a debt.</span></li>
@@ -3158,6 +3201,9 @@ footer{
         <li class="rc-perm"><a href="#perm-checkout-charge">Charge at the point of sale</a><span class="rc-desc">Opens the point of sale and allows closing a charge.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Apply discounts</a><span class="rc-desc">Enables the discount field inside a charge.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Leave on credit</a><span class="rc-desc">Allows closing a charge with an amount outstanding instead of collecting all of it.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-print-ticket">Print receipts</a><span class="rc-desc">Allows printing the receipt of a payment.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-budget">Give quotes</a><span class="rc-desc">Allows getting a quote from the point of sale, printed or by WhatsApp.</span></li>
+        <li class="rc-perm"><a href="#perm-promotions-manage">Manage promotions</a><span class="rc-desc">Creates, changes and deletes the promotions the point of sale shows between two dates.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-refund">Refunding a ticket</a><span class="rc-desc">Allows using the button to refund lines of a ticket that has already been charged, as money or as credit.</span></li>
         <li class="rc-perm"><a href="#perm-dashboard-cash">See the till on the Home screen</a><span class="rc-desc">Shows on the Home screen the card with what has been charged today and this month, by payment method. It does not open the point of sale or the point-of-sale report: that stays under “Charge at the point of sale” and “Daily totals”.</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">See pending payments</a><span class="rc-desc">Opens the pending payments screen.</span></li>
@@ -3437,6 +3483,8 @@ footer{
         <li class="rc-perm"><a href="#perm-checkout-charge">Charge at the point of sale</a><span class="rc-desc">Opens the point of sale and allows closing a charge.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Apply discounts</a><span class="rc-desc">Enables the discount field inside a charge.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Leave on credit</a><span class="rc-desc">Allows closing a charge with an amount outstanding instead of collecting all of it.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-print-ticket">Print receipts</a><span class="rc-desc">Allows printing the receipt of a payment.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-budget">Give quotes</a><span class="rc-desc">Allows getting a quote from the point of sale, printed or by WhatsApp.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-refund">Refunding a ticket</a><span class="rc-desc">Allows using the button to refund lines of a ticket that has already been charged, as money or as credit.</span></li>
         <li class="rc-perm"><a href="#perm-dashboard-cash">See the till on the Home screen</a><span class="rc-desc">Shows on the Home screen the card with what has been charged today and this month, by payment method. It does not open the point of sale or the point-of-sale report: that stays under “Charge at the point of sale” and “Daily totals”.</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">See pending payments</a><span class="rc-desc">Opens the pending payments screen.</span></li>
@@ -3664,6 +3712,9 @@ footer{
     <tr><td><a href="#perm-checkout-charge">Charge at the point of sale</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
     <tr><td><a href="#perm-checkout-discount">Apply discounts</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
     <tr><td><a href="#perm-checkout-debt">Leave on credit</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
+    <tr><td><a href="#perm-checkout-print-ticket">Print receipts</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
+    <tr><td><a href="#perm-checkout-budget">Give quotes</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
+    <tr><td><a href="#perm-promotions-manage">Manage promotions</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td></td></tr>
     <tr><td><a href="#perm-checkout-refund">Refunding a ticket</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
     <tr><td><a href="#perm-dashboard-cash">See the till on the Home screen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
     <tr><td><a href="#perm-debts-view">See pending payments</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Till</a></td></tr>
@@ -4050,7 +4101,13 @@ footer{
     Whoever signs has to understand what they sign. When creating or changing a template, below the main text
     there is <em>Text in other languages</em>: one optional section per language, with its name and its text. The gaps are
     written the same way in all of them, with their Spanish names: <code>{{cliente}}</code>, <code>{{nif}}</code>,
-    <code>{{centro}}</code>, <code>{{fecha}}</code> and <code>{{tratamiento}}</code>.
+    <code>{{centro}}</code>, <code>{{fecha}}</code>, <code>{{tratamiento}}</code>, <code>{{representante}}</code>,
+    <code>{{representante_documento}}</code> and <code>{{representante_parentesco}}</code>.
+  </p>
+  <p>
+    <strong>Under-age customers.</strong> If the date of birth says the customer is not yet 18, their legal guardian signs, and Turnera handles it by itself: the tablet says “Marta Gil (mother) signs as legal guardian of…” and the signed PDF carries, below the customer, a block <em>Legal guardian</em> with their name, relationship and ID document, even if the template has no such gaps. The gaps
+    <code>{{representante}}</code>, <code>{{representante_documento}}</code> and
+    <code>{{representante_parentesco}}</code> are for naming them inside the text too; for an adult they come out as a dash. If the minor has no guardian in their record yet, the signature cannot be requested: the notice says to fill it in first.
   </p>
   <ul>
     <li>If the customer's record has a language the template is written in, the tablet shows them that text, and the buttons and the notice below are in their language too. The signed PDF comes out the same.</li>

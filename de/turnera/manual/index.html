@@ -707,6 +707,7 @@ footer{
     <li><a href="#cobrar-tpv" class="sub">Die Kasse</a></li>
     <li><a href="#paquetes" class="sub">Pakete</a></li>
     <li><a href="#cupones" class="sub">Gutscheincodes</a></li>
+    <li><a href="#promociones" class="sub">Aktionen</a></li>
     <li><a href="#cobrar-bono" class="sub">Mit Gutschein bezahlen</a></li>
     <li><a href="#cobrar-partido" class="sub">Mit zwei Zahlungsarten bezahlen</a></li>
     <li><a href="#cobrar-parcial" class="sub">Nur einen Teil kassieren</a></li>
@@ -1204,7 +1205,12 @@ footer{
   <ul>
     <li><strong>Einen Termin eintragen:</strong> klicken Sie auf die freie Lücke, wo er liegen soll. Die Maske öffnet sich, Uhrzeit
       und Mitarbeiter sind schon eingetragen; es fehlen nur noch Kunde und Leistung.</li>
+    <li><strong>Neuer Kunde, der anruft:</strong> solange noch kein Kunde gewählt ist, steht unter der Suche
+      <em>+ Neuer Kunde</em>. Damit öffnet sich eine Karte für einen <strong>Erstbesuch</strong> , die nur Vorname, Nachnamen und Handy abfragt und den Kunden direkt in den Termin setzt. Der Rest der Karte (Ausweis, Geburtsdatum, E-Mail...) wird ergänzt, wenn er kommt. Bis dahin zeigen Termin und Karte <strong>Besuch Nr. 1</strong> in Blau; sobald die Karte geöffnet und der Rest gespeichert wird, verschwindet der Hinweis von selbst.</li>
     <li><strong>Einen Termin öffnen:</strong> klicken Sie ihn an.</li>
+    <li><strong>Die Kundin von eben, mit einem Klick:</strong> ein Klick in das Kundenfeld, ohne etwas zu tippen, zeigt die letzten 5 Kunden, mit denen Sie gearbeitet haben (in einem Termin, an der Kasse oder beim Öffnen ihrer Karte). Im Kundenfeld der Kasse ist es genauso.</li>
+    <li><strong>Eine Leistung zu einem bestehenden Termin hinzufügen:</strong> die Dauer wächst um die Länge der neuen Leistung (und das Entfernen verkürzt sie), auch wenn sie von Hand angepasst war; danach lässt sie sich nachjustieren. Reicht der Termin dadurch bis zum nächsten derselben Fachkraft oder derselben Kabine, kommt ein Hinweis: Es wäre keine Zeit, alles in diesem Termin zu machen.</li>
+    <li><strong>Sehen, was gemacht wird, ohne ihn zu öffnen:</strong> lassen Sie die Maus kurz auf dem Termin ruhen. Es erscheint eine Karte wie die des Pakets oder von „Offen“, oben mit Kunde und Uhrzeit, darunter die Leistungen, eine pro Zeile, und darunter Fachkraft, Status und die Hinweise des Termins. Über dem Paket- oder „Offen“-Etikett erscheint die Karte dieses Etiketts.</li>
     <li><strong>Vergangene Tage:</strong> man kann zu jedem früheren Tag gehen, um ihn anzusehen, seine Termine zu öffnen,
       abzurechnen oder zu markieren, wer nicht kam. Was nicht geht: <strong>einen neuen Termin anlegen oder einen auf einen Tag
       vor heute verschieben</strong>: der Kalender sagt es beim Klick auf eine freie Stelle, und die Datumsauswahl des Termins lässt diese
@@ -1360,6 +1366,14 @@ footer{
       <td><strong>Rotes Etikett «Offen»</strong>, gelbes «Raten» oder rotes «Rate überfällig»,<br>unten rechts</td>
       <td>Der Kunde hat unbezahlte Besuche («Offen»), eine laufende Ratenzahlung, die auf dem neuesten Stand ist («Raten»), oder eine Rate, die überfällig ist («Rate überfällig»). <strong>Fahren Sie mit der Maus darüber</strong> und es erscheint der offene Gesamtbetrag und, falls es Raten gibt, die nächste mit ihrem Datum. <strong>Nur Personen mit der Berechtigung, Schulden oder Ratenzahlungen einzusehen, sehen es</strong>; für alle anderen sieht der Termin aus wie immer. Neben dem Symbol der Mehrfachkarte sitzt es links davon.</td>
     </tr>
+    <tr>
+      <td><strong>Blaues Etikett „Besuch Nr. 1“</strong>, unten rechts</td>
+      <td>Die Kundenkarte ist <strong>unvollständig</strong>: Sie wurde bei der Terminbuchung nur mit Vorname, Nachnamen und Handy angelegt. Das ist nicht der orange Stern, der sich von selbst ergibt und anzeigt, dass es der erste Termin im Betrieb ist. Ein Erstbesuch hat weder Schulden noch Guthaben, deshalb nimmt dieses Etikett den Platz von „Offen“ und „Guthaben“ ein. Es verschwindet von selbst, wenn die vollständige Karte gespeichert wird.</td>
+    </tr>
+    <tr>
+      <td><strong>Grünes Etikett „Guthaben 45,00 €“</strong>, unten rechts</td>
+      <td>Der Kunde hat ein <strong>Guthaben</strong> (aus einer Rückerstattung). Es ist der verfügbare Betrag, der beim Kassieren als Zahlungsart angeboten wird. Sehen können es alle, die Karten sehen oder kassieren dürfen. Schuldet er zusätzlich etwas, steht es links von „Offen“. In der Kundenkarte sagt der grüne Guthaben-Hinweis dasselbe.</td>
+    </tr>
     <tr><td><strong>Kreispfeile</strong> neben dem Namen</td><td>Der Termin gehört zu einer Serie, die sich
       <a href="#agenda-repetir">wiederholt</a>.</td></tr>
     <tr><td><strong>Grüner Haken</strong></td><td>Der Termin ist bestätigt.</td></tr>
@@ -1497,6 +1511,11 @@ footer{
 
   <p>
     Im Verlauf trägt eine Leistung, die mit einem Gutscheinpaket beglichen wurde, ein kleines Ticket-Symbol neben ihrem Namen (beim Darüberfahren erscheint „Mit Gutschein bezahlt“); eine ohne dieses Symbol wurde separat bezahlt. Es ist auch für Personen sichtbar, die die Beträge nicht sehen dürfen, weil es kein Geld ist, und es hilft, auf einen Blick die Sitzungen zu zählen, die aus dem Gutschein stammen.
+  </p>
+
+  <h3 id="clientes-menores">Minderjährige Kunden: der gesetzliche Vertreter</h3>
+  <p>
+    Wenn das Geburtsdatum zeigt, dass der Kunde <strong>noch nicht 18 ist</strong>, zeigt die Karte von selbst den Abschnitt <em>Daten des gesetzlichen Vertreters</em>: Verwandtschaft, Vorname, Nachnamen, Adresse, Telefon, Art und Nummer des Ausweises und E-Mail. Bei Erwachsenen oder ohne Geburtsdatum erscheint der Abschnitt nicht. Fehlt beim Minderjährigen noch der Vertreter, weist die Karte darauf hin. Da es Kontaktdaten einer anderen Person sind, sehen und ändern sie nur Personen mit der Berechtigung „Telefonnummern und E-Mails sehen“. Werden die Daten eines Kunden auf seinen Wunsch gelöscht, werden diese mitgelöscht.
   </p>
 
   <h3 id="clientes-notas">Die Notizen der Akte</h3>
@@ -1656,6 +1675,10 @@ footer{
   </p>
 
   <p>
+    <strong>Eine Aktion für eine Leistung gehört in ihre Zeile.</strong> Jede Zeile des Belegs (Leistung, Produkt, Paket oder Bündel) hat ihr eigenes Feld <em>Rabatt</em>: 20 % auf die Leiste rabattiert nur die Leiste, die Achseln bleiben beim vollen Preis. Der Rabatt des Belegs, falls einer gesetzt ist, wird danach auf den Rest angewendet. Auf Beleg und Rechnung zeigt die Zeile ihren Gesamtrabatt: 20 % der Aktion und 10 % des Belegs erscheinen als 28 %.
+  </p>
+
+  <p>
     <strong>Der kurze Weg führt über den Terminkalender.</strong> Öffnen Sie den Termin und klicken Sie auf <em>Kassieren</em>: Die Kasse öffnet sich, Kunde,
     Mitarbeiter und die Leistungen dieses Termins sind schon eingetragen. Sie müssen nur noch sagen, wie bezahlt wird. Und beim Kassieren wird der
     Termin als kassiert markiert — das ist das Euro-Symbol im Raster.
@@ -1769,6 +1792,21 @@ footer{
   <div class="ojo">
     <p><strong>Wenn eine Zahlung nicht durchgeht, sagt der Hinweis, warum und was zu tun ist.</strong> Zum Beispiel, dass der Kunde nicht genug Gutscheinsitzungen für den ganzen Bon hat und der Rest anders bezahlt werden muss, oder dass die Geschäftslinie für Verkäufe nicht gewählt ist unter <em>Verwaltung → Einstellungen → Das Zentrum</em>. Ist es ein Serverfehler, enthält der Hinweis eine <strong>Referenz</strong> aus acht Buchstaben und Ziffern: Damit findet der Support genau, was passiert ist.</p>
   </div>
+
+  <h3 id="promociones">Aktionen</h3>
+  <span class="ruta">Menü → Katalog → Aktionen</span>
+
+  <p>
+    Eine Aktion ist ein <strong>Satz, an den die Kasse die kassierende Person erinnert</strong> , solange sie läuft: „20 % auf Leiste und Achseln bis Monatsende“, „zweite Pressotherapie-Sitzung zum halben Preis“. Angelegt wird sie mit dem Satz und zwei Daten, <strong>Von</strong> und <strong>Bis</strong>, beide eingeschlossen. Solange sie läuft, erscheint sie oben an der Kasse in einem blauen Kasten, damit niemand vergisst, sie anzuwenden.
+  </p>
+
+  <p>
+    Die Aktion <strong>rabattiert nichts von selbst</strong>: Sie ist eine Erinnerung. Der Rabatt wird wie immer in der Zeile der Leistung, des Produkts oder des Pakets mit dem Prozentsatz der Zeile oder auf den ganzen Beleg gesetzt. Die Liste kennzeichnet jede Aktion als <em>Läuft</em>, <em>Demnächst</em> oder <em>Beendet</em>; beendete bleiben als Verlauf und lassen sich bearbeiten oder löschen, wenn man sie nicht mehr will.
+  </p>
+
+  <p>
+    Sie zu verwalten erfordert die Berechtigung <a href="#perm-promotions-manage">„Aktionen verwalten“</a>, die ab Werk die Leitung hat (und der Administrator, der alles hat). Um die Erinnerung an der Kasse zu sehen, genügt es, kassieren zu dürfen. Es ist ein eigenes Modul, <strong>Aktionen</strong>, in neuen Betrieben ab Werk eingeschaltet; es braucht Kasse.
+  </p>
 
   <h3 id="cobrar-bono">Mit Gutschein bezahlen</h3>
   <p>
@@ -2735,7 +2773,7 @@ footer{
     <li><strong>Katalog.</strong> <a href="#perm-services-view">„Leistungen ansehen“</a> zeigt die Leistungen und ihre Preise;
       <a href="#perm-services-write">„Leistungen anlegen und bearbeiten“</a> erlaubt, sie zu ändern. Mit reinem Lesezugriff sind die Schaltflächen zum Anlegen, Bearbeiten und Entfernen ausgegraut oder fehlen. Das Auswählen von Leistungen mit den Schnelltasten bei der Terminvergabe erfordert keinen Einblick in den Katalog: Dafür gibt es eine andere Berechtigung,
       <a href="#perm-services-quick-pick">„Schnellauswahl von Leistungen“</a>.</li>
-    <li><strong>Kasse.</strong> Kassieren ist <a href="#perm-checkout-charge">„An der Kasse kassieren“</a>; einen Rabatt gewähren: <a href="#perm-checkout-discount">„Rabatte gewähren“</a>; etwas offen lassen: <a href="#perm-checkout-debt">„Offen lassen“</a>; ein Ticket zurückerstatten: <a href="#perm-checkout-refund">„Ticket zurückerstatten“</a>; auf der Startseite sehen, was heute und im Monat kassiert wurde,
+    <li><strong>Kasse.</strong> Kassieren ist <a href="#perm-checkout-charge">„An der Kasse kassieren“</a>; einen Rabatt gewähren: <a href="#perm-checkout-discount">„Rabatte gewähren“</a>; etwas offen lassen: <a href="#perm-checkout-debt">„Offen lassen“</a>; den Beleg drucken, <a href="#perm-checkout-print-ticket">„Belege drucken“</a>; einen Kostenvoranschlag geben, <a href="#perm-checkout-budget">„Kostenvoranschläge erstellen“</a>; ein Ticket zurückerstatten: <a href="#perm-checkout-refund">„Ticket zurückerstatten“</a>; auf der Startseite sehen, was heute und im Monat kassiert wurde,
       <a href="#perm-dashboard-cash">„Kasse auf der Startseite sehen“</a>. Niemand am Empfang öffnet eine geschlossene Kasse wieder ohne <a href="#perm-cash-reopen">«Geschlossene Kasse wieder öffnen»</a>.</li>
     <li><strong>Wartung.</strong> <a href="#perm-maintenance-view">„Instandhaltung ansehen“</a> liest die Aufträge; einen zu öffnen ist
       <a href="#perm-maintenance-report">„Ein Problem melden“</a>; ihn von einem Status in den nächsten zu bringen ist <a href="#perm-maintenance-manage">„Aufträge bearbeiten“</a>; ihn abzuschließen:
@@ -2787,7 +2825,7 @@ footer{
   <h3 id="roles-modulo">Eine Berechtigung hängt von den Modulen des Zentrums ab</h3>
 
   <p>
-    Jede Berechtigung gehört zu einem Modul: Terminkalender, Kunden, Kasse, Rechnungsstellung, Personal, Wartung usw. Der Rollenbildschirm <strong>zeigt nur die Berechtigungen der Module an, die das Zentrum eingeschaltet hat</strong>, und wenn ein Modul später abgeschaltet wird, nützen seine Berechtigungen niemandem mehr, auch dem Administrator nicht, egal welche Rollen er hat. Manche Module brauchen andere: Terminkalender, Kasse und Patientenakte brauchen Kunden; Terminkalender und Kasse brauchen den Katalog; die Rechnungsstellung die Kasse; das Portal den Terminkalender; und IoT lebt innerhalb der Wartung. Aktivierungen und IoT sind nicht standardmäßig eingeschaltet. Wenn Ihnen die Berechtigungen für einen Teil der Anwendung fehlen, prüfen Sie zuerst, ob das Zentrum dieses Modul hat.
+    Jede Berechtigung gehört zu einem Modul: Terminkalender, Kunden, Kasse, Rechnungsstellung, Personal, Wartung usw. Der Rollenbildschirm <strong>zeigt nur die Berechtigungen der Module an, die das Zentrum eingeschaltet hat</strong>, und wird ein Modul später ausgeschaltet, gelten seine Berechtigungen für niemanden mehr, auch nicht für den Administrator, egal welche Rollen er hat. Manche Module brauchen andere: Kalender, Kasse und Krankenakte brauchen Kunden; Kalender und Kasse den Katalog; Rechnungsstellung und Aktionen die Kasse; das Portal den Kalender; und IoT gehört zur Wartung. Aktivierungen und IoT sind ab Werk nicht eingeschaltet. Fehlen Ihnen die Berechtigungen für einen Teil der Anwendung, prüfen Sie zuerst, ob der Betrieb dieses Modul hat.
   </p>
 
   <h3 id="roles-sesion">Was passiert, wenn Berechtigungen geändert werden</h3>
@@ -2884,6 +2922,9 @@ footer{
     <tr id="perm-checkout-charge"><td><strong>An der Kasse kassieren</strong></td><td>Öffnet die Kasse und erlaubt, einen Zahlvorgang abzuschließen.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
     <tr id="perm-checkout-discount"><td><strong>Rabatte gewähren</strong></td><td>Schaltet das Rabattfeld innerhalb des Zahlvorgangs frei.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
     <tr id="perm-checkout-debt"><td><strong>Auf Rechnung lassen</strong></td><td>Erlaubt, einen Zahlvorgang mit offenem Restbetrag abzuschließen, statt ihn vollständig zu kassieren. Der Betrag erscheint danach unter „Offene Beträge ansehen“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-checkout-print-ticket"><td><strong>Belege drucken</strong></td><td>Erlaubt, den Beleg eines Zahlungsvorgangs zu drucken: beim Kassieren, beim Begleichen einer Schuld und aus dem Verlauf des Kunden.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-checkout-budget"><td><strong>Kostenvoranschläge erstellen</strong></td><td>Erlaubt, an der Kasse einen Kostenvoranschlag für den Inhalt des Belegs zu erstellen, gedruckt oder per WhatsApp.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
+    <tr id="perm-promotions-manage"><td><strong>Aktionen verwalten</strong></td><td>Erlaubt das Anlegen, Ändern und Löschen der Aktionen des Betriebs: der Satz, den die Kasse zwischen zwei Daten anzeigt.</td><td><a href="#rol-direccion">Leitung</a></td></tr>
     <tr id="perm-checkout-refund"><td><strong>Einen Beleg erstatten</strong></td><td>Erlaubt die Schaltfläche, um Positionen eines bereits abgerechneten Tickets zu erstatten, als Geld oder als Guthaben.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-caja">Kasse</a></td></tr>
     <tr id="perm-dashboard-customers"><td><strong>Kunden auf der Startseite sehen</strong></td><td>Zeigt auf der Startseite die Karte mit den in diesem Monat angelegten und den zuletzt hinzugekommenen Kunden. Die Akten öffnet sie nicht: Das bleibt bei „Kundenakten ansehen“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a></td></tr>
     <tr id="perm-dashboard-birthdays"><td><strong>Geburtstage auf der Startseite sehen</strong></td><td>Zeigt auf der Startseite die Karte mit den Geburtstagen der Woche, mit Name und Datum. Für Glückwünsche per WhatsApp braucht es zusätzlich „Telefonnummern und E-Mails sehen“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a></td></tr>
@@ -3043,6 +3084,8 @@ footer{
         <li class="rc-perm"><a href="#perm-checkout-charge">An der Kasse kassieren</a><span class="rc-desc">Öffnet die Kasse und erlaubt, einen Zahlvorgang abzuschließen.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Rabatte gewähren</a><span class="rc-desc">Schaltet das Rabattfeld innerhalb des Zahlvorgangs frei.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Auf Rechnung lassen</a><span class="rc-desc">Erlaubt, einen Zahlvorgang mit offenem Restbetrag abzuschließen, statt ihn vollständig zu kassieren.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-print-ticket">Belege drucken</a><span class="rc-desc">Erlaubt, den Beleg eines Zahlungsvorgangs zu drucken.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-budget">Kostenvoranschläge erstellen</a><span class="rc-desc">Erlaubt, an der Kasse einen Kostenvoranschlag zu erstellen, gedruckt oder per WhatsApp.</span></li>
         <li class="rc-perm"><a href="#perm-dashboard-cash">Kasse auf der Startseite sehen</a><span class="rc-desc">Zeigt auf der Startseite die Karte mit dem heute und im Monat Kassierten, nach Zahlungsart. Öffnet weder die Kasse noch den Kassenbericht: Das bleibt bei „An der Kasse kassieren“ und „Tagessummen“.</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">Offene Zahlungen ansehen</a><span class="rc-desc">Öffnet den Bildschirm der offenen Zahlungen.</span></li>
         <li class="rc-perm"><a href="#perm-debts-settle">Eine Schuld begleichen</a><span class="rc-desc">Erlaubt die Schaltfläche zum Begleichen einer Schuld.</span></li>
@@ -3161,6 +3204,9 @@ footer{
         <li class="rc-perm"><a href="#perm-checkout-charge">An der Kasse kassieren</a><span class="rc-desc">Öffnet die Kasse und erlaubt, einen Zahlvorgang abzuschließen.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Rabatte gewähren</a><span class="rc-desc">Schaltet das Rabattfeld innerhalb des Zahlvorgangs frei.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Auf Rechnung lassen</a><span class="rc-desc">Erlaubt, einen Zahlvorgang mit offenem Restbetrag abzuschließen, statt ihn vollständig zu kassieren.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-print-ticket">Belege drucken</a><span class="rc-desc">Erlaubt, den Beleg eines Zahlungsvorgangs zu drucken.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-budget">Kostenvoranschläge erstellen</a><span class="rc-desc">Erlaubt, an der Kasse einen Kostenvoranschlag zu erstellen, gedruckt oder per WhatsApp.</span></li>
+        <li class="rc-perm"><a href="#perm-promotions-manage">Aktionen verwalten</a><span class="rc-desc">Legt die Aktionen an, ändert und löscht sie, die die Kasse zwischen zwei Daten anzeigt.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-refund">Einen Beleg erstatten</a><span class="rc-desc">Erlaubt die Schaltfläche, um Positionen eines bereits abgerechneten Tickets zu erstatten, als Geld oder als Guthaben.</span></li>
         <li class="rc-perm"><a href="#perm-dashboard-cash">Kasse auf der Startseite sehen</a><span class="rc-desc">Zeigt auf der Startseite die Karte mit dem heute und im Monat Kassierten, nach Zahlungsart. Öffnet weder die Kasse noch den Kassenbericht: Das bleibt bei „An der Kasse kassieren“ und „Tagessummen“.</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">Offene Zahlungen ansehen</a><span class="rc-desc">Öffnet den Bildschirm der offenen Zahlungen.</span></li>
@@ -3440,6 +3486,8 @@ footer{
         <li class="rc-perm"><a href="#perm-checkout-charge">An der Kasse kassieren</a><span class="rc-desc">Öffnet die Kasse und erlaubt, einen Zahlvorgang abzuschließen.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Rabatte gewähren</a><span class="rc-desc">Schaltet das Rabattfeld innerhalb des Zahlvorgangs frei.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Auf Rechnung lassen</a><span class="rc-desc">Erlaubt, einen Zahlvorgang mit offenem Restbetrag abzuschließen, statt ihn vollständig zu kassieren.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-print-ticket">Belege drucken</a><span class="rc-desc">Erlaubt, den Beleg eines Zahlungsvorgangs zu drucken.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-budget">Kostenvoranschläge erstellen</a><span class="rc-desc">Erlaubt, an der Kasse einen Kostenvoranschlag zu erstellen, gedruckt oder per WhatsApp.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-refund">Einen Beleg erstatten</a><span class="rc-desc">Erlaubt die Schaltfläche, um Positionen eines bereits abgerechneten Tickets zu erstatten, als Geld oder als Guthaben.</span></li>
         <li class="rc-perm"><a href="#perm-dashboard-cash">Kasse auf der Startseite sehen</a><span class="rc-desc">Zeigt auf der Startseite die Karte mit dem heute und im Monat Kassierten, nach Zahlungsart. Öffnet weder die Kasse noch den Kassenbericht: Das bleibt bei „An der Kasse kassieren“ und „Tagessummen“.</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">Offene Zahlungen ansehen</a><span class="rc-desc">Öffnet den Bildschirm der offenen Zahlungen.</span></li>
@@ -3667,6 +3715,9 @@ footer{
     <tr><td><a href="#perm-checkout-charge">An der Kasse kassieren</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
     <tr><td><a href="#perm-checkout-discount">Rabatte gewähren</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
     <tr><td><a href="#perm-checkout-debt">Auf Rechnung lassen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-checkout-print-ticket">Belege drucken</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-checkout-budget">Kostenvoranschläge erstellen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
+    <tr><td><a href="#perm-promotions-manage">Aktionen verwalten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td></td></tr>
     <tr><td><a href="#perm-checkout-refund">Einen Beleg erstatten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
     <tr><td><a href="#perm-dashboard-cash">Kasse auf der Startseite sehen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
     <tr><td><a href="#perm-debts-view">Offene Zahlungen ansehen</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Kasse</a></td></tr>
@@ -4053,7 +4104,13 @@ footer{
     Wer unterschreibt, muss verstehen, was er unterschreibt. Beim Anlegen oder Ändern einer Vorlage steht unter dem
     Haupttext <em>Text in anderen Sprachen</em>: ein optionaler Abschnitt pro Sprache, mit Namen und Text. Die Platzhalter
     werden in allen gleich geschrieben, mit ihrem spanischen Namen: <code>{{cliente}}</code>, <code>{{nif}}</code>,
-    <code>{{centro}}</code>, <code>{{fecha}}</code> und <code>{{tratamiento}}</code>.
+    <code>{{centro}}</code>, <code>{{fecha}}</code>, <code>{{tratamiento}}</code>, <code>{{representante}}</code>,
+    <code>{{representante_documento}}</code> und <code>{{representante_parentesco}}</code>.
+  </p>
+  <p>
+    <strong>Minderjährige Kunden.</strong> Zeigt das Geburtsdatum, dass der Kunde noch nicht 18 ist, unterschreibt sein gesetzlicher Vertreter, und Turnera erledigt das von selbst: Das Tablet zeigt „Marta Gil (Mutter) unterschreibt als gesetzliche Vertreterin von…“, und das unterschriebene PDF enthält unter dem Kunden einen Block <em>Gesetzlicher Vertreter</em> mit Name, Verwandtschaft und Ausweis, auch wenn die Vorlage diese Platzhalter nicht hat. Die Platzhalter
+    <code>{{representante}}</code>, <code>{{representante_documento}}</code> und
+    <code>{{representante_parentesco}}</code> dienen dazu, ihn auch im Text zu nennen; bei Erwachsenen erscheint ein Strich. Hat der Minderjährige noch keinen Vertreter in seiner Karte, kann die Unterschrift nicht angefordert werden: Der Hinweis sagt, dass er zuerst eingetragen werden muss.
   </p>
   <ul>
     <li>Hat der Kunde in seiner Akte eine Sprache, in der die Vorlage geschrieben ist, zeigt ihm das Tablet diesen Text, und auch die Schaltflächen und der Hinweis darunter sind in seiner Sprache. Das unterschriebene PDF ist genauso.</li>

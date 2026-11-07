@@ -725,7 +725,7 @@ footer{
     <h2>6 de novembro de 2026</h2>
     <span class="version__sello">Última versão</span>
   </div>
-  <p class="version__numero">Versão <span translate="no">1.12.0-b51166a</span></p>
+  <p class="version__numero">Versão <span translate="no">1.12.0-d465876</span></p>
 
   <div class="grupo grupo--nuevo">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Novas funcionalidades</h3>
@@ -733,6 +733,31 @@ footer{
     <ul>
       <li>Um cartão-presente já pode ser vendido cobrando-o ao saldo a favor do cliente. Assim pode refazer-se uma venda: vende-se, devolve-se deixando o valor como saldo a favor e vende-se de novo pagando com esse saldo.</li>
       <li>Na linha de cada cartão, o botão Reenviar pergunta o e-mail para onde enviar e se o valor deve ser visível no cartão.</li>
+    </ul>
+    <h4>Desconto em cada linha do talão</h4>
+    <ul>
+      <li>Cada linha do talão (serviço, produto, pacote ou conjunto) tem a sua casa Desc.: 20 % nas virilhas desconta só as virilhas, e as axilas mantêm o preço.</li>
+      <li>O desconto de todo o talão continua a poder pôr-se, e aplica-se depois sobre o que resta. No talão e na fatura cada linha mostra o desconto total que leva.</li>
+    </ul>
+    <h4>Promoções: o TPV lembra as que estão em vigor</h4>
+    <ul>
+      <li>Em Catálogo → Promoções cria-se uma promoção com uma frase e duas datas, desde e até. Enquanto estiver em vigor, aparece no topo do TPV numa caixa azul, para que ninguém se esqueça de a aplicar.</li>
+      <li>É um lembrete: não desconta nada por si só. As terminadas ficam como histórico e podem editar-se ou apagar-se.</li>
+      <li>Gere-as quem tem a permissão Gerir promoções, que de origem tem a Direção.</li>
+    </ul>
+    <h4>Clientes menores de idade: o representante legal</h4>
+    <ul>
+      <li>Se a data de nascimento diz que o cliente ainda não tem 18 anos, a ficha mostra sozinha a secção do representante legal: parentesco, nome, apelidos, morada, telefone, documento e email. Num adulto não aparece.</li>
+      <li>Ao pedir a assinatura de um consentimento de um menor, assina o seu representante: o tablet di-lo e o PDF assinado leva os seus dados. Se o menor ainda não tem representante na ficha, o aviso pede para o preencher antes.</li>
+    </ul>
+    <h4>Primeira visita: criar o cliente a partir da marcação</h4>
+    <ul>
+      <li>Ao marcar a alguém que liga pela primeira vez, o botão + Novo cliente só pede nome, apelidos e telemóvel, e deixa o cliente já na marcação. O resto da ficha completa-se quando chegar.</li>
+      <li>Entretanto, a marcação e a ficha dizem Primeira visita a azul. O aviso desaparece sozinho ao guardar a ficha completa.</li>
+    </ul>
+    <h4>Agenda: aviso de saldo a favor</h4>
+    <ul>
+      <li>Se o cliente tem saldo a favor de uma devolução, a sua marcação leva uma etiqueta verde com o montante, por exemplo Tem 45,00 €, para se lembrar de o oferecer ao cobrar.</li>
     </ul>
     <h4>Agenda: aviso na marcação quando o cliente deve dinheiro ou tem um pagamento em prestações</h4>
     <ul>
@@ -749,6 +774,23 @@ footer{
       <li>Quando o que se escreve na pesquisa de clientes são sobretudo algarismos, pesquisa-se também por telefone, telemóvel e NIF comparando só os algarismos: 666123456 encontra um telefone guardado como 666 12-34 56.</li>
       <li>O indicativo +34 ou 0034 não é preciso escrevê-lo. Um número curto que é o de um cliente continua a encontrar só esse cliente.</li>
     </ul>
+    <h4>Os últimos clientes, a um clique</h4>
+    <ul>
+      <li>Ao clicar na caixa do cliente numa marcação ou no TPV sem escrever nada, aparecem os últimos 5 clientes com que se trabalhou.</li>
+    </ul>
+    <h4>Agenda: os serviços da marcação ao deixar o rato em cima</h4>
+    <ul>
+      <li>Ao deixar o rato um momento sobre uma marcação aparece uma ficha, como a do pacote ou a de Deve, com o cliente, a hora, os serviços um por linha, o profissional e o estado.</li>
+    </ul>
+    <h4>Agenda: acrescentar um serviço alonga a marcação</h4>
+    <ul>
+      <li>Ao acrescentar um serviço a uma marcação já feita, a duração aumenta o que dura o serviço, e ao retirá-lo encurta. Depois pode afinar-se à mão.</li>
+      <li>Se com isso a marcação chegar à seguinte do mesmo profissional ou da mesma cabine, avisa: não daria tempo para fazer tudo nessa marcação.</li>
+    </ul>
+    <h4>Permissões para imprimir talões e dar orçamentos</h4>
+    <ul>
+      <li>Imprimir talões e Dar orçamentos são agora permissões próprias, para decidir em cada papel quem pode tirar o talão ou o orçamento. De origem têm-nas a Receção e a Direção, por isso ninguém nota a mudança até o centro a ajustar.</li>
+    </ul>
   </div>
 
   <div class="grupo grupo--arreglo">
@@ -759,6 +801,7 @@ footer{
       <li>O separador do tablet já não fica em branco no fim: mostra uma mensagem a dizer que já se pode fechar.</li>
       <li>No TPV, uma venda com 100 % de desconto pode ser cobrada sem escolher forma de pagamento, porque não há nada a pagar.</li>
       <li>Ao vender um cartão-presente, a lista de formas de pagamento já não se desloca se se mexer no ecrã com ela aberta.</li>
+      <li>A consulta de preços já não mostra os produtos consumíveis, que são de uso interno e não se vendem.</li>
     </ul>
   </div>
 </section>

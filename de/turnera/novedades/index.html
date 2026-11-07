@@ -724,7 +724,7 @@ footer{
     <h2>6. November 2026</h2>
     <span class="version__sello">Neueste Version</span>
   </div>
-  <p class="version__numero">Version <span translate="no">1.12.0-b51166a</span></p>
+  <p class="version__numero">Version <span translate="no">1.12.0-d465876</span></p>
 
   <div class="grupo grupo--nuevo">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
@@ -732,6 +732,31 @@ footer{
     <ul>
       <li>Eine Geschenkkarte kann jetzt über das Guthaben des Kunden bezahlt werden. So lässt sich ein Verkauf wiederholen: verkaufen, erstatten und den Betrag als Guthaben stehen lassen, dann erneut verkaufen und mit diesem Guthaben bezahlen.</li>
       <li>In der Zeile jeder Karte fragt die Schaltfläche Erneut senden nach der E-Mail-Adresse und danach, ob der Betrag auf der Karte sichtbar sein soll.</li>
+    </ul>
+    <h4>Rabatt für jede Zeile des Belegs</h4>
+    <ul>
+      <li>Jede Zeile des Belegs (Leistung, Produkt, Paket oder Bündel) hat ihr eigenes Feld Rabatt: 20 % auf die Leiste rabattiert nur die Leiste, die Achseln bleiben beim vollen Preis.</li>
+      <li>Ein Rabatt auf den ganzen Beleg ist weiterhin möglich und wird danach auf den Rest angewendet. Auf Beleg und Rechnung zeigt jede Zeile ihren Gesamtrabatt.</li>
+    </ul>
+    <h4>Aktionen: Die Kasse erinnert an die laufenden</h4>
+    <ul>
+      <li>Unter Katalog → Aktionen legt man eine Aktion mit einem Satz und zwei Daten an, von und bis. Solange sie läuft, erscheint sie oben an der Kasse in einem blauen Kasten, damit niemand vergisst, sie anzuwenden.</li>
+      <li>Sie ist eine Erinnerung: Sie rabattiert nichts von selbst. Beendete bleiben als Verlauf und lassen sich bearbeiten oder löschen.</li>
+      <li>Verwaltet werden sie von Personen mit der Berechtigung Aktionen verwalten, die ab Werk die Leitung hat.</li>
+    </ul>
+    <h4>Minderjährige Kunden: der gesetzliche Vertreter</h4>
+    <ul>
+      <li>Zeigt das Geburtsdatum, dass der Kunde noch nicht 18 ist, erscheint in seiner Karte von selbst der Abschnitt des gesetzlichen Vertreters: Verwandtschaft, Vorname, Nachnamen, Adresse, Telefon, Ausweis und E-Mail. Bei Erwachsenen erscheint er nicht.</li>
+      <li>Wird die Unterschrift einer Einwilligung eines Minderjährigen angefordert, unterschreibt sein Vertreter: Das Tablet sagt es, und das unterschriebene PDF enthält seine Daten. Hat der Minderjährige noch keinen Vertreter in der Karte, bittet der Hinweis, ihn zuerst einzutragen.</li>
+    </ul>
+    <h4>Erstbesuch: den Kunden direkt aus dem Termin anlegen</h4>
+    <ul>
+      <li>Beim Termin für jemanden, der zum ersten Mal anruft, fragt die Schaltfläche + Neuer Kunde nur Vorname, Nachnamen und Handy ab und setzt den Kunden direkt in den Termin. Der Rest der Karte wird ergänzt, wenn er kommt.</li>
+      <li>Bis dahin zeigen Termin und Karte in Blau Besuch Nr. 1. Der Hinweis verschwindet von selbst, wenn die vollständige Karte gespeichert wird.</li>
+    </ul>
+    <h4>Kalender: Hinweis auf Guthaben</h4>
+    <ul>
+      <li>Hat der Kunde ein Guthaben aus einer Rückerstattung, trägt sein Termin ein grünes Etikett mit dem Betrag, zum Beispiel Guthaben 45,00 €, damit man daran denkt, es beim Kassieren anzubieten.</li>
     </ul>
     <h4>Agenda: Hinweis am Termin, wenn der Kunde etwas schuldet oder eine Ratenzahlung hat</h4>
     <ul>
@@ -748,6 +773,23 @@ footer{
       <li>Besteht die Eingabe in der Kundensuche überwiegend aus Ziffern, wird auch nach Telefon, Handy und Steuernummer gesucht, wobei nur die Ziffern verglichen werden: 666123456 findet eine als 666 12-34 56 gespeicherte Nummer.</li>
       <li>Die Vorwahl +34 oder 0034 muss nicht eingegeben werden. Eine kurze Zahl, die eine Kundennummer ist, findet weiterhin nur diesen Kunden.</li>
     </ul>
+    <h4>Die letzten Kunden mit einem Klick</h4>
+    <ul>
+      <li>Ein Klick in das Kundenfeld eines Termins oder der Kasse, ohne etwas zu tippen, zeigt die letzten 5 Kunden, mit denen gearbeitet wurde.</li>
+    </ul>
+    <h4>Kalender: die Leistungen des Termins, wenn die Maus darauf ruht</h4>
+    <ul>
+      <li>Ruht die Maus kurz auf einem Termin, erscheint eine Karte wie die des Pakets oder von Offen, mit Kunde, Uhrzeit, den Leistungen je eine pro Zeile, Fachkraft und Status.</li>
+    </ul>
+    <h4>Kalender: Eine weitere Leistung verlängert den Termin</h4>
+    <ul>
+      <li>Wird einem bestehenden Termin eine Leistung hinzugefügt, wächst seine Dauer um die Länge der Leistung, und das Entfernen verkürzt sie. Danach lässt sie sich von Hand nachjustieren.</li>
+      <li>Reicht der Termin dadurch bis zum nächsten derselben Fachkraft oder derselben Kabine, kommt ein Hinweis: Es wäre keine Zeit, alles in diesem Termin zu machen.</li>
+    </ul>
+    <h4>Berechtigungen zum Drucken von Belegen und für Kostenvoranschläge</h4>
+    <ul>
+      <li>Belege drucken und Kostenvoranschläge erstellen sind jetzt eigene Berechtigungen, damit man je Rolle entscheiden kann, wer den Beleg oder den Kostenvoranschlag ausgeben darf. Ab Werk haben sie Empfang und Leitung, sodass niemand die Änderung bemerkt, bis der Betrieb sie anpasst.</li>
+    </ul>
   </div>
 
   <div class="grupo grupo--arreglo">
@@ -758,6 +800,7 @@ footer{
       <li>Der Tablet-Tab bleibt am Ende nicht mehr leer: Er zeigt eine Meldung, dass er jetzt geschlossen werden kann.</li>
       <li>An der Kasse kann ein Verkauf mit 100 % Rabatt ohne Auswahl einer Zahlungsart abgeschlossen werden, da nichts zu zahlen ist.</li>
       <li>Beim Verkauf einer Geschenkkarte verrutscht die Auswahlliste der Zahlungsarten nicht mehr, wenn man bei geöffneter Liste scrollt.</li>
+      <li>Die Preisabfrage zeigt keine Verbrauchsprodukte mehr, die für den internen Gebrauch sind und nicht verkauft werden.</li>
     </ul>
   </div>
 </section>

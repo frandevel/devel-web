@@ -724,7 +724,7 @@ footer{
     <h2>November 6, 2026</h2>
     <span class="version__sello">Latest release</span>
   </div>
-  <p class="version__numero">Version <span translate="no">1.12.0-b51166a</span></p>
+  <p class="version__numero">Version <span translate="no">1.12.0-d465876</span></p>
 
   <div class="grupo grupo--nuevo">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
@@ -732,6 +732,31 @@ footer{
     <ul>
       <li>A gift card can now be sold by charging it to the customer’s credit. This lets you redo a sale: sell it, refund it leaving the amount as credit, and sell it again paying with that credit.</li>
       <li>On each card’s row, the Resend button asks for the email address to send it to and whether the amount should be visible on the card.</li>
+    </ul>
+    <h4>A discount on each line of the receipt</h4>
+    <ul>
+      <li>Each line of the receipt (service, product, voucher or package) has its own Disc. box: 20% off the groin only discounts the groin, and the underarms stay at full price.</li>
+      <li>A discount on the whole receipt can still be given, and it is applied afterwards to what is left. On the receipt and the invoice each line shows its total discount.</li>
+    </ul>
+    <h4>Promotions: the point of sale reminds you of the ones running</h4>
+    <ul>
+      <li>In Catalogue → Promotions you create a promotion with a phrase and two dates, from and to. While it is running, it appears at the top of the point of sale in a blue box, so that nobody forgets to apply it.</li>
+      <li>It is a reminder: it does not discount anything by itself. Ended ones stay as history and can be edited or deleted.</li>
+      <li>They are managed by whoever has the Manage promotions permission, which Management has by default.</li>
+    </ul>
+    <h4>Under-age customers: the legal guardian</h4>
+    <ul>
+      <li>If the date of birth says the customer is not yet 18, their record shows the legal guardian section by itself: relationship, first name, surnames, address, phone, ID document and email. It does not appear for adults.</li>
+      <li>When a minor's consent signature is requested, their guardian signs: the tablet says so and the signed PDF carries their details. If the minor has no guardian in their record yet, the notice asks for it to be filled in first.</li>
+    </ul>
+    <h4>First visit: creating the customer from the appointment</h4>
+    <ul>
+      <li>When booking someone who is calling for the first time, the + New customer button only asks for first name, surnames and mobile, and puts the customer straight into the appointment. The rest of the record is completed when they arrive.</li>
+      <li>Until then, the appointment and the record say First visit in blue. The notice disappears by itself when the full record is saved.</li>
+    </ul>
+    <h4>Diary: credit balance notice</h4>
+    <ul>
+      <li>If the customer has a credit balance from a refund, their appointment carries a green label with the amount, for example Has €45.00, as a reminder to offer it when charging.</li>
     </ul>
     <h4>Agenda: a notice on the appointment when the customer owes money or has a deferred payment</h4>
     <ul>
@@ -748,6 +773,23 @@ footer{
       <li>When what is typed in the customer search is mostly digits, it also searches by phone, mobile and tax ID comparing only the digits: 666123456 finds a phone stored as 666 12-34 56.</li>
       <li>The +34 or 0034 prefix does not need to be typed. A short number that is a customer number still finds only that customer.</li>
     </ul>
+    <h4>The latest customers, one click away</h4>
+    <ul>
+      <li>Clicking the customer box in an appointment or at the point of sale without typing anything shows the last 5 customers you have worked with.</li>
+    </ul>
+    <h4>Diary: the appointment's services when you rest the mouse on it</h4>
+    <ul>
+      <li>Resting the mouse on an appointment for a moment shows a card, like the voucher or Owes ones, with the customer, the time, the services one per line, the professional and the status.</li>
+    </ul>
+    <h4>Diary: adding a service lengthens the appointment</h4>
+    <ul>
+      <li>When a service is added to an existing appointment, its duration grows by the length of the service, and removing it shortens it. It can be fine-tuned by hand afterwards.</li>
+      <li>If that makes the appointment reach the next one of the same professional or room, it warns you: there would not be time to do everything in that appointment.</li>
+    </ul>
+    <h4>Permissions to print receipts and give quotes</h4>
+    <ul>
+      <li>Print receipts and Give quotes are now permissions of their own, so each role can decide who may print the receipt or the quote. By default Reception and Management have them, so nobody notices the change until the centre adjusts it.</li>
+    </ul>
   </div>
 
   <div class="grupo grupo--arreglo">
@@ -758,6 +800,7 @@ footer{
       <li>The tablet tab no longer ends up blank when finished: it shows a message saying it can now be closed.</li>
       <li>In the POS, a sale with a 100% discount can be charged without choosing a payment method, because there is nothing to pay.</li>
       <li>When selling a gift card, the payment method dropdown no longer shifts out of place if you scroll the screen while it is open.</li>
+      <li>The price lookup no longer shows consumable products, which are for internal use and not for sale.</li>
     </ul>
   </div>
 </section>

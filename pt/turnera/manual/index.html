@@ -707,6 +707,7 @@ footer{
     <li><a href="#cobrar-tpv" class="sub">O TPV</a></li>
     <li><a href="#paquetes" class="sub">Pacotes</a></li>
     <li><a href="#cupones" class="sub">Cupões</a></li>
+    <li><a href="#promociones" class="sub">Promoções</a></li>
     <li><a href="#cobrar-bono" class="sub">Cobrar com pacote de sessões</a></li>
     <li><a href="#cobrar-partido" class="sub">Pagar com duas formas de pagamento</a></li>
     <li><a href="#cobrar-parcial" class="sub">Cobrar só uma parte</a></li>
@@ -1234,7 +1235,12 @@ footer{
   <ul>
     <li><strong>Marcar uma consulta:</strong> prima o espaço livre onde quer que fique. Abre-se a ficha com a hora
       e o profissional já preenchidos; só falta o cliente e o serviço.</li>
+    <li><strong>Cliente novo que liga por telefone:</strong> enquanto não se escolheu cliente, por baixo da pesquisa aparece
+      <em>+ Novo cliente</em>. Abre uma ficha de <strong>primeira visita</strong> que só pede nome, apelidos e telemóvel, e deixa o cliente já na marcação. O resto da ficha (documento, data de nascimento, email...) completa-se quando chegar. Entretanto, a marcação e a ficha dizem <strong>Primeira visita</strong> a azul; assim que se abre a ficha e se guardam os restantes dados, o aviso desaparece sozinho.</li>
     <li><strong>Abrir uma marcação:</strong> prima-a.</li>
+    <li><strong>A cliente de antes, a um clique:</strong> ao clicar na caixa do cliente sem escrever nada aparecem os últimos 5 clientes com que trabalhou (numa marcação, no TPV ou ao abrir a ficha). Na caixa do cliente do TPV acontece o mesmo.</li>
+    <li><strong>Acrescentar um serviço a uma marcação já feita:</strong> a duração aumenta o que dura o serviço novo (e retirá-lo encurta-a), mesmo que tivesse sido ajustada à mão; depois pode afinar-se. Se com isso a marcação chegar à seguinte do mesmo profissional ou da mesma cabine, avisa: não daria tempo para fazer tudo nessa marcação.</li>
+    <li><strong>Ver o que se vai fazer sem a abrir:</strong> deixe o rato parado um momento sobre a marcação. Aparece uma ficha, como a do pacote ou a de «Deve», com o cliente e a hora em cima, os serviços um por linha e, por baixo, o profissional, o estado e os avisos da marcação. Sobre a etiqueta do pacote ou de «Deve» aparece a ficha dessa etiqueta.</li>
     <li><strong>Dias passados:</strong> pode ir-se a qualquer dia anterior para o ver, abrir as suas marcações,
       cobrá-las ou assinalar quem não veio. O que não se pode é <strong>marcar uma nova nem levar uma para um dia
       anterior a hoje</strong>: a agenda avisa ao premir um espaço, e o calendário da marcação não deixa escolher esses
@@ -1431,6 +1437,14 @@ footer{
       <td><strong>Etiqueta vermelha «Deve»</strong>, amarela «Prestações» ou vermelha «Prestação em atraso»,<br>em baixo à direita</td>
       <td>O cliente tem visitas por cobrar («Deve»), um pagamento em prestações em curso e em dia («Prestações») ou alguma prestação que passou da data («Prestação em atraso»). <strong>Passe o rato por cima</strong> e aparece o total pendente e, se houver prestações, a próxima com a sua data. <strong>Só a veem quem tem permissão para ver dívidas ou pagamentos em prestações</strong>; para os restantes a marcação aparece como sempre. Junto ao ícone do pacote, fica à sua esquerda.</td>
     </tr>
+    <tr>
+      <td><strong>Etiqueta azul «Primeira visita»</strong>, em baixo à direita</td>
+      <td>A ficha do cliente está <strong>por completar</strong>: foi criada ao marcar, só com nome, apelidos e telemóvel. Não é a estrela laranja, que se calcula sozinha e diz que é a primeira marcação no centro. Um cliente de primeira visita não tem dívidas nem saldo, por isso esta etiqueta ocupa o lugar de «Deve» e «Tem». Desaparece sozinha ao guardar a ficha completa.</td>
+    </tr>
+    <tr>
+      <td><strong>Etiqueta verde «Tem 45,00 €»</strong>, em baixo à direita</td>
+      <td>O cliente tem <strong>saldo a favor</strong> (de uma devolução). É o montante que tem disponível e que lhe é oferecido como forma de pagamento ao cobrar. Veem-no quem pode ver fichas ou cobrar. Se além disso deve alguma coisa, fica à esquerda de «Deve». Na ficha do cliente, o aviso verde de saldo diz o mesmo.</td>
+    </tr>
     <tr><td><strong>Setas em círculo</strong> junto ao nome</td><td>A marcação pertence a uma série que
       <a href="#agenda-repetir">se repete</a>.</td></tr>
     <tr><td><strong>Visto verde</strong></td><td>A marcação está confirmada.</td></tr>
@@ -1608,6 +1622,11 @@ footer{
 
   <p>
     No histórico, o serviço que foi saldado com um bónus leva um pequeno ícone de talão junto ao nome (ao passar o rato diz «Pago com bónus»); o que não o leva foi cobrado à parte. Vê-o também quem não pode ver os valores, porque não é dinheiro, e serve para contar de relance as sessões que saíram do bónus.
+  </p>
+
+  <h3 id="clientes-menores">Clientes menores de idade: o representante legal</h3>
+  <p>
+    Quando a data de nascimento diz que o cliente <strong>ainda não fez 18 anos</strong>, a ficha mostra sozinha a secção <em>Dados do representante legal</em>: parentesco, nome, apelidos, morada, telefone, tipo e número de documento e email. Num adulto, ou sem data de nascimento, a secção não aparece. Na ficha do menor, se ainda não houver representante, avisa. Como são dados de contacto de outra pessoa, só os vê e altera quem tem a permissão «Ver telefones e emails». Ao apagar os dados de um cliente que o pede, apagam-se também.
   </p>
 
   <h3 id="clientes-notas">As notas da ficha</h3>
@@ -1803,6 +1822,10 @@ footer{
   </p>
 
   <p>
+    <strong>Uma promoção de um serviço vai na sua linha.</strong> Cada linha do talão (serviço, produto, pacote ou conjunto) tem a sua casa <em>Desc.</em>: 20 % nas virilhas desconta só as virilhas, e as axilas mantêm o preço. O desconto do talão, se houver, aplica-se depois sobre o que resta. No talão e na fatura a linha mostra o desconto total que leva: 20 % da promoção e 10 % do talão aparecem como 28 %.
+  </p>
+
+  <p>
     <strong>O caminho curto é a partir da agenda.</strong> Abra a marcação e prima <em>Cobrar</em>: o TPV abre-se
     com o cliente, o profissional e os serviços dessa marcação já preenchidos. Só falta dizer como paga. E ao cobrar, a
     marcação fica assinalada como cobrada — é o ícone de euro da grelha.
@@ -1956,6 +1979,21 @@ footer{
       do servidor, o aviso traz uma <strong>referência</strong> de oito letras e números: com ela, o
       suporte encontra exatamente o que aconteceu.</p>
   </div>
+
+  <h3 id="promociones">Promoções</h3>
+  <span class="ruta">Menu → Catálogo → Promoções</span>
+
+  <p>
+    Uma promoção é uma <strong>frase que o TPV lembra a quem cobra</strong> enquanto dura: «20 % em virilhas e axilas até ao fim do mês», «segunda sessão de pressoterapia a metade do preço». Cria-se com a frase e duas datas, <strong>Desde</strong> e <strong>Até</strong>, ambas incluídas. Enquanto estiver em vigor, aparece no topo do TPV numa caixa azul, para que ninguém se esqueça de a aplicar.
+  </p>
+
+  <p>
+    A promoção <strong>não desconta nada por si só</strong>: é um lembrete. O desconto põe-se na linha do serviço, produto ou pacote com a percentagem da linha, ou no talão inteiro, como sempre. A lista marca cada promoção como <em>Em vigor</em>, <em>Próxima</em> ou <em>Terminada</em>; as terminadas ficam como histórico, e podem editar-se ou apagar-se se já não se quiserem.
+  </p>
+
+  <p>
+    Geri-las pede a permissão <a href="#perm-promotions-manage">«Gerir promoções»</a>, que de origem tem a Direção (e o administrador, que tem tudo). Ver o lembrete no TPV não pede mais do que poder cobrar. É um módulo próprio, <strong>Promoções</strong>, ligado de origem nos centros novos; precisa de Caixa.
+  </p>
 
   <h3 id="cobrar-bono">Cobrar com pacote de sessões</h3>
   <p>
@@ -3055,7 +3093,7 @@ footer{
     <li><strong>Catálogo.</strong> <a href="#perm-services-view">«Ver os serviços»</a> mostra os serviços e os seus preços;
       <a href="#perm-services-write">«Criar e editar os serviços»</a> é o que permite alterá-los. Só com permissão de ver, os botões de criar, editar e retirar aparecem desligados ou não aparecem. Escolher serviços com os botões rápidos ao marcar uma consulta não precisa de ver o catálogo: é outra permissão,
       <a href="#perm-services-quick-pick">“Seleção rápida de serviços”</a>.</li>
-    <li><strong>Caixa.</strong> Cobrar é <a href="#perm-checkout-charge">«Cobrar na caixa»</a>; aplicar um desconto, <a href="#perm-checkout-discount">«Aplicar descontos»</a>; deixar algo em dívida, <a href="#perm-checkout-debt">«Deixar em dívida»</a>; devolver um ticket, <a href="#perm-checkout-refund">«Devolver um ticket»</a>; ver o cobrado hoje e no mês no Início,
+    <li><strong>Caixa.</strong> Cobrar é <a href="#perm-checkout-charge">«Cobrar na caixa»</a>; aplicar um desconto, <a href="#perm-checkout-discount">«Aplicar descontos»</a>; deixar algo em dívida, <a href="#perm-checkout-debt">«Deixar em dívida»</a>; tirar o talão, <a href="#perm-checkout-print-ticket">«Imprimir talões»</a>; dar um orçamento, <a href="#perm-checkout-budget">«Dar orçamentos»</a>; devolver um ticket, <a href="#perm-checkout-refund">«Devolver um ticket»</a>; ver o cobrado hoje e no mês no Início,
       <a href="#perm-dashboard-cash">«Ver a caixa no Início»</a>. Ninguém da receção reabre uma caixa fechada sem <a href="#perm-cash-reopen">«Reabrir uma caixa fechada»</a>.</li>
     <li><strong>Manutenção.</strong> <a href="#perm-maintenance-view">«Ver a manutenção»</a> lê as ordens; abrir uma é
       <a href="#perm-maintenance-report">«Avisar de um problema»</a>; levá-la de um estado para outro é <a href="#perm-maintenance-manage">«Gerir as ordens»</a>; dá-la por fechada,
@@ -3107,7 +3145,7 @@ footer{
   <h3 id="roles-modulo">Uma permissão depende dos módulos do centro</h3>
 
   <p>
-    Cada permissão pertence a um módulo: agenda, clientes, caixa, faturação, pessoal, manutenção, etc. O ecrã das funções <strong>só mostra as permissões dos módulos que o centro tem ligados</strong>, e se um módulo for desligado depois, as suas permissões deixam de servir a toda a gente, incluindo o administrador, tenham as funções que tenham. Alguns módulos precisam de outros: a agenda, a caixa e o processo clínico precisam de Clientes; a agenda e a caixa, de Catálogo; a faturação, de Caixa; o portal, de Agenda; e o IoT vive dentro de Manutenção. Ativações e IoT não vêm ligados de origem. Se sentir a falta das permissões de uma parte da aplicação, o primeiro passo é ver se o centro tem esse módulo.
+    Cada permissão pertence a um módulo: agenda, clientes, caixa, faturação, pessoal, manutenção, etc. O ecrã das funções <strong>só mostra as permissões dos módulos que o centro tem ligados</strong>, e se um módulo se desligar depois, as suas permissões deixam de servir a toda a gente, incluindo o administrador, tenham os papéis que tiverem. Alguns módulos precisam de outros: a agenda, a caixa e a história clínica precisam de Clientes; a agenda e a caixa, de Catálogo; a faturação e as promoções, de Caixa; o portal, de Agenda; e IoT vive dentro de Manutenção. Ativações e IoT não vêm ligados de origem. Se lhe faltam as permissões de uma parte da aplicação, a primeira coisa a ver é se o centro tem esse módulo.
   </p>
 
   <h3 id="roles-sesion">O que acontece ao alterar permissões</h3>
@@ -3218,6 +3256,9 @@ footer{
     <tr id="perm-checkout-charge"><td><strong>Cobrar no TPV</strong></td><td>Abre a caixa e permite fechar uma cobrança.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
     <tr id="perm-checkout-discount"><td><strong>Aplicar descontos</strong></td><td>Ativa o campo de desconto dentro da cobrança.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
     <tr id="perm-checkout-debt"><td><strong>Deixar em dívida</strong></td><td>Permite fechar uma cobrança deixando um valor por pagar, em vez de a cobrar por inteiro. Esse valor aparece depois em «Ver os valores em dívida».</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
+    <tr id="perm-checkout-print-ticket"><td><strong>Imprimir talões</strong></td><td>Permite tirar o talão de um pagamento: ao cobrar no TPV, ao saldar uma dívida e a partir do histórico do cliente.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
+    <tr id="perm-checkout-budget"><td><strong>Dar orçamentos</strong></td><td>Permite tirar do TPV o orçamento do que está no talão, impresso ou por WhatsApp.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
+    <tr id="perm-promotions-manage"><td><strong>Gerir promoções</strong></td><td>Permite criar, alterar e apagar as promoções do centro: a frase que o TPV mostra entre duas datas.</td><td><a href="#rol-direccion">Direção</a></td></tr>
     <tr id="perm-checkout-refund"><td><strong>Reembolsar um talão</strong></td><td>Permite usar o botão de devolver linhas de um ticket já cobrado, em dinheiro ou como saldo a favor.</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-caja">Caixa</a></td></tr>
     <tr id="perm-dashboard-customers"><td><strong>Ver os clientes no Início</strong></td><td>Mostra no Início o cartão com os clientes registados este mês e os últimos que chegaram. Não abre as fichas: isso continua em “Ver as fichas de clientes”.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a></td></tr>
     <tr id="perm-dashboard-birthdays"><td><strong>Ver os aniversários no Início</strong></td><td>Mostra no Início o cartão com os aniversários da semana, com o nome e a data. Dar os parabéns por WhatsApp precisa também de “Ver telefones e emails”.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-direccion">Direção</a></td></tr>
@@ -3377,6 +3418,8 @@ footer{
         <li class="rc-perm"><a href="#perm-checkout-charge">Cobrar no TPV</a><span class="rc-desc">Abre a caixa e permite fechar uma cobrança.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Aplicar descontos</a><span class="rc-desc">Ativa o campo de desconto dentro da cobrança.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Deixar em dívida</a><span class="rc-desc">Permite fechar uma cobrança deixando um valor por pagar, em vez de a cobrar por inteiro.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-print-ticket">Imprimir talões</a><span class="rc-desc">Permite tirar o talão de um pagamento.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-budget">Dar orçamentos</a><span class="rc-desc">Permite tirar do TPV o orçamento, impresso ou por WhatsApp.</span></li>
         <li class="rc-perm"><a href="#perm-dashboard-cash">Ver a caixa no Início</a><span class="rc-desc">Mostra no Início o cartão com o cobrado hoje e no mês, por forma de pagamento. Não abre o TPV nem o relatório de caixa: isso continua em «Cobrar no TPV» e «Totais do dia».</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">Ver os valores em dívida</a><span class="rc-desc">Abre o ecrã de valores em dívida.</span></li>
         <li class="rc-perm"><a href="#perm-debts-settle">Liquidar uma dívida</a><span class="rc-desc">Permite usar o botão de saldar uma dívida.</span></li>
@@ -3495,6 +3538,9 @@ footer{
         <li class="rc-perm"><a href="#perm-checkout-charge">Cobrar no TPV</a><span class="rc-desc">Abre a caixa e permite fechar uma cobrança.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Aplicar descontos</a><span class="rc-desc">Ativa o campo de desconto dentro da cobrança.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Deixar em dívida</a><span class="rc-desc">Permite fechar uma cobrança deixando um valor por pagar, em vez de a cobrar por inteiro.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-print-ticket">Imprimir talões</a><span class="rc-desc">Permite tirar o talão de um pagamento.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-budget">Dar orçamentos</a><span class="rc-desc">Permite tirar do TPV o orçamento, impresso ou por WhatsApp.</span></li>
+        <li class="rc-perm"><a href="#perm-promotions-manage">Gerir promoções</a><span class="rc-desc">Cria, altera e apaga as promoções que o TPV mostra entre duas datas.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-refund">Reembolsar um talão</a><span class="rc-desc">Permite usar o botão de devolver linhas de um ticket já cobrado, em dinheiro ou como saldo a favor.</span></li>
         <li class="rc-perm"><a href="#perm-dashboard-cash">Ver a caixa no Início</a><span class="rc-desc">Mostra no Início o cartão com o cobrado hoje e no mês, por forma de pagamento. Não abre o TPV nem o relatório de caixa: isso continua em «Cobrar no TPV» e «Totais do dia».</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">Ver os valores em dívida</a><span class="rc-desc">Abre o ecrã de valores em dívida.</span></li>
@@ -3774,6 +3820,8 @@ footer{
         <li class="rc-perm"><a href="#perm-checkout-charge">Cobrar no TPV</a><span class="rc-desc">Abre a caixa e permite fechar uma cobrança.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-discount">Aplicar descontos</a><span class="rc-desc">Ativa o campo de desconto dentro da cobrança.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-debt">Deixar em dívida</a><span class="rc-desc">Permite fechar uma cobrança deixando um valor por pagar, em vez de a cobrar por inteiro.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-print-ticket">Imprimir talões</a><span class="rc-desc">Permite tirar o talão de um pagamento.</span></li>
+        <li class="rc-perm"><a href="#perm-checkout-budget">Dar orçamentos</a><span class="rc-desc">Permite tirar do TPV o orçamento, impresso ou por WhatsApp.</span></li>
         <li class="rc-perm"><a href="#perm-checkout-refund">Reembolsar um talão</a><span class="rc-desc">Permite usar o botão de devolver linhas de um ticket já cobrado, em dinheiro ou como saldo a favor.</span></li>
         <li class="rc-perm"><a href="#perm-dashboard-cash">Ver a caixa no Início</a><span class="rc-desc">Mostra no Início o cartão com o cobrado hoje e no mês, por forma de pagamento. Não abre o TPV nem o relatório de caixa: isso continua em «Cobrar no TPV» e «Totais do dia».</span></li>
         <li class="rc-perm"><a href="#perm-debts-view">Ver os valores em dívida</a><span class="rc-desc">Abre o ecrã de valores em dívida.</span></li>
@@ -4001,6 +4049,9 @@ footer{
     <tr><td><a href="#perm-checkout-charge">Cobrar no TPV</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
     <tr><td><a href="#perm-checkout-discount">Aplicar descontos</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
     <tr><td><a href="#perm-checkout-debt">Deixar em dívida</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
+    <tr><td><a href="#perm-checkout-print-ticket">Imprimir talões</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
+    <tr><td><a href="#perm-checkout-budget">Dar orçamentos</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
+    <tr><td><a href="#perm-promotions-manage">Gerir promoções</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td></td></tr>
     <tr><td><a href="#perm-checkout-refund">Reembolsar um talão</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
     <tr><td><a href="#perm-dashboard-cash">Ver a caixa no Início</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
     <tr><td><a href="#perm-debts-view">Ver os valores em dívida</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caixa</a></td></tr>
@@ -4415,7 +4466,13 @@ footer{
     Quem assina tem de perceber o que assina. Ao criar ou alterar um modelo, por baixo do texto principal
     está <em>Texto noutros idiomas</em>: uma secção por idioma, opcional, com o seu nome e o seu texto. Os campos
     escrevem-se igual em todos, com o seu nome em espanhol: <code>{{cliente}}</code>, <code>{{nif}}</code>,
-    <code>{{centro}}</code>, <code>{{fecha}}</code> e <code>{{tratamiento}}</code>.
+    <code>{{centro}}</code>, <code>{{fecha}}</code>, <code>{{tratamiento}}</code>, <code>{{representante}}</code>,
+    <code>{{representante_documento}}</code> e <code>{{representante_parentesco}}</code>.
+  </p>
+  <p>
+    <strong>Clientes menores de idade.</strong> Se a data de nascimento diz que o cliente ainda não fez 18 anos, assina o seu representante legal, e o Turnera trata disso sozinho: o tablet diz «Assina Marta Gil (mãe) como representante legal de…» e o PDF assinado leva, por baixo do cliente, um bloco <em>Representante legal</em> com o nome, parentesco e documento, mesmo que o modelo não tenha esses espaços. Os espaços
+    <code>{{representante}}</code>, <code>{{representante_documento}}</code> e
+    <code>{{representante_parentesco}}</code> servem para o nomear também dentro do texto; num adulto aparecem com um traço. Se o menor ainda não tem representante na ficha, não se pode pedir a assinatura: o aviso diz para o preencher antes.
   </p>
   <ul>
     <li>Se o cliente tiver na ficha um idioma em que o modelo está escrito, o tablet mostra-lhe esse texto, e também os botões e o aviso de baixo estão no seu idioma. O PDF assinado sai igual.</li>
