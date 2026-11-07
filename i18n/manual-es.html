@@ -1315,6 +1315,12 @@ footer{
       ficha, como la del bono o la de «Debe», con el cliente y la hora arriba, sus servicios uno por línea y, debajo,
       el profesional, el estado y los avisos de la cita. Sobre la etiqueta del bono o de «Debe» sale la ficha de esa
       etiqueta.</li>
+    <li><strong>Devolver una cita a un horario anterior:</strong> una cita que se ha movido alguna vez (de día, de hora,
+      de profesional o de cabina) lleva un reloj junto a su hora. Al pulsarlo se abre su historial: dónde está ahora y
+      los horarios por los que ha pasado, cada uno con cuándo y quién la movió de ahí y el botón <em>Volver aquí</em>.
+      Volver es un movimiento como arrastrarla, con las mismas comprobaciones: si el hueco está ocupado o el profesional
+      no trabaja a esa hora, lo dice. No avisa al cliente, porque se hace cuando él lo pide. El historial empieza a
+      contar con esta versión de Turnera; las citas movidas antes no tienen reloj.</li>
     <li><strong>Días pasados:</strong> se puede ir a cualquier día anterior para mirarlo, abrir sus citas,
       cobrarlas o marcar quién no vino. Lo que no se puede es <strong>poner una cita nueva ni llevar una a un día
       anterior a hoy</strong>: la agenda lo dice al pulsar un hueco, y el calendario de la cita no deja elegir esos
@@ -3592,11 +3598,11 @@ footer{
     <tr id="perm-dashboard-customers"><td><strong>Ver los clientes en el Inicio</strong></td><td>Muestra en el Inicio la tarjeta con los clientes dados de alta este mes y los últimos que han llegado. No abre las fichas: eso sigue en «Ver las fichas de clientes».</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a></td></tr>
     <tr id="perm-dashboard-birthdays"><td><strong>Ver los cumpleaños en el Inicio</strong></td><td>Muestra en el Inicio la tarjeta con los cumpleaños de la semana, con el nombre y la fecha. Felicitar por WhatsApp necesita además «Ver teléfonos y correos».</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a></td></tr>
     <tr id="perm-dashboard-cash"><td><strong>Ver la caja en el Inicio</strong></td><td>Muestra en el Inicio la tarjeta con lo cobrado hoy y en el mes, por forma de pago. No abre el TPV ni el informe de caja: eso sigue en «Cobrar en el TPV» y «Totales del día».</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
-    <tr id="perm-debts-view"><td><strong>Ver los cobros pendientes</strong></td><td>Abre la pantalla de cobros pendientes. Saldar una deuda es un permiso aparte: «Saldar una deuda».</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
+    <tr id="perm-debts-view"><td><strong>Ver los cobros pendientes</strong></td><td>Abre la pantalla de cobros pendientes y deja ver de qué servicios es cada deuda. Saldar una deuda es un permiso aparte: «Saldar una deuda».</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-debts-settle"><td><strong>Saldar una deuda</strong></td><td>Permite usar el botón de saldar una deuda.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-cash-close"><td><strong>Cuadrar y cerrar la caja</strong></td><td>Abre la caja del día para contar el efectivo y los resguardos de tarjeta, y permite cerrarla.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-cash-reopen"><td><strong>Reabrir una caja cerrada</strong></td><td>Permite volver a abrir la caja de un día ya cerrado para corregirla. Queda registrado quién la reabrió.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
-    <tr id="perm-visits-view"><td><strong>Ver las visitas cobradas</strong></td><td>Consulta las visitas ya cobradas y su detalle.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
+    <tr id="perm-visits-view"><td><strong>Ver las visitas cobradas</strong></td><td>Consulta las visitas ya cobradas y su detalle.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-vouchers-view"><td><strong>Ver los bonos de clientes</strong></td><td>Muestra los bonos y las sesiones que quedan en cada uno.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-vouchers-transfer"><td><strong>Traspasar un bono</strong></td><td>Pasa sesiones de un bono a otra persona.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
     <tr id="perm-vouchers-manage"><td><strong>Gestión de bonos</strong></td><td>Permite corregir y borrar bonos y descontar sesiones a mano.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-caja">Caja</a></td></tr>
@@ -3756,7 +3762,6 @@ footer{
         <li class="rc-perm"><a href="#perm-debts-view">Ver los cobros pendientes</a><span class="rc-desc">Abre la pantalla de cobros pendientes.</span></li>
         <li class="rc-perm"><a href="#perm-debts-settle">Saldar una deuda</a><span class="rc-desc">Permite usar el botón de saldar una deuda.</span></li>
         <li class="rc-perm"><a href="#perm-cash-close">Cuadrar y cerrar la caja</a><span class="rc-desc">Abre la caja del día para contar el efectivo y los resguardos de tarjeta, y permite cerrarla.</span></li>
-        <li class="rc-perm"><a href="#perm-visits-view">Ver las visitas cobradas</a><span class="rc-desc">Consulta las visitas ya cobradas y su detalle.</span></li>
         <li class="rc-perm"><a href="#perm-vouchers-view">Ver los bonos de clientes</a><span class="rc-desc">Muestra los bonos y las sesiones que quedan en cada uno.</span></li>
         <li class="rc-perm"><a href="#perm-gift-cards-view">Ver las tarjetas regalo</a><span class="rc-desc">Consulta las tarjetas regalo vendidas, su saldo y lo que queda por gastar entre todas.</span></li>
         <li class="rc-perm"><a href="#perm-gift-cards-sell">Vender tarjetas regalo</a><span class="rc-desc">Permite vender una tarjeta regalo, imprimirla y enviarla por correo.</span></li>
@@ -4395,7 +4400,7 @@ footer{
     <tr><td><a href="#perm-debts-settle">Saldar una deuda</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
     <tr><td><a href="#perm-cash-close">Cuadrar y cerrar la caja</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
     <tr><td><a href="#perm-cash-reopen">Reabrir una caja cerrada</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
-    <tr><td><a href="#perm-visits-view">Ver las visitas cobradas</a></td><td class="marca">✓</td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
+    <tr><td><a href="#perm-visits-view">Ver las visitas cobradas</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
     <tr><td><a href="#perm-vouchers-view">Ver los bonos de clientes</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
     <tr><td><a href="#perm-vouchers-transfer">Traspasar un bono</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>
     <tr><td><a href="#perm-vouchers-manage">Gestión de bonos</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-caja">Caja</a></td></tr>

@@ -1896,7 +1896,7 @@
   "t59b8c96c": "Ver a caixa no Início",
   "t1db2c357": "Mostra no Início o cartão com o cobrado hoje e no mês, por forma de pagamento. Não abre o TPV nem o relatório de caixa: isso continua em «Cobrar no TPV» e «Totais do dia».",
   "tb4b0e86e": "Ver os valores em dívida",
-  "t0d3bbc28": "Abre o ecrã dos valores em dívida. Saldar uma dívida é uma permissão à parte: «Saldar uma dívida».",
+  "t0d3bbc28": "Abre o ecrã dos valores em dívida. Liquidar uma dívida é uma permissão à parte: «Liquidar uma dívida».",
   "t9fa9401d": "Liquidar uma dívida",
   "t4d5bbf2b": "Permite usar o botão de saldar uma dívida.",
   "tcfb9208e": "Acertar e fechar a caixa",
@@ -3985,5 +3985,10 @@
   "t6ee4fc1a": "com o nome, parentesco e documento, mesmo que o modelo não tenha esses espaços. Os espaços",
   "tf519ebff": "servem para o nomear também dentro do texto; num adulto aparecem com um traço. Se o menor ainda não tem representante na ficha, não se pode pedir a assinatura: o aviso diz para o preencher antes.",
   "t4ebadd6e": "Clientes menores de idade.",
-  "t47af342a": "Representante legal"
+  "t47af342a": "Representante legal",
+  "t9af4de9d": "uma marcação que já foi movida alguma vez (de dia, de hora, de profissional ou de cabine) tem um relógio junto à hora. Ao clicar abre-se o seu histórico: onde está agora e os horários por onde passou, cada um com quando e quem a moveu dali e o botão",
+  "t7178eda5": ". Voltar é um movimento como arrastá-la, com as mesmas verificações: se o espaço estiver ocupado ou o profissional não trabalhar a essa hora, avisa. Não avisa o cliente, porque se faz quando ele o pede. O histórico começa a contar com esta versão do Turnera; as marcações movidas antes não têm relógio.",
+  "tbf938f88": "Devolver uma marcação a um horário anterior:",
+  "t126bcb08": "Voltar aqui",
+  "tfcd2ccfb": "Abre o ecrã dos valores em dívida e mostra de que serviços é cada dívida. Saldar uma dívida é uma permissão à parte: «Saldar uma dívida»."
 }

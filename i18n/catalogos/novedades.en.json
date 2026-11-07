@@ -1210,5 +1210,13 @@
   "t7fcb5531": "If that makes the appointment reach the next one of the same professional or room, it warns you: there would not be time to do everything in that appointment.",
   "tff14c127": "Permissions to print receipts and give quotes",
   "t6423a372": "Print receipts and Give quotes are now permissions of their own, so each role can decide who may print the receipt or the quote. By default Reception and Management have them, so nobody notices the change until the centre adjusts it.",
-  "t43b06ecd": "The price lookup no longer shows consumable products, which are for internal use and not for sale."
+  "t43b06ecd": "The price lookup no longer shows consumable products, which are for internal use and not for sale.",
+  "tb0ff9589": "November 7, 2026",
+  "t3d8825e4": "1.12.0-0c9ff28",
+  "t9f5fdee6": "Diary: moving an appointment back to an earlier time",
+  "t4aa0de6a": "An appointment that has been moved to another day, time, practitioner or room carries a clock next to its time.",
+  "t76ba36bb": "Clicking it opens its history: where it is now and the times it has been at, with when and by whom it was moved from each one.",
+  "t2e67d239": "Each time has a Move back here button, which returns it to that place with the same checks as dragging it. It does not notify the client, because it is done when the client asks for it.",
+  "t24b86f16": "The history starts counting with this version: appointments moved before have no clock.",
+  "t6b89bdad": "When settling an outstanding payment, anyone with the See outstanding payments permission (like Reception out of the box) now sees which services the debt is for. Before, only those who could look up every paid visit saw it."
 }

@@ -3985,5 +3985,10 @@
   "t6ee4fc1a": "with their name, relationship and ID document, even if the template has no such gaps. The gaps",
   "tf519ebff": "are for naming them inside the text too; for an adult they come out as a dash. If the minor has no guardian in their record yet, the signature cannot be requested: the notice says to fill it in first.",
   "t4ebadd6e": "Under-age customers.",
-  "t47af342a": "Legal guardian"
+  "t47af342a": "Legal guardian",
+  "t9af4de9d": "an appointment that has been moved at some point (to another day, time, practitioner or room) carries a clock next to its time. Clicking it opens its history: where it is now and the times it has been at, each with when and by whom it was moved from there, and the",
+  "t7178eda5": " button. Moving back is a move like dragging it, with the same checks: if the slot is taken or the practitioner does not work at that time, it says so. It does not notify the client, because it is done when the client asks for it. The history starts counting with this version of Turnera; appointments moved before have no clock.",
+  "tbf938f88": "Move an appointment back to an earlier time:",
+  "t126bcb08": "Move back here",
+  "tfcd2ccfb": "Opens the outstanding payments screen and shows which services each debt is for. Settling a debt is a separate permission: “Settle a debt”."
 }

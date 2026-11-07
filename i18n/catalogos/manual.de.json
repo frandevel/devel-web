@@ -3985,5 +3985,10 @@
   "t6ee4fc1a": "mit Name, Verwandtschaft und Ausweis, auch wenn die Vorlage diese Platzhalter nicht hat. Die Platzhalter",
   "tf519ebff": "dienen dazu, ihn auch im Text zu nennen; bei Erwachsenen erscheint ein Strich. Hat der Minderjährige noch keinen Vertreter in seiner Karte, kann die Unterschrift nicht angefordert werden: Der Hinweis sagt, dass er zuerst eingetragen werden muss.",
   "t4ebadd6e": "Minderjährige Kunden.",
-  "t47af342a": "Gesetzlicher Vertreter"
+  "t47af342a": "Gesetzlicher Vertreter",
+  "t9af4de9d": "ein Termin, der schon einmal verschoben wurde (auf einen anderen Tag, eine andere Uhrzeit, einen anderen Behandler oder eine andere Kabine), trägt eine Uhr neben seiner Uhrzeit. Ein Klick darauf öffnet seinen Verlauf: wo er jetzt ist und die Zeiten, zu denen er schon lag, jeweils mit wann und von wem er von dort verschoben wurde, und die Schaltfläche",
+  "t7178eda5": ". Zurückverschieben ist eine Verschiebung wie das Ziehen, mit denselben Prüfungen: Ist der Platz belegt oder arbeitet der Behandler zu dieser Zeit nicht, wird es angezeigt. Der Kunde wird nicht benachrichtigt, weil es auf seinen Wunsch geschieht. Der Verlauf beginnt mit dieser Version von Turnera; vorher verschobene Termine haben keine Uhr.",
+  "tbf938f88": "Einen Termin auf eine frühere Zeit zurücksetzen:",
+  "t126bcb08": "Hierher zurück",
+  "tfcd2ccfb": "Öffnet die Ansicht der offenen Beträge und zeigt, für welche Leistungen jede Schuld ist. Eine Schuld begleichen ist eine eigene Berechtigung: „Eine Schuld begleichen“."
 }

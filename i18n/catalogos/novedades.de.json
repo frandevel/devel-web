@@ -1210,5 +1210,13 @@
   "t7fcb5531": "Reicht der Termin dadurch bis zum nächsten derselben Fachkraft oder derselben Kabine, kommt ein Hinweis: Es wäre keine Zeit, alles in diesem Termin zu machen.",
   "tff14c127": "Berechtigungen zum Drucken von Belegen und für Kostenvoranschläge",
   "t6423a372": "Belege drucken und Kostenvoranschläge erstellen sind jetzt eigene Berechtigungen, damit man je Rolle entscheiden kann, wer den Beleg oder den Kostenvoranschlag ausgeben darf. Ab Werk haben sie Empfang und Leitung, sodass niemand die Änderung bemerkt, bis der Betrieb sie anpasst.",
-  "t43b06ecd": "Die Preisabfrage zeigt keine Verbrauchsprodukte mehr, die für den internen Gebrauch sind und nicht verkauft werden."
+  "t43b06ecd": "Die Preisabfrage zeigt keine Verbrauchsprodukte mehr, die für den internen Gebrauch sind und nicht verkauft werden.",
+  "tb0ff9589": "7. November 2026",
+  "t3d8825e4": "1.12.0-0c9ff28",
+  "t9f5fdee6": "Kalender: einen Termin auf eine frühere Zeit zurücksetzen",
+  "t4aa0de6a": "Ein Termin, der auf einen anderen Tag, eine andere Uhrzeit, einen anderen Behandler oder eine andere Kabine verschoben wurde, trägt eine Uhr neben seiner Uhrzeit.",
+  "t76ba36bb": "Ein Klick darauf öffnet seinen Verlauf: wo er jetzt ist und die Zeiten, zu denen er schon lag, jeweils mit wann und von wem er von dort verschoben wurde.",
+  "t2e67d239": "Jede Zeit hat die Schaltfläche Hierher zurück, die ihn mit denselben Prüfungen wie beim Ziehen dorthin zurücksetzt. Der Kunde wird nicht benachrichtigt, weil es auf seinen Wunsch geschieht.",
+  "t24b86f16": "Der Verlauf beginnt mit dieser Version: Vorher verschobene Termine haben keine Uhr.",
+  "t6b89bdad": "Beim Begleichen eines offenen Betrags sieht jetzt jeder mit der Berechtigung Offene Beträge ansehen (wie der Empfang ab Werk), für welche Leistungen die Schuld ist. Vorher sahen es nur Personen, die alle bezahlten Besuche einsehen durften."
 }

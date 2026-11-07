@@ -1210,5 +1210,13 @@
   "t7fcb5531": "Se com isso a marcação chegar à seguinte do mesmo profissional ou da mesma cabine, avisa: não daria tempo para fazer tudo nessa marcação.",
   "tff14c127": "Permissões para imprimir talões e dar orçamentos",
   "t6423a372": "Imprimir talões e Dar orçamentos são agora permissões próprias, para decidir em cada papel quem pode tirar o talão ou o orçamento. De origem têm-nas a Receção e a Direção, por isso ninguém nota a mudança até o centro a ajustar.",
-  "t43b06ecd": "A consulta de preços já não mostra os produtos consumíveis, que são de uso interno e não se vendem."
+  "t43b06ecd": "A consulta de preços já não mostra os produtos consumíveis, que são de uso interno e não se vendem.",
+  "tb0ff9589": "7 de novembro de 2026",
+  "t3d8825e4": "1.12.0-0c9ff28",
+  "t9f5fdee6": "Agenda: devolver uma marcação a um horário anterior",
+  "t4aa0de6a": "Uma marcação que foi movida de dia, de hora, de profissional ou de cabine tem um relógio junto à hora.",
+  "t76ba36bb": "Ao clicar abre-se o seu histórico: onde está agora e os horários por onde passou, com quando e quem a moveu de cada um.",
+  "t2e67d239": "Cada horário tem o botão Voltar aqui, que a devolve a esse lugar com as mesmas verificações que ao arrastá-la. Não avisa o cliente, porque se faz quando ele o pede.",
+  "t24b86f16": "O histórico começa a contar com esta versão: as marcações movidas antes não têm relógio.",
+  "t6b89bdad": "Ao liquidar um valor em dívida, quem tem a permissão Ver os valores em dívida (como a Receção de origem) já vê de que serviços é a dívida. Antes só o via quem podia consultar todas as visitas cobradas."
 }
