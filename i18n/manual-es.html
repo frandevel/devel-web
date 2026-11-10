@@ -720,6 +720,10 @@ footer{
     <li><a href="#calendario-cerrar" class="sub sub">Cerrar el año</a></li>
     <li><a href="#calendario-ausencias-parciales" class="sub sub">Ausencias parciales</a></li>
     <li><a href="#mi-calendario" class="sub sub">Lo que ve cada profesional</a></li>
+    <li><a href="#nominas" class="sub">Nóminas y certificados</a></li>
+    <li><a href="#nominas-asesoria" class="sub sub">Que la suba la asesoría</a></li>
+    <li><a href="#mis-documentos" class="sub sub">Mis documentos</a></li>
+    <li><a href="#laboral-configuracion" class="sub sub">Qué partes de Laboral usa el centro</a></li>
     <li><a href="#historia">11. La historia clínica</a></li>
     <li><a href="#historia-anular" class="sub">Borrar o anular una evolución</a></li>
     <li><a href="#historia-mapa" class="sub">Marcar dónde duele: el mapa anatómico</a></li>
@@ -1301,9 +1305,14 @@ footer{
       y el profesional ya puestos; sólo falta el cliente y el servicio.</li>
     <li><strong>Cliente nuevo que llama por teléfono:</strong> mientras no se ha elegido cliente, bajo el buscador sale
       <em>+ Nuevo cliente</em>. Abre una ficha de <strong>primera visita</strong> que solo pide nombre, apellidos y
-      móvil, y deja al cliente puesto en la cita. El resto de la ficha (documento, fecha de nacimiento, correo...) se
+      móvil (el DNI es opcional: hay quien no lo da por teléfono), y deja al cliente puesto en la cita. El resto de la ficha (documento, fecha de nacimiento, correo...) se
       completa cuando llega. Mientras tanto la cita y la ficha dicen <strong>Primera visita</strong> en azul; en
-      cuanto se abre la ficha y se guardan los demás datos, el aviso desaparece solo.</li>
+      cuanto se abre la ficha y se guardan los demás datos, el aviso desaparece solo. Al escribir el móvil, y el DNI
+      si se da, se comprueba si ya son de otra ficha (da igual cómo estén escritos: con espacios, con +34, con puntos o
+      guiones...). Si lo son, sale quién es, si coincide el teléfono, el documento o los dos, con el botón
+      <em>Usar esta ficha</em>; la primera visita no se da de alta salvo que se marque <em>Es otra persona con el
+      mismo teléfono o documento</em> (una madre y su hija, o un menor con el DNI de su madre). Al dar de alta una ficha
+      completa desde Clientes sale el mismo aviso, aunque ahí no impide guardar.</li>
     <li><strong>Abrir una cita:</strong> púlsela.</li>
     <li><strong>La clienta de antes, a un clic:</strong> al pulsar la caja del cliente sin escribir nada salen los
       últimos 5 clientes con los que ha trabajado usted (en una cita, en el TPV o abriendo su ficha). Pasa igual en la
@@ -1986,6 +1995,13 @@ footer{
   </p>
 
   <p>
+    <strong>En el ticket cada línea sale a su precio.</strong> Un descuento o una rebaja de toda la cuenta va en una
+    línea aparte, <em>Descuento</em>, y debajo el total cobrado; lo mismo al cobrar una deuda. Por dentro la rebaja sí
+    se reparte entre las líneas, en proporción a su precio: así la producción de cada profesional, la devolución de
+    una línea suelta y la factura cuadran con lo que entró en caja.
+  </p>
+
+  <p>
     <strong>Una promoción de un servicio va en su línea.</strong> Cada línea del ticket (servicio, producto, bono o
     paquete) tiene su casilla <em>Dto.</em>: un 20 % en las ingles rebaja solo las ingles, y las axilas siguen a su
     precio. El descuento del ticket, si se pone, se aplica después sobre lo que queda. En el ticket y en la factura la
@@ -2014,6 +2030,28 @@ footer{
     desaparece de ella en cuanto se cobra o se deja a deber.
   </p>
 
+  <p>
+    <strong>Varias citas el mismo día, un solo ticket.</strong> Si la clienta ha venido a más de un tratamiento hoy
+    —con la misma profesional o con distintas—, no hace falta cobrarlos uno a uno. Arriba, en <em>Por cobrar</em>,
+    sale una sola tarjeta con «2 citas», «3 citas»…; al pulsarla el ticket se monta con todas, en una sola venta y con
+    un solo total. Encima de las líneas aparece la lista <em>Citas de hoy</em>: las <strong>atendidas</strong> y las
+    que están <strong>en curso</strong> entran solas, y las que aún no han empezado se ven pero sin marcar. Desmarque
+    la que no quiera cobrar ahora —se queda esperando arriba para cuando salga— o marque otra para añadirla.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/90-tpv-varias-citas.png" alt="El TPV con las citas de hoy de una clienta: dos marcadas y entradas en el ticket, y una de la tarde sin marcar" loading="lazy">
+    <figcaption>Citas de hoy de la clienta: las marcadas van al ticket, cada servicio con la profesional que lo hizo.</figcaption>
+  </figure>
+
+  <p>
+    Cada servicio queda <strong>a nombre de quien lo hizo</strong> (la línea dice <em>Lo hace: …</em>), así que la
+    producción de cada profesional sale bien aunque se cobre todo junto. La profesional elegida arriba es quien vende
+    lo demás que se añada, como un producto. El descuento de cada línea, el del ticket y el reparto del cobro
+    funcionan igual que con una sola cita. Si en alguna de las citas falta una lectura de aparatología obligatoria,
+    el cobro espera: se anota, o se desmarca esa cita. Solo se juntan las citas de <strong>hoy</strong> que no tienen
+    plaza de clase y aún no se han cobrado; las de días anteriores se cobran desde <em>Cobros pendientes</em>.
+  </p>
   <ul>
     <li><strong>Cobrar ahora</strong> marcado: se elige la forma de pago y el dinero entra en la caja de hoy.</li>
     <li><strong>Cobrar ahora</strong> sin marcar: la visita se queda como deuda y aparece en <em>Cobros
@@ -4834,7 +4872,8 @@ footer{
   <p>
     Quien firma tiene que entender lo que firma. Al crear o cambiar una plantilla, debajo del texto principal
     está <em>Texto en otros idiomas</em>: un apartado por idioma, opcional, con su nombre y su texto. Los huecos se
-    escriben igual en todos, con su nombre en español: <code>{{cliente}}</code>, <code>{{nif}}</code>,
+    escriben igual en todos, con su nombre en español: <code>{{cliente}}</code>, <code>{{codigo_cliente}}</code>
+    (el código de la ficha del cliente en Turnera), <code>{{nif}}</code>,
     <code>{{centro}}</code>, <code>{{fecha}}</code>, <code>{{tratamiento}}</code>, <code>{{representante}}</code>,
     <code>{{representante_documento}}</code> y <code>{{representante_parentesco}}</code>.
   </p>
@@ -5816,9 +5855,9 @@ footer{
   <p>
     Un fichaje no es una hora que alguien escribe, como la de una cita: es el momento exacto en que se pulsa
     el botón. Para saber a qué día y a qué tramo pertenece, la aplicación necesita saber en qué huso vive el
-    centro, y viene puesta en <strong>Europe/Madrid</strong>. Un centro fuera de la España peninsular lo
-    cambia con la variable <code>TURNERA_TZ</code> al instalar; si no, los tramos saldrían desplazados
-    aunque las horas sumadas fueran correctas.
+    centro, y viene puesta en <strong>Europe/Madrid</strong>. Es la zona de toda la instalación: la de
+    la aplicación, la de la base de datos y la de «hoy». Un centro fuera de la España peninsular va en una
+    instalación propia con la variable <code>TURNERA_TZ</code> puesta al instalar, y no se cambia después.
   </p>
 
   <h3 id="calendario-laboral">Calendario laboral</h3>
@@ -6146,6 +6185,147 @@ footer{
     su usuario vinculado a un profesional (por ejemplo con su PIN en el puesto compartido) y tiene el permiso <em>Pedir
     días de vacaciones</em>: el usuario de la oficina no es de ningún profesional. Desde ahí se piden las vacaciones
     (ver <a href="#calendario-vacaciones-pedidas">Pedir vacaciones</a>).
+  </p>
+
+
+  <h3 id="nominas">Nóminas y certificados</h3>
+  <span class="ruta">Menú → Personal → Nóminas y certificados</span>
+
+  <p>
+    La asesoría hace las nóminas; Turnera las <strong>reparte</strong>. Se sube lo que manda la asesoría, Turnera separa
+    el documento de cada profesional por su NIF, RRHH revisa a quién va cada uno y lo entrega. Cada persona lo abre en
+    Turnera y <strong>confirma que lo ha recibido</strong>, y RRHH ve en todo momento quién lo tiene y quién no. Lo mismo
+    vale para el <strong>certificado de retenciones</strong> de cada año.
+  </p>
+  <p>
+    Es parte del módulo <strong>Laboral</strong>: un apartado que el centro tiene o no tiene según lo que haya contratado,
+    y que va siempre junto con Personal. Hace falta el permiso «Repartir nóminas y certificados», que de fábrica traen
+    Dirección y RRHH. Es un permiso delicado: quien lo tiene puede abrir la nómina de cualquiera, y cada vez que lo hace
+    queda apuntado quién y cuándo.
+  </p>
+
+  <h4 id="nominas-subir">Subir y revisar</h4>
+  <ol>
+    <li>Elegir <em>Nóminas</em> o <em>Certificados de retenciones</em>, y el mes o el año.</li>
+    <li>En <em>Elegir ficheros</em>, lo que haya mandado la asesoría: <strong>un PDF con todas</strong>, <strong>varios
+      PDF</strong> (uno por persona) o <strong>un zip</strong>. Después, <em>Subir y separar</em>.</li>
+    <li>Turnera separa y enseña el resultado, sin entregar nada todavía:
+      <ul>
+        <li>En un PDF con todas, lee el NIF de cada página. Las páginas seguidas con el mismo NIF son una sola nómina, y
+          una página sin NIF va con la anterior (las nóminas de dos hojas). El CIF de la empresa no se confunde con el de
+          nadie.</li>
+        <li>En un fichero con el NIF en el nombre (<code>12345678Z.pdf</code>, <code>nomina_12345678Z_octubre.pdf</code>),
+          el fichero entero es de esa persona, y además se comprueba que <strong>dentro</strong> ponga el mismo NIF.</li>
+      </ul>
+    </li>
+    <li>Lo que tiene dudas sale arriba, en naranja, y <strong>no se entrega a nadie</strong> hasta que se asigna a mano
+      o se descarta: un NIF que no es de ningún profesional, una página sin NIF, un fichero cuyo nombre dice un NIF y
+      dentro pone otro, o un PDF escaneado sin texto. Con <em>Ver</em> se abre el documento para comprobarlo.</li>
+    <li>Debajo se avisa de quién se ha quedado <strong>sin documento</strong> en esa carga, por si falta alguno, y de
+      quién tiene <strong>más de uno</strong> (una paga extra aparte, por ejemplo).</li>
+  </ol>
+  <p>
+    Si se sube algo más del mismo mes antes de entregar, se añade a la misma carga.
+  </p>
+  <p>
+    Cada documento reconocido dice <strong>por dónde le llegará</strong> a esa persona: <em>Mis documentos</em> si tiene
+    usuario, <em>Enlace por correo</em> si tiene correo en su ficha y PIN de fichar, o <em>Sin vía digital: en mano</em>
+    si no tiene ninguna de las dos cosas. Los que van en mano se avisan arriba, con su nombre, para poder completar su
+    ficha (correo y PIN, o un usuario vinculado) <strong>antes</strong> de entregar. Si no da tiempo, se entrega igual y
+    después se marca como <em>Entregado en papel</em>.
+  </p>
+
+  <h4 id="nominas-asesoria">Que la suba la asesoría</h4>
+  <p>
+    En vez de esperar a que la asesoría mande las nóminas y subirlas, se le puede pedir que las suba ella:
+    <em>Pedírselo a la asesoría</em>, debajo de <em>Subir y separar</em>, le manda un correo con un enlace para ese mes
+    (o ese año, si son certificados). El correo se rellena solo con el de la asesoría que hace las nóminas, si está puesto
+    en el envío de horas, y se puede cambiar.
+  </p>
+  <ul>
+    <li>La asesoría sube sin usuario ni contraseña: un PDF con todas, varios PDF o un zip, y puede subir más de una vez
+      mientras el enlace valga (10 días).</li>
+    <li>Lo que sube va a la carga de ese mes <strong>sin entregar</strong>: RRHH lo revisa y lo entrega como siempre. La
+      asesoría no ve nada de lo subido, ni a quién va cada documento.</li>
+    <li>Cada vez que sube, llega un correo a RRHH con cuántos documentos han llegado y desde dónde.</li>
+    <li>Debajo del botón se ve cómo está el último enlace (cuándo se mandó, hasta cuándo vale y cuánto ha subido) y se
+      puede <em>Anular</em>. Pedir otro para el mismo mes anula el anterior.</li>
+  </ul>
+  <figure>
+    <img src="/turnera/manual/imagenes/87-nominas-revisar.png" alt="La carga de nóminas de octubre: un documento con un NIF que no es de nadie, para asignarlo, y cuatro reconocidos" loading="lazy">
+    <figcaption>Revisar la carga: lo que tiene dudas, arriba; lo reconocido, con su fichero y sus páginas.</figcaption>
+  </figure>
+
+  <h4 id="nominas-entregar">Entregar</h4>
+  <p>
+    <em>Entregar</em> manda la carga entera, o nada: con un solo documento sin revisar no sale ninguno. Al entregar:
+  </p>
+  <ul>
+    <li>Quien tiene correo en su ficha recibe un aviso con un <strong>enlace</strong>, nunca con la nómina adjunta: un
+      correo que llega a quien no es no saca salario, NIF ni cuenta bancaria. El enlace pide el PIN con el que la
+      persona ficha y caduca a los 30 días. El aviso va siempre a su correo personal, nunca al del centro.</li>
+    <li>Al terminar, Turnera dice cuántos se han avisado por correo y cuántos hay que <strong>dar en mano</strong>; en
+      el seguimiento, esos salen con <em>Sin vía digital: entrégalo en mano</em> hasta que se marquen.</li>
+    <li>Quien entra con su usuario, en la web o en la app de Android, lo ve en <a href="#mis-documentos">Mis
+      documentos</a>.</li>
+    <li>A los <strong>3 y a los 7 días</strong> se recuerda por correo a quien no haya confirmado. Después ya es cosa de
+      RRHH.</li>
+    <li>Si la persona ya tenía una nómina de ese mes, la nueva la <strong>sustituye</strong>: la anterior no se borra y
+      su acuse sigue unido a ella.</li>
+  </ul>
+
+  <h4 id="nominas-seguir">Quién la tiene</h4>
+  <p>
+    En la carga entregada se ve cada persona con su estado: <em>Sin abrir</em>, <em>Abierto, sin confirmar</em>,
+    <em>Recibido</em>, <em>En papel</em> o <em>Se negó a firmar</em>. En <em>Detalle</em> está todo lo que ha pasado con
+    el documento (entregado, avisado, abierto, confirmado, con quién, cómo se identificó y desde dónde) y la
+    <strong>huella</strong> del PDF entregado, que permite comprobar después que lo confirmado es exactamente lo que se
+    guardó.
+  </p>
+  <ul>
+    <li><strong>Justificante</strong>: un PDF con todo lo anterior, para enseñarlo si alguna vez hace falta.</li>
+    <li><strong>Volver a avisar</strong>: otro correo, con un enlace nuevo.</li>
+    <li><strong>Entregado en papel</strong>: para cuando se da en mano; se anota el día.</li>
+    <li><strong>Se negó a firmar</strong>: se entregó y la persona no quiso confirmarlo; se anota quién estaba delante
+      como testigo, como se hace en papel.</li>
+  </ul>
+  <figure>
+    <img src="/turnera/manual/imagenes/88-nominas-detalle.png" alt="El detalle de una nómina entregada: su estado, lo que ha pasado, la huella del PDF y las acciones" loading="lazy">
+    <figcaption>El detalle de una nómina recibida: lo que ha pasado, con quién y cómo, y el justificante.</figcaption>
+  </figure>
+
+  <div class="ojo">
+    <p><strong>Qué vale el acuse.</strong> Confirmar es una firma electrónica sencilla: la persona se identifica con su
+      usuario o con su PIN, después de abrir el documento, y queda guardado cuándo, desde dónde y el texto exacto que se
+      le enseñó. Confirmar la recepción <strong>no significa estar de acuerdo</strong> con el contenido, y así lo dice
+      el texto. Desde un puesto compartido no se puede confirmar, porque ahí otra persona que sepa el PIN podría hacerlo
+      por ella. Que la entrega electrónica sirva como recibí es algo que conviene confirmar con la asesoría.</p>
+  </div>
+
+  <h4 id="mis-documentos">Mis documentos</h4>
+  <span class="ruta">Menú → Mis documentos</span>
+  <p>
+    Lo ve quien entra con su usuario vinculado a un profesional, en un centro con el módulo Laboral. Cada nómina o
+    certificado se <strong>abre</strong> y después se confirma con <em>Confirmo que lo he recibido</em>; el botón no se
+    activa hasta haberlo abierto. Quien no tiene usuario lo hace desde el enlace del correo, con su PIN.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/89-mis-documentos.png" alt="Mis documentos: la nómina de octubre por confirmar, con el texto del acuse y el botón para confirmar" loading="lazy">
+    <figcaption>Mis documentos: se abre y después se confirma.</figcaption>
+  </figure>
+
+  <h4 id="laboral-configuracion">Qué partes de Laboral usa el centro</h4>
+  <span class="ruta">Menú → Administración → Laboral</span>
+  <p>
+    Cada parte de Laboral se enciende o se apaga por separado: hoy, <em>Nóminas</em> y <em>Certificados de
+    retenciones</em>; las que vengan después (comunicados para firmar, contratos, títulos con caducidad,
+    reconocimientos médicos y justificantes) irán apareciendo aquí. Hace falta el permiso «Configurar Laboral», que de
+    fábrica trae Dirección.
+  </p>
+  <p>
+    Apagar una parte <strong>no borra nada</strong>: lo ya entregado sigue en <em>Mis documentos</em> de cada persona y en
+    su historial. Solo deja de poder subirse y entregarse lo nuevo de ese tipo. Con las dos apagadas, desaparece del menú
+    <em>Nóminas y certificados</em>.
   </p>
 
 </section>
@@ -6666,6 +6846,19 @@ footer{
     <img src="/turnera/manual/imagenes/51-app-mi-agenda.png" alt="La agenda del día de una profesional con sus citas y el botón Imprimir" loading="lazy">
     <figcaption>Mi agenda: las citas del día, con el botón para imprimirlas en A4.</figcaption>
   </figure>
+
+<h3 id="app-documentos">Mis documentos</h3>
+  <p>
+    En los centros con el módulo Laboral, la app personal (la de quien entra con su usuario) tiene además <em>Mis
+    documentos</em>: sus nóminas y certificados. Al poner el PIN avisa si hay alguno por confirmar. El documento se ve
+    dentro de la propia app, página a página, sin guardarse en el móvil, y debajo está el botón para confirmar que se ha
+    recibido.
+  </p>
+  <p>
+    Cada pocas horas la app mira si ha llegado algo nuevo y, si es así, avisa con una notificación del móvil. Lo hace
+    la propia app, sin pasar por ningún servicio de terceros, y con el móvil bloqueado la notificación no dice qué es.
+    En un móvil compartido no hay avisos: no puede salir en pantalla lo de otra persona.
+  </p>
 
   <h3 id="app-mantenimiento">Los partes de mantenimiento</h3>
   <p>

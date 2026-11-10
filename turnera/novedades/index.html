@@ -679,6 +679,9 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-11-10">10 de noviembre de 2026</a></li>
+    <li><a href="#2026-11-09">9 de noviembre de 2026</a></li>
+    <li><a href="#2026-11-08">8 de noviembre de 2026</a></li>
     <li><a href="#2026-11-07">7 de noviembre de 2026</a></li>
     <li><a href="#2026-11-06">6 de noviembre de 2026</a></li>
     <li><a href="#2026-11-04">4 de noviembre de 2026</a></li>
@@ -721,10 +724,105 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-11-10" class="version">
+  <div class="version__cabecera">
+    <h2>10 de noviembre de 2026</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">1.12.0-39c1477</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
+    <h4>TPV: varias citas del mismo día en un solo ticket</h4>
+    <ul>
+      <li>Una clienta con varias citas hoy, con la misma profesional o con distintas, se cobra en un solo ticket, con todos los conceptos y un solo total.</li>
+      <li>Arriba, en Por cobrar, sale una sola tarjeta con «2 citas», «3 citas»… Las citas atendidas y las que están en curso entran solas en el ticket; las que aún no han empezado se ven sin marcar, y se puede desmarcar la que no se quiera cobrar ahora.</li>
+      <li>Cada servicio queda a nombre de quien lo hizo y la línea lo dice. El descuento de cada línea, el del ticket y el reparto del cobro funcionan igual que con una sola cita.</li>
+      <li>Solo se juntan las citas de hoy que aún no se han cobrado; las de días anteriores se siguen cobrando desde Cobros pendientes.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Mejoras</h3>
+    <h4>TPV: el ticket se lee entero</h4>
+    <ul>
+      <li>El nombre de lo que se cobra ya no se corta: si no cabe en una línea, pasa a la siguiente, y la lista del ticket no recorta la última línea.</li>
+      <li>El aviso de Actualizar el ticket y el de las promociones en vigor van dentro del ticket, encima de las líneas y en una sola línea cada uno, para no empujar hacia abajo los botones de cobro.</li>
+    </ul>
+  </div>
+</section>
+<section id="2026-11-09" class="version">
+  <div class="version__cabecera">
+    <h2>9 de noviembre de 2026</h2>
+  </div>
+  <p class="version__numero">Versión <span translate="no">1.12.0-db02472</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
+    <h4>Clientes: el código de Turnera</h4>
+    <ul>
+      <li>La ficha del cliente y el buscador enseñan el código de Turnera. Al buscar por una cifra manda ese código sobre el número del programa anterior.</li>
+      <li>Las plantillas de consentimiento pueden llevar ese código con {{codigo_cliente}}.</li>
+    </ul>
+    <h4>Clientes: aviso de posibles duplicados</h4>
+    <ul>
+      <li>Al dar de alta a un cliente se avisa si su teléfono, o su DNI si se da, ya es de otra ficha, da igual cómo esté escrito (con espacios, con +34, con puntos o guiones).</li>
+      <li>El aviso dice quién es y si coincide el teléfono, el documento o los dos. Con el botón Usar esta ficha se sigue con la que ya existe; si es otra persona con el mismo teléfono (una madre y su hija, por ejemplo), se da de alta igualmente.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Mejoras</h3>
+    <h4>TPV: cada línea a su precio</h4>
+    <ul>
+      <li>En el ticket cada línea sale a su precio. El descuento o la rebaja de toda la cuenta va en una línea aparte, Descuento, y debajo el total cobrado.</li>
+      <li>Por dentro la rebaja sigue repartida entre las líneas, en proporción a su precio, para que la producción de cada profesional, las devoluciones y la factura cuadren con lo que entró en caja.</li>
+    </ul>
+    <h4>Menú: Catálogo, Ofertas e Instalaciones</h4>
+    <ul>
+      <li>Catálogo enseña solo lo que corresponde al rol Catálogo; Ofertas e Instalaciones salen aparte en el menú.</li>
+    </ul>
+    <h4>Laboral: subida por enlace de la asesoría</h4>
+    <ul>
+      <li>El enlace para que la asesoría suba las nóminas admite menos peso que la subida que hace RRHH desde la aplicación.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Errores corregidos</h3>
+    <ul>
+      <li>Las horas se cuentan en la hora del centro en toda la instalación, y los fichajes de la hora que se repite en el cambio de hora de octubre salen exactos.</li>
+    </ul>
+  </div>
+</section>
+<section id="2026-11-08" class="version">
+  <div class="version__cabecera">
+    <h2>8 de noviembre de 2026</h2>
+  </div>
+  <p class="version__numero">Versión <span translate="no">1.12.0-34fc330</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
+    <h4>Laboral: reparto de nóminas y certificados de retenciones</h4>
+    <ul>
+      <li>RRHH sube lo que manda la asesoría (un PDF con todas, varios PDF o un zip), Turnera separa el documento de cada profesional por su NIF, RRHH revisa a quién va cada uno y lo entrega. Menú → Personal → Nóminas y certificados.</li>
+      <li>Cada persona lo abre en Turnera, en Mis documentos (en la web y en la app de Android 0.4.0), y confirma que lo ha recibido. RRHH ve en todo momento quién lo tiene y quién no, y a los 3 y a los 7 días se recuerda por correo a quien no haya confirmado.</li>
+      <li>Quien tiene correo en su ficha recibe un aviso con un enlace, nunca con la nómina adjunta; quien no tiene ninguna vía digital se marca como entregado en papel.</li>
+      <li>La app de Android avisa con una notificación cuando llega algo nuevo, sin que la nómina salga en la pantalla bloqueada.</li>
+    </ul>
+    <h4>Laboral: que la suba la asesoría</h4>
+    <ul>
+      <li>En vez de esperar a que la asesoría mande las nóminas, RRHH puede pedirle que las suba ella con un enlace por correo, sin usuario ni contraseña, que vale 10 días. Lo que sube va a la carga de ese mes, y RRHH lo revisa y lo entrega como siempre.</li>
+    </ul>
+    <h4>Administración → Laboral: qué partes usa el centro</h4>
+    <ul>
+      <li>Nóminas y certificados de retenciones se encienden o se apagan por separado. Apagar una parte no borra nada: lo ya entregado sigue en Mis documentos y en el historial de cada persona.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-11-07" class="version">
   <div class="version__cabecera">
     <h2>7 de noviembre de 2026</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">1.12.0-0c9ff28</span></p>
 

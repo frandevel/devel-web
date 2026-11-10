@@ -772,6 +772,10 @@ footer{
     <li><a href="#calendario-cerrar" class="sub sub">Das Jahr abschließen</a></li>
     <li><a href="#calendario-ausencias-parciales" class="sub sub">Teilabwesenheiten</a></li>
     <li><a href="#mi-calendario" class="sub sub">Was jede Fachkraft sieht</a></li>
+    <li><a href="#nominas" class="sub">Gehaltsabrechnungen und Bescheinigungen</a></li>
+    <li><a href="#nominas-asesoria" class="sub sub">Vom Lohnbüro hochladen lassen</a></li>
+    <li><a href="#mis-documentos" class="sub sub">Meine Dokumente</a></li>
+    <li><a href="#laboral-configuracion" class="sub sub">Welche Teile von Arbeitsrecht das Zentrum nutzt</a></li>
     <li><a href="#historia">11. Die Patientenakte</a></li>
     <li><a href="#historia-anular" class="sub">Einen Verlaufseintrag löschen oder annullieren</a></li>
     <li><a href="#historia-mapa" class="sub">Markieren, wo es wehtut: die anatomische Karte</a></li>
@@ -1206,7 +1210,8 @@ footer{
     <li><strong>Einen Termin eintragen:</strong> klicken Sie auf die freie Lücke, wo er liegen soll. Die Maske öffnet sich, Uhrzeit
       und Mitarbeiter sind schon eingetragen; es fehlen nur noch Kunde und Leistung.</li>
     <li><strong>Neuer Kunde, der anruft:</strong> solange noch kein Kunde gewählt ist, steht unter der Suche
-      <em>+ Neuer Kunde</em>. Damit öffnet sich eine Karte für einen <strong>Erstbesuch</strong> , die nur Vorname, Nachnamen und Handy abfragt und den Kunden direkt in den Termin setzt. Der Rest der Karte (Ausweis, Geburtsdatum, E-Mail...) wird ergänzt, wenn er kommt. Bis dahin zeigen Termin und Karte <strong>Besuch Nr. 1</strong> in Blau; sobald die Karte geöffnet und der Rest gespeichert wird, verschwindet der Hinweis von selbst.</li>
+      <em>+ Neuer Kunde</em>. Damit öffnet sich eine Karte für einen <strong>Erstbesuch</strong> die nur Vorname, Nachname und Handynummer abfragt (die Ausweisnummer ist optional: Manche geben sie am Telefon nicht an) und den Kunden im Termin einträgt. Der Rest der Karte (Ausweis, Geburtsdatum, E-Mail ...) wird ergänzt, wenn die Person kommt. Bis dahin zeigen der Termin und die Karte <strong>Besuch Nr. 1</strong> in Blau an; sobald die Karte geöffnet und die übrigen Daten gespeichert werden, verschwindet der Hinweis von selbst. Beim Eintippen der Handynummer und, falls angegeben, der Ausweisnummer wird geprüft, ob sie schon zu einer anderen Karte gehören (egal, wie sie geschrieben sind: mit Leerzeichen, mit +34, mit Punkten oder Bindestrichen ...). Wenn ja, erscheint, wer es ist und ob Telefon, Ausweis oder beides übereinstimmen, mit der Schaltfläche
+      <em>Diese Karte verwenden</em>; der Erstbesuch wird nicht angelegt, außer es wird angehakt <em>Es ist eine andere Person mit demselben Telefon oder Ausweis</em> (eine Mutter und ihre Tochter oder ein Minderjähriger mit dem Ausweis seiner Mutter). Beim Anlegen einer vollständigen Karte unter Kunden erscheint derselbe Hinweis, verhindert dort aber das Speichern nicht.</li>
     <li><strong>Einen Termin öffnen:</strong> klicken Sie ihn an.</li>
     <li><strong>Die Kundin von eben, mit einem Klick:</strong> ein Klick in das Kundenfeld, ohne etwas zu tippen, zeigt die letzten 5 Kunden, mit denen Sie gearbeitet haben (in einem Termin, an der Kasse oder beim Öffnen ihrer Karte). Im Kundenfeld der Kasse ist es genauso.</li>
     <li><strong>Eine Leistung zu einem bestehenden Termin hinzufügen:</strong> die Dauer wächst um die Länge der neuen Leistung (und das Entfernen verkürzt sie), auch wenn sie von Hand angepasst war; danach lässt sie sich nachjustieren. Reicht der Termin dadurch bis zum nächsten derselben Fachkraft oder derselben Kabine, kommt ein Hinweis: Es wäre keine Zeit, alles in diesem Termin zu machen.</li>
@@ -1676,6 +1681,10 @@ footer{
   </p>
 
   <p>
+    <strong>Auf dem Beleg erscheint jede Zeile zu ihrem eigenen Preis.</strong> Ein Rabatt oder Nachlass auf die gesamte Rechnung steht in einer eigenen Zeile, <em>Rabatt</em>, und darunter der kassierte Gesamtbetrag; ebenso beim Kassieren einer offenen Zahlung. Intern wird der Nachlass tatsächlich im Verhältnis zu ihren Preisen auf die Zeilen verteilt: So stimmen die Produktion jeder Fachkraft, die Rückgabe einer einzelnen Zeile und die Rechnung mit dem überein, was in die Kasse gekommen ist.
+  </p>
+
+  <p>
     <strong>Eine Aktion für eine Leistung gehört in ihre Zeile.</strong> Jede Zeile des Belegs (Leistung, Produkt, Paket oder Bündel) hat ihr eigenes Feld <em>Rabatt</em>: 20 % auf die Leiste rabattiert nur die Leiste, die Achseln bleiben beim vollen Preis. Der Rabatt des Belegs, falls einer gesetzt ist, wird danach auf den Rest angewendet. Auf Beleg und Rechnung zeigt die Zeile ihren Gesamtrabatt: 20 % der Aktion und 10 % des Belegs erscheinen als 28 %.
   </p>
 
@@ -1695,6 +1704,18 @@ footer{
     <em>Behandelt</em>markiert, erscheint der Kunde oben unter <em>Zu kassieren</em>, noch bevor er an der Theke ankommt. Darunter stehen die, die noch <em>in Behandlung</em>sind – sie kommen als Nächstes. Tippen Sie auf die Karte, und der Verkauf wird genauso geladen wie aus dem Kalender. Die Liste aktualisiert sich alle paar Sekunden von selbst, zeigt nur die heutigen Termine, und jeder Kunde verschwindet daraus, sobald kassiert oder der Besuch als offener Betrag verbucht ist.
   </p>
 
+  <p>
+    <strong>Mehrere Termine am selben Tag, ein einziger Beleg.</strong> Wenn die Kundin heute zu mehr als einer Behandlung gekommen ist —bei derselben oder bei verschiedenen Fachkräften—, muss man sie nicht einzeln kassieren. Oben, unter <em>Zu kassieren</em>, erscheint eine einzige Karte mit „2 Terminen“, „3 Terminen“ ...; beim Antippen wird der Beleg mit allen aufgebaut, in einem Verkauf und mit einer Gesamtsumme. Über den Zeilen erscheint die Liste <em>Heutige Termine</em>: die <strong>behandelten</strong> und die, die <strong>läuft</strong> sind, kommen von allein hinein; die, die noch nicht begonnen haben, sind sichtbar, aber nicht angehakt. Entfernen Sie den Haken bei dem, was Sie jetzt nicht kassieren wollen —es wartet oben, bis die Kundin geht—, oder haken Sie einen weiteren an, um ihn hinzuzufügen.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/en/90-tpv-varias-citas.png" alt="Die Kasse mit den heutigen Terminen einer Kundin: zwei angehakt und auf dem Beleg, einer am Nachmittag ohne Haken" loading="lazy">
+    <figcaption>Die heutigen Termine der Kundin: Die angehakten kommen auf den Beleg, jede Leistung mit der Fachkraft, die sie erbracht hat.</figcaption>
+  </figure>
+
+  <p>
+    Jede Leistung wird verbucht <strong>auf den Namen dessen, der sie erbracht hat</strong> (die Zeile sagt <em>Ausgeführt von: …</em>), sodass die Produktion jeder Fachkraft auch dann stimmt, wenn alles zusammen kassiert wird. Die oben gewählte Fachkraft ist die, die alles Übrige verkauft, was hinzukommt, etwa ein Produkt. Der Rabatt jeder Zeile, der Belegrabatt und die Aufteilung der Zahlung funktionieren wie bei einem einzelnen Termin. Fehlt bei einem der Termine ein verpflichtender Geräte-Messwert, wartet das Kassieren: Er wird eingetragen, oder der Termin wird abgehakt. Zusammengeführt werden nur Termine von <strong>heute</strong> ohne Kursplatz, die noch nicht kassiert wurden; die von früheren Tagen werden unter <em>Offene Zahlungen</em>.
+  </p>
   <ul>
     <li><strong>Jetzt kassieren</strong> angehakt: Sie wählen die Zahlungsart, und das Geld geht in die heutige Kasse.</li>
     <li><strong>Jetzt kassieren</strong> nicht angehakt: Der Besuch bleibt als Schuld stehen und erscheint unter <em>Offene
@@ -4103,7 +4124,8 @@ footer{
   <p>
     Wer unterschreibt, muss verstehen, was er unterschreibt. Beim Anlegen oder Ändern einer Vorlage steht unter dem
     Haupttext <em>Text in anderen Sprachen</em>: ein optionaler Abschnitt pro Sprache, mit Namen und Text. Die Platzhalter
-    werden in allen gleich geschrieben, mit ihrem spanischen Namen: <code>{{cliente}}</code>, <code>{{nif}}</code>,
+    werden in allen gleich geschrieben, mit ihrem spanischen Namen: <code>{{cliente}}</code>, <code>{{codigo_cliente}}</code>
+    (der Code der Kundenkarte in Turnera), <code>{{nif}}</code>,
     <code>{{centro}}</code>, <code>{{fecha}}</code>, <code>{{tratamiento}}</code>, <code>{{representante}}</code>,
     <code>{{representante_documento}}</code> und <code>{{representante_parentesco}}</code>.
   </p>
@@ -4831,9 +4853,7 @@ footer{
   <p>
     Eine Stempelung ist keine Uhrzeit, die jemand einträgt, wie bei einem Termin: sie ist der genaue Moment, in dem
     die Schaltfläche gedrückt wird. Um zu wissen, zu welchem Tag und Abschnitt sie gehört, muss die Anwendung wissen, in
-    welcher Zeitzone das Zentrum liegt, und sie ist voreingestellt auf <strong>Europe/Madrid</strong>. Ein Zentrum außerhalb des spanischen Festlands
-    ändert das bei der Installation über die Variable <code>TURNERA_TZ</code> ; sonst kämen die Abschnitte verschoben heraus,
-    auch wenn die Stundensumme stimmte.
+    welcher Zeitzone das Zentrum liegt, und sie ist voreingestellt auf <strong>Europe/Madrid</strong>. Es ist die Zeitzone der gesamten Installation: die der Anwendung, die der Datenbank und die von „heute“. Ein Zentrum außerhalb des spanischen Festlands läuft auf einer eigenen Installation mit der Variable <code>TURNERA_TZ</code> , die bei der Installation gesetzt und danach nicht mehr geändert wird.
   </p>
 
   <h3 id="calendario-laboral">Arbeitskalender</h3>
@@ -5059,6 +5079,107 @@ footer{
     seinem mit einer Fachkraft verknüpften Benutzer anmeldet (zum Beispiel mit seiner PIN am gemeinsamen Gerät) und die Berechtigung hat <em>Urlaubstage
     beantragen</em>: Der Benutzer des Büros gehört zu keiner Fachkraft. Von dort aus wird Urlaub beantragt
     (siehe <a href="#calendario-vacaciones-pedidas">Urlaub beantragen</a>).
+  </p>
+
+
+  <h3 id="nominas">Gehaltsabrechnungen und Bescheinigungen</h3>
+  <span class="ruta">Menü → Personal → Gehaltsabrechnungen und Bescheinigungen</span>
+
+  <p>
+    Das Lohnbüro erstellt die Gehaltsabrechnungen; Turnera <strong>verteilt sie</strong>. Man lädt hoch, was das Lohnbüro schickt, Turnera trennt das Dokument jeder Fachkraft anhand ihrer Steuer-ID, die Personalabteilung prüft, wer was bekommt, und stellt es zu. Jede Person öffnet es in Turnera und <strong>bestätigt, dass sie es erhalten hat</strong>, und die Personalabteilung sieht jederzeit, wer es hat und wer nicht. Dasselbe gilt für die <strong>Lohnsteuerbescheinigung</strong> jedes Jahres.
+  </p>
+  <p>
+    Es ist Teil des Moduls <strong>Arbeitsrecht</strong>: ein Bereich, den das Zentrum je nach Vertrag hat oder nicht hat und der immer zusammen mit Personal kommt. Nötig ist die Berechtigung „Gehaltsabrechnungen und Bescheinigungen verteilen“, die Geschäftsleitung und Personalabteilung ab Werk haben. Sie ist heikel: Wer sie hat, kann die Abrechnung jeder Person öffnen, und jedes Mal wird festgehalten, wer und wann.
+  </p>
+
+  <h4 id="nominas-subir">Hochladen und prüfen</h4>
+  <ol>
+    <li>Wählen Sie <em>Gehaltsabrechnungen</em> oder <em>Lohnsteuerbescheinigungen</em>und den Monat oder das Jahr.</li>
+    <li>Unter <em>Dateien auswählen</em>, je nachdem, was das Lohnbüro geschickt hat: <strong>ein PDF mit allen</strong>, <strong>mehrere PDFs</strong> (eine pro Person) oder <strong>eine ZIP-Datei</strong>. Danach <em>Hochladen und trennen</em>.</li>
+    <li>Turnera trennt sie und zeigt das Ergebnis, ohne schon etwas zuzustellen:
+      <ul>
+        <li>Bei einem PDF mit allen liest es die Steuer-ID jeder Seite. Aufeinanderfolgende Seiten mit derselben Steuer-ID sind eine einzige Abrechnung, und eine Seite ohne Steuer-ID gehört zur vorherigen (zweiseitige Abrechnungen). Die Steuernummer des Unternehmens wird mit keiner Person verwechselt.</li>
+        <li>Bei einer Datei mit der Steuer-ID im Namen (<code>12345678Z.pdf</code>, <code>abrechnung_12345678Z_oktober.pdf</code>) gehört die ganze Datei dieser Person, und zusätzlich wird geprüft, dass die Datei <strong>darin</strong> dieselbe Steuer-ID enthält.</li>
+      </ul>
+    </li>
+    <li>Was Zweifel aufwirft, steht oben, in Orange, und <strong>wird an niemanden zugestellt</strong> bis es von Hand zugeordnet oder verworfen wird: eine Steuer-ID, die keiner Fachkraft gehört, eine Seite ohne Steuer-ID, eine Datei, deren Name eine Steuer-ID nennt und in der eine andere steht, oder ein gescanntes PDF ohne Text. Mit <em>Ansehen</em> wird das Dokument zur Prüfung geöffnet.</li>
+    <li>Darunter steht, wer bei diesem Upload <strong>kein Dokument</strong> übrig geblieben ist, falls jemand fehlt, und wer <strong>mehr als eines</strong> hat (zum Beispiel eine separate Sonderzahlung).</li>
+  </ol>
+  <p>
+    Wird vor der Zustellung noch etwas vom selben Monat hochgeladen, kommt es zum selben Upload.
+  </p>
+  <p>
+    Jedes erkannte Dokument sagt <strong>wie es sie erreicht</strong> dieser Person: <em>Meine Dokumente</em> wenn sie einen Benutzer hat, <em>Link per E-Mail</em> wenn sie eine E-Mail in ihrer Karte und eine Stempel-PIN hat, oder <em>Kein digitaler Weg: persönlich</em>
+    wenn sie keines von beiden hat. Die persönlich zu übergebenden stehen oben mit ihrem Namen, damit ihre Karte vervollständigt werden kann (E-Mail und PIN oder ein verknüpfter Benutzer) <strong>vorher</strong> der Zustellung. Bleibt keine Zeit, wird trotzdem zugestellt und danach als <em>Auf Papier übergeben</em>.
+  </p>
+
+  <h4 id="nominas-asesoria">Vom Lohnbüro hochladen lassen</h4>
+  <p>
+    Statt zu warten, bis das Lohnbüro die Gehaltsabrechnungen schickt, und sie hochzuladen, kann man es bitten, sie selbst hochzuladen:
+    <em>Bei der Lohnbuchhaltung anfordern</em>, unter <em>Hochladen und trennen</em>, schickt ihm eine E-Mail mit einem Link für diesen Monat (oder dieses Jahr, wenn es Bescheinigungen sind). Die E-Mail füllt sich von selbst mit der des Lohnbüros, das die Gehaltsabrechnungen macht, sofern sie im Stundenversand eingetragen ist, und lässt sich ändern.
+  </p>
+  <ul>
+    <li>Das Lohnbüro lädt ohne Benutzername und Passwort hoch: ein PDF mit allen, mehrere PDFs oder eine ZIP-Datei, und kann mehrmals hochladen, solange der Link gilt (10 Tage).</li>
+    <li>Was hochgeladen wird, kommt in den Upload dieses Monats <strong>noch nicht zugestellt</strong>: Die Personalabteilung prüft es und stellt es wie gewohnt zu. Das Lohnbüro sieht nichts vom Hochgeladenen und auch nicht, an wen jedes Dokument geht.</li>
+    <li>Bei jedem Upload kommt eine E-Mail bei der Personalabteilung an, wie viele Dokumente eingegangen sind und von wo.</li>
+    <li>Unter der Schaltfläche sieht man den Stand des letzten Links (wann er geschickt wurde, bis wann er gilt und wie viel hochgeladen wurde) und man kann ihn <em>Stornieren</em>. Einen weiteren für denselben Monat anzufordern, macht den vorherigen ungültig.</li>
+  </ul>
+  <figure>
+    <img src="/turnera/manual/imagenes/87-nominas-revisar.png" alt="Der Upload der Gehaltsabrechnungen für Oktober: ein Dokument mit einer Steuer-ID, die niemandem gehört und zugeordnet werden muss, und vier erkannte" loading="lazy">
+    <figcaption>Den Upload prüfen: was Zweifel aufwirft, oben; das Erkannte mit seiner Datei und seinen Seiten.</figcaption>
+  </figure>
+
+  <h4 id="nominas-entregar">Zustellen</h4>
+  <p>
+    <em>Zustellen</em> schickt den ganzen Upload oder nichts: Mit einem einzigen ungeprüften Dokument geht keines hinaus. Bei der Zustellung:
+  </p>
+  <ul>
+    <li>Wer eine E-Mail in der Karte hat, erhält eine Benachrichtigung mit einem <strong>Link</strong>, niemals mit angehängter Gehaltsabrechnung: Eine E-Mail, die bei der falschen Person ankommt, verrät kein Gehalt, keine Steuer-ID und kein Bankkonto. Der Link verlangt die PIN, mit der die Person stempelt, und läuft nach 30 Tagen ab. Die Benachrichtigung geht immer an die private E-Mail, nie an die des Zentrums.</li>
+    <li>Am Ende sagt Turnera, wie viele per E-Mail benachrichtigt wurden und wie viele <strong>persönlich zu übergeben</strong>werden müssen; in der Nachverfolgung erscheinen diese mit <em>Kein digitaler Weg: persönlich übergeben</em> bis sie markiert werden.</li>
+    <li>Wer sich mit seinem Benutzer anmeldet, im Web oder in der Android-App, sieht es unter <a href="#mis-documentos">Meine Dokumente</a>.</li>
+    <li>Nach <strong>3 und 7 Tagen</strong> wird, wer nicht bestätigt hat, per E-Mail erinnert. Danach ist es Sache der Personalabteilung.</li>
+    <li>Hatte die Person für diesen Monat schon eine Gehaltsabrechnung, so <strong>ersetzt</strong>die neue sie: Die vorherige wird nicht gelöscht, und ihre Empfangsbestätigung bleibt mit ihr verbunden.</li>
+  </ul>
+
+  <h4 id="nominas-seguir">Wer es hat</h4>
+  <p>
+    Im zugestellten Upload sieht man jede Person mit ihrem Status: <em>Noch nicht geöffnet</em>, <em>Geöffnet, nicht bestätigt</em>,
+    <em>Erhalten</em>, <em>Auf Papier</em> oder <em>Unterschrift verweigert</em>. Unter <em>Details</em> steht alles, was mit dem Dokument geschehen ist (zugestellt, benachrichtigt, geöffnet, bestätigt, mit wem, wie sich die Person identifiziert hat und von wo) sowie der
+    <strong>Fingerabdruck</strong> des zugestellten PDFs, mit dem sich später prüfen lässt, dass das Bestätigte genau das ist, was gespeichert wurde.
+  </p>
+  <ul>
+    <li><strong>Nachweis</strong>: ein PDF mit allem Obigen, um es vorzuzeigen, falls es einmal nötig ist.</li>
+    <li><strong>Erneut benachrichtigen</strong>: eine weitere E-Mail mit einem neuen Link.</li>
+    <li><strong>Auf Papier übergeben</strong>: für den Fall, dass persönlich übergeben wird; der Tag wird festgehalten.</li>
+    <li><strong>Unterschrift verweigert</strong>: Es wurde zugestellt, und die Person wollte es nicht bestätigen; wer anwesend war, wird als Zeuge festgehalten, wie es auf Papier üblich ist.</li>
+  </ul>
+  <figure>
+    <img src="/turnera/manual/imagenes/88-nominas-detalle.png" alt="Das Detail einer zugestellten Gehaltsabrechnung: ihr Status, was geschehen ist, der Fingerabdruck des PDFs und die Aktionen" loading="lazy">
+    <figcaption>Das Detail einer erhaltenen Gehaltsabrechnung: was geschehen ist, mit wem und wie, und der Nachweis.</figcaption>
+  </figure>
+
+  <div class="ojo">
+    <p><strong>Was die Empfangsbestätigung wert ist.</strong> Das Bestätigen ist eine einfache elektronische Unterschrift: Die Person identifiziert sich mit ihrem Benutzer oder ihrer PIN, nachdem sie das Dokument geöffnet hat, und es wird festgehalten, wann, von wo und der genaue Text, der ihr angezeigt wurde. Den Empfang zu bestätigen <strong>bedeutet nicht, einverstanden zu sein</strong> mit dem Inhalt, und der Text sagt das auch. Von einem gemeinsamen Arbeitsplatz aus kann nicht bestätigt werden, weil dort jemand anderes, der die PIN kennt, es an ihrer Stelle tun könnte. Ob die elektronische Zustellung als Empfangsbescheinigung gilt, sollte man mit dem Lohnbüro klären.</p>
+  </div>
+
+  <h4 id="mis-documentos">Meine Dokumente</h4>
+  <span class="ruta">Menü → Meine Dokumente</span>
+  <p>
+    Es sieht, wer sich mit einem Benutzer anmeldet, der mit einer Fachkraft verknüpft ist, in einem Zentrum mit dem Modul Arbeitsrecht. Jede Gehaltsabrechnung oder Bescheinigung wird <strong>geöffnet</strong> und danach bestätigt mit <em>Ich bestätige, dass ich es erhalten habe</em>; die Schaltfläche wird erst aktiv, wenn sie geöffnet wurde. Wer keinen Benutzer hat, macht es über den Link in der E-Mail, mit seiner PIN.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/89-mis-documentos.png" alt="Meine Dokumente: die Oktober-Gehaltsabrechnung zur Bestätigung, mit dem Text der Empfangsbestätigung und der Schaltfläche zum Bestätigen" loading="lazy">
+    <figcaption>Meine Dokumente: Es wird geöffnet und danach bestätigt.</figcaption>
+  </figure>
+
+  <h4 id="laboral-configuracion">Welche Teile von Arbeitsrecht das Zentrum nutzt</h4>
+  <span class="ruta">Menü → Verwaltung → Arbeitsrecht</span>
+  <p>
+    Jeder Teil von Arbeitsrecht wird einzeln ein- oder ausgeschaltet: heute <em>Gehaltsabrechnungen</em> und <em>Lohnsteuerbescheinigungen</em>; die späteren (Mitteilungen zum Unterschreiben, Verträge, Qualifikationen mit Ablaufdatum, Gesundheitsuntersuchungen und Abwesenheitsnachweise) erscheinen nach und nach hier. Nötig ist die Berechtigung „Arbeitsrecht konfigurieren“, die ab Werk die Geschäftsleitung hat.
+  </p>
+  <p>
+    Einen Teil ausschalten <strong>löscht nichts</strong>: Was schon zugestellt wurde, bleibt unter <em>Meine Dokumente</em> jeder Person und in ihrem Verlauf. Nur Neues dieser Art kann nicht mehr hochgeladen und zugestellt werden. Sind beide ausgeschaltet, verschwindet es aus dem Menü
+    <em>Gehaltsabrechnungen und Bescheinigungen</em>.
   </p>
 
 </section>
@@ -5458,6 +5579,14 @@ footer{
     <img src="/turnera/manual/imagenes/51-app-mi-agenda.png" alt="Der Terminkalender einer Mitarbeiterin für den Tag mit ihren Terminen und der Schaltfläche Drucken" loading="lazy">
     <figcaption>Mein Terminkalender: die Termine des Tages, mit der Schaltfläche, um sie auf A4 zu drucken.</figcaption>
   </figure>
+
+<h3 id="app-documentos">Meine Dokumente</h3>
+  <p>
+    In Zentren mit dem Modul Arbeitsrecht hat die persönliche App (die für alle, die sich mit ihrem Benutzer anmelden) zusätzlich <em>Meine Dokumente</em>: ihre Gehaltsabrechnungen und Bescheinigungen. Bei der PIN-Eingabe warnt sie, wenn etwas zu bestätigen ist. Das Dokument wird in der App selbst angezeigt, Seite für Seite, ohne auf dem Handy gespeichert zu werden, und darunter steht die Schaltfläche, um den Empfang zu bestätigen.
+  </p>
+  <p>
+    Alle paar Stunden prüft die App, ob etwas Neues eingetroffen ist, und meldet es gegebenenfalls mit einer Handy-Benachrichtigung. Das macht die App selbst, ohne über einen Drittdienst zu gehen, und bei gesperrtem Handy sagt die Benachrichtigung nicht, worum es geht. Auf einem gemeinsamen Handy gibt es keine Hinweise: Fremdes darf nicht auf dem Bildschirm erscheinen.
+  </p>
 
   <h3 id="app-mantenimiento">Wartungsaufträge</h3>
   <p>

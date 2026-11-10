@@ -679,6 +679,9 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-11-10">10. November 2026</a></li>
+    <li><a href="#2026-11-09">9. November 2026</a></li>
+    <li><a href="#2026-11-08">8. November 2026</a></li>
     <li><a href="#2026-11-07">7. November 2026</a></li>
     <li><a href="#2026-11-06">6. November 2026</a></li>
     <li><a href="#2026-11-04">4. November 2026</a></li>
@@ -720,10 +723,105 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-11-10" class="version">
+  <div class="version__cabecera">
+    <h2>10. November 2026</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.12.0-39c1477</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Kasse: mehrere Termine am selben Tag in einem einzigen Beleg</h4>
+    <ul>
+      <li>Eine Kundin mit mehreren Terminen heute, bei derselben oder bei verschiedenen Fachkräften, wird in einem einzigen Beleg kassiert, mit allen Posten und einer Gesamtsumme.</li>
+      <li>Oben, unter «Noch zu kassieren», erscheint eine einzige Karte mit „2 Terminen“, „3 Terminen“ … Erledigte Termine und die in Behandlung kommen von allein in den Beleg; die, die noch nicht begonnen haben, sind sichtbar, aber nicht angehakt, und man kann den Haken bei dem entfernen, was man jetzt nicht kassieren will.</li>
+      <li>Jede Leistung wird auf den Namen dessen verbucht, der sie erbracht hat, und die Zeile sagt es. Der Rabatt jeder Zeile, der Belegrabatt und die Aufteilung der Zahlung funktionieren wie bei einem einzelnen Termin.</li>
+      <li>Zusammengeführt werden nur die heutigen Termine, die noch nicht kassiert wurden; die von früheren Tagen werden weiterhin unter Offene Beträge kassiert.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Kasse: der Beleg ist vollständig lesbar</h4>
+    <ul>
+      <li>Der Name dessen, was kassiert wird, wird nicht mehr abgeschnitten: Passt er nicht in eine Zeile, geht er in die nächste über, und die Belegliste schneidet die letzte Zeile nicht mehr ab.</li>
+      <li>Der Hinweis „Beleg aktualisieren“ und der zu den geltenden Aktionen stehen jetzt im Beleg, über den Zeilen und jeweils in einer einzigen Zeile, damit sie die Kassier-Schaltflächen nicht nach unten schieben.</li>
+    </ul>
+  </div>
+</section>
+<section id="2026-11-09" class="version">
+  <div class="version__cabecera">
+    <h2>9. November 2026</h2>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.12.0-db02472</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Kunden: der Turnera-Code</h4>
+    <ul>
+      <li>Die Kundenkarte und die Suche zeigen den Turnera-Code. Bei der Suche nach einer Zahl hat dieser Code Vorrang vor der Nummer aus dem früheren Programm.</li>
+      <li>Einwilligungsvorlagen können diesen Code mit {{codigo_cliente}} enthalten.</li>
+    </ul>
+    <h4>Kunden: Hinweis auf mögliche Duplikate</h4>
+    <ul>
+      <li>Beim Anlegen eines Kunden erscheint ein Hinweis, wenn seine Telefonnummer oder, falls angegeben, seine Ausweisnummer schon zu einer anderen Karte gehört, egal wie sie geschrieben ist (mit Leerzeichen, mit +34, mit Punkten oder Bindestrichen).</li>
+      <li>Der Hinweis sagt, wer es ist und ob Telefon, Ausweis oder beides übereinstimmen. Mit der Schaltfläche „Diese Karte verwenden“ macht man mit der bestehenden weiter; handelt es sich um eine andere Person mit demselben Telefon (zum Beispiel eine Mutter und ihre Tochter), wird sie trotzdem angelegt.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Kasse: jede Zeile zu ihrem Preis</h4>
+    <ul>
+      <li>Auf dem Beleg erscheint jede Zeile zu ihrem eigenen Preis. Der Rabatt oder Nachlass auf die gesamte Rechnung steht in einer eigenen Zeile, Rabatt, und darunter der kassierte Gesamtbetrag.</li>
+      <li>Intern wird der Nachlass weiterhin im Verhältnis zu ihren Preisen auf die Zeilen verteilt, damit die Produktion jeder Fachkraft, die Rückgaben und die Rechnung mit dem übereinstimmen, was in die Kasse gekommen ist.</li>
+    </ul>
+    <h4>Menü: Katalog, Angebote und Einrichtungen</h4>
+    <ul>
+      <li>Katalog zeigt nur, was zur Rolle Katalog gehört; Angebote und Einrichtungen stehen getrennt im Menü.</li>
+    </ul>
+    <h4>Arbeitsrecht: Upload per Link für das Lohnbüro</h4>
+    <ul>
+      <li>Der Link, über den das Lohnbüro die Gehaltsabrechnungen hochlädt, lässt weniger Größe zu als der Upload, den die Personalabteilung in der Anwendung vornimmt.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Behobene Fehler</h3>
+    <ul>
+      <li>Die Uhrzeiten werden in der gesamten Installation in der Zeit des Zentrums gezählt, und die Zeiterfassungen in der Stunde, die sich bei der Zeitumstellung im Oktober wiederholt, sind exakt.</li>
+    </ul>
+  </div>
+</section>
+<section id="2026-11-08" class="version">
+  <div class="version__cabecera">
+    <h2>8. November 2026</h2>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.12.0-34fc330</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Arbeitsrecht: Verteilung von Gehaltsabrechnungen und Lohnsteuerbescheinigungen</h4>
+    <ul>
+      <li>Die Personalabteilung lädt hoch, was das Lohnbüro schickt (ein PDF mit allen, mehrere PDFs oder eine ZIP-Datei), Turnera trennt das Dokument jeder Fachkraft anhand ihrer Steuer-ID, die Personalabteilung prüft, wer was bekommt, und stellt es zu. Menü → Personal → Gehaltsabrechnungen und Bescheinigungen.</li>
+      <li>Jede Person öffnet es in Turnera unter Meine Dokumente (im Web und in der Android-App 0.4.0) und bestätigt, dass sie es erhalten hat. Die Personalabteilung sieht jederzeit, wer es hat und wer nicht, und nach 3 und 7 Tagen wird, wer nicht bestätigt hat, per E-Mail erinnert.</li>
+      <li>Wer eine E-Mail in der Karte hat, erhält eine Benachrichtigung mit einem Link, niemals mit angehängter Gehaltsabrechnung; wer keinen digitalen Weg hat, wird als auf Papier übergeben markiert.</li>
+      <li>Die Android-App meldet mit einer Benachrichtigung, wenn etwas Neues eintrifft, ohne dass die Gehaltsabrechnung auf dem gesperrten Bildschirm erscheint.</li>
+    </ul>
+    <h4>Arbeitsrecht: vom Lohnbüro hochladen lassen</h4>
+    <ul>
+      <li>Statt zu warten, bis das Lohnbüro die Gehaltsabrechnungen schickt, kann die Personalabteilung es bitten, sie selbst hochzuladen, mit einem Link per E-Mail, ohne Benutzername und Passwort, der 10 Tage gilt. Was hochgeladen wird, kommt in den Upload dieses Monats, und die Personalabteilung prüft es und stellt es wie gewohnt zu.</li>
+    </ul>
+    <h4>Verwaltung → Arbeitsrecht: welche Teile das Zentrum nutzt</h4>
+    <ul>
+      <li>Gehaltsabrechnungen und Lohnsteuerbescheinigungen werden einzeln ein- oder ausgeschaltet. Einen Teil auszuschalten löscht nichts: Was schon zugestellt wurde, bleibt unter Meine Dokumente und im Verlauf jeder Person.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-11-07" class="version">
   <div class="version__cabecera">
     <h2>7. November 2026</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.12.0-0c9ff28</span></p>
 

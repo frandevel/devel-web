@@ -772,6 +772,10 @@ footer{
     <li><a href="#calendario-cerrar" class="sub sub">Fechar o ano</a></li>
     <li><a href="#calendario-ausencias-parciales" class="sub sub">Ausências parciais</a></li>
     <li><a href="#mi-calendario" class="sub sub">O que vê cada profissional</a></li>
+    <li><a href="#nominas" class="sub">Recibos e declarações</a></li>
+    <li><a href="#nominas-asesoria" class="sub sub">Que seja o gabinete de salários a carregá-los</a></li>
+    <li><a href="#mis-documentos" class="sub sub">Os meus documentos</a></li>
+    <li><a href="#laboral-configuracion" class="sub sub">Que partes de Laboral o centro usa</a></li>
     <li><a href="#historia">11. O processo clínico</a></li>
     <li><a href="#historia-anular" class="sub">Apagar ou anular uma evolução</a></li>
     <li><a href="#historia-mapa" class="sub">Marcar onde dói: o mapa anatómico</a></li>
@@ -1236,7 +1240,8 @@ footer{
     <li><strong>Marcar uma consulta:</strong> prima o espaço livre onde quer que fique. Abre-se a ficha com a hora
       e o profissional já preenchidos; só falta o cliente e o serviço.</li>
     <li><strong>Cliente novo que liga por telefone:</strong> enquanto não se escolheu cliente, por baixo da pesquisa aparece
-      <em>+ Novo cliente</em>. Abre uma ficha de <strong>primeira visita</strong> que só pede nome, apelidos e telemóvel, e deixa o cliente já na marcação. O resto da ficha (documento, data de nascimento, email...) completa-se quando chegar. Entretanto, a marcação e a ficha dizem <strong>Primeira visita</strong> a azul; assim que se abre a ficha e se guardam os restantes dados, o aviso desaparece sozinho.</li>
+      <em>+ Novo cliente</em>. Abre uma ficha de <strong>primeira visita</strong> que só pede nome, apelidos e telemóvel (o NIF é opcional: há quem não o dê por telefone) e deixa o cliente colocado na marcação. O resto da ficha (documento, data de nascimento, e-mail...) completa-se quando chega. Entretanto, a marcação e a ficha dizem <strong>Primeira visita</strong> a azul; assim que se abre a ficha e se guardam os restantes dados, o aviso desaparece sozinho. Ao escrever o telemóvel, e o NIF se for dado, verifica-se se já pertencem a outra ficha (não importa como estejam escritos: com espaços, com +34, com pontos ou hífenes...). Se pertencerem, aparece quem é, se coincide o telefone, o documento ou ambos, com o botão
+      <em>Usar esta ficha</em>; a primeira visita não é registada a menos que se marque <em>É outra pessoa com o mesmo telefone ou documento</em> (uma mãe e a filha, ou um menor com o NIF da mãe). Ao registar uma ficha completa em Clientes aparece o mesmo aviso, embora aí não impeça de guardar.</li>
     <li><strong>Abrir uma marcação:</strong> prima-a.</li>
     <li><strong>A cliente de antes, a um clique:</strong> ao clicar na caixa do cliente sem escrever nada aparecem os últimos 5 clientes com que trabalhou (numa marcação, no TPV ou ao abrir a ficha). Na caixa do cliente do TPV acontece o mesmo.</li>
     <li><strong>Acrescentar um serviço a uma marcação já feita:</strong> a duração aumenta o que dura o serviço novo (e retirá-lo encurta-a), mesmo que tivesse sido ajustada à mão; depois pode afinar-se. Se com isso a marcação chegar à seguinte do mesmo profissional ou da mesma cabine, avisa: não daria tempo para fazer tudo nessa marcação.</li>
@@ -1823,6 +1828,10 @@ footer{
   </p>
 
   <p>
+    <strong>No talão cada linha sai ao seu preço.</strong> Um desconto ou uma redução de toda a conta vai numa linha à parte, <em>Desconto</em>, e por baixo o total cobrado; o mesmo ao cobrar uma dívida. Por dentro, a redução reparte-se de facto pelas linhas, em proporção ao seu preço: assim a produção de cada profissional, a devolução de uma linha avulsa e a fatura batem certo com o que entrou na caixa.
+  </p>
+
+  <p>
     <strong>Uma promoção de um serviço vai na sua linha.</strong> Cada linha do talão (serviço, produto, pacote ou conjunto) tem a sua casa <em>Desc.</em>: 20 % nas virilhas desconta só as virilhas, e as axilas mantêm o preço. O desconto do talão, se houver, aplica-se depois sobre o que resta. No talão e na fatura a linha mostra o desconto total que leva: 20 % da promoção e 10 % do talão aparecem como 28 %.
   </p>
 
@@ -1848,6 +1857,18 @@ footer{
     desaparece dela assim que é cobrado ou deixado em dívida.
   </p>
 
+  <p>
+    <strong>Várias marcações no mesmo dia, um só talão.</strong> Se a cliente veio hoje a mais de um tratamento —com a mesma profissional ou com diferentes—, não é preciso cobrá-los um a um. Em cima, em <em>Por cobrar</em>, aparece um único cartão com «2 marcações», «3 marcações»…; ao carregar nele, o talão monta-se com todas, numa só venda e com um só total. Por cima das linhas aparece a lista <em>Marcações de hoje</em>: as <strong>atendidas</strong> e as que estão <strong>em curso</strong> entram sozinhas, e as que ainda não começaram veem-se mas sem marcar. Desmarque a que não queira cobrar agora —fica à espera em cima para quando sair— ou marque outra para a juntar.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/en/90-tpv-varias-citas.png" alt="O TPV com as marcações de hoje de uma cliente: duas marcadas e no talão, e uma da tarde sem marcar" loading="lazy">
+    <figcaption>As marcações de hoje da cliente: as marcadas vão para o talão, cada serviço com a profissional que o fez.</figcaption>
+  </figure>
+
+  <p>
+    Cada serviço fica <strong>em nome de quem o fez</strong> (a linha diz <em>Quem faz: …</em>), pelo que a produção de cada profissional sai bem mesmo que se cobre tudo junto. A profissional escolhida em cima é quem vende tudo o resto que se junte, como um produto. O desconto de cada linha, o do talão e a repartição do pagamento funcionam como com uma só marcação. Se em alguma das marcações falta uma leitura de aparelho obrigatória, a cobrança espera: anota-se, ou desmarca-se essa marcação. Só se juntam as marcações de <strong>hoje</strong> sem lugar de aula e que ainda não foram cobradas; as de dias anteriores cobram-se em <em>Valores em dívida</em>.
+  </p>
   <ul>
     <li><strong>Cobrar agora</strong> marcado: escolhe-se a forma de pagamento e o dinheiro entra na caixa de hoje.</li>
     <li><strong>Cobrar agora</strong> desmarcado: a visita fica como dívida e aparece em <em>Valores
@@ -4465,7 +4486,8 @@ footer{
   <p>
     Quem assina tem de perceber o que assina. Ao criar ou alterar um modelo, por baixo do texto principal
     está <em>Texto noutros idiomas</em>: uma secção por idioma, opcional, com o seu nome e o seu texto. Os campos
-    escrevem-se igual em todos, com o seu nome em espanhol: <code>{{cliente}}</code>, <code>{{nif}}</code>,
+    escrevem-se igual em todos, com o seu nome em espanhol: <code>{{cliente}}</code>, <code>{{codigo_cliente}}</code>
+    (o código da ficha do cliente no Turnera), <code>{{nif}}</code>,
     <code>{{centro}}</code>, <code>{{fecha}}</code>, <code>{{tratamiento}}</code>, <code>{{representante}}</code>,
     <code>{{representante_documento}}</code> e <code>{{representante_parentesco}}</code>.
   </p>
@@ -5311,9 +5333,7 @@ footer{
   <p>
     Uma picagem não é uma hora que alguém escreve, como a de uma marcação: é o momento exato em que se carrega no
     botão. Para saber a que dia e a que troço pertence, a aplicação precisa de saber em que fuso horário vive o
-    centro, e vem definido em <strong>Europe/Madrid</strong>. Um centro fora de Espanha peninsular altera-o
-    com a variável <code>TURNERA_TZ</code> ao instalar; se não, os troços sairiam deslocados mesmo
-    que as horas somadas estivessem certas.
+    centro, e vem definido em <strong>Europe/Madrid</strong>. É o fuso horário de toda a instalação: o da aplicação, o da base de dados e o de «hoje». Um centro fora de Espanha continental vai numa instalação própria com a variável <code>TURNERA_TZ</code> definida na instalação, e não se muda depois.
   </p>
 
   <h3 id="calendario-laboral">Calendário laboral</h3>
@@ -5624,6 +5644,107 @@ footer{
     o seu utilizador associado a um profissional (por exemplo com o seu PIN no posto partilhado) e tem a permissão <em>Pedir
     dias de férias</em>: o utilizador do escritório não é de nenhum profissional. Daí pedem-se as férias
     (ver <a href="#calendario-vacaciones-pedidas">Pedir férias</a>).
+  </p>
+
+
+  <h3 id="nominas">Recibos e declarações</h3>
+  <span class="ruta">Menu → Pessoal → Recibos e declarações</span>
+
+  <p>
+    O gabinete de salários processa os recibos; o Turnera <strong>distribui-os</strong>. Carrega-se o que o gabinete envia, o Turnera separa o documento de cada profissional pelo NIF, os RH revêem a quem vai cada um e entregam-no. Cada pessoa abre-o no Turnera e <strong>confirma que o recebeu</strong>, e os RH veem em cada momento quem o tem e quem não. O mesmo vale para a <strong>declaração de retenções</strong> de cada ano.
+  </p>
+  <p>
+    Faz parte do módulo <strong>Laboral</strong>: uma secção que o centro tem ou não tem consoante o que tenha contratado, e que vai sempre junto com Pessoal. É preciso a permissão «Distribuir recibos e declarações», que de origem trazem a Direção e os RH. É uma permissão delicada: quem a tem pode abrir o recibo de qualquer pessoa, e de cada vez fica registado quem e quando.
+  </p>
+
+  <h4 id="nominas-subir">Carregar e rever</h4>
+  <ol>
+    <li>Escolher <em>Recibos</em> ou <em>Declarações de retenções</em>, e o mês ou o ano.</li>
+    <li>Em <em>Escolher ficheiros</em>, o que tenha enviado o gabinete de salários: <strong>um PDF com todos</strong>, <strong>vários PDF</strong> (um por pessoa) ou <strong>um zip</strong>. Depois, <em>Carregar e separar</em>.</li>
+    <li>O Turnera separa-os e mostra o resultado, sem entregar nada ainda:
+      <ul>
+        <li>Num PDF com todos, lê o NIF de cada página. As páginas seguidas com o mesmo NIF são um só recibo, e uma página sem NIF vai com a anterior (os recibos de duas folhas). O NIF da empresa não se confunde com o de ninguém.</li>
+        <li>Num ficheiro com o NIF no nome (<code>12345678Z.pdf</code>, <code>recibo_12345678Z_outubro.pdf</code>), o ficheiro inteiro é dessa pessoa, e verifica-se também que o ficheiro <strong>lá dentro</strong> traz o mesmo NIF.</li>
+      </ul>
+    </li>
+    <li>O que levanta dúvidas aparece em cima, a laranja, e <strong>não é entregue a ninguém</strong> até ser atribuído à mão ou descartado: um NIF que não é de nenhum profissional, uma página sem NIF, um ficheiro cujo nome diz um NIF e lá dentro está outro, ou um PDF digitalizado sem texto. Com <em>Ver</em> abre-se o documento para o verificar.</li>
+    <li>Por baixo avisa-se de quem ficou <strong>sem documento</strong> nesse carregamento, caso falte algum, e de quem tem <strong>mais de um</strong> (um subsídio extra à parte, por exemplo).</li>
+  </ol>
+  <p>
+    Se se carregar mais alguma coisa do mesmo mês antes de entregar, junta-se ao mesmo carregamento.
+  </p>
+  <p>
+    Cada documento reconhecido diz <strong>por onde lhe chegará</strong> a essa pessoa: <em>Os meus documentos</em> se tem utilizador, <em>Ligação por e-mail</em> se tem e-mail na ficha e PIN de picar o ponto, ou <em>Sem via digital: em mão</em>
+    se não tem nenhuma das duas coisas. Os que vão em mão avisam-se em cima, com o seu nome, para poder completar a ficha (e-mail e PIN, ou um utilizador associado) <strong>antes</strong> de entregar. Se não der tempo, entrega-se na mesma e depois marca-se como <em>Entregue em papel</em>.
+  </p>
+
+  <h4 id="nominas-asesoria">Que seja o gabinete de salários a carregá-los</h4>
+  <p>
+    Em vez de esperar que o gabinete de salários envie os recibos e carregá-los, pode pedir-se-lhe que os carregue ele:
+    <em>Pedir ao gabinete de salários</em>, por baixo de <em>Carregar e separar</em>, envia-lhe um e-mail com uma ligação para esse mês (ou esse ano, se forem declarações). O e-mail preenche-se sozinho com o do gabinete que processa os recibos, se estiver indicado no envio de horas, e pode alterar-se.
+  </p>
+  <ul>
+    <li>O gabinete carrega sem utilizador nem palavra-passe: um PDF com todos, vários PDF ou um zip, e pode carregar mais de uma vez enquanto a ligação valer (10 dias).</li>
+    <li>O que carrega vai para o carregamento desse mês <strong>por entregar</strong>: os RH revêem-no e entregam-no como sempre. O gabinete não vê nada do que carregou, nem a quem vai cada documento.</li>
+    <li>De cada vez que carrega, chega um e-mail aos RH com quantos documentos chegaram e de onde.</li>
+    <li>Por baixo do botão vê-se como está a última ligação (quando foi enviada, até quando vale e quanto foi carregado) e pode-se <em>Anular</em>. Pedir outra para o mesmo mês anula a anterior.</li>
+  </ul>
+  <figure>
+    <img src="/turnera/manual/imagenes/87-nominas-revisar.png" alt="O carregamento dos recibos de outubro: um documento com um NIF que não é de ninguém, para atribuir, e quatro reconhecidos" loading="lazy">
+    <figcaption>Rever o carregamento: o que levanta dúvidas, em cima; o reconhecido, com o seu ficheiro e as suas páginas.</figcaption>
+  </figure>
+
+  <h4 id="nominas-entregar">Entregar</h4>
+  <p>
+    <em>Entregar</em> envia o carregamento inteiro, ou nada: com um só documento por rever não sai nenhum. Ao entregar:
+  </p>
+  <ul>
+    <li>Quem tem e-mail na ficha recebe um aviso com uma <strong>ligação</strong>, nunca com o recibo anexado: um e-mail que chega a quem não é não revela salário, NIF nem conta bancária. A ligação pede o PIN com que a pessoa pica o ponto e caduca aos 30 dias. O aviso vai sempre para o seu e-mail pessoal, nunca para o do centro.</li>
+    <li>No fim, o Turnera diz quantos foram avisados por e-mail e quantos há que <strong>entregar em mão</strong>; no acompanhamento, esses aparecem com <em>Sem via digital: entregue-o em mão</em> até serem marcados.</li>
+    <li>Quem entra com o seu utilizador, na web ou na aplicação Android, vê-o em <a href="#mis-documentos">Os meus documentos</a>.</li>
+    <li>Aos <strong>3 e aos 7 dias</strong> lembra-se por e-mail quem não tenha confirmado. Depois, já é assunto dos RH.</li>
+    <li>Se a pessoa já tinha um recibo desse mês, o novo <strong>substitui</strong>-o: o anterior não se apaga e o seu aviso de receção continua ligado a ele.</li>
+  </ul>
+
+  <h4 id="nominas-seguir">Quem o tem</h4>
+  <p>
+    No carregamento entregue vê-se cada pessoa com o seu estado: <em>Ainda não aberto</em>, <em>Aberto, sem confirmar</em>,
+    <em>Recebido</em>, <em>Em papel</em> ou <em>Recusou assinar</em>. Em <em>Detalhe</em> está tudo o que aconteceu com o documento (entregue, avisado, aberto, confirmado, com quem, como se identificou e de onde) e a
+    <strong>impressão digital</strong> do PDF entregue, que permite verificar depois que o confirmado é exatamente o que ficou guardado.
+  </p>
+  <ul>
+    <li><strong>Comprovativo</strong>: um PDF com tudo o anterior, para mostrar se alguma vez for preciso.</li>
+    <li><strong>Voltar a avisar</strong>: outro e-mail, com uma ligação nova.</li>
+    <li><strong>Entregue em papel</strong>: para quando se dá em mão; anota-se o dia.</li>
+    <li><strong>Recusou assinar</strong>: foi entregue e a pessoa não quis confirmá-lo; anota-se quem estava presente como testemunha, como se faz em papel.</li>
+  </ul>
+  <figure>
+    <img src="/turnera/manual/imagenes/88-nominas-detalle.png" alt="O detalhe de um recibo entregue: o seu estado, o que aconteceu, a impressão digital do PDF e as ações" loading="lazy">
+    <figcaption>O detalhe de um recibo recebido: o que aconteceu, com quem e como, e o comprovativo.</figcaption>
+  </figure>
+
+  <div class="ojo">
+    <p><strong>O que vale o aviso de receção.</strong> Confirmar é uma assinatura eletrónica simples: a pessoa identifica-se com o seu utilizador ou com o seu PIN, depois de abrir o documento, e fica guardado quando, de onde e o texto exato que lhe foi mostrado. Confirmar a receção <strong>não significa estar de acordo</strong> com o conteúdo, e o texto di-lo. A partir de um posto partilhado não se pode confirmar, porque aí outra pessoa que saiba o PIN poderia fazê-lo por ela. Que a entrega eletrónica sirva como recibo é algo que convém confirmar com o gabinete de salários.</p>
+  </div>
+
+  <h4 id="mis-documentos">Os meus documentos</h4>
+  <span class="ruta">Menu → Os meus documentos</span>
+  <p>
+    Vê-o quem entra com um utilizador associado a um profissional, num centro com o módulo Laboral. Cada recibo ou declaração <strong>abre-se</strong> e depois confirma-se com <em>Confirmo que o recebi</em>; o botão só se ativa depois de aberto. Quem não tem utilizador fá-lo a partir da ligação do e-mail, com o seu PIN.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/89-mis-documentos.png" alt="Os meus documentos: o recibo de outubro por confirmar, com o texto do aviso de receção e o botão para confirmar" loading="lazy">
+    <figcaption>Os meus documentos: abre-se e depois confirma-se.</figcaption>
+  </figure>
+
+  <h4 id="laboral-configuracion">Que partes de Laboral o centro usa</h4>
+  <span class="ruta">Menu → Administração → Laboral</span>
+  <p>
+    Cada parte de Laboral liga-se ou desliga-se por separado: hoje, <em>Recibos</em> e <em>Declarações de retenções</em>; as que vierem depois (comunicados para assinar, contratos, títulos com validade, exames médicos e justificações de faltas) irão aparecendo aqui. É preciso a permissão «Configurar Laboral», que de origem tem a Direção.
+  </p>
+  <p>
+    Desligar uma parte <strong>não apaga nada</strong>: o que já foi entregue continua em <em>Os meus documentos</em> de cada pessoa e no seu histórico. Só deixa de se poder carregar e entregar o novo desse tipo. Com as duas desligadas, desaparece do menu
+    <em>Recibos e declarações</em>.
   </p>
 
 </section>
@@ -6086,6 +6207,14 @@ footer{
     <img src="/turnera/manual/imagenes/51-app-mi-agenda.png" alt="A agenda do dia de uma profissional com as suas marcações e o botão Imprimir" loading="lazy">
     <figcaption>A minha agenda: as marcações do dia, com o botão para as imprimir em A4.</figcaption>
   </figure>
+
+<h3 id="app-documentos">Os meus documentos</h3>
+  <p>
+    Nos centros com o módulo Laboral, a aplicação pessoal (a de quem entra com o seu utilizador) tem ainda <em>Os meus documentos</em>: os seus recibos e declarações. Ao pôr o PIN avisa se há algum por confirmar. O documento vê-se dentro da própria aplicação, página a página, sem ser guardado no telemóvel, e por baixo está o botão para confirmar que foi recebido.
+  </p>
+  <p>
+    De poucas em poucas horas a aplicação verifica se chegou algo novo e, se sim, avisa com uma notificação do telemóvel. Fá-lo a própria aplicação, sem passar por nenhum serviço de terceiros, e com o telemóvel bloqueado a notificação não diz o que é. Num telemóvel partilhado não há avisos: não pode aparecer no ecrã o que é de outra pessoa.
+  </p>
 
   <h3 id="app-mantenimiento">As ordens de manutenção</h3>
   <p>

@@ -679,6 +679,9 @@ footer{
   <h2>Novidades do Turnera</h2>
   <p>O mais recente, em cima</p>
   <ol>
+    <li><a href="#2026-11-10">10 de novembro de 2026</a></li>
+    <li><a href="#2026-11-09">9 de novembro de 2026</a></li>
+    <li><a href="#2026-11-08">8 de novembro de 2026</a></li>
     <li><a href="#2026-11-07">7 de novembro de 2026</a></li>
     <li><a href="#2026-11-06">6 de novembro de 2026</a></li>
     <li><a href="#2026-11-04">4 de novembro de 2026</a></li>
@@ -721,10 +724,105 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Erros corrigidos</strong>: o que falhava e já não falha.</span></li>
 </ul>
 
+<section id="2026-11-10" class="version">
+  <div class="version__cabecera">
+    <h2>10 de novembro de 2026</h2>
+    <span class="version__sello">Última versão</span>
+  </div>
+  <p class="version__numero">Versão <span translate="no">1.12.0-39c1477</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Novas funcionalidades</h3>
+    <h4>TPV: várias marcações no mesmo dia num só talão</h4>
+    <ul>
+      <li>Uma cliente com várias marcações hoje, com a mesma profissional ou com diferentes, cobra-se num só talão, com todos os itens e um só total.</li>
+      <li>Em cima, em «Por cobrar», aparece um único cartão com «2 marcações», «3 marcações»… As marcações atendidas e as que estão em curso entram sozinhas no talão; as que ainda não começaram veem-se sem marcar, e pode-se desmarcar a que não se queira cobrar agora.</li>
+      <li>Cada serviço fica em nome de quem o fez e a linha di-lo. O desconto de cada linha, o do talão e a repartição do pagamento funcionam como com uma só marcação.</li>
+      <li>Só se juntam as marcações de hoje que ainda não foram cobradas; as de dias anteriores continuam a cobrar-se em Valores em dívida.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Melhorias</h3>
+    <h4>TPV: o talão lê-se por inteiro</h4>
+    <ul>
+      <li>O nome do que se cobra já não se corta: se não cabe numa linha, passa para a seguinte, e a lista do talão já não corta a última linha.</li>
+      <li>O aviso de Atualizar o talão e o das promoções em vigor vão dentro do talão, por cima das linhas e numa só linha cada um, para não empurrar para baixo os botões de cobrança.</li>
+    </ul>
+  </div>
+</section>
+<section id="2026-11-09" class="version">
+  <div class="version__cabecera">
+    <h2>9 de novembro de 2026</h2>
+  </div>
+  <p class="version__numero">Versão <span translate="no">1.12.0-db02472</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Novas funcionalidades</h3>
+    <h4>Clientes: o código do Turnera</h4>
+    <ul>
+      <li>A ficha do cliente e a pesquisa mostram o código do Turnera. Ao pesquisar por um número, esse código tem prioridade sobre o número do programa anterior.</li>
+      <li>Os modelos de consentimento podem levar esse código com {{codigo_cliente}}.</li>
+    </ul>
+    <h4>Clientes: aviso de possíveis duplicados</h4>
+    <ul>
+      <li>Ao registar um cliente avisa-se se o seu telefone, ou o seu NIF se for dado, já pertence a outra ficha, não importa como esteja escrito (com espaços, com +34, com pontos ou hífenes).</li>
+      <li>O aviso diz quem é e se coincide o telefone, o documento ou ambos. Com o botão Usar esta ficha continua-se com a que já existe; se for outra pessoa com o mesmo telefone (uma mãe e a filha, por exemplo), regista-se na mesma.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Melhorias</h3>
+    <h4>TPV: cada linha ao seu preço</h4>
+    <ul>
+      <li>No talão cada linha sai ao seu preço. O desconto ou a redução de toda a conta vai numa linha à parte, Desconto, e por baixo o total cobrado.</li>
+      <li>Por dentro, a redução continua repartida pelas linhas, em proporção ao seu preço, para que a produção de cada profissional, as devoluções e a fatura batam certo com o que entrou na caixa.</li>
+    </ul>
+    <h4>Menu: Catálogo, Ofertas e Instalações</h4>
+    <ul>
+      <li>Catálogo mostra só o que corresponde ao papel Catálogo; Ofertas e Instalações aparecem à parte no menu.</li>
+    </ul>
+    <h4>Laboral: carregamento por ligação do gabinete de salários</h4>
+    <ul>
+      <li>A ligação para o gabinete de salários carregar os recibos admite menos peso do que o carregamento que os RH fazem a partir da aplicação.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Erros corrigidos</h3>
+    <ul>
+      <li>As horas contam-se na hora do centro em toda a instalação, e os registos de ponto da hora que se repete na mudança de hora de outubro saem exatos.</li>
+    </ul>
+  </div>
+</section>
+<section id="2026-11-08" class="version">
+  <div class="version__cabecera">
+    <h2>8 de novembro de 2026</h2>
+  </div>
+  <p class="version__numero">Versão <span translate="no">1.12.0-34fc330</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Novas funcionalidades</h3>
+    <h4>Laboral: distribuição de recibos e declarações de retenções</h4>
+    <ul>
+      <li>Os RH carregam o que o gabinete de salários envia (um PDF com todos, vários PDF ou um zip), o Turnera separa o documento de cada profissional pelo NIF, e os RH revêem a quem vai cada um e entregam-no. Menu → Pessoal → Recibos e declarações.</li>
+      <li>Cada pessoa abre-o no Turnera, em Os meus documentos (na web e na aplicação Android 0.4.0), e confirma que o recebeu. Os RH veem em cada momento quem o tem e quem não, e aos 3 e aos 7 dias lembra-se por e-mail quem não tenha confirmado.</li>
+      <li>Quem tem e-mail na ficha recebe um aviso com uma ligação, nunca com o recibo anexado; quem não tem nenhuma via digital marca-se como entregue em papel.</li>
+      <li>A aplicação Android avisa com uma notificação quando chega algo novo, sem que o recibo apareça no ecrã bloqueado.</li>
+    </ul>
+    <h4>Laboral: que seja o gabinete de salários a carregá-los</h4>
+    <ul>
+      <li>Em vez de esperar que o gabinete de salários envie os recibos, os RH podem pedir-lhe que os carregue ele, com uma ligação por e-mail, sem utilizador nem palavra-passe, que vale 10 dias. O que carrega vai para o carregamento desse mês, e os RH revêem-no e entregam-no como sempre.</li>
+    </ul>
+    <h4>Administração → Laboral: que partes usa o centro</h4>
+    <ul>
+      <li>Os recibos e as declarações de retenções ligam-se ou desligam-se por separado. Desligar uma parte não apaga nada: o que já foi entregue continua em Os meus documentos e no histórico de cada pessoa.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-11-07" class="version">
   <div class="version__cabecera">
     <h2>7 de novembro de 2026</h2>
-    <span class="version__sello">Última versão</span>
   </div>
   <p class="version__numero">Versão <span translate="no">1.12.0-0c9ff28</span></p>
 

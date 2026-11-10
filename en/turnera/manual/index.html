@@ -772,6 +772,10 @@ footer{
     <li><a href="#calendario-cerrar" class="sub sub">Closing the year</a></li>
     <li><a href="#calendario-ausencias-parciales" class="sub sub">Partial absences</a></li>
     <li><a href="#mi-calendario" class="sub sub">What each practitioner sees</a></li>
+    <li><a href="#nominas" class="sub">Payslips and certificates</a></li>
+    <li><a href="#nominas-asesoria" class="sub sub">Having the payroll advisor upload them</a></li>
+    <li><a href="#mis-documentos" class="sub sub">My documents</a></li>
+    <li><a href="#laboral-configuracion" class="sub sub">Which parts of Labour the centre uses</a></li>
     <li><a href="#historia">11. The clinical record</a></li>
     <li><a href="#historia-anular" class="sub">Deleting or annulling an evolution</a></li>
     <li><a href="#historia-mapa" class="sub">Marking where it hurts: the anatomical map</a></li>
@@ -1205,7 +1209,8 @@ footer{
     <li><strong>Booking an appointment:</strong> click the free slot where you want it to go. The form opens with the time
       and the member of staff already filled in; all that is missing is the customer and the service.</li>
     <li><strong>New customer calling on the phone:</strong> while no customer has been chosen, below the search box there is
-      <em>+ New customer</em>. It opens a <strong>first visit</strong> record that only asks for first name, surnames and mobile, and puts the customer straight into the appointment. The rest of the record (ID document, date of birth, email...) is completed when they arrive. Until then the appointment and the record say <strong>First visit</strong> in blue; as soon as the record is opened and the rest of the details are saved, the notice disappears by itself.</li>
+      <em>+ New customer</em>. It opens a <strong>first visit</strong> which only asks for first name, surname and mobile (the ID number is optional: some people will not give it over the phone), and leaves the customer set on the appointment. The rest of the record (ID, date of birth, email...) is filled in when they arrive. In the meantime the appointment and the record show <strong>First visit</strong> in blue; as soon as the record is opened and the other details are saved, the notice goes away by itself. When the mobile number is typed, and the ID number if given, Turnera checks whether they already belong to another record (it does not matter how they are written: with spaces, with +34, with dots or hyphens...). If they do, it shows who it is, whether the phone, the ID or both match, with the button
+      <em>Use this record</em>; the first visit is not registered unless it is ticked <em>It is another person with the same phone or ID</em> (a mother and her daughter, or a minor with their mother's ID). When a full record is registered from Customers the same notice appears, although there it does not prevent saving.</li>
     <li><strong>Opening an appointment:</strong> click it.</li>
     <li><strong>The previous customer, one click away:</strong> clicking the customer box without typing anything shows the last 5 customers you have worked with (in an appointment, at the point of sale or by opening their record). The customer box at the point of sale works the same way.</li>
     <li><strong>Adding a service to an existing appointment:</strong> the duration grows by the length of the new service (and removing it shortens it), even if it had been adjusted by hand; you can fine-tune it afterwards. If that makes the appointment reach the next one of the same professional or room, it warns you: there would not be time to do everything in that appointment.</li>
@@ -1675,6 +1680,10 @@ footer{
   </p>
 
   <p>
+    <strong>On the ticket each line shows its own price.</strong> A discount or a reduction on the whole bill goes on a separate line, <em>Discount</em>, and below it the total charged; the same when collecting a debt. Internally the reduction is in fact spread across the lines, in proportion to their price: that way each practitioner's production, the refund of a single line and the invoice match what went into the till.
+  </p>
+
+  <p>
     <strong>A promotion on one service goes on its line.</strong> Each line of the receipt (service, product, voucher or package) has its own <em>Disc.</em> box: 20% off the groin only discounts the groin, and the underarms stay at full price. The receipt discount, if any, is applied afterwards to what is left. On the receipt and the invoice the line shows its total discount: 20% from the promotion and 10% from the receipt show as 28%.
   </p>
 
@@ -1694,6 +1703,18 @@ footer{
     <em>Attended</em>, the customer appears at the top, under <em>To charge</em>, before they reach the counter. Below are the ones still <em>In progress</em>, who come next. Tap the card and the sale loads just as it does from the agenda. The list refreshes itself every few seconds, only shows today's appointments, and each customer drops off it as soon as they are charged or the visit is left as a debt.
   </p>
 
+  <p>
+    <strong>Several appointments on the same day, a single ticket.</strong> If the customer has come for more than one treatment today —with the same practitioner or different ones— there is no need to charge them one by one. At the top, in <em>To charge</em>, a single card appears with “2 appointments”, “3 appointments”…; when you press it the ticket is built with all of them, in one sale and with one total. Above the lines the list <em>Today's appointments</em>: the <strong>attended</strong> and those that are <strong>in progress</strong> go in on their own, and those that have not started yet are shown but unticked. Untick the one you do not want to charge now —it stays waiting at the top for when the customer leaves— or tick another to add it.
+  </p>
+
+  <figure>
+    <img src="/turnera/manual/imagenes/en/90-tpv-varias-citas.png" alt="The point of sale with a customer's appointments for today: two ticked and on the ticket, and one for the afternoon unticked" loading="lazy">
+    <figcaption>The customer's appointments for today: the ticked ones go on the ticket, each service with the practitioner who did it.</figcaption>
+  </figure>
+
+  <p>
+    Each service is recorded <strong>in the name of whoever did it</strong> (the line says <em>Done by: …</em>), so each practitioner's production comes out right even when everything is charged together. The practitioner chosen at the top is the one who sells anything else that is added, such as a product. The discount on each line, the ticket discount and the split of the payment work just as with a single appointment. If any of the appointments is missing a required equipment reading, the charge waits: record it, or untick that appointment. Only appointments from <strong>today</strong> that have no class place and have not yet been charged are joined together; those from earlier days are charged from <em>Unpaid visits</em>.
+  </p>
   <ul>
     <li><strong>Take payment now</strong> ticked: you choose the payment method and the money goes into today's till.</li>
     <li><strong>Take payment now</strong> unticked: the visit is left as a debt and shows up in <em>Unpaid
@@ -4100,7 +4121,8 @@ footer{
   <p>
     Whoever signs has to understand what they sign. When creating or changing a template, below the main text
     there is <em>Text in other languages</em>: one optional section per language, with its name and its text. The gaps are
-    written the same way in all of them, with their Spanish names: <code>{{cliente}}</code>, <code>{{nif}}</code>,
+    written the same way in all of them, with their Spanish names: <code>{{cliente}}</code>, <code>{{codigo_cliente}}</code>
+    (the code of the customer's record in Turnera), <code>{{nif}}</code>,
     <code>{{centro}}</code>, <code>{{fecha}}</code>, <code>{{tratamiento}}</code>, <code>{{representante}}</code>,
     <code>{{representante_documento}}</code> and <code>{{representante_parentesco}}</code>.
   </p>
@@ -4826,9 +4848,7 @@ footer{
   <p>
     A clocking is not a time somebody writes, like an appointment's: it is the exact moment the button is
     pressed. To know which day and which stretch it belongs to, the application needs to know which time zone the
-    centre lives in, and it comes set to <strong>Europe/Madrid</strong>. A centre outside mainland Spain
-    changes it with the <code>TURNERA_TZ</code> variable when installing; otherwise the stretches would come out shifted
-    even if the summed hours were right.
+    centre lives in, and it comes set to <strong>Europe/Madrid</strong>. It is the time zone of the whole installation: that of the application, that of the database and that of “today”. A centre outside mainland Spain goes on its own installation with the variable <code>TURNERA_TZ</code> set at installation time, and it is not changed afterwards.
   </p>
 
   <h3 id="calendario-laboral">Work calendar</h3>
@@ -5054,6 +5074,107 @@ footer{
     their user linked to a professional (for example with their PIN at the shared device) and has the permission <em>Request
     vacation days</em>: the office user belongs to no professional. From there vacation is requested
     (see <a href="#calendario-vacaciones-pedidas">Request vacation</a>).
+  </p>
+
+
+  <h3 id="nominas">Payslips and certificates</h3>
+  <span class="ruta">Menu → Staff → Payslips and certificates</span>
+
+  <p>
+    The payroll advisor prepares the payslips; Turnera <strong>distributes them</strong>. You upload what the advisor sends, Turnera separates each practitioner's document by their ID number, HR checks who each one goes to and delivers it. Each person opens it in Turnera and <strong>confirms they have received it</strong>, and HR can see at any moment who has it and who has not. The same goes for the <strong>tax withholding certificate</strong> for each year.
+  </p>
+  <p>
+    It is part of the <strong>Labour</strong>module: a section that the centre has or does not have depending on what it has contracted, and which always goes together with Staff. It needs the permission “Distribute payslips and certificates”, which Management and HR have by default. It is a sensitive permission: whoever has it can open anyone's payslip, and every time they do it is recorded who and when.
+  </p>
+
+  <h4 id="nominas-subir">Upload and review</h4>
+  <ol>
+    <li>Choose <em>Payslips</em> or <em>Tax withholding certificates</em>, and the month or the year.</li>
+    <li>In <em>Choose files</em>, whatever the payroll advisor has sent: <strong>one PDF with all of them</strong>, <strong>several PDFs</strong> (one per person) or <strong>a zip</strong>. Then, <em>Upload and split</em>.</li>
+    <li>Turnera splits them and shows the result, without delivering anything yet:
+      <ul>
+        <li>In a PDF with everyone, it reads the ID number on each page. Consecutive pages with the same ID number are a single payslip, and a page with no ID number goes with the previous one (two-page payslips). The company's tax ID is not mistaken for anyone's.</li>
+        <li>In a file with the ID number in its name (<code>12345678Z.pdf</code>, <code>payslip_12345678Z_october.pdf</code>), the whole file belongs to that person, and it is also checked that the file <strong>inside</strong> shows the same ID number.</li>
+      </ul>
+    </li>
+    <li>Whatever is in doubt appears at the top, in orange, and <strong>is not delivered to anyone</strong> until it is assigned by hand or discarded: an ID number that belongs to no practitioner, a page with no ID number, a file whose name says one ID number and inside says another, or a scanned PDF with no text. With <em>View</em> the document is opened so it can be checked.</li>
+    <li>Below it says who has been left out <strong>no document</strong> of that upload, in case anyone is missing, and who has <strong>more than one</strong> (a separate extra payment, for example).</li>
+  </ol>
+  <p>
+    If something else for the same month is uploaded before delivering, it is added to the same upload.
+  </p>
+  <p>
+    Each recognised document says <strong>how it will reach them</strong> to that person: <em>My documents</em> if they have a user, <em>Link by email</em> if they have an email on their record and a clock-in PIN, or <em>No digital route: in person</em>
+    if they have neither. Those handed over in person are listed at the top, with their name, so that their record can be completed (email and PIN, or a linked user) <strong>before</strong> delivering. If there is no time, it is delivered anyway and afterwards marked as <em>Handed over on paper</em>.
+  </p>
+
+  <h4 id="nominas-asesoria">Having the payroll advisor upload them</h4>
+  <p>
+    Instead of waiting for the payroll advisor to send the payslips and uploading them, they can be asked to upload them themselves:
+    <em>Ask the payroll advisor</em>, below <em>Upload and split</em>, sends them an email with a link for that month (or that year, if they are certificates). The email fills itself in with that of the payroll advisor who prepares the payslips, if it is set in the hours submission, and it can be changed.
+  </p>
+  <ul>
+    <li>The advisor uploads without a username or password: one PDF with everyone, several PDFs or a zip, and can upload more than once while the link is valid (10 days).</li>
+    <li>What they upload goes to that month's batch <strong>not yet delivered</strong>: HR reviews it and delivers it as usual. The advisor sees nothing of what was uploaded, nor who each document goes to.</li>
+    <li>Every time they upload, an email reaches HR with how many documents have arrived and from where.</li>
+    <li>Below the button you can see the state of the latest link (when it was sent, until when it is valid and how much has been uploaded) and you can <em>Cancel</em>. Asking for another for the same month cancels the previous one.</li>
+  </ul>
+  <figure>
+    <img src="/turnera/manual/imagenes/87-nominas-revisar.png" alt="The October payslip batch: a document with an ID number that belongs to no one, to be assigned, and four recognised" loading="lazy">
+    <figcaption>Reviewing the batch: whatever is in doubt at the top; the recognised ones with their file and their pages.</figcaption>
+  </figure>
+
+  <h4 id="nominas-entregar">Deliver</h4>
+  <p>
+    <em>Deliver</em> sends the whole batch, or nothing: with a single unreviewed document none goes out. On delivering:
+  </p>
+  <ul>
+    <li>Whoever has an email on their record receives a notice with a <strong>link</strong>, never with the payslip attached: an email that reaches the wrong person does not leak salary, ID number or bank account. The link asks for the PIN the person clocks in with and expires after 30 days. The notice always goes to their personal email, never to the centre's.</li>
+    <li>At the end, Turnera says how many have been notified by email and how many have to be <strong>handed over in person</strong>; in the follow-up, those appear with <em>No digital route: hand it over in person</em> until they are marked.</li>
+    <li>Whoever signs in with their user, on the web or in the Android app, sees it in <a href="#mis-documentos">My documents</a>.</li>
+    <li>At <strong>3 and 7 days</strong> whoever has not confirmed is reminded by email. After that it is up to HR.</li>
+    <li>If the person already had a payslip for that month, the new one <strong>replaces</strong>it: the previous one is not deleted and its acknowledgement stays attached to it.</li>
+  </ul>
+
+  <h4 id="nominas-seguir">Who has it</h4>
+  <p>
+    In the delivered batch each person is shown with their status: <em>Not opened</em>, <em>Opened, not confirmed</em>,
+    <em>Received</em>, <em>On paper</em> or <em>Refused to sign</em>. In <em>Details</em> everything that has happened with the document is recorded (delivered, notified, opened, confirmed, with whom, how they identified themselves and from where) and the
+    <strong>fingerprint</strong> of the PDF delivered, which makes it possible to check afterwards that what was confirmed is exactly what was stored.
+  </p>
+  <ul>
+    <li><strong>Receipt</strong>: a PDF with all of the above, to show if it is ever needed.</li>
+    <li><strong>Notify again</strong>: another email, with a new link.</li>
+    <li><strong>Handed over on paper</strong>: for when it is handed over in person; the day is recorded.</li>
+    <li><strong>Refused to sign</strong>: it was delivered and the person did not want to confirm it; who was present is recorded as a witness, as is done on paper.</li>
+  </ul>
+  <figure>
+    <img src="/turnera/manual/imagenes/88-nominas-detalle.png" alt="The detail of a delivered payslip: its status, what has happened, the PDF fingerprint and the actions" loading="lazy">
+    <figcaption>The detail of a payslip received: what has happened, with whom and how, and the receipt.</figcaption>
+  </figure>
+
+  <div class="ojo">
+    <p><strong>What the acknowledgement is worth.</strong> Confirming is a simple electronic signature: the person identifies themselves with their user or their PIN, after opening the document, and it is recorded when, from where and the exact text they were shown. Confirming receipt <strong>does not mean agreeing</strong> with the content, and the text says so. From a shared workstation it cannot be confirmed, because there someone else who knows the PIN could do it for them. Whether electronic delivery is valid as a receipt is something worth confirming with the payroll advisor.</p>
+  </div>
+
+  <h4 id="mis-documentos">My documents</h4>
+  <span class="ruta">Menu → My documents</span>
+  <p>
+    It is seen by whoever signs in with a user linked to a practitioner, in a centre with the Labour module. Each payslip or certificate is <strong>opened</strong> and then confirmed with <em>I confirm that I have received it</em>; the button is not enabled until it has been opened. Whoever has no user does it from the link in the email, with their PIN.
+  </p>
+  <figure>
+    <img src="/turnera/manual/imagenes/89-mis-documentos.png" alt="My documents: the October payslip to confirm, with the text of the acknowledgement and the button to confirm" loading="lazy">
+    <figcaption>My documents: it is opened and then confirmed.</figcaption>
+  </figure>
+
+  <h4 id="laboral-configuracion">Which parts of Labour the centre uses</h4>
+  <span class="ruta">Menu → Administration → Labour</span>
+  <p>
+    Each part of Labour is switched on or off separately: today, <em>Payslips</em> and <em>Tax withholding certificates</em>; those to come later (notices to sign, contracts, qualifications with an expiry date, medical check-ups and certificates of absence) will appear here. It needs the permission “Configure Labour”, which Management has by default.
+  </p>
+  <p>
+    Switching a part off <strong>does not delete anything</strong>: what has already been delivered stays in <em>My documents</em> of each person and in their history. Only new documents of that type can no longer be uploaded or delivered. With both switched off, it disappears from the menu
+    <em>Payslips and certificates</em>.
   </p>
 
 </section>
@@ -5453,6 +5574,14 @@ footer{
     <img src="/turnera/manual/imagenes/51-app-mi-agenda.png" alt="A professional’s diary for the day with their appointments and the Print button" loading="lazy">
     <figcaption>My diary: the day’s appointments, with the button to print them on A4.</figcaption>
   </figure>
+
+<h3 id="app-documentos">My documents</h3>
+  <p>
+    In centres with the Labour module, the personal app (the one for whoever signs in with their user) also has <em>My documents</em>: their payslips and certificates. When the PIN is entered it warns if there is one to confirm. The document is shown inside the app itself, page by page, without being saved on the phone, and below it is the button to confirm that it has been received.
+  </p>
+  <p>
+    Every few hours the app checks whether anything new has arrived and, if so, alerts with a phone notification. The app does it itself, without going through any third-party service, and with the phone locked the notification does not say what it is. On a shared phone there are no alerts: someone else's information must not appear on screen.
+  </p>
 
   <h3 id="app-mantenimiento">Maintenance orders</h3>
   <p>
