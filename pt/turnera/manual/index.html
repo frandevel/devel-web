@@ -3062,19 +3062,19 @@ footer{
     <tbody><tr><th>Função</th><th>Para que serve</th><th>Permissões de fábrica</th></tr>
     <tr><td><strong><a href="#rol-recepcion">Receção</a></strong></td><td>Marca horas, atende ao balcão e cobra.</td><td>33</td></tr>
     <tr><td><strong><a href="#rol-profesional">Profissional</a></strong></td><td>A sua agenda, os seus clientes e o processo clínico.</td><td>18</td></tr>
-    <tr><td><strong><a href="#rol-direccion">Direção</a></strong></td><td>Dirige o centro: catálogo, pessoal, relatórios e definições. Também trata dos utilizadores: alterar-lhes o nome ou a unidade, desbloqueá-los e repor-lhes a palavra-passe.</td><td>96</td></tr>
+    <tr><td><strong><a href="#rol-direccion">Direção</a></strong></td><td>Dirige o centro: catálogo, pessoal, relatórios e definições. Também trata dos utilizadores: alterar-lhes o nome ou a unidade, desbloqueá-los e repor-lhes a palavra-passe.</td><td>97</td></tr>
     <tr><td><strong><a href="#rol-rrhh">RH</a></strong></td><td>Calendários laborais, profissionais e agenda.</td><td>18</td></tr>
     <tr><td><strong><a href="#rol-mantenimiento">Manutenção</a></strong></td><td>Gere as ordens de manutenção, as suas zonas e os seus equipamentos.</td><td>7</td></tr>
     <tr><td><strong><a href="#rol-activaciones">Ativações</a></strong></td><td>Gere os pontos de ativação e os seus pedidos.</td><td>2</td></tr>
     <tr><td><strong><a href="#rol-clientes">Clientes</a></strong></td><td>Função de módulo: as fichas, os seus avisos, os seus pontos e o relatório de clientes.</td><td>11</td></tr>
-    <tr><td><strong><a href="#rol-catalogo">Catálogo</a></strong></td><td>Função de módulo: serviços, pacotes, produtos, fornecedores e stock, com os seus relatórios.</td><td>14</td></tr>
+    <tr><td><strong><a href="#rol-catalogo">Catálogo</a></strong></td><td>Função de módulo: serviços, pacotes, produtos, fornecedores e stock, com os seus relatórios.</td><td>15</td></tr>
     <tr><td><strong><a href="#rol-agenda">Agenda</a></strong></td><td>Função de módulo: marcações, lista de espera, cabinas, aparelhos e o relatório de marcações.</td><td>13</td></tr>
     <tr><td><strong><a href="#rol-historia-clinica">Histórico clínico</a></strong></td><td>Função de módulo: o processo clínico e os consentimentos.</td><td>8</td></tr>
     <tr><td><strong><a href="#rol-caja">Caixa</a></strong></td><td>Função de módulo: cobrar, devolver, dívidas, pacotes de sessões, cartões-oferta, cupões, fecho de caixa e os seus relatórios.</td><td>21</td></tr>
     <tr><td><strong><a href="#rol-facturacion">Faturação</a></strong></td><td>Função de módulo: faturas completas, livro de faturas e rascunho contabilístico.</td><td>3</td></tr>
     <tr><td><strong><a href="#rol-portal-y-avisos">Portal e avisos</a></strong></td><td>Função de módulo: o portal de reservas e os avisos por WhatsApp.</td><td>2</td></tr>
     <tr><td><strong><a href="#rol-personal">Pessoal</a></strong></td><td>Função de módulo: calendários laborais, registo de jornada e incidências.</td><td>10</td></tr>
-    <tr><td><strong><a href="#rol-administrador-del-sistema">Administrador do sistema</a></strong></td><td>Tudo, incluindo as <a href="#roles-sensibles">permissões sensíveis</a>. É a única que as traz.</td><td>120 (todas)</td></tr>
+    <tr><td><strong><a href="#rol-administrador-del-sistema">Administrador do sistema</a></strong></td><td>Tudo, incluindo as <a href="#roles-sensibles">permissões sensíveis</a>. É a única que as traz.</td><td>121 (todas)</td></tr>
   </tbody></table>
   </div>
 
@@ -3114,7 +3114,7 @@ footer{
       <a href="#perm-reports-payments">«Relatório de cobranças»</a>. Descarregá-lo para ficheiro exige além disso <a href="#perm-reports-export">«Descarregar relatórios para ficheiro»</a>; e o relatório de clientes para ficheiro exige <a href="#perm-customers-export">«Exportar a lista de clientes»</a>, que é sensível.</li>
     <li><strong>Catálogo.</strong> <a href="#perm-services-view">«Ver os serviços»</a> mostra os serviços e os seus preços;
       <a href="#perm-services-write">«Criar e editar os serviços»</a> é o que permite alterá-los. Só com permissão de ver, os botões de criar, editar e retirar aparecem desligados ou não aparecem. Escolher serviços com os botões rápidos ao marcar uma consulta não precisa de ver o catálogo: é outra permissão,
-      <a href="#perm-services-quick-pick">“Seleção rápida de serviços”</a>.</li>
+      <a href="#perm-services-quick-pick">“Seleção rápida de serviços”</a>. O ecrã dos grupos de pacotes de sessões também não abre só por ver os serviços: pede <a href="#perm-service-groups-view">«Ver os grupos de pacotes de sessões»</a>, que de origem só a Direção traz.</li>
     <li><strong>Caixa.</strong> Cobrar é <a href="#perm-checkout-charge">«Cobrar na caixa»</a>; aplicar um desconto, <a href="#perm-checkout-discount">«Aplicar descontos»</a>; deixar algo em dívida, <a href="#perm-checkout-debt">«Deixar em dívida»</a>; tirar o talão, <a href="#perm-checkout-print-ticket">«Imprimir talões»</a>; dar um orçamento, <a href="#perm-checkout-budget">«Dar orçamentos»</a>; devolver um ticket, <a href="#perm-checkout-refund">«Devolver um ticket»</a>; ver o cobrado hoje e no mês no Início,
       <a href="#perm-dashboard-cash">«Ver a caixa no Início»</a>. Ninguém da receção reabre uma caixa fechada sem <a href="#perm-cash-reopen">«Reabrir uma caixa fechada»</a>.</li>
     <li><strong>Manutenção.</strong> <a href="#perm-maintenance-view">«Ver a manutenção»</a> lê as ordens; abrir uma é
@@ -3314,6 +3314,7 @@ footer{
     <tr id="perm-services-write"><td><strong>Criar e editar os serviços</strong></td><td>Permite criar, editar e retirar serviços.</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-packages-view"><td><strong>Ver os pacotes</strong></td><td>Consulta os pacotes de serviços e produtos. Só de leitura.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-profesional">Profissional</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-packages-write"><td><strong>Criar e editar os pacotes</strong></td><td>Permite criar e editar pacotes e o respetivo preço.</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
+    <tr id="perm-service-groups-view"><td><strong>Ver os grupos de pacotes de sessões</strong></td><td>Abre o ecrã dos grupos de pacotes de sessões e consulta que serviços cobre cada um. Só de leitura: para os alterar é preciso «Gerir os grupos de pacotes de sessões».</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-service-groups-write"><td><strong>Gerir os grupos de pacotes de sessões</strong></td><td>Gere os grupos que decidem que pacote cobre que serviço.</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-prices-lookup"><td><strong>Consultar preços</strong></td><td>Abre a consulta rápida de preços: procura-se um serviço, um pacote ou um produto e só mostra o nome e o preço. Não dá acesso às fichas, aos custos nem a nada do que se cobra.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-profesional">Profissional</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-products-view"><td><strong>Ver os produtos</strong></td><td>Consulta os produtos à venda. Só de leitura.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-profesional">Profissional</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
@@ -3388,13 +3389,13 @@ footer{
     <p class="rol-selector__titulo">Funções gerais</p>
     <div class="chips"><a class="chip r-recepcion" href="#rol-recepcion">Receção <small>33</small></a>
       <a class="chip r-profesional" href="#rol-profesional">Profissional <small>18</small></a>
-      <a class="chip r-direccion" href="#rol-direccion">Direção <small>96</small></a>
+      <a class="chip r-direccion" href="#rol-direccion">Direção <small>97</small></a>
       <a class="chip r-rrhh" href="#rol-rrhh">RH <small>18</small></a>
       <a class="chip r-mantenimiento" href="#rol-mantenimiento">Manutenção <small>7</small></a>
       <a class="chip r-activaciones" href="#rol-activaciones">Ativações <small>2</small></a></div>
     <p class="rol-selector__titulo">Funções de módulo (tudo o que não é sensível num módulo)</p>
     <div class="chips"><a class="chip r-clientes" href="#rol-clientes">Clientes <small>11</small></a>
-      <a class="chip r-catalogo" href="#rol-catalogo">Catálogo <small>14</small></a>
+      <a class="chip r-catalogo" href="#rol-catalogo">Catálogo <small>15</small></a>
       <a class="chip r-agenda" href="#rol-agenda">Agenda <small>13</small></a>
       <a class="chip r-historia-clinica" href="#rol-historia-clinica">Histórico clínico <small>8</small></a>
       <a class="chip r-caja" href="#rol-caja">Caixa <small>21</small></a>
@@ -3402,7 +3403,7 @@ footer{
       <a class="chip r-portal-y-avisos" href="#rol-portal-y-avisos">Portal e avisos <small>2</small></a>
       <a class="chip r-personal" href="#rol-personal">Pessoal <small>10</small></a></div>
     <p class="rol-selector__titulo">Função de sistema</p>
-    <div class="chips"><a class="chip r-administrador-del-sistema" href="#rol-administrador-del-sistema">Administrador do sistema <small>120</small></a></div>
+    <div class="chips"><a class="chip r-administrador-del-sistema" href="#rol-administrador-del-sistema">Administrador do sistema <small>121</small></a></div>
     <p class="rol-selector__titulo">E o que nenhuma função traz</p>
     <div class="chips"><a class="chip r-adicionales" href="#permisos-adicionales">Permissões adicionais <small>14</small></a><a class="chip r-matriz" href="#roles-matriz">Resumo em matriz</a></div>
   </nav>
@@ -3518,7 +3519,7 @@ footer{
 
   <article class="rol-card r-direccion familia-general" id="rol-direccion">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Direção</h5><span class="rc-cuenta">96 permissões</span><span class="rc-familia">Função geral</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Direção</h5><span class="rc-cuenta">97 permissões</span><span class="rc-familia">Função geral</span></div>
       <p class="rc-para">Para quem dirige o centro: catálogo, pessoal, relatórios e definições.</p>
     </header>
     <div class="rc-cuerpo">
@@ -3594,6 +3595,7 @@ footer{
         <li class="rc-perm"><a href="#perm-services-write">Criar e editar os serviços</a><span class="rc-desc">Permite criar, editar e retirar serviços.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">Ver os pacotes</a><span class="rc-desc">Consulta os pacotes de serviços e produtos.</span></li>
         <li class="rc-perm"><a href="#perm-packages-write">Criar e editar os pacotes</a><span class="rc-desc">Permite criar e editar pacotes e o respetivo preço.</span></li>
+        <li class="rc-perm"><a href="#perm-service-groups-view">Ver os grupos de pacotes de sessões</a><span class="rc-desc">Abre o ecrã dos grupos de pacotes de sessões e consulta que serviços cobre cada um. Só de leitura: para os alterar é preciso «Gerir os grupos de pacotes de sessões».</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-write">Gerir os grupos de pacotes de sessões</a><span class="rc-desc">Gere os grupos que decidem que pacote cobre que serviço.</span></li>
         <li class="rc-perm"><a href="#perm-prices-lookup">Consultar preços</a><span class="rc-desc">Abre a consulta rápida de preços: procura-se um serviço, um pacote ou um produto e só mostra o nome e o preço.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Ver os produtos</a><span class="rc-desc">Consulta os produtos de venda.</span></li>
@@ -3761,7 +3763,7 @@ footer{
 
   <article class="rol-card r-catalogo familia-modulo" id="rol-catalogo">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Catálogo</h5><span class="rc-cuenta">14 permissões</span><span class="rc-familia">Função de módulo</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Catálogo</h5><span class="rc-cuenta">15 permissões</span><span class="rc-familia">Função de módulo</span></div>
       <p class="rc-para">Função de módulo, para quem gere serviços, pacotes, produtos, fornecedores e stock. Leva todas as permissões não sensíveis do seu módulo, e só essas.</p>
     </header>
     <div class="rc-cuerpo">
@@ -3771,6 +3773,7 @@ footer{
         <li class="rc-perm"><a href="#perm-services-write">Criar e editar os serviços</a><span class="rc-desc">Permite criar, editar e retirar serviços.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">Ver os pacotes</a><span class="rc-desc">Consulta os pacotes de serviços e produtos.</span></li>
         <li class="rc-perm"><a href="#perm-packages-write">Criar e editar os pacotes</a><span class="rc-desc">Permite criar e editar pacotes e o respetivo preço.</span></li>
+        <li class="rc-perm"><a href="#perm-service-groups-view">Ver os grupos de pacotes de sessões</a><span class="rc-desc">Abre o ecrã dos grupos de pacotes de sessões e consulta que serviços cobre cada um. Só de leitura: para os alterar é preciso «Gerir os grupos de pacotes de sessões».</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-write">Gerir os grupos de pacotes de sessões</a><span class="rc-desc">Gere os grupos que decidem que pacote cobre que serviço.</span></li>
         <li class="rc-perm"><a href="#perm-prices-lookup">Consultar preços</a><span class="rc-desc">Abre a consulta rápida de preços: procura-se um serviço, um pacote ou um produto e só mostra o nome e o preço.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Ver os produtos</a><span class="rc-desc">Consulta os produtos de venda.</span></li>
@@ -3919,8 +3922,8 @@ footer{
 
   <article class="rol-card r-administrador-del-sistema familia-admin" id="rol-administrador-del-sistema">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Administrador do sistema</h5><span class="rc-cuenta">120 permissões</span><span class="rc-familia">Função de sistema</span></div>
-      <p class="rc-para">Para quem responde por todo o centro: leva tudo, incluindo as permissões sensíveis. Traz <strong>as 120 permissões</strong> e é a única função de fábrica que traz as 13 permissões <a href="#roles-sensibles">sensíveis</a>. Uma permissão nova chega-lhe sozinha.</p>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Administrador do sistema</h5><span class="rc-cuenta">121 permissões</span><span class="rc-familia">Função de sistema</span></div>
+      <p class="rc-para">Para quem responde por todo o centro: leva tudo, incluindo as permissões sensíveis. Traz <strong>as 121 permissões</strong> e é a única função de fábrica que traz as 13 permissões <a href="#roles-sensibles">sensíveis</a>. Uma permissão nova chega-lhe sozinha.</p>
     </header>
     <div class="rc-cuerpo">
       <p class="rc-nota">Para não repetir a tabela inteira, aqui vão só as sensíveis. Todas as outras estão na <a href="#roles-permisos">tabela por módulo</a>.</p>
@@ -3967,7 +3970,7 @@ footer{
   <h4 id="roles-adicionales">Permissões adicionais: as que nenhuma função de fábrica traz</h4>
 
   <p>
-    Das 120 permissões, <strong>14</strong> nenhuma função de fábrica as traz, só o Administrador do sistema. Se alguém precisar delas, <strong>cria-se uma função à medida</strong> com essas permissões (<a href="#roles-paso-a-paso">como se cria uma função</a>) e atribui-se a essa pessoa em
+    Das 121 permissões, <strong>14</strong> nenhuma função de fábrica as traz, só o Administrador do sistema. Se alguém precisar delas, <strong>cria-se uma função à medida</strong> com essas permissões (<a href="#roles-paso-a-paso">como se cria uma função</a>) e atribui-se a essa pessoa em
     <strong>Administração → Utilizadores</strong>. As sensíveis levam o distintivo e convém dá-las apenas a quem dirige o centro.
   </p>
 
@@ -4103,6 +4106,7 @@ footer{
     <tr><td><a href="#perm-services-write">Criar e editar os serviços</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr><td><a href="#perm-packages-view">Ver os pacotes</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr><td><a href="#perm-packages-write">Criar e editar os pacotes</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
+    <tr><td><a href="#perm-service-groups-view">Ver os grupos de pacotes de sessões</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr><td><a href="#perm-service-groups-write">Gerir os grupos de pacotes de sessões</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr><td><a href="#perm-prices-lookup">Consultar preços</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr><td><a href="#perm-products-view">Ver os produtos</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>

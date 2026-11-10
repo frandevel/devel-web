@@ -3421,19 +3421,19 @@ footer{
     <tbody><tr><th>Rol</th><th>Para qué sirve</th><th>Permisos de fábrica</th></tr>
     <tr><td><strong><a href="#rol-recepcion">Recepción</a></strong></td><td>Da horas, atiende el mostrador y cobra.</td><td>33</td></tr>
     <tr><td><strong><a href="#rol-profesional">Profesional</a></strong></td><td>Su agenda, sus clientes y la historia clínica.</td><td>18</td></tr>
-    <tr><td><strong><a href="#rol-direccion">Dirección</a></strong></td><td>Lleva el centro: catálogo, personal, informes y ajustes. También atiende a los usuarios: cambiarles el nombre o la delegación, desbloquearlos y restablecerles la contraseña.</td><td>96</td></tr>
+    <tr><td><strong><a href="#rol-direccion">Dirección</a></strong></td><td>Lleva el centro: catálogo, personal, informes y ajustes. También atiende a los usuarios: cambiarles el nombre o la delegación, desbloquearlos y restablecerles la contraseña.</td><td>97</td></tr>
     <tr><td><strong><a href="#rol-rrhh">RRHH</a></strong></td><td>Calendarios laborales, profesionales y agenda.</td><td>18</td></tr>
     <tr><td><strong><a href="#rol-mantenimiento">Mantenimiento</a></strong></td><td>Lleva los partes de mantenimiento, sus zonas y sus equipos.</td><td>7</td></tr>
     <tr><td><strong><a href="#rol-activaciones">Activaciones</a></strong></td><td>Lleva los puntos de activación y sus solicitudes.</td><td>2</td></tr>
     <tr><td><strong><a href="#rol-clientes">Clientes</a></strong></td><td>Rol de módulo: las fichas, sus avisos, sus puntos y el informe de clientes.</td><td>11</td></tr>
-    <tr><td><strong><a href="#rol-catalogo">Catálogo</a></strong></td><td>Rol de módulo: servicios, paquetes, productos, proveedores y stock, con sus informes.</td><td>14</td></tr>
+    <tr><td><strong><a href="#rol-catalogo">Catálogo</a></strong></td><td>Rol de módulo: servicios, paquetes, productos, proveedores y stock, con sus informes.</td><td>15</td></tr>
     <tr><td><strong><a href="#rol-agenda">Agenda</a></strong></td><td>Rol de módulo: citas, lista de espera, cabinas, aparatos y el informe de citas.</td><td>13</td></tr>
     <tr><td><strong><a href="#rol-historia-clinica">Historia clínica</a></strong></td><td>Rol de módulo: la historia clínica y los consentimientos.</td><td>8</td></tr>
     <tr><td><strong><a href="#rol-caja">Caja</a></strong></td><td>Rol de módulo: cobrar, devolver, deudas, bonos, tarjetas regalo, cupones, cierre de caja y sus informes.</td><td>21</td></tr>
     <tr><td><strong><a href="#rol-facturacion">Facturación</a></strong></td><td>Rol de módulo: facturas completas, libro de facturas y borrador contable.</td><td>3</td></tr>
     <tr><td><strong><a href="#rol-portal-y-avisos">Portal y avisos</a></strong></td><td>Rol de módulo: el portal de reservas y los avisos por WhatsApp.</td><td>2</td></tr>
     <tr><td><strong><a href="#rol-personal">Personal</a></strong></td><td>Rol de módulo: calendarios laborales, registro de jornada e incidencias.</td><td>10</td></tr>
-    <tr><td><strong><a href="#rol-administrador-del-sistema">Administrador del sistema</a></strong></td><td>Todo, incluidos los <a href="#roles-sensibles">permisos delicados</a>. Es el único que los trae.</td><td>120 (todos)</td></tr>
+    <tr><td><strong><a href="#rol-administrador-del-sistema">Administrador del sistema</a></strong></td><td>Todo, incluidos los <a href="#roles-sensibles">permisos delicados</a>. Es el único que los trae.</td><td>121 (todos)</td></tr>
   </tbody></table>
   </div>
 
@@ -3494,7 +3494,8 @@ footer{
     <li><strong>Catálogo.</strong> <a href="#perm-services-view">«Ver los servicios»</a> enseña los servicios y sus precios;
       <a href="#perm-services-write">«Crear y editar los servicios»</a> es lo que deja cambiarlos. Con solo mirar, los botones de dar de alta, editar y retirar
       salen apagados o no salen. Elegir servicios con los botones rápidos al dar una cita no necesita ver el catálogo: es otro permiso,
-      <a href="#perm-services-quick-pick">«Selección rápida de servicios»</a>.</li>
+      <a href="#perm-services-quick-pick">«Selección rápida de servicios»</a>. La pantalla de grupos de bonos tampoco se abre con
+      ver los servicios: pide <a href="#perm-service-groups-view">«Ver los grupos de bonos»</a>, que de fábrica solo trae Dirección.</li>
     <li><strong>Caja.</strong> Cobrar es <a href="#perm-checkout-charge">«Cobrar en el TPV»</a>; aplicar un descuento, <a href="#perm-checkout-discount">«Aplicar descuentos»</a>;
       dejar algo a deber, <a href="#perm-checkout-debt">«Dejar a deber»</a>; sacar el ticket, <a href="#perm-checkout-print-ticket">«Imprimir tickets»</a>; dar un presupuesto, <a href="#perm-checkout-budget">«Dar presupuestos»</a>; devolver un ticket, <a href="#perm-checkout-refund">«Devolver un ticket»</a>; ver lo cobrado hoy y en el mes en el Inicio,
       <a href="#perm-dashboard-cash">«Ver la caja en el Inicio»</a>. Nadie de recepción
@@ -3717,6 +3718,7 @@ footer{
     <tr id="perm-services-write"><td><strong>Crear y editar los servicios</strong></td><td>Permite crear, editar y retirar servicios.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-packages-view"><td><strong>Ver los paquetes</strong></td><td>Consulta los paquetes de servicios y productos. Solo de lectura.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-packages-write"><td><strong>Crear y editar los paquetes</strong></td><td>Permite crear y editar paquetes y su precio.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
+    <tr id="perm-service-groups-view"><td><strong>Ver los grupos de bonos</strong></td><td>Abre la pantalla de grupos de bonos y consulta qué servicios cubre cada uno. Solo de lectura: para cambiarlos hace falta «Gestionar los grupos de bonos».</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-service-groups-write"><td><strong>Gestionar los grupos de bonos</strong></td><td>Gestiona los grupos que deciden qué bono cubre qué servicio.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-prices-lookup"><td><strong>Consultar precios</strong></td><td>Abre la consulta rápida de precios: se busca un servicio, un paquete o un producto y solo muestra su nombre y su precio. No da acceso a las fichas, a los costes ni a nada de lo que se cobra.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-products-view"><td><strong>Ver los productos</strong></td><td>Consulta los productos de venta. Solo de lectura.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
@@ -3794,13 +3796,13 @@ footer{
     <p class="rol-selector__titulo">Roles generales</p>
     <div class="chips"><a class="chip r-recepcion" href="#rol-recepcion">Recepción <small>33</small></a>
       <a class="chip r-profesional" href="#rol-profesional">Profesional <small>18</small></a>
-      <a class="chip r-direccion" href="#rol-direccion">Dirección <small>96</small></a>
+      <a class="chip r-direccion" href="#rol-direccion">Dirección <small>97</small></a>
       <a class="chip r-rrhh" href="#rol-rrhh">RRHH <small>18</small></a>
       <a class="chip r-mantenimiento" href="#rol-mantenimiento">Mantenimiento <small>7</small></a>
       <a class="chip r-activaciones" href="#rol-activaciones">Activaciones <small>2</small></a></div>
     <p class="rol-selector__titulo">Roles de módulo (todo lo no delicado de un módulo)</p>
     <div class="chips"><a class="chip r-clientes" href="#rol-clientes">Clientes <small>11</small></a>
-      <a class="chip r-catalogo" href="#rol-catalogo">Catálogo <small>14</small></a>
+      <a class="chip r-catalogo" href="#rol-catalogo">Catálogo <small>15</small></a>
       <a class="chip r-agenda" href="#rol-agenda">Agenda <small>13</small></a>
       <a class="chip r-historia-clinica" href="#rol-historia-clinica">Historia clínica <small>8</small></a>
       <a class="chip r-caja" href="#rol-caja">Caja <small>21</small></a>
@@ -3808,7 +3810,7 @@ footer{
       <a class="chip r-portal-y-avisos" href="#rol-portal-y-avisos">Portal y avisos <small>2</small></a>
       <a class="chip r-personal" href="#rol-personal">Personal <small>10</small></a></div>
     <p class="rol-selector__titulo">Rol de sistema</p>
-    <div class="chips"><a class="chip r-administrador-del-sistema" href="#rol-administrador-del-sistema">Administrador del sistema <small>120</small></a></div>
+    <div class="chips"><a class="chip r-administrador-del-sistema" href="#rol-administrador-del-sistema">Administrador del sistema <small>121</small></a></div>
     <p class="rol-selector__titulo">Y lo que no trae ningún rol</p>
     <div class="chips"><a class="chip r-adicionales" href="#permisos-adicionales">Permisos adicionales <small>14</small></a><a class="chip r-matriz" href="#roles-matriz">Resumen en matriz</a></div>
   </nav>
@@ -3924,7 +3926,7 @@ footer{
 
   <article class="rol-card r-direccion familia-general" id="rol-direccion">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Dirección</h5><span class="rc-cuenta">96 permisos</span><span class="rc-familia">Rol general</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Dirección</h5><span class="rc-cuenta">97 permisos</span><span class="rc-familia">Rol general</span></div>
       <p class="rc-para">Para quien lleva el centro: catálogo, personal, informes y ajustes.</p>
     </header>
     <div class="rc-cuerpo">
@@ -4000,6 +4002,7 @@ footer{
         <li class="rc-perm"><a href="#perm-services-write">Crear y editar los servicios</a><span class="rc-desc">Permite crear, editar y retirar servicios.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">Ver los paquetes</a><span class="rc-desc">Consulta los paquetes de servicios y productos.</span></li>
         <li class="rc-perm"><a href="#perm-packages-write">Crear y editar los paquetes</a><span class="rc-desc">Permite crear y editar paquetes y su precio.</span></li>
+        <li class="rc-perm"><a href="#perm-service-groups-view">Ver los grupos de bonos</a><span class="rc-desc">Abre la pantalla de grupos de bonos y consulta qué servicios cubre cada uno. Solo de lectura: para cambiarlos hace falta «Gestionar los grupos de bonos».</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-write">Gestionar los grupos de bonos</a><span class="rc-desc">Gestiona los grupos que deciden qué bono cubre qué servicio.</span></li>
         <li class="rc-perm"><a href="#perm-prices-lookup">Consultar precios</a><span class="rc-desc">Abre la consulta rápida de precios: se busca un servicio, un paquete o un producto y solo muestra su nombre y su precio.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Ver los productos</a><span class="rc-desc">Consulta los productos de venta.</span></li>
@@ -4167,7 +4170,7 @@ footer{
 
   <article class="rol-card r-catalogo familia-modulo" id="rol-catalogo">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Catálogo</h5><span class="rc-cuenta">14 permisos</span><span class="rc-familia">Rol de módulo</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Catálogo</h5><span class="rc-cuenta">15 permisos</span><span class="rc-familia">Rol de módulo</span></div>
       <p class="rc-para">Rol de módulo, para quien lleva servicios, paquetes, productos, proveedores y stock. Lleva todos los permisos no delicados de su módulo y solo esos.</p>
     </header>
     <div class="rc-cuerpo">
@@ -4177,6 +4180,7 @@ footer{
         <li class="rc-perm"><a href="#perm-services-write">Crear y editar los servicios</a><span class="rc-desc">Permite crear, editar y retirar servicios.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">Ver los paquetes</a><span class="rc-desc">Consulta los paquetes de servicios y productos.</span></li>
         <li class="rc-perm"><a href="#perm-packages-write">Crear y editar los paquetes</a><span class="rc-desc">Permite crear y editar paquetes y su precio.</span></li>
+        <li class="rc-perm"><a href="#perm-service-groups-view">Ver los grupos de bonos</a><span class="rc-desc">Abre la pantalla de grupos de bonos y consulta qué servicios cubre cada uno. Solo de lectura: para cambiarlos hace falta «Gestionar los grupos de bonos».</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-write">Gestionar los grupos de bonos</a><span class="rc-desc">Gestiona los grupos que deciden qué bono cubre qué servicio.</span></li>
         <li class="rc-perm"><a href="#perm-prices-lookup">Consultar precios</a><span class="rc-desc">Abre la consulta rápida de precios: se busca un servicio, un paquete o un producto y solo muestra su nombre y su precio.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Ver los productos</a><span class="rc-desc">Consulta los productos de venta.</span></li>
@@ -4325,8 +4329,8 @@ footer{
 
   <article class="rol-card r-administrador-del-sistema familia-admin" id="rol-administrador-del-sistema">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Administrador del sistema</h5><span class="rc-cuenta">120 permisos</span><span class="rc-familia">Rol de sistema</span></div>
-      <p class="rc-para">Para quien responde de todo el centro: lo lleva todo, incluidos los permisos delicados. Trae <strong>los 120 permisos</strong> y es el único rol de fábrica que trae los 13 <a href="#roles-sensibles">delicados</a>. Un permiso nuevo le llega solo.</p>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Administrador del sistema</h5><span class="rc-cuenta">121 permisos</span><span class="rc-familia">Rol de sistema</span></div>
+      <p class="rc-para">Para quien responde de todo el centro: lo lleva todo, incluidos los permisos delicados. Trae <strong>los 121 permisos</strong> y es el único rol de fábrica que trae los 13 <a href="#roles-sensibles">delicados</a>. Un permiso nuevo le llega solo.</p>
     </header>
     <div class="rc-cuerpo">
       <p class="rc-nota">Para no repetir la tabla entera, aquí van solo los delicados. Todos los demás están en la <a href="#roles-permisos">tabla por módulo</a>.</p>
@@ -4373,7 +4377,7 @@ footer{
   <h4 id="roles-adicionales">Permisos adicionales: los que ningún rol de fábrica trae</h4>
 
   <p>
-    De los 120 permisos, <strong>14</strong> no los trae ningún rol de fábrica, solo el
+    De los 121 permisos, <strong>14</strong> no los trae ningún rol de fábrica, solo el
     Administrador del sistema. Si alguien los necesita, <strong>se crea un rol a medida</strong> con esos permisos
     (<a href="#roles-paso-a-paso">cómo se crea un rol</a>) y se le da a esa persona en
     <strong>Administración → Usuarios</strong>. Los delicados llevan la insignia y conviene darlos solo a quien lleva la
@@ -4514,6 +4518,7 @@ footer{
     <tr><td><a href="#perm-services-write">Crear y editar los servicios</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr><td><a href="#perm-packages-view">Ver los paquetes</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr><td><a href="#perm-packages-write">Crear y editar los paquetes</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
+    <tr><td><a href="#perm-service-groups-view">Ver los grupos de bonos</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr><td><a href="#perm-service-groups-write">Gestionar los grupos de bonos</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr><td><a href="#perm-prices-lookup">Consultar precios</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr><td><a href="#perm-products-view">Ver los productos</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>

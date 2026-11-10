@@ -2739,19 +2739,19 @@ footer{
     <tbody><tr><th>Role</th><th>What it is for</th><th>Built-in permissions</th></tr>
     <tr><td><strong><a href="#rol-recepcion">Reception</a></strong></td><td>Books appointments, serves the front desk and takes payments.</td><td>33</td></tr>
     <tr><td><strong><a href="#rol-profesional">Professional</a></strong></td><td>Their own agenda, their clients and the clinical record.</td><td>18</td></tr>
-    <tr><td><strong><a href="#rol-direccion">Management</a></strong></td><td>Runs the centre: catalogue, staff, reports and settings. Also looks after the users: changing their name or delegation, unlocking them and resetting their password.</td><td>96</td></tr>
+    <tr><td><strong><a href="#rol-direccion">Management</a></strong></td><td>Runs the centre: catalogue, staff, reports and settings. Also looks after the users: changing their name or delegation, unlocking them and resetting their password.</td><td>97</td></tr>
     <tr><td><strong><a href="#rol-rrhh">HR</a></strong></td><td>Work calendars, practitioners and agenda.</td><td>18</td></tr>
     <tr><td><strong><a href="#rol-mantenimiento">Maintenance</a></strong></td><td>Handles maintenance orders, their zones and their equipment.</td><td>7</td></tr>
     <tr><td><strong><a href="#rol-activaciones">Activations</a></strong></td><td>Handles the activation points and their requests.</td><td>2</td></tr>
     <tr><td><strong><a href="#rol-clientes">Customers</a></strong></td><td>Module role: the client records, their alerts, their points and the clients report.</td><td>11</td></tr>
-    <tr><td><strong><a href="#rol-catalogo">Catalogue</a></strong></td><td>Module role: services, packages, products, suppliers and stock, with their reports.</td><td>14</td></tr>
+    <tr><td><strong><a href="#rol-catalogo">Catalogue</a></strong></td><td>Module role: services, packages, products, suppliers and stock, with their reports.</td><td>15</td></tr>
     <tr><td><strong><a href="#rol-agenda">Agenda</a></strong></td><td>Module role: appointments, waiting list, booths, devices and the appointments report.</td><td>13</td></tr>
     <tr><td><strong><a href="#rol-historia-clinica">Clinical record</a></strong></td><td>Module role: the clinical record and consents.</td><td>8</td></tr>
     <tr><td><strong><a href="#rol-caja">Till</a></strong></td><td>Module role: charging, refunds, debts, vouchers, gift cards, coupons, closing the till and their reports.</td><td>21</td></tr>
     <tr><td><strong><a href="#rol-facturacion">Invoicing</a></strong></td><td>Module role: full invoices, invoice book and accounting draft.</td><td>3</td></tr>
     <tr><td><strong><a href="#rol-portal-y-avisos">Portal and alerts</a></strong></td><td>Module role: the booking portal and the WhatsApp reminders.</td><td>2</td></tr>
     <tr><td><strong><a href="#rol-personal">Staff</a></strong></td><td>Module role: work calendars, working-time register and incidents.</td><td>10</td></tr>
-    <tr><td><strong><a href="#rol-administrador-del-sistema">System administrator</a></strong></td><td>Everything, including the <a href="#roles-sensibles">delicate permissions</a>. It is the only one that has them.</td><td>120 (all)</td></tr>
+    <tr><td><strong><a href="#rol-administrador-del-sistema">System administrator</a></strong></td><td>Everything, including the <a href="#roles-sensibles">delicate permissions</a>. It is the only one that has them.</td><td>121 (all)</td></tr>
   </tbody></table>
   </div>
 
@@ -2791,7 +2791,7 @@ footer{
       <a href="#perm-reports-payments">“Payments report”</a>. Downloading it to a file also needs <a href="#perm-reports-export">“Download reports as files”</a>; and the clients report to a file needs <a href="#perm-customers-export">“Export the clients list”</a>, which is delicate.</li>
     <li><strong>Catalogue.</strong> <a href="#perm-services-view">“See services”</a> shows the services and their prices;
       <a href="#perm-services-write">“Create and edit services”</a> is what lets you change them. With view-only access, the buttons to add, edit and remove are switched off or do not appear. Choosing services with the quick buttons when booking does not need to see the catalogue: that is another permission,
-      <a href="#perm-services-quick-pick">“Quick service selection”</a>.</li>
+      <a href="#perm-services-quick-pick">“Quick service selection”</a>. Nor does seeing the services open the voucher groups screen: it needs <a href="#perm-service-groups-view">“See voucher groups”</a>, which out of the box only Management has.</li>
     <li><strong>Till.</strong> Charging is <a href="#perm-checkout-charge">“Charge at the point of sale”</a>; applying a discount, <a href="#perm-checkout-discount">“Apply discounts”</a>; leaving something owing, <a href="#perm-checkout-debt">“Leave an amount owing”</a>; printing the receipt, <a href="#perm-checkout-print-ticket">“Print receipts”</a>; giving a quote, <a href="#perm-checkout-budget">“Give quotes”</a>; refunding a ticket, <a href="#perm-checkout-refund">“Refund a ticket”</a>; seeing what has been charged today and this month on the Home screen,
       <a href="#perm-dashboard-cash">“See the till on the Home screen”</a>. Nobody at reception reopens a closed till without <a href="#perm-cash-reopen">«Reopen a closed cash»</a>.</li>
     <li><strong>Maintenance.</strong> <a href="#perm-maintenance-view">“See maintenance”</a> reads the orders; opening one is
@@ -2977,6 +2977,7 @@ footer{
     <tr id="perm-services-write"><td><strong>Create and edit services</strong></td><td>Allows creating, editing and withdrawing services.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr id="perm-packages-view"><td><strong>See the packages</strong></td><td>Shows the packages of services and products. View only.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-profesional">Professional</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr id="perm-packages-write"><td><strong>Create and edit packages</strong></td><td>Allows creating and editing packages and their price.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
+    <tr id="perm-service-groups-view"><td><strong>See voucher groups</strong></td><td>Opens the voucher groups screen and shows which services each one covers. View only: changing them needs “Manage voucher groups”.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr id="perm-service-groups-write"><td><strong>Manage voucher groups</strong></td><td>Manages the groups that decide which voucher covers which service.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr id="perm-prices-lookup"><td><strong>Look up prices</strong></td><td>Opens the quick price lookup: you search for a service, a package or a product and it shows only its name and price. It gives no access to the records, the costs or anything that is charged.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-profesional">Professional</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr id="perm-products-view"><td><strong>See the products</strong></td><td>Shows the products for sale. View only.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-profesional">Professional</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
@@ -3051,13 +3052,13 @@ footer{
     <p class="rol-selector__titulo">General roles</p>
     <div class="chips"><a class="chip r-recepcion" href="#rol-recepcion">Reception <small>33</small></a>
       <a class="chip r-profesional" href="#rol-profesional">Professional <small>18</small></a>
-      <a class="chip r-direccion" href="#rol-direccion">Management <small>96</small></a>
+      <a class="chip r-direccion" href="#rol-direccion">Management <small>97</small></a>
       <a class="chip r-rrhh" href="#rol-rrhh">HR <small>18</small></a>
       <a class="chip r-mantenimiento" href="#rol-mantenimiento">Maintenance <small>7</small></a>
       <a class="chip r-activaciones" href="#rol-activaciones">Activations <small>2</small></a></div>
     <p class="rol-selector__titulo">Module roles (everything not delicate in a module)</p>
     <div class="chips"><a class="chip r-clientes" href="#rol-clientes">Customers <small>11</small></a>
-      <a class="chip r-catalogo" href="#rol-catalogo">Catalogue <small>14</small></a>
+      <a class="chip r-catalogo" href="#rol-catalogo">Catalogue <small>15</small></a>
       <a class="chip r-agenda" href="#rol-agenda">Agenda <small>13</small></a>
       <a class="chip r-historia-clinica" href="#rol-historia-clinica">Clinical record <small>8</small></a>
       <a class="chip r-caja" href="#rol-caja">Till <small>21</small></a>
@@ -3065,7 +3066,7 @@ footer{
       <a class="chip r-portal-y-avisos" href="#rol-portal-y-avisos">Portal and alerts <small>2</small></a>
       <a class="chip r-personal" href="#rol-personal">Staff <small>10</small></a></div>
     <p class="rol-selector__titulo">System role</p>
-    <div class="chips"><a class="chip r-administrador-del-sistema" href="#rol-administrador-del-sistema">System administrator <small>120</small></a></div>
+    <div class="chips"><a class="chip r-administrador-del-sistema" href="#rol-administrador-del-sistema">System administrator <small>121</small></a></div>
     <p class="rol-selector__titulo">And what no role carries</p>
     <div class="chips"><a class="chip r-adicionales" href="#permisos-adicionales">Additional permissions <small>14</small></a><a class="chip r-matriz" href="#roles-matriz">Summary as a matrix</a></div>
   </nav>
@@ -3181,7 +3182,7 @@ footer{
 
   <article class="rol-card r-direccion familia-general" id="rol-direccion">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Management</h5><span class="rc-cuenta">96 permissions</span><span class="rc-familia">General role</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Management</h5><span class="rc-cuenta">97 permissions</span><span class="rc-familia">General role</span></div>
       <p class="rc-para">For whoever runs the centre: catalogue, staff, reports and settings.</p>
     </header>
     <div class="rc-cuerpo">
@@ -3257,6 +3258,7 @@ footer{
         <li class="rc-perm"><a href="#perm-services-write">Create and edit services</a><span class="rc-desc">Allows creating, editing and withdrawing services.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">See the packages</a><span class="rc-desc">Shows the packages of services and products.</span></li>
         <li class="rc-perm"><a href="#perm-packages-write">Create and edit packages</a><span class="rc-desc">Allows creating and editing packages and their price.</span></li>
+        <li class="rc-perm"><a href="#perm-service-groups-view">See voucher groups</a><span class="rc-desc">Opens the voucher groups screen and shows which services each one covers. View only: changing them needs “Manage voucher groups”.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-write">Manage voucher groups</a><span class="rc-desc">Manages the groups that decide which voucher covers which service.</span></li>
         <li class="rc-perm"><a href="#perm-prices-lookup">Look up prices</a><span class="rc-desc">Opens the quick price lookup: you search for a service, a package or a product and it shows only its name and price.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">See the products</a><span class="rc-desc">Shows the products for sale.</span></li>
@@ -3424,7 +3426,7 @@ footer{
 
   <article class="rol-card r-catalogo familia-modulo" id="rol-catalogo">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Catalogue</h5><span class="rc-cuenta">14 permissions</span><span class="rc-familia">Module role</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Catalogue</h5><span class="rc-cuenta">15 permissions</span><span class="rc-familia">Module role</span></div>
       <p class="rc-para">Module role, for whoever handles services, packages, products, suppliers and stock. It carries all the non-delicate permissions of its module and only those.</p>
     </header>
     <div class="rc-cuerpo">
@@ -3434,6 +3436,7 @@ footer{
         <li class="rc-perm"><a href="#perm-services-write">Create and edit services</a><span class="rc-desc">Allows creating, editing and withdrawing services.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">See the packages</a><span class="rc-desc">Shows the packages of services and products.</span></li>
         <li class="rc-perm"><a href="#perm-packages-write">Create and edit packages</a><span class="rc-desc">Allows creating and editing packages and their price.</span></li>
+        <li class="rc-perm"><a href="#perm-service-groups-view">See voucher groups</a><span class="rc-desc">Opens the voucher groups screen and shows which services each one covers. View only: changing them needs “Manage voucher groups”.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-write">Manage voucher groups</a><span class="rc-desc">Manages the groups that decide which voucher covers which service.</span></li>
         <li class="rc-perm"><a href="#perm-prices-lookup">Look up prices</a><span class="rc-desc">Opens the quick price lookup: you search for a service, a package or a product and it shows only its name and price.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">See the products</a><span class="rc-desc">Shows the products for sale.</span></li>
@@ -3582,8 +3585,8 @@ footer{
 
   <article class="rol-card r-administrador-del-sistema familia-admin" id="rol-administrador-del-sistema">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">System administrator</h5><span class="rc-cuenta">120 permissions</span><span class="rc-familia">System role</span></div>
-      <p class="rc-para">For whoever answers for the whole centre: it carries everything, including the delicate permissions. It carries <strong>all 120 permissions</strong> and is the only built-in role that carries the 13 <a href="#roles-sensibles">delicate</a>permissions. A new permission reaches it by itself.</p>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">System administrator</h5><span class="rc-cuenta">121 permissions</span><span class="rc-familia">System role</span></div>
+      <p class="rc-para">For whoever answers for the whole centre: it carries everything, including the delicate permissions. It carries <strong>all 121 permissions</strong> and is the only built-in role that carries the 13 <a href="#roles-sensibles">delicate</a>permissions. A new permission reaches it by itself.</p>
     </header>
     <div class="rc-cuerpo">
       <p class="rc-nota">So as not to repeat the whole table, only the delicate ones are listed here. All the others are in the <a href="#roles-permisos">table by module</a>.</p>
@@ -3630,7 +3633,7 @@ footer{
   <h4 id="roles-adicionales">Additional permissions: the ones no built-in role carries</h4>
 
   <p>
-    Of the 120 permissions, <strong>14</strong> are carried by no built-in role, only by the System administrator. If someone needs them, <strong>create a custom role</strong> with those permissions (<a href="#roles-paso-a-paso">how a role is created</a>) and give it to that person in
+    Of the 121 permissions, <strong>14</strong> are carried by no built-in role, only by the System administrator. If someone needs them, <strong>create a custom role</strong> with those permissions (<a href="#roles-paso-a-paso">how a role is created</a>) and give it to that person in
     <strong>Administration → Users</strong>. The delicate ones carry the badge and should be given only to whoever runs the centre.
   </p>
 
@@ -3766,6 +3769,7 @@ footer{
     <tr><td><a href="#perm-services-write">Create and edit services</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr><td><a href="#perm-packages-view">See the packages</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr><td><a href="#perm-packages-write">Create and edit packages</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catalogue</a></td></tr>
+    <tr><td><a href="#perm-service-groups-view">See voucher groups</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr><td><a href="#perm-service-groups-write">Manage voucher groups</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr><td><a href="#perm-prices-lookup">Look up prices</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr><td><a href="#perm-products-view">See the products</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catalogue</a></td></tr>
