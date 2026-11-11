@@ -1261,7 +1261,7 @@
   "t38a9e465": "Administration → Labour: which parts the centre uses",
   "t2a013e90": "Payslips and tax withholding certificates are switched on or off separately. Switching a part off deletes nothing: what has already been delivered stays in My documents and in each person's history.",
   "td64c0bda": "11 November 2026",
-  "t401cb2c5": "1.13.0-7bf302a",
+  "t401cb2c5": "1.13.0-fb68b51",
   "te9839d21": "Stays: residents, rooms and places",
   "tec2fc2b8": "A new optional module for care homes and hospitals. If the centre has not switched it on, Turnera works as it always has and nothing new appears in the menu.",
   "tca133939": "Rooms are created all at once by saying how many floors, how many rooms per floor and how many places per room, with a preview before anything is created. Afterwards they can be changed one by one or several at a time. Rooms that have been occupied are not deleted: they are retired.",
