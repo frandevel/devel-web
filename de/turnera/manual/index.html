@@ -666,7 +666,7 @@ footer{
 <main id="top" class="shell manual">
 <nav class="indice">
   <h2>Turnera-Handbuch</h2>
-  <p>Aktualisiert am 30. Oktober 2026</p>
+  <p>Aktualisiert am 11. November 2026</p>
   <div class="buscador" role="search">
     <input type="search" id="buscador-texto" placeholder="Im Handbuch suchen" aria-label="Im Handbuch suchen" autocomplete="off">
     <div class="buscador__estado">
@@ -789,6 +789,7 @@ footer{
     <li><a href="#mantenimiento-movil" class="sub">Vom Handy aus: die App der Mitarbeitenden</a></li>
     <li><a href="#activaciones">12 bis. Aktivierungen: Türen und Geräte mit QR-Code</a></li>
     <li><a href="#soporte">12 ter. Support: Kontakt zum Turnera-Team</a></li>
+    <li><a href="#estancias">12 quater. Aufenthalte: Bewohner, Zimmer und Einträge auf der Station</a></li>
     <li><a href="#problemas">13. Wenn etwas nicht klappt</a></li>
     <li><a href="#app-nativa">14. Die native App der Mitarbeitenden (Android)</a></li>
     <li><a href="#app-instalar" class="sub">Die App herunterladen und installieren</a></li>
@@ -5452,6 +5453,90 @@ footer{
   </p>
   <p>
     Wenn das Team auf ein Ticket antwortet, das du über den Support eröffnet hast, bleibt die Antwort hier, und du erhältst eine <strong>Benachrichtigungs-E-Mail</strong> mit dem Link zum Ticket. Die E-Mail enthält weder das, was dir geschrieben wurde, noch die Anhänge: Um die Antwort zu lesen und zu beantworten, rufst du Turnera über den Link auf. Wenn du auf diese E-Mail antwortest, erhalten wir sie ebenfalls und sie landet im selben Ticket, am bequemsten ist es aber, es von hier aus zu tun. Wenn in deiner Mitarbeiterkarte keine E-Mail-Adresse steht, kannst du in Turnera Tickets eröffnen und die Antworten lesen, aber das Team kann dich nicht per E-Mail benachrichtigen: Es empfiehlt sich, eine hinterlegt zu haben.
+  </p>
+</section>
+<section id="estancias">
+  <h2>12 quater. Aufenthalte: Bewohner, Zimmer und Einträge auf der Station</h2>
+  <p>
+    Das Modul <strong>Aufenthalte</strong> ist für Einrichtungen gedacht, die Menschen unterbringen: Pflegeheime und Krankenhäuser. Es ist optional: Ist es in der Einrichtung nicht eingeschaltet, funktioniert Turnera genau wie ohne es und im Menü erscheint nichts. Wenn es eingeschaltet ist, erscheint im Menü der Bereich <strong>Aufenthalte</strong> und jeder Kunde kann <strong>einen offenen Aufenthalt</strong> auf einem Platz haben; seine Kundenkarte zeigt das mit einem Etikett
+    <em>Bewohner · Zimmer 204</em>. Wie im Rest von Turnera <strong>wird nichts gelöscht</strong>: Was falsch gemacht wurde, wird korrigiert, mit Begründung storniert oder stillgelegt, und es bleibt festgehalten, wer es wann getan hat.
+  </p>
+
+  <h3 id="estancias-habitaciones">Zimmer und Plätze</h3>
+  <p>
+    Unter <em>Aufenthalte → Zimmer</em> zeigt die Einrichtung nach Etagen, mit jedem Zimmer, seinen Plätzen und wer sie jeweils belegt. Zu Beginn müssen Sie sie nicht einzeln anlegen: <strong>Zimmer anlegen</strong> fragt, wie viele Etagen, wie viele Zimmer pro Etage und wie viele Plätze pro Zimmer es gibt, nummeriert wie in einem Hotel (101 ist das erste Zimmer auf Etage 1), zeigt das Ergebnis, bevor etwas angelegt wird, und lässt bereits vorhandene Zimmer unberührt. Danach können Sie ein Zimmer ändern oder <strong>mehrere auf einmal</strong> (Etage, Bereich, Anzahl der Plätze, stilllegen oder wieder in Nutzung nehmen). Jedes Zimmer kann einen <strong>Typ</strong> (Einzelzimmer, Doppelzimmer, mit Bad …, in den Worten der Einrichtung) und einen
+    <strong>Bereich</strong>haben; die Bereiche sind dieselben Arbeitsorte wie im Dienstplan.
+  </p>
+  <p>
+    Ein Zimmer, das schon einmal belegt war, <strong>wird nicht gelöscht</strong>: Es wird stillgelegt und nicht mehr angeboten. Ein belegtes Zimmer kann nicht stillgelegt werden, bis die Person den Platz wechselt oder entlassen wird.
+  </p>
+
+  <h3 id="estancias-ingreso">Aufnahme, Zimmerwechsel und Entlassung</h3>
+  <p>
+    <strong>Aufnahme</strong> (unter <em>Aufenthalte → Bewohner</em>): Sie wählen den Kunden (er muss bereits eine Kundenkarte haben), den freien Platz und den Tag. Der Tag kann in der Vergangenheit liegen, um jemanden zu erfassen, der schon in der Einrichtung war, aber nicht in der Zukunft. Kommt die Person für begrenzte Zeit, tragen Sie das <strong>voraussichtliche Ende</strong>ein; leer bedeutet einen unbefristeten Aufenthalt. Wer bereits untergebracht ist, kann nicht noch einmal aufgenommen werden.
+  </p>
+  <p>
+    <strong>Zimmer wechseln</strong>: Sie wählen den neuen Platz; angeboten werden die freien <em>und auch die von einer anderen Person belegten</em>. Wählen Sie den Platz einer anderen Person (mit gestrichelter Linie markiert), <strong>tauschen die beiden</strong>: Jede Person wechselt auf den Platz der anderen, und es wird für beide festgehalten.
+  </p>
+  <p>
+    <strong>Gehen</strong>: schließt den Aufenthalt mit Tag und Grund und gibt den Platz frei. Wurde die Entlassung versehentlich erfasst, öffnet <strong>Entlassung rückgängig machen</strong> den Aufenthalt wieder auf dem Platz, den die Person verlassen hat; die rückgängig gemachte Entlassung bleibt im Verlauf vermerkt. Eine versehentlich erfasste Aufnahme wird <strong>annulliert</strong> mit Begründung. Daten dürfen weder in der Zukunft noch vor dem letzten erfassten Ereignis des Aufenthalts liegen.
+  </p>
+  <p>
+    <em>Bewohner</em> zeigt, wer aktuell untergebracht ist, und mit <strong>Zu einem Datum</strong>, wer an einem beliebigen Tag in der Vergangenheit untergebracht war. Außerdem listet es die beendeten Aufenthalte auf. Jeder Aufenthalt hat seine eigene Karte mit dem Verlauf der Plätze, auf denen die Person war.
+  </p>
+
+  <h3 id="estancias-reservas">Reservierungen, Abwesenheiten und befristete Aufenthalte</h3>
+  <p>
+    <strong>Reservierungen</strong> (<em>Aufenthalte → Reservierungen</em>): wer aufgenommen wird und wann, mit Telefonnummer. Eine Reservierung kann <strong>einen Platz freihalten</strong>: Solange kann niemand sonst ihn belegen, und wenn die Person aufgenommen wird, gilt die Reservierung als erfüllt. Die, die schon hätten ankommen sollen, werden markiert; eine Reservierung wird storniert, indem man angibt, warum die Person nicht kommt.
+  </p>
+  <p>
+    <strong>Abwesenheiten</strong>: Wenn eine Person für einige Tage weg ist (Krankenhaus, bei der Familie), wird das im Aufenthalt mit Grund, erstem Tag und, falls bekannt, letztem Tag erfasst. Solange sie weg ist, ist sie in den Listen entsprechend markiert und zählt an diesem Tag nicht als Mahlzeit. Bei der Rückkehr klicken Sie auf <em>Ist zurück</em>; eine versehentlich erfasste Abwesenheit wird storniert. Die <strong>befristeten Aufenthalte</strong> sind die mit voraussichtlichem Ende: Man sieht, welche in den nächsten 30 Tagen enden.
+  </p>
+
+  <h3 id="estancias-tarifas">Tarife und Kennzahlen</h3>
+  <p>
+    Die <strong>Tarife</strong> sind benannte Monatsbeträge (unter <em>Einstellungen für Aufenthalte</em>). Jedem Aufenthalt wird ein Tarif oder ein manueller Betrag zugewiesen, <strong>ab einem bestimmten Tag</strong>; eine Änderung eines Tarifs der Einrichtung ändert nicht, was jemand bereits zahlt. <strong>Beträge sieht nur, wer die Berechtigung <em>Tarife einsehen und festlegen</em></strong>, die standardmäßig nur die Administration und die Leitung haben: Ohne sie wird nirgends ein Betrag angezeigt.
+  </p>
+  <p>
+    Der <strong>Kennzahlen</strong> (<em>Aufenthalte → Kennzahlen</em>) fasst die Einrichtung zusammen: Auslastung heute, Durchschnitt der letzten zwölf Monate, durchschnittliche Aufenthaltsdauer, wie viele Personen abwesend sind, Auslastung Monat für Monat, Prognose der nächsten Wochen (was mit den Reservierungen und den endenden Aufenthalten belegt sein wird), Aufnahmen und Entlassungen pro Monat, Entlassungsgründe und was man im Blick behalten sollte (abzuschließende Vorfälle, bald endende Aufenthalte, Personen ohne Tarif). Mit der Berechtigung für Tarife kommen die monatlichen Einnahmen, der durchschnittliche Tarif und das hinzu, was durch die freien Plätze entgeht.
+  </p>
+
+  <h3 id="estancias-dietas">Diäten</h3>
+  <p>
+    Unter <em>Einstellungen für Aufenthalte</em> legen Sie die <strong>Diätarten</strong> der Einrichtung fest (diabetisch, püriert, salzfrei …). Danach wird in der Liste <em>Aufenthalte → Diäten</em> jeder Person ihre Diät und ein eigener Hinweis zugewiesen (Allergien, Konsistenzen, was die Person nicht isst). Die Liste ist für Küche und Station gedacht: Sie wird nach Zimmer oder nach Diät angezeigt, mit der Zahl der Personen, die heute in der Einrichtung essen. Menüs und Zutaten verwaltet die Küche; Turnera verwaltet sie nicht.
+  </p>
+
+  <h3 id="estancias-planta">Der Stationsbildschirm und das Stationsbuch</h3>
+  <p>
+    Das <strong>Stationsbildschirm</strong> nutzt das Personal während der Schicht. Jeder <em>Eintrag</em> (Mahlzeit, Hygiene, Medikation, alles, was die Einrichtung dokumentieren möchte) ist eine große Schaltfläche pro Person: Ein Tippen, und es ist mit Uhrzeit und Person erfasst. Wer erfasst, identifiziert sich mit <strong>Personalkarte und PIN</strong>, wie beim Stempeln, sodass der Eintrag den Namen der Person trägt und nicht den dessen, der die Sitzung offen gelassen hat. Ein Eintrag kann <em>etwas Erledigtes</em>, <em>eine Option</em> unter mehreren, <em>eine Menge</em> oder <em>ein paar Worte</em>sein, und er kann angeben, wie oft am Tag er erwartet wird: Dann zeigt der Bildschirm, was heute noch fehlt.
+  </p>
+  <p>
+    Falsch Erfasstes <strong>wird nicht gelöscht</strong>: wird <em>korrigiert</em> mit einem weiteren Eintrag (der vorherige bleibt sichtbar, durchgestrichen) oder <em>annulliert</em> mit Begründung. Wer einen <strong>üblichen Bereich</strong> in der Personalakte hat, sieht nur die Personen dieses Bereichs, es sei denn, er hat die Berechtigung <em>Alle Bereiche einsehen</em>. Ein Gerät der Einrichtung (ein Tablet) kann <strong>einem Bereich zugeordnet werden</strong> festgelegt, in den <em>Einstellungen für Aufenthalte → Tablets der Bereiche</em>: Darauf wird nur gesehen und erfasst, was zu diesem Bereich gehört, egal wer sich anmeldet.
+  </p>
+  <p>
+    Das <strong>Stationsbuch</strong> ist das Tagebuch jedes Bereichs: was die kommende Schicht vor Dienstbeginn lesen muss. Wichtige Einträge werden für die Übergabe markiert und lassen sich filtern. Sie werden genauso korrigiert wie die Einträge.
+  </p>
+
+  <h3 id="estancias-incidencias">Vorfälle und Schichtaufsicht</h3>
+  <p>
+    Eine <strong>Vorfall</strong> ist etwas, das passiert und schriftlich festgehalten werden muss: ein Sturz, ein Streit, ein verweigertes Medikament. Er wird zur Person, zum Bereich oder zur Einrichtung eröffnet, mit Wer, Wann, Was geschah und Was getan wurde. Die Einrichtung legt ihre eigenen <strong>Vorfallarten</strong> fest (das Programm bringt keine mit) und entscheidet für jede, ob sie <em>Abschluss erfordert</em>, ob angegeben werden muss, von wem sie ist, und ob angegeben werden muss, was getan wurde. Die mit Abschluss bleiben offen, bis die aufsichtführende Person sie prüft und mit ihrem Fazit abschließt. Im Reiter <em>Bericht</em> filtern Sie nach Datum und laden als CSV herunter.
+  </p>
+  <p>
+    Das <strong>Schichtaufsicht</strong> bündelt auf einem Bildschirm, was heute in jedem Bereich noch zu erfassen ist, die Vorfälle, die auf Abschluss warten, und das Wichtige aus den Stationsbüchern.
+  </p>
+
+  <h3 id="estancias-ficha">Die Karte der untergebrachten Person</h3>
+  <p>
+    Von <em>Bewohner</em>, <strong>Verlauf ansehen</strong> öffnet die Karte der Person: wo sie ist und seit wann, Diagramme der in den letzten Tagen erfassten Einträge (mit dem Tagesdurchschnitt und wie oft jedes Ereignis vorkam) und ihre Vorfälle. Die Einträge eines anderen Tages oder einer bestimmten Person einzusehen ist eine <strong>Abfrage von Gesundheitsdaten</strong>
+    und erfordert die Berechtigung <em>Eintragsverlauf einsehen</em>; jede Abfrage wird im <em>Zugriffsprotokoll</em> der Administration vermerkt, wie die der Krankengeschichte.
+  </p>
+
+  <h3 id="estancias-permisos">Berechtigungen und Rollen</h3>
+  <p>
+    Die Berechtigungen für Aufenthalte sind vierzehn, die jede Einrichtung nach Belieben verteilt: <em>Aufenthalte einsehen</em>, <em>Aufnahmen, Zimmerwechsel und Entlassungen</em>, <em>Zimmer konfigurieren</em>, <em>Aufenthalte konfigurieren</em>,
+    <em>Tägliche Pflege erfassen</em>, <em>Eintragsverlauf einsehen</em>, <em>Einträge anderer korrigieren</em>,
+    <em>Vorfälle eröffnen</em>, <em>Vorfälle abschließen</em>, <em>Im Stationsbuch schreiben</em>, <em>Tarife einsehen und festlegen</em>, <em>Kennzahlen einsehen</em>, <em>Diäten einsehen</em> und <em>Alle Bereiche einsehen</em>. Wenn das Modul in einer Einrichtung eingeschaltet wird, entstehen zwei Ausgangsrollen, die die Einrichtung ändern kann: <strong>Estancias · planta</strong>
+    (Aufenthalte einsehen, erfassen, Vorfälle eröffnen, im Stationsbuch schreiben und Diäten einsehen) und <strong>Estancias · supervisión</strong> (das Obige plus Aufnahmen und Entlassungen, Vorfälle abschließen, Eintragsverlauf einsehen, korrigieren und alle Bereiche einsehen). <em>Leitung</em> hat alle; Beträge sind nur für die mit der Berechtigung für Tarife.
   </p>
 </section>
 <section id="problemas">

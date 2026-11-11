@@ -627,6 +627,7 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-11-11">11 de noviembre de 2026</a></li>
     <li><a href="#2026-11-10">10 de noviembre de 2026</a></li>
     <li><a href="#2026-11-09">9 de noviembre de 2026</a></li>
     <li><a href="#2026-11-08">8 de noviembre de 2026</a></li>
@@ -672,10 +673,42 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-11-11" class="version">
+  <div class="version__cabecera">
+    <h2>11 de noviembre de 2026</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">1.13.0-7bf302a</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"/></svg></span>Nuevas características</h3>
+    <h4>Estancias: residentes, habitaciones y plazas</h4>
+    <ul>
+      <li>Nuevo módulo opcional para residencias y hospitales. Si el centro no lo tiene activado, Turnera funciona igual que hasta ahora y no aparece nada nuevo en el menú.</li>
+      <li>Las habitaciones se crean de golpe diciendo cuántas plantas, cuántas habitaciones por planta y cuántas plazas por habitación, con una vista previa antes de crear nada. Después se pueden cambiar una a una o varias a la vez. Las que ya se han ocupado no se borran: se retiran.</li>
+      <li>Ingreso, cambio de habitación y salida con su día y su motivo. Al cambiar de habitación se puede elegir la plaza de otra persona y se intercambian. Una salida apuntada por error se puede deshacer, y un ingreso por error se anula con su motivo.</li>
+      <li>Reservas que guardan una plaza para quien va a ingresar, ausencias (hospital, con la familia) y estancias temporales con su final previsto.</li>
+      <li>Se puede ver quién estaba alojado en cualquier día del pasado, y la ficha del cliente indica en qué habitación está.</li>
+    </ul>
+    <h4>Estancias: tarifas, cuadro de mandos y dietas</h4>
+    <ul>
+      <li>Tarifas mensuales del centro, que se ponen a cada estancia desde un día. Los importes solo los ve quien tiene el permiso nuevo Ver y poner las tarifas, que de fábrica traen el administrador y Dirección.</li>
+      <li>Un cuadro de mandos con la ocupación de hoy y la media del último año, la estancia media, la previsión de las próximas semanas, las entradas y salidas y sus motivos. Con el permiso de tarifas, además, lo que se ingresa y lo que se deja de ingresar por las plazas libres.</li>
+      <li>Tipos de dieta definidos por el centro y una lista de dietas por habitación o por dieta, pensada para cocina y para la planta.</li>
+    </ul>
+    <h4>Estancias: registro de planta, incidencias y libreta de sala</h4>
+    <ul>
+      <li>Una pantalla de planta con un botón por cada cosa que el centro quiera registrar (comidas, higiene, lo que decida): un toque y queda apuntado con la hora y quién lo hizo, con su ficha y su PIN. Lo apuntado mal no se borra: se corrige o se anula y se ve tachado.</li>
+      <li>Cada persona del personal ve solo su zona habitual, y una tablet se puede atar a una zona. Quien tiene el permiso Ver todas las zonas ve todas.</li>
+      <li>Incidencias con los tipos que defina cada centro, algunas con cierre posterior por quien supervisa, y un informe por fechas que se descarga en CSV.</li>
+      <li>Libreta de sala para dejar escrito lo que el turno siguiente tiene que saber, y una pantalla de supervisión del turno con lo que falta por apuntar.</li>
+      <li>Ver los registros de otro día o de una persona concreta pide un permiso propio y queda anotado en el rastro de accesos.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-11-10" class="version">
   <div class="version__cabecera">
     <h2>10 de noviembre de 2026</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">1.12.0-2777395</span></p>
 

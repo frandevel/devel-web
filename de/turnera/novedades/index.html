@@ -679,6 +679,7 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-11-11">11. November 2026</a></li>
     <li><a href="#2026-11-10">10. November 2026</a></li>
     <li><a href="#2026-11-09">9. November 2026</a></li>
     <li><a href="#2026-11-08">8. November 2026</a></li>
@@ -723,10 +724,42 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-11-11" class="version">
+  <div class="version__cabecera">
+    <h2>11. November 2026</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.13.0-7bf302a</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Aufenthalte: Bewohner, Zimmer und Plätze</h4>
+    <ul>
+      <li>Ein neues optionales Modul für Pflegeheime und Krankenhäuser. Wenn die Einrichtung es nicht eingeschaltet hat, funktioniert Turnera wie bisher und im Menü erscheint nichts Neues.</li>
+      <li>Die Zimmer werden auf einmal angelegt, indem man angibt, wie viele Etagen, wie viele Zimmer pro Etage und wie viele Plätze pro Zimmer es gibt, mit einer Vorschau, bevor etwas angelegt wird. Danach lassen sie sich einzeln oder mehrere auf einmal ändern. Zimmer, die schon belegt waren, werden nicht gelöscht: Sie werden stillgelegt.</li>
+      <li>Aufnahme, Zimmerwechsel und Entlassung mit Tag und Grund. Beim Zimmerwechsel kann man den Platz einer anderen Person wählen, dann tauschen beide. Eine versehentlich erfasste Entlassung lässt sich rückgängig machen, eine versehentlich erfasste Aufnahme wird mit Begründung storniert.</li>
+      <li>Reservierungen, die einen Platz für die aufzunehmende Person freihalten, Abwesenheiten (Krankenhaus, bei der Familie) und befristete Aufenthalte mit voraussichtlichem Ende.</li>
+      <li>Man kann sehen, wer an einem beliebigen Tag in der Vergangenheit untergebracht war, und die Kundenkarte zeigt, in welchem Zimmer die Person ist.</li>
+    </ul>
+    <h4>Aufenthalte: Tarife, Kennzahlen und Diäten</h4>
+    <ul>
+      <li>Die Monatstarife der Einrichtung, die jedem Aufenthalt ab einem bestimmten Tag zugewiesen werden. Beträge sieht nur, wer die neue Berechtigung Tarife einsehen und festlegen hat, die standardmäßig die Administration und die Leitung besitzen.</li>
+      <li>Kennzahlen mit der Auslastung von heute und dem Durchschnitt des letzten Jahres, der durchschnittlichen Aufenthaltsdauer, der Prognose der nächsten Wochen, den Aufnahmen und Entlassungen und ihren Gründen. Mit der Berechtigung für Tarife zusätzlich, was eingenommen wird und was durch die freien Plätze entgeht.</li>
+      <li>Von der Einrichtung festgelegte Diätarten und eine Liste der Diäten nach Zimmer oder nach Diät, gedacht für Küche und Station.</li>
+    </ul>
+    <h4>Aufenthalte: Einträge auf der Station, Vorfälle und Stationsbuch</h4>
+    <ul>
+      <li>Ein Stationsbildschirm mit einer Schaltfläche für alles, was die Einrichtung erfassen möchte (Mahlzeiten, Hygiene, was sie festlegt): Ein Tippen, und es ist mit Uhrzeit und Person erfasst, mit deren Personalkarte und PIN. Falsch Erfasstes wird nicht gelöscht: Es wird korrigiert oder storniert und durchgestrichen angezeigt.</li>
+      <li>Jede Person des Personals sieht nur ihren üblichen Bereich, und ein Tablet kann einem Bereich zugeordnet werden. Wer die Berechtigung Alle Bereiche einsehen hat, sieht alle.</li>
+      <li>Vorfälle mit den Arten, die jede Einrichtung festlegt, einige mit späterem Abschluss durch die aufsichtführende Person, und ein Bericht nach Datum, der als CSV heruntergeladen werden kann.</li>
+      <li>Ein Stationsbuch, um festzuhalten, was die nächste Schicht wissen muss, und ein Bildschirm zur Schichtaufsicht mit dem, was noch zu erfassen ist.</li>
+      <li>Das Einsehen der Einträge eines anderen Tages oder einer bestimmten Person erfordert eine eigene Berechtigung und wird im Zugriffsprotokoll vermerkt.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-11-10" class="version">
   <div class="version__cabecera">
     <h2>10. November 2026</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.12.0-2777395</span></p>
 

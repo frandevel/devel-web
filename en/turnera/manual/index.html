@@ -666,7 +666,7 @@ footer{
 <main id="top" class="shell manual">
 <nav class="indice">
   <h2>The Turnera manual</h2>
-  <p>Updated on 30 October 2026</p>
+  <p>Updated on 11 November 2026</p>
   <div class="buscador" role="search">
     <input type="search" id="buscador-texto" placeholder="Search the manual" aria-label="Search the manual" autocomplete="off">
     <div class="buscador__estado">
@@ -789,6 +789,7 @@ footer{
     <li><a href="#mantenimiento-movil" class="sub">From the phone: the professionals’ app</a></li>
     <li><a href="#activaciones">12 bis. Activations: doors and devices with a QR code</a></li>
     <li><a href="#soporte">12 ter. Support: talking to the Turnera team</a></li>
+    <li><a href="#estancias">12 quater. Stays: residents, rooms and floor records</a></li>
     <li><a href="#problemas">13. When something goes wrong</a></li>
     <li><a href="#app-nativa">14. The professionals’ native app (Android)</a></li>
     <li><a href="#app-instalar" class="sub">Downloading and installing the app</a></li>
@@ -5447,6 +5448,90 @@ footer{
   </p>
   <p>
     When the team replies to a ticket you opened from Support, the reply stays here and you receive a <strong>notification email</strong> with the link to the ticket. The email does not include what they wrote to you or the attachments: to read it and reply, you go into Turnera using the link. If you reply to that email, we also receive it and it lands in the same ticket, but the most convenient way is to do it from here. If there is no email on your employee record, you will be able to open tickets and read the replies in Turnera, but the team will not be able to notify you by email: it is a good idea to have one filled in.
+  </p>
+</section>
+<section id="estancias">
+  <h2>12 quater. Stays: residents, rooms and floor records</h2>
+  <p>
+    The <strong>Stays</strong> module is for centres that accommodate people: care homes and hospitals. It is optional: if the centre has not switched it on, Turnera works exactly as it does without it and nothing appears in the menu. When it is switched on, the <strong>Stays</strong> section appears in the menu and each customer can have <strong>one open stay</strong> in a place; their customer record shows it with a tag
+    <em>Resident · Room 204</em>. As in the rest of Turnera, <strong>nothing is deleted</strong>: what is done wrongly is corrected, annulled with its reason or retired, and it is recorded who did it and when.
+  </p>
+
+  <h3 id="estancias-habitaciones">Rooms and places</h3>
+  <p>
+    In <em>Stays → Rooms</em> shows the centre by floor, with each room, its places and who occupies each one. To start, you do not need to create them one by one: <strong>Create rooms</strong> asks how many floors, how many rooms per floor and how many places per room, numbers them as in a hotel (101 is the first room on floor 1), shows the result before creating anything and does not touch rooms that already exist. Afterwards you can change one room, or <strong>several at once</strong> (floor, zone, number of places, retire them or bring them back into use). Each room can have a <strong>type</strong> (single, double, en suite…, in the centre's own words) and a
+    <strong>zone</strong>; the zones are the same work locations as in the roster.
+  </p>
+  <p>
+    A room that has ever been occupied <strong>is never deleted</strong>: it is retired and stops being offered. An occupied room cannot be retired until its occupant changes place or is discharged.
+  </p>
+
+  <h3 id="estancias-ingreso">Admission, room change and discharge</h3>
+  <p>
+    <strong>Admission</strong> (in <em>Stays → Residents</em>): you choose the customer (they must already have a customer record), the free place and the day. The day can be in the past, to record someone who was already in the centre, but not in the future. If they come for a limited time, the <strong>expected end</strong>is entered; empty means an open-ended stay. Someone who is already staying cannot be admitted again.
+  </p>
+  <p>
+    <strong>Change room</strong>: you choose the new place, and the free ones are offered <em>and also those occupied by another person</em>. If you choose another person's place (marked with a dashed line), <strong>they swap</strong>: each moves to the other's place and it is recorded for both.
+  </p>
+  <p>
+    <strong>Out</strong>: closes the stay with its day and reason, and frees the place. If the discharge was recorded by mistake, <strong>Undo the discharge</strong> reopens the stay in the place they left, and the undone discharge stays written in the history. An admission recorded by mistake is <strong>annulled</strong> with its reason. Dates cannot be in the future or earlier than the latest event on record for the stay.
+  </p>
+  <p>
+    <em>Residents</em> shows who is staying now and, with <strong>On a date</strong>, who was staying on any day in the past. It also lists ended stays. Each stay has its own record with the history of the places the person has been in.
+  </p>
+
+  <h3 id="estancias-reservas">Reservations, absences and temporary stays</h3>
+  <p>
+    <strong>Reservations</strong> (<em>Stays → Reservations</em>): who is going to be admitted and when, with their phone number. A reservation can <strong>hold a place</strong>: meanwhile nobody else can occupy it, and when that person is admitted the reservation is considered fulfilled. Those that should already have arrived are marked; a reservation is cancelled by saying why the person is not coming.
+  </p>
+  <p>
+    <strong>Absences</strong>: if a person goes away for a few days (hospital, with family), it is recorded from their stay with the reason, the first day and, if known, the last. While they are away they are marked as such in the lists and do not count as a meal that day. When they return, press <em>Has returned</em>; an absence recorded by mistake is annulled. The <strong>temporary stays</strong> are those with an expected end: you can see which ones end within the next 30 days.
+  </p>
+
+  <h3 id="estancias-tarifas">Rates and dashboard</h3>
+  <p>
+    The <strong>rates</strong> are named monthly amounts (in <em>Stays settings</em>). Each stay is given a rate, or a manual amount, <strong>from a given day</strong>; changing a centre rate does not change what anyone already pays. <strong>Amounts are only seen by those who have the permission <em>See and set rates</em></strong>, which by default only the administrator and Management have: without it no amount is shown anywhere.
+  </p>
+  <p>
+    The <strong>dashboard</strong> (<em>Stays → Dashboard</em>) summarises the centre: occupancy today, average over the last twelve months, average length of stay, how many people are away, occupancy month by month, forecast for the coming weeks (what will be occupied with the reservations and the stays that end), admissions and discharges by month, reasons for discharge and what is worth keeping in mind (incidents to close, stays ending soon, people without a rate). With the rates permission it adds monthly income, the average rate and what is not being earned because of the free places.
+  </p>
+
+  <h3 id="estancias-dietas">Diets</h3>
+  <p>
+    In <em>Stays settings</em> you define the centre's <strong>diet types</strong> (diabetic, pureed, salt-free…). Then, from the list <em>Stays → Diets</em> each person is given their diet and a note of their own (allergies, textures, what they do not eat). The list is designed for the kitchen and the floor: it is seen by room or by diet, with how many people are eating at the centre today. Menus and ingredients are handled by the kitchen; Turnera does not manage them.
+  </p>
+
+  <h3 id="estancias-planta">The floor screen and the room logbook</h3>
+  <p>
+    The <strong>floor screen</strong> is what staff use during the shift. Each <em>record</em> (meal, hygiene, medication, whatever the centre decides to keep track of) is a large button per person: one tap and it is recorded with the time and who did it. Whoever records identifies themselves with their <strong>staff record and PIN</strong>, as when clocking in, so the record carries the name of the person and not that of whoever left the session open. A record can be <em>something that has been done</em>, <em>an option</em> among several, <em>a quantity</em> or <em>a few words</em>, and it can state how many times a day it is expected: the screen then shows what is still missing today.
+  </p>
+  <p>
+    What is recorded wrongly <strong>is never deleted</strong>: it is <em>corrected</em> with another entry (the previous one stays visible, struck through) or <em>annulled</em> with its reason. Anyone who has a <strong>usual zone</strong> on their staff record only sees the people of that zone, unless they have the permission <em>See all zones</em>. A centre device (a tablet) can be <strong>tied to a zone</strong> in <em>Stays settings → Zone tablets</em>: only what belongs to that zone will be seen and recorded on it, whoever signs in.
+  </p>
+  <p>
+    The <strong>room logbook</strong> is each zone's diary: what the incoming shift has to read before starting. Important entries are marked for handover and can be filtered. They are corrected in the same way as records.
+  </p>
+
+  <h3 id="estancias-incidencias">Incidents and shift supervision</h3>
+  <p>
+    A <strong>incident</strong> is something that happens and has to be put in writing: a fall, an argument, a refused medication. It is opened from the person, the zone or the centre, with who, when, what happened and what was done. The centre defines its own <strong>incident types</strong> (the program comes with none) and for each one decides whether it <em>requires closure</em>, whether it requires saying whose it is and whether it requires saying what was done. Those that require closure stay open until whoever supervises reviews them and closes them with their conclusion. In the <em>Report</em> tab you filter by dates and download as CSV.
+  </p>
+  <p>
+    The <strong>shift supervision</strong> brings together on one screen what is still to be recorded today in each zone, the incidents awaiting closure and what matters in the logbooks.
+  </p>
+
+  <h3 id="estancias-ficha">The record of a person staying</h3>
+  <p>
+    From <em>Residents</em>, <strong>See their progress</strong> opens the person's record: where they are and since when, charts of what has been recorded in recent days (with the daily average and how many times each thing has happened) and their incidents. Seeing the records of another day or of a specific person is a <strong>query of health data</strong>
+    and requires the permission <em>See the record history</em>; each consultation is noted in the <em>access trail</em> in Administration, like those of the clinical history.
+  </p>
+
+  <h3 id="estancias-permisos">Permissions and roles</h3>
+  <p>
+    The Stays permissions are fourteen, which each centre distributes as it wishes: <em>See the stays</em>, <em>Admissions, room changes and discharges</em>, <em>Configure the rooms</em>, <em>Configure Stays</em>,
+    <em>Record day-to-day care</em>, <em>See the record history</em>, <em>Correct other people's records</em>,
+    <em>Open incidents</em>, <em>Close incidents</em>, <em>Write in the room logbook</em>, <em>See and set rates</em>, <em>See the dashboard</em>, <em>See the diets</em> and <em>See all zones</em>. When the module is switched on in a centre, two starting roles are created, which the centre can change: <strong>Estancias · planta</strong>
+    (see the stays, record, open incidents, write in the logbook and see the diets) and <strong>Estancias · supervisión</strong> (the above plus admissions and discharges, close incidents, see the record history, correct and see all zones). <em>Management</em> has them all; amounts are only for those who have the rates permission.
   </p>
 </section>
 <section id="problemas">

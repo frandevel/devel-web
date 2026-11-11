@@ -666,7 +666,7 @@ footer{
 <main id="top" class="shell manual">
 <nav class="indice">
   <h2>Manual do Turnera</h2>
-  <p>Atualizado a 30 de outubro de 2026</p>
+  <p>Atualizado a 11 de novembro de 2026</p>
   <div class="buscador" role="search">
     <input type="search" id="buscador-texto" placeholder="Pesquisar no manual" aria-label="Pesquisar no manual" autocomplete="off">
     <div class="buscador__estado">
@@ -789,6 +789,7 @@ footer{
     <li><a href="#mantenimiento-movil" class="sub">A partir do telemóvel: a app dos profissionais</a></li>
     <li><a href="#activaciones">12 bis. Ativações: portas e aparelhos com QR</a></li>
     <li><a href="#soporte">12 ter. Suporte: falar com a equipa da Turnera</a></li>
+    <li><a href="#estancias">12 quater. Estadias: residentes, quartos e registo do piso</a></li>
     <li><a href="#problemas">13. Quando algo não corre bem</a></li>
     <li><a href="#app-nativa">14. A aplicação nativa dos profissionais (Android)</a></li>
     <li><a href="#app-instalar" class="sub">Descarregar e instalar a aplicação</a></li>
@@ -6069,6 +6070,90 @@ footer{
   </p>
   <p>
     Quando a equipa responde a um ticket que abriste a partir do Suporte, a resposta fica aqui e recebes um <strong>e-mail de aviso</strong> com a ligação para o ticket. O e-mail não inclui o que te escreveram nem os anexos: para o leres e responderes, entras na Turnera com a ligação. Se respondes a esse e-mail, nós também o recebemos e cai no mesmo ticket, mas o mais cómodo é fazê-lo a partir daqui. Se na tua ficha de funcionário não houver e-mail, poderás abrir tickets e ler as respostas na Turnera, mas a equipa não poderá avisar-te por e-mail: convém que o tenhas preenchido.
+  </p>
+</section>
+<section id="estancias">
+  <h2>12 quater. Estadias: residentes, quartos e registo do piso</h2>
+  <p>
+    O módulo de <strong>Estadias</strong> é para centros que alojam pessoas: residências e hospitais. É opcional: se o centro não o tiver ligado, a Turnera funciona exatamente como sem ele e não aparece nada no menu. Quando se liga, aparece no menu a secção <strong>Estadias</strong> e cada cliente pode ter <strong>uma estadia aberta</strong> num lugar; a sua ficha de cliente indica-o com uma etiqueta
+    <em>Residente · Quarto 204</em>. Como no resto da Turnera, <strong>nada se apaga</strong>: o que se faz mal corrige-se, anula-se com o seu motivo ou retira-se, e fica escrito quem o fez e quando.
+  </p>
+
+  <h3 id="estancias-habitaciones">Quartos e lugares</h3>
+  <p>
+    Em <em>Estadias → Quartos</em> mostra o centro por pisos, com cada quarto, os seus lugares e quem ocupa cada um. Para começar, não é preciso criá-los um a um: <strong>Criar quartos</strong> pergunta quantos pisos, quantos quartos por piso e quantos lugares por quarto, numera como num hotel (o 101 é o primeiro do piso 1), mostra o resultado antes de criar nada e não toca nos quartos que já existem. Depois pode alterar-se um quarto, ou <strong>vários de uma vez</strong> (piso, zona, número de lugares, retirá-los ou voltar a usá-los). Cada quarto pode ter um <strong>tipo</strong> (individual, duplo, com casa de banho…, com as palavras do centro) e uma
+    <strong>zona</strong>; as zonas são os mesmos locais de trabalho da escala.
+  </p>
+  <p>
+    Um quarto que já tenha sido ocupado alguma vez <strong>não se apaga</strong>: é retirado e deixa de ser oferecido. Um quarto ocupado não se pode retirar até o seu ocupante mudar de lugar ou ter alta.
+  </p>
+
+  <h3 id="estancias-ingreso">Admissão, mudança de quarto e alta</h3>
+  <p>
+    <strong>Admissão</strong> (em <em>Estadias → Residentes</em>): escolhe-se o cliente (tem de ter já a sua ficha), o lugar livre e o dia. O dia pode ser passado, para registar quem já estava no centro, mas não futuro. Se vem por um período, anota-se o <strong>fim previsto</strong>; vazio, a estadia é por tempo indeterminado. Quem já está alojado não pode ser admitido outra vez.
+  </p>
+  <p>
+    <strong>Mudar de quarto</strong>: escolhe-se o novo lugar, e são oferecidos os livres <em>e também os ocupados por outra pessoa</em>. Se se escolher o de outra pessoa (marcado com linha tracejada), <strong>trocam entre si</strong>: cada uma passa para o lugar da outra e fica escrito para as duas.
+  </p>
+  <p>
+    <strong>Saída</strong>: encerra a estadia com o seu dia e o seu motivo, e deixa o lugar livre. Se a alta foi registada por engano, <strong>Desfazer a alta</strong> reabre a estadia no lugar que deixou, e a alta desfeita fica escrita no percurso. Para uma admissão registada por engano, use <strong>anular</strong> com o seu motivo. As datas não podem ser futuras nem anteriores ao último registo da estadia.
+  </p>
+  <p>
+    <em>Residentes</em> mostra quem está alojado agora e, com <strong>Numa data</strong>, quem estava alojado num dia qualquer do passado. Também lista as estadias terminadas. Cada estadia tem a sua ficha com o percurso pelos lugares por onde passou.
+  </p>
+
+  <h3 id="estancias-reservas">Reservas, ausências e estadias temporárias</h3>
+  <p>
+    <strong>Reservas</strong> (<em>Estadias → Reservas</em>): quem vai ser admitido e quando, com o seu telefone. Uma reserva pode <strong>guardar um lugar</strong>: entretanto ninguém mais o pode ocupar, e ao admitir essa pessoa a reserva dá-se por cumprida. As que já deviam ter chegado ficam assinaladas; uma reserva cancela-se dizendo porque a pessoa não vem.
+  </p>
+  <p>
+    <strong>Ausências</strong>: se uma pessoa se ausenta uns dias (hospital, com a família), regista-se a partir da sua estadia com o motivo, o primeiro dia e, se se souber, o último. Enquanto está fora aparece assinalada como tal nas listas e não conta como refeição desse dia. Ao regressar, clica-se em <em>Regressou</em>; uma ausência registada por engano anula-se. As <strong>estadias temporárias</strong> são as que têm um fim previsto: vê-se quais terminam nos próximos 30 dias.
+  </p>
+
+  <h3 id="estancias-tarifas">Tarifas e painel de controlo</h3>
+  <p>
+    As <strong>tarifas</strong> são valores mensais com nome (em <em>Definições de Estadias</em>). A cada estadia atribui-se uma tarifa, ou um valor manual, <strong>a partir de um dia</strong>; alterar uma tarifa do centro não altera o que alguém já paga. <strong>Os valores só os vê quem tem a permissão <em>Ver e definir as tarifas</em></strong>, que por defeito só têm o administrador e a Direção: sem ela não se vê nenhum valor em lado nenhum.
+  </p>
+  <p>
+    O <strong>painel de controlo</strong> (<em>Estadias → Painel de controlo</em>) resume o centro: ocupação de hoje, média dos últimos doze meses, dias de estadia média, quantas pessoas estão fora, ocupação mês a mês, previsão das próximas semanas (o que estará ocupado com as reservas e as estadias que terminam), admissões e altas por mês, motivos de alta e o que convém ter em conta (incidentes por encerrar, estadias que terminam em breve, pessoas sem tarifa). Com a permissão de tarifas, acrescenta o que se fatura em cada mês, a tarifa média e o que se deixa de receber pelos lugares livres.
+  </p>
+
+  <h3 id="estancias-dietas">Dietas</h3>
+  <p>
+    Em <em>Definições de Estadias</em> definem-se os <strong>tipos de dieta</strong> do centro (diabética, triturada, sem sal…). Depois, a partir da lista <em>Estadias → Dietas</em> atribui-se a cada pessoa a sua dieta e uma nota própria (alergias, texturas, o que não toma). A lista está pensada para a cozinha e para o piso: vê-se por quarto ou por dieta, com quantas pessoas comem hoje no centro. As ementas e os ingredientes são tratados pela cozinha; a Turnera não os gere.
+  </p>
+
+  <h3 id="estancias-planta">O ecrã do piso e o livro da sala</h3>
+  <p>
+    A <strong>ecrã do piso</strong> é o que o pessoal usa durante o turno. Cada <em>registo</em> (refeição, higiene, medicação, o que o centro decidir acompanhar) é um botão grande por pessoa: um toque e fica registado com a hora e quem o fez. Quem regista identifica-se com a sua <strong>ficha e o seu PIN</strong>, como ao marcar o ponto, pelo que o registo leva o nome da pessoa e não o de quem deixou a sessão aberta. Um registo pode ser <em>algo que foi feito</em>, <em>uma opção</em> entre várias, <em>uma quantidade</em> ou <em>umas palavras</em>, e pode indicar quantas vezes por dia é esperado: então o ecrã mostra o que falta hoje.
+  </p>
+  <p>
+    O que se registou mal <strong>não se apaga</strong>: deve-se <em>corrigir</em> com outra entrada (a anterior fica visível, riscada) ou <em>anular</em> com o seu motivo. Quem tem uma <strong>zona habitual</strong> na sua ficha de pessoal só vê as pessoas dessa zona, a menos que tenha a permissão <em>Ver todas as zonas</em>. Um equipamento do centro (um tablet) pode <strong>associar-se a uma zona</strong> em <em>Definições de Estadias → Tablets de zona</em>: nele só se verá e registará o que for dessa zona, entre quem entrar.
+  </p>
+  <p>
+    A <strong>livro da sala</strong> é o diário de cada zona: o que o turno que entra tem de ler antes de começar. As entradas importantes marcam-se para a passagem de turno e podem filtrar-se. Corrige-se da mesma forma que os registos.
+  </p>
+
+  <h3 id="estancias-incidencias">Incidentes e supervisão do turno</h3>
+  <p>
+    Uma <strong>ocorrência</strong> é algo que acontece e tem de ficar por escrito: uma queda, uma discussão, um medicamento recusado. Abre-se a partir da pessoa, da zona ou do centro, com quem, quando, o que aconteceu e o que se fez. O centro define os seus <strong>tipos de incidente</strong> (o programa não traz nenhum) e para cada um decide se <em>pede encerramento</em>, se exige indicar de quem é e se exige indicar o que se fez. Os que pedem encerramento ficam abertos até quem supervisiona os rever e os encerrar com a sua conclusão. No separador <em>Relatório</em> filtra-se por datas e descarrega-se em CSV.
+  </p>
+  <p>
+    A <strong>supervisão do turno</strong> reúne num único ecrã o que falta registar hoje em cada zona, os incidentes que aguardam encerramento e o que é importante nos livros.
+  </p>
+
+  <h3 id="estancias-ficha">A ficha da pessoa alojada</h3>
+  <p>
+    Desde <em>Residentes</em>, <strong>Ver a sua evolução</strong> abre a ficha da pessoa: onde está e desde quando, gráficos do que foi registado nos últimos dias (com a média diária e as vezes que cada coisa ocorreu) e os seus incidentes. Ver os registos de outro dia ou de uma pessoa concreta é uma <strong>consulta de dados de saúde</strong>
+    e exige a permissão <em>Ver o histórico de registos</em>; cada consulta fica anotada no <em>registo de acessos</em> da Administração, como as do processo clínico.
+  </p>
+
+  <h3 id="estancias-permisos">Permissões e perfis</h3>
+  <p>
+    As permissões de Estadias são catorze, que cada centro distribui como quiser: <em>Ver as estadias</em>, <em>Admissões, mudanças de quarto e altas</em>, <em>Configurar os quartos</em>, <em>Configurar Estadias</em>,
+    <em>Registar o dia a dia</em>, <em>Ver o histórico de registos</em>, <em>Corrigir registos de outros</em>,
+    <em>Abrir incidentes</em>, <em>Encerrar incidentes</em>, <em>Escrever no livro da sala</em>, <em>Ver e definir as tarifas</em>, <em>Ver o painel de controlo</em>, <em>Ver as dietas</em> e <em>Ver todas as zonas</em>. Ao ligar o módulo num centro criam-se dois perfis de partida, que o centro pode alterar: <strong>Estancias · planta</strong>
+    (ver as estadias, registar, abrir incidentes, escrever no livro da sala e ver as dietas) e <strong>Estancias · supervisión</strong> (o anterior mais admissões e altas, encerrar incidentes, ver o histórico de registos, corrigir e ver todas as zonas). <em>Direção</em> tem todas; os valores ficam só para quem tenha a permissão de tarifas.
   </p>
 </section>
 <section id="problemas">

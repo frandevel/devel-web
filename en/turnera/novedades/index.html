@@ -679,6 +679,7 @@ footer{
   <h2>What's new in Turnera</h2>
   <p>Latest first</p>
   <ol>
+    <li><a href="#2026-11-11">11 November 2026</a></li>
     <li><a href="#2026-11-10">November 10, 2026</a></li>
     <li><a href="#2026-11-09">November 9, 2026</a></li>
     <li><a href="#2026-11-08">November 8, 2026</a></li>
@@ -723,10 +724,42 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Bugs fixed</strong>: what failed, and no longer does.</span></li>
 </ul>
 
+<section id="2026-11-11" class="version">
+  <div class="version__cabecera">
+    <h2>11 November 2026</h2>
+    <span class="version__sello">Latest release</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.13.0-7bf302a</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Stays: residents, rooms and places</h4>
+    <ul>
+      <li>A new optional module for care homes and hospitals. If the centre has not switched it on, Turnera works as it always has and nothing new appears in the menu.</li>
+      <li>Rooms are created all at once by saying how many floors, how many rooms per floor and how many places per room, with a preview before anything is created. Afterwards they can be changed one by one or several at a time. Rooms that have been occupied are not deleted: they are retired.</li>
+      <li>Admission, room change and discharge with their day and reason. When changing room you can choose another person's place and the two swap. A discharge recorded by mistake can be undone, and an admission recorded by mistake is annulled with its reason.</li>
+      <li>Reservations that hold a place for whoever is going to be admitted, absences (hospital, with family) and temporary stays with their expected end.</li>
+      <li>You can see who was staying on any day in the past, and the customer's record shows which room they are in.</li>
+    </ul>
+    <h4>Stays: rates, dashboard and diets</h4>
+    <ul>
+      <li>The centre's monthly rates, which are applied to each stay from a given day. Amounts are only seen by those with the new See and set rates permission, which the administrator and Management have by default.</li>
+      <li>A dashboard with today's occupancy and the average over the last year, the average stay, the forecast for the coming weeks, admissions and discharges and their reasons. With the rates permission it also shows what is earned and what is not earned because of the free places.</li>
+      <li>Diet types defined by the centre and a list of diets by room or by diet, designed for the kitchen and the floor.</li>
+    </ul>
+    <h4>Stays: floor records, incidents and room logbook</h4>
+    <ul>
+      <li>A floor screen with a button for everything the centre wants to record (meals, hygiene, whatever it decides): one tap and it is recorded with the time and who did it, with their staff record and PIN. What is recorded wrongly is not deleted: it is corrected or annulled and shown struck through.</li>
+      <li>Each member of staff sees only their usual zone, and a tablet can be tied to a zone. Anyone with the See all zones permission sees them all.</li>
+      <li>Incidents with the types each centre defines, some with later closure by whoever supervises, and a report by dates that can be downloaded as CSV.</li>
+      <li>A room logbook to write down what the next shift needs to know, and a shift supervision screen with what is still to be recorded.</li>
+      <li>Seeing the records of another day or of a specific person requires its own permission and is noted in the access trail.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-11-10" class="version">
   <div class="version__cabecera">
     <h2>November 10, 2026</h2>
-    <span class="version__sello">Latest release</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.12.0-2777395</span></p>
 

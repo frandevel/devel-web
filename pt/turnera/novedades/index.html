@@ -679,6 +679,7 @@ footer{
   <h2>Novidades do Turnera</h2>
   <p>O mais recente, em cima</p>
   <ol>
+    <li><a href="#2026-11-11">11 de novembro de 2026</a></li>
     <li><a href="#2026-11-10">10 de novembro de 2026</a></li>
     <li><a href="#2026-11-09">9 de novembro de 2026</a></li>
     <li><a href="#2026-11-08">8 de novembro de 2026</a></li>
@@ -724,10 +725,42 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Erros corrigidos</strong>: o que falhava e já não falha.</span></li>
 </ul>
 
+<section id="2026-11-11" class="version">
+  <div class="version__cabecera">
+    <h2>11 de novembro de 2026</h2>
+    <span class="version__sello">Última versão</span>
+  </div>
+  <p class="version__numero">Versão <span translate="no">1.13.0-7bf302a</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Novas funcionalidades</h3>
+    <h4>Estadias: residentes, quartos e lugares</h4>
+    <ul>
+      <li>Um novo módulo opcional para residências e hospitais. Se o centro não o tiver ligado, a Turnera funciona como até agora e não aparece nada de novo no menu.</li>
+      <li>Os quartos criam-se de uma vez indicando quantos pisos, quantos quartos por piso e quantos lugares por quarto, com uma pré-visualização antes de criar o que quer que seja. Depois podem alterar-se um a um ou vários de uma vez. Os quartos que já foram ocupados não se apagam: retiram-se.</li>
+      <li>Admissão, mudança de quarto e alta com o seu dia e o seu motivo. Ao mudar de quarto pode escolher-se o lugar de outra pessoa e trocam entre si. Uma alta registada por engano pode desfazer-se, e uma admissão registada por engano anula-se com o seu motivo.</li>
+      <li>Reservas que guardam um lugar para quem vai ser admitido, ausências (hospital, com a família) e estadias temporárias com o seu fim previsto.</li>
+      <li>Pode ver-se quem estava alojado em qualquer dia do passado, e a ficha do cliente indica em que quarto está.</li>
+    </ul>
+    <h4>Estadias: tarifas, painel de controlo e dietas</h4>
+    <ul>
+      <li>As tarifas mensais do centro, que se atribuem a cada estadia a partir de um dia. Os valores só os vê quem tem a nova permissão Ver e definir as tarifas, que por defeito têm o administrador e a Direção.</li>
+      <li>Um painel de controlo com a ocupação de hoje e a média do último ano, a estadia média, a previsão das próximas semanas, as admissões e altas e os seus motivos. Com a permissão de tarifas, mostra ainda o que se fatura e o que se deixa de receber pelos lugares livres.</li>
+      <li>Tipos de dieta definidos pelo centro e uma lista de dietas por quarto ou por dieta, pensada para a cozinha e para o piso.</li>
+    </ul>
+    <h4>Estadias: registo do piso, incidentes e livro da sala</h4>
+    <ul>
+      <li>Um ecrã do piso com um botão para cada coisa que o centro queira registar (refeições, higiene, o que decidir): um toque e fica registado com a hora e quem o fez, com a sua ficha e o seu PIN. O que se registar mal não se apaga: corrige-se ou anula-se e aparece riscado.</li>
+      <li>Cada pessoa do pessoal vê apenas a sua zona habitual, e um tablet pode ser associado a uma zona. Quem tem a permissão Ver todas as zonas vê todas.</li>
+      <li>Incidentes com os tipos que cada centro definir, alguns com encerramento posterior por quem supervisiona, e um relatório por datas que se descarrega em CSV.</li>
+      <li>Um livro da sala para deixar escrito o que o turno seguinte tem de saber, e um ecrã de supervisão do turno com o que falta registar.</li>
+      <li>Ver os registos de outro dia ou de uma pessoa concreta exige uma permissão própria e fica anotado no registo de acessos.</li>
+    </ul>
+  </div>
+</section>
 <section id="2026-11-10" class="version">
   <div class="version__cabecera">
     <h2>10 de novembro de 2026</h2>
-    <span class="version__sello">Última versão</span>
   </div>
   <p class="version__numero">Versão <span translate="no">1.12.0-2777395</span></p>
 
