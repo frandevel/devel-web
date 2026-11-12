@@ -2595,7 +2595,7 @@ footer{
     Whatever is compared with last year shows <em>No reference</em> until there is a last year: a centre that has just arrived is neither doing well nor badly. It is opened by whoever holds the permission <em>Scorecard</em>, which the Management role has out of the box.
   </p>
   <p>
-    In centres with the <strong>Stays</strong> module, and for whoever can see the stays scorecard, there is a section of its own. Money is only shown to those with the rates permission.
+    In centres with the <strong>Stays</strong> module, and for those with the permission <em>See Stays in the scorecard</em>, there is a section of its own. Anyone with that permission but not the <em>Scorecard</em>  one can still open it and only sees this section, for their own branch. Money is only shown to those with the rates permission.
   </p>
   <div class="tabla-envoltorio">
   <table>
@@ -2608,10 +2608,12 @@ footer{
     <tr><td><strong>Floor records compliance</strong></td><td>Records made out of those expected, from the 1st to yesterday.</td><td>Green from 95 %; red below 85 %.</td></tr>
     <tr><td><strong>Admissions this month</strong></td><td>Admissions compared with the same month last year, with the month's departures, the most common reason for leaving and the average stay.</td><td>No traffic light.</td></tr>
     <tr><td><strong>Residents away today</strong></td><td>Who is away today, how many are in hospital and the month's days of absence.</td><td>No traffic light.</td></tr>
+    <tr><td><strong>People without a rate</strong></td><td>Those staying without a rate set, who therefore do not count towards billing. Only with the rates permission.</td><td>Green if none; red if there is any.</td></tr>
+    <tr><td><strong>Temporary stays ending</strong></td><td>The temporary stays ending in the next 30 days, out of all there are.</td><td>No traffic light.</td></tr>
   </tbody></table>
   </div>
   <p>
-    Below, a chart with stays revenue for the last twelve months in bars and average occupancy as a line.
+    Below, two charts: stays revenue for the last twelve months in bars with average occupancy as a line, and the <strong>occupancy forecast</strong>  for the next thirteen weeks (those staying with no planned end before then, plus the bookings that will have arrived).
   </p>
   <p>
     <strong>Everyone chooses what they see.</strong> With <em>Customise</em>  whole sections (Business, Stays, Staff) and each card or chart are switched on or off, and they are ordered with arrows: the sections among themselves and the cards within their section. It is saved for each user. Anything Turnera adds later appears on its own at the end of its section, and
@@ -5532,7 +5534,8 @@ footer{
   <h2>12 quater. Stays: residents, rooms and floor records</h2>
   <p>
     The <strong>Stays</strong> module is for centres that accommodate people: care homes and hospitals. It is optional: if the centre has not switched it on, Turnera works exactly as it does without it and nothing appears in the menu. When it is switched on, the <strong>Stays</strong>  in the menu (with the day-to-day: residents, rooms, diets, incidents, logbook and supervision), and the rest goes where it goes in the rest of Turnera: its <strong>reports</strong> in <em>Reports</em>, its <strong>settings</strong> in
-    <em>Administration › Stays</em> and its <strong>dashboard</strong> in <em>Reports and settings</em>, next to the general one. That way everyone sees what their roles allow. Each customer can have <strong>one open stay</strong> in a place; their customer record shows it with a tag
+    <em>Administration › Stays</em>  and its figures in the <strong>Stays</strong>  section of the
+    <a href="#cuadro-de-mando">scorecard</a>. That way everyone sees what their roles allow. Each customer can have <strong>one open stay</strong> in a place; their customer record shows it with a tag
     <em>Resident · Room 204</em>. As in the rest of Turnera, <strong>nothing is deleted</strong>: what is done wrongly is corrected, annulled with its reason or retired, and it is recorded who did it and when.
   </p>
 
@@ -5578,12 +5581,13 @@ footer{
     <strong>Absences</strong>: if a person goes away for a few days (hospital, with family), it is recorded from their stay with the reason, the first day and, if known, the last. While they are away they are marked as such in the lists and do not count as a meal that day. When they return, press <em>Has returned</em>; an absence recorded by mistake is annulled. The <strong>temporary stays</strong> are those with an expected end: you can see which ones end within the next 30 days.
   </p>
 
-  <h3 id="estancias-tarifas">Rates and dashboard</h3>
+  <h3 id="estancias-tarifas">Rates and figures of the care home</h3>
   <p>
     The <strong>rates</strong> are named monthly amounts (in <em>Administration › Stays</em>). Each stay is given a rate, or a manual amount, <strong>from a given day</strong>; changing a centre rate does not change what anyone already pays. <strong>Amounts are only seen by those who have the permission <em>See and set rates</em></strong>, which by default only the administrator and Management have: without it no amount is shown anywhere.
   </p>
   <p>
-    <strong>The stays dashboard</strong> (in <em>Reports and settings</em>) summarises the centre: occupancy today, average over the last twelve months, average length of stay, how many people are away, occupancy month by month, forecast for the coming weeks (what will be occupied with the reservations and the stays that end), admissions and discharges by month, reasons for discharge and what is worth keeping in mind (incidents to close, stays ending soon, people without a rate). With the rates permission it adds monthly income, the average rate and what is not being earned because of the free places.
+    <strong>The figures of the care home</strong>  are in the <strong>Stays</strong>  section of the
+    <a href="#cuadro-de-mando">scorecard</a> section of the scorecard: occupancy today and expected, revenue, incidents and falls, floor records compliance, admissions and discharges, residents away, people without a rate, temporary stays ending and the forecast for the coming weeks. With <em>Customise</em>  everyone chooses which cards they see and in what order. What used to be a separate Stays scorecard no longer exists: it is all there.
   </p>
 
   <h3 id="estancias-informes">Stays reports</h3>
@@ -5592,8 +5596,8 @@ footer{
   </p>
 
   <figure>
-    <img src="/turnera/manual/imagenes/en/93-estancias-cuadro.png" alt="The dashboard with today’s occupancy, the yearly average and income" loading="lazy">
-    <figcaption>The stays dashboard: occupancy, forecast and, with the rates permission, what comes in.</figcaption>
+    <img src="/turnera/manual/imagenes/en/93-estancias-cuadro.png" alt="The Stays section of the scorecard with its cards and traffic lights" loading="lazy">
+    <figcaption>The Stays section of the scorecard: occupancy, revenue, incidents, floor records and more.</figcaption>
   </figure>
 
   <h3 id="estancias-dietas">Diets</h3>
@@ -5661,7 +5665,7 @@ footer{
   <p>
     The Stays permissions are fourteen, which each centre distributes as it wishes: <em>See the stays</em>, <em>Admissions, room changes and discharges</em>, <em>Configure the rooms</em>, <em>Configure Stays</em>,
     <em>Record day-to-day care</em>, <em>See the record history</em>, <em>Correct other people's records</em>,
-    <em>Open incidents</em>, <em>Close incidents</em>, <em>Write in the room logbook</em>, <em>See and set rates</em>, <em>See the stays dashboard</em>, <em>See the diets</em> and <em>See all zones</em>. When the module is switched on in a centre, two starting roles are created, which the centre can change: <strong>Estancias · planta</strong>
+    <em>Open incidents</em>, <em>Close incidents</em>, <em>Write in the room logbook</em>, <em>See and set rates</em>, <em>See Stays in the scorecard</em>, <em>See the diets</em> and <em>See all zones</em>. When the module is switched on in a centre, two starting roles are created, which the centre can change: <strong>Estancias · planta</strong>
      (view stays, record, open incidents, write in the logbook and view diets) and <strong>Estancias · supervisión</strong> (the above plus admissions and discharges, close incidents, see the record history, correct and see all zones). <em>Management</em> has them all; amounts are only for those who have the rates permission.
   </p>
 </section>

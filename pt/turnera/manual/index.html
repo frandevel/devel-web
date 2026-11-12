@@ -2882,7 +2882,7 @@ footer{
     fábrica.
   </p>
   <p>
-    Nos centros com o módulo de <strong>Estadias</strong>, e para quem vê o painel de indicadores de estadias, há uma secção própria. O dinheiro só o vê quem tem a permissão de tarifas.
+    Nos centros com o módulo de <strong>Estadias</strong>, e para quem tem a permissão <em>Ver Estadias no painel de indicadores</em>, há uma secção própria. Quem tem essa permissão mas não a de <em>Painel de indicadores</em>  entra na mesma e só vê esta secção, da sua delegação. O dinheiro só o vê quem tem a permissão de tarifas.
   </p>
   <div class="tabla-envoltorio">
   <table>
@@ -2895,10 +2895,12 @@ footer{
     <tr><td><strong>Cumprimento dos registos de piso</strong></td><td>Os registos feitos sobre os esperados, do dia 1 até ontem.</td><td>Verde a partir de 95 %; vermelho abaixo de 85 %.</td></tr>
     <tr><td><strong>Admissões do mês</strong></td><td>As admissões, frente ao mesmo mês do ano passado, com as saídas do mês, o motivo de saída mais repetido e a estadia média.</td><td>Sem semáforo.</td></tr>
     <tr><td><strong>Residentes fora hoje</strong></td><td>Quem está ausente hoje, quantos estão no hospital e os dias de ausência do mês.</td><td>Sem semáforo.</td></tr>
+    <tr><td><strong>Pessoas sem tarifa</strong></td><td>As alojadas que não têm tarifa definida e, por isso, não entram na faturação. Só com a permissão de tarifas.</td><td>Verde se nenhuma; vermelho se houver alguma.</td></tr>
+    <tr><td><strong>Temporárias que terminam</strong></td><td>As estadias temporárias que acabam nos próximos 30 dias, de todas as que há.</td><td>Sem semáforo.</td></tr>
   </tbody></table>
   </div>
   <p>
-    Por baixo, um gráfico com a faturação de estadias dos últimos doze meses em barras e a ocupação média em linha.
+    Por baixo, dois gráficos: a faturação de estadias dos últimos doze meses em barras com a ocupação média em linha, e a <strong>previsão de ocupação</strong>  das próximas treze semanas (quem está alojado e não tem um fim previsto antes, mais as reservas que terão chegado).
   </p>
   <p>
     <strong>Cada um escolhe o que vê.</strong> Com <em>Personalizar</em>  ligam-se ou desligam-se secções inteiras (Negócio, Estadias, Pessoal) e cada ficha ou gráfico, e ordenam-se com setas: as secções entre si e as fichas dentro da sua secção. Fica guardado para cada utilizador. O que a Turnera acrescentar mais tarde aparece sozinho no fim da sua secção, e
@@ -6148,7 +6150,8 @@ footer{
   <h2>12 quater. Estadias: residentes, quartos e registo do piso</h2>
   <p>
     O módulo de <strong>Estadias</strong> é para centros que alojam pessoas: residências e hospitais. É opcional: se o centro não o tiver ligado, a Turnera funciona exatamente como sem ele e não aparece nada no menu. Quando se liga, aparece no menu a secção <strong>Estadias</strong>  no menu (com o dia a dia: residentes, quartos, dietas, ocorrências, livro da sala e supervisão), e o resto vai onde vai no resto da Turnera: os seus <strong>relatórios</strong> em <em>Relatórios</em>, as suas <strong>definições</strong> em
-    <em>Administração › Estadias</em> e a sua <strong>painel de controlo</strong> em <em>Relatórios e definições</em>, junto ao geral. Assim cada um vê o que as suas funções lhe permitem. Cada cliente pode ter <strong>uma estadia aberta</strong> num lugar; a sua ficha de cliente indica-o com uma etiqueta
+    <em>Administração › Estadias</em>  e os seus números na secção <strong>Estadias</strong>  do
+    <a href="#cuadro-de-mando">painel de indicadores</a>. Assim cada um vê o que as suas funções lhe permitem. Cada cliente pode ter <strong>uma estadia aberta</strong> num lugar; a sua ficha de cliente indica-o com uma etiqueta
     <em>Residente · Quarto 204</em>. Como no resto da Turnera, <strong>nada se apaga</strong>: o que se faz mal corrige-se, anula-se com o seu motivo ou retira-se, e fica escrito quem o fez e quando.
   </p>
 
@@ -6194,12 +6197,13 @@ footer{
     <strong>Ausências</strong>: se uma pessoa se ausenta uns dias (hospital, com a família), regista-se a partir da sua estadia com o motivo, o primeiro dia e, se se souber, o último. Enquanto está fora aparece assinalada como tal nas listas e não conta como refeição desse dia. Ao regressar, clica-se em <em>Regressou</em>; uma ausência registada por engano anula-se. As <strong>estadias temporárias</strong> são as que têm um fim previsto: vê-se quais terminam nos próximos 30 dias.
   </p>
 
-  <h3 id="estancias-tarifas">Tarifas e painel de controlo</h3>
+  <h3 id="estancias-tarifas">Tarifas e números da residência</h3>
   <p>
     As <strong>tarifas</strong> são valores mensais com nome (em <em>Administração › Estadias</em>). A cada estadia atribui-se uma tarifa, ou um valor manual, <strong>a partir de um dia</strong>; alterar uma tarifa do centro não altera o que alguém já paga. <strong>Os valores só os vê quem tem a permissão <em>Ver e definir as tarifas</em></strong>, que por defeito só têm o administrador e a Direção: sem ela não se vê nenhum valor em lado nenhum.
   </p>
   <p>
-    <strong>O painel de controlo de estadias</strong> (em <em>Relatórios e definições</em>) resume o centro: ocupação de hoje, média dos últimos doze meses, dias de estadia média, quantas pessoas estão fora, ocupação mês a mês, previsão das próximas semanas (o que estará ocupado com as reservas e as estadias que terminam), admissões e altas por mês, motivos de alta e o que convém ter em conta (incidentes por encerrar, estadias que terminam em breve, pessoas sem tarifa). Com a permissão de tarifas, acrescenta o que se fatura em cada mês, a tarifa média e o que se deixa de receber pelos lugares livres.
+    <strong>Os números da residência</strong>  estão na secção <strong>Estadias</strong>  do
+    <a href="#cuadro-de-mando">painel de indicadores</a> do painel de indicadores: ocupação de hoje e prevista, faturação, ocorrências e quedas, cumprimento dos registos de piso, entradas e saídas, residentes fora, pessoas sem tarifa, estadias temporárias que terminam e a previsão das próximas semanas. Com <em>Personalizar</em>  cada um escolhe que fichas vê e em que ordem. O que antes era um painel de indicadores à parte de Estadias já não existe: está tudo ali.
   </p>
 
   <h3 id="estancias-informes">Relatórios de estadias</h3>
@@ -6208,8 +6212,8 @@ footer{
   </p>
 
   <figure>
-    <img src="/turnera/manual/imagenes/en/93-estancias-cuadro.png" alt="O painel de controlo com a ocupação de hoje, a média do ano e o que se fatura" loading="lazy">
-    <figcaption>O painel de controlo de estadias: ocupação, previsão e, com a permissão de tarifas, o que entra.</figcaption>
+    <img src="/turnera/manual/imagenes/en/93-estancias-cuadro.png" alt="A secção Estadias do painel de indicadores com as suas fichas e semáforos" loading="lazy">
+    <figcaption>A secção Estadias do painel de indicadores: ocupação, faturação, ocorrências, registos de piso e mais.</figcaption>
   </figure>
 
   <h3 id="estancias-dietas">Dietas</h3>
@@ -6277,7 +6281,7 @@ footer{
   <p>
     As permissões de Estadias são catorze, que cada centro distribui como quiser: <em>Ver as estadias</em>, <em>Admissões, mudanças de quarto e altas</em>, <em>Configurar os quartos</em>, <em>Configurar Estadias</em>,
     <em>Registar o dia a dia</em>, <em>Ver o histórico de registos</em>, <em>Corrigir registos de outros</em>,
-    <em>Abrir incidentes</em>, <em>Encerrar incidentes</em>, <em>Escrever no livro da sala</em>, <em>Ver e definir as tarifas</em>, <em>Ver o painel de controlo de estadias</em>, <em>Ver as dietas</em> e <em>Ver todas as zonas</em>. Ao ligar o módulo num centro criam-se dois perfis de partida, que o centro pode alterar: <strong>Estancias · planta</strong>
+    <em>Abrir incidentes</em>, <em>Encerrar incidentes</em>, <em>Escrever no livro da sala</em>, <em>Ver e definir as tarifas</em>, <em>Ver Estadias no painel de indicadores</em>, <em>Ver as dietas</em> e <em>Ver todas as zonas</em>. Ao ligar o módulo num centro criam-se dois perfis de partida, que o centro pode alterar: <strong>Estancias · planta</strong>
      (ver as estadias, registar, abrir ocorrências, escrever no livro da sala e ver as dietas) e <strong>Estancias · supervisión</strong> (o anterior mais admissões e altas, encerrar incidentes, ver o histórico de registos, corrigir e ver todas as zonas). <em>Direção</em> tem todas; os valores ficam só para quem tenha a permissão de tarifas.
   </p>
 </section>

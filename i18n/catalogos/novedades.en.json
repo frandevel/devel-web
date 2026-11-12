@@ -1329,5 +1329,11 @@
   "t1ffb14b3": "In Spanish, the «Libreta de sala» is now called «Bitácora de sala».",
   "t4696dd24": "In shift supervision, each pending record says how many times it has been recorded out of those expected, with the time of the last one; anything not recorded at all is shown in orange.",
   "tda841b75": "If the customer has several vouchers valid for the same service, the session comes off the one that expires soonest, so that no paid sessions are lost.",
-  "t66aa01ab": "In the incidents report and the Stays reports, the download buttons sat higher than the dates."
+  "t66aa01ab": "In the incidents report and the Stays reports, the download buttons sat higher than the dates.",
+  "tb31045f1": "A Stays section in the scorecard: occupancy, stays revenue, incidents and falls per 1,000 stay days compared with the previous 30 days, incidents not closed in time, floor records compliance, admissions this month, residents away, people without a rate, temporary stays ending, a 12-month chart and the occupancy forecast for the coming weeks.",
+  "t870ac1d7": "The menu works like the rest of Turnera: reports in Reports and settings in Administration › Stays.",
+  "t281a76ff": "A single scorecard: the stays one is retired and everything it showed is in the Stays section of the general scorecard. Anyone who only had the stays one opens the general one and sees that section, for their own branch.",
+  "t1e45b60a": "In the scorecard, the falls card did not count incidents of the «Fall» type.",
+  "t9896a712": "1.15.1-a882220",
+  "t7c575d9c": "1.15.1-9cf4367"
 }

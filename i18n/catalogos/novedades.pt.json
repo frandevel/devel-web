@@ -1329,5 +1329,11 @@
   "t1ffb14b3": "Em espanhol, a «Libreta de sala» passa a chamar-se «Bitácora de sala».",
   "t4696dd24": "Na supervisão do turno, cada registo pendente diz quantas vezes se registou das que se esperam, com a hora da última; o que não se registou nenhuma vez sai a laranja.",
   "tda841b75": "Se o cliente tem vários pacotes de sessões válidos para o mesmo serviço, a sessão sai do que caduca primeiro, para que não se percam sessões pagas.",
-  "t66aa01ab": "No relatório de ocorrências e nos relatórios de Estadias, os botões de descarga ficavam mais altos do que as datas."
+  "t66aa01ab": "No relatório de ocorrências e nos relatórios de Estadias, os botões de descarga ficavam mais altos do que as datas.",
+  "tb31045f1": "Uma secção de Estadias no painel de indicadores: ocupação, faturação de estadias, ocorrências e quedas por cada 1.000 dias de estadia frente aos 30 dias anteriores, ocorrências não fechadas a tempo, cumprimento dos registos de piso, admissões do mês, residentes fora, pessoas sem tarifa, temporárias que terminam, um gráfico de 12 meses e a previsão de ocupação das próximas semanas.",
+  "t870ac1d7": "O menu funciona como no resto da Turnera: os relatórios em Relatórios e as definições em Administração › Estadias.",
+  "t281a76ff": "Um só painel de indicadores: o de estadias é retirado e tudo o que mostrava está na secção Estadias do painel geral. Quem só tinha o de estadias entra no geral e vê essa secção, da sua delegação.",
+  "t1e45b60a": "No painel de indicadores, a ficha de quedas não contava as ocorrências do tipo «Queda».",
+  "t9896a712": "1.15.1-a882220",
+  "t7c575d9c": "1.15.1-9cf4367"
 }

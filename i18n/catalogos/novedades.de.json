@@ -1329,5 +1329,11 @@
   "t1ffb14b3": "Auf Spanisch heißt die «Libreta de sala» jetzt «Bitácora de sala».",
   "t4696dd24": "In der Schichtaufsicht zeigt jede offene Aufzeichnung, wie oft sie von den erwarteten erfasst wurde, mit der Uhrzeit der letzten; was noch gar nicht erfasst wurde, erscheint orange.",
   "tda841b75": "Hat der Kunde mehrere Wertkarten für dieselbe Leistung, wird die Sitzung von der abgezogen, die am frühesten abläuft, damit keine bezahlten Sitzungen verloren gehen.",
-  "t66aa01ab": "Im Vorfallbericht und in den Aufenthaltsberichten saßen die Download-Schaltflächen höher als die Datumsfelder."
+  "t66aa01ab": "Im Vorfallbericht und in den Aufenthaltsberichten saßen die Download-Schaltflächen höher als die Datumsfelder.",
+  "tb31045f1": "Ein Abschnitt Aufenthalte im Cockpit: Belegung, Aufenthaltsumsatz, Vorfälle und Stürze pro 1.000 Aufenthaltstage im Vergleich zu den 30 Tagen davor, nicht rechtzeitig abgeschlossene Vorfälle, Erfüllung der Stationsaufzeichnungen, Aufnahmen des Monats, abwesende Bewohner, Personen ohne Tarif, endende Kurzaufenthalte, ein 12-Monats-Diagramm und die Belegungsprognose der nächsten Wochen.",
+  "t870ac1d7": "Das Menü funktioniert wie im übrigen Turnera: Berichte unter Berichte und Einstellungen unter Verwaltung › Aufenthalte.",
+  "t281a76ff": "Ein einziges Cockpit: das der Aufenthalte entfällt, und alles, was es zeigte, steht im Abschnitt Aufenthalte des allgemeinen Cockpits. Wer nur das der Aufenthalte hatte, öffnet das allgemeine und sieht diesen Abschnitt, für die eigene Filiale.",
+  "t1e45b60a": "Im Cockpit zählte die Karte der Stürze die Vorfälle der Art «Sturz» nicht mit.",
+  "t9896a712": "1.15.1-a882220",
+  "t7c575d9c": "1.15.1-9cf4367"
 }

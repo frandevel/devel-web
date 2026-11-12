@@ -2598,7 +2598,7 @@ footer{
     Was mit dem Vorjahr verglichen wird, zeigt <em>Kein Vergleich</em> solange es kein Vorjahr gibt: ein gerade angekommenes Zentrum läuft weder gut noch schlecht. Öffnen kann es, wer die Berechtigung <em>Cockpit</em> hat, die die Rolle Geschäftsleitung ab Werk mitbringt.
   </p>
   <p>
-    In Zentren mit dem Modul <strong>Aufenthalte</strong> gibt es für alle, die das Aufenthalts-Cockpit sehen, einen eigenen Abschnitt. Geldbeträge sieht nur, wer die Berechtigung für Tarife hat.
+    In Zentren mit dem Modul <strong>Aufenthalte</strong> gibt es für alle mit der Berechtigung <em>Aufenthalte im Cockpit sehen</em> einen eigenen Abschnitt. Wer diese Berechtigung hat, aber nicht <em>Cockpit</em> , kommt trotzdem hinein und sieht nur diesen Abschnitt, für die eigene Filiale. Geldbeträge sieht nur, wer die Berechtigung für Tarife hat.
   </p>
   <div class="tabla-envoltorio">
   <table>
@@ -2611,10 +2611,12 @@ footer{
     <tr><td><strong>Erfüllung der Stationsaufzeichnungen</strong></td><td>Erfasste Aufzeichnungen im Verhältnis zu den erwarteten, vom 1. bis gestern.</td><td>Grün ab 95 %; rot unter 85 %.</td></tr>
     <tr><td><strong>Aufnahmen des Monats</strong></td><td>Die Aufnahmen im Vergleich zum selben Monat des Vorjahres, mit den Abgängen des Monats, dem häufigsten Abgangsgrund und der durchschnittlichen Aufenthaltsdauer.</td><td>Ohne Ampel.</td></tr>
     <tr><td><strong>Heute abwesende Bewohner</strong></td><td>Wer heute abwesend ist, wie viele im Krankenhaus sind und die Abwesenheitstage des Monats.</td><td>Ohne Ampel.</td></tr>
+    <tr><td><strong>Personen ohne Tarif</strong></td><td>Untergebrachte ohne festgelegten Tarif, die deshalb nicht in die Abrechnung eingehen. Nur mit der Berechtigung für Tarife.</td><td>Grün bei keiner; rot, sobald es eine gibt.</td></tr>
+    <tr><td><strong>Endende Kurzaufenthalte</strong></td><td>Die befristeten Aufenthalte, die in den nächsten 30 Tagen enden, von allen, die es gibt.</td><td>Ohne Ampel.</td></tr>
   </tbody></table>
   </div>
   <p>
-    Darunter ein Diagramm mit dem Aufenthaltsumsatz der letzten zwölf Monate als Balken und der durchschnittlichen Belegung als Linie.
+    Darunter zwei Diagramme: der Aufenthaltsumsatz der letzten zwölf Monate als Balken mit der durchschnittlichen Belegung als Linie, und die <strong>Belegungsprognose</strong>  der nächsten dreizehn Wochen (wer untergebracht ist und kein früheres geplantes Ende hat, plus die Reservierungen, die bis dahin angekommen sind).
   </p>
   <p>
     <strong>Jeder wählt, was er sieht.</strong> Mit <em>Anpassen</em>  werden ganze Abschnitte (Geschäft, Aufenthalte, Personal) und jede Karte oder jedes Diagramm ein- oder ausgeschaltet und mit Pfeilen sortiert: die Abschnitte untereinander und die Karten innerhalb ihres Abschnitts. Es wird für jeden Benutzer gespeichert. Was Turnera später hinzufügt, erscheint von selbst am Ende seines Abschnitts, und
@@ -5537,7 +5539,8 @@ footer{
   <h2>12 quater. Aufenthalte: Bewohner, Zimmer und Einträge auf der Station</h2>
   <p>
     Das Modul <strong>Aufenthalte</strong> ist für Einrichtungen gedacht, die Menschen unterbringen: Pflegeheime und Krankenhäuser. Es ist optional: Ist es in der Einrichtung nicht eingeschaltet, funktioniert Turnera genau wie ohne es und im Menü erscheint nichts. Wenn es eingeschaltet ist, erscheint im Menü der Bereich <strong>Aufenthalte</strong>  im Menü (mit dem Alltäglichen: Bewohner, Zimmer, Diäten, Vorfälle, Stationsbuch und Aufsicht), und der Rest steht dort, wo er im übrigen Turnera steht: seine <strong>Berichte</strong> in <em>Berichte</em>, ihre <strong>Einstellungen</strong> in
-    <em>Verwaltung › Aufenthalte</em> und ihre <strong>Kennzahlen</strong> in <em>Berichte und Einstellungen</em>, neben den allgemeinen. So sieht jede Person, was ihre Rollen erlauben. Jede Kundin und jeder Kunde kann <strong>einen offenen Aufenthalt</strong> auf einem Platz haben; seine Kundenkarte zeigt das mit einem Etikett
+    <em>Verwaltung › Aufenthalte</em>  und seine Zahlen im Abschnitt <strong>Aufenthalte</strong>  des
+    <a href="#cuadro-de-mando">Cockpit</a>. So sieht jede Person, was ihre Rollen erlauben. Jede Kundin und jeder Kunde kann <strong>einen offenen Aufenthalt</strong> auf einem Platz haben; seine Kundenkarte zeigt das mit einem Etikett
     <em>Bewohner · Zimmer 204</em>. Wie im Rest von Turnera <strong>wird nichts gelöscht</strong>: Was falsch gemacht wurde, wird korrigiert, mit Begründung storniert oder stillgelegt, und es bleibt festgehalten, wer es wann getan hat.
   </p>
 
@@ -5583,12 +5586,13 @@ footer{
     <strong>Abwesenheiten</strong>: Wenn eine Person für einige Tage weg ist (Krankenhaus, bei der Familie), wird das im Aufenthalt mit Grund, erstem Tag und, falls bekannt, letztem Tag erfasst. Solange sie weg ist, ist sie in den Listen entsprechend markiert und zählt an diesem Tag nicht als Mahlzeit. Bei der Rückkehr klicken Sie auf <em>Ist zurück</em>; eine versehentlich erfasste Abwesenheit wird storniert. Die <strong>befristeten Aufenthalte</strong> sind die mit voraussichtlichem Ende: Man sieht, welche in den nächsten 30 Tagen enden.
   </p>
 
-  <h3 id="estancias-tarifas">Tarife und Kennzahlen</h3>
+  <h3 id="estancias-tarifas">Tarife und Zahlen der Einrichtung</h3>
   <p>
     Die <strong>Tarife</strong> sind benannte Monatsbeträge (unter <em>Verwaltung › Aufenthalte</em>). Jedem Aufenthalt wird ein Tarif oder ein manueller Betrag zugewiesen, <strong>ab einem bestimmten Tag</strong>; eine Änderung eines Tarifs der Einrichtung ändert nicht, was jemand bereits zahlt. <strong>Beträge sieht nur, wer die Berechtigung <em>Tarife einsehen und festlegen</em></strong> hat, die standardmäßig nur die Administration und die Leitung haben: Ohne sie wird nirgends ein Betrag angezeigt.
   </p>
   <p>
-    <strong>Die Kennzahlen der Aufenthalte</strong> (unter <em>Berichte und Einstellungen</em>) fasst die Einrichtung zusammen: Auslastung heute, Durchschnitt der letzten zwölf Monate, durchschnittliche Aufenthaltsdauer, wie viele Personen abwesend sind, Auslastung Monat für Monat, Prognose der nächsten Wochen (was mit den Reservierungen und den endenden Aufenthalten belegt sein wird), Aufnahmen und Entlassungen pro Monat, Entlassungsgründe und was man im Blick behalten sollte (abzuschließende Vorfälle, bald endende Aufenthalte, Personen ohne Tarif). Mit der Berechtigung für Tarife kommen die monatlichen Einnahmen, der durchschnittliche Tarif und das hinzu, was durch die freien Plätze entgeht.
+    <strong>Die Zahlen der Einrichtung</strong>  stehen im Abschnitt <strong>Aufenthalte</strong>  des
+    <a href="#cuadro-de-mando">Cockpit</a> des Cockpits: Belegung heute und erwartet, Umsatz, Vorfälle und Stürze, Erfüllung der Stationsaufzeichnungen, Aufnahmen und Abgänge, abwesende Bewohner, Personen ohne Tarif, endende Kurzaufenthalte und die Prognose der nächsten Wochen. Mit <em>Anpassen</em>  wählt jede Person, welche Karten sie sieht und in welcher Reihenfolge. Das frühere eigene Cockpit der Aufenthalte gibt es nicht mehr: alles steht dort.
   </p>
 
   <h3 id="estancias-informes">Berichte zu Aufenthalten</h3>
@@ -5597,8 +5601,8 @@ footer{
   </p>
 
   <figure>
-    <img src="/turnera/manual/imagenes/en/93-estancias-cuadro.png" alt="Die Kennzahlenübersicht mit der heutigen Auslastung, dem Jahresdurchschnitt und den Einnahmen" loading="lazy">
-    <figcaption>Die Kennzahlen der Aufenthalte: Belegung, Prognose und, mit der Tarifberechtigung, die Einnahmen.</figcaption>
+    <img src="/turnera/manual/imagenes/en/93-estancias-cuadro.png" alt="Der Abschnitt Aufenthalte im Cockpit mit seinen Karten und Ampeln" loading="lazy">
+    <figcaption>Der Abschnitt Aufenthalte im Cockpit: Belegung, Umsatz, Vorfälle, Stationsaufzeichnungen und mehr.</figcaption>
   </figure>
 
   <h3 id="estancias-dietas">Diäten</h3>
@@ -5666,7 +5670,7 @@ footer{
   <p>
     Die Berechtigungen für Aufenthalte sind vierzehn, die jede Einrichtung nach Belieben verteilt: <em>Aufenthalte einsehen</em>, <em>Aufnahmen, Zimmerwechsel und Entlassungen</em>, <em>Zimmer konfigurieren</em>, <em>Aufenthalte konfigurieren</em>,
     <em>Tägliche Pflege erfassen</em>, <em>Eintragsverlauf einsehen</em>, <em>Einträge anderer korrigieren</em>,
-    <em>Vorfälle eröffnen</em>, <em>Vorfälle abschließen</em>, <em>Ins Stationsbuch schreiben</em>, <em>Tarife einsehen und festlegen</em>, <em>Kennzahlen der Aufenthalte einsehen</em>, <em>Diäten einsehen</em> und <em>Alle Bereiche einsehen</em>. Wenn das Modul in einer Einrichtung eingeschaltet wird, entstehen zwei Ausgangsrollen, die die Einrichtung ändern kann: <strong>Estancias · planta</strong>
+    <em>Vorfälle eröffnen</em>, <em>Vorfälle abschließen</em>, <em>Ins Stationsbuch schreiben</em>, <em>Tarife einsehen und festlegen</em>, <em>Aufenthalte im Cockpit sehen</em>, <em>Diäten einsehen</em> und <em>Alle Bereiche einsehen</em>. Wenn das Modul in einer Einrichtung eingeschaltet wird, entstehen zwei Ausgangsrollen, die die Einrichtung ändern kann: <strong>Estancias · planta</strong>
      (Aufenthalte ansehen, erfassen, Vorfälle eröffnen, ins Stationsbuch schreiben und Diäten ansehen) und <strong>Estancias · supervisión</strong> (das Obige plus Aufnahmen und Entlassungen, Vorfälle abschließen, Eintragsverlauf einsehen, korrigieren und alle Bereiche einsehen). <em>Leitung</em> hat alle; Beträge sind nur für die mit der Berechtigung für Tarife.
   </p>
 </section>
