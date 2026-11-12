@@ -4295,5 +4295,21 @@
   "t34c714c8": "é o diário de cada zona: o que o turno que entra tem de ler antes de começar. As entradas importantes marcam-se para a passagem de turno e podem filtrar-se. As suas entradas corrigem-se da mesma forma que os registos.",
   "t96eba066": "O livro da sala",
   "t84466e1d": "Um incidente",
-  "t839d849a": "A supervisão do turno"
+  "t839d849a": "A supervisão do turno",
+  "t4b943e3b": "Quartos: o centro por pisos, com cada lugar e quem o ocupa.",
+  "t151ea86d": "Residentes: quem está alojado agora, com a mudança de quarto e a alta à mão.",
+  "t3a064778": "O painel de controlo: ocupação, previsão e, com a permissão de tarifas, o que se fatura.",
+  "tf159c7d4": "A lista da cozinha: quantos de cada dieta e o que é próprio de cada pessoa.",
+  "t364d418e": "O ecrã do piso: um toque por registo; o que falta hoje aparece assinalado.",
+  "t22fef0f3": "Incidentes: os abertos esperam que a supervisão os encerre.",
+  "t6221ff79": "Supervisão do turno: o que falta registar hoje, zona a zona.",
+  "t10525ccc": "A ficha da pessoa alojada: dieta, tarifa, ausências e o que foi registado nos últimos dias.",
+  "t257dc586": "A planta dos quartos por pisos, com quem ocupa cada lugar e quais estão livres",
+  "tcd69601b": "A lista de residentes com o quarto, o dia de admissão e as ações de mudar e dar alta",
+  "t90d33a41": "O painel de controlo com a ocupação de hoje, a média do ano e o que se fatura",
+  "t89b61323": "A lista de dietas por quarto, com a contagem de cada dieta em cima",
+  "t492cd74e": "O ecrã do piso, com um botão por registo e pessoa e o que falta assinalado",
+  "ta6034cab": "A lista de incidentes com o tipo, a pessoa e se aguardam encerramento",
+  "tbc704980": "A supervisão do turno, com o que falta registar em cada zona e por pessoa",
+  "tbcf51320": "A ficha de uma pessoa alojada com a dieta, a tarifa, as ausências e os registos"
 }

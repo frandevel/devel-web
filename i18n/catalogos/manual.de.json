@@ -4295,5 +4295,21 @@
   "t34c714c8": "ist das Tagebuch jedes Bereichs: was die kommende Schicht vor Dienstbeginn lesen muss. Wichtige Einträge werden für die Übergabe markiert und lassen sich filtern. Seine Einträge werden genauso korrigiert wie die Pflegeeinträge.",
   "t96eba066": "Das Stationsbuch",
   "t84466e1d": "Ein Vorfall",
-  "t839d849a": "Die Schichtaufsicht"
+  "t839d849a": "Die Schichtaufsicht",
+  "t4b943e3b": "Zimmer: die Einrichtung nach Etagen, mit jedem Platz und wer ihn belegt.",
+  "t151ea86d": "Bewohner: wer jetzt untergebracht ist, mit Zimmerwechsel und Entlassung griffbereit.",
+  "t3a064778": "Die Kennzahlenübersicht: Auslastung, Prognose und, mit der Berechtigung für Tarife, die Einnahmen.",
+  "tf159c7d4": "Die Küchenliste: wie viele von jeder Diät und das Persönliche jeder Person.",
+  "t364d418e": "Der Stationsbildschirm: ein Tippen pro Eintrag; was heute noch fehlt, ist markiert.",
+  "t22fef0f3": "Vorfälle: offene warten darauf, dass die Aufsicht sie abschließt.",
+  "t6221ff79": "Schichtaufsicht: was heute noch zu erfassen ist, Bereich für Bereich.",
+  "t10525ccc": "Die Karte der untergebrachten Person: Diät, Tarif, Abwesenheiten und die Einträge der letzten Tage.",
+  "t257dc586": "Der Zimmerplan nach Etagen, mit der Belegung jedes Platzes und den freien Plätzen",
+  "tcd69601b": "Die Bewohnerliste mit Zimmer, Aufnahmedatum und den Aktionen Wechseln und Entlassen",
+  "t90d33a41": "Die Kennzahlenübersicht mit der heutigen Auslastung, dem Jahresdurchschnitt und den Einnahmen",
+  "t89b61323": "Die Diätliste nach Zimmer, oben mit der Anzahl jeder Diät",
+  "t492cd74e": "Der Stationsbildschirm mit einer Schaltfläche pro Eintrag und Person; Fehlendes ist markiert",
+  "ta6034cab": "Die Vorfallliste mit Art, Person und ob ein Abschluss aussteht",
+  "tbc704980": "Die Schichtaufsicht mit dem, was in jedem Bereich und pro Person noch zu erfassen ist",
+  "tbcf51320": "Die Karte einer untergebrachten Person mit Diät, Tarif, Abwesenheiten und Einträgen"
 }

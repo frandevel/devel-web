@@ -4295,5 +4295,21 @@
   "t34c714c8": "is each zone’s diary: what the incoming shift has to read before starting. Important entries are marked for handover and can be filtered. Its entries are corrected in the same way as records.",
   "t96eba066": "The room logbook",
   "t84466e1d": "An incident",
-  "t839d849a": "The shift supervision"
+  "t839d849a": "The shift supervision",
+  "t4b943e3b": "Rooms: the centre by floor, with each place and who occupies it.",
+  "t151ea86d": "Residents: who is staying now, with room changes and discharge at hand.",
+  "t3a064778": "The dashboard: occupancy, forecast and, with the rates permission, income.",
+  "tf159c7d4": "The kitchen list: how many of each diet and what is specific to each person.",
+  "t364d418e": "The floor screen: one tap per record; what is still missing today is highlighted.",
+  "t22fef0f3": "Incidents: open ones wait for supervision to close them.",
+  "t6221ff79": "Shift supervision: what is still to be recorded today, zone by zone.",
+  "t10525ccc": "The record of a person staying: diet, rate, absences and what has been recorded in recent days.",
+  "t257dc586": "The room plan by floor, with who occupies each place and which are free",
+  "tcd69601b": "The list of residents with their room, admission date and the change and discharge actions",
+  "t90d33a41": "The dashboard with today’s occupancy, the yearly average and income",
+  "t89b61323": "The list of diets by room, with the count of each diet at the top",
+  "t492cd74e": "The floor screen, with one button per record and person and what is missing highlighted",
+  "ta6034cab": "The list of incidents with their type, the person and whether they await closure",
+  "tbc704980": "Shift supervision, with what is still to be recorded in each zone and per person",
+  "tbcf51320": "The record of a person staying, with their diet, rate, absences and records"
 }
