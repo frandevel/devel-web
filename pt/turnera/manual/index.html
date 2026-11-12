@@ -1952,6 +1952,12 @@ footer{
   </p>
 
   <p>
+    <strong>Datas de venda.</strong> Um pacote pode ser uma oferta com datas: <em>À venda desde</em> e
+    <em>À venda até (validade)</em>, ambas opcionais. Fora delas não aparece no TPV e não pode ser cobrado; no último dia ainda se vende, e o que já foi vendido não muda. Na lista de pacotes, o estado indica <em>Expirado</em> ou
+    <em>Ainda não à venda</em>, com as datas por baixo.
+  </p>
+
+  <p>
     Um pacote não se apaga: <em>é retirada</em>. Deixa de se oferecer no TPV, e os talões que já o
     contêm ficam como estão.
   </p>
@@ -2524,6 +2530,10 @@ footer{
   </p>
 
   <p>
+    <strong>Se o cliente tem vários pacotes de sessões válidos para o mesmo serviço, a sessão sai do que caduca primeiro</strong>, mesmo que tenha sido comprado depois, para que não se percam sessões pagas. Os que não caducam vão por último e, se dois caducam no mesmo dia, sai do comprado primeiro. Na ficha do cliente os pacotes de sessões aparecem nessa mesma ordem.
+  </p>
+
+  <p>
     Descontar uma sessão à mão, corrigir um bónus e dá-lo de baixa precisam da permissão
     <a href="#perm-vouchers-manage">Gestão de bónus</a>, que não é a de cobrar: a Receção de origem vende bónus e cobra com eles, mas não pode mexer nos já vendidos. Se no seu centro quiser que alguém o faça, dá-se-lhe essa permissão no ecrã de perfis.
   </p>
@@ -2870,6 +2880,29 @@ footer{
   <p>
     O que se compara com o ano anterior aparece <em>Sem referência</em> enquanto não há ano anterior: um centro recém-chegado não vai nem bem nem mal. Abre-o quem tiver a permissão <em>Painel de indicadores</em>, que a função Direção traz de
     fábrica.
+  </p>
+  <p>
+    Nos centros com o módulo de <strong>Estadias</strong>, e para quem vê o painel de indicadores de estadias, há uma secção própria. O dinheiro só o vê quem tem a permissão de tarifas.
+  </p>
+  <div class="tabla-envoltorio">
+  <table>
+    <tbody><tr><th>Número</th><th>O que conta</th><th>Semáforo</th></tr>
+    <tr><td><strong>Ocupação de hoje</strong></td><td>Vagas ocupadas sobre as existentes, frente ao mesmo dia há um ano. Por baixo, a média do mês e a prevista dentro de quatro semanas com as saídas previstas e as reservas.</td><td>Verde a partir de 85 %; vermelho abaixo de 75 %.</td></tr>
+    <tr><td><strong>Faturação de estadias do mês</strong></td><td>O que corresponde ao mês pelas tarifas, frente ao mesmo mês do ano passado, com o acumulado do ano e o que renderiam por mês as vagas livres.</td><td>Verde se iguala ou supera o ano passado; vermelho se cai mais de 5 %.</td></tr>
+    <tr><td><strong>Ocorrências por cada 1.000 dias de estadia</strong></td><td>As dos últimos 30 dias frente aos 30 anteriores. Em taxa, para que não suba só por haver mais residentes.</td><td>Verde se desce ou se mantém; vermelho se sobe mais de 25 %.</td></tr>
+    <tr><td><strong>Quedas por cada 1.000 dias de estadia</strong></td><td>O mesmo, contando as ocorrências dos tipos cujo nome diz «queda».</td><td>Como as ocorrências.</td></tr>
+    <tr><td><strong>Ocorrências não fechadas a tempo</strong></td><td>As que pedem fecho e estão abertas há mais de 48 horas.</td><td>Verde se nenhuma; âmbar com uma ou duas; vermelho a partir de três.</td></tr>
+    <tr><td><strong>Cumprimento dos registos de piso</strong></td><td>Os registos feitos sobre os esperados, do dia 1 até ontem.</td><td>Verde a partir de 95 %; vermelho abaixo de 85 %.</td></tr>
+    <tr><td><strong>Admissões do mês</strong></td><td>As admissões, frente ao mesmo mês do ano passado, com as saídas do mês, o motivo de saída mais repetido e a estadia média.</td><td>Sem semáforo.</td></tr>
+    <tr><td><strong>Residentes fora hoje</strong></td><td>Quem está ausente hoje, quantos estão no hospital e os dias de ausência do mês.</td><td>Sem semáforo.</td></tr>
+  </tbody></table>
+  </div>
+  <p>
+    Por baixo, um gráfico com a faturação de estadias dos últimos doze meses em barras e a ocupação média em linha.
+  </p>
+  <p>
+    <strong>Cada um escolhe o que vê.</strong> Com <em>Personalizar</em>  ligam-se ou desligam-se secções inteiras (Negócio, Estadias, Pessoal) e cada ficha ou gráfico, e ordenam-se com setas: as secções entre si e as fichas dentro da sua secção. Fica guardado para cada utilizador. O que a Turnera acrescentar mais tarde aparece sozinho no fim da sua secção, e
+    <em>Voltar ao habitual</em>  desfaz a escolha.
   </p>
   <figure>
     <img src="/turnera/manual/imagenes/en/30-cuadro-de-mando.png" alt="O painel de indicadores com os seis números, os seus semáforos e a faturação mensal" loading="lazy">
@@ -6114,7 +6147,7 @@ footer{
 <section id="estancias">
   <h2>12 quater. Estadias: residentes, quartos e registo do piso</h2>
   <p>
-    O módulo de <strong>Estadias</strong> é para centros que alojam pessoas: residências e hospitais. É opcional: se o centro não o tiver ligado, a Turnera funciona exatamente como sem ele e não aparece nada no menu. Quando se liga, aparece no menu a secção <strong>Estadias</strong> no menu (com o dia a dia: residentes, quartos, dietas, incidências, livro e supervisão), e o resto vai onde vai no resto do Turnera: os seus <strong>relatórios</strong> em <em>Relatórios</em>, as suas <strong>definições</strong> em
+    O módulo de <strong>Estadias</strong> é para centros que alojam pessoas: residências e hospitais. É opcional: se o centro não o tiver ligado, a Turnera funciona exatamente como sem ele e não aparece nada no menu. Quando se liga, aparece no menu a secção <strong>Estadias</strong>  no menu (com o dia a dia: residentes, quartos, dietas, ocorrências, livro da sala e supervisão), e o resto vai onde vai no resto da Turnera: os seus <strong>relatórios</strong> em <em>Relatórios</em>, as suas <strong>definições</strong> em
     <em>Administração › Estadias</em> e a sua <strong>painel de controlo</strong> em <em>Relatórios e definições</em>, junto ao geral. Assim cada um vê o que as suas funções lhe permitem. Cada cliente pode ter <strong>uma estadia aberta</strong> num lugar; a sua ficha de cliente indica-o com uma etiqueta
     <em>Residente · Quarto 204</em>. Como no resto da Turnera, <strong>nada se apaga</strong>: o que se faz mal corrige-se, anula-se com o seu motivo ou retira-se, e fica escrito quem o fez e quando.
   </p>
@@ -6189,7 +6222,7 @@ footer{
     <figcaption>A lista da cozinha: quantos de cada dieta e o que é próprio de cada pessoa.</figcaption>
   </figure>
 
-  <h3 id="estancias-planta">O ecrã do piso e o livro da sala</h3>
+  <h3 id="estancias-planta">O ecrã de piso e o livro da sala</h3>
   <p>
     <strong>O ecrã do piso</strong> é o que o pessoal usa durante o turno. Cada <em>registo</em> (refeição, higiene, medicação, o que o centro decidir acompanhar) é um botão grande por pessoa: um toque e fica registado com a hora e quem o fez. Quem regista identifica-se com a sua <strong>ficha e o seu PIN</strong>, como ao marcar o ponto, pelo que o registo leva o nome da pessoa e não o de quem deixou a sessão aberta. Um registo pode ser <em>algo que foi feito</em>, <em>uma opção</em> entre várias, <em>uma quantidade</em> ou <em>umas palavras</em>, e pode indicar quantas vezes por dia é esperado: então o ecrã mostra o que falta hoje.
   </p>
@@ -6207,10 +6240,11 @@ footer{
 
   <h3 id="estancias-incidencias">Incidentes e supervisão do turno</h3>
   <p>
-    <strong>Um incidente</strong> é algo que acontece e tem de ficar por escrito: uma queda, uma discussão, um medicamento recusado. Abre-se a partir da pessoa, da zona ou do centro, com quem, quando, o que aconteceu e o que se fez. O centro define os seus <strong>tipos de incidente</strong> (o programa não traz nenhum) e para cada um decide se <em>pede encerramento</em>, se exige indicar de quem é e se exige indicar o que se fez. Os que pedem encerramento ficam abertos até quem supervisiona os rever e os encerrar com a sua conclusão. No separador <em>Relatório</em> filtra-se por datas e descarrega-se em CSV.
+    <strong>Um incidente</strong> é algo que acontece e tem de ficar por escrito: uma queda, uma discussão, um medicamento recusado. Abre-se a partir da pessoa, da zona ou do centro, com quem, quando, o que aconteceu e o que se fez. O centro define os seus <strong>tipos de incidente</strong> (o programa não traz nenhum) e para cada um decide se <em>pede encerramento</em>, se exige indicar de quem é e se exige indicar o que se fez. Os que pedem encerramento ficam abertos até quem supervisiona os rever e os encerrar com a sua conclusão. No separador <em>Relatório</em>  filtra-se por datas e descarrega-se em CSV e, quem vê os relatórios de Estadias (de origem, o administrador e a Direção), também em
+    <strong>PDF</strong>, com o cabeçalho do centro, pronto para imprimir ou arquivar.
   </p>
   <p>
-    <strong>A supervisão do turno</strong> reúne num único ecrã o que falta registar hoje em cada zona, os incidentes que aguardam encerramento e o que é importante nos livros.
+    <strong>A supervisão do turno</strong>  reúne num ecrã o que falta registar hoje em cada zona, as ocorrências que esperam fecho e o importante dos livros da sala. De cada pessoa com algo pendente sai cada registo como «Refeição 1 de 3»: as vezes que se registou hoje das que se esperam, com a hora da última. A laranja vai o que ainda não se registou nenhuma vez; ao passar o rato vê-se o que se registou por último e quem.
   </p>
 
   <figure>
@@ -6244,7 +6278,7 @@ footer{
     As permissões de Estadias são catorze, que cada centro distribui como quiser: <em>Ver as estadias</em>, <em>Admissões, mudanças de quarto e altas</em>, <em>Configurar os quartos</em>, <em>Configurar Estadias</em>,
     <em>Registar o dia a dia</em>, <em>Ver o histórico de registos</em>, <em>Corrigir registos de outros</em>,
     <em>Abrir incidentes</em>, <em>Encerrar incidentes</em>, <em>Escrever no livro da sala</em>, <em>Ver e definir as tarifas</em>, <em>Ver o painel de controlo de estadias</em>, <em>Ver as dietas</em> e <em>Ver todas as zonas</em>. Ao ligar o módulo num centro criam-se dois perfis de partida, que o centro pode alterar: <strong>Estancias · planta</strong>
-    (ver as estadias, registar, abrir incidentes, escrever no livro da sala e ver as dietas) e <strong>Estancias · supervisión</strong> (o anterior mais admissões e altas, encerrar incidentes, ver o histórico de registos, corrigir e ver todas as zonas). <em>Direção</em> tem todas; os valores ficam só para quem tenha a permissão de tarifas.
+     (ver as estadias, registar, abrir ocorrências, escrever no livro da sala e ver as dietas) e <strong>Estancias · supervisión</strong> (o anterior mais admissões e altas, encerrar incidentes, ver o histórico de registos, corrigir e ver todas as zonas). <em>Direção</em> tem todas; os valores ficam só para quem tenha a permissão de tarifas.
   </p>
 </section>
 <section id="problemas">

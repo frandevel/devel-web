@@ -1787,6 +1787,12 @@ footer{
   </p>
 
   <p>
+    <strong>Sale dates.</strong> A package can be an offer with dates: <em>On sale from</em> and
+    <em>On sale until (expiry)</em>, both optional. Outside them it does not appear in the point of sale and cannot be charged; on the last day it can still be sold, and what has already been sold does not change. In the package list, the status says <em>Expired</em> or
+    <em>Not on sale yet</em>, with its dates underneath.
+  </p>
+
+  <p>
     A package is not deleted: it is <em>taken off</em>. It stops being offered at the point of sale, and the tickets that already carry it stay as they are.
   </p>
   <p>
@@ -2276,6 +2282,10 @@ footer{
   </p>
 
   <p>
+    <strong>If the customer has several vouchers valid for the same service, the session comes off the one that expires soonest</strong>, even if it was bought later, so that no paid sessions are lost. Vouchers that never expire go last, and if two expire on the same day, the session comes off the one bought first. In the customer file the vouchers appear in that same order.
+  </p>
+
+  <p>
     Deducting a session by hand, correcting a voucher and cancelling it require the permission
     <a href="#perm-vouchers-manage">Voucher management</a>, which is not the one for charging: the default Reception sells vouchers and charges with them, but cannot touch those already sold. If in your centre you want someone to do it, give them that permission from the roles screen.
   </p>
@@ -2583,6 +2593,29 @@ footer{
   </div>
   <p>
     Whatever is compared with last year shows <em>No reference</em> until there is a last year: a centre that has just arrived is neither doing well nor badly. It is opened by whoever holds the permission <em>Scorecard</em>, which the Management role has out of the box.
+  </p>
+  <p>
+    In centres with the <strong>Stays</strong> module, and for whoever can see the stays scorecard, there is a section of its own. Money is only shown to those with the rates permission.
+  </p>
+  <div class="tabla-envoltorio">
+  <table>
+    <tbody><tr><th>Figure</th><th>What it counts</th><th>Traffic light</th></tr>
+    <tr><td><strong>Occupancy today</strong></td><td>Occupied places out of those available, compared with the same day a year ago. Below, the month's average and the forecast four weeks ahead with planned departures and bookings.</td><td>Green from 85 %; red below 75 %.</td></tr>
+    <tr><td><strong>Stays revenue this month</strong></td><td>What the month amounts to under the rates, compared with the same month last year, with the year to date and what the free places would bring in each month.</td><td>Green if it matches or beats last year; red if it falls by more than 5 %.</td></tr>
+    <tr><td><strong>Incidents per 1,000 stay days</strong></td><td>The last 30 days compared with the 30 before. As a rate, so it does not rise just because there are more residents.</td><td>Green if it falls or stays the same; red if it rises by more than 25 %.</td></tr>
+    <tr><td><strong>Falls per 1,000 stay days</strong></td><td>The same, counting incidents of the types whose name says «fall».</td><td>Like incidents.</td></tr>
+    <tr><td><strong>Incidents not closed in time</strong></td><td>Those that require closing and have been open for more than 48 hours.</td><td>Green if none; amber with one or two; red from three.</td></tr>
+    <tr><td><strong>Floor records compliance</strong></td><td>Records made out of those expected, from the 1st to yesterday.</td><td>Green from 95 %; red below 85 %.</td></tr>
+    <tr><td><strong>Admissions this month</strong></td><td>Admissions compared with the same month last year, with the month's departures, the most common reason for leaving and the average stay.</td><td>No traffic light.</td></tr>
+    <tr><td><strong>Residents away today</strong></td><td>Who is away today, how many are in hospital and the month's days of absence.</td><td>No traffic light.</td></tr>
+  </tbody></table>
+  </div>
+  <p>
+    Below, a chart with stays revenue for the last twelve months in bars and average occupancy as a line.
+  </p>
+  <p>
+    <strong>Everyone chooses what they see.</strong> With <em>Customise</em>  whole sections (Business, Stays, Staff) and each card or chart are switched on or off, and they are ordered with arrows: the sections among themselves and the cards within their section. It is saved for each user. Anything Turnera adds later appears on its own at the end of its section, and
+    <em>Back to the usual</em>  undoes the choice.
   </p>
   <figure>
     <img src="/turnera/manual/imagenes/en/30-cuadro-de-mando.png" alt="The scorecard with the six figures, their traffic lights and monthly revenue" loading="lazy">
@@ -5498,7 +5531,7 @@ footer{
 <section id="estancias">
   <h2>12 quater. Stays: residents, rooms and floor records</h2>
   <p>
-    The <strong>Stays</strong> module is for centres that accommodate people: care homes and hospitals. It is optional: if the centre has not switched it on, Turnera works exactly as it does without it and nothing appears in the menu. When it is switched on, the <strong>Stays</strong> in the menu (with the day-to-day: residents, rooms, diets, incidents, logbook and supervision), and the rest goes where it goes in the rest of Turnera: its <strong>reports</strong> in <em>Reports</em>, its <strong>settings</strong> in
+    The <strong>Stays</strong> module is for centres that accommodate people: care homes and hospitals. It is optional: if the centre has not switched it on, Turnera works exactly as it does without it and nothing appears in the menu. When it is switched on, the <strong>Stays</strong>  in the menu (with the day-to-day: residents, rooms, diets, incidents, logbook and supervision), and the rest goes where it goes in the rest of Turnera: its <strong>reports</strong> in <em>Reports</em>, its <strong>settings</strong> in
     <em>Administration › Stays</em> and its <strong>dashboard</strong> in <em>Reports and settings</em>, next to the general one. That way everyone sees what their roles allow. Each customer can have <strong>one open stay</strong> in a place; their customer record shows it with a tag
     <em>Resident · Room 204</em>. As in the rest of Turnera, <strong>nothing is deleted</strong>: what is done wrongly is corrected, annulled with its reason or retired, and it is recorded who did it and when.
   </p>
@@ -5591,10 +5624,11 @@ footer{
 
   <h3 id="estancias-incidencias">Incidents and shift supervision</h3>
   <p>
-    <strong>An incident</strong> is something that happens and has to be put in writing: a fall, an argument, a refused medication. It is opened from the person, the zone or the centre, with who, when, what happened and what was done. The centre defines its own <strong>incident types</strong> (the program comes with none) and for each one decides whether it <em>requires closure</em>, whether it requires saying whose it is and whether it requires saying what was done. Those that require closure stay open until whoever supervises reviews them and closes them with their conclusion. In the <em>Report</em> tab you filter by dates and download as CSV.
+    <strong>An incident</strong> is something that happens and has to be put in writing: a fall, an argument, a refused medication. It is opened from the person, the zone or the centre, with who, when, what happened and what was done. The centre defines its own <strong>incident types</strong> (the program comes with none) and for each one decides whether it <em>requires closure</em>, whether it requires saying whose it is and whether it requires saying what was done. Those that require closure stay open until whoever supervises reviews them and closes them with their conclusion. In the <em>Report</em>  can be filtered by dates and downloaded as CSV and, for those who can see the Stays reports (by default, the administrator and Management), also as
+    <strong>PDF</strong>, with the centre's letterhead, ready to print or file.
   </p>
   <p>
-    <strong>The shift supervision</strong> brings together on one screen what is still to be recorded today in each zone, the incidents awaiting closure and what matters in the logbooks.
+    <strong>The shift supervision</strong>  brings together on one screen what is still to be recorded today in each area, the incidents awaiting closure and the important points from the logbooks. For each person with something pending, each record appears as «Meal 1 of 3»: the times it has been recorded today out of those expected, with the time of the last one. Anything not yet recorded at all is shown in orange; hovering shows what was last recorded and by whom.
   </p>
 
   <figure>
@@ -5628,7 +5662,7 @@ footer{
     The Stays permissions are fourteen, which each centre distributes as it wishes: <em>See the stays</em>, <em>Admissions, room changes and discharges</em>, <em>Configure the rooms</em>, <em>Configure Stays</em>,
     <em>Record day-to-day care</em>, <em>See the record history</em>, <em>Correct other people's records</em>,
     <em>Open incidents</em>, <em>Close incidents</em>, <em>Write in the room logbook</em>, <em>See and set rates</em>, <em>See the stays dashboard</em>, <em>See the diets</em> and <em>See all zones</em>. When the module is switched on in a centre, two starting roles are created, which the centre can change: <strong>Estancias · planta</strong>
-    (see the stays, record, open incidents, write in the logbook and see the diets) and <strong>Estancias · supervisión</strong> (the above plus admissions and discharges, close incidents, see the record history, correct and see all zones). <em>Management</em> has them all; amounts are only for those who have the rates permission.
+     (view stays, record, open incidents, write in the logbook and view diets) and <strong>Estancias · supervisión</strong> (the above plus admissions and discharges, close incidents, see the record history, correct and see all zones). <em>Management</em> has them all; amounts are only for those who have the rates permission.
   </p>
 </section>
 <section id="problemas">

@@ -1318,5 +1318,16 @@
   "t1c614f2d": "In Diets, “Today's portions” shows one card per diet with the portions to prepare, and in the by-diet view each group shows its count.",
   "t9d8ae42e": "The Stays settings explain where the zone tablets are registered (Administration › Devices, which appears when shared workstations are switched on in Preferences) and link straight to that screen.",
   "tc6dbdff4": "At the point of sale, the box on each line that decides whether the session comes off the voucher or is paid today changed when clicking anywhere on the line; now it only changes when you click the box or its label.",
-  "t8fad6a9d": "1.14.0-97016e6"
+  "t8fad6a9d": "1.14.0-97016e6",
+  "ta2244b49": "1.15.0-41ea11f",
+  "t37e7f569": "A Stays section in the scorecard: occupancy, stays revenue, incidents and falls per 1,000 stay days compared with the previous 30 days, incidents not closed in time, floor records compliance, admissions this month, residents away and a 12-month chart.",
+  "t38ff849e": "The incidents report can also be downloaded as PDF, with the centre's letterhead, for those who can see the Stays reports.",
+  "t07180ca3": "A scorecard to suit you",
+  "t5e08ae14": "With «Customise», each user chooses which sections and cards they see in the scorecard and in what order, just like on the Home page.",
+  "t57f048ac": "Packages with sale dates",
+  "t5812503b": "A package can be sold from a given day, until a given day (its expiry) or between the two. Outside those dates it does not appear in the point of sale and cannot be charged.",
+  "t1ffb14b3": "In Spanish, the «Libreta de sala» is now called «Bitácora de sala».",
+  "t4696dd24": "In shift supervision, each pending record says how many times it has been recorded out of those expected, with the time of the last one; anything not recorded at all is shown in orange.",
+  "tda841b75": "If the customer has several vouchers valid for the same service, the session comes off the one that expires soonest, so that no paid sessions are lost.",
+  "t66aa01ab": "In the incidents report and the Stays reports, the download buttons sat higher than the dates."
 }

@@ -1318,5 +1318,16 @@
   "t1c614f2d": "Unter Diäten zeigt „Portionen heute“ eine Karte pro Diät mit den zuzubereitenden Portionen, und in der Ansicht nach Diät trägt jede Gruppe ihre Anzahl.",
   "t9d8ae42e": "Die Einstellungen der Aufenthalte erklären, wo die Tablets der Bereiche angemeldet werden (Verwaltung › Geräte, das erscheint, wenn gemeinsame Arbeitsplätze in den Einstellungen eingeschaltet sind), und führen direkt dorthin.",
   "tc6dbdff4": "An der Kasse schaltete das Kästchen jeder Zeile, das entscheidet, ob die Sitzung von der Mehrfachkarte abgeht oder heute bezahlt wird, bei einem Klick irgendwo auf die Zeile um; jetzt ändert es sich nur beim Klick auf das Kästchen oder seinen Text.",
-  "t8fad6a9d": "1.14.0-97016e6"
+  "t8fad6a9d": "1.14.0-97016e6",
+  "ta2244b49": "1.15.0-41ea11f",
+  "t37e7f569": "Ein Abschnitt Aufenthalte im Cockpit: Belegung, Aufenthaltsumsatz, Vorfälle und Stürze pro 1.000 Aufenthaltstage im Vergleich zu den 30 Tagen davor, nicht rechtzeitig abgeschlossene Vorfälle, Erfüllung der Stationsaufzeichnungen, Aufnahmen des Monats, abwesende Bewohner und ein 12-Monats-Diagramm.",
+  "t38ff849e": "Der Vorfallbericht lässt sich auch als PDF mit dem Briefkopf des Zentrums herunterladen, für alle, die die Aufenthaltsberichte sehen.",
+  "t07180ca3": "Ein Cockpit nach Maß",
+  "t5e08ae14": "Mit «Anpassen» wählt jeder Benutzer, welche Abschnitte und Karten er im Cockpit sieht und in welcher Reihenfolge, wie auf der Startseite.",
+  "t57f048ac": "Pakete mit Verkaufsdaten",
+  "t5812503b": "Ein Paket kann ab einem Tag, bis zu einem Tag (sein Ablauf) oder dazwischen verkauft werden. Außerhalb dieser Daten erscheint es nicht in der Kasse und kann nicht kassiert werden.",
+  "t1ffb14b3": "Auf Spanisch heißt die «Libreta de sala» jetzt «Bitácora de sala».",
+  "t4696dd24": "In der Schichtaufsicht zeigt jede offene Aufzeichnung, wie oft sie von den erwarteten erfasst wurde, mit der Uhrzeit der letzten; was noch gar nicht erfasst wurde, erscheint orange.",
+  "tda841b75": "Hat der Kunde mehrere Wertkarten für dieselbe Leistung, wird die Sitzung von der abgezogen, die am frühesten abläuft, damit keine bezahlten Sitzungen verloren gehen.",
+  "t66aa01ab": "Im Vorfallbericht und in den Aufenthaltsberichten saßen die Download-Schaltflächen höher als die Datumsfelder."
 }

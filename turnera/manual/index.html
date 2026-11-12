@@ -2211,6 +2211,13 @@ footer{
   </p>
 
   <p>
+    <strong>Fechas de venta.</strong> Un paquete puede ser una oferta con fechas: <em>Se vende desde</em> y
+    <em>Se vende hasta (caducidad)</em>, las dos opcionales. Fuera de ellas no sale en el TPV y no se puede cobrar; el
+    último día todavía se vende, y lo ya vendido no cambia. En la lista de paquetes, el estado dice <em>Caducado</em> o
+    <em>Aún no se vende</em>, con sus fechas debajo.
+  </p>
+
+  <p>
     Un paquete no se borra: se <em>retira</em>. Deja de ofrecerse en el TPV, y los tickets que ya lo llevan se
     quedan como están.
   </p>
@@ -2859,6 +2866,13 @@ footer{
   </p>
 
   <p>
+    <strong>Si el cliente tiene varios bonos que valen para el mismo servicio, la sesión sale del que antes
+    caduca</strong>, aunque se comprara después, para que no se pierdan sesiones pagadas. Los que no caducan van los
+    últimos, y si dos caducan el mismo día, sale del comprado antes. En la ficha del cliente los bonos aparecen en ese
+    mismo orden.
+  </p>
+
+  <p>
     Descontar una sesión a mano, corregir un bono y darlo de baja necesitan el permiso
     <a href="#perm-vouchers-manage">Gestión de bonos</a>, que no es el de cobrar: la Recepción de fábrica vende bonos
     y cobra con ellos, pero no puede tocar los ya vendidos. Si en su centro quiere que alguien lo haga, se le da
@@ -3226,6 +3240,32 @@ footer{
     Lo que se compara con el año anterior sale <em>Sin referencia</em> mientras no hay año anterior: un centro recién
     llegado no va ni bien ni mal. Lo abre quien tenga el permiso <em>Cuadro de mando</em>, que el rol Dirección trae de
     fábrica.
+  </p>
+  <p>
+    En los centros con el módulo de <strong>Estancias</strong>, y para quien ve el cuadro de mando de estancias, hay una
+    sección propia. El dinero solo lo ve quien tiene el permiso de tarifas.
+  </p>
+  <div class="tabla-envoltorio">
+  <table>
+    <tbody><tr><th>Cifra</th><th>Qué cuenta</th><th>Semáforo</th></tr>
+    <tr><td><strong>Ocupación de hoy</strong></td><td>Plazas ocupadas sobre las que hay, frente al mismo día hace un año. Debajo, la media del mes y la prevista dentro de cuatro semanas con los finales previstos y las reservas.</td><td>Verde desde el 85 %; rojo por debajo del 75 %.</td></tr>
+    <tr><td><strong>Facturación de estancias del mes</strong></td><td>Lo que corresponde al mes por las tarifas, frente al mismo mes del año pasado, con lo del año hasta ahora y lo que dejarían al mes las plazas libres.</td><td>Verde si iguala o supera al año pasado; rojo si cae más de un 5 %.</td></tr>
+    <tr><td><strong>Incidencias por cada 1.000 días de estancia</strong></td><td>Las de los últimos 30 días frente a los 30 anteriores. En tasa, para que no suba solo porque haya más residentes.</td><td>Verde si baja o se queda igual; rojo si sube más de un 25 %.</td></tr>
+    <tr><td><strong>Caídas por cada 1.000 días de estancia</strong></td><td>Lo mismo, contando las incidencias de los tipos cuyo nombre dice «caída».</td><td>Como las incidencias.</td></tr>
+    <tr><td><strong>Incidencias sin cerrar a tiempo</strong></td><td>Las que piden cierre y llevan más de 48 horas abiertas.</td><td>Verde si ninguna; ámbar con una o dos; rojo desde tres.</td></tr>
+    <tr><td><strong>Cumplimiento de registros de planta</strong></td><td>Los registros hechos sobre los esperados, del día 1 a ayer.</td><td>Verde desde el 95 %; rojo por debajo del 85 %.</td></tr>
+    <tr><td><strong>Ingresos del mes</strong></td><td>Los ingresos, frente al mismo mes del año pasado, con las salidas del mes, el motivo de salida más repetido y la estancia media.</td><td>Sin semáforo.</td></tr>
+    <tr><td><strong>Residentes fuera hoy</strong></td><td>Quién está ausente hoy, cuántos en el hospital y los días de ausencia del mes.</td><td>Sin semáforo.</td></tr>
+  </tbody></table>
+  </div>
+  <p>
+    Debajo, un gráfico con la facturación de estancias de los doce últimos meses en barras y la ocupación media en línea.
+  </p>
+  <p>
+    <strong>Cada uno elige lo que ve.</strong> Con <em>Personalizar</em> se encienden o apagan secciones enteras (Negocio,
+    Estancias, Personal) y cada ficha o gráfico, y se ordenan con flechas: las secciones entre sí y las fichas dentro de
+    su sección. Se guarda para cada usuario. Lo que Turnera añada más adelante aparece solo al final de su sección, y
+    <em>Volver a lo de siempre</em> deshace la elección.
   </p>
   <figure>
     <img src="/turnera/manual/imagenes/30-cuadro-de-mando.png" alt="El cuadro de mando con las seis cifras, sus semáforos y la facturación mensual" loading="lazy">
@@ -6826,7 +6866,7 @@ footer{
     El módulo de <strong>Estancias</strong> es para centros que alojan personas: residencias y
     hospitales. Es opcional: si el centro no lo tiene encendido, Turnera funciona exactamente igual que sin él y no
     aparece nada en el menú. Cuando se enciende, aparece el apartado <strong>Estancias</strong> en el menú (con lo del día
-    a día: residentes, habitaciones, dietas, incidencias, libreta y supervisión), y lo demás va donde va en el resto de
+    a día: residentes, habitaciones, dietas, incidencias, bitácora y supervisión), y lo demás va donde va en el resto de
     Turnera: sus <strong>informes</strong> en <em>Informes</em>, sus <strong>ajustes</strong> en
     <em>Administración › Estancias</em> y su <strong>cuadro de mando</strong> en <em>Informes y ajustes</em>, junto al
     general. Así cada cual ve lo que le dejan sus roles. Cada cliente
@@ -6946,7 +6986,7 @@ footer{
     <figcaption>La lista de cocina: cuántos de cada dieta y lo de cada persona.</figcaption>
   </figure>
 
-  <h3 id="estancias-planta">La pantalla de planta y la libreta de sala</h3>
+  <h3 id="estancias-planta">La pantalla de planta y la bitácora de sala</h3>
   <p>
     <strong>La pantalla de planta</strong> es lo que usa el personal durante el turno. Cada <em>registro</em> (comida,
     higiene, medicación, lo que el centro decida llevar) es un botón grande por persona: un toque y queda apuntado con la
@@ -6964,7 +7004,7 @@ footer{
     que aparece al encender los puestos compartidos en <em>Preferencias</em>.
   </p>
   <p>
-    <strong>La libreta de sala</strong> es el diario de cada zona: lo que el turno que entra tiene que leer antes de
+    <strong>La bitácora de sala</strong> es el diario de cada zona: lo que el turno que entra tiene que leer antes de
     empezar. Las entradas importantes se marcan para el relevo y se pueden filtrar. Sus entradas se corrigen igual que los registros.
   </p>
 
@@ -6980,11 +7020,14 @@ footer{
     centro define sus <strong>tipos de incidencia</strong> (el programa no trae ninguno) y para cada uno decide si <em>pide
     cierre</em>, si exige indicar de quién es y si exige indicar lo que se hizo. Las que piden cierre quedan abiertas hasta
     que quien supervisa las revisa y las cierra con su conclusión. En la pestaña <em>Informe</em> se filtra por fechas y se
-    descarga en CSV.
+    descarga en CSV y, quien ve los informes de Estancias (de fábrica, el administrador y Dirección), también en
+    <strong>PDF</strong>, con el membrete del centro, listo para imprimir o archivar.
   </p>
   <p>
     <strong>La supervisión del turno</strong> reúne en una pantalla lo que falta por apuntar hoy en cada zona, las
-    incidencias que esperan cierre y lo importante de las libretas.
+    incidencias que esperan cierre y lo importante de las bitácoras. De cada persona con algo pendiente sale cada registro
+    como «Comida 1 de 3»: las veces que se ha apuntado hoy de las que se esperan, con la hora de la última. En naranja va
+    lo que aún no se ha apuntado ninguna vez; al pasar el ratón se ve qué se apuntó por última vez y quién.
   </p>
 
   <figure>
@@ -7027,10 +7070,10 @@ footer{
     Los permisos de Estancias son catorce, que cada centro reparte como quiera: <em>Ver las estancias</em>, <em>Ingresos,
     cambios de habitación y salidas</em>, <em>Configurar las habitaciones</em>, <em>Configurar Estancias</em>,
     <em>Registrar el día a día</em>, <em>Ver la historia de registros</em>, <em>Corregir registros de otros</em>,
-    <em>Abrir incidencias</em>, <em>Cerrar incidencias</em>, <em>Escribir en la libreta de sala</em>, <em>Ver y poner las
+    <em>Abrir incidencias</em>, <em>Cerrar incidencias</em>, <em>Escribir en la bitácora de sala</em>, <em>Ver y poner las
     tarifas</em>, <em>Ver el cuadro de mando de estancias</em>, <em>Ver las dietas</em> y <em>Ver todas las zonas</em>. Al encender el
     módulo en un centro se crean dos roles de partida, que el centro puede cambiar: <strong>Estancias · planta</strong>
-    (ver las estancias, registrar, abrir incidencias, escribir en la libreta y ver las dietas) y <strong>Estancias · supervisión</strong> (lo anterior más
+    (ver las estancias, registrar, abrir incidencias, escribir en la bitácora y ver las dietas) y <strong>Estancias · supervisión</strong> (lo anterior más
     ingresos y salidas, cerrar incidencias, ver la historia de registros, corregir y ver todas las zonas). <em>Dirección</em> trae todos; los importes
     quedan solo para quien tenga el permiso de tarifas.
   </p>

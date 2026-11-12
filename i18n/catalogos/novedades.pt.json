@@ -1318,5 +1318,16 @@
   "t1c614f2d": "Em Dietas, «Refeições de hoje» mostra um cartão por dieta com as refeições a preparar, e na vista por dieta cada grupo leva a sua contagem.",
   "t9d8ae42e": "As definições de Estadias explicam onde se registam os tablets de zona (Administração › Equipamentos, que aparece ao ligar os postos partilhados em Preferências) e levam diretamente a esse ecrã.",
   "tc6dbdff4": "No TPV, a caixa de cada linha que decide se a sessão sai do pacote ou se paga hoje mudava ao clicar em qualquer parte da linha; agora só muda ao clicar na caixa ou no seu texto.",
-  "t8fad6a9d": "1.14.0-97016e6"
+  "t8fad6a9d": "1.14.0-97016e6",
+  "ta2244b49": "1.15.0-41ea11f",
+  "t37e7f569": "Uma secção de Estadias no painel de indicadores: ocupação, faturação de estadias, ocorrências e quedas por cada 1.000 dias de estadia frente aos 30 dias anteriores, ocorrências não fechadas a tempo, cumprimento dos registos de piso, admissões do mês, residentes fora e um gráfico de 12 meses.",
+  "t38ff849e": "O relatório de ocorrências descarrega-se também em PDF, com o cabeçalho do centro, para quem vê os relatórios de Estadias.",
+  "t07180ca3": "Painel de controlo à sua medida",
+  "t5e08ae14": "Com «Personalizar», cada utilizador escolhe que secções e que fichas vê no painel de indicadores e em que ordem, tal como no Início.",
+  "t57f048ac": "Pacotes com datas de venda",
+  "t5812503b": "Um pacote pode vender-se a partir de um dia, até um dia (a sua validade) ou entre os dois. Fora dessas datas não aparece no TPV e não pode ser cobrado.",
+  "t1ffb14b3": "Em espanhol, a «Libreta de sala» passa a chamar-se «Bitácora de sala».",
+  "t4696dd24": "Na supervisão do turno, cada registo pendente diz quantas vezes se registou das que se esperam, com a hora da última; o que não se registou nenhuma vez sai a laranja.",
+  "tda841b75": "Se o cliente tem vários pacotes de sessões válidos para o mesmo serviço, a sessão sai do que caduca primeiro, para que não se percam sessões pagas.",
+  "t66aa01ab": "No relatório de ocorrências e nos relatórios de Estadias, os botões de descarga ficavam mais altos do que as datas."
 }
