@@ -1277,5 +1277,14 @@
   "t5bc88b23": "Cada pessoa do pessoal vê apenas a sua zona habitual, e um tablet pode ser associado a uma zona. Quem tem a permissão Ver todas as zonas vê todas.",
   "t60e39ef8": "Incidentes com os tipos que cada centro definir, alguns com encerramento posterior por quem supervisiona, e um relatório por datas que se descarrega em CSV.",
   "tbb23087e": "Um livro da sala para deixar escrito o que o turno seguinte tem de saber, e um ecrã de supervisão do turno com o que falta registar.",
-  "t547b3ad3": "Ver os registos de outro dia ou de uma pessoa concreta exige uma permissão própria e fica anotado no registo de acessos."
+  "t547b3ad3": "Ver os registos de outro dia ou de uma pessoa concreta exige uma permissão própria e fica anotado no registo de acessos.",
+  "t7791b55c": "12 de novembro de 2026",
+  "t1b3cc609": "1.13.0-4f8ec14",
+  "tfa7c3941": "1.13.0-fb68b51",
+  "t0d2aadcc": "Das listas para a ficha do cliente",
+  "t206443fe": "Na supervisão do turno, no ecrã do piso, na lista da cozinha e no relatório de incidentes, o nome de cada pessoa leva à sua ficha, para quem pode ver fichas de clientes.",
+  "tdeaa70ea": "Também nos planos de pagamento em atraso do Início e no detalhe de um plano de pagamento.",
+  "t2fc12857": "Estadias",
+  "td0bdab5d": "As dietas têm agora um ícone de talheres.",
+  "t27baee15": "As Definições de Estadias explicam onde se registam os tablets de zona (Administração › Equipamentos, que aparece ao ativar os postos partilhados nas Preferências) e levam diretamente a esse ecrã."
 }

@@ -1277,5 +1277,14 @@
   "t5bc88b23": "Each member of staff sees only their usual zone, and a tablet can be tied to a zone. Anyone with the See all zones permission sees them all.",
   "t60e39ef8": "Incidents with the types each centre defines, some with later closure by whoever supervises, and a report by dates that can be downloaded as CSV.",
   "tbb23087e": "A room logbook to write down what the next shift needs to know, and a shift supervision screen with what is still to be recorded.",
-  "t547b3ad3": "Seeing the records of another day or of a specific person requires its own permission and is noted in the access trail."
+  "t547b3ad3": "Seeing the records of another day or of a specific person requires its own permission and is noted in the access trail.",
+  "t7791b55c": "12 November 2026",
+  "t1b3cc609": "1.13.0-4f8ec14",
+  "tfa7c3941": "1.13.0-fb68b51",
+  "t0d2aadcc": "From lists to the customer record",
+  "t206443fe": "In shift supervision, the floor screen, the kitchen list and the incident report, each person’s name takes you to their record, for those who can see customer records.",
+  "tdeaa70ea": "Also in the overdue payment plans on the Home page and in the detail of a payment plan.",
+  "t2fc12857": "Stays",
+  "td0bdab5d": "Diets now have a cutlery icon.",
+  "t27baee15": "Stays settings explains where zone tablets are registered (Administration › Devices, which appears when shared devices are turned on in Preferences) and takes you straight to that screen."
 }

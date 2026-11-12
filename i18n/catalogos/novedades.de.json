@@ -1277,5 +1277,14 @@
   "t5bc88b23": "Jede Person des Personals sieht nur ihren üblichen Bereich, und ein Tablet kann einem Bereich zugeordnet werden. Wer die Berechtigung Alle Bereiche einsehen hat, sieht alle.",
   "t60e39ef8": "Vorfälle mit den Arten, die jede Einrichtung festlegt, einige mit späterem Abschluss durch die aufsichtführende Person, und ein Bericht nach Datum, der als CSV heruntergeladen werden kann.",
   "tbb23087e": "Ein Stationsbuch, um festzuhalten, was die nächste Schicht wissen muss, und ein Bildschirm zur Schichtaufsicht mit dem, was noch zu erfassen ist.",
-  "t547b3ad3": "Das Einsehen der Einträge eines anderen Tages oder einer bestimmten Person erfordert eine eigene Berechtigung und wird im Zugriffsprotokoll vermerkt."
+  "t547b3ad3": "Das Einsehen der Einträge eines anderen Tages oder einer bestimmten Person erfordert eine eigene Berechtigung und wird im Zugriffsprotokoll vermerkt.",
+  "t7791b55c": "12. November 2026",
+  "t1b3cc609": "1.13.0-4f8ec14",
+  "tfa7c3941": "1.13.0-fb68b51",
+  "t0d2aadcc": "Von den Listen zur Kundenkarte",
+  "t206443fe": "In der Schichtaufsicht, auf dem Stationsbildschirm, in der Küchenliste und im Vorfallbericht führt der Name jeder Person zu ihrer Karte, für alle, die Kundenkarten sehen dürfen.",
+  "tdeaa70ea": "Auch bei den überfälligen Zahlungsplänen auf der Startseite und in der Detailansicht eines Zahlungsplans.",
+  "t2fc12857": "Aufenthalte",
+  "td0bdab5d": "Diäten haben jetzt ein Besteck-Symbol.",
+  "t27baee15": "Die Einstellungen für Aufenthalte erklären, wo die Tablets der Bereiche angelegt werden (Verwaltung › Geräte, das erscheint, sobald die gemeinsamen Geräte in den Einstellungen eingeschaltet sind), und führen direkt zu dieser Seite."
 }
