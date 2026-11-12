@@ -1234,9 +1234,9 @@ footer{
       der Administrator besitzt: für den irrtümlich markierten Termin oder die Kundin, die nicht kam und anruft,
       um ihn zu verlegen. Ohne die Berechtigung erscheint nicht <em>Ausschneiden</em>, und wer ihn zu ziehen versucht, erfährt vom Terminkalender, welche Berechtigung
       nötig ist.</li>
-      <li><strong>Verschieben:</strong> ziehen Sie ihn. Wenn Sie ihn in einer anderen Spalte ablegen, wechselt er auch den Mitarbeiter oder die
-      Kabine, je nach Ansicht.</li>
+      <li><strong>Verschieben:</strong> ziehen Sie ihn. Lassen Sie ihn in einer anderen Spalte los, wechselt je nach Ansicht auch die Fachkraft oder der Raum.</li>
     <li><strong>Die Dauer ändern:</strong> ziehen Sie den unteren Rand.</li>
+    <li><strong>Das Gerät zählt auch beim Verschieben oder Verlängern.</strong> Braucht der Termin ein Gerät, das zur neuen Uhrzeit ein anderer Termin belegt, warnt Turnera wie beim Anlegen und nennt den Termin, der es hat: Sie können ihn ändern oder trotzdem speichern (siehe <a href="#aparatos">Geräte</a>).</li>
     <li><strong>Stornieren:</strong> öffnen Sie ihn, drücken Sie <em>Stornieren</em> und geben Sie an, <strong>wer storniert</strong>: der Kunde, das Zentrum (die Fachkraft kann nicht, die Kabine oder der Platz ist nicht verfügbar, ein Defekt) oder ein
       <strong>externer Grund</strong> (Regen auf einem offenen Platz, ein Stromausfall). Die Angabe ist Pflicht, denn nur was der Kunde storniert, zählt in seiner Historie und bei den verlorenen Terminen. Zusätzlich können Sie den Grund in eigenen Worten notieren; er bleibt in den Kommentaren des Termins. Außerdem wird festgehalten, <strong>wer ihn storniert hat und mit welcher Rolle</strong> (zum Beispiel <em>ana (Empfang)</em>), mit Tag und Uhrzeit: Die Karteikarte des stornierten Termins nennt es in einer Zeile. Storniert der Kunde ihn über das Buchungsportal, steht dort <em>Buchungsportal</em>, ohne Rolle. Vor Einführung dieser Angabe stornierte Termine haben sie nicht, und sie wird nicht erfunden.</li>
       <li><strong>Einen bereits abgerechneten Termin</strong> kann nur stornieren, wer die Berechtigung <strong>«Anular citas ya
@@ -1490,7 +1490,7 @@ footer{
   </p>
 
   <p>
-    In der Kundenakte stehen die Daten, die Besuchshistorie, die Wertkarten und die Notizen.
+    In der Kundenakte stehen die Daten, der Besuchsverlauf, die Mehrfachkarten und die Notizen. Der Besuchsverlauf steht <strong>vor den unterschriebenen Dokumenten</strong>, weil er am häufigsten aufgerufen wird.
     <strong>Telefonnummer und E-Mail-Adresse sind Links</strong>: ein Klick öffnet die Telefon- oder die Mail-Anwendung,
     ohne Kopieren und Einfügen. Das gilt in der ganzen Anwendung — auch bei Mitarbeitern, Lieferanten und
     Filialen —, sodass nirgends eine Nummer von Hand abgeschrieben werden muss.
@@ -1514,6 +1514,23 @@ footer{
 
   <p>
     Was bei jedem Besuch abgerechnet wurde —der Betrag und die Schaltfläche <em>Beleg</em> des Verlaufs, die den Druck startet, sieht, wer die Berechtigung „Beträge und Belege im Verlauf sehen“ hat. Wird sie einer Rolle oder einer Person entzogen, zeigt deren Verlauf weiterhin, was wann gemacht wurde, aber ohne Beträge und Beleg. Standardmäßig erhält sie, wer bereits die Karteien sehen darf.
+  </p>
+
+  <h3 id="clientes-conocido">Wie die Person von uns erfahren hat</h3>
+  <p>
+    In der Kundenakte und beim Anlegen eines <em>Erstbesuch</em>, kann man auswählen: <strong>Wie hat die Person von uns erfahren?</strong> Internet oder Suchmaschinen, soziale Netzwerke, Freunde, Familie, Bekannte, Radio, Fernsehen, Presse oder Zeitschriften, Straßenwerbung, im Vorbeigehen, von einem anderen Zentrum überwiesen oder von einer Fachkraft empfohlen. Passt nichts davon, lässt <em>Andere</em> es in wenigen Worten eintragen. Die Angabe ist freiwillig, und der Bericht <em>Kunden</em> filtert danach.
+  </p>
+
+  <h3 id="clientes-comentarios">Kommentare zu einem Besuch und Abweichungen</h3>
+  <p>
+    Jeder Besuch im Verlauf hat links ein Symbol, um ihn zu <strong>kommentieren</strong>. Ein Kommentar ist
+    <em>Information</em> (eine Notiz zu diesem Besuch) oder eine <strong>Abweichung</strong>: eine Beschwerde oder etwas, das schiefgelaufen ist. Ein Besuch mit Kommentaren zeigt eine Sprechblase, einer mit einer Abweichung ein <strong>rotes Ausrufezeichen</strong>
+    , damit niemand sie übersieht. Fährt man mit der Maus darüber, liest man den Text; ein Klick zeigt alle, mit Verfasser und Zeitpunkt, und erlaubt einen weiteren. Jede Person kann nur ihre eigenen löschen: Was jemand anderes geschrieben hat, bleibt.
+  </p>
+
+  <h3 id="clientes-varios-profesionales">Besuche mit mehreren Fachkräften</h3>
+  <p>
+    Haben bei einem Besuch mehrere Personen behandelt (zwei Leistungen auf einem Beleg, jede mit ihrer Fachkraft), nennt der Verlauf alle in der Spalte der Fachkraft und unter jeder Leistung, wer sie erbracht hat.
   </p>
 
   <p>
@@ -1695,6 +1712,12 @@ footer{
     Termin als kassiert markiert — das ist das Euro-Symbol im Raster.
   </p>
 
+  <div class="ojo">
+    <p><strong>Ab Werk wird nur Erledigtes kassiert.</strong> Solange der Termin nicht als
+      <em>Erledigt</em>mit der Schaltfläche <em>Kassieren</em> im Termin nicht anklickbar und der Termin erscheint nicht unter <em>Zu kassieren</em>
+      an der Kasse: So zählen Kasse und Kalender dasselbe, und es wird nichts kassiert, was nicht gemacht wurde. Wenn Ihr Zentrum vor der Behandlung kassiert, schalten Sie es aus unter <em>Verwaltung → Einstellungen → Zahlungen und Kundenbindung → Nur Erledigtes kassieren</em>. Bei Kursen zählt jede teilnehmende Person: Kassiert wird, sobald vermerkt ist, dass sie gekommen ist.</p>
+  </div>
+
   <p>
     <strong>Wenn sich der Termin bei halbfertigem Beleg ändert</strong> —Sie gehen zurück zum Kalender und fügen eine Leistung hinzu, die doch gemacht wurde—, erscheint beim Zurückkehren zur Kasse ein Hinweis mit dem, was der Termin jetzt enthält, und zwei Schaltflächen:
     <em>Beleg aktualisieren</em> fügt das Neue hinzu (und entfernt, was aus dem Termin entfernt wurde), und <em>So lassen</em> ändert nichts. Er wird nicht von selbst angepasst, weil das, was an der Theke entfernt oder hinzugefügt wurde, Absicht sein kann.
@@ -1702,7 +1725,7 @@ footer{
 
   <p>
     <strong>Und noch kürzer: oben in der Kasse.</strong> Sobald eine Fachkraft einen Termin als
-    <em>Behandelt</em>markiert, erscheint der Kunde oben unter <em>Zu kassieren</em>, noch bevor er an der Theke ankommt. Darunter stehen die, die noch <em>in Behandlung</em>sind – sie kommen als Nächstes. Tippen Sie auf die Karte, und der Verkauf wird genauso geladen wie aus dem Kalender. Die Liste aktualisiert sich alle paar Sekunden von selbst, zeigt nur die heutigen Termine, und jeder Kunde verschwindet daraus, sobald kassiert oder der Besuch als offener Betrag verbucht ist.
+    <em>Behandelt</em>markiert, erscheint der Kunde oben unter <em>Zu kassieren</em>, noch bevor er an der Theke ankommt. Darunter stehen die, die noch <em>in Behandlung</em>, die als Nächstes kommen (mit eingeschaltetem <em>Nur Erledigtes kassieren</em> werden sie angezeigt, aber erst kassiert, wenn sie erledigt sind). Ein Klick auf die Karte lädt den Verkauf wie aus dem Kalender. Die Liste aktualisiert sich alle paar Sekunden, zeigt nur die heutigen Termine, und jede Person verschwindet daraus, sobald sie bezahlt hat oder der Betrag offen bleibt.
   </p>
 
   <p>
@@ -2229,9 +2252,20 @@ footer{
     Eine Wertkarte sind im Voraus bezahlte Sitzungen einer <strong>Leistungsgruppe</strong>. Sie werden auf zwei Arten verkauft:
   </p>
   <ul>
-    <li><strong>Einzeln:</strong> in der Kundenakte, im Abschnitt Wertkarten, legen Sie eine von Hand an und geben die
-      Gruppe, die Sitzungen und das Ablaufdatum an.</li>
-    <li><strong>Beim Verkauf einer als Wertkarte markierten Leistung:</strong> die Wertkarte entsteht beim Kassieren von selbst.</li>
+    <li><strong>Beim Verkauf einer Leistung, die als Mehrfachkarte markiert ist</strong> (der übliche Weg): Die Mehrfachkarte entsteht von selbst, wenn sie an der Kasse kassiert wird.</li>
+    <li><strong>Von Hand:</strong> in der Kundenakte, im Bereich Mehrfachkarten, legt <em>Neue Mehrfachkarte</em> eine an, ohne sie zu kassieren, mit Gruppe, Sitzungen und Ablaufdatum. Das sehen nur Personen mit der Berechtigung
+      <a href="#perm-vouchers-manage">Gutscheinverwaltung</a> (ab Werk der Administrator und die Leitung); der Empfang nicht.</li>
+  </ul>
+
+  <h3 id="bonos-sesiones-vigencia">Wo Sitzungen und Gültigkeit festgelegt werden</h3>
+  <p>
+    Unter <em>Katalog → Leistungen</em>, in der Leistung, die als Mehrfachkarte verkauft wird, setzt man <strong>Wird als Mehrfachkarte verkauft</strong>
+    und es erscheinen ihre <strong>Sitzungen</strong> und ihre <strong>Gültigkeit</strong>. Die Sitzungen gelten für die Leistungen ihrer
+    <em>Mehrfachkarten-Gruppe</em>. Die Gültigkeit wird auf zwei Arten angegeben:
+  </p>
+  <ul>
+    <li><strong>Monate ab Kauf</strong>: Die Mehrfachkarte läuft so viele Monate nach dem Verkaufstag ab.</li>
+    <li><strong>Zwischen zwei Daten</strong>, wie bei einem Hotel: Im Kalender wählt man den ersten und den letzten Tag, und die Mehrfachkarte gilt nur dazwischen, beide eingeschlossen, egal wann sie verkauft wird. Gedacht für Saisonaktionen. Wird sie vor dem ersten Datum verkauft, zeigt die Kundenakte <em>Gültig ab …</em> und die Kasse zieht sie erst ab diesem Tag ab.</li>
   </ul>
 
   <h3>Wie sie verbraucht werden</h3>
@@ -2375,7 +2409,9 @@ footer{
   <h3>Was sich im Terminkalender ändert</h3>
   <p>
     Wenn zwei Termine zur selben Zeit dasselbe Gerät brauchen und es nicht genug Einheiten für beide gibt, warnt Turnera
-    <strong>bevor der zweite gespeichert wird</strong>, auch wenn sie in verschiedenen Kabinen und mit verschiedenen Fachkräften stattfinden. Die Warnung nennt das Gerät und <strong>welcher andere Termin es belegt</strong>: die Uhrzeit, den Kunden und die Fachkraft. Damit vor Augen wird entschieden: die Uhrzeit ändern oder trotzdem speichern.
+    <strong>bevor der zweite gespeichert wird</strong>, auch wenn sie in verschiedenen Kabinen und mit verschiedenen Fachkräften stattfinden. Die Warnung nennt das Gerät und <strong>welcher andere Termin es belegt</strong>: Uhrzeit, Kunde und Fachkraft. Damit entscheidet man: die Uhrzeit ändern oder trotzdem speichern. Die Warnung kommt auch beim
+    <strong>Ziehen</strong> eines Termins auf eine andere Uhrzeit, beim <strong>Ausschneiden und Einfügen</strong> an einem anderen Tag und beim
+    <strong>Verlängern</strong> über seinen Rand.
   </p>
 
   <div class="ojo">
@@ -2477,7 +2513,8 @@ footer{
   <p>
     Der Bildschirm gruppiert sie in Abschnitte, dieselben wie im Menü: <strong>Terminkalender</strong>, <strong>Kunden</strong>,
     <strong>Kasse und Zahlungen</strong>, <strong>Rechnungsstellung</strong>, <strong>Katalog und Bestand</strong> und
-    <strong>Personal</strong> (der Arbeitszeitnachweis, die Stundenübersicht und der Dienstplan, die sich in ihren Personal-Bildschirmen öffnen). Ein Bereich, von dem Sie keinen Bericht öffnen können, erscheint nicht.
+    <strong>Personal</strong> (die Arbeitszeiterfassung, die Stundenübersicht und der Dienstplan, die sich in ihren Personal-Ansichten öffnen), und in Zentren mit dem Modul Aufenthalte <strong>Aufenthalte</strong> (siehe
+    <a href="#estancias-informes">ihre Berichte</a>). Ein Bereich, in dem man keinen Bericht öffnen kann, wird nicht angezeigt.
   </p>
 
   <div class="tabla-envoltorio">
@@ -2489,6 +2526,7 @@ footer{
     <tr><td><strong>Stornierungen</strong></td><td>Wie viele vom Kunden, vom Zentrum und aus externen Gründen storniert wurden, und welche Kunden am meisten stornieren.</td></tr>
     <tr><td><strong><a href="#rol-clientes">Kunden</a></strong></td><td>Neuanmeldungen, Geburtstage und woher sie kommen. Außerdem, wer eine Leistung erhalten hat: Man wählt eine oder mehrere unter <em>Durchgeführte Leistungen</em> (es erscheint, wer irgendeine davon erhalten hat), gegebenenfalls eingegrenzt durch das <em>Besuchsdatum</em>.</td></tr>
     <tr><td><strong>Wertkarten</strong></td><td>Was verkauft ist, was noch offen ist und was demnächst abläuft.</td></tr>
+    <tr id="informe-facturacion-profesional"><td><strong>Abrechnung nach Fachkraft</strong></td><td>Was jede Fachkraft in einem Zeitraum abgerechnet hat: wie viele Leistungen und zu welchem Betrag, Sitzungen mit Mehrfachkarte (gezählt, aber ohne Betrag: kassiert wurde beim Verkauf der Karte), Produkte und was noch offen ist. Jede Belegzeile zählt für die Person, die sie erbracht hat, mit Rabatten und inklusive MwSt., Rückgaben werden abgezogen. Die Excel-Datei enthält die Übersicht und das Detail jeder Zeile, um Provisionen zu berechnen. Zu finden unter <em>Kasse und Zahlungen</em>.</td></tr>
     <tr><td><strong>Lager</strong></td><td>Was fehlt und was zu- und abgegangen ist.</td></tr>
   </tbody></table>
   </div>
@@ -3902,6 +3940,12 @@ footer{
   </p>
 
   <p>
+    Das <strong>Raster des Kalenders</strong> legt fest, wie deutlich die Linien der Stunden und Zeitfenster zu sehen sind:
+    <em>Dezent</em>, <em>Normal</em> oder <em>Kräftig</em>. Ist schwer zu erkennen, wo jedes Zeitfenster beginnt, wählen Sie
+    <em>Kräftig</em>. Auch das sieht man im Kalender sofort nach der Auswahl, und es bleibt erst nach dem Speichern.
+  </p>
+
+  <p>
     Das Logo des Betriebs bleibt in jedem Thema auf weißem Grund, auch im dunklen. Das ist Absicht: eine
     Marke für weißes Papier würde auf der Leiste verschwinden.
   </p>
@@ -5296,7 +5340,8 @@ footer{
     Hat der Betrieb das Modul <strong>Wartung</strong>, erscheint es im Menü unter <em>Katalog</em>. Jede Störung oder Arbeit ist ein <strong>Wartungsauftrag</strong>: mit Titel, Ziel, Beschreibung, Bereich und Gerät, Art, Priorität und Frist. Ein Auftrag durchläuft die Status <em>offen, zugewiesen, in Arbeit, wartend, gelöst und abgeschlossen</em> oder wird mit Begründung storniert. Alles, was geschieht, bleibt im <strong>Verlauf</strong> des Auftrags mit Verfasser und Uhrzeit festgehalten und lässt sich weder löschen noch ändern.
   </p>
   <p>
-    Zu jedem Auftrag werden <strong>Fotos pro Phase</strong>  (Problem, vorher, während, nachher und Dokument) hochgeladen, bis zu zehn pro Phase; jedes Foto hält fest, wer es wann hochgeladen hat, und seinen Fingerabdruck, damit niemand behaupten kann, es sei ausgetauscht worden. Es gibt acht Berechtigungen (ansehen, Aufträge anlegen, verwalten, abschließen, stornieren, Bereiche und Geräte, exportieren und Links). Dazu gibt es eine eigene Rolle,
+    Zu jedem Auftrag werden <strong>Fotos pro Phase</strong> (Problem, vorher, während, nachher und Dokument), bis zu zehn je Phase; jedes Foto speichert, wer es hochgeladen hat, wann und seinen Fingerabdruck, damit niemand behaupten kann, es sei verändert worden. Außerdem lädt
+    <strong>Dokument anhängen</strong> eine Datei so hoch, wie sie ist (PDF, Word, Excel, eine Tabelle, ein Text, ein Bild oder ein ZIP, bis 15 MB und bis zu zehn je Auftrag): gedacht für den <strong>Arbeitsbericht einer externen Firma</strong>, einen Kostenvoranschlag oder ein Zertifikat. Ein Klick lädt sie herunter, sie erscheint in der Historie des Auftrags, und auch die Prüfer sehen sie über ihren Link. Es gibt acht Berechtigungen (ansehen, Aufträge eröffnen, verwalten, schließen, stornieren, Bereiche und Anlagen, exportieren und Links). Es gibt eine eigene Rolle,
     <strong>Wartung</strong>, die Aufträge, ihre Bereiche und ihre Geräte betreut, aber keine Aufträge storniert und keine Links für die Prüfer vergibt; <em>Leitung</em> hat alles außer den Links, und der <em>Systemadministrator</em> hat auch diese. Empfang, Fachkraft und Personalwesen können ansehen und melden.
   </p>
   <p>
@@ -5458,7 +5503,8 @@ footer{
 <section id="estancias">
   <h2>12 quater. Aufenthalte: Bewohner, Zimmer und Einträge auf der Station</h2>
   <p>
-    Das Modul <strong>Aufenthalte</strong> ist für Einrichtungen gedacht, die Menschen unterbringen: Pflegeheime und Krankenhäuser. Es ist optional: Ist es in der Einrichtung nicht eingeschaltet, funktioniert Turnera genau wie ohne es und im Menü erscheint nichts. Wenn es eingeschaltet ist, erscheint im Menü der Bereich <strong>Aufenthalte</strong> und jeder Kunde kann <strong>einen offenen Aufenthalt</strong> auf einem Platz haben; seine Kundenkarte zeigt das mit einem Etikett
+    Das Modul <strong>Aufenthalte</strong> ist für Einrichtungen gedacht, die Menschen unterbringen: Pflegeheime und Krankenhäuser. Es ist optional: Ist es in der Einrichtung nicht eingeschaltet, funktioniert Turnera genau wie ohne es und im Menü erscheint nichts. Wenn es eingeschaltet ist, erscheint im Menü der Bereich <strong>Aufenthalte</strong> im Menü (mit dem Tagesgeschäft: Bewohner, Zimmer, Diäten, Vorfälle, Stationsbuch und Aufsicht), und der Rest liegt dort, wo er im übrigen Turnera liegt: ihre <strong>Berichte</strong> in <em>Berichte</em>, ihre <strong>Einstellungen</strong> in
+    <em>Verwaltung › Aufenthalte</em> und ihre <strong>Kennzahlen</strong> in <em>Berichte und Einstellungen</em>, neben den allgemeinen. So sieht jede Person, was ihre Rollen erlauben. Jede Kundin und jeder Kunde kann <strong>einen offenen Aufenthalt</strong> auf einem Platz haben; seine Kundenkarte zeigt das mit einem Etikett
     <em>Bewohner · Zimmer 204</em>. Wie im Rest von Turnera <strong>wird nichts gelöscht</strong>: Was falsch gemacht wurde, wird korrigiert, mit Begründung storniert oder stillgelegt, und es bleibt festgehalten, wer es wann getan hat.
   </p>
 
@@ -5497,7 +5543,8 @@ footer{
 
   <h3 id="estancias-reservas">Reservierungen, Abwesenheiten und befristete Aufenthalte</h3>
   <p>
-    <strong>Reservierungen</strong> (<em>Aufenthalte → Reservierungen</em>): wer aufgenommen wird und wann, mit Telefonnummer. Eine Reservierung kann <strong>einen Platz freihalten</strong>: Solange kann niemand sonst ihn belegen, und wenn die Person aufgenommen wird, gilt die Reservierung als erfüllt. Die, die schon hätten ankommen sollen, werden markiert; eine Reservierung wird storniert, indem man angibt, warum die Person nicht kommt.
+    <strong>Reservierungen</strong> (unter <em>Aufenthalte → Zimmer</em>, oben, zwischen <em>Zimmer</em> und
+    <em>Reservierungen</em>; sichtbar für alle, die Aufnahmen machen): wer wann aufgenommen wird, mit Telefonnummer. Eine Reservierung kann <strong>einen Platz freihalten</strong>: Solange kann niemand sonst ihn belegen, und wenn die Person aufgenommen wird, gilt die Reservierung als erfüllt. Die, die schon hätten ankommen sollen, werden markiert; eine Reservierung wird storniert, indem man angibt, warum die Person nicht kommt.
   </p>
   <p>
     <strong>Abwesenheiten</strong>: Wenn eine Person für einige Tage weg ist (Krankenhaus, bei der Familie), wird das im Aufenthalt mit Grund, erstem Tag und, falls bekannt, letztem Tag erfasst. Solange sie weg ist, ist sie in den Listen entsprechend markiert und zählt an diesem Tag nicht als Mahlzeit. Bei der Rückkehr klicken Sie auf <em>Ist zurück</em>; eine versehentlich erfasste Abwesenheit wird storniert. Die <strong>befristeten Aufenthalte</strong> sind die mit voraussichtlichem Ende: Man sieht, welche in den nächsten 30 Tagen enden.
@@ -5505,20 +5552,25 @@ footer{
 
   <h3 id="estancias-tarifas">Tarife und Kennzahlen</h3>
   <p>
-    Die <strong>Tarife</strong> sind benannte Monatsbeträge (unter <em>Einstellungen für Aufenthalte</em>). Jedem Aufenthalt wird ein Tarif oder ein manueller Betrag zugewiesen, <strong>ab einem bestimmten Tag</strong>; eine Änderung eines Tarifs der Einrichtung ändert nicht, was jemand bereits zahlt. <strong>Beträge sieht nur, wer die Berechtigung <em>Tarife einsehen und festlegen</em></strong> hat, die standardmäßig nur die Administration und die Leitung haben: Ohne sie wird nirgends ein Betrag angezeigt.
+    Die <strong>Tarife</strong> sind benannte Monatsbeträge (unter <em>Verwaltung › Aufenthalte</em>). Jedem Aufenthalt wird ein Tarif oder ein manueller Betrag zugewiesen, <strong>ab einem bestimmten Tag</strong>; eine Änderung eines Tarifs der Einrichtung ändert nicht, was jemand bereits zahlt. <strong>Beträge sieht nur, wer die Berechtigung <em>Tarife einsehen und festlegen</em></strong> hat, die standardmäßig nur die Administration und die Leitung haben: Ohne sie wird nirgends ein Betrag angezeigt.
   </p>
   <p>
-    <strong>Die Kennzahlenübersicht</strong> (<em>Aufenthalte → Kennzahlen</em>) fasst die Einrichtung zusammen: Auslastung heute, Durchschnitt der letzten zwölf Monate, durchschnittliche Aufenthaltsdauer, wie viele Personen abwesend sind, Auslastung Monat für Monat, Prognose der nächsten Wochen (was mit den Reservierungen und den endenden Aufenthalten belegt sein wird), Aufnahmen und Entlassungen pro Monat, Entlassungsgründe und was man im Blick behalten sollte (abzuschließende Vorfälle, bald endende Aufenthalte, Personen ohne Tarif). Mit der Berechtigung für Tarife kommen die monatlichen Einnahmen, der durchschnittliche Tarif und das hinzu, was durch die freien Plätze entgeht.
+    <strong>Die Kennzahlen der Aufenthalte</strong> (unter <em>Berichte und Einstellungen</em>) fasst die Einrichtung zusammen: Auslastung heute, Durchschnitt der letzten zwölf Monate, durchschnittliche Aufenthaltsdauer, wie viele Personen abwesend sind, Auslastung Monat für Monat, Prognose der nächsten Wochen (was mit den Reservierungen und den endenden Aufenthalten belegt sein wird), Aufnahmen und Entlassungen pro Monat, Entlassungsgründe und was man im Blick behalten sollte (abzuschließende Vorfälle, bald endende Aufenthalte, Personen ohne Tarif). Mit der Berechtigung für Tarife kommen die monatlichen Einnahmen, der durchschnittliche Tarif und das hinzu, was durch die freien Plätze entgeht.
+  </p>
+
+  <h3 id="estancias-informes">Berichte zu Aufenthalten</h3>
+  <p>
+    Unter <em>Berichte</em>, in ihrem Bereich <strong>Aufenthalte</strong>, für Leitung und Verwaltung, am Bildschirm, als CSV und als PDF: <strong>Rechnungsstellung</strong> (was auf jede Bewohnerin und jeden Bewohner im Monat entfällt, mit dem tageweise anteiligen Tarif; nur mit der Tarifberechtigung), <strong>Aufnahmen und Entlassungen</strong> (jede Aufnahme, jeder Platzwechsel, jede Abwesenheit, Rückkehr und Entlassung im Zeitraum, mit Grund und wer sie eingetragen hat), <strong>Auslastung</strong> (Monat für Monat: Plätze, durchschnittliche Belegung, Aufnahmen, Entlassungen, Fluktuation und durchschnittliche Aufenthaltsdauer) und <strong>Einträge</strong> (je Bewohnerin und Bewohner die im Zeitraum erwarteten und die tatsächlich gemachten Stationseinträge, bis zu 62 Tage).
   </p>
 
   <figure>
     <img src="/turnera/manual/imagenes/en/93-estancias-cuadro.png" alt="Die Kennzahlenübersicht mit der heutigen Auslastung, dem Jahresdurchschnitt und den Einnahmen" loading="lazy">
-    <figcaption>Die Kennzahlenübersicht: Auslastung, Prognose und, mit der Berechtigung für Tarife, die Einnahmen.</figcaption>
+    <figcaption>Die Kennzahlen der Aufenthalte: Belegung, Prognose und, mit der Tarifberechtigung, die Einnahmen.</figcaption>
   </figure>
 
   <h3 id="estancias-dietas">Diäten</h3>
   <p>
-    Unter <em>Einstellungen für Aufenthalte</em> legen Sie die <strong>Diätarten</strong> der Einrichtung fest (diabetisch, püriert, salzfrei …). Danach wird in der Liste <em>Aufenthalte → Diäten</em> jeder Person ihre Diät und ein eigener Hinweis zugewiesen (Allergien, Konsistenzen, was die Person nicht isst). Die Liste ist für Küche und Station gedacht: Sie wird nach Zimmer oder nach Diät angezeigt, mit der Zahl der Personen, die heute in der Einrichtung essen. Menüs und Zutaten verwaltet die Küche; Turnera verwaltet sie nicht.
+    Unter <em>Verwaltung › Aufenthalte</em> legen Sie die <strong>Diätarten</strong> der Einrichtung fest (diabetisch, püriert, salzfrei …). Danach wird in der Liste <em>Aufenthalte → Diäten</em> erhält jede Person ihre Diät und eine eigene Notiz (Allergien, Konsistenzen, was sie nicht isst). Die Liste ist für Küche und Station gedacht: nach Zimmer oder nach Diät, mit der Zahl der Personen, die heute im Zentrum essen. Oben zeigt <strong>Portionen heute</strong> eine Karte pro Diät mit der Zahl der zuzubereitenden Portionen und wie viele besondere Hinweise haben; in der Ansicht <em>Nach Diät</em> beginnt jede Diät ihre Gruppe mit ihrer Anzahl. Menüs und Zutaten sind Sache der Küche; Turnera verwaltet sie nicht.
   </p>
 
   <figure>
@@ -5531,7 +5583,7 @@ footer{
     <strong>Den Stationsbildschirm</strong> nutzt das Personal während der Schicht. Jeder <em>Eintrag</em> (Mahlzeit, Hygiene, Medikation, alles, was die Einrichtung dokumentieren möchte) ist eine große Schaltfläche pro Person: Ein Tippen, und es ist mit Uhrzeit und Person erfasst. Wer erfasst, identifiziert sich mit <strong>Personalkarte und PIN</strong>, wie beim Stempeln, sodass der Eintrag den Namen der Person trägt und nicht den derjenigen, die die Sitzung offen gelassen hat. Ein Eintrag kann <em>etwas Erledigtes</em>, <em>eine Option</em> unter mehreren, <em>eine Menge</em> oder <em>ein paar Worte</em>sein, und er kann angeben, wie oft am Tag er erwartet wird: Dann zeigt der Bildschirm, was heute noch fehlt.
   </p>
   <p>
-    Falsch Erfasstes <strong>wird nicht gelöscht</strong>: Es wird <em>korrigiert</em> mit einem weiteren Eintrag (der vorherige bleibt sichtbar, durchgestrichen) oder <em>annulliert</em> mit Begründung. Wer einen <strong>üblichen Bereich</strong> in der Personalakte hat, sieht nur die Personen dieses Bereichs, es sei denn, er hat die Berechtigung <em>Alle Bereiche einsehen</em>. Ein Gerät der Einrichtung (ein Tablet) kann <strong>einem Bereich zugeordnet werden</strong> in <em>Einstellungen für Aufenthalte → Tablets der Bereiche</em>: Darauf wird nur gesehen und erfasst, was zu diesem Bereich gehört, egal wer sich anmeldet. Die Geräte werden vorher unter <em>Verwaltung › Geräte</em> angelegt; diese Seite erscheint, sobald die gemeinsamen Geräte eingeschaltet sind, unter <em>Einstellungen</em>.
+    Falsch Erfasstes <strong>wird nicht gelöscht</strong>: Es wird <em>korrigiert</em> mit einem weiteren Eintrag (der vorherige bleibt sichtbar, durchgestrichen) oder <em>annulliert</em> mit Begründung. Wer einen <strong>üblichen Bereich</strong> in der Personalakte hat, sieht nur die Personen dieses Bereichs, es sei denn, er hat die Berechtigung <em>Alle Bereiche einsehen</em>. Ein Gerät der Einrichtung (ein Tablet) kann <strong>einem Bereich zugeordnet werden</strong> in <em>Verwaltung › Aufenthalte → Tablets der Bereiche</em>: Darauf wird nur gesehen und erfasst, was zu diesem Bereich gehört, egal wer sich anmeldet. Die Geräte werden vorher unter <em>Verwaltung › Geräte</em> angelegt; diese Seite erscheint, sobald die gemeinsamen Geräte eingeschaltet sind, unter <em>Einstellungen</em>.
   </p>
   <p>
     <strong>Das Stationsbuch</strong> ist das Tagebuch jedes Bereichs: was die kommende Schicht vor Dienstbeginn lesen muss. Wichtige Einträge werden für die Übergabe markiert und lassen sich filtern. Seine Einträge werden genauso korrigiert wie die Pflegeeinträge.
@@ -5562,20 +5614,25 @@ footer{
 
   <h3 id="estancias-ficha">Die Karte der untergebrachten Person</h3>
   <p>
-    Von <em>Bewohner</em>, <strong>Verlauf ansehen</strong> öffnet die Karte der Person: wo sie ist und seit wann, Diagramme der in den letzten Tagen erfassten Einträge (mit dem Tagesdurchschnitt und wie oft jedes Ereignis vorkam) und ihre Vorfälle. Die Einträge eines anderen Tages oder einer bestimmten Person einzusehen ist eine <strong>Abfrage von Gesundheitsdaten</strong>
+    Von <em>Bewohner</em>, <strong>Verlauf ansehen</strong> öffnet die Akte der Person: wo sie ist und seit wann, Diagramme der Einträge der letzten Tage (mit Tagesdurchschnitt und wie oft etwas vorkam), ihre Vorfälle und ihre <strong>Kontaktpersonen</strong>. Die Einträge eines anderen Tages oder einer bestimmten Person anzusehen ist ein <strong>Abfrage von Gesundheitsdaten</strong>
     und erfordert die Berechtigung <em>Eintragsverlauf einsehen</em>; jede Abfrage wird im <em>Zugriffsprotokoll</em> der Administration vermerkt, wie die der Krankengeschichte.
   </p>
 
   <figure>
-    <img src="/turnera/manual/imagenes/en/98-estancias-residente.png" alt="Die Karte einer untergebrachten Person mit Diät, Tarif, Abwesenheiten und Einträgen" loading="lazy">
-    <figcaption>Die Karte der untergebrachten Person: Diät, Tarif, Abwesenheiten und die Einträge der letzten Tage.</figcaption>
+    <img src="/turnera/manual/imagenes/en/98-estancias-residente.png" alt="Die Akte einer untergebrachten Person mit Diät, Tarif, Abwesenheiten und Kontaktpersonen" loading="lazy">
+    <figcaption>Die Akte einer untergebrachten Person: Diät, Tarif, Abwesenheiten und Kontaktpersonen; darunter die Einträge der letzten Tage.</figcaption>
   </figure>
+
+  <h3 id="estancias-contactos">Kontaktpersonen</h3>
+  <p>
+    In der Akte der untergebrachten Person und in ihrer Kundenakte hält <strong>Kontaktpersonen</strong> fest, wen man anruft: Oft ist eine ältere Person auf einen Sohn, eine Nichte oder ihren rechtlichen Betreuer angewiesen. Zu jeder Person Name, Beziehung, Telefon, E-Mail und Bemerkungen (wann man anruft, welche Angelegenheiten sie erledigt). Es können mehrere sein, und eine ist der <strong>Hauptkontakt</strong>, der zuerst erscheint: Der zuerst eingetragene ist es ohne weitere Angabe, und markiert man einen anderen, verliert der vorige die Markierung. Sie gehören zur Person und nicht zur Aufnahme, bleiben also bei einer erneuten Aufnahme erhalten. Ändern können sie alle, die Aufnahmen machen oder Kundenakten bearbeiten. Die E-Mail-Adresse sollte sorgfältig geschrieben werden: Sie wird später den Zugang zum Angehörigenportal öffnen.
+  </p>
 
   <h3 id="estancias-permisos">Berechtigungen und Rollen</h3>
   <p>
     Die Berechtigungen für Aufenthalte sind vierzehn, die jede Einrichtung nach Belieben verteilt: <em>Aufenthalte einsehen</em>, <em>Aufnahmen, Zimmerwechsel und Entlassungen</em>, <em>Zimmer konfigurieren</em>, <em>Aufenthalte konfigurieren</em>,
     <em>Tägliche Pflege erfassen</em>, <em>Eintragsverlauf einsehen</em>, <em>Einträge anderer korrigieren</em>,
-    <em>Vorfälle eröffnen</em>, <em>Vorfälle abschließen</em>, <em>Im Stationsbuch schreiben</em>, <em>Tarife einsehen und festlegen</em>, <em>Kennzahlen einsehen</em>, <em>Diäten einsehen</em> und <em>Alle Bereiche einsehen</em>. Wenn das Modul in einer Einrichtung eingeschaltet wird, entstehen zwei Ausgangsrollen, die die Einrichtung ändern kann: <strong>Estancias · planta</strong>
+    <em>Vorfälle eröffnen</em>, <em>Vorfälle abschließen</em>, <em>Im Stationsbuch schreiben</em>, <em>Tarife einsehen und festlegen</em>, <em>Kennzahlen der Aufenthalte einsehen</em>, <em>Diäten einsehen</em> und <em>Alle Bereiche einsehen</em>. Wenn das Modul in einer Einrichtung eingeschaltet wird, entstehen zwei Ausgangsrollen, die die Einrichtung ändern kann: <strong>Estancias · planta</strong>
     (Aufenthalte einsehen, erfassen, Vorfälle eröffnen, im Stationsbuch schreiben und Diäten einsehen) und <strong>Estancias · supervisión</strong> (das Obige plus Aufnahmen und Entlassungen, Vorfälle abschließen, Eintragsverlauf einsehen, korrigieren und alle Bereiche einsehen). <em>Leitung</em> hat alle; Beträge sind nur für die mit der Berechtigung für Tarife.
   </p>
 </section>

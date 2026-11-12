@@ -1268,9 +1268,9 @@ footer{
       tem o administrador: serve para a que foi assinalada por engano ou a da cliente que não veio e liga para
       a mudar. Sem a permissão não aparece <em>Cortar</em>, e se se tentar arrastá-la, a agenda diz que permissão
       é necessária.</li>
-      <li><strong>Movê-la:</strong> arraste-a. Se a largar noutra coluna, muda também de profissional ou de
-      cabine, conforme a vista em que estiver.</li>
+      <li><strong>Movê-la:</strong> arraste-a. Se a largar noutra coluna muda também de profissional ou de cabine, conforme a vista em que estiver.</li>
     <li><strong>Alterar a duração:</strong> arraste a margem de baixo.</li>
+    <li><strong>O aparelho também conta ao mudá-la ou prolongá-la.</strong> Se a marcação precisa de um aparelho que, à nova hora, está ocupado por outra marcação, o Turnera avisa tal como ao criá-la, com a marcação que o tem: pode mudá-la ou guardá-la na mesma (veja <a href="#aparatos">Aparelhos</a>).</li>
     <li><strong>Anulá-la:</strong> abra-a, prima <em>Anular</em> e indique <strong>quem a anula</strong>: o
       cliente, o centro (o profissional não pode, a cabine ou o campo não está disponível, uma avaria) ou uma
       <strong>causa externa</strong> (a chuva num campo descoberto, um corte de eletricidade). É obrigatório, porque só o que o cliente anula conta no seu histórico e nas marcações perdidas. Pode ainda escrever o motivo pelas suas palavras, que fica nos comentários da marcação. Fica também registado <strong>quem a anulou e com que função</strong> (por exemplo, <em>ana (Receção)</em>), com o dia e a hora: a ficha da marcação anulada di-lo numa linha. Se a anula o cliente a partir do portal de reservas, consta <em>Portal de reservas</em>, sem função. As anuladas antes de existir este dado não o têm e não se inventa.</li>
@@ -1601,7 +1601,7 @@ footer{
   </p>
 
   <p>
-    Na ficha de um cliente estão os seus dados, o seu histórico de visitas, os seus pacotes de sessões e as suas notas.
+    Na ficha de um cliente estão os seus dados, o histórico de visitas, os pacotes de sessões e as notas. O histórico de visitas vem <strong>antes da documentação assinada</strong>, porque é o que mais se consulta.
     <strong>O telefone e o e-mail são ligações</strong>: ao premi-los abre-se o marcador ou o programa de
     e-mail, sem copiar nem colar nada. Acontece em toda a aplicação —também em profissionais, fornecedores e unidades—,
     pelo que não é preciso copiar um número à mão em lado nenhum.
@@ -1625,6 +1625,23 @@ footer{
 
   <p>
     O que foi cobrado em cada visita —o valor e o botão <em>Talão</em> do histórico, que lança a impressão, vê-o quem tem a permissão «Ver os valores e os talões do histórico». Se se retirar a um perfil ou a uma pessoa, o seu histórico continua a mostrar o que se fez e quando, mas sem valores nem talão. Vem de origem para quem já pode ver as fichas.
+  </p>
+
+  <h3 id="clientes-conocido">Como nos conheceu</h3>
+  <p>
+    Na ficha do cliente, e ao marcar uma <em>primeira visita</em>, pode escolher-se <strong>Como nos conheceu?</strong>: internet ou motores de busca, redes sociais, amigos, familiares, conhecidos, rádio, televisão, imprensa ou revistas, publicidade na rua, passava em frente, encaminhado por outro centro ou recomendação de um profissional. Se não for nenhuma, <em>Outra</em> deixa escrevê-la em poucas palavras. É opcional, e o relatório de <em>Clientes</em> filtra por isso.
+  </p>
+
+  <h3 id="clientes-comentarios">Comentários de uma visita e não conformidades</h3>
+  <p>
+    Cada visita do histórico tem à esquerda um ícone para a <strong>comentar</strong>. Um comentário é
+    <em>Informativo</em> (uma nota sobre essa visita) ou uma <strong>Não conformidade</strong>: uma queixa ou algo que correu mal. A visita com comentários tem um balão, e a que tem uma não conformidade, um <strong>ponto de exclamação vermelho</strong>
+    para que ninguém o deixe passar. Ao passar o rato por cima lê-se o texto; ao clicar veem-se todos, com quem os escreveu e quando, e acrescenta-se outro. Cada um só pode apagar os seus: o que outra pessoa escreveu fica.
+  </p>
+
+  <h3 id="clientes-varios-profesionales">Visitas com vários profissionais</h3>
+  <p>
+    Se na mesma visita atenderam várias pessoas (dois serviços cobrados num só talão, cada um com o seu profissional), o histórico nomeia-as todas na coluna do profissional e, por baixo de cada serviço, quem o fez.
   </p>
 
   <p>
@@ -1842,6 +1859,12 @@ footer{
     marcação fica assinalada como cobrada — é o ícone de euro da grelha.
   </p>
 
+  <div class="ojo">
+    <p><strong>De fábrica, só se cobra o que foi atendido.</strong> Enquanto a marcação não estiver guardada como
+      <em>Atendida</em>, o botão <em>Cobrar</em> da marcação não se pode carregar e a marcação não aparece em <em>Por cobrar</em>
+      do TPV: assim a caixa e a agenda contam o mesmo e não se cobra o que não se fez. Se no seu centro se cobra antes de atender, desliga-se em <em>Administração → Preferências → Cobranças e fidelização → Cobrar só o que foi atendido</em>. Nas aulas conta cada participante: cobra-se-lhe quando consta que veio.</p>
+  </div>
+
   <p>
     <strong>Se a marcação muda com o talão a meio</strong> —volta-se à agenda e acrescenta-se um serviço que afinal se
     fez—, ao voltar ao TPV aparece um aviso com o que a marcação tem agora e dois botões:
@@ -1853,9 +1876,7 @@ footer{
   <p>
     <strong>E ainda mais curto: no topo do TPV.</strong> Assim que um profissional marca uma marcação como
     <em>Atendido</em>, o cliente aparece no topo, em <em>Por cobrar</em>, antes de chegar ao balcão. Por baixo
-    aparecem os que ainda estão <em>Em curso</em>, que são os seguintes. Prima o cartão e a venda carrega-se como
-    a partir da agenda. A lista atualiza-se sozinha a cada poucos segundos, só mostra as marcações de hoje e cada cliente
-    desaparece dela assim que é cobrado ou deixado em dívida.
+    aparecem os que ainda estão <em>Em curso</em>, que são os seguintes (com <em>Cobrar só o que foi atendido</em> ligado, estes veem-se mas não se cobram até serem atendidos). Clique no cartão e a venda carrega-se tal como a partir da agenda. A lista atualiza-se sozinha a cada poucos segundos, só mostra as marcações de hoje e cada cliente desaparece dela assim que paga ou fica a dever.
   </p>
 
   <p>
@@ -2478,9 +2499,20 @@ footer{
     Um pacote de sessões são sessões pagas antecipadamente de um <strong>grupo de serviços</strong>. Vendem-se de duas maneiras:
   </p>
   <ul>
-    <li><strong>Avulsos:</strong> na ficha do cliente, na secção de pacotes de sessões, cria-se um à mão indicando
-      o grupo, as sessões e quando expira.</li>
-    <li><strong>Ao vender um serviço marcado como pacote de sessões:</strong> o pacote de sessões é criado automaticamente ao cobrar.</li>
+    <li><strong>Ao vender um serviço marcado como pacote de sessões</strong> (o habitual): o pacote cria-se sozinho ao cobrá-lo no TPV.</li>
+    <li><strong>À mão:</strong> na ficha do cliente, na secção de pacotes, <em>Novo pacote de sessões</em> cria um sem o cobrar, indicando o grupo, as sessões e quando caduca. Só o vê quem tem a permissão
+      <a href="#perm-vouchers-manage">Gestão de bónus</a> (de fábrica, o administrador e a Direção); a Receção não.</li>
+  </ul>
+
+  <h3 id="bonos-sesiones-vigencia">Onde se definem as sessões e a validade</h3>
+  <p>
+    Em <em>Catálogo → Serviços</em>, no serviço que se vende como pacote, marca-se <strong>Vende-se como pacote de sessões</strong>
+    e aparecem as suas <strong>sessões</strong> e a sua <strong>validade</strong>. As sessões valem para os serviços do seu
+    <em>Grupo de pacotes</em>. A validade dá-se de duas maneiras:
+  </p>
+  <ul>
+    <li><strong>Meses desde a compra</strong>: o pacote caduca esse número de meses depois do dia em que se vende.</li>
+    <li><strong>Entre duas datas</strong>, como num hotel: escolhem-se no calendário o primeiro e o último dia, e o pacote só se pode usar entre eles, ambos incluídos, seja vendido quando for. Serve para campanhas de época. Se se vender antes da primeira data, a ficha do cliente indica <em>Usa-se a partir de …</em> e o TPV não o desconta até esse dia.</li>
   </ul>
 
   <h3>Como se gastam</h3>
@@ -2626,8 +2658,9 @@ footer{
   <p>
     Se duas marcações à mesma hora necessitam do mesmo aparelho e não há unidades para as duas, o Turnera
     <strong>avisa antes de guardar a segunda</strong>, mesmo que estejam em cabines distintas e com profissionais
-    distintos. O aviso indica de que aparelho se trata e <strong>que outra marcação o tem ocupado</strong>: a hora,
-    o cliente e o profissional. Com isso à frente, decide-se: mudar a hora, ou guardá-la na mesma.
+    distintos. O aviso indica de que aparelho se trata e <strong>que outra marcação o tem ocupado</strong>: a hora, o cliente e o profissional. Com isso à frente decide-se: mudar a hora, ou guardá-la na mesma. Avisa também ao
+    <strong>arrastar</strong> uma marcação para outra hora, ao <strong>cortá-la e colá-la</strong> noutro dia e ao
+    <strong>prolongá-la</strong> pelo seu bordo.
   </p>
 
   <div class="ojo">
@@ -2741,8 +2774,8 @@ footer{
   <p>
     O ecrã agrupa-os por secções, as mesmas do menu: <strong>Agenda</strong>, <strong>Clientes</strong>,
     <strong>Caixa e cobranças</strong>, <strong>Faturação</strong>, <strong>Catálogo e stock</strong> e
-    <strong>Pessoal</strong> (o registo de jornada, o resumo de horas e a escala, que se abrem nos seus
-    ecrãs de Pessoal). Uma secção da qual não possa abrir nenhum relatório não aparece.
+    <strong>Pessoal</strong> (o registo de jornada, o resumo de horas e a escala, que se abrem nos seus ecrãs de Pessoal), e nos centros com o módulo de Estadias, <strong>Estadias</strong> (veja
+    <a href="#estancias-informes">os seus relatórios</a>). Uma secção da qual não pode abrir nenhum relatório não aparece.
   </p>
 
   <div class="tabla-envoltorio">
@@ -2754,6 +2787,7 @@ footer{
     <tr><td><strong>Anulações</strong></td><td>Quantas foram anuladas pelo cliente, pelo centro e por causas externas, e que clientes mais anulam.</td></tr>
     <tr><td><strong><a href="#rol-clientes">Clientes</a></strong></td><td>Registos, aniversários e de onde vêm. Também quem fez um serviço: escolhem-se um ou vários em <em>Serviços realizados</em> (aparece quem fez qualquer um deles) e, se for preciso, restringe-se com a <em>Data da visita</em>.</td></tr>
     <tr><td><strong>Pacotes de sessões</strong></td><td>O que está vendido, o que falta consumir e o que está prestes a expirar.</td></tr>
+    <tr id="informe-facturacion-profesional"><td><strong>Faturação por profissional</strong></td><td>O que faturou cada profissional num período: quantos serviços e por quanto, as sessões com pacote (contam-se, mas não somam importância: cobrou-se ao vender o pacote), os produtos e o que fica pendente. Cada linha do talão conta para quem a fez, com os descontos e o IVA incluído, e as devoluções subtraem. O Excel traz o resumo e o detalhe de cada linha, para calcular as comissões. Está em <em>Caixa e cobranças</em>.</td></tr>
     <tr><td><strong>Stock</strong></td><td>O que falta e o que entrou e saiu.</td></tr>
   </tbody></table>
   </div>
@@ -4236,6 +4270,12 @@ footer{
     espaços é sempre cinzento e só mudam as riscas; de origem são <strong>salmão</strong>. Escolhe-se com o
     seletor de cor, vê-se na amostra e na agenda de imediato, e <strong>Repor</strong> volta a pôr o
     salmão. Como com o tema, não fica definido até se premir Guardar.
+  </p>
+
+  <p>
+    A <strong>Grelha da agenda</strong> diz o quão marcadas se veem as linhas das horas e dos intervalos:
+    <em>Suave</em>, <em>Normal</em> ou <em>Marcada</em>. Se custa distinguir onde começa cada intervalo, escolha
+    <em>Marcada</em>. Também se vê na agenda ao escolhê-la e não fica até se guardar.
   </p>
 
   <p>
@@ -5890,9 +5930,8 @@ footer{
     apagar nem alterar.
   </p>
   <p>
-    A cada ordem carregam-se <strong>fotos por fase</strong> (problema, antes, durante, depois e documento), até dez
-    por fase; cada foto guarda quem a carregou, quando e a sua impressão digital (hash), para que ninguém possa dizer que foi alterada. As permissões
-    são oito (ver, abrir ordens, gerir, fechar, anular, zonas e equipamentos, exportar e ligações). Traz uma função própria,
+    A cada ordem carregam-se <strong>fotos por fase</strong> (problema, antes, durante, depois e documento), até dez por fase; cada fotografia guarda quem a carregou, quando e a sua impressão digital, para que ninguém possa dizer que foi alterada. Além disso,
+    <strong>Anexar documento</strong> carrega um ficheiro tal como está (PDF, Word, Excel, uma folha de cálculo, um texto, uma imagem ou um ZIP, até 15 MB e até dez por ordem): é para a <strong>folha de trabalho de uma empresa externa</strong>, um orçamento ou um certificado. Descarrega-se ao clicar, aparece na história da ordem e a Inspeção também o vê com a sua ligação. As permissões são oito (ver, abrir ordens, gerir, fechar, anular, zonas e equipamentos, exportar e ligações). Traz uma função própria,
     <strong>Manutenção</strong>, que leva as ordens, as suas zonas e os seus equipamentos mas não anula ordens nem dá ligações à
     Inspeção; <em>Direção</em> tem tudo exceto as ligações, e o <em>Administrador do sistema</em> também essas.
     A Receção, o Profissional e os RH podem ver e avisar.
@@ -6075,7 +6114,8 @@ footer{
 <section id="estancias">
   <h2>12 quater. Estadias: residentes, quartos e registo do piso</h2>
   <p>
-    O módulo de <strong>Estadias</strong> é para centros que alojam pessoas: residências e hospitais. É opcional: se o centro não o tiver ligado, a Turnera funciona exatamente como sem ele e não aparece nada no menu. Quando se liga, aparece no menu a secção <strong>Estadias</strong> e cada cliente pode ter <strong>uma estadia aberta</strong> num lugar; a sua ficha de cliente indica-o com uma etiqueta
+    O módulo de <strong>Estadias</strong> é para centros que alojam pessoas: residências e hospitais. É opcional: se o centro não o tiver ligado, a Turnera funciona exatamente como sem ele e não aparece nada no menu. Quando se liga, aparece no menu a secção <strong>Estadias</strong> no menu (com o dia a dia: residentes, quartos, dietas, incidências, livro e supervisão), e o resto vai onde vai no resto do Turnera: os seus <strong>relatórios</strong> em <em>Relatórios</em>, as suas <strong>definições</strong> em
+    <em>Administração › Estadias</em> e a sua <strong>painel de controlo</strong> em <em>Relatórios e definições</em>, junto ao geral. Assim cada um vê o que as suas funções lhe permitem. Cada cliente pode ter <strong>uma estadia aberta</strong> num lugar; a sua ficha de cliente indica-o com uma etiqueta
     <em>Residente · Quarto 204</em>. Como no resto da Turnera, <strong>nada se apaga</strong>: o que se faz mal corrige-se, anula-se com o seu motivo ou retira-se, e fica escrito quem o fez e quando.
   </p>
 
@@ -6114,7 +6154,8 @@ footer{
 
   <h3 id="estancias-reservas">Reservas, ausências e estadias temporárias</h3>
   <p>
-    <strong>Reservas</strong> (<em>Estadias → Reservas</em>): quem vai ser admitido e quando, com o seu telefone. Uma reserva pode <strong>guardar um lugar</strong>: entretanto ninguém mais o pode ocupar, e ao admitir essa pessoa a reserva dá-se por cumprida. As que já deviam ter chegado ficam assinaladas; uma reserva cancela-se dizendo porque a pessoa não vem.
+    <strong>Reservas</strong> (em <em>Estadias → Quartos</em>, em cima, entre <em>Quartos</em> e
+    <em>Reservas</em>; vê-as quem faz admissões): quem vai dar entrada e quando, com o seu telefone. Uma reserva pode <strong>guardar um lugar</strong>: entretanto ninguém mais o pode ocupar, e ao admitir essa pessoa a reserva dá-se por cumprida. As que já deviam ter chegado ficam assinaladas; uma reserva cancela-se dizendo porque a pessoa não vem.
   </p>
   <p>
     <strong>Ausências</strong>: se uma pessoa se ausenta uns dias (hospital, com a família), regista-se a partir da sua estadia com o motivo, o primeiro dia e, se se souber, o último. Enquanto está fora aparece assinalada como tal nas listas e não conta como refeição desse dia. Ao regressar, clica-se em <em>Regressou</em>; uma ausência registada por engano anula-se. As <strong>estadias temporárias</strong> são as que têm um fim previsto: vê-se quais terminam nos próximos 30 dias.
@@ -6122,20 +6163,25 @@ footer{
 
   <h3 id="estancias-tarifas">Tarifas e painel de controlo</h3>
   <p>
-    As <strong>tarifas</strong> são valores mensais com nome (em <em>Definições de Estadias</em>). A cada estadia atribui-se uma tarifa, ou um valor manual, <strong>a partir de um dia</strong>; alterar uma tarifa do centro não altera o que alguém já paga. <strong>Os valores só os vê quem tem a permissão <em>Ver e definir as tarifas</em></strong>, que por defeito só têm o administrador e a Direção: sem ela não se vê nenhum valor em lado nenhum.
+    As <strong>tarifas</strong> são valores mensais com nome (em <em>Administração › Estadias</em>). A cada estadia atribui-se uma tarifa, ou um valor manual, <strong>a partir de um dia</strong>; alterar uma tarifa do centro não altera o que alguém já paga. <strong>Os valores só os vê quem tem a permissão <em>Ver e definir as tarifas</em></strong>, que por defeito só têm o administrador e a Direção: sem ela não se vê nenhum valor em lado nenhum.
   </p>
   <p>
-    <strong>O painel de controlo</strong> (<em>Estadias → Painel de controlo</em>) resume o centro: ocupação de hoje, média dos últimos doze meses, dias de estadia média, quantas pessoas estão fora, ocupação mês a mês, previsão das próximas semanas (o que estará ocupado com as reservas e as estadias que terminam), admissões e altas por mês, motivos de alta e o que convém ter em conta (incidentes por encerrar, estadias que terminam em breve, pessoas sem tarifa). Com a permissão de tarifas, acrescenta o que se fatura em cada mês, a tarifa média e o que se deixa de receber pelos lugares livres.
+    <strong>O painel de controlo de estadias</strong> (em <em>Relatórios e definições</em>) resume o centro: ocupação de hoje, média dos últimos doze meses, dias de estadia média, quantas pessoas estão fora, ocupação mês a mês, previsão das próximas semanas (o que estará ocupado com as reservas e as estadias que terminam), admissões e altas por mês, motivos de alta e o que convém ter em conta (incidentes por encerrar, estadias que terminam em breve, pessoas sem tarifa). Com a permissão de tarifas, acrescenta o que se fatura em cada mês, a tarifa média e o que se deixa de receber pelos lugares livres.
+  </p>
+
+  <h3 id="estancias-informes">Relatórios de estadias</h3>
+  <p>
+    Em <em>Relatórios</em>, na sua secção <strong>Estadias</strong>, para a direção e a administração, no ecrã, em CSV e em PDF: <strong>Faturação</strong> (o que corresponde a cada residente no mês, com a sua tarifa proporcional aos dias; só com a permissão de tarifas), <strong>Admissões e saídas</strong> (cada admissão, mudança de cama, ausência, regresso e saída do período, com o seu motivo e quem a registou), <strong>Ocupação</strong> (mês a mês: camas, ocupação média, admissões, saídas, rotação e estadia média) e <strong>Registos</strong> (por residente, os registos de piso esperados e os que se fizeram, até 62 dias).
   </p>
 
   <figure>
     <img src="/turnera/manual/imagenes/en/93-estancias-cuadro.png" alt="O painel de controlo com a ocupação de hoje, a média do ano e o que se fatura" loading="lazy">
-    <figcaption>O painel de controlo: ocupação, previsão e, com a permissão de tarifas, o que se fatura.</figcaption>
+    <figcaption>O painel de controlo de estadias: ocupação, previsão e, com a permissão de tarifas, o que entra.</figcaption>
   </figure>
 
   <h3 id="estancias-dietas">Dietas</h3>
   <p>
-    Em <em>Definições de Estadias</em> definem-se os <strong>tipos de dieta</strong> do centro (diabética, triturada, sem sal…). Depois, a partir da lista <em>Estadias → Dietas</em> atribui-se a cada pessoa a sua dieta e uma nota própria (alergias, texturas, o que não toma). A lista está pensada para a cozinha e para o piso: vê-se por quarto ou por dieta, com quantas pessoas comem hoje no centro. As ementas e os ingredientes são tratados pela cozinha; a Turnera não os gere.
+    Em <em>Administração › Estadias</em> definem-se os <strong>tipos de dieta</strong> do centro (diabética, triturada, sem sal…). Depois, a partir da lista <em>Estadias → Dietas</em> atribui-se a cada pessoa a sua dieta e uma nota própria (alergias, texturas, o que não toma). A lista está pensada para a cozinha e para o piso: vê-se por quarto ou por dieta, com quantas pessoas comem hoje no centro. Em cima, <strong>Refeições de hoje</strong> dá um cartão por dieta com quantas refeições há que preparar e quantas levam indicações; na vista <em>Por dieta</em>, cada dieta abre o seu grupo com a sua contagem. Os menus e os ingredientes são da cozinha; o Turnera não os gere.
   </p>
 
   <figure>
@@ -6148,7 +6194,7 @@ footer{
     <strong>O ecrã do piso</strong> é o que o pessoal usa durante o turno. Cada <em>registo</em> (refeição, higiene, medicação, o que o centro decidir acompanhar) é um botão grande por pessoa: um toque e fica registado com a hora e quem o fez. Quem regista identifica-se com a sua <strong>ficha e o seu PIN</strong>, como ao marcar o ponto, pelo que o registo leva o nome da pessoa e não o de quem deixou a sessão aberta. Um registo pode ser <em>algo que foi feito</em>, <em>uma opção</em> entre várias, <em>uma quantidade</em> ou <em>umas palavras</em>, e pode indicar quantas vezes por dia é esperado: então o ecrã mostra o que falta hoje.
   </p>
   <p>
-    O que se registou mal <strong>não se apaga</strong>: deve-se <em>corrigir</em> com outra entrada (a anterior fica visível, riscada) ou <em>anular</em> com o seu motivo. Quem tem uma <strong>zona habitual</strong> na sua ficha de pessoal só vê as pessoas dessa zona, a menos que tenha a permissão <em>Ver todas as zonas</em>. Um equipamento do centro (um tablet) pode <strong>associar-se a uma zona</strong> em <em>Definições de Estadias → Tablets de zona</em>: nele só se verá e registará o que for dessa zona, entre quem entrar. Os equipamentos registam-se antes em <em>Administração › Equipamentos</em>, que aparece ao ativar os postos partilhados em <em>Preferências</em>.
+    O que se registou mal <strong>não se apaga</strong>: deve-se <em>corrigir</em> com outra entrada (a anterior fica visível, riscada) ou <em>anular</em> com o seu motivo. Quem tem uma <strong>zona habitual</strong> na sua ficha de pessoal só vê as pessoas dessa zona, a menos que tenha a permissão <em>Ver todas as zonas</em>. Um equipamento do centro (um tablet) pode <strong>associar-se a uma zona</strong> em <em>Administração › Estadias → Tablets de zona</em>: nele só se verá e registará o que for dessa zona, entre quem entrar. Os equipamentos registam-se antes em <em>Administração › Equipamentos</em>, que aparece ao ativar os postos partilhados em <em>Preferências</em>.
   </p>
   <p>
     <strong>O livro da sala</strong> é o diário de cada zona: o que o turno que entra tem de ler antes de começar. As entradas importantes marcam-se para a passagem de turno e podem filtrar-se. As suas entradas corrigem-se da mesma forma que os registos.
@@ -6179,20 +6225,25 @@ footer{
 
   <h3 id="estancias-ficha">A ficha da pessoa alojada</h3>
   <p>
-    Desde <em>Residentes</em>, <strong>Ver a sua evolução</strong> abre a ficha da pessoa: onde está e desde quando, gráficos do que foi registado nos últimos dias (com a média diária e as vezes que cada coisa ocorreu) e os seus incidentes. Ver os registos de outro dia ou de uma pessoa concreta é uma <strong>consulta de dados de saúde</strong>
+    Desde <em>Residentes</em>, <strong>Ver a sua evolução</strong> abre a ficha da pessoa: onde está e desde quando, gráficos do registado nos últimos dias (com a média diária e as vezes que aconteceu cada coisa), as suas incidências e as suas <strong>pessoas de contacto</strong>. Ver os registos de outro dia ou de uma pessoa concreta é uma <strong>consulta de dados de saúde</strong>
     e exige a permissão <em>Ver o histórico de registos</em>; cada consulta fica anotada no <em>registo de acessos</em> da Administração, como as do processo clínico.
   </p>
 
   <figure>
-    <img src="/turnera/manual/imagenes/en/98-estancias-residente.png" alt="A ficha de uma pessoa alojada com a dieta, a tarifa, as ausências e os registos" loading="lazy">
-    <figcaption>A ficha da pessoa alojada: dieta, tarifa, ausências e o que foi registado nos últimos dias.</figcaption>
+    <img src="/turnera/manual/imagenes/en/98-estancias-residente.png" alt="A ficha de uma pessoa alojada com a sua dieta, tarifa, ausências e pessoas de contacto" loading="lazy">
+    <figcaption>A ficha da pessoa alojada: dieta, tarifa, ausências e pessoas de contacto; por baixo, o registado nos últimos dias.</figcaption>
   </figure>
+
+  <h3 id="estancias-contactos">Pessoas de contacto</h3>
+  <p>
+    Na ficha da pessoa alojada, e na sua ficha de cliente, <strong>Pessoas de contacto</strong> guarda a quem se liga: muitas vezes a pessoa idosa depende de um filho, de uma sobrinha ou do seu tutor legal. De cada uma, o nome, o parentesco, o telefone, o email e umas observações (quando ligar, que assuntos trata). Pode haver várias, e uma é a <strong>principal</strong>, que aparece primeiro: a primeira que se regista é-o sem dizer nada, e ao marcar outra deixa de o ser a anterior. Vão com a pessoa e não com a admissão, por isso continuam lá se voltar a dar entrada. Altera-as quem faz admissões ou edita fichas de clientes. Convém escrever bem o email: será o que dará acesso ao futuro portal do familiar.
+  </p>
 
   <h3 id="estancias-permisos">Permissões e perfis</h3>
   <p>
     As permissões de Estadias são catorze, que cada centro distribui como quiser: <em>Ver as estadias</em>, <em>Admissões, mudanças de quarto e altas</em>, <em>Configurar os quartos</em>, <em>Configurar Estadias</em>,
     <em>Registar o dia a dia</em>, <em>Ver o histórico de registos</em>, <em>Corrigir registos de outros</em>,
-    <em>Abrir incidentes</em>, <em>Encerrar incidentes</em>, <em>Escrever no livro da sala</em>, <em>Ver e definir as tarifas</em>, <em>Ver o painel de controlo</em>, <em>Ver as dietas</em> e <em>Ver todas as zonas</em>. Ao ligar o módulo num centro criam-se dois perfis de partida, que o centro pode alterar: <strong>Estancias · planta</strong>
+    <em>Abrir incidentes</em>, <em>Encerrar incidentes</em>, <em>Escrever no livro da sala</em>, <em>Ver e definir as tarifas</em>, <em>Ver o painel de controlo de estadias</em>, <em>Ver as dietas</em> e <em>Ver todas as zonas</em>. Ao ligar o módulo num centro criam-se dois perfis de partida, que o centro pode alterar: <strong>Estancias · planta</strong>
     (ver as estadias, registar, abrir incidentes, escrever no livro da sala e ver as dietas) e <strong>Estancias · supervisión</strong> (o anterior mais admissões e altas, encerrar incidentes, ver o histórico de registos, corrigir e ver todas as zonas). <em>Direção</em> tem todas; os valores ficam só para quem tenha a permissão de tarifas.
   </p>
 </section>

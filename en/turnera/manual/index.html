@@ -1233,9 +1233,9 @@ footer{
       the administrator has: it is meant for one marked by mistake or for the customer who did not come and calls to
       change it. Without the permission it does not show <em>Cut</em>, and if you try to drag it, the diary says which permission
       is needed.</li>
-      <li><strong>Moving it:</strong> drag it. If you drop it in another column it also changes member of staff or
-      room, depending on the view you are in.</li>
+      <li><strong>Moving it:</strong> drag it. If you drop it in another column it also changes professional or room, depending on the view you are in.</li>
     <li><strong>Changing how long it lasts:</strong> drag the bottom edge.</li>
+    <li><strong>The device also counts when you move or lengthen it.</strong> If the appointment needs a device that another appointment has taken at the new time, Turnera warns you just as it does when creating it, naming the appointment that has it: you can change it or save it anyway (see <a href="#aparatos">Devices</a>).</li>
     <li><strong>Cancelling it:</strong> open it, press <em>Cancel</em> and say <strong>who is calling it off</strong>: the customer, the centre (the professional cannot make it, the cabin or the court is unavailable, something broke) or an
       <strong>external cause</strong> (rain on an outdoor court, a power cut). It is required, because only what the customer calls off counts in their history and in lost appointments. You can also write the reason in your own words, which is kept in the comments of the appointment. It also records <strong>who cancelled it and with what role</strong> (for example, <em>ana (Reception)</em>), with the day and time: the record of the cancelled appointment says so in one line. If the customer cancels it from the booking portal, it shows <em>Booking portal</em>, with no role. Those cancelled before this information existed do not have it, and it is not made up.</li>
       <li><strong>An appointment already charged</strong> can only be cancelled by whoever has the <strong>«Anular citas ya
@@ -1489,7 +1489,7 @@ footer{
   </p>
 
   <p>
-    A customer record holds their details, their visit history, their vouchers and their notes.
+    A customer record holds their details, visit history, vouchers and notes. The visit history comes <strong>before the signed documents</strong>, because it is what people look at most.
     <strong>The phone number and the email address are links</strong>: tapping them opens the dialler or the mail programme,
     with nothing to copy and paste. It happens throughout the application — staff, suppliers and
     delegations too — so there is never a number to copy out by hand.
@@ -1513,6 +1513,23 @@ footer{
 
   <p>
     What was charged on each visit —the amount and the <em>Ticket</em> of the history, which starts the printing, is seen by whoever has the permission “See the amounts and tickets in the history”. If it is removed from a role or a person, their history still shows what was done and when, but without amounts or ticket. It is given by default to whoever can already see the records.
+  </p>
+
+  <h3 id="clientes-conocido">How they heard about us</h3>
+  <p>
+    In the customer record, and when booking a <em>first visit</em>, you can choose <strong>How did they hear about us?</strong>: internet or search engines, social media, friends, family, acquaintances, radio, television, press or magazines, street advertising, walking past, referred by another centre or recommended by a professional. If it is none of these, <em>Other</em> lets you write it in a few words. It is optional, and the <em>Customers</em> report filters by it.
+  </p>
+
+  <h3 id="clientes-comentarios">Comments on a visit and nonconformities</h3>
+  <p>
+    Each visit in the history has an icon on its left to <strong>comment on it</strong>. A comment is
+    <em>Information</em> (a note about that visit) or a <strong>Nonconformity</strong>: a complaint or something that went wrong. A visit with comments shows a speech bubble, and one with a nonconformity a <strong>red exclamation mark</strong>
+    so nobody overlooks it. Hover over it to read the text; click it to see them all, with who wrote them and when, and to add another. Each person can delete only their own: what someone else wrote stays.
+  </p>
+
+  <h3 id="clientes-varios-profesionales">Visits with several professionals</h3>
+  <p>
+    If several people attended the same visit (two services charged on one ticket, each with its professional), the history names them all in the professional column and, under each service, who did it.
   </p>
 
   <p>
@@ -1694,6 +1711,12 @@ footer{
     pay. And once charged, the appointment is marked as paid — that is the euro icon on the grid.
   </p>
 
+  <div class="ojo">
+    <p><strong>By default, only what was done is charged.</strong> Until the appointment is saved as
+      <em>Seen</em>, the button <em>Charge</em> button on the appointment cannot be pressed and the appointment does not show in <em>To charge</em>
+      at the point of sale: that way the till and the agenda count the same and nothing is charged that was not done. If your centre charges before the service, turn it off in <em>Administration → Preferences → Payments and loyalty → Charge only what was done</em>. In classes each attendee counts: they are charged once it is recorded that they came.</p>
+  </div>
+
   <p>
     <strong>If the appointment changes with the ticket half done</strong> —you go back to the agenda and add a service that was done in the end—, on returning to the POS a notice shows what the appointment has now and two buttons:
     <em>Update the ticket</em> adds what is new (and removes what was removed from the appointment), and <em>Keep it as it is</em> changes nothing. It is not updated on its own because what was removed or added at the counter may be on purpose.
@@ -1701,7 +1724,7 @@ footer{
 
   <p>
     <strong>And shorter still: the top of the POS.</strong> As soon as a professional marks an appointment as
-    <em>Attended</em>, the customer appears at the top, under <em>To charge</em>, before they reach the counter. Below are the ones still <em>In progress</em>, who come next. Tap the card and the sale loads just as it does from the agenda. The list refreshes itself every few seconds, only shows today's appointments, and each customer drops off it as soon as they are charged or the visit is left as a debt.
+    <em>Attended</em>, the customer appears at the top, under <em>To charge</em>, before they reach the counter. Below are the ones still <em>In progress</em>, who are next (with <em>Charge only what was done</em> switched on, these are shown but not charged until they have been seen). Click the card and the sale loads just as from the agenda. The list refreshes itself every few seconds, only shows today's appointments and each customer disappears from it as soon as they pay or the amount is left owing.
   </p>
 
   <p>
@@ -2228,9 +2251,20 @@ footer{
     A voucher is sessions paid for in advance from a <strong>group of services</strong>. They are sold in two ways:
   </p>
   <ul>
-    <li><strong>On their own:</strong> in the customer record, in the vouchers section, you create one by hand giving the
-      group, the sessions and when it expires.</li>
-    <li><strong>When selling a service marked as a voucher:</strong> the voucher is created by itself when you charge.</li>
+    <li><strong>When selling a service marked as a voucher</strong> (the usual way): the voucher is created by itself when it is charged at the point of sale.</li>
+    <li><strong>By hand:</strong> in the customer record, in the vouchers section, <em>New voucher</em> creates one without charging it, stating the group, the sessions and when it expires. Only people with the permission
+      <a href="#perm-vouchers-manage">Voucher management</a> see it (by default, the administrator and Management); Reception does not.</li>
+  </ul>
+
+  <h3 id="bonos-sesiones-vigencia">Where the sessions and validity are set</h3>
+  <p>
+    In <em>Catalogue → Services</em>, in the service sold as a voucher, tick <strong>Sold as a voucher</strong>
+    and its <strong>sessions</strong> and its <strong>validity</strong> appear. The sessions are valid for the services in its
+    <em>Voucher group</em>. Validity can be given in two ways:
+  </p>
+  <ul>
+    <li><strong>Months from purchase</strong>: the voucher expires that number of months after the day it is sold.</li>
+    <li><strong>Between two dates</strong>, like a hotel: you pick the first and last day on the calendar, and the voucher can only be used between them, both included, whenever it is sold. It is meant for seasonal campaigns. If it is sold before the first date, the customer record shows <em>Usable from …</em> and the point of sale does not deduct it until that day.</li>
   </ul>
 
   <h3>How they are used up</h3>
@@ -2372,7 +2406,9 @@ footer{
   <h3>What changes on the agenda</h3>
   <p>
     If two appointments at the same time need the same piece of equipment and there are not units for both, Turnera
-    <strong>warns before saving the second one</strong>, even if they are in different rooms and with different professionals. The warning says which piece of equipment it is and <strong>which other appointment has it taken</strong>: the time, the customer and the professional. With that in front of you, you decide: change the time, or save it anyway.
+    <strong>warns before saving the second one</strong>, even if they are in different rooms and with different professionals. The warning says which piece of equipment it is and <strong>which other appointment has it taken</strong>: the time, the customer and the professional. With that in front of you, you decide: change the time, or save it anyway. It also warns when you
+    <strong>drag</strong> an appointment to another time, when you <strong>cut and paste it</strong> on another day and when you
+    <strong>lengthen</strong> it from its edge.
   </p>
 
   <div class="ojo">
@@ -2474,7 +2510,8 @@ footer{
   <p>
     The screen groups them in sections, the same as the menu: <strong>Agenda</strong>, <strong>Customers</strong>,
     <strong>Till and payments</strong>, <strong>Invoicing</strong>, <strong>Catalogue and stock</strong> and
-    <strong>Staff</strong> (the working-time record, the hours summary and the roster, which open in their Staff screens). A section none of whose reports you can open is not shown.
+    <strong>Staff</strong> (the working-time record, the hours summary and the rota, which open in their Staff screens), and in centres with the Stays module, <strong>Stays</strong> (see
+    <a href="#estancias-informes">its reports</a>). A section in which you cannot open any report is not shown.
   </p>
 
   <div class="tabla-envoltorio">
@@ -2486,6 +2523,7 @@ footer{
     <tr><td><strong>Cancellations</strong></td><td>How many were cancelled by the customer, by the centre and by external causes, and which customers cancel the most.</td></tr>
     <tr><td><strong><a href="#rol-clientes">Customers</a></strong></td><td>Sign-ups, birthdays and where they come from. Also who has had a service: pick one or more in <em>Services performed</em> (anyone who had any of them shows up) and, if needed, narrow it down with the <em>Visit date</em>.</td></tr>
     <tr><td><strong>Vouchers</strong></td><td>What has been sold, what is left to use and what is about to expire.</td></tr>
+    <tr id="informe-facturacion-profesional"><td><strong>Billing by professional</strong></td><td>What each professional billed in a period: how many services and for how much, voucher sessions (counted, but adding no amount: it was charged when the voucher was sold), products and what is still owed. Each ticket line counts for whoever did it, with its discounts and VAT included, and refunds subtract. The Excel file has the summary and the detail of each line, to work out commissions. It is under <em>Till and payments</em>.</td></tr>
     <tr><td><strong>Stock</strong></td><td>What is missing and what has come in and gone out.</td></tr>
   </tbody></table>
   </div>
@@ -3899,6 +3937,12 @@ footer{
   </p>
 
   <p>
+    The <strong>Agenda grid</strong> sets how strongly the lines of the hours and slots show:
+    <em>Soft</em>, <em>Normal</em> or <em>Strong</em>. If it is hard to tell where each slot begins, choose
+    <em>Strong</em>. It also shows in the agenda as soon as you choose it and is not kept until you save.
+  </p>
+
+  <p>
     The logo of the centre stays on a white background in every theme, the dark one included. That is on
     purpose: a mark meant for white paper would disappear on the bar.
   </p>
@@ -5291,7 +5335,8 @@ footer{
     If the centre has the <strong>Maintenance</strong> module, it appears in the menu, inside <em>Catalogue</em>. Each fault or job is an <strong>order</strong>: with a title, objective, description, zone and equipment, type, priority and due date. An order goes through <em>open, assigned, in progress, waiting, resolved and closed</em>, or is annulled with a reason. Everything that happens is kept in the <strong>history</strong> of the order, with its author and time, and it cannot be deleted or changed.
   </p>
   <p>
-    Each order gets <strong>photos per phase</strong> (problem, before, during, after and document), up to ten per phase; each photo records who uploaded it, when and its fingerprint, so nobody can claim it was swapped. There are eight permissions (view, open orders, manage, close, annul, zones and equipment, export and links). It comes with a role of its own,
+    Each order gets <strong>photos per phase</strong> (problem, before, during, after and document), up to ten per phase; each photo keeps who uploaded it, when, and its fingerprint, so nobody can claim it was changed. In addition,
+    <strong>Attach document</strong> uploads a file as it is (PDF, Word, Excel, a spreadsheet, a text, an image or a ZIP, up to 15 MB and up to ten per order): it is for the <strong>work report of an outside contractor</strong>, a quote or a certificate. It downloads when clicked, appears in the order's history and the inspectorate can also see it with its link. There are eight permissions (view, open orders, manage, close, cancel, zones and equipment, export and links). It comes with its own role,
     <strong>Maintenance</strong>, which handles orders, their zones and their equipment but does not annul orders or give links to the Inspectorate; <em>Management</em> has everything except the links, and the <em>System administrator</em> has those too. Reception, Practitioner and HR can view and report.
   </p>
   <p>
@@ -5453,7 +5498,8 @@ footer{
 <section id="estancias">
   <h2>12 quater. Stays: residents, rooms and floor records</h2>
   <p>
-    The <strong>Stays</strong> module is for centres that accommodate people: care homes and hospitals. It is optional: if the centre has not switched it on, Turnera works exactly as it does without it and nothing appears in the menu. When it is switched on, the <strong>Stays</strong> section appears in the menu and each customer can have <strong>one open stay</strong> in a place; their customer record shows it with a tag
+    The <strong>Stays</strong> module is for centres that accommodate people: care homes and hospitals. It is optional: if the centre has not switched it on, Turnera works exactly as it does without it and nothing appears in the menu. When it is switched on, the <strong>Stays</strong> in the menu (with the day-to-day: residents, rooms, diets, incidents, logbook and supervision), and the rest goes where it goes in the rest of Turnera: its <strong>reports</strong> in <em>Reports</em>, its <strong>settings</strong> in
+    <em>Administration › Stays</em> and its <strong>dashboard</strong> in <em>Reports and settings</em>, next to the general one. That way everyone sees what their roles allow. Each customer can have <strong>one open stay</strong> in a place; their customer record shows it with a tag
     <em>Resident · Room 204</em>. As in the rest of Turnera, <strong>nothing is deleted</strong>: what is done wrongly is corrected, annulled with its reason or retired, and it is recorded who did it and when.
   </p>
 
@@ -5492,7 +5538,8 @@ footer{
 
   <h3 id="estancias-reservas">Reservations, absences and temporary stays</h3>
   <p>
-    <strong>Reservations</strong> (<em>Stays → Reservations</em>): who is going to be admitted and when, with their phone number. A reservation can <strong>hold a place</strong>: meanwhile nobody else can occupy it, and when that person is admitted the reservation is considered fulfilled. Those that should already have arrived are marked; a reservation is cancelled by saying why the person is not coming.
+    <strong>Reservations</strong> (in <em>Stays → Rooms</em>, at the top, between <em>Rooms</em> and
+    <em>Reservations</em>; seen by whoever handles admissions): who is going to be admitted and when, with their phone number. A reservation can <strong>hold a place</strong>: meanwhile nobody else can occupy it, and when that person is admitted the reservation is considered fulfilled. Those that should already have arrived are marked; a reservation is cancelled by saying why the person is not coming.
   </p>
   <p>
     <strong>Absences</strong>: if a person goes away for a few days (hospital, with family), it is recorded from their stay with the reason, the first day and, if known, the last. While they are away they are marked as such in the lists and do not count as a meal that day. When they return, press <em>Has returned</em>; an absence recorded by mistake is annulled. The <strong>temporary stays</strong> are those with an expected end: you can see which ones end within the next 30 days.
@@ -5500,20 +5547,25 @@ footer{
 
   <h3 id="estancias-tarifas">Rates and dashboard</h3>
   <p>
-    The <strong>rates</strong> are named monthly amounts (in <em>Stays settings</em>). Each stay is given a rate, or a manual amount, <strong>from a given day</strong>; changing a centre rate does not change what anyone already pays. <strong>Amounts are only seen by those who have the permission <em>See and set rates</em></strong>, which by default only the administrator and Management have: without it no amount is shown anywhere.
+    The <strong>rates</strong> are named monthly amounts (in <em>Administration › Stays</em>). Each stay is given a rate, or a manual amount, <strong>from a given day</strong>; changing a centre rate does not change what anyone already pays. <strong>Amounts are only seen by those who have the permission <em>See and set rates</em></strong>, which by default only the administrator and Management have: without it no amount is shown anywhere.
   </p>
   <p>
-    <strong>The dashboard</strong> (<em>Stays → Dashboard</em>) summarises the centre: occupancy today, average over the last twelve months, average length of stay, how many people are away, occupancy month by month, forecast for the coming weeks (what will be occupied with the reservations and the stays that end), admissions and discharges by month, reasons for discharge and what is worth keeping in mind (incidents to close, stays ending soon, people without a rate). With the rates permission it adds monthly income, the average rate and what is not being earned because of the free places.
+    <strong>The stays dashboard</strong> (in <em>Reports and settings</em>) summarises the centre: occupancy today, average over the last twelve months, average length of stay, how many people are away, occupancy month by month, forecast for the coming weeks (what will be occupied with the reservations and the stays that end), admissions and discharges by month, reasons for discharge and what is worth keeping in mind (incidents to close, stays ending soon, people without a rate). With the rates permission it adds monthly income, the average rate and what is not being earned because of the free places.
+  </p>
+
+  <h3 id="estancias-informes">Stays reports</h3>
+  <p>
+    In <em>Reports</em>, in its section <strong>Stays</strong>, for management and administration, on screen, in CSV and in PDF: <strong>Invoicing</strong> (what each resident owes for the month, with their rate prorated by days; only with the rates permission), <strong>Admissions and discharges</strong> (every admission, change of place, absence, return and discharge in the period, with its reason and who recorded it), <strong>Occupancy</strong> (month by month: places, average occupancy, admissions, discharges, turnover and average stay) and <strong>Records</strong> (per resident, the floor records expected in the period and those that were made, up to 62 days).
   </p>
 
   <figure>
     <img src="/turnera/manual/imagenes/en/93-estancias-cuadro.png" alt="The dashboard with today’s occupancy, the yearly average and income" loading="lazy">
-    <figcaption>The dashboard: occupancy, forecast and, with the rates permission, income.</figcaption>
+    <figcaption>The stays dashboard: occupancy, forecast and, with the rates permission, what comes in.</figcaption>
   </figure>
 
   <h3 id="estancias-dietas">Diets</h3>
   <p>
-    In <em>Stays settings</em> you define the centre's <strong>diet types</strong> (diabetic, pureed, salt-free…). Then, from the list <em>Stays → Diets</em> each person is given their diet and a note of their own (allergies, textures, what they do not eat). The list is designed for the kitchen and the floor: it is seen by room or by diet, with how many people are eating at the centre today. Menus and ingredients are handled by the kitchen; Turnera does not manage them.
+    In <em>Administration › Stays</em> you define the centre's <strong>diet types</strong> (diabetic, pureed, salt-free…). Then, from the list <em>Stays → Diets</em> each person is given their diet and a note of their own (allergies, textures, what they do not take). The list is meant for the kitchen and the floor: it can be seen by room or by diet, with how many people eat in the centre today. At the top, <strong>Today's portions</strong> gives one card per diet with how many portions to prepare and how many have instructions; in the <em>By diet</em> view, each diet opens its group with its count. Menus and ingredients are the kitchen's business; Turnera does not manage them.
   </p>
 
   <figure>
@@ -5526,7 +5578,7 @@ footer{
     <strong>The floor screen</strong> is what staff use during the shift. Each <em>record</em> (meal, hygiene, medication, whatever the centre decides to keep track of) is a large button per person: one tap and it is recorded with the time and who did it. Whoever records identifies themselves with their <strong>staff record and PIN</strong>, as when clocking in, so the record carries the name of the person and not that of whoever left the session open. A record can be <em>something that has been done</em>, <em>an option</em> among several, <em>a quantity</em> or <em>a few words</em>, and it can state how many times a day it is expected: the screen then shows what is still missing today.
   </p>
   <p>
-    What is recorded wrongly <strong>is never deleted</strong>: it is <em>corrected</em> with another entry (the previous one stays visible, struck through) or <em>annulled</em> with its reason. Anyone who has a <strong>usual zone</strong> on their staff record only sees the people of that zone, unless they have the permission <em>See all zones</em>. A centre device (a tablet) can be <strong>tied to a zone</strong> in <em>Stays settings → Zone tablets</em>: on it, only what belongs to that zone will be seen and recorded, whoever signs in. Devices are registered beforehand in <em>Administration › Devices</em>, which appears when shared devices are turned on in <em>Preferences</em>.
+    What is recorded wrongly <strong>is never deleted</strong>: it is <em>corrected</em> with another entry (the previous one stays visible, struck through) or <em>annulled</em> with its reason. Anyone who has a <strong>usual zone</strong> on their staff record only sees the people of that zone, unless they have the permission <em>See all zones</em>. A centre device (a tablet) can be <strong>tied to a zone</strong> in <em>Administration › Stays → Zone tablets</em>: on it, only what belongs to that zone will be seen and recorded, whoever signs in. Devices are registered beforehand in <em>Administration › Devices</em>, which appears when shared devices are turned on in <em>Preferences</em>.
   </p>
   <p>
     <strong>The room logbook</strong> is each zone’s diary: what the incoming shift has to read before starting. Important entries are marked for handover and can be filtered. Its entries are corrected in the same way as records.
@@ -5557,20 +5609,25 @@ footer{
 
   <h3 id="estancias-ficha">The record of a person staying</h3>
   <p>
-    From <em>Residents</em>, <strong>See their progress</strong> opens the person's record: where they are and since when, charts of what has been recorded in recent days (with the daily average and how many times each thing has happened) and their incidents. Seeing the records of another day or of a specific person is a <strong>query of health data</strong>
+    From <em>Residents</em>, <strong>See their progress</strong> opens the person's record: where they are and since when, charts of what was recorded in recent days (with the daily average and how often each thing happened), their incidents, and their <strong>contact people</strong>. Viewing the records of another day or of a specific person is a <strong>query of health data</strong>
     and requires the permission <em>See the record history</em>; each consultation is noted in the <em>access trail</em> in Administration, like those of the clinical history.
   </p>
 
   <figure>
-    <img src="/turnera/manual/imagenes/en/98-estancias-residente.png" alt="The record of a person staying, with their diet, rate, absences and records" loading="lazy">
-    <figcaption>The record of a person staying: diet, rate, absences and what has been recorded in recent days.</figcaption>
+    <img src="/turnera/manual/imagenes/en/98-estancias-residente.png" alt="The record of a person staying with their diet, rate, absences and contact people" loading="lazy">
+    <figcaption>The record of a person staying: diet, rate, absences and contact people; below, what was recorded in recent days.</figcaption>
   </figure>
+
+  <h3 id="estancias-contactos">Contact people</h3>
+  <p>
+    In the record of the person staying, and in their customer record, <strong>Contact people</strong> keeps who to call: an older person often depends on a son, a niece or their legal guardian. For each one, the name, the relationship, the phone, the email and some notes (when to call, what errands they handle). There can be several, and one is the <strong>main contact</strong>, shown first: the first one entered is main without saying so, and marking another removes the mark from the previous one. They belong to the person, not to the admission, so they are still there if they are admitted again. They are changed by whoever handles admissions or edits customer records. It is worth writing the email carefully: it will be the one that gives access to the future family portal.
+  </p>
 
   <h3 id="estancias-permisos">Permissions and roles</h3>
   <p>
     The Stays permissions are fourteen, which each centre distributes as it wishes: <em>See the stays</em>, <em>Admissions, room changes and discharges</em>, <em>Configure the rooms</em>, <em>Configure Stays</em>,
     <em>Record day-to-day care</em>, <em>See the record history</em>, <em>Correct other people's records</em>,
-    <em>Open incidents</em>, <em>Close incidents</em>, <em>Write in the room logbook</em>, <em>See and set rates</em>, <em>See the dashboard</em>, <em>See the diets</em> and <em>See all zones</em>. When the module is switched on in a centre, two starting roles are created, which the centre can change: <strong>Estancias · planta</strong>
+    <em>Open incidents</em>, <em>Close incidents</em>, <em>Write in the room logbook</em>, <em>See and set rates</em>, <em>See the stays dashboard</em>, <em>See the diets</em> and <em>See all zones</em>. When the module is switched on in a centre, two starting roles are created, which the centre can change: <strong>Estancias · planta</strong>
     (see the stays, record, open incidents, write in the logbook and see the diets) and <strong>Estancias · supervisión</strong> (the above plus admissions and discharges, close incidents, see the record history, correct and see all zones). <em>Management</em> has them all; amounts are only for those who have the rates permission.
   </p>
 </section>

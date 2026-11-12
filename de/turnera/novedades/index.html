@@ -730,19 +730,80 @@ footer{
     <h2>12. November 2026</h2>
     <span class="version__sello">Neueste Version</span>
   </div>
-  <p class="version__numero">Version <span translate="no">1.13.0-4f8ec14</span></p>
+  <p class="version__numero">Version <span translate="no">1.14.0-97016e6</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Abrechnung nach Fachkraft</h4>
+    <ul>
+      <li>Ein neuer Bericht unter Berichte › Kasse und Zahlungen mit dem, was jede Fachkraft in einem Zeitraum abgerechnet hat: Leistungen, Sitzungen mit Mehrfachkarte, Produkte und was noch offen ist. Jede Belegzeile zählt für die Person, die sie erbracht hat, Rückgaben werden abgezogen.</li>
+      <li>Er wird als Excel mit Übersicht und dem Detail jeder Zeile heruntergeladen, um Provisionen zu berechnen.</li>
+    </ul>
+    <h4>Kommentare und Abweichungen im Verlauf</h4>
+    <ul>
+      <li>Jeder Besuch im Kundenverlauf lässt sich kommentieren. Ein Kommentar ist entweder eine Information oder eine Abweichung (eine Beschwerde oder etwas, das schiefgelaufen ist).</li>
+      <li>Ein Besuch mit einer Abweichung zeigt ein rotes Ausrufezeichen. Fährt man mit der Maus darüber, liest man den Text, und jede Person kann nur ihre eigenen Kommentare löschen.</li>
+    </ul>
+    <h4>Wie hat die Person von uns erfahren?</h4>
+    <ul>
+      <li>In der Kundenakte und beim Erstbesuch wählt man, wie die Person auf das Zentrum gekommen ist (Internet, soziale Netzwerke, Freunde, Straßenwerbung, Empfehlung einer Fachkraft …). Passt nichts davon, lässt „Andere“ es eintragen.</li>
+    </ul>
+    <h4>Mehrfachkarten mit Gültigkeit zwischen zwei Daten</h4>
+    <ul>
+      <li>Neben dem Ablauf einige Monate nach dem Kauf kann eine Mehrfachkarte zwischen zwei im Kalender gewählten Daten gelten, wie bei einem Hotel. Praktisch für Saisonaktionen.</li>
+      <li>Wird sie vor dem ersten Datum verkauft, zeigt die Kundenakte, ab welchem Tag sie gilt.</li>
+    </ul>
+    <h4>Nur Erledigtes kassieren</h4>
+    <ul>
+      <li>Neue Option unter Einstellungen › Zahlungen und Kundenbindung, ab Werk eingeschaltet: Ein Termin wird erst kassiert, wenn er als „Erledigt“ gespeichert ist. Bis dahin erscheint er an der Kasse nicht unter „Noch zu kassieren“. So zählen Kasse und Kalender dasselbe. Ein Zentrum, das vor der Behandlung kassiert, kann sie ausschalten.</li>
+    </ul>
+    <h4>Dokumente in Wartungsaufträgen</h4>
+    <ul>
+      <li>An einen Auftrag lassen sich Dokumente so anhängen, wie sie sind (PDF, Word, Excel …), etwa der Arbeitsbericht einer externen Firma, ein Kostenvoranschlag oder ein Zertifikat.</li>
+    </ul>
+    <h4>Aufenthalte</h4>
+    <ul>
+      <li>Kontaktpersonen für jede Bewohnerin und jeden Bewohner: Name, Beziehung, Telefon, E-Mail und Bemerkungen. Es können mehrere sein, eine davon ist der Hauptkontakt.</li>
+      <li>Berichte zu Abrechnung, Aufnahmen und Entlassungen, Belegung und Einträgen, am Bildschirm und als CSV und PDF zum Herunterladen.</li>
+    </ul>
+    <h4>Raster des Kalenders</h4>
+    <ul>
+      <li>Unter Einstellungen › Darstellung wählt man, wie deutlich die Linien des Kalenders zu sehen sind: dezent, normal oder kräftig.</li>
+    </ul>
+  </div>
 
   <div class="grupo grupo--mejora">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Terminkalender</h4>
+    <ul>
+      <li>Beim Ziehen eines Termins auf eine andere Uhrzeit, beim Ausschneiden und Einfügen an einem anderen Tag oder beim Verlängern warnt Turnera, wenn ein anderer Termin das benötigte Gerät belegt, wie beim Anlegen.</li>
+    </ul>
+    <h4>Kundenakte</h4>
+    <ul>
+      <li>Der Besuchsverlauf steht vor den unterschriebenen Dokumenten, weil er am häufigsten aufgerufen wird.</li>
+      <li>Haben bei einem Besuch mehrere Fachkräfte behandelt, nennt der Verlauf alle und zeigt, wer welche Leistung erbracht hat.</li>
+      <li>Die Schaltfläche „Neue Mehrfachkarte“, die eine Karte ohne Kassieren anlegt, sehen nur Personen, die Mehrfachkarten verwalten (ab Werk Administrator und Leitung). Der Empfang verkauft sie weiterhin an der Kasse.</li>
+      <li>In der als Mehrfachkarte verkauften Leistung wird erklärt, woher Sitzungen und Gültigkeit der Karte kommen.</li>
+    </ul>
+    <h4>Aufenthalte</h4>
+    <ul>
+      <li>Das Menü funktioniert wie im übrigen Turnera: Berichte unter Berichte, Einstellungen unter Verwaltung › Aufenthalte und die Kennzahlen der Aufenthalte unter Berichte und Einstellungen.</li>
+      <li>Reservierungen liegen jetzt unter Zimmer.</li>
+      <li>Unter Diäten zeigt „Portionen heute“ eine Karte pro Diät mit den zuzubereitenden Portionen, und in der Ansicht nach Diät trägt jede Gruppe ihre Anzahl.</li>
+      <li>Diäten haben jetzt ein Besteck-Symbol.</li>
+      <li>Die Einstellungen der Aufenthalte erklären, wo die Tablets der Bereiche angemeldet werden (Verwaltung › Geräte, das erscheint, wenn gemeinsame Arbeitsplätze in den Einstellungen eingeschaltet sind), und führen direkt dorthin.</li>
+    </ul>
     <h4>Von den Listen zur Kundenkarte</h4>
     <ul>
       <li>In der Schichtaufsicht, auf dem Stationsbildschirm, in der Küchenliste und im Vorfallbericht führt der Name jeder Person zu ihrer Karte, für alle, die Kundenkarten sehen dürfen.</li>
       <li>Auch bei den überfälligen Zahlungsplänen auf der Startseite und in der Detailansicht eines Zahlungsplans.</li>
     </ul>
-    <h4>Aufenthalte</h4>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Behobene Fehler</h3>
     <ul>
-      <li>Diäten haben jetzt ein Besteck-Symbol.</li>
-      <li>Die Einstellungen für Aufenthalte erklären, wo die Tablets der Bereiche angelegt werden (Verwaltung › Geräte, das erscheint, sobald die gemeinsamen Geräte in den Einstellungen eingeschaltet sind), und führen direkt zu dieser Seite.</li>
+      <li>An der Kasse schaltete das Kästchen jeder Zeile, das entscheidet, ob die Sitzung von der Mehrfachkarte abgeht oder heute bezahlt wird, bei einem Klick irgendwo auf die Zeile um; jetzt ändert es sich nur beim Klick auf das Kästchen oder seinen Text.</li>
     </ul>
   </div>
 </section>

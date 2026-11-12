@@ -730,19 +730,80 @@ footer{
     <h2>12 November 2026</h2>
     <span class="version__sello">Latest release</span>
   </div>
-  <p class="version__numero">Version <span translate="no">1.13.0-4f8ec14</span></p>
+  <p class="version__numero">Version <span translate="no">1.14.0-97016e6</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Billing by professional</h4>
+    <ul>
+      <li>A new report, under Reports › Till and payments, with what each professional billed in a period: services, voucher sessions, products and what is still owed. Each ticket line counts for whoever did it, and refunds subtract.</li>
+      <li>It downloads as Excel with the summary and the detail of each line, to work out commissions.</li>
+    </ul>
+    <h4>Comments and nonconformities in the history</h4>
+    <ul>
+      <li>Each visit in the customer's history can be commented on. A comment can be informative or a nonconformity (a complaint or something that went wrong).</li>
+      <li>A visit with a nonconformity shows a red exclamation mark. Hovering over it shows the text, and each person can delete only the comments they wrote.</li>
+    </ul>
+    <h4>How did they hear about us?</h4>
+    <ul>
+      <li>In the customer record and when booking a first visit you can choose how they found the centre (internet, social media, friends, street advertising, recommended by a professional…). If it is none of these, “Other” lets you write it.</li>
+    </ul>
+    <h4>Vouchers valid between two dates</h4>
+    <ul>
+      <li>Besides expiring a number of months after purchase, a voucher can be valid between two dates picked on the calendar, like a hotel. It is useful for seasonal campaigns.</li>
+      <li>If it is sold before the first date, the customer record shows from which day it can be used.</li>
+    </ul>
+    <h4>Charge only what was done</h4>
+    <ul>
+      <li>A new option in Preferences › Payments and loyalty, on by default: an appointment can only be charged once it is saved as “Seen”. Until then it does not appear under “To charge” at the point of sale. That way the till and the agenda count the same. A centre that charges before the service can turn it off.</li>
+    </ul>
+    <h4>Documents in maintenance orders</h4>
+    <ul>
+      <li>Documents can be attached to an order as they are (PDF, Word, Excel…), for example the work report of an outside contractor, a quote or a certificate.</li>
+    </ul>
+    <h4>Stays</h4>
+    <ul>
+      <li>Contact people for each resident: name, relationship, phone, email and notes. There can be several, and one is the main contact.</li>
+      <li>Reports on billing, admissions and discharges, occupancy and records, to view on screen and download as CSV and PDF.</li>
+    </ul>
+    <h4>Agenda grid</h4>
+    <ul>
+      <li>In Preferences › Appearance you choose how strongly the agenda lines show: soft, normal or strong.</li>
+    </ul>
+  </div>
 
   <div class="grupo grupo--mejora">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Improvements</h3>
+    <h4>Diary</h4>
+    <ul>
+      <li>When you drag an appointment to another time, cut and paste it on another day or lengthen it, Turnera warns you if another appointment has the device it needs, just as when creating it.</li>
+    </ul>
+    <h4>Customer record</h4>
+    <ul>
+      <li>The visit history comes before the signed documents, because it is what people look at most.</li>
+      <li>If several professionals attended a visit, the history names them all and says who did each service.</li>
+      <li>The “New voucher” button, which creates a voucher without charging it, is only shown to those who manage vouchers (by default, the administrator and Management). Reception still sells them from the point of sale.</li>
+      <li>The service sold as a voucher now explains where the voucher's sessions and validity come from.</li>
+    </ul>
+    <h4>Stays</h4>
+    <ul>
+      <li>The menu works like the rest of Turnera: reports under Reports, settings under Administration › Stays and the stays dashboard under Reports and settings.</li>
+      <li>Reservations are now inside Rooms.</li>
+      <li>In Diets, “Today's portions” shows one card per diet with the portions to prepare, and in the by-diet view each group shows its count.</li>
+      <li>Diets now have a cutlery icon.</li>
+      <li>The Stays settings explain where the zone tablets are registered (Administration › Devices, which appears when shared workstations are switched on in Preferences) and link straight to that screen.</li>
+    </ul>
     <h4>From lists to the customer record</h4>
     <ul>
       <li>In shift supervision, the floor screen, the kitchen list and the incident report, each person’s name takes you to their record, for those who can see customer records.</li>
       <li>Also in the overdue payment plans on the Home page and in the detail of a payment plan.</li>
     </ul>
-    <h4>Stays</h4>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Bugs fixed</h3>
     <ul>
-      <li>Diets now have a cutlery icon.</li>
-      <li>Stays settings explains where zone tablets are registered (Administration › Devices, which appears when shared devices are turned on in Preferences) and takes you straight to that screen.</li>
+      <li>At the point of sale, the box on each line that decides whether the session comes off the voucher or is paid today changed when clicking anywhere on the line; now it only changes when you click the box or its label.</li>
     </ul>
   </div>
 </section>

@@ -1404,8 +1404,11 @@ footer{
       cambiarla. Sin el permiso no aparece <em>Cortar</em>, y si se intenta arrastrarla, la agenda dice qué permiso
       hace falta.</li>
       <li><strong>Moverla:</strong> arrástrela. Si la suelta en otra columna cambia también de profesional o de
-      cabina, según la vista en la que esté.</li>
+        cabina, según la vista en la que esté.</li>
     <li><strong>Cambiar cuánto dura:</strong> arrastre el borde de abajo.</li>
+    <li><strong>El aparato también cuenta al moverla o alargarla.</strong> Si la cita necesita un aparato que a la
+      nueva hora tiene cogido otra cita, Turnera avisa igual que al crearla, con la cita que lo tiene: se puede
+      cambiar o guardar igualmente (véase <a href="#aparatos">Aparatos</a>).</li>
     <li><strong>Anularla:</strong> ábrala, pulse <em>Anular</em> y diga <strong>quién la anula</strong>: el
       cliente, el centro (el profesional no puede, la cabina o la pista no está disponible, una avería) o una
       <strong>causa externa</strong> (la lluvia en una pista descubierta, un corte de luz). Es obligatorio, porque
@@ -1789,7 +1792,8 @@ footer{
   </p>
 
   <p>
-    En la ficha de un cliente están sus datos, su historial de visitas, sus bonos y sus notas.
+    En la ficha de un cliente están sus datos, su historial de visitas, sus bonos y sus notas. El historial de
+    visitas va <strong>antes que la documentación firmada</strong>, porque es lo que más se consulta.
     <strong>El teléfono y el correo son enlaces</strong>: al pulsarlos se abre el marcador o el programa de correo,
     sin copiar ni pegar nada. Ocurre en toda la aplicación —también en profesionales, proveedores y
     delegaciones—, así que no hay que copiar un número a mano en ningún sitio.
@@ -1816,6 +1820,29 @@ footer{
     Lo cobrado en cada visita —el importe y el botón <em>Ticket</em> del historial, que lanza la impresión,— lo ve quien tiene el permiso
     «Ver los importes y los tickets del historial». Si se lo quita a un rol o a una persona, su historial sigue
     enseñando qué se hizo y cuándo, pero sin cantidades ni ticket. Se da de fábrica a quien ya puede ver las fichas.
+  </p>
+
+  <h3 id="clientes-conocido">Cómo nos ha conocido</h3>
+  <p>
+    En la ficha del cliente, y al dar una <em>primera visita</em>, se puede elegir <strong>¿Cómo nos ha conocido?</strong>:
+    internet o buscadores, redes sociales, amigos, familiares, conocidos, radio, televisión, prensa o revistas,
+    publicidad en la calle, pasaba por delante, derivado de otro centro o recomendación de un profesional. Si no es
+    ninguna, <em>Otra</em> deja escribirla en pocas palabras. Es opcional, y el informe de <em>Clientes</em> filtra por ello.
+  </p>
+
+  <h3 id="clientes-comentarios">Comentarios de una visita y no conformidades</h3>
+  <p>
+    Cada visita del historial tiene a su izquierda un icono para <strong>comentarla</strong>. Un comentario es
+    <em>Informativo</em> (una nota sobre esa visita) o una <strong>No conformidad</strong>: una queja o algo que salió mal.
+    La visita con comentarios lleva un bocadillo, y la que tiene una no conformidad, una <strong>exclamación roja</strong>
+    para que nadie la pase por alto. Al posar el ratón encima se lee el texto; al pulsarlo se ven todos, con quién los
+    escribió y cuándo, y se añade otro. Cada cual puede borrar solo los suyos: lo que escribió otra persona se queda.
+  </p>
+
+  <h3 id="clientes-varios-profesionales">Visitas con varios profesionales</h3>
+  <p>
+    Si en una misma visita atendieron varias personas (dos servicios cobrados en un solo ticket, cada uno con su
+    profesional), el historial las nombra a todas en la columna del profesional y, debajo de cada servicio, quién lo hizo.
   </p>
 
   <p>
@@ -2067,6 +2094,14 @@ footer{
     cita queda marcada como cobrada — es el icono de euro de la rejilla.
   </p>
 
+  <div class="ojo">
+    <p><strong>De fábrica, solo se cobra lo atendido.</strong> Mientras la cita no esté guardada como
+      <em>Atendida</em>, el botón <em>Cobrar</em> de la cita no se puede pulsar y la cita no sale en <em>Por cobrar</em>
+      del TPV: así la caja y la agenda cuentan lo mismo y no se cobra lo que no se hizo. Si en su centro se cobra antes
+      de atender, se apaga en <em>Administración → Preferencias → Cobros y fidelización → Cobrar solo lo atendido</em>.
+      En las clases cuenta cada asistente: se le cobra cuando consta que vino.</p>
+  </div>
+
   <p>
     <strong>Si la cita cambia con el ticket a medias</strong> —se vuelve a la agenda y se le añade un servicio que
     al final se hizo—, al volver al TPV aparece un aviso con lo que lleva ahora la cita y dos botones:
@@ -2078,7 +2113,8 @@ footer{
   <p>
     <strong>Y más corto todavía: arriba del TPV.</strong> En cuanto un profesional marca una cita como
     <em>Atendido</em>, el cliente aparece arriba, en <em>Por cobrar</em>, antes de que llegue al mostrador. Debajo
-    salen los que aún están <em>En curso</em>, que son los siguientes. Pulse la tarjeta y la venta se carga igual
+    salen los que aún están <em>En curso</em>, que son los siguientes (con <em>Cobrar solo lo atendido</em> encendido,
+    estos se ven pero no se cobran hasta que se atienden). Pulse la tarjeta y la venta se carga igual
     que desde la agenda. La lista se actualiza sola cada pocos segundos, sólo enseña las citas de hoy y cada cliente
     desaparece de ella en cuanto se cobra o se deja a deber.
   </p>
@@ -2794,9 +2830,24 @@ footer{
     Un bono son sesiones pagadas por adelantado de un <strong>grupo de servicios</strong>. Se venden de dos maneras:
   </p>
   <ul>
-    <li><strong>Solas:</strong> en la ficha del cliente, en el apartado de bonos, se crea uno a mano diciendo el
-      grupo, las sesiones y cuándo caduca.</li>
-    <li><strong>Al vender un servicio marcado como bono:</strong> el bono se crea solo al cobrar.</li>
+    <li><strong>Al vender un servicio marcado como bono</strong> (lo normal): el bono se crea solo al cobrarlo en el TPV.</li>
+    <li><strong>A mano:</strong> en la ficha del cliente, en el apartado de bonos, <em>Nuevo bono</em> crea uno sin
+      cobrarlo, diciendo el grupo, las sesiones y cuándo caduca. Solo lo ve quien tiene el permiso
+      <a href="#perm-vouchers-manage">Gestión de bonos</a> (de fábrica, el administrador y Dirección); Recepción no.</li>
+  </ul>
+
+  <h3 id="bonos-sesiones-vigencia">Dónde se ponen las sesiones y la vigencia</h3>
+  <p>
+    En <em>Catálogo → Servicios</em>, en el servicio que se vende como bono, se marca <strong>Se vende como bono</strong>
+    y aparecen sus <strong>sesiones</strong> y su <strong>vigencia</strong>. Las sesiones valen para los servicios de su
+    <em>Grupo de bonos</em>. La vigencia se da de dos maneras:
+  </p>
+  <ul>
+    <li><strong>Meses desde la compra</strong>: el bono caduca ese número de meses después del día en que se vende.</li>
+    <li><strong>Entre dos fechas</strong>, como en un hotel: se eligen en el calendario el primer día y el último, y el
+      bono solo se puede usar entre ellas, ambas incluidas, se venda cuando se venda. Sirve para campañas de temporada.
+      Si se vende antes de la primera fecha, la ficha del cliente indica <em>Se usa desde el …</em> y el TPV no lo
+      descuenta hasta ese día.</li>
   </ul>
 
   <h3>Cómo se gastan</h3>
@@ -2946,7 +2997,9 @@ footer{
     Si dos citas a la misma hora necesitan el mismo aparato y no hay unidades para las dos, Turnera
     <strong>avisa antes de guardar la segunda</strong>, aunque estén en cabinas distintas y con profesionales
     distintos. El aviso dice de qué aparato se trata y <strong>qué otra cita lo tiene cogido</strong>: la hora,
-    el cliente y el profesional. Con eso delante se decide: cambiar la hora, o guardarla igual.
+    el cliente y el profesional. Con eso delante se decide: cambiar la hora, o guardarla igual. Avisa también al
+    <strong>arrastrar</strong> una cita a otra hora, al <strong>cortarla y pegarla</strong> en otro día y al
+    <strong>alargarla</strong> desde su borde.
   </p>
 
   <div class="ojo">
@@ -3075,7 +3128,8 @@ footer{
     La pantalla los agrupa por secciones, las mismas del menú: <strong>Agenda</strong>, <strong>Clientes</strong>,
     <strong>Caja y cobros</strong>, <strong>Facturación</strong>, <strong>Catálogo y stock</strong> y
     <strong>Personal</strong> (el registro de jornada, el resumen de horas y el cuadrante, que se abren en sus
-    pantallas de Personal). Una sección de la que no puede abrir ningún informe no sale.
+    pantallas de Personal), y en los centros con el módulo de Estancias, <strong>Estancias</strong> (véase
+    <a href="#estancias-informes">sus informes</a>). Una sección de la que no puede abrir ningún informe no sale.
   </p>
 
   <div class="tabla-envoltorio">
@@ -3087,6 +3141,7 @@ footer{
     <tr><td><strong>Anulaciones</strong></td><td>Cuántas se anularon por el cliente, por el centro y por causas externas, y qué clientes anulan más.</td></tr>
     <tr><td><strong><a href="#rol-clientes">Clientes</a></strong></td><td>Altas, cumpleaños y de dónde vienen. También quién se ha hecho un servicio: se eligen uno o varios en <em>Servicios realizados</em> (sale quien se hizo cualquiera de ellos) y, si hace falta, se acota con la <em>Fecha de la visita</em>.</td></tr>
     <tr><td><strong>Bonos</strong></td><td>Qué hay vendido, qué queda por consumir y qué está a punto de caducar.</td></tr>
+    <tr id="informe-facturacion-profesional"><td><strong>Facturación por profesional</strong></td><td>Lo que ha facturado cada profesional en un periodo: cuántos servicios y por cuánto, las sesiones con bono (se cuentan, pero no suman importe: se cobró al vender el bono), los productos y lo que queda pendiente. Cada línea del ticket cuenta para quien la hizo, con sus descuentos y el IVA incluido, y las devoluciones restan. El Excel trae el resumen y el detalle de cada línea, para calcular las comisiones. Está en <em>Caja y cobros</em>.</td></tr>
     <tr><td><strong>Stock</strong></td><td>Qué falta y qué ha entrado y salido.</td></tr>
   </tbody></table>
   </div>
@@ -4648,6 +4703,12 @@ footer{
     huecos es siempre gris y sólo cambian las rayas; de fábrica son <strong>salmón</strong>. Se elige con el
     selector de color, se ve en la muestra y en la agenda al momento, y <strong>Restablecer</strong> devuelve el
     salmón. Como con el tema, no queda puesto hasta que se pulsa Guardar.
+  </p>
+
+  <p>
+    La <strong>Rejilla de la agenda</strong> dice lo marcadas que se ven las líneas de las horas y de los huecos:
+    <em>Suave</em>, <em>Normal</em> o <em>Marcada</em>. Si cuesta distinguir dónde empieza cada hueco, elija
+    <em>Marcada</em>. También se ve en la agenda al elegirla y no queda hasta que se guarda.
   </p>
 
   <p>
@@ -6526,7 +6587,11 @@ footer{
   </p>
   <p>
     A cada parte se le suben <strong>fotos por fase</strong> (problema, antes, durante, después y documento), hasta diez
-    por fase; cada foto guarda quién la subió, cuándo y su huella, para que nadie pueda decir que se cambió. Los permisos
+    por fase; cada foto guarda quién la subió, cuándo y su huella, para que nadie pueda decir que se cambió. Además,
+    <strong>Adjuntar documento</strong> sube un fichero tal cual (PDF, Word, Excel, una hoja de cálculo, un texto, una
+    imagen o un ZIP, de hasta 15 MB y hasta diez por parte): es para el <strong>parte de trabajo de una contrata
+    externa</strong>, un presupuesto o un certificado. Se descarga pulsándolo, sale en la historia del parte y lo ve
+    también la Inspección con su enlace. Los permisos
     son ocho (ver, abrir partes, gestionar, cerrar, anular, zonas y equipos, exportar y enlaces). Trae un rol propio,
     <strong>Mantenimiento</strong>, que lleva los partes, sus zonas y sus equipos pero no anula partes ni da enlaces a la
     Inspección; <em>Dirección</em> lo tiene todo salvo los enlaces, y el <em>Administrador del sistema</em> también esos.
@@ -6760,7 +6825,11 @@ footer{
   <p>
     El módulo de <strong>Estancias</strong> es para centros que alojan personas: residencias y
     hospitales. Es opcional: si el centro no lo tiene encendido, Turnera funciona exactamente igual que sin él y no
-    aparece nada en el menú. Cuando se enciende, aparece el apartado <strong>Estancias</strong> en el menú y cada cliente
+    aparece nada en el menú. Cuando se enciende, aparece el apartado <strong>Estancias</strong> en el menú (con lo del día
+    a día: residentes, habitaciones, dietas, incidencias, libreta y supervisión), y lo demás va donde va en el resto de
+    Turnera: sus <strong>informes</strong> en <em>Informes</em>, sus <strong>ajustes</strong> en
+    <em>Administración › Estancias</em> y su <strong>cuadro de mando</strong> en <em>Informes y ajustes</em>, junto al
+    general. Así cada cual ve lo que le dejan sus roles. Cada cliente
     puede tener <strong>una estancia abierta</strong> en una plaza; su ficha de cliente lo indica con una etiqueta
     <em>Residente · Hab. 204</em>. Como en el resto de Turnera, <strong>nada se borra</strong>: lo que se hace mal se
     corrige, se anula con su motivo o se retira, y queda escrito quién lo hizo y cuándo.
@@ -6817,7 +6886,8 @@ footer{
 
   <h3 id="estancias-reservas">Reservas, ausencias y estancias temporales</h3>
   <p>
-    <strong>Reservas</strong> (<em>Estancias → Reservas</em>): quién va a ingresar y cuándo, con su teléfono. Una reserva
+    <strong>Reservas</strong> (en <em>Estancias → Habitaciones</em>, arriba, entre <em>Habitaciones</em> y
+    <em>Reservas</em>; lo ve quien hace ingresos): quién va a ingresar y cuándo, con su teléfono. Una reserva
     puede <strong>guardar una plaza</strong>: mientras tanto nadie más puede ocuparla, y al ingresar a esa persona la
     reserva se da por cumplida. Las que ya deberían haber llegado se marcan; una reserva se cancela diciendo por qué no
     viene.
@@ -6832,13 +6902,13 @@ footer{
 
   <h3 id="estancias-tarifas">Tarifas y cuadro de mandos</h3>
   <p>
-    Las <strong>tarifas</strong> son importes mensuales con nombre (en <em>Ajustes de Estancias</em>). A cada estancia se le
+    Las <strong>tarifas</strong> son importes mensuales con nombre (en <em>Administración › Estancias</em>). A cada estancia se le
     pone una tarifa, o un importe a mano, <strong>desde un día</strong>; cambiar una tarifa del centro no cambia lo que ya
     paga nadie. <strong>Los importes solo los ve quien tiene el permiso <em>Ver y poner las tarifas</em></strong>, que por
     defecto traen solo el administrador y Dirección: sin él no se ve ningún importe en ningún sitio.
   </p>
   <p>
-    <strong>El cuadro de mandos</strong> (<em>Estancias → Cuadro de mandos</em>) resume el centro: ocupación de hoy, media
+    <strong>El cuadro de mando de estancias</strong> (en <em>Informes y ajustes</em>) resume el centro: ocupación de hoy, media
     de los últimos doce meses, días de estancia media, cuántas personas están fuera, ocupación mes a mes, previsión de las
     próximas semanas (lo que se ocupará con las reservas y las estancias que terminan), ingresos y salidas por mes, motivos
     de salida y lo que conviene tener en cuenta (incidencias por cerrar, estancias que acaban pronto, personas sin
@@ -6846,17 +6916,29 @@ footer{
     las plazas libres.
   </p>
 
+  <h3 id="estancias-informes">Informes de Estancias</h3>
+  <p>
+    En <em>Informes</em>, en su sección <strong>Estancias</strong>, para dirección y administración, en pantalla, en CSV
+    y en PDF: <strong>Facturación</strong> (lo que corresponde a cada residente en el mes, con su tarifa prorrateada por
+    días; solo con el permiso de tarifas), <strong>Ingresos y salidas</strong> (cada ingreso, cambio de plaza, ausencia,
+    vuelta y salida del periodo, con su motivo y quién lo apuntó), <strong>Ocupación</strong> (mes a mes: plazas,
+    ocupación media, ingresos, salidas, rotación y estancia media) y <strong>Registros</strong> (por residente, los
+    registros de planta esperados y los que se hicieron, hasta 62 días).
+  </p>
+
   <figure>
     <img src="/turnera/manual/imagenes/93-estancias-cuadro.png" alt="El cuadro de mandos con la ocupación de hoy, la media del año y los ingresos" loading="lazy">
-    <figcaption>El cuadro de mandos: ocupación, previsión y, con el permiso de tarifas, lo que se ingresa.</figcaption>
+    <figcaption>El cuadro de mando de estancias: ocupación, previsión y, con el permiso de tarifas, lo que se ingresa.</figcaption>
   </figure>
 
   <h3 id="estancias-dietas">Dietas</h3>
   <p>
-    En <em>Ajustes de Estancias</em> se definen los <strong>tipos de dieta</strong> del centro (diabética, triturada, sin
+    En <em>Administración › Estancias</em> se definen los <strong>tipos de dieta</strong> del centro (diabética, triturada, sin
     sal…). Después, desde la lista <em>Estancias → Dietas</em> se pone a cada persona su dieta y una nota propia (alergias,
     texturas, lo que no toma). La lista está pensada para cocina y para la planta: se ve por habitación o por dieta, con
-    cuántas personas comen hoy en el centro. Los menús y los ingredientes los lleva la cocina; Turnera no los gestiona.
+    cuántas personas comen hoy en el centro. Arriba, <strong>Raciones de hoy</strong> da una tarjeta por dieta con
+    cuántas raciones hay que preparar y cuántas llevan indicaciones; en la vista <em>Por dieta</em>, cada dieta abre su
+    grupo con su recuento. Los menús y los ingredientes los lleva la cocina; Turnera no los gestiona.
   </p>
 
   <figure>
@@ -6877,7 +6959,7 @@ footer{
     Lo apuntado mal <strong>no se borra</strong>: se <em>corrige</em> con otra entrada (la anterior queda a la vista,
     tachada) o se <em>anula</em> con su motivo. Quien tiene una <strong>zona habitual</strong> en su ficha de personal ve
     solo las personas de esa zona, salvo que tenga el permiso <em>Ver todas las zonas</em>. Un equipo del centro (una
-    tablet) puede <strong>atarse a una zona</strong> en <em>Ajustes de Estancias → Tablets de zona</em>: en él solo se verá
+    tablet) puede <strong>atarse a una zona</strong> en <em>Administración › Estancias → Tablets de zona</em>: en él solo se verá
     y se apuntará lo de esa zona, entre quien entre. Los equipos se dan de alta antes en <em>Administración › Equipos</em>,
     que aparece al encender los puestos compartidos en <em>Preferencias</em>.
   </p>
@@ -6919,15 +7001,26 @@ footer{
   <p>
     Desde <em>Residentes</em>, <strong>Ver su evolución</strong> abre la ficha de la persona: dónde está y desde cuándo,
     gráficos de lo registrado en los últimos días (con la media diaria y las veces que ha ocurrido cada cosa) y sus
-    incidencias. Ver los registros de otro día o de una persona concreta es una <strong>consulta de datos de salud</strong>
+    incidencias, y sus <strong>personas de contacto</strong>. Ver los registros de otro día o de una persona concreta es una <strong>consulta de datos de salud</strong>
     y requiere el permiso <em>Ver la historia de registros</em>; cada consulta queda anotada en el <em>rastro de
     accesos</em> de Administración, como las de la historia clínica.
   </p>
 
   <figure>
-    <img src="/turnera/manual/imagenes/98-estancias-residente.png" alt="La ficha de una persona alojada con su dieta, su tarifa, sus ausencias y sus registros" loading="lazy">
-    <figcaption>La ficha de la persona alojada: dieta, tarifa, ausencias y lo apuntado en los últimos días.</figcaption>
+    <img src="/turnera/manual/imagenes/98-estancias-residente.png" alt="La ficha de una persona alojada con su dieta, su tarifa, sus ausencias y sus personas de contacto" loading="lazy">
+    <figcaption>La ficha de la persona alojada: dieta, tarifa, ausencias y personas de contacto; debajo, lo apuntado en los últimos días.</figcaption>
   </figure>
+
+  <h3 id="estancias-contactos">Personas de contacto</h3>
+  <p>
+    En la ficha de la persona alojada, y en su ficha de cliente, <strong>Personas de contacto</strong> guarda a quién se
+    llama: muchas veces la persona mayor depende de un hijo, una sobrina o su tutor legal. De cada una, el nombre, el
+    parentesco, el teléfono, el correo y unas observaciones (cuándo llamar, qué gestiones lleva). Puede haber varias, y
+    una es la <strong>principal</strong>, que sale la primera: la primera que se apunta lo es sin decirlo, y al marcar
+    otra deja de serlo la anterior. Van con la persona y no con el ingreso, así que siguen ahí si vuelve a ingresar.
+    Las cambia quien hace ingresos o edita fichas de clientes. Conviene escribir bien el correo: será el que dé entrada
+    al futuro portal del familiar.
+  </p>
 
   <h3 id="estancias-permisos">Permisos y roles</h3>
   <p>
@@ -6935,7 +7028,7 @@ footer{
     cambios de habitación y salidas</em>, <em>Configurar las habitaciones</em>, <em>Configurar Estancias</em>,
     <em>Registrar el día a día</em>, <em>Ver la historia de registros</em>, <em>Corregir registros de otros</em>,
     <em>Abrir incidencias</em>, <em>Cerrar incidencias</em>, <em>Escribir en la libreta de sala</em>, <em>Ver y poner las
-    tarifas</em>, <em>Ver el cuadro de mandos</em>, <em>Ver las dietas</em> y <em>Ver todas las zonas</em>. Al encender el
+    tarifas</em>, <em>Ver el cuadro de mando de estancias</em>, <em>Ver las dietas</em> y <em>Ver todas las zonas</em>. Al encender el
     módulo en un centro se crean dos roles de partida, que el centro puede cambiar: <strong>Estancias · planta</strong>
     (ver las estancias, registrar, abrir incidencias, escribir en la libreta y ver las dietas) y <strong>Estancias · supervisión</strong> (lo anterior más
     ingresos y salidas, cerrar incidencias, ver la historia de registros, corregir y ver todas las zonas). <em>Dirección</em> trae todos; los importes
