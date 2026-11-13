@@ -1081,7 +1081,7 @@ footer{
     Schaltfläche <strong>€</strong> oben, die man auf dem Smartphone und dem Tablet verwendet. Das Kürzel noch einmal drücken, um sie zu schließen.
   </p>
   <p>
-    Man tippt, was man sucht -- den Namen einer Leistung, einer Zehnerkarte, eines Pakets oder eines Produkts, in beliebiger Reihenfolge und mit oder ohne Akzente -- und Name und Preis erscheinen, inklusive MwSt. Es erscheint alles, was aktiv ist und einen Preis hat; was man nicht anbieten möchte, wird deaktiviert oder in seinem Katalogeintrag ohne Preis gelassen. Ein Paket ohne eigenen Preis kostet so viel wie seine Leistungen und Produkte zusammen. Mehr ist nicht zu sehen: keine Kosten, keine MwSt., kein Lagerbestand, kein Eintrag.
+    Man tippt, was man sucht -- den Namen einer Leistung, einer Zehnerkarte, eines Pakets oder eines Produkts, in beliebiger Reihenfolge und mit oder ohne Akzente -- und es erscheinen Name und Preis inklusive MwSt. Es erscheint alles, was aktiv ist und einen Preis hat; was nicht angeboten werden soll, wird in seiner Katalogkarte deaktiviert oder ohne Preis gelassen. Ein Paket ohne eigenen Preis kostet so viel wie seine Leistungen und Produkte zusammen. Bei Produkten steht zusätzlich, wie viele Stück im aktuellen Zentrum noch vorrätig sind („5 Stück auf Lager“ oder „Nicht auf Lager“ in Rot). Mehr wird nicht angezeigt: keine Kosten, keine MwSt.-Aufschlüsselung und keine Karteikarte.
   </p>
   <ul>
     <li><strong>Wer sie sieht:</strong> wer die Berechtigung hat <em>Preise nachschlagen</em>. Empfang, Fachkraft, Leitung und die Rolle des Moduls Katalog haben sie. Eine bereits bestehende Rolle erhält sie nicht von selbst: Sie wird angekreuzt unter
@@ -1246,6 +1246,7 @@ footer{
       bezahlten Termin nicht stornieren: er muss im Zentrum anrufen.</li>
       <li><strong>Einen versehentlich angelegten Termin entfernen:</strong> in den <strong>15 Minuten</strong> nach dem Anlegen erscheint beim Stornieren eine vierte Option, <em>Versehentlich angelegt</em>. Der Termin verschwindet aus dem Kalender und zählt in keinem Bericht, denn er war nie eine Buchung. Danach wird die Option nicht mehr angeboten: Es ist eine Stornierung durch jemanden, und man muss angeben, durch wen. Auch wenn er aus dem Kalender verschwindet, wird festgehalten, wer ihn entfernt hat und mit welcher Rolle, und wer die Berechtigung <em>Terminbericht</em> hat, sieht ihn mit der Schaltfläche <em>Stornierungen</em> in der Kopfzeile des Kalenders, die zum Stornierungsbericht mit den versehentlich angelegten Terminen der letzten 30 Tage führt.</li>
     <li><strong>Abgesagte Termine aus der Ansicht nehmen:</strong> setzen Sie das Häkchen bei <em>Abgesagte ausblenden</em>, unter der Kopfzeile. Der Terminkalender merkt sich das Kästchen, sodass Sie es beim nächsten Mal so vorfinden, wie Sie es gelassen haben.</li>
+    <li><strong>Damit die Namen beim Scrollen sichtbar bleiben:</strong> setzen Sie das Häkchen bei <em>Spaltenköpfe beim Scrollen fixieren</em>, gleich daneben. Die Zeile mit der Fachkraft oder dem Raum jeder Spalte bleibt oben stehen, während Sie durch die Stunden nach unten scrollen. Jeder Arbeitsplatz merkt sich das für sich: Auf einem großen Bildschirm ist es vielleicht nicht nötig.</li>
   </ul>
 
   <p>
@@ -1437,7 +1438,7 @@ footer{
   </p>
 
   <p>
-    <strong>Bei einem Fehler wird wieder geöffnet.</strong> Jede von Hand gesperrte Zeitspanne trägt ein offenes Vorhängeschloss in der Ecke: anklicken, bestätigen, und die Zeitspanne ist wieder frei. Die Termine ändern sich nicht. Das Vorhängeschloss sieht nur, wer Zeitspannen sperren darf; bei dem, was der Arbeitskalender markiert (Urlaub, Feiertage oder außerhalb der Schicht), erscheint es nicht, das wird dort geändert.
+    <strong>Bei einem Fehler wird wieder geöffnet.</strong> Jeder von Hand gesperrte Zeitraum hat in seiner Ecke ein offenes Schloss: Klicken Sie darauf, bestätigen Sie, und der Zeitraum ist wieder frei. Die Termine ändern sich nicht. Das Schloss sieht nur, wer Zeiträume sperren darf, und es erscheint nicht bei dem, was der Arbeitskalender vorgibt (Urlaub, Feiertage oder außerhalb der Schicht); das wird dort geändert. Beginnen zwei Zeiträume in derselben Spalte zur gleichen Zeit, rücken Griff und Schloss des zweiten nach links, damit sich beide anklicken lassen. In der Wochenansicht einer Fachkraft erscheinen ihre Sperren und die des ganzen Zentrums; die Sperren eines Raums sieht man in der Ansicht nach Ressource.
   </p>
 
   <p>
@@ -3056,7 +3057,7 @@ footer{
     <tr id="perm-packages-write"><td><strong>Pakete anlegen und bearbeiten</strong></td><td>Erlaubt, Pakete und ihren Preis anzulegen und zu bearbeiten.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
     <tr id="perm-service-groups-view"><td><strong>Mehrfachkarten-Gruppen ansehen</strong></td><td>Öffnet die Seite der Mehrfachkarten-Gruppen und zeigt, welche Leistungen jede abdeckt. Nur zum Ansehen: Zum Ändern braucht es „Mehrfachkarten-Gruppen verwalten“.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
     <tr id="perm-service-groups-write"><td><strong>Mehrfachkarten-Gruppen verwalten</strong></td><td>Verwaltet die Gruppen, die festlegen, welche Mehrfachkarte welche Leistung abdeckt.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
-    <tr id="perm-prices-lookup"><td><strong>Preise nachschlagen</strong></td><td>Öffnet die Schnellabfrage der Preise: Man sucht eine Leistung, ein Paket oder ein Produkt und sieht nur Name und Preis. Kein Zugriff auf Karteikarten, Kosten oder auf irgendetwas, das kassiert wird.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="perm-prices-lookup"><td><strong>Preise nachschlagen</strong></td><td>Öffnet die Schnellabfrage der Preise: Man sucht eine Leistung, ein Paket oder ein Produkt und sieht nur Name, Preis und bei Produkten den Lagerbestand des Zentrums. Kein Zugriff auf Karteikarten, Kosten oder auf irgendetwas, das kassiert wird.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
     <tr id="perm-products-view"><td><strong>Produkte ansehen</strong></td><td>Zeigt die Verkaufsprodukte. Nur zum Ansehen.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
     <tr id="perm-products-write"><td><strong>Produkte anlegen und bearbeiten</strong></td><td>Erlaubt, Produkte anzulegen und zu bearbeiten.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
     <tr id="perm-providers-view"><td><strong>Lieferanten ansehen</strong></td><td>Zeigt die Lieferanten. Nur zum Ansehen.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
@@ -3200,7 +3201,7 @@ footer{
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">Leistungen ansehen</a><span class="rc-desc">Zeigt die Leistungen und ihre Preise.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">Pakete ansehen</a><span class="rc-desc">Zeigt die Pakete aus Leistungen und Produkten.</span></li>
-        <li class="rc-perm"><a href="#perm-prices-lookup">Preise nachschlagen</a><span class="rc-desc">Öffnet die Schnellabfrage der Preise: Man sucht eine Leistung, ein Paket oder ein Produkt und sieht nur Name und Preis.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Preise nachschlagen</a><span class="rc-desc">Öffnet die Schnellabfrage der Preise: Man sucht eine Leistung, ein Paket oder ein Produkt und sieht nur Name, Preis und bei Produkten den Lagerbestand des Zentrums.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Produkte ansehen</a><span class="rc-desc">Zeigt die Verkaufsprodukte.</span></li>
         <li class="rc-perm"><a href="#perm-stock-view">Lagerbestand ansehen</a><span class="rc-desc">Zeigt den vorhandenen Bestand.</span></li>
       </ul>
@@ -3246,7 +3247,7 @@ footer{
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">Leistungen ansehen</a><span class="rc-desc">Zeigt die Leistungen und ihre Preise.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">Pakete ansehen</a><span class="rc-desc">Zeigt die Pakete aus Leistungen und Produkten.</span></li>
-        <li class="rc-perm"><a href="#perm-prices-lookup">Preise nachschlagen</a><span class="rc-desc">Öffnet die Schnellabfrage der Preise: Man sucht eine Leistung, ein Paket oder ein Produkt und sieht nur Name und Preis.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Preise nachschlagen</a><span class="rc-desc">Öffnet die Schnellabfrage der Preise: Man sucht eine Leistung, ein Paket oder ein Produkt und sieht nur Name, Preis und bei Produkten den Lagerbestand des Zentrums.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Produkte ansehen</a><span class="rc-desc">Zeigt die Verkaufsprodukte.</span></li>
       </ul>
       <h6 class="rc-modulo"><a href="#permisos-mantenimiento">Wartung</a> <span class="n">· 2</span></h6>
@@ -3337,7 +3338,7 @@ footer{
         <li class="rc-perm"><a href="#perm-packages-write">Pakete anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Pakete und ihren Preis anzulegen und zu bearbeiten.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-view">Mehrfachkarten-Gruppen ansehen</a><span class="rc-desc">Öffnet die Seite der Mehrfachkarten-Gruppen und zeigt, welche Leistungen jede abdeckt. Nur zum Ansehen: Zum Ändern braucht es „Mehrfachkarten-Gruppen verwalten“.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-write">Mehrfachkarten-Gruppen verwalten</a><span class="rc-desc">Verwaltet die Gruppen, die festlegen, welche Mehrfachkarte welche Leistung abdeckt.</span></li>
-        <li class="rc-perm"><a href="#perm-prices-lookup">Preise nachschlagen</a><span class="rc-desc">Öffnet die Schnellabfrage der Preise: Man sucht eine Leistung, ein Paket oder ein Produkt und sieht nur Name und Preis.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Preise nachschlagen</a><span class="rc-desc">Öffnet die Schnellabfrage der Preise: Man sucht eine Leistung, ein Paket oder ein Produkt und sieht nur Name, Preis und bei Produkten den Lagerbestand des Zentrums.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Produkte ansehen</a><span class="rc-desc">Zeigt die Verkaufsprodukte.</span></li>
         <li class="rc-perm"><a href="#perm-products-write">Produkte anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Produkte anzulegen und zu bearbeiten.</span></li>
         <li class="rc-perm"><a href="#perm-providers-view">Lieferanten ansehen</a><span class="rc-desc">Zeigt die Lieferanten.</span></li>
@@ -3515,7 +3516,7 @@ footer{
         <li class="rc-perm"><a href="#perm-packages-write">Pakete anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Pakete und ihren Preis anzulegen und zu bearbeiten.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-view">Mehrfachkarten-Gruppen ansehen</a><span class="rc-desc">Öffnet die Seite der Mehrfachkarten-Gruppen und zeigt, welche Leistungen jede abdeckt. Nur zum Ansehen: Zum Ändern braucht es „Mehrfachkarten-Gruppen verwalten“.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-write">Mehrfachkarten-Gruppen verwalten</a><span class="rc-desc">Verwaltet die Gruppen, die festlegen, welche Mehrfachkarte welche Leistung abdeckt.</span></li>
-        <li class="rc-perm"><a href="#perm-prices-lookup">Preise nachschlagen</a><span class="rc-desc">Öffnet die Schnellabfrage der Preise: Man sucht eine Leistung, ein Paket oder ein Produkt und sieht nur Name und Preis.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Preise nachschlagen</a><span class="rc-desc">Öffnet die Schnellabfrage der Preise: Man sucht eine Leistung, ein Paket oder ein Produkt und sieht nur Name, Preis und bei Produkten den Lagerbestand des Zentrums.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Produkte ansehen</a><span class="rc-desc">Zeigt die Verkaufsprodukte.</span></li>
         <li class="rc-perm"><a href="#perm-products-write">Produkte anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Produkte anzulegen und zu bearbeiten.</span></li>
         <li class="rc-perm"><a href="#perm-providers-view">Lieferanten ansehen</a><span class="rc-desc">Zeigt die Lieferanten.</span></li>
@@ -4957,10 +4958,7 @@ footer{
 
   <h4>Was einmal eingerichtet wird</h4>
   <ul>
-    <li><strong>Tarifvertrag</strong>legt das Zentrum fest; es gibt <strong>einen pro Jahr für die ganze Belegschaft</strong> und
-      alle Standorte: Name, Jahresarbeitsstunden bei Vollzeit und Urlaubstage, Kalendertage
-      (die 30 des Statuts) oder Arbeitstage (ohne Wochenenden und Feiertage). Jeder Kalender übernimmt den seines Jahres;
-      er wird nicht Person für Person gewählt.</li>
+    <li><strong>Tarifvertrag</strong>legt das Zentrum fest; es gibt <strong>einen pro Jahr für die ganze Belegschaft</strong> und alle seine Standorte: der Name, die jährlichen Arbeitsstunden bei Vollzeit und die Urlaubstage, Kalendertage (die 30 des Arbeitnehmerstatuts) oder Arbeitstage (ohne Wochenenden und Feiertage). Jeder Kalender übernimmt den seines Jahres; er wird nicht Person für Person gewählt. Beim Anlegen bietet das Auswahlfeld <em>Tarifvertrag</em> die häufigsten an: Friseure und Kosmetik, Sportanlagen und Fitnessstudios, Pflege von Menschen mit Unterstützungsbedarf, Tierarztpraxen, Seniorenheime in der Region Valencia sowie private Gesundheitsversorgung und Büros und Kanzleien der Provinz Valencia. Es schlägt Stunden und Urlaub vor, die sich vor dem Speichern ändern lassen, und zeigt das Wichtigste, die Gültigkeit und den amtlichen Text. Es ist eine unverbindliche Zusammenfassung: Was unterschrieben wurde, bestätigt die Arbeitsrechtsberatung. Ist Ihrer nicht dabei, wählen Sie <em>Anderer Tarifvertrag</em> und füllen Sie ihn von Hand aus.</li>
     <li><strong>Schichten</strong>: «Vormittag 9-14», «Nachmittag 15-21»… Eine, die vor ihrem Beginn endet, ist eine Nachtschicht und endet am nächsten Tag. <strong>Ein Tag hat eine einzige Schicht</strong>: Für Vor- und Nachmittag legen Sie eine geteilte Schicht an, mit <em>Abschnitt hinzufügen (geteilte Schicht)</em> oder mit <em>Als geteilte Schicht beginnen</em>, die sie auf 09:00-14:00 und 16:00-20:00 setzt, zum Anpassen. Die Pause ist die Lücke zwischen zwei Abschnitten und zählt nicht als Arbeitszeit.</li>
     <li><strong>Abwesenheiten</strong>: Krankschreibung, bezahlte oder unbezahlte Freistellung… Jede sagt, ob der Tag
       für die Stunden des Tarifvertrags als gearbeitet zählt. Bei einer Krankschreibung wird nur das festgehalten, nie die Diagnose.</li>
@@ -5509,7 +5507,7 @@ footer{
   <h3>Ein Problem mit dem Rettungsring melden</h3>
   <p>
     Die Schaltfläche mit dem <strong>Rettungsring</strong>, unten rechts auf jedem Bildschirm für alle mit der Berechtigung
-    <em>Support benachrichtigen</em>, öffnet ein Ticket, ohne dass Sie die aktuelle Stelle verlassen: Sie schildern, was passiert ist, wählen die Dringlichkeit und hängen, wenn es hilft, einen Screenshot an (nur Bilder). Mit der Berechtigung, Tickets zu öffnen und einzusehen, ist das Ergebnis ein weiteres Support-Ticket mit seiner Nummer <em>T-n</em>, Status und den Antworten des Teams; die Meldung im Fenster enthält die Schaltfläche <em>Im Support öffnen</em>. Der Bildschirm, auf dem Sie waren, Ihr Standort, der letzte Fehler und Ihre Telefonnummer (falls angegeben) stehen am Ende der ersten Nachricht. Wer diese Berechtigungen nicht hat, meldet Probleme weiterhin per E-Mail; und wenn der Ticketdienst in diesem Moment nicht verfügbar ist, weist Sie die Anwendung darauf hin, dass die Meldung per E-Mail gegangen ist und Sie sie nicht im Support sehen werden.
+    <em>Support benachrichtigen</em>, öffnet ein Ticket, ohne dass Sie die aktuelle Stelle verlassen: Sie schildern, was passiert ist, wählen die Dringlichkeit und hängen, wenn es hilft, einen Screenshot an (nur Bilder). Mit der Berechtigung, Tickets zu öffnen und einzusehen, ist das Ergebnis ein weiteres Support-Ticket mit seiner Nummer <em>T-n</em>, Status und den Antworten des Teams; die Meldung im Fenster enthält die Schaltfläche <em>Im Support öffnen</em>. Der Bildschirm, auf dem Sie waren, Ihre Niederlassung, der letzte Fehler und Ihre Telefonnummer (falls angegeben) stehen am Ende der ersten Nachricht. Wer diese Berechtigungen nicht hat, meldet den Vorfall weiterhin per E-Mail, und wenn der Ticketdienst gerade nicht verfügbar ist, sagt Ihnen die Anwendung, dass er per E-Mail ging und Sie ihn nicht im Support sehen werden. Hier und beim Schreiben in einem Ticket fügt die Schaltfläche mit dem Smiley ein Emoji an der Stelle des Cursors ein, falls Sie uns auch sagen möchten, wie es Ihnen damit geht.
   </p>
 
   <h3>Ein Ticket verfolgen</h3>

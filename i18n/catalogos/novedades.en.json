@@ -1335,5 +1335,16 @@
   "t281a76ff": "A single scorecard: the stays one is retired and everything it showed is in the Stays section of the general scorecard. Anyone who only had the stays one opens the general one and sees that section, for their own branch.",
   "t1e45b60a": "In the scorecard, the falls card did not count incidents of the «Fall» type.",
   "t9896a712": "1.15.1-a882220",
-  "t7c575d9c": "1.15.1-9cf4367"
+  "t7c575d9c": "1.15.1-9cf4367",
+  "t26677dc1": "13 November 2026",
+  "t89084bd3": "1.16.0-060bc88",
+  "t5a7fe7dc": "Catalogue of collective agreements",
+  "t9664350b": "When creating the collective agreement of the work calendar, you can choose it from a list: hairdressers and beauty, sports facilities and gyms, care for dependent people, veterinary centres, care homes in the Valencian Community, and private healthcare and offices in the province of Valencia.",
+  "t79eca789": "It suggests its hours per year and its holidays, which can be changed before saving, and shows the main points, its validity and the official text. It is an indicative summary: the centre's employment adviser confirms it. If the agreement is not on the list, it is filled in by hand as always.",
+  "tdf159a75": "Emojis in Support",
+  "t16394bf9": "When reporting an incident and when writing in a ticket, the smiley button adds an emoji where the cursor is, in case you also want to tell us how you feel about it.",
+  "tc4c35019": "Products also show how many units are left at the centre you are in, or «Out of stock» in red if there are none.",
+  "t36b08696": "New «Keep the column headers in view» box, next to «Hide cancelled»: the row with the professional or the room of each column stays at the top while you scroll down through the hours. Each workstation remembers it on its own.",
+  "tc1dce014": "The week view of a professional no longer shows the closed stretches of a room, just like the day view by professional.",
+  "td6197700": "If two closed stretches started at the same time in the same column, the padlock of one covered the other and it could not be reopened. Now the second one moves to the left."
 }

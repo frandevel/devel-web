@@ -1335,5 +1335,16 @@
   "t281a76ff": "Um só painel de indicadores: o de estadias é retirado e tudo o que mostrava está na secção Estadias do painel geral. Quem só tinha o de estadias entra no geral e vê essa secção, da sua delegação.",
   "t1e45b60a": "No painel de indicadores, a ficha de quedas não contava as ocorrências do tipo «Queda».",
   "t9896a712": "1.15.1-a882220",
-  "t7c575d9c": "1.15.1-9cf4367"
+  "t7c575d9c": "1.15.1-9cf4367",
+  "t26677dc1": "13 de novembro de 2026",
+  "t89084bd3": "1.16.0-060bc88",
+  "t5a7fe7dc": "Catálogo de convenções coletivas",
+  "t9664350b": "Ao criar a convenção coletiva do calendário laboral, pode escolher-se de uma lista: cabeleireiros e estética, instalações desportivas e ginásios, apoio à dependência, centros veterinários, lares da Comunidade Valenciana, e saúde privada e escritórios da província de Valência.",
+  "t79eca789": "Propõe as horas por ano e as férias, que se podem mudar antes de guardar, e mostra o principal que diz, a vigência e o texto oficial. É um resumo orientativo: confirma-o o consultor laboral do centro. Se a convenção não estiver na lista, preenche-se à mão como sempre.",
+  "tdf159a75": "Emojis no Suporte",
+  "t16394bf9": "Ao contar um incidente e ao escrever num ticket, o botão da carinha acrescenta um emoji onde está o cursor, caso também nos queira dizer como se sente com isso.",
+  "tc4c35019": "Nos produtos aparece também quantas unidades restam no centro em que se está, ou «Sem stock» a vermelho se não restar nenhuma.",
+  "t36b08696": "Nova caixa «Fixar o cabeçalho ao deslocar», junto a «Ocultar canceladas»: a linha com o profissional ou a cabine de cada coluna fica no topo enquanto se desce pelas horas. Cada posto lembra-se disso por si.",
+  "tc1dce014": "Na vista semanal de um profissional já não aparecem os períodos fechados de uma cabine, tal como na vista do dia por profissional.",
+  "td6197700": "Se dois períodos fechados começavam à mesma hora na mesma coluna, o cadeado de um tapava o do outro e não se podia reabrir. Agora o segundo afasta-se para a esquerda."
 }

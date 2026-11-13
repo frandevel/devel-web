@@ -1097,7 +1097,7 @@ footer{
     botão <strong>€</strong> de cima, que é o que se usa no telemóvel e no tablet. Prima de novo o atalho para a fechar.
   </p>
   <p>
-    Escreve-se o que se procura -- o nome de um serviço, um pacote de sessões, um pacote ou um produto, por qualquer ordem e com ou sem acentos -- e aparecem o nome e o preço, com IVA incluído. Aparece tudo o que está ativo e tem preço; o que não se quiser oferecer desativa-se ou deixa-se sem preço na sua ficha do catálogo. Um pacote sem preço próprio vale a soma dos seus serviços e produtos. Não se vê mais nada: nem custos, nem IVA, nem stock, nem a ficha.
+    Escreve-se o que se procura -- o nome de um serviço, de um pacote de sessões, de um pacote ou de um produto, por qualquer ordem e com ou sem acentos -- e aparecem o nome e o preço, com IVA incluído. Aparece tudo o que está ativo e tem preço; o que não se quiser oferecer desativa-se ou deixa-se sem preço na sua ficha do catálogo. Um pacote sem preço próprio vale o que somam os seus serviços e produtos. Nos produtos aparece também quantas unidades restam no centro em que se está («5 unidades em stock», ou «Sem stock» a vermelho). Não se vê mais nada: nem custos, nem a discriminação do IVA, nem a ficha.
   </p>
   <ul>
     <li><strong>Quem a vê:</strong> quem tiver a permissão <em>Consultar preços</em>. Trazem-na Receção,
@@ -1283,6 +1283,7 @@ footer{
       ao anulá-la aparece uma quarta opção, <em>Criada por engano</em>. A marcação desaparece da agenda e não conta em nenhum relatório, porque nunca chegou a ser uma reserva. Passado esse tempo já não se oferece: é uma anulação de alguém, e é preciso dizer de quem. Embora desapareça da agenda, também fica registado quem a retirou e com que função, e quem tem a permissão <em>Relatório de marcações</em> vê-a com o botão <em>Anulações</em> no cabeçalho da agenda, que leva ao relatório de anulações com as criadas por engano nos últimos 30 dias.</li>
     <li><strong>Retirar as anuladas da vista:</strong> assinale <em>Ocultar canceladas</em>, por baixo do
       cabeçalho. A agenda recorda a opção, por isso da próxima vez encontrá-la-á como a deixou.</li>
+    <li><strong>Para não perder os nomes ao descer:</strong> assinale <em>Fixar o cabeçalho ao deslocar</em>, ao lado. A linha com o profissional ou a cabine de cada coluna fica no topo enquanto desce pelas horas. Cada posto lembra-se disso por si: num ecrã grande pode não fazer falta.</li>
   </ul>
 
   <p>
@@ -1520,10 +1521,7 @@ footer{
   </p>
 
   <p>
-    <strong>Se se enganar, reabre-se.</strong> Cada período bloqueado manualmente tem um cadeado aberto no canto: prima-o,
-    confirme, e o período volta a ficar livre. As marcações não mudam. O cadeado só o vê quem pode bloquear
-    períodos, e não aparece no que o calendário laboral marca (férias, feriados ou fora de turno), que se altera
-    aí.
+    <strong>Se se enganar, reabre-se.</strong> Cada período fechado à mão tem um cadeado aberto no canto: carregue nele, confirme, e o período fica livre outra vez. As marcações não mudam. O cadeado só o vê quem pode fechar períodos, e não aparece no que o calendário laboral marca (férias, feriados ou fora do turno), que se muda lá. Se dois períodos começarem à mesma hora na mesma coluna, a pega e o cadeado do segundo afastam-se para a esquerda, para se poder carregar nos dois. Na vista semanal de um profissional aparecem os seus fechos e os de todo o centro; os de uma cabine veem-se na vista por recurso.
   </p>
 
   <p>
@@ -3386,7 +3384,7 @@ footer{
     <tr id="perm-packages-write"><td><strong>Criar e editar os pacotes</strong></td><td>Permite criar e editar pacotes e o respetivo preço.</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-service-groups-view"><td><strong>Ver os grupos de pacotes de sessões</strong></td><td>Abre o ecrã dos grupos de pacotes de sessões e consulta que serviços cobre cada um. Só de leitura: para os alterar é preciso «Gerir os grupos de pacotes de sessões».</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-service-groups-write"><td><strong>Gerir os grupos de pacotes de sessões</strong></td><td>Gere os grupos que decidem que pacote cobre que serviço.</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
-    <tr id="perm-prices-lookup"><td><strong>Consultar preços</strong></td><td>Abre a consulta rápida de preços: procura-se um serviço, um pacote ou um produto e só mostra o nome e o preço. Não dá acesso às fichas, aos custos nem a nada do que se cobra.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-profesional">Profissional</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
+    <tr id="perm-prices-lookup"><td><strong>Consultar preços</strong></td><td>Abre a consulta rápida de preços: procura-se um serviço, um pacote ou um produto e só mostra o nome, o preço e, nos produtos, as unidades em stock do centro. Não dá acesso às fichas, aos custos nem a nada do que se cobra.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-profesional">Profissional</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-products-view"><td><strong>Ver os produtos</strong></td><td>Consulta os produtos à venda. Só de leitura.</td><td><a href="#rol-recepcion">Receção</a>, <a href="#rol-profesional">Profissional</a>, <a href="#rol-direccion">Direção</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-products-write"><td><strong>Criar e editar os produtos</strong></td><td>Permite criar e editar produtos.</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-providers-view"><td><strong>Ver os fornecedores</strong></td><td>Consulta os fornecedores. Só de leitura.</td><td><a href="#rol-direccion">Direção</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
@@ -3530,7 +3528,7 @@ footer{
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">Ver os serviços</a><span class="rc-desc">Consulta os serviços e os seus preços.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">Ver os pacotes</a><span class="rc-desc">Consulta os pacotes de serviços e produtos.</span></li>
-        <li class="rc-perm"><a href="#perm-prices-lookup">Consultar preços</a><span class="rc-desc">Abre a consulta rápida de preços: procura-se um serviço, um pacote ou um produto e só mostra o nome e o preço.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Consultar preços</a><span class="rc-desc">Abre a consulta rápida de preços: procura-se um serviço, um pacote ou um produto e só mostra o nome, o preço e, nos produtos, as unidades em stock do centro.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Ver os produtos</a><span class="rc-desc">Consulta os produtos de venda.</span></li>
         <li class="rc-perm"><a href="#perm-stock-view">Ver o stock</a><span class="rc-desc">Consulta as existências.</span></li>
       </ul>
@@ -3576,7 +3574,7 @@ footer{
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">Ver os serviços</a><span class="rc-desc">Consulta os serviços e os seus preços.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">Ver os pacotes</a><span class="rc-desc">Consulta os pacotes de serviços e produtos.</span></li>
-        <li class="rc-perm"><a href="#perm-prices-lookup">Consultar preços</a><span class="rc-desc">Abre a consulta rápida de preços: procura-se um serviço, um pacote ou um produto e só mostra o nome e o preço.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Consultar preços</a><span class="rc-desc">Abre a consulta rápida de preços: procura-se um serviço, um pacote ou um produto e só mostra o nome, o preço e, nos produtos, as unidades em stock do centro.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Ver os produtos</a><span class="rc-desc">Consulta os produtos de venda.</span></li>
       </ul>
       <h6 class="rc-modulo"><a href="#permisos-mantenimiento">Manutenção</a> <span class="n">· 2</span></h6>
@@ -3667,7 +3665,7 @@ footer{
         <li class="rc-perm"><a href="#perm-packages-write">Criar e editar os pacotes</a><span class="rc-desc">Permite criar e editar pacotes e o respetivo preço.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-view">Ver os grupos de pacotes de sessões</a><span class="rc-desc">Abre o ecrã dos grupos de pacotes de sessões e consulta que serviços cobre cada um. Só de leitura: para os alterar é preciso «Gerir os grupos de pacotes de sessões».</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-write">Gerir os grupos de pacotes de sessões</a><span class="rc-desc">Gere os grupos que decidem que pacote cobre que serviço.</span></li>
-        <li class="rc-perm"><a href="#perm-prices-lookup">Consultar preços</a><span class="rc-desc">Abre a consulta rápida de preços: procura-se um serviço, um pacote ou um produto e só mostra o nome e o preço.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Consultar preços</a><span class="rc-desc">Abre a consulta rápida de preços: procura-se um serviço, um pacote ou um produto e só mostra o nome, o preço e, nos produtos, as unidades em stock do centro.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Ver os produtos</a><span class="rc-desc">Consulta os produtos de venda.</span></li>
         <li class="rc-perm"><a href="#perm-products-write">Criar e editar os produtos</a><span class="rc-desc">Permite criar e editar produtos.</span></li>
         <li class="rc-perm"><a href="#perm-providers-view">Ver os fornecedores</a><span class="rc-desc">Consulta os fornecedores.</span></li>
@@ -3845,7 +3843,7 @@ footer{
         <li class="rc-perm"><a href="#perm-packages-write">Criar e editar os pacotes</a><span class="rc-desc">Permite criar e editar pacotes e o respetivo preço.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-view">Ver os grupos de pacotes de sessões</a><span class="rc-desc">Abre o ecrã dos grupos de pacotes de sessões e consulta que serviços cobre cada um. Só de leitura: para os alterar é preciso «Gerir os grupos de pacotes de sessões».</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-write">Gerir os grupos de pacotes de sessões</a><span class="rc-desc">Gere os grupos que decidem que pacote cobre que serviço.</span></li>
-        <li class="rc-perm"><a href="#perm-prices-lookup">Consultar preços</a><span class="rc-desc">Abre a consulta rápida de preços: procura-se um serviço, um pacote ou um produto e só mostra o nome e o preço.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Consultar preços</a><span class="rc-desc">Abre a consulta rápida de preços: procura-se um serviço, um pacote ou um produto e só mostra o nome, o preço e, nos produtos, as unidades em stock do centro.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Ver os produtos</a><span class="rc-desc">Consulta os produtos de venda.</span></li>
         <li class="rc-perm"><a href="#perm-products-write">Criar e editar os produtos</a><span class="rc-desc">Permite criar e editar produtos.</span></li>
         <li class="rc-perm"><a href="#perm-providers-view">Ver os fornecedores</a><span class="rc-desc">Consulta os fornecedores.</span></li>
@@ -5434,10 +5432,7 @@ footer{
 
   <h4>O que se prepara uma vez</h4>
   <ul>
-    <li><strong>Convenção</strong>: acorda-o o centro e é <strong>um por ano para todo o pessoal</strong> e
-      todas as suas sedes: o nome, as horas de trabalho por ano a tempo completo e os dias de férias,
-      naturais (os 30 do Estatuto) ou úteis (sem contar fins de semana nem feriados). Cada calendário toma o do seu ano;
-      não se escolhe pessoa a pessoa.</li>
+    <li><strong>Convenção</strong>: acorda-o o centro e é <strong>um por ano para todo o pessoal</strong> e todas as suas sedes: o nome, as horas de trabalho por ano a tempo inteiro e os dias de férias, de calendário (os 30 do Estatuto) ou úteis (sem contar fins de semana nem feriados). Cada calendário usa o do seu ano; não se escolhe pessoa a pessoa. Ao criá-la, o menu <em>Convenção</em> oferece as mais habituais: cabeleireiros e estética, instalações desportivas e ginásios, apoio à dependência, centros veterinários, lares da Comunidade Valenciana, e saúde privada e escritórios da província de Valência. Propõe as suas horas e férias, que se podem mudar antes de guardar, e mostra o principal que diz, a sua vigência e o texto oficial. É um resumo orientativo: o que se assinou confirma-o o consultor laboral. Se a sua não estiver, escolha <em>Outra convenção</em> e preencha-a à mão.</li>
     <li><strong>Turnos</strong>: «Manhã 9-14», «Tarde 15-21»… Um que acaba antes de começar é noturno e
       termina no dia seguinte. <strong>Um dia leva um só turno</strong>: para quem faz manhã e tarde cria-se
       um turno dividido, com <em>Adicionar troço (turno dividido)</em> ou com <em>Começar como dividido</em>, que o deixa em
@@ -6119,7 +6114,7 @@ footer{
   <h3>Comunicar uma ocorrência com o salva-vidas</h3>
   <p>
     O botão do <strong>salva-vidas</strong>, em baixo à direita em todos os ecrãs para quem tem a permissão
-    <em>Avisar o suporte</em>, abre um ticket sem sair de onde está: conta o que aconteceu, escolhe a urgência e, se ajudar, anexa uma captura de ecrã (só imagens). Com permissão para abrir e ver tickets, o resultado é mais um ticket de Suporte, com o seu número <em>T-n</em>, o seu estado e as respostas da equipa; o aviso da janela tem um botão <em>Ver em Suporte</em>. O ecrã em que estava, a sua unidade, o último erro e o seu telefone (se o indicou) ficam escritos no fim da primeira mensagem. Quem não tem essas permissões continua a comunicar a ocorrência por e-mail e, se o serviço de tickets não estiver disponível nesse momento, a aplicação avisa-o de que foi por e-mail e de que não a verá no Suporte.
+    <em>Avisar o suporte</em>, abre um ticket sem sair de onde está: conta o que aconteceu, escolhe a urgência e, se ajudar, anexa uma captura de ecrã (só imagens). Com permissão para abrir e ver tickets, o resultado é mais um ticket de Suporte, com o seu número <em>T-n</em>, o seu estado e as respostas da equipa; o aviso da janela tem um botão <em>Ver em Suporte</em>. O ecrã em que estava, a sua delegação, o último erro e o seu telefone (se o indicou) ficam escritos no fim da primeira mensagem. Quem não tem essas permissões continua a contar o incidente por e-mail, e se o serviço de tickets não estiver disponível nesse momento a aplicação avisa que foi por e-mail e que não o verá no Suporte. Aqui e ao escrever num ticket, o botão da carinha acrescenta um emoji onde está o cursor, caso também nos queira dizer como se sente com isso.
   </p>
 
   <h3>Acompanhar um ticket</h3>

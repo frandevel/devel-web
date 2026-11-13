@@ -1080,7 +1080,7 @@ footer{
     button <strong>€</strong> at the top, which is the one to use on a phone or tablet. Press the shortcut again to close it.
   </p>
   <p>
-    You type what you are looking for -- the name of a service, a voucher, a package or a product, in any order and with or without accents -- and the name and price appear, VAT included. Everything active with a price appears; whatever you do not want to offer is deactivated or left without a price in its catalogue record. A package without its own price is worth the sum of its services and products. Nothing else is shown: no costs, no VAT, no stock, no record.
+    You type what you are looking for -- the name of a service, a voucher, a package or a product, in any order and with or without accents -- and the name and price appear, VAT included. Everything active with a price shows up; anything you don't want to offer is disabled or left without a price in its catalogue record. A package without its own price is worth what its services and products add up to. Products also show how many units are left at the centre you are in («5 units in stock», or «Out of stock» in red). Nothing else is shown: no costs, no VAT breakdown and no record.
   </p>
   <ul>
     <li><strong>Who sees it:</strong> whoever has the permission <em>Look up prices</em>. Reception, Professional, Management and the Catalogue module role have it. A role that already existed does not get it by itself: tick it in
@@ -1245,6 +1245,7 @@ footer{
       an appointment already paid either: they have to call the centre.</li>
       <li><strong>Removing an appointment made by mistake:</strong> within the <strong>15 minutes</strong> after creating it, a fourth option appears when cancelling it, <em>Created by mistake</em>. The appointment disappears from the agenda and counts in no report, because it was never a booking. After that time it is no longer offered: it is a cancellation by someone, and you have to say by whom. Even though it disappears from the agenda, it also records who removed it and with what role, and whoever has the permission <em>Appointments report</em> can see it with the button <em>Cancellations</em> in the header of the agenda, which leads to the cancellations report with the appointments created by mistake in the last 30 days.</li>
     <li><strong>Taking cancelled appointments off the view:</strong> tick <em>Hide cancelled</em>, under the header. The agenda remembers the box, so next time you will find it as you left it.</li>
+    <li><strong>Keep the names in view when scrolling:</strong> tick <em>Keep the column headers in view</em>, next to it. The row with the professional or the room of each column stays at the top while you scroll down through the hours. Each workstation remembers it on its own: on a large screen you may not need it.</li>
   </ul>
 
   <p>
@@ -1436,7 +1437,7 @@ footer{
   </p>
 
   <p>
-    <strong>If you make a mistake, reopen it.</strong> Every stretch closed by hand has an open padlock in the corner: click it, confirm, and the stretch is free again. Appointments do not change. Only whoever can close stretches sees the padlock, and it does not appear on what the work calendar marks (holidays, public holidays or off-shift), which is changed there.
+    <strong>If you make a mistake, reopen it.</strong> Every stretch closed by hand has an open padlock in its corner: click it, confirm, and the stretch is free again. Appointments do not change. Only people who can close stretches see the padlock, and it does not appear on what the work calendar marks (holidays, public holidays or outside the shift), which is changed there. If two stretches start at the same time in the same column, the handle and the padlock of the second one move to the left, so both can be clicked. The week view of a professional shows their closures and those of the whole centre; the closures of a room are seen in the view by resource.
   </p>
 
   <p>
@@ -3053,7 +3054,7 @@ footer{
     <tr id="perm-packages-write"><td><strong>Create and edit packages</strong></td><td>Allows creating and editing packages and their price.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr id="perm-service-groups-view"><td><strong>See voucher groups</strong></td><td>Opens the voucher groups screen and shows which services each one covers. View only: changing them needs “Manage voucher groups”.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr id="perm-service-groups-write"><td><strong>Manage voucher groups</strong></td><td>Manages the groups that decide which voucher covers which service.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
-    <tr id="perm-prices-lookup"><td><strong>Look up prices</strong></td><td>Opens the quick price lookup: you search for a service, a package or a product and it shows only its name and price. It gives no access to the records, the costs or anything that is charged.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-profesional">Professional</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
+    <tr id="perm-prices-lookup"><td><strong>Look up prices</strong></td><td>Opens the quick price lookup: you search for a service, a package or a product and it shows only its name, its price and, for products, the units in stock at the centre. It gives no access to the records, the costs or anything that is charged.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-profesional">Professional</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr id="perm-products-view"><td><strong>See the products</strong></td><td>Shows the products for sale. View only.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-profesional">Professional</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr id="perm-products-write"><td><strong>Create and edit products</strong></td><td>Allows creating and editing products.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr id="perm-providers-view"><td><strong>See the suppliers</strong></td><td>Shows the suppliers. View only.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
@@ -3197,7 +3198,7 @@ footer{
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">See the services</a><span class="rc-desc">Shows the services and their prices.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">See the packages</a><span class="rc-desc">Shows the packages of services and products.</span></li>
-        <li class="rc-perm"><a href="#perm-prices-lookup">Look up prices</a><span class="rc-desc">Opens the quick price lookup: you search for a service, a package or a product and it shows only its name and price.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Look up prices</a><span class="rc-desc">Opens the quick price lookup: you search for a service, a package or a product and it shows only its name, its price and, for products, the units in stock at the centre.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">See the products</a><span class="rc-desc">Shows the products for sale.</span></li>
         <li class="rc-perm"><a href="#perm-stock-view">See the stock</a><span class="rc-desc">Shows the stock on hand.</span></li>
       </ul>
@@ -3243,7 +3244,7 @@ footer{
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">See the services</a><span class="rc-desc">Shows the services and their prices.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">See the packages</a><span class="rc-desc">Shows the packages of services and products.</span></li>
-        <li class="rc-perm"><a href="#perm-prices-lookup">Look up prices</a><span class="rc-desc">Opens the quick price lookup: you search for a service, a package or a product and it shows only its name and price.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Look up prices</a><span class="rc-desc">Opens the quick price lookup: you search for a service, a package or a product and it shows only its name, its price and, for products, the units in stock at the centre.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">See the products</a><span class="rc-desc">Shows the products for sale.</span></li>
       </ul>
       <h6 class="rc-modulo"><a href="#permisos-mantenimiento">Maintenance</a> <span class="n">· 2</span></h6>
@@ -3334,7 +3335,7 @@ footer{
         <li class="rc-perm"><a href="#perm-packages-write">Create and edit packages</a><span class="rc-desc">Allows creating and editing packages and their price.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-view">See voucher groups</a><span class="rc-desc">Opens the voucher groups screen and shows which services each one covers. View only: changing them needs “Manage voucher groups”.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-write">Manage voucher groups</a><span class="rc-desc">Manages the groups that decide which voucher covers which service.</span></li>
-        <li class="rc-perm"><a href="#perm-prices-lookup">Look up prices</a><span class="rc-desc">Opens the quick price lookup: you search for a service, a package or a product and it shows only its name and price.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Look up prices</a><span class="rc-desc">Opens the quick price lookup: you search for a service, a package or a product and it shows only its name, its price and, for products, the units in stock at the centre.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">See the products</a><span class="rc-desc">Shows the products for sale.</span></li>
         <li class="rc-perm"><a href="#perm-products-write">Create and edit products</a><span class="rc-desc">Allows creating and editing products.</span></li>
         <li class="rc-perm"><a href="#perm-providers-view">See the suppliers</a><span class="rc-desc">Shows the suppliers.</span></li>
@@ -3512,7 +3513,7 @@ footer{
         <li class="rc-perm"><a href="#perm-packages-write">Create and edit packages</a><span class="rc-desc">Allows creating and editing packages and their price.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-view">See voucher groups</a><span class="rc-desc">Opens the voucher groups screen and shows which services each one covers. View only: changing them needs “Manage voucher groups”.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-write">Manage voucher groups</a><span class="rc-desc">Manages the groups that decide which voucher covers which service.</span></li>
-        <li class="rc-perm"><a href="#perm-prices-lookup">Look up prices</a><span class="rc-desc">Opens the quick price lookup: you search for a service, a package or a product and it shows only its name and price.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Look up prices</a><span class="rc-desc">Opens the quick price lookup: you search for a service, a package or a product and it shows only its name, its price and, for products, the units in stock at the centre.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">See the products</a><span class="rc-desc">Shows the products for sale.</span></li>
         <li class="rc-perm"><a href="#perm-products-write">Create and edit products</a><span class="rc-desc">Allows creating and editing products.</span></li>
         <li class="rc-perm"><a href="#perm-providers-view">See the suppliers</a><span class="rc-desc">Shows the suppliers.</span></li>
@@ -4952,10 +4953,7 @@ footer{
 
   <h4>What is set up once</h4>
   <ul>
-    <li><strong>Agreement</strong>: set by the centre, it is <strong>one a year for the whole staff</strong> and
-      all its sites: the name, the yearly working hours full time and the holiday days, calendar days
-      (the Statute's 30) or working days (not counting weekends or public holidays). Each calendar takes the one of its year;
-      it is not chosen person by person.</li>
+    <li><strong>Agreement</strong>: set by the centre, it is <strong>one a year for the whole staff</strong> and all its sites: the name, the working hours per year for a full-time job and the holiday days, calendar days (the 30 of the Workers' Statute) or working days (not counting weekends or public holidays). Each calendar takes the one for its year; it is not chosen person by person. When creating it, the <em>Agreement</em> drop-down offers the most common ones: hairdressers and beauty, sports facilities and gyms, care for dependent people, veterinary centres, care homes in the Valencian Community, and private healthcare and offices in the province of Valencia. It suggests their hours and holidays, which can be changed before saving, and shows the main points, its validity and the official text. It is an indicative summary: what was signed is confirmed by your employment adviser. If yours is not there, choose <em>Another agreement</em> and fill it in by hand.</li>
     <li><strong>Shifts</strong>: «Morning 9-14», «Afternoon 15-21»… One that ends before it starts is a night shift and finishes the next day. <strong>A day takes a single shift</strong>: for someone who works morning and afternoon, create a split shift, with <em>Add stretch (split shift)</em> or with <em>Start as a split shift</em>, which sets it to 09:00-14:00 and 16:00-20:00 for you to adjust. The break is the gap between one stretch and the next, and does not count as worked.</li>
     <li><strong>Absences</strong>: sick leave, paid leave, unpaid leave… Each one says whether that day counts
       as worked for the agreement hours. For a sick leave only that it is a sick leave is written down, never the diagnosis.</li>
@@ -5504,7 +5502,7 @@ footer{
   <h3>Report an incident with the lifebuoy</h3>
   <p>
     The button with the <strong>lifebuoy</strong>, at the bottom right on every screen for whoever has the permission
-    <em>Notify support</em>, opens a ticket without leaving where you are: you tell what happened, choose the urgency and, if it helps, attach a screenshot (images only). With permission to open and view tickets, the result is one more Support ticket, with its number <em>T-n</em>, its status and the team's replies; the notice in the window has a button <em>Open in Support</em>. The screen you were on, your delegation, the last error and your phone number (if you entered it) are written at the end of the first message. Whoever does not have those permissions keeps reporting incidents by email, and if the ticket service is not available at that moment the application tells you it went by email and that you will not see it in Support.
+    <em>Notify support</em>, opens a ticket without leaving where you are: you tell what happened, choose the urgency and, if it helps, attach a screenshot (images only). With permission to open and view tickets, the result is one more Support ticket, with its number <em>T-n</em>, its status and the team's replies; the notice in the window has a button <em>Open in Support</em>. The screen you were on, your branch, the last error and your phone number (if you entered it) are written at the end of the first message. Anyone without those permissions still reports the incident by email, and if the ticket service is not available at that moment the app tells you that it went by email and that you will not see it in Support. Here and when writing in a ticket, the smiley button adds an emoji where the cursor is, in case you also want to tell us how you feel about it.
   </p>
 
   <h3>Following a ticket</h3>

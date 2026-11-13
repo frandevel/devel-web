@@ -1141,8 +1141,9 @@ footer{
     Se escribe lo que se busca -- el nombre de un servicio, un bono, un paquete o un producto, en el orden y con
     los acentos que sea -- y salen el nombre y el precio, con el IVA incluido. Salen todas las cosas activas y con
     precio; lo que no se quiera ofrecer se desactiva o se deja sin precio en su ficha del catálogo. Un paquete sin
-    precio propio vale lo que suman sus servicios y productos. No se ve nada más: ni costes, ni IVA, ni stock, ni la
-    ficha.
+    precio propio vale lo que suman sus servicios y productos. En los productos sale además cuántas unidades quedan en el
+    centro en el que se está («5 unidades en stock», o «Sin stock» en rojo). No se ve nada más: ni costes, ni IVA, ni
+    la ficha.
   </p>
   <ul>
     <li><strong>Quién la ve:</strong> quien tenga el permiso <em>Consultar precios</em>. Lo traen Recepción,
@@ -1378,6 +1379,9 @@ footer{
       la agenda, que lleva al informe de cancelaciones con las creadas por error de los últimos 30 días.</li>
     <li><strong>Quitar las anuladas de la vista:</strong> marque <em>Ocultar canceladas</em>, debajo de la
       cabecera. La agenda recuerda la casilla, así que la próxima vez la encontrará como la dejó.</li>
+    <li><strong>Que no se pierdan los nombres al bajar:</strong> marque <em>Fijar la cabecera al bajar</em>, al lado.
+      La fila con el profesional o la cabina de cada columna se queda arriba mientras baja por las horas. Cada puesto
+      la recuerda por su cuenta: en una pantalla grande puede no hacer falta.</li>
   </ul>
 
   <p>
@@ -1648,7 +1652,9 @@ footer{
     <strong>Si se equivoca, se reabre.</strong> Cada rato cerrado a mano lleva un candado abierto en la esquina:
     púlselo, confirme, y el rato vuelve a estar libre. Las citas no cambian. El candado solo lo ve quien puede cerrar
     ratos, y no sale en lo que marca el calendario laboral (vacaciones, festivos o fuera de turno), que se cambia
-    allí.
+    allí. Si dos ratos empiezan a la vez en la misma columna, el candado y el asa del segundo se apartan a la
+    izquierda, para poder pulsar los dos. En la vista de semana de un profesional salen sus cierres y los de todo el
+    centro; los de una cabina se ven en la vista por recurso.
   </p>
 
   <p>
@@ -3769,7 +3775,7 @@ footer{
     <tr id="perm-packages-write"><td><strong>Crear y editar los paquetes</strong></td><td>Permite crear y editar paquetes y su precio.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-service-groups-view"><td><strong>Ver los grupos de bonos</strong></td><td>Abre la pantalla de grupos de bonos y consulta qué servicios cubre cada uno. Solo de lectura: para cambiarlos hace falta «Gestionar los grupos de bonos».</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-service-groups-write"><td><strong>Gestionar los grupos de bonos</strong></td><td>Gestiona los grupos que deciden qué bono cubre qué servicio.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
-    <tr id="perm-prices-lookup"><td><strong>Consultar precios</strong></td><td>Abre la consulta rápida de precios: se busca un servicio, un paquete o un producto y solo muestra su nombre y su precio. No da acceso a las fichas, a los costes ni a nada de lo que se cobra.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
+    <tr id="perm-prices-lookup"><td><strong>Consultar precios</strong></td><td>Abre la consulta rápida de precios: se busca un servicio, un paquete o un producto y solo muestra su nombre, su precio y, en los productos, las unidades en stock del centro. No da acceso a las fichas, a los costes ni a nada de lo que se cobra.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-products-view"><td><strong>Ver los productos</strong></td><td>Consulta los productos de venta. Solo de lectura.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-products-write"><td><strong>Crear y editar los productos</strong></td><td>Permite crear y editar productos.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-providers-view"><td><strong>Ver los proveedores</strong></td><td>Consulta los proveedores. Solo de lectura.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
@@ -3916,7 +3922,7 @@ footer{
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">Ver los servicios</a><span class="rc-desc">Consulta los servicios y sus precios.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">Ver los paquetes</a><span class="rc-desc">Consulta los paquetes de servicios y productos.</span></li>
-        <li class="rc-perm"><a href="#perm-prices-lookup">Consultar precios</a><span class="rc-desc">Abre la consulta rápida de precios: se busca un servicio, un paquete o un producto y solo muestra su nombre y su precio.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Consultar precios</a><span class="rc-desc">Abre la consulta rápida de precios: se busca un servicio, un paquete o un producto y solo muestra su nombre, su precio y, en los productos, las unidades en stock del centro.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Ver los productos</a><span class="rc-desc">Consulta los productos de venta.</span></li>
         <li class="rc-perm"><a href="#perm-stock-view">Ver el stock</a><span class="rc-desc">Consulta las existencias.</span></li>
       </ul>
@@ -3962,7 +3968,7 @@ footer{
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">Ver los servicios</a><span class="rc-desc">Consulta los servicios y sus precios.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">Ver los paquetes</a><span class="rc-desc">Consulta los paquetes de servicios y productos.</span></li>
-        <li class="rc-perm"><a href="#perm-prices-lookup">Consultar precios</a><span class="rc-desc">Abre la consulta rápida de precios: se busca un servicio, un paquete o un producto y solo muestra su nombre y su precio.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Consultar precios</a><span class="rc-desc">Abre la consulta rápida de precios: se busca un servicio, un paquete o un producto y solo muestra su nombre, su precio y, en los productos, las unidades en stock del centro.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Ver los productos</a><span class="rc-desc">Consulta los productos de venta.</span></li>
       </ul>
       <h6 class="rc-modulo"><a href="#permisos-mantenimiento">Mantenimiento</a> <span class="n">· 2</span></h6>
@@ -4053,7 +4059,7 @@ footer{
         <li class="rc-perm"><a href="#perm-packages-write">Crear y editar los paquetes</a><span class="rc-desc">Permite crear y editar paquetes y su precio.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-view">Ver los grupos de bonos</a><span class="rc-desc">Abre la pantalla de grupos de bonos y consulta qué servicios cubre cada uno. Solo de lectura: para cambiarlos hace falta «Gestionar los grupos de bonos».</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-write">Gestionar los grupos de bonos</a><span class="rc-desc">Gestiona los grupos que deciden qué bono cubre qué servicio.</span></li>
-        <li class="rc-perm"><a href="#perm-prices-lookup">Consultar precios</a><span class="rc-desc">Abre la consulta rápida de precios: se busca un servicio, un paquete o un producto y solo muestra su nombre y su precio.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Consultar precios</a><span class="rc-desc">Abre la consulta rápida de precios: se busca un servicio, un paquete o un producto y solo muestra su nombre, su precio y, en los productos, las unidades en stock del centro.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Ver los productos</a><span class="rc-desc">Consulta los productos de venta.</span></li>
         <li class="rc-perm"><a href="#perm-products-write">Crear y editar los productos</a><span class="rc-desc">Permite crear y editar productos.</span></li>
         <li class="rc-perm"><a href="#perm-providers-view">Ver los proveedores</a><span class="rc-desc">Consulta los proveedores.</span></li>
@@ -4231,7 +4237,7 @@ footer{
         <li class="rc-perm"><a href="#perm-packages-write">Crear y editar los paquetes</a><span class="rc-desc">Permite crear y editar paquetes y su precio.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-view">Ver los grupos de bonos</a><span class="rc-desc">Abre la pantalla de grupos de bonos y consulta qué servicios cubre cada uno. Solo de lectura: para cambiarlos hace falta «Gestionar los grupos de bonos».</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-write">Gestionar los grupos de bonos</a><span class="rc-desc">Gestiona los grupos que deciden qué bono cubre qué servicio.</span></li>
-        <li class="rc-perm"><a href="#perm-prices-lookup">Consultar precios</a><span class="rc-desc">Abre la consulta rápida de precios: se busca un servicio, un paquete o un producto y solo muestra su nombre y su precio.</span></li>
+        <li class="rc-perm"><a href="#perm-prices-lookup">Consultar precios</a><span class="rc-desc">Abre la consulta rápida de precios: se busca un servicio, un paquete o un producto y solo muestra su nombre, su precio y, en los productos, las unidades en stock del centro.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Ver los productos</a><span class="rc-desc">Consulta los productos de venta.</span></li>
         <li class="rc-perm"><a href="#perm-products-write">Crear y editar los productos</a><span class="rc-desc">Permite crear y editar productos.</span></li>
         <li class="rc-perm"><a href="#perm-providers-view">Ver los proveedores</a><span class="rc-desc">Consulta los proveedores.</span></li>
@@ -5993,7 +5999,12 @@ footer{
     <li><strong>Convenio</strong>: lo acuerda el centro y es <strong>uno por año para toda la plantilla</strong> y
       todas sus sedes: el nombre, las horas de trabajo al año a jornada completa y los días de vacaciones, naturales
       (los 30 del Estatuto) o laborables (sin contar fines de semana ni festivos). Cada calendario toma el de su año;
-      no se elige persona a persona.</li>
+      no se elige persona a persona. Al crearlo, el desplegable <em>Convenio</em> ofrece los más habituales:
+      peluquerías y estética, instalaciones deportivas y gimnasios, atención a la dependencia, centros veterinarios,
+      residencias de la Comunitat Valenciana, y sanidad privada y oficinas y despachos de la provincia de Valencia.
+      Propone sus horas y sus vacaciones, que se pueden cambiar antes de guardar, y enseña lo principal que dice, su
+      vigencia y el texto oficial. Es un resumen orientativo: lo que se firmó lo confirma la asesoría laboral. Si el
+      suyo no está, elija <em>Otro convenio</em> y rellénelo a mano.</li>
     <li><strong>Turnos</strong>: «Mañana 9-14», «Tarde 15-21»… Uno que acaba antes de empezar es de noche y
       termina al día siguiente. <strong>Un día lleva un solo turno</strong>: para quien hace mañana y tarde se crea
       un turno partido, con <em>Añadir tramo (turno partido)</em> o con <em>Empezar como partido</em>, que lo deja en
@@ -6778,7 +6789,8 @@ footer{
     equipo; el aviso de la ventana tiene un botón <em>Ver en Soporte</em>. La pantalla en la que estabas, tu delegación,
     el último error y tu teléfono (si lo pusiste) quedan escritos al final del primer mensaje. Quien no tiene esos
     permisos sigue contando la incidencia por correo, y si el servicio de tickets no está disponible en ese momento la
-    aplicación te avisa de que ha ido por correo y de que no la verás en Soporte.
+    aplicación te avisa de que ha ido por correo y de que no la verás en Soporte. Aquí y al escribir en un ticket,
+    el botón de la carita añade un emoji donde está el cursor, por si quieres contarnos también cómo te sienta.
   </p>
 
   <h3>Seguir un ticket</h3>
