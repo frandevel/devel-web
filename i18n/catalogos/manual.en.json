@@ -4525,5 +4525,11 @@
   "t07f79a38": ": in the list (the «Code» column), in the record, on the diary card, in the appointment and payment search, in pending payments and in the reports. Customers who came from another platform keep the number they had there, and new ones get the next one when they are registered. And",
   "t94d8aacc": "A customer record holds their details, visit history, vouchers and notes. Under the name you can see whether they",
   "tfdbca94e": "accept marketing communications",
-  "tdc559b01": ": green if they do, red if they don't and amber if it isn't recorded, in which case nothing should be sent to them. The visit history comes"
+  "tdc559b01": ": green if they do, red if they don't and amber if it isn't recorded, in which case nothing should be sent to them. The visit history comes",
+  "t896f4a1e": "When the diary slots are shorter than an hour and you move the mouse over a free slot, its start time appears, so you know when the appointment would start if you put it there. It is the time of the slot under the mouse, even past its halfway point, and the same one the appointment opens with when you click. Reception sees the same diary times as the rest of the team.",
+  "t8895bc84": ", next to it. While you scroll down through the hours, the whole top part of the diary stays at the top: the title with the day, the buttons to change view and day, the filters and the row with the professional or room of each column. Each workstation remembers it separately: on a large screen it may not be needed.",
+  "tb3131394": "Professionals → Actions → Clocking PIN",
+  "t57d285d1": "Staff → Professionals → Actions → Clocking PIN",
+  "t215a8668": "of anyone whose PIN is locked turns amber with a warning, and in",
+  "t79bd0ed9": "Actions"
 }

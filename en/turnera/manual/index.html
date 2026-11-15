@@ -1201,7 +1201,7 @@ footer{
 
   <h3 id="agenda-hora-inicio">The start time of a slot</h3>
   <p>
-    When the agenda’s time steps are shorter than an hour and you hover over a free slot, its start time appears, so you know what time the appointment would fall at if you place it there. Reception sees the same agenda hours as the rest of the team.
+    When the diary slots are shorter than an hour and you move the mouse over a free slot, its start time appears, so you know when the appointment would start if you put it there. It is the time of the slot under the mouse, even past its halfway point, and the same one the appointment opens with when you click. Reception sees the same diary times as the rest of the team.
   </p>
 
   <h3 id="agenda-citas">Booking, moving and cancelling appointments</h3>
@@ -1245,7 +1245,7 @@ footer{
       an appointment already paid either: they have to call the centre.</li>
       <li><strong>Removing an appointment made by mistake:</strong> within the <strong>15 minutes</strong> after creating it, a fourth option appears when cancelling it, <em>Created by mistake</em>. The appointment disappears from the agenda and counts in no report, because it was never a booking. After that time it is no longer offered: it is a cancellation by someone, and you have to say by whom. Even though it disappears from the agenda, it also records who removed it and with what role, and whoever has the permission <em>Appointments report</em> can see it with the button <em>Cancellations</em> in the header of the agenda, which leads to the cancellations report with the appointments created by mistake in the last 30 days.</li>
     <li><strong>Taking cancelled appointments off the view:</strong> tick <em>Hide cancelled</em>, under the header. The agenda remembers the box, so next time you will find it as you left it.</li>
-    <li><strong>Keep the names in view when scrolling:</strong> tick <em>Keep the column headers in view</em>, next to it. The row with the professional or the room of each column stays at the top while you scroll down through the hours. Each workstation remembers it on its own: on a large screen you may not need it.</li>
+    <li><strong>Keep the names in view when scrolling:</strong> tick <em>Keep the column headers in view</em>, next to it. While you scroll down through the hours, the whole top part of the diary stays at the top: the title with the day, the buttons to change view and day, the filters and the row with the professional or room of each column. Each workstation remembers it separately: on a large screen it may not be needed.</li>
   </ul>
 
   <p>
@@ -4571,7 +4571,7 @@ footer{
   <h4>The PIN</h4>
 
   <p>
-    Every professional needs a <strong>PIN</strong>, four digits unless the centre decides otherwise, which administration resets in <em>Professionals → Clocking PIN</em>. Pressing their button brings up a keypad and they type it: with the last digit their screen opens, with nothing else to press. From a computer the PIN can also be typed on the keyboard, numeric keypad included: <em>Backspace</em> deletes the last digit and <em>Enter</em> confirms. This is what makes pressing someone else’s button not the same as clocking in for them, and without it the list of names would not prove much to an inspector.
+    Every professional needs a <strong>PIN</strong>, four digits unless the centre decides otherwise, which administration resets in <em>Professionals → Actions → Clocking PIN</em>. Pressing their button brings up a keypad and they type it: with the last digit their screen opens, with nothing else to press. From a computer the PIN can also be typed on the keyboard, numeric keypad included: <em>Backspace</em> deletes the last digit and <em>Enter</em> confirms. This is what makes pressing someone else’s button not the same as clocking in for them, and without it the list of names would not prove much to an inspector.
   </p>
 
   <p>
@@ -4616,14 +4616,14 @@ footer{
   </p>
 
   <h4 id="pin-provisional">Temporary PIN</h4>
-  <span class="ruta">Staff → Professionals → Clocking PIN</span>
+  <span class="ruta">Staff → Professionals → Actions → Clocking PIN</span>
 
   <p>
     A PIN that <strong>administration resets</strong> is <strong>temporary</strong>, because whoever reset it knows it. With it the person cannot clock in, neither on the web nor in the professionals’ app, nor sign their monthly summary: when they type it, Turnera asks them to <strong>choose their own</strong> (different from the temporary one and from the digits the centre requires), and from then on it is theirs alone. That way HR never gets to know the PIN someone signs with. PINs that were already set before this improvement are left untouched.
   </p>
 
   <h4 id="pin-bloqueado">Locked PIN</h4>
-  <span class="ruta">Staff → Professionals → Clocking PIN</span>
+  <span class="ruta">Staff → Professionals → Actions → Clocking PIN</span>
 
   <p>
     If <strong>a wrong PIN is typed five times in a row</strong>, that person's PIN becomes
@@ -4639,7 +4639,8 @@ footer{
   </div>
 
   <p>
-    In <em>Staff</em>, the button <em>clocking PIN</em> of anyone whose PIN is locked shows a warning, and inside it shows <strong>«PIN locked since …»</strong> with the button <strong>Unlock</strong>, which keeps the same PIN and resets the count. It needs the «Unlock the clocking PIN» permission, which Management, HR and Staff have out of the box (and the System administrator); without it, the window says which permission is missing. <strong>Resetting the PIN also unlocks it</strong> (and it is temporary, as always when administration resets it). Every lock and every unlock is recorded —who unlocked it, when and how— and that trail is not deleted.
+    In <em>Staff</em>, the button <em>Actions</em> of anyone whose PIN is locked turns amber with a warning, and in <em>clocking PIN</em>
+    screen is shown <strong>«PIN locked since …»</strong> with the button <strong>Unlock</strong>, which keeps the same PIN and resets the count. It needs the «Unlock the clocking PIN» permission, which Management, HR and Staff have out of the box (and the System administrator); without it, the window says which permission is missing. <strong>Resetting the PIN also unlocks it</strong> (and it is temporary, as always when administration resets it). Every lock and every unlock is recorded —who unlocked it, when and how— and that trail is not deleted.
   </p>
 
   <h4 id="firma-resumen">Signing the monthly summary</h4>

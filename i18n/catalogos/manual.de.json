@@ -4525,5 +4525,11 @@
   "t07f79a38": ": in der Liste (Spalte «Code»), in der Kartei, auf der Terminkarte, in der Termin- und Zahlungssuche, bei den offenen Zahlungen und in den Berichten. Kunden, die von einer anderen Plattform kamen, behalten ihre dortige Nummer, und neue erhalten beim Anlegen die nächste. Und",
   "t94d8aacc": "In der Kundenakte stehen die Daten, der Besuchsverlauf, die Mehrfachkarten und die Notizen. Unter dem Namen sehen Sie, ob der Kunde",
   "tfdbca94e": "Werbemitteilungen akzeptiert",
-  "tdc559b01": ": grün, wenn ja, rot, wenn nein, und gelb, wenn es nicht erfasst ist; dann darf ihm nichts geschickt werden. Der Besuchsverlauf steht"
+  "tdc559b01": ": grün, wenn ja, rot, wenn nein, und gelb, wenn es nicht erfasst ist; dann darf ihm nichts geschickt werden. Der Besuchsverlauf steht",
+  "t896f4a1e": "Sind die Zeitabschnitte des Terminkalenders kürzer als eine Stunde und fährt man mit der Maus über eine freie Lücke, erscheint ihre Anfangszeit, damit man weiß, wann der Termin dort beginnen würde. Es ist die Zeit des Abschnitts unter der Maus, auch wenn seine Mitte überschritten ist, und dieselbe, mit der sich der Termin beim Klicken öffnet. Der Empfang sieht dieselben Zeiten wie das übrige Team.",
+  "t8895bc84": ", daneben. Beim Herunterscrollen durch die Stunden bleibt der ganze obere Teil des Terminkalenders oben: der Titel mit dem Tag, die Schaltflächen zum Wechseln von Ansicht und Tag, die Filter und die Zeile mit der Fachkraft oder der Kabine jeder Spalte. Jeder Arbeitsplatz merkt es sich für sich: auf einem großen Bildschirm ist es vielleicht nicht nötig.",
+  "tb3131394": "Fachkräfte → Aktionen → Stempel-PIN",
+  "t57d285d1": "Personal → Mitarbeitende → Aktionen → Stempel-PIN",
+  "t215a8668": "von jemandem mit gesperrter PIN erscheint gelb mit einem Hinweis, und unter",
+  "t79bd0ed9": "Aktionen"
 }

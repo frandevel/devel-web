@@ -1355,5 +1355,10 @@
   "t8d9aabfd": "A lista de profissionais cabe inteira no ecrã, sem barra para deslizar para os lados. Editar, o PIN de picagem e dar baixa são ícones que mostram o nome ao passar o rato por cima, e em ecrãs mais estreitos o NIF, o email e a data de entrada consultam-se na ficha.",
   "tdc076687": "Documentos que se assinam ou se entregam",
   "t38ca60f0": "Cada página leva no rodapé que documento é, de quem e que página de quantas: os consentimentos, a informação de proteção de dados aos profissionais, os comprovativos de entrega de recibos de vencimento e certificados e o registo mensal de horário. Uma folha solta sabe-se de que documento é e vê-se se falta alguma.",
-  "ta96108cb": "Ao guardar uma marcação nova aparecia por um instante um aviso amarelo a dizer que se sobrepunha à marcação seguinte, que na verdade era ela própria. Já não aparece; o aviso a sério, quando uma marcação alongada se sobrepõe à seguinte, continua a aparecer e fica à vista."
+  "ta96108cb": "Ao guardar uma marcação nova aparecia por um instante um aviso amarelo a dizer que se sobrepunha à marcação seguinte, que na verdade era ela própria. Já não aparece; o aviso a sério, quando uma marcação alongada se sobrepõe à seguinte, continua a aparecer e fica à vista.",
+  "t187c02ab": "O título diz o dia que se está a ver, por exemplo «Agenda para domingo, 15 de novembro de 2026», sem gastar uma linha à parte.",
+  "te4a37e27": "marcado, ao descer pelas horas fica no topo toda a parte de cima da agenda: o título com o dia, os botões para mudar de vista e de dia, os filtros e os nomes das colunas.",
+  "tbd3952e9": "Fixar o cabeçalho ao deslocar",
+  "t9e98e4d8": "A lista de profissionais cabe inteira no ecrã, sem barra para deslocar para os lados. Editar, o PIN de picagem e dar baixa estão no botão «Ações» de cada linha, que fica âmbar se essa pessoa tiver o PIN bloqueado. Em ecrãs mais estreitos o NIF, o email e a data de entrada consultam-se na ficha.",
+  "t46845f5c": "Ao clicar num espaço da agenda passada a metade de um quarto de hora, a marcação era proposta no quarto seguinte. Agora propõe-se o quarto que o rato pisa, o mesmo que mostra a hora junto ao ponteiro."
 }

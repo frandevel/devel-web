@@ -1296,8 +1296,9 @@ footer{
   <h3 id="agenda-hora-inicio">La hora de inicio de un hueco</h3>
   <p>
     Cuando los tramos de la agenda son de menos de una hora y se pasa el ratón por un hueco libre, aparece
-    su hora de inicio, para saber a qué hora caería la cita si se pone ahí. Recepción ve las mismas horas de la
-    agenda que el resto del equipo.
+    su hora de inicio, para saber a qué hora caería la cita si se pone ahí. Es la del tramo que pisa el ratón,
+    aunque esté pasada su mitad, y es la misma con la que se abre la cita al pulsar. Recepción ve las mismas horas
+    de la agenda que el resto del equipo.
   </p>
 
   <h3 id="agenda-citas">Poner, mover y anular citas</h3>
@@ -1380,7 +1381,8 @@ footer{
     <li><strong>Quitar las anuladas de la vista:</strong> marque <em>Ocultar canceladas</em>, debajo de la
       cabecera. La agenda recuerda la casilla, así que la próxima vez la encontrará como la dejó.</li>
     <li><strong>Que no se pierdan los nombres al bajar:</strong> marque <em>Fijar la cabecera al bajar</em>, al lado.
-      La fila con el profesional o la cabina de cada columna se queda arriba mientras baja por las horas. Cada puesto
+      Mientras baja por las horas se queda arriba toda la parte de arriba de la agenda: el título con el día, los
+      botones para cambiar de vista y de día, los filtros y la fila con el profesional o la cabina de cada columna. Cada puesto
       la recuerda por su cuenta: en una pantalla grande puede no hacer falta.</li>
   </ul>
 
@@ -5503,7 +5505,7 @@ footer{
 
   <p>
     Cada profesional necesita un <strong>PIN</strong>, de cuatro cifras si el centro no decide otra cosa, que administración
-    le restablece en <em>Profesionales → PIN de fichaje</em>. Al pulsar su botón sale un teclado y lo teclea: con la última
+    le restablece en <em>Profesionales → Acciones → PIN de fichaje</em>. Al pulsar su botón sale un teclado y lo teclea: con la última
     cifra se abre lo suyo, sin pulsar nada más. Desde un ordenador el PIN también se teclea con el teclado, el
     numérico incluido: <em>Retroceso</em> borra la última cifra e <em>Intro</em> confirma. Es lo que hace que
     pulsar el botón de otro no sea fichar por otro, y sin ello la lista de nombres no probaría gran cosa ante
@@ -5560,7 +5562,7 @@ footer{
   </p>
 
   <h4 id="pin-provisional">PIN provisional</h4>
-  <span class="ruta">Personal → Profesionales → PIN de fichaje</span>
+  <span class="ruta">Personal → Profesionales → Acciones → PIN de fichaje</span>
 
   <p>
     Un PIN que <strong>restablece administración</strong> es <strong>provisional</strong>, porque lo conoce
@@ -5571,7 +5573,7 @@ footer{
   </p>
 
   <h4 id="pin-bloqueado">PIN bloqueado</h4>
-  <span class="ruta">Personal → Profesionales → PIN de fichaje</span>
+  <span class="ruta">Personal → Profesionales → Acciones → PIN de fichaje</span>
 
   <p>
     Si alguien escribe <strong>cinco veces seguidas un PIN equivocado</strong>, el PIN de esa persona queda
@@ -5596,7 +5598,7 @@ footer{
   </div>
 
   <p>
-    En <em>Profesionales</em>, el botón <em>PIN de fichaje</em> de quien lo tiene bloqueado sale con un aviso, y dentro
+    En <em>Profesionales</em>, el botón <em>Acciones</em> de quien tiene el PIN bloqueado sale en ámbar con un aviso, y en <em>PIN de fichaje</em>
     se ve <strong>«PIN bloqueado desde …»</strong> con el botón <strong>Desbloquear</strong>, que deja el mismo PIN y la
     cuenta a cero. Hace falta el permiso «Desbloquear el PIN de fichar», que de fábrica traen Dirección, RRHH y Personal
     (y el Administrador del sistema); sin él, la ventana dice qué permiso falta. <strong>Restablecer el PIN también lo

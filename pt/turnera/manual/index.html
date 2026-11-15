@@ -1232,7 +1232,7 @@ footer{
 
   <h3 id="agenda-hora-inicio">A hora de início de um espaço</h3>
   <p>
-    Quando os intervalos da agenda são de menos de uma hora e se passa o rato por um espaço livre, aparece a sua hora de início, para saber a que horas ficaria a marcação se a pusermos aí. A receção vê as mesmas horas da agenda que o resto da equipa.
+    Quando os intervalos da agenda são de menos de uma hora e se passa o rato por um espaço livre, aparece a sua hora de início, para saber a que horas começaria a marcação se for posta aí. É a do intervalo que o rato pisa, mesmo passada a sua metade, e é a mesma com que se abre a marcação ao clicar. A receção vê as mesmas horas da agenda que o resto da equipa.
   </p>
 
   <h3 id="agenda-citas">Marcar, mover e anular marcações</h3>
@@ -1283,7 +1283,7 @@ footer{
       ao anulá-la aparece uma quarta opção, <em>Criada por engano</em>. A marcação desaparece da agenda e não conta em nenhum relatório, porque nunca chegou a ser uma reserva. Passado esse tempo já não se oferece: é uma anulação de alguém, e é preciso dizer de quem. Embora desapareça da agenda, também fica registado quem a retirou e com que função, e quem tem a permissão <em>Relatório de marcações</em> vê-a com o botão <em>Anulações</em> no cabeçalho da agenda, que leva ao relatório de anulações com as criadas por engano nos últimos 30 dias.</li>
     <li><strong>Retirar as anuladas da vista:</strong> assinale <em>Ocultar canceladas</em>, por baixo do
       cabeçalho. A agenda recorda a opção, por isso da próxima vez encontrá-la-á como a deixou.</li>
-    <li><strong>Para não perder os nomes ao descer:</strong> assinale <em>Fixar o cabeçalho ao deslocar</em>, ao lado. A linha com o profissional ou a cabine de cada coluna fica no topo enquanto desce pelas horas. Cada posto lembra-se disso por si: num ecrã grande pode não fazer falta.</li>
+    <li><strong>Para não perder os nomes ao descer:</strong> assinale <em>Fixar o cabeçalho ao deslocar</em>, ao lado. Enquanto desce pelas horas, toda a parte de cima da agenda fica no topo: o título com o dia, os botões para mudar de vista e de dia, os filtros e a linha com o profissional ou a cabine de cada coluna. Cada posto lembra-se por si: num ecrã grande pode não ser preciso.</li>
   </ul>
 
   <p>
@@ -5020,7 +5020,7 @@ footer{
   <h4>O PIN</h4>
 
   <p>
-    Cada profissional precisa de um <strong>PIN</strong>, de quatro algarismos se o centro não decidir outra coisa, que a administração lhe repõe em <em>Profissionais → PIN de picagem</em>. Ao carregar no seu botão aparece um teclado e digita-o: com o último algarismo abre-se o que é seu, sem carregar em mais nada. Num computador, o PIN também se digita no teclado, incluindo o numérico: <em>Retrocesso</em> apaga o último algarismo e <em>Enter</em> confirma. É o que faz com que carregar no botão de outra pessoa não seja picar o ponto por ela, e sem isso a lista de nomes pouco provaria perante uma inspeção.
+    Cada profissional precisa de um <strong>PIN</strong>, de quatro algarismos se o centro não decidir outra coisa, que a administração lhe repõe em <em>Profissionais → Ações → PIN de picagem</em>. Ao carregar no seu botão aparece um teclado e digita-o: com o último algarismo abre-se o que é seu, sem carregar em mais nada. Num computador, o PIN também se digita no teclado, incluindo o numérico: <em>Retrocesso</em> apaga o último algarismo e <em>Enter</em> confirma. É o que faz com que carregar no botão de outra pessoa não seja picar o ponto por ela, e sem isso a lista de nomes pouco provaria perante uma inspeção.
   </p>
 
   <p>
@@ -5065,7 +5065,7 @@ footer{
   </p>
 
   <h4 id="pin-provisional">PIN provisório</h4>
-  <span class="ruta">Pessoal → Profissionais → PIN de picagem</span>
+  <span class="ruta">Pessoal → Profissionais → Ações → PIN de picagem</span>
 
   <p>
     Um PIN que <strong>a administração repõe</strong> é <strong>provisório</strong>, porque quem o repôs o conhece. Com ele a pessoa não pica o ponto, nem na web nem na aplicação dos profissionais, nem assina o resumo mensal: ao digitá-lo, o Turnera pede-lhe que <strong>escolher um seu</strong> (distinto do provisório e dos
@@ -5074,7 +5074,7 @@ footer{
   </p>
 
   <h4 id="pin-bloqueado">PIN bloqueado</h4>
-  <span class="ruta">Pessoal → Profissionais → PIN de picagem</span>
+  <span class="ruta">Pessoal → Profissionais → Ações → PIN de picagem</span>
 
   <p>
     Se alguém escrever <strong>cinco vezes seguidas um PIN errado</strong>, o PIN dessa pessoa fica
@@ -5090,7 +5090,8 @@ footer{
   </div>
 
   <p>
-    Em <em>Profissionais</em>, o botão <em>PIN de picagem</em> de quem o tem bloqueado aparece com um aviso, e dentro vê-se <strong>«PIN bloqueado desde …»</strong> com o botão <strong>Desbloquear</strong>, que mantém o mesmo PIN e põe a contagem a zero. É precisa a permissão «Desbloquear o PIN de picagem», que de origem trazem Direção, RH e Pessoal (e o Administrador do sistema); sem ela, a janela diz que permissão falta. <strong>Repor o PIN também o desbloqueia</strong> (e é provisório, como sempre que a administração o repõe). Cada bloqueio e cada desbloqueio ficam registados —quem o desbloqueou, quando e como— e esse rasto não se apaga.
+    Em <em>Profissionais</em>, o botão <em>Ações</em> de quem tem o PIN bloqueado fica âmbar com um aviso, e em <em>PIN de picagem</em>
+    aparece <strong>«PIN bloqueado desde …»</strong> com o botão <strong>Desbloquear</strong>, que mantém o mesmo PIN e põe a contagem a zero. É precisa a permissão «Desbloquear o PIN de picagem», que de origem trazem Direção, RH e Pessoal (e o Administrador do sistema); sem ela, a janela diz que permissão falta. <strong>Repor o PIN também o desbloqueia</strong> (e é provisório, como sempre que a administração o repõe). Cada bloqueio e cada desbloqueio ficam registados —quem o desbloqueou, quando e como— e esse rasto não se apaga.
   </p>
 
   <h4 id="firma-resumen">Assinatura do resumo mensal</h4>

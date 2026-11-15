@@ -4525,5 +4525,11 @@
   "t07f79a38": ": na lista (coluna «Código»), na ficha, no cartão da agenda, na pesquisa da marcação e da cobrança, nos valores em dívida e nos relatórios. O dos clientes que vieram de outra plataforma é o que tinham lá, e aos novos atribui-se o seguinte ao registá-los. E",
   "t94d8aacc": "Na ficha de um cliente estão os seus dados, o histórico de visitas, os pacotes de sessões e as notas. Por baixo do nome vê-se se",
   "tfdbca94e": "aceita comunicações comerciais",
-  "tdc559b01": ": a verde se aceita, a vermelho se não e a âmbar se não consta, e nesse caso não se lhe deve enviar nada. O histórico de visitas vem"
+  "tdc559b01": ": a verde se aceita, a vermelho se não e a âmbar se não consta, e nesse caso não se lhe deve enviar nada. O histórico de visitas vem",
+  "t896f4a1e": "Quando os intervalos da agenda são de menos de uma hora e se passa o rato por um espaço livre, aparece a sua hora de início, para saber a que horas começaria a marcação se for posta aí. É a do intervalo que o rato pisa, mesmo passada a sua metade, e é a mesma com que se abre a marcação ao clicar. A receção vê as mesmas horas da agenda que o resto da equipa.",
+  "t8895bc84": ", ao lado. Enquanto desce pelas horas, toda a parte de cima da agenda fica no topo: o título com o dia, os botões para mudar de vista e de dia, os filtros e a linha com o profissional ou a cabine de cada coluna. Cada posto lembra-se por si: num ecrã grande pode não ser preciso.",
+  "tb3131394": "Profissionais → Ações → PIN de picagem",
+  "t57d285d1": "Pessoal → Profissionais → Ações → PIN de picagem",
+  "t215a8668": "de quem tem o PIN bloqueado fica âmbar com um aviso, e em",
+  "t79bd0ed9": "Ações"
 }

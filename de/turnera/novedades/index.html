@@ -730,10 +730,15 @@ footer{
     <h2>15. November 2026</h2>
     <span class="version__sello">Neueste Version</span>
   </div>
-  <p class="version__numero">Version <span translate="no">1.17.0-f6ccf40</span></p>
+  <p class="version__numero">Version <span translate="no">1.17.0-8417560</span></p>
 
   <div class="grupo grupo--mejora">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Terminkalender</h4>
+    <ul>
+      <li>Der Titel nennt den angezeigten Tag, zum Beispiel «Terminkalender für Sonntag, den 15. November 2026», ohne eine eigene Zeile zu verbrauchen.</li>
+      <li>Mit <em>Spaltenköpfe beim Scrollen fixieren</em> aktiviert, bleibt beim Scrollen durch die Stunden der ganze obere Teil des Terminkalenders oben: der Titel mit dem Tag, die Schaltflächen zum Wechseln von Ansicht und Tag, die Filter und die Spaltennamen.</li>
+    </ul>
     <h4>Kunden</h4>
     <ul>
       <li>Die Kundenliste zeigt den Code jedes Kunden in der Spalte «Code» und lässt sich danach sortieren.</li>
@@ -742,7 +747,7 @@ footer{
     </ul>
     <h4>Fachkräfte</h4>
     <ul>
-      <li>Die Liste der Mitarbeitenden passt vollständig auf den Bildschirm, ohne seitliche Bildlaufleiste. Bearbeiten, Stempel-PIN und Abmelden sind Symbole, die ihren Namen zeigen, wenn Sie mit der Maus darüberfahren; auf schmaleren Bildschirmen stehen Steuernummer, E-Mail und Eintrittsdatum in der Karteikarte.</li>
+      <li>Die Liste der Fachkräfte passt ganz auf den Bildschirm, ohne seitliche Bildlaufleiste. Bearbeiten, die Stempel-PIN und Abmelden liegen in der Schaltfläche «Aktionen» jeder Zeile, die gelb erscheint, wenn die PIN dieser Person gesperrt ist. Auf schmaleren Bildschirmen stehen Steuernummer, E-Mail und Eintrittsdatum in der Kartei.</li>
     </ul>
     <h4>Dokumente, die unterschrieben oder ausgehändigt werden</h4>
     <ul>
@@ -753,6 +758,7 @@ footer{
   <div class="grupo grupo--arreglo">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Behobene Fehler</h3>
     <ul>
+      <li>Beim Klick in eine Lücke des Terminkalenders nach der Hälfte einer Viertelstunde wurde der Termin in der nächsten Viertelstunde vorgeschlagen. Jetzt wird die Viertelstunde unter der Maus vorgeschlagen, dieselbe, die die Uhrzeit neben dem Mauszeiger anzeigt.</li>
       <li>Beim Speichern eines neuen Termins blitzte kurz eine gelbe Warnung auf, er überschneide sich mit dem nächsten Termin, der in Wirklichkeit er selbst war. Sie erscheint nicht mehr; die echte Warnung, wenn ein verlängerter Termin in den nächsten hineinreicht, erscheint weiterhin und bleibt sichtbar.</li>
     </ul>
   </div>

@@ -1355,5 +1355,10 @@
   "t8d9aabfd": "The staff list fits on the screen, with no sideways scroll bar. Edit, clock-in PIN and deactivate are icons that show their name when you hover over them, and on narrower screens the tax ID, email and start date are in each person's record.",
   "tdc076687": "Documents that are signed or handed over",
   "t38ca60f0": "Every page carries a footer saying which document it is, whose, and which page of how many: consents, the data protection information for staff, receipts for payslips and certificates, and the monthly working-time record. A loose page can be traced to its document, and a missing page is noticed.",
-  "ta96108cb": "When saving a new appointment, a yellow warning flashed for a moment saying it overlapped the next appointment, which was actually itself. It no longer appears; the real warning, when a lengthened appointment runs into the next one, still appears and stays on screen."
+  "ta96108cb": "When saving a new appointment, a yellow warning flashed for a moment saying it overlapped the next appointment, which was actually itself. It no longer appears; the real warning, when a lengthened appointment runs into the next one, still appears and stays on screen.",
+  "t187c02ab": "The title says which day you are looking at, for example «Agenda for Sunday, November 15, 2026», without using a separate line.",
+  "te4a37e27": "ticked, the whole top part of the diary stays at the top while you scroll through the hours: the title with the day, the buttons to change view and day, the filters and the column names.",
+  "tbd3952e9": "Keep the column headers in view",
+  "t9e98e4d8": "The professionals list fits on the screen, with no sideways scroll bar. Edit, the clocking PIN and deregistering are in each row's «Actions» button, which turns amber if that person's PIN is locked. On narrower screens the tax ID, email and start date are shown in the record.",
+  "t46845f5c": "Clicking a diary slot past the halfway point of a quarter of an hour proposed the appointment in the next quarter. Now it proposes the quarter under the mouse, the same one shown by the time next to the pointer."
 }
