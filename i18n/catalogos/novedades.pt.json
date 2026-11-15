@@ -1346,5 +1346,14 @@
   "tc4c35019": "Nos produtos aparece também quantas unidades restam no centro em que se está, ou «Sem stock» a vermelho se não restar nenhuma.",
   "t36b08696": "Nova caixa «Fixar o cabeçalho ao deslocar», junto a «Ocultar canceladas»: a linha com o profissional ou a cabine de cada coluna fica no topo enquanto se desce pelas horas. Cada posto lembra-se disso por si.",
   "tc1dce014": "Na vista semanal de um profissional já não aparecem os períodos fechados de uma cabine, tal como na vista do dia por profissional.",
-  "td6197700": "Se dois períodos fechados começavam à mesma hora na mesma coluna, o cadeado de um tapava o do outro e não se podia reabrir. Agora o segundo afasta-se para a esquerda."
+  "td6197700": "Se dois períodos fechados começavam à mesma hora na mesma coluna, o cadeado de um tapava o do outro e não se podia reabrir. Agora o segundo afasta-se para a esquerda.",
+  "t433ae595": "15 de novembro de 2026",
+  "t2801ff2b": "1.17.0-f6ccf40",
+  "t688df296": "A lista de clientes mostra o código de cada cliente na coluna «Código», e pode ser ordenada por ele.",
+  "t72071c31": "Se um número for o código de um cliente e, ao mesmo tempo, o número que outro cliente trazia de outra plataforma, a pesquisa mostra os dois, primeiro o do código, para não abrir a ficha errada sem dar por isso.",
+  "tb07a51ff": "Assim que se abre a ficha de um cliente vê-se se aceita comunicações comerciais: a verde se aceita, a vermelho se não aceita e a âmbar se não consta (e nesse caso não se lhe deve enviar nada).",
+  "t8d9aabfd": "A lista de profissionais cabe inteira no ecrã, sem barra para deslizar para os lados. Editar, o PIN de picagem e dar baixa são ícones que mostram o nome ao passar o rato por cima, e em ecrãs mais estreitos o NIF, o email e a data de entrada consultam-se na ficha.",
+  "tdc076687": "Documentos que se assinam ou se entregam",
+  "t38ca60f0": "Cada página leva no rodapé que documento é, de quem e que página de quantas: os consentimentos, a informação de proteção de dados aos profissionais, os comprovativos de entrega de recibos de vencimento e certificados e o registo mensal de horário. Uma folha solta sabe-se de que documento é e vê-se se falta alguma.",
+  "ta96108cb": "Ao guardar uma marcação nova aparecia por um instante um aviso amarelo a dizer que se sobrepunha à marcação seguinte, que na verdade era ela própria. Já não aparece; o aviso a sério, quando uma marcação alongada se sobrepõe à seguinte, continua a aparecer e fica à vista."
 }

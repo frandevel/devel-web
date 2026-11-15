@@ -1346,5 +1346,14 @@
   "tc4c35019": "Bei Produkten steht auch, wie viele Stück im aktuellen Zentrum noch vorrätig sind, oder „Nicht auf Lager“ in Rot, wenn keines mehr da ist.",
   "t36b08696": "Neues Kästchen „Spaltenköpfe beim Scrollen fixieren“ neben „Stornierte ausblenden“: Die Zeile mit der Fachkraft oder dem Raum jeder Spalte bleibt oben stehen, während man durch die Stunden nach unten scrollt. Jeder Arbeitsplatz merkt sich das für sich.",
   "tc1dce014": "In der Wochenansicht einer Fachkraft erscheinen die gesperrten Zeiträume eines Raums nicht mehr, genau wie in der Tagesansicht nach Fachkraft.",
-  "td6197700": "Begannen zwei gesperrte Zeiträume in derselben Spalte zur gleichen Zeit, verdeckte das Schloss des einen das des anderen, und er ließ sich nicht wieder öffnen. Jetzt rückt der zweite nach links."
+  "td6197700": "Begannen zwei gesperrte Zeiträume in derselben Spalte zur gleichen Zeit, verdeckte das Schloss des einen das des anderen, und er ließ sich nicht wieder öffnen. Jetzt rückt der zweite nach links.",
+  "t433ae595": "15. November 2026",
+  "t2801ff2b": "1.17.0-f6ccf40",
+  "t688df296": "Die Kundenliste zeigt den Code jedes Kunden in der Spalte «Code» und lässt sich danach sortieren.",
+  "t72071c31": "Ist eine Nummer der Code eines Kunden und zugleich die Nummer, die ein anderer Kunde aus einer anderen Plattform mitgebracht hat, zeigt die Suche beide an, zuerst den mit diesem Code, damit niemand unbemerkt die falsche Karteikarte öffnet.",
+  "tb07a51ff": "Gleich beim Öffnen der Karteikarte eines Kunden sehen Sie, ob er Werbemitteilungen akzeptiert: grün, wenn ja, rot, wenn nein, und gelb, wenn es nicht erfasst ist (dann darf ihm nichts geschickt werden).",
+  "t8d9aabfd": "Die Liste der Mitarbeitenden passt vollständig auf den Bildschirm, ohne seitliche Bildlaufleiste. Bearbeiten, Stempel-PIN und Abmelden sind Symbole, die ihren Namen zeigen, wenn Sie mit der Maus darüberfahren; auf schmaleren Bildschirmen stehen Steuernummer, E-Mail und Eintrittsdatum in der Karteikarte.",
+  "tdc076687": "Dokumente, die unterschrieben oder ausgehändigt werden",
+  "t38ca60f0": "Jede Seite trägt in der Fußzeile, um welches Dokument es sich handelt, von wem und welche Seite von wie vielen: Einwilligungen, die Datenschutzinformation für Mitarbeitende, die Empfangsbestätigungen für Gehaltsabrechnungen und Bescheinigungen und die monatliche Arbeitszeiterfassung. Ein loses Blatt lässt sich seinem Dokument zuordnen, und man sieht, ob eines fehlt.",
+  "ta96108cb": "Beim Speichern eines neuen Termins blitzte kurz eine gelbe Warnung auf, er überschneide sich mit dem nächsten Termin, der in Wirklichkeit er selbst war. Sie erscheint nicht mehr; die echte Warnung, wenn ein verlängerter Termin in den nächsten hineinreicht, erscheint weiterhin und bleibt sichtbar."
 }

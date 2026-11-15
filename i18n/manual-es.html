@@ -1729,7 +1729,9 @@ footer{
     Arribas, y «ana gar» encuentra a Ana García. El teléfono y el NIF se encuentran con cualquier trozo; el número
     de cliente va exacto. Si escribe <strong>solo cifras y son menos de 9</strong>, el buscador entiende que es un número de
     cliente (un teléfono tiene 9): si hay un cliente con ese número, le sale <strong>únicamente ese cliente</strong>, sin los
-    que lo llevan dentro del teléfono o del NIF; y si nadie lo tiene, busca como siempre. Con 9 cifras o más, o con
+    que lo llevan dentro del teléfono o del NIF. Si ese número es el de un cliente y, a la vez, el que otro cliente traía
+    de otra plataforma, <strong>salen los dos</strong>, primero el que tiene ese número en Turnera, para no abrir la ficha
+    equivocada sin darse cuenta. Y si nadie lo tiene, busca como siempre. Con 9 cifras o más, o con
     letras, no cambia nada.
     <strong>Si lo escrito son sobre todo cifras</strong> (tres o más, y al menos la mitad del texto), busca además por
     teléfono, móvil y NIF comparando solo las cifras: «666123456» encuentra un teléfono guardado como «666 12-34 56», y el
@@ -1738,7 +1740,7 @@ footer{
   </p>
 
   <p>
-    <strong>El número de cliente sale en todas partes</strong>: en la lista, en la ficha, en la tarjeta de la
+    <strong>El número de cliente sale en todas partes</strong>: en la lista (columna «Código»), en la ficha, en la tarjeta de la
     agenda, en el buscador de la cita y del cobro, en los cobros pendientes y en los informes. El de los clientes
     que vinieron de otra plataforma es el que tenían allí, y a los nuevos se les da el siguiente al darlos de alta. Y
     <strong>el nombre de un cliente en cualquier listado es un enlace a su ficha</strong>, igual que en el
@@ -1746,7 +1748,9 @@ footer{
   </p>
 
   <p>
-    En la ficha de un cliente están sus datos, su historial de visitas, sus bonos y sus notas. El historial de
+    En la ficha de un cliente están sus datos, su historial de visitas, sus bonos y sus notas. Debajo del nombre se ve
+    si <strong>acepta comunicaciones comerciales</strong>: en verde si las acepta, en rojo si no y en ámbar si no consta,
+    y entonces no se le deben enviar. El historial de
     visitas va <strong>antes que la documentación firmada</strong>, porque es lo que más se consulta.
     <strong>El teléfono y el correo son enlaces</strong>: al pulsarlos se abre el marcador o el programa de correo,
     sin copiar ni pegar nada. Ocurre en toda la aplicación —también en profesionales, proveedores y

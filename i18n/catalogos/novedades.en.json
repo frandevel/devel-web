@@ -1346,5 +1346,14 @@
   "tc4c35019": "Products also show how many units are left at the centre you are in, or «Out of stock» in red if there are none.",
   "t36b08696": "New «Keep the column headers in view» box, next to «Hide cancelled»: the row with the professional or the room of each column stays at the top while you scroll down through the hours. Each workstation remembers it on its own.",
   "tc1dce014": "The week view of a professional no longer shows the closed stretches of a room, just like the day view by professional.",
-  "td6197700": "If two closed stretches started at the same time in the same column, the padlock of one covered the other and it could not be reopened. Now the second one moves to the left."
+  "td6197700": "If two closed stretches started at the same time in the same column, the padlock of one covered the other and it could not be reopened. Now the second one moves to the left.",
+  "t433ae595": "15 November 2026",
+  "t2801ff2b": "1.17.0-f6ccf40",
+  "t688df296": "The customer list shows each customer's code in the «Code» column, and it can be sorted by it.",
+  "t72071c31": "If a number is one customer's code and, at the same time, the number another customer brought from another platform, the search shows both, the one with that code first, so nobody opens the wrong record without noticing.",
+  "tb07a51ff": "As soon as you open a customer's record you can see whether they accept marketing communications: green if they do, red if they don't and amber if it isn't recorded (in which case nothing should be sent to them).",
+  "t8d9aabfd": "The staff list fits on the screen, with no sideways scroll bar. Edit, clock-in PIN and deactivate are icons that show their name when you hover over them, and on narrower screens the tax ID, email and start date are in each person's record.",
+  "tdc076687": "Documents that are signed or handed over",
+  "t38ca60f0": "Every page carries a footer saying which document it is, whose, and which page of how many: consents, the data protection information for staff, receipts for payslips and certificates, and the monthly working-time record. A loose page can be traced to its document, and a missing page is noticed.",
+  "ta96108cb": "When saving a new appointment, a yellow warning flashed for a moment saying it overlapped the next appointment, which was actually itself. It no longer appears; the real warning, when a lengthened appointment runs into the next one, still appears and stays on screen."
 }

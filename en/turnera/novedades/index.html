@@ -725,10 +725,42 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Bugs fixed</strong>: what failed, and no longer does.</span></li>
 </ul>
 
+<section id="2026-11-15" class="version">
+  <div class="version__cabecera">
+    <h2>15 November 2026</h2>
+    <span class="version__sello">Latest release</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.17.0-f6ccf40</span></p>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Improvements</h3>
+    <h4>Customers</h4>
+    <ul>
+      <li>The customer list shows each customer's code in the «Code» column, and it can be sorted by it.</li>
+      <li>If a number is one customer's code and, at the same time, the number another customer brought from another platform, the search shows both, the one with that code first, so nobody opens the wrong record without noticing.</li>
+      <li>As soon as you open a customer's record you can see whether they accept marketing communications: green if they do, red if they don't and amber if it isn't recorded (in which case nothing should be sent to them).</li>
+    </ul>
+    <h4>Professionals</h4>
+    <ul>
+      <li>The staff list fits on the screen, with no sideways scroll bar. Edit, clock-in PIN and deactivate are icons that show their name when you hover over them, and on narrower screens the tax ID, email and start date are in each person's record.</li>
+    </ul>
+    <h4>Documents that are signed or handed over</h4>
+    <ul>
+      <li>Every page carries a footer saying which document it is, whose, and which page of how many: consents, the data protection information for staff, receipts for payslips and certificates, and the monthly working-time record. A loose page can be traced to its document, and a missing page is noticed.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Bugs fixed</h3>
+    <ul>
+      <li>When saving a new appointment, a yellow warning flashed for a moment saying it overlapped the next appointment, which was actually itself. It no longer appears; the real warning, when a lengthened appointment runs into the next one, still appears and stays on screen.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-13" class="version">
   <div class="version__cabecera">
     <h2>13 November 2026</h2>
-    <span class="version__sello">Latest release</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.16.0-060bc88</span></p>
 
