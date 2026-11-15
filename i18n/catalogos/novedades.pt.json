@@ -1360,5 +1360,9 @@
   "te4a37e27": "marcado, ao descer pelas horas fica no topo toda a parte de cima da agenda: o título com o dia, os botões para mudar de vista e de dia, os filtros e os nomes das colunas.",
   "tbd3952e9": "Fixar o cabeçalho ao deslocar",
   "t9e98e4d8": "A lista de profissionais cabe inteira no ecrã, sem barra para deslocar para os lados. Editar, o PIN de picagem e dar baixa estão no botão «Ações» de cada linha, que fica âmbar se essa pessoa tiver o PIN bloqueado. Em ecrãs mais estreitos o NIF, o email e a data de entrada consultam-se na ficha.",
-  "t46845f5c": "Ao clicar num espaço da agenda passada a metade de um quarto de hora, a marcação era proposta no quarto seguinte. Agora propõe-se o quarto que o rato pisa, o mesmo que mostra a hora junto ao ponteiro."
+  "t46845f5c": "Ao clicar num espaço da agenda passada a metade de um quarto de hora, a marcação era proposta no quarto seguinte. Agora propõe-se o quarto que o rato pisa, o mesmo que mostra a hora junto ao ponteiro.",
+  "tcd668a78": "16 de novembro de 2026",
+  "tbfbcf922": "1.17.0-ed4b05c",
+  "t549f1850": "O pacote de sessões dado à mão a partir da ficha do cliente escolhe-se agora da tabela de preços, como no TPV, e só entre os ativos. Traz o seu grupo, as sessões e a validade, que se podem alterar antes de guardar. Antes tinha de se escolher um grupo, a lista não os mostrava todos e apareciam os de promoções já retiradas.",
+  "tda2fa5a9": "Ao criar ou corrigir um pacote de sessões à mão, a validade ficava guardada um dia depois da data escolhida. Agora termina no dia escolhido."
 }

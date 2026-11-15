@@ -1506,7 +1506,7 @@
   "t38f6dda4": "(lo normal): el bono se crea solo al cobrarlo en el TPV.",
   "ta2368304": "Al vender un servicio marcado como bono",
   "t55cbb1e3": "en la ficha del cliente, en el apartado de bonos,",
-  "ta5b99bca": "crea uno sin\n      cobrarlo, diciendo el grupo, las sesiones y cuándo caduca. Solo lo ve quien tiene el permiso",
+  "t2c82124d": "crea uno sin\n      cobrarlo. Se elige el bono de la tarifa, entre los que están activos, y trae su grupo, sus sesiones y su\n      caducidad; las sesiones y la fecha se pueden cambiar antes de guardar. Solo lo ve quien tiene el permiso",
   "t32844b8c": "(de fábrica, el administrador y Dirección); Recepción no.",
   "t31149a42": "A mano:",
   "t5dc3f82d": "Nuevo bono",

@@ -4531,5 +4531,6 @@
   "tb3131394": "Fachkräfte → Aktionen → Stempel-PIN",
   "t57d285d1": "Personal → Mitarbeitende → Aktionen → Stempel-PIN",
   "t215a8668": "von jemandem mit gesperrter PIN erscheint gelb mit einem Hinweis, und unter",
-  "t79bd0ed9": "Aktionen"
+  "t79bd0ed9": "Aktionen",
+  "t2c82124d": "legt eine an, ohne sie zu kassieren. Man wählt die Mehrfachkarte aus der Preisliste, unter den aktiven, und sie bringt ihre Gruppe, ihre Sitzungen und ihr Ablaufdatum mit; Sitzungen und Datum lassen sich vor dem Speichern ändern. Sichtbar ist das nur für Personen mit der Berechtigung"
 }

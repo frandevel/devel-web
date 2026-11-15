@@ -4531,5 +4531,6 @@
   "tb3131394": "Professionals → Actions → Clocking PIN",
   "t57d285d1": "Staff → Professionals → Actions → Clocking PIN",
   "t215a8668": "of anyone whose PIN is locked turns amber with a warning, and in",
-  "t79bd0ed9": "Actions"
+  "t79bd0ed9": "Actions",
+  "t2c82124d": "creates one without charging for it. You choose the voucher from the price list, among the active ones, and it brings its group, sessions and expiry date; the sessions and the date can be changed before saving. It is only visible to whoever has the permission"
 }

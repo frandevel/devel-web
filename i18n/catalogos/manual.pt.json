@@ -4531,5 +4531,6 @@
   "tb3131394": "Profissionais → Ações → PIN de picagem",
   "t57d285d1": "Pessoal → Profissionais → Ações → PIN de picagem",
   "t215a8668": "de quem tem o PIN bloqueado fica âmbar com um aviso, e em",
-  "t79bd0ed9": "Ações"
+  "t79bd0ed9": "Ações",
+  "t2c82124d": "cria um sem o cobrar. Escolhe-se o pacote de sessões da tabela de preços, entre os que estão ativos, e traz o seu grupo, as sessões e a validade; as sessões e a data podem ser alteradas antes de guardar. Só o vê quem tem a permissão"
 }

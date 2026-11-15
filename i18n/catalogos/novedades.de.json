@@ -1360,5 +1360,9 @@
   "te4a37e27": "aktiviert, bleibt beim Scrollen durch die Stunden der ganze obere Teil des Terminkalenders oben: der Titel mit dem Tag, die Schaltflächen zum Wechseln von Ansicht und Tag, die Filter und die Spaltennamen.",
   "tbd3952e9": "Spaltenköpfe beim Scrollen fixieren",
   "t9e98e4d8": "Die Liste der Fachkräfte passt ganz auf den Bildschirm, ohne seitliche Bildlaufleiste. Bearbeiten, die Stempel-PIN und Abmelden liegen in der Schaltfläche «Aktionen» jeder Zeile, die gelb erscheint, wenn die PIN dieser Person gesperrt ist. Auf schmaleren Bildschirmen stehen Steuernummer, E-Mail und Eintrittsdatum in der Kartei.",
-  "t46845f5c": "Beim Klick in eine Lücke des Terminkalenders nach der Hälfte einer Viertelstunde wurde der Termin in der nächsten Viertelstunde vorgeschlagen. Jetzt wird die Viertelstunde unter der Maus vorgeschlagen, dieselbe, die die Uhrzeit neben dem Mauszeiger anzeigt."
+  "t46845f5c": "Beim Klick in eine Lücke des Terminkalenders nach der Hälfte einer Viertelstunde wurde der Termin in der nächsten Viertelstunde vorgeschlagen. Jetzt wird die Viertelstunde unter der Maus vorgeschlagen, dieselbe, die die Uhrzeit neben dem Mauszeiger anzeigt.",
+  "tcd668a78": "16. November 2026",
+  "tbfbcf922": "1.17.0-ed4b05c",
+  "t549f1850": "Eine von Hand in der Kundenakte vergebene Mehrfachkarte wird jetzt aus der Preisliste gewählt, wie an der Kasse, und nur unter den aktiven. Sie bringt Gruppe, Sitzungen und Ablaufdatum mit, die sich vor dem Speichern ändern lassen. Vorher musste man eine Gruppe wählen, die Liste zeigte nicht alle und es erschienen die von eingestellten Aktionen.",
+  "tda2fa5a9": "Beim Anlegen oder Korrigieren einer Mehrfachkarte von Hand wurde das Ablaufdatum einen Tag nach dem gewählten Datum gespeichert. Jetzt läuft sie am gewählten Tag ab."
 }

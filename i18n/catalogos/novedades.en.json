@@ -1360,5 +1360,9 @@
   "te4a37e27": "ticked, the whole top part of the diary stays at the top while you scroll through the hours: the title with the day, the buttons to change view and day, the filters and the column names.",
   "tbd3952e9": "Keep the column headers in view",
   "t9e98e4d8": "The professionals list fits on the screen, with no sideways scroll bar. Edit, the clocking PIN and deregistering are in each row's «Actions» button, which turns amber if that person's PIN is locked. On narrower screens the tax ID, email and start date are shown in the record.",
-  "t46845f5c": "Clicking a diary slot past the halfway point of a quarter of an hour proposed the appointment in the next quarter. Now it proposes the quarter under the mouse, the same one shown by the time next to the pointer."
+  "t46845f5c": "Clicking a diary slot past the halfway point of a quarter of an hour proposed the appointment in the next quarter. Now it proposes the quarter under the mouse, the same one shown by the time next to the pointer.",
+  "tcd668a78": "16 November 2026",
+  "tbfbcf922": "1.17.0-ed4b05c",
+  "t549f1850": "A voucher given by hand from the customer record is now chosen from the price list, as in the POS, and only among active vouchers. It brings its group, sessions and expiry date, which can be changed before saving. Before, you had to choose a group, the list did not show them all and vouchers from withdrawn promotions appeared.",
+  "tda2fa5a9": "When creating or correcting a voucher by hand, the expiry date was saved one day after the date chosen. Now it expires on the day chosen."
 }
