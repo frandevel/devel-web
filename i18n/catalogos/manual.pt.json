@@ -4587,5 +4587,6 @@
   "t464ffc6f": ": marque nela",
   "t8b832b3a": ". Ao assinar, «Sim» regista na ficha que aceita comunicações comerciais e «Não» retira-o. Se essa assinatura for retirada, a ficha fica em «Não aceita». Só uma pergunta por modelo o pode fazer.",
   "t9ade1a24": "atualizar a ficha do cliente",
-  "t054feed1": "Ao assinar, atualiza a ficha: aceita comunicações comerciais"
+  "t054feed1": "Ao assinar, atualiza a ficha: aceita comunicações comerciais",
+  "tc43297b2": "Para encontrar os cartões de um cliente, escolha-o acima da lista como nos outros ecrãs, por nome, código ou telefone, e aparecem só os que comprou. Ao lado há um texto para pesquisar pelo código do cartão ou pelo nome de quem o recebe: quem o recebe não tem ficha ligada, por isso encontra-se pelo nome."
 }

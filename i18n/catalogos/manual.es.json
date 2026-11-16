@@ -1420,6 +1420,7 @@
   "t8eff1b77": "RG-7K2M-Q9TX",
   "t6d7683d2": "Imprimir",
   "taf6ee040": "Enviar por WhatsApp",
+  "tc43297b2": "Para encontrar las tarjetas de un cliente, se elige arriba de la lista como en el resto de pantallas, por\n    nombre, código o teléfono, y salen solo las que compró. Al lado hay un texto para buscar por el código de\n    la tarjeta o por el nombre de para quién es: la persona que la recibe no tiene ficha enlazada, así que a\n    ella se la encuentra por el nombre.",
   "t23eba5b3": "Vender una tarjeta regalo. La casilla de abajo oculta el importe en el correo y en la tarjeta impresa.",
   "td06d6fb8": "Si el regalo es una sorpresa y no se quiere que se sepa lo que ha costado, se marca",
   "td06eef17": ": saldrán solo la dedicatoria y el código, sin decir\n    cuánto vale. El saldo sigue siendo el mismo para el centro, y al gastarla el TPV lo enseña como siempre.",

@@ -4587,5 +4587,6 @@
   "t464ffc6f": ": Aktivieren Sie dort",
   "t8b832b3a": ". Beim Unterschreiben vermerkt „Ja“ in der Kundenkarte, dass Werbemitteilungen akzeptiert werden, und „Nein“ entfernt es. Wird diese Unterschrift widerrufen, steht die Karte auf „Akzeptiert nicht“. Das kann nur eine Frage pro Vorlage.",
   "t9ade1a24": "die Kundenkarte aktualisieren",
-  "t054feed1": "Beim Unterschreiben die Kundenkarte aktualisieren: akzeptiert Werbemitteilungen"
+  "t054feed1": "Beim Unterschreiben die Kundenkarte aktualisieren: akzeptiert Werbemitteilungen",
+  "tc43297b2": "Um die Karten eines Kunden zu finden, wählen Sie ihn über der Liste wie in den anderen Bildschirmen nach Name, Nummer oder Telefon aus; es erscheinen nur die Karten, die er gekauft hat. Daneben sucht ein Textfeld nach Kartencode oder nach der beschenkten Person: Wer die Karte erhält, hat keine verknüpfte Kundenkarte und wird daher über den Namen gefunden."
 }

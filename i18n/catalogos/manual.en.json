@@ -4587,5 +4587,6 @@
   "t464ffc6f": ": tick",
   "t8b832b3a": " on it. When signed, \"Yes\" records in the file that the customer accepts marketing communications and \"No\" removes it. If that signature is withdrawn, the file is set to \"Does not accept\". Only one question per template can do this.",
   "t9ade1a24": "update the customer's file",
-  "t054feed1": "When signed, update the customer record: accepts marketing communications"
+  "t054feed1": "When signed, update the customer record: accepts marketing communications",
+  "tc43297b2": "To find a customer's cards, choose the customer above the list as in the other screens, by name, code or phone, and only the cards they bought are shown. Next to it, a text box searches by card code or by who the card is for: the person who receives it has no linked file, so they are found by name."
 }
