@@ -330,6 +330,12 @@ section{padding-block:clamp(3.2rem,6vw,5.5rem)}
   :root:not([data-theme="light"]) .aviso[data-estado="ok"]{color:#66C6A6}
 }
 .legal{font-size:.78rem;line-height:1.5;color:var(--steel);margin-top:.2rem}
+.rithmic{display:grid;gap:1.6rem 3rem;margin-top:1.6rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));align-items:start}
+.rithmic p{margin:0 0 1rem}
+.rithmic__marcas{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.2rem 1.4rem}
+.rithmic__logos{display:flex;flex-wrap:wrap;gap:1rem 1.6rem;align-items:center}
+.rithmic__logos img{height:29px;width:auto}
+.rithmic__avisos{margin:1rem 0 0;padding-left:1.1rem;font-size:.78rem;line-height:1.5;color:#4a6078}
 
 footer{
   border-top:1px solid var(--line);
@@ -813,6 +819,33 @@ footer{
               <div class="faq__respuesta"><p>{{t3bf0a58a}} <a href="mailto:hola@devel.es">{{t7ea5da81}}</a>{{t7b71fdbe}}</p></div>
             </details>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rithmic">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">{{tf65f7097}}</p>
+        <h2>{{tb8fbf45d}}</h2>
+      </div>
+      <div class="rithmic">
+        <div>
+          <p>{{t3bdc449c}}</p>
+          <p>{{tc246f07e}}</p>
+        </div>
+        <div class="rithmic__marcas">
+          <div class="rithmic__logos">
+            <img src="/tradeguncharts/rithmic/trading-platform-by-rithmic.png" alt="{{t1d41a532}}" width="216" height="29" loading="lazy">
+            <img src="/tradeguncharts/rithmic/powered-by-omne.png" alt="{{tf66ea5cb}}" width="170" height="35" loading="lazy">
+          </div>
+          <ul class="rithmic__avisos">
+            <li>{{te19402e0}}</li>
+            <li>{{tb2f3bb0c}}</li>
+            <li>{{t3a44cd70}}</li>
+            <li>{{t7243422f}}</li>
+          </ul>
         </div>
       </div>
     </div>

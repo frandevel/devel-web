@@ -334,6 +334,12 @@ section{padding-block:clamp(3.2rem,6vw,5.5rem)}
   :root:not([data-theme="light"]) .aviso[data-estado="ok"]{color:#66C6A6}
 }
 .legal{font-size:.78rem;line-height:1.5;color:var(--steel);margin-top:.2rem}
+.rithmic{display:grid;gap:1.6rem 3rem;margin-top:1.6rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));align-items:start}
+.rithmic p{margin:0 0 1rem}
+.rithmic__marcas{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.2rem 1.4rem}
+.rithmic__logos{display:flex;flex-wrap:wrap;gap:1rem 1.6rem;align-items:center}
+.rithmic__logos img{height:29px;width:auto}
+.rithmic__avisos{margin:1rem 0 0;padding-left:1.1rem;font-size:.78rem;line-height:1.5;color:#4a6078}
 
 footer{
   border-top:1px solid var(--line);
@@ -922,6 +928,33 @@ footer{
               <div class="faq__respuesta"><p>Yes, by email at <a href="mailto:hola@devel.es">hola@devel.es</a>. You get an answer from the person who builds it, who uses it every day to trade.</p></div>
             </details>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rithmic">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Rithmic connection</p>
+        <h2>Your Rithmic accounts, in certification.</h2>
+      </div>
+      <div class="rithmic">
+        <div>
+          <p>TradegunCharts connects to Rithmic through R | Protocol API: market data with depth by order, manual and automated orders, positions and P&L for every account, and fill history for the trade journal. It works with accounts from any FCM, IB or prop firm that trades through Rithmic, and you can connect several at once.</p>
+          <p>The connection is going through Rithmic's certification and will be enabled as soon as Rithmic approves it.</p>
+        </div>
+        <div class="rithmic__marcas">
+          <div class="rithmic__logos">
+            <img src="/tradeguncharts/rithmic/trading-platform-by-rithmic.png" alt="Trading Platform by Rithmic" width="216" height="29" loading="lazy">
+            <img src="/tradeguncharts/rithmic/powered-by-omne.png" alt="Powered by OMNE" width="170" height="35" loading="lazy">
+          </div>
+          <ul class="rithmic__avisos">
+            <li>The R | Protocol API™ software is Copyright © 2026 by Rithmic, LLC. All rights reserved.</li>
+            <li>Trading Platform by Rithmic™ is a trademark of Rithmic, LLC. All rights reserved.</li>
+            <li>The OMNE™ software is Copyright © 2026 by Omnesys, LLC and Omnesys Technologies, Inc. All rights reserved.</li>
+            <li>Powered by OMNE™ is a trademark of Omnesys, LLC and Omnesys Technologies, Inc. All rights reserved.</li>
+          </ul>
         </div>
       </div>
     </div>

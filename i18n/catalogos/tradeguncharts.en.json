@@ -218,9 +218,19 @@
   "t5fc8e5fe": "curl -fsSL https://descargas.tradegun.devel.es/macos/install.sh | sh -s -- beta",
   "td9b882d5": "Footprint, an options chain and execution in a single platform for Windows, macOS and Linux, built by someone who trades with it every day. Light, fast, and made for traders and family offices who work with futures, options and hedging.",
   "t8398ce94": "macOS · Intel and Apple Silicon",
-  "t2c00416c": "Windows 10 or 11, 64-bit, macOS 11 or later (Intel and Apple Silicon Macs; the Apple Silicon version is still experimental), or 64-bit Linux based on Ubuntu (Ubuntu, Zorin OS and other derivatives). The installer includes everything it needs and updates install themselves. The application\u0027s interface is in Spanish.",
+  "t2c00416c": "Windows 10 or 11, 64-bit, macOS 11 or later (Intel and Apple Silicon Macs; the Apple Silicon version is still experimental), or 64-bit Linux based on Ubuntu (Ubuntu, Zorin OS and other derivatives). The installer includes everything it needs and updates install themselves. The application's interface is in Spanish.",
   "t1bd4616b": "Windows, macOS and Linux platform for professional derivatives trading: footprint charts, trading from the chart, order-flow indicators, option chain and phone alerts. With Interactive Brokers (Rithmic coming soon). Essential plan free; Pro and Desk from €19 a month, with a 14-day trial.",
   "t1d9cea6e": "Footprint charts, an options chain and execution through Interactive Brokers, in a single platform for Windows, macOS and Linux.",
   "t3db66e77": "It updates itself, as on Windows and Linux",
-  "t06f75dcc": "curl -fsSL https://descargas.tradegun.devel.es/macos/install.sh | sh"
+  "t06f75dcc": "curl -fsSL https://descargas.tradegun.devel.es/macos/install.sh | sh",
+  "tf65f7097": "Rithmic connection",
+  "tb8fbf45d": "Your Rithmic accounts, in certification.",
+  "t3bdc449c": "TradegunCharts connects to Rithmic through R | Protocol API: market data with depth by order, manual and automated orders, positions and P&L for every account, and fill history for the trade journal. It works with accounts from any FCM, IB or prop firm that trades through Rithmic, and you can connect several at once.",
+  "tc246f07e": "The connection is going through Rithmic's certification and will be enabled as soon as Rithmic approves it.",
+  "te19402e0": "The R | Protocol API™ software is Copyright © 2026 by Rithmic, LLC. All rights reserved.",
+  "tb2f3bb0c": "Trading Platform by Rithmic™ is a trademark of Rithmic, LLC. All rights reserved.",
+  "t3a44cd70": "The OMNE™ software is Copyright © 2026 by Omnesys, LLC and Omnesys Technologies, Inc. All rights reserved.",
+  "t7243422f": "Powered by OMNE™ is a trademark of Omnesys, LLC and Omnesys Technologies, Inc. All rights reserved.",
+  "t1d41a532": "Trading Platform by Rithmic",
+  "tf66ea5cb": "Powered by OMNE"
 }

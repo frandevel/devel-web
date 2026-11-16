@@ -150,6 +150,14 @@
   "t3bf0a58a": "Sí, por correo en",
   "t7b71fdbe": ". Te contesta quien la desarrolla, que la usa a diario para operar.",
   "t7ea5da81": "hola@devel.es",
+  "tf65f7097": "Conexión con Rithmic",
+  "tb8fbf45d": "Tus cuentas de Rithmic, en certificación.",
+  "t3bdc449c": "TradegunCharts se conecta a Rithmic con R | Protocol API: datos de mercado con profundidad orden a orden, órdenes manuales y automáticas, posiciones y P&L de cada cuenta, e historial de ejecuciones para el diario. Sirve para las cuentas de cualquier FCM, IB o empresa de fondeo que opere con Rithmic, y puedes conectar varias a la vez.",
+  "tc246f07e": "La conexión está en proceso de certificación con Rithmic y se activará en cuanto la apruebe.",
+  "te19402e0": "The R | Protocol API™ software is Copyright © 2026 by Rithmic, LLC. All rights reserved.",
+  "tb2f3bb0c": "Trading Platform by Rithmic™ is a trademark of Rithmic, LLC. All rights reserved.",
+  "t3a44cd70": "The OMNE™ software is Copyright © 2026 by Omnesys, LLC and Omnesys Technologies, Inc. All rights reserved.",
+  "t7243422f": "Powered by OMNE™ is a trademark of Omnesys, LLC and Omnesys Technologies, Inc. All rights reserved.",
   "t7842ffa7": "Aviso de riesgo y condiciones",
   "t4b503b7f": "Antes de operar.",
   "td01fb299": "Aviso de riesgo",
@@ -195,5 +203,7 @@
   "t0159e5ae": "Gráfico con VWAP, media exponencial, estructura de mercado SMC y un CRT marcado.",
   "t9d476425": "Perfil de volumen de un tramo del gráfico con su POC, VAH, VAL, single prints y VWAP anclada.",
   "t777c3e76": "Cadena de opciones de TradegunCharts con una estrategia de dos patas y su curva de beneficio y pérdida.",
-  "t1a4d3a16": "Periodo de pago"
+  "t1a4d3a16": "Periodo de pago",
+  "t1d41a532": "Trading Platform by Rithmic",
+  "tf66ea5cb": "Powered by OMNE"
 }
