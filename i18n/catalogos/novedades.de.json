@@ -1382,7 +1382,7 @@
   "tc9041607": "Eine Schließung mit Stundenabzug konnte ohne die Berechtigung zum Ändern von Schließungen wieder geöffnet werden, wodurch der Abzug verloren ging. Jetzt erfordert das Wiederöffnen «Schließungen ändern».",
   "taead9ce8": "Beim Ändern des Passworts eines Benutzers konnte der Browser selbst das gespeicherte Passwort eines anderen Benutzers eintragen und die Liste nach dessen Namen filtern. Felder für neue Passwörter werden nicht mehr automatisch ausgefüllt.",
   "td48a8e9b": "1.18.0-eb9dfe5",
-  "t9645c523": "1.18.0-3c23955",
+  "t379f2ee9": "1.18.0-a46f5c5",
   "tf7b9e4d3": "Die Kalender zur Datumsauswahl erschienen auf Englisch (Monate und Wochentage), auch wenn eine andere Sprache gewählt war. Jetzt sprechen sie die gewählte Sprache.",
   "t9f99cb75": "Auf der Startseite verschwand die Einladung «Erste Schritte» in Zentren ohne Kalender oder Katalog, etwa Pflegeheimen, nie, weil sie nach Kabinen oder Leistungen fragte, die sie nicht haben. Jetzt fragt sie nur nach dem, was die Module des Zentrums nutzen."
 }
