@@ -1364,5 +1364,22 @@
   "tcd668a78": "16. November 2026",
   "tbfbcf922": "1.17.0-ed4b05c",
   "t549f1850": "Eine von Hand in der Kundenakte vergebene Mehrfachkarte wird jetzt aus der Preisliste gewählt, wie an der Kasse, und nur unter den aktiven. Sie bringt Gruppe, Sitzungen und Ablaufdatum mit, die sich vor dem Speichern ändern lassen. Vorher musste man eine Gruppe wählen, die Liste zeigte nicht alle und es erschienen die von eingestellten Aktionen.",
-  "tda2fa5a9": "Beim Anlegen oder Korrigieren einer Mehrfachkarte von Hand wurde das Ablaufdatum einen Tag nach dem gewählten Datum gespeichert. Jetzt läuft sie am gewählten Tag ab."
+  "tda2fa5a9": "Beim Anlegen oder Korrigieren einer Mehrfachkarte von Hand wurde das Ablaufdatum einen Tag nach dem gewählten Datum gespeichert. Jetzt läuft sie am gewählten Tag ab.",
+  "tcdf38065": "Besuche im Kalender",
+  "t99e39d8c": "Wenn eine andere Fachkraft während eines Termins beim Kunden vorbeischauen muss (zum Beispiel, um eine Behandlung zu beurteilen), wird das direkt im Termin mit «Besuch hinzufügen» eingetragen: wer kommt, um wie viel Uhr und wie lange, bei Bedarf mit einer Notiz.",
+  "t275a1829": "Der Besuch erscheint in der Spalte der besuchenden Person, in «Tag nach Fachkraft» und in ihrer Woche, mit Kunde und Kabine, und die Terminkarte zeigt, wer wann vorbeischaut. Ein Klick darauf öffnet den Termin oder entfernt den Besuch.",
+  "t8975140d": "Er belegt die Zeit der besuchenden Person, nicht die Kabine: Zu dieser Uhrzeit kann sie keinen anderen Termin bekommen. Wird der Termin verschoben oder storniert, geht der Besuch mit.",
+  "t8fe44118": "Unterschriften-Tablet",
+  "t8b1bc716": "Neue Rolle «Unterschriften» für den Benutzer des Tablets am Empfang: Nach der Anmeldung geht es direkt zum Unterschriftenbildschirm und sammelt die Unterschriften ein, die der Empfang anfordert, ohne unterschriebene Dokumente oder andere Bildschirme öffnen zu können.",
+  "t8afc49b4": "In «Tag nach Fachkraft» und «Woche nach Fachkraft» wird der Termin in der Kabine gespeichert, die im Dialog selbst gewählt wird. Vorausgewählt ist die übliche Kabine der Fachkraft, wenn sie zu dieser Uhrzeit frei ist, sonst die erste freie; belegte Kabinen sind markiert und nicht wählbar. Vorher konnte es heißen, die Zeit sei belegt, obwohl die Spalte der Fachkraft frei war.",
+  "tfc2c5c59": "In der Akte der Fachkraft wird aus «Kalenderspalte» «Übliche Kabine», mit der Möglichkeit, keine zu haben und die erste freie zu nehmen.",
+  "t423b12b6": "Wenn ein Termin nicht passt, sagt der Hinweis, womit er kollidiert und was zu tun ist: welche Fachkraft oder Kabine belegt ist, von wann bis wann und mit welchem Kunden.",
+  "tf0f86446": "Bei einem neuen Termin heißt die aus den Leistungen berechnete Dauer «Automatisch» statt «0 Minuten».",
+  "t44330121": "Schließungen im Kalender",
+  "tf74fed22": "Jeder geschlossene Zeitraum einer Fachkraft zeigt auf einen Blick, ob er von ihren Stunden abgezogen wird oder nicht.",
+  "t71236dbb": "Neue Berechtigung «Schließungen ändern», um den Grund einer Schließung und den Stundenabzug zu ändern, ohne sie wieder öffnen und neu schließen zu müssen.",
+  "t9c6784e4": "Beim Schließen eines Zeitraums in der Spalte einer Fachkraft ist das Kästchen für den Stundenabzug angehakt; in der Spalte einer Kabine oder für das ganze Zentrum erscheint es nicht.",
+  "tc9041607": "Eine Schließung mit Stundenabzug konnte ohne die Berechtigung zum Ändern von Schließungen wieder geöffnet werden, wodurch der Abzug verloren ging. Jetzt erfordert das Wiederöffnen «Schließungen ändern».",
+  "taead9ce8": "Beim Ändern des Passworts eines Benutzers konnte der Browser selbst das gespeicherte Passwort eines anderen Benutzers eintragen und die Liste nach dessen Namen filtern. Felder für neue Passwörter werden nicht mehr automatisch ausgefüllt.",
+  "td48a8e9b": "1.18.0-eb9dfe5"
 }

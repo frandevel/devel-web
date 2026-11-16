@@ -730,10 +730,37 @@ footer{
     <h2>16 November 2026</h2>
     <span class="version__sello">Latest release</span>
   </div>
-  <p class="version__numero">Version <span translate="no">1.17.0-ed4b05c</span></p>
+  <p class="version__numero">Version <span translate="no">1.18.0-eb9dfe5</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Drop-in visits in the diary</h4>
+    <ul>
+      <li>When another professional has to drop in on the client during an appointment (for example, to assess a treatment), it is noted from the appointment itself with «Add visit»: who drops in, at what time and for how long, with a note if needed.</li>
+      <li>The visit shows in the column of whoever makes it, in «Day by professional» and in their week, with the client and the room, and the appointment card says who drops in and when. Clicking it opens the appointment or removes the visit.</li>
+      <li>It takes the time of whoever visits, not the room: they cannot be booked at that time. If the appointment moves or is cancelled, the visit goes with it.</li>
+    </ul>
+    <h4>Signing tablet</h4>
+    <ul>
+      <li>New «Signatures» role for the user of the front-desk tablet: on signing in it goes straight to the signing screen and collects the signatures the front desk requests, without being able to open signed documents or any other screen.</li>
+    </ul>
+  </div>
 
   <div class="grupo grupo--mejora">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Improvements</h3>
+    <h4>Diary</h4>
+    <ul>
+      <li>In «Day by professional» and «Week by professional» the appointment is saved in the room chosen in the dialog itself. The professional's usual room comes preselected if it is free at that time and, if not, the first free one; taken rooms are marked and cannot be chosen. Before, it could say the time was taken even though the professional's column was free.</li>
+      <li>In the professional's record, «Diary column» becomes «Usual room», with the option of having none and using the first free one.</li>
+      <li>When an appointment doesn't fit, the warning says what it clashes with and what to do: which professional or room is taken, from what time to what time and with which client.</li>
+      <li>In a new appointment, the duration worked out from the services is called «Automatic» instead of «0 minutes».</li>
+    </ul>
+    <h4>Diary closures</h4>
+    <ul>
+      <li>Each closed stretch of a professional shows at a glance whether it is deducted from their hours or not.</li>
+      <li>New «Edit closures» permission to change a closure's reason and whether it deducts hours without having to reopen it and close it again.</li>
+      <li>When closing a stretch in a professional's column, the deduct-hours box comes ticked; in a room's column or for the whole centre it does not appear.</li>
+    </ul>
     <h4>Vouchers</h4>
     <ul>
       <li>A voucher given by hand from the customer record is now chosen from the price list, as in the POS, and only among active vouchers. It brings its group, sessions and expiry date, which can be changed before saving. Before, you had to choose a group, the list did not show them all and vouchers from withdrawn promotions appeared.</li>
@@ -744,6 +771,8 @@ footer{
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Bugs fixed</h3>
     <ul>
       <li>When creating or correcting a voucher by hand, the expiry date was saved one day after the date chosen. Now it expires on the day chosen.</li>
+      <li>A closure that deducts hours could be reopened without the edit-closures permission, losing the deduction. Reopening it now requires «Edit closures».</li>
+      <li>When changing a user's password, the browser could fill in another user's saved password on its own and filter the list by that user's name. New-password fields are no longer filled in automatically.</li>
     </ul>
   </div>
 </section>

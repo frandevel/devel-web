@@ -1364,5 +1364,22 @@
   "tcd668a78": "16 November 2026",
   "tbfbcf922": "1.17.0-ed4b05c",
   "t549f1850": "A voucher given by hand from the customer record is now chosen from the price list, as in the POS, and only among active vouchers. It brings its group, sessions and expiry date, which can be changed before saving. Before, you had to choose a group, the list did not show them all and vouchers from withdrawn promotions appeared.",
-  "tda2fa5a9": "When creating or correcting a voucher by hand, the expiry date was saved one day after the date chosen. Now it expires on the day chosen."
+  "tda2fa5a9": "When creating or correcting a voucher by hand, the expiry date was saved one day after the date chosen. Now it expires on the day chosen.",
+  "tcdf38065": "Drop-in visits in the diary",
+  "t99e39d8c": "When another professional has to drop in on the client during an appointment (for example, to assess a treatment), it is noted from the appointment itself with «Add visit»: who drops in, at what time and for how long, with a note if needed.",
+  "t275a1829": "The visit shows in the column of whoever makes it, in «Day by professional» and in their week, with the client and the room, and the appointment card says who drops in and when. Clicking it opens the appointment or removes the visit.",
+  "t8975140d": "It takes the time of whoever visits, not the room: they cannot be booked at that time. If the appointment moves or is cancelled, the visit goes with it.",
+  "t8fe44118": "Signing tablet",
+  "t8b1bc716": "New «Signatures» role for the user of the front-desk tablet: on signing in it goes straight to the signing screen and collects the signatures the front desk requests, without being able to open signed documents or any other screen.",
+  "t8afc49b4": "In «Day by professional» and «Week by professional» the appointment is saved in the room chosen in the dialog itself. The professional's usual room comes preselected if it is free at that time and, if not, the first free one; taken rooms are marked and cannot be chosen. Before, it could say the time was taken even though the professional's column was free.",
+  "tfc2c5c59": "In the professional's record, «Diary column» becomes «Usual room», with the option of having none and using the first free one.",
+  "t423b12b6": "When an appointment doesn't fit, the warning says what it clashes with and what to do: which professional or room is taken, from what time to what time and with which client.",
+  "tf0f86446": "In a new appointment, the duration worked out from the services is called «Automatic» instead of «0 minutes».",
+  "t44330121": "Diary closures",
+  "tf74fed22": "Each closed stretch of a professional shows at a glance whether it is deducted from their hours or not.",
+  "t71236dbb": "New «Edit closures» permission to change a closure's reason and whether it deducts hours without having to reopen it and close it again.",
+  "t9c6784e4": "When closing a stretch in a professional's column, the deduct-hours box comes ticked; in a room's column or for the whole centre it does not appear.",
+  "tc9041607": "A closure that deducts hours could be reopened without the edit-closures permission, losing the deduction. Reopening it now requires «Edit closures».",
+  "taead9ce8": "When changing a user's password, the browser could fill in another user's saved password on its own and filter the list by that user's name. New-password fields are no longer filled in automatically.",
+  "td48a8e9b": "1.18.0-eb9dfe5"
 }

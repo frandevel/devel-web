@@ -692,6 +692,7 @@ footer{
     <li><a href="#agenda">2. Der Terminkalender</a></li>
     <li><a href="#agenda-ahora" class="sub">Die Linie der aktuellen Uhrzeit</a></li>
     <li><a href="#agenda-citas" class="sub">Termine eintragen, verschieben und stornieren</a></li>
+    <li><a href="#agenda-visitas" class="sub">Besuche: eine andere Fachkraft schaut beim Kunden vorbei</a></li>
     <li><a href="#agenda-plazas" class="sub">Kurse: Termine mit mehreren Plätzen</a></li>
     <li><a href="#agenda-repetir" class="sub">Wiederkehrende Termine</a></li>
     <li><a href="#agenda-senales" class="sub">Was jede Karte anzeigt</a></li>
@@ -1202,7 +1203,7 @@ footer{
 
   <h3 id="agenda-hora-inicio">Die Anfangszeit eines freien Feldes</h3>
   <p>
-    Sind die Zeitabschnitte des Terminkalenders kürzer als eine Stunde und fährt man mit der Maus über eine freie Lücke, erscheint ihre Anfangszeit, damit man weiß, wann der Termin dort beginnen würde. Es ist die Zeit des Abschnitts unter der Maus, auch wenn seine Mitte überschritten ist, und dieselbe, mit der sich der Termin beim Klicken öffnet. Der Empfang sieht dieselben Zeiten wie das übrige Team.
+    Sind die Zeitabschnitte der Agenda kürzer als eine Stunde und fahren Sie mit der Maus über ein freies Feld, erscheint dessen Anfangszeit, damit Sie wissen, um wie viel Uhr der Termin dort läge. Der Empfang sieht dieselben Agenda-Zeiten wie der Rest des Teams.
   </p>
 
   <h3 id="agenda-citas">Termine eintragen, verschieben und stornieren</h3>
@@ -1213,6 +1214,10 @@ footer{
     <li><strong>Neuer Kunde, der anruft:</strong> solange noch kein Kunde gewählt ist, steht unter der Suche
       <em>+ Neuer Kunde</em>. Damit öffnet sich eine Karte für einen <strong>Erstbesuch</strong> die nur Vorname, Nachname und Handynummer abfragt (die Ausweisnummer ist optional: Manche geben sie am Telefon nicht an) und den Kunden im Termin einträgt. Der Rest der Karte (Ausweis, Geburtsdatum, E-Mail ...) wird ergänzt, wenn die Person kommt. Bis dahin zeigen der Termin und die Karte <strong>Besuch Nr. 1</strong> in Blau an; sobald die Karte geöffnet und die übrigen Daten gespeichert werden, verschwindet der Hinweis von selbst. Beim Eintippen der Handynummer und, falls angegeben, der Ausweisnummer wird geprüft, ob sie schon zu einer anderen Karte gehören (egal, wie sie geschrieben sind: mit Leerzeichen, mit +34, mit Punkten oder Bindestrichen ...). Wenn ja, erscheint, wer es ist und ob Telefon, Ausweis oder beides übereinstimmen, mit der Schaltfläche
       <em>Diese Karte verwenden</em>; der Erstbesuch wird nicht angelegt, außer es wird angehakt <em>Es ist eine andere Person mit demselben Telefon oder Ausweis</em> (eine Mutter und ihre Tochter oder ein Minderjähriger mit dem Ausweis seiner Mutter). Beim Anlegen einer vollständigen Karte unter Kunden erscheint derselbe Hinweis, verhindert dort aber das Speichern nicht.</li>
+    <li><strong>Die Kabine in den Ansichten nach Mitarbeiter:</strong> in <em>Tag nach Mitarbeiter</em> und <em>Woche nach Mitarbeiter</em> ist die Spalte die Person, deshalb hat der Termin ein Auswahlfeld mit der Kabine (oder dem Platz, oder dem Raum). Vorausgewählt ist die übliche Kabine der Fachkraft, wenn sie zu dieser Uhrzeit frei ist, sonst die erste freie; belegte Kabinen sind als «belegt» markiert und nicht wählbar. Wird die vorgeschlagene Kabine belegt, während der Termin ausgefüllt wird, wird er in der ersten freien gespeichert und das wird angezeigt. In <em>Tag nach Ressource</em> ist die Kabine die angeklickte Spalte, und das Auswahlfeld erscheint nicht. Die übliche Kabine wird in der Akte der Fachkraft gewählt (<em>Übliche Kabine</em>,
+      oder <em>Keine</em> damit immer die erste freie genommen wird).</li>
+    <li><strong>Wenn der Termin nicht passt, sagt der Hinweis warum:</strong> womit er kollidiert und was zu tun ist. Zum Beispiel: «Passt nicht: Kabine 2 hat bereits von 10:00 bis 11:00 einen Termin mit Ana López (Fachkraft 3). Wählen Sie eine andere Uhrzeit oder einen anderen freien Platz», oder dass die Fachkraft zu dieser Uhrzeit schon einen Termin hat oder bei einem Besuch ist.</li>
+    <li><strong>Automatische Dauer:</strong> bei einem neuen Termin steht die Dauer auf <em>Automatisch</em>: die Summe der gewählten Leistungen und, solange keine gewählt ist, der Takt der Kabine. Eine andere kann von Hand gewählt werden.</li>
     <li><strong>Einen Termin öffnen:</strong> klicken Sie ihn an.</li>
     <li><strong>Die Kundin von eben, mit einem Klick:</strong> ein Klick in das Kundenfeld, ohne etwas zu tippen, zeigt die letzten 5 Kunden, mit denen Sie gearbeitet haben (in einem Termin, an der Kasse oder beim Öffnen ihrer Karte). Im Kundenfeld der Kasse ist es genauso.</li>
     <li><strong>Eine Leistung zu einem bestehenden Termin hinzufügen:</strong> die Dauer wächst um die Länge der neuen Leistung (und das Entfernen verkürzt sie), auch wenn sie von Hand angepasst war; danach lässt sie sich nachjustieren. Reicht der Termin dadurch bis zum nächsten derselben Fachkraft oder derselben Kabine, kommt ein Hinweis: Es wäre keine Zeit, alles in diesem Termin zu machen.</li>
@@ -1234,7 +1239,7 @@ footer{
       der Administrator besitzt: für den irrtümlich markierten Termin oder die Kundin, die nicht kam und anruft,
       um ihn zu verlegen. Ohne die Berechtigung erscheint nicht <em>Ausschneiden</em>, und wer ihn zu ziehen versucht, erfährt vom Terminkalender, welche Berechtigung
       nötig ist.</li>
-      <li><strong>Verschieben:</strong> ziehen Sie ihn. Lassen Sie ihn in einer anderen Spalte los, wechselt je nach Ansicht auch die Fachkraft oder der Raum.</li>
+      <li><strong>Verschieben:</strong> ziehen Sie ihn. Lassen Sie ihn in einer anderen Spalte los, wechselt er je nach Ansicht auch die Fachkraft oder die Kabine. In den Ansichten nach Mitarbeiter behält er seine Kabine und wechselt in die erste freie, wenn sie zur neuen Uhrzeit belegt ist.</li>
     <li><strong>Die Dauer ändern:</strong> ziehen Sie den unteren Rand.</li>
     <li><strong>Das Gerät zählt auch beim Verschieben oder Verlängern.</strong> Braucht der Termin ein Gerät, das zur neuen Uhrzeit ein anderer Termin belegt, warnt Turnera wie beim Anlegen und nennt den Termin, der es hat: Sie können ihn ändern oder trotzdem speichern (siehe <a href="#aparatos">Geräte</a>).</li>
     <li><strong>Stornieren:</strong> öffnen Sie ihn, drücken Sie <em>Stornieren</em> und geben Sie an, <strong>wer storniert</strong>: der Kunde, das Zentrum (die Fachkraft kann nicht, die Kabine oder der Platz ist nicht verfügbar, ein Defekt) oder ein
@@ -1246,7 +1251,7 @@ footer{
       bezahlten Termin nicht stornieren: er muss im Zentrum anrufen.</li>
       <li><strong>Einen versehentlich angelegten Termin entfernen:</strong> in den <strong>15 Minuten</strong> nach dem Anlegen erscheint beim Stornieren eine vierte Option, <em>Versehentlich angelegt</em>. Der Termin verschwindet aus dem Kalender und zählt in keinem Bericht, denn er war nie eine Buchung. Danach wird die Option nicht mehr angeboten: Es ist eine Stornierung durch jemanden, und man muss angeben, durch wen. Auch wenn er aus dem Kalender verschwindet, wird festgehalten, wer ihn entfernt hat und mit welcher Rolle, und wer die Berechtigung <em>Terminbericht</em> hat, sieht ihn mit der Schaltfläche <em>Stornierungen</em> in der Kopfzeile des Kalenders, die zum Stornierungsbericht mit den versehentlich angelegten Terminen der letzten 30 Tage führt.</li>
     <li><strong>Abgesagte Termine aus der Ansicht nehmen:</strong> setzen Sie das Häkchen bei <em>Abgesagte ausblenden</em>, unter der Kopfzeile. Der Terminkalender merkt sich das Kästchen, sodass Sie es beim nächsten Mal so vorfinden, wie Sie es gelassen haben.</li>
-    <li><strong>Damit die Namen beim Scrollen sichtbar bleiben:</strong> setzen Sie das Häkchen bei <em>Spaltenköpfe beim Scrollen fixieren</em>, daneben. Beim Herunterscrollen durch die Stunden bleibt der ganze obere Teil des Terminkalenders oben: der Titel mit dem Tag, die Schaltflächen zum Wechseln von Ansicht und Tag, die Filter und die Zeile mit der Fachkraft oder der Kabine jeder Spalte. Jeder Arbeitsplatz merkt es sich für sich: auf einem großen Bildschirm ist es vielleicht nicht nötig.</li>
+    <li><strong>Damit die Namen beim Scrollen sichtbar bleiben:</strong> setzen Sie das Häkchen bei <em>Spaltenköpfe beim Scrollen fixieren</em>, gleich daneben. Die Zeile mit der Fachkraft oder dem Raum jeder Spalte bleibt oben stehen, während Sie durch die Stunden nach unten scrollen. Jeder Arbeitsplatz merkt sich das für sich: Auf einem großen Bildschirm ist es vielleicht nicht nötig.</li>
   </ul>
 
   <p>
@@ -1303,6 +1308,21 @@ footer{
     <img src="/turnera/manual/imagenes/en/80-volver-a-la-cita.png" alt="Die Akte eines Kunden mit dem schwebenden Kalendersymbol unten rechts, um zum Termin zurückzukehren" loading="lazy">
     <figcaption>Das Kalendersymbol unten rechts führt zum Termin zurück, der geöffnet war.</figcaption>
   </figure>
+
+  <h3 id="agenda-visitas">Besuche: eine andere Fachkraft schaut beim Kunden vorbei</h3>
+  <span class="ruta">Kalender → Termin öffnen → Besuche → Besuch hinzufügen</span>
+
+  <p>
+    Manchmal hat eine Fachkraft den Termin und eine andere muss kurz beim Kunden vorbeischauen: um eine Behandlung zu beurteilen oder etwas zu diagnostizieren. Das ist ein <strong>Besuch</strong>. Er wird direkt im Termin eingetragen, im Abschnitt
+    <em>Besuche</em>, mit <em>Besuch hinzufügen</em>: wer kommt, um wie viel Uhr (innerhalb des Termins; vorgeschlagen wird die Mitte) und wie lange (anfangs 15 Minuten), bei Bedarf mit einer Notiz.
+  </p>
+
+  <ul>
+    <li>Der Besuch erscheint in der Spalte der besuchenden Person, in <em>Tag nach Mitarbeiter</em> und in ihrer <em>Woche nach Mitarbeiter</em>, als orangefarbener Streifen mit Kunde und Kabine. Die Terminkarte zeigt, wer wann vorbeischaut. Ein Klick auf den Streifen öffnet den Termin oder entfernt den Besuch.</li>
+    <li><strong>Er belegt die Zeit der besuchenden Person, nicht die Kabine.</strong> Zu dieser Uhrzeit kann sie keinen anderen Termin bekommen, und der Hinweis erklärt es: «Passt nicht: Mariluz hat von 13:30 bis 13:45 einen Besuch bei Ana López (Kabine 2)».</li>
+    <li><strong>Er gehört zum Termin.</strong> Wird der Termin verschoben, geht der Besuch mit; wird er storniert, verschwindet der Besuch. Hat die besuchende Person zur neuen Uhrzeit schon einen Termin, wird der Termin nicht verschoben und der Hinweis sagt, womit er kollidiert.</li>
+    <li>Hat die besuchende Person beim Eintragen zu dieser Uhrzeit schon einen Termin, wird angezeigt, mit wem und von wann bis wann, damit eine andere Uhrzeit oder Person gewählt werden kann.</li>
+  </ul>
 
   <h3 id="agenda-plazas">Kurse: Termine mit mehreren Plätzen</h3>
   <p>
@@ -1438,12 +1458,11 @@ footer{
   </p>
 
   <p>
-    <strong>Bei einem Fehler wird wieder geöffnet.</strong> Jeder von Hand gesperrte Zeitraum hat in seiner Ecke ein offenes Schloss: Klicken Sie darauf, bestätigen Sie, und der Zeitraum ist wieder frei. Die Termine ändern sich nicht. Das Schloss sieht nur, wer Zeiträume sperren darf, und es erscheint nicht bei dem, was der Arbeitskalender vorgibt (Urlaub, Feiertage oder außerhalb der Schicht); das wird dort geändert. Beginnen zwei Zeiträume in derselben Spalte zur gleichen Zeit, rücken Griff und Schloss des zweiten nach links, damit sich beide anklicken lassen. In der Wochenansicht einer Fachkraft erscheinen ihre Sperren und die des ganzen Zentrums; die Sperren eines Raums sieht man in der Ansicht nach Ressource.
+    <strong>Bei einem Fehler wird wieder geöffnet.</strong> Jeder von Hand geschlossene Zeitraum hat ein offenes Schloss in der Ecke: anklicken, bestätigen, und der Zeitraum ist wieder frei. Mit der Berechtigung <em>Schließungen ändern</em> öffnet das Schloss die Schließung, um den Grund und den Stundenabzug zu ändern, ohne sie wieder zu öffnen; von dort kann sie auch wieder geöffnet werden. Eine Schließung mit Stundenabzug kann nur wieder öffnen, wer <em>Schließungen ändern</em>. Die Termine ändern sich nicht. Das Schloss sieht nur, wer Zeiträume schließen darf, und es erscheint nicht bei dem, was der Arbeitskalender markiert (Urlaub, Feiertage oder außerhalb der Schicht); das wird dort geändert. Beginnen zwei Zeiträume gleichzeitig in derselben Spalte, rücken Schloss und Griff des zweiten nach links, damit man beide anklicken kann. In der Wochenansicht einer Fachkraft erscheinen ihre Schließungen und die des ganzen Zentrums; die einer Kabine sieht man in der Ansicht nach Ressource.
   </p>
 
   <p>
-    <strong>Eine Zeitspanne für eine Person kann auch von deren Stunden abgezogen werden.</strong> Das nutzt man für eine verschobene Mittagspause oder einen privaten Termin. Hat, wer sperrt, die Schreibberechtigung für den Arbeitskalender (Personalverwaltung oder Leitung) und hat die Person in diesem Jahr einen Arbeitskalender, erscheint bei der Auswahl
-    <em>Von den Stunden abziehen</em>, <strong>standardmäßig nicht angekreuzt</strong>. Nicht angekreuzt, bleibt die Zeitspanne als Hinweis in ihrem Arbeitskalender und zieht nichts ab. Angekreuzt, zählt das, was die Zeitspanne von ihrer Schicht abdeckt, nicht mehr als geplante Stunden, ab dem Moment des Sperrens und auch wenn noch niemand gestempelt hat: Der Arbeitskalender zeigt diese Stunden als fehlend gegenüber dem Tarifvertrag. Bleibt die Person während der Zeitspanne eingestempelt, wird ihr auch von den normalen Stunden abgezogen, was sich aus Gestempeltem, Zeitspanne und Schicht überschneidet; stempelt sie aus, waren diese Stunden ohnehin nicht gestempelt. In beiden Fällen sinken gearbeitete und geplante Stunden um dasselbe. Es braucht keine PIN, es gibt kein Minimum, und die Stunden werden nicht von selbst nachgeholt. Wiederöffnen der Zeitspanne hebt auch den Abzug auf; in einem abgeschlossenen Jahr geht das nicht.
+    <strong>Eine Zeitspanne für eine Person kann auch von deren Stunden abgezogen werden.</strong> Das wird für ein Essen zu ungewohnter Zeit oder eine persönliche Erledigung benutzt. Bei eingeschaltetem Personalmodul erscheint beim Schließen eines Zeitraums für eine Person <em>Von den Stunden abziehen</em>, <strong>standardmäßig angehakt</strong>; beim Schließen einer Kabine oder des ganzen Zentrums erscheint es nicht. Jeder geschlossene Zeitraum einer Person zeigt auf einen Blick, mit einer Uhr, ob er von ihren Stunden abgezogen wird oder nicht. Ohne Haken bleibt der Zeitraum ein informativer Hinweis in ihrem Arbeitskalender und zieht nichts ab. Mit Haken zählt, was der Zeitraum von ihrer Schicht abdeckt, nicht mehr als geplante Stunden, ab dem Moment des Schließens und auch wenn noch niemand eingestempelt hat: Der Arbeitskalender zeigt diese Stunden als Fehlstunden gegenüber dem Tarifvertrag. Bleibt die Person während des Zeitraums eingestempelt, wird auch die Überschneidung von Stempelzeit, Zeitraum und Schicht von ihren normalen Stunden abgezogen; stempelt sie aus, waren diese Stunden nicht mehr gestempelt. In beiden Fällen sinken Gearbeitetes und Geplantes gleich. Es braucht keine PIN, es gibt kein Minimum, und die Stunden werden nicht von selbst nachgeholt. Das Wiederöffnen des Zeitraums hebt auch den Abzug auf; in einem abgeschlossenen Jahr geht das nicht.
   </p>
 
   <p>
@@ -1481,17 +1500,17 @@ footer{
   <span class="ruta">Menü → Kunden</span>
 
   <p>
-    Das Suchfeld oben sucht nach Vorname, Nachname, Telefon, Steuernummer oder <strong>Kundennummer</strong>. Bei Vor- und Nachnamen genügt <strong>der Anfang jedes Wortes</strong>: «iba» findet Ibáñez, aber nicht Arribas, und «ana gar» findet Ana García. Telefon und Steuernummer werden über jeden Teil gefunden; die Kundennummer muss exakt sein. Wenn Sie <strong>nur Ziffern und weniger als 9</strong> eingeben, versteht die Suche, dass es eine Kundennummer ist (eine Telefonnummer hat 9 Ziffern): Gibt es einen Kunden mit dieser Nummer, erscheint <strong>nur dieser Kunde</strong>, ohne jene, die sie in der Telefonnummer oder der Steuernummer enthalten. Ist diese Nummer die eines Kunden und zugleich die, die ein anderer Kunde aus einer anderen Plattform mitgebracht hat, <strong>erscheinen beide</strong>, zuerst der mit dieser Nummer in Turnera, damit niemand unbemerkt die falsche Kartei öffnet. Und wenn niemand sie hat, wird wie gewohnt gesucht. Bei 9 oder mehr Ziffern oder bei Buchstaben ändert sich nichts.
+    Das Suchfeld oben sucht nach Vorname, Nachname, Telefon, Steuernummer oder <strong>Kundennummer</strong>. Bei Vor- und Nachnamen genügt <strong>der Anfang jedes Wortes</strong>: «iba» findet Ibáñez, aber nicht Arribas, und «ana gar» findet Ana García. Telefon und Steuernummer werden über jeden Teil gefunden; die Kundennummer muss exakt sein. Wenn Sie <strong>nur Ziffern und weniger als 9</strong> eingeben, versteht die Suche, dass es eine Kundennummer ist (eine Telefonnummer hat 9 Ziffern): Gibt es einen Kunden mit dieser Nummer, erscheint <strong>nur dieser Kunde</strong>, ohne jene, die sie in der Telefonnummer oder der Steuernummer enthalten; und wenn niemand sie hat, wird wie gewohnt gesucht. Bei 9 oder mehr Ziffern oder bei Buchstaben ändert sich nichts.
     <strong>Besteht die Eingabe überwiegend aus Ziffern</strong> (drei oder mehr, und mindestens die Hälfte des Textes), wird zusätzlich nach Telefon, Handy und Steuernummer gesucht, wobei nur die Ziffern verglichen werden: «666123456» findet eine als «666 12-34 56» gespeicherte Nummer, und die Vorwahl +34 oder 0034 muss nicht eingegeben werden. Es ist dieselbe Suche wie bei Terminen und beim Kassieren. Die Liste wird sortiert, indem man auf die Kopfzeile einer beliebigen Spalte klickt (<a href="#ordenar">wie</a>).
   </p>
 
   <p>
-    <strong>Die Kundennummer steht überall</strong>: in der Liste (Spalte «Code»), in der Kartei, auf der Terminkarte, in der Termin- und Zahlungssuche, bei den offenen Zahlungen und in den Berichten. Kunden, die von einer anderen Plattform kamen, behalten ihre dortige Nummer, und neue erhalten beim Anlegen die nächste. Und
+    <strong>Die Kundennummer steht überall</strong>: in der Liste, in der Kartei, auf der Terminkarte, in der Termin- und Zahlungssuche, bei den offenen Zahlungen und in den Berichten. Kunden, die von einer anderen Plattform kamen, behalten ihre dortige Nummer, und neue erhalten beim Anlegen die nächste. Und
     <strong>der Name eines Kunden ist in jeder Liste ein Link zu seiner Akte</strong>, genau wie auf der Startseite; im Termin und an der Kasse führt auch die Kartenschaltfläche neben dem Kunden dorthin.
   </p>
 
   <p>
-    In der Kundenakte stehen die Daten, der Besuchsverlauf, die Mehrfachkarten und die Notizen. Unter dem Namen sehen Sie, ob der Kunde <strong>Werbemitteilungen akzeptiert</strong>: grün, wenn ja, rot, wenn nein, und gelb, wenn es nicht erfasst ist; dann darf ihm nichts geschickt werden. Der Besuchsverlauf steht <strong>vor den unterschriebenen Dokumenten</strong>, weil er am häufigsten aufgerufen wird.
+    In der Kundenakte stehen die Daten, der Besuchsverlauf, die Mehrfachkarten und die Notizen. Der Besuchsverlauf steht <strong>vor den unterschriebenen Dokumenten</strong>, weil er am häufigsten aufgerufen wird.
     <strong>Telefonnummer und E-Mail-Adresse sind Links</strong>: ein Klick öffnet die Telefon- oder die Mail-Anwendung,
     ohne Kopieren und Einfügen. Das gilt in der ganzen Anwendung — auch bei Mitarbeitern, Lieferanten und
     Filialen —, sodass nirgends eine Nummer von Hand abgeschrieben werden muss.
@@ -2260,7 +2279,7 @@ footer{
   </p>
   <ul>
     <li><strong>Beim Verkauf einer Leistung, die als Mehrfachkarte markiert ist</strong> (der übliche Weg): Die Mehrfachkarte entsteht von selbst, wenn sie an der Kasse kassiert wird.</li>
-    <li><strong>Von Hand:</strong> in der Kundenakte, im Bereich Mehrfachkarten, legt <em>Neue Mehrfachkarte</em> legt eine an, ohne sie zu kassieren. Man wählt die Mehrfachkarte aus der Preisliste, unter den aktiven, und sie bringt ihre Gruppe, ihre Sitzungen und ihr Ablaufdatum mit; Sitzungen und Datum lassen sich vor dem Speichern ändern. Sichtbar ist das nur für Personen mit der Berechtigung
+    <li><strong>Von Hand:</strong> in der Kundenakte, im Bereich Mehrfachkarten, legt <em>Neue Mehrfachkarte</em> eine an, ohne sie zu kassieren, mit Gruppe, Sitzungen und Ablaufdatum. Das sehen nur Personen mit der Berechtigung
       <a href="#perm-vouchers-manage">Gutscheinverwaltung</a> (ab Werk der Administrator und die Leitung); der Empfang nicht.</li>
   </ul>
 
@@ -2817,13 +2836,14 @@ footer{
     <tbody><tr><th>Rolle</th><th>Wofür sie gut ist</th><th>Berechtigungen ab Werk</th></tr>
     <tr><td><strong><a href="#rol-recepcion">Empfang</a></strong></td><td>Vergibt Termine, betreut den Empfang und kassiert.</td><td>33</td></tr>
     <tr><td><strong><a href="#rol-profesional">Fachkraft</a></strong></td><td>Der eigene Terminkalender, die eigenen Kunden und die Patientenakte.</td><td>18</td></tr>
-    <tr><td><strong><a href="#rol-direccion">Leitung</a></strong></td><td>Führt das Zentrum: Katalog, Personal, Berichte und Einstellungen. Kümmert sich auch um die Benutzer: Namen oder Filiale ändern, sie entsperren und ihr Passwort zurücksetzen.</td><td>97</td></tr>
-    <tr><td><strong><a href="#rol-rrhh">RRHH</a></strong></td><td>Arbeitskalender, Behandler und Terminkalender.</td><td>18</td></tr>
+    <tr><td><strong><a href="#rol-direccion">Leitung</a></strong></td><td>Führt das Zentrum: Katalog, Personal, Berichte und Einstellungen. Kümmert sich auch um die Benutzer: Namen oder Filiale ändern, sie entsperren und ihr Passwort zurücksetzen.</td><td>98</td></tr>
+    <tr><td><strong><a href="#rol-rrhh">RRHH</a></strong></td><td>Arbeitskalender, Behandler und Terminkalender.</td><td>19</td></tr>
     <tr><td><strong><a href="#rol-mantenimiento">Wartung</a></strong></td><td>Betreut die Wartungsaufträge, ihre Bereiche und ihre Anlagen.</td><td>7</td></tr>
     <tr><td><strong><a href="#rol-activaciones">Aktivierungen</a></strong></td><td>Betreut die Aktivierungspunkte und ihre Anfragen.</td><td>2</td></tr>
+    <tr><td><strong><a href="#rol-firmas">Unterschriften</a></strong></td><td>Nur der Unterschriftenbildschirm: sammelt auf dem Tablet die Unterschriften, die der Empfang anfordert.</td><td>1</td></tr>
     <tr><td><strong><a href="#rol-clientes">Kunden</a></strong></td><td>Modulrolle: die Karteikarten, ihre Hinweise, ihre Punkte und der Kundenbericht.</td><td>11</td></tr>
     <tr><td><strong><a href="#rol-catalogo">Katalog</a></strong></td><td>Modulrolle: Leistungen, Pakete, Produkte, Lieferanten und Bestand samt Berichten.</td><td>15</td></tr>
-    <tr><td><strong><a href="#rol-agenda">Terminkalender</a></strong></td><td>Modulrolle: Termine, Warteliste, Kabinen, Geräte und der Terminbericht.</td><td>13</td></tr>
+    <tr><td><strong><a href="#rol-agenda">Terminkalender</a></strong></td><td>Modulrolle: Termine, Warteliste, Kabinen, Geräte und der Terminbericht.</td><td>14</td></tr>
     <tr><td><strong><a href="#rol-historia-clinica">Patientenakte</a></strong></td><td>Modulrolle: die Patientenakte und die Einwilligungen.</td><td>8</td></tr>
     <tr><td><strong><a href="#rol-caja">Kasse</a></strong></td><td>Modulrolle: Kassieren, Rückerstattungen, Schulden, Mehrfachkarten, Geschenkgutscheine, Gutscheincodes, Kassenabschluss und die zugehörigen Berichte.</td><td>21</td></tr>
     <tr><td><strong><a href="#rol-facturacion">Rechnungsstellung</a></strong></td><td>Modulrolle: vollständige Rechnungen, Rechnungsbuch und Buchhaltungsentwurf.</td><td>3</td></tr>
@@ -2982,6 +3002,7 @@ footer{
     <tr id="perm-appointments-move-closed"><td><strong>Erledigte Termine verschieben</strong></td><td>Erlaubt, Termine zu verschieben, die als erledigt oder als nicht erschienen markiert sind. Nötig, wenn sie versehentlich so markiert wurden oder ein Kunde anruft, um sie zu ändern. Abgerechnete und stornierte lassen sich nicht verschieben.</td><td><a href="#rol-agenda">Terminkalender</a></td></tr>
     <tr id="perm-appointments-cancel-charged"><td><strong>Bereits bezahlte Termine stornieren</strong></td><td>Erlaubt, bereits abgerechnete Termine zu stornieren. Die Zahlung wird dadurch nicht rückgängig gemacht: Dafür gibt es die Rückerstattung des Tickets.</td><td><a href="#rol-agenda">Terminkalender</a></td></tr>
     <tr id="perm-appointments-block"><td><strong>Zeitspannen im Terminkalender sperren</strong></td><td>Erlaubt, Zeiträume im Terminkalender zu sperren, damit dort niemand Termine anlegen kann.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-agenda">Terminkalender</a></td></tr>
+    <tr id="perm-appointments-edit-blocks"><td><strong>Schließungen ändern</strong></td><td>Erlaubt, einen bereits geschlossenen Zeitraum zu ändern, ohne ihn wieder zu öffnen: den Grund und ob er von den Stunden der Person abgezogen wird. Auch das Wiederöffnen einer Schließung mit Stundenabzug erfordert sie.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-agenda">Terminkalender</a></td></tr>
     <tr id="perm-appointments-print"><td><strong>Den Terminkalender ausdrucken</strong></td><td>Erlaubt die Schaltfläche zum Drucken des Tagesblatts.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-agenda">Terminkalender</a></td></tr>
     <tr id="perm-waiting-list-manage"><td><strong>Warteliste</strong></td><td>Erlaubt, Kunden auf die Warteliste für eine belegte Uhrzeit zu setzen und diese Liste einzusehen.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-agenda">Terminkalender</a></td></tr>
     <tr id="perm-equipment-readings-write"><td><strong>Gerätesitzung erfassen</strong></td><td>Erlaubt, den Gerätewert am Ende der Sitzung zu erfassen.</td><td><a href="#rol-profesional">Fachkraft</a>, <a href="#rol-agenda">Terminkalender</a></td></tr>
@@ -3009,7 +3030,7 @@ footer{
     <tr id="perm-clinic-view"><td><strong>Patientenakte ansehen</strong></td><td>Öffnet die Patientenakte einer Person. Nur zum Ansehen: Zum Schreiben braucht es „In die Patientenakte schreiben“.</td><td><a href="#rol-profesional">Fachkraft</a>, <a href="#rol-historia-clinica">Patientenakte</a></td></tr>
     <tr id="perm-clinic-write"><td><strong>In die Patientenakte schreiben</strong></td><td>Erlaubt, Verlaufseinträge und Vorgeschichte in die Patientenakte zu schreiben.</td><td><a href="#rol-profesional">Fachkraft</a>, <a href="#rol-historia-clinica">Patientenakte</a></td></tr>
     <tr id="perm-clinic-print"><td><strong>Krankenakte drucken</strong></td><td>Erlaubt, die Patientenakte einer Person zu drucken.</td><td><a href="#rol-profesional">Fachkraft</a>, <a href="#rol-historia-clinica">Patientenakte</a></td></tr>
-    <tr id="perm-consents-request"><td><strong>Unterschrift anfordern</strong></td><td>Bittet um die Unterschrift unter einer Einwilligung.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-historia-clinica">Patientenakte</a></td></tr>
+    <tr id="perm-consents-request"><td><strong>Unterschrift anfordern</strong></td><td>Bittet um die Unterschrift unter einer Einwilligung.</td><td><a href="#rol-firmas">Unterschriften</a>, <a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-historia-clinica">Patientenakte</a></td></tr>
     <tr id="perm-consents-read"><td><strong>Unterschriebenes Dokument ansehen</strong></td><td>Öffnet das bereits unterschriebene Einwilligungsdokument. Die Unterschrift anfordern zu dürfen genügt dafür nicht.</td><td><a href="#rol-profesional">Fachkraft</a>, <a href="#rol-historia-clinica">Patientenakte</a></td></tr>
     <tr id="perm-consents-import"><td><strong>Unterschriebene Einwilligungen importieren</strong></td><td>Lädt Einwilligungen, die bereits auf einer anderen Plattform unterschrieben wurden, als PDF in die Karteikarte hoch.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-historia-clinica">Patientenakte</a></td></tr>
     <tr id="perm-consents-withdraw"><td><strong>Einwilligung widerrufen</strong></td><td>Widerruft eine bereits erteilte Einwilligung.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-historia-clinica">Patientenakte</a></td></tr>
@@ -3130,14 +3151,15 @@ footer{
     <p class="rol-selector__titulo">Allgemeine Rollen</p>
     <div class="chips"><a class="chip r-recepcion" href="#rol-recepcion">Empfang <small>33</small></a>
       <a class="chip r-profesional" href="#rol-profesional">Fachkraft <small>18</small></a>
-      <a class="chip r-direccion" href="#rol-direccion">Leitung <small>97</small></a>
-      <a class="chip r-rrhh" href="#rol-rrhh">RRHH <small>18</small></a>
+      <a class="chip r-direccion" href="#rol-direccion">Leitung <small>98</small></a>
+      <a class="chip r-rrhh" href="#rol-rrhh">RRHH <small>19</small></a>
       <a class="chip r-mantenimiento" href="#rol-mantenimiento">Wartung <small>7</small></a>
-      <a class="chip r-activaciones" href="#rol-activaciones">Aktivierungen <small>2</small></a></div>
+      <a class="chip r-activaciones" href="#rol-activaciones">Aktivierungen <small>2</small></a>
+      <a class="chip r-activaciones" href="#rol-firmas">Unterschriften <small>1</small></a></div>
     <p class="rol-selector__titulo">Modulrollen (alles Nicht-Sensible eines Moduls)</p>
     <div class="chips"><a class="chip r-clientes" href="#rol-clientes">Kunden <small>11</small></a>
       <a class="chip r-catalogo" href="#rol-catalogo">Katalog <small>15</small></a>
-      <a class="chip r-agenda" href="#rol-agenda">Terminkalender <small>13</small></a>
+      <a class="chip r-agenda" href="#rol-agenda">Terminkalender <small>14</small></a>
       <a class="chip r-historia-clinica" href="#rol-historia-clinica">Patientenakte <small>8</small></a>
       <a class="chip r-caja" href="#rol-caja">Kasse <small>21</small></a>
       <a class="chip r-facturacion" href="#rol-facturacion">Rechnungsstellung <small>3</small></a>
@@ -3260,16 +3282,17 @@ footer{
 
   <article class="rol-card r-direccion familia-general" id="rol-direccion">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Leitung</h5><span class="rc-cuenta">97 Berechtigungen</span><span class="rc-familia">Allgemeine Rolle</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Leitung</h5><span class="rc-cuenta">98 Berechtigungen</span><span class="rc-familia">Allgemeine Rolle</span></div>
       <p class="rc-para">Für alle, die das Zentrum leiten: Katalog, Personal, Berichte und Einstellungen.</p>
     </header>
     <div class="rc-cuerpo">
-      <h6 class="rc-modulo"><a href="#permisos-agenda">Terminkalender</a> <span class="n">· 9</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-agenda">Terminkalender</a> <span class="n">· 10</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-appointments-view">Terminkalender ansehen</a><span class="rc-desc">Öffnet den Terminkalender und zeigt die Termine der sichtbaren Spalten.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-book">Termine anlegen und verschieben</a><span class="rc-desc">Erlaubt, neue Termine anzulegen und bestehende per Ziehen auf eine andere Uhrzeit oder Spalte zu verschieben.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-cancel">Termine stornieren</a><span class="rc-desc">Erlaubt es, Termine über die Schaltfläche zum Stornieren abzusagen.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-block">Zeitspannen im Terminkalender sperren</a><span class="rc-desc">Erlaubt, Zeiträume im Terminkalender zu sperren, damit dort niemand Termine anlegen kann.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-edit-blocks">Schließungen ändern</a><span class="rc-desc">Erlaubt, einen bereits geschlossenen Zeitraum zu ändern, ohne ihn wieder zu öffnen: den Grund und ob er von den Stunden der Person abgezogen wird.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-print">Den Terminkalender ausdrucken</a><span class="rc-desc">Erlaubt die Schaltfläche zum Drucken des Tagesblatts.</span></li>
         <li class="rc-perm"><a href="#perm-waiting-list-manage">Warteliste</a><span class="rc-desc">Erlaubt, Kunden auf die Warteliste für eine belegte Uhrzeit zu setzen und diese Liste einzusehen.</span></li>
         <li class="rc-perm"><a href="#perm-reports-appointments">Terminbericht</a><span class="rc-desc">Öffnet den Terminbericht.</span></li>
@@ -3406,14 +3429,15 @@ footer{
 
   <article class="rol-card r-rrhh familia-general" id="rol-rrhh">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">RRHH</h5><span class="rc-cuenta">18 Berechtigungen</span><span class="rc-familia">Allgemeine Rolle</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">RRHH</h5><span class="rc-cuenta">19 Berechtigungen</span><span class="rc-familia">Allgemeine Rolle</span></div>
       <p class="rc-para">Für alle, die das Personal betreuen: Arbeitskalender, Behandler und Terminkalender.</p>
     </header>
     <div class="rc-cuerpo">
-      <h6 class="rc-modulo"><a href="#permisos-agenda">Terminkalender</a> <span class="n">· 2</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-agenda">Terminkalender</a> <span class="n">· 3</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-appointments-view">Terminkalender ansehen</a><span class="rc-desc">Öffnet den Terminkalender und zeigt die Termine der sichtbaren Spalten.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-block">Zeitspannen im Terminkalender sperren</a><span class="rc-desc">Erlaubt, Zeiträume im Terminkalender zu sperren, damit dort niemand Termine anlegen kann.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-edit-blocks">Schließungen ändern</a><span class="rc-desc">Erlaubt, einen bereits geschlossenen Zeitraum zu ändern, ohne ihn wieder zu öffnen: den Grund und ob er von den Stunden der Person abgezogen wird.</span></li>
       </ul>
       <h6 class="rc-modulo"><a href="#permisos-personal">Personal</a> <span class="n">· 10</span></h6>
       <ul class="rc-lista">
@@ -3479,6 +3503,19 @@ footer{
     </div>
   </article>
 
+  <article class="rol-card r-activaciones familia-general" id="rol-firmas">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Unterschriften</h5><span class="rc-cuenta">1 Berechtigung</span><span class="rc-familia">Allgemeine Rolle</span></div>
+      <p class="rc-para">Für den Benutzer des Tablets am Empfang: wartet auf dem Unterschriftenbildschirm und sammelt die Unterschriften, die der Empfang anfordert.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <h6 class="rc-modulo"><a href="#permisos-historia-clinica-y-consentimientos">Patientenakte und Einwilligungserklärungen</a> <span class="n">· 1</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-consents-request">Unterschrift anfordern</a><span class="rc-desc">Bittet um die Unterschrift unter einer Einwilligung.</span></li>
+      </ul>
+    </div>
+  </article>
+
   <article class="rol-card r-clientes familia-modulo" id="rol-clientes">
     <header class="rc-cab">
       <div class="rc-fila"><h5 class="rc-nombre-rol">Kunden</h5><span class="rc-cuenta">11 Berechtigungen</span><span class="rc-familia">Modulrolle</span></div>
@@ -3531,11 +3568,11 @@ footer{
 
   <article class="rol-card r-agenda familia-modulo" id="rol-agenda">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Terminkalender</h5><span class="rc-cuenta">13 Berechtigungen</span><span class="rc-familia">Modulrolle</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Terminkalender</h5><span class="rc-cuenta">14 Berechtigungen</span><span class="rc-familia">Modulrolle</span></div>
       <p class="rc-para">Modulrolle für alle, die den ganzen Terminkalender betreuen: Termine, Warteliste, Kabinen und Geräte. Sie bringt alle nicht sensiblen Berechtigungen ihres Moduls mit, und nur diese.</p>
     </header>
     <div class="rc-cuerpo">
-      <h6 class="rc-modulo"><a href="#permisos-agenda">Terminkalender</a> <span class="n">· 13</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-agenda">Terminkalender</a> <span class="n">· 14</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-appointments-view">Terminkalender ansehen</a><span class="rc-desc">Öffnet den Terminkalender und zeigt die Termine der sichtbaren Spalten.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-book">Termine anlegen und verschieben</a><span class="rc-desc">Erlaubt, neue Termine anzulegen und bestehende per Ziehen auf eine andere Uhrzeit oder Spalte zu verschieben.</span></li>
@@ -3544,6 +3581,7 @@ footer{
         <li class="rc-perm"><a href="#perm-appointments-move-closed">Erledigte Termine verschieben</a><span class="rc-desc">Erlaubt, Termine zu verschieben, die als erledigt oder als nicht erschienen markiert sind.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-cancel-charged">Bereits bezahlte Termine stornieren</a><span class="rc-desc">Erlaubt, bereits abgerechnete Termine zu stornieren.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-block">Zeitspannen im Terminkalender sperren</a><span class="rc-desc">Erlaubt, Zeiträume im Terminkalender zu sperren, damit dort niemand Termine anlegen kann.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-edit-blocks">Schließungen ändern</a><span class="rc-desc">Erlaubt, einen bereits geschlossenen Zeitraum zu ändern, ohne ihn wieder zu öffnen: den Grund und ob er von den Stunden der Person abgezogen wird.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-print">Den Terminkalender ausdrucken</a><span class="rc-desc">Erlaubt die Schaltfläche zum Drucken des Tagesblatts.</span></li>
         <li class="rc-perm"><a href="#perm-waiting-list-manage">Warteliste</a><span class="rc-desc">Erlaubt, Kunden auf die Warteliste für eine belegte Uhrzeit zu setzen und diese Liste einzusehen.</span></li>
         <li class="rc-perm"><a href="#perm-equipment-readings-write">Gerätesitzung erfassen</a><span class="rc-desc">Erlaubt, den Gerätewert am Ende der Sitzung zu erfassen.</span></li>
@@ -4186,11 +4224,11 @@ footer{
   <span class="ruta">Verwaltung → Benutzer · Tablet → /firmas</span>
 
   <p>
-    Das Tablet braucht nichts Besonderes: Es ist ein Browser mit der geöffneten Seite <em>Unterschriften</em> und einer Sitzung des Empfangs. Es gibt keinen vordefinierten Benutzer «Unterschriften»; am saubersten ist es, einen eigenen anzulegen.
+    Das Tablet braucht nichts Besonderes: Es ist ein Browser mit der geöffneten Seite <em>Unterschriften</em> geöffnet und ein Benutzer mit der vordefinierten Rolle <strong>Unterschriften</strong>, der nur die am Empfang angeforderten Unterschriften einsammeln kann.
   </p>
 
   <ol>
-    <li>Unter <em>Verwaltung → Benutzer</em> einen Benutzer nur für das Tablet anlegen (zum Beispiel <code>tablet</code>) mit der Rolle <strong>Empfang</strong> und der Filiale des Empfangs. So teilt es mit niemandem eine Sitzung. Es muss Unterschriften anfordern und kassieren können, weil die Seite <em>Unterschriften</em> es verlangt.</li>
+    <li>Unter <em>Verwaltung → Benutzer</em> einen Benutzer nur für das Tablet anlegen (zum Beispiel <code>tablet</code>) mit der Rolle <strong>Unterschriften</strong> und der Filiale des Empfangs. So teilt es mit niemandem eine Sitzung und geht nach der Anmeldung direkt zum Unterschriftenbildschirm: Es öffnet weder unterschriebene Dokumente noch andere Bildschirme.</li>
     <li>Auf dem Tablet die Adresse von Turnera öffnen, gefolgt von <code>/firmas</code>. Beim Anfordern einer Unterschrift in der Kundenakte zeigt Turnera diese vollständige Adresse an, und sie kann kopiert werden.</li>
     <li>Mit diesem Benutzer anmelden, die Filiale wählen und <em>Auf diesem Gerät angemeldet bleiben</em> ankreuzen, damit die Sitzung beim Schließen des Browsers nicht endet.</li>
     <li>Optional: Im Browser des Tablets die Seite zum Startbildschirm hinzufügen, um sie im Vollbild zu öffnen.</li>
@@ -4198,7 +4236,7 @@ footer{
 
   <ul>
     <li>Alle drei Sekunden fragt das Tablet nach der ältesten offenen Unterschrift <strong>seiner Filiale</strong>. Jede Anforderung gilt fünf Minuten und wird nur einmal unterschrieben.</li>
-    <li>Die Sitzung des Empfangs öffnet keine bereits unterschriebenen Einwilligungen.</li>
+    <li>Der Tablet-Benutzer öffnet keine bereits unterschriebenen Einwilligungen.</li>
     <li>Die Seite <em>Unterschriften</em> wird <strong>allein</strong> angezeigt: nur mit dem Turnera-Logo, ohne Menü, ohne Sprachwechsel und ohne Möglichkeit, den Benutzer zu wechseln oder sich abzumelden. Wer das Tablet vor sich hat, ist der Kunde. Zum Wechseln des Benutzers oder Abmelden <code>/inicio</code> im Browser des Tablets öffnen.</li>
     <li>Nach dem Unterschreiben verschwindet das Dokument, und das Tablet zeigt mit einem großen grünen Haken ein «Dokument unterschrieben» in der gelesenen Sprache, neben einer Schaltfläche <em>Abschließen</em> , die den Tab schließt. Drückt sie niemand, wartet es nach 20 Sekunden wieder von selbst. Lässt der Browser das Schließen des Tabs nicht zu, macht die Schaltfläche ihn leer.</li>
     <li>Die Kundenakte, die der Empfang geöffnet hat, <strong>bekommt es von selbst mit</strong> von der Unterschrift, innerhalb weniger Sekunden: Das unterschriebene Dokument erscheint unter <em>Einwilligungen</em> ohne die Akte zu verlassen und neu zu öffnen, auch wenn der Hinweis auf die ausstehende Unterschrift geschlossen wurde.</li>
@@ -4577,7 +4615,7 @@ footer{
   <h4>Die PIN</h4>
 
   <p>
-    Jede Fachkraft braucht eine <strong>PIN</strong>, vierstellig, sofern das Zentrum nichts anderes festlegt, die die Verwaltung ihr zurücksetzt, unter <em>Fachkräfte → Aktionen → Stempel-PIN</em>. Ein Druck auf ihre Schaltfläche öffnet ein Tastenfeld, und sie tippt sie ein: Mit der letzten Ziffer öffnet sich ihr Bereich, ohne weiteren Klick. Am Computer lässt sich die PIN auch über die Tastatur eingeben, der Ziffernblock eingeschlossen: <em>Rücktaste</em> löscht die letzte Ziffer und <em>Enter</em> bestätigt. Dadurch ist ein Druck auf die Schaltfläche einer anderen Person noch kein Stempeln für sie, und ohne das würde die Namensliste bei einer Prüfung wenig beweisen.
+    Jede Fachkraft braucht eine <strong>PIN</strong>, vierstellig, sofern das Zentrum nichts anderes festlegt, die die Verwaltung ihr zurücksetzt, unter <em>Fachkräfte → Stempel-PIN</em>. Ein Druck auf ihre Schaltfläche öffnet ein Tastenfeld, und sie tippt sie ein: Mit der letzten Ziffer öffnet sich ihr Bereich, ohne weiteren Klick. Am Computer lässt sich die PIN auch über die Tastatur eingeben, der Ziffernblock eingeschlossen: <em>Rücktaste</em> löscht die letzte Ziffer und <em>Enter</em> bestätigt. Dadurch ist ein Druck auf die Schaltfläche einer anderen Person noch kein Stempeln für sie, und ohne das würde die Namensliste bei einer Prüfung wenig beweisen.
   </p>
 
   <p>
@@ -4622,14 +4660,14 @@ footer{
   </p>
 
   <h4 id="pin-provisional">Vorläufige PIN</h4>
-  <span class="ruta">Personal → Mitarbeitende → Aktionen → Stempel-PIN</span>
+  <span class="ruta">Personal → Mitarbeitende → Stempel-PIN</span>
 
   <p>
     Eine PIN, die <strong>die Verwaltung zurücksetzt</strong> ist <strong>vorläufig</strong>, weil sie derjenige kennt, der sie zurückgesetzt hat. Mit ihr kann die Person weder stempeln, weder im Web noch in der App der Mitarbeitenden, noch ihre Monatsübersicht unterschreiben: Beim Eintippen fordert Turnera sie auf, <strong>eine eigene zu wählen</strong> (anders als die vorläufige und als die Stellenzahl, die der Betrieb verlangt), und von da an gehört sie allein ihr. So lernt die Personalabteilung nie die PIN kennen, mit der jemand unterschreibt. PINs, die schon vor dieser Verbesserung gesetzt waren, bleiben unberührt.
   </p>
 
   <h4 id="pin-bloqueado">Gesperrte PIN</h4>
-  <span class="ruta">Personal → Mitarbeitende → Aktionen → Stempel-PIN</span>
+  <span class="ruta">Personal → Mitarbeitende → Stempel-PIN</span>
 
   <p>
     Gibt jemand <strong>fünfmal hintereinander eine falsche PIN</strong> ein, ist die PIN dieser Person
@@ -4645,8 +4683,7 @@ footer{
   </div>
 
   <p>
-    Unter <em>Mitarbeiter</em>mit der Schaltfläche <em>Aktionen</em> von jemandem mit gesperrter PIN erscheint gelb mit einem Hinweis, und unter <em>Stempel-PIN</em>
-    wird <strong>«PIN seit … gesperrt»</strong> mit der Schaltfläche <strong>Entsperren</strong>, die dieselbe PIN behält und die Zählung zurücksetzt. Dafür braucht es die Berechtigung «Stempel-PIN entsperren», die ab Werk Leitung, RRHH und Personal haben (und der Systemadministrator); ohne sie sagt das Fenster, welche Berechtigung fehlt. <strong>Ein Zurücksetzen der PIN entsperrt sie ebenfalls</strong> (und sie ist vorläufig, wie immer, wenn die Verwaltung sie zurücksetzt). Jede Sperre und jede Entsperrung wird festgehalten —wer entsperrt hat, wann und wie— und diese Spur wird nicht gelöscht.
+    Unter <em>Mitarbeiter</em>mit der Schaltfläche <em>Stempel-PIN</em> : Bei wem die PIN gesperrt ist, zeigt sie einen Hinweis, und darin steht <strong>«PIN seit … gesperrt»</strong> mit der Schaltfläche <strong>Entsperren</strong>, die dieselbe PIN behält und die Zählung zurücksetzt. Dafür braucht es die Berechtigung «Stempel-PIN entsperren», die ab Werk Leitung, RRHH und Personal haben (und der Systemadministrator); ohne sie sagt das Fenster, welche Berechtigung fehlt. <strong>Ein Zurücksetzen der PIN entsperrt sie ebenfalls</strong> (und sie ist vorläufig, wie immer, wenn die Verwaltung sie zurücksetzt). Jede Sperre und jede Entsperrung wird festgehalten —wer entsperrt hat, wann und wie— und diese Spur wird nicht gelöscht.
   </p>
 
   <h4 id="firma-resumen">Unterschrift der Monatsübersicht</h4>

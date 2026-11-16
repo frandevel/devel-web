@@ -640,6 +640,7 @@ footer{
     <li><a href="#agenda">2. La agenda</a></li>
     <li><a href="#agenda-ahora" class="sub">La raya de la hora</a></li>
     <li><a href="#agenda-citas" class="sub">Poner, mover y anular citas</a></li>
+    <li><a href="#agenda-visitas" class="sub">Visitas: otra profesional pasa a ver al cliente</a></li>
     <li><a href="#agenda-plazas" class="sub">Clases: citas de varias plazas</a></li>
     <li><a href="#agenda-repetir" class="sub">Citas que se repiten</a></li>
     <li><a href="#agenda-senales" class="sub">Lo que dice cada tarjeta</a></li>
@@ -1296,9 +1297,8 @@ footer{
   <h3 id="agenda-hora-inicio">La hora de inicio de un hueco</h3>
   <p>
     Cuando los tramos de la agenda son de menos de una hora y se pasa el ratón por un hueco libre, aparece
-    su hora de inicio, para saber a qué hora caería la cita si se pone ahí. Es la del tramo que pisa el ratón,
-    aunque esté pasada su mitad, y es la misma con la que se abre la cita al pulsar. Recepción ve las mismas horas
-    de la agenda que el resto del equipo.
+    su hora de inicio, para saber a qué hora caería la cita si se pone ahí. Recepción ve las mismas horas de la
+    agenda que el resto del equipo.
   </p>
 
   <h3 id="agenda-citas">Poner, mover y anular citas</h3>
@@ -1316,6 +1316,18 @@ footer{
       <em>Usar esta ficha</em>; la primera visita no se da de alta salvo que se marque <em>Es otra persona con el
       mismo teléfono o documento</em> (una madre y su hija, o un menor con el DNI de su madre). Al dar de alta una ficha
       completa desde Clientes sale el mismo aviso, aunque ahí no impide guardar.</li>
+    <li><strong>La cabina, en las vistas por profesional:</strong> en <em>Día por profesional</em> y <em>Semana por
+      profesional</em> la columna es la persona, así que la cita lleva un desplegable con la cabina (o la pista, o la
+      sala). Viene puesta la cabina habitual del profesional si está libre a esa hora y, si no, la primera libre; las
+      ocupadas salen marcadas como «ocupada» y no se pueden elegir. Si mientras se rellena la cita la cabina propuesta
+      se ocupa, se guarda en la primera libre y lo dice. En <em>Día por recurso</em> la cabina es la columna donde se
+      pulsó y el desplegable no sale. La cabina habitual se elige en la ficha del profesional (<em>Cabina habitual</em>,
+      o <em>Ninguna</em> para que tome siempre la primera libre).</li>
+    <li><strong>Si la cita no cabe, el aviso dice por qué:</strong> con qué choca y qué hacer. Por ejemplo, «No cabe:
+      Cabina 2 ya tiene cita de 10:00 a 11:00 con Ana López (Profesional 3). Elige otra hora u otro hueco libre», o
+      que el profesional ya tiene cita, o que está en una visita, a esa hora.</li>
+    <li><strong>Duración automática:</strong> en una cita nueva la duración viene en <em>Automática</em>: la que sumen
+      los servicios elegidos y, mientras no hay ninguno, el paso de la cabina. Se puede elegir otra a mano.</li>
     <li><strong>Abrir una cita:</strong> púlsela.</li>
     <li><strong>La clienta de antes, a un clic:</strong> al pulsar la caja del cliente sin escribir nada salen los
       últimos 5 clientes con los que ha trabajado usted (en una cita, en el TPV o abriendo su ficha). Pasa igual en la
@@ -1354,7 +1366,8 @@ footer{
       cambiarla. Sin el permiso no aparece <em>Cortar</em>, y si se intenta arrastrarla, la agenda dice qué permiso
       hace falta.</li>
       <li><strong>Moverla:</strong> arrástrela. Si la suelta en otra columna cambia también de profesional o de
-        cabina, según la vista en la que esté.</li>
+        cabina, según la vista en la que esté. En las vistas por profesional conserva su cabina y, si a la hora nueva
+        está ocupada, pasa a la primera libre.</li>
     <li><strong>Cambiar cuánto dura:</strong> arrastre el borde de abajo.</li>
     <li><strong>El aparato también cuenta al moverla o alargarla.</strong> Si la cita necesita un aparato que a la
       nueva hora tiene cogido otra cita, Turnera avisa igual que al crearla, con la cita que lo tiene: se puede
@@ -1381,8 +1394,7 @@ footer{
     <li><strong>Quitar las anuladas de la vista:</strong> marque <em>Ocultar canceladas</em>, debajo de la
       cabecera. La agenda recuerda la casilla, así que la próxima vez la encontrará como la dejó.</li>
     <li><strong>Que no se pierdan los nombres al bajar:</strong> marque <em>Fijar la cabecera al bajar</em>, al lado.
-      Mientras baja por las horas se queda arriba toda la parte de arriba de la agenda: el título con el día, los
-      botones para cambiar de vista y de día, los filtros y la fila con el profesional o la cabina de cada columna. Cada puesto
+      La fila con el profesional o la cabina de cada columna se queda arriba mientras baja por las horas. Cada puesto
       la recuerda por su cuenta: en una pantalla grande puede no hacer falta.</li>
   </ul>
 
@@ -1466,6 +1478,28 @@ footer{
     <img src="/turnera/manual/imagenes/80-volver-a-la-cita.png" alt="La ficha de un cliente con el icono flotante de calendario abajo a la derecha para volver a la cita" loading="lazy">
     <figcaption>El icono de calendario, abajo a la derecha, vuelve a la cita que se tenía abierta.</figcaption>
   </figure>
+
+  <h3 id="agenda-visitas">Visitas: otra profesional pasa a ver al cliente</h3>
+  <span class="ruta">Agenda → abrir la cita → Visitas → Añadir visita</span>
+
+  <p>
+    A veces la cita la lleva una profesional y otra tiene que pasar un momento a ver al cliente: a valorar un
+    tratamiento, a diagnosticar algo. Eso es una <strong>visita</strong>. Se apunta desde la propia cita, en el apartado
+    <em>Visitas</em>, con <em>Añadir visita</em>: quién pasa, a qué hora (dentro de la cita; viene puesta a mitad) y
+    cuánto tarda (15 minutos de partida), con una nota si hace falta.
+  </p>
+
+  <ul>
+    <li>La visita sale en la columna de quien la hace, en <em>Día por profesional</em> y en su <em>Semana por
+      profesional</em>, como una franja naranja con el cliente y la cabina. La tarjeta de la cita dice quién pasa y a qué
+      hora. Al pulsar la franja se abre la cita o se quita la visita.</li>
+    <li><strong>Ocupa el tiempo de quien visita, no la cabina.</strong> A esa hora no se le puede dar otra cita, y el
+      aviso lo explica: «No cabe: Mariluz tiene una visita de 13:30 a 13:45 con Ana López (Cabina 2)».</li>
+    <li><strong>Va con la cita.</strong> Si la cita se mueve, la visita se mueve con ella; si se anula, la visita
+      desaparece. Si a la hora nueva quien visita ya tiene cita, la cita no se mueve y el aviso dice con qué choca.</li>
+    <li>Si al apuntarla quien visita ya tiene cita a esa hora, se dice con quién y de qué hora a qué hora, para elegir
+      otra hora u otra persona.</li>
+  </ul>
 
   <h3 id="agenda-plazas">Clases: citas de varias plazas</h3>
   <p>
@@ -1652,7 +1686,9 @@ footer{
 
   <p>
     <strong>Si se equivoca, se reabre.</strong> Cada rato cerrado a mano lleva un candado abierto en la esquina:
-    púlselo, confirme, y el rato vuelve a estar libre. Las citas no cambian. El candado solo lo ve quien puede cerrar
+    púlselo, confirme, y el rato vuelve a estar libre. Con el permiso <em>Modificar cierres</em> el candado abre el
+    cierre para cambiar el motivo y si descuenta horas sin reabrirlo; desde ahí también se puede reabrir. Un cierre
+    que descuenta horas solo lo reabre quien tiene <em>Modificar cierres</em>. Las citas no cambian. El candado solo lo ve quien puede cerrar
     ratos, y no sale en lo que marca el calendario laboral (vacaciones, festivos o fuera de turno), que se cambia
     allí. Si dos ratos empiezan a la vez en la misma columna, el candado y el asa del segundo se apartan a la
     izquierda, para poder pulsar los dos. En la vista de semana de un profesional salen sus cierres y los de todo el
@@ -1661,9 +1697,10 @@ footer{
 
   <p>
     <strong>Un rato para una persona también puede descontarse de sus horas.</strong> Es lo que se usa para una
-    comida a deshoras o una gestión personal. Si quien cierra tiene el permiso de escritura del calendario laboral
-    (RRHH o Dirección) y la persona tiene calendario laboral ese año, al elegirla aparece
-    <em>Descontar de las horas</em>, <strong>sin marcar de forma predeterminada</strong>. Sin marcar, el rato queda
+    comida a deshoras o una gestión personal. Con el módulo de personal encendido, al cerrar un rato a una persona
+    aparece <em>Descontar de las horas</em>, <strong>marcado de forma predeterminada</strong>; en el cierre de una
+    cabina o de todo el centro no sale. Cada rato cerrado de una persona dice a la vista, con un reloj, si descuenta
+    de sus horas o no. Sin marcar, el rato queda
     como aviso informativo en su calendario laboral y no resta nada. Marcado, lo que el rato tape de su turno deja
     de contar como horas planificadas, desde el momento en que se cierra y aunque nadie haya fichado todavía: el
     calendario laboral enseña esas horas de menos frente al convenio. Si la persona se queda fichada durante el
@@ -1731,9 +1768,7 @@ footer{
     Arribas, y «ana gar» encuentra a Ana García. El teléfono y el NIF se encuentran con cualquier trozo; el número
     de cliente va exacto. Si escribe <strong>solo cifras y son menos de 9</strong>, el buscador entiende que es un número de
     cliente (un teléfono tiene 9): si hay un cliente con ese número, le sale <strong>únicamente ese cliente</strong>, sin los
-    que lo llevan dentro del teléfono o del NIF. Si ese número es el de un cliente y, a la vez, el que otro cliente traía
-    de otra plataforma, <strong>salen los dos</strong>, primero el que tiene ese número en Turnera, para no abrir la ficha
-    equivocada sin darse cuenta. Y si nadie lo tiene, busca como siempre. Con 9 cifras o más, o con
+    que lo llevan dentro del teléfono o del NIF; y si nadie lo tiene, busca como siempre. Con 9 cifras o más, o con
     letras, no cambia nada.
     <strong>Si lo escrito son sobre todo cifras</strong> (tres o más, y al menos la mitad del texto), busca además por
     teléfono, móvil y NIF comparando solo las cifras: «666123456» encuentra un teléfono guardado como «666 12-34 56», y el
@@ -1742,7 +1777,7 @@ footer{
   </p>
 
   <p>
-    <strong>El número de cliente sale en todas partes</strong>: en la lista (columna «Código»), en la ficha, en la tarjeta de la
+    <strong>El número de cliente sale en todas partes</strong>: en la lista, en la ficha, en la tarjeta de la
     agenda, en el buscador de la cita y del cobro, en los cobros pendientes y en los informes. El de los clientes
     que vinieron de otra plataforma es el que tenían allí, y a los nuevos se les da el siguiente al darlos de alta. Y
     <strong>el nombre de un cliente en cualquier listado es un enlace a su ficha</strong>, igual que en el
@@ -1750,9 +1785,7 @@ footer{
   </p>
 
   <p>
-    En la ficha de un cliente están sus datos, su historial de visitas, sus bonos y sus notas. Debajo del nombre se ve
-    si <strong>acepta comunicaciones comerciales</strong>: en verde si las acepta, en rojo si no y en ámbar si no consta,
-    y entonces no se le deben enviar. El historial de
+    En la ficha de un cliente están sus datos, su historial de visitas, sus bonos y sus notas. El historial de
     visitas va <strong>antes que la documentación firmada</strong>, porque es lo que más se consulta.
     <strong>El teléfono y el correo son enlaces</strong>: al pulsarlos se abre el marcador o el programa de correo,
     sin copiar ni pegar nada. Ocurre en toda la aplicación —también en profesionales, proveedores y
@@ -2799,8 +2832,7 @@ footer{
   <ul>
     <li><strong>Al vender un servicio marcado como bono</strong> (lo normal): el bono se crea solo al cobrarlo en el TPV.</li>
     <li><strong>A mano:</strong> en la ficha del cliente, en el apartado de bonos, <em>Nuevo bono</em> crea uno sin
-      cobrarlo. Se elige el bono de la tarifa, entre los que están activos, y trae su grupo, sus sesiones y su
-      caducidad; las sesiones y la fecha se pueden cambiar antes de guardar. Solo lo ve quien tiene el permiso
+      cobrarlo, diciendo el grupo, las sesiones y cuándo caduca. Solo lo ve quien tiene el permiso
       <a href="#perm-vouchers-manage">Gestión de bonos</a> (de fábrica, el administrador y Dirección); Recepción no.</li>
   </ul>
 
@@ -3483,13 +3515,14 @@ footer{
     <tr><th>Rol</th><th>Para qué sirve</th><th>Permisos de fábrica</th></tr>
     <tr><td><strong><a href="#rol-recepcion">Recepción</a></strong></td><td>Da horas, atiende el mostrador y cobra.</td><td>33</td></tr>
     <tr><td><strong><a href="#rol-profesional">Profesional</a></strong></td><td>Su agenda, sus clientes y la historia clínica.</td><td>18</td></tr>
-    <tr><td><strong><a href="#rol-direccion">Dirección</a></strong></td><td>Lleva el centro: catálogo, personal, informes y ajustes. También atiende a los usuarios: cambiarles el nombre o la delegación, desbloquearlos y restablecerles la contraseña.</td><td>97</td></tr>
-    <tr><td><strong><a href="#rol-rrhh">RRHH</a></strong></td><td>Calendarios laborales, profesionales y agenda.</td><td>18</td></tr>
+    <tr><td><strong><a href="#rol-direccion">Dirección</a></strong></td><td>Lleva el centro: catálogo, personal, informes y ajustes. También atiende a los usuarios: cambiarles el nombre o la delegación, desbloquearlos y restablecerles la contraseña.</td><td>98</td></tr>
+    <tr><td><strong><a href="#rol-rrhh">RRHH</a></strong></td><td>Calendarios laborales, profesionales y agenda.</td><td>19</td></tr>
     <tr><td><strong><a href="#rol-mantenimiento">Mantenimiento</a></strong></td><td>Lleva los partes de mantenimiento, sus zonas y sus equipos.</td><td>7</td></tr>
     <tr><td><strong><a href="#rol-activaciones">Activaciones</a></strong></td><td>Lleva los puntos de activación y sus solicitudes.</td><td>2</td></tr>
+    <tr><td><strong><a href="#rol-firmas">Firmas</a></strong></td><td>Solo la pantalla de firmas: recoge en la tablet las firmas que pide recepción.</td><td>1</td></tr>
     <tr><td><strong><a href="#rol-clientes">Clientes</a></strong></td><td>Rol de módulo: las fichas, sus avisos, sus puntos y el informe de clientes.</td><td>11</td></tr>
     <tr><td><strong><a href="#rol-catalogo">Catálogo</a></strong></td><td>Rol de módulo: servicios, paquetes, productos, proveedores y stock, con sus informes.</td><td>15</td></tr>
-    <tr><td><strong><a href="#rol-agenda">Agenda</a></strong></td><td>Rol de módulo: citas, lista de espera, cabinas, aparatos y el informe de citas.</td><td>13</td></tr>
+    <tr><td><strong><a href="#rol-agenda">Agenda</a></strong></td><td>Rol de módulo: citas, lista de espera, cabinas, aparatos y el informe de citas.</td><td>14</td></tr>
     <tr><td><strong><a href="#rol-historia-clinica">Historia clínica</a></strong></td><td>Rol de módulo: la historia clínica y los consentimientos.</td><td>8</td></tr>
     <tr><td><strong><a href="#rol-caja">Caja</a></strong></td><td>Rol de módulo: cobrar, devolver, deudas, bonos, tarjetas regalo, cupones, cierre de caja y sus informes.</td><td>21</td></tr>
     <tr><td><strong><a href="#rol-facturacion">Facturación</a></strong></td><td>Rol de módulo: facturas completas, libro de facturas y borrador contable.</td><td>3</td></tr>
@@ -3707,6 +3740,7 @@ footer{
     <tr id="perm-appointments-move-closed"><td><strong>Mover citas atendidas</strong></td><td>Permite mover las citas marcadas como atendidas o como que no vinieron. Hace falta cuando se marcaron por error o cuando el cliente llama para cambiarlas. Las cobradas y las anuladas no se pueden mover.</td><td><a href="#rol-agenda">Agenda</a></td></tr>
     <tr id="perm-appointments-cancel-charged"><td><strong>Anular citas ya cobradas</strong></td><td>Permite anular las citas que ya se cobraron. El cobro no se deshace: para eso está devolver el ticket.</td><td><a href="#rol-agenda">Agenda</a></td></tr>
     <tr id="perm-appointments-block"><td><strong>Cerrar ratos de la agenda</strong></td><td>Permite cerrar ratos de la agenda para que nadie pueda poner citas en ellos.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-agenda">Agenda</a></td></tr>
+    <tr id="perm-appointments-edit-blocks"><td><strong>Modificar cierres</strong></td><td>Permite cambiar un rato ya cerrado sin reabrirlo: el motivo y si descuenta de las horas de la persona. Reabrir un cierre que descuenta horas también lo pide.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-rrhh">RRHH</a>, <a href="#rol-agenda">Agenda</a></td></tr>
     <tr id="perm-appointments-print"><td><strong>Imprimir la agenda</strong></td><td>Permite usar el botón de imprimir el parte del día.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-agenda">Agenda</a></td></tr>
     <tr id="perm-waiting-list-manage"><td><strong>Lista de espera</strong></td><td>Permite apuntar clientes en la lista de espera de una hora ocupada y consultar esa lista.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-agenda">Agenda</a></td></tr>
     <tr id="perm-equipment-readings-write"><td><strong>Anotar la sesión del aparato</strong></td><td>Permite anotar la lectura del aparato al terminar la sesión.</td><td><a href="#rol-profesional">Profesional</a>, <a href="#rol-agenda">Agenda</a></td></tr>
@@ -3734,7 +3768,7 @@ footer{
     <tr id="perm-clinic-view"><td><strong>Ver la historia clínica</strong></td><td>Abre la historia clínica de una persona. Es solo de consulta: escribir en ella necesita «Escribir en la historia clínica».</td><td><a href="#rol-profesional">Profesional</a>, <a href="#rol-historia-clinica">Historia clínica</a></td></tr>
     <tr id="perm-clinic-write"><td><strong>Escribir en la historia clínica</strong></td><td>Permite escribir evoluciones y antecedentes en la historia clínica.</td><td><a href="#rol-profesional">Profesional</a>, <a href="#rol-historia-clinica">Historia clínica</a></td></tr>
     <tr id="perm-clinic-print"><td><strong>Imprimir la historia clínica</strong></td><td>Permite imprimir la historia clínica de una persona.</td><td><a href="#rol-profesional">Profesional</a>, <a href="#rol-historia-clinica">Historia clínica</a></td></tr>
-    <tr id="perm-consents-request"><td><strong>Pedir una firma</strong></td><td>Pide a la persona la firma de un consentimiento.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-historia-clinica">Historia clínica</a></td></tr>
+    <tr id="perm-consents-request"><td><strong>Pedir una firma</strong></td><td>Pide a la persona la firma de un consentimiento.</td><td><a href="#rol-firmas">Firmas</a>, <a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-historia-clinica">Historia clínica</a></td></tr>
     <tr id="perm-consents-read"><td><strong>Ver el documento firmado</strong></td><td>Abre el documento de consentimiento ya firmado. Poder pedir la firma no basta para leerlo.</td><td><a href="#rol-profesional">Profesional</a>, <a href="#rol-historia-clinica">Historia clínica</a></td></tr>
     <tr id="perm-consents-import"><td><strong>Importar consentimientos firmados</strong></td><td>Sube a la ficha consentimientos en PDF ya firmados en otra plataforma.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-historia-clinica">Historia clínica</a></td></tr>
     <tr id="perm-consents-withdraw"><td><strong>Retirar un consentimiento</strong></td><td>Retira un consentimiento que ya se había dado.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-historia-clinica">Historia clínica</a></td></tr>
@@ -3858,14 +3892,15 @@ footer{
     <p class="rol-selector__titulo">Roles generales</p>
     <div class="chips"><a class="chip r-recepcion" href="#rol-recepcion">Recepción <small>33</small></a>
       <a class="chip r-profesional" href="#rol-profesional">Profesional <small>18</small></a>
-      <a class="chip r-direccion" href="#rol-direccion">Dirección <small>97</small></a>
-      <a class="chip r-rrhh" href="#rol-rrhh">RRHH <small>18</small></a>
+      <a class="chip r-direccion" href="#rol-direccion">Dirección <small>98</small></a>
+      <a class="chip r-rrhh" href="#rol-rrhh">RRHH <small>19</small></a>
       <a class="chip r-mantenimiento" href="#rol-mantenimiento">Mantenimiento <small>7</small></a>
-      <a class="chip r-activaciones" href="#rol-activaciones">Activaciones <small>2</small></a></div>
+      <a class="chip r-activaciones" href="#rol-activaciones">Activaciones <small>2</small></a>
+      <a class="chip r-activaciones" href="#rol-firmas">Firmas <small>1</small></a></div>
     <p class="rol-selector__titulo">Roles de módulo (todo lo no delicado de un módulo)</p>
     <div class="chips"><a class="chip r-clientes" href="#rol-clientes">Clientes <small>11</small></a>
       <a class="chip r-catalogo" href="#rol-catalogo">Catálogo <small>15</small></a>
-      <a class="chip r-agenda" href="#rol-agenda">Agenda <small>13</small></a>
+      <a class="chip r-agenda" href="#rol-agenda">Agenda <small>14</small></a>
       <a class="chip r-historia-clinica" href="#rol-historia-clinica">Historia clínica <small>8</small></a>
       <a class="chip r-caja" href="#rol-caja">Caja <small>21</small></a>
       <a class="chip r-facturacion" href="#rol-facturacion">Facturación <small>3</small></a>
@@ -3988,16 +4023,17 @@ footer{
 
   <article class="rol-card r-direccion familia-general" id="rol-direccion">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Dirección</h5><span class="rc-cuenta">97 permisos</span><span class="rc-familia">Rol general</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Dirección</h5><span class="rc-cuenta">98 permisos</span><span class="rc-familia">Rol general</span></div>
       <p class="rc-para">Para quien lleva el centro: catálogo, personal, informes y ajustes.</p>
     </header>
     <div class="rc-cuerpo">
-      <h6 class="rc-modulo"><a href="#permisos-agenda">Agenda</a> <span class="n">· 9</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-agenda">Agenda</a> <span class="n">· 10</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-appointments-view">Ver la agenda</a><span class="rc-desc">Abre la agenda y muestra las citas de las columnas que se tengan a la vista.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-book">Poner y mover citas</a><span class="rc-desc">Permite poner citas nuevas y arrastrar las existentes a otra hora o columna.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-cancel">Anular citas</a><span class="rc-desc">Permite usar el botón de anular las citas.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-block">Cerrar ratos de la agenda</a><span class="rc-desc">Permite cerrar ratos de la agenda para que nadie pueda poner citas en ellos.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-edit-blocks">Modificar cierres</a><span class="rc-desc">Permite cambiar un rato ya cerrado sin reabrirlo: el motivo y si descuenta de las horas de la persona.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-print">Imprimir la agenda</a><span class="rc-desc">Permite usar el botón de imprimir el parte del día.</span></li>
         <li class="rc-perm"><a href="#perm-waiting-list-manage">Lista de espera</a><span class="rc-desc">Permite apuntar clientes en la lista de espera de una hora ocupada y consultar esa lista.</span></li>
         <li class="rc-perm"><a href="#perm-reports-appointments">Informe de citas</a><span class="rc-desc">Abre el informe de citas.</span></li>
@@ -4134,14 +4170,15 @@ footer{
 
   <article class="rol-card r-rrhh familia-general" id="rol-rrhh">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">RRHH</h5><span class="rc-cuenta">18 permisos</span><span class="rc-familia">Rol general</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">RRHH</h5><span class="rc-cuenta">19 permisos</span><span class="rc-familia">Rol general</span></div>
       <p class="rc-para">Para quien lleva al personal: calendarios laborales, profesionales y agenda.</p>
     </header>
     <div class="rc-cuerpo">
-      <h6 class="rc-modulo"><a href="#permisos-agenda">Agenda</a> <span class="n">· 2</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-agenda">Agenda</a> <span class="n">· 3</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-appointments-view">Ver la agenda</a><span class="rc-desc">Abre la agenda y muestra las citas de las columnas que se tengan a la vista.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-block">Cerrar ratos de la agenda</a><span class="rc-desc">Permite cerrar ratos de la agenda para que nadie pueda poner citas en ellos.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-edit-blocks">Modificar cierres</a><span class="rc-desc">Permite cambiar un rato ya cerrado sin reabrirlo: el motivo y si descuenta de las horas de la persona.</span></li>
       </ul>
       <h6 class="rc-modulo"><a href="#permisos-personal">Personal</a> <span class="n">· 10</span></h6>
       <ul class="rc-lista">
@@ -4207,6 +4244,19 @@ footer{
     </div>
   </article>
 
+  <article class="rol-card r-activaciones familia-general" id="rol-firmas">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Firmas</h5><span class="rc-cuenta">1 permiso</span><span class="rc-familia">Rol general</span></div>
+      <p class="rc-para">Para el usuario de la tablet del mostrador: espera en la pantalla de firmas y recoge las que pide recepción.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <h6 class="rc-modulo"><a href="#permisos-historia-clinica-y-consentimientos">Historia clínica y consentimientos</a> <span class="n">· 1</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-consents-request">Pedir una firma</a><span class="rc-desc">Pide a la persona la firma de un consentimiento.</span></li>
+      </ul>
+    </div>
+  </article>
+
   <article class="rol-card r-clientes familia-modulo" id="rol-clientes">
     <header class="rc-cab">
       <div class="rc-fila"><h5 class="rc-nombre-rol">Clientes</h5><span class="rc-cuenta">11 permisos</span><span class="rc-familia">Rol de módulo</span></div>
@@ -4259,11 +4309,11 @@ footer{
 
   <article class="rol-card r-agenda familia-modulo" id="rol-agenda">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Agenda</h5><span class="rc-cuenta">13 permisos</span><span class="rc-familia">Rol de módulo</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Agenda</h5><span class="rc-cuenta">14 permisos</span><span class="rc-familia">Rol de módulo</span></div>
       <p class="rc-para">Rol de módulo, para quien lleva la agenda entera: citas, lista de espera, cabinas y aparatos. Lleva todos los permisos no delicados de su módulo y solo esos.</p>
     </header>
     <div class="rc-cuerpo">
-      <h6 class="rc-modulo"><a href="#permisos-agenda">Agenda</a> <span class="n">· 13</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-agenda">Agenda</a> <span class="n">· 14</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-appointments-view">Ver la agenda</a><span class="rc-desc">Abre la agenda y muestra las citas de las columnas que se tengan a la vista.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-book">Poner y mover citas</a><span class="rc-desc">Permite poner citas nuevas y arrastrar las existentes a otra hora o columna.</span></li>
@@ -4272,6 +4322,7 @@ footer{
         <li class="rc-perm"><a href="#perm-appointments-move-closed">Mover citas atendidas</a><span class="rc-desc">Permite mover las citas marcadas como atendidas o como que no vinieron.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-cancel-charged">Anular citas ya cobradas</a><span class="rc-desc">Permite anular las citas que ya se cobraron.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-block">Cerrar ratos de la agenda</a><span class="rc-desc">Permite cerrar ratos de la agenda para que nadie pueda poner citas en ellos.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-edit-blocks">Modificar cierres</a><span class="rc-desc">Permite cambiar un rato ya cerrado sin reabrirlo: el motivo y si descuenta de las horas de la persona.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-print">Imprimir la agenda</a><span class="rc-desc">Permite usar el botón de imprimir el parte del día.</span></li>
         <li class="rc-perm"><a href="#perm-waiting-list-manage">Lista de espera</a><span class="rc-desc">Permite apuntar clientes en la lista de espera de una hora ocupada y consultar esa lista.</span></li>
         <li class="rc-perm"><a href="#perm-equipment-readings-write">Anotar la sesión del aparato</a><span class="rc-desc">Permite anotar la lectura del aparato al terminar la sesión.</span></li>
@@ -4959,14 +5010,14 @@ footer{
   <span class="ruta">Administración → Usuarios · tablet → /firmas</span>
 
   <p>
-    La tablet no necesita nada especial: es un navegador con la pantalla <em>Firmas</em> abierta y una sesión
-    de recepción. No hay un usuario «firmas» predefinido; lo más limpio es crear uno propio.
+    La tablet no necesita nada especial: es un navegador con la pantalla <em>Firmas</em> abierta y un usuario con el
+    rol de fábrica <strong>Firmas</strong>, que solo puede recoger las firmas que se piden desde el mostrador.
   </p>
 
   <ol>
     <li>En <em>Administración → Usuarios</em>, crea un usuario solo para la tablet (por ejemplo, <code>tablet</code>)
-      con el rol <strong>Recepción</strong> y la delegación del mostrador. Así no comparte sesión con
-      nadie. Hace falta que pueda pedir firmas y cobrar, porque la pantalla <em>Firmas</em> lo exige.</li>
+      con el rol <strong>Firmas</strong> y la delegación del mostrador. Así no comparte sesión con nadie y,
+      al entrar, va directo a la pantalla de firmas: no abre los documentos firmados ni ninguna otra pantalla.</li>
     <li>En la tablet, abre la dirección de Turnera seguida de <code>/firmas</code>. Al pedir una firma en la ficha
       del cliente, Turnera te enseña esa dirección completa y puedes copiarla.</li>
     <li>Entra con ese usuario, elige la delegación y marca <em>Recordarme en este equipo</em> para que la sesión
@@ -4977,7 +5028,7 @@ footer{
   <ul>
     <li>La tablet pregunta cada tres segundos por la firma más antigua pendiente <strong>de su delegación</strong>.
       Cada petición vale cinco minutos y se firma una sola vez.</li>
-    <li>La sesión de recepción no abre los consentimientos ya firmados.</li>
+    <li>El usuario de la tablet no abre los consentimientos ya firmados.</li>
     <li>La pantalla <em>Firmas</em> se ve <strong>sola</strong>: solo lleva el logo de Turnera, sin menú, sin
       cambio de idioma y sin forma de cambiar de usuario ni de cerrar la sesión. Quien tiene la tablet delante es
       el cliente. Para cambiar de usuario o salir, abre <code>/inicio</code> desde el navegador de la tablet.</li>
@@ -5506,7 +5557,7 @@ footer{
 
   <p>
     Cada profesional necesita un <strong>PIN</strong>, de cuatro cifras si el centro no decide otra cosa, que administración
-    le restablece en <em>Profesionales → Acciones → PIN de fichaje</em>. Al pulsar su botón sale un teclado y lo teclea: con la última
+    le restablece en <em>Profesionales → PIN de fichaje</em>. Al pulsar su botón sale un teclado y lo teclea: con la última
     cifra se abre lo suyo, sin pulsar nada más. Desde un ordenador el PIN también se teclea con el teclado, el
     numérico incluido: <em>Retroceso</em> borra la última cifra e <em>Intro</em> confirma. Es lo que hace que
     pulsar el botón de otro no sea fichar por otro, y sin ello la lista de nombres no probaría gran cosa ante
@@ -5563,7 +5614,7 @@ footer{
   </p>
 
   <h4 id="pin-provisional">PIN provisional</h4>
-  <span class="ruta">Personal → Profesionales → Acciones → PIN de fichaje</span>
+  <span class="ruta">Personal → Profesionales → PIN de fichaje</span>
 
   <p>
     Un PIN que <strong>restablece administración</strong> es <strong>provisional</strong>, porque lo conoce
@@ -5574,7 +5625,7 @@ footer{
   </p>
 
   <h4 id="pin-bloqueado">PIN bloqueado</h4>
-  <span class="ruta">Personal → Profesionales → Acciones → PIN de fichaje</span>
+  <span class="ruta">Personal → Profesionales → PIN de fichaje</span>
 
   <p>
     Si alguien escribe <strong>cinco veces seguidas un PIN equivocado</strong>, el PIN de esa persona queda
@@ -5599,7 +5650,7 @@ footer{
   </div>
 
   <p>
-    En <em>Profesionales</em>, el botón <em>Acciones</em> de quien tiene el PIN bloqueado sale en ámbar con un aviso, y en <em>PIN de fichaje</em>
+    En <em>Profesionales</em>, el botón <em>PIN de fichaje</em> de quien lo tiene bloqueado sale con un aviso, y dentro
     se ve <strong>«PIN bloqueado desde …»</strong> con el botón <strong>Desbloquear</strong>, que deja el mismo PIN y la
     cuenta a cero. Hace falta el permiso «Desbloquear el PIN de fichar», que de fábrica traen Dirección, RRHH y Personal
     (y el Administrador del sistema); sin él, la ventana dice qué permiso falta. <strong>Restablecer el PIN también lo

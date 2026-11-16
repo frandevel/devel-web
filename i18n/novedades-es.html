@@ -679,10 +679,37 @@ footer{
     <h2>16 de noviembre de 2026</h2>
     <span class="version__sello">Última versión</span>
   </div>
-  <p class="version__numero">Versión <span translate="no">1.17.0-ed4b05c</span></p>
+  <p class="version__numero">Versión <span translate="no">1.18.0-eb9dfe5</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"/></svg></span>Nuevas características</h3>
+    <h4>Visitas en la agenda</h4>
+    <ul>
+      <li>Cuando otra profesional tiene que pasar a ver al cliente durante una cita (por ejemplo, a valorar un tratamiento), se apunta desde la propia cita con «Añadir visita»: quién pasa, a qué hora y cuánto tarda, con una nota si hace falta.</li>
+      <li>La visita sale en la columna de quien la hace, en «Día por profesional» y en su semana, con el cliente y la cabina, y la tarjeta de la cita dice quién pasa y a qué hora. Al pulsarla se abre la cita o se quita la visita.</li>
+      <li>Ocupa el tiempo de quien visita, no la cabina: a esa hora no se le puede dar otra cita. Si la cita se mueve o se anula, la visita va con ella.</li>
+    </ul>
+    <h4>Tablet de firmas</h4>
+    <ul>
+      <li>Nuevo rol «Firmas» para el usuario de la tablet del mostrador: al entrar va directo a la pantalla de firmas y recoge las que pide recepción, sin poder abrir los documentos firmados ni ninguna otra pantalla.</li>
+    </ul>
+  </div>
 
   <div class="grupo grupo--mejora">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>Mejoras</h3>
+    <h4>Agenda</h4>
+    <ul>
+      <li>En «Día por profesional» y «Semana por profesional» la cita se guarda en la cabina que se elige en el propio diálogo. Viene puesta la cabina habitual del profesional si está libre a esa hora y, si no, la primera libre; las ocupadas salen marcadas y no se pueden elegir. Antes se podía decir que el horario estaba ocupado aunque la columna del profesional estuviera libre.</li>
+      <li>En la ficha del profesional, «Columna de la agenda» pasa a ser «Cabina habitual», con la opción de no tener ninguna y usar la primera libre.</li>
+      <li>Cuando una cita no cabe, el aviso dice con qué choca y qué hacer: qué profesional o qué cabina está ocupada, de qué hora a qué hora y con qué cliente.</li>
+      <li>En una cita nueva, la duración que se calcula sola con los servicios se llama «Automática» en lugar de «0 minutos».</li>
+    </ul>
+    <h4>Cierres de la agenda</h4>
+    <ul>
+      <li>Cada rato cerrado de un profesional dice a la vista si descuenta de sus horas o no.</li>
+      <li>Nuevo permiso «Modificar cierres» para cambiar el motivo de un cierre y si descuenta horas sin tener que reabrirlo y volver a cerrarlo.</li>
+      <li>Al cerrar un rato en la columna de un profesional, la casilla de descontar horas viene marcada; en la de una cabina o en todo el centro no aparece.</li>
+    </ul>
     <h4>Bonos</h4>
     <ul>
       <li>El nuevo bono que se da a mano desde la ficha del cliente se elige de la tarifa, como en el TPV, y solo entre los bonos activos. Trae su grupo, sus sesiones y su caducidad, que se pueden cambiar antes de guardar. Antes había que elegir un grupo, la lista no los mostraba todos y salían los de promociones ya retiradas.</li>
@@ -693,6 +720,8 @@ footer{
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span>Errores corregidos</h3>
     <ul>
       <li>Al crear o corregir un bono a mano, la caducidad se guardaba un día después de la fecha elegida. Ahora caduca el día que se elige.</li>
+      <li>Un cierre que descuenta horas se podía reabrir sin el permiso de modificar cierres, y con él se perdía el descuento. Ahora reabrirlo pide «Modificar cierres».</li>
+      <li>Al cambiar la contraseña de un usuario, el navegador podía rellenar sola la contraseña guardada de otro usuario y filtrar la lista por su nombre. Los campos de contraseña nueva ya no se rellenan solos.</li>
     </ul>
   </div>
 </section>

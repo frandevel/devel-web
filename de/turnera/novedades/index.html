@@ -730,10 +730,37 @@ footer{
     <h2>16. November 2026</h2>
     <span class="version__sello">Neueste Version</span>
   </div>
-  <p class="version__numero">Version <span translate="no">1.17.0-ed4b05c</span></p>
+  <p class="version__numero">Version <span translate="no">1.18.0-eb9dfe5</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Besuche im Kalender</h4>
+    <ul>
+      <li>Wenn eine andere Fachkraft während eines Termins beim Kunden vorbeischauen muss (zum Beispiel, um eine Behandlung zu beurteilen), wird das direkt im Termin mit «Besuch hinzufügen» eingetragen: wer kommt, um wie viel Uhr und wie lange, bei Bedarf mit einer Notiz.</li>
+      <li>Der Besuch erscheint in der Spalte der besuchenden Person, in «Tag nach Fachkraft» und in ihrer Woche, mit Kunde und Kabine, und die Terminkarte zeigt, wer wann vorbeischaut. Ein Klick darauf öffnet den Termin oder entfernt den Besuch.</li>
+      <li>Er belegt die Zeit der besuchenden Person, nicht die Kabine: Zu dieser Uhrzeit kann sie keinen anderen Termin bekommen. Wird der Termin verschoben oder storniert, geht der Besuch mit.</li>
+    </ul>
+    <h4>Unterschriften-Tablet</h4>
+    <ul>
+      <li>Neue Rolle «Unterschriften» für den Benutzer des Tablets am Empfang: Nach der Anmeldung geht es direkt zum Unterschriftenbildschirm und sammelt die Unterschriften ein, die der Empfang anfordert, ohne unterschriebene Dokumente oder andere Bildschirme öffnen zu können.</li>
+    </ul>
+  </div>
 
   <div class="grupo grupo--mejora">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Terminkalender</h4>
+    <ul>
+      <li>In «Tag nach Fachkraft» und «Woche nach Fachkraft» wird der Termin in der Kabine gespeichert, die im Dialog selbst gewählt wird. Vorausgewählt ist die übliche Kabine der Fachkraft, wenn sie zu dieser Uhrzeit frei ist, sonst die erste freie; belegte Kabinen sind markiert und nicht wählbar. Vorher konnte es heißen, die Zeit sei belegt, obwohl die Spalte der Fachkraft frei war.</li>
+      <li>In der Akte der Fachkraft wird aus «Kalenderspalte» «Übliche Kabine», mit der Möglichkeit, keine zu haben und die erste freie zu nehmen.</li>
+      <li>Wenn ein Termin nicht passt, sagt der Hinweis, womit er kollidiert und was zu tun ist: welche Fachkraft oder Kabine belegt ist, von wann bis wann und mit welchem Kunden.</li>
+      <li>Bei einem neuen Termin heißt die aus den Leistungen berechnete Dauer «Automatisch» statt «0 Minuten».</li>
+    </ul>
+    <h4>Schließungen im Kalender</h4>
+    <ul>
+      <li>Jeder geschlossene Zeitraum einer Fachkraft zeigt auf einen Blick, ob er von ihren Stunden abgezogen wird oder nicht.</li>
+      <li>Neue Berechtigung «Schließungen ändern», um den Grund einer Schließung und den Stundenabzug zu ändern, ohne sie wieder öffnen und neu schließen zu müssen.</li>
+      <li>Beim Schließen eines Zeitraums in der Spalte einer Fachkraft ist das Kästchen für den Stundenabzug angehakt; in der Spalte einer Kabine oder für das ganze Zentrum erscheint es nicht.</li>
+    </ul>
     <h4>Wertkarten</h4>
     <ul>
       <li>Eine von Hand in der Kundenakte vergebene Mehrfachkarte wird jetzt aus der Preisliste gewählt, wie an der Kasse, und nur unter den aktiven. Sie bringt Gruppe, Sitzungen und Ablaufdatum mit, die sich vor dem Speichern ändern lassen. Vorher musste man eine Gruppe wählen, die Liste zeigte nicht alle und es erschienen die von eingestellten Aktionen.</li>
@@ -744,6 +771,8 @@ footer{
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Behobene Fehler</h3>
     <ul>
       <li>Beim Anlegen oder Korrigieren einer Mehrfachkarte von Hand wurde das Ablaufdatum einen Tag nach dem gewählten Datum gespeichert. Jetzt läuft sie am gewählten Tag ab.</li>
+      <li>Eine Schließung mit Stundenabzug konnte ohne die Berechtigung zum Ändern von Schließungen wieder geöffnet werden, wodurch der Abzug verloren ging. Jetzt erfordert das Wiederöffnen «Schließungen ändern».</li>
+      <li>Beim Ändern des Passworts eines Benutzers konnte der Browser selbst das gespeicherte Passwort eines anderen Benutzers eintragen und die Liste nach dessen Namen filtern. Felder für neue Passwörter werden nicht mehr automatisch ausgefüllt.</li>
     </ul>
   </div>
 </section>

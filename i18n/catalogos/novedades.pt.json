@@ -1364,5 +1364,22 @@
   "tcd668a78": "16 de novembro de 2026",
   "tbfbcf922": "1.17.0-ed4b05c",
   "t549f1850": "O pacote de sessões dado à mão a partir da ficha do cliente escolhe-se agora da tabela de preços, como no TPV, e só entre os ativos. Traz o seu grupo, as sessões e a validade, que se podem alterar antes de guardar. Antes tinha de se escolher um grupo, a lista não os mostrava todos e apareciam os de promoções já retiradas.",
-  "tda2fa5a9": "Ao criar ou corrigir um pacote de sessões à mão, a validade ficava guardada um dia depois da data escolhida. Agora termina no dia escolhido."
+  "tda2fa5a9": "Ao criar ou corrigir um pacote de sessões à mão, a validade ficava guardada um dia depois da data escolhida. Agora termina no dia escolhido.",
+  "tcdf38065": "Visitas na agenda",
+  "t99e39d8c": "Quando outra profissional tem de passar a ver o cliente durante uma marcação (por exemplo, para avaliar um tratamento), regista-se na própria marcação com «Adicionar visita»: quem passa, a que horas e quanto tempo demora, com uma nota se for preciso.",
+  "t275a1829": "A visita aparece na coluna de quem a faz, em «Dia por profissional» e na sua semana, com o cliente e a cabine, e o cartão da marcação diz quem passa e a que horas. Ao clicar, abre-se a marcação ou retira-se a visita.",
+  "t8975140d": "Ocupa o tempo de quem visita, não a cabine: a essa hora não lhe pode ser dada outra marcação. Se a marcação mudar ou for anulada, a visita vai com ela.",
+  "t8fe44118": "Tablet de assinaturas",
+  "t8b1bc716": "Nova função «Assinaturas» para o utilizador do tablet da receção: ao entrar vai diretamente para o ecrã de assinaturas e recolhe as que a receção pede, sem poder abrir os documentos assinados nem nenhum outro ecrã.",
+  "t8afc49b4": "Em «Dia por profissional» e «Semana por profissional» a marcação é guardada na cabine escolhida no próprio diálogo. Vem selecionada a cabine habitual do profissional se estiver livre a essa hora e, se não, a primeira livre; as ocupadas aparecem marcadas e não se podem escolher. Antes podia dizer que o horário estava ocupado embora a coluna do profissional estivesse livre.",
+  "tfc2c5c59": "Na ficha do profissional, «Coluna da agenda» passa a ser «Cabine habitual», com a opção de não ter nenhuma e usar a primeira livre.",
+  "t423b12b6": "Quando uma marcação não cabe, o aviso diz com o que choca e o que fazer: que profissional ou cabine está ocupado, de que hora a que hora e com que cliente.",
+  "tf0f86446": "Numa marcação nova, a duração calculada a partir dos serviços chama-se «Automática» em vez de «0 minutos».",
+  "t44330121": "Fechos da agenda",
+  "tf74fed22": "Cada período fechado de um profissional mostra de relance se desconta das suas horas ou não.",
+  "t71236dbb": "Nova permissão «Alterar fechos» para mudar o motivo de um fecho e se desconta horas sem ter de o reabrir e voltar a fechar.",
+  "t9c6784e4": "Ao fechar um período na coluna de um profissional, a caixa de descontar horas vem marcada; na de uma cabine ou no centro todo não aparece.",
+  "tc9041607": "Um fecho que desconta horas podia ser reaberto sem a permissão de alterar fechos, perdendo-se o desconto. Agora reabri-lo exige «Alterar fechos».",
+  "taead9ce8": "Ao mudar a palavra-passe de um utilizador, o navegador podia preencher sozinho a palavra-passe guardada de outro utilizador e filtrar a lista pelo seu nome. Os campos de palavra-passe nova já não se preenchem sozinhos.",
+  "td48a8e9b": "1.18.0-eb9dfe5"
 }

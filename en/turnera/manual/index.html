@@ -692,6 +692,7 @@ footer{
     <li><a href="#agenda">2. The agenda</a></li>
     <li><a href="#agenda-ahora" class="sub">The line of the hour</a></li>
     <li><a href="#agenda-citas" class="sub">Booking, moving and cancelling appointments</a></li>
+    <li><a href="#agenda-visitas" class="sub">Drop-in visits: another professional comes to see the client</a></li>
     <li><a href="#agenda-plazas" class="sub">Classes: appointments with several places</a></li>
     <li><a href="#agenda-repetir" class="sub">Repeating appointments</a></li>
     <li><a href="#agenda-senales" class="sub">What each card tells you</a></li>
@@ -1201,7 +1202,7 @@ footer{
 
   <h3 id="agenda-hora-inicio">The start time of a slot</h3>
   <p>
-    When the diary slots are shorter than an hour and you move the mouse over a free slot, its start time appears, so you know when the appointment would start if you put it there. It is the time of the slot under the mouse, even past its halfway point, and the same one the appointment opens with when you click. Reception sees the same diary times as the rest of the team.
+    When the agenda’s time steps are shorter than an hour and you hover over a free slot, its start time appears, so you know what time the appointment would fall at if you place it there. Reception sees the same agenda hours as the rest of the team.
   </p>
 
   <h3 id="agenda-citas">Booking, moving and cancelling appointments</h3>
@@ -1212,6 +1213,10 @@ footer{
     <li><strong>New customer calling on the phone:</strong> while no customer has been chosen, below the search box there is
       <em>+ New customer</em>. It opens a <strong>first visit</strong> which only asks for first name, surname and mobile (the ID number is optional: some people will not give it over the phone), and leaves the customer set on the appointment. The rest of the record (ID, date of birth, email...) is filled in when they arrive. In the meantime the appointment and the record show <strong>First visit</strong> in blue; as soon as the record is opened and the other details are saved, the notice goes away by itself. When the mobile number is typed, and the ID number if given, Turnera checks whether they already belong to another record (it does not matter how they are written: with spaces, with +34, with dots or hyphens...). If they do, it shows who it is, whether the phone, the ID or both match, with the button
       <em>Use this record</em>; the first visit is not registered unless it is ticked <em>It is another person with the same phone or ID</em> (a mother and her daughter, or a minor with their mother's ID). When a full record is registered from Customers the same notice appears, although there it does not prevent saving.</li>
+    <li><strong>The room, in the professional views:</strong> in <em>Day by member of staff</em> and <em>Week by member of staff</em> the column is the person, so the appointment has a drop-down with the room (or the court, or the hall). The professional's usual room comes preselected if it is free at that time and, if not, the first free one; taken rooms are marked «taken» and cannot be chosen. If the proposed room is taken while the appointment is being filled in, it is saved in the first free one and says so. In <em>Day by resource</em> the room is the column that was clicked and the drop-down does not appear. The usual room is chosen in the professional's record (<em>Usual room</em>,
+      or <em>None</em> so that it always takes the first free one).</li>
+    <li><strong>If the appointment doesn't fit, the warning says why:</strong> what it clashes with and what to do. For example, «It doesn't fit: Room 2 already has an appointment from 10:00 to 11:00 with Ana López (Professional 3). Choose another time or another free slot», or that the professional already has an appointment, or is on a visit, at that time.</li>
+    <li><strong>Automatic duration:</strong> in a new appointment the duration is set to <em>Automatic</em>: what the chosen services add up to and, while there are none, the room's step. Another one can be chosen by hand.</li>
     <li><strong>Opening an appointment:</strong> click it.</li>
     <li><strong>The previous customer, one click away:</strong> clicking the customer box without typing anything shows the last 5 customers you have worked with (in an appointment, at the point of sale or by opening their record). The customer box at the point of sale works the same way.</li>
     <li><strong>Adding a service to an existing appointment:</strong> the duration grows by the length of the new service (and removing it shortens it), even if it had been adjusted by hand; you can fine-tune it afterwards. If that makes the appointment reach the next one of the same professional or room, it warns you: there would not be time to do everything in that appointment.</li>
@@ -1233,7 +1238,7 @@ footer{
       the administrator has: it is meant for one marked by mistake or for the customer who did not come and calls to
       change it. Without the permission it does not show <em>Cut</em>, and if you try to drag it, the diary says which permission
       is needed.</li>
-      <li><strong>Moving it:</strong> drag it. If you drop it in another column it also changes professional or room, depending on the view you are in.</li>
+      <li><strong>Moving it:</strong> drag it. If you drop it in another column it also changes professional or room, depending on the view. In the professional views it keeps its room and, if that is taken at the new time, it moves to the first free one.</li>
     <li><strong>Changing how long it lasts:</strong> drag the bottom edge.</li>
     <li><strong>The device also counts when you move or lengthen it.</strong> If the appointment needs a device that another appointment has taken at the new time, Turnera warns you just as it does when creating it, naming the appointment that has it: you can change it or save it anyway (see <a href="#aparatos">Devices</a>).</li>
     <li><strong>Cancelling it:</strong> open it, press <em>Cancel</em> and say <strong>who is calling it off</strong>: the customer, the centre (the professional cannot make it, the cabin or the court is unavailable, something broke) or an
@@ -1245,7 +1250,7 @@ footer{
       an appointment already paid either: they have to call the centre.</li>
       <li><strong>Removing an appointment made by mistake:</strong> within the <strong>15 minutes</strong> after creating it, a fourth option appears when cancelling it, <em>Created by mistake</em>. The appointment disappears from the agenda and counts in no report, because it was never a booking. After that time it is no longer offered: it is a cancellation by someone, and you have to say by whom. Even though it disappears from the agenda, it also records who removed it and with what role, and whoever has the permission <em>Appointments report</em> can see it with the button <em>Cancellations</em> in the header of the agenda, which leads to the cancellations report with the appointments created by mistake in the last 30 days.</li>
     <li><strong>Taking cancelled appointments off the view:</strong> tick <em>Hide cancelled</em>, under the header. The agenda remembers the box, so next time you will find it as you left it.</li>
-    <li><strong>Keep the names in view when scrolling:</strong> tick <em>Keep the column headers in view</em>, next to it. While you scroll down through the hours, the whole top part of the diary stays at the top: the title with the day, the buttons to change view and day, the filters and the row with the professional or room of each column. Each workstation remembers it separately: on a large screen it may not be needed.</li>
+    <li><strong>Keep the names in view when scrolling:</strong> tick <em>Keep the column headers in view</em>, next to it. The row with the professional or the room of each column stays at the top while you scroll down through the hours. Each workstation remembers it on its own: on a large screen you may not need it.</li>
   </ul>
 
   <p>
@@ -1302,6 +1307,21 @@ footer{
     <img src="/turnera/manual/imagenes/en/80-volver-a-la-cita.png" alt="A customer's record with the floating calendar icon at the bottom right to return to the appointment" loading="lazy">
     <figcaption>The calendar icon, at the bottom right, returns to the appointment that was open.</figcaption>
   </figure>
+
+  <h3 id="agenda-visitas">Drop-in visits: another professional comes to see the client</h3>
+  <span class="ruta">Diary → open the appointment → Visits → Add visit</span>
+
+  <p>
+    Sometimes one professional has the appointment and another has to drop in for a moment to see the client: to assess a treatment, to diagnose something. That is a <strong>visit</strong>. It is noted from the appointment itself, in the section
+    <em>Visits</em>, with <em>Add visit</em>: who drops in, at what time (within the appointment; it starts halfway) and how long it takes (15 minutes to begin with), with a note if needed.
+  </p>
+
+  <ul>
+    <li>The visit shows in the column of whoever makes it, in <em>Day by member of staff</em> and in their <em>Week by member of staff</em>, as an orange strip with the client and the room. The appointment card says who drops in and when. Clicking the strip opens the appointment or removes the visit.</li>
+    <li><strong>It takes the time of whoever visits, not the room.</strong> They cannot be booked at that time, and the warning explains it: «It doesn't fit: Mariluz has a visit from 13:30 to 13:45 with Ana López (Room 2)».</li>
+    <li><strong>It goes with the appointment.</strong> If the appointment moves, the visit moves with it; if it is cancelled, the visit disappears. If whoever visits already has an appointment at the new time, the appointment does not move and the warning says what it clashes with.</li>
+    <li>If, when it is noted, whoever visits already has an appointment at that time, it says with whom and from what time to what time, so another time or another person can be chosen.</li>
+  </ul>
 
   <h3 id="agenda-plazas">Classes: appointments with several places</h3>
   <p>
@@ -1437,12 +1457,11 @@ footer{
   </p>
 
   <p>
-    <strong>If you make a mistake, reopen it.</strong> Every stretch closed by hand has an open padlock in its corner: click it, confirm, and the stretch is free again. Appointments do not change. Only people who can close stretches see the padlock, and it does not appear on what the work calendar marks (holidays, public holidays or outside the shift), which is changed there. If two stretches start at the same time in the same column, the handle and the padlock of the second one move to the left, so both can be clicked. The week view of a professional shows their closures and those of the whole centre; the closures of a room are seen in the view by resource.
+    <strong>If you make a mistake, reopen it.</strong> Every stretch closed by hand has an open padlock in the corner: click it, confirm, and the stretch is free again. With the permission <em>Edit closures</em> the padlock opens the closure to change the reason and whether it deducts hours without reopening it; it can also be reopened from there. A closure that deducts hours can only be reopened by someone with <em>Edit closures</em>. Appointments do not change. Only those who can close stretches see the padlock, and it does not appear on what the work calendar marks (holidays, bank holidays or off-shift), which is changed there. If two stretches start at the same time in the same column, the padlock and handle of the second move to the left so both can be clicked. In a professional's week view their closures and those of the whole centre appear; a room's are seen in the resource view.
   </p>
 
   <p>
-    <strong>A stretch for one person can also be deducted from their hours.</strong> It is what you use for a lunch at an odd hour or a personal errand. If whoever closes has the work calendar write permission (HR or Management) and the person has a work calendar that year, choosing them shows
-    <em>Deduct from hours</em>, <strong>unticked by default</strong>. Unticked, the stretch stays as an informative notice in their work calendar and deducts nothing. Ticked, whatever the stretch covers of their shift stops counting as planned hours, from the moment it is closed and even if nobody has clocked in yet: the work calendar shows those hours short against the agreement. If the person stays clocked in during the stretch, the part where the clocked time, the stretch and their shift overlap is also deducted from their normal hours; if they clock out, those hours were no longer clocked anyway. Either way, worked and planned hours go down by the same amount. No PIN is needed, there is no minimum, and the hours are not made up automatically. Reopening the stretch also removes the deduction; in a closed year it cannot be done.
+    <strong>A stretch for one person can also be deducted from their hours.</strong> It is what is used for a meal at an odd time or a personal errand. With the staff module switched on, when closing a stretch for a person there appears <em>Deduct from hours</em>, <strong>ticked by default</strong>; when closing a room or the whole centre it does not appear. Each closed stretch of a person shows at a glance, with a clock, whether it deducts from their hours or not. Unticked, the stretch stays as an informative note in their work calendar and deducts nothing. Ticked, whatever the stretch covers of their shift stops counting as planned hours, from the moment it is closed and even if nobody has clocked in yet: the work calendar shows those hours short against the agreement. If the person stays clocked in during the stretch, what overlaps between the clocked time, the stretch and their shift is also deducted from their normal hours; if they clock out, those hours were no longer clocked. Either way worked and planned go down by the same amount. No PIN is needed and there is no minimum, and the hours are not made up automatically. Reopening the stretch also removes the deduction; in a closed year it cannot be done.
   </p>
 
   <p>
@@ -1480,17 +1499,17 @@ footer{
   <span class="ruta">Menu → Customers</span>
 
   <p>
-    The search box at the top searches by first name, surname, phone, tax ID or <strong>customer number</strong>. For the first name and surnames, <strong>the start of each word</strong> is enough: «iba» finds Ibáñez but not Arribas, and «ana gar» finds Ana García. Phone and tax ID are found by any fragment; the customer number must be exact. If you type <strong>only digits, and fewer than 9 of them</strong>, the search understands it is a customer number (a phone number has 9): if there is a customer with that number, you get <strong>only that customer</strong>, without those that have it inside their phone or tax ID. If that number is one customer's and, at the same time, the one another customer brought from another platform, <strong>both appear</strong>, first the one with that number in Turnera, so nobody opens the wrong record without noticing. And if nobody has it, it searches as usual. With 9 digits or more, or with letters, nothing changes.
+    The search box at the top searches by first name, surname, phone, tax ID or <strong>customer number</strong>. For the first name and surnames, <strong>the start of each word</strong> is enough: «iba» finds Ibáñez but not Arribas, and «ana gar» finds Ana García. Phone and tax ID are found by any fragment; the customer number must be exact. If you type <strong>only digits, and fewer than 9 of them</strong>, the search understands it is a customer number (a phone number has 9): if there is a customer with that number, you get <strong>only that customer</strong>, without those that have it inside their phone or tax ID; and if nobody has it, it searches as usual. With 9 digits or more, or with letters, nothing changes.
     <strong>If what is typed is mostly digits</strong> (three or more, and at least half of the text), it also searches by phone, mobile and tax ID comparing only the digits: «666123456» finds a phone stored as «666 12-34 56», and the +34 or 0034 prefix does not need to be typed. It is the same search as the one in appointments and in charging. The list is sorted by clicking the header of any column (<a href="#ordenar">how</a>).
   </p>
 
   <p>
-    <strong>The customer number appears everywhere</strong>: in the list (the «Code» column), in the record, on the diary card, in the appointment and payment search, in pending payments and in the reports. Customers who came from another platform keep the number they had there, and new ones get the next one when they are registered. And
+    <strong>The customer number appears everywhere</strong>: in the list, in the record, on the diary card, in the appointment and payment search, in pending payments and in the reports. Customers who came from another platform keep the number they had there, and new ones get the next one when they are registered. And
     <strong>a customer's name in any list is a link to their record</strong>, just like on the home screen; in the appointment and at the checkout, the card button next to the customer also takes you there.
   </p>
 
   <p>
-    A customer record holds their details, visit history, vouchers and notes. Under the name you can see whether they <strong>accept marketing communications</strong>: green if they do, red if they don't and amber if it isn't recorded, in which case nothing should be sent to them. The visit history comes <strong>before the signed documents</strong>, because it is what people look at most.
+    A customer record holds their details, visit history, vouchers and notes. The visit history comes <strong>before the signed documents</strong>, because it is what people look at most.
     <strong>The phone number and the email address are links</strong>: tapping them opens the dialler or the mail programme,
     with nothing to copy and paste. It happens throughout the application — staff, suppliers and
     delegations too — so there is never a number to copy out by hand.
@@ -2259,7 +2278,7 @@ footer{
   </p>
   <ul>
     <li><strong>When selling a service marked as a voucher</strong> (the usual way): the voucher is created by itself when it is charged at the point of sale.</li>
-    <li><strong>By hand:</strong> in the customer record, in the vouchers section, <em>New voucher</em> creates one without charging for it. You choose the voucher from the price list, among the active ones, and it brings its group, sessions and expiry date; the sessions and the date can be changed before saving. It is only visible to whoever has the permission
+    <li><strong>By hand:</strong> in the customer record, in the vouchers section, <em>New voucher</em> creates one without charging it, stating the group, the sessions and when it expires. Only people with the permission
       <a href="#perm-vouchers-manage">Voucher management</a> see it (by default, the administrator and Management); Reception does not.</li>
   </ul>
 
@@ -2814,13 +2833,14 @@ footer{
     <tbody><tr><th>Role</th><th>What it is for</th><th>Built-in permissions</th></tr>
     <tr><td><strong><a href="#rol-recepcion">Reception</a></strong></td><td>Books appointments, serves the front desk and takes payments.</td><td>33</td></tr>
     <tr><td><strong><a href="#rol-profesional">Professional</a></strong></td><td>Their own agenda, their clients and the clinical record.</td><td>18</td></tr>
-    <tr><td><strong><a href="#rol-direccion">Management</a></strong></td><td>Runs the centre: catalogue, staff, reports and settings. Also looks after the users: changing their name or delegation, unlocking them and resetting their password.</td><td>97</td></tr>
-    <tr><td><strong><a href="#rol-rrhh">HR</a></strong></td><td>Work calendars, practitioners and agenda.</td><td>18</td></tr>
+    <tr><td><strong><a href="#rol-direccion">Management</a></strong></td><td>Runs the centre: catalogue, staff, reports and settings. Also looks after the users: changing their name or delegation, unlocking them and resetting their password.</td><td>98</td></tr>
+    <tr><td><strong><a href="#rol-rrhh">HR</a></strong></td><td>Work calendars, practitioners and agenda.</td><td>19</td></tr>
     <tr><td><strong><a href="#rol-mantenimiento">Maintenance</a></strong></td><td>Handles maintenance orders, their zones and their equipment.</td><td>7</td></tr>
     <tr><td><strong><a href="#rol-activaciones">Activations</a></strong></td><td>Handles the activation points and their requests.</td><td>2</td></tr>
+    <tr><td><strong><a href="#rol-firmas">Signatures</a></strong></td><td>Only the signing screen: collects on the tablet the signatures the front desk requests.</td><td>1</td></tr>
     <tr><td><strong><a href="#rol-clientes">Customers</a></strong></td><td>Module role: the client records, their alerts, their points and the clients report.</td><td>11</td></tr>
     <tr><td><strong><a href="#rol-catalogo">Catalogue</a></strong></td><td>Module role: services, packages, products, suppliers and stock, with their reports.</td><td>15</td></tr>
-    <tr><td><strong><a href="#rol-agenda">Agenda</a></strong></td><td>Module role: appointments, waiting list, booths, devices and the appointments report.</td><td>13</td></tr>
+    <tr><td><strong><a href="#rol-agenda">Agenda</a></strong></td><td>Module role: appointments, waiting list, booths, devices and the appointments report.</td><td>14</td></tr>
     <tr><td><strong><a href="#rol-historia-clinica">Clinical record</a></strong></td><td>Module role: the clinical record and consents.</td><td>8</td></tr>
     <tr><td><strong><a href="#rol-caja">Till</a></strong></td><td>Module role: charging, refunds, debts, vouchers, gift cards, coupons, closing the till and their reports.</td><td>21</td></tr>
     <tr><td><strong><a href="#rol-facturacion">Invoicing</a></strong></td><td>Module role: full invoices, invoice book and accounting draft.</td><td>3</td></tr>
@@ -2979,6 +2999,7 @@ footer{
     <tr id="perm-appointments-move-closed"><td><strong>Move attended appointments</strong></td><td>Allows moving appointments marked as attended or as a no-show. It is needed when one was marked by mistake or when the client calls to change it. Charged and cancelled ones cannot be moved.</td><td><a href="#rol-agenda">Agenda</a></td></tr>
     <tr id="perm-appointments-cancel-charged"><td><strong>Cancel appointments already charged</strong></td><td>Allows cancelling appointments that have already been charged. The charge is not undone: refunding the ticket is for that.</td><td><a href="#rol-agenda">Agenda</a></td></tr>
     <tr id="perm-appointments-block"><td><strong>Closing stretches in the agenda</strong></td><td>Allows blocking off periods in the agenda so that nobody can book appointments in them.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-rrhh">HR</a>, <a href="#rol-agenda">Agenda</a></td></tr>
+    <tr id="perm-appointments-edit-blocks"><td><strong>Edit closures</strong></td><td>Lets you change a stretch that is already closed without reopening it: the reason and whether it deducts from the person's hours. Reopening a closure that deducts hours also requires it.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-rrhh">HR</a>, <a href="#rol-agenda">Agenda</a></td></tr>
     <tr id="perm-appointments-print"><td><strong>Printing the agenda</strong></td><td>Allows using the button that prints the day sheet.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-agenda">Agenda</a></td></tr>
     <tr id="perm-waiting-list-manage"><td><strong>Waiting list</strong></td><td>Allows adding clients to the waiting list for a busy time and reviewing that list.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-agenda">Agenda</a></td></tr>
     <tr id="perm-equipment-readings-write"><td><strong>Record the equipment session</strong></td><td>Allows recording the equipment reading at the end of the session.</td><td><a href="#rol-profesional">Professional</a>, <a href="#rol-agenda">Agenda</a></td></tr>
@@ -3006,7 +3027,7 @@ footer{
     <tr id="perm-clinic-view"><td><strong>View the clinical record</strong></td><td>Opens a person’s clinical record. View only: writing in it needs “Write in the clinical record”.</td><td><a href="#rol-profesional">Professional</a>, <a href="#rol-historia-clinica">Clinical record</a></td></tr>
     <tr id="perm-clinic-write"><td><strong>Write in the clinical record</strong></td><td>Allows writing progress notes and medical history in the clinical record.</td><td><a href="#rol-profesional">Professional</a>, <a href="#rol-historia-clinica">Clinical record</a></td></tr>
     <tr id="perm-clinic-print"><td><strong>Print the clinical record</strong></td><td>Allows printing a person’s clinical record.</td><td><a href="#rol-profesional">Professional</a>, <a href="#rol-historia-clinica">Clinical record</a></td></tr>
-    <tr id="perm-consents-request"><td><strong>Ask for a signature</strong></td><td>Asks the person to sign a consent.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-profesional">Professional</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-historia-clinica">Clinical record</a></td></tr>
+    <tr id="perm-consents-request"><td><strong>Ask for a signature</strong></td><td>Asks the person to sign a consent.</td><td><a href="#rol-firmas">Signatures</a>, <a href="#rol-recepcion">Reception</a>, <a href="#rol-profesional">Professional</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-historia-clinica">Clinical record</a></td></tr>
     <tr id="perm-consents-read"><td><strong>See the signed document</strong></td><td>Opens the consent document once it has been signed. Being able to request the signature is not enough to read it.</td><td><a href="#rol-profesional">Professional</a>, <a href="#rol-historia-clinica">Clinical record</a></td></tr>
     <tr id="perm-consents-import"><td><strong>Import signed consent forms</strong></td><td>Uploads to the record consents, as PDFs, that were already signed on another platform.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-historia-clinica">Clinical record</a></td></tr>
     <tr id="perm-consents-withdraw"><td><strong>Withdraw a consent</strong></td><td>Withdraws a consent that had already been given.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-historia-clinica">Clinical record</a></td></tr>
@@ -3127,14 +3148,15 @@ footer{
     <p class="rol-selector__titulo">General roles</p>
     <div class="chips"><a class="chip r-recepcion" href="#rol-recepcion">Reception <small>33</small></a>
       <a class="chip r-profesional" href="#rol-profesional">Professional <small>18</small></a>
-      <a class="chip r-direccion" href="#rol-direccion">Management <small>97</small></a>
-      <a class="chip r-rrhh" href="#rol-rrhh">HR <small>18</small></a>
+      <a class="chip r-direccion" href="#rol-direccion">Management <small>98</small></a>
+      <a class="chip r-rrhh" href="#rol-rrhh">HR <small>19</small></a>
       <a class="chip r-mantenimiento" href="#rol-mantenimiento">Maintenance <small>7</small></a>
-      <a class="chip r-activaciones" href="#rol-activaciones">Activations <small>2</small></a></div>
+      <a class="chip r-activaciones" href="#rol-activaciones">Activations <small>2</small></a>
+      <a class="chip r-activaciones" href="#rol-firmas">Signatures <small>1</small></a></div>
     <p class="rol-selector__titulo">Module roles (everything not delicate in a module)</p>
     <div class="chips"><a class="chip r-clientes" href="#rol-clientes">Customers <small>11</small></a>
       <a class="chip r-catalogo" href="#rol-catalogo">Catalogue <small>15</small></a>
-      <a class="chip r-agenda" href="#rol-agenda">Agenda <small>13</small></a>
+      <a class="chip r-agenda" href="#rol-agenda">Agenda <small>14</small></a>
       <a class="chip r-historia-clinica" href="#rol-historia-clinica">Clinical record <small>8</small></a>
       <a class="chip r-caja" href="#rol-caja">Till <small>21</small></a>
       <a class="chip r-facturacion" href="#rol-facturacion">Invoicing <small>3</small></a>
@@ -3257,16 +3279,17 @@ footer{
 
   <article class="rol-card r-direccion familia-general" id="rol-direccion">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Management</h5><span class="rc-cuenta">97 permissions</span><span class="rc-familia">General role</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Management</h5><span class="rc-cuenta">98 permissions</span><span class="rc-familia">General role</span></div>
       <p class="rc-para">For whoever runs the centre: catalogue, staff, reports and settings.</p>
     </header>
     <div class="rc-cuerpo">
-      <h6 class="rc-modulo"><a href="#permisos-agenda">Agenda</a> <span class="n">· 9</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-agenda">Agenda</a> <span class="n">· 10</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-appointments-view">See the agenda</a><span class="rc-desc">Opens the agenda and shows the appointments in the columns on screen.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-book">Book and move appointments</a><span class="rc-desc">Allows booking new appointments and dragging existing ones to another time or column.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-cancel">Cancel appointments</a><span class="rc-desc">Allows using the cancel button on appointments.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-block">Closing stretches in the agenda</a><span class="rc-desc">Allows blocking off periods in the agenda so that nobody can book appointments in them.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-edit-blocks">Edit closures</a><span class="rc-desc">Lets you change a stretch that is already closed without reopening it: the reason and whether it deducts from the person's hours.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-print">Printing the agenda</a><span class="rc-desc">Allows using the button that prints the day sheet.</span></li>
         <li class="rc-perm"><a href="#perm-waiting-list-manage">Waiting list</a><span class="rc-desc">Allows adding clients to the waiting list for a busy time and reviewing that list.</span></li>
         <li class="rc-perm"><a href="#perm-reports-appointments">Appointments report</a><span class="rc-desc">Opens the appointments report.</span></li>
@@ -3403,14 +3426,15 @@ footer{
 
   <article class="rol-card r-rrhh familia-general" id="rol-rrhh">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">HR</h5><span class="rc-cuenta">18 permissions</span><span class="rc-familia">General role</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">HR</h5><span class="rc-cuenta">19 permissions</span><span class="rc-familia">General role</span></div>
       <p class="rc-para">For whoever looks after the staff: work calendars, practitioners and agenda.</p>
     </header>
     <div class="rc-cuerpo">
-      <h6 class="rc-modulo"><a href="#permisos-agenda">Agenda</a> <span class="n">· 2</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-agenda">Agenda</a> <span class="n">· 3</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-appointments-view">See the agenda</a><span class="rc-desc">Opens the agenda and shows the appointments in the columns on screen.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-block">Closing stretches in the agenda</a><span class="rc-desc">Allows blocking off periods in the agenda so that nobody can book appointments in them.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-edit-blocks">Edit closures</a><span class="rc-desc">Lets you change a stretch that is already closed without reopening it: the reason and whether it deducts from the person's hours.</span></li>
       </ul>
       <h6 class="rc-modulo"><a href="#permisos-personal">Staff</a> <span class="n">· 10</span></h6>
       <ul class="rc-lista">
@@ -3476,6 +3500,19 @@ footer{
     </div>
   </article>
 
+  <article class="rol-card r-activaciones familia-general" id="rol-firmas">
+    <header class="rc-cab">
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Signatures</h5><span class="rc-cuenta">1 permission</span><span class="rc-familia">General role</span></div>
+      <p class="rc-para">For the user of the front-desk tablet: waits on the signing screen and collects the signatures the front desk requests.</p>
+    </header>
+    <div class="rc-cuerpo">
+      <h6 class="rc-modulo"><a href="#permisos-historia-clinica-y-consentimientos">Clinical record and consent forms</a> <span class="n">· 1</span></h6>
+      <ul class="rc-lista">
+        <li class="rc-perm"><a href="#perm-consents-request">Ask for a signature</a><span class="rc-desc">Asks the person to sign a consent.</span></li>
+      </ul>
+    </div>
+  </article>
+
   <article class="rol-card r-clientes familia-modulo" id="rol-clientes">
     <header class="rc-cab">
       <div class="rc-fila"><h5 class="rc-nombre-rol">Customers</h5><span class="rc-cuenta">11 permissions</span><span class="rc-familia">Module role</span></div>
@@ -3528,11 +3565,11 @@ footer{
 
   <article class="rol-card r-agenda familia-modulo" id="rol-agenda">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Agenda</h5><span class="rc-cuenta">13 permissions</span><span class="rc-familia">Module role</span></div>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Agenda</h5><span class="rc-cuenta">14 permissions</span><span class="rc-familia">Module role</span></div>
       <p class="rc-para">Module role, for whoever handles the whole agenda: appointments, waiting list, booths and devices. It carries all the non-delicate permissions of its module and only those.</p>
     </header>
     <div class="rc-cuerpo">
-      <h6 class="rc-modulo"><a href="#permisos-agenda">Agenda</a> <span class="n">· 13</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-agenda">Agenda</a> <span class="n">· 14</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-appointments-view">See the agenda</a><span class="rc-desc">Opens the agenda and shows the appointments in the columns on screen.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-book">Book and move appointments</a><span class="rc-desc">Allows booking new appointments and dragging existing ones to another time or column.</span></li>
@@ -3541,6 +3578,7 @@ footer{
         <li class="rc-perm"><a href="#perm-appointments-move-closed">Move attended appointments</a><span class="rc-desc">Allows moving appointments marked as attended or as a no-show.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-cancel-charged">Cancel appointments already charged</a><span class="rc-desc">Allows cancelling appointments that have already been charged.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-block">Closing stretches in the agenda</a><span class="rc-desc">Allows blocking off periods in the agenda so that nobody can book appointments in them.</span></li>
+        <li class="rc-perm"><a href="#perm-appointments-edit-blocks">Edit closures</a><span class="rc-desc">Lets you change a stretch that is already closed without reopening it: the reason and whether it deducts from the person's hours.</span></li>
         <li class="rc-perm"><a href="#perm-appointments-print">Printing the agenda</a><span class="rc-desc">Allows using the button that prints the day sheet.</span></li>
         <li class="rc-perm"><a href="#perm-waiting-list-manage">Waiting list</a><span class="rc-desc">Allows adding clients to the waiting list for a busy time and reviewing that list.</span></li>
         <li class="rc-perm"><a href="#perm-equipment-readings-write">Record the equipment session</a><span class="rc-desc">Allows recording the equipment reading at the end of the session.</span></li>
@@ -4183,11 +4221,11 @@ footer{
   <span class="ruta">Administration → Users · tablet → /firmas</span>
 
   <p>
-    The tablet needs nothing special: it is a browser with the <em>Signatures</em> screen open and a front-desk session. There is no predefined «signatures» user; the cleanest way is to create one of your own.
+    The tablet needs nothing special: it is a browser with the <em>Signatures</em> open and a user with the built-in role <strong>Signatures</strong>, which can only collect the signatures requested from the front desk.
   </p>
 
   <ol>
-    <li>In <em>Administration → Users</em>, create a user just for the tablet (for example, <code>tablet</code>) with the role <strong>Reception</strong> and the front-desk delegation. That way it shares a session with nobody. It must be able to request signatures and charge, because the <em>Signatures</em> screen requires it.</li>
+    <li>In <em>Administration → Users</em>, create a user just for the tablet (for example, <code>tablet</code>) with the role <strong>Signatures</strong> and the front-desk branch. That way it doesn't share a session with anyone and, on signing in, it goes straight to the signing screen: it doesn't open signed documents or any other screen.</li>
     <li>On the tablet, open the Turnera address followed by <code>/firmas</code>. When you request a signature from the customer record, Turnera shows you that full address and you can copy it.</li>
     <li>Log in with that user, choose the delegation and tick <em>Remember me on this device</em> so the session does not end when the browser is closed.</li>
     <li>Optional: in the tablet's browser, add the page to the home screen to open it full screen.</li>
@@ -4195,7 +4233,7 @@ footer{
 
   <ul>
     <li>Every three seconds the tablet asks for the oldest pending signature <strong>of its delegation</strong>. Each request is valid for five minutes and is signed only once.</li>
-    <li>The front-desk session does not open consents that are already signed.</li>
+    <li>The tablet user does not open consents that have already been signed.</li>
     <li>The <em>Signatures</em> screen is shown <strong>on its own</strong>: it only carries the Turnera logo, with no menu, no language switch and no way to change user or log out. Whoever has the tablet in front of them is the customer. To change user or log out, open <code>/inicio</code> from the tablet's browser.</li>
     <li>After signing, the document disappears and the tablet shows, with a big green tick, a «Document signed» in the language that was read, next to a <em>Close</em> button that closes the tab. If nobody presses it, after 20 seconds it goes back to waiting by itself. If the browser does not allow closing the tab, the button leaves it blank.</li>
     <li>The customer record that reception has open <strong>finds out on its own</strong> of the signature, within a few seconds: the signed document appears in <em>Consents</em> without leaving the record and coming back in, even if the pending-signature notice has been closed.</li>
@@ -4571,7 +4609,7 @@ footer{
   <h4>The PIN</h4>
 
   <p>
-    Every professional needs a <strong>PIN</strong>, four digits unless the centre decides otherwise, which administration resets in <em>Professionals → Actions → Clocking PIN</em>. Pressing their button brings up a keypad and they type it: with the last digit their screen opens, with nothing else to press. From a computer the PIN can also be typed on the keyboard, numeric keypad included: <em>Backspace</em> deletes the last digit and <em>Enter</em> confirms. This is what makes pressing someone else’s button not the same as clocking in for them, and without it the list of names would not prove much to an inspector.
+    Every professional needs a <strong>PIN</strong>, four digits unless the centre decides otherwise, which administration resets in <em>Professionals → Clocking PIN</em>. Pressing their button brings up a keypad and they type it: with the last digit their screen opens, with nothing else to press. From a computer the PIN can also be typed on the keyboard, numeric keypad included: <em>Backspace</em> deletes the last digit and <em>Enter</em> confirms. This is what makes pressing someone else’s button not the same as clocking in for them, and without it the list of names would not prove much to an inspector.
   </p>
 
   <p>
@@ -4616,14 +4654,14 @@ footer{
   </p>
 
   <h4 id="pin-provisional">Temporary PIN</h4>
-  <span class="ruta">Staff → Professionals → Actions → Clocking PIN</span>
+  <span class="ruta">Staff → Professionals → Clocking PIN</span>
 
   <p>
     A PIN that <strong>administration resets</strong> is <strong>temporary</strong>, because whoever reset it knows it. With it the person cannot clock in, neither on the web nor in the professionals’ app, nor sign their monthly summary: when they type it, Turnera asks them to <strong>choose their own</strong> (different from the temporary one and from the digits the centre requires), and from then on it is theirs alone. That way HR never gets to know the PIN someone signs with. PINs that were already set before this improvement are left untouched.
   </p>
 
   <h4 id="pin-bloqueado">Locked PIN</h4>
-  <span class="ruta">Staff → Professionals → Actions → Clocking PIN</span>
+  <span class="ruta">Staff → Professionals → Clocking PIN</span>
 
   <p>
     If <strong>a wrong PIN is typed five times in a row</strong>, that person's PIN becomes
@@ -4639,8 +4677,7 @@ footer{
   </div>
 
   <p>
-    In <em>Staff</em>, the button <em>Actions</em> of anyone whose PIN is locked turns amber with a warning, and in <em>clocking PIN</em>
-    screen is shown <strong>«PIN locked since …»</strong> with the button <strong>Unlock</strong>, which keeps the same PIN and resets the count. It needs the «Unlock the clocking PIN» permission, which Management, HR and Staff have out of the box (and the System administrator); without it, the window says which permission is missing. <strong>Resetting the PIN also unlocks it</strong> (and it is temporary, as always when administration resets it). Every lock and every unlock is recorded —who unlocked it, when and how— and that trail is not deleted.
+    In <em>Staff</em>, the button <em>clocking PIN</em> of anyone whose PIN is locked shows a warning, and inside it shows <strong>«PIN locked since …»</strong> with the button <strong>Unlock</strong>, which keeps the same PIN and resets the count. It needs the «Unlock the clocking PIN» permission, which Management, HR and Staff have out of the box (and the System administrator); without it, the window says which permission is missing. <strong>Resetting the PIN also unlocks it</strong> (and it is temporary, as always when administration resets it). Every lock and every unlock is recorded —who unlocked it, when and how— and that trail is not deleted.
   </p>
 
   <h4 id="firma-resumen">Signing the monthly summary</h4>

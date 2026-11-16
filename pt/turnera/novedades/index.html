@@ -731,10 +731,37 @@ footer{
     <h2>16 de novembro de 2026</h2>
     <span class="version__sello">Última versão</span>
   </div>
-  <p class="version__numero">Versão <span translate="no">1.17.0-ed4b05c</span></p>
+  <p class="version__numero">Versão <span translate="no">1.18.0-eb9dfe5</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Novas funcionalidades</h3>
+    <h4>Visitas na agenda</h4>
+    <ul>
+      <li>Quando outra profissional tem de passar a ver o cliente durante uma marcação (por exemplo, para avaliar um tratamento), regista-se na própria marcação com «Adicionar visita»: quem passa, a que horas e quanto tempo demora, com uma nota se for preciso.</li>
+      <li>A visita aparece na coluna de quem a faz, em «Dia por profissional» e na sua semana, com o cliente e a cabine, e o cartão da marcação diz quem passa e a que horas. Ao clicar, abre-se a marcação ou retira-se a visita.</li>
+      <li>Ocupa o tempo de quem visita, não a cabine: a essa hora não lhe pode ser dada outra marcação. Se a marcação mudar ou for anulada, a visita vai com ela.</li>
+    </ul>
+    <h4>Tablet de assinaturas</h4>
+    <ul>
+      <li>Nova função «Assinaturas» para o utilizador do tablet da receção: ao entrar vai diretamente para o ecrã de assinaturas e recolhe as que a receção pede, sem poder abrir os documentos assinados nem nenhum outro ecrã.</li>
+    </ul>
+  </div>
 
   <div class="grupo grupo--mejora">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Melhorias</h3>
+    <h4>Agenda</h4>
+    <ul>
+      <li>Em «Dia por profissional» e «Semana por profissional» a marcação é guardada na cabine escolhida no próprio diálogo. Vem selecionada a cabine habitual do profissional se estiver livre a essa hora e, se não, a primeira livre; as ocupadas aparecem marcadas e não se podem escolher. Antes podia dizer que o horário estava ocupado embora a coluna do profissional estivesse livre.</li>
+      <li>Na ficha do profissional, «Coluna da agenda» passa a ser «Cabine habitual», com a opção de não ter nenhuma e usar a primeira livre.</li>
+      <li>Quando uma marcação não cabe, o aviso diz com o que choca e o que fazer: que profissional ou cabine está ocupado, de que hora a que hora e com que cliente.</li>
+      <li>Numa marcação nova, a duração calculada a partir dos serviços chama-se «Automática» em vez de «0 minutos».</li>
+    </ul>
+    <h4>Fechos da agenda</h4>
+    <ul>
+      <li>Cada período fechado de um profissional mostra de relance se desconta das suas horas ou não.</li>
+      <li>Nova permissão «Alterar fechos» para mudar o motivo de um fecho e se desconta horas sem ter de o reabrir e voltar a fechar.</li>
+      <li>Ao fechar um período na coluna de um profissional, a caixa de descontar horas vem marcada; na de uma cabine ou no centro todo não aparece.</li>
+    </ul>
     <h4>Pacotes de sessões</h4>
     <ul>
       <li>O pacote de sessões dado à mão a partir da ficha do cliente escolhe-se agora da tabela de preços, como no TPV, e só entre os ativos. Traz o seu grupo, as sessões e a validade, que se podem alterar antes de guardar. Antes tinha de se escolher um grupo, a lista não os mostrava todos e apareciam os de promoções já retiradas.</li>
@@ -745,6 +772,8 @@ footer{
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Erros corrigidos</h3>
     <ul>
       <li>Ao criar ou corrigir um pacote de sessões à mão, a validade ficava guardada um dia depois da data escolhida. Agora termina no dia escolhido.</li>
+      <li>Um fecho que desconta horas podia ser reaberto sem a permissão de alterar fechos, perdendo-se o desconto. Agora reabri-lo exige «Alterar fechos».</li>
+      <li>Ao mudar a palavra-passe de um utilizador, o navegador podia preencher sozinho a palavra-passe guardada de outro utilizador e filtrar a lista pelo seu nome. Os campos de palavra-passe nova já não se preenchem sozinhos.</li>
     </ul>
   </div>
 </section>
