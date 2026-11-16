@@ -1382,7 +1382,8 @@
   "tc9041607": "A closure that deducts hours could be reopened without the edit-closures permission, losing the deduction. Reopening it now requires «Edit closures».",
   "taead9ce8": "When changing a user's password, the browser could fill in another user's saved password on its own and filter the list by that user's name. New-password fields are no longer filled in automatically.",
   "td48a8e9b": "1.18.0-eb9dfe5",
-  "t379f2ee9": "1.18.0-a46f5c5",
+  "t03c53eb1": "1.18.0-9a8dabe",
+  "tef29cd26": "A yes/no question or a checkbox the customer answers on the tablet can be set so that, when signed, it records in their file whether they accept marketing communications: \"Yes\" ticks it and \"No\" unticks it. If that signature is withdrawn, the file is set to \"Does not accept\". It is switched on in the question, inside the template; if it is not, everything works as before.",
   "tf7b9e4d3": "Date-picker calendars showed in English (months and weekdays) even when another language had been chosen. They now speak the chosen language.",
   "t9f99cb75": "On the Home screen, the «First steps» invitation never went away in centres without a diary or a catalogue, such as care homes, because it asked for rooms or services they don't have. It now only asks for what the centre's modules use."
 }

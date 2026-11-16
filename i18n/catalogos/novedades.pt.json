@@ -1382,7 +1382,8 @@
   "tc9041607": "Um fecho que desconta horas podia ser reaberto sem a permissão de alterar fechos, perdendo-se o desconto. Agora reabri-lo exige «Alterar fechos».",
   "taead9ce8": "Ao mudar a palavra-passe de um utilizador, o navegador podia preencher sozinho a palavra-passe guardada de outro utilizador e filtrar a lista pelo seu nome. Os campos de palavra-passe nova já não se preenchem sozinhos.",
   "td48a8e9b": "1.18.0-eb9dfe5",
-  "t379f2ee9": "1.18.0-a46f5c5",
+  "t03c53eb1": "1.18.0-9a8dabe",
+  "tef29cd26": "Uma pergunta de sim ou não ou uma caixa que o cliente responde no tablet pode ser marcada para que, ao assinar, registe na sua ficha se aceita comunicações comerciais: «Sim» marca-a e «Não» desmarca-a. Se essa assinatura for retirada, a ficha fica em «Não aceita». Ativa-se na pergunta, dentro do modelo; sem a ativar, tudo continua como até agora.",
   "tf7b9e4d3": "Os calendários para escolher uma data apareciam em inglês (meses e dias da semana) mesmo com outro idioma escolhido. Agora falam o idioma escolhido.",
   "t9f99cb75": "No Início, o convite «Primeiros passos» nunca desaparecia nos centros sem agenda ou sem catálogo, como as residências, porque pedia cabines ou serviços que não têm. Agora só pede o que os módulos do centro usam."
 }
