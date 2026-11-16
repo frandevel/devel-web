@@ -4582,5 +4582,10 @@
   "t8f288526": "open and a user with the built-in role",
   "te787e759": ", which can only collect the signatures requested from the front desk.",
   "t03d22afb": "and the front-desk branch. That way it doesn't share a session with anyone and, on signing in, it goes straight to the signing screen: it doesn't open signed documents or any other screen.",
-  "t2bb8ed5f": "The tablet user does not open consents that have already been signed."
+  "t2bb8ed5f": "The tablet user does not open consents that have already been signed.",
+  "td747c135": "A yes/no question or a checkbox ticked by the signer can also",
+  "t464ffc6f": ": tick",
+  "t8b832b3a": " on it. When signed, \"Yes\" records in the file that the customer accepts marketing communications and \"No\" removes it. If that signature is withdrawn, the file is set to \"Does not accept\". Only one question per template can do this.",
+  "t9ade1a24": "update the customer's file",
+  "t054feed1": "When signed, update the customer record: accepts marketing communications"
 }
