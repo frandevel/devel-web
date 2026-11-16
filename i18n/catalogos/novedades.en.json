@@ -1381,5 +1381,8 @@
   "t9c6784e4": "When closing a stretch in a professional's column, the deduct-hours box comes ticked; in a room's column or for the whole centre it does not appear.",
   "tc9041607": "A closure that deducts hours could be reopened without the edit-closures permission, losing the deduction. Reopening it now requires «Edit closures».",
   "taead9ce8": "When changing a user's password, the browser could fill in another user's saved password on its own and filter the list by that user's name. New-password fields are no longer filled in automatically.",
-  "td48a8e9b": "1.18.0-eb9dfe5"
+  "td48a8e9b": "1.18.0-eb9dfe5",
+  "t9645c523": "1.18.0-3c23955",
+  "tf7b9e4d3": "Date-picker calendars showed in English (months and weekdays) even when another language had been chosen. They now speak the chosen language.",
+  "t9f99cb75": "On the Home screen, the «First steps» invitation never went away in centres without a diary or a catalogue, such as care homes, because it asked for rooms or services they don't have. It now only asks for what the centre's modules use."
 }
