@@ -679,6 +679,10 @@ footer{
   <h2>What's new in Turnera</h2>
   <p>Latest first</p>
   <ol>
+    <li><a href="#2026-11-18">18 November 2026</a></li>
+    <li><a href="#2026-11-16">16 November 2026</a></li>
+    <li><a href="#2026-11-15">15 November 2026</a></li>
+    <li><a href="#2026-11-13">13 November 2026</a></li>
     <li><a href="#2026-11-12">12 November 2026</a></li>
     <li><a href="#2026-11-11">11 November 2026</a></li>
     <li><a href="#2026-11-10">November 10, 2026</a></li>
@@ -725,10 +729,80 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Bugs fixed</strong>: what failed, and no longer does.</span></li>
 </ul>
 
+<section id="2026-11-18" class="version">
+  <div class="version__cabecera">
+    <h2>18 November 2026</h2>
+    <span class="version__sello">Latest release</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.18.0-f1c2542</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Vouchers for a single service</h4>
+    <ul>
+      <li>A voucher can be valid for one service only, for example “5 underarm sessions”. In the voucher’s record, “Valid for” chooses between the services of a rate group or a single service. That voucher no longer pays for other areas of the same group.</li>
+      <li>In each service’s record, “New voucher for this service” creates the voucher already set up for it, and “Vouchers that pay for it” shows its own vouchers and those of its rate group.</li>
+      <li>If a service can be paid both by its own voucher and by one of its group, its own is used first, since it is good for nothing else.</li>
+    </ul>
+    <h4>A service in several rate groups</h4>
+    <ul>
+      <li>A service can be in several rate groups at once, for example its usual one and a promotion’s, and a voucher of any of them pays for it. They are chosen in the service’s record, under “Rate groups”.</li>
+      <li>On the rate groups screen, “Add services” puts several into the group at once and “Remove” takes a service out of that group only.</li>
+    </ul>
+    <h4>Till closing</h4>
+    <ul>
+      <li>Below the takings, a “Given away” line shows how many lines were settled with the Gift payment method and what they were worth at list price, with its breakdown. It is not money and does not go into the till.</li>
+    </ul>
+    <h4>Signed consents report</h4>
+    <ul>
+      <li>A new report in the clients section: the signed, current consents of all clients, with the date, the template, how it was signed and who collected it. It can be filtered by date, template and client and downloaded to Excel. Out of the box only Management sees it.</li>
+    </ul>
+    <h4>Client history</h4>
+    <ul>
+      <li>Lines that come from another program carry a small arrow next to the service. Hovering over it says “Imported from another program”.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Improvements</h3>
+    <h4>Catalogue</h4>
+    <ul>
+      <li>“Voucher group” is now called “Rate group”.</li>
+      <li>The services list can be filtered by “All”, “Services” or “Vouchers”, and says what each voucher is valid for.</li>
+      <li>The service category is chosen from the existing ones or a new one is typed.</li>
+      <li>The rate group dropdown brings them all. Before, only the first hundred appeared.</li>
+    </ul>
+    <h4>Till</h4>
+    <ul>
+      <li>When charging a client, only their appointments already marked as attended are added to the ticket. The rest are shown unticked: to charge them, mark them as attended first.</li>
+    </ul>
+    <h4>Diary</h4>
+    <ul>
+      <li>In Preferences, a colour of its own for the out-of-shift stripes, separate from that of closed periods, with its sample and its “Reset”.</li>
+    </ul>
+    <h4>Working-time record</h4>
+    <ul>
+      <li>The link for the Labour Inspectorate or the staff representatives also comes as a QR code when it is created, to open it with the phone camera without dictating it.</li>
+    </ul>
+    <h4>Built-in roles</h4>
+    <ul>
+      <li>The “Clinical record” role is now for following up cases: seeing, writing and printing the clinical record. Consents are handled by Reception and Management.</li>
+      <li>The “Stocks” menu entry is opened by the “See the stock” permission, not by the stock report one.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Bugs fixed</h3>
+    <ul>
+      <li>Saving a client with the type “The centre’s” or with no type gave an error.</li>
+      <li>When refunding an old line paid with a voucher, the session goes back to its voucher even if the service has no rate group.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-16" class="version">
   <div class="version__cabecera">
     <h2>16 November 2026</h2>
-    <span class="version__sello">Latest release</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.18.0-776d3e3</span></p>
 

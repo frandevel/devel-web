@@ -679,6 +679,10 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-11-18">18. November 2026</a></li>
+    <li><a href="#2026-11-16">16. November 2026</a></li>
+    <li><a href="#2026-11-15">15. November 2026</a></li>
+    <li><a href="#2026-11-13">13. November 2026</a></li>
     <li><a href="#2026-11-12">12. November 2026</a></li>
     <li><a href="#2026-11-11">11. November 2026</a></li>
     <li><a href="#2026-11-10">10. November 2026</a></li>
@@ -725,10 +729,80 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-11-18" class="version">
+  <div class="version__cabecera">
+    <h2>18. November 2026</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.18.0-f1c2542</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Mehrfachkarten für eine einzige Leistung</h4>
+    <ul>
+      <li>Eine Mehrfachkarte kann nur für eine Leistung gelten, zum Beispiel „5 Sitzungen Achseln“. In der Karte der Mehrfachkarte wählt „Gilt für“ zwischen den Leistungen einer Tarifgruppe oder einer einzigen Leistung. Diese Mehrfachkarte bezahlt keine anderen Zonen derselben Gruppe mehr.</li>
+      <li>In der Karte jeder Leistung legt „Neue Mehrfachkarte für diese Leistung“ die Mehrfachkarte schon passend an, und „Mehrfachkarten, die sie bezahlen“ zeigt ihre eigenen und die ihrer Tarifgruppe.</li>
+      <li>Kann eine Leistung sowohl mit ihrer eigenen Mehrfachkarte als auch mit einer ihrer Gruppe bezahlt werden, wird zuerst die eigene verbraucht, die für nichts anderes taugt.</li>
+    </ul>
+    <h4>Eine Leistung in mehreren Tarifgruppen</h4>
+    <ul>
+      <li>Eine Leistung kann gleichzeitig in mehreren Tarifgruppen sein, zum Beispiel in ihrer üblichen und in der einer Aktion, und eine Mehrfachkarte jeder dieser Gruppen bezahlt sie. Sie werden in der Karte der Leistung unter „Tarifgruppen“ gewählt.</li>
+      <li>Auf der Seite der Tarifgruppen fügt „Leistungen hinzufügen“ mehrere auf einmal zur Gruppe hinzu, und „Entfernen“ nimmt eine Leistung nur aus dieser Gruppe.</li>
+    </ul>
+    <h4>Kassenabschluss</h4>
+    <ul>
+      <li>Unter den Einnahmen zeigt eine Zeile „Verschenkt“, wie viele Positionen mit der Zahlungsart Geschenk beglichen wurden und was sie zum Listenpreis wert waren, mit ihrer Aufschlüsselung. Es ist kein Geld und fließt nicht in die Kasse ein.</li>
+    </ul>
+    <h4>Bericht der unterschriebenen Einwilligungen</h4>
+    <ul>
+      <li>Ein neuer Bericht im Bereich Kunden: die unterschriebenen, gültigen Einwilligungen aller Kunden, mit Datum, Vorlage, Art der Unterschrift und wer sie entgegengenommen hat. Er lässt sich nach Datum, Vorlage und Kunde filtern und als Excel herunterladen. Ab Werk sieht ihn nur die Leitung.</li>
+    </ul>
+    <h4>Kundenverlauf</h4>
+    <ul>
+      <li>Positionen, die aus einem anderen Programm stammen, tragen einen kleinen Pfeil neben der Leistung. Fährt man mit der Maus darüber, steht dort „Aus einem anderen Programm importiert“.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Katalog</h4>
+    <ul>
+      <li>„Mehrfachkarten-Gruppe“ heißt jetzt „Tarifgruppe“.</li>
+      <li>Die Leistungsliste lässt sich nach „Alle“, „Leistungen“ oder „Mehrfachkarten“ filtern und zeigt, wofür jede Mehrfachkarte gilt.</li>
+      <li>Die Kategorie der Leistung wird aus den vorhandenen gewählt oder neu eingegeben.</li>
+      <li>Die Auswahlliste der Tarifgruppen zeigt jetzt alle. Vorher erschienen nur die ersten hundert.</li>
+    </ul>
+    <h4>Kasse</h4>
+    <ul>
+      <li>Beim Kassieren eines Kunden kommen nur seine bereits als erledigt markierten Termine auf den Beleg. Die übrigen erscheinen ohne Haken: um sie zu kassieren, markiert man sie zuerst als erledigt.</li>
+    </ul>
+    <h4>Terminkalender</h4>
+    <ul>
+      <li>In den Einstellungen eine eigene Farbe für die Streifen außerhalb der Schicht, getrennt von der der gesperrten Zeiten, mit Vorschau und „Zurücksetzen“.</li>
+    </ul>
+    <h4>Arbeitszeiterfassung</h4>
+    <ul>
+      <li>Der Link für die Arbeitsinspektion oder die Arbeitnehmervertretung erscheint beim Erstellen auch als QR-Code, damit man ihn mit der Handykamera öffnen kann, ohne ihn zu diktieren.</li>
+    </ul>
+    <h4>Werkseitige Rollen</h4>
+    <ul>
+      <li>Die Rolle „Krankenakte“ dient jetzt der Fallbetreuung: die Krankenakte ansehen, schreiben und drucken. Die Einwilligungen übernehmen Empfang und Leitung.</li>
+      <li>Der Menüeintrag „Lager“ wird mit der Berechtigung „Lagerbestand ansehen“ geöffnet, nicht mit der des Lagerberichts.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Behobene Fehler</h3>
+    <ul>
+      <li>Einen Kunden mit dem Typ „Der des Zentrums“ oder ohne Typ zu speichern, ergab einen Fehler.</li>
+      <li>Beim Erstatten einer alten, mit Mehrfachkarte bezahlten Position geht die Sitzung an ihre Mehrfachkarte zurück, auch wenn die Leistung keine Tarifgruppe hat.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-16" class="version">
   <div class="version__cabecera">
     <h2>16. November 2026</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.18.0-776d3e3</span></p>
 

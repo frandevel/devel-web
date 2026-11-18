@@ -679,6 +679,10 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-11-18">18 de noviembre de 2026</a></li>
+    <li><a href="#2026-11-16">16 de noviembre de 2026</a></li>
+    <li><a href="#2026-11-15">15 de noviembre de 2026</a></li>
+    <li><a href="#2026-11-13">13 de noviembre de 2026</a></li>
     <li><a href="#2026-11-12">12 de noviembre de 2026</a></li>
     <li><a href="#2026-11-11">11 de noviembre de 2026</a></li>
     <li><a href="#2026-11-10">10 de noviembre de 2026</a></li>
@@ -726,10 +730,80 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-11-18" class="version">
+  <div class="version__cabecera">
+    <h2>18 de noviembre de 2026</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">1.18.0-f1c2542</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
+    <h4>Bonos de un solo servicio</h4>
+    <ul>
+      <li>Un bono puede valer solo para un servicio, por ejemplo «5 sesiones de axilas». En la ficha del bono, «Vale para» elige entre los servicios de un grupo de tarifa o un solo servicio. Ese bono ya no paga otras zonas del mismo grupo.</li>
+      <li>En la ficha de cada servicio, «Nuevo bono de este servicio» crea el bono ya preparado para él, y «Bonos que lo pagan» enseña los suyos y los de su grupo de tarifa.</li>
+      <li>Si a un servicio lo paga a la vez un bono suyo y uno de su grupo, se gasta antes el suyo, que no sirve para otra cosa.</li>
+    </ul>
+    <h4>Un servicio en varios grupos de tarifa</h4>
+    <ul>
+      <li>Un servicio puede estar en varios grupos de tarifa a la vez, por ejemplo en el suyo y en el de una promoción, y lo paga el bono de cualquiera de ellos. Se eligen en la ficha del servicio, en «Grupos de tarifa».</li>
+      <li>En la pantalla de grupos de tarifa, «Añadir servicios» mete varios en el grupo de una vez y «Quitar» saca un servicio solo de ese grupo.</li>
+    </ul>
+    <h4>Cierre de caja</h4>
+    <ul>
+      <li>Debajo de lo cobrado, una línea «Regalado» dice cuántas líneas se han saldado con la forma de pago Regalo y lo que valían a precio de tarifa, con su desglose. No es dinero y no entra en la caja.</li>
+    </ul>
+    <h4>Informe de consentimientos firmados</h4>
+    <ul>
+      <li>Nuevo informe en la sección de clientes: los consentimientos firmados y vigentes de todos los clientes, con la fecha, la plantilla, cómo se firmó y quién lo recogió. Se filtra por fecha, plantilla y cliente y se descarga a Excel. De fábrica solo lo ve Dirección.</li>
+    </ul>
+    <h4>Historial del cliente</h4>
+    <ul>
+      <li>Las líneas que vienen de otro programa llevan una flechita junto al servicio. Al pasar el ratón por encima dice «Importada de otro programa».</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Mejoras</h3>
+    <h4>Catálogo</h4>
+    <ul>
+      <li>«Grupo de bonos» pasa a llamarse «Grupo de tarifa».</li>
+      <li>La lista de servicios se filtra por «Todos», «Servicios» o «Bonos», y dice para qué vale cada bono.</li>
+      <li>La categoría del servicio se elige de las que ya hay o se escribe una nueva.</li>
+      <li>El desplegable de grupos de tarifa los trae todos. Antes solo salían los cien primeros.</li>
+    </ul>
+    <h4>TPV</h4>
+    <ul>
+      <li>Al cobrar a un cliente, solo se juntan al ticket sus citas ya marcadas como atendidas. Las demás se ven sin marcar: para cobrarlas, primero se marcan como atendidas.</li>
+    </ul>
+    <h4>Agenda</h4>
+    <ul>
+      <li>En Preferencias, un color propio para las franjas de fuera de turno, separado del de los ratos cerrados, con su muestra y su «Restablecer».</li>
+    </ul>
+    <h4>Registro de jornada</h4>
+    <ul>
+      <li>El enlace para la Inspección o la representación de la plantilla sale también en código QR al crearlo, para abrirlo con la cámara del móvil sin dictarlo.</li>
+    </ul>
+    <h4>Roles de fábrica</h4>
+    <ul>
+      <li>El rol «Historia clínica» queda para el seguimiento de los casos: ver, escribir e imprimir la historia clínica. Los consentimientos los llevan Recepción y Dirección.</li>
+      <li>La entrada «Stocks» del menú la abre el permiso «Ver el stock», no el del informe de stock.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Errores corregidos</h3>
+    <ul>
+      <li>Guardar un cliente con el tipo «El del centro» o sin tipo daba error.</li>
+      <li>Al devolver una línea antigua pagada con bono, la sesión vuelve a su bono aunque el servicio no tenga grupo de tarifa.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-16" class="version">
   <div class="version__cabecera">
     <h2>16 de noviembre de 2026</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">1.18.0-776d3e3</span></p>
 
