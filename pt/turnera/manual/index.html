@@ -1632,6 +1632,10 @@ footer{
   </p>
 
   <p>
+    As linhas que não foram feitas no Turnera, mas chegaram com a <strong>importação de outro programa</strong>, levam uma pequena marca (uma seta para baixo) junto ao nome do serviço ou do produto. Ao passar o rato por cima di-lo. As que se cobram aqui não a levam.
+  </p>
+
+  <p>
     O que foi cobrado em cada visita —o valor e o botão <em>Talão</em> do histórico, que lança a impressão, vê-o quem tem a permissão «Ver os valores e os talões do histórico». Se se retirar a um perfil ou a uma pessoa, o seu histórico continua a mostrar o que se fez e quando, mas sem valores nem talão. Vem de origem para quem já pode ver as fichas.
   </p>
 
@@ -1888,7 +1892,8 @@ footer{
   </p>
 
   <p>
-    <strong>Várias marcações no mesmo dia, um só talão.</strong> Se a cliente veio hoje a mais de um tratamento —com a mesma profissional ou com diferentes—, não é preciso cobrá-los um a um. Em cima, em <em>Por cobrar</em>, aparece um único cartão com «2 marcações», «3 marcações»…; ao carregar nele, o talão monta-se com todas, numa só venda e com um só total. Por cima das linhas aparece a lista <em>Marcações de hoje</em>: as <strong>atendidas</strong> e as que estão <strong>em curso</strong> entram sozinhas, e as que ainda não começaram veem-se mas sem marcar. Desmarque a que não queira cobrar agora —fica à espera em cima para quando sair— ou marque outra para a juntar.
+    <strong>Várias marcações no mesmo dia, um só talão.</strong> Se a cliente veio hoje a mais de um tratamento —com a mesma profissional ou com diferentes—, não é preciso cobrá-los um a um. Em cima, em <em>Por cobrar</em>, aparece um único cartão com «2 marcações», «3 marcações»…; ao carregar nele, o talão monta-se com todas, numa só venda e com um só total. Por cima das linhas aparece a lista <em>Marcações de hoje</em>: só se juntam no talão as que já estão
+    <strong>marcadas como atendidas</strong>, e entram sozinhas. As outras — ainda na cabine, sem começar, ou que já passaram mas ninguém marcou como atendidas — aparecem sem marcar e não se podem juntar: para as cobrar aqui, volte à marcação e ponha-a como atendida. Desmarque a que não quiser cobrar agora — fica à espera em cima para quando sair — ou marque outra como atendida para a juntar.
   </p>
 
   <figure>
@@ -2514,24 +2519,39 @@ footer{
   <h2>5. Pacotes de sessões</h2>
 
   <p>
-    Um pacote de sessões são sessões pagas antecipadamente de um <strong>grupo de serviços</strong>. Vendem-se de duas maneiras:
+    Um pacote de sessões são sessões pagas antecipadamente que valem para os serviços de um <strong>grupo de tarifa</strong>
+    ou para <strong>um só serviço</strong>. Vendem-se de duas maneiras:
   </p>
   <ul>
     <li><strong>Ao vender um serviço marcado como pacote de sessões</strong> (o habitual): o pacote cria-se sozinho ao cobrá-lo no TPV.</li>
-    <li><strong>À mão:</strong> na ficha do cliente, na secção de pacotes, <em>Novo pacote de sessões</em> cria um sem o cobrar, indicando o grupo, as sessões e quando caduca. Só o vê quem tem a permissão
+    <li><strong>À mão:</strong> na ficha do cliente, na secção de pacotes, <em>Novo pacote de sessões</em> cria um sem o cobrar, escolhendo o pacote da tabela: traz as suas sessões e a sua validade, que se podem mudar antes de guardar. Só o vê quem tem a permissão
       <a href="#perm-vouchers-manage">Gestão de bónus</a> (de fábrica, o administrador e a Direção); a Receção não.</li>
   </ul>
 
   <h3 id="bonos-sesiones-vigencia">Onde se definem as sessões e a validade</h3>
   <p>
     Em <em>Catálogo → Serviços</em>, no serviço que se vende como pacote, marca-se <strong>Vende-se como pacote de sessões</strong>
-    e aparecem as suas <strong>sessões</strong> e a sua <strong>validade</strong>. As sessões valem para os serviços do seu
-    <em>Grupo de pacotes</em>. A validade dá-se de duas maneiras:
+    e aparecem as suas <strong>sessões</strong> e a sua <strong>validade</strong>. Em <em>Válido para</em> escolhe-se se o pacote paga os serviços de um <em>Grupo de tarifa</em> ou um só serviço. A validade dá-se de duas maneiras:
   </p>
   <ul>
     <li><strong>Meses desde a compra</strong>: o pacote caduca esse número de meses depois do dia em que se vende.</li>
     <li><strong>Entre duas datas</strong>, como num hotel: escolhem-se no calendário o primeiro e o último dia, e o pacote só se pode usar entre eles, ambos incluídos, seja vendido quando for. Serve para campanhas de época. Se se vender antes da primeira data, a ficha do cliente indica <em>Usa-se a partir de …</em> e o TPV não o desconta até esse dia.</li>
   </ul>
+
+  <h3 id="bonos-de-un-servicio">Pacotes de sessões de um só serviço</h3>
+  <p>
+    Um pacote de um serviço (por exemplo, «5 sessões de axilas») só paga esse serviço, mesmo que o serviço esteja num grupo de tarifa com outros. Cria-se a partir da ficha do serviço com <strong>Novo pacote deste serviço</strong>, que o deixa preparado para esse serviço, ou em qualquer pacote escolhendo <em>Válido para → Um serviço</em>. A ficha de cada serviço mostra em <strong>Pacotes que o pagam</strong> os seus e os dos seus grupos de tarifa, e a lista de serviços filtra-se com <em>Todos</em>, <em>Serviços</em> ou <em>Pacotes de sessões</em>.
+  </p>
+
+  <h3 id="bonos-varios-grupos">Um serviço em vários grupos de tarifa</h3>
+  <p>
+    Um serviço pode estar em <strong>vários grupos de tarifa</strong> ao mesmo tempo: por exemplo, no seu de sempre e no de uma promoção. Paga-o o pacote de qualquer um deles. Faz-se de qualquer dos dois lados:
+  </p>
+  <ul>
+    <li>Em <em>Catálogo → Serviços</em>, na ficha do serviço, o campo <strong>Grupos de tarifa</strong> admite vários.</li>
+    <li>No ecrã de grupos de tarifa, ao escolher um grupo, <strong>Adicionar serviços</strong> põe vários de uma vez, e <strong>Remover</strong>, em cada linha, tira o serviço só desse grupo.</li>
+  </ul>
+  <p>Um pacote, pelo contrário, continua a ser de um só grupo de tarifa ou de um só serviço.</p>
 
   <h3>Como se gastam</h3>
   <p>
@@ -2539,6 +2559,10 @@ footer{
     pacote e que fique marcado como coberto (ver <a href="#cobrar-bono">Cobrar com pacote de sessões</a>). Os serviços de
     outros grupos e os produtos do mesmo talão são pagos com a forma de pagamento normal. Também se pode descontar
     manualmente a partir da ficha do cliente, para o caso de ter atendido sem passar pela caixa.
+  </p>
+
+  <p>
+    <strong>Se um serviço pode ser pago ao mesmo tempo por um pacote seu e por um do seu grupo de tarifa, gasta-se primeiro o seu</strong>, que não serve para mais nada; o do grupo guarda-se para os outros serviços.
   </p>
 
   <p>
@@ -2808,6 +2832,7 @@ footer{
     <tr><td><strong>Marcações</strong></td><td>As marcações de um período, com filtro por primeira visita.</td></tr>
     <tr><td><strong>Anulações</strong></td><td>Quantas foram anuladas pelo cliente, pelo centro e por causas externas, e que clientes mais anulam.</td></tr>
     <tr><td><strong><a href="#rol-clientes">Clientes</a></strong></td><td>Registos, aniversários e de onde vêm. Também quem fez um serviço: escolhem-se um ou vários em <em>Serviços realizados</em> (aparece quem fez qualquer um deles) e, se for preciso, restringe-se com a <em>Data da visita</em>.</td></tr>
+    <tr><td><strong>Consentimentos assinados</strong></td><td>Os consentimentos assinados e em vigor de todos os clientes, com data, modelo e versão, se foi assinado no tablet ou importado e quem o recolheu. Filtra-se por data, modelo e cliente. É da secção de clientes e de fábrica só o vê a Direção; o documento assinado só se abre com «Ver o documento assinado».</td></tr>
     <tr><td><strong>Pacotes de sessões</strong></td><td>O que está vendido, o que falta consumir e o que está prestes a expirar.</td></tr>
     <tr id="informe-facturacion-profesional"><td><strong>Faturação por profissional</strong></td><td>O que faturou cada profissional num período: quantos serviços e por quanto, as sessões com pacote (contam-se, mas não somam importância: cobrou-se ao vender o pacote), os produtos e o que fica pendente. Cada linha do talão conta para quem a fez, com os descontos e o IVA incluído, e as devoluções subtraem. O Excel traz o resumo e o detalhe de cada linha, para calcular as comissões. Está em <em>Caixa e cobranças</em>.</td></tr>
     <tr><td><strong>Stock</strong></td><td>O que falta e o que entrou e saiu.</td></tr>
@@ -2840,6 +2865,7 @@ footer{
       numerário, menos os <em>pagamentos por caixa</em> (o estafeta, a florista), é o que <em>devia haver na
       caixa</em>. Escreve-se a contagem e aparece a diferença de numerário. O que se leva ao banco vai em <em>quantia
       retirada</em>, e o que fica é a caixa inicial do dia seguinte.</li>
+    <li><strong>Oferecido</strong>: por baixo do recebido, uma linha discreta diz quantas linhas foram saldadas com a forma de pagamento <em>Oferta</em> e quanto valiam a preço de tabela. Não é dinheiro, por isso não entra na caixa nem na diferença. <em>Ver detalhe</em> mostra cada linha: hora, talão, cliente, conceito, profissional e preço. Ao imprimir o fecho sai a linha com o total.</li>
   </ul>
   <p>
     Em cima, grande, <strong>o veredicto</strong>: a verde se a caixa bate certo, a vermelho com quanto falta ou sobra
@@ -3026,8 +3052,7 @@ footer{
   <ul>
     <li><strong>Aparelhos</strong>: as máquinas que não se podem partilhar e o que se regista de cada sessão.
       Está explicado em <a href="#aparatos">Aparelhagem</a>.</li>
-    <li><strong>Catálogo</strong>: serviços, produtos, grupos de pacotes de sessões e fornecedores. Cada serviço e cada
-      produto têm ainda <strong>o seu IVA</strong>, que se decide aqui e não ao balcão.</li>
+    <li><strong>Catálogo</strong>: serviços, produtos, grupos de tarifa e fornecedores. Cada serviço e cada produto levam além disso <strong>o seu IVA</strong>, que se decide aqui e não ao balcão.</li>
     <li><strong>O que está desativado não aparece ao pesquisar.</strong> Um serviço, um produto, um pacote ou um
       profissional retirado, ou um fornecedor com quem já não se trabalha (na sua ficha, retirando <em>Ativo</em>),
       desaparece das listas e dos menus. As listas de serviços, produtos, pacotes, fornecedores e
@@ -3068,7 +3093,7 @@ footer{
     <li><strong>Clientes</strong>: as fichas, os seus avisos, os seus pontos e o relatório de clientes.</li>
     <li><strong>Catálogo</strong>: serviços, pacotes, produtos, fornecedores e stock, com os seus relatórios.</li>
     <li><strong>Agenda</strong>: marcações, lista de espera, cabines, aparelhos e o relatório de marcações.</li>
-    <li><strong>Histórico clínico</strong>: o histórico clínico e os consentimentos.</li>
+    <li><strong>Histórico clínico</strong>: o acompanhamento dos casos, ou seja, ver, escrever e imprimir o histórico clínico. Os consentimentos não vão com este perfil.</li>
     <li><strong>Caixa</strong>: cobrar, reembolsar, dívidas, pacotes de sessões, cartões-oferta, cupões, fecho de caixa e os seus relatórios.</li>
     <li><strong>Faturação</strong>: faturas completas, livro de faturas e rascunho contabilístico.</li>
     <li><strong>Portal e avisos</strong>: o portal de reservas e os avisos por WhatsApp.</li>
@@ -3152,7 +3177,7 @@ footer{
     <tr><td><strong><a href="#rol-clientes">Clientes</a></strong></td><td>Função de módulo: as fichas, os seus avisos, os seus pontos e o relatório de clientes.</td><td>11</td></tr>
     <tr><td><strong><a href="#rol-catalogo">Catálogo</a></strong></td><td>Função de módulo: serviços, pacotes, produtos, fornecedores e stock, com os seus relatórios.</td><td>15</td></tr>
     <tr><td><strong><a href="#rol-agenda">Agenda</a></strong></td><td>Função de módulo: marcações, lista de espera, cabinas, aparelhos e o relatório de marcações.</td><td>14</td></tr>
-    <tr><td><strong><a href="#rol-historia-clinica">Histórico clínico</a></strong></td><td>Função de módulo: o processo clínico e os consentimentos.</td><td>8</td></tr>
+    <tr><td><strong><a href="#rol-historia-clinica">Histórico clínico</a></strong></td><td>Perfil de módulo: o acompanhamento dos casos (ver, escrever e imprimir o histórico clínico).</td><td>3</td></tr>
     <tr><td><strong><a href="#rol-caja">Caixa</a></strong></td><td>Função de módulo: cobrar, devolver, dívidas, pacotes de sessões, cartões-oferta, cupões, fecho de caixa e os seus relatórios.</td><td>21</td></tr>
     <tr><td><strong><a href="#rol-facturacion">Faturação</a></strong></td><td>Função de módulo: faturas completas, livro de faturas e rascunho contabilístico.</td><td>3</td></tr>
     <tr><td><strong><a href="#rol-portal-y-avisos">Portal e avisos</a></strong></td><td>Função de módulo: o portal de reservas e os avisos por WhatsApp.</td><td>2</td></tr>
@@ -3197,7 +3222,7 @@ footer{
       <a href="#perm-reports-payments">«Relatório de cobranças»</a>. Descarregá-lo para ficheiro exige além disso <a href="#perm-reports-export">«Descarregar relatórios para ficheiro»</a>; e o relatório de clientes para ficheiro exige <a href="#perm-customers-export">«Exportar a lista de clientes»</a>, que é sensível.</li>
     <li><strong>Catálogo.</strong> <a href="#perm-services-view">«Ver os serviços»</a> mostra os serviços e os seus preços;
       <a href="#perm-services-write">«Criar e editar os serviços»</a> é o que permite alterá-los. Só com permissão de ver, os botões de criar, editar e retirar aparecem desligados ou não aparecem. Escolher serviços com os botões rápidos ao marcar uma consulta não precisa de ver o catálogo: é outra permissão,
-      <a href="#perm-services-quick-pick">“Seleção rápida de serviços”</a>. O ecrã dos grupos de pacotes de sessões também não abre só por ver os serviços: pede <a href="#perm-service-groups-view">«Ver os grupos de pacotes de sessões»</a>, que de origem só a Direção traz.</li>
+      <a href="#perm-services-quick-pick">“Seleção rápida de serviços”</a>. O ecrã de grupos de tarifa também não se abre com ver os serviços: pede <a href="#perm-service-groups-view">«Ver os grupos de pacotes de sessões»</a>, que de origem só a Direção traz.</li>
     <li><strong>Caixa.</strong> Cobrar é <a href="#perm-checkout-charge">«Cobrar na caixa»</a>; aplicar um desconto, <a href="#perm-checkout-discount">«Aplicar descontos»</a>; deixar algo em dívida, <a href="#perm-checkout-debt">«Deixar em dívida»</a>; tirar o talão, <a href="#perm-checkout-print-ticket">«Imprimir talões»</a>; dar um orçamento, <a href="#perm-checkout-budget">«Dar orçamentos»</a>; devolver um ticket, <a href="#perm-checkout-refund">«Devolver um ticket»</a>; ver o cobrado hoje e no mês no Início,
       <a href="#perm-dashboard-cash">«Ver a caixa no Início»</a>. Ninguém da receção reabre uma caixa fechada sem <a href="#perm-cash-reopen">«Reabrir uma caixa fechada»</a>.</li>
     <li><strong>Manutenção.</strong> <a href="#perm-maintenance-view">«Ver a manutenção»</a> lê as ordens; abrir uma é
@@ -3916,20 +3941,15 @@ footer{
 
   <article class="rol-card r-historia-clinica familia-modulo" id="rol-historia-clinica">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Histórico clínico</h5><span class="rc-cuenta">8 permissões</span><span class="rc-familia">Função de módulo</span></div>
-      <p class="rc-para">Função de módulo, para quem gere o processo clínico e os consentimentos. Leva todas as permissões não sensíveis do seu módulo, e só essas.</p>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Histórico clínico</h5><span class="rc-cuenta">3 permissões</span><span class="rc-familia">Função de módulo</span></div>
+      <p class="rc-para">Perfil de módulo, para quem faz o acompanhamento dos casos: ver, escrever e imprimir o histórico clínico. Ao contrário dos outros perfis de módulo, não leva os consentimentos nem o seu relatório, embora sejam do mesmo módulo.</p>
     </header>
     <div class="rc-cuerpo">
-      <h6 class="rc-modulo"><a href="#permisos-historia-clinica-y-consentimientos">Processo clínico e consentimentos</a> <span class="n">· 8</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-historia-clinica-y-consentimientos">Processo clínico e consentimentos</a> <span class="n">· 3</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-clinic-view">Ver o processo clínico</a><span class="rc-desc">Abre o processo clínico de uma pessoa.</span></li>
         <li class="rc-perm"><a href="#perm-clinic-write">Escrever no processo clínico</a><span class="rc-desc">Permite escrever evoluções e antecedentes no processo clínico.</span></li>
         <li class="rc-perm"><a href="#perm-clinic-print">Imprimir o processo clínico</a><span class="rc-desc">Permite imprimir o processo clínico de uma pessoa.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-request">Pedir uma assinatura</a><span class="rc-desc">Pede à pessoa a assinatura de um consentimento.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-read">Ver o documento assinado</a><span class="rc-desc">Abre o documento de consentimento já assinado.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-import">Importar consentimentos assinados</a><span class="rc-desc">Carrega para a ficha consentimentos em PDF já assinados noutra plataforma.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-withdraw">Retirar um consentimento</a><span class="rc-desc">Retira um consentimento que já tinha sido dado.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-templates">Gerir os modelos</a><span class="rc-desc">Cria e altera os modelos de consentimento do centro.</span></li>
       </ul>
     </div>
   </article>
@@ -4330,10 +4350,7 @@ footer{
   </p>
 
   <p>
-    Por baixo do tema está a <strong>cor das riscas</strong>: as riscas diagonais dos períodos bloqueados da
-    agenda. O que cai fora do turno do calendário laboral vai sempre riscado a branco, para que não se
-    confunda com um bloqueio. O fundo desses
-    espaços é sempre cinzento e só mudam as riscas; de origem são <strong>salmão</strong>. Escolhe-se com o
+    Por baixo do tema está a <strong>cor das riscas</strong>: as riscas diagonais dos períodos fechados da agenda. O que fica fora do turno do calendário laboral tem a sua própria cor, a <strong>cor das riscas fora de turno</strong>, com a sua amostra e o seu <strong>Repor</strong>: vão separadas porque fora de turno se pode marcar e num fecho não. O fundo desses espaços é sempre cinzento e só mudam as riscas; de fábrica são <strong>salmão</strong>. Escolhe-se com o
     seletor de cor, vê-se na amostra e na agenda de imediato, e <strong>Repor</strong> volta a pôr o
     salmão. Como com o tema, não fica definido até se premir Guardar.
   </p>
@@ -5267,8 +5284,7 @@ footer{
   <p>
     Quem a abre vê o registo de qualquer período dos últimos quatro anos, de um ano no máximo de cada vez,
     e pode descarregar os mesmos ficheiros. A representação vê-o <strong>sem o NIF</strong>, por proteção de
-    dados. A ligação <strong>só se mostra ao criá-la</strong>: copie-a então e envie-a. Pode ser retirada antes
-    de expirar, e cada consulta fica registada com quando, de onde e o que se consultou.
+    dados. A ligação <strong>só se mostra ao criá-la</strong>: copie-a então e envie-a. Se a pessoa estiver presente, por baixo da ligação aparece o seu <strong>código QR</strong>: digitaliza-o com a câmara do telemóvel e abre-a sem ser preciso ditá-la. Pode retirar-se antes de expirar, e cada consulta fica registada com quando, de onde e o que se viu.
   </p>
 
   <div class="ojo">

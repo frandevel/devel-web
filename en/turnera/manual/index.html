@@ -1532,6 +1532,10 @@ footer{
   </p>
 
   <p>
+    Lines that were not made in Turnera but arrived with the <strong>import from another program</strong>, carry a small mark (a downward arrow) next to the name of the service or product. Hovering over it says so. Those charged here do not carry it.
+  </p>
+
+  <p>
     What was charged on each visit —the amount and the <em>Ticket</em> of the history, which starts the printing, is seen by whoever has the permission “See the amounts and tickets in the history”. If it is removed from a role or a person, their history still shows what was done and when, but without amounts or ticket. It is given by default to whoever can already see the records.
   </p>
 
@@ -1748,7 +1752,8 @@ footer{
   </p>
 
   <p>
-    <strong>Several appointments on the same day, a single ticket.</strong> If the customer has come for more than one treatment today —with the same practitioner or different ones— there is no need to charge them one by one. At the top, in <em>To charge</em>, a single card appears with “2 appointments”, “3 appointments”…; when you press it the ticket is built with all of them, in one sale and with one total. Above the lines the list <em>Today's appointments</em>: the <strong>attended</strong> and those that are <strong>in progress</strong> go in on their own, and those that have not started yet are shown but unticked. Untick the one you do not want to charge now —it stays waiting at the top for when the customer leaves— or tick another to add it.
+    <strong>Several appointments on the same day, a single ticket.</strong> If the customer has come for more than one treatment today —with the same practitioner or different ones— there is no need to charge them one by one. At the top, in <em>To charge</em>, a single card appears with “2 appointments”, “3 appointments”…; when you press it the ticket is built with all of them, in one sale and with one total. Above the lines the list <em>Today's appointments</em>: only those already
+    <strong>marked as attended</strong> are added to the ticket, and they come in on their own. The rest — still in the room, not started, or past but nobody marked them as attended — are shown unticked and cannot be added: to charge them here, go back to the appointment and set it as attended. Untick the one you do not want to charge now — it stays waiting above for when the client comes out — or mark another as attended to add it.
   </p>
 
   <figure>
@@ -2278,24 +2283,39 @@ footer{
   <h2>5. Vouchers</h2>
 
   <p>
-    A voucher is sessions paid for in advance from a <strong>group of services</strong>. They are sold in two ways:
+    A voucher is sessions paid in advance that are valid for the services of a <strong>rate group</strong>
+    or for <strong>a single service</strong>. They are sold in two ways:
   </p>
   <ul>
     <li><strong>When selling a service marked as a voucher</strong> (the usual way): the voucher is created by itself when it is charged at the point of sale.</li>
-    <li><strong>By hand:</strong> in the customer record, in the vouchers section, <em>New voucher</em> creates one without charging it, stating the group, the sessions and when it expires. Only people with the permission
+    <li><strong>By hand:</strong> in the customer record, in the vouchers section, <em>New voucher</em> creates one without charging it, choosing the voucher from the price list: it brings its sessions and its expiry, which can be changed before saving. Only those with the permission
       <a href="#perm-vouchers-manage">Voucher management</a> see it (by default, the administrator and Management); Reception does not.</li>
   </ul>
 
   <h3 id="bonos-sesiones-vigencia">Where the sessions and validity are set</h3>
   <p>
     In <em>Catalogue → Services</em>, in the service sold as a voucher, tick <strong>Sold as a voucher</strong>
-    and its <strong>sessions</strong> and its <strong>validity</strong> appear. The sessions are valid for the services in its
-    <em>Voucher group</em>. Validity can be given in two ways:
+    and its <strong>sessions</strong> and its <strong>validity</strong>. In <em>Valid for</em> you choose whether the voucher pays for the services of a <em>Rate group</em> or a single service. The validity is given in two ways:
   </p>
   <ul>
     <li><strong>Months from purchase</strong>: the voucher expires that number of months after the day it is sold.</li>
     <li><strong>Between two dates</strong>, like a hotel: you pick the first and last day on the calendar, and the voucher can only be used between them, both included, whenever it is sold. It is meant for seasonal campaigns. If it is sold before the first date, the customer record shows <em>Usable from …</em> and the point of sale does not deduct it until that day.</li>
   </ul>
+
+  <h3 id="bonos-de-un-servicio">Vouchers for a single service</h3>
+  <p>
+    A voucher for one service (for example, “5 underarm sessions”) only pays for that service, even if the service is in a rate group with others. It is created from the service’s record with <strong>New voucher for this service</strong>, which leaves it ready for that service, or in any voucher by choosing <em>Valid for → A service</em>. Each service’s record shows under <strong>Vouchers that pay for it</strong> its own and those of its rate groups, and the services list can be filtered with <em>All</em>, <em>Services</em> or <em>Vouchers</em>.
+  </p>
+
+  <h3 id="bonos-varios-grupos">A service in several rate groups</h3>
+  <p>
+    A service can be in <strong>several rate groups</strong> at once: for example, in its usual one and in a promotion’s. A voucher of any of them pays for it. It can be done from either side:
+  </p>
+  <ul>
+    <li>In <em>Catalogue → Services</em>, in the service’s record, the field <strong>Rate groups</strong> accepts several.</li>
+    <li>On the rate groups screen, after choosing a group, <strong>Add services</strong> puts several in at once, and <strong>Remove</strong>, on each row, takes the service out of that group only.</li>
+  </ul>
+  <p>A voucher, on the other hand, is still for a single rate group or a single service.</p>
 
   <h3>How they are used up</h3>
   <p>
@@ -2303,6 +2323,10 @@ footer{
     group and is left ticked as covered (see <a href="#cobrar-bono">Paying with a voucher</a>). Services from
     other groups and products on the same ticket are paid with the normal payment method. It can also be deducted
     by hand from the customer's record, for when someone was seen without going through the till.
+  </p>
+
+  <p>
+    <strong>If a service can be paid both by its own voucher and by one of its rate group, its own is used first</strong>, which is good for nothing else; the group one is kept for the other services.
   </p>
 
   <p>
@@ -2556,6 +2580,7 @@ footer{
     <tr><td><strong>Appointments</strong></td><td>The appointments in a period, with a filter for first visits.</td></tr>
     <tr><td><strong>Cancellations</strong></td><td>How many were cancelled by the customer, by the centre and by external causes, and which customers cancel the most.</td></tr>
     <tr><td><strong><a href="#rol-clientes">Customers</a></strong></td><td>Sign-ups, birthdays and where they come from. Also who has had a service: pick one or more in <em>Services performed</em> (anyone who had any of them shows up) and, if needed, narrow it down with the <em>Visit date</em>.</td></tr>
+    <tr><td><strong>Signed consents</strong></td><td>The signed, current consents of all clients, with date, template and version, whether it was signed on the tablet or imported and who collected it. It can be filtered by date, template and client. It belongs to the clients section and out of the box only Management sees it; the signed document only opens with “See the signed document”.</td></tr>
     <tr><td><strong>Vouchers</strong></td><td>What has been sold, what is left to use and what is about to expire.</td></tr>
     <tr id="informe-facturacion-profesional"><td><strong>Billing by professional</strong></td><td>What each professional billed in a period: how many services and for how much, voucher sessions (counted, but adding no amount: it was charged when the voucher was sold), products and what is still owed. Each ticket line counts for whoever did it, with its discounts and VAT included, and refunds subtract. The Excel file has the summary and the detail of each line, to work out commissions. It is under <em>Till and payments</em>.</td></tr>
     <tr><td><strong>Stock</strong></td><td>What is missing and what has come in and gone out.</td></tr>
@@ -2578,6 +2603,7 @@ footer{
     <li><strong>Card</strong>: you type what the card terminal receipts or the bank say, and the card difference appears.</li>
     <li><strong>Bizum and bank transfer</strong> are neither in the drawer nor in the card terminal: they appear on their own line of what was collected, and are checked against the bank statement.</li>
     <li><strong>Cash</strong>: the opening cash —what the previous closing left is suggested—, plus what was charged in cash, minus the <em>payments out of the till</em> (the courier, the florist), is what <em>should be in the till</em>. You type the count and the cash difference appears. What goes to the bank goes in <em>amount withdrawn</em>, and what is left is the opening cash of the next day.</li>
+    <li><strong>Given away</strong>: below the takings, a discreet line says how many lines were settled with the payment method <em>Gift</em> and what they were worth at list price. It is not money, so it does not go into the till or the discrepancy. <em>See breakdown</em> shows each line: time, ticket, client, item, professional and price. When the closing is printed, the line comes out with the total.</li>
   </ul>
   <p>
     At the top, in large type, <strong>the verdict</strong>: in green if the cash balances, in red with how much is missing or over —negative means missing—, split between cash and card. It is recalculated with each figure you type, so you can keep checking until it balances. <em>Save the count</em> leaves the cash open to continue later;
@@ -2735,8 +2761,7 @@ footer{
   <ul>
     <li><strong>Devices</strong>: the machines that cannot be shared and what is recorded for each session.
       It is explained under <a href="#aparatos">Equipment</a>.</li>
-    <li><strong>Catalogue</strong>: services, products, voucher groups and providers. Each service and each
-      product also carries <strong>its VAT</strong>, which is decided here and not at the counter.</li>
+    <li><strong>Catalogue</strong>: services, products, rate groups and suppliers. Each service and each product also carry <strong>its VAT</strong>, which is decided here and not at the counter.</li>
     <li><strong>What is deactivated does not show up in searches.</strong> A service, a product, a package or a
       professional retired, or a supplier no longer used (in its record, unticking <em>Active</em>),
       disappears from the lists and drop-downs. The lists of services, products, packages, suppliers and
@@ -2776,7 +2801,7 @@ footer{
     <li><strong>Customers</strong>: customer records, their alerts, their points and the customer report.</li>
     <li><strong>Catalogue</strong>: services, packages, products, suppliers and stock, with their reports.</li>
     <li><strong>Agenda</strong>: appointments, waiting list, rooms, equipment and the appointments report.</li>
-    <li><strong>Clinical record</strong>: the clinical record and consent forms.</li>
+    <li><strong>Clinical record</strong>: following up cases, that is, seeing, writing and printing the clinical record. Consents do not go with this role.</li>
     <li><strong>Till</strong>: charging, refunds, debts, vouchers, gift cards, coupons, till closing and their reports.</li>
     <li><strong>Invoicing</strong>: full invoices, invoice book and accounting draft.</li>
     <li><strong>Portal and alerts</strong>: the booking portal and WhatsApp alerts.</li>
@@ -2845,7 +2870,7 @@ footer{
     <tr><td><strong><a href="#rol-clientes">Customers</a></strong></td><td>Module role: the client records, their alerts, their points and the clients report.</td><td>11</td></tr>
     <tr><td><strong><a href="#rol-catalogo">Catalogue</a></strong></td><td>Module role: services, packages, products, suppliers and stock, with their reports.</td><td>15</td></tr>
     <tr><td><strong><a href="#rol-agenda">Agenda</a></strong></td><td>Module role: appointments, waiting list, booths, devices and the appointments report.</td><td>14</td></tr>
-    <tr><td><strong><a href="#rol-historia-clinica">Clinical record</a></strong></td><td>Module role: the clinical record and consents.</td><td>8</td></tr>
+    <tr><td><strong><a href="#rol-historia-clinica">Clinical record</a></strong></td><td>Module role: following up cases (seeing, writing and printing the clinical record).</td><td>3</td></tr>
     <tr><td><strong><a href="#rol-caja">Till</a></strong></td><td>Module role: charging, refunds, debts, vouchers, gift cards, coupons, closing the till and their reports.</td><td>21</td></tr>
     <tr><td><strong><a href="#rol-facturacion">Invoicing</a></strong></td><td>Module role: full invoices, invoice book and accounting draft.</td><td>3</td></tr>
     <tr><td><strong><a href="#rol-portal-y-avisos">Portal and alerts</a></strong></td><td>Module role: the booking portal and the WhatsApp reminders.</td><td>2</td></tr>
@@ -2890,7 +2915,7 @@ footer{
       <a href="#perm-reports-payments">“Payments report”</a>. Downloading it to a file also needs <a href="#perm-reports-export">“Download reports as files”</a>; and the clients report to a file needs <a href="#perm-customers-export">“Export the clients list”</a>, which is delicate.</li>
     <li><strong>Catalogue.</strong> <a href="#perm-services-view">“See services”</a> shows the services and their prices;
       <a href="#perm-services-write">“Create and edit services”</a> is what lets you change them. With view-only access, the buttons to add, edit and remove are switched off or do not appear. Choosing services with the quick buttons when booking does not need to see the catalogue: that is another permission,
-      <a href="#perm-services-quick-pick">“Quick service selection”</a>. Nor does seeing the services open the voucher groups screen: it needs <a href="#perm-service-groups-view">“See voucher groups”</a>, which out of the box only Management has.</li>
+      <a href="#perm-services-quick-pick">“Quick service selection”</a>. The rate groups screen does not open with seeing the services either: it needs <a href="#perm-service-groups-view">“See voucher groups”</a>, which out of the box only Management has.</li>
     <li><strong>Till.</strong> Charging is <a href="#perm-checkout-charge">“Charge at the point of sale”</a>; applying a discount, <a href="#perm-checkout-discount">“Apply discounts”</a>; leaving something owing, <a href="#perm-checkout-debt">“Leave an amount owing”</a>; printing the receipt, <a href="#perm-checkout-print-ticket">“Print receipts”</a>; giving a quote, <a href="#perm-checkout-budget">“Give quotes”</a>; refunding a ticket, <a href="#perm-checkout-refund">“Refund a ticket”</a>; seeing what has been charged today and this month on the Home screen,
       <a href="#perm-dashboard-cash">“See the till on the Home screen”</a>. Nobody at reception reopens a closed till without <a href="#perm-cash-reopen">«Reopen a closed cash»</a>.</li>
     <li><strong>Maintenance.</strong> <a href="#perm-maintenance-view">“See maintenance”</a> reads the orders; opening one is
@@ -3595,20 +3620,15 @@ footer{
 
   <article class="rol-card r-historia-clinica familia-modulo" id="rol-historia-clinica">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Clinical record</h5><span class="rc-cuenta">8 permissions</span><span class="rc-familia">Module role</span></div>
-      <p class="rc-para">Module role, for whoever handles the clinical record and consents. It carries all the non-delicate permissions of its module and only those.</p>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Clinical record</h5><span class="rc-cuenta">3 permissions</span><span class="rc-familia">Module role</span></div>
+      <p class="rc-para">Module role, for whoever follows up cases: seeing, writing and printing the clinical record. Unlike the other module roles, it does not carry consents or their report, even though they belong to the same module.</p>
     </header>
     <div class="rc-cuerpo">
-      <h6 class="rc-modulo"><a href="#permisos-historia-clinica-y-consentimientos">Clinical record and consent forms</a> <span class="n">· 8</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-historia-clinica-y-consentimientos">Clinical record and consent forms</a> <span class="n">· 3</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-clinic-view">View the clinical record</a><span class="rc-desc">Opens a person’s clinical record.</span></li>
         <li class="rc-perm"><a href="#perm-clinic-write">Write in the clinical record</a><span class="rc-desc">Allows writing progress notes and medical history in the clinical record.</span></li>
         <li class="rc-perm"><a href="#perm-clinic-print">Print the clinical record</a><span class="rc-desc">Allows printing a person’s clinical record.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-request">Ask for a signature</a><span class="rc-desc">Asks the person to sign a consent.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-read">See the signed document</a><span class="rc-desc">Opens the consent document once it has been signed.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-import">Import signed consent forms</a><span class="rc-desc">Uploads to the record consents, as PDFs, that were already signed on another platform.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-withdraw">Withdraw a consent</a><span class="rc-desc">Withdraws a consent that had already been given.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-templates">Manage the templates</a><span class="rc-desc">Creates and changes the centre’s consent templates.</span></li>
       </ul>
     </div>
   </article>
@@ -4009,7 +4029,7 @@ footer{
   </p>
 
   <p>
-    Below the theme is the <strong>stripe colour</strong>: the diagonal stripes on the closed stretches of the agenda. Whatever falls outside the work-calendar shift is always striped in white, so it is not mistaken for a closure. The background of those gaps is always grey and only the stripes change; by default they are <strong>salmon</strong>. It is chosen with the
+    Below the theme is the <strong>stripe colour</strong>: the diagonal stripes of the diary’s closed periods. What falls outside the shift of the work calendar has a colour of its own, the <strong>colour of the out-of-shift stripes</strong>, with its sample and its <strong>Reset</strong>: they are separate because you can book outside the shift and not in a closed period. The background of those gaps is always grey and only the stripes change; out of the box they are <strong>salmon</strong>. It is chosen with the
     colour picker, it shows on the sample and on the agenda straight away, and <strong>Reset</strong> puts the
     salmon back. As with the theme, it is not kept until you press Save.
   </p>
@@ -4806,8 +4826,7 @@ footer{
   <p>
     Whoever opens it sees the record of any period of the last four years, a year at most each time, and
     can download the same files. The representatives see it <strong>without the tax ID</strong>, for data
-    protection. The link <strong>is only shown when it is created</strong>: copy it then and send it. It can be revoked before
-    it expires, and every visit is logged with when, from where and what was looked at.
+    protection. The link <strong>is only shown when it is created</strong>: copy it then and send it. If the person is present, below the link comes its <strong>QR code</strong>: they scan it with the phone camera and open it without it having to be dictated. It can be withdrawn before it expires, and each visit is logged with when, from where and what was looked at.
   </p>
 
   <div class="ojo">

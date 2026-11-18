@@ -1533,6 +1533,10 @@ footer{
   </p>
 
   <p>
+    Positionen, die nicht in Turnera entstanden sind, sondern mit dem <strong>Import aus einem anderen Programm</strong> kamen, tragen eine kleine Markierung (einen Pfeil nach unten) neben dem Namen der Leistung oder des Produkts. Beim Darüberfahren mit der Maus steht es dort. Die hier kassierten tragen sie nicht.
+  </p>
+
+  <p>
     Was bei jedem Besuch abgerechnet wurde —der Betrag und die Schaltfläche <em>Beleg</em> des Verlaufs, die den Druck startet, sieht, wer die Berechtigung „Beträge und Belege im Verlauf sehen“ hat. Wird sie einer Rolle oder einer Person entzogen, zeigt deren Verlauf weiterhin, was wann gemacht wurde, aber ohne Beträge und Beleg. Standardmäßig erhält sie, wer bereits die Karteien sehen darf.
   </p>
 
@@ -1749,7 +1753,8 @@ footer{
   </p>
 
   <p>
-    <strong>Mehrere Termine am selben Tag, ein einziger Beleg.</strong> Wenn die Kundin heute zu mehr als einer Behandlung gekommen ist —bei derselben oder bei verschiedenen Fachkräften—, muss man sie nicht einzeln kassieren. Oben, unter <em>Zu kassieren</em>, erscheint eine einzige Karte mit „2 Terminen“, „3 Terminen“ ...; beim Antippen wird der Beleg mit allen aufgebaut, in einem Verkauf und mit einer Gesamtsumme. Über den Zeilen erscheint die Liste <em>Heutige Termine</em>: die <strong>behandelten</strong> und die, die <strong>läuft</strong> sind, kommen von allein hinein; die, die noch nicht begonnen haben, sind sichtbar, aber nicht angehakt. Entfernen Sie den Haken bei dem, was Sie jetzt nicht kassieren wollen —es wartet oben, bis die Kundin geht—, oder haken Sie einen weiteren an, um ihn hinzuzufügen.
+    <strong>Mehrere Termine am selben Tag, ein einziger Beleg.</strong> Wenn die Kundin heute zu mehr als einer Behandlung gekommen ist —bei derselben oder bei verschiedenen Fachkräften—, muss man sie nicht einzeln kassieren. Oben, unter <em>Zu kassieren</em>, erscheint eine einzige Karte mit „2 Terminen“, „3 Terminen“ ...; beim Antippen wird der Beleg mit allen aufgebaut, in einem Verkauf und mit einer Gesamtsumme. Über den Zeilen erscheint die Liste <em>Heutige Termine</em>: auf den Beleg kommen nur die bereits
+    <strong>als erledigt markierten Termine</strong>, und zwar von selbst. Die übrigen — noch in der Kabine, nicht begonnen oder vorbei, aber von niemandem als erledigt markiert — erscheinen ohne Haken und können nicht hinzugefügt werden: um sie hier zu kassieren, zurück zum Termin gehen und ihn als erledigt setzen. Entfernen Sie den Haken bei dem, den Sie jetzt nicht kassieren wollen — er wartet oben, bis der Kunde herauskommt — oder markieren Sie einen weiteren als erledigt, um ihn hinzuzufügen.
   </p>
 
   <figure>
@@ -2279,24 +2284,39 @@ footer{
   <h2>5. Wertkarten</h2>
 
   <p>
-    Eine Wertkarte sind im Voraus bezahlte Sitzungen einer <strong>Leistungsgruppe</strong>. Sie werden auf zwei Arten verkauft:
+    Eine Mehrfachkarte sind im Voraus bezahlte Sitzungen, die für die Leistungen einer <strong>Tarifgruppe</strong>
+    oder für <strong>eine einzige Leistung</strong>. Sie werden auf zwei Arten verkauft:
   </p>
   <ul>
     <li><strong>Beim Verkauf einer Leistung, die als Mehrfachkarte markiert ist</strong> (der übliche Weg): Die Mehrfachkarte entsteht von selbst, wenn sie an der Kasse kassiert wird.</li>
-    <li><strong>Von Hand:</strong> in der Kundenakte, im Bereich Mehrfachkarten, legt <em>Neue Mehrfachkarte</em> eine an, ohne sie zu kassieren, mit Gruppe, Sitzungen und Ablaufdatum. Das sehen nur Personen mit der Berechtigung
+    <li><strong>Von Hand:</strong> in der Kundenakte, im Bereich Mehrfachkarten, legt <em>Neue Mehrfachkarte</em> legt eine an, ohne sie zu kassieren, indem man die Mehrfachkarte aus der Preisliste wählt: Sie bringt ihre Sitzungen und ihren Ablauf mit, die sich vor dem Speichern ändern lassen. Nur wer die Berechtigung
       <a href="#perm-vouchers-manage">Gutscheinverwaltung</a> (ab Werk der Administrator und die Leitung); der Empfang nicht.</li>
   </ul>
 
   <h3 id="bonos-sesiones-vigencia">Wo Sitzungen und Gültigkeit festgelegt werden</h3>
   <p>
     Unter <em>Katalog → Leistungen</em>, in der Leistung, die als Mehrfachkarte verkauft wird, setzt man <strong>Wird als Mehrfachkarte verkauft</strong>
-    und es erscheinen ihre <strong>Sitzungen</strong> und ihre <strong>Gültigkeit</strong>. Die Sitzungen gelten für die Leistungen ihrer
-    <em>Mehrfachkarten-Gruppe</em>. Die Gültigkeit wird auf zwei Arten angegeben:
+    und es erscheinen ihre <strong>Sitzungen</strong> und ihre <strong>Gültigkeit</strong>. Unter <em>Gilt für</em> wählt man, ob die Mehrfachkarte die Leistungen einer <em>Tarifgruppe</em> bezahlt oder eine einzige Leistung. Die Gültigkeit wird auf zwei Arten angegeben:
   </p>
   <ul>
     <li><strong>Monate ab Kauf</strong>: Die Mehrfachkarte läuft so viele Monate nach dem Verkaufstag ab.</li>
     <li><strong>Zwischen zwei Daten</strong>, wie bei einem Hotel: Im Kalender wählt man den ersten und den letzten Tag, und die Mehrfachkarte gilt nur dazwischen, beide eingeschlossen, egal wann sie verkauft wird. Gedacht für Saisonaktionen. Wird sie vor dem ersten Datum verkauft, zeigt die Kundenakte <em>Gültig ab …</em> und die Kasse zieht sie erst ab diesem Tag ab.</li>
   </ul>
+
+  <h3 id="bonos-de-un-servicio">Mehrfachkarten für eine einzige Leistung</h3>
+  <p>
+    Eine Mehrfachkarte für eine Leistung (zum Beispiel „5 Sitzungen Achseln“) bezahlt nur diese Leistung, auch wenn die Leistung mit anderen in einer Tarifgruppe ist. Sie wird in der Karte der Leistung angelegt mit <strong>Neue Mehrfachkarte für diese Leistung</strong>, das sie für diese Leistung vorbereitet, oder bei jeder Mehrfachkarte mit <em>Gilt für → Eine Leistung</em>. Die Karte jeder Leistung zeigt unter <strong>Mehrfachkarten, die sie bezahlen</strong> ihre eigenen und die ihrer Tarifgruppen, und die Leistungsliste lässt sich filtern mit <em>Alle</em>, <em>Leistungen</em> oder <em>Wertkarten</em>.
+  </p>
+
+  <h3 id="bonos-varios-grupos">Eine Leistung in mehreren Tarifgruppen</h3>
+  <p>
+    Eine Leistung kann in <strong>mehreren Tarifgruppen</strong> gleichzeitig sein: zum Beispiel in ihrer üblichen und in der einer Aktion. Eine Mehrfachkarte jeder dieser Gruppen bezahlt sie. Das geht von beiden Seiten aus:
+  </p>
+  <ul>
+    <li>Unter <em>Katalog → Leistungen</em>, in der Karte der Leistung, nimmt das Feld <strong>Tarifgruppen</strong> mehrere auf.</li>
+    <li>Auf der Seite der Tarifgruppen, nach Auswahl einer Gruppe, fügt <strong>Leistungen hinzufügen</strong> mehrere auf einmal hinzu, und <strong>Entfernen</strong>, in jeder Zeile, nimmt die Leistung nur aus dieser Gruppe.</li>
+  </ul>
+  <p>Eine Mehrfachkarte dagegen gilt weiterhin für eine einzige Tarifgruppe oder eine einzige Leistung.</p>
 
   <h3>Wie sie verbraucht werden</h3>
   <p>
@@ -2304,6 +2324,10 @@ footer{
     Gutscheins gehört und als gedeckt markiert bleibt (siehe <a href="#cobrar-bono">Mit Gutschein bezahlen</a>). Leistungen
     anderer Gruppen und Produkte auf demselben Bon werden mit der normalen Zahlungsart bezahlt. Sie kann auch von Hand
     in der Kundenakte abgezogen werden, falls jemand behandelt wurde, ohne an der Kasse vorbeizukommen.
+  </p>
+
+  <p>
+    <strong>Kann eine Leistung sowohl mit ihrer eigenen Mehrfachkarte als auch mit einer ihrer Tarifgruppe bezahlt werden, wird zuerst die eigene verbraucht</strong>, die für nichts anderes taugt; die der Gruppe bleibt für die übrigen Leistungen.
   </p>
 
   <p>
@@ -2559,6 +2583,7 @@ footer{
     <tr><td><strong>Termine</strong></td><td>Die Termine eines Zeitraums, mit Filter nach Erstbesuch.</td></tr>
     <tr><td><strong>Stornierungen</strong></td><td>Wie viele vom Kunden, vom Zentrum und aus externen Gründen storniert wurden, und welche Kunden am meisten stornieren.</td></tr>
     <tr><td><strong><a href="#rol-clientes">Kunden</a></strong></td><td>Neuanmeldungen, Geburtstage und woher sie kommen. Außerdem, wer eine Leistung erhalten hat: Man wählt eine oder mehrere unter <em>Durchgeführte Leistungen</em> (es erscheint, wer irgendeine davon erhalten hat), gegebenenfalls eingegrenzt durch das <em>Besuchsdatum</em>.</td></tr>
+    <tr><td><strong>Unterschriebene Einwilligungen</strong></td><td>Die unterschriebenen, gültigen Einwilligungen aller Kunden, mit Datum, Vorlage und Version, ob auf dem Tablet unterschrieben oder importiert und wer sie entgegengenommen hat. Filterbar nach Datum, Vorlage und Kunde. Er gehört zum Bereich Kunden und ab Werk sieht ihn nur die Leitung; das unterschriebene Dokument öffnet sich nur mit „Unterschriebenes Dokument ansehen“.</td></tr>
     <tr><td><strong>Wertkarten</strong></td><td>Was verkauft ist, was noch offen ist und was demnächst abläuft.</td></tr>
     <tr id="informe-facturacion-profesional"><td><strong>Abrechnung nach Fachkraft</strong></td><td>Was jede Fachkraft in einem Zeitraum abgerechnet hat: wie viele Leistungen und zu welchem Betrag, Sitzungen mit Mehrfachkarte (gezählt, aber ohne Betrag: kassiert wurde beim Verkauf der Karte), Produkte und was noch offen ist. Jede Belegzeile zählt für die Person, die sie erbracht hat, mit Rabatten und inklusive MwSt., Rückgaben werden abgezogen. Die Excel-Datei enthält die Übersicht und das Detail jeder Zeile, um Provisionen zu berechnen. Zu finden unter <em>Kasse und Zahlungen</em>.</td></tr>
     <tr><td><strong>Lager</strong></td><td>Was fehlt und was zu- und abgegangen ist.</td></tr>
@@ -2581,6 +2606,7 @@ footer{
     <li><strong>Karte</strong>: Man trägt ein, was die Belege des Kartenterminals oder die Bank sagen, und die Kartendifferenz erscheint.</li>
     <li><strong>Bizum und Überweisung</strong> liegen weder in der Kasse noch im Kartenterminal: sie erscheinen in ihrer eigenen Zeile des Kassierten und werden mit dem Kontoauszug abgeglichen.</li>
     <li><strong>Bargeld</strong>: der Anfangsbestand —vorgeschlagen wird, was der letzte Abschluss hinterlassen hat—, plus die Bareinnahmen, minus die <em>Auszahlungen aus der Kasse</em> (der Kurier, der Blumenladen), ist das, was <em>in der Kasse liegen sollte</em>. Man trägt die Zählung ein, und die Bardifferenz erscheint. Was zur Bank geht, kommt in <em>entnommener Betrag</em>, und was bleibt, ist der Anfangsbestand des nächsten Tages.</li>
+    <li><strong>Verschenkt</strong>: unter den Einnahmen zeigt eine unauffällige Zeile, wie viele Positionen mit der Zahlungsart <em>Geschenk</em> beglichen wurden und was sie zum Listenpreis wert waren. Es ist kein Geld und fließt daher weder in die Kasse noch in die Differenz ein. <em>Aufschlüsselung ansehen</em> zeigt jede Position: Uhrzeit, Beleg, Kunde, Bezeichnung, Fachkraft und Preis. Beim Drucken des Abschlusses erscheint die Zeile mit der Summe.</li>
   </ul>
   <p>
     Oben, groß, <strong>das Ergebnis</strong>: grün, wenn die Kasse stimmt, rot mit dem Fehlbetrag oder Überschuss —negativ heißt Fehlbetrag—, aufgeteilt nach Bargeld und Karte. Es wird bei jeder eingegebenen Zahl neu berechnet, sodass man prüfen kann, bis es stimmt. <em>Zählung speichern</em> lässt die Kasse offen, um später weiterzumachen;
@@ -2738,8 +2764,7 @@ footer{
   <ul>
     <li><strong>Geräte</strong>: die Maschinen, die sich nicht teilen lassen, und was zu jeder Sitzung erfasst wird.
       Erklärt ist das unter <a href="#aparatos">Geräte und Zubehör</a>.</li>
-    <li><strong>Katalog</strong>: Leistungen, Produkte, Bonusgruppen und Lieferanten. Jede Leistung und jedes
-      Produkt tragen außerdem <strong>ihre Mehrwertsteuer</strong>, die hier entschieden wird und nicht am Empfang.</li>
+    <li><strong>Katalog</strong>: Leistungen, Produkte, Tarifgruppen und Lieferanten. Jede Leistung und jedes Produkt haben außerdem <strong>ihre Mehrwertsteuer</strong>, die hier entschieden wird und nicht am Empfang.</li>
     <li><strong>Was abgemeldet ist, erscheint nicht in der Suche.</strong> Eine zurückgezogene Leistung, ein Produkt, ein Paket oder eine
       Fachkraft, oder ein Lieferant, mit dem man nicht mehr arbeitet (in seiner Akte das Häkchen bei <em>Aktiv</em> entfernen),
       verschwindet aus den Listen und Auswahlfeldern. Die Listen der Leistungen, Produkte, Pakete, Lieferanten und
@@ -2779,7 +2804,7 @@ footer{
     <li><strong>Kunden</strong>: die Kundenakten, ihre Hinweise, ihre Punkte und der Kundenbericht.</li>
     <li><strong>Katalog</strong>: Leistungen, Pakete, Produkte, Lieferanten und Lagerbestand, mit ihren Berichten.</li>
     <li><strong>Terminkalender</strong>: Termine, Warteliste, Kabinen, Geräte und der Terminbericht.</li>
-    <li><strong>Patientenakte</strong>: die Patientenakte und die Einwilligungserklärungen.</li>
+    <li><strong>Patientenakte</strong>: die Fallbetreuung, also die Krankenakte ansehen, schreiben und drucken. Die Einwilligungen gehören nicht zu dieser Rolle.</li>
     <li><strong>Kasse</strong>: Kassieren, Erstattungen, offene Beträge, Wertkarten, Geschenkkarten, Gutscheincodes, Kassenabschluss und ihre Berichte.</li>
     <li><strong>Rechnungsstellung</strong>: vollständige Rechnungen, Rechnungsbuch und Buchhaltungsentwurf.</li>
     <li><strong>Portal und Hinweise</strong>: das Buchungsportal und die WhatsApp-Benachrichtigungen.</li>
@@ -2848,7 +2873,7 @@ footer{
     <tr><td><strong><a href="#rol-clientes">Kunden</a></strong></td><td>Modulrolle: die Karteikarten, ihre Hinweise, ihre Punkte und der Kundenbericht.</td><td>11</td></tr>
     <tr><td><strong><a href="#rol-catalogo">Katalog</a></strong></td><td>Modulrolle: Leistungen, Pakete, Produkte, Lieferanten und Bestand samt Berichten.</td><td>15</td></tr>
     <tr><td><strong><a href="#rol-agenda">Terminkalender</a></strong></td><td>Modulrolle: Termine, Warteliste, Kabinen, Geräte und der Terminbericht.</td><td>14</td></tr>
-    <tr><td><strong><a href="#rol-historia-clinica">Patientenakte</a></strong></td><td>Modulrolle: die Patientenakte und die Einwilligungen.</td><td>8</td></tr>
+    <tr><td><strong><a href="#rol-historia-clinica">Patientenakte</a></strong></td><td>Modulrolle: die Fallbetreuung (Krankenakte ansehen, schreiben und drucken).</td><td>3</td></tr>
     <tr><td><strong><a href="#rol-caja">Kasse</a></strong></td><td>Modulrolle: Kassieren, Rückerstattungen, Schulden, Mehrfachkarten, Geschenkgutscheine, Gutscheincodes, Kassenabschluss und die zugehörigen Berichte.</td><td>21</td></tr>
     <tr><td><strong><a href="#rol-facturacion">Rechnungsstellung</a></strong></td><td>Modulrolle: vollständige Rechnungen, Rechnungsbuch und Buchhaltungsentwurf.</td><td>3</td></tr>
     <tr><td><strong><a href="#rol-portal-y-avisos">Portal und Hinweise</a></strong></td><td>Modulrolle: das Buchungsportal und die WhatsApp-Erinnerungen.</td><td>2</td></tr>
@@ -2893,7 +2918,7 @@ footer{
       <a href="#perm-reports-payments">„Zahlungsbericht“</a>. Ihn als Datei herunterzuladen erfordert zusätzlich <a href="#perm-reports-export">„Berichte als Datei herunterladen“</a>; und der Kundenbericht als Datei erfordert <a href="#perm-customers-export">„Liste der Kunden exportieren“</a>, die sensibel ist.</li>
     <li><strong>Katalog.</strong> <a href="#perm-services-view">„Leistungen ansehen“</a> zeigt die Leistungen und ihre Preise;
       <a href="#perm-services-write">„Leistungen anlegen und bearbeiten“</a> erlaubt, sie zu ändern. Mit reinem Lesezugriff sind die Schaltflächen zum Anlegen, Bearbeiten und Entfernen ausgegraut oder fehlen. Das Auswählen von Leistungen mit den Schnelltasten bei der Terminvergabe erfordert keinen Einblick in den Katalog: Dafür gibt es eine andere Berechtigung,
-      <a href="#perm-services-quick-pick">„Schnellauswahl von Leistungen“</a>. Auch die Seite der Mehrfachkarten-Gruppen öffnet sich nicht mit dem Ansehen der Leistungen: Sie verlangt <a href="#perm-service-groups-view">„Mehrfachkarten-Gruppen ansehen“</a>, die ab Werk nur die Leitung hat.</li>
+      <a href="#perm-services-quick-pick">„Schnellauswahl von Leistungen“</a>. Die Seite der Tarifgruppen öffnet sich ebenfalls nicht mit dem Ansehen der Leistungen: Dafür braucht es <a href="#perm-service-groups-view">„Mehrfachkarten-Gruppen ansehen“</a>, die ab Werk nur die Leitung hat.</li>
     <li><strong>Kasse.</strong> Kassieren ist <a href="#perm-checkout-charge">„An der Kasse kassieren“</a>; einen Rabatt gewähren: <a href="#perm-checkout-discount">„Rabatte gewähren“</a>; etwas offen lassen: <a href="#perm-checkout-debt">„Offen lassen“</a>; den Beleg drucken, <a href="#perm-checkout-print-ticket">„Belege drucken“</a>; einen Kostenvoranschlag geben, <a href="#perm-checkout-budget">„Kostenvoranschläge erstellen“</a>; ein Ticket zurückerstatten: <a href="#perm-checkout-refund">„Ticket zurückerstatten“</a>; auf der Startseite sehen, was heute und im Monat kassiert wurde,
       <a href="#perm-dashboard-cash">„Kasse auf der Startseite sehen“</a>. Niemand am Empfang öffnet eine geschlossene Kasse wieder ohne <a href="#perm-cash-reopen">«Geschlossene Kasse wieder öffnen»</a>.</li>
     <li><strong>Wartung.</strong> <a href="#perm-maintenance-view">„Instandhaltung ansehen“</a> liest die Aufträge; einen zu öffnen ist
@@ -3598,20 +3623,15 @@ footer{
 
   <article class="rol-card r-historia-clinica familia-modulo" id="rol-historia-clinica">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Patientenakte</h5><span class="rc-cuenta">8 Berechtigungen</span><span class="rc-familia">Modulrolle</span></div>
-      <p class="rc-para">Modulrolle für alle, die die Patientenakte und die Einwilligungen betreuen. Sie bringt alle nicht sensiblen Berechtigungen ihres Moduls mit, und nur diese.</p>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Patientenakte</h5><span class="rc-cuenta">3 Berechtigungen</span><span class="rc-familia">Modulrolle</span></div>
+      <p class="rc-para">Modulrolle für die Fallbetreuung: die Krankenakte ansehen, schreiben und drucken. Anders als die übrigen Modulrollen enthält sie weder die Einwilligungen noch ihren Bericht, obwohl sie zum selben Modul gehören.</p>
     </header>
     <div class="rc-cuerpo">
-      <h6 class="rc-modulo"><a href="#permisos-historia-clinica-y-consentimientos">Patientenakte und Einwilligungserklärungen</a> <span class="n">· 8</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-historia-clinica-y-consentimientos">Patientenakte und Einwilligungserklärungen</a> <span class="n">· 3</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-clinic-view">Patientenakte ansehen</a><span class="rc-desc">Öffnet die Patientenakte einer Person.</span></li>
         <li class="rc-perm"><a href="#perm-clinic-write">In die Patientenakte schreiben</a><span class="rc-desc">Erlaubt, Verlaufseinträge und Vorgeschichte in die Patientenakte zu schreiben.</span></li>
         <li class="rc-perm"><a href="#perm-clinic-print">Krankenakte drucken</a><span class="rc-desc">Erlaubt, die Patientenakte einer Person zu drucken.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-request">Unterschrift anfordern</a><span class="rc-desc">Bittet um die Unterschrift unter einer Einwilligung.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-read">Unterschriebenes Dokument ansehen</a><span class="rc-desc">Öffnet das bereits unterschriebene Einwilligungsdokument.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-import">Unterschriebene Einwilligungen importieren</a><span class="rc-desc">Lädt Einwilligungen, die bereits auf einer anderen Plattform unterschrieben wurden, als PDF in die Karteikarte hoch.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-withdraw">Einwilligung widerrufen</a><span class="rc-desc">Widerruft eine bereits erteilte Einwilligung.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-templates">Vorlagen verwalten</a><span class="rc-desc">Erstellt und ändert die Einwilligungsvorlagen des Zentrums.</span></li>
       </ul>
     </div>
   </article>
@@ -4012,7 +4032,7 @@ footer{
   </p>
 
   <p>
-    Unter dem Thema steht die <strong>Streifenfarbe</strong>: die diagonalen Streifen der gesperrten Zeitspannen im Terminkalender. Was außerhalb der Schicht des Arbeitskalenders liegt, ist immer weiß schraffiert, damit es nicht mit einer Sperre verwechselt wird. Der Hintergrund dieser Lücken ist immer grau, nur die Streifen ändern sich; voreingestellt sind sie <strong>lachsrosa</strong>. Sie wird mit der
+    Unter dem Thema steht die <strong>Streifenfarbe</strong>: die diagonalen Streifen der gesperrten Zeiten im Terminkalender. Was außerhalb der Schicht des Arbeitskalenders liegt, hat eine eigene Farbe, die <strong>Farbe der Streifen außerhalb der Schicht</strong>, mit Vorschau und <strong>Zurücksetzen</strong>: Sie sind getrennt, weil man außerhalb der Schicht Termine vergeben kann, in einer Sperrzeit aber nicht. Der Hintergrund dieser Lücken ist immer grau und nur die Streifen ändern sich; ab Werk sind sie <strong>lachsrosa</strong>. Sie wird mit der
     Farbauswahl gewählt, ist sofort im Muster und in der Agenda zu sehen, und <strong>Zurücksetzen</strong> bringt das
     Lachsrosa zurück. Wie beim Thema bleibt sie erst, wenn Speichern gedrückt wird.
   </p>
@@ -4811,8 +4831,7 @@ footer{
   </p>
   <p>
     Wer ihn öffnet, sieht die Erfassung jedes Zeitraums der letzten vier Jahre, höchstens ein Jahr auf einmal, und
-    kann dieselben Dateien herunterladen. Die Belegschaftsvertretung sieht sie <strong>ohne Steuernummer</strong>, aus Datenschutzgründen. Der Link <strong>wird nur beim Erstellen angezeigt</strong>: kopieren Sie ihn dann und schicken Sie ihn ab. Er lässt sich vor
-    Ablauf widerrufen, und jeder Aufruf wird mit Zeitpunkt, Herkunft und Inhalt protokolliert.
+    kann dieselben Dateien herunterladen. Die Belegschaftsvertretung sieht sie <strong>ohne Steuernummer</strong>, aus Datenschutzgründen. Der Link <strong>wird nur beim Erstellen angezeigt</strong>: Kopieren Sie ihn dann und senden Sie ihn. Ist die Person anwesend, erscheint unter dem Link sein <strong>QR-Code</strong>: Sie scannt ihn mit der Handykamera und öffnet ihn, ohne dass er diktiert werden muss. Er lässt sich vor Ablauf zurückziehen, und jeder Abruf wird mit Zeitpunkt, Herkunft und Inhalt protokolliert.
   </p>
 
   <div class="ojo">

@@ -1862,6 +1862,12 @@ footer{
   </p>
 
   <p>
+    Las líneas que no se hicieron en Turnera, sino que llegaron con la <strong>importación desde otro programa</strong>,
+    llevan una marca pequeña (una flecha hacia abajo) junto al nombre del servicio o del producto. Al posar el ratón
+    encima lo dice. Las que se cobran aquí no la llevan.
+  </p>
+
+  <p>
     Lo cobrado en cada visita —el importe y el botón <em>Ticket</em> del historial, que lanza la impresión,— lo ve quien tiene el permiso
     «Ver los importes y los tickets del historial». Si se lo quita a un rol o a una persona, su historial sigue
     enseñando qué se hizo y cuándo, pero sin cantidades ni ticket. Se da de fábrica a quien ya puede ver las fichas.
@@ -2168,9 +2174,11 @@ footer{
     <strong>Varias citas el mismo día, un solo ticket.</strong> Si la clienta ha venido a más de un tratamiento hoy
     —con la misma profesional o con distintas—, no hace falta cobrarlos uno a uno. Arriba, en <em>Por cobrar</em>,
     sale una sola tarjeta con «2 citas», «3 citas»…; al pulsarla el ticket se monta con todas, en una sola venta y con
-    un solo total. Encima de las líneas aparece la lista <em>Citas de hoy</em>: las <strong>atendidas</strong> y las
-    que están <strong>en curso</strong> entran solas, y las que aún no han empezado se ven pero sin marcar. Desmarque
-    la que no quiera cobrar ahora —se queda esperando arriba para cuando salga— o marque otra para añadirla.
+    un solo total. Encima de las líneas aparece la lista <em>Citas de hoy</em>: solo se juntan en el ticket las que ya están
+    <strong>marcadas como atendidas</strong>, y entran solas. Las demás —en cabina todavía, sin empezar, o que ya
+    pasaron pero nadie marcó como atendidas— se ven sin marcar y no se pueden añadir: para cobrarlas aquí, vuelva a la
+    cita y póngala como atendida. Desmarque la que no quiera cobrar ahora —se queda esperando arriba para cuando
+    salga— o marque otra atendida para añadirla.
   </p>
 
   <figure>
@@ -2886,20 +2894,22 @@ footer{
   <h2>5. Bonos</h2>
 
   <p>
-    Un bono son sesiones pagadas por adelantado de un <strong>grupo de servicios</strong>. Se venden de dos maneras:
+    Un bono son sesiones pagadas por adelantado que valen para los servicios de un <strong>grupo de tarifa</strong>
+    o para <strong>un solo servicio</strong>. Se venden de dos maneras:
   </p>
   <ul>
     <li><strong>Al vender un servicio marcado como bono</strong> (lo normal): el bono se crea solo al cobrarlo en el TPV.</li>
     <li><strong>A mano:</strong> en la ficha del cliente, en el apartado de bonos, <em>Nuevo bono</em> crea uno sin
-      cobrarlo, diciendo el grupo, las sesiones y cuándo caduca. Solo lo ve quien tiene el permiso
+      cobrarlo, eligiendo el bono de la tarifa: trae sus sesiones y su caducidad, que se pueden cambiar antes de
+      guardar. Solo lo ve quien tiene el permiso
       <a href="#perm-vouchers-manage">Gestión de bonos</a> (de fábrica, el administrador y Dirección); Recepción no.</li>
   </ul>
 
   <h3 id="bonos-sesiones-vigencia">Dónde se ponen las sesiones y la vigencia</h3>
   <p>
     En <em>Catálogo → Servicios</em>, en el servicio que se vende como bono, se marca <strong>Se vende como bono</strong>
-    y aparecen sus <strong>sesiones</strong> y su <strong>vigencia</strong>. Las sesiones valen para los servicios de su
-    <em>Grupo de bonos</em>. La vigencia se da de dos maneras:
+    y aparecen sus <strong>sesiones</strong> y su <strong>vigencia</strong>. En <em>Vale para</em> se elige si el bono
+    paga los servicios de un <em>Grupo de tarifa</em> o un solo servicio. La vigencia se da de dos maneras:
   </p>
   <ul>
     <li><strong>Meses desde la compra</strong>: el bono caduca ese número de meses después del día en que se vende.</li>
@@ -2909,12 +2919,39 @@ footer{
       descuenta hasta ese día.</li>
   </ul>
 
+  <h3 id="bonos-de-un-servicio">Bonos de un solo servicio</h3>
+  <p>
+    Un bono de un servicio (por ejemplo, «5 sesiones de axilas») solo paga ese servicio, aunque el servicio esté
+    en un grupo de tarifa con otros. Se crea desde la ficha del servicio con <strong>Nuevo bono de este
+    servicio</strong>, que lo deja preparado para ese servicio, o en cualquier bono eligiendo <em>Vale para → Un
+    servicio</em>. La ficha de cada servicio enseña en <strong>Bonos que lo pagan</strong> los suyos y los de sus
+    grupos de tarifa, y la lista de servicios se filtra con <em>Todos</em>, <em>Servicios</em> o <em>Bonos</em>.
+  </p>
+
+  <h3 id="bonos-varios-grupos">Un servicio en varios grupos de tarifa</h3>
+  <p>
+    Un servicio puede estar en <strong>varios grupos de tarifa</strong> a la vez: por ejemplo, en el suyo de siempre
+    y en el de una promoción. Lo paga el bono de cualquiera de ellos. Se hace desde cualquiera de los dos lados:
+  </p>
+  <ul>
+    <li>En <em>Catálogo → Servicios</em>, en la ficha del servicio, el campo <strong>Grupos de tarifa</strong> admite
+      varios.</li>
+    <li>En la pantalla de grupos de tarifa, al elegir un grupo, <strong>Añadir servicios</strong> mete varios de una
+      vez, y <strong>Quitar</strong>, en cada fila, saca el servicio solo de ese grupo.</li>
+  </ul>
+  <p>Un bono, en cambio, sigue siendo de un solo grupo de tarifa o de un solo servicio.</p>
+
   <h3>Cómo se gastan</h3>
   <p>
     Una sesión se descuenta <strong>al cobrar en el TPV</strong>, por cada servicio del ticket que sea del grupo del
     bono y que se deje marcado como cubierto (véase <a href="#cobrar-bono">Cobrar con bono</a>). Los servicios de
     otros grupos y los productos del mismo ticket se pagan con la forma de pago normal. También se puede descontar
     a mano desde la ficha del cliente, para el caso de haber atendido sin pasar por caja.
+  </p>
+
+  <p>
+    <strong>Si a un servicio lo paga a la vez un bono suyo y uno de su grupo de tarifa, se gasta antes el
+    suyo</strong>, que no sirve para otra cosa; el del grupo se guarda para los demás servicios.
   </p>
 
   <p>
@@ -3206,6 +3243,7 @@ footer{
     <tr><td><strong>Citas</strong></td><td>Las citas de un periodo, con filtro por primera visita.</td></tr>
     <tr><td><strong>Anulaciones</strong></td><td>Cuántas se anularon por el cliente, por el centro y por causas externas, y qué clientes anulan más.</td></tr>
     <tr><td><strong><a href="#rol-clientes">Clientes</a></strong></td><td>Altas, cumpleaños y de dónde vienen. También quién se ha hecho un servicio: se eligen uno o varios en <em>Servicios realizados</em> (sale quien se hizo cualquiera de ellos) y, si hace falta, se acota con la <em>Fecha de la visita</em>.</td></tr>
+    <tr><td><strong>Consentimientos firmados</strong></td><td>Los consentimientos firmados y vigentes de todos los clientes, con fecha, plantilla y versión, si se firmó en la tablet o se importó y quién lo recogió. Se filtra por fecha, plantilla y cliente. Es de la sección de clientes y de fábrica solo lo ve Dirección; el documento firmado solo se abre con «Ver el documento firmado».</td></tr>
     <tr><td><strong>Bonos</strong></td><td>Qué hay vendido, qué queda por consumir y qué está a punto de caducar.</td></tr>
     <tr id="informe-facturacion-profesional"><td><strong>Facturación por profesional</strong></td><td>Lo que ha facturado cada profesional en un periodo: cuántos servicios y por cuánto, las sesiones con bono (se cuentan, pero no suman importe: se cobró al vender el bono), los productos y lo que queda pendiente. Cada línea del ticket cuenta para quien la hizo, con sus descuentos y el IVA incluido, y las devoluciones restan. El Excel trae el resumen y el detalle de cada línea, para calcular las comisiones. Está en <em>Caja y cobros</em>.</td></tr>
     <tr><td><strong>Stock</strong></td><td>Qué falta y qué ha entrado y salido.</td></tr>
@@ -3238,6 +3276,10 @@ footer{
       efectivo, menos los <em>pagos por caja</em> (el mensajero, la floristería), es lo que <em>debería haber en la
       caja</em>. Se escribe el recuento y sale el descuadre de efectivo. Lo que se lleva al banco va en <em>cantidad
       retirada</em>, y lo que queda es la caja inicial del día siguiente.</li>
+    <li><strong>Regalado</strong>: debajo de lo cobrado, una línea discreta dice cuántas líneas se han saldado
+      con la forma de pago <em>Regalo</em> y lo que valían a precio de tarifa. No es dinero, así que no entra en
+      la caja ni en el descuadre. <em>Ver desglose</em> enseña cada línea: hora, ticket, cliente, concepto,
+      profesional y precio. Al imprimir el cierre sale la línea con el total.</li>
   </ul>
   <p>
     Arriba, grande, <strong>el veredicto</strong>: en verde si la caja cuadra, en rojo con cuánto falta o sobra
@@ -3439,7 +3481,7 @@ footer{
   <ul>
     <li><strong>Aparatos</strong>: las máquinas que no se pueden compartir y lo que se anota de cada sesión.
       Está explicado en <a href="#aparatos">Aparatología</a>.</li>
-    <li><strong>Catálogo</strong>: servicios, productos, grupos de bonos y proveedores. Cada servicio y cada
+    <li><strong>Catálogo</strong>: servicios, productos, grupos de tarifa y proveedores. Cada servicio y cada
       producto llevan además <strong>su IVA</strong>, que se decide aquí y no en el mostrador.</li>
     <li><strong>Lo que está de baja no sale al buscar.</strong> Un servicio, un producto, un paquete o un
       profesional retirado, o un proveedor con el que ya no se trabaja (en su ficha, quitando <em>Activo</em>),
@@ -3484,7 +3526,7 @@ footer{
     <li><strong>Clientes</strong>: las fichas, sus avisos, sus puntos y el informe de clientes.</li>
     <li><strong>Catálogo</strong>: servicios, paquetes, productos, proveedores y stock, con sus informes.</li>
     <li><strong>Agenda</strong>: citas, lista de espera, cabinas, aparatos y el informe de citas.</li>
-    <li><strong>Historia clínica</strong>: la historia clínica y los consentimientos.</li>
+    <li><strong>Historia clínica</strong>: el seguimiento de los casos, es decir, ver, escribir e imprimir la historia clínica. Los consentimientos no van con este rol.</li>
     <li><strong>Caja</strong>: cobrar, devolver, deudas, bonos, tarjetas regalo, cupones, cierre de caja y sus informes.</li>
     <li><strong>Facturación</strong>: facturas completas, libro de facturas y borrador contable.</li>
     <li><strong>Portal y avisos</strong>: el portal de reservas y los avisos por WhatsApp.</li>
@@ -3582,7 +3624,7 @@ footer{
     <tr><td><strong><a href="#rol-clientes">Clientes</a></strong></td><td>Rol de módulo: las fichas, sus avisos, sus puntos y el informe de clientes.</td><td>11</td></tr>
     <tr><td><strong><a href="#rol-catalogo">Catálogo</a></strong></td><td>Rol de módulo: servicios, paquetes, productos, proveedores y stock, con sus informes.</td><td>15</td></tr>
     <tr><td><strong><a href="#rol-agenda">Agenda</a></strong></td><td>Rol de módulo: citas, lista de espera, cabinas, aparatos y el informe de citas.</td><td>14</td></tr>
-    <tr><td><strong><a href="#rol-historia-clinica">Historia clínica</a></strong></td><td>Rol de módulo: la historia clínica y los consentimientos.</td><td>8</td></tr>
+    <tr><td><strong><a href="#rol-historia-clinica">Historia clínica</a></strong></td><td>Rol de módulo: el seguimiento de los casos (ver, escribir e imprimir la historia clínica).</td><td>3</td></tr>
     <tr><td><strong><a href="#rol-caja">Caja</a></strong></td><td>Rol de módulo: cobrar, devolver, deudas, bonos, tarjetas regalo, cupones, cierre de caja y sus informes.</td><td>21</td></tr>
     <tr><td><strong><a href="#rol-facturacion">Facturación</a></strong></td><td>Rol de módulo: facturas completas, libro de facturas y borrador contable.</td><td>3</td></tr>
     <tr><td><strong><a href="#rol-portal-y-avisos">Portal y avisos</a></strong></td><td>Rol de módulo: el portal de reservas y los avisos por WhatsApp.</td><td>2</td></tr>
@@ -3648,7 +3690,7 @@ footer{
     <li><strong>Catálogo.</strong> <a href="#perm-services-view">«Ver los servicios»</a> enseña los servicios y sus precios;
       <a href="#perm-services-write">«Crear y editar los servicios»</a> es lo que deja cambiarlos. Con solo mirar, los botones de dar de alta, editar y retirar
       salen apagados o no salen. Elegir servicios con los botones rápidos al dar una cita no necesita ver el catálogo: es otro permiso,
-      <a href="#perm-services-quick-pick">«Selección rápida de servicios»</a>. La pantalla de grupos de bonos tampoco se abre con
+      <a href="#perm-services-quick-pick">«Selección rápida de servicios»</a>. La pantalla de grupos de tarifa tampoco se abre con
       ver los servicios: pide <a href="#perm-service-groups-view">«Ver los grupos de bonos»</a>, que de fábrica solo trae Dirección.</li>
     <li><strong>Caja.</strong> Cobrar es <a href="#perm-checkout-charge">«Cobrar en el TPV»</a>; aplicar un descuento, <a href="#perm-checkout-discount">«Aplicar descuentos»</a>;
       dejar algo a deber, <a href="#perm-checkout-debt">«Dejar a deber»</a>; sacar el ticket, <a href="#perm-checkout-print-ticket">«Imprimir tickets»</a>; dar un presupuesto, <a href="#perm-checkout-budget">«Dar presupuestos»</a>; devolver un ticket, <a href="#perm-checkout-refund">«Devolver un ticket»</a>; ver lo cobrado hoy y en el mes en el Inicio,
@@ -4394,20 +4436,15 @@ footer{
 
   <article class="rol-card r-historia-clinica familia-modulo" id="rol-historia-clinica">
     <header class="rc-cab">
-      <div class="rc-fila"><h5 class="rc-nombre-rol">Historia clínica</h5><span class="rc-cuenta">8 permisos</span><span class="rc-familia">Rol de módulo</span></div>
-      <p class="rc-para">Rol de módulo, para quien lleva la historia clínica y los consentimientos. Lleva todos los permisos no delicados de su módulo y solo esos.</p>
+      <div class="rc-fila"><h5 class="rc-nombre-rol">Historia clínica</h5><span class="rc-cuenta">3 permisos</span><span class="rc-familia">Rol de módulo</span></div>
+      <p class="rc-para">Rol de módulo, para quien lleva el seguimiento de los casos: ver, escribir e imprimir la historia clínica. A diferencia de los demás roles de módulo, no lleva los consentimientos ni su informe, aunque sean del mismo módulo.</p>
     </header>
     <div class="rc-cuerpo">
-      <h6 class="rc-modulo"><a href="#permisos-historia-clinica-y-consentimientos">Historia clínica y consentimientos</a> <span class="n">· 8</span></h6>
+      <h6 class="rc-modulo"><a href="#permisos-historia-clinica-y-consentimientos">Historia clínica y consentimientos</a> <span class="n">· 3</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-clinic-view">Ver la historia clínica</a><span class="rc-desc">Abre la historia clínica de una persona.</span></li>
         <li class="rc-perm"><a href="#perm-clinic-write">Escribir en la historia clínica</a><span class="rc-desc">Permite escribir evoluciones y antecedentes en la historia clínica.</span></li>
         <li class="rc-perm"><a href="#perm-clinic-print">Imprimir la historia clínica</a><span class="rc-desc">Permite imprimir la historia clínica de una persona.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-request">Pedir una firma</a><span class="rc-desc">Pide a la persona la firma de un consentimiento.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-read">Ver el documento firmado</a><span class="rc-desc">Abre el documento de consentimiento ya firmado.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-import">Importar consentimientos firmados</a><span class="rc-desc">Sube a la ficha consentimientos en PDF ya firmados en otra plataforma.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-withdraw">Retirar un consentimiento</a><span class="rc-desc">Retira un consentimiento que ya se había dado.</span></li>
-        <li class="rc-perm"><a href="#perm-consents-templates">Gestionar las plantillas</a><span class="rc-desc">Crea y modifica las plantillas de consentimiento del centro.</span></li>
       </ul>
     </div>
   </article>
@@ -4814,8 +4851,9 @@ footer{
 
   <p>
     Debajo del tema está el <strong>color de las franjas</strong>: las rayas diagonales de los ratos cerrados de
-    la agenda. Lo que cae fuera del turno del calendario laboral va siempre rayado en blanco, para que no se
-    confunda con un cierre. El fondo de esos
+    la agenda. Lo que cae fuera del turno del calendario laboral tiene su propio color, el <strong>color de las
+    franjas de fuera de turno</strong>, con su muestra y su <strong>Restablecer</strong>: van separados porque
+    fuera de turno se puede citar y en un cierre no. El fondo de esos
     huecos es siempre gris y sólo cambian las rayas; de fábrica son <strong>salmón</strong>. Se elige con el
     selector de color, se ve en la muestra y en la agenda al momento, y <strong>Restablecer</strong> devuelve el
     salmón. Como con el tema, no queda puesto hasta que se pulsa Guardar.
@@ -5881,7 +5919,9 @@ footer{
   <p>
     Quien lo abre ve el registro de cualquier periodo de los cuatro últimos años, de un año como mucho cada vez, y
     puede descargar los mismos ficheros. La representación lo ve <strong>sin el NIF</strong>, por protección de
-    datos. El enlace <strong>solo se enseña al crearlo</strong>: cópielo entonces y envíelo. Se puede retirar antes
+    datos. El enlace <strong>solo se enseña al crearlo</strong>: cópielo entonces y envíelo. Si la persona está
+    delante, debajo del enlace sale su <strong>código QR</strong>: lo escanea con la cámara del móvil y lo abre sin
+    que haya que dictárselo. Se puede retirar antes
     de que caduque, y cada consulta queda apuntada con cuándo, desde dónde y qué se miró.
   </p>
 
