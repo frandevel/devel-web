@@ -791,6 +791,7 @@ footer{
     <li><a href="#activaciones">12 bis. Activations: doors and devices with a QR code</a></li>
     <li><a href="#soporte">12 ter. Support: talking to the Turnera team</a></li>
     <li><a href="#estancias">12 quater. Stays: residents, rooms and floor records</a></li>
+      <li><a href="#gestion-financiera">12 quinquies. Financial management: pay, settlements, fixed costs and cash forecast</a></li>
     <li><a href="#problemas">13. When something goes wrong</a></li>
     <li><a href="#app-nativa">14. The professionals’ native app (Android)</a></li>
     <li><a href="#app-instalar" class="sub">Downloading and installing the app</a></li>
@@ -1739,6 +1740,8 @@ footer{
     <p><strong>By default, only what was done is charged.</strong> Until the appointment is saved as
       <em>Seen</em>, the button <em>Charge</em> button on the appointment cannot be pressed and the appointment does not show in <em>To charge</em>
       at the point of sale: that way the till and the agenda count the same and nothing is charged that was not done. If your centre charges before the service, turn it off in <em>Administration → Preferences → Payments and loyalty → Charge only what was done</em>. In classes each attendee counts: they are charged once it is recorded that they came.</p>
+    <p><strong>An appointment is not marked as attended before its start time.</strong> Until then, the button
+      <em>Seen</em> cannot be pressed (and in a class, neither can marking that someone came). This way an appointment on another day is not charged by mistake as attended. Once the start time has passed, it can, even if the appointment has not finished yet. It goes with the previous setting: if <em>Charge only what was done</em> is switched off, an appointment can be marked as attended at any time.</p>
   </div>
 
   <p>
@@ -2330,7 +2333,7 @@ footer{
   </p>
 
   <p>
-    <strong>If the customer has several vouchers valid for the same service, the session comes off the one that expires soonest</strong>, even if it was bought later, so that no paid sessions are lost. Vouchers that never expire go last, and if two expire on the same day, the session comes off the one bought first. In the customer file the vouchers appear in that same order.
+    <strong>If the customer has several vouchers valid for the same service, the session comes off the one that expires soonest</strong>, even if it was bought later, so that paid sessions are not lost. Those that do not expire go last, and if two expire on the same day, the one bought first is used. In the customer record the vouchers appear in that same order. At first the record only shows the vouchers that can still be used: to also see used-up or expired ones, tick the boxes above the list; each user finds them as they left them last time in that browser.
   </p>
 
   <p>
@@ -2364,6 +2367,10 @@ footer{
     is optional.
   </p>
 
+  <p>
+    <strong>You can also transfer just part of it.</strong> In <em>Sessions to transfer</em> shows everything that is left at first; if it is lowered (for example, 3 of 7), those sessions go to a <strong>new voucher</strong> for the person receiving them, in the same group and with the same purchase and expiry dates, and the original voucher keeps the rest. Nothing is charged or invoiced again. Vouchers without a number of sessions can only be transferred whole.
+  </p>
+
   <figure>
     <img src="/turnera/manual/imagenes/en/25-traspaso-de-bono.png" alt="The dialog for transferring a voucher, with the warning that it cannot be undone" loading="lazy">
     <figcaption>The transfer dialog. The notice at the top says how many sessions are moving and that there is no going back.</figcaption>
@@ -2376,8 +2383,7 @@ footer{
   </div>
 
   <p>
-    Every transfer records <strong>from whom to whom, how many sessions were left, who did it and the
-    date and the time</strong>. It shows on both records, in the block <em>Transferred vouchers</em>: on the one who gave it
+    Every transfer records <strong>from whom to whom, how many sessions were moved, who did it and the date and time</strong> (and, if it was a part, the number of the new voucher). It appears in both records, in the block <em>Transferred vouchers</em>: on the one who gave it
     and on the one who received it.
   </p>
 
@@ -2581,6 +2587,7 @@ footer{
     <tr><td><strong>Cancellations</strong></td><td>How many were cancelled by the customer, by the centre and by external causes, and which customers cancel the most.</td></tr>
     <tr><td><strong><a href="#rol-clientes">Customers</a></strong></td><td>Sign-ups, birthdays and where they come from. Also who has had a service: pick one or more in <em>Services performed</em> (anyone who had any of them shows up) and, if needed, narrow it down with the <em>Visit date</em>.</td></tr>
     <tr><td><strong>Signed consents</strong></td><td>The signed, current consents of all clients, with date, template and version, whether it was signed on the tablet or imported and who collected it. It can be filtered by date, template and client. It belongs to the clients section and out of the box only Management sees it; the signed document only opens with “See the signed document”.</td></tr>
+    <tr><td><strong>Pending consents</strong></td><td>The customers who still have to sign a mandatory consent, with those waiting longest at the top and, when equal, those with more pending. It counts as pending when the person has had an appointment since the template exists (any appointment if it is general; one for a service of its rate group if it is for a treatment). It shows since when, what is missing and their next appointment. Whoever sees the signed consents report sees it too.</td></tr>
     <tr><td><strong>Vouchers</strong></td><td>What has been sold, what is left to use and what is about to expire.</td></tr>
     <tr id="informe-facturacion-profesional"><td><strong>Billing by professional</strong></td><td>What each professional billed in a period: how many services and for how much, voucher sessions (counted, but adding no amount: it was charged when the voucher was sold), products and what is still owed. Each ticket line counts for whoever did it, with its discounts and VAT included, and refunds subtract. The Excel file has the summary and the detail of each line, to work out commissions. It is under <em>Till and payments</em>.</td></tr>
     <tr><td><strong>Stock</strong></td><td>What is missing and what has come in and gone out.</td></tr>
@@ -2622,11 +2629,11 @@ footer{
   <table>
     <tbody><tr><th>Figure</th><th>What it counts</th><th>Traffic light</th></tr>
     <tr><td><strong>Revenue this month</strong></td><td>What was collected from the 1st to today, against the same days last year. The forecast stretches that pace to the whole month.</td><td>Green from 5% up; red from 5% down.</td></tr>
-    <tr><td><strong>Occupancy</strong></td><td>Of the hours that fit in the diary over the next four weeks, how many are booked. What fits is the active places (rooms, cabins) times the diary opening hours, on the weekdays the centre has worked over the last year, minus the closed spans.</td><td>Green from 75%; red below 50%.</td></tr>
-    <tr><td><strong>Active clients</strong></td><td>Those who came in the last 90 days: with a ticket or with an appointment they attended.</td><td>Like revenue, against last year.</td></tr>
-    <tr><td><strong>New clients who come back</strong></td><td>Of those who first came three to six months ago, how many came back within three months.</td><td>Green from 50%; red below 30%.</td></tr>
-    <tr><td><strong>Average spend</strong></td><td>What was collected over twelve months from clients with a record, divided among those who paid anything.</td><td>Like revenue, against last year.</td></tr>
-    <tr><td><strong>Lost appointments</strong></td><td>Appointments this month that were missed or that the customer cancelled less than 24 hours ahead, and what they were worth at list price. Cancelling in good time does not count: the slot could be filled again. Nor does what the centre or an external cause calls off.</td><td>Green below 8%; red above 15%.</td></tr>
+    <tr><td><strong>Occupancy</strong></td><td>Of the hours that fit in the diary over the coming weeks (four, by default), how many have an appointment. What fits is the active places (cabins, rooms) by the diary hours, on the weekdays worked in the last year, minus the closed periods.</td><td>Green from 75%; red below 50%.</td></tr>
+    <tr><td><strong>Active clients</strong></td><td>Those who came in the last days (90, by default): with a ticket or with an appointment they attended.</td><td>Like revenue, against last year.</td></tr>
+    <tr><td><strong>New clients who come back</strong></td><td>Of those who came for the first time between three and six months ago, how many came back within three months. With another period, N months: those who came between N and 2N months ago, so that all of them have had N months to come back.</td><td>Green from 50%; red below 30%.</td></tr>
+    <tr><td><strong>Average spend</strong></td><td>What was charged in the last months (twelve, by default) to customers with a record, among those who paid something.</td><td>Like revenue, against last year.</td></tr>
+    <tr><td><strong>Lost appointments</strong></td><td>Those of the month the customer did not come to or cancelled with less notice than the hours required (24, by default), and what they were worth at list price. Cancelling in time does not count: the slot could be filled again. Neither does what the centre or an outside cause cancels.</td><td>Green below 8%; red above 15%.</td></tr>
   </tbody></table>
   </div>
   <p>
@@ -2668,6 +2675,28 @@ footer{
   <p>
     <strong>Everyone chooses what they see.</strong> With <em>Customise</em>  whole sections (Business, Stays, Staff) and each card or chart are switched on or off, and they are ordered with arrows: the sections among themselves and the cards within their section. It is saved for each user. Anything Turnera adds later appears on its own at the end of its section, and
     <em>Back to the usual</em>  undoes the choice.
+  </p>
+  <p id="cuadro-de-mando-numeros">
+    <strong>Everyone adjusts their own numbers.</strong> On the cards that look at a period, the number is underlined within its sentence, for example “in the last <em>90 days</em>”. Clicking it opens a small window to change it, with some shortcuts and <em>Back to</em> the default; when applied, the figures are recalculated with it. The comparison with a year ago looks at the same period one year earlier, and the colours do not change. It is saved for each user, and
+    <em>Back to the usual</em>, in <em>Customise</em> also sets the numbers back to the defaults.
+  </p>
+  <div class="tabla-envoltorio">
+  <table>
+    <tbody><tr><th>Card</th><th>Which number</th><th>Default</th></tr>
+    <tr><td><strong>Occupancy</strong></td><td>Weeks ahead, from 1 to 12.</td><td>4</td></tr>
+    <tr><td><strong>Active clients</strong></td><td>Days, from 7 to 730.</td><td>90</td></tr>
+    <tr><td><strong>New clients who come back</strong></td><td>Months to come back, from 1 to 12.</td><td>3</td></tr>
+    <tr><td><strong>Average spend</strong></td><td>Months, from 1 to 24.</td><td>12</td></tr>
+    <tr><td><strong>Lost appointments</strong></td><td>Hours of notice for the cancellation, from 1 to 72.</td><td>24</td></tr>
+    <tr><td><strong>Incidents and falls</strong> (Stays)</td><td>Days compared with the previous ones, from 7 to 90.</td><td>30</td></tr>
+    <tr><td><strong>Incidents not closed in time</strong></td><td>Hours of waiting, from 1 to 336.</td><td>48</td></tr>
+    <tr><td><strong>Temporary stays ending</strong></td><td>Days ahead, from 1 to 180.</td><td>30</td></tr>
+    <tr><td><strong>Occupancy today</strong> (Stays)</td><td>Weeks of the forecast below, from 1 to 13.</td><td>4</td></tr>
+  </tbody></table>
+  </div>
+  <p>
+    The revenue chart can be shown <strong>monthly</strong>, the last twelve months with the previous year alongside, or
+    <strong>yearly</strong>, the last five years with the forecast for the end of the current year dashed. It is chosen at the top right of the chart and stays that way for whoever chose it.
   </p>
   <figure>
     <img src="/turnera/manual/imagenes/en/30-cuadro-de-mando.png" alt="The scorecard with the six figures, their traffic lights and monthly revenue" loading="lazy">
@@ -2810,7 +2839,8 @@ footer{
 
   <p>
     To make one to measure, press <strong>New role</strong>, give it a name that does not exist yet and share out the permissions with the two lists: on the left the <strong>available ones</strong>, on the right the
-    <strong>ones of the role</strong>. They are moved from one side to the other with the arrows or by double-clicking, and above each list there is a search box so you do not have to go through the hundred-odd. <strong>Under the name of each permission, always in view, it says what it unlocks</strong> and, where there could be confusion, what it does not unlock. That is not always a whole screen: sometimes it is just a button, or being able to press that button. The search box looks at that explanation too. The roles screen has a link at the top to this same section of the manual. Seeing the services and changing their prices, for example, are two different permissions.
+    <strong>ones of the role</strong>. They are moved from one side to the other with the arrows or by double-clicking, and above each list there is a search box so you do not have to go through the hundred-odd. <strong>Under the name of each permission, always in view, it says what it unlocks</strong> and, where there could be confusion, what it does not unlock. That is not always a whole screen: sometimes it is just a button, or whether that button can be pressed. The search also looks at that explanation. The roles screen has a link at the top to this same section of the manual. Seeing services and changing their prices, for example, are two different permissions. And the <strong>vouchers for sale</strong> in the catalogue have their own, <em>See the catalogue vouchers</em> and
+    <em>Create and edit the catalogue vouchers</em>, separate from those for services. Selling them at the point of sale needs neither of the two: all it takes is <em>Charge at the point of sale</em>.
   </p>
 
   <div class="ojo">
@@ -3098,8 +3128,10 @@ footer{
     <tr id="perm-centre-invoicing-production"><td><strong>Pasar la facturación a producción (move invoicing to production)</strong></td><td>Moves invoicing from test mode to production: it deletes the test invoices and the numbering starts again. There is no going back.</td><td><strong><a href="#roles-sensibles">Delicate</a>:</strong> only the System administrator</td></tr>
     <tr id="permisos-catalogo"><th colspan="3">Catalogue</th></tr>
     <tr id="perm-services-quick-pick"><td><strong>Quick service selection</strong></td><td>Allows choosing the services of an appointment with the quick buttons, without needing access to the catalogue. It shows the name, code and duration of each service, but not the price or the records.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-direccion">Management</a></td></tr>
-    <tr id="perm-services-view"><td><strong>See the services</strong></td><td>Shows the services and their prices. View only: changing them needs “Create and edit services”.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-profesional">Professional</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
-    <tr id="perm-services-write"><td><strong>Create and edit services</strong></td><td>Allows creating, editing and withdrawing services.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
+    <tr id="perm-services-view"><td><strong>See the services</strong></td><td>Looks up services and their prices, without the vouchers for sale, which have their own permission. It is view-only: changing them needs “Create and edit services”.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-profesional">Professional</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
+    <tr id="perm-catalogue-vouchers-view"><td><strong>See the catalogue vouchers</strong></td><td>Looks up the vouchers the centre has for sale, their sessions, validity and price. It is view-only. Selling them at the point of sale only needs “Charge at the point of sale”.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-profesional">Professional</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
+    <tr id="perm-services-write"><td><strong>Create and edit services</strong></td><td>Allows creating, editing and withdrawing services (not the vouchers for sale).</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
+    <tr id="perm-catalogue-vouchers-write"><td><strong>Create and edit the catalogue vouchers</strong></td><td>Allows creating, editing and withdrawing the vouchers for sale.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr id="perm-packages-view"><td><strong>See the packages</strong></td><td>Shows the packages of services and products. View only.</td><td><a href="#rol-recepcion">Reception</a>, <a href="#rol-profesional">Professional</a>, <a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr id="perm-packages-write"><td><strong>Create and edit packages</strong></td><td>Allows creating and editing packages and their price.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr id="perm-service-groups-view"><td><strong>See voucher groups</strong></td><td>Opens the voucher groups screen and shows which services each one covers. View only: changing them needs “Manage voucher groups”.</td><td><a href="#rol-direccion">Management</a>, <a href="#rol-catalogo">Catalogue</a></td></tr>
@@ -3248,6 +3280,7 @@ footer{
       <h6 class="rc-modulo"><a href="#permisos-catalogo">Catalogue</a> <span class="n">· 5</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">See the services</a><span class="rc-desc">Shows the services and their prices.</span></li>
+        <li class="rc-perm"><a href="#perm-catalogue-vouchers-view">See the catalogue vouchers</a><span class="rc-desc">Looks up the vouchers for sale.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">See the packages</a><span class="rc-desc">Shows the packages of services and products.</span></li>
         <li class="rc-perm"><a href="#perm-prices-lookup">Look up prices</a><span class="rc-desc">Opens the quick price lookup: you search for a service, a package or a product and it shows only its name, its price and, for products, the units in stock at the centre.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">See the products</a><span class="rc-desc">Shows the products for sale.</span></li>
@@ -3294,6 +3327,7 @@ footer{
       <h6 class="rc-modulo"><a href="#permisos-catalogo">Catalogue</a> <span class="n">· 4</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">See the services</a><span class="rc-desc">Shows the services and their prices.</span></li>
+        <li class="rc-perm"><a href="#perm-catalogue-vouchers-view">See the catalogue vouchers</a><span class="rc-desc">Looks up the vouchers for sale.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">See the packages</a><span class="rc-desc">Shows the packages of services and products.</span></li>
         <li class="rc-perm"><a href="#perm-prices-lookup">Look up prices</a><span class="rc-desc">Opens the quick price lookup: you search for a service, a package or a product and it shows only its name, its price and, for products, the units in stock at the centre.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">See the products</a><span class="rc-desc">Shows the products for sale.</span></li>
@@ -3382,7 +3416,9 @@ footer{
       <h6 class="rc-modulo"><a href="#permisos-catalogo">Catalogue</a> <span class="n">· 14</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">See the services</a><span class="rc-desc">Shows the services and their prices.</span></li>
+        <li class="rc-perm"><a href="#perm-catalogue-vouchers-view">See the catalogue vouchers</a><span class="rc-desc">Looks up the vouchers for sale.</span></li>
         <li class="rc-perm"><a href="#perm-services-write">Create and edit services</a><span class="rc-desc">Allows creating, editing and withdrawing services.</span></li>
+        <li class="rc-perm"><a href="#perm-catalogue-vouchers-write">Create and edit the catalogue vouchers</a><span class="rc-desc">Allows creating, editing and withdrawing the vouchers for sale.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">See the packages</a><span class="rc-desc">Shows the packages of services and products.</span></li>
         <li class="rc-perm"><a href="#perm-packages-write">Create and edit packages</a><span class="rc-desc">Allows creating and editing packages and their price.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-view">See voucher groups</a><span class="rc-desc">Opens the voucher groups screen and shows which services each one covers. View only: changing them needs “Manage voucher groups”.</span></li>
@@ -3574,7 +3610,9 @@ footer{
       <h6 class="rc-modulo"><a href="#permisos-catalogo">Catalogue</a> <span class="n">· 14</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">See the services</a><span class="rc-desc">Shows the services and their prices.</span></li>
+        <li class="rc-perm"><a href="#perm-catalogue-vouchers-view">See the catalogue vouchers</a><span class="rc-desc">Looks up the vouchers for sale.</span></li>
         <li class="rc-perm"><a href="#perm-services-write">Create and edit services</a><span class="rc-desc">Allows creating, editing and withdrawing services.</span></li>
+        <li class="rc-perm"><a href="#perm-catalogue-vouchers-write">Create and edit the catalogue vouchers</a><span class="rc-desc">Allows creating, editing and withdrawing the vouchers for sale.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">See the packages</a><span class="rc-desc">Shows the packages of services and products.</span></li>
         <li class="rc-perm"><a href="#perm-packages-write">Create and edit packages</a><span class="rc-desc">Allows creating and editing packages and their price.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-view">See voucher groups</a><span class="rc-desc">Opens the voucher groups screen and shows which services each one covers. View only: changing them needs “Manage voucher groups”.</span></li>
@@ -3903,7 +3941,9 @@ footer{
     <tr><td><a href="#perm-centre-invoicing-production">Pasar la facturación a producción (move invoicing to production)</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><em>delicate</em></td></tr>
     <tr><th colspan="8"><a href="#permisos-catalogo">Catalogue</a></th></tr>
     <tr><td><a href="#perm-services-view">See the services</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catalogue</a></td></tr>
+    <tr><td><a href="#perm-catalogue-vouchers-view">See the catalogue vouchers</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr><td><a href="#perm-services-write">Create and edit services</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catalogue</a></td></tr>
+    <tr><td><a href="#perm-catalogue-vouchers-write">Create and edit the catalogue vouchers</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr><td><a href="#perm-packages-view">See the packages</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr><td><a href="#perm-packages-write">Create and edit packages</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catalogue</a></td></tr>
     <tr><td><a href="#perm-service-groups-view">See voucher groups</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catalogue</a></td></tr>
@@ -4318,6 +4358,21 @@ footer{
     If you mark a template as <strong>required</strong>, the record of every customer who has not signed it
     says so. Without that warning this would be a folder of papers: the point is finding out before doing the
     treatment, not afterwards.
+  </p>
+
+  <h4 id="consentimientos-servicios">Consents required by certain services (optional)</h4>
+  <span class="ruta">Administration → Consents → New version → Services that require it</span>
+
+  <p>
+    <strong>It is an extra that can be used or not.</strong> If no service is chosen, everything works exactly as before and nothing changes day to day.
+  </p>
+  <p>
+    If services are chosen (for example, the diode laser consent is required by “Diode laser underarms” and “Diode laser legs”), Turnera asks for it from <strong>whoever has or has had an appointment for one of those services</strong>, without having to mark the template as mandatory. Other customers see nothing. The services are saved with the template: making a new version of the text does not remove them.
+  </p>
+  <p>
+    What is left to sign shows in the customer record, in the report <em>Pending consents</em> and at the
+    <strong>Point of sale</strong>: when the customer is chosen, a notice shows what is missing and a button <em>Ask for signature</em>
+    for each document, which sends it to the front-desk tablet. In the strip of <em>To charge</em>, whoever has something pending carries a small icon with the number. <strong>The notice never prevents charging.</strong>
   </p>
 
   <h4 id="consentimientos-campos">Fields to fill in the document</h4>
@@ -5541,7 +5596,7 @@ footer{
 <section id="soporte">
   <h2>12 ter. Support: talking to the Turnera team</h2>
   <p>
-    If something doesn't work or you need help, open a ticket from <em>Support</em>, in the menu. Right there you see the team's replies, without going through email. If you prefer to write by email, that works too: your message reaches the same ticket. Replies appear on their own on the screen, within seconds: there is no need to reload.
+    If something doesn't work or you need help, open a ticket from <em>Support</em>, in the menu. There you see the team’s replies, without going through email. If you prefer to write by email, that works too: your message reaches the same ticket. Replies appear by themselves on screen within seconds: there is no need to reload. They may come with formatting (bold, lists, tables and links) when that explains things better.
   </p>
 
   <h3>Who sees what</h3>
@@ -5727,6 +5782,70 @@ footer{
     <em>Record day-to-day care</em>, <em>See the record history</em>, <em>Correct other people's records</em>,
     <em>Open incidents</em>, <em>Close incidents</em>, <em>Write in the room logbook</em>, <em>See and set rates</em>, <em>See Stays in the scorecard</em>, <em>See the diets</em> and <em>See all zones</em>. When the module is switched on in a centre, two starting roles are created, which the centre can change: <strong>Estancias · planta</strong>
      (view stays, record, open incidents, write in the logbook and view diets) and <strong>Estancias · supervisión</strong> (the above plus admissions and discharges, close incidents, see the record history, correct and see all zones). <em>Management</em> has them all; amounts are only for those who have the rates permission.
+  </p>
+</section>
+<section id="gestion-financiera">
+  <h2>12 quinquies. Financial management: pay, settlements, fixed costs and cash forecast</h2>
+  <p>
+    The <strong>Financial management</strong> is for knowing what the centre costs: how each professional is paid, what has to be paid each month to collaborators, and the fixed costs. It is optional: if the centre does not have it switched on, it does not appear anywhere, neither in the menu nor in the permissions. It needs Till, because what a collaborator earns comes from what was charged.
+  </p>
+  <p>
+    Its two permissions are <strong>delicate</strong> and by default only the <em>System administrator</em>:
+    <em>Costs and pay</em> (each professional’s pay and the fixed costs) and <em>Collaborator settlements</em>. The professional themselves sees none of this.
+  </p>
+
+  <h3 id="gestion-financiera-retribucion">How each professional is paid</h3>
+  <p>
+    In <em>Staff</em>, the actions menu of each row has <strong>Pay</strong>. There are three ways of paying:
+  </p>
+  <ul>
+    <li><strong>Fixed monthly cost</strong>, for salaried staff: what they cost the company per month (gross pay, the company’s Social Security and prorated extra payments). Nothing is settled for a salaried person.</li>
+    <li><strong>Percentage of what they bill</strong>, on what is billed excluding VAT.</li>
+    <li><strong>Amount per act or hour</strong>: a list of services, each with its rule. It can be an amount
+      <em>per act</em> (€120 for each toxin), <em>per appointment hour</em> (€80/h for assessment consultations) or a
+      <em>percentage</em> of what is billed excluding VAT (40% of the threads). What is not on the list is not paid. This is the usual arrangement with a doctor who comes to do certain procedures.</li>
+  </ul>
+  <p>
+    In the last two you choose whether they are paid for what was <strong>done</strong> (even if the customer still owes it) or only what was
+    <strong>charged</strong>. The appointment hour is how long the appointment lasted; if the sale does not have a single appointment of that professional, the service duration is counted.
+  </p>
+  <p>
+    Each change is saved with its <strong>“Valid from” date</strong> and applies until the next one, so a raise is a new version and the previous one stays in the <strong>history</strong>. Saving with a date that already exists changes that version. Removing a version makes the previous one apply again.
+  </p>
+
+  <h3 id="gestion-financiera-liquidaciones">Collaborator settlements</h3>
+  <p>
+    In <em>Financial management → Settlements</em> you choose the month and the collaborators of the site appear: those paid a percentage or an amount per act or hour. Choosing one shows line by line what they did, with the customer, the service, the rule applied and what they are owed. A session paid with a voucher counts as an act done; in a percentage it adds nothing, because the money came in when the voucher was sold. A <strong>refund</strong> is deducted in the month it is made.
+  </p>
+  <p>
+    <strong>Download Excel</strong> exports the detail to check it against the collaborator’s invoice. Income tax withholding and VAT go on that invoice: Turnera does not calculate them. <strong>Mark as paid</strong> fixes the amount: if something in that month changes afterwards, what was paid does not move and the screen warns what it would come to now. If it was marked by mistake,
+    <em>Undo payment</em> sets it as pending again.
+  </p>
+
+  <h3 id="gestion-financiera-gastos">Fixed costs</h3>
+  <p>
+    In <em>Financial management → Fixed costs</em> you record what the site pays each month, quarter or year, whether it sells or not: rent, utilities, insurance, loans, advisers. Each cost has its start date and, if it ends, its end date. Quarterly and yearly ones are spread over the months in the column <em>Per month</em>. A cost that goes up is closed with its “Until” date and another is added with the new amount, so each month counts the right one. Removing a cost is for one entered by mistake.
+  </p>
+
+  <h3 id="gestion-financiera-prevision">Cash forecast</h3>
+  <p>
+    In <em>Financial management → Cash forecast</em> you choose the period (this month, this quarter, this year or up to a given month) and you see the result the site will leave: what has already happened from the start of the period until today, plus what is expected from today to the end. Everything is excluding VAT. At the top, three cards: the expected result, how much of the income is already secured (what was sold and the appointments already booked) and the worst month of the period.
+  </p>
+  <p>
+    How each line is forecast:
+  </p>
+  <ul>
+    <li><strong>Services and products.</strong> First come the appointments already booked and not yet charged, at list price. If what was sold in the same period last year comes to more, the gap is filled with that pace; with no previous year, with the daily average of the last three months.</li>
+    <li><strong>Salaried staff.</strong> The company cost of each professional with monthly pay, day by day, according to what is recorded in their pay.</li>
+    <li><strong>Collaborators.</strong> Up to today, what they have earned under their pay scheme, the same as in the settlement. In the forecast, the same share of income they have had over the last three months.</li>
+    <li><strong>Fixed costs.</strong> Their monthly equivalent, spread over the days.</li>
+  </ul>
+  <p>
+    It does not start from any balance: it says what the centre generates in the period, not the money in the bank. Instalments of deferred payments do not appear separately, because those sales already count as income on the day they were made.
+  </p>
+  <p>
+    If the centre has Financial management, whoever can see the costs also finds in the <em>Scorecard</em>
+    a section with the expected result for the month and the year, staff cost over income, the break-even point, collaborator settlements, fixed costs and a chart of the result month by month (months with a forecast are dashed). Whoever cannot see the costs does not see that section.
   </p>
 </section>
 <section id="problemas">

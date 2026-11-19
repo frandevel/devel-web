@@ -791,6 +791,7 @@ footer{
     <li><a href="#activaciones">12 bis. Aktivierungen: Türen und Geräte mit QR-Code</a></li>
     <li><a href="#soporte">12 ter. Support: Kontakt zum Turnera-Team</a></li>
     <li><a href="#estancias">12 quater. Aufenthalte: Bewohner, Zimmer und Einträge auf der Station</a></li>
+      <li><a href="#gestion-financiera">12 quinquies. Finanzverwaltung: Vergütung, Abrechnungen, Fixkosten und Liquiditätsprognose</a></li>
     <li><a href="#problemas">13. Wenn etwas nicht klappt</a></li>
     <li><a href="#app-nativa">14. Die native App der Mitarbeitenden (Android)</a></li>
     <li><a href="#app-instalar" class="sub">Die App herunterladen und installieren</a></li>
@@ -1740,6 +1741,8 @@ footer{
     <p><strong>Ab Werk wird nur Erledigtes kassiert.</strong> Solange der Termin nicht als
       <em>Erledigt</em>mit der Schaltfläche <em>Kassieren</em> im Termin nicht anklickbar und der Termin erscheint nicht unter <em>Zu kassieren</em>
       an der Kasse: So zählen Kasse und Kalender dasselbe, und es wird nichts kassiert, was nicht gemacht wurde. Wenn Ihr Zentrum vor der Behandlung kassiert, schalten Sie es aus unter <em>Verwaltung → Einstellungen → Zahlungen und Kundenbindung → Nur Erledigtes kassieren</em>. Bei Kursen zählt jede teilnehmende Person: Kassiert wird, sobald vermerkt ist, dass sie gekommen ist.</p>
+    <p><strong>Ein Termin wird nicht vor seiner Anfangszeit als wahrgenommen markiert.</strong> Bis dahin lässt sich die Schaltfläche
+      <em>Erledigt</em> nicht drücken (und bei einem Kurs auch nicht, dass jemand kam). So wird nicht versehentlich ein Termin eines anderen Tages als wahrgenommen kassiert. Nach der Anfangszeit geht es, auch wenn der Termin noch nicht zu Ende ist. Es hängt an der vorigen Einstellung: Wird <em>Nur Erledigtes kassieren</em> ausgeschaltet, lässt sich ein Termin jederzeit als wahrgenommen markieren.</p>
   </div>
 
   <p>
@@ -2331,7 +2334,7 @@ footer{
   </p>
 
   <p>
-    <strong>Hat der Kunde mehrere Wertkarten für dieselbe Leistung, wird die Sitzung von der abgezogen, die am frühesten abläuft</strong>, auch wenn sie später gekauft wurde, damit keine bezahlten Sitzungen verloren gehen. Wertkarten ohne Ablauf kommen zuletzt, und laufen zwei am selben Tag ab, wird die zuerst gekaufte verwendet. In der Kundenakte erscheinen die Wertkarten in derselben Reihenfolge.
+    <strong>Hat der Kunde mehrere Wertkarten für dieselbe Leistung, wird die Sitzung von der abgezogen, die am frühesten abläuft</strong>, auch wenn er später gekauft wurde, damit keine bezahlten Sitzungen verloren gehen. Die ohne Ablauf kommen zuletzt, und laufen zwei am selben Tag ab, wird der zuerst gekaufte verwendet. In der Kundenkarte erscheinen die Gutscheine in derselben Reihenfolge. Anfangs zeigt die Karte nur die Gutscheine, die noch nutzbar sind: Um auch aufgebrauchte oder abgelaufene zu sehen, markiert man die Kästchen über der Liste, und jeder Benutzer findet sie so vor, wie er sie zuletzt in diesem Browser gelassen hat.
   </p>
 
   <p>
@@ -2365,6 +2368,10 @@ footer{
     freiwillig.
   </p>
 
+  <p>
+    <strong>Man kann auch nur einen Teil übertragen.</strong> Unter <em>Zu übertragende Sitzungen</em> zeigt anfangs alles, was übrig ist; wird sie gesenkt (zum Beispiel 3 von 7), gehen diese Sitzungen in einen <strong>neuen Gutschein</strong> des Empfängers, in derselben Gruppe und mit demselben Kauf- und Ablaufdatum, und der ursprüngliche Gutschein behält den Rest. Es wird nichts kassiert und nichts neu abgerechnet. Gutscheine ohne Sitzungsanzahl werden nur ganz übertragen.
+  </p>
+
   <figure>
     <img src="/turnera/manual/imagenes/en/25-traspaso-de-bono.png" alt="Der Dialog zum Übertragen eines Gutscheins, mit dem Hinweis, dass es sich nicht rückgängig machen lässt" loading="lazy">
     <figcaption>Der Übertragungsdialog. Der Hinweis oben sagt, wie viele Sitzungen mitgehen und dass es kein Zurück gibt.</figcaption>
@@ -2378,8 +2385,7 @@ footer{
   </div>
 
   <p>
-    Von jeder Übertragung wird festgehalten, <strong>von wem an wen, wie viele Sitzungen übrig waren, wer es
-    gemacht hat sowie Datum und Uhrzeit</strong>. Sie erscheint in beiden Akten, im Block <em>Übertragene Wertkarten</em>: bei dem, der sie
+    Von jeder Übertragung wird festgehalten, <strong>von wem an wen, wie viele Sitzungen übertragen wurden, wer es tat sowie Datum und Uhrzeit</strong> (und, wenn es ein Teil war, die Nummer des neuen Gutscheins). Es steht in beiden Karten, im Block <em>Übertragene Wertkarten</em>: bei dem, der sie
     abgegeben hat, und bei dem, der sie bekommen hat.
   </p>
 
@@ -2584,6 +2590,7 @@ footer{
     <tr><td><strong>Stornierungen</strong></td><td>Wie viele vom Kunden, vom Zentrum und aus externen Gründen storniert wurden, und welche Kunden am meisten stornieren.</td></tr>
     <tr><td><strong><a href="#rol-clientes">Kunden</a></strong></td><td>Neuanmeldungen, Geburtstage und woher sie kommen. Außerdem, wer eine Leistung erhalten hat: Man wählt eine oder mehrere unter <em>Durchgeführte Leistungen</em> (es erscheint, wer irgendeine davon erhalten hat), gegebenenfalls eingegrenzt durch das <em>Besuchsdatum</em>.</td></tr>
     <tr><td><strong>Unterschriebene Einwilligungen</strong></td><td>Die unterschriebenen, gültigen Einwilligungen aller Kunden, mit Datum, Vorlage und Version, ob auf dem Tablet unterschrieben oder importiert und wer sie entgegengenommen hat. Filterbar nach Datum, Vorlage und Kunde. Er gehört zum Bereich Kunden und ab Werk sieht ihn nur die Leitung; das unterschriebene Dokument öffnet sich nur mit „Unterschriebenes Dokument ansehen“.</td></tr>
+    <tr><td><strong>Ausstehende Einwilligungen</strong></td><td>Die Kunden, denen noch eine Pflicht-Einwilligung fehlt, oben die, die am längsten warten, und bei Gleichstand die mit mehr offenen. Als ausstehend zählt sie, wenn die Person seit Bestehen der Vorlage einen Termin hatte (jeden Termin, wenn sie allgemein ist; einen für eine Leistung ihrer Tarifgruppe, wenn sie zu einer Behandlung gehört). Er zeigt seit wann, was fehlt und den nächsten Termin. Ihn sehen alle, die den Bericht der unterschriebenen Einwilligungen sehen.</td></tr>
     <tr><td><strong>Wertkarten</strong></td><td>Was verkauft ist, was noch offen ist und was demnächst abläuft.</td></tr>
     <tr id="informe-facturacion-profesional"><td><strong>Abrechnung nach Fachkraft</strong></td><td>Was jede Fachkraft in einem Zeitraum abgerechnet hat: wie viele Leistungen und zu welchem Betrag, Sitzungen mit Mehrfachkarte (gezählt, aber ohne Betrag: kassiert wurde beim Verkauf der Karte), Produkte und was noch offen ist. Jede Belegzeile zählt für die Person, die sie erbracht hat, mit Rabatten und inklusive MwSt., Rückgaben werden abgezogen. Die Excel-Datei enthält die Übersicht und das Detail jeder Zeile, um Provisionen zu berechnen. Zu finden unter <em>Kasse und Zahlungen</em>.</td></tr>
     <tr><td><strong>Lager</strong></td><td>Was fehlt und was zu- und abgegangen ist.</td></tr>
@@ -2625,11 +2632,11 @@ footer{
   <table>
     <tbody><tr><th>Kennzahl</th><th>Was sie zählt</th><th>Ampel</th></tr>
     <tr><td><strong>Umsatz des Monats</strong></td><td>Das vom 1. bis heute Kassierte, gegenüber denselben Tagen des Vorjahres. Die Prognose rechnet dieses Tempo auf den ganzen Monat hoch.</td><td>Grün ab 5 % mehr; rot ab 5 % weniger.</td></tr>
-    <tr><td><strong>Auslastung</strong></td><td>Von den Stunden, die in den nächsten vier Wochen in den Kalender passen, wie viele gebucht sind. Hinein passen die aktiven Plätze (Kabinen, Räume) mal die Öffnungszeiten des Kalenders, an den Wochentagen, an denen im letzten Jahr gearbeitet wurde, abzüglich der gesperrten Zeiten.</td><td>Grün ab 75 %; rot unter 50 %.</td></tr>
-    <tr><td><strong>Aktive Kunden</strong></td><td>Wer in den letzten 90 Tagen da war: mit einem Beleg oder mit einem wahrgenommenen Termin.</td><td>Wie der Umsatz, gegenüber dem Vorjahr.</td></tr>
-    <tr><td><strong>Wiederkehr der Neukunden</strong></td><td>Von denen, die vor drei bis sechs Monaten zum ersten Mal kamen, wie viele innerhalb von drei Monaten wiederkamen.</td><td>Grün ab 50 %; rot unter 30 %.</td></tr>
-    <tr><td><strong>Durchschnittliche Ausgaben</strong></td><td>Das in zwölf Monaten von Kunden mit Kartei Kassierte, geteilt durch die, die etwas bezahlt haben.</td><td>Wie der Umsatz, gegenüber dem Vorjahr.</td></tr>
-    <tr><td><strong>Verlorene Termine</strong></td><td>Termine des Monats, zu denen niemand kam oder die der Kunde weniger als 24 Stunden vorher storniert hat, und ihr Wert laut Preisliste. Rechtzeitig zu stornieren zählt nicht: Die Lücke konnte neu besetzt werden. Was das Zentrum oder ein externer Grund storniert, zählt ebenfalls nicht.</td><td>Grün unter 8 %; rot über 15 %.</td></tr>
+    <tr><td><strong>Auslastung</strong></td><td>Von den Stunden, die in den kommenden Wochen in den Kalender passen (vier, ab Werk), wie viele einen Termin haben. Es passen die aktiven Plätze (Kabinen, Räume) mal die Kalenderzeiten, an den Wochentagen, an denen im letzten Jahr gearbeitet wurde, abzüglich der geschlossenen Zeiten.</td><td>Grün ab 75 %; rot unter 50 %.</td></tr>
+    <tr><td><strong>Aktive Kunden</strong></td><td>Wer in den letzten Tagen kam (90, ab Werk): mit einem Bon oder mit einem wahrgenommenen Termin.</td><td>Wie der Umsatz, gegenüber dem Vorjahr.</td></tr>
+    <tr><td><strong>Wiederkehr der Neukunden</strong></td><td>Von denen, die vor drei bis sechs Monaten zum ersten Mal kamen, wie viele innerhalb von drei Monaten wiederkamen. Mit einem anderen Zeitraum, N Monate: die vor N bis 2N Monaten kamen, damit alle N Monate Zeit zum Wiederkommen hatten.</td><td>Grün ab 50 %; rot unter 30 %.</td></tr>
+    <tr><td><strong>Durchschnittliche Ausgaben</strong></td><td>Was in den letzten Monaten (zwölf, ab Werk) Kunden mit Karte kassiert wurde, unter denen, die etwas bezahlten.</td><td>Wie der Umsatz, gegenüber dem Vorjahr.</td></tr>
+    <tr><td><strong>Verlorene Termine</strong></td><td>Die des Monats, zu denen der Kunde nicht kam oder die er mit weniger als der verlangten Vorlaufzeit in Stunden (24, ab Werk) absagte, und was sie zum Tarif wert waren. Rechtzeitiges Absagen zählt nicht: Die Lücke ließ sich wieder füllen. Was das Zentrum oder eine äußere Ursache absagt, auch nicht.</td><td>Grün unter 8 %; rot über 15 %.</td></tr>
   </tbody></table>
   </div>
   <p>
@@ -2671,6 +2678,28 @@ footer{
   <p>
     <strong>Jeder wählt, was er sieht.</strong> Mit <em>Anpassen</em>  werden ganze Abschnitte (Geschäft, Aufenthalte, Personal) und jede Karte oder jedes Diagramm ein- oder ausgeschaltet und mit Pfeilen sortiert: die Abschnitte untereinander und die Karten innerhalb ihres Abschnitts. Es wird für jeden Benutzer gespeichert. Was Turnera später hinzufügt, erscheint von selbst am Ende seines Abschnitts, und
     <em>Zurück zum Üblichen</em>  macht die Auswahl rückgängig.
+  </p>
+  <p id="cuadro-de-mando-numeros">
+    <strong>Jeder passt seine Zahlen an.</strong> Bei den Kacheln, die einen Zeitraum betrachten, ist die Zahl in ihrem Satz unterstrichen, zum Beispiel „in den letzten <em>90 Tagen</em>“. Ein Klick darauf öffnet ein kleines Fenster zum Ändern, mit einigen Abkürzungen und <em>Zurück auf</em> dem Werkswert; beim Übernehmen werden die Zahlen damit neu berechnet. Der Vergleich mit dem Vorjahr betrachtet denselben Zeitraum ein Jahr früher, und die Farben ändern sich nicht. Es wird für jeden Benutzer gespeichert, und
+    <em>Zurück zum Üblichen</em>, unter <em>Anpassen</em> setzt auch die Zahlen auf die Werkswerte zurück.
+  </p>
+  <div class="tabla-envoltorio">
+  <table>
+    <tbody><tr><th>Kachel</th><th>Welche Zahl</th><th>Ab Werk</th></tr>
+    <tr><td><strong>Auslastung</strong></td><td>Wochen voraus, von 1 bis 12.</td><td>4</td></tr>
+    <tr><td><strong>Aktive Kunden</strong></td><td>Tage, von 7 bis 730.</td><td>90</td></tr>
+    <tr><td><strong>Wiederkehr der Neukunden</strong></td><td>Monate bis zur Rückkehr, von 1 bis 12.</td><td>3</td></tr>
+    <tr><td><strong>Durchschnittliche Ausgaben</strong></td><td>Monate, von 1 bis 24.</td><td>12</td></tr>
+    <tr><td><strong>Verlorene Termine</strong></td><td>Stunden Vorlauf der Absage, von 1 bis 72.</td><td>24</td></tr>
+    <tr><td><strong>Vorfälle und Stürze</strong> (Aufenthalte)</td><td>Tage, die mit den vorherigen verglichen werden, von 7 bis 90.</td><td>30</td></tr>
+    <tr><td><strong>Nicht rechtzeitig abgeschlossene Vorfälle</strong></td><td>Wartestunden, von 1 bis 336.</td><td>48</td></tr>
+    <tr><td><strong>Endende Kurzaufenthalte</strong></td><td>Tage voraus, von 1 bis 180.</td><td>30</td></tr>
+    <tr><td><strong>Belegung heute</strong> (Aufenthalte)</td><td>Wochen der Prognose darunter, von 1 bis 13.</td><td>4</td></tr>
+  </tbody></table>
+  </div>
+  <p>
+    Das Umsatzdiagramm lässt sich <strong>monatlich</strong> anzeigen, die letzten zwölf Monate mit dem Vorjahr daneben, oder
+    <strong>jährlich</strong>, die letzten fünf Jahre mit der gestrichelten Prognose zum Abschluss des laufenden Jahres. Gewählt wird oben rechts im Diagramm, und es bleibt so für den, der es gewählt hat.
   </p>
   <figure>
     <img src="/turnera/manual/imagenes/en/30-cuadro-de-mando.png" alt="Das Cockpit mit den sechs Kennzahlen, ihren Ampeln und dem Monatsumsatz" loading="lazy">
@@ -2813,7 +2842,8 @@ footer{
 
   <p>
     Für eine maßgeschneiderte drückt man <strong>Neue Rolle</strong>, gibt ihr einen Namen, den es noch nicht gibt, und verteilt die Berechtigungen mit den zwei Listen: links die <strong>verfügbaren</strong>, rechts die
-    <strong>der Rolle</strong>. Man verschiebt sie mit den Pfeilen oder per Doppelklick von einer Seite auf die andere, und über jeder Liste gibt es ein Suchfeld, damit man nicht die gut hundert durchgehen muss. <strong>Unter dem Namen jeder Berechtigung steht, immer sichtbar, was sie freischaltet</strong> und, wo Verwechslungen möglich sind, was sie nicht freischaltet. Das ist nicht immer ein ganzer Bildschirm: manchmal nur eine Schaltfläche oder die Möglichkeit, diese Schaltfläche zu drücken. Die Suche berücksichtigt auch diese Erklärung. Oben auf dem Rollenbildschirm gibt es einen Link zu genau diesem Abschnitt des Handbuchs. Die Leistungen anzusehen und ihre Preise zu ändern sind zum Beispiel zwei verschiedene Berechtigungen.
+    <strong>der Rolle</strong>. Man verschiebt sie mit den Pfeilen oder per Doppelklick von einer Seite auf die andere, und über jeder Liste gibt es ein Suchfeld, damit man nicht die gut hundert durchgehen muss. <strong>Unter dem Namen jeder Berechtigung steht, immer sichtbar, was sie freischaltet</strong> und, wo es Verwechslungen geben kann, was sie nicht freischaltet. Das ist nicht immer ein ganzer Bildschirm: Manchmal ist es nur eine Schaltfläche, oder dass diese sich drücken lässt. Die Suche berücksichtigt auch diese Erklärung. Der Rollenbildschirm hat oben einen Link zu genau diesem Abschnitt des Handbuchs. Leistungen sehen und ihre Preise ändern sind zum Beispiel zwei verschiedene Berechtigungen. Und die <strong>Gutscheine im Verkauf</strong> im Katalog haben eigene, <em>Gutscheine des Katalogs sehen</em> und
+    <em>Gutscheine des Katalogs anlegen und bearbeiten</em>, getrennt von denen der Leistungen. Um sie an der Kasse zu verkaufen, braucht man keine von beiden: Es genügt <em>An der Kasse kassieren</em>.
   </p>
 
   <div class="ojo">
@@ -3101,8 +3131,10 @@ footer{
     <tr id="perm-centre-invoicing-production"><td><strong>Pasar la facturación a producción (Rechnungsstellung in die Produktion überführen)</strong></td><td>Stellt die Rechnungsstellung vom Testmodus auf Produktion um: Die Testrechnungen werden gelöscht und die Nummerierung beginnt von vorn. Es gibt kein Zurück.</td><td><strong><a href="#roles-sensibles">Sensibel</a>:</strong> nur der Systemadministrator</td></tr>
     <tr id="permisos-catalogo"><th colspan="3">Katalog</th></tr>
     <tr id="perm-services-quick-pick"><td><strong>Schnellauswahl von Leistungen</strong></td><td>Erlaubt es, die Leistungen eines Termins mit den Schnelltasten auszuwählen, ohne Zugriff auf den Katalog zu benötigen. Es zeigt Name, Code und Dauer jeder Leistung, aber weder den Preis noch die Datenblätter.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-direccion">Leitung</a></td></tr>
-    <tr id="perm-services-view"><td><strong>Leistungen ansehen</strong></td><td>Zeigt die Leistungen und ihre Preise. Nur zum Ansehen: Für Änderungen braucht es „Leistungen anlegen und bearbeiten“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
-    <tr id="perm-services-write"><td><strong>Leistungen anlegen und bearbeiten</strong></td><td>Erlaubt, Leistungen anzulegen, zu bearbeiten und zu entfernen.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="perm-services-view"><td><strong>Leistungen ansehen</strong></td><td>Zeigt die Leistungen und ihre Preise, ohne die Gutscheine im Verkauf, die eine eigene Berechtigung haben. Nur zum Ansehen: Zum Ändern braucht man „Leistungen anlegen und bearbeiten“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="perm-catalogue-vouchers-view"><td><strong>Gutscheine des Katalogs sehen</strong></td><td>Zeigt die Gutscheine, die das Zentrum im Verkauf hat, ihre Sitzungen, Gültigkeit und ihren Preis. Nur zum Ansehen. Um sie an der Kasse zu verkaufen, genügt „An der Kasse kassieren“.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="perm-services-write"><td><strong>Leistungen anlegen und bearbeiten</strong></td><td>Erlaubt, Leistungen anzulegen, zu bearbeiten und zurückzuziehen (nicht die Gutscheine im Verkauf).</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr id="perm-catalogue-vouchers-write"><td><strong>Gutscheine des Katalogs anlegen und bearbeiten</strong></td><td>Erlaubt, die Gutscheine im Verkauf anzulegen, zu bearbeiten und zurückzuziehen.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
     <tr id="perm-packages-view"><td><strong>Pakete ansehen</strong></td><td>Zeigt die Pakete aus Leistungen und Produkten. Nur zum Ansehen.</td><td><a href="#rol-recepcion">Empfang</a>, <a href="#rol-profesional">Fachkraft</a>, <a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
     <tr id="perm-packages-write"><td><strong>Pakete anlegen und bearbeiten</strong></td><td>Erlaubt, Pakete und ihren Preis anzulegen und zu bearbeiten.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
     <tr id="perm-service-groups-view"><td><strong>Mehrfachkarten-Gruppen ansehen</strong></td><td>Öffnet die Seite der Mehrfachkarten-Gruppen und zeigt, welche Leistungen jede abdeckt. Nur zum Ansehen: Zum Ändern braucht es „Mehrfachkarten-Gruppen verwalten“.</td><td><a href="#rol-direccion">Leitung</a>, <a href="#rol-catalogo">Katalog</a></td></tr>
@@ -3251,6 +3283,7 @@ footer{
       <h6 class="rc-modulo"><a href="#permisos-catalogo">Katalog</a> <span class="n">· 5</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">Leistungen ansehen</a><span class="rc-desc">Zeigt die Leistungen und ihre Preise.</span></li>
+        <li class="rc-perm"><a href="#perm-catalogue-vouchers-view">Gutscheine des Katalogs sehen</a><span class="rc-desc">Zeigt die Gutscheine im Verkauf.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">Pakete ansehen</a><span class="rc-desc">Zeigt die Pakete aus Leistungen und Produkten.</span></li>
         <li class="rc-perm"><a href="#perm-prices-lookup">Preise nachschlagen</a><span class="rc-desc">Öffnet die Schnellabfrage der Preise: Man sucht eine Leistung, ein Paket oder ein Produkt und sieht nur Name, Preis und bei Produkten den Lagerbestand des Zentrums.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Produkte ansehen</a><span class="rc-desc">Zeigt die Verkaufsprodukte.</span></li>
@@ -3297,6 +3330,7 @@ footer{
       <h6 class="rc-modulo"><a href="#permisos-catalogo">Katalog</a> <span class="n">· 4</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">Leistungen ansehen</a><span class="rc-desc">Zeigt die Leistungen und ihre Preise.</span></li>
+        <li class="rc-perm"><a href="#perm-catalogue-vouchers-view">Gutscheine des Katalogs sehen</a><span class="rc-desc">Zeigt die Gutscheine im Verkauf.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">Pakete ansehen</a><span class="rc-desc">Zeigt die Pakete aus Leistungen und Produkten.</span></li>
         <li class="rc-perm"><a href="#perm-prices-lookup">Preise nachschlagen</a><span class="rc-desc">Öffnet die Schnellabfrage der Preise: Man sucht eine Leistung, ein Paket oder ein Produkt und sieht nur Name, Preis und bei Produkten den Lagerbestand des Zentrums.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Produkte ansehen</a><span class="rc-desc">Zeigt die Verkaufsprodukte.</span></li>
@@ -3385,7 +3419,9 @@ footer{
       <h6 class="rc-modulo"><a href="#permisos-catalogo">Katalog</a> <span class="n">· 14</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">Leistungen ansehen</a><span class="rc-desc">Zeigt die Leistungen und ihre Preise.</span></li>
+        <li class="rc-perm"><a href="#perm-catalogue-vouchers-view">Gutscheine des Katalogs sehen</a><span class="rc-desc">Zeigt die Gutscheine im Verkauf.</span></li>
         <li class="rc-perm"><a href="#perm-services-write">Leistungen anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Leistungen anzulegen, zu bearbeiten und zu entfernen.</span></li>
+        <li class="rc-perm"><a href="#perm-catalogue-vouchers-write">Gutscheine des Katalogs anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, die Gutscheine im Verkauf anzulegen, zu bearbeiten und zurückzuziehen.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">Pakete ansehen</a><span class="rc-desc">Zeigt die Pakete aus Leistungen und Produkten.</span></li>
         <li class="rc-perm"><a href="#perm-packages-write">Pakete anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Pakete und ihren Preis anzulegen und zu bearbeiten.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-view">Mehrfachkarten-Gruppen ansehen</a><span class="rc-desc">Öffnet die Seite der Mehrfachkarten-Gruppen und zeigt, welche Leistungen jede abdeckt. Nur zum Ansehen: Zum Ändern braucht es „Mehrfachkarten-Gruppen verwalten“.</span></li>
@@ -3577,7 +3613,9 @@ footer{
       <h6 class="rc-modulo"><a href="#permisos-catalogo">Katalog</a> <span class="n">· 14</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">Leistungen ansehen</a><span class="rc-desc">Zeigt die Leistungen und ihre Preise.</span></li>
+        <li class="rc-perm"><a href="#perm-catalogue-vouchers-view">Gutscheine des Katalogs sehen</a><span class="rc-desc">Zeigt die Gutscheine im Verkauf.</span></li>
         <li class="rc-perm"><a href="#perm-services-write">Leistungen anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Leistungen anzulegen, zu bearbeiten und zu entfernen.</span></li>
+        <li class="rc-perm"><a href="#perm-catalogue-vouchers-write">Gutscheine des Katalogs anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, die Gutscheine im Verkauf anzulegen, zu bearbeiten und zurückzuziehen.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">Pakete ansehen</a><span class="rc-desc">Zeigt die Pakete aus Leistungen und Produkten.</span></li>
         <li class="rc-perm"><a href="#perm-packages-write">Pakete anlegen und bearbeiten</a><span class="rc-desc">Erlaubt, Pakete und ihren Preis anzulegen und zu bearbeiten.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-view">Mehrfachkarten-Gruppen ansehen</a><span class="rc-desc">Öffnet die Seite der Mehrfachkarten-Gruppen und zeigt, welche Leistungen jede abdeckt. Nur zum Ansehen: Zum Ändern braucht es „Mehrfachkarten-Gruppen verwalten“.</span></li>
@@ -3906,7 +3944,9 @@ footer{
     <tr><td><a href="#perm-centre-invoicing-production">Pasar la facturación a producción (Rechnungsstellung in die Produktion überführen)</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><em>sensibel</em></td></tr>
     <tr><th colspan="8"><a href="#permisos-catalogo">Katalog</a></th></tr>
     <tr><td><a href="#perm-services-view">Leistungen ansehen</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr><td><a href="#perm-catalogue-vouchers-view">Gutscheine des Katalogs sehen</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
     <tr><td><a href="#perm-services-write">Leistungen anlegen und bearbeiten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
+    <tr><td><a href="#perm-catalogue-vouchers-write">Gutscheine des Katalogs anlegen und bearbeiten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
     <tr><td><a href="#perm-packages-view">Pakete ansehen</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
     <tr><td><a href="#perm-packages-write">Pakete anlegen und bearbeiten</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
     <tr><td><a href="#perm-service-groups-view">Mehrfachkarten-Gruppen ansehen</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Katalog</a></td></tr>
@@ -4322,6 +4362,21 @@ footer{
     Wenn Sie eine Vorlage als <strong>verpflichtend</strong>kennzeichnen, weist die Akte jedes Kunden darauf hin, der
     sie nicht unterschrieben hat. Ohne diesen Hinweis wäre das ein Ordner voller Papiere: der Sinn ist, es vor
     der Behandlung zu merken, nicht danach.
+  </p>
+
+  <h4 id="consentimientos-servicios">Einwilligungen, die bestimmte Leistungen erfordern (optional)</h4>
+  <span class="ruta">Verwaltung → Einwilligungen → Neue Version → Leistungen, die sie erfordern</span>
+
+  <p>
+    <strong>Es ist ein Extra, das man nutzen kann oder nicht.</strong> Wird keine Leistung gewählt, funktioniert alles genau wie bisher und im Alltag ändert sich nichts.
+  </p>
+  <p>
+    Werden Leistungen gewählt (zum Beispiel erfordern „Diodenlaser Achseln“ und „Diodenlaser Beine“ die Einwilligung zum Diodenlaser), fordert Turnera sie an von <strong>allen, die einen Termin für eine dieser Leistungen haben oder hatten</strong>, ohne die Vorlage als Pflicht markieren zu müssen. Bei anderen Kunden erscheint nichts. Die Leistungen werden mit der Vorlage gespeichert: Eine neue Version des Textes entfernt sie nicht.
+  </p>
+  <p>
+    Was noch zu unterschreiben ist, steht in der Kundenkarte, im Bericht <em>Ausstehende Einwilligungen</em> und an der
+    <strong>Kasse</strong>: Bei der Wahl des Kunden erscheint ein Hinweis mit dem, was fehlt, und eine Schaltfläche <em>Unterschrift anfordern</em>
+    für jedes Dokument, die es an das Tablet am Empfang schickt. In der Leiste <em>Zu kassieren</em> trägt, wer etwas offen hat, ein kleines Symbol mit der Zahl. <strong>Der Hinweis verhindert nie das Kassieren.</strong>
   </p>
 
   <h4 id="consentimientos-campos">Felder, die im Dokument ausgefüllt werden</h4>
@@ -5546,7 +5601,7 @@ footer{
 <section id="soporte">
   <h2>12 ter. Support: Kontakt zum Turnera-Team</h2>
   <p>
-    Wenn etwas nicht funktioniert oder Sie Hilfe brauchen, öffnen Sie ein Ticket unter <em>Support</em>, im Menü. Dort sehen Sie die Antworten des Teams, ohne den Umweg über E-Mail. Wenn Sie lieber per E-Mail schreiben, geht das auch: Ihre Nachricht landet im selben Ticket. Antworten erscheinen von selbst auf dem Bildschirm, innerhalb weniger Sekunden: Sie müssen nicht neu laden.
+    Wenn etwas nicht funktioniert oder Sie Hilfe brauchen, öffnen Sie ein Ticket unter <em>Support</em>, im Menü. Dort siehst du die Antworten des Teams, ohne über die E-Mail zu gehen. Wenn du lieber per E-Mail schreibst, geht das auch: Deine Nachricht landet im selben Ticket. Die Antworten erscheinen innerhalb von Sekunden von selbst auf dem Bildschirm: Neu laden ist nicht nötig. Sie können Formatierung haben (Fettdruck, Listen, Tabellen und Links), wenn sich etwas so besser erklären lässt.
   </p>
 
   <h3>Wer sieht was</h3>
@@ -5732,6 +5787,70 @@ footer{
     <em>Tägliche Pflege erfassen</em>, <em>Eintragsverlauf einsehen</em>, <em>Einträge anderer korrigieren</em>,
     <em>Vorfälle eröffnen</em>, <em>Vorfälle abschließen</em>, <em>Ins Stationsbuch schreiben</em>, <em>Tarife einsehen und festlegen</em>, <em>Aufenthalte im Cockpit sehen</em>, <em>Diäten einsehen</em> und <em>Alle Bereiche einsehen</em>. Wenn das Modul in einer Einrichtung eingeschaltet wird, entstehen zwei Ausgangsrollen, die die Einrichtung ändern kann: <strong>Estancias · planta</strong>
      (Aufenthalte ansehen, erfassen, Vorfälle eröffnen, ins Stationsbuch schreiben und Diäten ansehen) und <strong>Estancias · supervisión</strong> (das Obige plus Aufnahmen und Entlassungen, Vorfälle abschließen, Eintragsverlauf einsehen, korrigieren und alle Bereiche einsehen). <em>Leitung</em> hat alle; Beträge sind nur für die mit der Berechtigung für Tarife.
+  </p>
+</section>
+<section id="gestion-financiera">
+  <h2>12 quinquies. Finanzverwaltung: Vergütung, Abrechnungen, Fixkosten und Liquiditätsprognose</h2>
+  <p>
+    Das Modul <strong>Finanzverwaltung</strong> dient dazu, zu wissen, was das Zentrum kostet: wie jede Fachkraft bezahlt wird, was jeden Monat an freie Mitarbeiter zu zahlen ist, und die Fixkosten. Es ist optional: Hat das Zentrum es nicht eingeschaltet, erscheint es nirgends, weder im Menü noch bei den Berechtigungen. Es braucht Kasse, weil das, was ein freier Mitarbeiter verdient, aus dem Kassierten stammt.
+  </p>
+  <p>
+    Seine zwei Berechtigungen sind <strong>sensiblen</strong> und ab Werk hat sie nur die Rolle <em>Systemadministrator</em>:
+    <em>Kosten und Vergütung</em> (die Vergütung jeder Fachkraft und die Fixkosten) und <em>Abrechnung der freien Mitarbeiter</em>. Die Fachkraft selbst sieht nichts davon.
+  </p>
+
+  <h3 id="gestion-financiera-retribucion">Wie jede Fachkraft bezahlt wird</h3>
+  <p>
+    Unter <em>Mitarbeiter</em> hat das Aktionsmenü jeder Zeile <strong>Vergütung</strong>. Es gibt drei Vergütungsarten:
+  </p>
+  <ul>
+    <li><strong>Feste Monatskosten</strong>, für Angestellte: was sie das Unternehmen im Monat kosten (Brutto, Arbeitgeberanteil der Sozialversicherung und anteilige Sonderzahlungen). Einem Angestellten wird nichts abgerechnet.</li>
+    <li><strong>Prozent vom Umsatz</strong>, auf den Umsatz ohne MwSt.</li>
+    <li><strong>Betrag pro Behandlung oder Stunde</strong>: eine Liste von Leistungen, jede mit ihrer Regel. Das kann ein Betrag sein
+      <em>pro Behandlung</em> (120 € pro Toxin), <em>pro Terminstunde</em> (80 €/h bei Beratungsgesprächen) oder ein
+      <em>Prozentsatz</em> vom Umsatz ohne MwSt. (40 % der Fäden). Was nicht auf der Liste steht, wird nicht vergütet. So ist es üblich bei einem Arzt, der für bestimmte Eingriffe kommt.</li>
+  </ul>
+  <p>
+    Bei den letzten beiden wählt man, ob vergütet wird, was <strong>erbracht</strong> (auch wenn der Kunde es noch schuldet) oder nur, was
+    <strong>kassiert</strong> wurde. Die Terminstunde ist die Dauer des Termins; hat der Verkauf nicht genau einen Termin dieser Fachkraft, zählt die Dauer der Leistung.
+  </p>
+  <p>
+    Jede Änderung wird mit ihrem <strong>Datum „Gültig ab“</strong> gespeichert und gilt bis zur nächsten, eine Erhöhung ist also eine neue Version, und die vorige bleibt im <strong>Verlauf</strong>. Speichern mit einem schon vorhandenen Datum ändert diese Version. Entfernt man eine Version, gilt wieder die vorige.
+  </p>
+
+  <h3 id="gestion-financiera-liquidaciones">Abrechnung der freien Mitarbeiter</h3>
+  <p>
+    Unter <em>Finanzverwaltung → Abrechnungen</em> wählt man den Monat, und es erscheinen die freien Mitarbeiter des Standorts: die mit Prozentsatz oder Betrag pro Behandlung oder Stunde. Wählt man einen, sieht man Zeile für Zeile, was er gemacht hat, mit Kunde, Leistung, angewandter Regel und dem, was ihm zusteht. Eine mit Gutschein bezahlte Sitzung zählt als erbrachte Behandlung; bei einem Prozentsatz zählt sie nicht, weil das Geld beim Verkauf des Gutscheins kam. Eine <strong>Rückgabe</strong> wird im Monat abgezogen, in dem sie erfolgt.
+  </p>
+  <p>
+    <strong>Excel herunterladen</strong> exportiert die Details zum Abgleich mit der Rechnung des freien Mitarbeiters. Steuerabzug und MwSt. stehen auf dieser Rechnung: Turnera berechnet sie nicht. <strong>Als bezahlt markieren</strong> legt den Betrag fest: Ändert sich danach etwas in diesem Monat, bleibt das Bezahlte, und der Bildschirm weist darauf hin, was jetzt herauskäme. Wurde es versehentlich markiert,
+    <em>Zahlung zurücknehmen</em> setzt sie wieder auf offen.
+  </p>
+
+  <h3 id="gestion-financiera-gastos">Fixkosten</h3>
+  <p>
+    Unter <em>Finanzverwaltung → Fixkosten</em> trägt man ein, was der Standort jeden Monat, jedes Quartal oder Jahr zahlt, ob er verkauft oder nicht: Miete, Nebenkosten, Versicherungen, Kredite, Beratung. Jede Ausgabe hat ihr Anfangsdatum und, wenn sie endet, ihr Enddatum. Vierteljährliche und jährliche werden in der Spalte <em>Pro Monat</em> auf die Monate verteilt. Eine Ausgabe, die steigt, wird mit ihrem Datum „Bis“ geschlossen und eine neue mit dem neuen Betrag angelegt, damit jeder Monat die richtige zählt. Eine Ausgabe entfernen ist für eine versehentlich eingetragene gedacht.
+  </p>
+
+  <h3 id="gestion-financiera-prevision">Liquiditätsprognose</h3>
+  <p>
+    Unter <em>Finanzverwaltung → Liquiditätsprognose</em> wählt man den Zeitraum (dieser Monat, dieses Quartal, dieses Jahr oder bis zu einem bestimmten Monat), und es erscheint das Ergebnis des Standorts: was vom Beginn des Zeitraums bis heute schon geschehen ist, plus was von heute bis zum Ende erwartet wird. Alles ohne MwSt. Oben drei Kacheln: das erwartete Ergebnis, welcher Teil der Einnahmen schon sicher ist (Verkauftes und bereits vergebene Termine) und der schlechteste Monat des Zeitraums.
+  </p>
+  <p>
+    Wie jede Zeile prognostiziert wird:
+  </p>
+  <ul>
+    <li><strong>Leistungen und Produkte.</strong> Zuerst zählen die bereits vergebenen, noch nicht kassierten Termine zum Tarifpreis. Ergibt das im selben Zeitraum des Vorjahres Verkaufte mehr, wird mit diesem Tempo aufgefüllt; ohne Vorjahr mit dem Tagesdurchschnitt der letzten drei Monate.</li>
+    <li><strong>Angestellte.</strong> Die Arbeitgeberkosten jeder Fachkraft mit Monatsvergütung, Tag für Tag, gemäß ihrer eingetragenen Vergütung.</li>
+    <li><strong>Freie Mitarbeiter.</strong> Bis heute, was sie nach ihrer Vergütungsart verdient haben, wie in der Abrechnung. In der Prognose derselbe Anteil an den Einnahmen wie in den letzten drei Monaten.</li>
+    <li><strong>Fixkosten.</strong> Ihr Monatsäquivalent, auf die Tage verteilt.</li>
+  </ul>
+  <p>
+    Es geht von keinem Saldo aus: Es zeigt, was das Zentrum im Zeitraum erwirtschaftet, nicht das Geld auf der Bank. Raten von Ratenzahlungen erscheinen nicht gesondert, weil diese Verkäufe schon am Tag des Verkaufs als Einnahme zählen.
+  </p>
+  <p>
+    Hat das Zentrum die Finanzverwaltung, findet, wer die Kosten sehen darf, außerdem in den <em>Cockpit</em>
+    einen Bereich mit dem erwarteten Ergebnis des Monats und des Jahres, den Personalkosten im Verhältnis zu den Einnahmen, der Gewinnschwelle, den Abrechnungen der freien Mitarbeiter, den Fixkosten und einem Diagramm des Ergebnisses Monat für Monat (Monate mit Prognose sind gestrichelt). Wer die Kosten nicht sieht, sieht diesen Bereich nicht.
   </p>
 </section>
 <section id="problemas">

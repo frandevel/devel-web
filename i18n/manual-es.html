@@ -739,6 +739,7 @@ footer{
     <li><a href="#activaciones">12 bis. Activaciones: puertas y aparatos con QR</a></li>
     <li><a href="#soporte">12 ter. Soporte: hablar con el equipo de Turnera</a></li>
     <li><a href="#estancias">12 quater. Estancias: residentes, habitaciones y registro de planta</a></li>
+      <li><a href="#gestion-financiera">12 quinquies. Gestión financiera: retribución, liquidaciones, gastos fijos y previsión de caja</a></li>
     <li><a href="#problemas">13. Cuando algo no sale</a></li>
     <li><a href="#app-nativa">14. La aplicación nativa de los profesionales (Android)</a></li>
     <li><a href="#app-instalar" class="sub">Descargar e instalar la aplicación</a></li>
@@ -2099,6 +2100,11 @@ footer{
       del TPV: así la caja y la agenda cuentan lo mismo y no se cobra lo que no se hizo. Si en su centro se cobra antes
       de atender, se apaga en <em>Administración → Preferencias → Cobros y fidelización → Cobrar solo lo atendido</em>.
       En las clases cuenta cada asistente: se le cobra cuando consta que vino.</p>
+    <p><strong>Una cita no se marca como atendida antes de su hora de inicio.</strong> Hasta que llega, el botón
+      <em>Atendida</em> no se puede pulsar (y en una clase, tampoco que alguien vino). Así no se cobra por error como
+      atendida una cita de otro día. Pasada la hora de inicio, sí, aunque la cita aún no haya terminado. Va unido al
+      ajuste anterior: si se apaga <em>Cobrar solo lo atendido</em>, una cita se puede marcar como atendida en
+      cualquier momento.</p>
   </div>
 
   <p>
@@ -2906,7 +2912,9 @@ footer{
     <strong>Si el cliente tiene varios bonos que valen para el mismo servicio, la sesión sale del que antes
     caduca</strong>, aunque se comprara después, para que no se pierdan sesiones pagadas. Los que no caducan van los
     últimos, y si dos caducan el mismo día, sale del comprado antes. En la ficha del cliente los bonos aparecen en ese
-    mismo orden.
+    mismo orden. De partida la ficha solo enseña los bonos que aún sirven: para ver también los agotados o los
+    caducados se marcan las casillas de encima de la lista, y cada usuario se las encuentra como las dejó la última
+    vez en ese navegador.
   </p>
 
   <p>
@@ -2944,6 +2952,14 @@ footer{
     es opcional.
   </p>
 
+  <p>
+    <strong>También se puede pasar solo una parte.</strong> En <em>Sesiones que se traspasan</em> sale de partida
+    todo lo que queda; si se baja (por ejemplo, 3 de 7), esas sesiones van a un <strong>bono nuevo</strong> de
+    quien las recibe, del mismo grupo y con la misma fecha de compra y caducidad, y el bono original se queda con
+    el resto. No se cobra nada ni se factura de nuevo. Los bonos sin número de sesiones solo se traspasan
+    enteros.
+  </p>
+
   <figure>
     <img src="/turnera/manual/imagenes/25-traspaso-de-bono.png" alt="El dialogo de traspaso de un bono, con el aviso de que no se deshace" loading="lazy">
     <figcaption>El diálogo de traspaso. El aviso de arriba dice cuántas sesiones se llevan y que no hay vuelta atrás.</figcaption>
@@ -2956,8 +2972,8 @@ footer{
   </div>
 
   <p>
-    De cada traspaso queda anotado <strong>de quién a quién, cuántas sesiones quedaban, quién lo hizo y la
-    fecha y la hora</strong>. Sale en las dos fichas, en el bloque <em>Bonos traspasados</em>: en la de quien
+    De cada traspaso queda anotado <strong>de quién a quién, cuántas sesiones se llevó, quién lo hizo y la
+    fecha y la hora</strong> (y, si fue una parte, el número del bono nuevo). Sale en las dos fichas, en el bloque <em>Bonos traspasados</em>: en la de quien
     lo dio y en la de quien lo recibió.
   </p>
 
@@ -3192,6 +3208,7 @@ footer{
     <tr><td><strong>Anulaciones</strong></td><td>Cuántas se anularon por el cliente, por el centro y por causas externas, y qué clientes anulan más.</td></tr>
     <tr><td><strong><a href="#rol-clientes">Clientes</a></strong></td><td>Altas, cumpleaños y de dónde vienen. También quién se ha hecho un servicio: se eligen uno o varios en <em>Servicios realizados</em> (sale quien se hizo cualquiera de ellos) y, si hace falta, se acota con la <em>Fecha de la visita</em>.</td></tr>
     <tr><td><strong>Consentimientos firmados</strong></td><td>Los consentimientos firmados y vigentes de todos los clientes, con fecha, plantilla y versión, si se firmó en la tablet o se importó y quién lo recogió. Se filtra por fecha, plantilla y cliente. Es de la sección de clientes y de fábrica solo lo ve Dirección; el documento firmado solo se abre con «Ver el documento firmado».</td></tr>
+    <tr><td><strong>Consentimientos pendientes</strong></td><td>Los clientes a los que les falta firmar algún consentimiento obligatorio, con los que llevan más tiempo arriba y, a igualdad, los que tienen más pendientes. Cuenta como pendiente cuando la persona ha tenido una cita desde que existe la plantilla (cualquier cita si es general; una de un servicio de su grupo de tarifa si es de un tratamiento). Dice desde cuándo, qué falta y su próxima cita. Lo ven quienes ven el de consentimientos firmados.</td></tr>
     <tr><td><strong>Bonos</strong></td><td>Qué hay vendido, qué queda por consumir y qué está a punto de caducar.</td></tr>
     <tr id="informe-facturacion-profesional"><td><strong>Facturación por profesional</strong></td><td>Lo que ha facturado cada profesional en un periodo: cuántos servicios y por cuánto, las sesiones con bono (se cuentan, pero no suman importe: se cobró al vender el bono), los productos y lo que queda pendiente. Cada línea del ticket cuenta para quien la hizo, con sus descuentos y el IVA incluido, y las devoluciones restan. El Excel trae el resumen y el detalle de cada línea, para calcular las comisiones. Está en <em>Caja y cobros</em>.</td></tr>
     <tr><td><strong>Stock</strong></td><td>Qué falta y qué ha entrado y salido.</td></tr>
@@ -3258,11 +3275,11 @@ footer{
   <table>
     <tr><th>Cifra</th><th>Qué cuenta</th><th>Semáforo</th></tr>
     <tr><td><strong>Facturación del mes</strong></td><td>Lo cobrado del día 1 a hoy, frente a los mismos días del año pasado. La previsión estira ese ritmo al mes entero.</td><td>Verde desde un 5 % más; rojo desde un 5 % menos.</td></tr>
-    <tr><td><strong>Ocupación</strong></td><td>De las horas que caben en la agenda las próximas cuatro semanas, cuántas tienen cita. Caben los sitios activos (cabinas, salas) por el horario de la agenda, los días de la semana en que se ha trabajado el último año, menos los ratos cerrados.</td><td>Verde desde el 75 %; rojo por debajo del 50 %.</td></tr>
-    <tr><td><strong>Clientes activos</strong></td><td>Los que han venido en los últimos 90 días: con un ticket o con una cita a la que acudieron.</td><td>Como la facturación, frente al año pasado.</td></tr>
-    <tr><td><strong>Repetición de los nuevos</strong></td><td>De los que vinieron por primera vez hace entre tres y seis meses, cuántos volvieron antes de tres meses.</td><td>Verde desde el 50 %; rojo por debajo del 30 %.</td></tr>
-    <tr><td><strong>Gasto medio</strong></td><td>Lo cobrado en doce meses a clientes con ficha, entre los que pagaron algo.</td><td>Como la facturación, frente al año pasado.</td></tr>
-    <tr><td><strong>Citas perdidas</strong></td><td>Las del mes a las que no vinieron o que el cliente anuló con menos de 24 horas, y lo que valían en tarifa. Anular con tiempo no cuenta: el hueco se pudo volver a llenar. Lo que anula el centro o una causa externa tampoco.</td><td>Verde por debajo del 8 %; rojo por encima del 15 %.</td></tr>
+    <tr><td><strong>Ocupación</strong></td><td>De las horas que caben en la agenda las próximas semanas (cuatro, de fábrica), cuántas tienen cita. Caben los sitios activos (cabinas, salas) por el horario de la agenda, los días de la semana en que se ha trabajado el último año, menos los ratos cerrados.</td><td>Verde desde el 75 %; rojo por debajo del 50 %.</td></tr>
+    <tr><td><strong>Clientes activos</strong></td><td>Los que han venido en los últimos días (90, de fábrica): con un ticket o con una cita a la que acudieron.</td><td>Como la facturación, frente al año pasado.</td></tr>
+    <tr><td><strong>Repetición de los nuevos</strong></td><td>De los que vinieron por primera vez hace entre tres y seis meses, cuántos volvieron antes de tres meses. Con otro plazo, N meses: los que vinieron hace entre N y 2N meses, para que todos hayan tenido N meses para volver.</td><td>Verde desde el 50 %; rojo por debajo del 30 %.</td></tr>
+    <tr><td><strong>Gasto medio</strong></td><td>Lo cobrado en los últimos meses (doce, de fábrica) a clientes con ficha, entre los que pagaron algo.</td><td>Como la facturación, frente al año pasado.</td></tr>
+    <tr><td><strong>Citas perdidas</strong></td><td>Las del mes a las que no vinieron o que el cliente anuló con menos de las horas de antelación que se pidan (24, de fábrica), y lo que valían en tarifa. Anular con tiempo no cuenta: el hueco se pudo volver a llenar. Lo que anula el centro o una causa externa tampoco.</td><td>Verde por debajo del 8 %; rojo por encima del 15 %.</td></tr>
   </table>
   </div>
   <p>
@@ -3313,6 +3330,32 @@ footer{
     Estancias, Personal) y cada ficha o gráfico, y se ordenan con flechas: las secciones entre sí y las fichas dentro de
     su sección. Se guarda para cada usuario. Lo que Turnera añada más adelante aparece solo al final de su sección, y
     <em>Volver a lo de siempre</em> deshace la elección.
+  </p>
+  <p id="cuadro-de-mando-numeros">
+    <strong>Cada uno ajusta sus números.</strong> En las fichas que miran un periodo, el número va subrayado dentro
+    de su frase, por ejemplo «en los últimos <em>90 días</em>». Al pulsarlo sale una ventanita para cambiarlo, con
+    unos atajos y <em>Volver a</em> lo de fábrica; al aplicar, las cifras se vuelven a calcular con él. La comparación
+    con hace un año mira el mismo periodo un año antes, y los colores no cambian. Se guarda para cada usuario, y
+    <em>Volver a lo de siempre</em>, en <em>Personalizar</em>, devuelve también los números a los de fábrica.
+  </p>
+  <div class="tabla-envoltorio">
+  <table>
+    <tr><th>Ficha</th><th>Qué número</th><th>De fábrica</th></tr>
+    <tr><td><strong>Ocupación</strong></td><td>Semanas por delante, de 1 a 12.</td><td>4</td></tr>
+    <tr><td><strong>Clientes activos</strong></td><td>Días, de 7 a 730.</td><td>90</td></tr>
+    <tr><td><strong>Repetición de los nuevos</strong></td><td>Meses para volver, de 1 a 12.</td><td>3</td></tr>
+    <tr><td><strong>Gasto medio</strong></td><td>Meses, de 1 a 24.</td><td>12</td></tr>
+    <tr><td><strong>Citas perdidas</strong></td><td>Horas de antelación de la anulación, de 1 a 72.</td><td>24</td></tr>
+    <tr><td><strong>Incidencias y caídas</strong> (Estancias)</td><td>Días que se comparan con los anteriores, de 7 a 90.</td><td>30</td></tr>
+    <tr><td><strong>Incidencias sin cerrar a tiempo</strong></td><td>Horas de espera, de 1 a 336.</td><td>48</td></tr>
+    <tr><td><strong>Temporales que terminan</strong></td><td>Días por delante, de 1 a 180.</td><td>30</td></tr>
+    <tr><td><strong>Ocupación de hoy</strong> (Estancias)</td><td>Semanas de la previsión de debajo, de 1 a 13.</td><td>4</td></tr>
+  </table>
+  </div>
+  <p>
+    El gráfico de facturación se ve <strong>mensual</strong>, los doce últimos meses con el año anterior al lado, o
+    <strong>anual</strong>, los cinco últimos años con la previsión de cierre del año en curso punteada. Se elige
+    arriba a la derecha del gráfico y se queda así para quien lo eligió.
   </p>
   <figure>
     <img src="/turnera/manual/imagenes/30-cuadro-de-mando.png" alt="El cuadro de mando con las seis cifras, sus semáforos y la facturación mensual" loading="lazy">
@@ -3489,6 +3532,9 @@ footer{
     qué desbloquea</strong> y, cuando hay confusión posible, qué no desbloquea. Eso no siempre es una pantalla
     entera: a veces es solo un botón, o que ese botón se pueda pulsar. El buscador mira también esa explicación. La
     pantalla de roles lleva arriba un enlace a esta misma sección del manual. Ver los servicios y cambiar sus precios, por ejemplo, son dos permisos distintos.
+    Y los <strong>bonos a la venta</strong> del catálogo tienen los suyos, <em>Ver los bonos del catálogo</em> y
+    <em>Crear y editar los bonos del catálogo</em>, separados de los de servicios. Para venderlos en el TPV no hace
+    falta ninguno de los dos: basta con <em>Cobrar en el TPV</em>.
   </p>
 
   <div class="ojo">
@@ -3859,8 +3905,10 @@ footer{
     <tr id="perm-centre-invoicing-production"><td><strong>Pasar la facturación a producción</strong></td><td>Pasa la facturación del modo de pruebas a producción: borra las facturas de prueba y la numeración vuelve a empezar. No tiene vuelta atrás.</td><td><strong><a href="#roles-sensibles">Delicado</a>:</strong> solo el Administrador del sistema</td></tr>
     <tr id="permisos-catalogo"><th colspan="3">Catálogo</th></tr>
     <tr id="perm-services-quick-pick"><td><strong>Selección rápida de servicios</strong></td><td>Permite elegir los servicios de una cita con los botones rápidos, sin necesitar acceso al catálogo. Enseña el nombre, el código y la duración de cada servicio, pero no el precio ni las fichas.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-direccion">Dirección</a></td></tr>
-    <tr id="perm-services-view"><td><strong>Ver los servicios</strong></td><td>Consulta los servicios y sus precios. Es solo de consulta: para cambiarlos hace falta «Crear y editar los servicios».</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
-    <tr id="perm-services-write"><td><strong>Crear y editar los servicios</strong></td><td>Permite crear, editar y retirar servicios.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
+    <tr id="perm-services-view"><td><strong>Ver los servicios</strong></td><td>Consulta los servicios y sus precios, sin los bonos a la venta, que tienen su propio permiso. Es solo de consulta: para cambiarlos hace falta «Crear y editar los servicios».</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
+    <tr id="perm-catalogue-vouchers-view"><td><strong>Ver los bonos del catálogo</strong></td><td>Consulta los bonos que el centro tiene a la venta, sus sesiones, su vigencia y su precio. Es solo de consulta. Para venderlos en el TPV basta con «Cobrar en el TPV».</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
+    <tr id="perm-services-write"><td><strong>Crear y editar los servicios</strong></td><td>Permite crear, editar y retirar servicios (no los bonos a la venta).</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
+    <tr id="perm-catalogue-vouchers-write"><td><strong>Crear y editar los bonos del catálogo</strong></td><td>Permite crear, editar y retirar los bonos a la venta.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-packages-view"><td><strong>Ver los paquetes</strong></td><td>Consulta los paquetes de servicios y productos. Solo de lectura.</td><td><a href="#rol-recepcion">Recepción</a>, <a href="#rol-profesional">Profesional</a>, <a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-packages-write"><td><strong>Crear y editar los paquetes</strong></td><td>Permite crear y editar paquetes y su precio.</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr id="perm-service-groups-view"><td><strong>Ver los grupos de bonos</strong></td><td>Abre la pantalla de grupos de bonos y consulta qué servicios cubre cada uno. Solo de lectura: para cambiarlos hace falta «Gestionar los grupos de bonos».</td><td><a href="#rol-direccion">Dirección</a>, <a href="#rol-catalogo">Catálogo</a></td></tr>
@@ -4012,6 +4060,7 @@ footer{
       <h6 class="rc-modulo"><a href="#permisos-catalogo">Catálogo</a> <span class="n">· 5</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">Ver los servicios</a><span class="rc-desc">Consulta los servicios y sus precios.</span></li>
+        <li class="rc-perm"><a href="#perm-catalogue-vouchers-view">Ver los bonos del catálogo</a><span class="rc-desc">Consulta los bonos a la venta.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">Ver los paquetes</a><span class="rc-desc">Consulta los paquetes de servicios y productos.</span></li>
         <li class="rc-perm"><a href="#perm-prices-lookup">Consultar precios</a><span class="rc-desc">Abre la consulta rápida de precios: se busca un servicio, un paquete o un producto y solo muestra su nombre, su precio y, en los productos, las unidades en stock del centro.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Ver los productos</a><span class="rc-desc">Consulta los productos de venta.</span></li>
@@ -4058,6 +4107,7 @@ footer{
       <h6 class="rc-modulo"><a href="#permisos-catalogo">Catálogo</a> <span class="n">· 4</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">Ver los servicios</a><span class="rc-desc">Consulta los servicios y sus precios.</span></li>
+        <li class="rc-perm"><a href="#perm-catalogue-vouchers-view">Ver los bonos del catálogo</a><span class="rc-desc">Consulta los bonos a la venta.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">Ver los paquetes</a><span class="rc-desc">Consulta los paquetes de servicios y productos.</span></li>
         <li class="rc-perm"><a href="#perm-prices-lookup">Consultar precios</a><span class="rc-desc">Abre la consulta rápida de precios: se busca un servicio, un paquete o un producto y solo muestra su nombre, su precio y, en los productos, las unidades en stock del centro.</span></li>
         <li class="rc-perm"><a href="#perm-products-view">Ver los productos</a><span class="rc-desc">Consulta los productos de venta.</span></li>
@@ -4146,7 +4196,9 @@ footer{
       <h6 class="rc-modulo"><a href="#permisos-catalogo">Catálogo</a> <span class="n">· 14</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">Ver los servicios</a><span class="rc-desc">Consulta los servicios y sus precios.</span></li>
+        <li class="rc-perm"><a href="#perm-catalogue-vouchers-view">Ver los bonos del catálogo</a><span class="rc-desc">Consulta los bonos a la venta.</span></li>
         <li class="rc-perm"><a href="#perm-services-write">Crear y editar los servicios</a><span class="rc-desc">Permite crear, editar y retirar servicios.</span></li>
+        <li class="rc-perm"><a href="#perm-catalogue-vouchers-write">Crear y editar los bonos del catálogo</a><span class="rc-desc">Permite crear, editar y retirar los bonos a la venta.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">Ver los paquetes</a><span class="rc-desc">Consulta los paquetes de servicios y productos.</span></li>
         <li class="rc-perm"><a href="#perm-packages-write">Crear y editar los paquetes</a><span class="rc-desc">Permite crear y editar paquetes y su precio.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-view">Ver los grupos de bonos</a><span class="rc-desc">Abre la pantalla de grupos de bonos y consulta qué servicios cubre cada uno. Solo de lectura: para cambiarlos hace falta «Gestionar los grupos de bonos».</span></li>
@@ -4338,7 +4390,9 @@ footer{
       <h6 class="rc-modulo"><a href="#permisos-catalogo">Catálogo</a> <span class="n">· 14</span></h6>
       <ul class="rc-lista">
         <li class="rc-perm"><a href="#perm-services-view">Ver los servicios</a><span class="rc-desc">Consulta los servicios y sus precios.</span></li>
+        <li class="rc-perm"><a href="#perm-catalogue-vouchers-view">Ver los bonos del catálogo</a><span class="rc-desc">Consulta los bonos a la venta.</span></li>
         <li class="rc-perm"><a href="#perm-services-write">Crear y editar los servicios</a><span class="rc-desc">Permite crear, editar y retirar servicios.</span></li>
+        <li class="rc-perm"><a href="#perm-catalogue-vouchers-write">Crear y editar los bonos del catálogo</a><span class="rc-desc">Permite crear, editar y retirar los bonos a la venta.</span></li>
         <li class="rc-perm"><a href="#perm-packages-view">Ver los paquetes</a><span class="rc-desc">Consulta los paquetes de servicios y productos.</span></li>
         <li class="rc-perm"><a href="#perm-packages-write">Crear y editar los paquetes</a><span class="rc-desc">Permite crear y editar paquetes y su precio.</span></li>
         <li class="rc-perm"><a href="#perm-service-groups-view">Ver los grupos de bonos</a><span class="rc-desc">Abre la pantalla de grupos de bonos y consulta qué servicios cubre cada uno. Solo de lectura: para cambiarlos hace falta «Gestionar los grupos de bonos».</span></li>
@@ -4672,7 +4726,9 @@ footer{
     <tr><td><a href="#perm-centre-invoicing-production">Pasar la facturación a producción</a></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><em>delicado</em></td></tr>
     <tr><th colspan="8"><a href="#permisos-catalogo">Catálogo</a></th></tr>
     <tr><td><a href="#perm-services-view">Ver los servicios</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
+    <tr><td><a href="#perm-catalogue-vouchers-view">Ver los bonos del catálogo</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr><td><a href="#perm-services-write">Crear y editar los servicios</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
+    <tr><td><a href="#perm-catalogue-vouchers-write">Crear y editar los bonos del catálogo</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr><td><a href="#perm-packages-view">Ver los paquetes</a></td><td class="marca">✓</td><td class="marca">✓</td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr><td><a href="#perm-packages-write">Crear y editar los paquetes</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
     <tr><td><a href="#perm-service-groups-view">Ver los grupos de bonos</a></td><td class="marca"></td><td class="marca"></td><td class="marca">✓</td><td class="marca"></td><td class="marca"></td><td class="marca"></td><td><a href="#rol-catalogo">Catálogo</a></td></tr>
@@ -5149,6 +5205,26 @@ footer{
     Si marca una plantilla como <strong>obligatoria</strong>, la ficha de cada cliente que no la tenga firmada
     lo avisa. Sin ese aviso esto sería una carpeta de papeles: la gracia es enterarse antes de hacer el
     tratamiento, no después.
+  </p>
+
+  <h4 id="consentimientos-servicios">Consentimientos que piden ciertos servicios (opcional)</h4>
+  <span class="ruta">Administración → Consentimientos → Nueva versión → Servicios que lo piden</span>
+
+  <p>
+    <strong>Es un extra que se puede usar o no.</strong> Si no se elige ningún servicio, todo funciona exactamente
+    como hasta ahora y no cambia nada en el día a día.
+  </p>
+  <p>
+    Si se eligen servicios (por ejemplo, el consentimiento de láser diodo lo piden «Láser diodo axilas» y «Láser
+    diodo piernas»), Turnera se lo pide a <strong>quien tiene o ha tenido cita de alguno de esos servicios</strong>,
+    sin necesidad de marcar la plantilla como obligatoria. A los demás clientes no les sale nada. Los servicios se
+    guardan con la plantilla: hacer una versión nueva del texto no los quita.
+  </p>
+  <p>
+    Lo que falte firmar se ve en la ficha del cliente, en el informe <em>Consentimientos pendientes</em> y en el
+    <strong>TPV</strong>: al elegir el cliente sale un aviso con lo que le falta y un botón <em>Pedir la firma</em>
+    para cada documento, que lo manda a la tablet del mostrador. En la tira de <em>Por cobrar</em>, quien tiene
+    algo pendiente lleva un pequeño icono con el número. <strong>El aviso nunca impide cobrar.</strong>
   </p>
 
   <h4 id="consentimientos-campos">Campos a rellenar en el documento</h4>
@@ -6868,7 +6944,8 @@ footer{
   <p>
     Si algo no sale o necesitas ayuda, abre un ticket desde <em>Soporte</em>, en el menú. Ahí mismo ves las respuestas del
     equipo, sin pasar por el correo. Si prefieres escribir por correo, también vale: tu mensaje llega al mismo ticket.
-    Las respuestas aparecen solas en la pantalla, en cuestión de segundos: no hace falta recargar.
+    Las respuestas aparecen solas en la pantalla, en cuestión de segundos: no hace falta recargar. Pueden traer
+    formato (negrita, listas, tablas y enlaces) cuando así se explican mejor.
   </p>
 
   <h3>Quién ve qué</h3>
@@ -7150,6 +7227,100 @@ footer{
     (ver las estancias, registrar, abrir incidencias, escribir en la bitácora y ver las dietas) y <strong>Estancias · supervisión</strong> (lo anterior más
     ingresos y salidas, cerrar incidencias, ver la historia de registros, corregir y ver todas las zonas). <em>Dirección</em> trae todos; los importes
     quedan solo para quien tenga el permiso de tarifas.
+  </p>
+</section>
+<section id="gestion-financiera">
+  <h2>12 quinquies. Gestión financiera: retribución, liquidaciones, gastos fijos y previsión de caja</h2>
+  <p>
+    El módulo de <strong>Gestión financiera</strong> sirve para saber lo que cuesta el centro: cómo se le paga a cada
+    profesional, lo que toca pagar cada mes a los colaboradores y los gastos fijos. Es opcional: si el centro no lo tiene
+    encendido no aparece en ningún sitio, ni en el menú ni en los permisos. Necesita Caja, porque lo que cobra un
+    colaborador sale de lo cobrado.
+  </p>
+  <p>
+    Sus dos permisos son <strong>delicados</strong> y de fábrica solo los tiene el <em>Administrador del sistema</em>:
+    <em>Costes y retribución</em> (la retribución de cada profesional y los gastos fijos) y <em>Liquidaciones de
+    colaboradores</em>. El propio profesional no ve nada de esto.
+  </p>
+
+  <h3 id="gestion-financiera-retribucion">Cómo se le paga a cada profesional</h3>
+  <p>
+    En <em>Profesionales</em>, el menú de acciones de cada fila tiene <strong>Retribución</strong>. Hay tres formas de
+    pago:
+  </p>
+  <ul>
+    <li><strong>Coste mensual fijo</strong>, para los asalariados: lo que le cuesta a la empresa al mes (bruto, Seguridad
+      Social de la empresa y pagas extra prorrateadas). A un asalariado no se le liquida nada.</li>
+    <li><strong>Porcentaje de lo que factura</strong>, sobre lo facturado sin IVA.</li>
+    <li><strong>Importe por acto u hora</strong>: una lista de servicios, cada uno con su regla. Puede ser un importe
+      <em>por acto</em> (120 € por cada toxina), <em>por hora de cita</em> (80 €/h en las consultas de valoración) o un
+      <em>porcentaje</em> de lo facturado sin IVA (40 % de los hilos). Lo que no está en la lista no se le paga. Es lo
+      habitual con un médico que va a hacer ciertas intervenciones.</li>
+  </ul>
+  <p>
+    En las dos últimas se elige si se le paga lo <strong>atendido</strong> (aunque el cliente lo deba todavía) o solo lo
+    <strong>cobrado</strong>. La hora de cita es lo que duró la cita; si la venta no tiene una sola cita de ese
+    profesional, se cuenta lo que dura el servicio.
+  </p>
+  <p>
+    Cada cambio se guarda con su <strong>fecha «Vigente desde»</strong> y vale hasta la siguiente, así que una subida
+    es una versión nueva y la anterior queda en el <strong>historial</strong>. Guardar con una fecha que ya existe
+    cambia esa versión. Quitar una versión hace que vuelva a valer la de antes.
+  </p>
+
+  <h3 id="gestion-financiera-liquidaciones">Liquidación de colaboradores</h3>
+  <p>
+    En <em>Gestión financiera → Liquidaciones</em> se elige el mes y salen los colaboradores de la delegación: los que
+    cobran un porcentaje o un importe por acto u hora. Al elegir uno se ve línea a línea lo que ha hecho, con el cliente,
+    el servicio, la regla aplicada y lo que le corresponde. Una sesión pagada con bono cuenta como acto hecho; en un
+    porcentaje no suma, porque el dinero entró al vender el bono. Una <strong>devolución</strong> resta en el mes en que
+    se hace.
+  </p>
+  <p>
+    <strong>Descargar Excel</strong> saca el detalle para cotejarlo con la factura del colaborador. La retención de IRPF y
+    el IVA van en esa factura: Turnera no los calcula. <strong>Marcar como pagada</strong> fija el importe: si después
+    cambia algo de ese mes, lo pagado no se mueve y la pantalla avisa de lo que saldría ahora. Si se marcó por error,
+    <em>Deshacer el pago</em> la deja pendiente otra vez.
+  </p>
+
+  <h3 id="gestion-financiera-gastos">Gastos fijos</h3>
+  <p>
+    En <em>Gestión financiera → Gastos fijos</em> se apunta lo que la delegación paga cada mes, trimestre o año, venda o
+    no: alquiler, suministros, seguros, préstamos, asesoría. Cada gasto lleva su fecha de inicio y, si se acaba, la de
+    fin. Los trimestrales y anuales se reparten por meses en la columna <em>Al mes</em>. Un gasto que sube se cierra con
+    su fecha «Hasta» y se da de alta otro con el importe nuevo, para que cada mes cuente el que tocaba. Quitar un gasto
+    es para uno apuntado por error.
+  </p>
+
+  <h3 id="gestion-financiera-prevision">Previsión de caja</h3>
+  <p>
+    En <em>Gestión financiera → Previsión de caja</em> se elige el periodo (este mes, este trimestre, este año o hasta
+    un mes concreto) y sale el resultado que dejará la delegación: lo que ya ha pasado desde el inicio del periodo hasta
+    hoy, más lo que se prevé desde hoy hasta el cierre. Todo va sin IVA. Arriba, tres fichas: el resultado previsto,
+    qué parte de los ingresos ya es segura (lo vendido y las citas ya dadas) y el peor mes del periodo.
+  </p>
+  <p>
+    Cómo se prevé cada línea:
+  </p>
+  <ul>
+    <li><strong>Servicios y productos.</strong> Primero cuentan las citas ya dadas que aún no se han cobrado, a precio
+      de tarifa. Si lo que se vendió en el mismo periodo del año pasado da más, se completa con ese ritmo; si no hay año
+      anterior, con la media diaria de los últimos tres meses.</li>
+    <li><strong>Personal asalariado.</strong> El coste de empresa de cada profesional con retribución mensual, día a
+      día, según lo apuntado en su retribución.</li>
+    <li><strong>Colaboradores.</strong> Hasta hoy, lo que llevan según su forma de pago, igual que en la liquidación.
+      En lo previsto, la misma proporción sobre los ingresos que han tenido los últimos tres meses.</li>
+    <li><strong>Gastos fijos.</strong> Su equivalente al mes, repartido por días.</li>
+  </ul>
+  <p>
+    No parte de ningún saldo: dice lo que el centro genera en el periodo, no el dinero que hay en el banco. Las cuotas
+    de pagos aplazados no aparecen aparte, porque esas ventas ya cuentan como ingreso el día que se hicieron.
+  </p>
+  <p>
+    Si el centro tiene Gestión financiera, quien puede ver los costes encuentra además en el <em>Cuadro de mando</em>
+    una sección con el resultado previsto del mes y del año, el coste de personal sobre los ingresos, el punto de
+    equilibrio, las liquidaciones de colaboradores, los gastos fijos y un gráfico del resultado mes a mes (los meses con
+    previsión salen punteados). Quien no ve los costes no ve esa sección.
   </p>
 </section>
 <section id="problemas">
