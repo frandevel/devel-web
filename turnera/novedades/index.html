@@ -679,6 +679,7 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-11-20">20 de noviembre de 2026</a></li>
     <li><a href="#2026-11-19">19 de noviembre de 2026</a></li>
     <li><a href="#2026-11-18">18 de noviembre de 2026</a></li>
     <li><a href="#2026-11-16">16 de noviembre de 2026</a></li>
@@ -731,10 +732,148 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-11-20" class="version">
+  <div class="version__cabecera">
+    <h2>20 de noviembre de 2026</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">1.18.0-d7fa6e5</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
+    <h4>El correo sale desde la cuenta del centro</h4>
+    <ul>
+      <li>Lo que el centro manda a sus clientes, a su equipo y a su asesoría (tarjetas regalo, enlaces de pago, acceso al portal, reservas, encuestas, nóminas y documentos laborales) sale desde su propio correo, por el servidor de Preferencias → Servidor de correo del centro. Quien lo recibe ve el nombre del centro y, si contesta, le escribe al centro. Los avisos a Dirección y a RRHH salen también por ahí.</li>
+      <li>Con «Enviar un correo de prueba» se elige a qué dirección mandarlo y se prueba lo que hay en pantalla, sin guardar. Si el servidor no lo acepta, dice lo que ha contestado.</li>
+      <li>Si un centro que ya trabaja con Turnera no tiene servidor de correo configurado, un aviso rojo arriba lo dice, y lo que se manda a mano explica por qué no ha salido.</li>
+    </ul>
+    <h4>Lo lleno que va cada día, en el calendario de la agenda</h4>
+    <ul>
+      <li>Al elegir fecha en la agenda, cada día con citas lleva un punto: verde, naranja desde el 50 % de ocupación y rojo desde el 75 %. Al pasar el ratón dice cuántas horas hay ocupadas y cuántas libres entre todos. Los cortes se cambian en Preferencias → Agenda.</li>
+    </ul>
+    <h4>Tarjetas regalo</h4>
+    <ul>
+      <li>Una tarjeta regalo se puede corregir (por ejemplo, la caducidad mal puesta al venderla) o dar de baja, con un permiso nuevo que Dirección tiene de fábrica.</li>
+    </ul>
+    <h4>Stock</h4>
+    <ul>
+      <li>La ficha de un producto enseña sus entradas y salidas de stock, con las unidades, la fecha y la hora, a quien lleva el stock.</li>
+      <li>Stock y los informes de stock se exportan a Excel con los filtros que haya puestos, para quien tiene el permiso de exportar.</li>
+    </ul>
+    <h4>Personal</h4>
+    <ul>
+      <li>Comunicados a la plantilla: un PDF (protección de datos, desconexión digital, protocolo de acoso…) para toda la plantilla, un puesto, una ubicación o personas sueltas, con firma de que se ha leído o como simple aviso. Se ve quién falta y hay recordatorios.</li>
+      <li>Expediente de cada profesional: contrato, títulos, reconocimientos médicos, justificantes y demás, cada documento con su tipo y, si caduca, en ámbar o en rojo cuando se acerca la fecha. Cada persona ve en Mis documentos lo que RRHH le deja ver.</li>
+      <li>Incidencias para nóminas: de cada mes y cada persona, lo que sale de los fichajes y lo que se apunta a mano (actividad extra, plus, dietas, anticipo, embargo, IRPF pedido o descuento acordado). Llega a la asesoría con el envío del mes.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
+    <h4>Consentimientos pendientes de firmar</h4>
+    <ul>
+      <li>Nuevo informe, junto al de consentimientos firmados: los clientes a los que les falta firmar algún consentimiento obligatorio, desde cuándo, cuántos y cuáles, y su próxima cita. Arriba, quien lleva más tiempo pendiente; a igualdad, quien tiene más. Lo ve quien ya veía el de firmados.</li>
+    </ul>
+    <h4>Consentimientos por servicio, si se quiere</h4>
+    <ul>
+      <li>En una plantilla de consentimiento se pueden elegir los servicios que la piden. Si a un cliente con cita de alguno de ellos le falta firmarla, el TPV lo avisa al cobrarle y deja pedir la firma desde ahí mismo.</li>
+      <li>Es opcional. Una plantilla sin servicios funciona exactamente como hasta ahora, y un centro que no lo use no nota ningún cambio.</li>
+    </ul>
+    <h4>Cuadro de mando</h4>
+    <ul>
+      <li>Cada usuario ajusta los números de sus fichas: en las que miran un periodo, el número va subrayado («en los últimos 90 días») y al pulsarlo se cambia. Se guarda para ese usuario, y «Volver a lo de siempre» lo deja como venía.</li>
+      <li>El gráfico de facturación se ve por meses o por años: los cinco últimos, con la previsión de cierre del año en curso.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Mejoras</h3>
+    <h4>TPV</h4>
+    <ul>
+      <li>Más compacto: el total va en el botón de cobrar, «Paga con» y «Cambio» están en la misma línea y las líneas del ticket ocupan menos.</li>
+      <li>Al elegir «Regalo» como forma de pago, el descuento se pone al 100 % y el total a cero.</li>
+      <li>El aviso de consentimientos sin firmar se puede apagar en Preferencias. Viene encendido.</li>
+      <li>Con «Vender sin unidades» apagado, como viene, no deja vender un producto sin unidades ni más de las que quedan, y dice cuántas hay.</li>
+    </ul>
+    <h4>Ficha del cliente</h4>
+    <ul>
+      <li>En el historial, el nombre del servicio o del producto lleva a su ficha del catálogo.</li>
+      <li>Los iconos de comentario y de no conformidad son el doble de grandes, y el de comentario se rellena de verde cuando la visita tiene uno. Al pasar el ratón se ve quién lo escribió y cuándo.</li>
+    </ul>
+    <h4>Catálogo</h4>
+    <ul>
+      <li>La categoría y la marca se eligen de una lista que se filtra al escribir. Se pueden añadir nuevas y, si se escribe una que ya existe con otras tildes o mayúsculas, se queda la que había.</li>
+      <li>La tabla de servicios de un grupo de tarifa cabe en su tarjeta, sin barra de desplazamiento.</li>
+    </ul>
+    <h4>Informes de stock</h4>
+    <ul>
+      <li>Se busca por palabras (nombre, referencia, marca, categoría o código), la marca y la categoría son desplegables, y en cualquier informe Intro lanza la búsqueda.</li>
+    </ul>
+    <h4>Calendario laboral</h4>
+    <ul>
+      <li>En la lista de calendarios y en el cuadrante se busca por nombre o apellidos y se ordena por cualquiera de los dos.</li>
+    </ul>
+    <h4>Preferencias</h4>
+    <ul>
+      <li>Cada dirección de correo explica qué le llega. El campo «Soporte», que no se usaba, desaparece.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
+    <h4>Consentimientos pendientes de firmar</h4>
+    <ul>
+      <li>Nuevo informe, junto al de consentimientos firmados: los clientes a los que les falta firmar algún consentimiento obligatorio, desde cuándo, cuántos y cuáles, y su próxima cita. Arriba, quien lleva más tiempo pendiente; a igualdad, quien tiene más. Lo ve quien ya veía el de firmados.</li>
+    </ul>
+    <h4>Consentimientos por servicio, si se quiere</h4>
+    <ul>
+      <li>En una plantilla de consentimiento se pueden elegir los servicios que la piden. Si a un cliente con cita de alguno de ellos le falta firmarla, el TPV lo avisa al cobrarle y deja pedir la firma desde ahí mismo.</li>
+      <li>Es opcional. Una plantilla sin servicios funciona exactamente como hasta ahora, y un centro que no lo use no nota ningún cambio.</li>
+    </ul>
+    <h4>Cuadro de mando</h4>
+    <ul>
+      <li>Cada usuario ajusta los números de sus fichas: en las que miran un periodo, el número va subrayado («en los últimos 90 días») y al pulsarlo se cambia. Se guarda para ese usuario, y «Volver a lo de siempre» lo deja como venía.</li>
+      <li>El gráfico de facturación se ve por meses o por años: los cinco últimos, con la previsión de cierre del año en curso.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Mejoras</h3>
+    <h4>Bonos</h4>
+    <ul>
+      <li>Se puede traspasar solo una parte de las sesiones de un bono. Las que se pasan van a un bono nuevo de quien las recibe, con el mismo grupo, la misma compra y la misma caducidad; el original se queda con el resto.</li>
+      <li>En los bonos del cliente, los agotados y los caducados salen ocultos de partida. Cada usuario se encuentra las casillas como las dejó en ese navegador.</li>
+    </ul>
+    <h4>Agenda</h4>
+    <ul>
+      <li>Con «Cobrar solo lo atendido» encendido, como viene de fábrica, una cita no se marca como atendida antes de su hora de inicio (ni, en una clase, que un asistente vino). Así no se cobra por error una cita de otro día. Pasada la hora de inicio, sí, aunque la cita no haya terminado. Si el centro apaga ese ajuste, todo sigue como antes.</li>
+    </ul>
+    <h4>Catálogo y TPV</h4>
+    <ul>
+      <li>Al elegir los grupos de tarifa de un servicio, los ya marcados salen arriba y la lista tiene su propio desplazamiento. Igual al elegir los servicios de un consentimiento.</li>
+      <li>Los bonos a la venta tienen permisos propios, separados de los de servicios. Quien ya podía ver o cambiar los servicios conserva lo mismo con los bonos.</li>
+      <li>Para cobrar en el TPV basta con el permiso de cobrar: los servicios, productos y paquetes salen aunque el usuario no pueda entrar en el catálogo.</li>
+    </ul>
+    <h4>Soporte</h4>
+    <ul>
+      <li>Las respuestas del equipo de soporte se ven con su formato: negritas, listas, tablas y enlaces.</li>
+      <li>Al escribir a soporte se envían también la sede, el navegador y el tamaño de pantalla, para que el equipo vea el problema tal como sale en el centro.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Errores corregidos</h3>
+    <ul>
+      <li>En el TPV, elegir Tarjeta o Efectivo quitaba los bonos de la cuenta. Ahora se mantienen y se paga con la forma elegida solo lo que no cubren.</li>
+      <li>Al pasar a otra cita o a otro cliente, el TPV se quedaba con la forma de pago del ticket anterior. Ahora empieza sin ninguna elegida.</li>
+      <li>Abrir en la agenda una clase con varios alumnos podía dejar la pantalla en blanco.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-19" class="version">
   <div class="version__cabecera">
     <h2>19 de noviembre de 2026</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">1.18.0-2dad9fa</span></p>
 

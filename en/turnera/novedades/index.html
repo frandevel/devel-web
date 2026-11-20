@@ -679,6 +679,7 @@ footer{
   <h2>What's new in Turnera</h2>
   <p>Latest first</p>
   <ol>
+    <li><a href="#2026-11-20">20 November 2026</a></li>
     <li><a href="#2026-11-19">19 November 2026</a></li>
     <li><a href="#2026-11-18">18 November 2026</a></li>
     <li><a href="#2026-11-16">16 November 2026</a></li>
@@ -730,10 +731,148 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Bugs fixed</strong>: what failed, and no longer does.</span></li>
 </ul>
 
+<section id="2026-11-20" class="version">
+  <div class="version__cabecera">
+    <h2>20 November 2026</h2>
+    <span class="version__sello">Latest release</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.18.0-d7fa6e5</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Email goes out from the centre's own account</h4>
+    <ul>
+      <li>What the centre sends to its customers, its staff and its payroll advisor (gift cards, payment links, portal access, bookings, surveys, payslips and labour documents) goes out from its own email, through the server in Preferences → Centre mail server. Whoever receives it sees the centre's name and, if they reply, writes to the centre. Notices to Management and HR go out that way too.</li>
+      <li>With «Send a test email» you choose which address to send it to and test what is on screen, without saving. If the server does not accept it, it shows what the server answered.</li>
+      <li>If a centre that already works with Turnera has no mail server set up, a red notice at the top says so, and anything sent by hand explains why it did not go out.</li>
+    </ul>
+    <h4>How full each day is, in the diary calendar</h4>
+    <ul>
+      <li>When you pick a date in the diary, each day with appointments has a dot: green, orange from 50 % occupancy and red from 75 %. Hovering over it shows how many hours are booked and how many are free across everyone. The thresholds are changed in Preferences → Agenda.</li>
+    </ul>
+    <h4>Gift cards</h4>
+    <ul>
+      <li>A gift card can be corrected (for example, an expiry date entered wrongly when it was sold) or withdrawn, with a new permission that Management has out of the box.</li>
+    </ul>
+    <h4>Stock</h4>
+    <ul>
+      <li>A product's record shows its stock ins and outs, with units, date and time, to whoever manages stock.</li>
+      <li>Stock and the stock reports export to Excel with the filters applied, for whoever has the export permission.</li>
+    </ul>
+    <h4>Staff</h4>
+    <ul>
+      <li>Notices to staff: a PDF (data protection, digital disconnection, harassment protocol…) for the whole staff, a position, a location or individual people, with a signature that it has been read or as a plain notice. You can see who is missing and there are reminders.</li>
+      <li>A file for each professional: contract, qualifications, medical check-ups, absence notes and the rest, each document with its type and, if it expires, in amber or red as the date approaches. Each person sees in My documents what HR lets them see.</li>
+      <li>Payroll items: for each month and each person, what comes from the clock-ins and what is entered by hand (extra activity, bonus, expenses, advance, garnishment, requested income tax withholding or agreed deduction). It reaches the payroll advisor with the month's send.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Consents pending signature</h4>
+    <ul>
+      <li>New report, next to the signed consents one: the customers who still have to sign a mandatory consent, since when, how many and which ones, and their next appointment. Those waiting longest come first; when equal, those with more pending. Whoever could see the signed consents report can see it.</li>
+    </ul>
+    <h4>Consents by service, if you want</h4>
+    <ul>
+      <li>A consent template can list the services that require it. If a customer with an appointment for one of them has not signed it yet, the POS warns when charging them and lets you ask for the signature right there.</li>
+      <li>It is optional. A template without services works exactly as before, and a centre that does not use it will notice no change.</li>
+    </ul>
+    <h4>Scorecard</h4>
+    <ul>
+      <li>Each user adjusts the numbers on their cards: on those that look at a period, the number is underlined (“in the last 90 days”) and clicking it changes it. It is saved for that user, and “Back to the usual” resets it.</li>
+      <li>The revenue chart can be shown by month or by year: the last five, with the forecast for the end of the current year.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Improvements</h3>
+    <h4>Till</h4>
+    <ul>
+      <li>More compact: the total is on the charge button, «Pays with» and «Change» are on the same line, and the ticket lines take up less space.</li>
+      <li>Choosing «Gift» as the payment method sets the discount to 100 % and the total to zero.</li>
+      <li>The notice of unsigned consents can be switched off in Preferences. It comes switched on.</li>
+      <li>With «Sell without units» off, as it comes, the till does not let you sell a product with no units or more than are left, and says how many there are.</li>
+    </ul>
+    <h4>Customer record</h4>
+    <ul>
+      <li>In the history, the name of the service or product takes you to its record in the catalogue.</li>
+      <li>The comment and non-conformity icons are twice as big, and the comment one is filled in green when the visit has one. Hovering over it shows who wrote it and when.</li>
+    </ul>
+    <h4>Catalogue</h4>
+    <ul>
+      <li>Category and brand are chosen from a list that filters as you type. New ones can be added and, if you type one that already exists with different accents or capitals, the existing one is kept.</li>
+      <li>The table of services in a rate group fits in its card, with no scroll bar.</li>
+    </ul>
+    <h4>Stock reports</h4>
+    <ul>
+      <li>You search by words (name, reference, brand, category or code), brand and category are drop-downs, and in any report Enter runs the search.</li>
+    </ul>
+    <h4>Work calendar</h4>
+    <ul>
+      <li>In the list of calendars and in the roster you can search by first name or surname and sort by either.</li>
+    </ul>
+    <h4>Preferences</h4>
+    <ul>
+      <li>Each email address explains what reaches it. The «Support» field, which was not used, is gone.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Consents pending signature</h4>
+    <ul>
+      <li>New report, next to the signed consents one: the customers who still have to sign a mandatory consent, since when, how many and which ones, and their next appointment. Those waiting longest come first; when equal, those with more pending. Whoever could see the signed consents report can see it.</li>
+    </ul>
+    <h4>Consents by service, if you want</h4>
+    <ul>
+      <li>A consent template can list the services that require it. If a customer with an appointment for one of them has not signed it yet, the POS warns when charging them and lets you ask for the signature right there.</li>
+      <li>It is optional. A template without services works exactly as before, and a centre that does not use it will notice no change.</li>
+    </ul>
+    <h4>Scorecard</h4>
+    <ul>
+      <li>Each user adjusts the numbers on their cards: on those that look at a period, the number is underlined (“in the last 90 days”) and clicking it changes it. It is saved for that user, and “Back to the usual” resets it.</li>
+      <li>The revenue chart can be shown by month or by year: the last five, with the forecast for the end of the current year.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Improvements</h3>
+    <h4>Vouchers</h4>
+    <ul>
+      <li>You can transfer just part of a voucher’s sessions. The ones transferred go to a new voucher for the recipient, with the same group, purchase and expiry; the original keeps the rest.</li>
+      <li>In a customer’s vouchers, used-up and expired ones are hidden at first. Each user finds the checkboxes as they left them in that browser.</li>
+    </ul>
+    <h4>Diary</h4>
+    <ul>
+      <li>With “Charge only what was done” switched on, as it comes by default, an appointment cannot be marked as attended before its start time (nor, in a class, that an attendee came). This way an appointment on another day is not charged by mistake. Once the start time has passed, it can, even if the appointment has not finished. If the centre switches that setting off, everything stays as before.</li>
+    </ul>
+    <h4>Catalogue and POS</h4>
+    <ul>
+      <li>When choosing a service’s rate groups, the ones already ticked come first and the list scrolls on its own. The same when choosing the services of a consent.</li>
+      <li>Vouchers for sale have their own permissions, separate from those for services. Whoever could already see or change services keeps the same with vouchers.</li>
+      <li>Charging at the POS only needs the charging permission: services, products and packages appear even if the user cannot open the catalogue.</li>
+    </ul>
+    <h4>Support</h4>
+    <ul>
+      <li>Replies from the support team are shown with their formatting: bold, lists, tables and links.</li>
+      <li>When writing to support, the site, the browser and the screen size are sent too, so the team sees the problem as it appears at the centre.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Bugs fixed</h3>
+    <ul>
+      <li>At the till, choosing Card or Cash removed the vouchers from the bill. Now they stay, and only what they do not cover is paid with the chosen method.</li>
+      <li>When moving on to another appointment or customer, the till kept the payment method of the previous ticket. Now it starts with none chosen.</li>
+      <li>Opening a class with several students in the diary could leave the screen blank.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-19" class="version">
   <div class="version__cabecera">
     <h2>19 November 2026</h2>
-    <span class="version__sello">Latest release</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.18.0-2dad9fa</span></p>
 
