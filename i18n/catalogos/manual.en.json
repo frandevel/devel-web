@@ -4782,5 +4782,8 @@
   "tad6a7686": "Fixed costs.",
   "t37d17d58": "It does not start from any balance: it says what the centre generates in the period, not the money in the bank. Instalments of deferred payments do not appear separately, because those sales already count as income on the day they were made.",
   "t5f0d25c4": "If the centre has Financial management, whoever can see the costs also finds in the",
-  "t2853659d": "a section with the expected result for the month and the year, staff cost over income, the break-even point, collaborator settlements, fixed costs and a chart of the result month by month (months with a forecast are dashed). Whoever cannot see the costs does not see that section."
+  "t2853659d": "a section with the expected result for the month and the year, staff cost over income, the break-even point, collaborator settlements, fixed costs and a chart of the result month by month (months with a forecast are dashed). Whoever cannot see the costs does not see that section.",
+  "tb195cc03": "for the person receiving them, in the same group and with the same purchase and expiry dates, and the original voucher keeps the rest. Nothing is charged or invoiced again.",
+  "tdb6d6421": "It has no sessions left to transfer.",
+  "te0f8ac7e": "Nor can a used-up one."
 }
