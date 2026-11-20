@@ -775,6 +775,9 @@ footer{
     <li><a href="#mi-calendario" class="sub sub">Lo que ve cada profesional</a></li>
     <li><a href="#nominas" class="sub">Nóminas y certificados</a></li>
     <li><a href="#nominas-asesoria" class="sub sub">Que la suba la asesoría</a></li>
+    <li><a href="#expediente" class="sub sub">El expediente de cada profesional</a></li>
+    <li><a href="#comunicados" class="sub sub">Comunicados a la plantilla</a></li>
+    <li><a href="#incidencias-nominas" class="sub sub">Incidencias para nóminas</a></li>
     <li><a href="#mis-documentos" class="sub sub">Mis documentos</a></li>
     <li><a href="#laboral-configuracion" class="sub sub">Qué partes de Laboral usa el centro</a></li>
     <li><a href="#historia">11. La historia clínica</a></li>
@@ -1328,6 +1331,22 @@ footer{
     cita</em>. Al pasar el ratón por encima, cada uno dice lo que hace.
   </p>
 
+  <h3 id="agenda-ocupacion">Lo lleno que va cada día</h3>
+
+  <p>
+    Al abrir el calendario para elegir la fecha, cada día con citas lleva un <strong>punto</strong>, como en las
+    webs de vuelos: <strong>verde</strong> (hueco) si va por debajo del 50 %, <strong>naranja</strong> desde el
+    50 % y <strong>rojo</strong>, algo más grande, desde el 75 %. Un día sin citas no lleva punto. Al pasar el ratón
+    por encima se lee cuántas citas tiene, cuánto va ocupado y cuánto tiempo queda libre.
+  </p>
+
+  <p>
+    La ocupación se mide en tiempo, no en número de citas: lo reservado frente al turno de los profesionales según
+    su calendario laboral, o el horario de la agenda para quien no tiene. Los puntos se ponen al día solos cuando
+    alguien da o anula una cita. Los cortes del naranja y del rojo se cambian en <strong>Administración →
+    Preferencias → Agenda</strong>.
+  </p>
+
   <h3 id="agenda-ahora">La raya de la hora</h3>
 
   <p>
@@ -1843,6 +1862,11 @@ footer{
     <strong>El teléfono y el correo son enlaces</strong>: al pulsarlos se abre el marcador o el programa de correo,
     sin copiar ni pegar nada. Ocurre en toda la aplicación —también en profesionales, proveedores y
     delegaciones—, así que no hay que copiar un número a mano en ningún sitio.
+    En el historial, <strong>cada servicio y cada producto lleva a su ficha</strong>: al pulsar su nombre se abre
+    en el catálogo, si quien mira tiene permiso para ver servicios o productos; si no, se lee como texto normal.
+    En cada visita del historial, el icono de comentario sale relleno de verde si tiene alguno, y una
+    <strong>no conformidad</strong> se marca con una exclamación roja grande: al pasar por encima se lee qué se
+    apuntó, quién y cuándo.
   </p>
 
   <figure>
@@ -1887,8 +1911,8 @@ footer{
     Cada visita del historial tiene a su izquierda un icono para <strong>comentarla</strong>. Un comentario es
     <em>Informativo</em> (una nota sobre esa visita) o una <strong>No conformidad</strong>: una queja o algo que salió mal.
     La visita con comentarios lleva un bocadillo, y la que tiene una no conformidad, una <strong>exclamación roja</strong>
-    para que nadie la pase por alto. Al posar el ratón encima se lee el texto; al pulsarlo se ven todos, con quién los
-    escribió y cuándo, y se añade otro. Cada cual puede borrar solo los suyos: lo que escribió otra persona se queda.
+    para que nadie la pase por alto. Al posar el ratón encima se lee el texto, con quién lo escribió y cuándo; al pulsarlo
+    se ven todos y se añade otro. Cada cual puede borrar solo los suyos: lo que escribió otra persona se queda.
   </p>
 
   <h3 id="clientes-varios-profesionales">Visitas con varios profesionales</h3>
@@ -2209,9 +2233,31 @@ footer{
   </ul>
 
   <p>
-    Un producto <strong>se vende aunque el stock diga que no quedan</strong>: si está en el mostrador, está. La
-    unidad sale del stock —que se queda en cero, nunca en negativo— y la salida queda apuntada; el inventario es
-    el que pone luego la cifra buena. Al abonar o anular la venta, la unidad vuelve.
+    <strong>Bonos y forma de pago.</strong> Si el cliente tiene bonos que pagan algo del ticket, la forma de pago
+    sale como <em>Bono</em>. Elegir <em>Tarjeta</em> o <em>Efectivo</em> no quita los bonos: los bonos siguen
+    pagando sus sesiones y esa forma de pago es para el resto, como se avisa debajo con el importe. Para no gastar
+    un bono en una sesión, se desmarca en su línea.
+  </p>
+
+  <p>
+    <strong>Regalo.</strong> Al elegir la forma de pago <em>Regalo</em> (o cualquiera que tenga su propio descuento),
+    el descuento del ticket se pone solo al 100 % y el total queda en cero, que es lo que se registra. Si después se
+    elige otra forma de pago, el descuento vuelve a cero.
+  </p>
+
+  <p>
+    <strong>Consentimientos sin firmar.</strong> Si al cliente le falta algún consentimiento por firmar, el TPV lo
+    avisa al cobrarle y lo marca en «Por cobrar». No impide cobrar. El aviso se apaga y se enciende en
+    <em>Administración → Preferencias → Cobros y fidelización → Consentimientos en el TPV</em>; viene encendido.
+  </p>
+
+  <p>
+    Un producto <strong>sin unidades no se vende</strong>: el TPV no deja añadirlo al ticket, ni más unidades de las
+    que quedan en el centro, y avisa de cuántas hay. Para venderlo, antes hay que hacer una entrada de stock. Si el
+    centro vende lo que tiene en el mostrador aunque Turnera no lo tenga apuntado, se enciende en
+    <em>Administración → Preferencias → Cobros y fidelización → Vender sin unidades</em>; entonces la unidad sale del
+    stock —que se queda en cero, nunca en negativo—, la salida queda apuntada y el inventario pone luego la cifra
+    buena. Al abonar o anular la venta, la unidad vuelve.
   </p>
 
   <p>
@@ -2235,6 +2281,22 @@ footer{
     <img src="/turnera/manual/imagenes/08-tpv.png" alt="El TPV con un cliente elegido y el ticket a medio montar" loading="lazy">
     <figcaption>El TPV: el cliente, el profesional y el ticket con sus servicios y productos.</figcaption>
   </figure>
+
+  <h3 id="productos-y-servicios">Productos y servicios</h3>
+  <span class="ruta">Menú → Catálogo → Productos / Servicios</span>
+
+  <p>
+    Al dar de alta o corregir un producto o un servicio, la <strong>categoría</strong> y la <strong>marca</strong>
+    se eligen de una lista que se filtra conforme se escribe, para usar la que ya existe. Si no está, se escribe y se
+    crea («Nueva: se añadirá…»). Si se escribe una que ya existe con otras mayúsculas o tildes, se queda la que había,
+    para no tener dos casi iguales.
+  </p>
+
+  <p>
+    En la ficha de un producto, quien lleva el almacén o ve el informe de movimientos de stock tiene además sus
+    <strong>entradas y salidas</strong> en esta delegación, las últimas primero: fecha y hora, si entra o sale,
+    cuántas unidades y si fue una venta o un movimiento a mano.
+  </p>
 
   <h3 id="paquetes">Paquetes</h3>
   <span class="ruta">Menú → Catálogo → Paquetes</span>
@@ -2682,6 +2744,14 @@ footer{
     nombre, código o teléfono, y salen solo las que compró. Al lado hay un texto para buscar por el código de
     la tarjeta o por el nombre de para quién es: la persona que la recibe no tiene ficha enlazada, así que a
     ella se la encuentra por el nombre.
+  </p>
+
+  <p>
+    Quien tiene el permiso <strong>Corregir y dar de baja tarjetas regalo</strong> (de fábrica, Dirección) ve dos
+    botones más en cada tarjeta. <em>Corregir</em> arregla lo que se puso mal al venderla —casi siempre la
+    caducidad—, el destinatario, el correo, la dedicatoria o si se ve el importe; el importe y el saldo no se tocan.
+    <em>Dar de baja</em> la deja sin valor; no devuelve el dinero: para eso está <em>Devolver</em> en la venta de la
+    tarjeta. Las dos cosas quedan apuntadas con quién y cuándo.
   </p>
 
   <figure>
@@ -3240,7 +3310,8 @@ footer{
   <h2>8. Informes y cierre de caja</h2>
   <span class="ruta">Menú → Informes</span>
 
-  <p>Todos se filtran por fechas y todos se bajan en Excel con el botón de exportar.</p>
+  <p>Todos se filtran por fechas y todos se bajan en Excel con el botón de exportar. Al pulsar Intro en un filtro se
+    busca, sin tener que ir al botón <em>Buscar</em>.</p>
 
   <p>
     La pantalla los agrupa por secciones, las mismas del menú: <strong>Agenda</strong>, <strong>Clientes</strong>,
@@ -3262,7 +3333,11 @@ footer{
     <tr><td><strong>Consentimientos pendientes</strong></td><td>Los clientes a los que les falta firmar algún consentimiento obligatorio, con los que llevan más tiempo arriba y, a igualdad, los que tienen más pendientes. Cuenta como pendiente cuando la persona ha tenido una cita desde que existe la plantilla (cualquier cita si es general; una de un servicio de su grupo de tarifa si es de un tratamiento). Dice desde cuándo, qué falta y su próxima cita. Lo ven quienes ven el de consentimientos firmados.</td></tr>
     <tr><td><strong>Bonos</strong></td><td>Qué hay vendido, qué queda por consumir y qué está a punto de caducar.</td></tr>
     <tr id="informe-facturacion-profesional"><td><strong>Facturación por profesional</strong></td><td>Lo que ha facturado cada profesional en un periodo: cuántos servicios y por cuánto, las sesiones con bono (se cuentan, pero no suman importe: se cobró al vender el bono), los productos y lo que queda pendiente. Cada línea del ticket cuenta para quien la hizo, con sus descuentos y el IVA incluido, y las devoluciones restan. El Excel trae el resumen y el detalle de cada línea, para calcular las comisiones. Está en <em>Caja y cobros</em>.</td></tr>
-    <tr><td><strong>Stock</strong></td><td>Qué falta y qué ha entrado y salido.</td></tr>
+    <tr><td><strong>Stock</strong></td><td>Qué falta y qué ha entrado y salido. El producto se busca como en
+      Productos: por palabras del nombre, la referencia, la marca, la categoría o el código, y tienen que salir todas
+      («crema 50» da la crema de 50 ml). La marca y la categoría se eligen de su lista, que también se puede filtrar
+      escribiendo. Quien tiene <em>Exportar informes</em> los descarga en Excel con el filtro aplicado, también
+      desde el listado de Stock. Las entradas y salidas llevan fecha y hora.</td></tr>
   </tbody></table>
   </div>
 
@@ -5050,6 +5125,46 @@ footer{
     puntos (22.09.2026). La vista previa de cada idioma aparece al guardar.
   </p>
 
+  <h3 id="correo-del-centro">El correo del centro</h3>
+
+  <p>
+    Todo lo que tiene que ver con el centro —lo que manda a sus clientes, a su equipo y a su asesoría (tarjetas
+    regalo, enlaces de pago, el acceso al portal, reservas, encuestas, nóminas y documentos laborales) y los
+    avisos a su Dirección o a RRHH— sale <strong>desde el correo del centro</strong>: por el servidor de <strong>Preferencias → Servidor de correo del centro</strong> y con la
+    dirección de «Dirección desde la que salen los correos». Quien lo recibe ve el nombre del centro como
+    remitente y, si contesta, le escribe al centro.
+  </p>
+
+  <p>
+    Mientras el centro está en pruebas y no tiene servidor puesto, esos correos salen por el de la plataforma.
+    <strong>Un centro en producción sin servidor configurado no los envía</strong>, y Turnera lo avisa: arriba de
+    todas las pantallas sale un aviso rojo, con el enlace a Preferencias para quien puede configurarlo, y lo que se
+    manda a mano (reenviar una tarjeta regalo, una encuesta, el resumen de horas, el envío a la asesoría) contesta
+    que no puede salir y por qué. Por la plataforma solo salen los avisos de Turnera al centro: cambios de cuota,
+    incidencias técnicas, la exportación de datos o las integraciones.
+  </p>
+
+  <h4 id="correo-direcciones">Qué llega a cada dirección</h4>
+  <span class="ruta">Administración → Preferencias → Direcciones de correo</span>
+
+  <ul>
+    <li><strong>Contacto</strong>: la que ven los clientes. Va al pie de los correos que les llegan, en el portal de
+      reservas y en las tarjetas regalo. Aquí llega también el aviso de una cuenta pagada dos veces por enlace.</li>
+    <li><strong>Gerencia</strong>: altas en el club, visitas anuladas y valoraciones bajas en las encuestas. También
+      lo de personal (peticiones de vacaciones, contratos que vencen, fichajes olvidados, PIN bloqueados, envíos y
+      descargas de la asesoría) si no se ha puesto un correo de RRHH propio.</li>
+    <li><strong>Consejo</strong>: citas eliminadas, servicios quitados de una visita y no conformidades. Si se deja
+      vacío, estos avisos no se mandan.</li>
+    <li><strong>Dirección desde la que salen los correos</strong>: el remitente de todo lo anterior. Tiene que ser
+      una dirección que el servidor del centro deje usar; normalmente, su misma cuenta.</li>
+  </ul>
+
+  <p>
+    Con el puerto 465 la conexión es SSL; con el 587, marque «Conexión cifrada (STARTTLS)». El usuario suele ser
+    la dirección de correo completa. El botón <strong>«Enviar un correo de prueba»</strong> pide a qué dirección
+    mandarlo y prueba lo que hay en pantalla, sin guardar; si el servidor no lo acepta, dice lo que ha contestado.
+  </p>
+
   <h3 id="stripe">Cobro por enlace con Stripe</h3>
   <span class="ruta">Administración → Preferencias → Cobros y fidelización</span>
 
@@ -6468,6 +6583,12 @@ footer{
     marca quién está <strong>dentro ahora mismo</strong>, según lo fichado. Quien no tiene calendario laboral no
     sale en el cuadrante.
   </p>
+  <p>
+    Arriba hay un buscador por nombre o apellidos, y se puede ordenar la plantilla por <em>Nombre</em> o por
+    <em>Apellidos</em>; por apellidos, cada persona sale como «Apellidos, Nombre». Lo mismo en la lista de
+    calendarios. El orden elegido se recuerda en ese navegador y vale para las dos pantallas, también al imprimir el
+    cuadrante.
+  </p>
 
   <figure>
     <img src="/turnera/manual/imagenes/35-cuadrante.png" alt="El cuadrante de la semana con el turno de cada profesional y quién está dentro ahora" loading="lazy">
@@ -6662,12 +6783,98 @@ footer{
       por ella. Que la entrega electrónica sirva como recibí es algo que conviene confirmar con la asesoría.</p>
   </div>
 
+  <h4 id="expediente">El expediente de cada profesional</h4>
+  <span class="ruta">Profesionales → (una fila) → Expediente</span>
+  <p>
+    Los papeles que RRHH guarda de cada persona. Hace falta el permiso «Llevar el expediente de los profesionales»,
+    que es delicado y de fábrica traen Dirección y RRHH. Cada documento es de un <strong>tipo de una lista
+    cerrada</strong>: contrato de trabajo; prórroga o modificación del contrato; alta en la Seguridad Social;
+    documento de identidad o permiso de trabajo; certificado de cuenta bancaria; título o certificado profesional;
+    certificado de formación; reconocimiento médico o aptitud; entrega de equipos de protección (EPI); parte de baja o
+    de alta médica; justificante de ausencia; amonestación o sanción; y finiquito y carta de baja. No hay un «otros»:
+    Turnera no es un almacén de ficheros. Si falta un tipo, díganoslo y lo añadimos.
+  </p>
+  <ul>
+    <li><strong>Subir.</strong> Se elige el tipo, el documento (PDF, JPG o PNG, hasta 10 MB), su fecha y, en los que
+      caducan (documento de identidad, títulos, formación y reconocimientos médicos), la fecha de caducidad. Una nota
+      corta es opcional.</li>
+    <li><strong>Caducidad.</strong> En la lista, lo caducado sale en rojo y lo que caduca en los próximos 60 días, en
+      ámbar.</li>
+    <li><strong>Lo que ve la persona.</strong> Cada documento dice si la persona lo ve en <em>Mis documentos</em>; de
+      partida, sí. Se desmarca para lo que no le corresponde ver.</li>
+    <li><strong>Quitar</strong> es para un documento subido por error, y no se puede deshacer.</li>
+  </ul>
+  <p>
+    Los documentos se guardan cifrados. El expediente se puede apagar en la configuración de Laboral: lo que ya hay
+    se sigue pudiendo consultar, pero no se añade nada.
+  </p>
+
+  <h4 id="comunicados">Comunicados a la plantilla</h4>
+  <span class="ruta">Menú → Personal → Comunicados</span>
+  <p>
+    Para mandar a la plantilla un documento que tiene que constar que cada persona ha recibido: la información de
+    protección de datos, la política de desconexión digital, el protocolo de acoso, la información de prevención de
+    riesgos, el plan de igualdad, las normas internas o un aviso. Hace falta el permiso «Mandar comunicados a la
+    plantilla», que de fábrica traen Dirección y RRHH.
+  </p>
+  <ul>
+    <li><strong>Mandar.</strong> Se elige el tema, se pone un título, se sube el PDF (hasta 10 MB) y se elige a quién:
+      <em>Toda la plantilla</em>, los de un puesto, los de una ubicación o persona a persona. Sale en el acto, como una
+      nómina: a <em>Mis documentos</em> de quien tiene usuario, por correo con un enlace que se abre con el PIN de fichar
+      a quien no, y en mano a quien no tiene ninguna de las dos cosas. Antes de mandar, Turnera avisa de quién lo va a
+      tener que recibir en mano.</li>
+    <li><strong>Con firma o como aviso.</strong> Con <em>Pedir firma</em>, cada persona lo abre y firma que lo ha
+      leído, y se le recuerda por correo a los 3 y a los 7 días. Sin firma es un aviso: basta con que lo abra, y no se
+      le recuerda. Los avisos salen sin firma de partida y lo demás con firma, pero se puede cambiar.</li>
+    <li><strong>Quién falta.</strong> En <em>Mandados</em> sale cada comunicado con cuántos lo han firmado o leído.
+      Al abrirlo se ve persona a persona, primero quien falta. Como en las nóminas, se puede anotar que se dio en papel o
+      que la persona se negó a firmar delante de un testigo, volver a mandarle el correo y descargar el justificante.</li>
+    <li><strong>A quien entra después.</strong> Debajo, <em>Mandarlo también a</em> lista a quien no lo tiene, para
+      mandarle el mismo comunicado.</li>
+  </ul>
+  <p>
+    Un comunicado mandado no se puede retirar ni cambiar: si hay que corregirlo, se manda otro. El PDF se guarda cifrado.
+    Cada tema se puede apagar en la configuración de Laboral.
+  </p>
+
+  <h4 id="incidencias-nominas">Incidencias para nóminas</h4>
+  <span class="ruta">Menú → Personal → Incidencias para nóminas</span>
+  <p>
+    El mes de cada persona tal como le llega a la asesoría, para revisarlo antes de mandarlo y apuntar lo que no sale de
+    los fichajes. Hace falta el permiso «Llevar las incidencias para nóminas», que es delicado (lleva embargos,
+    anticipos y el IRPF de cada uno) y de fábrica traen Dirección y RRHH.
+  </p>
+  <ul>
+    <li><strong>Lo que sale solo.</strong> De cada persona, las horas trabajadas y los días, las extra, las nocturnas,
+      las de domingo y festivo, las vacaciones, cada tipo de ausencia con sus días, los días con turno sin fichar y las
+      incidencias de los fichajes. Es lo mismo que va en el resumen de horas del envío a la asesoría.</li>
+    <li><strong>Lo que se apunta.</strong> Con <em>Apuntar un concepto</em> se elige la persona y el concepto, de una
+      lista cerrada: actividad extra, plus o gratificación, dietas y kilometraje, anticipo, embargo, IRPF pedido por la
+      persona (en porcentaje) y descuento acordado. Lleva su importe y, si hace falta, un detalle. Un embargo que calcula
+      la asesoría puede ir sin importe, con la resolución en el detalle.</li>
+    <li><strong>Cuánto dura.</strong> <em>Solo este mes</em>, <em>Hasta nuevo aviso</em> (todos los meses desde ese,
+      como un embargo o un anticipo que se descuenta a plazos) o <em>Hasta un mes</em>. Lo que se repite se termina con
+      <em>Terminar este mes</em>.</li>
+    <li><strong>Quitar</strong> es para lo apuntado por error. Lo que ya ha ido en un envío a la asesoría no se quita:
+      se termina, para que lo mandado siga cuadrando.</li>
+  </ul>
+  <p>
+    Lo apuntado va en el envío a la asesoría del mes, en una hoja propia del Excel y en su propio CSV. Si se apunta algo
+    después de mandar el mes, en <a href="#envio-asesoria">Enviar las horas a la asesoría</a> sale quién ha cambiado
+    para mandar un rectificativo, que lleva solo lo de esas personas.
+  </p>
+
   <h4 id="mis-documentos">Mis documentos</h4>
   <span class="ruta">Menú → Mis documentos</span>
   <p>
-    Lo ve quien entra con su usuario vinculado a un profesional, en un centro con el módulo Laboral. Cada nómina o
-    certificado se <strong>abre</strong> y después se confirma con <em>Confirmo que lo he recibido</em>; el botón no se
-    activa hasta haberlo abierto. Quien no tiene usuario lo hace desde el enlace del correo, con su PIN.
+    Lo ve quien entra con su usuario vinculado a un profesional, en un centro con el módulo Laboral. Cada nómina,
+    certificado o comunicado se <strong>abre</strong> y después se confirma con <em>Confirmo que lo he recibido</em>; el
+    botón no se activa hasta haberlo abierto. Un aviso que no pide firma queda como leído al abrirlo. Quien no tiene
+    usuario lo hace desde el enlace del correo, con su PIN.
+  </p>
+  <p>
+    Debajo, en <em>Tu expediente</em>, salen los documentos de su expediente que RRHH le deja ver, para descargarlos.
+    Esos no piden confirmación.
   </p>
   <figure>
     <img src="/turnera/manual/imagenes/89-mis-documentos.png" alt="Mis documentos: la nómina de octubre por confirmar, con el texto del acuse y el botón para confirmar" loading="lazy">
@@ -6677,9 +6884,9 @@ footer{
   <h4 id="laboral-configuracion">Qué partes de Laboral usa el centro</h4>
   <span class="ruta">Menú → Administración → Laboral</span>
   <p>
-    Cada parte de Laboral se enciende o se apaga por separado: hoy, <em>Nóminas</em> y <em>Certificados de
-    retenciones</em>; las que vengan después (comunicados para firmar, contratos, títulos con caducidad,
-    reconocimientos médicos y justificantes) irán apareciendo aquí. Hace falta el permiso «Configurar Laboral», que de
+    Cada parte de Laboral se enciende o se apaga por separado: <em>Nóminas</em>, <em>Certificados de
+    retenciones</em>, <em>Expediente</em> y cada tema de los comunicados (protección de datos, desconexión digital,
+    protocolo de acoso, prevención de riesgos, plan de igualdad, normas internas y avisos). Hace falta el permiso «Configurar Laboral», que de
     fábrica trae Dirección.
   </p>
   <p>

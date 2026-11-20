@@ -775,6 +775,9 @@ footer{
     <li><a href="#mi-calendario" class="sub sub">Was jede Fachkraft sieht</a></li>
     <li><a href="#nominas" class="sub">Gehaltsabrechnungen und Bescheinigungen</a></li>
     <li><a href="#nominas-asesoria" class="sub sub">Vom Lohnbüro hochladen lassen</a></li>
+    <li><a href="#expediente" class="sub sub">Die Akte jedes Mitarbeiters</a></li>
+    <li><a href="#comunicados" class="sub sub">Mitteilungen an die Belegschaft</a></li>
+    <li><a href="#incidencias-nominas" class="sub sub">Lohnabrechnungsposten</a></li>
     <li><a href="#mis-documentos" class="sub sub">Meine Dokumente</a></li>
     <li><a href="#laboral-configuracion" class="sub sub">Welche Teile von Arbeitsrecht das Zentrum nutzt</a></li>
     <li><a href="#historia">11. Die Patientenakte</a></li>
@@ -1187,6 +1190,16 @@ footer{
     <em>zu drucken</em>, die Personen für die <em>Warteliste</em> und <strong>+</strong> für den <em>neuen Termin</em>. Fährt man mit der Maus darüber, sagt jede, was sie tut.
   </p>
 
+  <h3 id="agenda-ocupacion">Wie voll jeder Tag ist</h3>
+
+  <p>
+    Beim Öffnen des Kalenders zur Datumswahl hat jeder Tag mit Terminen einen <strong>Punkt</strong>, wie auf Flugbuchungsseiten: <strong>grün</strong> (hohl) unter 50 %, <strong>orange</strong> ab 50 % und <strong>rot</strong>, etwas größer, ab 75 %. Ein Tag ohne Termine hat keinen Punkt. Mit der Maus darüber sieht man, wie viele Termine er hat, wie viel belegt ist und wie viel Zeit frei bleibt.
+  </p>
+
+  <p>
+    Die Auslastung wird in Zeit gemessen, nicht in Anzahl Termine: das Gebuchte gegenüber den Schichten der Mitarbeiter laut Arbeitskalender, oder den Öffnungszeiten des Terminkalenders für alle ohne Kalender. Die Punkte aktualisieren sich von selbst, wenn jemand einen Termin vergibt oder storniert. Die Grenzen für Orange und Rot ändert man unter <strong>Verwaltung → Einstellungen → Terminkalender</strong>.
+  </p>
+
   <h3 id="agenda-ahora">Die Linie der aktuellen Uhrzeit</h3>
 
   <p>
@@ -1512,9 +1525,8 @@ footer{
 
   <p>
     In der Kundenakte stehen die Daten, der Besuchsverlauf, die Mehrfachkarten und die Notizen. Der Besuchsverlauf steht <strong>vor den unterschriebenen Dokumenten</strong>, weil er am häufigsten aufgerufen wird.
-    <strong>Telefonnummer und E-Mail-Adresse sind Links</strong>: ein Klick öffnet die Telefon- oder die Mail-Anwendung,
-    ohne Kopieren und Einfügen. Das gilt in der ganzen Anwendung — auch bei Mitarbeitern, Lieferanten und
-    Filialen —, sodass nirgends eine Nummer von Hand abgeschrieben werden muss.
+    <strong>Telefonnummer und E-Mail-Adresse sind Links</strong>: ein Klick öffnet das Telefon oder das E-Mail-Programm, ohne Kopieren und Einfügen. Das gilt in der ganzen Anwendung —auch bei Mitarbeitern, Lieferanten und Filialen—, sodass man nirgends eine Nummer von Hand abschreiben muss. In der Historie <strong>führt jede Leistung und jedes Produkt zu seiner Akte</strong>: ein Klick auf den Namen öffnet sie im Katalog, wenn die Person Leistungen oder Produkte sehen darf; sonst ist es normaler Text. Bei jedem Besuch in der Historie ist das Kommentarsymbol grün gefüllt, wenn es Kommentare gibt, und eine
+    <strong>Reklamation</strong> wird mit einem großen roten Ausrufezeichen markiert: Mit der Maus darüber sieht man, was notiert wurde, von wem und wann.
   </p>
 
   <figure>
@@ -1550,7 +1562,7 @@ footer{
   <p>
     Jeder Besuch im Verlauf hat links ein Symbol, um ihn zu <strong>kommentieren</strong>. Ein Kommentar ist
     <em>Information</em> (eine Notiz zu diesem Besuch) oder eine <strong>Abweichung</strong>: eine Beschwerde oder etwas, das schiefgelaufen ist. Ein Besuch mit Kommentaren zeigt eine Sprechblase, einer mit einer Abweichung ein <strong>rotes Ausrufezeichen</strong>
-    , damit niemand sie übersieht. Fährt man mit der Maus darüber, liest man den Text; ein Klick zeigt alle, mit Verfasser und Zeitpunkt, und erlaubt einen weiteren. Jede Person kann nur ihre eigenen löschen: Was jemand anderes geschrieben hat, bleibt.
+    damit niemand sie übersieht. Mit der Maus darüber liest man den Text, wer ihn wann geschrieben hat; ein Klick zeigt alle und erlaubt einen weiteren. Jede Person kann nur ihre eigenen löschen: was andere geschrieben haben, bleibt.
   </p>
 
   <h3 id="clientes-varios-profesionales">Besuche mit mehreren Fachkräften</h3>
@@ -1776,7 +1788,21 @@ footer{
   </ul>
 
   <p>
-    Ein Produkt <strong>wird verkauft, auch wenn laut Bestand keines mehr da ist</strong>: Wenn es auf dem Tresen liegt, ist es da. Die Einheit geht aus dem Bestand —der bei null bleibt, nie negativ— und der Abgang wird verbucht; die richtige Zahl setzt später die Inventur. Wird der Verkauf erstattet oder storniert, kommt die Einheit zurück.
+    <strong>Wertkarten und Zahlungsart.</strong> Hat der Kunde Wertkarten, die einen Teil des Bons bezahlen, steht als Zahlungsart <em>Gutschein</em>. Die Wahl von <em>Karte</em> oder <em>Bargeld</em> entfernt die Wertkarten nicht: Sie bezahlen weiter ihre Sitzungen, und diese Zahlungsart gilt für den Rest, wie darunter mit dem Betrag angezeigt. Soll eine Wertkarte für eine Sitzung nicht verwendet werden, wird sie in ihrer Zeile abgewählt.
+  </p>
+
+  <p>
+    <strong>Geschenk.</strong> Wählt man die Zahlungsart <em>Geschenk</em> (oder eine andere mit eigenem Rabatt), steht der Rabatt des Bons von selbst auf 100 % und der Betrag auf null, und so wird es gebucht. Wird danach eine andere Zahlungsart gewählt, geht der Rabatt wieder auf null.
+  </p>
+
+  <p>
+    <strong>Fehlende Einwilligungen.</strong> Fehlt dem Kunden eine Einwilligung, weist die Kasse beim Kassieren darauf hin und markiert es unter «Zu kassieren». Das Kassieren wird nicht verhindert. Der Hinweis wird ein- und ausgeschaltet unter
+    <em>Verwaltung → Einstellungen → Zahlungen und Kundenbindung → Einwilligungen an der Kasse</em>; ab Werk ist er eingeschaltet.
+  </p>
+
+  <p>
+    Ein Produkt <strong>ohne Bestand wird nicht verkauft</strong>: Die Kasse lässt es nicht auf den Bon und auch nicht mehr Stück, als im Zentrum vorhanden sind, und sagt, wie viele es gibt. Um es zu verkaufen, muss zuerst ein Lagerzugang erfasst werden. Verkauft das Zentrum, was auf der Theke liegt, auch wenn Turnera es nicht erfasst hat, schaltet man ein:
+    <em>Verwaltung → Einstellungen → Zahlungen und Kundenbindung → Ohne Bestand verkaufen</em>; dann geht das Stück aus dem Lager —das bei null bleibt, nie negativ—, der Abgang wird erfasst, und die Inventur setzt später die richtige Zahl. Wird der Verkauf erstattet oder storniert, kommt das Stück zurück.
   </p>
 
   <p>
@@ -1791,6 +1817,19 @@ footer{
     <img src="/turnera/manual/imagenes/en/08-tpv.png" alt="Die Kasse mit ausgewähltem Kunden und halb zusammengestelltem Bon" loading="lazy">
     <figcaption>Die Kasse: der Kunde, der Mitarbeiter und der Bon mit seinen Leistungen und Produkten.</figcaption>
   </figure>
+
+  <h3 id="productos-y-servicios">Produkte und Leistungen</h3>
+  <span class="ruta">Menü → Katalog → Produkte / Leistungen</span>
+
+  <p>
+    Beim Anlegen oder Korrigieren eines Produkts oder einer Leistung werden <strong>Kategorie</strong> und die <strong>Marke</strong>
+    aus einer Liste gewählt, die sich beim Tippen filtert, damit man die vorhandene nimmt. Fehlt sie, tippt man sie ein und sie wird angelegt («Neu: wird hinzugefügt…»). Schreibt man eine vorhandene mit anderen Groß- oder Kleinbuchstaben oder Akzenten, bleibt die vorhandene, damit es nicht zwei fast gleiche gibt.
+  </p>
+
+  <p>
+    In der Produktakte sehen die Lagerverantwortlichen und alle, die den Bericht der Lagerbewegungen sehen, außerdem seine
+    <strong>Zu- und Abgänge</strong> in dieser Filiale, die neuesten zuerst: Datum und Uhrzeit, ob Zu- oder Abgang, wie viele Stück und ob es ein Verkauf oder eine manuelle Bewegung war.
+  </p>
 
   <h3 id="paquetes">Pakete</h3>
   <span class="ruta">Menü → Katalog → Pakete</span>
@@ -2110,6 +2149,11 @@ footer{
 
   <p>
     Um die Karten eines Kunden zu finden, wählen Sie ihn über der Liste wie in den anderen Bildschirmen nach Name, Nummer oder Telefon aus; es erscheinen nur die Karten, die er gekauft hat. Daneben sucht ein Textfeld nach Kartencode oder nach der beschenkten Person: Wer die Karte erhält, hat keine verknüpfte Kundenkarte und wird daher über den Namen gefunden.
+  </p>
+
+  <p>
+    Wer die Berechtigung <strong>Geschenkkarten korrigieren und ausbuchen</strong> hat (ab Werk die Leitung), sieht auf jeder Karte zwei weitere Knöpfe. <em>Korrigieren</em> berichtigt, was beim Verkauf falsch eingetragen wurde —fast immer das Ablaufdatum—, den Empfänger, die E-Mail, die Widmung oder ob der Betrag sichtbar ist; Betrag und Guthaben bleiben unverändert.
+    <em>Ausbuchen</em> macht sie wertlos; das Geld wird nicht erstattet: Dafür gibt es <em>Erstatten</em> beim Verkauf der Karte. Beides wird mit Person und Zeitpunkt festgehalten.
   </p>
 
   <figure>
@@ -2572,7 +2616,7 @@ footer{
   <h2>8. Berichte und Kassenabschluss</h2>
   <span class="ruta">Menü → Berichte</span>
 
-  <p>Alle lassen sich nach Datum filtern und alle mit dem Export-Knopf als Excel herunterladen.</p>
+  <p>Alle lassen sich nach Datum filtern und mit dem Export-Knopf nach Excel herunterladen. Die Eingabetaste in einem Filter startet die Suche, ohne den Knopf <em>Suchen</em>.</p>
 
   <p>
     Der Bildschirm gruppiert sie in Abschnitte, dieselben wie im Menü: <strong>Terminkalender</strong>, <strong>Kunden</strong>,
@@ -2593,7 +2637,7 @@ footer{
     <tr><td><strong>Ausstehende Einwilligungen</strong></td><td>Die Kunden, denen noch eine Pflicht-Einwilligung fehlt, oben die, die am längsten warten, und bei Gleichstand die mit mehr offenen. Als ausstehend zählt sie, wenn die Person seit Bestehen der Vorlage einen Termin hatte (jeden Termin, wenn sie allgemein ist; einen für eine Leistung ihrer Tarifgruppe, wenn sie zu einer Behandlung gehört). Er zeigt seit wann, was fehlt und den nächsten Termin. Ihn sehen alle, die den Bericht der unterschriebenen Einwilligungen sehen.</td></tr>
     <tr><td><strong>Wertkarten</strong></td><td>Was verkauft ist, was noch offen ist und was demnächst abläuft.</td></tr>
     <tr id="informe-facturacion-profesional"><td><strong>Abrechnung nach Fachkraft</strong></td><td>Was jede Fachkraft in einem Zeitraum abgerechnet hat: wie viele Leistungen und zu welchem Betrag, Sitzungen mit Mehrfachkarte (gezählt, aber ohne Betrag: kassiert wurde beim Verkauf der Karte), Produkte und was noch offen ist. Jede Belegzeile zählt für die Person, die sie erbracht hat, mit Rabatten und inklusive MwSt., Rückgaben werden abgezogen. Die Excel-Datei enthält die Übersicht und das Detail jeder Zeile, um Provisionen zu berechnen. Zu finden unter <em>Kasse und Zahlungen</em>.</td></tr>
-    <tr><td><strong>Lager</strong></td><td>Was fehlt und was zu- und abgegangen ist.</td></tr>
+    <tr><td><strong>Lager</strong></td><td>Was fehlt und was zu- und abgegangen ist. Das Produkt sucht man wie unter Produkte: nach Wörtern aus Name, Referenz, Marke, Kategorie oder Code, und alle müssen vorkommen («Creme 50» findet die 50-ml-Creme). Marke und Kategorie wählt man aus ihrer Liste, die sich ebenfalls durch Tippen filtern lässt. Wer <em>Berichte exportieren</em> hat, lädt sie mit dem gesetzten Filter nach Excel herunter, auch aus der Lagerliste. Zu- und Abgänge tragen Datum und Uhrzeit.</td></tr>
   </tbody></table>
   </div>
 
@@ -4198,6 +4242,31 @@ footer{
     Unter dem Haupttext gibt es einen optionalen Abschnitt pro Sprache. Bei einem Kunden, der eine dieser Sprachen in seiner Akte hat, öffnet sich das Gespräch mit diesem Text; bei allen anderen mit dem Haupttext. Die Marken funktionieren in jeder Sprache gleich, und das Datum wird so geschrieben, wie es dort gelesen wird: auf Deutsch mit Punkten (22.09.2026). Die Vorschau jeder Sprache erscheint beim Speichern.
   </p>
 
+  <h3 id="correo-del-centro">Die E-Mail des Zentrums</h3>
+
+  <p>
+    Alles, was das Zentrum betrifft —was es an seine Kunden, sein Team und sein Lohnbüro schickt (Geschenkkarten, Zahlungslinks, Zugang zum Portal, Buchungen, Umfragen, Gehaltsabrechnungen und Arbeitsdokumente) und die Meldungen an seine Leitung oder Personalabteilung—, geht <strong>von der E-Mail des Zentrums aus</strong>: über den Server unter <strong>Einstellungen → Mailserver des Zentrums</strong> und mit der Adresse aus «Absenderadresse der E-Mails». Wer sie erhält, sieht den Namen des Zentrums als Absender und schreibt bei einer Antwort an das Zentrum.
+  </p>
+
+  <p>
+    Solange das Zentrum noch testet und keinen Server eingerichtet hat, gehen diese E-Mails über den der Plattform.
+    <strong>Ein Zentrum im Echtbetrieb ohne eingerichteten Server verschickt sie nicht</strong>, und Turnera weist darauf hin: Oben auf jedem Bildschirm erscheint ein roter Hinweis, mit dem Link zu den Einstellungen für alle, die ihn einrichten dürfen, und was von Hand verschickt wird (eine Geschenkkarte erneut senden, eine Umfrage, die Stundenübersicht, die Sendung ans Lohnbüro), antwortet, dass es nicht hinausgehen kann und warum. Über die Plattform gehen nur die Meldungen von Turnera an das Zentrum: Gebührenänderungen, technische Störungen, der Datenexport oder die Integrationen.
+  </p>
+
+  <h4 id="correo-direcciones">Was an jede Adresse geht</h4>
+  <span class="ruta">Verwaltung → Einstellungen → E-Mail-Adressen</span>
+
+  <ul>
+    <li><strong>Kontakt</strong>: die Adresse, die die Kunden sehen. Sie steht unten in den E-Mails an sie, im Buchungsportal und auf den Geschenkkarten. Hier kommt auch die Meldung an, wenn eine Rechnung per Link doppelt bezahlt wurde.</li>
+    <li><strong>Geschäftsführung</strong>: Neuanmeldungen im Club, stornierte Besuche und schlechte Bewertungen in Umfragen. Außerdem Personalthemen (Urlaubsanträge, auslaufende Verträge, vergessene Stempelungen, gesperrte PINs, Sendungen an das Lohnbüro und dessen Downloads), wenn keine eigene Personaladresse angegeben ist.</li>
+    <li><strong>Vorstand</strong>: gelöschte Termine, aus einem Besuch entfernte Leistungen und Reklamationen. Bleibt das Feld leer, werden diese Meldungen nicht verschickt.</li>
+    <li><strong>Absenderadresse der E-Mails</strong>: der Absender von allem oben Genannten. Es muss eine Adresse sein, die der Server des Zentrums erlaubt; meist sein eigenes Konto.</li>
+  </ul>
+
+  <p>
+    Mit Port 465 ist die Verbindung SSL; mit 587 «Verschlüsselte Verbindung (STARTTLS)» ankreuzen. Der Benutzer ist meist die vollständige E-Mail-Adresse. Der Knopf <strong>«Test-E-Mail senden»</strong> fragt nach der Zieladresse und testet, was auf dem Bildschirm steht, ohne zu speichern; nimmt der Server sie nicht an, zeigt er seine Antwort.
+  </p>
+
   <h3 id="stripe">Zahlung per Link mit Stripe</h3>
   <span class="ruta">Verwaltung → Einstellungen → Zahlungen und Kundenbindung</span>
 
@@ -5221,6 +5290,10 @@ footer{
   <p>
     <em>Arbeitskalender → Dienstplan</em> zeigt die Woche des ganzen Personals: wer an jedem Tag in welcher Schicht arbeitet, wer im Urlaub, abwesend oder frei ist und wie viele an jedem Tag arbeiten. Heute ist hervorgehoben und zeigt, wer <strong>gerade da</strong>ist, laut Stempelung. Wer keinen Arbeitskalender hat, erscheint nicht im Dienstplan.
   </p>
+  <p>
+    Oben gibt es eine Suche nach Vor- oder Nachname, und die Belegschaft lässt sich sortieren nach <em>Vorname</em> oder nach
+    <em>Nachname</em>; nach Nachname erscheint jede Person als «Nachname, Vorname». Ebenso in der Liste der Kalender. Die gewählte Sortierung merkt sich der Browser, sie gilt für beide Bildschirme, auch beim Drucken des Dienstplans.
+  </p>
 
   <figure>
     <img src="/turnera/manual/imagenes/en/35-cuadrante.png" alt="Der Wochendienstplan mit der Schicht jeder Fachkraft und wer gerade da ist" loading="lazy">
@@ -5361,10 +5434,60 @@ footer{
     <p><strong>Was die Empfangsbestätigung wert ist.</strong> Das Bestätigen ist eine einfache elektronische Unterschrift: Die Person identifiziert sich mit ihrem Benutzer oder ihrer PIN, nachdem sie das Dokument geöffnet hat, und es wird festgehalten, wann, von wo und der genaue Text, der ihr angezeigt wurde. Den Empfang zu bestätigen <strong>bedeutet nicht, einverstanden zu sein</strong> mit dem Inhalt, und der Text sagt das auch. Von einem gemeinsamen Arbeitsplatz aus kann nicht bestätigt werden, weil dort jemand anderes, der die PIN kennt, es an ihrer Stelle tun könnte. Ob die elektronische Zustellung als Empfangsbescheinigung gilt, sollte man mit dem Lohnbüro klären.</p>
   </div>
 
+  <h4 id="expediente">Die Akte jedes Mitarbeiters</h4>
+  <span class="ruta">Mitarbeiter → (eine Zeile) → Akte</span>
+  <p>
+    Die Unterlagen, die die Personalabteilung zu jeder Person aufbewahrt. Dafür braucht man die Berechtigung «Die Akten der Mitarbeiter führen», die sensibel ist und ab Werk Leitung und Personalabteilung haben. Jedes Dokument hat einen <strong>Typ aus einer festen Liste</strong>: Arbeitsvertrag; Verlängerung oder Änderung des Vertrags; Anmeldung bei der Sozialversicherung; Ausweis oder Arbeitserlaubnis; Bankbescheinigung; Abschluss oder Berufszertifikat; Fortbildungsnachweis; ärztliche Untersuchung oder Tauglichkeit; Ausgabe von Schutzausrüstung (PSA); Krank- oder Gesundmeldung; Abwesenheitsnachweis; Abmahnung oder Sanktion; und Abfindung und Kündigungsschreiben. Ein «Sonstiges» gibt es nicht: Turnera ist kein Dateiablageort. Fehlt ein Typ, sagen Sie es uns, und wir ergänzen ihn.
+  </p>
+  <ul>
+    <li><strong>Hochladen.</strong> Man wählt den Typ, das Dokument (PDF, JPG oder PNG, bis 10 MB), sein Datum und bei den ablaufenden (Ausweis, Abschlüsse, Fortbildungen und ärztliche Untersuchungen) das Ablaufdatum. Eine kurze Notiz ist freiwillig.</li>
+    <li><strong>Ablauf.</strong> In der Liste erscheint Abgelaufenes rot und was in den nächsten 60 Tagen abläuft gelb.</li>
+    <li><strong>Was die Person sieht.</strong> Bei jedem Dokument steht, ob die Person es sieht unter <em>Meine Dokumente</em>; ab Werk ja. Für das, was sie nicht sehen soll, wird es abgewählt.</li>
+    <li><strong>Entfernen</strong> ist für ein versehentlich hochgeladenes Dokument und lässt sich nicht rückgängig machen.</li>
+  </ul>
+  <p>
+    Die Dokumente werden verschlüsselt gespeichert. Die Akte lässt sich in den Arbeitsrecht-Einstellungen abschalten: Vorhandenes kann man weiter ansehen, aber nichts hinzufügen.
+  </p>
+
+  <h4 id="comunicados">Mitteilungen an die Belegschaft</h4>
+  <span class="ruta">Menü → Personal → Mitteilungen</span>
+  <p>
+    Um der Belegschaft ein Dokument zu schicken, bei dem festgehalten sein muss, dass jede Person es erhalten hat: die Datenschutzinformation, die Richtlinie zur digitalen Abschaltung, das Belästigungsprotokoll, die Information zur Arbeitssicherheit, den Gleichstellungsplan, die Hausordnung oder einen Hinweis. Dafür braucht man die Berechtigung «Mitteilungen an die Belegschaft schicken», die ab Werk Leitung und Personalabteilung haben.
+  </p>
+  <ul>
+    <li><strong>Senden.</strong> Man wählt das Thema, gibt einen Titel ein, lädt das PDF hoch (bis 10 MB) und wählt die Empfänger:
+      <em>Ganze Belegschaft</em>, die einer Stelle, die eines Standorts oder einzeln. Es geht sofort hinaus, wie eine Gehaltsabrechnung: in <em>Meine Dokumente</em> bei allen mit Benutzer, per E-Mail mit einem Link, der sich mit der Stempel-PIN öffnet, bei allen ohne, und von Hand bei allen, die keins von beiden haben. Vor dem Senden zeigt Turnera, wer es von Hand bekommen muss.</li>
+    <li><strong>Mit Unterschrift oder als Hinweis.</strong> Mit <em>Unterschrift anfordern</em> öffnet jede Person es und unterschreibt, dass sie es gelesen hat, und wird nach 3 und nach 7 Tagen per E-Mail erinnert. Ohne Unterschrift ist es ein Hinweis: Öffnen genügt, und es wird nicht erinnert. Hinweise gehen ab Werk ohne Unterschrift hinaus, alles andere mit, aber das lässt sich ändern.</li>
+    <li><strong>Wer fehlt.</strong> Unter <em>Gesendet</em> steht jede Mitteilung mit der Zahl derer, die sie unterschrieben oder gelesen haben. Geöffnet sieht man jede Person, zuerst die Fehlenden. Wie bei den Gehaltsabrechnungen lässt sich vermerken, dass sie auf Papier übergeben wurde oder die Person vor einem Zeugen die Unterschrift verweigert hat, die E-Mail erneut senden und den Nachweis herunterladen.</li>
+    <li><strong>Für spätere Neuzugänge.</strong> Darunter steht, <em>Auch senden an</em> listet alle auf, die sie nicht haben, um ihnen dieselbe Mitteilung zu schicken.</li>
+  </ul>
+  <p>
+    Eine gesendete Mitteilung lässt sich weder zurückziehen noch ändern: Muss sie korrigiert werden, schickt man eine neue. Das PDF wird verschlüsselt gespeichert. Jedes Thema lässt sich in den Arbeitsrecht-Einstellungen abschalten.
+  </p>
+
+  <h4 id="incidencias-nominas">Lohnabrechnungsposten</h4>
+  <span class="ruta">Menü → Personal → Lohnabrechnungsposten</span>
+  <p>
+    Der Monat jeder Person so, wie er beim Lohnbüro ankommt, um ihn vor dem Senden zu prüfen und einzutragen, was nicht aus den Stempelungen kommt. Dafür braucht man die Berechtigung «Lohnabrechnungsposten führen», die sensibel ist (sie enthält Pfändungen, Vorschüsse und den Steuerabzug jedes Einzelnen) und ab Werk Leitung und Personalabteilung haben.
+  </p>
+  <ul>
+    <li><strong>Was von selbst kommt.</strong> Für jede Person die gearbeiteten Stunden und Tage, Überstunden, Nachtstunden, Sonn- und Feiertagsstunden, Urlaub, jede Abwesenheitsart mit ihren Tagen, Tage mit Schicht ohne Stempelung und die Vorfälle bei den Stempelungen. Es ist dasselbe, was in der Stundenübersicht der Sendung ans Lohnbüro steht.</li>
+    <li><strong>Was eingetragen wird.</strong> Mit <em>Posten eintragen</em> wählt man die Person und den Posten aus einer festen Liste: Zusatztätigkeit, Zulage oder Prämie, Spesen und Kilometergeld, Vorschuss, Pfändung, von der Person gewünschter Steuerabzug (in Prozent) und vereinbarter Abzug. Er trägt seinen Betrag und bei Bedarf ein Detail. Eine Pfändung, die das Lohnbüro berechnet, kann ohne Betrag eingetragen werden, mit dem Beschluss im Detail.</li>
+    <li><strong>Wie lange es gilt.</strong> <em>Nur diesen Monat</em>, <em>Bis auf Weiteres</em> (jeden Monat ab diesem, wie eine Pfändung oder ein in Raten abgezogener Vorschuss) oder <em>Bis zu einem Monat</em>. Was sich wiederholt, beendet man mit
+      <em>Diesen Monat beenden</em>.</li>
+    <li><strong>Entfernen</strong> ist für versehentlich Eingetragenes. Was schon in einer Sendung ans Lohnbüro war, wird nicht entfernt, sondern beendet, damit das Gesendete stimmig bleibt.</li>
+  </ul>
+  <p>
+    Das Eingetragene geht mit der Monatssendung ans Lohnbüro, in einem eigenen Excel-Blatt und einer eigenen CSV-Datei. Wird etwas nach dem Senden des Monats eingetragen, zeigt <a href="#envio-asesoria">Die Stunden ans Lohnbüro schicken</a> an, wer sich geändert hat, um eine Korrektursendung zu schicken, die nur diese Personen enthält.
+  </p>
+
   <h4 id="mis-documentos">Meine Dokumente</h4>
   <span class="ruta">Menü → Meine Dokumente</span>
   <p>
-    Es sieht, wer sich mit einem Benutzer anmeldet, der mit einer Fachkraft verknüpft ist, in einem Zentrum mit dem Modul Arbeitsrecht. Jede Gehaltsabrechnung oder Bescheinigung wird <strong>geöffnet</strong> und danach bestätigt mit <em>Ich bestätige, dass ich es erhalten habe</em>; die Schaltfläche wird erst aktiv, wenn sie geöffnet wurde. Wer keinen Benutzer hat, macht es über den Link in der E-Mail, mit seiner PIN.
+    Das sieht, wer sich mit einem Benutzer anmeldet, der mit einem Mitarbeiter verknüpft ist, in einem Zentrum mit dem Modul Arbeitsrecht. Jede Gehaltsabrechnung, Bescheinigung oder Mitteilung wird <strong>geöffnet</strong> und danach bestätigt mit <em>Ich bestätige, dass ich es erhalten habe</em>; der Knopf ist erst aktiv, wenn es geöffnet wurde. Ein Hinweis ohne Unterschrift gilt beim Öffnen als gelesen. Wer keinen Benutzer hat, macht es über den Link in der E-Mail, mit seiner PIN.
+  </p>
+  <p>
+    Darunter, unter <em>Deine Akte</em>, stehen die Dokumente aus der Akte, die die Personalabteilung zeigt, zum Herunterladen. Diese verlangen keine Bestätigung.
   </p>
   <figure>
     <img src="/turnera/manual/imagenes/89-mis-documentos.png" alt="Meine Dokumente: die Oktober-Gehaltsabrechnung zur Bestätigung, mit dem Text der Empfangsbestätigung und der Schaltfläche zum Bestätigen" loading="lazy">
@@ -5374,7 +5497,7 @@ footer{
   <h4 id="laboral-configuracion">Welche Teile von Arbeitsrecht das Zentrum nutzt</h4>
   <span class="ruta">Menü → Verwaltung → Arbeitsrecht</span>
   <p>
-    Jeder Teil von Arbeitsrecht wird einzeln ein- oder ausgeschaltet: heute <em>Gehaltsabrechnungen</em> und <em>Lohnsteuerbescheinigungen</em>; die späteren (Mitteilungen zum Unterschreiben, Verträge, Qualifikationen mit Ablaufdatum, Gesundheitsuntersuchungen und Abwesenheitsnachweise) erscheinen nach und nach hier. Nötig ist die Berechtigung „Arbeitsrecht konfigurieren“, die ab Werk die Geschäftsleitung hat.
+    Jeder Teil von Arbeitsrecht wird einzeln ein- oder ausgeschaltet: <em>Gehaltsabrechnungen</em>, <em>Lohnsteuerbescheinigungen</em>, <em>Akte</em> und jedes Thema der Mitteilungen (Datenschutz, digitale Abschaltung, Belästigungsprotokoll, Arbeitssicherheit, Gleichstellungsplan, Hausordnung und Hinweise). Dafür braucht man die Berechtigung «Arbeitsrecht einrichten», die ab Werk die Leitung hat.
   </p>
   <p>
     Einen Teil ausschalten <strong>löscht nichts</strong>: Was schon zugestellt wurde, bleibt unter <em>Meine Dokumente</em> jeder Person und in ihrem Verlauf. Nur Neues dieser Art kann nicht mehr hochgeladen und zugestellt werden. Sind beide ausgeschaltet, verschwindet es aus dem Menü

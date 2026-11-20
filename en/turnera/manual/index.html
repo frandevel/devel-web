@@ -775,6 +775,9 @@ footer{
     <li><a href="#mi-calendario" class="sub sub">What each practitioner sees</a></li>
     <li><a href="#nominas" class="sub">Payslips and certificates</a></li>
     <li><a href="#nominas-asesoria" class="sub sub">Having the payroll advisor upload them</a></li>
+    <li><a href="#expediente" class="sub sub">Each professional's file</a></li>
+    <li><a href="#comunicados" class="sub sub">Notices to staff</a></li>
+    <li><a href="#incidencias-nominas" class="sub sub">Payroll items</a></li>
     <li><a href="#mis-documentos" class="sub sub">My documents</a></li>
     <li><a href="#laboral-configuracion" class="sub sub">Which parts of Labour the centre uses</a></li>
     <li><a href="#historia">11. The clinical record</a></li>
@@ -1186,6 +1189,16 @@ footer{
     <em>print</em>, the people for the <em>waiting list</em> and the <strong>+</strong> for the <em>new appointment</em>. Hover over each one and it says what it does.
   </p>
 
+  <h3 id="agenda-ocupacion">How full each day is</h3>
+
+  <p>
+    When you open the calendar to pick the date, each day with appointments has a <strong>point</strong>, as on flight booking sites: <strong>green</strong> (hollow) if it is below 50 %, <strong>orange</strong> from 50 % and <strong>red</strong>, slightly bigger, from 75 %. A day with no appointments has no dot. Hovering over it shows how many appointments it has, how much is booked and how much time is left free.
+  </p>
+
+  <p>
+    Occupancy is measured in time, not in number of appointments: what is booked against the professionals' shifts according to their work calendar, or the diary's opening hours for those without one. The dots update by themselves when someone books or cancels an appointment. The orange and red thresholds are changed in <strong>Administration → Preferences → Agenda</strong>.
+  </p>
+
   <h3 id="agenda-ahora">The line of the hour</h3>
 
   <p>
@@ -1511,9 +1524,8 @@ footer{
 
   <p>
     A customer record holds their details, visit history, vouchers and notes. The visit history comes <strong>before the signed documents</strong>, because it is what people look at most.
-    <strong>The phone number and the email address are links</strong>: tapping them opens the dialler or the mail programme,
-    with nothing to copy and paste. It happens throughout the application — staff, suppliers and
-    delegations too — so there is never a number to copy out by hand.
+    <strong>The phone number and the email address are links</strong>: clicking them opens the dialler or the email program, with no copying or pasting. This happens throughout the application —also for professionals, suppliers and branches—, so there is nowhere you need to copy a number by hand. In the history, <strong>each service and each product takes you to its record</strong>: clicking its name opens it in the catalogue, if the person looking has permission to see services or products; otherwise it reads as plain text. In each visit in the history, the comment icon is filled in green if it has any, and a
+    <strong>non-conformity</strong> is marked with a large red exclamation mark: hovering over it shows what was noted, by whom and when.
   </p>
 
   <figure>
@@ -1549,7 +1561,7 @@ footer{
   <p>
     Each visit in the history has an icon on its left to <strong>comment on it</strong>. A comment is
     <em>Information</em> (a note about that visit) or a <strong>Nonconformity</strong>: a complaint or something that went wrong. A visit with comments shows a speech bubble, and one with a nonconformity a <strong>red exclamation mark</strong>
-    so nobody overlooks it. Hover over it to read the text; click it to see them all, with who wrote them and when, and to add another. Each person can delete only their own: what someone else wrote stays.
+    so that nobody overlooks it. Hovering over it shows the text, with who wrote it and when; clicking it shows them all and lets you add another. Each person can delete only their own: what someone else wrote stays.
   </p>
 
   <h3 id="clientes-varios-profesionales">Visits with several professionals</h3>
@@ -1775,7 +1787,21 @@ footer{
   </ul>
 
   <p>
-    A product <strong>is sold even if the stock says there are none left</strong>: if it is on the counter, it is there. The unit leaves the stock —which stays at zero, never negative— and the outgoing movement is recorded; the stock count is what later sets the right figure. When the sale is refunded or cancelled, the unit comes back.
+    <strong>Vouchers and payment method.</strong> If the customer has vouchers that pay for part of the ticket, the payment method shows as <em>Voucher</em>. Choosing <em>Card</em> or <em>Cash</em> does not remove the vouchers: the vouchers keep paying for their sessions and that payment method is for the rest, as the amount shown below says. To avoid using a voucher for a session, untick it on its line.
+  </p>
+
+  <p>
+    <strong>Gift.</strong> When you choose the payment method <em>Gift</em> (or any other with its own discount), the ticket discount is set to 100 % by itself and the total is zero, which is what gets recorded. If another payment method is chosen afterwards, the discount goes back to zero.
+  </p>
+
+  <p>
+    <strong>Unsigned consents.</strong> If the customer still has a consent to sign, the till warns about it when charging and marks it in «To charge». It does not stop the charge. The notice is switched off and on in
+    <em>Administration → Preferences → Payments and loyalty → Consents at the till</em>; it comes switched on.
+  </p>
+
+  <p>
+    A product <strong>with no units cannot be sold</strong>: the till does not let you add it to the ticket, nor more units than are left in the centre, and says how many there are. To sell it, first record a stock entry. If the centre sells what it has on the counter even if Turnera has not recorded it, switch on
+    <em>Administration → Preferences → Payments and loyalty → Sell without units</em>; then the unit comes out of stock —which stays at zero, never negative—, the output is recorded and the stocktake later sets the right figure. When the sale is refunded or cancelled, the unit comes back.
   </p>
 
   <p>
@@ -1790,6 +1816,19 @@ footer{
     <img src="/turnera/manual/imagenes/en/08-tpv.png" alt="The point of sale with a customer picked and the ticket half built" loading="lazy">
     <figcaption>The point of sale: the customer, the member of staff and the ticket with its services and products.</figcaption>
   </figure>
+
+  <h3 id="productos-y-servicios">Products and services</h3>
+  <span class="ruta">Menu → Catalogue → Products / Services</span>
+
+  <p>
+    When creating or correcting a product or a service, the <strong>category</strong> and the <strong>brand</strong>
+    are chosen from a list that filters as you type, so you use the one that already exists. If it is not there, type it and it is created («New: will be added…»). If you type one that already exists with different capitals or accents, the existing one is kept, so there are never two almost identical ones.
+  </p>
+
+  <p>
+    In a product's record, whoever manages the store or sees the stock movements report also has its
+    <strong>ins and outs</strong> in this branch, latest first: date and time, whether it comes in or goes out, how many units, and whether it was a sale or a manual movement.
+  </p>
 
   <h3 id="paquetes">Packages</h3>
   <span class="ruta">Menu → Catalogue → Packages</span>
@@ -2109,6 +2148,11 @@ footer{
 
   <p>
     To find a customer's cards, choose the customer above the list as in the other screens, by name, code or phone, and only the cards they bought are shown. Next to it, a text box searches by card code or by who the card is for: the person who receives it has no linked file, so they are found by name.
+  </p>
+
+  <p>
+    Whoever has the permission <strong>Correct and withdraw gift cards</strong> (out of the box, Management) sees two more buttons on each card. <em>Correct</em> fixes what was entered wrongly when it was sold —almost always the expiry date—, the recipient, the email, the message or whether the amount is shown; the amount and the balance are not touched.
+    <em>Withdraw</em> leaves it with no value; it does not give the money back: for that there is <em>Refund</em> on the card's sale. Both actions are recorded with who and when.
   </p>
 
   <figure>
@@ -2569,7 +2613,7 @@ footer{
   <h2>8. Reports and the end-of-day till</h2>
   <span class="ruta">Menu → Reports</span>
 
-  <p>They all filter by date and they all download to Excel with the export button.</p>
+  <p>All of them filter by dates and all of them download to Excel with the export button. Pressing Enter in a filter runs the search, without going to the button <em>Search</em>.</p>
 
   <p>
     The screen groups them in sections, the same as the menu: <strong>Agenda</strong>, <strong>Customers</strong>,
@@ -2590,7 +2634,7 @@ footer{
     <tr><td><strong>Pending consents</strong></td><td>The customers who still have to sign a mandatory consent, with those waiting longest at the top and, when equal, those with more pending. It counts as pending when the person has had an appointment since the template exists (any appointment if it is general; one for a service of its rate group if it is for a treatment). It shows since when, what is missing and their next appointment. Whoever sees the signed consents report sees it too.</td></tr>
     <tr><td><strong>Vouchers</strong></td><td>What has been sold, what is left to use and what is about to expire.</td></tr>
     <tr id="informe-facturacion-profesional"><td><strong>Billing by professional</strong></td><td>What each professional billed in a period: how many services and for how much, voucher sessions (counted, but adding no amount: it was charged when the voucher was sold), products and what is still owed. Each ticket line counts for whoever did it, with its discounts and VAT included, and refunds subtract. The Excel file has the summary and the detail of each line, to work out commissions. It is under <em>Till and payments</em>.</td></tr>
-    <tr><td><strong>Stock</strong></td><td>What is missing and what has come in and gone out.</td></tr>
+    <tr><td><strong>Stock</strong></td><td>What is missing and what has come in and gone out. The product is searched as in Products: by words from the name, reference, brand, category or code, and all of them must match («cream 50» gives the 50 ml cream). Brand and category are chosen from their list, which can also be filtered by typing. Whoever has <em>Export reports</em> downloads them to Excel with the filter applied, also from the Stock list. Ins and outs carry date and time.</td></tr>
   </tbody></table>
   </div>
 
@@ -4196,6 +4240,31 @@ footer{
     Below the main text there is an optional section per language. A customer who has one of those languages on their record gets the conversation opened with that text; everyone else, with the main one. The tags work the same in each language, and the date is written as it is read there: in German, with dots (22.09.2026). The preview of each language appears on saving.
   </p>
 
+  <h3 id="correo-del-centro">The centre's email</h3>
+
+  <p>
+    Everything to do with the centre —what it sends to its customers, its staff and its payroll advisor (gift cards, payment links, portal access, bookings, surveys, payslips and labour documents) and the notices to its Management or HR— goes out <strong>from the centre's email</strong>: through the server in <strong>Preferences → Centre mail server</strong> and with the address in «Address emails are sent from». Whoever receives it sees the centre's name as sender and, if they reply, writes to the centre.
+  </p>
+
+  <p>
+    While the centre is still testing and has no server set up, those emails go out through the platform's.
+    <strong>A centre in production with no server set up does not send them</strong>, and Turnera says so: a red notice appears at the top of every screen, with a link to Preferences for whoever can set it up, and anything sent by hand (resending a gift card, a survey, the hours summary, the send to the payroll advisor) answers that it cannot go out and why. Only Turnera's notices to the centre go out through the platform: fee changes, technical incidents, the data export or the integrations.
+  </p>
+
+  <h4 id="correo-direcciones">What reaches each address</h4>
+  <span class="ruta">Administration → Preferences → Email addresses</span>
+
+  <ul>
+    <li><strong>Contact</strong>: the one customers see. It goes at the foot of the emails they receive, in the booking portal and on gift cards. The notice of a bill paid twice by link also arrives here.</li>
+    <li><strong>Management</strong>: club sign-ups, cancelled visits and low survey ratings. Also staff matters (holiday requests, expiring contracts, missed clock-ins, locked PINs, sends to and downloads by the payroll advisor) if no separate HR address has been set.</li>
+    <li><strong>Board</strong>: deleted appointments, services removed from a visit and non-conformities. If left empty, these notices are not sent.</li>
+    <li><strong>Address emails are sent from</strong>: the sender of all of the above. It must be an address the centre's server lets you use; usually its own account.</li>
+  </ul>
+
+  <p>
+    With port 465 the connection is SSL; with 587, tick «Encrypted connection (STARTTLS)». The user is usually the full email address. The button <strong>«Send a test email»</strong> asks which address to send it to and tests what is on screen, without saving; if the server does not accept it, it shows what the server answered.
+  </p>
+
   <h3 id="stripe">Payment links with Stripe</h3>
   <span class="ruta">Administration → Preferences → Payments and loyalty</span>
 
@@ -5216,6 +5285,10 @@ footer{
   <p>
     <em>Work calendar → Roster</em> shows the week of the whole staff: who works each day and on which shift, who is on vacation, absent or off, and how many work each day. Today is highlighted and marks who is <strong>in right now</strong>, according to what was clocked. Whoever has no work calendar is not shown in the roster.
   </p>
+  <p>
+    At the top there is a search by first name or surname, and the staff can be sorted by <em>First name</em> or by
+    <em>Surname</em>; by surname, each person appears as «Surname, First name». The same in the list of calendars. The chosen order is remembered in that browser and applies to both screens, also when printing the roster.
+  </p>
 
   <figure>
     <img src="/turnera/manual/imagenes/en/35-cuadrante.png" alt="The week’s roster with each practitioner’s shift and who is in now" loading="lazy">
@@ -5356,10 +5429,60 @@ footer{
     <p><strong>What the acknowledgement is worth.</strong> Confirming is a simple electronic signature: the person identifies themselves with their user or their PIN, after opening the document, and it is recorded when, from where and the exact text they were shown. Confirming receipt <strong>does not mean agreeing</strong> with the content, and the text says so. From a shared workstation it cannot be confirmed, because there someone else who knows the PIN could do it for them. Whether electronic delivery is valid as a receipt is something worth confirming with the payroll advisor.</p>
   </div>
 
+  <h4 id="expediente">Each professional's file</h4>
+  <span class="ruta">Professionals → (a row) → File</span>
+  <p>
+    The paperwork HR keeps for each person. It needs the «Keep the professionals' files» permission, which is sensitive and comes out of the box with Management and HR. Each document is of a <strong>type from a closed list</strong>: employment contract; extension or change to the contract; Social Security registration; identity document or work permit; bank account certificate; qualification or professional certificate; training certificate; medical check-up or fitness; delivery of protective equipment (PPE); sick leave or return-to-work note; absence note; warning or sanction; and settlement and termination letter. There is no «other»: Turnera is not a file store. If a type is missing, tell us and we will add it.
+  </p>
+  <ul>
+    <li><strong>Upload.</strong> You choose the type, the document (PDF, JPG or PNG, up to 10 MB), its date and, for those that expire (identity document, qualifications, training and medical check-ups), the expiry date. A short note is optional.</li>
+    <li><strong>Expiry.</strong> In the list, what has expired shows in red and what expires in the next 60 days in amber.</li>
+    <li><strong>What the person sees.</strong> Each document says whether the person sees it in <em>My documents</em>; by default, yes. Untick it for what they should not see.</li>
+    <li><strong>Remove</strong> is for a document uploaded by mistake, and cannot be undone.</li>
+  </ul>
+  <p>
+    Documents are stored encrypted. The file can be switched off in the Labour settings: what is already there can still be consulted, but nothing is added.
+  </p>
+
+  <h4 id="comunicados">Notices to staff</h4>
+  <span class="ruta">Menu → Staff → Notices</span>
+  <p>
+    To send the staff a document where it must be on record that each person received it: the data protection information, the digital disconnection policy, the harassment protocol, the occupational risk information, the equality plan, the internal rules or a notice. It needs the «Send notices to staff» permission, which comes out of the box with Management and HR.
+  </p>
+  <ul>
+    <li><strong>Send.</strong> You choose the topic, add a title, upload the PDF (up to 10 MB) and choose who it goes to:
+      <em>All staff</em>, those in a position, those in a location or person by person. It goes out at once, like a payslip: to <em>My documents</em> for those with a user, by email with a link opened with the clock-in PIN for those without, and by hand for those who have neither. Before sending, Turnera warns who will have to receive it by hand.</li>
+    <li><strong>With signature or as a notice.</strong> With <em>Ask for signature</em>, each person opens it and signs that they have read it, and is reminded by email after 3 and 7 days. Without a signature it is a notice: opening it is enough, and there are no reminders. Notices go out without a signature by default and everything else with one, but it can be changed.</li>
+    <li><strong>Who is missing.</strong> In <em>Sent</em> each notice appears with how many have signed or read it. Opening it shows each person, those missing first. As with payslips, you can record that it was handed over on paper or that the person refused to sign in front of a witness, send them the email again and download the receipt.</li>
+    <li><strong>For those who join later.</strong> Below, <em>Also send it to</em> lists those who do not have it, to send them the same notice.</li>
+  </ul>
+  <p>
+    A notice once sent cannot be withdrawn or changed: if it needs correcting, send another. The PDF is stored encrypted. Each topic can be switched off in the Labour settings.
+  </p>
+
+  <h4 id="incidencias-nominas">Payroll items</h4>
+  <span class="ruta">Menu → Staff → Payroll items</span>
+  <p>
+    Each person's month as it reaches the payroll advisor, to review it before sending and to note what does not come from the clock-ins. It needs the «Keep payroll items» permission, which is sensitive (it holds garnishments, advances and each person's tax withholding) and comes out of the box with Management and HR.
+  </p>
+  <ul>
+    <li><strong>What comes on its own.</strong> For each person, hours and days worked, overtime, night hours, Sunday and holiday hours, holidays, each type of absence with its days, days with a shift but no clock-in, and clock-in incidents. It is the same as what goes in the hours summary sent to the payroll advisor.</li>
+    <li><strong>What is entered.</strong> With <em>Enter an item</em> you choose the person and the item, from a closed list: extra activity, bonus or gratuity, expenses and mileage, advance, garnishment, tax withholding requested by the person (as a percentage) and agreed deduction. It carries its amount and, if needed, a detail. A garnishment calculated by the payroll advisor can go without an amount, with the court order in the detail.</li>
+    <li><strong>How long it lasts.</strong> <em>This month only</em>, <em>Until further notice</em> (every month from that one, like a garnishment or an advance deducted in instalments) or <em>Until a month</em>. What repeats is ended with
+      <em>End this month</em>.</li>
+    <li><strong>Remove</strong> is for something entered by mistake. What has already gone in a send to the payroll advisor is not removed: it is ended, so that what was sent still adds up.</li>
+  </ul>
+  <p>
+    What is entered goes in the month's send to the payroll advisor, in its own Excel sheet and its own CSV. If something is entered after the month has been sent, in <a href="#envio-asesoria">Send the hours to the payroll advisor</a> it shows who has changed so that a corrective send can go, carrying only those people.
+  </p>
+
   <h4 id="mis-documentos">My documents</h4>
   <span class="ruta">Menu → My documents</span>
   <p>
-    It is seen by whoever signs in with a user linked to a practitioner, in a centre with the Labour module. Each payslip or certificate is <strong>opened</strong> and then confirmed with <em>I confirm that I have received it</em>; the button is not enabled until it has been opened. Whoever has no user does it from the link in the email, with their PIN.
+    Anyone signing in with a user linked to a professional, in a centre with the Labour module, sees it. Each payslip, certificate or notice is <strong>opened</strong> and then confirmed with <em>I confirm that I have received it</em>; the button is not active until it has been opened. A notice that does not ask for a signature is marked as read when opened. Those without a user do it from the email link, with their PIN.
+  </p>
+  <p>
+    Below, in <em>Your file</em>, are the documents from their file that HR lets them see, to download. Those do not ask for confirmation.
   </p>
   <figure>
     <img src="/turnera/manual/imagenes/89-mis-documentos.png" alt="My documents: the October payslip to confirm, with the text of the acknowledgement and the button to confirm" loading="lazy">
@@ -5369,7 +5492,7 @@ footer{
   <h4 id="laboral-configuracion">Which parts of Labour the centre uses</h4>
   <span class="ruta">Menu → Administration → Labour</span>
   <p>
-    Each part of Labour is switched on or off separately: today, <em>Payslips</em> and <em>Tax withholding certificates</em>; those to come later (notices to sign, contracts, qualifications with an expiry date, medical check-ups and certificates of absence) will appear here. It needs the permission “Configure Labour”, which Management has by default.
+    Each part of Labour is switched on or off separately: <em>Payslips</em>, <em>Tax withholding certificates</em>, <em>File</em> and each notice topic (data protection, digital disconnection, harassment protocol, occupational risks, equality plan, internal rules and notices). It needs the «Set up Labour» permission, which comes out of the box with Management.
   </p>
   <p>
     Switching a part off <strong>does not delete anything</strong>: what has already been delivered stays in <em>My documents</em> of each person and in their history. Only new documents of that type can no longer be uploaded or delivered. With both switched off, it disappears from the menu
