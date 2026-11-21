@@ -679,6 +679,7 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-11-21">21. November 2026</a></li>
     <li><a href="#2026-11-20">20. November 2026</a></li>
     <li><a href="#2026-11-19">19. November 2026</a></li>
     <li><a href="#2026-11-18">18. November 2026</a></li>
@@ -731,10 +732,34 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-11-21" class="version">
+  <div class="version__cabecera">
+    <h2>21. November 2026</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.18.0-0c78fcc</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Kompaktes Layout</h4>
+    <ul>
+      <li>Im Sitzungsmenü oben rechts wählt man zwischen «Normales Layout» und «Kompaktes Layout». Das kompakte verkleinert Schrift, Ränder und die Höhe von Feldern und Zeilen, damit auf einem Laptop oder kleinen Bildschirm mehr auf jede Seite passt. Die Wahl wird in diesem Browser gespeichert, jeder Rechner kann also seine eigene haben.</li>
+      <li>Wenn sich jemand zum ersten Mal an einem kleinen Bildschirm anmeldet, bietet Turnera das kompakte Layout an. Sagt die Person nein, wird nicht wieder gefragt.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <h4>Kommentare und Abweichungen</h4>
+    <ul>
+      <li>Kommentare und Abweichungen zu den Besuchen im Verlauf des Kunden kann löschen, wer die neue Berechtigung «Kommentare und Abweichungen löschen» hat – ab Werk der Administrator –, egal wer sie geschrieben hat. Alle anderen sehen den Löschknopf nicht.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-20" class="version">
   <div class="version__cabecera">
     <h2>20. November 2026</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.18.0-d7fa6e5</span></p>
 
@@ -768,24 +793,6 @@ footer{
   </div>
 
   <div class="grupo grupo--mejora">
-    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
-    <h4>Noch nicht unterschriebene Einwilligungen</h4>
-    <ul>
-      <li>Neuer Bericht neben dem der unterschriebenen Einwilligungen: die Kunden, denen noch eine Pflicht-Einwilligung fehlt, seit wann, wie viele und welche, sowie ihr nächster Termin. Oben stehen die, die am längsten warten; bei Gleichstand die mit mehr offenen. Sehen kann ihn, wer schon den der unterschriebenen sah.</li>
-    </ul>
-    <h4>Einwilligungen pro Leistung, wenn gewünscht</h4>
-    <ul>
-      <li>In einer Einwilligungsvorlage lassen sich die Leistungen wählen, die sie erfordern. Fehlt einem Kunden mit einem Termin für eine davon die Unterschrift, weist die Kasse beim Kassieren darauf hin und lässt die Unterschrift direkt dort anfordern.</li>
-      <li>Es ist optional. Eine Vorlage ohne Leistungen funktioniert genau wie bisher, und ein Zentrum, das es nicht nutzt, merkt keine Änderung.</li>
-    </ul>
-    <h4>Kennzahlen</h4>
-    <ul>
-      <li>Jeder Benutzer passt die Zahlen seiner Kacheln an: Bei denen, die einen Zeitraum betrachten, ist die Zahl unterstrichen („in den letzten 90 Tagen“) und lässt sich per Klick ändern. Das wird für diesen Benutzer gespeichert, und „Zurück zum Üblichen“ stellt es wieder her.</li>
-      <li>Das Umsatzdiagramm lässt sich nach Monaten oder nach Jahren anzeigen: die letzten fünf, mit der Prognose zum Abschluss des laufenden Jahres.</li>
-    </ul>
-  </div>
-
-  <div class="grupo grupo--mejora">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
     <h4>Kasse</h4>
     <ul>
@@ -815,48 +822,6 @@ footer{
     <h4>Einstellungen</h4>
     <ul>
       <li>Jede E-Mail-Adresse erklärt, was an sie geht. Das Feld «Support», das nicht benutzt wurde, entfällt.</li>
-    </ul>
-  </div>
-
-  <div class="grupo grupo--arreglo">
-    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
-    <h4>Noch nicht unterschriebene Einwilligungen</h4>
-    <ul>
-      <li>Neuer Bericht neben dem der unterschriebenen Einwilligungen: die Kunden, denen noch eine Pflicht-Einwilligung fehlt, seit wann, wie viele und welche, sowie ihr nächster Termin. Oben stehen die, die am längsten warten; bei Gleichstand die mit mehr offenen. Sehen kann ihn, wer schon den der unterschriebenen sah.</li>
-    </ul>
-    <h4>Einwilligungen pro Leistung, wenn gewünscht</h4>
-    <ul>
-      <li>In einer Einwilligungsvorlage lassen sich die Leistungen wählen, die sie erfordern. Fehlt einem Kunden mit einem Termin für eine davon die Unterschrift, weist die Kasse beim Kassieren darauf hin und lässt die Unterschrift direkt dort anfordern.</li>
-      <li>Es ist optional. Eine Vorlage ohne Leistungen funktioniert genau wie bisher, und ein Zentrum, das es nicht nutzt, merkt keine Änderung.</li>
-    </ul>
-    <h4>Kennzahlen</h4>
-    <ul>
-      <li>Jeder Benutzer passt die Zahlen seiner Kacheln an: Bei denen, die einen Zeitraum betrachten, ist die Zahl unterstrichen („in den letzten 90 Tagen“) und lässt sich per Klick ändern. Das wird für diesen Benutzer gespeichert, und „Zurück zum Üblichen“ stellt es wieder her.</li>
-      <li>Das Umsatzdiagramm lässt sich nach Monaten oder nach Jahren anzeigen: die letzten fünf, mit der Prognose zum Abschluss des laufenden Jahres.</li>
-    </ul>
-  </div>
-
-  <div class="grupo grupo--mejora">
-    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
-    <h4>Wertkarten</h4>
-    <ul>
-      <li>Man kann nur einen Teil der Sitzungen eines Gutscheins übertragen. Die übertragenen gehen in einen neuen Gutschein des Empfängers, mit derselben Gruppe, demselben Kauf und demselben Ablauf; der ursprüngliche behält den Rest.</li>
-      <li>Bei den Gutscheinen eines Kunden sind aufgebrauchte und abgelaufene zunächst ausgeblendet. Jeder Benutzer findet die Kästchen so vor, wie er sie in diesem Browser gelassen hat.</li>
-    </ul>
-    <h4>Terminkalender</h4>
-    <ul>
-      <li>Ist „Nur Erledigtes kassieren“ eingeschaltet, wie ab Werk, lässt sich ein Termin nicht vor seiner Anfangszeit als wahrgenommen markieren (und bei einem Kurs nicht, dass ein Teilnehmer kam). So wird nicht versehentlich ein Termin eines anderen Tages kassiert. Nach der Anfangszeit geht es, auch wenn der Termin noch nicht zu Ende ist. Schaltet das Zentrum diese Einstellung aus, bleibt alles wie bisher.</li>
-    </ul>
-    <h4>Katalog und Kasse</h4>
-    <ul>
-      <li>Bei der Auswahl der Tarifgruppen einer Leistung stehen die bereits markierten oben und die Liste hat ihren eigenen Bildlauf. Ebenso bei der Auswahl der Leistungen einer Einwilligung.</li>
-      <li>Gutscheine im Verkauf haben eigene Berechtigungen, getrennt von denen der Leistungen. Wer Leistungen schon sehen oder ändern konnte, behält dasselbe bei den Gutscheinen.</li>
-      <li>Zum Kassieren genügt die Kassierberechtigung: Leistungen, Produkte und Pakete erscheinen, auch wenn der Benutzer den Katalog nicht öffnen kann.</li>
-    </ul>
-    <h4>Support</h4>
-    <ul>
-      <li>Antworten des Support-Teams werden mit ihrer Formatierung angezeigt: Fettdruck, Listen, Tabellen und Links.</li>
-      <li>Beim Schreiben an den Support werden auch Standort, Browser und Bildschirmgröße mitgeschickt, damit das Team das Problem so sieht, wie es im Zentrum erscheint.</li>
     </ul>
   </div>
 

@@ -627,6 +627,7 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-11-21">21 de noviembre de 2026</a></li>
     <li><a href="#2026-11-20">20 de noviembre de 2026</a></li>
     <li><a href="#2026-11-19">19 de noviembre de 2026</a></li>
     <li><a href="#2026-11-18">18 de noviembre de 2026</a></li>
@@ -680,10 +681,34 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-11-21" class="version">
+  <div class="version__cabecera">
+    <h2>21 de noviembre de 2026</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">1.18.0-0c78fcc</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"/></svg></span>Nuevas características</h3>
+    <h4>Diseño compacto</h4>
+    <ul>
+      <li>En el menú de la sesión, arriba a la derecha, se elige entre «Diseño normal» y «Diseño compacto». El compacto reduce la letra, los márgenes y la altura de campos y filas, para que en un portátil o un monitor pequeño quepa más en cada pantalla. Se guarda en ese navegador, así que cada equipo puede tener el suyo.</li>
+      <li>La primera vez que alguien entra desde una pantalla pequeña, Turnera le ofrece pasarse al compacto. Si dice que no, no se le vuelve a preguntar.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>Mejoras</h3>
+    <h4>Comentarios y no conformidades</h4>
+    <ul>
+      <li>Los comentarios y las no conformidades de las visitas del historial del cliente los puede borrar quien tenga el permiso nuevo «Borrar comentarios y no conformidades», que de fábrica tiene el administrador, los haya escrito quien los haya escrito. A los demás no les sale el botón de borrar.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-20" class="version">
   <div class="version__cabecera">
     <h2>20 de noviembre de 2026</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">1.18.0-d7fa6e5</span></p>
 
@@ -717,24 +742,6 @@ footer{
   </div>
 
   <div class="grupo grupo--mejora">
-    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"/></svg></span>Nuevas características</h3>
-    <h4>Consentimientos pendientes de firmar</h4>
-    <ul>
-      <li>Nuevo informe, junto al de consentimientos firmados: los clientes a los que les falta firmar algún consentimiento obligatorio, desde cuándo, cuántos y cuáles, y su próxima cita. Arriba, quien lleva más tiempo pendiente; a igualdad, quien tiene más. Lo ve quien ya veía el de firmados.</li>
-    </ul>
-    <h4>Consentimientos por servicio, si se quiere</h4>
-    <ul>
-      <li>En una plantilla de consentimiento se pueden elegir los servicios que la piden. Si a un cliente con cita de alguno de ellos le falta firmarla, el TPV lo avisa al cobrarle y deja pedir la firma desde ahí mismo.</li>
-      <li>Es opcional. Una plantilla sin servicios funciona exactamente como hasta ahora, y un centro que no lo use no nota ningún cambio.</li>
-    </ul>
-    <h4>Cuadro de mando</h4>
-    <ul>
-      <li>Cada usuario ajusta los números de sus fichas: en las que miran un periodo, el número va subrayado («en los últimos 90 días») y al pulsarlo se cambia. Se guarda para ese usuario, y «Volver a lo de siempre» lo deja como venía.</li>
-      <li>El gráfico de facturación se ve por meses o por años: los cinco últimos, con la previsión de cierre del año en curso.</li>
-    </ul>
-  </div>
-
-  <div class="grupo grupo--mejora">
     <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>Mejoras</h3>
     <h4>TPV</h4>
     <ul>
@@ -764,48 +771,6 @@ footer{
     <h4>Preferencias</h4>
     <ul>
       <li>Cada dirección de correo explica qué le llega. El campo «Soporte», que no se usaba, desaparece.</li>
-    </ul>
-  </div>
-
-  <div class="grupo grupo--arreglo">
-    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"/></svg></span>Nuevas características</h3>
-    <h4>Consentimientos pendientes de firmar</h4>
-    <ul>
-      <li>Nuevo informe, junto al de consentimientos firmados: los clientes a los que les falta firmar algún consentimiento obligatorio, desde cuándo, cuántos y cuáles, y su próxima cita. Arriba, quien lleva más tiempo pendiente; a igualdad, quien tiene más. Lo ve quien ya veía el de firmados.</li>
-    </ul>
-    <h4>Consentimientos por servicio, si se quiere</h4>
-    <ul>
-      <li>En una plantilla de consentimiento se pueden elegir los servicios que la piden. Si a un cliente con cita de alguno de ellos le falta firmarla, el TPV lo avisa al cobrarle y deja pedir la firma desde ahí mismo.</li>
-      <li>Es opcional. Una plantilla sin servicios funciona exactamente como hasta ahora, y un centro que no lo use no nota ningún cambio.</li>
-    </ul>
-    <h4>Cuadro de mando</h4>
-    <ul>
-      <li>Cada usuario ajusta los números de sus fichas: en las que miran un periodo, el número va subrayado («en los últimos 90 días») y al pulsarlo se cambia. Se guarda para ese usuario, y «Volver a lo de siempre» lo deja como venía.</li>
-      <li>El gráfico de facturación se ve por meses o por años: los cinco últimos, con la previsión de cierre del año en curso.</li>
-    </ul>
-  </div>
-
-  <div class="grupo grupo--mejora">
-    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>Mejoras</h3>
-    <h4>Bonos</h4>
-    <ul>
-      <li>Se puede traspasar solo una parte de las sesiones de un bono. Las que se pasan van a un bono nuevo de quien las recibe, con el mismo grupo, la misma compra y la misma caducidad; el original se queda con el resto.</li>
-      <li>En los bonos del cliente, los agotados y los caducados salen ocultos de partida. Cada usuario se encuentra las casillas como las dejó en ese navegador.</li>
-    </ul>
-    <h4>Agenda</h4>
-    <ul>
-      <li>Con «Cobrar solo lo atendido» encendido, como viene de fábrica, una cita no se marca como atendida antes de su hora de inicio (ni, en una clase, que un asistente vino). Así no se cobra por error una cita de otro día. Pasada la hora de inicio, sí, aunque la cita no haya terminado. Si el centro apaga ese ajuste, todo sigue como antes.</li>
-    </ul>
-    <h4>Catálogo y TPV</h4>
-    <ul>
-      <li>Al elegir los grupos de tarifa de un servicio, los ya marcados salen arriba y la lista tiene su propio desplazamiento. Igual al elegir los servicios de un consentimiento.</li>
-      <li>Los bonos a la venta tienen permisos propios, separados de los de servicios. Quien ya podía ver o cambiar los servicios conserva lo mismo con los bonos.</li>
-      <li>Para cobrar en el TPV basta con el permiso de cobrar: los servicios, productos y paquetes salen aunque el usuario no pueda entrar en el catálogo.</li>
-    </ul>
-    <h4>Soporte</h4>
-    <ul>
-      <li>Las respuestas del equipo de soporte se ven con su formato: negritas, listas, tablas y enlaces.</li>
-      <li>Al escribir a soporte se envían también la sede, el navegador y el tamaño de pantalla, para que el equipo vea el problema tal como sale en el centro.</li>
     </ul>
   </div>
 

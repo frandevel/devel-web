@@ -1467,5 +1467,12 @@
   "tf3f572c2": "Cada endereço de email explica o que lhe chega. O campo «Suporte», que não se usava, desaparece.",
   "t9a77964c": "No TPV, escolher Cartão ou Numerário retirava os pacotes de sessões da conta. Agora mantêm-se e só se paga com a forma escolhida o que eles não cobrem.",
   "t97f4bc40": "Ao passar a outra marcação ou a outro cliente, o TPV ficava com a forma de pagamento do talão anterior. Agora começa sem nenhuma escolhida.",
-  "t9e360bd4": "Abrir na agenda uma aula com vários alunos podia deixar o ecrã em branco."
+  "t9e360bd4": "Abrir na agenda uma aula com vários alunos podia deixar o ecrã em branco.",
+  "t5b3382ce": "21 de novembro de 2026",
+  "t76f0cdfd": "1.18.0-0c78fcc",
+  "taa3efbd9": "Disposição compacta",
+  "t1a40330c": "No menu da sessão, em cima à direita, escolhe-se entre «Disposição normal» e «Disposição compacta». A compacta reduz a letra, as margens e a altura de campos e linhas, para que num portátil ou num monitor pequeno caiba mais em cada ecrã. Fica guardada nesse navegador, por isso cada computador pode ter a sua.",
+  "t1becc1ac": "Na primeira vez que alguém entra a partir de um ecrã pequeno, o Turnera propõe mudar para a compacta. Se disser que não, não volta a ser perguntado.",
+  "t512fda9c": "Comentários e não conformidades",
+  "tb7dc64a6": "Os comentários e as não conformidades das visitas do histórico do cliente pode apagá-los quem tiver a nova permissão «Apagar comentários e não conformidades», que de fábrica tem o administrador, seja quem for que os escreveu. Aos restantes não aparece o botão de apagar."
 }

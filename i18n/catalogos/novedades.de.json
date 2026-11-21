@@ -1467,5 +1467,12 @@
   "tf3f572c2": "Jede E-Mail-Adresse erklärt, was an sie geht. Das Feld «Support», das nicht benutzt wurde, entfällt.",
   "t9a77964c": "An der Kasse entfernte die Wahl von Karte oder Bargeld die Wertkarten von der Rechnung. Jetzt bleiben sie, und nur, was sie nicht decken, wird mit der gewählten Zahlungsart bezahlt.",
   "t97f4bc40": "Beim Wechsel zu einem anderen Termin oder Kunden behielt die Kasse die Zahlungsart des vorigen Bons. Jetzt beginnt sie ohne gewählte Zahlungsart.",
-  "t9e360bd4": "Das Öffnen eines Kurses mit mehreren Teilnehmern im Terminkalender konnte den Bildschirm leer lassen."
+  "t9e360bd4": "Das Öffnen eines Kurses mit mehreren Teilnehmern im Terminkalender konnte den Bildschirm leer lassen.",
+  "t5b3382ce": "21. November 2026",
+  "t76f0cdfd": "1.18.0-0c78fcc",
+  "taa3efbd9": "Kompaktes Layout",
+  "t1a40330c": "Im Sitzungsmenü oben rechts wählt man zwischen «Normales Layout» und «Kompaktes Layout». Das kompakte verkleinert Schrift, Ränder und die Höhe von Feldern und Zeilen, damit auf einem Laptop oder kleinen Bildschirm mehr auf jede Seite passt. Die Wahl wird in diesem Browser gespeichert, jeder Rechner kann also seine eigene haben.",
+  "t1becc1ac": "Wenn sich jemand zum ersten Mal an einem kleinen Bildschirm anmeldet, bietet Turnera das kompakte Layout an. Sagt die Person nein, wird nicht wieder gefragt.",
+  "t512fda9c": "Kommentare und Abweichungen",
+  "tb7dc64a6": "Kommentare und Abweichungen zu den Besuchen im Verlauf des Kunden kann löschen, wer die neue Berechtigung «Kommentare und Abweichungen löschen» hat – ab Werk der Administrator –, egal wer sie geschrieben hat. Alle anderen sehen den Löschknopf nicht."
 }

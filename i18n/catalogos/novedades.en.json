@@ -1467,5 +1467,12 @@
   "tf3f572c2": "Each email address explains what reaches it. The «Support» field, which was not used, is gone.",
   "t9a77964c": "At the till, choosing Card or Cash removed the vouchers from the bill. Now they stay, and only what they do not cover is paid with the chosen method.",
   "t97f4bc40": "When moving on to another appointment or customer, the till kept the payment method of the previous ticket. Now it starts with none chosen.",
-  "t9e360bd4": "Opening a class with several students in the diary could leave the screen blank."
+  "t9e360bd4": "Opening a class with several students in the diary could leave the screen blank.",
+  "t5b3382ce": "21 November 2026",
+  "t76f0cdfd": "1.18.0-0c78fcc",
+  "taa3efbd9": "Compact layout",
+  "t1a40330c": "In the session menu, top right, you choose between «Normal layout» and «Compact layout». The compact one shrinks the text, the margins and the height of fields and rows, so that more fits on each screen of a laptop or a small monitor. It is saved in that browser, so each computer can have its own.",
+  "t1becc1ac": "The first time someone signs in from a small screen, Turnera offers to switch to the compact one. If they say no, they are not asked again.",
+  "t512fda9c": "Comments and non-conformities",
+  "tb7dc64a6": "Comments and non-conformities on the visits in the customer's history can be deleted by whoever has the new permission «Delete comments and non-conformities», which the administrator has out of the box, no matter who wrote them. Everyone else does not see the delete button."
 }
