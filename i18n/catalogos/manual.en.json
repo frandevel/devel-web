@@ -4923,5 +4923,12 @@
   "t817cb9a5": "Your file",
   "t479cc05e": "Each part of Labour is switched on or off separately:",
   "t6dd27aa6": "and each notice topic (data protection, digital disconnection, harassment protocol, occupational risks, equality plan, internal rules and notices). It needs the «Set up Labour» permission, which comes out of the box with Management.",
-  "t10f8f19c": "File"
+  "t10f8f19c": "File",
+  "taa3efbd9": "Compact layout",
+  "t42b53df7": "In the session menu, top right, you choose between",
+  "td7354985": ". The compact one shrinks the text, the margins and the height of fields and rows so that on a laptop or a small monitor more fits on each screen without scrolling. The choice is saved in that browser, so each computer can have its own.",
+  "tf7f95bae": "Normal layout",
+  "tb93e5347": "Compact layout",
+  "tf9a7e4ca": "The first time someone signs in from a small screen, Turnera offers to switch to the compact one. If they say no, they are not asked again; they can change it whenever they like from the menu.",
+  "t9eda112c": "so that nobody overlooks it. Hovering over it shows the text, with who wrote it and when; clicking it shows them all and lets you add another. Only whoever has the permission «Delete comments and non-conformities», which the administrator has out of the box, can delete them; everyone else does not see the delete button."
 }
