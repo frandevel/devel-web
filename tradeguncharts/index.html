@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>TradegunCharts · Footprint, opciones y ejecución para futuros</title>
-<meta name="description" content="Plataforma para Windows, macOS y Linux de operativa profesional en derivados: gráficos footprint, operativa en el gráfico, indicadores de flujo de órdenes, cadena de opciones y avisos al móvil. Con Interactive Brokers (Rithmic, próximamente). Plan Essential gratis; Pro y Desk desde 19 € al mes, con 14 días de prueba.">
+<meta name="description" content="Plataforma para Windows, macOS y Linux de operativa profesional en derivados: gráficos footprint, operativa en el gráfico, indicadores de flujo de órdenes, cadena de opciones y avisos al móvil. Con Interactive Brokers y Rithmic. Plan Essential gratis; Pro y Desk desde 19 € al mes, con 14 días de prueba.">
 <link rel="canonical" href="https://devel.es/tradeguncharts">
 <link rel="alternate" hreflang="es" href="https://devel.es/tradeguncharts">
 <link rel="alternate" hreflang="en" href="https://devel.es/en/tradeguncharts">
@@ -473,7 +473,7 @@ footer{
       "@id": "https://devel.es/tradeguncharts#pagina",
       "url": "https://devel.es/tradeguncharts",
       "name": "TradegunCharts · Footprint, opciones y ejecución para futuros",
-      "description": "Plataforma para Windows, macOS y Linux de operativa profesional en derivados: gráficos footprint, operativa en el gráfico, indicadores de flujo de órdenes, cadena de opciones y avisos al móvil. Con Interactive Brokers (Rithmic, próximamente). Plan Essential gratis; Pro y Desk desde 19 € al mes, con 14 días de prueba.",
+      "description": "Plataforma para Windows, macOS y Linux de operativa profesional en derivados: gráficos footprint, operativa en el gráfico, indicadores de flujo de órdenes, cadena de opciones y avisos al móvil. Con Interactive Brokers y Rithmic. Plan Essential gratis; Pro y Desk desde 19 € al mes, con 14 días de prueba.",
       "inLanguage": "es",
       "isPartOf": {
         "@id": "https://devel.es/#web"
@@ -487,7 +487,7 @@ footer{
           "name": "¿Con qué brókers funciona?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Con Interactive Brokers, a través de tu propio TWS o IB Gateway. La conexión con Rithmic, que usan muchas cuentas de fondeo, todavía no está disponible: está en proceso de certificación. También tiene una cuenta simulada para practicar con datos reales."
+            "text": "Con Interactive Brokers, a través de tu propio TWS o IB Gateway, y con Rithmic, que usan muchas cuentas de fondeo como Apex o Bulenox. También tiene una cuenta simulada para practicar con datos reales."
           }
         },
         {
@@ -605,7 +605,7 @@ footer{
           <li>macOS · Intel y Apple Silicon</li>
 <li>Linux · Ubuntu y derivadas</li>
           <li>Interactive Brokers</li>
-          <li>Rithmic · próximamente</li>
+          <li>Rithmic</li>
           <li>Actualizaciones automáticas</li>
         </ul>
       </div>
@@ -845,8 +845,7 @@ footer{
           <p class="plan__nota solo-anual">180 € al año, en un solo pago</p>
           <ul class="specs">
             <li>Todo lo del plan Essential</li>
-            <li>Operativa en el gráfico y panel de órdenes con Interactive Brokers</li>
-            <li>Rithmic: en certificación, todavía no disponible</li>
+            <li>Operativa en el gráfico y panel de órdenes con Interactive Brokers y Rithmic</li>
             <li>Diario de operaciones</li>
             <li>Lista de seguimiento con cotizaciones</li>
             <li>Avisos al móvil</li>
@@ -874,7 +873,7 @@ footer{
         <li>Precios sin IVA.</li>
         <li>Cada licencia se activa en un equipo. Para pasarla a otro, la liberas desde Ayuda → Licencia.</li>
         <li>Los datos de mercado los contratas con tu bróker: TradegunCharts no los revende.</li>
-        <li>Hoy la conexión es con Interactive Brokers. Rithmic está en certificación y aún no se puede usar; llegará a los planes Pro y Desk sin coste adicional.</li>
+        <li>La conexión con Rithmic está incluida en los planes Pro y Desk. Rithmic no admite cuentas demo: hace falta una suscripción de datos de pago.</li>
       </ul>
       <div class="actions"><a class="btn btn--solid" href="#contacto">Empezar la prueba de 14 días</a></div>
     </div>
@@ -892,7 +891,7 @@ footer{
             <h3>Brókers y datos</h3>
             <details class="faq__item">
               <summary>¿Con qué brókers funciona?</summary>
-              <div class="faq__respuesta"><p>Con Interactive Brokers, a través de tu propio TWS o IB Gateway. La conexión con Rithmic, que usan muchas cuentas de fondeo, todavía no está disponible: está en proceso de certificación. También tiene una cuenta simulada para practicar con datos reales.</p></div>
+              <div class="faq__respuesta"><p>Con Interactive Brokers, a través de tu propio TWS o IB Gateway, y con Rithmic, que usan muchas cuentas de fondeo como Apex o Bulenox. También tiene una cuenta simulada para practicar con datos reales.</p></div>
             </details>
             <details class="faq__item">
               <summary>¿Tengo que pagar los datos de mercado aparte?</summary>
@@ -937,12 +936,12 @@ footer{
     <div class="shell">
       <div class="section__head">
         <p class="eyebrow">Conexión con Rithmic</p>
-        <h2>Tus cuentas de Rithmic, en certificación.</h2>
+        <h2>Tus cuentas de Rithmic, conectadas.</h2>
       </div>
       <div class="rithmic">
         <div>
           <p>TradegunCharts se conecta a Rithmic con R | Protocol API: datos de mercado con profundidad orden a orden, órdenes manuales y automáticas, posiciones y P&L de cada cuenta, e historial de ejecuciones para el diario. Sirve para las cuentas de cualquier FCM, IB o empresa de fondeo que opere con Rithmic, y puedes conectar varias a la vez.</p>
-          <p>La conexión está en proceso de certificación con Rithmic y se activará en cuanto la apruebe.</p>
+          <p>Necesitas una suscripción de datos de pago: Rithmic no admite cuentas demo por esta vía. Si tu empresa de fondeo o tu broker no tiene habilitado TradegunCharts, pídeles que lo activen.</p>
         </div>
         <div class="rithmic__marcas">
           <div class="rithmic__logos">

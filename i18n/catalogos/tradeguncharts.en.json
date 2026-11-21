@@ -232,5 +232,12 @@
   "t3a44cd70": "The OMNE™ software is Copyright © 2026 by Omnesys, LLC and Omnesys Technologies, Inc. All rights reserved.",
   "t7243422f": "Powered by OMNE™ is a trademark of Omnesys, LLC and Omnesys Technologies, Inc. All rights reserved.",
   "t1d41a532": "Trading Platform by Rithmic",
-  "tf66ea5cb": "Powered by OMNE"
+  "tf66ea5cb": "Powered by OMNE",
+  "tb3e99287": "Rithmic",
+  "tc95561ed": "Trading from the chart and order panel with Interactive Brokers and Rithmic",
+  "t604232a5": "The Rithmic connection is included in the Pro and Desk plans. Rithmic doesn\u0027t accept demo accounts: you need a paid market data subscription.",
+  "t7f84d76e": "With Interactive Brokers, through your own TWS or IB Gateway, and with Rithmic, used by many prop firms such as Apex or Bulenox. There is also a simulated account to practise with real data.",
+  "t31fb6905": "Your Rithmic accounts, connected.",
+  "ta40a9a73": "You need a paid market data subscription: Rithmic doesn\u0027t accept demo accounts through this connection. If your prop firm or broker hasn\u0027t enabled TradegunCharts, ask them to turn it on.",
+  "t0a718dbd": "Windows, macOS and Linux platform for professional derivatives trading: footprint charts, trading from the chart, order-flow indicators, option chain and phone alerts. With Interactive Brokers and Rithmic. Essential plan free; Pro and Desk from €19 a month, with a 14-day trial."
 }
