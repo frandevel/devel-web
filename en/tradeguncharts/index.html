@@ -432,6 +432,22 @@ footer{
 .comando__copiar.copiado .comando__ok{display:inline;color:var(--accent-lift)}
 #descargar:not(.linux) .solo-linux,#descargar:not(.macos) .solo-macos,#descargar.linux .solo-windows,#descargar.macos .solo-windows{display:none}
 .plan--destacado .specs li::before{background:var(--accent)}
+.comparativa{margin-top:3rem}
+.comparativa h3{font-size:1.3rem;color:var(--brand)}
+.comparativa>p{color:var(--text-dim);margin:.4rem 0 0}
+.comparativa__marco{margin-top:1.2rem;overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.comparativa table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:560px}
+.comparativa th,.comparativa td{padding:.7rem 1rem;border-bottom:1px solid var(--line);text-align:center;vertical-align:middle}
+.comparativa tbody th{text-align:left;font-weight:400;color:var(--text)}
+.comparativa thead th{font-family:var(--display);font-size:1.05rem;color:var(--brand);text-align:center;vertical-align:bottom}
+.comparativa thead th:first-child{text-align:left;color:var(--text-dim);font-family:var(--body);font-size:.85rem;font-weight:500}
+.comparativa thead th span{display:block;font-family:var(--body);font-size:.75rem;font-weight:400;color:var(--steel);margin-top:.2rem}
+.comparativa thead th:not(:first-child),.comparativa td{width:15%}
+.comparativa__pro,.comparativa td:nth-child(3){background:color-mix(in srgb,var(--accent) 7%,transparent)}
+.comparativa__grupo th{background:var(--surface-sunk);font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);font-weight:500;padding:.55rem 1rem}
+.comparativa tbody tr:last-child th,.comparativa tbody tr:last-child td{border-bottom:0}
+.comparativa .si{color:var(--accent);font-weight:700;font-size:1.05rem}
+.comparativa .no{color:var(--mist)}
 .precios__pie{list-style:none;padding:0;margin:2rem 0 0;display:flex;flex-direction:column;gap:.35rem;font-size:.9rem;color:var(--text-dim)}
 #precios .actions{margin-top:1.8rem}
 .cambios{list-style:none;padding:0;margin:2.4rem 0 0;display:flex;flex-direction:column;max-width:52rem}
@@ -851,6 +867,7 @@ footer{
             <li>Phone notifications</li>
             <li>Option chain and greeks</li>
             <li>Macroeconomic calendar</li>
+            <li>US Treasury yield curve</li>
             <li>Strategies and automatic hedging</li>
             <li>Order copy groups across accounts</li>
           </ul>
@@ -868,6 +885,43 @@ footer{
             <li>Automation and strategy engine, when they arrive</li>
           </ul>
         </article>
+      </div>
+      <div class="comparativa">
+        <h3>Compare the plans</h3>
+        <p>Each plan includes everything in the one before it, plus its own features.</p>
+        <div class="comparativa__marco">
+          <table>
+            <thead>
+              <tr><th scope="col">Feature</th><th scope="col">Essential<span>Free</span></th><th scope="col" class="comparativa__pro">Pro<span>Everything in Essential, plus…</span></th><th scope="col">Desk<span>Everything in Pro, plus…</span></th></tr>
+            </thead>
+            <tbody>
+            <tr class="comparativa__grupo"><th scope="rowgroup" colspan="4">Analysis</th></tr>
+            <tr><th scope="row">Footprint, candlestick, line and Heikin Ashi charts</th><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr><th scope="row">Custom timeframes and lower-timeframe window</th><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr><th scope="row">Standard indicators: EMA, SMA, VWAP, Bollinger, RSI, MACD, stochastic, FVG, Big Trades, stacked imbalance, Elliott waves, ADR</th><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr><th scope="row">Drawings, volume profile and sound alarms</th><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr><th scope="row">Unlimited windows</th><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr><th scope="row">Range detector</th><td><span class="no" aria-label="Not included">—</span></td><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr><th scope="row">Watchlist with quotes and market monitor</th><td><span class="no" aria-label="Not included">—</span></td><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr><th scope="row">Macroeconomic calendar</th><td><span class="no" aria-label="Not included">—</span></td><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr><th scope="row">US Treasury yield curve</th><td><span class="no" aria-label="Not included">—</span></td><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr class="comparativa__grupo"><th scope="rowgroup" colspan="4">Trading</th></tr>
+            <tr><th scope="row">Trading from the chart and order panel with Interactive Brokers and Rithmic</th><td><span class="no" aria-label="Not included">—</span></td><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr><th scope="row">ATR trailing stop</th><td><span class="no" aria-label="Not included">—</span></td><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr><th scope="row">Strategies and automatic hedging</th><td><span class="no" aria-label="Not included">—</span></td><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr><th scope="row">Order copy groups across accounts</th><td><span class="no" aria-label="Not included">—</span></td><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr><th scope="row">Trading journal</th><td><span class="no" aria-label="Not included">—</span></td><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr><th scope="row">Phone notifications</th><td><span class="no" aria-label="Not included">—</span></td><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr class="comparativa__grupo"><th scope="rowgroup" colspan="4">Options and gamma</th></tr>
+            <tr><th scope="row">Option chain and greeks</th><td><span class="no" aria-label="Not included">—</span></td><td><span class="si" aria-label="Included">✓</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr><th scope="row">Gamma levels and regime</th><td><span class="no" aria-label="Not included">—</span></td><td><span class="no" aria-label="Not included">—</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr><th scope="row">Options desk with action zones</th><td><span class="no" aria-label="Not included">—</span></td><td><span class="no" aria-label="Not included">—</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr class="comparativa__grupo"><th scope="rowgroup" colspan="4">Proprietary indicators</th></tr>
+            <tr><th scope="row">CRT, SMC, order blocks, BOS, Valhalla, absorptions, delta divergences and Key Candle</th><td><span class="no" aria-label="Not included">—</span></td><td><span class="no" aria-label="Not included">—</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            <tr><th scope="row">Automation and strategy engine, when they arrive</th><td><span class="no" aria-label="Not included">—</span></td><td><span class="no" aria-label="Not included">—</span></td><td><span class="si" aria-label="Included">✓</span></td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
       <ul class="precios__pie">
         <li>Prices exclude VAT.</li>
