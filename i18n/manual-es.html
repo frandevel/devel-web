@@ -861,6 +861,15 @@ footer{
     se configura de vez en cuando (catálogo y stock), lo del equipo en <strong>Personal</strong> (profesionales,
     calendario laboral y control de presencia) y lo que sólo se consulta (informes y ajustes).
   </p>
+  <p id="menu-favoritos">
+    <strong>Favoritos.</strong> Cada usuario puede poner arriba del todo las pantallas que más usa. Al abrir una
+    pantalla del menú, junto a su título hay una <strong>estrella</strong>: se pulsa y la pantalla pasa al apartado
+    <strong>Favoritos</strong>, el primero del menú; la estrella queda rellena, y pulsándola otra vez se quita. Los
+    favoritos se <strong>ordenan arrastrando</strong> uno encima de otro con el ratón; en una tableta o un móvil, con las flechas de subir y
+    bajar que salen junto a cada uno. Son de cada usuario y le
+    siguen a cualquier ordenador; la pantalla sigue además en su sitio de siempre, y los favoritos no dan acceso a
+    nada que los permisos no den.
+  </p>
   <p>
     En el ordenador el menú se queda fijo a la izquierda aunque se baje por la página, y el botón de abajo lo
     pliega para dejar sólo los iconos. En el móvil y en una tableta en vertical está escondido: se abre con el
@@ -1654,6 +1663,13 @@ footer{
     <tr><td><strong>Visto verde</strong></td><td>La cita está confirmada.</td></tr>
     <tr><td><strong>Icono de euro</strong></td><td>Esa cita ya ha pasado por caja.</td></tr>
     <tr>
+      <td><strong>«+2»</strong> en una cita corta (menos de 30 minutos)</td>
+      <td>En una cita corta no caben todas las marcas: en su única línea van la hora (más pequeña), el nombre, la
+        confirmación, el cobro y <strong>solo la marca más importante</strong> (deuda, primera visita, bono o saldo, por
+        ese orden); «+2» dice cuántas más tiene. Al pulsar la cita salen todas, con el número de cliente y el
+        historial de cambios.</td>
+    </tr>
+    <tr>
       <td><strong>Borde discontinuo</strong> y una etiqueta oscura junto a la hora: <em>WEB</em> o el nombre de un
         programa</td>
       <td><strong>La cita no se puso en el centro.</strong> <em>WEB</em>: la reservó el cliente en el
@@ -1810,7 +1826,7 @@ footer{
 
   <p>
     <strong>El número de cliente sale en todas partes</strong>: en la lista, en la ficha, en la tarjeta de la
-    agenda, en el buscador de la cita y del cobro, en los cobros pendientes y en los informes. El de los clientes
+    agenda (en las citas cortas, al pulsarla), en el buscador de la cita y del cobro, en los cobros pendientes y en los informes. El de los clientes
     que vinieron de otra plataforma es el que tenían allí, y a los nuevos se les da el siguiente al darlos de alta. Y
     <strong>el nombre de un cliente en cualquier listado es un enlace a su ficha</strong>, igual que en el
     inicio; en la cita y en el cobro, el botón de la tarjeta que hay junto al cliente lleva también a ella.
@@ -5739,6 +5755,13 @@ footer{
     que hace falta un correo en la ficha.
   </p>
   <p>
+    <strong>No todo el personal sale en la agenda.</strong> A quien no atiende con cita (en una residencia, por
+    ejemplo, gerocultores, limpieza o cocina) se le quita en su ficha la marca de <em>Sale en la agenda</em>. Sigue en
+    activo: ficha, sale en el cuadrante y se le puede elegir en el TPV o en la historia clínica, pero no tiene columna
+    en <em>Día por profesional</em> ni en <em>Semana por profesional</em>, y la reserva online no le da citas. Si ya
+    tenía alguna, su columna sigue saliendo los días que la tenga, para que ninguna cita se pierda de vista.
+  </p>
+  <p>
     La ficha admite la <strong>fecha de alta</strong>: el día en que entró a trabajar en el centro. No es obligatoria,
     y con ella la ficha muestra su <strong>antigüedad</strong> (por ejemplo, «3 años y 2 meses»).
   </p>
@@ -5784,6 +5807,13 @@ footer{
       Inspección de Trabajo. No llevarlo es sanción.</p>
   </div>
 
+  <p id="fichar-numero">
+    <strong>Número para fichar.</strong> En un centro con mucha plantilla nadie quiere buscarse en una lista larga.
+    En la ficha de cada profesional se le puede poner un <em>Número para fichar</em> (corto, sin repetir en la
+    delegación). Cuando hay más de ocho profesionales, el reloj enseña arriba un buscador: se teclea ese número y
+    queda solo su tarjeta; también busca por nombre. El número no sustituye al PIN, que se sigue pidiendo: solo
+    ahorra buscar. En <em>Personal → Profesionales</em> también se busca por él.
+  </p>
   <p>
     En <em>Fichar</em>, en el menú, están todos los profesionales del centro, cada uno con su botón
     <em>Fichar</em>. La lista <strong>solo enseña nombres</strong>: quién está dentro y desde cuándo es parte del
@@ -6322,7 +6352,7 @@ footer{
       un turno partido, con <em>Añadir tramo (turno partido)</em> o con <em>Empezar como partido</em>, que lo deja en
       09:00-14:00 y 16:00-20:00 para ajustarlo. La pausa es el hueco entre un tramo y el siguiente, y no cuenta como
       trabajada.</li>
-    <li><strong>Ausencias</strong>: baja, permiso retribuido, permiso sin sueldo… Cada una dice si ese día cuenta
+    <li><strong>Tipos de ausencia</strong>: baja, permiso retribuido, permiso sin sueldo… Cada una dice si ese día cuenta
       como trabajado para las horas del convenio. De una baja se apunta que es una baja, nunca el diagnóstico.</li>
     <li><strong>Festivos</strong>: en <em>Ajustes</em> se elige la comunidad autónoma del centro, y en
       <em>Festivos</em> el botón trae los nacionales y los de esa comunidad para el año.</li>
@@ -6357,8 +6387,16 @@ footer{
     quitar— y se pincha un día, o se arrastra de un día a otro para marcar todos los de en medio. Cada día tiene
     una sola cosa: si es de turno no puede ser a la vez vacaciones. <strong>Antes del alta y después de la baja no
     se planifica</strong>: esos días no cuentan para las horas, así que la pantalla se los salta y avisa de cuántos.
+    Al elegir qué poner, los días que ya lo tienen <strong>se resaltan</strong> y los demás se atenúan, y junto al
+    botón sale cuántos son: así se ve de un vistazo dónde cae cada turno. En el listado de calendarios y en el
+    cuadrante se busca por nombre, apellidos o por el código de nómina de cada profesional. El cuadrante se filtra
+    además por puesto y por ubicación, y de cada uno se puede elegir más de uno a la vez.
     <em>Rellenar por días de la semana</em> lo pone de una vez en, por ejemplo, los lunes a viernes de enero a
-    junio, saltándose los festivos y sin tocar lo ya puesto. A la derecha, <strong>las cuentas se rehacen con
+    junio, saltándose los festivos y sin tocar lo ya puesto. Con <em>Se repite cada</em> 2, 3 o 4 semanas, cada
+    semana del ciclo lleva sus propios días: es lo de los <strong>equipos que se turnan</strong>, por ejemplo una
+    semana martes, jueves y viernes y la siguiente lunes, miércoles, sábado y domingo. Al equipo 1 se le pone el
+    ciclo empezando por la semana 1 y al equipo 2 el mismo ciclo empezando por la 2, y así uno cubre lo que el otro
+    no; después se copia a los demás de cada equipo con <em>Copiar a otros</em>. A la derecha, <strong>las cuentas se rehacen con
     cada cambio</strong>: horas del convenio, planificadas, las que quedan por repartir (o las que sobran), las
     vacaciones puestas frente a las que le corresponden y cuántas le quedan, y hasta ayer, lo planificado frente a lo fichado.
   </p>
@@ -6805,6 +6843,10 @@ footer{
     anticipos y el IRPF de cada uno) y de fábrica traen Dirección y RRHH.
   </p>
   <ul>
+    <li><strong>Buscar y ordenar.</strong> Arriba se busca a una persona por su nombre, su puesto o su
+      <em>Código en nómina o ERP</em> (el número con el que la conoce la asesoría, que se pone en su ficha), y la lista
+      se ordena por nombre, por puesto o por ese código. Bajo el nombre de cada persona salen su puesto y su código.
+      En <em>Personal → Profesionales</em> se busca y se ordena por lo mismo.</li>
     <li><strong>Lo que sale solo.</strong> De cada persona, las horas trabajadas y los días, las extra, las nocturnas,
       las de domingo y festivo, las vacaciones, cada tipo de ausencia con sus días, los días con turno sin fichar y las
       incidencias de los fichajes. Es lo mismo que va en el resumen de horas del envío a la asesoría.</li>

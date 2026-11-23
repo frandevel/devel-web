@@ -896,6 +896,10 @@ footer{
     se configura de vez em quando (catálogo e stock), o que é da equipa em <strong>Pessoal</strong> (profissionais,
     calendário laboral e controlo de assiduidade) e o que apenas se consulta (relatórios e definições).
   </p>
+  <p id="menu-favoritos">
+    <strong>Favoritos.</strong> Cada utilizador pode pôr no topo os ecrãs que mais usa. Ao abrir um ecrã do menu, junto ao seu título há uma <strong>estrela</strong>: carrega-se nela e o ecrã passa para a secção
+    <strong>Favoritos</strong>, a primeira do menu; a estrela fica preenchida e, carregando outra vez, retira-se. Os favoritos <strong>ordenam-se arrastando</strong> um por cima do outro com o rato; num tablet ou num telemóvel, com as setas de subir e descer que aparecem junto a cada um. São de cada utilizador e acompanham-no em qualquer computador; o ecrã continua além disso no seu sítio de sempre, e os favoritos não dão acesso a nada que as permissões não deem.
+  </p>
   <p>
     No computador o menu fica fixo à esquerda mesmo quando se percorre a página, e o botão de baixo recolhe-o para deixar só os ícones. No telemóvel e num tablet na vertical está escondido: abre-se com o botão <strong>☰</strong> no canto superior esquerdo e fecha-se ao escolher uma entrada, ao tocar fora dele ou com a tecla <kbd>Esc</kbd>.
   </p>
@@ -1500,6 +1504,10 @@ footer{
     <tr><td><strong>Visto verde</strong></td><td>A marcação está confirmada.</td></tr>
     <tr><td><strong>Ícone de euro</strong></td><td>Essa marcação já passou pela caixa.</td></tr>
     <tr>
+      <td><strong>«+2»</strong> numa marcação curta (menos de 30 minutos)</td>
+      <td>Numa marcação curta não cabem todas as marcas: na sua única linha vão a hora (mais pequena), o nome, a confirmação, a cobrança e <strong>só a marca mais importante</strong> (dívida, primeira visita, pacote ou saldo, por essa ordem); «+2» diz quantas mais tem. Ao carregar na marcação aparecem todas, com o número de cliente e o histórico de alterações.</td>
+    </tr>
+    <tr>
       <td><strong>Contorno tracejado</strong> e uma etiqueta escura junto à hora: <em>WEB</em> ou o nome de
         um programa</td>
       <td><strong>A marcação não foi feita no centro.</strong> <em>WEB</em>: foi reservada pelo cliente no
@@ -1623,9 +1631,7 @@ footer{
   </p>
 
   <p>
-    <strong>O número de cliente aparece em todo o lado</strong>: na lista, na ficha, no cartão da
-    agenda, na pesquisa da marcação e da cobrança, nos valores em dívida e nos relatórios. O dos clientes
-    que vieram de outra plataforma é o que tinham lá, e aos novos atribui-se o seguinte ao registá-los. E
+    <strong>O número de cliente aparece em todo o lado</strong>: na lista, na ficha, no cartão da agenda (nas marcações curtas, ao carregar nele), na pesquisa da marcação e da cobrança, nas cobranças pendentes e nos relatórios. O dos clientes que vieram de outra plataforma é o que tinham lá, e aos novos é dado o seguinte ao criá-los. E
     <strong>o nome de um cliente em qualquer listagem é uma ligação para a sua ficha</strong>, tal como
     no início; na marcação e na cobrança, o botão do cartão junto ao cliente também leva à ficha.
   </p>
@@ -5148,6 +5154,9 @@ footer{
     que é preciso um e-mail na ficha.
   </p>
   <p>
+    <strong>Nem todo o pessoal aparece na agenda.</strong> A quem não atende por marcação (num lar, por exemplo, auxiliares, limpeza ou cozinha) retira-se na sua ficha a marca de <em>Aparece na agenda</em>. Continua ativo: pica o ponto, aparece na escala e pode ser escolhido no TPV ou na história clínica, mas não tem coluna em <em>Dia por profissional</em> nem em <em>Semana por profissional</em>, e a reserva online não lhe dá marcações. Se já tinha alguma, a sua coluna continua a aparecer nos dias em que a tenha, para que nenhuma marcação se perca de vista.
+  </p>
+  <p>
     A ficha admite a <strong>data de entrada</strong>: o dia em que a pessoa começou a trabalhar no centro. Não é obrigatória, e com ela a ficha mostra a sua <strong>antiguidade</strong> (por exemplo, «3 anos e 2 meses»).
   </p>
   <p>
@@ -5179,6 +5188,9 @@ footer{
       Não o manter é passível de sanção.</p>
   </div>
 
+  <p id="fichar-numero">
+    <strong>Número para picar o ponto.</strong> Num centro com muito pessoal ninguém quer procurar-se numa lista comprida. Na ficha de cada profissional pode pôr-se um <em>Número para picar o ponto</em> (curto, sem repetir na unidade). Quando há mais de oito profissionais, o relógio mostra em cima uma pesquisa: escreve-se esse número e fica só o seu cartão; também pesquisa por nome. O número não substitui o PIN, que continua a pedir-se: só poupa procurar. Em <em>Pessoal → Profissionais</em> também se pesquisa por ele.
+  </p>
   <p>
     Em <em>Picar o ponto</em>, no menu, estão todos os profissionais do centro, cada um com o seu botão
     <em>Picar o ponto</em>. A lista <strong>só mostra nomes</strong>: quem está dentro e desde quando faz parte do
@@ -5618,7 +5630,7 @@ footer{
       um turno dividido, com <em>Adicionar troço (turno dividido)</em> ou com <em>Começar como dividido</em>, que o deixa em
       09:00-14:00 e 16:00-20:00 para o ajustar. A pausa é o intervalo entre um troço e o seguinte, e não conta como
       trabalhada.</li>
-    <li><strong>Ausências</strong>: baixa, licença remunerada, licença sem vencimento… Cada uma diz se esse dia conta
+    <li><strong>Tipos de ausência</strong>: baixa, licença remunerada, licença sem vencimento… Cada uma diz se esse dia conta
       como trabalhado para as horas da convenção. De uma baixa anota-se que é uma baixa, nunca o diagnóstico.</li>
     <li><strong>Feriados</strong>: em <em>Definições</em> escolhe-se a comunidade autónoma do centro, e em
       <em>Feriados</em> o botão traz os nacionais e os dessa comunidade para o ano.</li>
@@ -5652,9 +5664,8 @@ footer{
     Para repartir o ano escolhe-se em cima o que pôr —um turno, férias, uma ausência ou <em>Livre</em> para
     retirar— e clica-se num dia, ou arrasta-se de um dia para outro para marcar todos os do meio. Cada dia tem uma
     só coisa: se é de turno não pode ser ao mesmo tempo férias. <strong>Antes da admissão e depois da saída não
-    se planeia</strong>: esses dias não contam para as horas, pelo que o ecrã os salta e avisa de quantos.
-    <em>Preencher por dias da semana</em> põe-no de uma vez, por exemplo, de segunda a sexta de janeiro a junho,
-    saltando os feriados e sem tocar no que já está posto. À direita, <strong>as contas refazem-se a
+    se planeia</strong>: esses dias não contam para as horas, por isso o ecrã salta-os e avisa quantos são. Ao escolher o que pôr, os dias que já o têm <strong>ficam realçados</strong> e os restantes atenuados, e junto ao botão aparece quantos são: assim vê-se de relance onde cai cada turno. Na lista de calendários e na escala pesquisa-se por nome, apelidos ou pelo código de salários de cada profissional. A escala filtra-se além disso por posto e por local, e de cada um pode escolher-se mais de um ao mesmo tempo.
+    <em>Preencher por dias da semana</em> põe-no de uma vez em, por exemplo, segundas a sextas de janeiro a junho, saltando os feriados e sem tocar no que já está posto. Com <em>Repete-se a cada</em> 2, 3 ou 4 semanas, cada semana do ciclo tem os seus próprios dias: é o caso das <strong>equipas que se revezam</strong>, por exemplo uma semana terça, quinta e sexta e a seguinte segunda, quarta, sábado e domingo. À equipa 1 dá-se o ciclo a começar pela semana 1 e à equipa 2 o mesmo ciclo a começar pela 2, e assim uma cobre o que a outra não cobre; depois copia-se para os restantes de cada equipa com <em>Copiar para outros</em>. À direita, <strong>as contas refazem-se a
     cada alteração</strong>: horas da convenção, planeadas, as que faltam repartir (ou as que sobram), as
     férias postas face às que lhe correspondem e quantas lhe restam, e até ontem, o planeado face ao picado.
   </p>
@@ -6023,6 +6034,8 @@ footer{
     O mês de cada pessoa tal como chega ao gabinete de salários, para o rever antes de enviar e registar o que não vem das marcações de ponto. É precisa a permissão «Gerir as incidências para salários», que é sensível (inclui penhoras, adiantamentos e o IRS de cada um) e de origem têm a Direção e os RH.
   </p>
   <ul>
+    <li><strong>Pesquisar e ordenar.</strong> Em cima pesquisa-se uma pessoa pelo seu nome, o seu posto ou o seu
+      <em>Código de salários ou ERP</em> (o número pelo qual a assessoria a conhece, que se põe na sua ficha), e a lista ordena-se por nome, por posto ou por esse código. Por baixo do nome de cada pessoa aparecem o seu posto e o seu código. Em <em>Pessoal → Profissionais</em> pesquisa-se e ordena-se pelo mesmo.</li>
     <li><strong>O que vem sozinho.</strong> De cada pessoa, as horas trabalhadas e os dias, as extra, as noturnas, as de domingo e feriado, as férias, cada tipo de ausência com os seus dias, os dias com turno sem marcação e as incidências das marcações. É o mesmo que vai no resumo de horas do envio ao gabinete de salários.</li>
     <li><strong>O que se regista.</strong> Com <em>Registar um conceito</em> escolhe-se a pessoa e o conceito, de uma lista fechada: atividade extra, prémio ou gratificação, ajudas de custo e quilometragem, adiantamento, penhora, retenção de IRS pedida pela pessoa (em percentagem) e desconto acordado. Leva o seu valor e, se for preciso, um detalhe. Uma penhora que o gabinete calcula pode ir sem valor, com a decisão no detalhe.</li>
     <li><strong>Quanto dura.</strong> <em>Só este mês</em>, <em>Até nova ordem</em> (todos os meses a partir desse, como uma penhora ou um adiantamento descontado em prestações) ou <em>Até um mês</em>. O que se repete termina-se com

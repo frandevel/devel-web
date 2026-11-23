@@ -894,6 +894,10 @@ footer{
     <strong>Point of sale</strong>, <strong>Unpaid visits</strong> and <strong>Customers</strong>. Below, grouped, is what you set up now and then (catalogue and stock), the team under <strong>Staff</strong> (professionals,
     work calendar and working time) and what you only look up (reports and settings).
   </p>
+  <p id="menu-favoritos">
+    <strong>Favourites.</strong> Each user can put the screens they use most at the very top. When you open a screen from the menu, next to its title there is a <strong>star</strong>: press it and the screen moves to the
+    <strong>Favourites</strong>section, the first one in the menu; the star is filled in, and pressing it again removes it. Favourites are <strong>reordered by dragging</strong> one on top of another with the mouse; on a tablet or a phone, with the up and down arrows shown next to each one. They belong to each user and follow them to any computer; the screen also stays in its usual place, and favourites give access to nothing that permissions do not give.
+  </p>
   <p>
     On a computer the menu stays fixed on the left even when you scroll down the page, and the button at the bottom collapses it to show only the icons. On a phone and on a tablet held upright it is hidden: it opens with the <strong>☰</strong> button at the top left and closes when you choose an entry, when you tap outside it or with the <kbd>Esc</kbd>.
   </p>
@@ -1428,6 +1432,10 @@ footer{
     <tr><td><strong>Green tick</strong></td><td>The appointment is confirmed.</td></tr>
     <tr><td><strong>Euro icon</strong></td><td>That appointment has already been through the till.</td></tr>
     <tr>
+      <td><strong>“+2”</strong> in a short appointment (under 30 minutes)</td>
+      <td>A short appointment has no room for every mark: its single line holds the time (smaller), the name, the confirmation, the payment and <strong>only the most important mark</strong> (debt, first visit, voucher or balance, in that order); “+2” says how many more it has. Pressing the appointment shows them all, with the customer number and the history of changes.</td>
+    </tr>
+    <tr>
       <td><strong>Dashed border</strong> and a dark tag next to the time: <em>WEB</em> or the name of a
         program</td>
       <td><strong>The appointment was not booked at the centre.</strong> <em>WEB</em>: the customer booked it on the
@@ -1526,7 +1534,7 @@ footer{
   </p>
 
   <p>
-    <strong>The customer number appears everywhere</strong>: in the list, in the record, on the diary card, in the appointment and payment search, in pending payments and in the reports. Customers who came from another platform keep the number they had there, and new ones get the next one when they are registered. And
+    <strong>The customer number appears everywhere</strong>: in the list, on the record, on the agenda card (in short appointments, when you press it), in the appointment and payment search, in pending payments and in the reports. For customers who came from another platform it is the one they had there, and new ones get the next number when they are created. And
     <strong>a customer's name in any list is a link to their record</strong>, just like on the home screen; in the appointment and at the checkout, the card button next to the customer also takes you there.
   </p>
 
@@ -4718,6 +4726,9 @@ footer{
     The same record is where you reset their <strong>clocking PIN</strong> (see <a href="#presencia">Working time</a>) and you tick whether the <strong>summary of their working day</strong> is emailed to them every month, which needs an email address on the record.
   </p>
   <p>
+    <strong>Not all staff appear in the agenda.</strong> For anyone who does not see people by appointment (in a care home, for example, care assistants, cleaning or kitchen staff), untick on their record the <em>Shown in the agenda</em>box. They remain active: they clock in, appear in the roster and can be chosen at the till or in the clinical record, but they have no column in <em>Day by member of staff</em> or in <em>Week by member of staff</em>, and online booking gives them no appointments. If they already had any, their column still appears on the days they have one, so no appointment is lost from view.
+  </p>
+  <p>
     The record has the <strong>start date</strong>: the day the person started working at the centre. It is not mandatory, and with it the record shows their <strong>length of service</strong> (for example, «3 years and 2 months»).
   </p>
   <p>
@@ -4745,6 +4756,9 @@ footer{
       inspectorate. Not keeping it is a fine.</p>
   </div>
 
+  <p id="fichar-numero">
+    <strong>Clock-in number.</strong> In a centre with a large staff nobody wants to look for themselves in a long list. On each member of staff’s record you can set a <em>Clock-in number</em> (short, not repeated within the branch). When there are more than eight members of staff, the clock shows a search box at the top: type that number and only their card remains; it also searches by name. The number does not replace the PIN, which is still asked for: it only saves searching. In <em>Staff → Professionals</em> you can also search by it.
+  </p>
   <p>
     In <em>Clock</em>, in the menu, there are all the professionals of the centre, each with their button
     <em>Clock</em>. The list <strong>only shows names</strong>: who is in and since when is part of the
@@ -5149,7 +5163,7 @@ footer{
   <ul>
     <li><strong>Agreement</strong>: set by the centre, it is <strong>one a year for the whole staff</strong> and all its sites: the name, the working hours per year for a full-time job and the holiday days, calendar days (the 30 of the Workers' Statute) or working days (not counting weekends or public holidays). Each calendar takes the one for its year; it is not chosen person by person. When creating it, the <em>Agreement</em> drop-down offers the most common ones: hairdressers and beauty, sports facilities and gyms, care for dependent people, veterinary centres, care homes in the Valencian Community, and private healthcare and offices in the province of Valencia. It suggests their hours and holidays, which can be changed before saving, and shows the main points, its validity and the official text. It is an indicative summary: what was signed is confirmed by your employment adviser. If yours is not there, choose <em>Another agreement</em> and fill it in by hand.</li>
     <li><strong>Shifts</strong>: «Morning 9-14», «Afternoon 15-21»… One that ends before it starts is a night shift and finishes the next day. <strong>A day takes a single shift</strong>: for someone who works morning and afternoon, create a split shift, with <em>Add stretch (split shift)</em> or with <em>Start as a split shift</em>, which sets it to 09:00-14:00 and 16:00-20:00 for you to adjust. The break is the gap between one stretch and the next, and does not count as worked.</li>
-    <li><strong>Absences</strong>: sick leave, paid leave, unpaid leave… Each one says whether that day counts
+    <li><strong>Absence types</strong>: sick leave, paid leave, unpaid leave… Each one says whether that day counts
       as worked for the agreement hours. For a sick leave only that it is a sick leave is written down, never the diagnosis.</li>
     <li><strong>Public holidays</strong>: in <em>Settings</em> the region of the centre is chosen, and in
       <em>Public holidays</em> the button brings the national ones and those of that region for the year.</li>
@@ -5180,9 +5194,8 @@ footer{
     <figcaption>The year’s calendars: how many hours the collective agreement sets for each person, how many are planned and how many are left to allocate or are over.</figcaption>
   </figure>
   <p>
-    To spread the year, choose at the top what to put —a shift, holidays, an absence or <em>Free</em> to remove— and you click a day, or drag from one day to another to mark all those in between. Each day has one thing only: if it has a shift it cannot also be vacation. <strong>Nothing is planned before the start date or after the end date</strong>: those days do not count towards the hours, so the screen skips them and says how many.
-    <em>Fill by weekdays</em> puts it at once on, for example, Monday to Friday from January to
-    June, skipping public holidays and leaving alone what is already set. On the right, <strong>the figures are redone with
+    To spread the year, choose at the top what to put —a shift, holidays, an absence or <em>Free</em> to remove— and you click a day, or drag from one day to another to mark all those in between. Each day has one thing only: if it has a shift it cannot also be vacation. <strong>Nothing is planned before the start date or after the end date</strong>: those days do not count towards the hours, so the screen skips them and says how many. When you choose what to put, the days that already have it <strong>are highlighted</strong> and the rest are dimmed, and next to the button it says how many there are: you see at a glance where each shift falls. In the list of calendars and in the roster you can search by first name, surname or the payroll code of each member of staff. The roster is also filtered by position and by location, and more than one of each can be chosen at a time.
+    <em>Fill by weekdays</em> puts it in one go on, for example, Mondays to Fridays from January to June, skipping public holidays and without touching what is already there. With <em>Repeats every</em> 2, 3 or 4 weeks, each week of the cycle has its own days: this is for <strong>teams that take turns</strong>, for example one week Tuesday, Thursday and Friday and the next Monday, Wednesday, Saturday and Sunday. Team 1 gets the cycle starting on week 1 and team 2 the same cycle starting on week 2, so one covers what the other does not; then it is copied to the rest of each team with <em>Copy to others</em>. On the right, <strong>the figures are redone with
     each change</strong>: agreement hours, planned hours, those still to be distributed (or those in excess), vacation days set against those owed and how many are left, and, up to yesterday, what was planned against what was clocked.
   </p>
 
@@ -5474,6 +5487,8 @@ footer{
     Each person's month as it reaches the payroll advisor, to review it before sending and to note what does not come from the clock-ins. It needs the «Keep payroll items» permission, which is sensitive (it holds garnishments, advances and each person's tax withholding) and comes out of the box with Management and HR.
   </p>
   <ul>
+    <li><strong>Search and sort.</strong> At the top you can search for a person by their name, their position or their
+      <em>Payroll or ERP code</em> (the number the payroll adviser knows them by, set on their record), and the list is sorted by name, by position or by that code. Under each person’s name are their position and their code. In <em>Staff → Professionals</em> you search and sort by the same.</li>
     <li><strong>What comes on its own.</strong> For each person, hours and days worked, overtime, night hours, Sunday and holiday hours, holidays, each type of absence with its days, days with a shift but no clock-in, and clock-in incidents. It is the same as what goes in the hours summary sent to the payroll advisor.</li>
     <li><strong>What is entered.</strong> With <em>Enter an item</em> you choose the person and the item, from a closed list: extra activity, bonus or gratuity, expenses and mileage, advance, garnishment, tax withholding requested by the person (as a percentage) and agreed deduction. It carries its amount and, if needed, a detail. A garnishment calculated by the payroll advisor can go without an amount, with the court order in the detail.</li>
     <li><strong>How long it lasts.</strong> <em>This month only</em>, <em>Until further notice</em> (every month from that one, like a garnishment or an advance deducted in instalments) or <em>Until a month</em>. What repeats is ended with
