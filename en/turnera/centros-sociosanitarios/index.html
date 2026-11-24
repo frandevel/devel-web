@@ -614,7 +614,7 @@ footer{
           "name": "How much does it cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "€2 per place per month, with a minimum fee of €49 and a maximum of €299: from 150 places the price stops going up. We count the places the centre has, not the occupied ones, so the fee does not change from one month to the next. Places Per month Per year Up to 24 49 € 490 € 60 120 € 1.200 € 100 200 € 2.000 € 150 or more 299 € 2.990 € Everything is included: residents and stays, the centre's staff (clocking in, rota and payroll for the payroll office), maintenance, stock, and diary with clinical records if you have consultations. Unlimited users and no lock-in. Paying the year in advance you pay ten months. Prices exclude VAT."
+            "text": "€2 per place per month, with a minimum fee of €49 and a maximum of €299: from 150 places the price stops going up. We count the places the centre has, not the occupied ones, so the fee does not change from one month to the next. You can work out yours in Pricing. Everything is included: residents and stays, the centre's staff (clocking in, rota and payroll for the payroll office), maintenance, stock, and diary with clinical records if you have consultations. Unlimited users and no lock-in. Prices exclude VAT."
           }
         },
         {
@@ -675,6 +675,7 @@ footer{
       <a href="/en/turnera">Turnera</a>
       <a href="#funciones">What's included</a>
       <a href="#pantallas">Screens</a>
+      <a href="#precios">Pricing</a>
       <a href="#preguntas">FAQ</a>
       <a href="/en/turnera#demo">Demo</a>
     </nav>
@@ -867,6 +868,35 @@ footer{
     </div>
   </section>
 
+  <section id="precios">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Pricing</p>
+        <h2>You pay for the places your centre has.</h2>
+        <p>€2 per place per month, everything included: residents, staff, maintenance and stock. Unlimited users and no lock-in.</p>
+      </div>
+      <div class="precios">
+      <div class="precios__calculo">
+        <div class="precio-config" id="configurador-plazas">
+          <div class="precio-config__cabecera">
+            <label for="precio-plazas">Places in your centre</label>
+            <output id="precio-plazas-n" for="precio-plazas">60</output>
+          </div>
+          <input type="range" id="precio-plazas" min="10" max="150" step="1" value="60">
+          <div class="precio-config__escala" aria-hidden="true"><span style="left:0">10</span><span style="left:28.6%">50</span><span style="left:64.3%">100</span><span style="left:100%">150+</span></div>
+          <div class="precio-config__resultado" aria-live="polite">
+            <p class="precio-config__cifra"><span id="precio-cifra">120 €</span> per month</p>
+            <p class="precio-config__detalle" data-tramo="minimo" hidden="">Below 25 places the minimum fee applies.</p>
+            <p class="precio-config__detalle" data-tramo="plazas">€2 for each place in the centre.</p>
+            <p class="precio-config__detalle" data-tramo="maximo" hidden="">From 150 places the price stops going up.</p>
+          </div>
+        </div>
+        <p class="precios__nota">Prices exclude VAT. We count the places the centre has, not the occupied ones.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
   <section id="preguntas">
     <div class="shell">
       <div class="section__head">
@@ -914,17 +944,8 @@ footer{
           <details class="faq__item">
             <summary>How much does it cost?</summary>
             <div class="faq__respuesta">
-              <p><b>€2 per place per month</b>, with a minimum fee of €49 and a maximum of €299: from 150 places the price stops going up. We count the places the centre has, not the occupied ones, so the fee does not change from one month to the next.</p>
-              <table class="faq__tabla">
-                <thead><tr><th>Places</th><th>Per month</th><th>Per year</th></tr></thead>
-                <tbody>
-                  <tr><td>Up to 24</td><td>49 €</td><td>490 €</td></tr>
-                  <tr><td>60</td><td>120 €</td><td>1.200 €</td></tr>
-                  <tr><td>100</td><td>200 €</td><td>2.000 €</td></tr>
-                  <tr><td>150 or more</td><td>299 €</td><td>2.990 €</td></tr>
-                </tbody>
-              </table>
-              <p>Everything is included: residents and stays, the centre's staff (clocking in, rota and payroll for the payroll office), maintenance, stock, and diary with clinical records if you have consultations. Unlimited users and no lock-in. Paying the year in advance you pay ten months. Prices exclude VAT.</p>
+              <p><b>€2 per place per month</b>, with a minimum fee of €49 and a maximum of €299: from 150 places the price stops going up. We count the places the centre has, not the occupied ones, so the fee does not change from one month to the next. You can work out yours in <a href="#precios">Pricing</a>.</p>
+              <p>Everything is included: residents and stays, the centre's staff (clocking in, rota and payroll for the payroll office), maintenance, stock, and diary with clinical records if you have consultations. Unlimited users and no lock-in. Prices exclude VAT.</p>
             </div>
           </details>
 
@@ -971,6 +992,34 @@ footer{
     <span><a href="/en/legal">Legal notice and privacy</a> · <a href="/en/">devel.es</a></span>
   </div>
 </footer>
+<script>
+// El configurador de precios: las cifras salen de aquí y los textos de la página, que se traducen con ella.
+(function () {
+  const raiz = document.getElementById("configurador-plazas");
+  if (!raiz) return;
+  const POR_PLAZA = 2;
+  const MINIMO = 49;
+  const MAXIMO = 299;
+  const barra = document.getElementById("precio-plazas");
+  const formato = new Intl.NumberFormat(document.documentElement.lang || "es",
+    { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
+
+  function pintar() {
+    const plazas = Number(barra.value);
+    const sinLimites = plazas * POR_PLAZA;
+    const cuota = Math.min(Math.max(sinLimites, MINIMO), MAXIMO);
+    const tramo = sinLimites <= MINIMO ? "minimo" : sinLimites >= MAXIMO ? "maximo" : "plazas";
+    document.getElementById("precio-plazas-n").textContent = plazas >= 150 ? "150+" : String(plazas);
+    document.getElementById("precio-cifra").textContent = formato.format(cuota);
+    raiz.querySelectorAll("[data-tramo]").forEach((linea) => {
+      linea.hidden = linea.dataset.tramo !== tramo;
+    });
+  }
+
+  barra.addEventListener("input", pintar);
+  pintar();
+})();
+</script>
 
 
 </body></html>

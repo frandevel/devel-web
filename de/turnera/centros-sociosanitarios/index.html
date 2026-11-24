@@ -614,7 +614,7 @@ footer{
           "name": "Was kostet es?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "2 € pro Platz und Monat, mit einer Mindestgebühr von 49 € und höchstens 299 €: ab 150 Plätzen steigt der Preis nicht mehr. Gezählt werden die Plätze der Einrichtung, nicht die belegten, deshalb bleibt die Gebühr jeden Monat gleich. Plätze Pro Monat Pro Jahr Bis 24 49 € 490 € 60 120 € 1.200 € 100 200 € 2.000 € 150 oder mehr 299 € 2.990 € Alles inklusive: Bewohner und Aufenthalte, das Personal der Einrichtung (Zeiterfassung, Dienstplan und Lohnabrechnung für das Lohnbüro), Instandhaltung, Lager sowie Terminkalender mit Patientenakte, wenn Sie Sprechstunden haben. Unbegrenzt viele Benutzer, ohne Mindestlaufzeit. Bei jährlicher Vorauszahlung zahlen Sie zehn Monate. Preise zzgl. MwSt."
+            "text": "2 € pro Platz und Monat, mit einer Mindestgebühr von 49 € und höchstens 299 €: ab 150 Plätzen steigt der Preis nicht mehr. Gezählt werden die Plätze der Einrichtung, nicht die belegten, deshalb bleibt die Gebühr jeden Monat gleich. Ihre können Sie berechnen unter Preise. Alles inklusive: Bewohner und Aufenthalte, das Personal der Einrichtung (Zeiterfassung, Dienstplan und Lohnabrechnung für das Lohnbüro), Instandhaltung, Lager sowie Terminkalender mit Patientenakte, wenn Sie Sprechstunden haben. Unbegrenzt viele Benutzer, ohne Mindestlaufzeit. Preise zzgl. MwSt."
           }
         },
         {
@@ -675,6 +675,7 @@ footer{
       <a href="/de/turnera">Turnera</a>
       <a href="#funciones">Was enthalten ist</a>
       <a href="#pantallas">Ansichten</a>
+      <a href="#precios">Preise</a>
       <a href="#preguntas">FAQ</a>
       <a href="/de/turnera#demo">Demo</a>
     </nav>
@@ -867,6 +868,35 @@ footer{
     </div>
   </section>
 
+  <section id="precios">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Preise</p>
+        <h2>Sie zahlen nach den Plätzen Ihrer Einrichtung.</h2>
+        <p>2 € pro Platz und Monat, alles inklusive: Bewohner, Personal, Instandhaltung und Lager. Unbegrenzt viele Benutzer, ohne Mindestlaufzeit.</p>
+      </div>
+      <div class="precios">
+      <div class="precios__calculo">
+        <div class="precio-config" id="configurador-plazas">
+          <div class="precio-config__cabecera">
+            <label for="precio-plazas">Plätze Ihrer Einrichtung</label>
+            <output id="precio-plazas-n" for="precio-plazas">60</output>
+          </div>
+          <input type="range" id="precio-plazas" min="10" max="150" step="1" value="60">
+          <div class="precio-config__escala" aria-hidden="true"><span style="left:0">10</span><span style="left:28.6%">50</span><span style="left:64.3%">100</span><span style="left:100%">150+</span></div>
+          <div class="precio-config__resultado" aria-live="polite">
+            <p class="precio-config__cifra"><span id="precio-cifra">120 €</span> pro Monat</p>
+            <p class="precio-config__detalle" data-tramo="minimo" hidden="">Unter 25 Plätzen gilt die Mindestgebühr.</p>
+            <p class="precio-config__detalle" data-tramo="plazas">2 € für jeden Platz der Einrichtung.</p>
+            <p class="precio-config__detalle" data-tramo="maximo" hidden="">Ab 150 Plätzen steigt der Preis nicht mehr.</p>
+          </div>
+        </div>
+        <p class="precios__nota">Preise zzgl. MwSt. Gezählt werden die Plätze der Einrichtung, nicht die belegten.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
   <section id="preguntas">
     <div class="shell">
       <div class="section__head">
@@ -914,17 +944,8 @@ footer{
           <details class="faq__item">
             <summary>Was kostet es?</summary>
             <div class="faq__respuesta">
-              <p><b>2 € pro Platz und Monat</b>, mit einer Mindestgebühr von 49 € und höchstens 299 €: ab 150 Plätzen steigt der Preis nicht mehr. Gezählt werden die Plätze der Einrichtung, nicht die belegten, deshalb bleibt die Gebühr jeden Monat gleich.</p>
-              <table class="faq__tabla">
-                <thead><tr><th>Plätze</th><th>Pro Monat</th><th>Pro Jahr</th></tr></thead>
-                <tbody>
-                  <tr><td>Bis 24</td><td>49 €</td><td>490 €</td></tr>
-                  <tr><td>60</td><td>120 €</td><td>1.200 €</td></tr>
-                  <tr><td>100</td><td>200 €</td><td>2.000 €</td></tr>
-                  <tr><td>150 oder mehr</td><td>299 €</td><td>2.990 €</td></tr>
-                </tbody>
-              </table>
-              <p>Alles inklusive: Bewohner und Aufenthalte, das Personal der Einrichtung (Zeiterfassung, Dienstplan und Lohnabrechnung für das Lohnbüro), Instandhaltung, Lager sowie Terminkalender mit Patientenakte, wenn Sie Sprechstunden haben. Unbegrenzt viele Benutzer, ohne Mindestlaufzeit. Bei jährlicher Vorauszahlung zahlen Sie zehn Monate. Preise zzgl. MwSt.</p>
+              <p><b>2 € pro Platz und Monat</b>, mit einer Mindestgebühr von 49 € und höchstens 299 €: ab 150 Plätzen steigt der Preis nicht mehr. Gezählt werden die Plätze der Einrichtung, nicht die belegten, deshalb bleibt die Gebühr jeden Monat gleich. Ihre können Sie berechnen unter <a href="#precios">Preise</a>.</p>
+              <p>Alles inklusive: Bewohner und Aufenthalte, das Personal der Einrichtung (Zeiterfassung, Dienstplan und Lohnabrechnung für das Lohnbüro), Instandhaltung, Lager sowie Terminkalender mit Patientenakte, wenn Sie Sprechstunden haben. Unbegrenzt viele Benutzer, ohne Mindestlaufzeit. Preise zzgl. MwSt.</p>
             </div>
           </details>
 
@@ -971,6 +992,34 @@ footer{
     <span><a href="/de/legal">Impressum und Datenschutz</a> · <a href="/de/">devel.es</a></span>
   </div>
 </footer>
+<script>
+// El configurador de precios: las cifras salen de aquí y los textos de la página, que se traducen con ella.
+(function () {
+  const raiz = document.getElementById("configurador-plazas");
+  if (!raiz) return;
+  const POR_PLAZA = 2;
+  const MINIMO = 49;
+  const MAXIMO = 299;
+  const barra = document.getElementById("precio-plazas");
+  const formato = new Intl.NumberFormat(document.documentElement.lang || "es",
+    { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
+
+  function pintar() {
+    const plazas = Number(barra.value);
+    const sinLimites = plazas * POR_PLAZA;
+    const cuota = Math.min(Math.max(sinLimites, MINIMO), MAXIMO);
+    const tramo = sinLimites <= MINIMO ? "minimo" : sinLimites >= MAXIMO ? "maximo" : "plazas";
+    document.getElementById("precio-plazas-n").textContent = plazas >= 150 ? "150+" : String(plazas);
+    document.getElementById("precio-cifra").textContent = formato.format(cuota);
+    raiz.querySelectorAll("[data-tramo]").forEach((linea) => {
+      linea.hidden = linea.dataset.tramo !== tramo;
+    });
+  }
+
+  barra.addEventListener("input", pintar);
+  pintar();
+})();
+</script>
 
 
 </body></html>

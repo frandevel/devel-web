@@ -614,7 +614,7 @@ footer{
           "name": "Quanto custa?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "2 € por vaga por mês, com uma quota mínima de 49 € e um máximo de 299 €: a partir de 150 vagas o preço já não sobe. Contam as vagas do centro, não as ocupadas, por isso a quota não muda de um mês para o outro. Vagas Por mês Por ano Até 24 49 € 490 € 60 120 € 1.200 € 100 200 € 2.000 € 150 ou mais 299 € 2.990 € Inclui tudo: residentes e estadias, o pessoal do centro (registo de ponto, escala e salários para o contabilista), manutenção, stock e agenda com processo clínico se tiverem consultas. Utilizadores ilimitados e sem fidelização. Pagando o ano adiantado pagam-se dez meses. Preços sem IVA."
+            "text": "2 € por vaga por mês, com uma quota mínima de 49 € e um máximo de 299 €: a partir de 150 vagas o preço já não sobe. Contam as vagas do centro, não as ocupadas, por isso a quota não muda de um mês para o outro. Pode calcular a sua em Preços. Inclui tudo: residentes e estadias, o pessoal do centro (registo de ponto, escala e salários para o contabilista), manutenção, stock e agenda com processo clínico se tiverem consultas. Utilizadores ilimitados e sem fidelização. Preços sem IVA."
           }
         },
         {
@@ -675,6 +675,7 @@ footer{
       <a href="/pt/turnera">Turnera</a>
       <a href="#funciones">O que inclui</a>
       <a href="#pantallas">Ecrãs</a>
+      <a href="#precios">Preços</a>
       <a href="#preguntas">Perguntas</a>
       <a href="/pt/turnera#demo">Demo</a>
     </nav>
@@ -867,6 +868,35 @@ footer{
     </div>
   </section>
 
+  <section id="precios">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Preços</p>
+        <h2>Paga pelas vagas do seu centro.</h2>
+        <p>2 € por vaga por mês, com tudo incluído: residentes, pessoal, manutenção e stock. Utilizadores ilimitados e sem fidelização.</p>
+      </div>
+      <div class="precios">
+      <div class="precios__calculo">
+        <div class="precio-config" id="configurador-plazas">
+          <div class="precio-config__cabecera">
+            <label for="precio-plazas">Vagas do seu centro</label>
+            <output id="precio-plazas-n" for="precio-plazas">60</output>
+          </div>
+          <input type="range" id="precio-plazas" min="10" max="150" step="1" value="60">
+          <div class="precio-config__escala" aria-hidden="true"><span style="left:0">10</span><span style="left:28.6%">50</span><span style="left:64.3%">100</span><span style="left:100%">150+</span></div>
+          <div class="precio-config__resultado" aria-live="polite">
+            <p class="precio-config__cifra"><span id="precio-cifra">120 €</span> por mês</p>
+            <p class="precio-config__detalle" data-tramo="minimo" hidden="">Abaixo de 25 vagas aplica-se a quota mínima.</p>
+            <p class="precio-config__detalle" data-tramo="plazas">2 € por cada vaga do centro.</p>
+            <p class="precio-config__detalle" data-tramo="maximo" hidden="">A partir de 150 vagas o preço já não sobe.</p>
+          </div>
+        </div>
+        <p class="precios__nota">Preços sem IVA. Contam as vagas do centro, não as ocupadas.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
   <section id="preguntas">
     <div class="shell">
       <div class="section__head">
@@ -914,17 +944,8 @@ footer{
           <details class="faq__item">
             <summary>Quanto custa?</summary>
             <div class="faq__respuesta">
-              <p><b>2 € por vaga por mês</b>, com uma quota mínima de 49 € e um máximo de 299 €: a partir de 150 vagas o preço já não sobe. Contam as vagas do centro, não as ocupadas, por isso a quota não muda de um mês para o outro.</p>
-              <table class="faq__tabla">
-                <thead><tr><th>Vagas</th><th>Por mês</th><th>Por ano</th></tr></thead>
-                <tbody>
-                  <tr><td>Até 24</td><td>49 €</td><td>490 €</td></tr>
-                  <tr><td>60</td><td>120 €</td><td>1.200 €</td></tr>
-                  <tr><td>100</td><td>200 €</td><td>2.000 €</td></tr>
-                  <tr><td>150 ou mais</td><td>299 €</td><td>2.990 €</td></tr>
-                </tbody>
-              </table>
-              <p>Inclui tudo: residentes e estadias, o pessoal do centro (registo de ponto, escala e salários para o contabilista), manutenção, stock e agenda com processo clínico se tiverem consultas. Utilizadores ilimitados e sem fidelização. Pagando o ano adiantado pagam-se dez meses. Preços sem IVA.</p>
+              <p><b>2 € por vaga por mês</b>, com uma quota mínima de 49 € e um máximo de 299 €: a partir de 150 vagas o preço já não sobe. Contam as vagas do centro, não as ocupadas, por isso a quota não muda de um mês para o outro. Pode calcular a sua em <a href="#precios">Preços</a>.</p>
+              <p>Inclui tudo: residentes e estadias, o pessoal do centro (registo de ponto, escala e salários para o contabilista), manutenção, stock e agenda com processo clínico se tiverem consultas. Utilizadores ilimitados e sem fidelização. Preços sem IVA.</p>
             </div>
           </details>
 
@@ -971,6 +992,34 @@ footer{
     <span><a href="/legal">Aviso legal e privacidade</a> · <a href="/pt/">devel.es</a></span>
   </div>
 </footer>
+<script>
+// El configurador de precios: las cifras salen de aquí y los textos de la página, que se traducen con ella.
+(function () {
+  const raiz = document.getElementById("configurador-plazas");
+  if (!raiz) return;
+  const POR_PLAZA = 2;
+  const MINIMO = 49;
+  const MAXIMO = 299;
+  const barra = document.getElementById("precio-plazas");
+  const formato = new Intl.NumberFormat(document.documentElement.lang || "es",
+    { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
+
+  function pintar() {
+    const plazas = Number(barra.value);
+    const sinLimites = plazas * POR_PLAZA;
+    const cuota = Math.min(Math.max(sinLimites, MINIMO), MAXIMO);
+    const tramo = sinLimites <= MINIMO ? "minimo" : sinLimites >= MAXIMO ? "maximo" : "plazas";
+    document.getElementById("precio-plazas-n").textContent = plazas >= 150 ? "150+" : String(plazas);
+    document.getElementById("precio-cifra").textContent = formato.format(cuota);
+    raiz.querySelectorAll("[data-tramo]").forEach((linea) => {
+      linea.hidden = linea.dataset.tramo !== tramo;
+    });
+  }
+
+  barra.addEventListener("input", pintar);
+  pintar();
+})();
+</script>
 
 
 </body></html>
