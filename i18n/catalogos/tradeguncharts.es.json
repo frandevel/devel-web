@@ -157,7 +157,7 @@
   "tecb59081": "¿Mis credenciales pasan por vuestros servidores?",
   "tc001f0a1": "No. La aplicación se conecta directamente desde tu equipo a tu bróker. Nuestro servidor solo comprueba la licencia, y para eso no necesita saber nada de tu cuenta.",
   "tfef23a3d": "¿Qué mercados puedo operar?",
-  "tf98f00b4": "Futuros (índices, metales, energía, divisas…) y sus micros, opciones y acciones o ETFs con Interactive Brokers. El footprint tiene más sentido en futuros, donde se ve todo el volumen del mercado.",
+  "t1c0627ab": "Futuros (índices, metales, energía, divisas…) y sus micros, opciones y acciones o ETFs con Interactive Brokers, y futuros con Rithmic, el proveedor que usan muchas cuentas de fondeo como Apex o Bulenox. El footprint tiene más sentido en futuros, donde se ve todo el volumen del mercado.",
   "te295ef9b": "Licencia y uso",
   "t1c7b7535": "¿En cuántos equipos puedo usarla?",
   "t392d6994": "Cada licencia se activa en un equipo. Si cambias de ordenador, la liberas desde Ayuda → Licencia y la activas en el nuevo.",

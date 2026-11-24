@@ -104,7 +104,7 @@
   "tecb59081": "Do my credentials go through your servers?",
   "tc001f0a1": "No. The application connects directly from your computer to your broker. Our server only checks the licence, and it doesn't need to know anything about your account for that.",
   "tfef23a3d": "Which markets can I trade?",
-  "tf98f00b4": "Futures (indices, metals, energy, currencies…) and their micros, plus options and stocks or ETFs with Interactive Brokers. Footprint makes the most sense in futures, where the whole market's volume is visible.",
+  "t1c0627ab": "Futures (indices, metals, energy, currencies…) and their micros, plus options and stocks or ETFs with Interactive Brokers, and futures with Rithmic, the provider used by many funded accounts such as Apex or Bulenox. Footprint makes the most sense in futures, where the whole market's volume is visible.",
   "te295ef9b": "Licence and use",
   "t1c7b7535": "On how many computers can I use it?",
   "t392d6994": "Each licence is activated on one computer. If you change computers, release it from Help → Licence and activate it on the new one.",
