@@ -11,7 +11,6 @@
   "t91d5663d": "· produto",
   "t403bdd18": "A agenda, a ficha e a caixa.",
   "td840d303": "No mesmo ecrã.",
-  "t75b6d183": "O Turnera é o software de gestão para negócios que atendem por marcação: clínicas, centros de estética, fisioterapia, podologia, veterinária, centros de treino, clubes desportivos e academias de música, línguas ou explicações. O que um balcão faz num dia cabe em três ecrãs, e nenhum o obriga a sair dele para cobrar.",
   "td44582c6": "Pedir uma demo",
   "t30db8ed3": "Ver como é",
   "ta22b32a8": "O dia de um centro",
@@ -71,7 +70,6 @@
   "t5d734bca": "Residências e equipas de trabalho",
   "t643ff745": "Clínica, estética, fisioterapia",
   "t40c4ac90": "Uma pessoa por cabine e uma hora reservada para ela. A ficha guarda os seus antecedentes, as suas alergias, o caso aberto e a evolução de cada sessão, e o pacote de dez tratamentos vai sendo descontado sozinho à medida que vem.",
-  "t38d5e9e7": "É de onde vem o Turnera: podologia, veterinária, dentária e fisioterapia usam o mesmo.",
   "t7c77e27c": "Ver o Turnera para clínicas",
   "tc4e91ba2": "Como se monta",
   "t7e322096": "clínica.",
@@ -373,5 +371,7 @@
   "t5d3fd0bc": "Estadias e Recursos Humanos.",
   "tf9ab8871": "quartos com as suas camas, por pisos e alas.",
   "t5e394712": "agenda e historial clínico se houver consultas.",
-  "t7e90260a": "Condomínios, oficinas, lojas"
+  "t7e90260a": "Condomínios, oficinas, lojas",
+  "t6f4259c9": "O Turnera é o software de gestão para negócios que atendem por marcação: clínicas, centros de estética, fisioterapia e reabilitação, centros de treino, clubes desportivos e academias de música, línguas ou explicações. O que um balcão faz num dia cabe em três ecrãs, e nenhum o obriga a sair dele para cobrar.",
+  "t05ad1cb5": "É de onde vem o Turnera: estética, fisioterapia e reabilitação usam o mesmo."
 }
