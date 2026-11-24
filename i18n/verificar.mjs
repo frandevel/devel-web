@@ -10,7 +10,7 @@ const PAGINAS = ['/', '/en/', '/de/', '/turnera/', '/en/turnera/', '/de/turnera/
                  '/legal/', '/en/legal/', '/de/legal/',
                  '/pt/', '/pt/turnera/', '/pt/turnera/manual/', '/pt/turnera/novedades/', '/pt/turnera/recursos-humanos/',
                  '/turnera/recursos-humanos/', '/en/turnera/recursos-humanos/', '/de/turnera/recursos-humanos/',
-                 ...['clinicas', 'centros-deportivos', 'academias'].flatMap((ruta) =>
+                 ...['clinicas', 'centros-deportivos', 'academias', 'centros-sociosanitarios'].flatMap((ruta) =>
                    ['', '/en', '/de', '/pt'].map((prefijo) => `${prefijo}/turnera/${ruta}/`))];
 const PREFIJO = { es: '', en: '/en', de: '/de', pt: '/pt' };
 

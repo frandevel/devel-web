@@ -12,6 +12,7 @@ const PAGINAS = [
   { plantilla: 'plantillas/clinicas.html', catalogo: 'clinicas', ruta: 'turnera/clinicas' },
   { plantilla: 'plantillas/centros-deportivos.html', catalogo: 'centros-deportivos', ruta: 'turnera/centros-deportivos' },
   { plantilla: 'plantillas/academias.html', catalogo: 'academias', ruta: 'turnera/academias' },
+  { plantilla: 'plantillas/centros-sociosanitarios.html', catalogo: 'centros-sociosanitarios', ruta: 'turnera/centros-sociosanitarios' },
   { plantilla: 'plantillas/tradeguncharts.html', catalogo: 'tradeguncharts', ruta: 'tradeguncharts', idiomas: ['es', 'en'], respaldo: 'en' },
   { plantilla: 'plantillas/tradeguncharts-novedades.html', catalogo: 'tradeguncharts-novedades', ruta: 'tradeguncharts/novedades', idiomas: ['es', 'en'], respaldo: 'en' },
   { plantilla: 'plantillas/manual.html',  catalogo: 'manual',  ruta: 'turnera/manual' },
@@ -108,6 +109,7 @@ const NOMBRES_DE_PAGINA = {
   'turnera/clinicas': { es: 'Clínicas', en: 'Clinics', de: 'Praxen und Kliniken', pt: 'Clínicas' },
   'turnera/centros-deportivos': { es: 'Centros deportivos', en: 'Training centres and clubs', de: 'Trainingszentren und Vereine', pt: 'Centros desportivos' },
   'turnera/academias': { es: 'Academias', en: 'Academies', de: 'Schulen und Akademien', pt: 'Academias' },
+  'turnera/centros-sociosanitarios': { es: 'Centros sociosanitarios', en: 'Care homes', de: 'Pflegeeinrichtungen', pt: 'Centros sociossanitários' },
   'turnera/manual': { es: 'Manual', en: 'Manual', de: 'Handbuch', pt: 'Manual' },
   'turnera/novedades': { es: 'Novedades', en: "What's new", de: 'Neuigkeiten', pt: 'Novidades' },
   'legal': { es: 'Información legal', en: 'Legal information', de: 'Rechtliche Hinweise' }

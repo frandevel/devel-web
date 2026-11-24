@@ -217,6 +217,42 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/academias"/>
   </url>
   <url>
+    <loc>https://devel.es/turnera/centros-sociosanitarios</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/centros-sociosanitarios"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/centros-sociosanitarios"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/centros-sociosanitarios"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/centros-sociosanitarios"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/centros-sociosanitarios"/>
+  </url>
+  <url>
+    <loc>https://devel.es/en/turnera/centros-sociosanitarios</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/centros-sociosanitarios"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/centros-sociosanitarios"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/centros-sociosanitarios"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/centros-sociosanitarios"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/centros-sociosanitarios"/>
+  </url>
+  <url>
+    <loc>https://devel.es/de/turnera/centros-sociosanitarios</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/centros-sociosanitarios"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/centros-sociosanitarios"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/centros-sociosanitarios"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/centros-sociosanitarios"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/centros-sociosanitarios"/>
+  </url>
+  <url>
+    <loc>https://devel.es/pt/turnera/centros-sociosanitarios</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/turnera/centros-sociosanitarios"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devel.es/en/turnera/centros-sociosanitarios"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devel.es/de/turnera/centros-sociosanitarios"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devel.es/pt/turnera/centros-sociosanitarios"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devel.es/turnera/centros-sociosanitarios"/>
+  </url>
+  <url>
     <loc>https://devel.es/tradeguncharts</loc>
     <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://devel.es/tradeguncharts"/>
