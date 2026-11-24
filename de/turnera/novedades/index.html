@@ -679,8 +679,9 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-11-24">24. November 2026</a></li>
     <li><a href="#2026-11-23">23. November 2026</a></li>
-<li><a href="#2026-11-21">21. November 2026</a></li>
+    <li><a href="#2026-11-21">21. November 2026</a></li>
     <li><a href="#2026-11-20">20. November 2026</a></li>
     <li><a href="#2026-11-19">19. November 2026</a></li>
     <li><a href="#2026-11-18">18. November 2026</a></li>
@@ -733,10 +734,55 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-11-24" class="version">
+  <div class="version__cabecera">
+    <h2>24. November 2026</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.18.0-3ba0ed0</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Nachbestellung</h4>
+    <ul>
+      <li>Unter Katalog → Nachbestellung erscheinen nach Lieferant die Produkte, die in der Filiale unter ihren Mindestbestand gefallen sind.</li>
+      <li>„Entwurf vorbereiten“ schickt die Bestellung dieses Lieferanten mit dessen E-Mail-Adresse an die Adresse der Einrichtung, die in „Einstellungen der Nachbestellung“ steht, damit Sie sie weiterleiten. Beim Lieferanten kommt direkt nichts an, und es wird keine E-Mail von selbst verschickt: nur, wenn jemand die Schaltfläche drückt.</li>
+      <li>Sie ist ausgeschaltet: solange in den Einstellungen kein Lieferant angehakt ist, bleibt der Bildschirm leer.</li>
+    </ul>
+    <h4>Pflegeheime: Gesundheit der Bewohner</h4>
+    <ul>
+      <li>Allergien, einzeln, mit Reaktion und Schweregrad. Schwere erscheinen rot und zuerst.</li>
+      <li>Einschätzungen mit sechs anerkannten Skalen (Barthel, Lawton und Brody, Pfeiffer, Tinetti, Norton und Downton). Die Punktzahl berechnet Turnera, und der Verlauf jeder Skala bleibt erhalten.</li>
+      <li>Fixierungen, mit wer sie verordnet, wer einwilligt, dem Grund und wie oft sie geprüft wird. Eine, deren Prüfdatum überschritten ist, erscheint rot.</li>
+      <li>Medikationsplan: Medikamente werden im amtlichen Arzneimittelkatalog gesucht, mit Dosis, Verabreichungsweg und Uhrzeiten der Gaben. Stimmt ein Medikament mit einer erfassten Allergie überein, warnt Turnera vor dem Speichern.</li>
+      <li>Der Bildschirm Medikation sammelt die Gaben des Tages nach Uhrzeit. Jede wird als gegeben markiert oder, wenn nicht, mit dem Grund, und steht auf den Namen dessen, der sie gibt.</li>
+    </ul>
+    <h4>Pflegeheime: der Alltag</h4>
+    <ul>
+      <li>Bezugspersonen jeder Bewohnerin und jedes Bewohners: die Pflegehilfskraft, die Pflegefachkraft oder wen die Familie als Kontakt in der Einrichtung hat.</li>
+      <li>Besuche: wer gekommen ist, zu wem und wann er gegangen ist.</li>
+      <li>Taschengeld: was die Familie hinterlegt und was für die Person ausgegeben wird, mit Saldo.</li>
+    </ul>
+    <h4>Pflegeheime: Abrechnung, Qualität und Angehörige</h4>
+    <ul>
+      <li>Monatliche Abrechnung: die Beträge jedes Aufenthalts nach Tagen laut Tarif, unter Berücksichtigung des Anteils, den die Behörde bei öffentlich finanzierten Plätzen zahlt, und die Lastschriftdatei (SEPA) zum Hochladen bei der Bank. Zurückgebuchte gehen in die nächste Sammellastschrift.</li>
+      <li>Qualität: Lob, Vorschläge, Beschwerden und Abweichungen, mit ihrer Herkunft und dem, was zum Abschluss getan wurde.</li>
+      <li>Angehörigenportal: die Familie fordert mit ihrer E-Mail-Adresse einen Link an und sieht Zimmer, Kost, Bezugspersonen und die letzten Besuche und kann der Einrichtung schreiben. Es ist geschlossen, bis die Einrichtung es öffnet.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <ul>
+      <li>Beim Zusammenführen zweier Akten zeigt das Fenster in Grün, welche bleibt, und in Rot, welche gelöscht wird, und zur Bestätigung muss der Code der zu löschenden eingegeben werden.</li>
+      <li>An Support-Tickets lassen sich jetzt auch Word-, Excel- und OpenDocument-Dokumente anhängen.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-23" class="version">
   <div class="version__cabecera">
     <h2>23. November 2026</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.18.0-b901b5d</span></p>
 

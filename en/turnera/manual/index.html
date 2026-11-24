@@ -1725,9 +1725,7 @@ footer{
   </p>
 
   <div class="ojo">
-    <p><strong>A merge cannot be undone.</strong> Before confirming it, check on screen that the record that
-      stays is the right one. To confirm you have to <strong>type by hand the name</strong> of the record that is going to be
-      deleted; pasting it does not work, so nobody confirms without having read it.</p>
+    <p><strong>A merge cannot be undone.</strong> It is done from the record you want to keep: press <strong>Merge</strong> and search for the duplicate, which is the one that gets deleted. Before confirming, the window shows in green which one stays and in red which one is removed. To confirm you have to <strong>type in by hand the code</strong> of the record that will be deleted (or its name, if it has no code); pasting does not work, so that nobody confirms without having read it.</p>
   </div>
 </section>
 
@@ -1844,6 +1842,13 @@ footer{
   <p>
     In a product's record, whoever manages the store or sees the stock movements report also has its
     <strong>ins and outs</strong> in this branch, latest first: date and time, whether it comes in or goes out, how many units, and whether it was a sale or a manual movement.
+  </p>
+
+  <h3 id="reposicion">Restocking</h3>
+  <span class="ruta">Menu → Catalogue → Restocking</span>
+
+  <p>
+    Lists, by supplier, the products that are <strong>below their minimum</strong> in this branch (the minimum is the one on the product record). Only the suppliers ticked in <strong>Restocking settings</strong>are shown, which is also where you set the <strong>address for draft orders</strong>. For each product you say how many units to order; if you do not, the ones missing up to the minimum. <strong>Prepare the draft</strong> sends the supplier's order, with its email address, to that address so you can forward it; nothing reaches the supplier directly. Afterwards the draft is marked as <strong>Sent to the supplier</strong> or you <strong>Discard</strong> it (for example, because that material is provided by the public authority and is not bought). While a product is in an open draft it is not proposed again. It is seen by whoever sees the stock; preparing drafts and changing the settings is for whoever moves stock.
   </p>
 
   <h3 id="paquetes">Packages</h3>
@@ -5777,7 +5782,7 @@ footer{
     <li><strong>Closed</strong>: resolved more than two weeks ago.</li>
   </ul>
   <p>
-    Inside a ticket you see the conversation (yours on the right, the team's on the left), you can download the files, <strong>Attach file</strong> (images or videos, with the same limits; the support team can send you files of any type), <strong>Send reply</strong> and, once it is solved, <strong>Mark as resolved</strong>. Each person can send up to 5 new tickets per hour.
+    Inside a ticket you see the conversation (yours on the right, the team's on the left), you can download the files, <strong>Attach file</strong> (images, videos or Word, Excel or OpenDocument documents —docx, xlsx, odt, ods—, with the same limits; the support team can send you files of any type), <strong>Send reply</strong> and, once it is solved, <strong>Mark as resolved</strong>. Each person can send up to 5 new tickets per hour.
   </p>
   <p>
     The boxes for <em>New ticket</em> and for <strong>Send reply</strong> have four buttons at the top: <strong>bold</strong>,
@@ -5922,9 +5927,82 @@ footer{
     In the record of the person staying, and in their customer record, <strong>Contact people</strong> keeps who to call: an older person often depends on a son, a niece or their legal guardian. For each one, the name, the relationship, the phone, the email and some notes (when to call, what errands they handle). There can be several, and one is the <strong>main contact</strong>, shown first: the first one entered is main without saying so, and marking another removes the mark from the previous one. They belong to the person, not to the admission, so they are still there if they are admitted again. They are changed by whoever handles admissions or edits customer records. It is worth writing the email carefully: it will be the one that gives access to the future family portal.
   </p>
 
+  <h3 id="estancias-referencia">Key staff</h3>
+  <p>
+    The <strong>key staff</strong> are the people who know the resident best and whom the family turns to: their care assistant, their nurse, their psychologist. They are not the same as the contact people, who are their family. On the resident's record, <strong>Add</strong> lets you pick a professional of the centre from the list or, if it is someone from outside, type their name; the role (care assistant, nursing…) is optional. There can be several. It goes with the admission: in another admission it can be someone else. Removing someone does not delete them; who removed them and when is kept. It is changed by whoever handles admissions and seen by whoever sees stays.
+  </p>
+
+  <h3 id="estancias-alergias">Allergies</h3>
+  <p>
+    The <strong>allergies</strong> are recorded one by one: whether it is to a medicine, a food or something else, to what (penicillin, shellfish, latex…), the reaction and the severity. Severe ones show in red and first. They are on the resident's record and in the clinical history, because they go with the person and not with the admission. Floor staff see them too, since what is given to eat and take depends on them; they are recorded by whoever writes in the clinical history or has the permission <em>Allergies, assessments and restraints</em>. Removing one does not delete it: who removed it and when is kept. Every look is kept in the access log, like the clinical history.
+  </p>
+
+  <h3 id="estancias-valoraciones">Assessments with scales</h3>
+  <p>
+    A <strong>assessment</strong> measures something about the person with a recognised scale and repeats it every so often to see how it evolves. Turnera comes with six: <strong>Barthel</strong> (how independent they are to eat, dress, wash or walk), <strong>Lawton and Brody</strong> (activities such as the telephone, medication or money),
+    <strong>Pfeiffer</strong> (orientation and memory), <strong>Tinetti</strong> (balance and gait),
+    <strong>Norton</strong> (risk of pressure ulcers) and <strong>Downton</strong> (risk of falls).
+    <strong>New assessment</strong> asks for the scale and the date, shows its questions and adds up the score with its reading as it goes (for example, “Moderate dependence”). Turnera works out the score; it is not typed in by hand. You see the latest of each scale and, with <em>See all</em>, the full history. One made by mistake is cancelled with its reason and stays visible, crossed out. Other widely used scales, such as Braden or MNA, require a licence from their authors to be included in a program, which is why they are not there.
+  </p>
+
+  <h3 id="estancias-medicacion">Medication</h3>
+  <p>
+    On the resident's record, <strong>Medication</strong> is their medication plan. <strong>Prescribe a medicine</strong> lets you look it up in the catalogue of medicines marketed in Spain (CIMA, from the AEMPS) or type it, and asks for the dose (1 tablet, 5 ml…), the route, the times of the doses (08:00, 14:00, 21:00), who prescribes it and since when, and whether it ends on a date. One given only when needed is marked <em>As needed</em>, with when it is given (if in pain, if feverish…). Before saving it is checked against the recorded <strong>allergies</strong> : if the medicine or its active ingredient matches one, a warning appears and it can only be prescribed with <em>Prescribe anyway</em>, which stays flagged on the prescription. A prescription is not deleted: it is <strong>stopped</strong> with its reason.
+  </p>
+  <p>
+    The <strong>Medication</strong> in the Stays menu is the one for the shift: the day's doses grouped by time, for whom (with their room) and what. Each dose is marked <strong>Given</strong> or <strong>Not given</strong> with the reason (refuses it, not there, fasting, asleep, out of stock, vomits it or other) and a note, and it is recorded in the name of whoever gives it, also from an area's tablet with the PIN. A dose is recorded only once and at most two hours before its time. Anyone who is away that day is flagged. Below are the prescriptions <em>as needed</em> with <strong>Give now</strong>
+    and what has already been given that way. Previous days can be looked up. Whoever only sees their area only sees the doses of their area. It is used by whoever records the day to day or has the health permission; prescribing and stopping, only the latter.
+  </p>
+
+  <h3 id="estancias-visitas">Visits</h3>
+  <p>
+    The <strong>Visits</strong> in the Stays menu says who is visiting right now and whom they have come to see.
+    <strong>New visit</strong> asks for the resident and who is coming: you choose from their contact people, which brings the relationship, or type the name. When they leave, <strong>Has left</strong> records the time. One recorded by mistake is cancelled and stays visible. Previous days can be looked up, and the resident's record shows their latest visits. They are recorded by whoever handles admissions or records on the floor; whoever sees stays sees them too.
+  </p>
+
+  <h3 id="estancias-bolsillo">Pocket money</h3>
+  <p>
+    On the resident's record, <strong>Pocket money</strong> keeps what the family leaves at the residence for their expenses and what is spent for them (hairdresser, shopping, outings), with the <strong>balance</strong> at the top. Each movement has whether it comes in or goes out, the amount, the concept and the date. You cannot spend more than there is. One recorded by mistake is cancelled and stays visible; an entry that has already been spent cannot be cancelled without first cancelling the outgoings. It is kept by whoever handles admissions and discharges.
+  </p>
+
+  <h3 id="estancias-cobros">Billing and remittances</h3>
+  <p>
+    <strong>Stays → Billing</strong> works out what each resident pays per month and prepares the direct debit file (SEPA) to upload to the bank. It is for whoever sees and sets the rates.
+  </p>
+  <ol>
+    <li>At the top, in <strong>Who collects</strong>, you enter once the account holder, the <strong>SEPA creditor identifier</strong> (the bank gives it, it looks like ES12ZZZB12345678) and the account the money goes to.</li>
+    <li>In the rate of each resident with a publicly funded place, <strong>Paid by the public authority</strong> holds the part they do not pay; the resident pays the rest. That way what comes in from the bank matches the resident's part.</li>
+    <li>On their record, <strong>Direct debit</strong> keeps the signed mandate: account holder, IBAN and signature date. Only the last four digits of the account are shown; a new one replaces the previous one.</li>
+    <li>Each month, <strong>Work out the charges</strong> works out each stay's amount by calendar days according to its rate. Pressing it again only adds the missing ones.</li>
+    <li><strong>Generate the remittance</strong>, with the collection date (at least two days ahead), gathers the pending ones of whoever has a mandate. <strong>Download the file</strong> gives the XML to upload in business online banking.</li>
+    <li>When the bank pays in, <strong>Paid in by the bank</strong> leaves the receipts as collected. One the bank returns is marked <strong>Returned</strong> with the reason and goes into the next remittance; one that is not going to be collected is marked <strong>Not collected</strong>.</li>
+  </ol>
+  <p>
+    Billing does not issue the stay invoice yet: for now it is the remittance and its follow-up.
+  </p>
+
+  <h3 id="estancias-calidad">Quality and family portal</h3>
+  <p>
+    <strong>Stays → Quality</strong> is the record of <strong>compliments, suggestions, complaints and non-conformities</strong>. Each one says where it comes from (the family, the centre itself or an inspection), whom it concerns (a resident or the whole centre), who reports it and what has happened. Open ones come first, from oldest to newest; they are closed by recording <strong>what was done</strong>, which is compulsory for a complaint or a non-conformity. Nothing is deleted. The official complaints form is still separate: this is for finding out in time and keeping a record of what is done.
+  </p>
+  <p>
+    On the same screen is the <strong>family portal</strong>, closed until it is opened. The family goes to
+    <em>/familia</em>, picks the residence if there is more than one and types their email; if that email is in the
+    <strong>contact people</strong> of someone staying there, they get a link valid for 30 days. With it they see the room, the diet, the key staff and the latest visits, and can <strong>write to the residence</strong>: what they write goes into Quality with their name and email, and Management gets a notice. Anyone who is not there gets the same reply and is sent nothing. If that email is removed from the record, the link stops showing anything.
+  </p>
+  <p>
+    Incidents from the last 30 days and care records from the last week are only shown if ticked. The colours, the font and a welcome text make the portal look like the residence's website; the logo is the centre's. To put it on the website there is a link without its own styles that whoever runs the website places wherever they like. All of this belongs to the permission <em>Quality and family portal</em>.
+  </p>
+
+  <h3 id="estancias-sujeciones">Restraints</h3>
+  <p>
+    A <strong>restraint</strong> is any means that limits the person's movements: bed rails, belts, wrist straps, a table on the chair or a medicine given to restrain them. It is only recorded with <strong>who prescribes it</strong> and when, <strong>who gives consent</strong> (the person or their representative) and when, the reason, when it is applied and <strong>every how many days it is reviewed</strong> (30 by default). One past its review date shows in red. <em>Review</em> records who reviews it and what is concluded; <em>Withdraw</em>, the day and the reason. Nothing is deleted. They are seen by whoever sees stays or works on the floor; they are recorded by whoever has the permission
+    <em>Allergies, assessments and restraints</em>. Turnera records what the centre decides: which restraint protocol it follows and what its regional regulations require are set by the centre.
+  </p>
+
   <h3 id="estancias-permisos">Permissions and roles</h3>
   <p>
-    The Stays permissions are fourteen, which each centre distributes as it wishes: <em>See the stays</em>, <em>Admissions, room changes and discharges</em>, <em>Configure the rooms</em>, <em>Configure Stays</em>,
+    There are sixteen Stays permissions, which each centre shares out as it likes: <em>Allergies, assessments and restraints</em>, <em>Quality and family portal</em>, <em>See the stays</em>, <em>Admissions, room changes and discharges</em>, <em>Configure the rooms</em>, <em>Configure Stays</em>,
     <em>Record day-to-day care</em>, <em>See the record history</em>, <em>Correct other people's records</em>,
     <em>Open incidents</em>, <em>Close incidents</em>, <em>Write in the room logbook</em>, <em>See and set rates</em>, <em>See Stays in the scorecard</em>, <em>See the diets</em> and <em>See all zones</em>. When the module is switched on in a centre, two starting roles are created, which the centre can change: <strong>Estancias · planta</strong>
      (view stays, record, open incidents, write in the logbook and view diets) and <strong>Estancias · supervisión</strong> (the above plus admissions and discharges, close incidents, see the record history, correct and see all zones). <em>Management</em> has them all; amounts are only for those who have the rates permission.

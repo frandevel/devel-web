@@ -2143,9 +2143,10 @@ footer{
   </p>
 
   <div class="ojo">
-    <p><strong>La fusión no se deshace.</strong> Antes de confirmarla, compruebe en la pantalla que la ficha que se
-      queda es la correcta. Para confirmar hay que <strong>escribir a mano el nombre</strong> de la ficha que se va a
-      borrar; pegarlo no vale, para que nadie confirme sin haberlo leído.</p>
+    <p><strong>La fusión no se deshace.</strong> Se hace desde la ficha que se quiere conservar: se pulsa <strong>Fusionar</strong> y se
+      busca la repetida, que es la que se borra. Antes de confirmar, la ventana dice en verde cuál se queda
+      y en rojo cuál se elimina. Para confirmar hay que <strong>escribir a mano el código</strong> de la ficha
+      que se va a borrar (o su nombre, si no tiene código); pegarlo no vale, para que nadie confirme sin haberlo leído.</p>
   </div>
 </section>
 
@@ -2324,6 +2325,20 @@ footer{
     En la ficha de un producto, quien lleva el almacén o ve el informe de movimientos de stock tiene además sus
     <strong>entradas y salidas</strong> en esta delegación, las últimas primero: fecha y hora, si entra o sale,
     cuántas unidades y si fue una venta o un movimiento a mano.
+  </p>
+
+  <h3 id="reposicion">Reposición</h3>
+  <span class="ruta">Menú → Catálogo → Reposición</span>
+
+  <p>
+    Lista, por proveedor, los productos que están <strong>por debajo de su mínimo</strong> en esta delegación (el mínimo
+    es el de la ficha del producto). Solo salen los proveedores marcados en <strong>Ajustes de reposición</strong>, donde
+    se pone también la <strong>dirección de los borradores de pedido</strong>. En cada producto se dice cuántas unidades
+    pedir; si no se dice, las que faltan hasta el mínimo. <strong>Preparar el borrador</strong> manda a esa dirección el
+    pedido del proveedor, con su correo, para reenviárselo; no le llega nada al proveedor directamente. Después el
+    borrador se marca como <strong>Mandado al proveedor</strong> o se <strong>Descarta</strong> (por ejemplo, porque ese
+    material lo da la Administración y no se compra). Mientras un producto está en un borrador abierto no vuelve a
+    proponerse. Lo ve quien ve el stock; preparar borradores y cambiar los ajustes es de quien mueve stock.
   </p>
 
   <h3 id="paquetes">Paquetes</h3>
@@ -7302,7 +7317,7 @@ footer{
   </ul>
   <p>
     Dentro de un ticket ves la conversación (lo tuyo a la derecha, lo del equipo a la izquierda), puedes descargar los
-    archivos, <strong>Adjuntar archivo</strong> (imágenes o vídeos, con los mismos límites; el equipo de soporte sí puede enviarte ficheros de cualquier tipo), <strong>Enviar respuesta</strong> y, cuando ya
+    archivos, <strong>Adjuntar archivo</strong> (imágenes, vídeos o documentos de Word, Excel u OpenDocument —docx, xlsx, odt, ods—, con los mismos límites; el equipo de soporte sí puede enviarte ficheros de cualquier tipo), <strong>Enviar respuesta</strong> y, cuando ya
     está solucionado, <strong>Marcar como resuelto</strong>. Cada persona puede enviar hasta 5 tickets nuevos por hora.
   </p>
   <p>
@@ -7528,9 +7543,142 @@ footer{
     al futuro portal del familiar.
   </p>
 
+  <h3 id="estancias-referencia">Personal de referencia</h3>
+  <p>
+    El <strong>personal de referencia</strong> es quien mejor conoce a la persona alojada y a quien acude la familia:
+    su auxiliar, su enfermera, su psicóloga. No es lo mismo que las personas de contacto, que son de su familia. En la
+    ficha de la persona, <strong>Añadir</strong> deja elegir a una profesional del centro de la lista o, si es alguien
+    de fuera, escribir su nombre; el papel (auxiliar, enfermería…) es opcional. Puede haber varias. Va con el ingreso:
+    en otro ingreso puede ser otra persona. Quitar a alguien no lo borra, queda quién lo quitó y cuándo. Lo cambia quien
+    hace ingresos y lo ve quien ve las estancias.
+  </p>
+
+  <h3 id="estancias-alergias">Alergias</h3>
+  <p>
+    Las <strong>alergias</strong> se apuntan una por una: si es a un medicamento, a un alimento o a otra cosa, a qué
+    (penicilina, marisco, látex…), la reacción y la gravedad. Las graves salen en rojo y las primeras. Están en la ficha
+    de la persona alojada y en la historia clínica, porque van con la persona y no con el ingreso. Las ve también quien
+    trabaja en planta, ya que de ellas depende lo que se da de comer y de tomar; las apunta quien escribe en la historia
+    clínica o tiene el permiso <em>Alergias, valoraciones y sujeciones</em>. Quitar una no la borra: queda quién la quitó
+    y cuándo. Cada consulta queda en el rastro de accesos, como la historia clínica.
+  </p>
+
+  <h3 id="estancias-valoraciones">Valoraciones con escalas</h3>
+  <p>
+    Una <strong>valoración</strong> mide algo de la persona con una escala reconocida y la repite cada cierto tiempo para
+    ver cómo evoluciona. Turnera trae seis: <strong>Barthel</strong> (cuánto se vale para comer, vestirse, asearse o
+    andar), <strong>Lawton y Brody</strong> (actividades como el teléfono, la medicación o el dinero),
+    <strong>Pfeiffer</strong> (orientación y memoria), <strong>Tinetti</strong> (equilibrio y marcha),
+    <strong>Norton</strong> (riesgo de úlceras por presión) y <strong>Downton</strong> (riesgo de caídas).
+    <strong>Nueva valoración</strong> pide la escala y la fecha, enseña sus preguntas y va sumando la puntuación con su
+    lectura (por ejemplo, «Dependencia moderada»). La puntuación la calcula Turnera, no se escribe a mano. Se ve la
+    última de cada escala y, con <em>Ver todas</em>, la historia completa. Una hecha por error se anula con su motivo y
+    sigue a la vista, tachada. Otras escalas muy usadas, como Braden o MNA, piden licencia a sus autores para incluirlas
+    en un programa, y por eso no están.
+  </p>
+
+  <h3 id="estancias-medicacion">Medicación</h3>
+  <p>
+    En la ficha de la persona alojada, <strong>Medicación</strong> es su plan farmacológico. <strong>Pautar un
+    medicamento</strong> deja buscarlo en el catálogo de medicamentos comercializados en España (CIMA, de la AEMPS) o
+    escribirlo, y pide la dosis (1 comprimido, 5 ml…), la vía, las horas de las tomas (08:00, 14:00, 21:00), quién lo
+    prescribe y desde cuándo, y si acaba en una fecha. Uno que se da solo cuando hace falta se marca <em>Si precisa</em>,
+    con cuándo se da (si dolor, si fiebre…). Antes de guardar se mira contra las <strong>alergias</strong> apuntadas: si
+    el medicamento o su principio activo coincide con una, sale el aviso y solo se pauta con <em>Pautar igualmente</em>,
+    que queda señalado en la pauta. Una pauta no se borra: se <strong>suspende</strong> con su motivo.
+  </p>
+  <p>
+    La pantalla <strong>Medicación</strong> del menú de Estancias es la del turno: las tomas del día agrupadas por hora,
+    de quién (con su habitación) y qué. Cada toma se marca <strong>Dada</strong> o <strong>No dada</strong> con el motivo
+    (la rechaza, no está, en ayunas, dormida, no hay, la vomita u otro) y una nota, y queda a nombre de quien la da,
+    también desde la tablet de una zona con el PIN. Una toma se apunta una sola vez y como mucho dos horas antes de su
+    hora. Quien está fuera ese día sale marcado. Debajo están las pautas <em>si precisa</em> con <strong>Dar ahora</strong>
+    y lo que ya se dio así. Se pueden consultar días anteriores. Quien solo ve su zona, solo ve las tomas de su zona. La
+    usa quien registra el día a día o tiene el permiso de salud; pautar y suspender, solo este último.
+  </p>
+
+  <h3 id="estancias-visitas">Visitas</h3>
+  <p>
+    La pantalla <strong>Visitas</strong> del menú de Estancias dice quién hay ahora de visita y a quién ha venido a ver.
+    <strong>Nueva visita</strong> pide la persona alojada y quién viene: se elige entre sus personas de contacto, que
+    trae el parentesco, o se escribe el nombre. Al irse, <strong>Ha salido</strong> apunta la hora. Una apuntada por error
+    se anula y sigue a la vista. Se pueden consultar días anteriores, y la ficha de la persona alojada enseña sus últimas
+    visitas. Las apunta quien hace ingresos o registra en planta; las ve también quien ve las estancias.
+  </p>
+
+  <h3 id="estancias-bolsillo">Dinero de bolsillo</h3>
+  <p>
+    En la ficha de la persona alojada, <strong>Dinero de bolsillo</strong> lleva lo que la familia deja en la residencia
+    para sus gastos y lo que se gasta por ella (peluquería, compras, salidas), con el <strong>saldo</strong> arriba. Cada
+    movimiento lleva si entra o sale, el importe, el concepto y la fecha. No se puede gastar más de lo que hay. Uno
+    apuntado por error se anula y sigue a la vista; una entrada que ya se ha gastado no se anula sin anular antes las
+    salidas. Lo lleva quien hace ingresos y salidas.
+  </p>
+
+  <h3 id="estancias-cobros">Cobros y remesas</h3>
+  <p>
+    <strong>Estancias → Cobros</strong> saca lo que paga cada residente al mes y prepara el fichero de recibos
+    domiciliados (SEPA) para subirlo al banco. Es de quien ve y pone las tarifas.
+  </p>
+  <ol>
+    <li>Arriba, en <strong>Quién cobra</strong>, se pone una vez el titular, el <strong>identificador de acreedor
+      SEPA</strong> (lo da el banco, es como ES12ZZZB12345678) y la cuenta a la que llega el dinero.</li>
+    <li>En la tarifa de cada residente con plaza concertada, <strong>Paga la Administración</strong> lleva la parte que
+      no paga él; el residente paga el resto. Así lo que entra del banco cuadra con la parte del residente.</li>
+    <li>En su ficha, <strong>Domiciliación</strong> guarda el mandato firmado: titular, IBAN y fecha de la firma. De la
+      cuenta solo se ven las cuatro últimas cifras; uno nuevo sustituye al anterior.</li>
+    <li>Cada mes, <strong>Calcular los cargos</strong> saca lo de cada estancia por días naturales según su tarifa.
+      Volver a pulsarlo solo añade los que falten.</li>
+    <li><strong>Generar la remesa</strong>, con la fecha de cargo (al menos dentro de dos días), junta los pendientes
+      de quien tiene mandato. <strong>Descargar el fichero</strong> da el XML para subirlo en la banca de empresa.</li>
+    <li>Cuando el banco abona, <strong>Abonada por el banco</strong> deja los recibos como cobrados. Uno que el banco
+      devuelve se marca <strong>Devuelto</strong> con el motivo y entra en la remesa siguiente; uno que no se va a
+      cobrar se marca <strong>No se cobra</strong>.</li>
+  </ol>
+  <p>
+    Los cobros no emiten aún la factura de la estancia: de momento son la remesa y su control.
+  </p>
+
+  <h3 id="estancias-calidad">Calidad y portal del familiar</h3>
+  <p>
+    <strong>Estancias → Calidad</strong> es el registro de <strong>felicitaciones, sugerencias, quejas y no
+    conformidades</strong>. Cada una dice de dónde viene (la familia, el propio centro o una inspección), de quién es
+    (una persona alojada o todo el centro), quién lo comunica y qué ha pasado. Las abiertas salen primero, de la más
+    antigua a la más nueva; se cierran apuntando <strong>lo que se hizo</strong>, que en una queja o una no conformidad
+    es obligatorio. Nada se borra. La hoja oficial de reclamaciones sigue siendo aparte: esto sirve para enterarse a
+    tiempo y dejar constancia de lo que se hace.
+  </p>
+  <p>
+    En la misma pantalla está el <strong>portal del familiar</strong>, cerrado hasta que se abre. La familia entra en
+    <em>/familia</em>, elige la residencia si hay más de una y escribe su correo; si ese correo está en las
+    <strong>personas de contacto</strong> de alguien alojado, le llega un enlace que vale 30 días. Con él ve la
+    habitación, la dieta, las personas de referencia y las últimas visitas, y puede <strong>escribir a la
+    residencia</strong>: lo que escribe entra en Calidad con su nombre y su correo, y Dirección recibe un aviso. A quien
+    no está, se le contesta lo mismo y no se le manda nada. Si se quita ese correo de la ficha, el enlace deja de
+    enseñar nada.
+  </p>
+  <p>
+    Las incidencias de los últimos 30 días y los registros de cuidados de la última semana solo se enseñan si se
+    marcan. Los colores, la letra y un texto de bienvenida hacen que el portal se parezca a la web de la residencia; el
+    logotipo es el del centro. Para ponerlo en la web hay un enlace sin estilos propios que quien lleve la web coloca
+    donde quiera. Todo esto es del permiso <em>Calidad y portal del familiar</em>.
+  </p>
+
+  <h3 id="estancias-sujeciones">Sujeciones</h3>
+  <p>
+    Una <strong>sujeción</strong> es cualquier medio que limita los movimientos de la persona: barandillas, cinturones,
+    muñequeras, una mesa en la silla o un medicamento dado para contenerla. Solo se apunta con <strong>quién la
+    prescribe</strong> y cuándo, <strong>quién da el consentimiento</strong> (la persona o su representante) y cuándo,
+    el motivo, cuándo se pone y <strong>cada cuántos días se revisa</strong> (30 por defecto). La que pasa de su fecha de
+    revisión sale en rojo. <em>Revisar</em> deja escrito quién revisa y qué se concluye; <em>Retirar</em>, el día y el
+    motivo. Nada se borra. Las ve quien ve las estancias o trabaja en planta; las apunta quien tiene el permiso
+    <em>Alergias, valoraciones y sujeciones</em>. Turnera registra lo que el centro decide: qué protocolo de sujeciones
+    sigue y qué le exige su normativa autonómica lo marca el centro.
+  </p>
+
   <h3 id="estancias-permisos">Permisos y roles</h3>
   <p>
-    Los permisos de Estancias son catorce, que cada centro reparte como quiera: <em>Ver las estancias</em>, <em>Ingresos,
+    Los permisos de Estancias son dieciséis, que cada centro reparte como quiera: <em>Alergias, valoraciones y sujeciones</em>, <em>Calidad y portal del familiar</em>, <em>Ver las estancias</em>, <em>Ingresos,
     cambios de habitación y salidas</em>, <em>Configurar las habitaciones</em>, <em>Configurar Estancias</em>,
     <em>Registrar el día a día</em>, <em>Ver la historia de registros</em>, <em>Corregir registros de otros</em>,
     <em>Abrir incidencias</em>, <em>Cerrar incidencias</em>, <em>Escribir en la bitácora de sala</em>, <em>Ver y poner las

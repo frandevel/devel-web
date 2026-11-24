@@ -679,8 +679,9 @@ footer{
   <h2>What's new in Turnera</h2>
   <p>Latest first</p>
   <ol>
+    <li><a href="#2026-11-24">24 November 2026</a></li>
     <li><a href="#2026-11-23">23 November 2026</a></li>
-<li><a href="#2026-11-21">21 November 2026</a></li>
+    <li><a href="#2026-11-21">21 November 2026</a></li>
     <li><a href="#2026-11-20">20 November 2026</a></li>
     <li><a href="#2026-11-19">19 November 2026</a></li>
     <li><a href="#2026-11-18">18 November 2026</a></li>
@@ -733,10 +734,55 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Bugs fixed</strong>: what failed, and no longer does.</span></li>
 </ul>
 
+<section id="2026-11-24" class="version">
+  <div class="version__cabecera">
+    <h2>24 November 2026</h2>
+    <span class="version__sello">Latest release</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.18.0-3ba0ed0</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Stock restocking</h4>
+    <ul>
+      <li>Catalogue → Restocking lists, by supplier, the products that have dropped below their minimum in the branch.</li>
+      <li>“Prepare the draft” sends that supplier's order, with its email address, to the centre address set in “Restocking settings”, so it can be forwarded. Nothing reaches the supplier directly, and no email is sent on its own: only when someone presses the button.</li>
+      <li>It comes switched off: until a supplier is ticked in the settings, the screen is empty.</li>
+    </ul>
+    <h4>Care homes: resident health</h4>
+    <ul>
+      <li>Allergies, one by one, with the reaction and the severity. Severe ones show in red and first.</li>
+      <li>Assessments with six recognised scales (Barthel, Lawton and Brody, Pfeiffer, Tinetti, Norton and Downton). Turnera works out the score and keeps the history of each one.</li>
+      <li>Restraints, with who prescribes it, who gives consent, the reason and every how many days it is reviewed. One past its review date shows in red.</li>
+      <li>Medication plan: medicines are looked up in the official medicines catalogue, with dose, route and dose times. If a medicine matches a recorded allergy, it warns before saving.</li>
+      <li>The Medication screen gathers the day's doses by time. Each one is marked as given or, if it was not given, with the reason, and it is recorded in the name of whoever gives it.</li>
+    </ul>
+    <h4>Care homes: day to day</h4>
+    <ul>
+      <li>Key staff for each resident: their care assistant, their nurse or whoever the family has as contact in the centre.</li>
+      <li>Visits: who has come, to see whom and when they left.</li>
+      <li>Pocket money: what the family leaves and what is spent for the resident, with its balance.</li>
+    </ul>
+    <h4>Care homes: billing, quality and families</h4>
+    <ul>
+      <li>Monthly billing: the charges of each stay by days according to its rate, taking into account the part paid by the public authority for publicly funded places, and the direct debit file (SEPA) to upload to the bank. Returned ones go into the next remittance.</li>
+      <li>Quality: compliments, suggestions, complaints and non-conformities, with where they come from and what was done to close them.</li>
+      <li>Family portal: the family asks for a link with their email and sees the room, the diet, the key staff and the latest visits, and can write to the residence. It comes closed until the centre opens it.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Improvements</h3>
+    <ul>
+      <li>When merging two records, the window says in green which one stays and in red which one is deleted, and to confirm you have to type the code of the one being deleted.</li>
+      <li>Word, Excel and OpenDocument documents can also be attached to support tickets.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-23" class="version">
   <div class="version__cabecera">
     <h2>23 November 2026</h2>
-    <span class="version__sello">Latest release</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.18.0-b901b5d</span></p>
 

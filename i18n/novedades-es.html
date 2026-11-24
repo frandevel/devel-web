@@ -627,8 +627,9 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-11-24">24 de noviembre de 2026</a></li>
     <li><a href="#2026-11-23">23 de noviembre de 2026</a></li>
-<li><a href="#2026-11-21">21 de noviembre de 2026</a></li>
+    <li><a href="#2026-11-21">21 de noviembre de 2026</a></li>
     <li><a href="#2026-11-20">20 de noviembre de 2026</a></li>
     <li><a href="#2026-11-19">19 de noviembre de 2026</a></li>
     <li><a href="#2026-11-18">18 de noviembre de 2026</a></li>
@@ -682,10 +683,55 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"/></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-11-24" class="version">
+  <div class="version__cabecera">
+    <h2>24 de noviembre de 2026</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">1.18.0-3ba0ed0</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"/></svg></span>Nuevas características</h3>
+    <h4>Reposición de stock</h4>
+    <ul>
+      <li>En Catálogo → Reposición salen, por proveedor, los productos que han bajado de su mínimo en la delegación.</li>
+      <li>«Preparar el borrador» manda el pedido de ese proveedor, con su correo, a la dirección del centro que se ponga en «Ajustes de reposición», para reenviarlo. Al proveedor no le llega nada directamente, y no se manda ningún correo solo: únicamente cuando alguien pulsa el botón.</li>
+      <li>Viene apagada: hasta que no se marca un proveedor en los ajustes, la pantalla sale vacía.</li>
+    </ul>
+    <h4>Residencias: salud del residente</h4>
+    <ul>
+      <li>Alergias, una por una, con la reacción y la gravedad. Las graves salen en rojo y las primeras.</li>
+      <li>Valoraciones con seis escalas reconocidas (Barthel, Lawton y Brody, Pfeiffer, Tinetti, Norton y Downton). La puntuación la calcula Turnera y queda la historia de cada una.</li>
+      <li>Sujeciones, con quién la prescribe, quién da el consentimiento, el motivo y cada cuántos días se revisa. La que pasa de su fecha de revisión sale en rojo.</li>
+      <li>Plan farmacológico: los medicamentos se buscan en el catálogo oficial de medicamentos, con dosis, vía y horas de las tomas. Si un medicamento coincide con una alergia apuntada, avisa antes de guardar.</li>
+      <li>La pantalla de Medicación reúne las tomas del día por hora. Cada una se marca como dada o, si no se dio, con el motivo, y queda a nombre de quien la da.</li>
+    </ul>
+    <h4>Residencias: el día a día</h4>
+    <ul>
+      <li>Personal de referencia de cada residente: su auxiliar, su enfermera o quien la familia tenga como contacto en el centro.</li>
+      <li>Visitas: quién ha venido, a ver a quién y cuándo se ha ido.</li>
+      <li>Dinero de bolsillo: lo que deja la familia y lo que se gasta por el residente, con su saldo.</li>
+    </ul>
+    <h4>Residencias: cobros, calidad y familias</h4>
+    <ul>
+      <li>Cobro mensual: los cargos de cada estancia por días según su tarifa, teniendo en cuenta la parte que paga la Administración en las plazas concertadas, y el fichero de recibos domiciliados (SEPA) para subirlo al banco. Los devueltos entran en la remesa siguiente.</li>
+      <li>Calidad: felicitaciones, sugerencias, quejas y no conformidades, con de dónde vienen y lo que se hizo para cerrarlas.</li>
+      <li>Portal del familiar: la familia pide un enlace con su correo y ve la habitación, la dieta, el personal de referencia y las últimas visitas, y puede escribir a la residencia. Viene cerrado hasta que el centro lo abre.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>Mejoras</h3>
+    <ul>
+      <li>Al fusionar dos fichas, la ventana dice en verde cuál se queda y en rojo cuál se borra, y para confirmar hay que escribir el código de la que se borra.</li>
+      <li>En los tickets de soporte se pueden adjuntar también documentos de Word, Excel y OpenDocument.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-23" class="version">
   <div class="version__cabecera">
     <h2>23 de noviembre de 2026</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">1.18.0-b901b5d</span></p>
 

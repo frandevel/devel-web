@@ -1854,9 +1854,7 @@ footer{
   </p>
 
   <div class="ojo">
-    <p><strong>A fusão não se desfaz.</strong> Antes de a confirmar, verifique no ecrã se a ficha que
-      fica é a correta. Para confirmar é preciso <strong>escrever à mão o nome</strong> da ficha que vai
-      ser apagada; colar não vale, para que ninguém confirme sem a ter lido.</p>
+    <p><strong>A fusão não se desfaz.</strong> Faz-se a partir da ficha que se quer manter: carrega-se em <strong>Fundir</strong> e procura-se a repetida, que é a que se apaga. Antes de confirmar, a janela mostra a verde qual fica e a vermelho qual se elimina. Para confirmar é preciso <strong>escrever à mão o código</strong> da ficha que vai ser apagada (ou o nome, se não tiver código); colar não serve, para que ninguém confirme sem ter lido.</p>
   </div>
 </section>
 
@@ -1985,6 +1983,13 @@ footer{
   <p>
     Na ficha de um produto, quem gere o armazém ou vê o relatório de movimentos de stock tem também as suas
     <strong>entradas e saídas</strong> nesta delegação, as mais recentes primeiro: data e hora, se entra ou sai, quantas unidades e se foi uma venda ou um movimento manual.
+  </p>
+
+  <h3 id="reposicion">Reposição</h3>
+  <span class="ruta">Menu → Catálogo → Reposição</span>
+
+  <p>
+    Lista, por fornecedor, os produtos que estão <strong>abaixo do seu mínimo</strong> nesta delegação (o mínimo é o da ficha do produto). Só aparecem os fornecedores marcados em <strong>Definições de reposição</strong>, onde também se indica o <strong>endereço dos rascunhos de encomenda</strong>. Em cada produto indica-se quantas unidades encomendar; se não se indicar, as que faltam até ao mínimo. <strong>Preparar o rascunho</strong> envia para esse endereço a encomenda do fornecedor, com o seu e-mail, para a reencaminhar; ao fornecedor não chega nada diretamente. Depois o rascunho é marcado como <strong>Enviado ao fornecedor</strong> ou é <strong>Descartado</strong> (por exemplo, porque esse material é fornecido pela Administração e não se compra). Enquanto um produto estiver num rascunho aberto não volta a ser proposto. Vê-o quem vê o stock; preparar rascunhos e alterar as definições é de quem movimenta stock.
   </p>
 
   <h3 id="paquetes">Pacotes</h3>
@@ -6373,7 +6378,7 @@ footer{
     <li><strong>Fechado</strong>: resolvido há mais de duas semanas.</li>
   </ul>
   <p>
-    Dentro de um ticket vê a conversa (o seu à direita, o da equipa à esquerda), pode descarregar os ficheiros, <strong>Anexar ficheiro</strong> (imagens ou vídeos, com os mesmos limites; a equipa de suporte pode enviar-lhe ficheiros de qualquer tipo), <strong>Enviar resposta</strong> e, quando já
+    Dentro de um ticket vê a conversa (o seu à direita, o da equipa à esquerda), pode descarregar os ficheiros, <strong>Anexar ficheiro</strong> (imagens, vídeos ou documentos de Word, Excel ou OpenDocument —docx, xlsx, odt, ods—, com os mesmos limites; a equipa de suporte pode enviar-lhe ficheiros de qualquer tipo), <strong>Enviar resposta</strong> e, quando já
     estiver resolvido, <strong>Marcar como resolvido</strong>. Cada pessoa pode enviar até 5 tickets novos por hora.
   </p>
   <p>
@@ -6519,9 +6524,82 @@ footer{
     Na ficha da pessoa alojada, e na sua ficha de cliente, <strong>Pessoas de contacto</strong> guarda a quem se liga: muitas vezes a pessoa idosa depende de um filho, de uma sobrinha ou do seu tutor legal. De cada uma, o nome, o parentesco, o telefone, o email e umas observações (quando ligar, que assuntos trata). Pode haver várias, e uma é a <strong>principal</strong>, que aparece primeiro: a primeira que se regista é-o sem dizer nada, e ao marcar outra deixa de o ser a anterior. Vão com a pessoa e não com a admissão, por isso continuam lá se voltar a dar entrada. Altera-as quem faz admissões ou edita fichas de clientes. Convém escrever bem o email: será o que dará acesso ao futuro portal do familiar.
   </p>
 
+  <h3 id="estancias-referencia">Pessoal de referência</h3>
+  <p>
+    O <strong>pessoal de referência</strong> é quem melhor conhece a pessoa alojada e a quem a família recorre: a sua auxiliar, a sua enfermeira, a sua psicóloga. Não é o mesmo que as pessoas de contacto, que são da família. Na ficha da pessoa, <strong>Adicionar</strong> permite escolher uma profissional do centro na lista ou, se for alguém de fora, escrever o nome; a função (auxiliar, enfermagem…) é opcional. Pode haver várias. Vai com a admissão: noutra admissão pode ser outra pessoa. Retirar alguém não o apaga, fica registado quem o retirou e quando. Altera-o quem faz admissões e vê-o quem vê as estadias.
+  </p>
+
+  <h3 id="estancias-alergias">Alergias</h3>
+  <p>
+    As <strong>alergias</strong> registam-se uma a uma: se é a um medicamento, a um alimento ou a outra coisa, a quê (penicilina, marisco, látex…), a reação e a gravidade. As graves aparecem a vermelho e em primeiro lugar. Estão na ficha da pessoa alojada e no processo clínico, porque vão com a pessoa e não com a admissão. Vê-as também quem trabalha no piso, já que delas depende o que se dá de comer e de tomar; regista-as quem escreve no processo clínico ou tem a permissão <em>Alergias, avaliações e contenções</em>. Retirar uma não a apaga: fica registado quem a retirou e quando. Cada consulta fica no registo de acessos, como o processo clínico.
+  </p>
+
+  <h3 id="estancias-valoraciones">Avaliações com escalas</h3>
+  <p>
+    Uma <strong>avaliação</strong> mede algo da pessoa com uma escala reconhecida e repete-a de tempos a tempos para ver como evolui. O Turnera traz seis: <strong>Barthel</strong> (quanto é autónoma para comer, vestir-se, fazer a higiene ou andar), <strong>Lawton e Brody</strong> (atividades como o telefone, a medicação ou o dinheiro),
+    <strong>Pfeiffer</strong> (orientação e memória), <strong>Tinetti</strong> (equilíbrio e marcha),
+    <strong>Norton</strong> (risco de úlceras de pressão) e <strong>Downton</strong> (risco de quedas).
+    <strong>Nova avaliação</strong> pede a escala e a data, mostra as perguntas e vai somando a pontuação com a sua leitura (por exemplo, «Dependência moderada»). A pontuação é calculada pelo Turnera, não se escreve à mão. Vê-se a última de cada escala e, com <em>Ver todas</em>, o histórico completo. Uma feita por engano anula-se com o motivo e continua visível, riscada. Outras escalas muito usadas, como a Braden ou a MNA, exigem licença dos autores para serem incluídas num programa, e por isso não estão.
+  </p>
+
+  <h3 id="estancias-medicacion">Medicação</h3>
+  <p>
+    Na ficha da pessoa alojada, <strong>Medicação</strong> é o seu plano farmacológico. <strong>Prescrever um medicamento</strong> permite procurá-lo no catálogo de medicamentos comercializados em Espanha (CIMA, da AEMPS) ou escrevê-lo, e pede a dose (1 comprimido, 5 ml…), a via, as horas das tomas (08:00, 14:00, 21:00), quem o prescreve e desde quando, e se termina numa data. Um que só se dá quando é preciso marca-se <em>Em SOS</em>, com quando se dá (se dor, se febre…). Antes de guardar confronta-se com as <strong>alergias</strong> registadas: se o medicamento ou o seu princípio ativo coincidir com uma, aparece o aviso e só se prescreve com <em>Prescrever mesmo assim</em>, que fica assinalado na prescrição. Uma prescrição não se apaga: <strong>suspende-se</strong> com o motivo.
+  </p>
+  <p>
+    O ecrã <strong>Medicação</strong> do menu Estadias é a do turno: as tomas do dia agrupadas por hora, de quem (com o quarto) e o quê. Cada toma marca-se <strong>Dada</strong> ou <strong>Não dada</strong> com o motivo (recusa, não está, em jejum, a dormir, não há, vomita ou outro) e uma nota, e fica em nome de quem a dá, também a partir do tablet de uma zona com o PIN. Uma toma regista-se uma única vez e no máximo duas horas antes da sua hora. Quem está fora nesse dia aparece assinalado. Por baixo estão as prescrições <em>em SOS</em> com <strong>Dar agora</strong>
+    e o que já se deu assim. É possível consultar dias anteriores. Quem só vê a sua zona só vê as tomas da sua zona. Usa-a quem regista o dia a dia ou tem a permissão de saúde; prescrever e suspender, só esta última.
+  </p>
+
+  <h3 id="estancias-visitas">Visitas</h3>
+  <p>
+    O ecrã <strong>Visitas</strong> do menu Estadias diz quem está agora de visita e quem veio ver.
+    <strong>Nova visita</strong> pede a pessoa alojada e quem vem: escolhe-se entre as suas pessoas de contacto, que trazem o parentesco, ou escreve-se o nome. À saída, <strong>Saiu</strong> regista a hora. Uma registada por engano anula-se e continua visível. É possível consultar dias anteriores, e a ficha da pessoa alojada mostra as suas últimas visitas. Regista-as quem faz admissões ou regista no piso; vê-as também quem vê as estadias.
+  </p>
+
+  <h3 id="estancias-bolsillo">Dinheiro de bolso</h3>
+  <p>
+    Na ficha da pessoa alojada, <strong>Dinheiro de bolso</strong> regista o que a família deixa no lar para as suas despesas e o que se gasta por ela (cabeleireiro, compras, passeios), com o <strong>saldo</strong> no topo. Cada movimento indica se entra ou sai, o valor, a descrição e a data. Não se pode gastar mais do que há. Um registado por engano anula-se e continua visível; uma entrada que já foi gasta não se anula sem anular antes as saídas. Faz isto quem trata das admissões e saídas.
+  </p>
+
+  <h3 id="estancias-cobros">Cobranças e remessas</h3>
+  <p>
+    <strong>Estadias → Cobranças</strong> calcula o que cada residente paga por mês e prepara o ficheiro de débitos diretos (SEPA) para enviar ao banco. É de quem vê e define as tarifas.
+  </p>
+  <ol>
+    <li>No topo, em <strong>Quem cobra</strong>, indica-se uma vez o titular, o <strong>identificador de credor SEPA</strong> (é dado pelo banco, tem a forma ES12ZZZB12345678) e a conta para onde vai o dinheiro.</li>
+    <li>Na tarifa de cada residente com vaga convencionada, <strong>Paga a Administração</strong> leva a parte que ele não paga; o residente paga o resto. Assim o que entra do banco bate certo com a parte do residente.</li>
+    <li>Na sua ficha, <strong>Débito direto</strong> guarda o mandato assinado: titular, IBAN e data da assinatura. Da conta só se veem os quatro últimos algarismos; um novo substitui o anterior.</li>
+    <li>Todos os meses, <strong>Calcular as cobranças</strong> calcula o valor de cada estadia por dias de calendário segundo a sua tarifa. Voltar a carregar só acrescenta os que faltem.</li>
+    <li><strong>Gerar a remessa</strong>, com a data de débito (pelo menos daqui a dois dias), junta os pendentes de quem tem mandato. <strong>Descarregar o ficheiro</strong> dá o XML para carregar no homebanking da empresa.</li>
+    <li>Quando o banco credita, <strong>Creditada pelo banco</strong> deixa os recibos como cobrados. Um que o banco devolve marca-se <strong>Devolvido</strong> com o motivo e entra na remessa seguinte; um que não se vai cobrar marca-se <strong>Não se cobra</strong>.</li>
+  </ol>
+  <p>
+    As cobranças ainda não emitem a fatura da estadia: por agora são a remessa e o seu controlo.
+  </p>
+
+  <h3 id="estancias-calidad">Qualidade e portal do familiar</h3>
+  <p>
+    <strong>Estadias → Qualidade</strong> é o registo de <strong>elogios, sugestões, queixas e não conformidades</strong>. Cada um diz de onde vem (a família, o próprio centro ou uma inspeção), a quem diz respeito (uma pessoa alojada ou todo o centro), quem o comunica e o que aconteceu. Os abertos aparecem primeiro, do mais antigo para o mais recente; fecham-se registando <strong>o que se fez</strong>, o que numa queixa ou numa não conformidade é obrigatório. Nada se apaga. O livro de reclamações oficial continua à parte: isto serve para saber a tempo e deixar registo do que se faz.
+  </p>
+  <p>
+    No mesmo ecrã está o <strong>portal do familiar</strong>, fechado até ser aberto. A família entra em
+    <em>/familia</em>, escolhe o lar se houver mais de um e escreve o seu e-mail; se esse e-mail estiver nas
+    <strong>pessoas de contacto</strong> de alguém alojado, recebe uma ligação válida durante 30 dias. Com ela vê o quarto, a dieta, o pessoal de referência e as últimas visitas, e pode <strong>escrever ao lar</strong>: o que escreve entra em Qualidade com o seu nome e e-mail, e a Direção recebe um aviso. A quem não está, responde-se o mesmo e não se envia nada. Se esse e-mail for retirado da ficha, a ligação deixa de mostrar o que quer que seja.
+  </p>
+  <p>
+    As ocorrências dos últimos 30 dias e os registos de cuidados da última semana só se mostram se forem marcados. As cores, a letra e um texto de boas-vindas fazem o portal parecer-se com o site do lar; o logótipo é o do centro. Para o pôr no site há uma ligação sem estilos próprios que quem gere o site coloca onde quiser. Tudo isto é da permissão <em>Qualidade e portal do familiar</em>.
+  </p>
+
+  <h3 id="estancias-sujeciones">Contenções</h3>
+  <p>
+    Uma <strong>contenção</strong> é qualquer meio que limite os movimentos da pessoa: grades, cintos, pulseiras de contenção, uma mesa na cadeira ou um medicamento dado para a conter. Só se regista com <strong>quem a prescreve</strong> e quando, <strong>quem dá o consentimento</strong> (a pessoa ou o seu representante) e quando, o motivo, quando se aplica e <strong>de quantos em quantos dias se revê</strong> (30 por defeito). A que ultrapassa a data de revisão aparece a vermelho. <em>Rever</em> regista quem revê e o que se conclui; <em>Retirar</em>, o dia e o motivo. Nada se apaga. Vê-as quem vê as estadias ou trabalha no piso; regista-as quem tem a permissão
+    <em>Alergias, avaliações e contenções</em>. O Turnera regista o que o centro decide: qual o protocolo de contenções que segue e o que exige a sua regulamentação regional é o centro que define.
+  </p>
+
   <h3 id="estancias-permisos">Permissões e perfis</h3>
   <p>
-    As permissões de Estadias são catorze, que cada centro distribui como quiser: <em>Ver as estadias</em>, <em>Admissões, mudanças de quarto e altas</em>, <em>Configurar os quartos</em>, <em>Configurar Estadias</em>,
+    As permissões de Estadias são dezasseis, que cada centro distribui como quiser: <em>Alergias, avaliações e contenções</em>, <em>Qualidade e portal do familiar</em>, <em>Ver as estadias</em>, <em>Admissões, mudanças de quarto e altas</em>, <em>Configurar os quartos</em>, <em>Configurar Estadias</em>,
     <em>Registar o dia a dia</em>, <em>Ver o histórico de registos</em>, <em>Corrigir registos de outros</em>,
     <em>Abrir incidentes</em>, <em>Encerrar incidentes</em>, <em>Escrever no livro da sala</em>, <em>Ver e definir as tarifas</em>, <em>Ver Estadias no painel de indicadores</em>, <em>Ver as dietas</em> e <em>Ver todas as zonas</em>. Ao ligar o módulo num centro criam-se dois perfis de partida, que o centro pode alterar: <strong>Estancias · planta</strong>
      (ver as estadias, registar, abrir ocorrências, escrever no livro da sala e ver as dietas) e <strong>Estancias · supervisión</strong> (o anterior mais admissões e altas, encerrar incidentes, ver o histórico de registos, corrigir e ver todas as zonas). <em>Direção</em> tem todas; os valores ficam só para quem tenha a permissão de tarifas.

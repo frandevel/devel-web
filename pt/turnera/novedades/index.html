@@ -679,8 +679,9 @@ footer{
   <h2>Novidades do Turnera</h2>
   <p>O mais recente, em cima</p>
   <ol>
+    <li><a href="#2026-11-24">24 de novembro de 2026</a></li>
     <li><a href="#2026-11-23">23 de novembro de 2026</a></li>
-<li><a href="#2026-11-21">21 de novembro de 2026</a></li>
+    <li><a href="#2026-11-21">21 de novembro de 2026</a></li>
     <li><a href="#2026-11-20">20 de novembro de 2026</a></li>
     <li><a href="#2026-11-19">19 de novembro de 2026</a></li>
     <li><a href="#2026-11-18">18 de novembro de 2026</a></li>
@@ -734,10 +735,55 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Erros corrigidos</strong>: o que falhava e já não falha.</span></li>
 </ul>
 
+<section id="2026-11-24" class="version">
+  <div class="version__cabecera">
+    <h2>24 de novembro de 2026</h2>
+    <span class="version__sello">Última versão</span>
+  </div>
+  <p class="version__numero">Versão <span translate="no">1.18.0-3ba0ed0</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Novas funcionalidades</h3>
+    <h4>Reposição de stock</h4>
+    <ul>
+      <li>Em Catálogo → Reposição aparecem, por fornecedor, os produtos que desceram abaixo do seu mínimo na delegação.</li>
+      <li>«Preparar o rascunho» envia a encomenda desse fornecedor, com o seu e-mail, para o endereço do centro indicado em «Definições de reposição», para a reencaminhar. Ao fornecedor não chega nada diretamente, e não se envia nenhum e-mail sozinho: só quando alguém carrega no botão.</li>
+      <li>Vem desligada: enquanto não se marcar um fornecedor nas definições, o ecrã aparece vazio.</li>
+    </ul>
+    <h4>Lares: saúde do residente</h4>
+    <ul>
+      <li>Alergias, uma a uma, com a reação e a gravidade. As graves aparecem a vermelho e em primeiro lugar.</li>
+      <li>Avaliações com seis escalas reconhecidas (Barthel, Lawton e Brody, Pfeiffer, Tinetti, Norton e Downton). A pontuação é calculada pelo Turnera e fica o histórico de cada uma.</li>
+      <li>Contenções, com quem a prescreve, quem dá o consentimento, o motivo e de quantos em quantos dias se revê. A que ultrapassa a data de revisão aparece a vermelho.</li>
+      <li>Plano farmacológico: os medicamentos procuram-se no catálogo oficial de medicamentos, com dose, via e horas das tomas. Se um medicamento coincidir com uma alergia registada, avisa antes de guardar.</li>
+      <li>O ecrã Medicação reúne as tomas do dia por hora. Cada uma marca-se como dada ou, se não foi dada, com o motivo, e fica em nome de quem a dá.</li>
+    </ul>
+    <h4>Lares: o dia a dia</h4>
+    <ul>
+      <li>Pessoal de referência de cada residente: a sua auxiliar, a sua enfermeira ou quem a família tenha como contacto no centro.</li>
+      <li>Visitas: quem veio, ver quem e quando saiu.</li>
+      <li>Dinheiro de bolso: o que a família deixa e o que se gasta pelo residente, com o seu saldo.</li>
+    </ul>
+    <h4>Lares: cobranças, qualidade e famílias</h4>
+    <ul>
+      <li>Cobrança mensal: os valores de cada estadia por dias segundo a sua tarifa, tendo em conta a parte paga pela Administração nas vagas convencionadas, e o ficheiro de débitos diretos (SEPA) para enviar ao banco. Os devolvidos entram na remessa seguinte.</li>
+      <li>Qualidade: elogios, sugestões, queixas e não conformidades, com a sua origem e o que se fez para os fechar.</li>
+      <li>Portal do familiar: a família pede uma ligação com o seu e-mail e vê o quarto, a dieta, o pessoal de referência e as últimas visitas, e pode escrever ao lar. Vem fechado até o centro o abrir.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Melhorias</h3>
+    <ul>
+      <li>Ao fundir duas fichas, a janela mostra a verde qual fica e a vermelho qual se apaga, e para confirmar é preciso escrever o código da que se apaga.</li>
+      <li>Nos tickets de suporte também se podem anexar documentos de Word, Excel e OpenDocument.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-23" class="version">
   <div class="version__cabecera">
     <h2>23 de novembro de 2026</h2>
-    <span class="version__sello">Última versão</span>
   </div>
   <p class="version__numero">Versão <span translate="no">1.18.0-b901b5d</span></p>
 

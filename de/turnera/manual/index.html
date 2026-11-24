@@ -1726,9 +1726,7 @@ footer{
   </p>
 
   <div class="ojo">
-    <p><strong>Das Zusammenführen lässt sich nicht rückgängig machen.</strong> Prüfen Sie vor der Bestätigung am Bildschirm, ob die verbleibende
-      Kartei die richtige ist. Zur Bestätigung muss man <strong>von Hand den Namen eintippen</strong> der Kartei, die gelöscht
-      wird; Einfügen gilt nicht, damit niemand bestätigt, ohne ihn gelesen zu haben.</p>
+    <p><strong>Das Zusammenführen lässt sich nicht rückgängig machen.</strong> Das geschieht in der Akte, die erhalten bleiben soll: Sie drücken <strong>Zusammenführen</strong> und suchen die doppelte, die gelöscht wird. Vor der Bestätigung zeigt das Fenster in Grün, welche bleibt, und in Rot, welche entfernt wird. Zur Bestätigung müssen Sie <strong>von Hand den Code</strong> der zu löschenden Akte eingeben (oder ihren Namen, wenn sie keinen Code hat); Einfügen gilt nicht, damit niemand bestätigt, ohne es gelesen zu haben.</p>
   </div>
 </section>
 
@@ -1845,6 +1843,13 @@ footer{
   <p>
     In der Produktakte sehen die Lagerverantwortlichen und alle, die den Bericht der Lagerbewegungen sehen, außerdem seine
     <strong>Zu- und Abgänge</strong> in dieser Filiale, die neuesten zuerst: Datum und Uhrzeit, ob Zu- oder Abgang, wie viele Stück und ob es ein Verkauf oder eine manuelle Bewegung war.
+  </p>
+
+  <h3 id="reposicion">Nachbestellung</h3>
+  <span class="ruta">Menü → Katalog → Nachbestellung</span>
+
+  <p>
+    Listet nach Lieferant die Produkte auf, die <strong>unter ihrem Mindestbestand</strong> in dieser Filiale liegen (der Mindestbestand ist der aus der Produktakte). Es erscheinen nur die Lieferanten, die markiert sind in <strong>Einstellungen der Nachbestellung</strong>, wo auch die <strong>Adresse für die Bestellentwürfe</strong>eingetragen wird. Bei jedem Produkt geben Sie an, wie viele Einheiten bestellt werden; ohne Angabe die, die bis zum Mindestbestand fehlen. <strong>Entwurf vorbereiten</strong> schickt die Bestellung des Lieferanten mit dessen E-Mail-Adresse an diese Adresse, damit Sie sie weiterleiten; beim Lieferanten kommt direkt nichts an. Danach wird der Entwurf markiert als <strong>An Lieferanten gesendet</strong> oder <strong>verworfen</strong> (zum Beispiel, weil dieses Material die Behörde stellt und es nicht gekauft wird). Solange ein Produkt in einem offenen Entwurf steht, wird es nicht erneut vorgeschlagen. Es sieht, wer den Lagerbestand sieht; Entwürfe vorbereiten und die Einstellungen ändern darf, wer Lagerbewegungen bucht.
   </p>
 
   <h3 id="paquetes">Pakete</h3>
@@ -5782,7 +5787,7 @@ footer{
     <li><strong>Geschlossen</strong>: vor mehr als zwei Wochen gelöst.</li>
   </ul>
   <p>
-    In einem Ticket sehen Sie die Unterhaltung (Ihre Beiträge rechts, die des Teams links), können die Dateien herunterladen, <strong>Datei anhängen</strong> (Bilder oder Videos, mit denselben Grenzen; das Support-Team kann Ihnen Dateien jeder Art senden), <strong>Antwort senden</strong> und, sobald das Problem gelöst ist, <strong>Als gelöst markieren</strong>. Jede Person kann bis zu 5 neue Tickets pro Stunde senden.
+    In einem Ticket sehen Sie die Unterhaltung (Ihre Beiträge rechts, die des Teams links), können die Dateien herunterladen, <strong>Datei anhängen</strong> (Bilder, Videos oder Word-, Excel- oder OpenDocument-Dokumente —docx, xlsx, odt, ods— mit denselben Grenzen; das Support-Team kann Ihnen Dateien jeder Art senden), <strong>Antwort senden</strong> und, sobald das Problem gelöst ist, <strong>Als gelöst markieren</strong>. Jede Person kann bis zu 5 neue Tickets pro Stunde senden.
   </p>
   <p>
     Die Felder von <em>Neues Ticket</em> und von <strong>Antwort senden</strong> haben oben vier Schaltflächen: <strong>Fett</strong>,
@@ -5927,9 +5932,82 @@ footer{
     In der Akte der untergebrachten Person und in ihrer Kundenakte hält <strong>Kontaktpersonen</strong> fest, wen man anruft: Oft ist eine ältere Person auf einen Sohn, eine Nichte oder ihren rechtlichen Betreuer angewiesen. Zu jeder Person Name, Beziehung, Telefon, E-Mail und Bemerkungen (wann man anruft, welche Angelegenheiten sie erledigt). Es können mehrere sein, und eine ist der <strong>Hauptkontakt</strong>, der zuerst erscheint: Der zuerst eingetragene ist es ohne weitere Angabe, und markiert man einen anderen, verliert der vorige die Markierung. Sie gehören zur Person und nicht zur Aufnahme, bleiben also bei einer erneuten Aufnahme erhalten. Ändern können sie alle, die Aufnahmen machen oder Kundenakten bearbeiten. Die E-Mail-Adresse sollte sorgfältig geschrieben werden: Sie wird später den Zugang zum Angehörigenportal öffnen.
   </p>
 
+  <h3 id="estancias-referencia">Bezugspersonen</h3>
+  <p>
+    Der <strong>Bezugspersonen</strong> sind die, die die Bewohnerin oder den Bewohner am besten kennen und an die sich die Familie wendet: die Pflegehilfskraft, die Pflegefachkraft, die Psychologin. Sie sind nicht dasselbe wie die Kontaktpersonen, die zur Familie gehören. In der Akte der Person <strong>Hinzufügen</strong> lässt eine Fachkraft der Einrichtung aus der Liste wählen oder, wenn es jemand von außerhalb ist, den Namen eingeben; die Rolle (Pflegehilfe, Pflege…) ist optional. Es können mehrere sein. Sie gehört zur Aufnahme: bei einer anderen Aufnahme kann es jemand anderes sein. Wer entfernt wird, wird nicht gelöscht; es bleibt festgehalten, wer es wann getan hat. Ändern darf, wer Aufnahmen bearbeitet, sehen, wer die Aufenthalte sieht.
+  </p>
+
+  <h3 id="estancias-alergias">Allergien</h3>
+  <p>
+    Die <strong>Allergien</strong> werden einzeln erfasst: ob gegen ein Medikament, ein Lebensmittel oder etwas anderes, wogegen (Penicillin, Meeresfrüchte, Latex…), die Reaktion und der Schweregrad. Schwere erscheinen rot und zuerst. Sie stehen in der Akte der Person und in der Krankengeschichte, weil sie zur Person gehören und nicht zur Aufnahme. Auch das Stationspersonal sieht sie, denn davon hängt ab, was zu essen und einzunehmen gegeben wird; erfasst werden sie von wem, der in die Krankengeschichte schreibt oder die Berechtigung hat <em>Allergien, Einschätzungen und Fixierungen</em>. Eine zu entfernen löscht sie nicht: es bleibt festgehalten, wer es wann getan hat. Jeder Abruf bleibt im Zugriffsprotokoll, wie bei der Krankengeschichte.
+  </p>
+
+  <h3 id="estancias-valoraciones">Einschätzungen mit Skalen</h3>
+  <p>
+    Eine <strong>Einschätzung</strong> misst etwas an der Person mit einer anerkannten Skala und wiederholt es in Abständen, um die Entwicklung zu sehen. Turnera bringt sechs mit: <strong>Barthel</strong> (wie selbstständig sie beim Essen, Anziehen, Waschen oder Gehen ist), <strong>Lawton und Brody</strong> (Tätigkeiten wie Telefon, Medikamente oder Geld),
+    <strong>Pfeiffer</strong> (Orientierung und Gedächtnis), <strong>Tinetti</strong> (Gleichgewicht und Gang),
+    <strong>Norton</strong> (Dekubitusrisiko) und <strong>Downton</strong> (Sturzrisiko).
+    <strong>Neue Einschätzung</strong> fragt nach Skala und Datum, zeigt die Fragen und summiert die Punktzahl mit ihrer Deutung (zum Beispiel „Mäßige Abhängigkeit“). Die Punktzahl berechnet Turnera, sie wird nicht von Hand eingegeben. Sie sehen die letzte jeder Skala und mit <em>Alle ansehen</em>den ganzen Verlauf. Eine irrtümliche wird mit Begründung storniert und bleibt durchgestrichen sichtbar. Andere verbreitete Skalen wie Braden oder MNA brauchen eine Lizenz ihrer Autoren, um in ein Programm aufgenommen zu werden, deshalb fehlen sie.
+  </p>
+
+  <h3 id="estancias-medicacion">Medikation</h3>
+  <p>
+    In der Akte der Person ist <strong>Medikation</strong> ihr Medikationsplan. <strong>Ein Medikament verordnen</strong> lässt das Medikament im Katalog der in Spanien zugelassenen Arzneimittel (CIMA der AEMPS) suchen oder eingeben und fragt nach Dosis (1 Tablette, 5 ml…), Verabreichungsweg, den Uhrzeiten der Gaben (08:00, 14:00, 21:00), wer es verordnet und seit wann und ob es an einem Datum endet. Eines, das nur bei Bedarf gegeben wird, wird markiert als <em>Bei Bedarf</em>, mit wann es gegeben wird (bei Schmerzen, bei Fieber…). Vor dem Speichern wird es mit den erfassten <strong>Allergien</strong> abgeglichen: stimmt das Medikament oder sein Wirkstoff mit einer überein, erscheint ein Hinweis und es lässt sich nur verordnen mit <em>Trotzdem verordnen</em>, was in der Verordnung markiert bleibt. Eine Verordnung wird nicht gelöscht: sie wird <strong>abgesetzt</strong> mit Begründung.
+  </p>
+  <p>
+    Die Seite <strong>Medikation</strong> im Menü Aufenthalte ist die der Schicht: die Gaben des Tages nach Uhrzeit gruppiert, für wen (mit Zimmer) und was. Jede Gabe wird markiert als <strong>Gegeben</strong> oder <strong>Nicht gegeben</strong> mit Grund (lehnt ab, nicht da, nüchtern, schläft, nicht vorrätig, erbricht oder anderes) und einer Notiz und steht auf den Namen dessen, der sie gibt, auch vom Tablet eines Bereichs mit der PIN. Eine Gabe wird nur einmal erfasst und höchstens zwei Stunden vor ihrer Uhrzeit. Wer an dem Tag abwesend ist, ist markiert. Darunter stehen die Verordnungen <em>bei Bedarf</em> mit <strong>Jetzt geben</strong>
+    und was schon so gegeben wurde. Frühere Tage lassen sich abrufen. Wer nur seinen Bereich sieht, sieht nur die Gaben seines Bereichs. Sie nutzt, wer den Alltag erfasst oder die Gesundheitsberechtigung hat; verordnen und absetzen nur Letztere.
+  </p>
+
+  <h3 id="estancias-visitas">Besuche</h3>
+  <p>
+    Die Seite <strong>Besuche</strong> im Menü Aufenthalte zeigt, wer gerade zu Besuch ist und wen er besucht.
+    <strong>Neuer Besuch</strong> fragt nach der Person und wer kommt: Sie wählen aus ihren Kontaktpersonen, die das Verwandtschaftsverhältnis mitbringen, oder geben den Namen ein. Beim Gehen <strong>Ist gegangen</strong> trägt die Uhrzeit ein. Ein irrtümlich erfasster Besuch wird storniert und bleibt sichtbar. Frühere Tage lassen sich abrufen, und die Akte der Person zeigt ihre letzten Besuche. Erfasst werden sie von wem, der Aufnahmen bearbeitet oder auf der Station erfasst; sehen kann sie auch, wer die Aufenthalte sieht.
+  </p>
+
+  <h3 id="estancias-bolsillo">Taschengeld</h3>
+  <p>
+    In der Akte der Person ist <strong>Taschengeld</strong> führt, was die Familie in der Einrichtung für ihre Ausgaben hinterlegt und was für sie ausgegeben wird (Friseur, Einkäufe, Ausflüge), mit dem <strong>Saldo</strong> oben. Jede Bewegung hat, ob sie ein- oder ausgeht, den Betrag, den Zweck und das Datum. Man kann nicht mehr ausgeben, als da ist. Eine irrtümliche wird storniert und bleibt sichtbar; ein Eingang, der schon ausgegeben ist, lässt sich nicht stornieren, ohne vorher die Ausgänge zu stornieren. Es führt, wer Aufnahmen und Entlassungen bearbeitet.
+  </p>
+
+  <h3 id="estancias-cobros">Abrechnung und Sammellastschriften</h3>
+  <p>
+    <strong>Aufenthalte → Abrechnung</strong> ermittelt, was jede Bewohnerin und jeder Bewohner im Monat zahlt, und bereitet die Lastschriftdatei (SEPA) zum Hochladen bei der Bank vor. Sie gehört dem, der die Tarife sieht und festlegt.
+  </p>
+  <ol>
+    <li>Oben, unter <strong>Wer einzieht</strong>, tragen Sie einmal den Kontoinhaber, die <strong>SEPA-Gläubiger-Identifikationsnummer</strong> (gibt die Bank, sieht aus wie ES12ZZZB12345678) und das Konto ein, auf dem das Geld eingeht.</li>
+    <li>Im Tarif jeder Person mit öffentlich finanziertem Platz enthält <strong>Zahlt die Behörde</strong> den Teil, den sie nicht zahlt; den Rest zahlt die Person. So passt das, was von der Bank eingeht, zum Anteil der Person.</li>
+    <li>In ihrer Akte speichert <strong>Lastschriftmandat</strong> das unterschriebene Mandat: Kontoinhaber, IBAN und Datum der Unterschrift. Vom Konto sind nur die letzten vier Ziffern zu sehen; ein neues ersetzt das vorige.</li>
+    <li>Jeden Monat ermittelt <strong>Beträge berechnen</strong> den Betrag jedes Aufenthalts nach Kalendertagen laut Tarif. Erneutes Drücken fügt nur die fehlenden hinzu.</li>
+    <li><strong>Sammellastschrift erzeugen</strong>fasst mit dem Einzugsdatum (mindestens in zwei Tagen) die offenen Beträge derer zusammen, die ein Mandat haben. <strong>Datei herunterladen</strong> liefert die XML-Datei zum Hochladen im Firmen-Onlinebanking.</li>
+    <li>Wenn die Bank gutschreibt, <strong>Von der Bank gutgeschrieben</strong> setzt die Lastschriften auf eingezogen. Eine, die die Bank zurückbucht, wird markiert als <strong>Zurückgebucht</strong> mit Grund und geht in die nächste Sammellastschrift; eine, die nicht eingezogen wird, wird markiert als <strong>Wird nicht eingezogen</strong>.</li>
+  </ol>
+  <p>
+    Die Abrechnung stellt die Rechnung für den Aufenthalt noch nicht aus: vorerst sind es die Sammellastschrift und ihre Kontrolle.
+  </p>
+
+  <h3 id="estancias-calidad">Qualität und Angehörigenportal</h3>
+  <p>
+    <strong>Aufenthalte → Qualität</strong> ist das Register der <strong>Lob, Vorschlägen, Beschwerden und Abweichungen</strong>. Jeder Eintrag sagt, woher er kommt (Familie, die Einrichtung selbst oder eine Inspektion), wen er betrifft (eine Person oder die ganze Einrichtung), wer ihn meldet und was passiert ist. Offene stehen zuerst, vom ältesten zum neuesten; geschlossen werden sie mit <strong>was getan wurde</strong>, was bei einer Beschwerde oder einer Abweichung Pflicht ist. Nichts wird gelöscht. Das amtliche Beschwerdeformular bleibt getrennt: dies dient dazu, rechtzeitig davon zu erfahren und festzuhalten, was getan wird.
+  </p>
+  <p>
+    Auf demselben Bildschirm ist das <strong>Angehörigenportal</strong>, geschlossen, bis es geöffnet wird. Die Familie geht auf
+    <em>/familia</em>, wählt die Einrichtung, wenn es mehrere gibt, und gibt ihre E-Mail-Adresse ein; steht diese Adresse in den
+    <strong>Kontaktpersonen</strong> einer untergebrachten Person, erhält sie einen Link, der 30 Tage gilt. Damit sieht sie Zimmer, Kost, Bezugspersonen und die letzten Besuche und kann <strong>der Einrichtung schreiben</strong>: was sie schreibt, geht mit Name und E-Mail in Qualität ein, und die Leitung erhält einen Hinweis. Wer nicht dabei ist, bekommt dieselbe Antwort und nichts zugeschickt. Wird diese Adresse aus der Akte entfernt, zeigt der Link nichts mehr.
+  </p>
+  <p>
+    Vorkommnisse der letzten 30 Tage und Pflegeeinträge der letzten Woche werden nur gezeigt, wenn sie angehakt sind. Farben, Schrift und ein Begrüßungstext lassen das Portal wie die Website der Einrichtung aussehen; das Logo ist das der Einrichtung. Für die Website gibt es einen Link ohne eigene Stile, den die Person, die die Website betreut, platziert, wo sie will. All das gehört zur Berechtigung <em>Qualität und Angehörigenportal</em>.
+  </p>
+
+  <h3 id="estancias-sujeciones">Fixierungen</h3>
+  <p>
+    Eine <strong>Fixierung</strong> ist jedes Mittel, das die Bewegung der Person einschränkt: Bettgitter, Gurte, Handgelenkbänder, ein Tisch am Stuhl oder ein Medikament zur Ruhigstellung. Sie wird nur erfasst mit <strong>wer sie verordnet</strong> und wann, <strong>wer einwilligt</strong> (die Person oder ihre Vertretung) und wann, dem Grund, wann sie angelegt wird und <strong>alle wie viele Tage sie geprüft wird</strong> (standardmäßig 30). Eine, deren Prüfdatum überschritten ist, erscheint rot. <em>Prüfen</em> hält fest, wer prüft und was beschlossen wird; <em>Zurücknehmen</em>, Tag und Grund. Nichts wird gelöscht. Sehen kann sie, wer die Aufenthalte sieht oder auf der Station arbeitet; erfassen, wer die Berechtigung hat
+    <em>Allergien, Einschätzungen und Fixierungen</em>. Turnera hält fest, was die Einrichtung entscheidet: welches Fixierungsprotokoll sie befolgt und was ihre regionalen Vorschriften verlangen, legt die Einrichtung fest.
+  </p>
+
   <h3 id="estancias-permisos">Berechtigungen und Rollen</h3>
   <p>
-    Die Berechtigungen für Aufenthalte sind vierzehn, die jede Einrichtung nach Belieben verteilt: <em>Aufenthalte einsehen</em>, <em>Aufnahmen, Zimmerwechsel und Entlassungen</em>, <em>Zimmer konfigurieren</em>, <em>Aufenthalte konfigurieren</em>,
+    Die Berechtigungen für Aufenthalte sind sechzehn, die jede Einrichtung nach Belieben verteilt: <em>Allergien, Einschätzungen und Fixierungen</em>, <em>Qualität und Angehörigenportal</em>, <em>Aufenthalte einsehen</em>, <em>Aufnahmen, Zimmerwechsel und Entlassungen</em>, <em>Zimmer konfigurieren</em>, <em>Aufenthalte konfigurieren</em>,
     <em>Tägliche Pflege erfassen</em>, <em>Eintragsverlauf einsehen</em>, <em>Einträge anderer korrigieren</em>,
     <em>Vorfälle eröffnen</em>, <em>Vorfälle abschließen</em>, <em>Ins Stationsbuch schreiben</em>, <em>Tarife einsehen und festlegen</em>, <em>Aufenthalte im Cockpit sehen</em>, <em>Diäten einsehen</em> und <em>Alle Bereiche einsehen</em>. Wenn das Modul in einer Einrichtung eingeschaltet wird, entstehen zwei Ausgangsrollen, die die Einrichtung ändern kann: <strong>Estancias · planta</strong>
      (Aufenthalte ansehen, erfassen, Vorfälle eröffnen, ins Stationsbuch schreiben und Diäten ansehen) und <strong>Estancias · supervisión</strong> (das Obige plus Aufnahmen und Entlassungen, Vorfälle abschließen, Eintragsverlauf einsehen, korrigieren und alle Bereiche einsehen). <em>Leitung</em> hat alle; Beträge sind nur für die mit der Berechtigung für Tarife.
