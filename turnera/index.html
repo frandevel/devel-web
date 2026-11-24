@@ -351,6 +351,10 @@ footer{
 .hero--turnera .eyebrow{color:#8FC7BA}
 .hero--turnera .eyebrow::before{background:var(--tu-turno)}
 .hero--turnera .lede{color:#BFDCD4}
+.verticales{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin:1.4rem 0 .4rem}
+.verticales__titulo{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#8FC7BA;margin-right:.4rem}
+.verticales a{padding:.4rem .95rem;border:1px solid #3E7A6F;border-radius:999px;color:#D8EDE7;font-size:.92rem;text-decoration:none}
+.verticales a:hover{border-color:#7ED0BF;color:#FFFFFF}
 .hero--turnera .isotipo{width:min(100%,270px);height:auto;display:block;filter:drop-shadow(0 16px 34px rgba(0,0,0,.42))}
 @media (max-width:820px){.hero--turnera .hero__mark{display:none}}
 
@@ -1037,6 +1041,7 @@ footer{
     </a>
     <nav>
       <a href="#que-hace">Qué hace</a>
+      <a href="#perfiles">Para quién</a>
       <a href="#precios">Precios</a>
       <a href="#preguntas">Preguntas</a>
       <a href="#demo">Demo</a>
@@ -1067,7 +1072,15 @@ footer{
 <g transform="translate(333.88 82.00) scale(0.03027 -0.03027)"><path d="M444 -25Q339 -25 255.0 13.0Q171 51 122.0 123.5Q73 196 73 297Q73 406 136.5 487.5Q200 569 324.5 614.0Q449 659 633 659H795L777 635V696Q777 812 733.0 871.0Q689 930 587 930Q490 930 438.0 879.0Q386 828 378 738L119 787Q132 876 191.5 948.0Q251 1020 354.0 1063.0Q457 1106 602 1106Q740 1106 833.0 1059.0Q926 1012 972.5 913.5Q1019 815 1019 659V244Q1019 210 1028.5 199.0Q1038 188 1069 188H1123V0H994Q896 0 841.0 52.5Q786 105 786 197V258L828 246Q814 203 787.0 156.0Q760 109 715.0 68.0Q670 27 603.5 1.0Q537 -25 444 -25ZM512 154Q587 154 647.5 189.5Q708 225 743.5 298.5Q779 372 779 484V502H637Q520 502 454.0 471.5Q388 441 361.0 396.5Q334 352 334 308Q334 270 351.5 234.5Q369 199 408.0 176.5Q447 154 512 154Z" fill="var(--tu-anillo)"></path></g>
 </svg></span>
         <h1>La agenda, la ficha y la caja.<br><em>En la misma pantalla.</em></h1>
-        <p class="lede">Turnera es el software de gestión para negocios que atienden con cita: clínicas, centros de estética, fisioterapia y rehabilitación, centros de entrenamiento, clubes deportivos y academias de música, idiomas o clases particulares. Lo que hace un mostrador en un día cabe en tres pantallas, y ninguna te obliga a salir de ella para cobrar.</p>
+        <nav class="verticales" aria-label="Para quién es Turnera">
+          <span class="verticales__titulo">Para</span>
+          <a href="/turnera/clinicas">Clínicas</a>
+          <a href="/turnera/centros-sociosanitarios">Residencias y centros sociosanitarios</a>
+          <a href="/turnera/centros-deportivos">Centros deportivos</a>
+          <a href="/turnera/academias">Academias</a>
+          <a href="/turnera/recursos-humanos">Recursos humanos</a>
+        </nav>
+        <p class="lede">Turnera es el software de gestión para negocios que atienden con cita: clínicas de estética, fisioterapia y rehabilitación, residencias y centros sociosanitarios, centros de entrenamiento, clubes deportivos y academias de música, idiomas o clases particulares. Lo que hace un mostrador en un día cabe en tres pantallas, y ninguna te obliga a salir de ella para cobrar.</p>
         <div class="actions">
           <a class="btn btn--solid" href="#demo">Pedir una demo</a>
           <a class="btn btn--ghost" href="#pantallas">Ver cómo es</a>
