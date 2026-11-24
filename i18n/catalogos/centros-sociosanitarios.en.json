@@ -68,7 +68,6 @@
   "tdba8ac24": "Only if the centre opens the family portal, and only what the centre decides: by default, the room, the diet, the key people and the visits. Incidents and care records are only shown if the centre turns them on.",
   "t4c0cbb80": "Price and getting started",
   "t882e7f82": "How much does it cost?",
-  "td78054bd": "It depends on the number of places and what the centre will use. Tell us how many places you have and we'll send you the price, with no minimum term.",
   "t52a98ba1": "Can you bring over the data from the program I use now?",
   "t462e9d21": "Yes. We bring over residents, rooms, rates, contact people and staff from Excel or CSV sheets, which is what every program can export.",
   "t94c4bee7": "Does it also work for a clinic or a centre with consulting rooms?",
@@ -98,5 +97,13 @@
   "ta60baabf": "The stays dashboard with occupancy, the month's billing, falls and record compliance",
   "t3218a195": "The month's charges by resident, with the public administration's share and what the resident pays",
   "t001a6143": "The quality log with an open non-conformity, complaint and suggestion",
-  "t2c528c30": "The family portal with a resident's room, diet, key people and latest visits"
+  "t2c528c30": "The family portal with a resident's room, diet, key people and latest visits",
+  "tdf7070b8": ", with a minimum fee of €49 and a maximum of €299: from 150 places the price stops going up. We count the places the centre has, not the occupied ones, so the fee does not change from one month to the next.",
+  "ta47884b1": "€2 per place per month",
+  "tc07b3e55": "Places",
+  "tdf450d80": "Per month",
+  "t932c9887": "Per year",
+  "tf4582eea": "Up to 24",
+  "tdd01773a": "150 or more",
+  "t9dd6258d": "Everything is included: residents and stays, the centre's staff (clocking in, rota and payroll for the payroll office), maintenance, stock, and diary with clinical records if you have consultations. Unlimited users and no lock-in. Paying the year in advance you pay ten months. Prices exclude VAT."
 }

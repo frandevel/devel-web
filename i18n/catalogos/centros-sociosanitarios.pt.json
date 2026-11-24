@@ -68,7 +68,6 @@
   "tdba8ac24": "Só se o centro abrir o portal do familiar, e só o que o centro decidir: de origem, o quarto, a dieta, as pessoas de referência e as visitas. As ocorrências e os registos de cuidados só se mostram se o centro os ativar.",
   "t4c0cbb80": "Preço e arranque",
   "t882e7f82": "Quanto custa?",
-  "td78054bd": "Depende das vagas e do que o centro vai usar. Diga-nos quantas vagas têm e enviamos o preço, sem fidelização.",
   "t52a98ba1": "Podem trazer os dados do programa que uso agora?",
   "t462e9d21": "Sim. Trazemos residentes, quartos, tarifas, pessoas de contacto e o pessoal a partir de folhas de Excel ou CSV, que é o que todos os programas sabem exportar.",
   "t94c4bee7": "Serve também para uma clínica ou um centro com consultas?",
@@ -98,5 +97,13 @@
   "ta60baabf": "O painel de estadias com a ocupação, a faturação do mês, as quedas e o cumprimento dos registos",
   "t3218a195": "As cobranças do mês por residente, com a parte da Administração e a que paga o residente",
   "t001a6143": "O registo de qualidade com uma não conformidade, uma reclamação e uma sugestão abertas",
-  "t2c528c30": "O portal do familiar com o quarto, a dieta, as pessoas de referência e as últimas visitas de um residente"
+  "t2c528c30": "O portal do familiar com o quarto, a dieta, as pessoas de referência e as últimas visitas de um residente",
+  "tdf7070b8": ", com uma quota mínima de 49 € e um máximo de 299 €: a partir de 150 vagas o preço já não sobe. Contam as vagas do centro, não as ocupadas, por isso a quota não muda de um mês para o outro.",
+  "ta47884b1": "2 € por vaga por mês",
+  "tc07b3e55": "Vagas",
+  "tdf450d80": "Por mês",
+  "t932c9887": "Por ano",
+  "tf4582eea": "Até 24",
+  "tdd01773a": "150 ou mais",
+  "t9dd6258d": "Inclui tudo: residentes e estadias, o pessoal do centro (registo de ponto, escala e salários para o contabilista), manutenção, stock e agenda com processo clínico se tiverem consultas. Utilizadores ilimitados e sem fidelização. Pagando o ano adiantado pagam-se dez meses. Preços sem IVA."
 }

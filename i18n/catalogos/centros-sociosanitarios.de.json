@@ -68,7 +68,6 @@
   "tdba8ac24": "Nur wenn die Einrichtung das Angehörigenportal öffnet, und nur, was die Einrichtung festlegt: standardmäßig Zimmer, Kostform, Bezugspersonen und Besuche. Vorfälle und Pflegedokumentation werden nur gezeigt, wenn die Einrichtung es aktiviert.",
   "t4c0cbb80": "Preis und Start",
   "t882e7f82": "Was kostet es?",
-  "td78054bd": "Das hängt von der Zahl der Plätze ab und davon, was die Einrichtung nutzt. Sagen Sie uns, wie viele Plätze Sie haben, und wir nennen Ihnen den Preis, ohne Mindestlaufzeit.",
   "t52a98ba1": "Können Sie die Daten aus meinem jetzigen Programm übernehmen?",
   "t462e9d21": "Ja. Wir übernehmen Bewohner, Zimmer, Tarife, Kontaktpersonen und Personal aus Excel- oder CSV-Tabellen, die jedes Programm exportieren kann.",
   "t94c4bee7": "Eignet es sich auch für eine Praxis oder eine Einrichtung mit Sprechzimmern?",
@@ -98,5 +97,13 @@
   "ta60baabf": "Das Aufenthalts-Dashboard mit Belegung, Monatsumsatz, Stürzen und Dokumentationsquote",
   "t3218a195": "Die Beträge des Monats je Bewohner, mit dem Anteil der öffentlichen Hand und dem Eigenanteil",
   "t001a6143": "Das Qualitätsregister mit einer offenen Abweichung, einer Beschwerde und einem Vorschlag",
-  "t2c528c30": "Das Angehörigenportal mit Zimmer, Kostform, Bezugspersonen und letzten Besuchen eines Bewohners"
+  "t2c528c30": "Das Angehörigenportal mit Zimmer, Kostform, Bezugspersonen und letzten Besuchen eines Bewohners",
+  "tdf7070b8": ", mit einer Mindestgebühr von 49 € und höchstens 299 €: ab 150 Plätzen steigt der Preis nicht mehr. Gezählt werden die Plätze der Einrichtung, nicht die belegten, deshalb bleibt die Gebühr jeden Monat gleich.",
+  "ta47884b1": "2 € pro Platz und Monat",
+  "tc07b3e55": "Plätze",
+  "tdf450d80": "Pro Monat",
+  "t932c9887": "Pro Jahr",
+  "tf4582eea": "Bis 24",
+  "tdd01773a": "150 oder mehr",
+  "t9dd6258d": "Alles inklusive: Bewohner und Aufenthalte, das Personal der Einrichtung (Zeiterfassung, Dienstplan und Lohnabrechnung für das Lohnbüro), Instandhaltung, Lager sowie Terminkalender mit Patientenakte, wenn Sie Sprechstunden haben. Unbegrenzt viele Benutzer, ohne Mindestlaufzeit. Bei jährlicher Vorauszahlung zahlen Sie zehn Monate. Preise zzgl. MwSt."
 }
