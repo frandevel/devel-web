@@ -232,3 +232,5 @@ ${entradas.join('\n')}
 construir();
 writeFileSync('../sitemap.xml', sitemap());
 console.log('  ../sitemap.xml');
+const { manualEnMarkdown } = await import('./manual-markdown.mjs');
+manualEnMarkdown();
