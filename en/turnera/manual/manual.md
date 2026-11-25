@@ -562,6 +562,8 @@ When creating or correcting a product or a service, the **category** and the **b
 
 In a product's record, whoever manages the store or sees the stock movements report also has its **ins and outs** in this branch, latest first: date and time, whether it comes in or goes out, how many units, and whether it was a sale or a manual movement.
 
+When recording a movement by hand (in, out or adjustment) you can write the **reason**, which is optional: a product that arrived broken, a retail one moved to the treatment room. In the product's ins and outs and in the movements report, lines with a reason carry a comment icon on the left, like the notes in the customer history; tapping it opens a dialog with the text and who wrote it. An adjustment that does not change the units leaves no movement, so it does not keep the reason either.
+
 ### Restocking
 
 Menu → Catalogue → Restocking
@@ -3270,6 +3272,8 @@ What is recorded wrongly **is never deleted**: it is *corrected* with another en
 
 **An incident** is something that happens and has to be put in writing: a fall, an argument, a refused medication. It is opened from the person, the zone or the centre, with who, when, what happened and what was done. The centre defines its own **incident types** (the program comes with none) and for each one decides whether it *requires closure*, whether it requires saying whose it is and whether it requires saying what was done. Those that require closure stay open until whoever supervises reviews them and closes them with their conclusion. In the *Report* can be filtered by dates and downloaded as CSV and, for those who can see the Stays reports (by default, the administrator and Management), also as **PDF**, with the centre's letterhead, ready to print or file.
 
+Incidents opened from the mobile app can carry **photos** (up to six). They show small in the incident; tapping one shows it full size, with who took it and when.
+
 **The shift supervision** brings together on one screen what is still to be recorded today in each area, the incidents awaiting closure and the important points from the logbooks. For each person with something pending, each record appears as «Meal 1 of 3»: the times it has been recorded today out of those expected, with the time of the last one. Anything not yet recorded at all is shown in orange; hovering shows what was last recorded and by whom.
 
 *[Captura] Incidents: open ones wait for supervision to close them.*
@@ -3290,6 +3294,8 @@ In the record of the person staying, and in their customer record, **Contact peo
 
 The **key staff** are the people who know the resident best and whom the family turns to: their care assistant, their nurse, their psychologist. They are not the same as the contact people, who are their family. On the resident's record, **Add** lets you pick a professional of the centre from the list or, if it is someone from outside, type their name; the role (care assistant, nursing…) is optional. There can be several. It goes with the admission: in another admission it can be someone else. Removing someone does not delete them; who removed them and when is kept. It is changed by whoever handles admissions and seen by whoever sees stays.
 
+When typing the role, the ones already used in the centre are suggested, so as not to have «Physio» and «Physiotherapy» as if they were two different things. In the **agenda**, when booking an appointment for a resident, the professional field shows their reference professionals first with their role («Miguel · Doctor») and then the rest; any of them can be chosen. The report **Reference professionals** (Reports → Stays) lists, as of today, who looks after each resident and in what role, and also who has nobody assigned; it can be downloaded as CSV or PDF.
+
 ### Allergies
 
 The **allergies** are recorded one by one: whether it is to a medicine, a food or something else, to what (penicillin, shellfish, latex…), the reaction and the severity. Severe ones show in red and first. They are on the resident's record and in the clinical history, because they go with the person and not with the admission. Floor staff see them too, since what is given to eat and take depends on them; they are recorded by whoever writes in the clinical history or has the permission *Allergies, assessments and restraints*. Removing one does not delete it: who removed it and when is kept. Every look is kept in the access log, like the clinical history.
@@ -3308,6 +3314,14 @@ The **Medication** in the Stays menu is the one for the shift: the day's doses g
 
 The **Visits** in the Stays menu says who is visiting right now and whom they have come to see. **New visit** asks for the resident and who is coming: you choose from their contact people, which brings the relationship, or type the name. When they leave, **Has left** records the time. One recorded by mistake is cancelled and stays visible. Previous days can be looked up, and the resident's record shows their latest visits. They are recorded by whoever handles admissions or records on the floor; whoever sees stays sees them too.
 
+### Transfers
+
+Menu → Stays → Transfers
+
+The **Transfers** shows who is out right now, where they have gone and with whom. **New transfer** asks for the resident and the **destination** (a hospital, the health centre); the reason, the **driver**, the **vehicle** and the **companion** are optional. The driver is chosen from the staff; so is the companion, or their name is written if it is a relative. On return, **Has returned** records the time. A resident cannot leave on a transfer while still out on another, and one recorded by mistake is annulled and stays visible.
+
+While the transfer lasts, the resident shows as **out** on the floor, in their record («Transfer: destination») and in medication, just like an absence, so that nobody prepares a dose for someone who will not be there to receive it. The record shows their latest transfers and earlier days can be checked. They are recorded by whoever does admissions or records on the floor. The **centre's vehicles** (name and number plate) are added at the bottom of the same screen, by whoever manages the Stays settings; a vehicle that has already been used is not deleted, it is retired.
+
 ### Pocket money
 
 On the resident's record, **Pocket money** keeps what the family leaves at the residence for their expenses and what is spent for them (hairdresser, shopping, outings), with the **balance** at the top. Each movement has whether it comes in or goes out, the amount, the concept and the date. You cannot spend more than there is. One recorded by mistake is cancelled and stays visible; an entry that has already been spent cannot be cancelled without first cancelling the outgoings. It is kept by whoever handles admissions and discharges.
@@ -3316,14 +3330,24 @@ On the resident's record, **Pocket money** keeps what the family leaves at the r
 
 **Stays → Billing** works out what each resident pays per month and prepares the direct debit file (SEPA) to upload to the bank. It is for whoever sees and sets the rates.
 
-1. At the top, in **Who collects**, you enter once the account holder, the **SEPA creditor identifier** (the bank gives it, it looks like ES12ZZZB12345678) and the account the money goes to.
+1. At the top, in **Who collects**, you enter once the account holder, the **SEPA creditor identifier** (given by the bank, it looks like ES12ZZZB12345678), the account the money arrives in and the **remittance file**: *SEPA XML*, the one most banks accept, or *Cuaderno 19 (text)*, the AEB 19.14 format some still ask for. If the bank rejects one, change it here and generate it again.
 2. In the rate of each resident with a publicly funded place, **Paid by the public authority** holds the part they do not pay; the resident pays the rest. That way what comes in from the bank matches the resident's part.
-3. On their record, **Direct debit** keeps the signed mandate: account holder, IBAN and signature date. Only the last four digits of the account are shown; a new one replaces the previous one.
+3. On their record, **Direct debit** keeps the signed mandate: holder, IBAN and date of signature. Only the last four digits of the account are shown; a new one replaces the previous one. Above it is the **accounting account** the accountants use for that person (it usually starts with 430, but it is free): it goes with the person and not with the stay, and it is the one that will appear in what is exported for the accounts.
 4. Each month, **Work out the charges** works out each stay's amount by calendar days according to its rate. Pressing it again only adds the missing ones.
-5. **Generate the remittance**, with the collection date (at least two days ahead), gathers the pending ones of whoever has a mandate. **Download the file** gives the XML to upload in business online banking.
+5. **Generate the remittance**, with the collection date (at least two days ahead), gathers the pending ones of whoever has a mandate. **Download the file** gives the XML or the cuaderno 19 text, as chosen, to upload in business online banking.
 6. When the bank pays in, **Paid in by the bank** leaves the receipts as collected. One the bank returns is marked **Returned** with the reason and goes into the next remittance; one that is not going to be collected is marked **Not collected**.
 
-Billing does not issue the stay invoice yet: for now it is the remittance and its follow-up.
+### Stay invoices
+
+On the same screen, **Invoices of the month** prepares the stay invoices as **drafts**: accounting reviews them and issues the correct ones, one by one or by ticking several and pressing **Issue selected**. Until issued they have no number and do not go to VeriFactu, and a draft can be **discarded**; an issued invoice is never deleted: it is credited. Once issued, they go into the centre's series of full invoices and can be downloaded as PDF.
+
+- **How each resident is invoiced** is chosen in their record, next to the accounting account: *Month in advance* (the whole month when it starts), *Month in arrears* (the previous month for the days they were there) or *C8 place* (the regional government pays it all).
+- If someone billed a month in advance arrives or leaves mid-month, they are invoiced the full month and, when preparing the following month, a **part payment** is issued for the days they were not there (based on when their rate ends).
+- **Fixed supplements** (high-protein diet, single room…): in the record, next to how they are invoiced, with their monthly amount, their VAT (or the stays one) and from which day. They go in the monthly invoice with the stay, the whole month in advance or, in arrears, for the days they had them; anything left over goes in the credit note. In a C8 place the resident pays them, in their own invoice for the previous month. *Remove* stops charging it from that day; what has already been invoiced does not change.
+- The **C8 places** go in a single invoice to the regional government, with one line per resident and month (name, tax ID and days). In **VAT and regional government** its name, tax ID and address are entered, and whether the invoice is *monthly* or *quarterly* (the quarterly one comes out in January, April, July and October).
+- Rate amounts **include VAT**. The VAT is the centre's stays VAT (10% by default) unless the rate has its own, set when editing it in the Stays settings.
+- A full invoice needs the payer's tax ID: if it is missing, the draft says so and cannot be issued until it is added to the record.
+- Preparing again duplicates nothing: it only adds what is missing.
 
 ### Quality and family portal
 
@@ -3511,6 +3535,15 @@ In the three-dot menu of your own order there are two more options. *On hold / B
 *[Captura] On hold / Blocked: you say what is awaited or what is blocking it.*
 
 *[Captura] Releasing the order: you say where the work stands and the order is left for someone else to take.*
+
+### In a care home: my shift, floor, medication and incidents
+
+In centres with the Stays, the personal app (for whoever logs in with their own user) adds to the menu what is needed on the floor. Each option shows only to those with the matching permission, the same as on the web, and what is recorded goes under the name of whoever logged in. On a shared phone they do not appear.
+
+- **My shift today**: your own shift and zone, who else works that shift (with a green dot if they have already clocked in) and the zone's handover notebook since yesterday. From here you go straight to the floor, medication or opening an incident. A night shift is still «today» until it ends.
+- **Floor**: the residents of the zone with what is still to record today. Tapping one records their entries (meals, changes, vital signs…), just like the floor screen on the web. It works **without coverage**: what is recorded is saved on the phone and sent automatically as soon as there is signal. At the top you can see how many entries are waiting to be sent and whether the centre rejected any.
+- **Medication**: the day's doses ordered by time, with *Given* or *Not given*; when marking «Not given» the reason is chosen (refuses it, not there, fasting…). This one does need a connection, so that two doses are never confirmed from two phones.
+- **New incident**: the type, who it concerns, what happened and what was done, with up to **six photos** taken with the camera. Photos are sent reduced and without location data, and can be seen in the incident from the web. Photos can be added up to a day after opening it even if it is already closed.
 
 Turnera — user manual. Updated on 16 October 2026.
 This document is kept alongside the program: every change that alters how something is used is reflected here.

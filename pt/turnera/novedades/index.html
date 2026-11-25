@@ -679,6 +679,7 @@ footer{
   <h2>Novidades do Turnera</h2>
   <p>O mais recente, em cima</p>
   <ol>
+    <li><a href="#2026-11-25">25 de novembro de 2026</a></li>
     <li><a href="#2026-11-24">24 de novembro de 2026</a></li>
     <li><a href="#2026-11-23">23 de novembro de 2026</a></li>
     <li><a href="#2026-11-21">21 de novembro de 2026</a></li>
@@ -735,10 +736,59 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Erros corrigidos</strong>: o que falhava e já não falha.</span></li>
 </ul>
 
+<section id="2026-11-25" class="version">
+  <div class="version__cabecera">
+    <h2>25 de novembro de 2026</h2>
+    <span class="version__sello">Última versão</span>
+  </div>
+  <p class="version__numero">Versão <span translate="no">1.18.0-b96eac6</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Novas funcionalidades</h3>
+    <h4>Residências: faturas das estadias</h4>
+    <ul>
+      <li>Em Estadias → Cobranças, «Preparar rascunhos» gera as faturas do mês. Revêem-se e emitem-se uma a uma ou marcando várias com «Emitir selecionadas». Até serem emitidas não têm número e podem descartar-se.</li>
+      <li>Cada residente fatura-se por mês antecipado, por mês vencido ou como vaga C8. Se alguém com mês antecipado entra ou sai a meio do mês, ao preparar o mês seguinte sai a nota de crédito dos dias em que não esteve.</li>
+      <li>As vagas C8 vão numa única fatura à administração regional, mensal ou trimestral, com uma linha por residente e mês.</li>
+      <li>Suplementos fixos da estadia (dieta, quarto individual…), com o seu valor mensal e IVA, que vão na fatura mensal.</li>
+      <li>O IVA das estadias define-se no centro (10 % de início) e cada tarifa pode ter o seu. Os valores têm IVA incluído.</li>
+      <li>A conta contabilística de cada residente, a que usa a contabilidade, e o ficheiro da remessa também no formato de texto do cuaderno 19 que alguns bancos ainda pedem.</li>
+    </ul>
+    <h4>Residências: transferências e profissionais de referência</h4>
+    <ul>
+      <li>Transferências: quem sai, para onde e porquê, a hora de saída e de regresso, o motorista, o veículo e quem o acompanha. Enquanto está fora, o residente aparece como ausente no piso e na medicação.</li>
+      <li>Ao marcar uma consulta a um residente, a agenda propõe primeiro os seus profissionais de referência. E há um relatório com os profissionais atribuídos a cada residente.</li>
+    </ul>
+    <h4>Residências: fotos e app do pessoal</h4>
+    <ul>
+      <li>Os incidentes podem ter fotos, que se veem em miniatura na lista.</li>
+      <li>A app Android do pessoal junta o turno do dia, o piso, a medicação e os incidentes com foto a partir do telemóvel.</li>
+    </ul>
+    <h4>Stock</h4>
+    <ul>
+      <li>Ao registar à mão uma entrada, uma saída ou um ajuste de stock pode escrever-se o motivo. As linhas com motivo têm um ícone à esquerda que, ao tocá-lo, mostra o texto e quem o escreveu.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Melhorias</h3>
+    <ul>
+      <li>O relatório de consultas canceladas abre-se ordenado pela data de cancelamento, da mais recente para a mais antiga.</li>
+      <li>A barra superior já não sai pela direita em ecrãs de 1440 píxeis.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Erros corrigidos</h3>
+    <ul>
+      <li>Ao mudar o estado de uma consulta (por exemplo, para «Em espera»), da primeira vez voltava ao estado que tinha ao fechar a janela e era preciso mudá-lo duas vezes.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-24" class="version">
   <div class="version__cabecera">
     <h2>24 de novembro de 2026</h2>
-    <span class="version__sello">Última versão</span>
   </div>
   <p class="version__numero">Versão <span translate="no">1.18.0-3ba0ed0</span></p>
 

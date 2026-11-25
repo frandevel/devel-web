@@ -1844,6 +1844,9 @@ footer{
     In der Produktakte sehen die Lagerverantwortlichen und alle, die den Bericht der Lagerbewegungen sehen, außerdem seine
     <strong>Zu- und Abgänge</strong> in dieser Filiale, die neuesten zuerst: Datum und Uhrzeit, ob Zu- oder Abgang, wie viele Stück und ob es ein Verkauf oder eine manuelle Bewegung war.
   </p>
+  <p>
+    Beim manuellen Erfassen einer Bewegung (Eingang, Ausgang oder Korrektur) kann man den <strong>Grund</strong> schreiben, der optional ist: ein Produkt, das beschädigt ankam, ein Verkaufsprodukt, das in die Kabine wandert. In den Ein- und Ausgängen des Produkts und im Bewegungsbericht tragen Zeilen mit Grund links ein Kommentarsymbol, wie die Notizen im Kundenverlauf; ein Tippen darauf öffnet einen Dialog mit dem Text und wer ihn geschrieben hat. Eine Korrektur, die die Einheiten nicht ändert, erzeugt keine Bewegung und speichert daher auch keinen Grund.
+  </p>
 
   <h3 id="reposicion">Nachbestellung</h3>
   <span class="ruta">Menü → Katalog → Nachbestellung</span>
@@ -5903,6 +5906,10 @@ footer{
     <strong>PDF</strong>, mit dem Briefkopf des Zentrums, bereit zum Drucken oder Ablegen.
   </p>
   <p>
+    Vorfälle, die über die <a href="#app-residencia">Handy-App</a> eröffnet werden, können <strong>Fotos</strong>
+    (bis zu sechs) haben. Sie erscheinen klein im Vorfall; ein Tippen zeigt sie groß, mit wer sie gemacht hat und wann.
+  </p>
+  <p>
     <strong>Die Schichtaufsicht</strong>  fasst auf einem Bildschirm zusammen, was heute in jedem Bereich noch zu erfassen ist, die Vorfälle, die auf Abschluss warten, und das Wichtige aus den Stationsbüchern. Für jede Person mit Offenem erscheint jede Aufzeichnung als «Essen 1 von 3»: wie oft sie heute von den erwarteten erfasst wurde, mit der Uhrzeit der letzten. Orange ist, was noch gar nicht erfasst wurde; beim Überfahren mit der Maus sieht man, was zuletzt erfasst wurde und von wem.
   </p>
 
@@ -5936,6 +5943,9 @@ footer{
   <p>
     Der <strong>Bezugspersonen</strong> sind die, die die Bewohnerin oder den Bewohner am besten kennen und an die sich die Familie wendet: die Pflegehilfskraft, die Pflegefachkraft, die Psychologin. Sie sind nicht dasselbe wie die Kontaktpersonen, die zur Familie gehören. In der Akte der Person <strong>Hinzufügen</strong> lässt eine Fachkraft der Einrichtung aus der Liste wählen oder, wenn es jemand von außerhalb ist, den Namen eingeben; die Rolle (Pflegehilfe, Pflege…) ist optional. Es können mehrere sein. Sie gehört zur Aufnahme: bei einer anderen Aufnahme kann es jemand anderes sein. Wer entfernt wird, wird nicht gelöscht; es bleibt festgehalten, wer es wann getan hat. Ändern darf, wer Aufnahmen bearbeitet, sehen, wer die Aufenthalte sieht.
   </p>
+  <p>
+    Beim Eingeben der Rolle werden die im Zentrum bereits verwendeten vorgeschlagen, damit es nicht «Physio» und «Physiotherapie» wie zwei verschiedene Dinge gibt. Im <strong>Agenda</strong>, wenn man für einen Bewohner einen Termin vergibt, erscheinen im Feld der Fachkraft zuerst seine Bezugsfachkräfte mit ihrer Rolle («Miguel · Arzt») und danach die übrigen; man kann jede wählen. Der Bericht <strong>Bezugsfachkräfte</strong> (Berichte → Aufenthalte) listet zum heutigen Tag, wer jeden Bewohner betreut und in welcher Rolle, und auch, wer niemanden zugewiesen hat; er lässt sich als CSV oder PDF herunterladen.
+  </p>
 
   <h3 id="estancias-alergias">Allergien</h3>
   <p>
@@ -5965,6 +5975,16 @@ footer{
     <strong>Neuer Besuch</strong> fragt nach der Person und wer kommt: Sie wählen aus ihren Kontaktpersonen, die das Verwandtschaftsverhältnis mitbringen, oder geben den Namen ein. Beim Gehen <strong>Ist gegangen</strong> trägt die Uhrzeit ein. Ein irrtümlich erfasster Besuch wird storniert und bleibt sichtbar. Frühere Tage lassen sich abrufen, und die Akte der Person zeigt ihre letzten Besuche. Erfasst werden sie von wem, der Aufnahmen bearbeitet oder auf der Station erfasst; sehen kann sie auch, wer die Aufenthalte sieht.
   </p>
 
+  <h3 id="estancias-traslados">Transfers</h3>
+  <span class="ruta">Menü → Aufenthalte → Transfers</span>
+  <p>
+    Die Seite <strong>Transfers</strong> zeigt, wer gerade außer Haus ist, wohin und mit wem. <strong>Neuer Transfer</strong> fragt nach dem Bewohner und dem <strong>Ziel</strong> (ein Krankenhaus, das Gesundheitszentrum); der Grund, der <strong>Fahrer</strong>, <strong>Fahrzeug</strong> und <strong>Begleitung</strong> sind optional. Der Fahrer wird aus dem Personal gewählt; die Begleitung ebenso, oder man schreibt ihren Namen, wenn es ein Angehöriger ist. Bei der Rückkehr notiert
+    <strong>Ist zurück</strong> die Uhrzeit. Ein Bewohner kann nicht zu einem Transfer aufbrechen, solange er noch bei einem anderen unterwegs ist, und ein irrtümlich erfasster wird storniert und bleibt sichtbar.
+  </p>
+  <p>
+    Während des Transfers erscheint der Bewohner als <strong>außer Haus</strong> auf der Station, in seiner Akte («Transfer: Ziel») und in der Medikation, genau wie bei einer Abwesenheit, damit niemand eine Gabe vorbereitet für jemanden, der nicht da ist. Die Akte zeigt seine letzten Transfers, und frühere Tage lassen sich abrufen. Erfasst werden sie von wer Aufnahmen macht oder auf der Station dokumentiert. Die <strong>Fahrzeuge des Zentrums</strong> (Name und Kennzeichen) werden unten auf demselben Bildschirm angelegt, von wer die Einstellungen der Aufenthalte verwaltet; ein bereits benutztes Fahrzeug wird nicht gelöscht, sondern stillgelegt.
+  </p>
+
   <h3 id="estancias-bolsillo">Taschengeld</h3>
   <p>
     In der Akte der Person ist <strong>Taschengeld</strong> führt, was die Familie in der Einrichtung für ihre Ausgaben hinterlegt und was für sie ausgegeben wird (Friseur, Einkäufe, Ausflüge), mit dem <strong>Saldo</strong> oben. Jede Bewegung hat, ob sie ein- oder ausgeht, den Betrag, den Zweck und das Datum. Man kann nicht mehr ausgeben, als da ist. Eine irrtümliche wird storniert und bleibt sichtbar; ein Eingang, der schon ausgegeben ist, lässt sich nicht stornieren, ohne vorher die Ausgänge zu stornieren. Es führt, wer Aufnahmen und Entlassungen bearbeitet.
@@ -5975,16 +5995,32 @@ footer{
     <strong>Aufenthalte → Abrechnung</strong> ermittelt, was jede Bewohnerin und jeder Bewohner im Monat zahlt, und bereitet die Lastschriftdatei (SEPA) zum Hochladen bei der Bank vor. Sie gehört dem, der die Tarife sieht und festlegt.
   </p>
   <ol>
-    <li>Oben, unter <strong>Wer einzieht</strong>, tragen Sie einmal den Kontoinhaber, die <strong>SEPA-Gläubiger-Identifikationsnummer</strong> (gibt die Bank, sieht aus wie ES12ZZZB12345678) und das Konto ein, auf dem das Geld eingeht.</li>
+    <li>Oben, unter <strong>Wer einzieht</strong>, tragen Sie einmal den Kontoinhaber, die <strong>SEPA-Gläubiger-Identifikationsnummer</strong> (von der Bank vergeben, etwa ES12ZZZB12345678), das Konto, auf dem das Geld eingeht, und die
+      <strong>Datei des Lastschrifteinzugs</strong>: <em>SEPA-XML</em>, die die meisten Banken annehmen, oder
+      <em>Cuaderno 19 (Text)</em>, das AEB-Format 19.14, das manche noch verlangen. Lehnt die Bank eine ab, ändert man es hier und erzeugt sie erneut.</li>
     <li>Im Tarif jeder Person mit öffentlich finanziertem Platz enthält <strong>Zahlt die Behörde</strong> den Teil, den sie nicht zahlt; den Rest zahlt die Person. So passt das, was von der Bank eingeht, zum Anteil der Person.</li>
-    <li>In ihrer Akte speichert <strong>Lastschriftmandat</strong> das unterschriebene Mandat: Kontoinhaber, IBAN und Datum der Unterschrift. Vom Konto sind nur die letzten vier Ziffern zu sehen; ein neues ersetzt das vorige.</li>
+    <li>In ihrer Akte speichert <strong>Lastschriftmandat</strong> bewahrt das unterschriebene Mandat auf: Inhaber, IBAN und Datum der Unterschrift. Vom Konto sind nur die letzten vier Ziffern zu sehen; ein neues ersetzt das vorherige. Darüber steht das <strong>Buchungskonto</strong> mit dem die Steuerberatung diese Person führt (beginnt meist mit 430, ist aber frei): es gehört zur Person und nicht zum Aufenthalt und erscheint in dem, was für die Buchhaltung exportiert wird.</li>
     <li>Jeden Monat ermittelt <strong>Beträge berechnen</strong> den Betrag jedes Aufenthalts nach Kalendertagen laut Tarif. Erneutes Drücken fügt nur die fehlenden hinzu.</li>
-    <li><strong>Sammellastschrift erzeugen</strong>fasst mit dem Einzugsdatum (mindestens in zwei Tagen) die offenen Beträge derer zusammen, die ein Mandat haben. <strong>Datei herunterladen</strong> liefert die XML-Datei zum Hochladen im Firmen-Onlinebanking.</li>
+    <li><strong>Sammellastschrift erzeugen</strong>fasst mit dem Einzugsdatum (mindestens in zwei Tagen) die offenen Beträge derer zusammen, die ein Mandat haben. <strong>Datei herunterladen</strong> liefert das XML oder den Text des Cuaderno 19, je nach Wahl, zum Hochladen im Firmen-Onlinebanking.</li>
     <li>Wenn die Bank gutschreibt, <strong>Von der Bank gutgeschrieben</strong> setzt die Lastschriften auf eingezogen. Eine, die die Bank zurückbucht, wird markiert als <strong>Zurückgebucht</strong> mit Grund und geht in die nächste Sammellastschrift; eine, die nicht eingezogen wird, wird markiert als <strong>Wird nicht eingezogen</strong>.</li>
   </ol>
+
+  <h3 id="estancias-facturas">Rechnungen der Aufenthalte</h3>
   <p>
-    Die Abrechnung stellt die Rechnung für den Aufenthalt noch nicht aus: vorerst sind es die Sammellastschrift und ihre Kontrolle.
+    Auf demselben Bildschirm bereitet <strong>Rechnungen des Monats</strong> die Rechnungen der Aufenthalte als
+    <strong>Entwürfe</strong> vor: die Buchhaltung prüft sie und stellt die richtigen aus, einzeln oder indem sie mehrere markiert und <strong>Ausgewählte ausstellen</strong> drückt. Bis zur Ausstellung haben sie keine Nummer und gehen nicht an VeriFactu, und ein Entwurf lässt sich <strong>verwerfen</strong>; eine ausgestellte Rechnung wird nie gelöscht, sondern gutgeschrieben. Ausgestellt gehen sie in die Serie der vollständigen Rechnungen des Zentrums und lassen sich als PDF herunterladen.
   </p>
+  <ul>
+    <li><strong>Wie jeder Bewohner abgerechnet wird</strong> wird in seiner Akte gewählt, neben dem Buchungskonto:
+      <em>Monat im Voraus</em> (der ganze Monat zu Beginn), <em>Monat nachträglich</em> (der Vormonat für die Tage, die er da war) oder <em>C8-Platz</em> (alles zahlt die Landesregierung).</li>
+    <li>Kommt oder geht jemand mit Abrechnung im Voraus mitten im Monat, wird ihm der volle Monat berechnet, und beim Vorbereiten des Folgemonats entsteht eine <strong>Teilzahlung</strong> für die Tage, an denen er nicht da war (maßgeblich ist, wann sein Tarif endet).</li>
+    <li><strong>Feste Zuschläge</strong> (eiweißreiche Kost, Einzelzimmer…): in der Akte, neben der Abrechnungsart, mit Monatsbetrag, MwSt. (oder der der Aufenthalte) und ab welchem Tag. Sie kommen mit dem Aufenthalt in die Monatsrechnung, im Voraus der ganze Monat oder nachträglich für die Tage, an denen sie bestanden; was zu viel ist, erscheint in der Gutschrift. Bei einem C8-Platz zahlt sie die Person, in ihrer eigenen Rechnung für den Vormonat. <em>Entfernen</em> beendet die Berechnung ab diesem Tag; bereits Abgerechnetes ändert sich nicht.</li>
+    <li>Die <strong>C8-Plätze</strong> gehen in eine einzige Rechnung an die Landesregierung, mit einer Zeile pro Bewohner und Monat (Name, Steuernummer und Tage). In <strong>MwSt. und Landesregierung</strong> werden ihr Name, ihre Steuernummer und Adresse eingetragen und ob die Rechnung
+      <em>monatlich</em> oder <em>vierteljährlich</em> ist (die vierteljährliche erscheint im Januar, April, Juli und Oktober).</li>
+    <li>Die Tarifbeträge <strong>enthalten MwSt.</strong>. Die MwSt. ist die der Aufenthalte des Zentrums (standardmäßig 10 %), sofern der Tarif keine eigene hat, die man beim Bearbeiten in den Einstellungen der Aufenthalte festlegt.</li>
+    <li>Eine vollständige Rechnung braucht die Steuernummer des Zahlers: fehlt sie, sagt es der Entwurf, und er lässt sich erst ausstellen, wenn sie in der Akte steht.</li>
+    <li>Erneutes Vorbereiten verdoppelt nichts: es ergänzt nur, was fehlt.</li>
+  </ul>
 
   <h3 id="estancias-calidad">Qualität und Angehörigenportal</h3>
   <p>
@@ -6279,6 +6315,18 @@ footer{
     <img src="/turnera/manual/imagenes/56-app-soltar.png" alt="Der Hinweis Den Auftrag abgeben, der fragt, wo die Arbeit steht" loading="lazy">
     <figcaption>Den Auftrag abgeben: Man sagt, wo die Arbeit steht, und der Auftrag bleibt für eine andere Person übrig.</figcaption>
   </figure>
+
+  <h3 id="app-residencia">In einem Pflegeheim: meine Schicht, Station, Medikation und Vorfälle</h3>
+  <p>
+    In Zentren mit dem Modul <a href="#estancias">Aufenthalte</a>, fügt die persönliche App (für wer sich mit eigenem Benutzer anmeldet) dem Menü hinzu, was auf der Station gebraucht wird. Jede Option erscheint nur bei passender Berechtigung, wie im Web, und Erfasstes läuft auf den Namen der angemeldeten Person. Auf einem geteilten Handy erscheinen sie nicht.
+  </p>
+  <ul>
+    <li><strong>Meine Schicht heute</strong>: die eigene Schicht und Zone, wer sonst in dieser Schicht arbeitet (mit grünem Punkt, wenn bereits eingestempelt) und das Stationsbuch der Zone seit gestern, für die Übergabe. Von hier geht es direkt zur Station, zur Medikation oder zum Erfassen eines Vorfalls. Eine Nachtschicht bleibt «heute», bis sie endet.</li>
+    <li><strong>Station</strong>: die Bewohner der Zone mit dem, was heute noch zu erfassen ist. Ein Tippen erfasst ihre Einträge (Mahlzeiten, Wechsel, Vitalwerte…), wie auf dem Stationsbildschirm im Web. Es funktioniert <strong>ohne Empfang</strong>: Erfasstes wird auf dem Handy gespeichert und automatisch gesendet, sobald Empfang da ist. Oben sieht man, wie viele Einträge auf den Versand warten und ob das Zentrum einen abgelehnt hat.</li>
+    <li><strong>Medikation</strong>: die Gaben des Tages nach Uhrzeit, mit <em>Gegeben</em> oder <em>Nicht gegeben</em>; beim Markieren von «Nicht gegeben» wählt man den Grund (lehnt ab, nicht da, nüchtern…). Dies braucht eine Verbindung, damit nie zwei Gaben von zwei Handys bestätigt werden.</li>
+    <li><strong>Neuer Vorfall</strong>: die Art, wen er betrifft, was passiert ist und was getan wurde, mit bis zu
+      <strong>sechs Fotos</strong> mit der Kamera aufgenommen. Die Fotos werden verkleinert und ohne Standortdaten gesendet und sind im Vorfall im Web zu sehen. Fotos lassen sich bis einen Tag nach dem Erfassen hinzufügen, auch wenn er schon geschlossen ist.</li>
+  </ul>
 
 </section>
 

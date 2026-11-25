@@ -679,6 +679,7 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-11-25">25. November 2026</a></li>
     <li><a href="#2026-11-24">24. November 2026</a></li>
     <li><a href="#2026-11-23">23. November 2026</a></li>
     <li><a href="#2026-11-21">21. November 2026</a></li>
@@ -734,10 +735,59 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-11-25" class="version">
+  <div class="version__cabecera">
+    <h2>25. November 2026</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.18.0-b96eac6</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Pflegeheime: Rechnungen der Aufenthalte</h4>
+    <ul>
+      <li>Unter Aufenthalte → Inkasso erzeugt «Entwürfe vorbereiten» die Rechnungen des Monats. Sie werden geprüft und einzeln oder mehrere auf einmal mit «Ausgewählte ausstellen» ausgestellt. Bis dahin haben sie keine Nummer und können verworfen werden.</li>
+      <li>Jeder Bewohner wird im Voraus, nachträglich oder als C8-Platz abgerechnet. Kommt oder geht jemand mit Abrechnung im Voraus mitten im Monat, entsteht beim Vorbereiten des Folgemonats die Gutschrift für die Tage, an denen er nicht da war.</li>
+      <li>C8-Plätze gehen in eine einzige Rechnung an die Landesregierung, monatlich oder vierteljährlich, mit einer Zeile pro Bewohner und Monat.</li>
+      <li>Feste Zuschläge des Aufenthalts (Diät, Einzelzimmer…), mit Monatsbetrag und MwSt., die in die Monatsrechnung kommen.</li>
+      <li>Die MwSt. der Aufenthalte wird im Zentrum festgelegt (standardmäßig 10 %), und jeder Tarif kann eine eigene haben. Die Beträge enthalten MwSt.</li>
+      <li>Das Buchungskonto jedes Bewohners, das die Steuerberatung verwendet, und die Datei des Lastschrifteinzugs auch im Textformat des Cuaderno 19, das manche Banken noch verlangen.</li>
+    </ul>
+    <h4>Pflegeheime: Transfers und Bezugsfachkräfte</h4>
+    <ul>
+      <li>Transfers: wer geht, wohin und warum, Abfahrts- und Rückkehrzeit, Fahrer, Fahrzeug und Begleitung. Solange er unterwegs ist, erscheint der Bewohner auf der Station und in der Medikation als abwesend.</li>
+      <li>Bei der Terminvergabe für einen Bewohner schlägt die Agenda zuerst seine Bezugsfachkräfte vor. Und es gibt einen Bericht mit den jedem Bewohner zugewiesenen Fachkräften.</li>
+    </ul>
+    <h4>Pflegeheime: Fotos und die App des Personals</h4>
+    <ul>
+      <li>Vorfälle können Fotos haben, die in der Liste als Vorschaubilder erscheinen.</li>
+      <li>Die Android-App des Personals bietet jetzt die Schicht des Tages, die Station, die Medikation und Vorfälle mit Foto vom Handy aus.</li>
+    </ul>
+    <h4>Lager</h4>
+    <ul>
+      <li>Beim manuellen Erfassen eines Lagereingangs, -ausgangs oder einer Korrektur kann man einen Grund schreiben. Zeilen mit Grund tragen links ein Symbol, das beim Antippen den Text und den Verfasser zeigt.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <ul>
+      <li>Der Bericht der stornierten Termine öffnet sich nach Stornodatum sortiert, die neuesten zuerst.</li>
+      <li>Die obere Leiste läuft auf 1440-Pixel-Bildschirmen rechts nicht mehr über.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Behobene Fehler</h3>
+    <ul>
+      <li>Beim Ändern des Status eines Termins (zum Beispiel auf «Wartend») sprang er beim ersten Mal beim Schließen des Fensters auf den vorherigen Status zurück und musste zweimal geändert werden.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-24" class="version">
   <div class="version__cabecera">
     <h2>24. November 2026</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.18.0-3ba0ed0</span></p>
 

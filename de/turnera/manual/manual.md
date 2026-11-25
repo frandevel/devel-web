@@ -562,6 +562,8 @@ Beim Anlegen oder Korrigieren eines Produkts oder einer Leistung werden **Katego
 
 In der Produktakte sehen die Lagerverantwortlichen und alle, die den Bericht der Lagerbewegungen sehen, außerdem seine **Zu- und Abgänge** in dieser Filiale, die neuesten zuerst: Datum und Uhrzeit, ob Zu- oder Abgang, wie viele Stück und ob es ein Verkauf oder eine manuelle Bewegung war.
 
+Beim manuellen Erfassen einer Bewegung (Eingang, Ausgang oder Korrektur) kann man den **Grund** schreiben, der optional ist: ein Produkt, das beschädigt ankam, ein Verkaufsprodukt, das in die Kabine wandert. In den Ein- und Ausgängen des Produkts und im Bewegungsbericht tragen Zeilen mit Grund links ein Kommentarsymbol, wie die Notizen im Kundenverlauf; ein Tippen darauf öffnet einen Dialog mit dem Text und wer ihn geschrieben hat. Eine Korrektur, die die Einheiten nicht ändert, erzeugt keine Bewegung und speichert daher auch keinen Grund.
+
 ### Nachbestellung
 
 Menü → Katalog → Nachbestellung
@@ -3270,6 +3272,8 @@ Falsch Erfasstes **wird nicht gelöscht**: Es wird *korrigiert* mit einem weiter
 
 **Ein Vorfall** ist etwas, das passiert und schriftlich festgehalten werden muss: ein Sturz, ein Streit, ein verweigertes Medikament. Er wird zur Person, zum Bereich oder zur Einrichtung eröffnet, mit Wer, Wann, Was geschah und Was getan wurde. Die Einrichtung legt ihre eigenen **Vorfallarten** fest (das Programm bringt keine mit) und entscheidet für jede, ob sie *Abschluss erfordert*, ob angegeben werden muss, von wem sie ist, und ob angegeben werden muss, was getan wurde. Die mit Abschluss bleiben offen, bis die aufsichtführende Person sie prüft und mit ihrem Fazit abschließt. Im Reiter *Bericht* lässt sich nach Datum filtern und als CSV herunterladen und, für alle, die die Aufenthaltsberichte sehen (standardmäßig Administrator und Leitung), auch als **PDF**, mit dem Briefkopf des Zentrums, bereit zum Drucken oder Ablegen.
 
+Vorfälle, die über die Handy-App eröffnet werden, können **Fotos** (bis zu sechs) haben. Sie erscheinen klein im Vorfall; ein Tippen zeigt sie groß, mit wer sie gemacht hat und wann.
+
 **Die Schichtaufsicht** fasst auf einem Bildschirm zusammen, was heute in jedem Bereich noch zu erfassen ist, die Vorfälle, die auf Abschluss warten, und das Wichtige aus den Stationsbüchern. Für jede Person mit Offenem erscheint jede Aufzeichnung als «Essen 1 von 3»: wie oft sie heute von den erwarteten erfasst wurde, mit der Uhrzeit der letzten. Orange ist, was noch gar nicht erfasst wurde; beim Überfahren mit der Maus sieht man, was zuletzt erfasst wurde und von wem.
 
 *[Captura] Vorfälle: offene warten darauf, dass die Aufsicht sie abschließt.*
@@ -3290,6 +3294,8 @@ In der Akte der untergebrachten Person und in ihrer Kundenakte hält **Kontaktpe
 
 Der **Bezugspersonen** sind die, die die Bewohnerin oder den Bewohner am besten kennen und an die sich die Familie wendet: die Pflegehilfskraft, die Pflegefachkraft, die Psychologin. Sie sind nicht dasselbe wie die Kontaktpersonen, die zur Familie gehören. In der Akte der Person **Hinzufügen** lässt eine Fachkraft der Einrichtung aus der Liste wählen oder, wenn es jemand von außerhalb ist, den Namen eingeben; die Rolle (Pflegehilfe, Pflege…) ist optional. Es können mehrere sein. Sie gehört zur Aufnahme: bei einer anderen Aufnahme kann es jemand anderes sein. Wer entfernt wird, wird nicht gelöscht; es bleibt festgehalten, wer es wann getan hat. Ändern darf, wer Aufnahmen bearbeitet, sehen, wer die Aufenthalte sieht.
 
+Beim Eingeben der Rolle werden die im Zentrum bereits verwendeten vorgeschlagen, damit es nicht «Physio» und «Physiotherapie» wie zwei verschiedene Dinge gibt. Im **Agenda**, wenn man für einen Bewohner einen Termin vergibt, erscheinen im Feld der Fachkraft zuerst seine Bezugsfachkräfte mit ihrer Rolle («Miguel · Arzt») und danach die übrigen; man kann jede wählen. Der Bericht **Bezugsfachkräfte** (Berichte → Aufenthalte) listet zum heutigen Tag, wer jeden Bewohner betreut und in welcher Rolle, und auch, wer niemanden zugewiesen hat; er lässt sich als CSV oder PDF herunterladen.
+
 ### Allergien
 
 Die **Allergien** werden einzeln erfasst: ob gegen ein Medikament, ein Lebensmittel oder etwas anderes, wogegen (Penicillin, Meeresfrüchte, Latex…), die Reaktion und der Schweregrad. Schwere erscheinen rot und zuerst. Sie stehen in der Akte der Person und in der Krankengeschichte, weil sie zur Person gehören und nicht zur Aufnahme. Auch das Stationspersonal sieht sie, denn davon hängt ab, was zu essen und einzunehmen gegeben wird; erfasst werden sie von wem, der in die Krankengeschichte schreibt oder die Berechtigung hat *Allergien, Einschätzungen und Fixierungen*. Eine zu entfernen löscht sie nicht: es bleibt festgehalten, wer es wann getan hat. Jeder Abruf bleibt im Zugriffsprotokoll, wie bei der Krankengeschichte.
@@ -3308,6 +3314,14 @@ Die Seite **Medikation** im Menü Aufenthalte ist die der Schicht: die Gaben des
 
 Die Seite **Besuche** im Menü Aufenthalte zeigt, wer gerade zu Besuch ist und wen er besucht. **Neuer Besuch** fragt nach der Person und wer kommt: Sie wählen aus ihren Kontaktpersonen, die das Verwandtschaftsverhältnis mitbringen, oder geben den Namen ein. Beim Gehen **Ist gegangen** trägt die Uhrzeit ein. Ein irrtümlich erfasster Besuch wird storniert und bleibt sichtbar. Frühere Tage lassen sich abrufen, und die Akte der Person zeigt ihre letzten Besuche. Erfasst werden sie von wem, der Aufnahmen bearbeitet oder auf der Station erfasst; sehen kann sie auch, wer die Aufenthalte sieht.
 
+### Transfers
+
+Menü → Aufenthalte → Transfers
+
+Die Seite **Transfers** zeigt, wer gerade außer Haus ist, wohin und mit wem. **Neuer Transfer** fragt nach dem Bewohner und dem **Ziel** (ein Krankenhaus, das Gesundheitszentrum); der Grund, der **Fahrer**, **Fahrzeug** und **Begleitung** sind optional. Der Fahrer wird aus dem Personal gewählt; die Begleitung ebenso, oder man schreibt ihren Namen, wenn es ein Angehöriger ist. Bei der Rückkehr notiert **Ist zurück** die Uhrzeit. Ein Bewohner kann nicht zu einem Transfer aufbrechen, solange er noch bei einem anderen unterwegs ist, und ein irrtümlich erfasster wird storniert und bleibt sichtbar.
+
+Während des Transfers erscheint der Bewohner als **außer Haus** auf der Station, in seiner Akte («Transfer: Ziel») und in der Medikation, genau wie bei einer Abwesenheit, damit niemand eine Gabe vorbereitet für jemanden, der nicht da ist. Die Akte zeigt seine letzten Transfers, und frühere Tage lassen sich abrufen. Erfasst werden sie von wer Aufnahmen macht oder auf der Station dokumentiert. Die **Fahrzeuge des Zentrums** (Name und Kennzeichen) werden unten auf demselben Bildschirm angelegt, von wer die Einstellungen der Aufenthalte verwaltet; ein bereits benutztes Fahrzeug wird nicht gelöscht, sondern stillgelegt.
+
 ### Taschengeld
 
 In der Akte der Person ist **Taschengeld** führt, was die Familie in der Einrichtung für ihre Ausgaben hinterlegt und was für sie ausgegeben wird (Friseur, Einkäufe, Ausflüge), mit dem **Saldo** oben. Jede Bewegung hat, ob sie ein- oder ausgeht, den Betrag, den Zweck und das Datum. Man kann nicht mehr ausgeben, als da ist. Eine irrtümliche wird storniert und bleibt sichtbar; ein Eingang, der schon ausgegeben ist, lässt sich nicht stornieren, ohne vorher die Ausgänge zu stornieren. Es führt, wer Aufnahmen und Entlassungen bearbeitet.
@@ -3316,14 +3330,24 @@ In der Akte der Person ist **Taschengeld** führt, was die Familie in der Einric
 
 **Aufenthalte → Abrechnung** ermittelt, was jede Bewohnerin und jeder Bewohner im Monat zahlt, und bereitet die Lastschriftdatei (SEPA) zum Hochladen bei der Bank vor. Sie gehört dem, der die Tarife sieht und festlegt.
 
-1. Oben, unter **Wer einzieht**, tragen Sie einmal den Kontoinhaber, die **SEPA-Gläubiger-Identifikationsnummer** (gibt die Bank, sieht aus wie ES12ZZZB12345678) und das Konto ein, auf dem das Geld eingeht.
+1. Oben, unter **Wer einzieht**, tragen Sie einmal den Kontoinhaber, die **SEPA-Gläubiger-Identifikationsnummer** (von der Bank vergeben, etwa ES12ZZZB12345678), das Konto, auf dem das Geld eingeht, und die **Datei des Lastschrifteinzugs**: *SEPA-XML*, die die meisten Banken annehmen, oder *Cuaderno 19 (Text)*, das AEB-Format 19.14, das manche noch verlangen. Lehnt die Bank eine ab, ändert man es hier und erzeugt sie erneut.
 2. Im Tarif jeder Person mit öffentlich finanziertem Platz enthält **Zahlt die Behörde** den Teil, den sie nicht zahlt; den Rest zahlt die Person. So passt das, was von der Bank eingeht, zum Anteil der Person.
-3. In ihrer Akte speichert **Lastschriftmandat** das unterschriebene Mandat: Kontoinhaber, IBAN und Datum der Unterschrift. Vom Konto sind nur die letzten vier Ziffern zu sehen; ein neues ersetzt das vorige.
+3. In ihrer Akte speichert **Lastschriftmandat** bewahrt das unterschriebene Mandat auf: Inhaber, IBAN und Datum der Unterschrift. Vom Konto sind nur die letzten vier Ziffern zu sehen; ein neues ersetzt das vorherige. Darüber steht das **Buchungskonto** mit dem die Steuerberatung diese Person führt (beginnt meist mit 430, ist aber frei): es gehört zur Person und nicht zum Aufenthalt und erscheint in dem, was für die Buchhaltung exportiert wird.
 4. Jeden Monat ermittelt **Beträge berechnen** den Betrag jedes Aufenthalts nach Kalendertagen laut Tarif. Erneutes Drücken fügt nur die fehlenden hinzu.
-5. **Sammellastschrift erzeugen**fasst mit dem Einzugsdatum (mindestens in zwei Tagen) die offenen Beträge derer zusammen, die ein Mandat haben. **Datei herunterladen** liefert die XML-Datei zum Hochladen im Firmen-Onlinebanking.
+5. **Sammellastschrift erzeugen**fasst mit dem Einzugsdatum (mindestens in zwei Tagen) die offenen Beträge derer zusammen, die ein Mandat haben. **Datei herunterladen** liefert das XML oder den Text des Cuaderno 19, je nach Wahl, zum Hochladen im Firmen-Onlinebanking.
 6. Wenn die Bank gutschreibt, **Von der Bank gutgeschrieben** setzt die Lastschriften auf eingezogen. Eine, die die Bank zurückbucht, wird markiert als **Zurückgebucht** mit Grund und geht in die nächste Sammellastschrift; eine, die nicht eingezogen wird, wird markiert als **Wird nicht eingezogen**.
 
-Die Abrechnung stellt die Rechnung für den Aufenthalt noch nicht aus: vorerst sind es die Sammellastschrift und ihre Kontrolle.
+### Rechnungen der Aufenthalte
+
+Auf demselben Bildschirm bereitet **Rechnungen des Monats** die Rechnungen der Aufenthalte als **Entwürfe** vor: die Buchhaltung prüft sie und stellt die richtigen aus, einzeln oder indem sie mehrere markiert und **Ausgewählte ausstellen** drückt. Bis zur Ausstellung haben sie keine Nummer und gehen nicht an VeriFactu, und ein Entwurf lässt sich **verwerfen**; eine ausgestellte Rechnung wird nie gelöscht, sondern gutgeschrieben. Ausgestellt gehen sie in die Serie der vollständigen Rechnungen des Zentrums und lassen sich als PDF herunterladen.
+
+- **Wie jeder Bewohner abgerechnet wird** wird in seiner Akte gewählt, neben dem Buchungskonto: *Monat im Voraus* (der ganze Monat zu Beginn), *Monat nachträglich* (der Vormonat für die Tage, die er da war) oder *C8-Platz* (alles zahlt die Landesregierung).
+- Kommt oder geht jemand mit Abrechnung im Voraus mitten im Monat, wird ihm der volle Monat berechnet, und beim Vorbereiten des Folgemonats entsteht eine **Teilzahlung** für die Tage, an denen er nicht da war (maßgeblich ist, wann sein Tarif endet).
+- **Feste Zuschläge** (eiweißreiche Kost, Einzelzimmer…): in der Akte, neben der Abrechnungsart, mit Monatsbetrag, MwSt. (oder der der Aufenthalte) und ab welchem Tag. Sie kommen mit dem Aufenthalt in die Monatsrechnung, im Voraus der ganze Monat oder nachträglich für die Tage, an denen sie bestanden; was zu viel ist, erscheint in der Gutschrift. Bei einem C8-Platz zahlt sie die Person, in ihrer eigenen Rechnung für den Vormonat. *Entfernen* beendet die Berechnung ab diesem Tag; bereits Abgerechnetes ändert sich nicht.
+- Die **C8-Plätze** gehen in eine einzige Rechnung an die Landesregierung, mit einer Zeile pro Bewohner und Monat (Name, Steuernummer und Tage). In **MwSt. und Landesregierung** werden ihr Name, ihre Steuernummer und Adresse eingetragen und ob die Rechnung *monatlich* oder *vierteljährlich* ist (die vierteljährliche erscheint im Januar, April, Juli und Oktober).
+- Die Tarifbeträge **enthalten MwSt.**. Die MwSt. ist die der Aufenthalte des Zentrums (standardmäßig 10 %), sofern der Tarif keine eigene hat, die man beim Bearbeiten in den Einstellungen der Aufenthalte festlegt.
+- Eine vollständige Rechnung braucht die Steuernummer des Zahlers: fehlt sie, sagt es der Entwurf, und er lässt sich erst ausstellen, wenn sie in der Akte steht.
+- Erneutes Vorbereiten verdoppelt nichts: es ergänzt nur, was fehlt.
 
 ### Qualität und Angehörigenportal
 
@@ -3511,6 +3535,15 @@ Im Drei-Punkte-Menü eines eigenen Auftrags gibt es zwei weitere Optionen. *Wart
 *[Captura] Wartend / Blockiert: Man schreibt, worauf gewartet wird oder was ihn blockiert.*
 
 *[Captura] Den Auftrag abgeben: Man sagt, wo die Arbeit steht, und der Auftrag bleibt für eine andere Person übrig.*
+
+### In einem Pflegeheim: meine Schicht, Station, Medikation und Vorfälle
+
+In Zentren mit dem Modul Aufenthalte, fügt die persönliche App (für wer sich mit eigenem Benutzer anmeldet) dem Menü hinzu, was auf der Station gebraucht wird. Jede Option erscheint nur bei passender Berechtigung, wie im Web, und Erfasstes läuft auf den Namen der angemeldeten Person. Auf einem geteilten Handy erscheinen sie nicht.
+
+- **Meine Schicht heute**: die eigene Schicht und Zone, wer sonst in dieser Schicht arbeitet (mit grünem Punkt, wenn bereits eingestempelt) und das Stationsbuch der Zone seit gestern, für die Übergabe. Von hier geht es direkt zur Station, zur Medikation oder zum Erfassen eines Vorfalls. Eine Nachtschicht bleibt «heute», bis sie endet.
+- **Station**: die Bewohner der Zone mit dem, was heute noch zu erfassen ist. Ein Tippen erfasst ihre Einträge (Mahlzeiten, Wechsel, Vitalwerte…), wie auf dem Stationsbildschirm im Web. Es funktioniert **ohne Empfang**: Erfasstes wird auf dem Handy gespeichert und automatisch gesendet, sobald Empfang da ist. Oben sieht man, wie viele Einträge auf den Versand warten und ob das Zentrum einen abgelehnt hat.
+- **Medikation**: die Gaben des Tages nach Uhrzeit, mit *Gegeben* oder *Nicht gegeben*; beim Markieren von «Nicht gegeben» wählt man den Grund (lehnt ab, nicht da, nüchtern…). Dies braucht eine Verbindung, damit nie zwei Gaben von zwei Handys bestätigt werden.
+- **Neuer Vorfall**: die Art, wen er betrifft, was passiert ist und was getan wurde, mit bis zu **sechs Fotos** mit der Kamera aufgenommen. Die Fotos werden verkleinert und ohne Standortdaten gesendet und sind im Vorfall im Web zu sehen. Fotos lassen sich bis einen Tag nach dem Erfassen hinzufügen, auch wenn er schon geschlossen ist.
 
 Turnera — Benutzerhandbuch. Stand: 16. Oktober 2026.
 Dieses Dokument wird zusammen mit dem Programm gepflegt: jede Änderung, die etwas an der Bedienung ändert, wird hier abgebildet.

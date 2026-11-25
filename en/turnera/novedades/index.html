@@ -679,6 +679,7 @@ footer{
   <h2>What's new in Turnera</h2>
   <p>Latest first</p>
   <ol>
+    <li><a href="#2026-11-25">25 November 2026</a></li>
     <li><a href="#2026-11-24">24 November 2026</a></li>
     <li><a href="#2026-11-23">23 November 2026</a></li>
     <li><a href="#2026-11-21">21 November 2026</a></li>
@@ -734,10 +735,59 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Bugs fixed</strong>: what failed, and no longer does.</span></li>
 </ul>
 
+<section id="2026-11-25" class="version">
+  <div class="version__cabecera">
+    <h2>25 November 2026</h2>
+    <span class="version__sello">Latest release</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.18.0-b96eac6</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Care homes: stay invoices</h4>
+    <ul>
+      <li>In Stays → Billing, «Prepare drafts» produces the month's invoices. They are reviewed and issued one by one or by ticking several with «Issue selected». Until issued they have no number and can be discarded.</li>
+      <li>Each resident is invoiced a month in advance, a month in arrears or as a C8 place. If someone billed in advance arrives or leaves mid-month, preparing the next month produces the credit note for the days they were not there.</li>
+      <li>C8 places go in a single invoice to the regional government, monthly or quarterly, with one line per resident and month.</li>
+      <li>Fixed stay supplements (diet, single room…), with their monthly amount and VAT, which go in the monthly invoice.</li>
+      <li>The stays VAT is set in the centre (10% by default) and each rate can have its own. Amounts include VAT.</li>
+      <li>Each resident's accounting account, the one the accountants use, and the remittance file also in the cuaderno 19 text format some banks still ask for.</li>
+    </ul>
+    <h4>Care homes: transfers and reference professionals</h4>
+    <ul>
+      <li>Transfers: who leaves, where to and why, the departure and return time, the driver, the vehicle and who goes with them. While out, the resident shows as away on the floor and in medication.</li>
+      <li>When booking an appointment for a resident, the agenda suggests their reference professionals first. And there is a report with the professionals assigned to each resident.</li>
+    </ul>
+    <h4>Care homes: photos and the staff app</h4>
+    <ul>
+      <li>Incidents can carry photos, shown as thumbnails in the list.</li>
+      <li>The staff Android app adds the day's shift, the floor, medication and incidents with photos from the phone.</li>
+    </ul>
+    <h4>Stock</h4>
+    <ul>
+      <li>When recording a stock in, out or adjustment by hand, a reason can be written. Lines with a reason carry an icon on the left that, when tapped, shows the text and who wrote it.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Improvements</h3>
+    <ul>
+      <li>The cancelled appointments report opens sorted by cancellation date, most recent first.</li>
+      <li>The top bar no longer overflows on the right on 1440-pixel screens.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Bugs fixed</h3>
+    <ul>
+      <li>When changing an appointment's status (for example, to «Waiting»), the first time it went back to the status it had when closing the window and had to be changed twice.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-24" class="version">
   <div class="version__cabecera">
     <h2>24 November 2026</h2>
-    <span class="version__sello">Latest release</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.18.0-3ba0ed0</span></p>
 

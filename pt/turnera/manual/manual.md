@@ -562,6 +562,8 @@ Ao criar ou corrigir um produto ou um serviço, a **categoria** e o **marca** es
 
 Na ficha de um produto, quem gere o armazém ou vê o relatório de movimentos de stock tem também as suas **entradas e saídas** nesta delegação, as mais recentes primeiro: data e hora, se entra ou sai, quantas unidades e se foi uma venda ou um movimento manual.
 
+Ao registar um movimento à mão (entrada, saída ou ajuste) pode escrever-se o **motivo**, que é opcional: um produto que chegou partido, um de venda que passa para a cabine. Nas entradas e saídas do produto e no relatório de movimentos, as linhas com motivo têm um ícone de comentário à esquerda, como as notas do histórico do cliente; ao tocá-lo abre-se uma janela com o texto e quem o escreveu. Um ajuste que não altera as unidades não gera movimento, por isso também não guarda o motivo.
+
 ### Reposição
 
 Menu → Catálogo → Reposição
@@ -3270,6 +3272,8 @@ O que se registou mal **não se apaga**: deve-se *corrigir* com outra entrada (a
 
 **Um incidente** é algo que acontece e tem de ficar por escrito: uma queda, uma discussão, um medicamento recusado. Abre-se a partir da pessoa, da zona ou do centro, com quem, quando, o que aconteceu e o que se fez. O centro define os seus **tipos de incidente** (o programa não traz nenhum) e para cada um decide se *pede encerramento*, se exige indicar de quem é e se exige indicar o que se fez. Os que pedem encerramento ficam abertos até quem supervisiona os rever e os encerrar com a sua conclusão. No separador *Relatório* filtra-se por datas e descarrega-se em CSV e, quem vê os relatórios de Estadias (de origem, o administrador e a Direção), também em **PDF**, com o cabeçalho do centro, pronto para imprimir ou arquivar.
 
+Os incidentes abertos a partir da app do telemóvel podem ter **fotos** (até seis). Aparecem em pequeno no incidente; ao tocar numa vê-se em grande, com quem a tirou e quando.
+
 **A supervisão do turno** reúne num ecrã o que falta registar hoje em cada zona, as ocorrências que esperam fecho e o importante dos livros da sala. De cada pessoa com algo pendente sai cada registo como «Refeição 1 de 3»: as vezes que se registou hoje das que se esperam, com a hora da última. A laranja vai o que ainda não se registou nenhuma vez; ao passar o rato vê-se o que se registou por último e quem.
 
 *[Captura] Incidentes: os abertos esperam que a supervisão os encerre.*
@@ -3290,6 +3294,8 @@ Na ficha da pessoa alojada, e na sua ficha de cliente, **Pessoas de contacto** g
 
 O **pessoal de referência** é quem melhor conhece a pessoa alojada e a quem a família recorre: a sua auxiliar, a sua enfermeira, a sua psicóloga. Não é o mesmo que as pessoas de contacto, que são da família. Na ficha da pessoa, **Adicionar** permite escolher uma profissional do centro na lista ou, se for alguém de fora, escrever o nome; a função (auxiliar, enfermagem…) é opcional. Pode haver várias. Vai com a admissão: noutra admissão pode ser outra pessoa. Retirar alguém não o apaga, fica registado quem o retirou e quando. Altera-o quem faz admissões e vê-o quem vê as estadias.
 
+Ao escrever o papel propõem-se os que já se usaram no centro, para não ter «Fisio» e «Fisioterapia» como se fossem duas coisas. Na **agenda**, ao marcar uma consulta a um residente, no campo do profissional aparecem primeiro os seus profissionais de referência com o seu papel («Miguel · Médico») e depois os restantes; pode escolher-se qualquer um. O relatório **Profissionais de referência** (Relatórios → Estadias) lista, à data de hoje, quem atende cada residente e com que papel, e também quem não tem ninguém atribuído; descarrega-se em CSV ou PDF.
+
 ### Alergias
 
 As **alergias** registam-se uma a uma: se é a um medicamento, a um alimento ou a outra coisa, a quê (penicilina, marisco, látex…), a reação e a gravidade. As graves aparecem a vermelho e em primeiro lugar. Estão na ficha da pessoa alojada e no processo clínico, porque vão com a pessoa e não com a admissão. Vê-as também quem trabalha no piso, já que delas depende o que se dá de comer e de tomar; regista-as quem escreve no processo clínico ou tem a permissão *Alergias, avaliações e contenções*. Retirar uma não a apaga: fica registado quem a retirou e quando. Cada consulta fica no registo de acessos, como o processo clínico.
@@ -3308,6 +3314,14 @@ O ecrã **Medicação** do menu Estadias é a do turno: as tomas do dia agrupada
 
 O ecrã **Visitas** do menu Estadias diz quem está agora de visita e quem veio ver. **Nova visita** pede a pessoa alojada e quem vem: escolhe-se entre as suas pessoas de contacto, que trazem o parentesco, ou escreve-se o nome. À saída, **Saiu** regista a hora. Uma registada por engano anula-se e continua visível. É possível consultar dias anteriores, e a ficha da pessoa alojada mostra as suas últimas visitas. Regista-as quem faz admissões ou regista no piso; vê-as também quem vê as estadias.
 
+### Transferências
+
+Menu → Estadias → Transferências
+
+O ecrã **Transferências** mostra quem está fora agora, para onde foi e com quem. **Nova transferência** pede o residente e o **destino** (um hospital, o centro de saúde); o motivo, o **motorista**, o **veículo** e o **acompanhante** são opcionais. O motorista escolhe-se entre o pessoal; o acompanhante também, ou escreve-se o nome se for um familiar. No regresso, **Regressou** regista a hora. Um residente não pode sair numa transferência enquanto ainda está fora noutra, e uma registada por engano anula-se e continua visível.
+
+Enquanto dura a transferência, o residente aparece como **fora** no piso, na sua ficha («Transferência: destino») e na medicação, tal como numa ausência, para que ninguém prepare uma toma a quem não vai estar para a receber. A ficha mostra as suas últimas transferências e podem consultar-se dias anteriores. Registam-nas quem faz admissões ou regista no piso. Os **veículos do centro** (nome e matrícula) dão-se de alta no fundo do mesmo ecrã, por quem gere as definições de Estadias; um veículo que já foi usado não se apaga, retira-se.
+
 ### Dinheiro de bolso
 
 Na ficha da pessoa alojada, **Dinheiro de bolso** regista o que a família deixa no lar para as suas despesas e o que se gasta por ela (cabeleireiro, compras, passeios), com o **saldo** no topo. Cada movimento indica se entra ou sai, o valor, a descrição e a data. Não se pode gastar mais do que há. Um registado por engano anula-se e continua visível; uma entrada que já foi gasta não se anula sem anular antes as saídas. Faz isto quem trata das admissões e saídas.
@@ -3316,14 +3330,24 @@ Na ficha da pessoa alojada, **Dinheiro de bolso** regista o que a família deixa
 
 **Estadias → Cobranças** calcula o que cada residente paga por mês e prepara o ficheiro de débitos diretos (SEPA) para enviar ao banco. É de quem vê e define as tarifas.
 
-1. No topo, em **Quem cobra**, indica-se uma vez o titular, o **identificador de credor SEPA** (é dado pelo banco, tem a forma ES12ZZZB12345678) e a conta para onde vai o dinheiro.
+1. No topo, em **Quem cobra**, indica-se uma vez o titular, o **identificador de credor SEPA** (dá-o o banco, é como ES12ZZZB12345678), a conta onde chega o dinheiro e o **ficheiro da remessa**: *XML SEPA*, o que a maioria dos bancos aceita, ou *Cuaderno 19 (texto)*, o formato 19.14 da AEB que alguns ainda pedem. Se o banco rejeitar um, muda-se aqui e gera-se outra vez.
 2. Na tarifa de cada residente com vaga convencionada, **Paga a Administração** leva a parte que ele não paga; o residente paga o resto. Assim o que entra do banco bate certo com a parte do residente.
-3. Na sua ficha, **Débito direto** guarda o mandato assinado: titular, IBAN e data da assinatura. Da conta só se veem os quatro últimos algarismos; um novo substitui o anterior.
+3. Na sua ficha, **Débito direto** guarda o mandato assinado: titular, IBAN e data da assinatura. Da conta só se veem os quatro últimos algarismos; um novo substitui o anterior. Por cima vai a **conta contabilística** com que a contabilidade leva essa pessoa (normalmente começa por 430, mas é livre): vai com a pessoa e não com a estadia, e é a que sairá no que se exporte para a contabilidade.
 4. Todos os meses, **Calcular as cobranças** calcula o valor de cada estadia por dias de calendário segundo a sua tarifa. Voltar a carregar só acrescenta os que faltem.
-5. **Gerar a remessa**, com a data de débito (pelo menos daqui a dois dias), junta os pendentes de quem tem mandato. **Descarregar o ficheiro** dá o XML para carregar no homebanking da empresa.
+5. **Gerar a remessa**, com a data de débito (pelo menos daqui a dois dias), junta os pendentes de quem tem mandato. **Descarregar o ficheiro** dá o XML ou o texto do cuaderno 19, conforme o escolhido, para carregar no homebanking da empresa.
 6. Quando o banco credita, **Creditada pelo banco** deixa os recibos como cobrados. Um que o banco devolve marca-se **Devolvido** com o motivo e entra na remessa seguinte; um que não se vai cobrar marca-se **Não se cobra**.
 
-As cobranças ainda não emitem a fatura da estadia: por agora são a remessa e o seu controlo.
+### Faturas das estadias
+
+No mesmo ecrã, **Faturas do mês** prepara as faturas das estadias como **rascunhos**: a contabilidade revê-os e emite os que estiverem bem, um a um ou marcando vários e carregando em **Emitir selecionadas**. Até serem emitidas não têm número nem vão para o VeriFactu, e um rascunho pode **ser descartado**; uma fatura emitida já não se apaga: credita-se. Emitidas, vão para a série de faturas completas do centro e descarregam-se em PDF.
+
+- **Como se fatura cada residente** escolhe-se na sua ficha, junto à conta contabilística: *Mês antecipado* (o mês inteiro ao começá-lo), *Mês vencido* (o mês anterior pelos dias em que esteve) ou *Vaga C8* (paga tudo a administração regional).
+- Se alguém com mês antecipado entra ou sai a meio do mês, fatura-se o mês completo e, ao preparar o mês seguinte, sai uma **pagamento parcial** pelos dias em que não esteve (vê-se quando acaba a sua tarifa).
+- **Suplementos fixos** (dieta hiperproteica, quarto individual…): na ficha, junto à forma de faturar, com o seu valor mensal, o seu IVA (ou o das estadias) e desde que dia. Vão na fatura mensal com a estadia, por antecipação o mês inteiro ou, em mês vencido, pelos dias em que se tiveram; se sobrar algo, sai na nota de crédito. Numa vaga C8 paga-os o residente, na sua própria fatura do mês anterior. *Remover* deixa de o cobrar a partir desse dia; o já faturado não muda.
+- As **vagas C8** vão numa única fatura à administração regional, com uma linha por residente e mês (nome, NIF e dias). Em **IVA e administração regional** põem-se o seu nome, NIF e morada e se a fatura é *mensal* ou *trimestral* (a trimestral sai em janeiro, abril, julho e outubro).
+- Os valores das tarifas têm o **IVA incluído**. O IVA é o das estadias do centro (10 % de início), salvo se a tarifa tiver um próprio, que se põe ao editá-la nas Definições de estadias.
+- Uma fatura completa precisa do NIF de quem paga: se faltar, o rascunho di-lo e não deixa emitir até que se ponha na ficha.
+- Preparar outra vez não duplica nada: só acrescenta o que faltar.
 
 ### Qualidade e portal do familiar
 
@@ -3511,6 +3535,15 @@ No menu dos três pontos de uma ordem própria há mais duas opções. *Em esper
 *[Captura] Em espera / Bloqueada: conta-se o que se espera ou o que a bloqueia.*
 
 *[Captura] Largar a ordem: conta-se em que ponto fica e a ordem fica para que outra pessoa a assuma.*
+
+### Numa residência: o meu turno, piso, medicação e incidentes
+
+Nos centros com o módulo de Estadias, a app pessoal (a de quem entra com o seu próprio utilizador) acrescenta ao menu o que faz falta no piso. Cada opção só aparece a quem tem a permissão correspondente, a mesma que na web, e o que se regista fica em nome de quem entrou. Num telemóvel partilhado não aparecem.
+
+- **O meu turno de hoje**: o turno e a zona próprios, quem mais trabalha nesse turno (com um ponto verde se já picou o ponto) e o caderno de sala da zona desde ontem, para a passagem de turno. Daqui vai-se direto ao piso, à medicação ou a abrir um incidente. Um turno da noite continua a ser «hoje» até terminar.
+- **Piso**: os residentes da zona com o que lhes falta registar hoje. Ao tocar num registam-se os seus registos (refeições, mudas, sinais vitais…), tal como no ecrã de piso da web. Funciona **sem rede**: o registado guarda-se no telemóvel e envia-se sozinho assim que houver rede. Em cima vê-se quantos registos esperam para ser enviados e se o centro rejeitou algum.
+- **Medicação**: as tomas do dia ordenadas por hora, com *Dada* ou *Não dada*; ao marcar «Não dada» escolhe-se o motivo (recusa, não está, em jejum…). Esta precisa de ligação, para que nunca se deem por boas duas tomas a partir de dois telemóveis.
+- **Novo incidente**: o tipo, de quem é, o que aconteceu e o que se fez, com até **seis fotos** tiradas com a câmara. As fotos enviam-se reduzidas e sem dados de localização, e veem-se no incidente a partir da web. Podem acrescentar-se fotos até um dia depois de o abrir, mesmo que já esteja fechado.
 
 Turnera — manual de utilização. Atualizado a 16 de outubro de 2026.
 Este documento é mantido junto do programa: cada alteração que muda a forma como se usa algo é refletida aqui.

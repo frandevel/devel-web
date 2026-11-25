@@ -562,6 +562,8 @@ Al dar de alta o corregir un producto o un servicio, la **categoría** y la **ma
 
 En la ficha de un producto, quien lleva el almacén o ve el informe de movimientos de stock tiene además sus **entradas y salidas** en esta delegación, las últimas primero: fecha y hora, si entra o sale, cuántas unidades y si fue una venta o un movimiento a mano.
 
+Al registrar un movimiento a mano (entrada, salida o ajuste) se puede escribir el **motivo**, que es opcional: un producto que llegó roto, uno de venta que pasa a cabina. En las entradas y salidas de la ficha y en el informe de movimientos, las líneas con motivo llevan un icono de comentario a la izquierda, como las notas del historial del cliente; al pulsarlo se abre un diálogo con el texto y quién lo escribió. Un ajuste que no cambia las unidades no deja movimiento, así que tampoco guarda el motivo.
+
 ### Reposición
 
 Menú → Catálogo → Reposición
@@ -3270,6 +3272,8 @@ Lo apuntado mal **no se borra**: se *corrige* con otra entrada (la anterior qued
 
 **Una incidencia** es algo que pasa y tiene que quedar por escrito: una caída, una discusión, un medicamento rechazado. Se abre desde la persona, la zona o el centro, con quién, cuándo, qué pasó y qué se hizo. El centro define sus **tipos de incidencia** (el programa no trae ninguno) y para cada uno decide si *pide cierre*, si exige indicar de quién es y si exige indicar lo que se hizo. Las que piden cierre quedan abiertas hasta que quien supervisa las revisa y las cierra con su conclusión. En la pestaña *Informe* se filtra por fechas y se descarga en CSV y, quien ve los informes de Estancias (de fábrica, el administrador y Dirección), también en **PDF**, con el membrete del centro, listo para imprimir o archivar.
 
+Las incidencias abiertas desde la app del móvil pueden llevar **fotos** (hasta seis). Salen en la incidencia en pequeño; al tocar una se ve en grande, con quién la hizo y cuándo.
+
 **La supervisión del turno** reúne en una pantalla lo que falta por apuntar hoy en cada zona, las incidencias que esperan cierre y lo importante de las bitácoras. De cada persona con algo pendiente sale cada registro como «Comida 1 de 3»: las veces que se ha apuntado hoy de las que se esperan, con la hora de la última. En naranja va lo que aún no se ha apuntado ninguna vez; al pasar el ratón se ve qué se apuntó por última vez y quién.
 
 *[Captura] Incidencias: las abiertas esperan a que la supervisión las cierre.*
@@ -3290,6 +3294,8 @@ En la ficha de la persona alojada, y en su ficha de cliente, **Personas de conta
 
 El **personal de referencia** es quien mejor conoce a la persona alojada y a quien acude la familia: su auxiliar, su enfermera, su psicóloga. No es lo mismo que las personas de contacto, que son de su familia. En la ficha de la persona, **Añadir** deja elegir a una profesional del centro de la lista o, si es alguien de fuera, escribir su nombre; el papel (auxiliar, enfermería…) es opcional. Puede haber varias. Va con el ingreso: en otro ingreso puede ser otra persona. Quitar a alguien no lo borra, queda quién lo quitó y cuándo. Lo cambia quien hace ingresos y lo ve quien ve las estancias.
 
+Al escribir el papel se proponen los que ya se han usado en el centro, para no tener «Fisio» y «Fisioterapia» como si fueran dos cosas. En la **agenda**, al dar una cita a una persona alojada, en el campo del profesional salen primero sus profesionales de referencia con su papel («Miguel · Médico») y después el resto; se puede elegir cualquiera. El informe **Profesionales de referencia** (Informes → Estancias) lista, a día de hoy, quién atiende a cada residente y con qué papel, y también a quien no tiene a nadie asignado; se descarga en CSV o PDF.
+
 ### Alergias
 
 Las **alergias** se apuntan una por una: si es a un medicamento, a un alimento o a otra cosa, a qué (penicilina, marisco, látex…), la reacción y la gravedad. Las graves salen en rojo y las primeras. Están en la ficha de la persona alojada y en la historia clínica, porque van con la persona y no con el ingreso. Las ve también quien trabaja en planta, ya que de ellas depende lo que se da de comer y de tomar; las apunta quien escribe en la historia clínica o tiene el permiso *Alergias, valoraciones y sujeciones*. Quitar una no la borra: queda quién la quitó y cuándo. Cada consulta queda en el rastro de accesos, como la historia clínica.
@@ -3308,6 +3314,14 @@ La pantalla **Medicación** del menú de Estancias es la del turno: las tomas de
 
 La pantalla **Visitas** del menú de Estancias dice quién hay ahora de visita y a quién ha venido a ver. **Nueva visita** pide la persona alojada y quién viene: se elige entre sus personas de contacto, que trae el parentesco, o se escribe el nombre. Al irse, **Ha salido** apunta la hora. Una apuntada por error se anula y sigue a la vista. Se pueden consultar días anteriores, y la ficha de la persona alojada enseña sus últimas visitas. Las apunta quien hace ingresos o registra en planta; las ve también quien ve las estancias.
 
+### Traslados
+
+Menú → Estancias → Traslados
+
+La pantalla **Traslados** dice quién está fuera ahora, adónde ha ido y con quién. **Nuevo traslado** pide la persona alojada y el **destino** (un hospital, el centro de salud); el motivo, el **chófer**, el **vehículo** y el **acompañante** son opcionales. El chófer se elige entre la plantilla; el acompañante también, o se escribe su nombre si es un familiar. Al volver, **Ha vuelto** apunta la hora. Una persona no puede salir en un traslado mientras sigue fuera en otro, y uno apuntado por error se anula y sigue a la vista.
+
+Mientras dura el traslado, la persona sale **fuera** en la planta, en su ficha («Traslado: destino») y en la medicación, igual que en una ausencia, para que nadie le prepare una toma que no va a estar para recibir. La ficha enseña sus últimos traslados y se pueden consultar días anteriores. Los apunta quien hace ingresos o registra en planta. Los **vehículos del centro** (nombre y matrícula) se dan de alta al pie de la misma pantalla, y lo hace quien lleva los ajustes de Estancias; un vehículo que ya se ha usado no se borra, se retira.
+
 ### Dinero de bolsillo
 
 En la ficha de la persona alojada, **Dinero de bolsillo** lleva lo que la familia deja en la residencia para sus gastos y lo que se gasta por ella (peluquería, compras, salidas), con el **saldo** arriba. Cada movimiento lleva si entra o sale, el importe, el concepto y la fecha. No se puede gastar más de lo que hay. Uno apuntado por error se anula y sigue a la vista; una entrada que ya se ha gastado no se anula sin anular antes las salidas. Lo lleva quien hace ingresos y salidas.
@@ -3316,14 +3330,24 @@ En la ficha de la persona alojada, **Dinero de bolsillo** lleva lo que la famili
 
 **Estancias → Cobros** saca lo que paga cada residente al mes y prepara el fichero de recibos domiciliados (SEPA) para subirlo al banco. Es de quien ve y pone las tarifas.
 
-1. Arriba, en **Quién cobra**, se pone una vez el titular, el **identificador de acreedor SEPA** (lo da el banco, es como ES12ZZZB12345678) y la cuenta a la que llega el dinero.
+1. Arriba, en **Quién cobra**, se pone una vez el titular, el **identificador de acreedor SEPA** (lo da el banco, es como ES12ZZZB12345678), la cuenta a la que llega el dinero y el **fichero de la remesa**: *XML SEPA*, el que acepta la mayoría de los bancos, o *Cuaderno 19 (texto)*, el formato 19.14 de la AEB que aún piden algunos. Si el banco rechaza uno, se cambia aquí y se genera otra vez.
 2. En la tarifa de cada residente con plaza concertada, **Paga la Administración** lleva la parte que no paga él; el residente paga el resto. Así lo que entra del banco cuadra con la parte del residente.
-3. En su ficha, **Domiciliación** guarda el mandato firmado: titular, IBAN y fecha de la firma. De la cuenta solo se ven las cuatro últimas cifras; uno nuevo sustituye al anterior.
+3. En su ficha, **Domiciliación** guarda el mandato firmado: titular, IBAN y fecha de la firma. De la cuenta solo se ven las cuatro últimas cifras; uno nuevo sustituye al anterior. Encima va la **cuenta contable** con la que la asesoría lleva a esa persona (normalmente empieza por 430, pero es libre): va con la persona y no con el ingreso, y es la que saldrá en lo que se exporte para la contabilidad.
 4. Cada mes, **Calcular los cargos** saca lo de cada estancia por días naturales según su tarifa. Volver a pulsarlo solo añade los que falten.
-5. **Generar la remesa**, con la fecha de cargo (al menos dentro de dos días), junta los pendientes de quien tiene mandato. **Descargar el fichero** da el XML para subirlo en la banca de empresa.
+5. **Generar la remesa**, con la fecha de cargo (al menos dentro de dos días), junta los pendientes de quien tiene mandato. **Descargar el fichero** da el XML o el texto del cuaderno 19, según lo elegido, para subirlo en la banca de empresa.
 6. Cuando el banco abona, **Abonada por el banco** deja los recibos como cobrados. Uno que el banco devuelve se marca **Devuelto** con el motivo y entra en la remesa siguiente; uno que no se va a cobrar se marca **No se cobra**.
 
-Los cobros no emiten aún la factura de la estancia: de momento son la remesa y su control.
+### Facturas de las estancias
+
+En la misma pantalla, **Facturas del mes** prepara las facturas de las estancias como **borradores**: contabilidad los repasa y emite los que estén bien, uno a uno o marcando varios y pulsando **Emitir seleccionadas**. Hasta emitirse no tienen número ni van a VeriFactu, y un borrador se puede **descartar**; una factura emitida ya no se borra: se abona. Emitidas, van a la serie de facturas completas del centro y se descargan en PDF.
+
+- **Cómo se factura a cada residente** se elige en su ficha, junto a la cuenta contable: *Mes anticipado* (el mes entero al empezarlo), *Mes vencido* (el mes anterior por los días que estuvo) o *Plaza C8* (lo paga todo la Conselleria).
+- Si alguien con mes anticipado entra o sale a mitad de mes, se le factura el mes completo y, al preparar el mes siguiente, sale un **abono** por los días que no estuvo (se mira cuándo acaba su tarifa).
+- **Suplementos fijos** (dieta hiperproteica, habitación individual…): en la ficha, junto a la forma de facturar, con su importe al mes, su IVA (o el de las estancias) y desde qué día. Van en la factura mensual con la estancia, por adelantado el mes entero o, en mes vencido, por los días que se tuvieron; si sobra algo, sale en el abono. En una plaza C8 los paga la persona, en su propia factura del mes anterior. *Quitar* lo deja de cobrar desde ese día; lo ya facturado no cambia.
+- Las **plazas C8** van en una sola factura a la Conselleria, con una línea por residente y mes (nombre, NIF y días). En **IVA y Conselleria** se ponen su nombre, NIF y dirección y si la factura es *mensual* o *trimestral* (la trimestral sale en enero, abril, julio y octubre).
+- Los importes de las tarifas llevan el **IVA incluido**. El IVA es el de las estancias del centro (10 % de entrada) salvo que la tarifa tenga uno propio, que se pone al editarla en Ajustes de estancias.
+- Una factura completa necesita el NIF de quien paga: si falta, el borrador lo dice y no se deja emitir hasta que se pone en la ficha.
+- Preparar otra vez no duplica nada: solo añade lo que falte.
 
 ### Calidad y portal del familiar
 
@@ -3511,6 +3535,15 @@ En el menú de los tres puntos de un parte propio hay dos opciones más. *En esp
 *[Captura] En espera / Bloqueado: se cuenta qué se espera o qué lo bloquea.*
 
 *[Captura] Soltar el parte: se cuenta en qué punto queda y el parte queda para que lo coja otra persona.*
+
+### En una residencia: mi turno, planta, medicación e incidencias
+
+En los centros con el módulo de Estancias, la app personal (la de quien entra con su propio usuario) añade al menú lo que hace falta en planta. Cada opción sale solo a quien tiene el permiso correspondiente, el mismo que en la web, y lo que se apunta queda a nombre de quien ha entrado. En un móvil compartido no aparecen.
+
+- **Mi turno de hoy**: el turno y la zona propios, quién más trabaja en ese turno (con un punto verde si ya ha fichado) y la libreta de sala de la zona desde ayer, para el relevo. Desde aquí se va directo a planta, medicación o a abrir una incidencia. Un turno de noche sigue siendo «hoy» hasta que termina.
+- **Planta**: los residentes de la zona con lo que les falta por apuntar hoy. Al tocar uno se apuntan sus registros (comidas, cambios, constantes…), igual que en la pantalla de planta de la web. Funciona **sin cobertura**: lo apuntado se guarda en el móvil y se envía solo en cuanto hay señal. Arriba se ve cuántos registros esperan para enviarse y si el centro rechazó alguno.
+- **Medicación**: las tomas del día ordenadas por hora, con *Dada* o *No dada*; al marcar «No dada» se elige el motivo (la rechaza, no está, en ayunas…). Esta sí necesita conexión, para que nunca se den por buenas dos tomas desde dos móviles.
+- **Nueva incidencia**: el tipo, de quién es, qué ha pasado y qué se ha hecho, con hasta **seis fotos** hechas con la cámara. Las fotos se envían reducidas y sin datos de ubicación, y se ven en la incidencia desde la web. Se pueden añadir fotos hasta un día después de abrirla aunque ya esté cerrada.
 
 Turnera — manual de uso. Actualizado el 16 de octubre de 2026.
 Este documento se mantiene junto al programa: cada cambio que altera cómo se usa algo se refleja aquí.

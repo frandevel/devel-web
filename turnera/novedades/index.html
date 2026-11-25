@@ -679,6 +679,7 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-11-25">25 de noviembre de 2026</a></li>
     <li><a href="#2026-11-24">24 de noviembre de 2026</a></li>
     <li><a href="#2026-11-23">23 de noviembre de 2026</a></li>
     <li><a href="#2026-11-21">21 de noviembre de 2026</a></li>
@@ -735,10 +736,59 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-11-25" class="version">
+  <div class="version__cabecera">
+    <h2>25 de noviembre de 2026</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">1.18.0-b96eac6</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
+    <h4>Residencias: facturas de las estancias</h4>
+    <ul>
+      <li>En Estancias → Cobros, «Preparar los borradores» saca las facturas del mes. Se repasan y se emiten una a una o marcando varias con «Emitir seleccionadas». Hasta emitirse no tienen número y se pueden descartar.</li>
+      <li>Cada residente se factura por mes anticipado, por mes vencido o como plaza C8. Si alguien con mes anticipado entra o sale a mitad de mes, al preparar el mes siguiente sale el abono de los días que no estuvo.</li>
+      <li>Las plazas C8 van en una sola factura a la Conselleria, mensual o trimestral, con una línea por residente y mes.</li>
+      <li>Suplementos fijos de la estancia (dieta, habitación individual…), con su importe al mes y su IVA, que van en la factura mensual.</li>
+      <li>El IVA de las estancias se pone en el centro (10 % de entrada) y cada tarifa puede llevar el suyo. Los importes llevan el IVA incluido.</li>
+      <li>La cuenta contable de cada residente, la que usa la asesoría, y el fichero de la remesa también en el formato de texto del cuaderno 19 que aún piden algunos bancos.</li>
+    </ul>
+    <h4>Residencias: traslados y profesionales de referencia</h4>
+    <ul>
+      <li>Traslados: quién sale, adónde y por qué, la hora de salida y de vuelta, el chófer, el vehículo y quién le acompaña. Mientras está fuera, el residente sale como ausente en la planta y en la medicación.</li>
+      <li>Al dar una cita a un residente, la agenda propone primero a sus profesionales de referencia. Y hay un informe con los profesionales asignados a cada residente.</li>
+    </ul>
+    <h4>Residencias: fotos y aplicación del personal</h4>
+    <ul>
+      <li>Las incidencias pueden llevar fotos, que se ven en miniatura en la lista.</li>
+      <li>La aplicación Android del personal suma su turno del día, la planta, la medicación y las incidencias con foto desde el móvil.</li>
+    </ul>
+    <h4>Stock</h4>
+    <ul>
+      <li>Al registrar a mano una entrada, una salida o un ajuste de stock se puede escribir el motivo. Las líneas con motivo llevan un icono a la izquierda que, al pulsarlo, enseña el texto y quién lo escribió.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Mejoras</h3>
+    <ul>
+      <li>El informe de citas canceladas se abre ordenado por la fecha de cancelación, de la más reciente a la más antigua.</li>
+      <li>La barra superior ya no se sale por la derecha en pantallas de 1440 píxeles.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Errores corregidos</h3>
+    <ul>
+      <li>Al cambiar el estado de una cita (por ejemplo, a «En espera»), la primera vez volvía al estado que tenía al cerrar la ventana y había que cambiarlo dos veces.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-24" class="version">
   <div class="version__cabecera">
     <h2>24 de noviembre de 2026</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">1.18.0-3ba0ed0</span></p>
 
