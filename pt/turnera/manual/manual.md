@@ -49,6 +49,8 @@ Em cima, sem título, está o que se usa todos os dias: **Início**, **Agenda**,
 
 **Pesquisa no menu.** Quando o menu tem tantos ecrãs que não cabem todos ao mesmo tempo, aparece por baixo do logótipo uma caixa **Procurar ecrã…** (com a barra recolhida ou com o menu inteiro à vista não é precisa e não aparece). Ao escrever ficam só os ecrãs cujo nome contém o que se escreveu, sem importar maiúsculas nem acentos; se o que se escreveu faz parte do nome de uma secção, aparecem todos os ecrãs dessa secção. Com as setas **↑** e **↓** percorrem-se os resultados, **Enter** abre o assinalado e **Esc** apaga a pesquisa e devolve o menu completo. Só se pesquisam os ecrãs que o utilizador já vê no seu menu.
 
+*[Captura] Com o menu mais comprido do que o ecrã, a pesquisa deixa só os ecrãs que coincidem com o que se escreve.*
+
 No computador o menu fica fixo à esquerda mesmo quando se percorre a página, e o botão de baixo recolhe-o para deixar só os ícones. No telemóvel e num tablet na vertical está escondido: abre-se com o botão **☰** no canto superior esquerdo e fecha-se ao escolher uma entrada, ao tocar fora dele ou com a tecla `Esc`.
 
 Se lhe falta alguma dessas entradas, não é uma falha: é que o seu utilizador não tem essa permissão. Quem administra o centro pode atribuí-la.
@@ -567,6 +569,10 @@ Na ficha de um produto, quem gere o armazém ou vê o relatório de movimentos d
 Ao registar um movimento à mão (entrada, saída ou ajuste) pode escrever-se o **motivo**, que é opcional: um produto que chegou partido, um de venda que passa para a cabine. Nas entradas e saídas do produto e no relatório de movimentos, as linhas com motivo têm um ícone de comentário à esquerda, como as notas do histórico do cliente; ao tocá-lo abre-se uma janela com o texto e quem o escreveu. Um ajuste que não altera as unidades não gera movimento, por isso também não guarda o motivo.
 
 Na lista de **Stock**, os produtos com algum movimento com motivo levam o mesmo ícone junto ao nome: ao carregar nele veem-se os seus últimos movimentos com o motivo. E o diálogo de entrada, saída ou acerto mostra por baixo os cinco últimos movimentos do produto, para ver o que se fez antes e porquê. O motivo não se pode alterar nem apagar: é o rasto do movimento.
+
+*[Captura] Ao carregar no ícone veem-se os últimos movimentos do produto; o que tem motivo leva o ícone à frente.*
+
+*[Captura] Em Stock, o ícone junto ao nome avisa de que o produto tem movimentos com motivo.*
 
 ### Reposição
 
@@ -1112,6 +1118,8 @@ Conta sobre **as marcações do intervalo, não sobre as anuladas no intervalo**
 Em cima, **quantas foram anuladas e quem as anulou**: o cliente, o centro ou uma causa externa. As do centro aparecem repartidas por profissional, e as externas por cabine ou campo, que é onde se vê se um campo descoberto perde muito mais aulas com a chuva do que um coberto. As anuladas antes de existir esta distinção aparecem como *sem indicar*. As *criadas por engano* contam-se à parte: não são anulações, mas se esse número crescer, convém saber porquê.
 
 Depois, **todas as marcações anuladas uma a uma**, com o último anulado em cima: o dia, o cliente, o profissional, quando se criou, quando se anulou, **a causa, quem a anulou e com que perfil** e os comentários. Para saber o que aconteceu à marcação de alguém, escreva em **Cliente** o seu número ou parte do nome e apelidos e carregue em *Aplicar*: ficam só as suas marcações anuladas, e o ranking de baixo deixa de aparecer. Lembre-se de que o intervalo é o do **dia da marcação**: para uma marcação da semana que vem anulada hoje, o intervalo tem de chegar à semana que vem.
+
+*[Captura] O relatório de anulações: cada marcação anulada com a sua causa, quem a anulou e com que perfil.*
 
 Com o filtro **Causa** a lista fica só com as anuladas por essa causa e o ranking deixa de aparecer. É a forma de rever o que se marcou como erro.
 
@@ -2608,9 +2616,13 @@ A **idade** já não se escreve: sai sozinha da **data de nascimento**. Nas fich
 
 A secção recolhível **Família e emergência** guarda o contacto para um aviso (nome, relação e telefone), se tem a seu cargo um idoso dependente e os seus filhos menores, ou maiores com uma medida de apoio judicial, com a data de nascimento. Os dados da sua *cabine habitual* só aparecem para quem aparece na agenda.
 
+*[Captura] A secção «Família e emergência» da ficha: contacto para um aviso, idoso dependente a cargo e filhos.*
+
 **Admissões, saídas e contrato.** Com o módulo Laboral, o botão *Admissões, saídas e contrato* da ficha guarda cada período de admissão da pessoa: se sai e volta anos depois, veem-se todos. Cada saída leva o seu **motivo** (fim de contrato, a empresa não renova, saída voluntária, despedimento, não passa o período experimental, fim de chamamento, reforma, falecimento ou outro) e uma nota para as circunstâncias.
 
 **Idade e género do pessoal.** O botão *Idade e género* da lista de profissionais conta o pessoal no ativo por escalões de idade (por décadas) e por género, que é o que pedem todos os anos a estatística de emprego e o plano de igualdade. Filtra-se por género, por idade ou por data de nascimento e *Descarregar a lista* descarrega as pessoas que cumprem os filtros num ficheiro para Excel.
+
+*[Captura] O pessoal no ativo por escalões de idade e por género, com os filtros e a descarga para Excel.*
 
 **Desativar não apaga.** O profissional sai da agenda, mas as suas marcações, visitas e casos clínicos continuam a mostrá-lo, e pode voltar a ativar-se editando-o. Se tem marcações de hoje em diante, o Turnera pergunta a que profissional passam e passa-as todas de uma vez; se alguma coincide com outra que já tem quem as recebe, di-lo para a recolocar depois. A lista mostra só os que estão ativos: retirando *Só ativos* aparecem também os inativos.
 

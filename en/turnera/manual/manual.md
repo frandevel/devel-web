@@ -49,6 +49,8 @@ At the top, with no heading, is what you use every day: **Home**, **Agenda**, **
 
 **Menu search.** When the menu has so many screens that they do not all fit at once, a box appears under the logo, **Find a screen…** (with the bar collapsed or with the whole menu in view it is not needed and does not appear). As you type, only the screens whose name contains what you typed remain, regardless of capitals or accents; if what you typed is part of the name of a section, all the screens in that section appear. With the arrow keys **↑** and **↓** you move through the results, **Enter** opens the highlighted one and **Esc** clears the search and brings back the full menu. Only the screens the user already sees in their menu are searched.
 
+*[Captura] When the menu is longer than the screen, the search box leaves only the screens that match what you type.*
+
 On a computer the menu stays fixed on the left even when you scroll down the page, and the button at the bottom collapses it to show only the icons. On a phone and on a tablet held upright it is hidden: it opens with the **☰** button at the top left and closes when you choose an entry, when you tap outside it or with the `Esc`.
 
 If one of those entries is missing for you it is not a fault: your user account does not have that permission. Whoever administers the centre can give it to you.
@@ -567,6 +569,10 @@ In a product's record, whoever manages the store or sees the stock movements rep
 When recording a movement by hand (in, out or adjustment) you can write the **reason**, which is optional: a product that arrived broken, a retail one moved to the treatment room. In the product's ins and outs and in the movements report, lines with a reason carry a comment icon on the left, like the notes in the customer history; tapping it opens a dialog with the text and who wrote it. An adjustment that does not change the units leaves no movement, so it does not keep the reason either.
 
 In the list in **Stock**, products with any movement that has a reason carry the same icon next to their name: pressing it shows their latest movements with their reason. And the stock-in, stock-out or adjustment dialog shows the product's last five movements underneath, so you can see what was done before and why. The reason cannot be changed or deleted: it is the trail of the movement.
+
+*[Captura] Pressing the icon shows the product's latest movements; the one with a reason has the icon in front of it.*
+
+*[Captura] In Stock, the icon next to the name shows that the product has movements with a reason.*
 
 ### Restocking
 
@@ -1112,6 +1118,8 @@ It counts against **the appointments in the range, not the ones cancelled in the
 At the top, **how many were cancelled and who called them off**: the customer, the centre or an external cause. The centre's are broken down by professional, and the external ones by cabin or court, which is where you see whether an outdoor court loses many more classes to the rain than a covered one. Those cancelled before this distinction existed appear as *not stated*. Those *created by mistake* are counted separately: they are not cancellations, but if that number grows, it is worth knowing why.
 
 Then, **all the cancelled appointments one by one**, with the most recently cancelled at the top: the day, the customer, the staff member, when it was created, when it was cancelled, **the reason, who cancelled it and with which role** and the comments. To find out what happened to someone's appointment, type in **Customer** their number or part of their name and surnames and press *Apply*: only their cancelled appointments remain, and the ranking below no longer appears. Remember that the range is that of the **day of the appointment**: for an appointment next week cancelled today, the range has to reach next week.
+
+*[Captura] The cancellations report: each cancelled appointment with its reason, who cancelled it and with which role.*
 
 With the **Cause** the list keeps only the ones cancelled for that reason and the ranking no longer appears. It is the way to review what was marked as a mistake.
 
@@ -2608,9 +2616,13 @@ The **age** is no longer typed in: it comes from the **date of birth**. In old r
 
 The collapsible section **Family and emergency** keeps the contact for an emergency (name, relationship and phone), whether they look after a dependent older person, and their children under 18, or adult children with a court-ordered support measure, with their date of birth. The details of their *usual room* only appear for people who appear in the diary.
 
+*[Captura] The «Family and emergency» section of the record: emergency contact, dependent older person in their care, and children.*
+
 **Employment history and contract.** With the Employment module, the button *Employment history and contract* on the record keeps each period of employment of the person: if they leave and come back years later, you see them all. Each departure has its **reason** (end of contract, not renewed by the company, voluntary resignation, dismissal, did not pass the probation period, end of seasonal call-up, retirement, death or other) and a note for the circumstances.
 
 **Age and gender of the workforce.** The *Age and gender* in the staff list counts the active workforce by age band (by decades) and by gender, which is what the yearly employment statistics and the equality plan ask for. You can filter by gender, by age or by date of birth, and *Download the list* downloads the people who match the filters into a file for Excel.
+
+*[Captura] The active workforce by age band and by gender, with the filters and the Excel download.*
 
 **Deactivating does not delete.** The practitioner leaves the agenda, but their appointments, visits and clinical cases still show them, and they can be reactivated by editing them. If they have appointments from today on, Turnera asks which practitioner takes them over and moves them all at once; if one clashes with another the receiver already has, it says so so you can rearrange it afterwards. The list shows only those who are active: by clearing *Active only* the inactive ones show too.
 

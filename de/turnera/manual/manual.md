@@ -49,6 +49,8 @@ Oben, ohne Überschrift, steht das, was jeden Tag benutzt wird: **Start**, **Ter
 
 **Menüsuche.** Wenn das Menü so viele Bildschirme hat, dass sie nicht alle gleichzeitig hineinpassen, erscheint unter dem Logo ein Feld **Bildschirm suchen…** (bei eingeklappter Leiste oder vollständig sichtbarem Menü wird es nicht gebraucht und erscheint nicht). Beim Tippen bleiben nur die Bildschirme, deren Name das Eingegebene enthält, unabhängig von Groß- und Kleinschreibung und Akzenten; ist das Eingegebene Teil des Namens eines Bereichs, erscheinen alle Bildschirme dieses Bereichs. Mit den Pfeiltasten **↑** und **↓** bewegt man sich durch die Ergebnisse, **Enter** öffnet den markierten und **Esc** löscht die Suche und zeigt wieder das ganze Menü. Gesucht wird nur unter den Bildschirmen, die der Benutzer bereits in seinem Menü sieht.
 
+*[Captura] Ist das Menü länger als der Bildschirm, lässt das Suchfeld nur die Bildschirme übrig, die zum Eingegebenen passen.*
+
 Am Computer bleibt das Menü links stehen, auch wenn man auf der Seite nach unten scrollt, und die Schaltfläche unten klappt es ein, sodass nur die Symbole bleiben. Auf dem Handy und auf dem Tablet im Hochformat ist es versteckt: Es öffnet sich mit der Schaltfläche **☰** oben links und schließt sich, wenn man einen Eintrag wählt, daneben tippt oder mit der Taste `Esc`.
 
 Wenn Ihnen einer dieser Einträge fehlt, ist das kein Fehler: Ihr Benutzer hat diese Berechtigung nicht. Wer den Betrieb verwaltet, kann sie Ihnen geben.
@@ -567,6 +569,10 @@ In der Produktakte sehen die Lagerverantwortlichen und alle, die den Bericht der
 Beim manuellen Erfassen einer Bewegung (Eingang, Ausgang oder Korrektur) kann man den **Grund** schreiben, der optional ist: ein Produkt, das beschädigt ankam, ein Verkaufsprodukt, das in die Kabine wandert. In den Ein- und Ausgängen des Produkts und im Bewegungsbericht tragen Zeilen mit Grund links ein Kommentarsymbol, wie die Notizen im Kundenverlauf; ein Tippen darauf öffnet einen Dialog mit dem Text und wer ihn geschrieben hat. Eine Korrektur, die die Einheiten nicht ändert, erzeugt keine Bewegung und speichert daher auch keinen Grund.
 
 In der Liste von **Lager** tragen Produkte mit mindestens einer Bewegung mit Grund dasselbe Symbol neben dem Namen: Ein Klick darauf zeigt ihre letzten Bewegungen mit dem Grund. Und der Dialog für Eingang, Ausgang oder Korrektur zeigt darunter die letzten fünf Bewegungen des Produkts, damit man sieht, was vorher gemacht wurde und warum. Der Grund kann nicht geändert oder gelöscht werden: Er ist die Spur der Bewegung.
+
+*[Captura] Ein Klick auf das Symbol zeigt die letzten Bewegungen des Produkts; die mit Grund hat das Symbol davor.*
+
+*[Captura] Im Lager zeigt das Symbol neben dem Namen, dass das Produkt Bewegungen mit Grund hat.*
 
 ### Nachbestellung
 
@@ -1112,6 +1118,8 @@ Er rechnet bezogen auf **die Termine des Zeitraums, nicht auf die im Zeitraum st
 Oben steht, **wie viele storniert wurden und wer sie storniert hat**: der Kunde, das Zentrum oder ein externer Grund. Die des Zentrums werden nach Fachkraft aufgeschlüsselt, die externen nach Kabine oder Platz – dort sieht man, ob ein offener Platz durch Regen viel mehr Stunden verliert als ein überdachter. Was storniert wurde, bevor es diese Unterscheidung gab, erscheint als *nicht angegeben*. Die *versehentlich angelegten* werden getrennt gezählt: Sie sind keine Stornierungen, aber wenn diese Zahl wächst, sollte man wissen, warum.
 
 Danach **alle stornierten Termine einzeln**, die zuletzt stornierten oben: der Tag, der Kunde, der Mitarbeiter, wann er angelegt und wann er storniert wurde, **der Grund, wer ihn storniert hat und mit welcher Rolle** und die Kommentare. Um zu erfahren, was mit dem Termin einer Person passiert ist, geben Sie in **Kunde** ihre Nummer oder einen Teil ihres Namens ein und klicken Sie auf *Anwenden*: Es bleiben nur ihre stornierten Termine, und die Rangliste darunter wird nicht mehr angezeigt. Denken Sie daran, dass sich der Zeitraum auf den **Tag des Termins** bezieht: Für einen heute stornierten Termin der nächsten Woche muss der Zeitraum bis in die nächste Woche reichen.
+
+*[Captura] Der Stornierungsbericht: jeder stornierte Termin mit Grund, wer ihn storniert hat und mit welcher Rolle.*
 
 Mit dem Filter **Grund** zeigt die Liste nur noch die aus diesem Grund stornierten, und die Rangliste verschwindet. So lässt sich prüfen, was als Fehler markiert wurde.
 
@@ -2608,9 +2616,13 @@ Das **Alter** wird nicht mehr eingegeben: es ergibt sich aus dem **Geburtsdatum*
 
 Der aufklappbare Bereich **Familie und Notfall** speichert den Kontakt für einen Notfall (Name, Beziehung und Telefon), ob die Person einen pflegebedürftigen älteren Angehörigen betreut, sowie ihre minderjährigen Kinder oder volljährigen Kinder mit einer gerichtlichen Unterstützungsmaßnahme, mit Geburtsdatum. Die Angaben zu ihrer *üblichen Kabine* erscheinen nur bei Personen, die im Terminkalender stehen.
 
+*[Captura] Der Bereich «Familie und Notfall» der Karteikarte: Notfallkontakt, betreuter pflegebedürftiger Angehöriger und Kinder.*
+
 **Ein- und Austritte, Vertrag.** Mit dem Modul Arbeitsrecht speichert die Schaltfläche *Ein- und Austritte, Vertrag* in der Karteikarte jeden Beschäftigungszeitraum der Person: Geht sie und kommt Jahre später wieder, sieht man alle. Jeder Austritt hat seinen **Grund** (Vertragsende, vom Unternehmen nicht verlängert, freiwillige Kündigung, Entlassung, Probezeit nicht bestanden, Ende des Abrufs, Ruhestand, Tod oder Sonstiges) und eine Notiz zu den Umständen.
 
 **Alter und Geschlecht der Belegschaft.** Der Knopf *Alter und Geschlecht* in der Mitarbeiterliste zählt die aktive Belegschaft nach Altersgruppen (in Jahrzehnten) und nach Geschlecht, wie es die jährliche Beschäftigungsstatistik und der Gleichstellungsplan verlangen. Man kann nach Geschlecht, Alter oder Geburtsdatum filtern, und *Liste herunterladen* lädt die Personen, die den Filtern entsprechen, in eine Datei für Excel herunter.
+
+*[Captura] Die aktive Belegschaft nach Altersgruppen und Geschlecht, mit Filtern und Download für Excel.*
 
 **Deaktivieren löscht nicht.** Die Fachkraft verschwindet aus dem Terminkalender, aber ihre Termine, Besuche und klinischen Fälle zeigen sie weiterhin an, und durch Bearbeiten lässt sie sich wieder aktivieren. Hat sie ab heute Termine, fragt Turnera, welche Fachkraft sie übernimmt, und überträgt sie alle auf einmal; überschneidet sich eine mit einem Termin, den die übernehmende Person schon hat, meldet es das, damit man sie danach neu einplanen kann. Die Liste zeigt nur aktive Mitarbeiter: Wenn man *Nur aktive* abwählt, erscheinen auch die ausgeschiedenen.
 

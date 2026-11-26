@@ -49,6 +49,8 @@ Arriba, sin título, está lo que se toca cada día: **Inicio**, **Agenda**, **T
 
 **Buscador del menú.** Cuando el menú tiene tantas pantallas que no caben a la vez, aparece debajo del logotipo una casilla **Buscar pantalla…** (con la barra plegada o con el menú entero a la vista no hace falta y no sale). Al escribir quedan sólo las pantallas cuyo nombre contiene lo escrito, sin importar mayúsculas ni tildes; si lo escrito es parte del nombre de un apartado, salen todas las pantallas de ese apartado. Con las flechas **↑** y **↓** se recorren los resultados, **Intro** abre el marcado y **Esc** borra la búsqueda y devuelve el menú completo. Sólo se buscan las pantallas que el usuario ya ve en su menú.
 
+*[Captura] Con el menú más largo que la pantalla, el buscador deja solo las pantallas que coinciden con lo escrito.*
+
 En el ordenador el menú se queda fijo a la izquierda aunque se baje por la página, y el botón de abajo lo pliega para dejar sólo los iconos. En el móvil y en una tableta en vertical está escondido: se abre con el botón **☰** de arriba a la izquierda y se cierra al elegir una entrada, al tocar fuera de él o con la tecla `Esc`.
 
 Si a usted le falta alguna de esas entradas no es un fallo: es que su usuario no tiene ese permiso. Quien administra el centro puede dárselo.
@@ -567,6 +569,10 @@ En la ficha de un producto, quien lleva el almacén o ve el informe de movimient
 Al registrar un movimiento a mano (entrada, salida o ajuste) se puede escribir el **motivo**, que es opcional: un producto que llegó roto, uno de venta que pasa a cabina. En las entradas y salidas de la ficha y en el informe de movimientos, las líneas con motivo llevan un icono de comentario a la izquierda, como las notas del historial del cliente; al pulsarlo se abre un diálogo con el texto y quién lo escribió. Un ajuste que no cambia las unidades no deja movimiento, así que tampoco guarda el motivo.
 
 En la lista de **Stock**, los productos con algún movimiento con motivo llevan el mismo icono junto al nombre: al pulsarlo se ven sus últimos movimientos con su motivo. Y el diálogo de entrada, salida o ajuste enseña debajo los cinco últimos movimientos del producto, para ver qué se hizo antes y por qué. El motivo no se puede cambiar ni borrar: es el rastro del movimiento.
+
+*[Captura] Al pulsar el icono se ven los últimos movimientos del producto; el que lleva motivo tiene el icono delante.*
+
+*[Captura] En Stock, el icono junto al nombre avisa de que el producto tiene movimientos con motivo.*
 
 ### Reposición
 
@@ -1112,6 +1118,8 @@ Cuenta sobre **las citas del rango, no sobre las anuladas en el rango**. La dife
 Arriba, **cuántas se anularon y quién las anuló**: el cliente, el centro o una causa externa. Las del centro salen repartidas por profesional, y las externas por cabina o pista, que es donde se ve si una pista descubierta pierde muchas más clases con la lluvia que una cubierta. Las anuladas antes de existir esta distinción salen como *sin indicar*. Las *creadas por error* se cuentan aparte: no son anulaciones, pero si ese número crece, conviene saber por qué.
 
 Después, **todas las citas anuladas una a una**, con lo último que se anuló arriba: el día, el cliente, el profesional, cuándo se creó, cuándo se anuló, **la causa, quién la anuló y con qué rol** y los comentarios. Para saber qué pasó con la cita de alguien, escriba en **Cliente** su número o parte de su nombre y apellidos y pulse *Aplicar*: quedan solo sus citas anuladas, y el ranking de abajo deja de salir. Recuerde que el rango es el del **día de la cita**: para una cita de la semana que viene anulada hoy, el rango tiene que llegar a la semana que viene.
+
+*[Captura] El informe de anulaciones: cada cita anulada con su causa, quién la anuló y con qué rol.*
 
 Con el filtro **Causa** la lista se queda solo con las anuladas por esa causa y el ranking deja de salir. Es la forma de revisar qué se marcó como error.
 
@@ -2608,9 +2616,13 @@ La **edad** ya no se escribe: sale sola de la **fecha de nacimiento**. En las fi
 
 El apartado plegable **Familia y emergencia** guarda el contacto para un aviso (nombre, relación y teléfono), si tiene a su cargo a un mayor dependiente y sus hijos menores, o mayores con una medida de apoyo judicial, con su fecha de nacimiento. Los datos de su *cabina habitual* solo salen para quien sale en la agenda.
 
+*[Captura] El apartado «Familia y emergencia» de la ficha: contacto para un aviso, mayor dependiente a cargo e hijos.*
+
 **Altas, bajas y contrato.** Con el módulo Laboral, el botón *Altas, bajas y contrato* de la ficha guarda cada periodo de alta de la persona: si se va y vuelve años después, se ven todos. Cada baja lleva su **motivo** (fin de contrato, la empresa no renueva, baja voluntaria, despido, no supera el periodo de prueba, fin de llamamiento, jubilación, fallecimiento u otro) y una nota para las circunstancias.
 
 **Edad y género de la plantilla.** El botón *Edad y género* de la lista de profesionales cuenta la plantilla en activo por tramos de edad (por decenas) y por género, que es lo que piden cada año la estadística de empleo y el plan de igualdad. Se filtra por género, por edad o por fecha de nacimiento y *Descargar la lista* baja las personas que cumplen los filtros en un fichero para Excel.
+
+*[Captura] La plantilla en activo por tramos de edad y por género, con los filtros y la descarga para Excel.*
 
 **Dar de baja no borra.** El profesional sale de la agenda, pero sus citas, visitas y casos clínicos siguen mostrándolo, y se puede volver a activar editándolo. Si tiene citas de hoy en adelante, Turnera pide a qué profesional pasan y las pasa todas a la vez; si alguna coincide con otra que ya tiene quien las recibe, lo dice para recolocarla después. La lista enseña solo a los que están en activo: quitando *Solo en activo* salen también los de baja.
 

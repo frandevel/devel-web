@@ -5146,5 +5146,17 @@
   "t1ae149f3": "The most common cause is that it was cancelled and the diary has ticked",
   "t9620e423": ", which each workstation remembers. To be sure, open the",
   "tf2a1c009": "with a range that includes the day of the appointment and type the customer's name: if it was cancelled, it shows when, with which reason and by which user. If each person logs in with their own user, you also know who it was.",
-  "t83c51644": "cancellations report"
+  "t83c51644": "cancellations report",
+  "t87c4624c": "When the menu is longer than the screen, the search box leaves only the screens that match what you type.",
+  "tedf31c1c": "Pressing the icon shows the product's latest movements; the one with a reason has the icon in front of it.",
+  "t7dc23591": "In Stock, the icon next to the name shows that the product has movements with a reason.",
+  "td91c4582": "The cancellations report: each cancelled appointment with its reason, who cancelled it and with which role.",
+  "t5bd36670": "The «Family and emergency» section of the record: emergency contact, dependent older person in their care, and children.",
+  "t0edf4662": "The active workforce by age band and by gender, with the filters and the Excel download.",
+  "t5b4dff41": "The menu search box with «stock» typed in: only the Stock screen remains",
+  "tb5fbf264": "The latest movements of a product, with the reason icon on the one that has it",
+  "t5a3cfdd4": "The Stock list with the reason icon next to a product name",
+  "t88d9d879": "The cancellations report with the list of cancelled appointments, their reason and who cancelled them",
+  "tf392d1f4": "The staff record with the Family and emergency section open",
+  "tb32c97da": "The Age and gender dialog with the active workforce by age band and by gender"
 }
