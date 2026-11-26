@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>TradegunCharts · Footprint, opciones y ejecución para futuros</title>
-<meta name="description" content="Plataforma para Windows, macOS y Linux de operativa profesional en derivados: gráficos footprint, operativa en el gráfico, indicadores de flujo de órdenes, cadena de opciones y avisos al móvil. Con Interactive Brokers y Rithmic. Plan Essential gratis; Pro y Desk desde 19 € al mes, con 14 días de prueba.">
+<meta name="description" content="Plataforma para Windows, macOS y Linux de operativa profesional en derivados: gráficos footprint, operativa en el gráfico, indicadores de flujo de órdenes, cadena de opciones y avisos al móvil vía ntfy. Con Interactive Brokers y Rithmic. Plan Essential gratis; Pro y Desk desde 19 € al mes, con 14 días de prueba.">
 <link rel="canonical" href="https://devel.es/tradeguncharts">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
@@ -400,7 +400,7 @@ footer{
 .periodo__opcion[aria-pressed="true"]{background:var(--accent);color:#fff}
 .periodo__opcion[aria-pressed="true"] em{color:#fff;opacity:.85}
 #precios:not(.anual) .solo-anual,#precios.anual .solo-mensual{display:none}
-.planes{display:grid;gap:1.5rem;margin-top:1.8rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));align-items:start}
+.planes{display:grid;gap:1.5rem;margin-top:1.8rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));align-items:stretch}
 .plan{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.6rem 1.5rem;display:flex;flex-direction:column;gap:.7rem;position:relative}
 .plan--destacado{border:2px solid var(--accent)}
 .plan__sello{position:absolute;top:-.8rem;left:1.4rem;background:var(--accent);color:#fff;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .7rem;border-radius:100px}
@@ -411,6 +411,8 @@ footer{
 .plan__precio span{font-family:var(--display);font-size:2.3rem;font-weight:700;color:var(--text);margin-right:.25rem}
 .plan__nota{font-size:.86rem;color:var(--steel);margin-top:-.4rem}
 .plan .specs{margin-top:.6rem}
+.plan__accion{margin-top:auto;padding-top:1.2rem}
+.plan__accion .btn{width:100%;justify-content:center}
 .sistema{display:flex;gap:1.8rem;margin-top:2.2rem}
 .sistema__opcion{font:inherit;font-size:1rem;border:0;border-bottom:2px solid var(--line);border-radius:0;padding:.35rem .1rem .55rem;min-width:4.2rem;background:transparent;color:var(--text-dim);cursor:pointer}
 .sistema__opcion:hover:not([disabled]){color:var(--text)}
@@ -506,8 +508,8 @@ footer{
         <p class="hero__lema">Lee el flujo de órdenes.<br><em>Opera desde el gráfico.</em></p>
         <p class="lede">Footprint, cadena de opciones y ejecución en una sola plataforma para Windows, macOS y Linux, hecha por quien opera con ella cada día. Ligera, rápida y pensada para traders y family offices que trabajan con futuros, opciones y coberturas.</p>
         <div class="actions">
-          <a class="btn btn--solid" href="#contacto">Prueba 14 días</a>
-          <a class="btn btn--ghost" href="#precios">Ver precios</a>
+          <a class="btn btn--solid" href="#precios">Prueba 14 días</a>
+          <a class="btn btn--ghost" href="#descargar">Descargar gratis</a>
         </div>
         <ul class="datos">
           <li>Windows 10 y 11 · 64 bits</li>
@@ -671,7 +673,7 @@ footer{
           <p>Marca un rango con el ratón y obtén su perfil: área de valor, punto de control, nodos de volumen, single prints y VWAP anclada al inicio del tramo.</p>
           <ul class="specs">
             <li>Líneas, rectángulos, Fibonacci, largos y cortos con su riesgo y beneficio</li>
-            <li>Alarmas en líneas y rectángulos, con sonido y aviso al móvil</li>
+            <li>Alarmas en líneas y rectángulos, con sonido y aviso al móvil vía ntfy</li>
             <li>Dibujos bloqueables, con color de línea y de texto</li>
           </ul>
         </div>
@@ -699,8 +701,8 @@ footer{
           <p>Eventos económicos con previsto, anterior y dato publicado, en el panel y marcados sobre el gráfico.</p>
         </article>
         <article class="pillar">
-          <h3>Avisos al móvil</h3>
-          <p>Órdenes ejecutadas y rechazadas, alarmas de dibujos y alertas de indicadores, por sonido y por notificación push. Tú eliges cuáles.</p>
+          <h3>Avisos al móvil vía ntfy</h3>
+          <p>Órdenes ejecutadas y rechazadas, alarmas de dibujos y alertas de indicadores, por sonido y por notificación push en el móvil con la app gratuita ntfy. Tú eliges cuáles.</p>
         </article>
         <article class="pillar">
           <h3>Diario de trades</h3>
@@ -726,7 +728,7 @@ footer{
     <div class="shell">
       <div class="section__head">
         <p class="eyebrow">Precios</p>
-        <h2>Una licencia por equipo, sin letra pequeña.</h2>
+        <h2>Sin permanencia y sin letra pequeña.</h2>
         <p>Paga al mes o al año, y prueba gratis cualquiera de los planes de pago durante 14 días. Sin permanencia: si lo dejas, no se renueva.</p>
       </div>
       <div class="periodo" role="group" aria-label="Periodo de pago">
@@ -742,8 +744,10 @@ footer{
             <li>Gráficos footprint de futuros</li>
             <li>Indicadores estándar: EMA, SMA, VWAP, Bollinger, FVG, Big Trades, Stacked imbalance, Ondas de Elliott</li>
             <li>Dibujos, perfil de volumen y alarmas con sonido</li>
-            <li>Ventanas ilimitadas</li>
+            <li>Hasta 3 ventanas de gráfico</li>
+            <li>Operativa solo en la cuenta simulada</li>
           </ul>
+          <div class="plan__accion"><a class="btn btn--ghost" href="#descargar">Descargar gratis</a></div>
         </article>
         <article class="plan plan--destacado">
           <p class="plan__sello">El más popular</p>
@@ -757,13 +761,18 @@ footer{
             <li>Operativa en el gráfico y panel de órdenes con Interactive Brokers y Rithmic</li>
             <li>Diario de operaciones</li>
             <li>Lista de seguimiento con cotizaciones</li>
-            <li>Avisos al móvil</li>
-            <li>Cadena de opciones y griegas</li>
+            <li>Avisos al móvil vía ntfy</li>
+            <li>Cadena de opciones y griegas, según tu bróker y tus suscripciones de datos</li>
             <li>Calendario macroeconómico</li>
             <li>Curva de tipos de EEUU</li>
             <li>Estrategias y cobertura automática</li>
             <li>Grupos de copia de órdenes entre cuentas</li>
+            <li>Licencia para 1 equipo</li>
           </ul>
+          <div class="plan__accion">
+            <a class="btn btn--solid solo-mensual" href="https://buy.stripe.com/28EeVebj5d9J9LrbHv18c00">Probar Pro 14 días</a>
+            <a class="btn btn--solid solo-anual" href="https://buy.stripe.com/bJe00kbj5c5F3n34f318c03">Probar Pro 14 días</a>
+          </div>
         </article>
         <article class="plan">
           <h3 class="plan__nombre">Desk</h3>
@@ -775,8 +784,12 @@ footer{
             <li>Todo lo del plan Pro</li>
             <li>Niveles y régimen de gamma</li>
             <li>Los indicadores propios de TradegunCharts: CRT, SMC, order blocks, BOS, Valhalla, absorciones, divergencias de delta y Key Candle</li>
-            <li>Automatismos y motor de estrategias, cuando lleguen</li>
+            <li>Licencia para 2 equipos</li>
           </ul>
+          <div class="plan__accion">
+            <a class="btn btn--ghost solo-mensual" href="https://buy.stripe.com/5kQeVe5YLd9J3n3cLz18c01">Probar Desk 14 días</a>
+            <a class="btn btn--ghost solo-anual" href="https://buy.stripe.com/9B6eVecn9fhR0aRdPD18c02">Probar Desk 14 días</a>
+          </div>
         </article>
       </div>
       <div class="comparativa">
@@ -793,36 +806,36 @@ footer{
             <tr><th scope="row">Temporalidades personalizadas y ventana de temporalidad inferior</th><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
             <tr><th scope="row">Indicadores estándar: EMA, SMA, VWAP, Bollinger, RSI, MACD, estocástico, FVG, Big Trades, Stacked imbalance, Ondas de Elliott, ADR</th><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
             <tr><th scope="row">Dibujos, perfil de volumen y alarmas con sonido</th><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
-            <tr><th scope="row">Ventanas ilimitadas</th><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
+            <tr><th scope="row">Ventanas de gráfico</th><td>Hasta 3</td><td>Ilimitadas</td><td>Ilimitadas</td></tr>
             <tr><th scope="row">Detector de rangos</th><td><span class="no" aria-label="No incluido">—</span></td><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
             <tr><th scope="row">Lista de seguimiento con cotizaciones y monitor de mercado</th><td><span class="no" aria-label="No incluido">—</span></td><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
             <tr><th scope="row">Calendario macroeconómico</th><td><span class="no" aria-label="No incluido">—</span></td><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
             <tr><th scope="row">Curva de tipos de EEUU</th><td><span class="no" aria-label="No incluido">—</span></td><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
             <tr class="comparativa__grupo"><th scope="rowgroup" colspan="4">Operativa</th></tr>
+            <tr><th scope="row">Operativa en la cuenta simulada</th><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
             <tr><th scope="row">Operativa en el gráfico y panel de órdenes con Interactive Brokers y Rithmic</th><td><span class="no" aria-label="No incluido">—</span></td><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
             <tr><th scope="row">Trailing stop por ATR</th><td><span class="no" aria-label="No incluido">—</span></td><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
             <tr><th scope="row">Estrategias y cobertura automática</th><td><span class="no" aria-label="No incluido">—</span></td><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
             <tr><th scope="row">Grupos de copia de órdenes entre cuentas</th><td><span class="no" aria-label="No incluido">—</span></td><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
             <tr><th scope="row">Diario de operaciones</th><td><span class="no" aria-label="No incluido">—</span></td><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
-            <tr><th scope="row">Avisos al móvil</th><td><span class="no" aria-label="No incluido">—</span></td><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
+            <tr><th scope="row">Avisos al móvil vía ntfy</th><td><span class="no" aria-label="No incluido">—</span></td><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
             <tr class="comparativa__grupo"><th scope="rowgroup" colspan="4">Opciones y gamma</th></tr>
-            <tr><th scope="row">Cadena de opciones y griegas</th><td><span class="no" aria-label="No incluido">—</span></td><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
+            <tr><th scope="row">Cadena de opciones y griegas (según tu bróker y tus suscripciones de datos)</th><td><span class="no" aria-label="No incluido">—</span></td><td><span class="si" aria-label="Incluido">✓</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
             <tr><th scope="row">Niveles y régimen de gamma</th><td><span class="no" aria-label="No incluido">—</span></td><td><span class="no" aria-label="No incluido">—</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
             <tr><th scope="row">Operativa de opciones con zonas de acción</th><td><span class="no" aria-label="No incluido">—</span></td><td><span class="no" aria-label="No incluido">—</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
             <tr class="comparativa__grupo"><th scope="rowgroup" colspan="4">Indicadores propios</th></tr>
             <tr><th scope="row">CRT, SMC, order blocks, BOS, Valhalla, absorciones, divergencias de delta y Key Candle</th><td><span class="no" aria-label="No incluido">—</span></td><td><span class="no" aria-label="No incluido">—</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
-            <tr><th scope="row">Automatismos y motor de estrategias, cuando lleguen</th><td><span class="no" aria-label="No incluido">—</span></td><td><span class="no" aria-label="No incluido">—</span></td><td><span class="si" aria-label="Incluido">✓</span></td></tr>
             </tbody>
           </table>
         </div>
       </div>
       <ul class="precios__pie">
         <li>Precios sin IVA.</li>
-        <li>Cada licencia se activa en un equipo. Para pasarla a otro, la liberas desde Ayuda → Licencia.</li>
-        <li>Los datos de mercado los contratas con tu bróker: TradegunCharts no los revende.</li>
+        <li>La licencia Pro se activa en un equipo y la Desk en dos. Para pasarla a otro, la liberas desde Ayuda → Licencia.</li>
+        <li>El pago lo gestiona Stripe. Al terminar verás tu clave de licencia y te llegará también por correo.</li>
+        <li>TradegunCharts no proporciona datos de mercado: los contratas con tu bróker. Las opciones (cadena, griegas y gamma) dependen de que tu bróker las ofrezca y de tus suscripciones de datos de opciones.</li>
         <li>La conexión con Rithmic está incluida en los planes Pro y Desk. Rithmic no admite cuentas demo: hace falta una suscripción de datos de pago.</li>
       </ul>
-      <div class="actions"><a class="btn btn--solid" href="#contacto">Empezar la prueba de 14 días</a></div>
     </div>
   </section>
 

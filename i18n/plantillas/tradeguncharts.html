@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{{t7424c966}}</title>
-<meta name="description" content="{{t0a718dbd}}">
+<meta name="description" content="{{tc5482df9}}">
 <link rel="canonical" href="https://devel.es/tradeguncharts">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
@@ -398,7 +398,7 @@ footer{
 .periodo__opcion[aria-pressed="true"]{background:var(--accent);color:#fff}
 .periodo__opcion[aria-pressed="true"] em{color:#fff;opacity:.85}
 #precios:not(.anual) .solo-anual,#precios.anual .solo-mensual{display:none}
-.planes{display:grid;gap:1.5rem;margin-top:1.8rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));align-items:start}
+.planes{display:grid;gap:1.5rem;margin-top:1.8rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));align-items:stretch}
 .plan{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.6rem 1.5rem;display:flex;flex-direction:column;gap:.7rem;position:relative}
 .plan--destacado{border:2px solid var(--accent)}
 .plan__sello{position:absolute;top:-.8rem;left:1.4rem;background:var(--accent);color:#fff;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .7rem;border-radius:100px}
@@ -409,6 +409,8 @@ footer{
 .plan__precio span{font-family:var(--display);font-size:2.3rem;font-weight:700;color:var(--text);margin-right:.25rem}
 .plan__nota{font-size:.86rem;color:var(--steel);margin-top:-.4rem}
 .plan .specs{margin-top:.6rem}
+.plan__accion{margin-top:auto;padding-top:1.2rem}
+.plan__accion .btn{width:100%;justify-content:center}
 .sistema{display:flex;gap:1.8rem;margin-top:2.2rem}
 .sistema__opcion{font:inherit;font-size:1rem;border:0;border-bottom:2px solid var(--line);border-radius:0;padding:.35rem .1rem .55rem;min-width:4.2rem;background:transparent;color:var(--text-dim);cursor:pointer}
 .sistema__opcion:hover:not([disabled]){color:var(--text)}
@@ -504,8 +506,8 @@ footer{
         <p class="hero__lema">{{t4cdbe1d5}}<br><em>{{t4332a157}}</em></p>
         <p class="lede">{{td9b882d5}}</p>
         <div class="actions">
-          <a class="btn btn--solid" href="#contacto">{{t044c1589}}</a>
-          <a class="btn btn--ghost" href="#precios">{{te397d0cf}}</a>
+          <a class="btn btn--solid" href="#precios">{{t044c1589}}</a>
+          <a class="btn btn--ghost" href="#descargar">{{tab4096ae}}</a>
         </div>
         <ul class="datos">
           <li>{{tdf37d252}}</li>
@@ -669,7 +671,7 @@ footer{
           <p>{{t9feae06f}}</p>
           <ul class="specs">
             <li>{{tef42f1cf}}</li>
-            <li>{{t2462ed91}}</li>
+            <li>{{te9239fb9}}</li>
             <li>{{ta83e7061}}</li>
           </ul>
         </div>
@@ -697,8 +699,8 @@ footer{
           <p>{{t188e58fd}}</p>
         </article>
         <article class="pillar">
-          <h3>{{t99d7fa12}}</h3>
-          <p>{{t60d31309}}</p>
+          <h3>{{t5aa00d3c}}</h3>
+          <p>{{t7bfe9c62}}</p>
         </article>
         <article class="pillar">
           <h3>{{t92a8be4b}}</h3>
@@ -724,7 +726,7 @@ footer{
     <div class="shell">
       <div class="section__head">
         <p class="eyebrow">{{t628c066b}}</p>
-        <h2>{{t6ea0e259}}</h2>
+        <h2>{{t06009a07}}</h2>
         <p>{{t3af5ffdd}}</p>
       </div>
       <div class="periodo" role="group" aria-label="{{t1a4d3a16}}">
@@ -740,8 +742,10 @@ footer{
             <li>{{t96456b5e}}</li>
             <li>{{t3c0d71cd}}</li>
             <li>{{tb01ecf88}}</li>
-            <li>{{t5d99691d}}</li>
+            <li>{{t5250648c}}</li>
+            <li>{{t78c08bcc}}</li>
           </ul>
+          <div class="plan__accion"><a class="btn btn--ghost" href="#descargar">{{tab4096ae}}</a></div>
         </article>
         <article class="plan plan--destacado">
           <p class="plan__sello">{{t792c72ae}}</p>
@@ -755,13 +759,18 @@ footer{
             <li>{{tc95561ed}}</li>
             <li>{{t92fb0244}}</li>
             <li>{{tcdf278e7}}</li>
-            <li>{{t99d7fa12}}</li>
-            <li>{{tc4630b94}}</li>
+            <li>{{t5aa00d3c}}</li>
+            <li>{{t7dd613e3}}</li>
             <li>{{t05a4f0d8}}</li>
             <li>{{tcc6b57a8}}</li>
             <li>{{te5f31bbe}}</li>
             <li>{{tbb50fbf0}}</li>
+            <li>{{t52d7a057}}</li>
           </ul>
+          <div class="plan__accion">
+            <a class="btn btn--solid solo-mensual" href="https://buy.stripe.com/28EeVebj5d9J9LrbHv18c00">{{t3f81f379}}</a>
+            <a class="btn btn--solid solo-anual" href="https://buy.stripe.com/bJe00kbj5c5F3n34f318c03">{{t3f81f379}}</a>
+          </div>
         </article>
         <article class="plan">
           <h3 class="plan__nombre">{{t5f9a8584}}</h3>
@@ -773,8 +782,12 @@ footer{
             <li>{{ta7596792}}</li>
             <li>{{t03a9b9e4}}</li>
             <li>{{t03a5ba1b}}</li>
-            <li>{{t32d17fee}}</li>
+            <li>{{t663aa72b}}</li>
           </ul>
+          <div class="plan__accion">
+            <a class="btn btn--ghost solo-mensual" href="https://buy.stripe.com/5kQeVe5YLd9J3n3cLz18c01">{{t67be38c2}}</a>
+            <a class="btn btn--ghost solo-anual" href="https://buy.stripe.com/9B6eVecn9fhR0aRdPD18c02">{{t67be38c2}}</a>
+          </div>
         </article>
       </div>
       <div class="comparativa">
@@ -791,36 +804,36 @@ footer{
             <tr><th scope="row">{{t256063c4}}</th><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
             <tr><th scope="row">{{t47423939}}</th><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
             <tr><th scope="row">{{tb01ecf88}}</th><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
-            <tr><th scope="row">{{t5d99691d}}</th><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
+            <tr><th scope="row">{{t3721f21e}}</th><td>{{t008f16c3}}</td><td>{{t2e8c400c}}</td><td>{{t2e8c400c}}</td></tr>
             <tr><th scope="row">{{ta9749d61}}</th><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
             <tr><th scope="row">{{te482469b}}</th><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
             <tr><th scope="row">{{t05a4f0d8}}</th><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
             <tr><th scope="row">{{tcc6b57a8}}</th><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
             <tr class="comparativa__grupo"><th scope="rowgroup" colspan="4">{{t5e625057}}</th></tr>
+            <tr><th scope="row">{{t63d2f3c8}}</th><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
             <tr><th scope="row">{{tc95561ed}}</th><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
             <tr><th scope="row">{{ta85778f0}}</th><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
             <tr><th scope="row">{{te5f31bbe}}</th><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
             <tr><th scope="row">{{tbb50fbf0}}</th><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
             <tr><th scope="row">{{t92fb0244}}</th><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
-            <tr><th scope="row">{{t99d7fa12}}</th><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
+            <tr><th scope="row">{{t5aa00d3c}}</th><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
             <tr class="comparativa__grupo"><th scope="rowgroup" colspan="4">{{t67609f2a}}</th></tr>
-            <tr><th scope="row">{{tc4630b94}}</th><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
+            <tr><th scope="row">{{t89199429}}</th><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
             <tr><th scope="row">{{t03a9b9e4}}</th><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
             <tr><th scope="row">{{t7649724e}}</th><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
             <tr class="comparativa__grupo"><th scope="rowgroup" colspan="4">{{tc2423713}}</th></tr>
             <tr><th scope="row">{{t03c375a0}}</th><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
-            <tr><th scope="row">{{t32d17fee}}</th><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="no" aria-label="{{tc09dec07}}">—</span></td><td><span class="si" aria-label="{{t62c7a69e}}">{{t698a8799}}</span></td></tr>
             </tbody>
           </table>
         </div>
       </div>
       <ul class="precios__pie">
         <li>{{t255b4514}}</li>
-        <li>{{t601fa612}}</li>
-        <li>{{t254c5060}}</li>
+        <li>{{t86fa5a13}}</li>
+        <li>{{t10cfcf4d}}</li>
+        <li>{{t49a19e93}}</li>
         <li>{{t604232a5}}</li>
       </ul>
-      <div class="actions"><a class="btn btn--solid" href="#contacto">{{t68ece815}}</a></div>
     </div>
   </section>
 
