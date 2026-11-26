@@ -10,8 +10,6 @@
   "tdd811d79": "In accordance with article 10 of Spanish Law 34/2002 on information society services and electronic commerce, these are the details of the owner of devel.es:",
   "tdfe24ff0": "Owner",
   "t77124a3a": "Tax ID (NIF)",
-  "t3bb42a14": "Registered office",
-  "t2510af77": "Commercial Registry",
   "t59a16700": "Email",
   "t7ea5da81": "hola@devel.es",
   "t7e0d441e": "Use of the website",
@@ -43,7 +41,6 @@
   "te19fe68d": "Cloudflare Turnstile's anti-bot check, which protects the forms, may store technical data to tell a person from an automated program. It is exempt from consent because it is needed to send the form securely.",
   "t8cecd8f9": "The fonts are downloaded from Google Fonts servers. They set no cookies, but Google receives your IP address when serving them.",
   "t70eb3249": "If we ever add non-technical cookies, we will ask your permission before setting them. You can delete or block cookies in your browser settings.",
-  "t52f089c5": "Last updated: 26 September 2026.",
   "t19fce486": "© 2026 DEVEL · Valencia, Spain",
   "tcd7c8586": "devel.es",
   "t117bb77c": "Who owns devel.es, how we handle the details you send us and which cookies the website uses.",
@@ -51,8 +48,11 @@
   "tfa0558d9": "Who owns devel.es and how we handle your data.",
   "t95b1e0ac": "DEVEL: built in days, running for years",
   "t58805743": "DEVEL logo",
-  "t34b78f53": "DEVEL Consultoría y Servicios Informáticos, S.L.",
-  "tb3d1f10e": "B98100001",
-  "tf78dd33f": "Valencia Commercial Registry, volume 8991, book 6276, folio 107, section 8, sheet V-132453, entry 1",
-  "t488d9fba": "Calle Barcelona 11, 3rd floor, 46003 Valencia, Spain"
+  "t8e9c78ec": "Francisco José Serrano Pons",
+  "tf0ae6c27": "Trade name",
+  "t692ca098": "DEVEL",
+  "t83cb17a0": "24363899E",
+  "tcedb0b0e": "Address",
+  "t4ea749c2": "Calle Barcelona 11, 2nd floor, 46003 Valencia, Spain",
+  "t97770cc7": "Last updated: 26 November 2026."
 }

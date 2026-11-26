@@ -119,7 +119,6 @@
   "td01fb299": "Risk warning",
   "t954f6af9": "Trading futures, options and other derivatives carries a high risk of loss, which can exceed the capital deposited, and is not suitable for every investor. TradegunCharts is an analysis and execution tool: it does not provide investment advice or recommend trades, and its indicators, alerts and statistics do not guarantee results. Past performance is not indicative of future results. Each user is solely responsible for the orders they send and their consequences.",
   "t30986a7c": "Terms of use",
-  "tfd2efa4e": "TradegunCharts is software by DEVEL Consultoría y Servicios Informáticos, S.L. The licence grants the right to use it, not to copy, resell or decompile it.",
   "t2a46cf87": "Market data and execution depend on your broker and your connection. We are not liable for their outages, delays or errors.",
   "t2f2113d2": "The software is provided as is. DEVEL is not liable for losses arising from its use, from technical failures or from investment decisions.",
   "te68491e9": "Name",
@@ -136,7 +135,6 @@
   "t5442e2b6": "GitHub",
   "t35754c0c": "We only use your details to reply to you.",
   "t5d7c988d": "How we handle them",
-  "tb26a2489": "© 2026 DEVEL Consultoría y Servicios Informáticos, S.L.",
   "tb4c42e63": "Valencia, Spain ·",
   "ta8304056": "Windows platform for professional derivatives trading: footprint charts, trading from the chart, order-flow indicators, an options chain and phone notifications. With Interactive Brokers. From €19 per month, with a 14-day trial.",
   "t78398371": "TradegunCharts: footprint charts and options",
@@ -284,5 +282,7 @@
   "tf92aa7e2": "Terms, refunds and privacy",
   "t20e22c4f": "Legal notice",
   "t63b2a772": "Write to us.",
-  "tbccba5b8": "Questions about the plans, your broker or a feature? Tell us what you trade and you'll get an answer from the person who built TradegunCharts."
+  "tbccba5b8": "Questions about the plans, your broker or a feature? Tell us what you trade and you'll get an answer from the person who built TradegunCharts.",
+  "t8c26948c": "TradegunCharts is software by Francisco José Serrano Pons, sold under the trade name DEVEL. The license lets you use it, not copy, resell or decompile it.",
+  "t43893875": "© 2026 DEVEL · Francisco José Serrano Pons"
 }

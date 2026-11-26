@@ -10,8 +10,6 @@
   "tdd811d79": "Gemäß Artikel 10 des spanischen Gesetzes 34/2002 über Dienste der Informationsgesellschaft und den elektronischen Geschäftsverkehr sind dies die Angaben zum Inhaber von devel.es:",
   "tdfe24ff0": "Inhaber",
   "t77124a3a": "Steuernummer (NIF)",
-  "t3bb42a14": "Sitz der Gesellschaft",
-  "t2510af77": "Handelsregister",
   "t59a16700": "E-Mail",
   "t7ea5da81": "hola@devel.es",
   "t7e0d441e": "Nutzung der Website",
@@ -43,7 +41,6 @@
   "te19fe68d": "Die Bot-Prüfung von Cloudflare Turnstile, die die Formulare schützt, kann technische Daten speichern, um einen Menschen von einem automatisierten Programm zu unterscheiden. Sie ist einwilligungsfrei, weil sie für das sichere Absenden des Formulars nötig ist.",
   "t8cecd8f9": "Die Schriften werden von den Servern von Google Fonts geladen. Sie setzen keine Cookies, aber Google erhält dabei Ihre IP-Adresse.",
   "t70eb3249": "Sollten wir einmal nicht technische Cookies einsetzen, fragen wir Sie vorher um Erlaubnis. Cookies können Sie in den Einstellungen Ihres Browsers löschen oder blockieren.",
-  "t52f089c5": "Zuletzt aktualisiert: 26. September 2026.",
   "t19fce486": "© 2026 DEVEL · Valencia, Spanien",
   "tcd7c8586": "devel.es",
   "t117bb77c": "Wer Inhaber von devel.es ist, wie wir mit Ihren Daten umgehen und welche Cookies die Website verwendet.",
@@ -51,8 +48,11 @@
   "tfa0558d9": "Wer Inhaber von devel.es ist und wie wir mit Ihren Daten umgehen.",
   "t95b1e0ac": "DEVEL: in Tagen gebaut, läuft jahrelang",
   "t58805743": "DEVEL-Logo",
-  "t34b78f53": "DEVEL Consultoría y Servicios Informáticos, S.L.",
-  "tb3d1f10e": "B98100001",
-  "tf78dd33f": "Handelsregister Valencia, Band 8991, Buch 6276, Blatt 107, Abschnitt 8, Registerblatt V-132453, Eintragung 1",
-  "t488d9fba": "Calle Barcelona 11, 3. Stock, 46003 Valencia, Spanien"
+  "t8e9c78ec": "Francisco José Serrano Pons",
+  "tf0ae6c27": "Handelsname",
+  "t692ca098": "DEVEL",
+  "t83cb17a0": "24363899E",
+  "tcedb0b0e": "Anschrift",
+  "t4ea749c2": "Calle Barcelona 11, 2. Stock, 46003 Valencia, Spanien",
+  "t97770cc7": "Zuletzt aktualisiert: 26. November 2026."
 }
