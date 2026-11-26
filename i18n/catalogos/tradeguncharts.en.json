@@ -122,8 +122,6 @@
   "tfd2efa4e": "TradegunCharts is software by DEVEL Consultoría y Servicios Informáticos, S.L. The licence grants the right to use it, not to copy, resell or decompile it.",
   "t2a46cf87": "Market data and execution depend on your broker and your connection. We are not liable for their outages, delays or errors.",
   "t2f2113d2": "The software is provided as is. DEVEL is not liable for losses arising from its use, from technical failures or from investment decisions.",
-  "t1330b379": "Ask for your 14-day trial.",
-  "t15d182a8": "Tell us what you trade and with which broker. You'll get an answer from the person who built it, along with the installer and your trial key.",
   "te68491e9": "Name",
   "t98f00c3e": "Email",
   "t4557bca4": "What you trade and what you need",
@@ -284,5 +282,7 @@
   "t306550aa": "Governed by Spanish law. Full terms, cancellations, refunds and privacy in the",
   "tb5370f51": "TradegunCharts terms",
   "tf92aa7e2": "Terms, refunds and privacy",
-  "t20e22c4f": "Legal notice"
+  "t20e22c4f": "Legal notice",
+  "t63b2a772": "Write to us.",
+  "tbccba5b8": "Questions about the plans, your broker or a feature? Tell us what you trade and you'll get an answer from the person who built TradegunCharts."
 }
