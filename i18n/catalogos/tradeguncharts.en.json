@@ -192,7 +192,6 @@
   "t014d3441": "Linux · Ubuntu and derivatives",
   "t8b98cb1d": "Download",
   "t4d72a5e4": "Install it and start free with Essential.",
-  "t26e029c4": "The installer includes everything you need and the app updates itself. The Essential plan never expires; to try a paid plan for 14 days, request it from Contact.",
   "t26d9c28d": "Windows",
   "t051a8970": "Windows 10 and 11 · 64-bit · 53 MB",
   "t9e024471": "Installer wizard in Spanish",
@@ -282,5 +281,6 @@
   "t2e8c400c": "Unlimited",
   "t63d2f3c8": "Trading on the simulated account",
   "t89199429": "Options chain and Greeks (depending on your broker and your data subscriptions)",
-  "t49a19e93": "TradegunCharts does not provide market data: you subscribe to it with your broker. Options (chain, Greeks and gamma) depend on your broker offering them and on your options data subscriptions."
+  "t49a19e93": "TradegunCharts does not provide market data: you subscribe to it with your broker. Options (chain, Greeks and gamma) depend on your broker offering them and on your options data subscriptions.",
+  "t5f190e0c": "The installer includes everything you need and the app updates itself. The first time you open it, request your free Essential key with your email: it arrives right away and never expires. Paid plans include a 14-day trial."
 }
