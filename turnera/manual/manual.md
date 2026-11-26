@@ -1,4 +1,4 @@
-<!-- Manual de usuario de Turnera, el mismo texto que la web sin capturas de pantalla. https://devel.es/turnera/manual · 2026-11-25 -->
+<!-- Manual de usuario de Turnera, el mismo texto que la web sin capturas de pantalla. https://devel.es/turnera/manual · 2026-11-26 -->
 
 # Manual de Turnera
 
@@ -45,7 +45,9 @@ Si el centro prefiere firmar en papel, DEVEL le hace llegar los documentos, los 
 
 Arriba, sin título, está lo que se toca cada día: **Inicio**, **Agenda**, **TPV**, **Cobros pendientes** y **Clientes**. Debajo, agrupado, lo que se configura de vez en cuando (catálogo y stock), lo del equipo en **Personal** (profesionales, calendario laboral y control de presencia) y lo que sólo se consulta (informes y ajustes).
 
-**Favoritos.** Cada usuario puede poner arriba del todo las pantallas que más usa. Al abrir una pantalla del menú, junto a su título hay una **estrella**: se pulsa y la pantalla pasa al apartado **Favoritos**, el primero del menú; la estrella queda rellena, y pulsándola otra vez se quita. Los favoritos se **ordenan arrastrando** uno encima de otro con el ratón; en una tableta o un móvil, con las flechas de subir y bajar que salen junto a cada uno. Son de cada usuario y le siguen a cualquier ordenador; la pantalla sigue además en su sitio de siempre, y los favoritos no dan acceso a nada que los permisos no den.
+**Favoritos.** Cada usuario puede poner arriba del todo las pantallas que más usa. Al abrir una pantalla del menú, junto a su título hay una **estrella**: se pulsa y la pantalla pasa al apartado **Favoritos**, el primero del menú, que se queda fijo arriba aunque se baje por el resto del menú; la estrella queda rellena, y pulsándola otra vez se quita. Los favoritos se **ordenan arrastrando** uno encima de otro con el ratón; en una tableta o un móvil, con las flechas de subir y bajar que salen junto a cada uno. Son de cada usuario y le siguen a cualquier ordenador; la pantalla sigue además en su sitio de siempre, y los favoritos no dan acceso a nada que los permisos no den.
+
+**Buscador del menú.** Cuando el menú tiene tantas pantallas que no caben a la vez, aparece debajo del logotipo una casilla **Buscar pantalla…** (con la barra plegada o con el menú entero a la vista no hace falta y no sale). Al escribir quedan sólo las pantallas cuyo nombre contiene lo escrito, sin importar mayúsculas ni tildes; si lo escrito es parte del nombre de un apartado, salen todas las pantallas de ese apartado. Con las flechas **↑** y **↓** se recorren los resultados, **Intro** abre el marcado y **Esc** borra la búsqueda y devuelve el menú completo. Sólo se buscan las pantallas que el usuario ya ve en su menú.
 
 En el ordenador el menú se queda fijo a la izquierda aunque se baje por la página, y el botón de abajo lo pliega para dejar sólo los iconos. En el móvil y en una tableta en vertical está escondido: se abre con el botón **☰** de arriba a la izquierda y se cierra al elegir una entrada, al tocar fuera de él o con la tecla `Esc`.
 
@@ -564,6 +566,8 @@ En la ficha de un producto, quien lleva el almacén o ve el informe de movimient
 
 Al registrar un movimiento a mano (entrada, salida o ajuste) se puede escribir el **motivo**, que es opcional: un producto que llegó roto, uno de venta que pasa a cabina. En las entradas y salidas de la ficha y en el informe de movimientos, las líneas con motivo llevan un icono de comentario a la izquierda, como las notas del historial del cliente; al pulsarlo se abre un diálogo con el texto y quién lo escribió. Un ajuste que no cambia las unidades no deja movimiento, así que tampoco guarda el motivo.
 
+En la lista de **Stock**, los productos con algún movimiento con motivo llevan el mismo icono junto al nombre: al pulsarlo se ven sus últimos movimientos con su motivo. Y el diálogo de entrada, salida o ajuste enseña debajo los cinco últimos movimientos del producto, para ver qué se hizo antes y por qué. El motivo no se puede cambiar ni borrar: es el rastro del movimiento.
+
 ### Reposición
 
 Menú → Catálogo → Reposición
@@ -951,6 +955,8 @@ Agenda → (una cita) → Aparatología de la sesión
 
 En las citas que llevan un servicio con aparato aparece, debajo de los datos de la cita, un apartado con los parámetros que hay que anotar, **agrupados por servicio y aparato**: cada grupo dice para qué servicio se anota («Láser axilas · Láser de diodo»). Si la cita lleva dos servicios con el mismo aparato, sus parámetros salen dos veces, una por servicio, y así queda claro cuántos julios se pusieron en cada zona. Junto a cada parámetro, **con cuánto se le trató a ese cliente la vez anterior en ese mismo servicio**. Se guarda junto con la cita, al pulsar *Guardar*; un parámetro que se deja en blanco se entiende como «no se anotó» y no queda escrito. Los parámetros se piden aquí, en la cita, y no en el TPV. Si se cambian los servicios de la cita, el apartado se actualiza solo: aparecen las líneas del servicio nuevo y desaparecen las del que se quita.
 
+**Un mismo servicio varias veces.** Hay servicios que se cobran por unidades, como los *pulsos* del láser: cada disparo es una unidad, con sus propios julios y su propio número de sesión. En la lista de servicios de la cita, pulse el **+** junto al servicio para añadirlo otra vez; cada vez sale como un grupo propio en *Aparatología de la sesión* («Pulsos láser 1», «Pulsos láser 2»…), con lo de la vez anterior de esa misma posición, y la duración de la cita suma los minutos de cada vez. En el TPV los pulsos se juntan en una sola línea con las unidades y el total. Para quitar uno, doble clic en su línea de la lista de la cita.
+
 **Lo que se anota no se pierde al salir y volver.** Los valores que ya se habían puesto, y los que se han tecleado y todavía no se han guardado, siguen puestos en sus cajas al volver a la cita —por ejemplo después de ir a la ficha del cliente y regresar con el icono de volver a la cita—, además de verse en el *Antes:* de cada parámetro. Nadie tiene que escribirlos otra vez.
 
 Si la cita no lleva ningún servicio con aparato, el apartado no aparece.
@@ -1105,7 +1111,9 @@ Cuenta sobre **las citas del rango, no sobre las anuladas en el rango**. La dife
 
 Arriba, **cuántas se anularon y quién las anuló**: el cliente, el centro o una causa externa. Las del centro salen repartidas por profesional, y las externas por cabina o pista, que es donde se ve si una pista descubierta pierde muchas más clases con la lluvia que una cubierta. Las anuladas antes de existir esta distinción salen como *sin indicar*. Las *creadas por error* se cuentan aparte: no son anulaciones, pero si ese número crece, conviene saber por qué.
 
-Con el filtro **Causa** el informe deja el ranking y lista una a una las citas anuladas por esa causa: el día, el cliente, el profesional, cuándo se creó, cuándo se anuló, **quién la anuló y con qué rol** y los comentarios. Es la forma de revisar qué se marcó como error.
+Después, **todas las citas anuladas una a una**, con lo último que se anuló arriba: el día, el cliente, el profesional, cuándo se creó, cuándo se anuló, **la causa, quién la anuló y con qué rol** y los comentarios. Para saber qué pasó con la cita de alguien, escriba en **Cliente** su número o parte de su nombre y apellidos y pulse *Aplicar*: quedan solo sus citas anuladas, y el ranking de abajo deja de salir. Recuerde que el rango es el del **día de la cita**: para una cita de la semana que viene anulada hoy, el rango tiene que llegar a la semana que viene.
+
+Con el filtro **Causa** la lista se queda solo con las anuladas por esa causa y el ranking deja de salir. Es la forma de revisar qué se marcó como error.
 
 Debajo, **qué clientes anulan más**. Aquí solo cuenta lo que anula el propio cliente: si la clase se suspende por lluvia, no le sube en la lista. Sale ordenado por número de anulaciones y, a igualdad, por proporción: quien anuló tres de tres molesta más que quien anuló tres de cuarenta.
 
@@ -2594,6 +2602,16 @@ En la misma ficha se restablece el **PIN de fichaje** (ver Control de presencia)
 
 La ficha admite la **fecha de alta**: el día en que entró a trabajar en el centro. No es obligatoria, y con ella la ficha muestra su **antigüedad** (por ejemplo, «3 años y 2 meses»).
 
+La **edad** ya no se escribe: sale sola de la **fecha de nacimiento**. En las fichas antiguas que solo tenían la edad escrita a mano se sigue viendo, con un aviso para poner la fecha.
+
+**Al dar de alta a alguien**, con la fecha de alta puesta, se puede elegir *Mismos turnos que* un compañero de su equipo: desde su alta hasta final de año hará sus mismos turnos, con su convenio y su jornada, y ya sale en el cuadrante. Hace falta poder llevar los calendarios laborales. Si la persona ya tiene calendario ese año, se cambia desde el suyo.
+
+El apartado plegable **Familia y emergencia** guarda el contacto para un aviso (nombre, relación y teléfono), si tiene a su cargo a un mayor dependiente y sus hijos menores, o mayores con una medida de apoyo judicial, con su fecha de nacimiento. Los datos de su *cabina habitual* solo salen para quien sale en la agenda.
+
+**Altas, bajas y contrato.** Con el módulo Laboral, el botón *Altas, bajas y contrato* de la ficha guarda cada periodo de alta de la persona: si se va y vuelve años después, se ven todos. Cada baja lleva su **motivo** (fin de contrato, la empresa no renueva, baja voluntaria, despido, no supera el periodo de prueba, fin de llamamiento, jubilación, fallecimiento u otro) y una nota para las circunstancias.
+
+**Edad y género de la plantilla.** El botón *Edad y género* de la lista de profesionales cuenta la plantilla en activo por tramos de edad (por decenas) y por género, que es lo que piden cada año la estadística de empleo y el plan de igualdad. Se filtra por género, por edad o por fecha de nacimiento y *Descargar la lista* baja las personas que cumplen los filtros en un fichero para Excel.
+
 **Dar de baja no borra.** El profesional sale de la agenda, pero sus citas, visitas y casos clínicos siguen mostrándolo, y se puede volver a activar editándolo. Si tiene citas de hoy en adelante, Turnera pide a qué profesional pasan y las pasa todas a la vez; si alguna coincide con otra que ya tiene quien las recibe, lo dice para recolocarla después. La lista enseña solo a los que están en activo: quitando *Solo en activo* salen también los de baja.
 
 #### Protección de datos del profesional
@@ -3349,6 +3367,14 @@ En la misma pantalla, **Facturas del mes** prepara las facturas de las estancias
 - Una factura completa necesita el NIF de quien paga: si falta, el borrador lo dice y no se deja emitir hasta que se pone en la ficha.
 - Preparar otra vez no duplica nada: solo añade lo que falte.
 
+#### Extras del mes
+
+Lo que se le hace a un residente aparte de la plaza (peluquería, podología, arreglos y etiquetas de ropa…) se apunta en **Extras del mes**, en la misma pantalla: el día, el residente, el **servicio** del catálogo (trae su precio y su IVA) o un concepto libre, la cantidad y el precio. El día y el servicio se quedan puestos al apuntar, para pasar seguido la hoja de peluquería o de podología de muchos residentes. Lo que se apunta pero no se cobra se marca **No facturar**.
+
+- Al **preparar las facturas del mes**, los extras pendientes hasta el **día de corte** entran en la factura de cada residente: en su borrador del mes si lo tiene o, si no, en una factura aparte. El corte se pone en *Corte y acompañamientos* (por ejemplo, el 25: entran del 26 del mes anterior al 25); vacío, el mes natural. Lo apuntado después del corte va al mes siguiente.
+- Los **acompañamientos** salen solos de los traslados con acompañante y hora de vuelta: se cobran por horas, **redondeadas hacia abajo al cuarto** (5 h 10 min son 5 horas; 3 h 40 min, 3,5), al precio de la hora que se pone en *Corte y acompañamientos*. Sin precio no se cobran. En las plazas C8 no se cobran nunca, y en la ficha de un residente se puede marcar *No se le cobran los acompañamientos*.
+- Un extra que ya está en un borrador o en una factura no se cambia ni se anula: se descarta el borrador (y el extra vuelve a quedar pendiente) o se abona la factura.
+
 ### Calidad y portal del familiar
 
 **Estancias → Calidad** es el registro de **felicitaciones, sugerencias, quejas y no conformidades**. Cada una dice de dónde viene (la familia, el propio centro o una inspección), de quién es (una persona alojada o todo el centro), quién lo comunica y qué ha pasado. Las abiertas salen primero, de la más antigua a la más nueva; se cierran apuntando **lo que se hizo**, que en una queja o una no conformidad es obligatorio. Nada se borra. La hoja oficial de reclamaciones sigue siendo aparte: esto sirve para enterarse a tiempo y dejar constancia de lo que se hace.
@@ -3433,6 +3459,10 @@ Mire primero los cobros repartidos entre varias formas de pago y las visitas que
 ### «He anulado una cita sin querer»
 
 No se puede recuperar: hay que crearla otra vez con los mismos datos.
+
+### «Una cita ha desaparecido de la agenda»
+
+Lo más habitual es que esté anulada y que la agenda tenga marcado *Ocultar canceladas*, que cada puesto recuerda. Para salir de dudas, abra el informe de anulaciones con un rango que incluya el día de la cita y escriba el nombre del cliente: si se anuló, sale cuándo, con qué causa y con qué usuario. Si cada persona entra con su propio usuario, se sabe además quién fue.
 
 ## 14. La aplicación nativa de los profesionales (Android)
 

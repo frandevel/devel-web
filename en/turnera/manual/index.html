@@ -896,7 +896,11 @@ footer{
   </p>
   <p id="menu-favoritos">
     <strong>Favourites.</strong> Each user can put the screens they use most at the very top. When you open a screen from the menu, next to its title there is a <strong>star</strong>: press it and the screen moves to the
-    <strong>Favourites</strong>section, the first one in the menu; the star is filled in, and pressing it again removes it. Favourites are <strong>reordered by dragging</strong> one on top of another with the mouse; on a tablet or a phone, with the up and down arrows shown next to each one. They belong to each user and follow them to any computer; the screen also stays in its usual place, and favourites give access to nothing that permissions do not give.
+    <strong>Favourites</strong>, the first in the menu, which stays fixed at the top even when you scroll down the rest of the menu; the star is filled in, and pressing it again removes it. Favourites are <strong>reordered by dragging</strong> one on top of another with the mouse; on a tablet or a phone, with the up and down arrows shown next to each one. They belong to each user and follow them to any computer; the screen also stays in its usual place, and favourites give access to nothing that permissions do not give.
+  </p>
+  <p id="menu-buscador">
+    <strong>Menu search.</strong> When the menu has so many screens that they do not all fit at once, a box appears under the logo, <strong>Find a screen…</strong> (with the bar collapsed or with the whole menu in view it is not needed and does not appear). As you type, only the screens whose name contains what you typed remain, regardless of capitals or accents; if what you typed is part of the name of a section, all the screens in that section appear. With the arrow keys <strong>↑</strong> and <strong>↓</strong> you move through the results, <strong>Enter</strong>
+    opens the highlighted one and <strong>Esc</strong> clears the search and brings back the full menu. Only the screens the user already sees in their menu are searched.
   </p>
   <p>
     On a computer the menu stays fixed on the left even when you scroll down the page, and the button at the bottom collapses it to show only the icons. On a phone and on a tablet held upright it is hidden: it opens with the <strong>☰</strong> button at the top left and closes when you choose an entry, when you tap outside it or with the <kbd>Esc</kbd>.
@@ -1846,6 +1850,9 @@ footer{
   <p>
     When recording a movement by hand (in, out or adjustment) you can write the <strong>reason</strong>, which is optional: a product that arrived broken, a retail one moved to the treatment room. In the product's ins and outs and in the movements report, lines with a reason carry a comment icon on the left, like the notes in the customer history; tapping it opens a dialog with the text and who wrote it. An adjustment that does not change the units leaves no movement, so it does not keep the reason either.
   </p>
+  <p>
+    In the list in <strong>Stock</strong>, products with any movement that has a reason carry the same icon next to their name: pressing it shows their latest movements with their reason. And the stock-in, stock-out or adjustment dialog shows the product's last five movements underneath, so you can see what was done before and why. The reason cannot be changed or deleted: it is the trail of the movement.
+  </p>
 
   <h3 id="reposicion">Restocking</h3>
   <span class="ruta">Menu → Catalogue → Restocking</span>
@@ -2553,6 +2560,10 @@ footer{
     On appointments that include a service with a device, below the appointment details there is a section with the parameters to record, <strong>grouped by service and device</strong>: each group says which service it is for (“Armpit laser · Diode laser”). If the appointment has two services with the same device, its parameters appear twice, once per service, so it is clear how many joules were used on each area. Next to each parameter, <strong>how that customer was treated the previous time in that same service</strong>. It is saved together with the appointment, when you press <em>Save</em>; a parameter left blank is understood as “not noted” and is not written. The parameters are asked for here, in the appointment, and not in the POS. If the appointment’s services are changed, the section updates by itself: the lines of the new service appear and those of the one removed disappear.
   </p>
   <p>
+    <strong>The same service several times.</strong> Some services are charged by units, such as laser
+    <em>pulses</em> : each shot is one unit, with its own joules and its own session number. In the appointment's list of services, press <strong>+</strong> next to the service to add it again; each time it appears as its own group in <em>Equipment used in this session</em> («Laser pulses 1», «Laser pulses 2»…), with what was done last time in that same position, and the length of the appointment adds up the minutes of each one. At the till the pulses are put together in a single line with the units and the total. To remove one, double-click its line in the appointment's list.
+  </p>
+  <p>
     <strong>What is noted is not lost when leaving and coming back.</strong> The values already entered, and those typed but not yet saved, stay in their boxes when you return to the appointment — for example after going to the customer's record and coming back with the <a href="#agenda-volver">return-to-appointment icon</a>—, as well as showing in the <em>Before:</em> of each parameter. Nobody has to type them again.
   </p>
   <p>
@@ -2778,8 +2789,12 @@ footer{
   <p>
     At the top, <strong>how many were cancelled and who called them off</strong>: the customer, the centre or an external cause. The centre's are broken down by professional, and the external ones by cabin or court, which is where you see whether an outdoor court loses many more classes to the rain than a covered one. Those cancelled before this distinction existed appear as <em>not stated</em>. Those <em>created by mistake</em> are counted separately: they are not cancellations, but if that number grows, it is worth knowing why.
   </p>
+  <p id="informe-anulaciones-lista">
+    Then, <strong>all the cancelled appointments one by one</strong>, with the most recently cancelled at the top: the day, the customer, the staff member, when it was created, when it was cancelled, <strong>the reason, who cancelled it and with which role</strong> and the comments. To find out what happened to someone's appointment, type in <strong>Customer</strong>
+    their number or part of their name and surnames and press <em>Apply</em>: only their cancelled appointments remain, and the ranking below no longer appears. Remember that the range is that of the <strong>day of the appointment</strong>: for an appointment next week cancelled today, the range has to reach next week.
+  </p>
   <p>
-    With the <strong>Cause</strong> the report leaves the ranking and lists one by one the appointments cancelled for that cause: the day, the customer, the professional, when it was created, when it was cancelled, <strong>who cancelled it and with what role</strong> and the comments. It is how you review what was marked as a mistake.
+    With the <strong>Cause</strong> the list keeps only the ones cancelled for that reason and the ranking no longer appears. It is the way to review what was marked as a mistake.
   </p>
   <p>
     Below, <strong>which customers cancel the most</strong>. Only what the customer calls off counts here: if a class is called off because of rain, it does not push them up the list. It is sorted by number of cancellations and, when tied, by proportion: someone who cancelled three out of three is more of a problem than someone who cancelled three out of forty.
@@ -4740,6 +4755,23 @@ footer{
     The record has the <strong>start date</strong>: the day the person started working at the centre. It is not mandatory, and with it the record shows their <strong>length of service</strong> (for example, «3 years and 2 months»).
   </p>
   <p>
+    The <strong>age</strong> is no longer typed in: it comes from the <strong>date of birth</strong>. In old records that only had the age typed in by hand it is still shown, with a notice to enter the date.
+  </p>
+  <p>
+    <strong>When registering someone new</strong>, with the start date filled in, you can choose <em>Same shifts as</em> a colleague from their team: from their start date until the end of the year they will work the same shifts, with their collective agreement and working hours, and they already appear on the rota. You need to be able to manage work calendars. If the person already has a calendar that year, it is changed from their own.
+  </p>
+  <p>
+    The collapsible section <strong>Family and emergency</strong> keeps the contact for an emergency (name, relationship and phone), whether they look after a dependent older person, and their children under 18, or adult children with a court-ordered support measure, with their date of birth. The details of their <em>usual room</em> only appear for people who appear in the diary.
+  </p>
+  <p>
+    <strong>Employment history and contract.</strong> With the Employment module, the button <em>Employment history and contract</em> on the record keeps each period of employment of the person: if they leave and come back years later, you see them all. Each departure has its
+    <strong>reason</strong> (end of contract, not renewed by the company, voluntary resignation, dismissal, did not pass the probation period, end of seasonal call-up, retirement, death or other) and a note for the circumstances.
+  </p>
+  <p id="profesionales-edad-genero">
+    <strong>Age and gender of the workforce.</strong> The <em>Age and gender</em> in the staff list counts the active workforce by age band (by decades) and by gender, which is what the yearly employment statistics and the equality plan ask for. You can filter by gender, by age or by date of birth, and
+    <em>Download the list</em> downloads the people who match the filters into a file for Excel.
+  </p>
+  <p>
     <strong>Deactivating does not delete.</strong> The practitioner leaves the agenda, but their appointments, visits and clinical cases still show them, and they can be reactivated by editing them. If they have appointments from today on, Turnera asks which practitioner takes them over and moves them all at once; if one clashes with another the receiver already has, it says so so you can rearrange it afterwards. The list shows only those who are active: by clearing <em>Active only</em> the inactive ones show too.
   </p>
 
@@ -6017,6 +6049,17 @@ footer{
     <li>Preparing again duplicates nothing: it only adds what is missing.</li>
   </ul>
 
+  <h4 id="estancias-extras">Extras of the month</h4>
+  <p>
+    What is done for a resident apart from the place itself (hairdressing, podiatry, clothing repairs and name labels…) is recorded in <strong>Extras of the month</strong>, on the same screen: the day, the resident, the <strong>service</strong> from the catalogue (it brings its price and VAT) or a free description, the quantity and the price. The day and the service stay filled in after each entry, so you can go straight through the hairdressing or podiatry sheet for many residents. What is recorded but not charged is marked <strong>Do not invoice</strong>.
+  </p>
+  <ul>
+    <li>When you <strong>prepare the invoices for the month</strong>, the pending extras up to the <strong>cutoff day</strong>
+      go into each resident's invoice: into their draft for the month if they have one or, if not, into a separate invoice. The cutoff is set in <em>Cutoff and escorts</em> (for example, the 25th: from the 26th of the previous month to the 25th go in); empty, the calendar month. What is recorded after the cutoff goes to the next month.</li>
+    <li>The <strong>escorts</strong> come by themselves from the <a href="#estancias-traslados">transfers</a> with an escort and a return time: they are charged by the hour, <strong>rounded down to the quarter hour</strong> (5 h 10 min is 5 hours; 3 h 40 min, 3.5), at the hourly price set in <em>Cutoff and escorts</em>. Without a price they are not charged. In C8 places they are never charged, and on a resident's record you can tick <em>Escorts are not charged</em>.</li>
+    <li>An extra that is already in a draft or an invoice is not changed or cancelled: the draft is discarded (and the extra becomes pending again) or a credit note is issued for the invoice.</li>
+  </ul>
+
   <h3 id="estancias-calidad">Quality and family portal</h3>
   <p>
     <strong>Stays → Quality</strong> is the record of <strong>compliments, suggestions, complaints and non-conformities</strong>. Each one says where it comes from (the family, the centre itself or an inspection), whom it concerns (a resident or the whole centre), who reports it and what has happened. Open ones come first, from oldest to newest; they are closed by recording <strong>what was done</strong>, which is compulsory for a complaint or a non-conformity. Nothing is deleted. The official complaints form is still separate: this is for finding out in time and keeping a record of what is done.
@@ -6142,6 +6185,11 @@ footer{
 
   <h3>“I cancelled an appointment by mistake”</h3>
   <p>It cannot be recovered: you have to create it again with the same details.</p>
+
+  <h3>«An appointment has disappeared from the diary»</h3>
+  <p>
+    The most common cause is that it was cancelled and the diary has ticked <em>Hide cancelled</em>, which each workstation remembers. To be sure, open the <a href="#informe-anulaciones-lista">cancellations report</a> with a range that includes the day of the appointment and type the customer's name: if it was cancelled, it shows when, with which reason and by which user. If each person logs in with their own user, you also know who it was.
+  </p>
 </section>
 <section id="app-nativa">
   <h2>14. The professionals’ native app (Android)</h2>

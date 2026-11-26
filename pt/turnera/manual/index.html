@@ -898,7 +898,11 @@ footer{
   </p>
   <p id="menu-favoritos">
     <strong>Favoritos.</strong> Cada utilizador pode pôr no topo os ecrãs que mais usa. Ao abrir um ecrã do menu, junto ao seu título há uma <strong>estrela</strong>: carrega-se nela e o ecrã passa para a secção
-    <strong>Favoritos</strong>, a primeira do menu; a estrela fica preenchida e, carregando outra vez, retira-se. Os favoritos <strong>ordenam-se arrastando</strong> um por cima do outro com o rato; num tablet ou num telemóvel, com as setas de subir e descer que aparecem junto a cada um. São de cada utilizador e acompanham-no em qualquer computador; o ecrã continua além disso no seu sítio de sempre, e os favoritos não dão acesso a nada que as permissões não deem.
+    <strong>Favoritos</strong>, o primeiro do menu, que fica fixo em cima mesmo quando se desce pelo resto do menu; a estrela fica preenchida e, ao carregar outra vez, retira-se. Os favoritos são <strong>ordenam-se arrastando</strong> um por cima do outro com o rato; num tablet ou num telemóvel, com as setas de subir e descer que aparecem junto a cada um. São de cada utilizador e acompanham-no em qualquer computador; o ecrã continua além disso no seu sítio de sempre, e os favoritos não dão acesso a nada que as permissões não deem.
+  </p>
+  <p id="menu-buscador">
+    <strong>Pesquisa no menu.</strong> Quando o menu tem tantos ecrãs que não cabem todos ao mesmo tempo, aparece por baixo do logótipo uma caixa <strong>Procurar ecrã…</strong> (com a barra recolhida ou com o menu inteiro à vista não é precisa e não aparece). Ao escrever ficam só os ecrãs cujo nome contém o que se escreveu, sem importar maiúsculas nem acentos; se o que se escreveu faz parte do nome de uma secção, aparecem todos os ecrãs dessa secção. Com as setas <strong>↑</strong> e <strong>↓</strong> percorrem-se os resultados, <strong>Enter</strong>
+    abre o assinalado e <strong>Esc</strong> apaga a pesquisa e devolve o menu completo. Só se pesquisam os ecrãs que o utilizador já vê no seu menu.
   </p>
   <p>
     No computador o menu fica fixo à esquerda mesmo quando se percorre a página, e o botão de baixo recolhe-o para deixar só os ícones. No telemóvel e num tablet na vertical está escondido: abre-se com o botão <strong>☰</strong> no canto superior esquerdo e fecha-se ao escolher uma entrada, ao tocar fora dele ou com a tecla <kbd>Esc</kbd>.
@@ -1987,6 +1991,9 @@ footer{
   <p>
     Ao registar um movimento à mão (entrada, saída ou ajuste) pode escrever-se o <strong>motivo</strong>, que é opcional: um produto que chegou partido, um de venda que passa para a cabine. Nas entradas e saídas do produto e no relatório de movimentos, as linhas com motivo têm um ícone de comentário à esquerda, como as notas do histórico do cliente; ao tocá-lo abre-se uma janela com o texto e quem o escreveu. Um ajuste que não altera as unidades não gera movimento, por isso também não guarda o motivo.
   </p>
+  <p>
+    Na lista de <strong>Stock</strong>, os produtos com algum movimento com motivo levam o mesmo ícone junto ao nome: ao carregar nele veem-se os seus últimos movimentos com o motivo. E o diálogo de entrada, saída ou acerto mostra por baixo os cinco últimos movimentos do produto, para ver o que se fez antes e porquê. O motivo não se pode alterar nem apagar: é o rasto do movimento.
+  </p>
 
   <h3 id="reposicion">Reposição</h3>
   <span class="ruta">Menu → Catálogo → Reposição</span>
@@ -2796,6 +2803,10 @@ footer{
     cada parâmetro, <strong>com quanto se tratou esse cliente da vez anterior nesse mesmo serviço</strong>. Guarda-se junto com a marcação, ao carregar em <em>Guardar</em>; um parâmetro deixado em branco entende-se como «não anotado» e não fica escrito. Os parâmetros pedem-se aqui, na marcação, e não no TPV. Se se mudarem os serviços da marcação, a secção atualiza-se sozinha: aparecem as linhas do serviço novo e desaparecem as do que se tira.
   </p>
   <p>
+    <strong>O mesmo serviço várias vezes.</strong> Há serviços que se cobram por unidades, como os
+    <em>impulsos</em> do laser: cada disparo é uma unidade, com os seus próprios joules e o seu próprio número de sessão. Na lista de serviços da marcação, carregue no <strong>+</strong> junto ao serviço para o acrescentar outra vez; cada vez aparece como um grupo próprio em <em>Aparelhos usados na sessão</em> («Impulsos laser 1», «Impulsos laser 2»…), com o da vez anterior nessa mesma posição, e a duração da marcação soma os minutos de cada vez. No TPV os impulsos juntam-se numa única linha com as unidades e o total. Para retirar um, duplo clique na sua linha da lista da marcação.
+  </p>
+  <p>
     <strong>O que se anota não se perde ao sair e voltar.</strong> Os valores já postos, e os que se escreveram e ainda não se guardaram, continuam nas suas caixas ao voltar à consulta — por exemplo depois de ir à ficha do cliente e regressar com o <a href="#agenda-volver">ícone de voltar à consulta</a>—, além de se verem no <em>Antes:</em> de cada parâmetro. Ninguém tem de os escrever outra vez.
   </p>
   <p>
@@ -3054,8 +3065,12 @@ footer{
     distinção aparecem como <em>sem indicar</em>. As <em>criadas por engano</em> contam-se à parte: não são
     anulações, mas se esse número crescer, convém saber porquê.
   </p>
+  <p id="informe-anulaciones-lista">
+    Depois, <strong>todas as marcações anuladas uma a uma</strong>, com o último anulado em cima: o dia, o cliente, o profissional, quando se criou, quando se anulou, <strong>a causa, quem a anulou e com que perfil</strong> e os comentários. Para saber o que aconteceu à marcação de alguém, escreva em <strong>Cliente</strong>
+    o seu número ou parte do nome e apelidos e carregue em <em>Aplicar</em>: ficam só as suas marcações anuladas, e o ranking de baixo deixa de aparecer. Lembre-se de que o intervalo é o do <strong>dia da marcação</strong>: para uma marcação da semana que vem anulada hoje, o intervalo tem de chegar à semana que vem.
+  </p>
   <p>
-    Com o filtro <strong>Causa</strong> o relatório deixa o ranking e lista uma a uma as marcações anuladas por essa causa: o dia, o cliente, o profissional, quando foi criada, quando foi anulada, <strong>quem a anulou e com que função</strong> e os comentários. É a forma de rever o que foi marcado como engano.
+    Com o filtro <strong>Causa</strong> a lista fica só com as anuladas por essa causa e o ranking deixa de aparecer. É a forma de rever o que se marcou como erro.
   </p>
   <p>
     Por baixo, <strong>que clientes mais anulam</strong>. Aqui só conta o que o próprio cliente anula: se a aula
@@ -5168,6 +5183,23 @@ footer{
     A ficha admite a <strong>data de entrada</strong>: o dia em que a pessoa começou a trabalhar no centro. Não é obrigatória, e com ela a ficha mostra a sua <strong>antiguidade</strong> (por exemplo, «3 anos e 2 meses»).
   </p>
   <p>
+    A <strong>idade</strong> já não se escreve: sai sozinha da <strong>data de nascimento</strong>. Nas fichas antigas que só tinham a idade escrita à mão continua a ver-se, com um aviso para pôr a data.
+  </p>
+  <p>
+    <strong>Ao dar de alta alguém</strong>, com a data de admissão preenchida, pode escolher-se <em>Mesmos turnos que</em> um colega da sua equipa: desde a admissão até ao fim do ano fará os mesmos turnos, com a sua convenção e o seu horário, e já aparece na escala. É preciso poder gerir os calendários laborais. Se a pessoa já tiver calendário nesse ano, altera-se a partir do seu.
+  </p>
+  <p>
+    A secção recolhível <strong>Família e emergência</strong> guarda o contacto para um aviso (nome, relação e telefone), se tem a seu cargo um idoso dependente e os seus filhos menores, ou maiores com uma medida de apoio judicial, com a data de nascimento. Os dados da sua <em>cabine habitual</em> só aparecem para quem aparece na agenda.
+  </p>
+  <p>
+    <strong>Admissões, saídas e contrato.</strong> Com o módulo Laboral, o botão <em>Admissões, saídas e contrato</em> da ficha guarda cada período de admissão da pessoa: se sai e volta anos depois, veem-se todos. Cada saída leva o seu
+    <strong>motivo</strong> (fim de contrato, a empresa não renova, saída voluntária, despedimento, não passa o período experimental, fim de chamamento, reforma, falecimento ou outro) e uma nota para as circunstâncias.
+  </p>
+  <p id="profesionales-edad-genero">
+    <strong>Idade e género do pessoal.</strong> O botão <em>Idade e género</em> da lista de profissionais conta o pessoal no ativo por escalões de idade (por décadas) e por género, que é o que pedem todos os anos a estatística de emprego e o plano de igualdade. Filtra-se por género, por idade ou por data de nascimento e
+    <em>Descarregar a lista</em> descarrega as pessoas que cumprem os filtros num ficheiro para Excel.
+  </p>
+  <p>
     <strong>Desativar não apaga.</strong> O profissional sai da agenda, mas as suas marcações, visitas e casos
     clínicos continuam a mostrá-lo, e pode voltar a ativar-se editando-o. Se tem marcações de hoje em diante,
     o Turnera pergunta a que profissional passam e passa-as todas de uma vez; se alguma coincide com outra que já tem
@@ -6614,6 +6646,17 @@ footer{
     <li>Preparar outra vez não duplica nada: só acrescenta o que faltar.</li>
   </ul>
 
+  <h4 id="estancias-extras">Extras do mês</h4>
+  <p>
+    O que se faz a um residente além da vaga (cabeleireiro, podologia, arranjos e etiquetas de roupa…) regista-se em <strong>Extras do mês</strong>, no mesmo ecrã: o dia, o residente, o <strong>serviço</strong> do catálogo (traz o seu preço e IVA) ou um conceito livre, a quantidade e o preço. O dia e o serviço ficam preenchidos depois de cada registo, para passar seguida a folha de cabeleireiro ou de podologia de muitos residentes. O que se regista mas não se cobra marca-se <strong>Não faturar</strong>.
+  </p>
+  <ul>
+    <li>Ao <strong>preparar as faturas do mês</strong>, os extras pendentes até ao <strong>dia de corte</strong>
+      entram na fatura de cada residente: no seu rascunho do mês, se o tiver, ou, se não, numa fatura à parte. O corte define-se em <em>Corte e acompanhamentos</em> (por exemplo, o 25: entram do dia 26 do mês anterior ao dia 25); vazio, o mês civil. O que se regista depois do corte passa para o mês seguinte.</li>
+    <li>Os <strong>acompanhamentos</strong> saem sozinhos das <a href="#estancias-traslados">transferências</a> com acompanhante e hora de regresso: cobram-se à hora, <strong>arredondadas para baixo ao quarto de hora</strong> (5 h 10 min são 5 horas; 3 h 40 min, 3,5), ao preço da hora definido em <em>Corte e acompanhamentos</em>. Sem preço não se cobram. Nas vagas C8 nunca se cobram, e na ficha de um residente pode marcar-se <em>Não se cobram os acompanhamentos</em>.</li>
+    <li>Um extra que já está num rascunho ou numa fatura não se altera nem se anula: descarta-se o rascunho (e o extra volta a ficar pendente) ou emite-se uma nota de crédito da fatura.</li>
+  </ul>
+
   <h3 id="estancias-calidad">Qualidade e portal do familiar</h3>
   <p>
     <strong>Estadias → Qualidade</strong> é o registo de <strong>elogios, sugestões, queixas e não conformidades</strong>. Cada um diz de onde vem (a família, o próprio centro ou uma inspeção), a quem diz respeito (uma pessoa alojada ou todo o centro), quem o comunica e o que aconteceu. Os abertos aparecem primeiro, do mais antigo para o mais recente; fecham-se registando <strong>o que se fez</strong>, o que numa queixa ou numa não conformidade é obrigatório. Nada se apaga. O livro de reclamações oficial continua à parte: isto serve para saber a tempo e deixar registo do que se faz.
@@ -6739,6 +6782,11 @@ footer{
 
   <h3>«Anulei uma marcação sem querer»</h3>
   <p>Não se pode recuperar: tem de se criar de novo com os mesmos dados.</p>
+
+  <h3>«Uma marcação desapareceu da agenda»</h3>
+  <p>
+    O mais habitual é estar anulada e a agenda ter assinalado <em>Ocultar canceladas</em>, que cada posto recorda. Para tirar dúvidas, abra o <a href="#informe-anulaciones-lista">relatório de anulações</a> com um intervalo que inclua o dia da marcação e escreva o nome do cliente: se foi anulada, aparece quando, com que causa e com que utilizador. Se cada pessoa entra com o seu próprio utilizador, sabe-se também quem foi.
+  </p>
 </section>
 <section id="app-nativa">
   <h2>14. A aplicação nativa dos profissionais (Android)</h2>

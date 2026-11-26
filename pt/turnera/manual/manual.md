@@ -1,4 +1,4 @@
-<!-- Manual do utilizador do Turnera, o mesmo texto da página web, sem capturas de ecrã. https://devel.es/pt/turnera/manual · 2026-11-25 -->
+<!-- Manual do utilizador do Turnera, o mesmo texto da página web, sem capturas de ecrã. https://devel.es/pt/turnera/manual · 2026-11-26 -->
 
 # Manual do Turnera
 
@@ -45,7 +45,9 @@ Se o centro preferir assinar em papel, a DEVEL envia-lhe os documentos, assina-o
 
 Em cima, sem título, está o que se usa todos os dias: **Início**, **Agenda**, **TPV**, **Valores em dívida** e **Clientes**. Por baixo, agrupado, o que se configura de vez em quando (catálogo e stock), o que é da equipa em **Pessoal** (profissionais, calendário laboral e controlo de assiduidade) e o que apenas se consulta (relatórios e definições).
 
-**Favoritos.** Cada utilizador pode pôr no topo os ecrãs que mais usa. Ao abrir um ecrã do menu, junto ao seu título há uma **estrela**: carrega-se nela e o ecrã passa para a secção **Favoritos**, a primeira do menu; a estrela fica preenchida e, carregando outra vez, retira-se. Os favoritos **ordenam-se arrastando** um por cima do outro com o rato; num tablet ou num telemóvel, com as setas de subir e descer que aparecem junto a cada um. São de cada utilizador e acompanham-no em qualquer computador; o ecrã continua além disso no seu sítio de sempre, e os favoritos não dão acesso a nada que as permissões não deem.
+**Favoritos.** Cada utilizador pode pôr no topo os ecrãs que mais usa. Ao abrir um ecrã do menu, junto ao seu título há uma **estrela**: carrega-se nela e o ecrã passa para a secção **Favoritos**, o primeiro do menu, que fica fixo em cima mesmo quando se desce pelo resto do menu; a estrela fica preenchida e, ao carregar outra vez, retira-se. Os favoritos são **ordenam-se arrastando** um por cima do outro com o rato; num tablet ou num telemóvel, com as setas de subir e descer que aparecem junto a cada um. São de cada utilizador e acompanham-no em qualquer computador; o ecrã continua além disso no seu sítio de sempre, e os favoritos não dão acesso a nada que as permissões não deem.
+
+**Pesquisa no menu.** Quando o menu tem tantos ecrãs que não cabem todos ao mesmo tempo, aparece por baixo do logótipo uma caixa **Procurar ecrã…** (com a barra recolhida ou com o menu inteiro à vista não é precisa e não aparece). Ao escrever ficam só os ecrãs cujo nome contém o que se escreveu, sem importar maiúsculas nem acentos; se o que se escreveu faz parte do nome de uma secção, aparecem todos os ecrãs dessa secção. Com as setas **↑** e **↓** percorrem-se os resultados, **Enter** abre o assinalado e **Esc** apaga a pesquisa e devolve o menu completo. Só se pesquisam os ecrãs que o utilizador já vê no seu menu.
 
 No computador o menu fica fixo à esquerda mesmo quando se percorre a página, e o botão de baixo recolhe-o para deixar só os ícones. No telemóvel e num tablet na vertical está escondido: abre-se com o botão **☰** no canto superior esquerdo e fecha-se ao escolher uma entrada, ao tocar fora dele ou com a tecla `Esc`.
 
@@ -564,6 +566,8 @@ Na ficha de um produto, quem gere o armazém ou vê o relatório de movimentos d
 
 Ao registar um movimento à mão (entrada, saída ou ajuste) pode escrever-se o **motivo**, que é opcional: um produto que chegou partido, um de venda que passa para a cabine. Nas entradas e saídas do produto e no relatório de movimentos, as linhas com motivo têm um ícone de comentário à esquerda, como as notas do histórico do cliente; ao tocá-lo abre-se uma janela com o texto e quem o escreveu. Um ajuste que não altera as unidades não gera movimento, por isso também não guarda o motivo.
 
+Na lista de **Stock**, os produtos com algum movimento com motivo levam o mesmo ícone junto ao nome: ao carregar nele veem-se os seus últimos movimentos com o motivo. E o diálogo de entrada, saída ou acerto mostra por baixo os cinco últimos movimentos do produto, para ver o que se fez antes e porquê. O motivo não se pode alterar nem apagar: é o rasto do movimento.
+
 ### Reposição
 
 Menu → Catálogo → Reposição
@@ -951,6 +955,8 @@ Agenda → (uma marcação) → Aparelhagem da sessão
 
 Nas marcações que levam um serviço com aparelho aparece, por baixo dos dados da marcação, uma secção com os parâmetros a registar, **agrupados por serviço e aparelho**: cada grupo indica para que serviço se regista («Laser axilas · Laser de díodo»). Se a marcação leva dois serviços com o mesmo aparelho, os seus parâmetros aparecem duas vezes, uma por serviço, e assim fica claro quantos joules se aplicaram em cada zona. Junto a cada parâmetro, **com quanto se tratou esse cliente da vez anterior nesse mesmo serviço**. Guarda-se junto com a marcação, ao carregar em *Guardar*; um parâmetro deixado em branco entende-se como «não anotado» e não fica escrito. Os parâmetros pedem-se aqui, na marcação, e não no TPV. Se se mudarem os serviços da marcação, a secção atualiza-se sozinha: aparecem as linhas do serviço novo e desaparecem as do que se tira.
 
+**O mesmo serviço várias vezes.** Há serviços que se cobram por unidades, como os *impulsos* do laser: cada disparo é uma unidade, com os seus próprios joules e o seu próprio número de sessão. Na lista de serviços da marcação, carregue no **+** junto ao serviço para o acrescentar outra vez; cada vez aparece como um grupo próprio em *Aparelhos usados na sessão* («Impulsos laser 1», «Impulsos laser 2»…), com o da vez anterior nessa mesma posição, e a duração da marcação soma os minutos de cada vez. No TPV os impulsos juntam-se numa única linha com as unidades e o total. Para retirar um, duplo clique na sua linha da lista da marcação.
+
 **O que se anota não se perde ao sair e voltar.** Os valores já postos, e os que se escreveram e ainda não se guardaram, continuam nas suas caixas ao voltar à consulta — por exemplo depois de ir à ficha do cliente e regressar com o ícone de voltar à consulta—, além de se verem no *Antes:* de cada parâmetro. Ninguém tem de os escrever outra vez.
 
 Se a marcação não leva nenhum serviço com aparelho, a secção não aparece.
@@ -1105,7 +1111,9 @@ Conta sobre **as marcações do intervalo, não sobre as anuladas no intervalo**
 
 Em cima, **quantas foram anuladas e quem as anulou**: o cliente, o centro ou uma causa externa. As do centro aparecem repartidas por profissional, e as externas por cabine ou campo, que é onde se vê se um campo descoberto perde muito mais aulas com a chuva do que um coberto. As anuladas antes de existir esta distinção aparecem como *sem indicar*. As *criadas por engano* contam-se à parte: não são anulações, mas se esse número crescer, convém saber porquê.
 
-Com o filtro **Causa** o relatório deixa o ranking e lista uma a uma as marcações anuladas por essa causa: o dia, o cliente, o profissional, quando foi criada, quando foi anulada, **quem a anulou e com que função** e os comentários. É a forma de rever o que foi marcado como engano.
+Depois, **todas as marcações anuladas uma a uma**, com o último anulado em cima: o dia, o cliente, o profissional, quando se criou, quando se anulou, **a causa, quem a anulou e com que perfil** e os comentários. Para saber o que aconteceu à marcação de alguém, escreva em **Cliente** o seu número ou parte do nome e apelidos e carregue em *Aplicar*: ficam só as suas marcações anuladas, e o ranking de baixo deixa de aparecer. Lembre-se de que o intervalo é o do **dia da marcação**: para uma marcação da semana que vem anulada hoje, o intervalo tem de chegar à semana que vem.
+
+Com o filtro **Causa** a lista fica só com as anuladas por essa causa e o ranking deixa de aparecer. É a forma de rever o que se marcou como erro.
 
 Por baixo, **que clientes mais anulam**. Aqui só conta o que o próprio cliente anula: se a aula é suspensa por chuva, não lhe sobe na lista. Aparece ordenado por número de anulações e, em caso de igualdade, por proporção: quem anulou três de três incomoda mais do que quem anulou três de quarenta.
 
@@ -2594,6 +2602,16 @@ Na mesma ficha repõe-se o **PIN de picagem** (ver Controlo de assiduidade) e ma
 
 A ficha admite a **data de entrada**: o dia em que a pessoa começou a trabalhar no centro. Não é obrigatória, e com ela a ficha mostra a sua **antiguidade** (por exemplo, «3 anos e 2 meses»).
 
+A **idade** já não se escreve: sai sozinha da **data de nascimento**. Nas fichas antigas que só tinham a idade escrita à mão continua a ver-se, com um aviso para pôr a data.
+
+**Ao dar de alta alguém**, com a data de admissão preenchida, pode escolher-se *Mesmos turnos que* um colega da sua equipa: desde a admissão até ao fim do ano fará os mesmos turnos, com a sua convenção e o seu horário, e já aparece na escala. É preciso poder gerir os calendários laborais. Se a pessoa já tiver calendário nesse ano, altera-se a partir do seu.
+
+A secção recolhível **Família e emergência** guarda o contacto para um aviso (nome, relação e telefone), se tem a seu cargo um idoso dependente e os seus filhos menores, ou maiores com uma medida de apoio judicial, com a data de nascimento. Os dados da sua *cabine habitual* só aparecem para quem aparece na agenda.
+
+**Admissões, saídas e contrato.** Com o módulo Laboral, o botão *Admissões, saídas e contrato* da ficha guarda cada período de admissão da pessoa: se sai e volta anos depois, veem-se todos. Cada saída leva o seu **motivo** (fim de contrato, a empresa não renova, saída voluntária, despedimento, não passa o período experimental, fim de chamamento, reforma, falecimento ou outro) e uma nota para as circunstâncias.
+
+**Idade e género do pessoal.** O botão *Idade e género* da lista de profissionais conta o pessoal no ativo por escalões de idade (por décadas) e por género, que é o que pedem todos os anos a estatística de emprego e o plano de igualdade. Filtra-se por género, por idade ou por data de nascimento e *Descarregar a lista* descarrega as pessoas que cumprem os filtros num ficheiro para Excel.
+
 **Desativar não apaga.** O profissional sai da agenda, mas as suas marcações, visitas e casos clínicos continuam a mostrá-lo, e pode voltar a ativar-se editando-o. Se tem marcações de hoje em diante, o Turnera pergunta a que profissional passam e passa-as todas de uma vez; se alguma coincide com outra que já tem quem as recebe, di-lo para a recolocar depois. A lista mostra só os que estão ativos: retirando *Só ativos* aparecem também os inativos.
 
 #### Proteção de dados do profissional
@@ -3349,6 +3367,14 @@ No mesmo ecrã, **Faturas do mês** prepara as faturas das estadias como **rascu
 - Uma fatura completa precisa do NIF de quem paga: se faltar, o rascunho di-lo e não deixa emitir até que se ponha na ficha.
 - Preparar outra vez não duplica nada: só acrescenta o que faltar.
 
+#### Extras do mês
+
+O que se faz a um residente além da vaga (cabeleireiro, podologia, arranjos e etiquetas de roupa…) regista-se em **Extras do mês**, no mesmo ecrã: o dia, o residente, o **serviço** do catálogo (traz o seu preço e IVA) ou um conceito livre, a quantidade e o preço. O dia e o serviço ficam preenchidos depois de cada registo, para passar seguida a folha de cabeleireiro ou de podologia de muitos residentes. O que se regista mas não se cobra marca-se **Não faturar**.
+
+- Ao **preparar as faturas do mês**, os extras pendentes até ao **dia de corte** entram na fatura de cada residente: no seu rascunho do mês, se o tiver, ou, se não, numa fatura à parte. O corte define-se em *Corte e acompanhamentos* (por exemplo, o 25: entram do dia 26 do mês anterior ao dia 25); vazio, o mês civil. O que se regista depois do corte passa para o mês seguinte.
+- Os **acompanhamentos** saem sozinhos das transferências com acompanhante e hora de regresso: cobram-se à hora, **arredondadas para baixo ao quarto de hora** (5 h 10 min são 5 horas; 3 h 40 min, 3,5), ao preço da hora definido em *Corte e acompanhamentos*. Sem preço não se cobram. Nas vagas C8 nunca se cobram, e na ficha de um residente pode marcar-se *Não se cobram os acompanhamentos*.
+- Um extra que já está num rascunho ou numa fatura não se altera nem se anula: descarta-se o rascunho (e o extra volta a ficar pendente) ou emite-se uma nota de crédito da fatura.
+
 ### Qualidade e portal do familiar
 
 **Estadias → Qualidade** é o registo de **elogios, sugestões, queixas e não conformidades**. Cada um diz de onde vem (a família, o próprio centro ou uma inspeção), a quem diz respeito (uma pessoa alojada ou todo o centro), quem o comunica e o que aconteceu. Os abertos aparecem primeiro, do mais antigo para o mais recente; fecham-se registando **o que se fez**, o que numa queixa ou numa não conformidade é obrigatório. Nada se apaga. O livro de reclamações oficial continua à parte: isto serve para saber a tempo e deixar registo do que se faz.
@@ -3433,6 +3459,10 @@ Veja primeiro os recebimentos repartidos por várias formas de pagamento e as vi
 ### «Anulei uma marcação sem querer»
 
 Não se pode recuperar: tem de se criar de novo com os mesmos dados.
+
+### «Uma marcação desapareceu da agenda»
+
+O mais habitual é estar anulada e a agenda ter assinalado *Ocultar canceladas*, que cada posto recorda. Para tirar dúvidas, abra o relatório de anulações com um intervalo que inclua o dia da marcação e escreva o nome do cliente: se foi anulada, aparece quando, com que causa e com que utilizador. Se cada pessoa entra com o seu próprio utilizador, sabe-se também quem foi.
 
 ## 14. A aplicação nativa dos profissionais (Android)
 

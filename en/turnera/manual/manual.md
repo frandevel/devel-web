@@ -1,4 +1,4 @@
-<!-- Turnera user manual, the same text as the website without screenshots. https://devel.es/en/turnera/manual · 2026-11-25 -->
+<!-- Turnera user manual, the same text as the website without screenshots. https://devel.es/en/turnera/manual · 2026-11-26 -->
 
 # The Turnera manual
 
@@ -45,7 +45,9 @@ If the centre prefers to sign on paper, DEVEL sends the documents, signs them an
 
 At the top, with no heading, is what you use every day: **Home**, **Agenda**, **Point of sale**, **Unpaid visits** and **Customers**. Below, grouped, is what you set up now and then (catalogue and stock), the team under **Staff** (professionals, work calendar and working time) and what you only look up (reports and settings).
 
-**Favourites.** Each user can put the screens they use most at the very top. When you open a screen from the menu, next to its title there is a **star**: press it and the screen moves to the **Favourites**section, the first one in the menu; the star is filled in, and pressing it again removes it. Favourites are **reordered by dragging** one on top of another with the mouse; on a tablet or a phone, with the up and down arrows shown next to each one. They belong to each user and follow them to any computer; the screen also stays in its usual place, and favourites give access to nothing that permissions do not give.
+**Favourites.** Each user can put the screens they use most at the very top. When you open a screen from the menu, next to its title there is a **star**: press it and the screen moves to the **Favourites**, the first in the menu, which stays fixed at the top even when you scroll down the rest of the menu; the star is filled in, and pressing it again removes it. Favourites are **reordered by dragging** one on top of another with the mouse; on a tablet or a phone, with the up and down arrows shown next to each one. They belong to each user and follow them to any computer; the screen also stays in its usual place, and favourites give access to nothing that permissions do not give.
+
+**Menu search.** When the menu has so many screens that they do not all fit at once, a box appears under the logo, **Find a screen…** (with the bar collapsed or with the whole menu in view it is not needed and does not appear). As you type, only the screens whose name contains what you typed remain, regardless of capitals or accents; if what you typed is part of the name of a section, all the screens in that section appear. With the arrow keys **↑** and **↓** you move through the results, **Enter** opens the highlighted one and **Esc** clears the search and brings back the full menu. Only the screens the user already sees in their menu are searched.
 
 On a computer the menu stays fixed on the left even when you scroll down the page, and the button at the bottom collapses it to show only the icons. On a phone and on a tablet held upright it is hidden: it opens with the **☰** button at the top left and closes when you choose an entry, when you tap outside it or with the `Esc`.
 
@@ -564,6 +566,8 @@ In a product's record, whoever manages the store or sees the stock movements rep
 
 When recording a movement by hand (in, out or adjustment) you can write the **reason**, which is optional: a product that arrived broken, a retail one moved to the treatment room. In the product's ins and outs and in the movements report, lines with a reason carry a comment icon on the left, like the notes in the customer history; tapping it opens a dialog with the text and who wrote it. An adjustment that does not change the units leaves no movement, so it does not keep the reason either.
 
+In the list in **Stock**, products with any movement that has a reason carry the same icon next to their name: pressing it shows their latest movements with their reason. And the stock-in, stock-out or adjustment dialog shows the product's last five movements underneath, so you can see what was done before and why. The reason cannot be changed or deleted: it is the trail of the movement.
+
 ### Restocking
 
 Menu → Catalogue → Restocking
@@ -951,6 +955,8 @@ Agenda → (an appointment) → Equipment for the session
 
 On appointments that include a service with a device, below the appointment details there is a section with the parameters to record, **grouped by service and device**: each group says which service it is for (“Armpit laser · Diode laser”). If the appointment has two services with the same device, its parameters appear twice, once per service, so it is clear how many joules were used on each area. Next to each parameter, **how that customer was treated the previous time in that same service**. It is saved together with the appointment, when you press *Save*; a parameter left blank is understood as “not noted” and is not written. The parameters are asked for here, in the appointment, and not in the POS. If the appointment’s services are changed, the section updates by itself: the lines of the new service appear and those of the one removed disappear.
 
+**The same service several times.** Some services are charged by units, such as laser *pulses* : each shot is one unit, with its own joules and its own session number. In the appointment's list of services, press **+** next to the service to add it again; each time it appears as its own group in *Equipment used in this session* («Laser pulses 1», «Laser pulses 2»…), with what was done last time in that same position, and the length of the appointment adds up the minutes of each one. At the till the pulses are put together in a single line with the units and the total. To remove one, double-click its line in the appointment's list.
+
 **What is noted is not lost when leaving and coming back.** The values already entered, and those typed but not yet saved, stay in their boxes when you return to the appointment — for example after going to the customer's record and coming back with the return-to-appointment icon—, as well as showing in the *Before:* of each parameter. Nobody has to type them again.
 
 If the appointment has no service with a device, the section does not appear.
@@ -1105,7 +1111,9 @@ It counts against **the appointments in the range, not the ones cancelled in the
 
 At the top, **how many were cancelled and who called them off**: the customer, the centre or an external cause. The centre's are broken down by professional, and the external ones by cabin or court, which is where you see whether an outdoor court loses many more classes to the rain than a covered one. Those cancelled before this distinction existed appear as *not stated*. Those *created by mistake* are counted separately: they are not cancellations, but if that number grows, it is worth knowing why.
 
-With the **Cause** the report leaves the ranking and lists one by one the appointments cancelled for that cause: the day, the customer, the professional, when it was created, when it was cancelled, **who cancelled it and with what role** and the comments. It is how you review what was marked as a mistake.
+Then, **all the cancelled appointments one by one**, with the most recently cancelled at the top: the day, the customer, the staff member, when it was created, when it was cancelled, **the reason, who cancelled it and with which role** and the comments. To find out what happened to someone's appointment, type in **Customer** their number or part of their name and surnames and press *Apply*: only their cancelled appointments remain, and the ranking below no longer appears. Remember that the range is that of the **day of the appointment**: for an appointment next week cancelled today, the range has to reach next week.
+
+With the **Cause** the list keeps only the ones cancelled for that reason and the ranking no longer appears. It is the way to review what was marked as a mistake.
 
 Below, **which customers cancel the most**. Only what the customer calls off counts here: if a class is called off because of rain, it does not push them up the list. It is sorted by number of cancellations and, when tied, by proportion: someone who cancelled three out of three is more of a problem than someone who cancelled three out of forty.
 
@@ -2594,6 +2602,16 @@ The same record is where you reset their **clocking PIN** (see Working time) and
 
 The record has the **start date**: the day the person started working at the centre. It is not mandatory, and with it the record shows their **length of service** (for example, «3 years and 2 months»).
 
+The **age** is no longer typed in: it comes from the **date of birth**. In old records that only had the age typed in by hand it is still shown, with a notice to enter the date.
+
+**When registering someone new**, with the start date filled in, you can choose *Same shifts as* a colleague from their team: from their start date until the end of the year they will work the same shifts, with their collective agreement and working hours, and they already appear on the rota. You need to be able to manage work calendars. If the person already has a calendar that year, it is changed from their own.
+
+The collapsible section **Family and emergency** keeps the contact for an emergency (name, relationship and phone), whether they look after a dependent older person, and their children under 18, or adult children with a court-ordered support measure, with their date of birth. The details of their *usual room* only appear for people who appear in the diary.
+
+**Employment history and contract.** With the Employment module, the button *Employment history and contract* on the record keeps each period of employment of the person: if they leave and come back years later, you see them all. Each departure has its **reason** (end of contract, not renewed by the company, voluntary resignation, dismissal, did not pass the probation period, end of seasonal call-up, retirement, death or other) and a note for the circumstances.
+
+**Age and gender of the workforce.** The *Age and gender* in the staff list counts the active workforce by age band (by decades) and by gender, which is what the yearly employment statistics and the equality plan ask for. You can filter by gender, by age or by date of birth, and *Download the list* downloads the people who match the filters into a file for Excel.
+
 **Deactivating does not delete.** The practitioner leaves the agenda, but their appointments, visits and clinical cases still show them, and they can be reactivated by editing them. If they have appointments from today on, Turnera asks which practitioner takes them over and moves them all at once; if one clashes with another the receiver already has, it says so so you can rearrange it afterwards. The list shows only those who are active: by clearing *Active only* the inactive ones show too.
 
 #### The professional's data protection
@@ -3349,6 +3367,14 @@ On the same screen, **Invoices of the month** prepares the stay invoices as **dr
 - A full invoice needs the payer's tax ID: if it is missing, the draft says so and cannot be issued until it is added to the record.
 - Preparing again duplicates nothing: it only adds what is missing.
 
+#### Extras of the month
+
+What is done for a resident apart from the place itself (hairdressing, podiatry, clothing repairs and name labels…) is recorded in **Extras of the month**, on the same screen: the day, the resident, the **service** from the catalogue (it brings its price and VAT) or a free description, the quantity and the price. The day and the service stay filled in after each entry, so you can go straight through the hairdressing or podiatry sheet for many residents. What is recorded but not charged is marked **Do not invoice**.
+
+- When you **prepare the invoices for the month**, the pending extras up to the **cutoff day** go into each resident's invoice: into their draft for the month if they have one or, if not, into a separate invoice. The cutoff is set in *Cutoff and escorts* (for example, the 25th: from the 26th of the previous month to the 25th go in); empty, the calendar month. What is recorded after the cutoff goes to the next month.
+- The **escorts** come by themselves from the transfers with an escort and a return time: they are charged by the hour, **rounded down to the quarter hour** (5 h 10 min is 5 hours; 3 h 40 min, 3.5), at the hourly price set in *Cutoff and escorts*. Without a price they are not charged. In C8 places they are never charged, and on a resident's record you can tick *Escorts are not charged*.
+- An extra that is already in a draft or an invoice is not changed or cancelled: the draft is discarded (and the extra becomes pending again) or a credit note is issued for the invoice.
+
 ### Quality and family portal
 
 **Stays → Quality** is the record of **compliments, suggestions, complaints and non-conformities**. Each one says where it comes from (the family, the centre itself or an inspection), whom it concerns (a resident or the whole centre), who reports it and what has happened. Open ones come first, from oldest to newest; they are closed by recording **what was done**, which is compulsory for a complaint or a non-conformity. Nothing is deleted. The official complaints form is still separate: this is for finding out in time and keeping a record of what is done.
@@ -3433,6 +3459,10 @@ Look first at the payments split across several payment methods and the visits t
 ### “I cancelled an appointment by mistake”
 
 It cannot be recovered: you have to create it again with the same details.
+
+### «An appointment has disappeared from the diary»
+
+The most common cause is that it was cancelled and the diary has ticked *Hide cancelled*, which each workstation remembers. To be sure, open the cancellations report with a range that includes the day of the appointment and type the customer's name: if it was cancelled, it shows when, with which reason and by which user. If each person logs in with their own user, you also know who it was.
 
 ## 14. The professionals’ native app (Android)
 

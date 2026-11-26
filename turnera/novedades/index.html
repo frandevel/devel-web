@@ -679,6 +679,7 @@ footer{
   <h2>Novedades de Turnera</h2>
   <p>Lo último, arriba</p>
   <ol>
+    <li><a href="#2026-11-26">26 de noviembre de 2026</a></li>
     <li><a href="#2026-11-25">25 de noviembre de 2026</a></li>
     <li><a href="#2026-11-24">24 de noviembre de 2026</a></li>
     <li><a href="#2026-11-23">23 de noviembre de 2026</a></li>
@@ -736,10 +737,52 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Errores corregidos</strong>: lo que fallaba, y ya no.</span></li>
 </ul>
 
+<section id="2026-11-26" class="version">
+  <div class="version__cabecera">
+    <h2>26 de noviembre de 2026</h2>
+    <span class="version__sello">Última versión</span>
+  </div>
+  <p class="version__numero">Versión <span translate="no">1.18.0-f72b7ab</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Nuevas características</h3>
+    <h4>Residencias: extras del mes</h4>
+    <ul>
+      <li>En Estancias → Cobros, «Extras del mes» recoge lo que se le hace a cada residente aparte de la plaza: peluquería, podología, arreglos y etiquetas de ropa… Se elige un servicio del catálogo, que trae su precio y su IVA, o se escribe un concepto libre. Lo que no se cobra se marca «No facturar».</li>
+      <li>Al preparar las facturas del mes, los extras entran en la de cada residente. Con un día de corte (por ejemplo, el 25), entra lo apuntado del 26 del mes anterior al 25.</li>
+      <li>Los acompañamientos a salidas salen solos de los traslados con acompañante y hora de vuelta, y se cobran por horas redondeadas hacia abajo al cuarto. En las plazas C8 no se cobran, y en un residente se puede marcar que no se le cobren.</li>
+    </ul>
+    <h4>Ficha del profesional</h4>
+    <ul>
+      <li>Fecha de nacimiento: la edad ya no se escribe, se calcula sola.</li>
+      <li>Apartado «Familia y emergencia»: contacto para un aviso, si tiene a su cargo a un mayor dependiente y sus hijos, con su fecha de nacimiento.</li>
+      <li>Al dar de alta a alguien se puede elegir «Mismos turnos que» un compañero de su equipo: desde su alta hasta final de año hace sus turnos y ya sale en el cuadrante.</li>
+      <li>«Edad y género» en la lista de profesionales: la plantilla en activo por tramos de edad y por género, con filtros y descarga para Excel.</li>
+      <li>Nuevo motivo de baja: «La empresa no renueva».</li>
+    </ul>
+    <h4>Un mismo servicio varias veces en la cita</h4>
+    <ul>
+      <li>Para servicios que se cobran por unidades, como los pulsos de láser: el servicio se puede añadir varias veces a la cita, cada vez con sus julios y su número de sesión, y en el TPV salen juntos en una línea con las unidades.</li>
+    </ul>
+    <h4>Menú</h4>
+    <ul>
+      <li>Cuando el menú no cabe entero, sale un buscador debajo del logotipo: se escribe parte del nombre de la pantalla y quedan solo las que coinciden.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Mejoras</h3>
+    <ul>
+      <li>El informe de anulaciones enseña todas las citas anuladas una a una, con su causa y quién la anuló, y se puede buscar por cliente para saber qué pasó con una cita.</li>
+      <li>Los favoritos se quedan fijos arriba del menú aunque se baje por él.</li>
+      <li>En Stock, los productos con algún movimiento con motivo llevan un icono que enseña sus últimos movimientos, y el diálogo de entrada, salida o ajuste muestra los cinco últimos.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-25" class="version">
   <div class="version__cabecera">
     <h2>25 de noviembre de 2026</h2>
-    <span class="version__sello">Última versión</span>
   </div>
   <p class="version__numero">Versión <span translate="no">1.18.0-b96eac6</span></p>
 

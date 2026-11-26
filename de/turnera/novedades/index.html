@@ -679,6 +679,7 @@ footer{
   <h2>Neuigkeiten in Turnera</h2>
   <p>Das Neueste zuerst</p>
   <ol>
+    <li><a href="#2026-11-26">26. November 2026</a></li>
     <li><a href="#2026-11-25">25. November 2026</a></li>
     <li><a href="#2026-11-24">24. November 2026</a></li>
     <li><a href="#2026-11-23">23. November 2026</a></li>
@@ -735,10 +736,52 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Behobene Fehler</strong>: was nicht funktionierte und jetzt funktioniert.</span></li>
 </ul>
 
+<section id="2026-11-26" class="version">
+  <div class="version__cabecera">
+    <h2>26. November 2026</h2>
+    <span class="version__sello">Neueste Version</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.18.0-f72b7ab</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>Neue Funktionen</h3>
+    <h4>Pflegeheime: Extras des Monats</h4>
+    <ul>
+      <li>Unter Aufenthalte → Abrechnung sammelt «Extras des Monats», was für jeden Bewohner zusätzlich zum Platz gemacht wird: Friseur, Podologie, Kleidungsreparaturen und Namensetiketten… Man wählt eine Leistung aus dem Katalog, die ihren Preis und ihre MwSt. mitbringt, oder schreibt einen freien Text. Was nicht berechnet wird, wird mit «Nicht berechnen» markiert.</li>
+      <li>Beim Vorbereiten der Monatsrechnungen gehen die Extras in die Rechnung jedes Bewohners ein. Mit einem Stichtag (zum Beispiel dem 25.) geht ein, was vom 26. des Vormonats bis zum 25. erfasst wurde.</li>
+      <li>Begleitungen bei Ausgängen ergeben sich automatisch aus den Transfers mit Begleitung und Rückkehrzeit und werden nach Stunden berechnet, auf die Viertelstunde abgerundet. Bei C8-Plätzen werden sie nicht berechnet, und bei einem Bewohner kann man festlegen, dass sie nicht berechnet werden.</li>
+    </ul>
+    <h4>Mitarbeiterkarte</h4>
+    <ul>
+      <li>Geburtsdatum: Das Alter wird nicht mehr eingegeben, es wird automatisch berechnet.</li>
+      <li>Bereich «Familie und Notfall»: Notfallkontakt, ob die Person einen pflegebedürftigen älteren Angehörigen betreut, und ihre Kinder mit Geburtsdatum.</li>
+      <li>Beim Anlegen einer Person kann man «Gleiche Schichten wie» eine Person aus ihrem Team wählen: Ab dem Eintritt bis Jahresende arbeitet sie deren Schichten und erscheint bereits im Dienstplan.</li>
+      <li>«Alter und Geschlecht» in der Mitarbeiterliste: die aktive Belegschaft nach Altersgruppen und Geschlecht, mit Filtern und Download für Excel.</li>
+      <li>Neuer Austrittsgrund: «Vom Unternehmen nicht verlängert».</li>
+    </ul>
+    <h4>Dieselbe Leistung mehrmals im Termin</h4>
+    <ul>
+      <li>Für Leistungen, die nach Einheiten abgerechnet werden, etwa Laserimpulse: Die Leistung kann mehrmals zum Termin hinzugefügt werden, jedes Mal mit ihren Joule und ihrer Sitzungsnummer, und an der Kasse erscheinen sie zusammen in einer Zeile mit den Einheiten.</li>
+    </ul>
+    <h4>Menü</h4>
+    <ul>
+      <li>Wenn das Menü nicht ganz hineinpasst, erscheint unter dem Logo ein Suchfeld: Man tippt einen Teil des Bildschirmnamens, und nur die passenden bleiben.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Verbesserungen</h3>
+    <ul>
+      <li>Der Stornierungsbericht zeigt alle stornierten Termine einzeln, mit Grund und wer sie storniert hat, und man kann nach Kunde suchen, um herauszufinden, was mit einem Termin passiert ist.</li>
+      <li>Die Favoriten bleiben oben im Menü fest stehen, auch wenn man darin nach unten scrollt.</li>
+      <li>Im Lager tragen Produkte mit mindestens einer Bewegung mit Grund ein Symbol, das ihre letzten Bewegungen zeigt, und der Dialog für Eingang, Ausgang oder Korrektur zeigt die letzten fünf.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-25" class="version">
   <div class="version__cabecera">
     <h2>25. November 2026</h2>
-    <span class="version__sello">Neueste Version</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.18.0-b96eac6</span></p>
 

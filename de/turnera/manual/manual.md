@@ -1,4 +1,4 @@
-<!-- Benutzerhandbuch von Turnera, derselbe Text wie auf der Website, ohne Bildschirmfotos. https://devel.es/de/turnera/manual · 2026-11-25 -->
+<!-- Benutzerhandbuch von Turnera, derselbe Text wie auf der Website, ohne Bildschirmfotos. https://devel.es/de/turnera/manual · 2026-11-26 -->
 
 # Turnera-Handbuch
 
@@ -45,7 +45,9 @@ Wenn das Zentrum lieber auf Papier unterschreibt, schickt DEVEL ihm die Dokument
 
 Oben, ohne Überschrift, steht das, was jeden Tag benutzt wird: **Start**, **Terminkalender**, **Kasse**, **Offene Zahlungen** und **Kunden**. Darunter, gruppiert, steht, was ab und zu eingerichtet wird (Katalog und Bestand), das Team unter **Personal** (Fachkräfte, Arbeitskalender und Arbeitszeiterfassung) und das, was nur nachgeschlagen wird (Berichte und Einstellungen).
 
-**Favoriten.** Jeder Benutzer kann die Bildschirme, die er am meisten nutzt, ganz nach oben legen. Öffnet man einen Bildschirm aus dem Menü, steht neben seinem Titel ein **Stern**: Man drückt ihn, und der Bildschirm kommt in den Bereich **Favoriten**, den ersten im Menü; der Stern ist dann ausgefüllt, und ein erneuter Druck entfernt ihn. Die Favoriten werden **durch Ziehen sortiert** , eins über das andere, mit der Maus; auf einem Tablet oder Handy mit den Pfeilen nach oben und unten neben jedem Eintrag. Sie gehören dem jeweiligen Benutzer und begleiten ihn auf jeden Computer; der Bildschirm bleibt außerdem an seinem gewohnten Platz, und Favoriten geben auf nichts Zugriff, was die Berechtigungen nicht erlauben.
+**Favoriten.** Jeder Benutzer kann die Bildschirme, die er am meisten nutzt, ganz nach oben legen. Öffnet man einen Bildschirm aus dem Menü, steht neben seinem Titel ein **Stern**: Man drückt ihn, und der Bildschirm kommt in den Bereich **Favoriten**, das erste im Menü, das oben fest stehen bleibt, auch wenn man im restlichen Menü nach unten scrollt; der Stern ist ausgefüllt, und ein erneuter Klick entfernt ihn. Die Favoriten werden **durch Ziehen sortiert** , eins über das andere, mit der Maus; auf einem Tablet oder Handy mit den Pfeilen nach oben und unten neben jedem Eintrag. Sie gehören dem jeweiligen Benutzer und begleiten ihn auf jeden Computer; der Bildschirm bleibt außerdem an seinem gewohnten Platz, und Favoriten geben auf nichts Zugriff, was die Berechtigungen nicht erlauben.
+
+**Menüsuche.** Wenn das Menü so viele Bildschirme hat, dass sie nicht alle gleichzeitig hineinpassen, erscheint unter dem Logo ein Feld **Bildschirm suchen…** (bei eingeklappter Leiste oder vollständig sichtbarem Menü wird es nicht gebraucht und erscheint nicht). Beim Tippen bleiben nur die Bildschirme, deren Name das Eingegebene enthält, unabhängig von Groß- und Kleinschreibung und Akzenten; ist das Eingegebene Teil des Namens eines Bereichs, erscheinen alle Bildschirme dieses Bereichs. Mit den Pfeiltasten **↑** und **↓** bewegt man sich durch die Ergebnisse, **Enter** öffnet den markierten und **Esc** löscht die Suche und zeigt wieder das ganze Menü. Gesucht wird nur unter den Bildschirmen, die der Benutzer bereits in seinem Menü sieht.
 
 Am Computer bleibt das Menü links stehen, auch wenn man auf der Seite nach unten scrollt, und die Schaltfläche unten klappt es ein, sodass nur die Symbole bleiben. Auf dem Handy und auf dem Tablet im Hochformat ist es versteckt: Es öffnet sich mit der Schaltfläche **☰** oben links und schließt sich, wenn man einen Eintrag wählt, daneben tippt oder mit der Taste `Esc`.
 
@@ -564,6 +566,8 @@ In der Produktakte sehen die Lagerverantwortlichen und alle, die den Bericht der
 
 Beim manuellen Erfassen einer Bewegung (Eingang, Ausgang oder Korrektur) kann man den **Grund** schreiben, der optional ist: ein Produkt, das beschädigt ankam, ein Verkaufsprodukt, das in die Kabine wandert. In den Ein- und Ausgängen des Produkts und im Bewegungsbericht tragen Zeilen mit Grund links ein Kommentarsymbol, wie die Notizen im Kundenverlauf; ein Tippen darauf öffnet einen Dialog mit dem Text und wer ihn geschrieben hat. Eine Korrektur, die die Einheiten nicht ändert, erzeugt keine Bewegung und speichert daher auch keinen Grund.
 
+In der Liste von **Lager** tragen Produkte mit mindestens einer Bewegung mit Grund dasselbe Symbol neben dem Namen: Ein Klick darauf zeigt ihre letzten Bewegungen mit dem Grund. Und der Dialog für Eingang, Ausgang oder Korrektur zeigt darunter die letzten fünf Bewegungen des Produkts, damit man sieht, was vorher gemacht wurde und warum. Der Grund kann nicht geändert oder gelöscht werden: Er ist die Spur der Bewegung.
+
 ### Nachbestellung
 
 Menü → Katalog → Nachbestellung
@@ -951,6 +955,8 @@ Terminkalender → (ein Termin) → Geräte der Sitzung
 
 Bei Terminen mit einer Leistung, die ein Gerät benötigt, erscheint unter den Termindaten ein Abschnitt mit den zu erfassenden Parametern, **gruppiert nach Leistung und Gerät**: Jede Gruppe nennt die Leistung, für die erfasst wird („Achsel-Laser · Diodenlaser“). Hat der Termin zwei Leistungen mit demselben Gerät, erscheinen seine Parameter zweimal, einmal je Leistung, sodass klar ist, wie viele Joule an jeder Zone eingestellt wurden. Neben jedem Parameter steht, **womit dieser Kunde beim letzten Mal in derselben Leistung behandelt wurde**. Sie werden zusammen mit dem Termin gespeichert, sobald Sie auf *Speichern*drücken; ein leer gelassener Parameter gilt als „nicht erfasst“ und wird nicht geschrieben. Die Parameter werden hier im Termin abgefragt und nicht in der Kasse. Ändert man die Leistungen des Termins, aktualisiert sich der Bereich von selbst: Die Zeilen der neuen Leistung erscheinen, die der entfernten verschwinden.
 
+**Dieselbe Leistung mehrmals.** Manche Leistungen werden nach Einheiten abgerechnet, etwa die *Impulse* des Lasers: Jeder Schuss ist eine Einheit, mit eigenen Joule und eigener Sitzungsnummer. In der Leistungsliste des Termins klicken Sie auf **+** neben der Leistung, um sie erneut hinzuzufügen; jedes Mal erscheint sie als eigene Gruppe in *Geräteeinsatz in dieser Sitzung* («Laserimpulse 1», «Laserimpulse 2»…), mit den Werten vom letzten Mal an derselben Position, und die Dauer des Termins zählt die Minuten jeder Wiederholung zusammen. An der Kasse werden die Impulse in einer einzigen Zeile mit Einheiten und Gesamtbetrag zusammengefasst. Um einen zu entfernen, doppelklicken Sie auf seine Zeile in der Liste des Termins.
+
 **Was eingetragen wird, geht beim Verlassen und Zurückkehren nicht verloren.** Die bereits eingetragenen Werte und die getippten, aber noch nicht gespeicherten bleiben in ihren Feldern, wenn man zum Termin zurückkehrt — zum Beispiel nach dem Besuch der Kundenakte und der Rückkehr über das Symbol „Zurück zum Termin“—, außerdem sind sie in der Anzeige *Vorher:* jedes Parameters zu sehen. Niemand muss sie noch einmal eingeben.
 
 Wenn der Termin keine Leistung mit Gerät enthält, erscheint der Abschnitt nicht.
@@ -1105,7 +1111,9 @@ Er rechnet bezogen auf **die Termine des Zeitraums, nicht auf die im Zeitraum st
 
 Oben steht, **wie viele storniert wurden und wer sie storniert hat**: der Kunde, das Zentrum oder ein externer Grund. Die des Zentrums werden nach Fachkraft aufgeschlüsselt, die externen nach Kabine oder Platz – dort sieht man, ob ein offener Platz durch Regen viel mehr Stunden verliert als ein überdachter. Was storniert wurde, bevor es diese Unterscheidung gab, erscheint als *nicht angegeben*. Die *versehentlich angelegten* werden getrennt gezählt: Sie sind keine Stornierungen, aber wenn diese Zahl wächst, sollte man wissen, warum.
 
-Mit dem Filter **Grund** verlässt der Bericht die Rangliste und listet die aus diesem Grund stornierten Termine einzeln auf: Tag, Kunde, Fachkraft, wann er angelegt und wann er storniert wurde, **wer ihn storniert hat und mit welcher Rolle** und die Kommentare. So prüft man, was als Versehen markiert wurde.
+Danach **alle stornierten Termine einzeln**, die zuletzt stornierten oben: der Tag, der Kunde, der Mitarbeiter, wann er angelegt und wann er storniert wurde, **der Grund, wer ihn storniert hat und mit welcher Rolle** und die Kommentare. Um zu erfahren, was mit dem Termin einer Person passiert ist, geben Sie in **Kunde** ihre Nummer oder einen Teil ihres Namens ein und klicken Sie auf *Anwenden*: Es bleiben nur ihre stornierten Termine, und die Rangliste darunter wird nicht mehr angezeigt. Denken Sie daran, dass sich der Zeitraum auf den **Tag des Termins** bezieht: Für einen heute stornierten Termin der nächsten Woche muss der Zeitraum bis in die nächste Woche reichen.
+
+Mit dem Filter **Grund** zeigt die Liste nur noch die aus diesem Grund stornierten, und die Rangliste verschwindet. So lässt sich prüfen, was als Fehler markiert wurde.
 
 Darunter steht, **welche Kunden am meisten stornieren**. Hier zählt nur, was der Kunde selbst storniert: Fällt eine Stunde wegen Regen aus, rückt er in der Liste nicht nach oben. Sortiert wird nach Anzahl der Stornierungen und bei Gleichstand nach Anteil: Wer drei von drei storniert hat, ist ein größeres Problem als wer drei von vierzig storniert hat.
 
@@ -2594,6 +2602,16 @@ In derselben Karteikarte steht der Knopf zum Zurücksetzen ihrer **Stempel-PIN**
 
 Die Akte kennt das **Eintrittsdatum**: den Tag, an dem die Person im Zentrum zu arbeiten begonnen hat. Es ist nicht verpflichtend, und mit ihm zeigt die Akte ihre **Betriebszugehörigkeit** (zum Beispiel «3 Jahre und 2 Monate»).
 
+Das **Alter** wird nicht mehr eingegeben: es ergibt sich aus dem **Geburtsdatum**. In alten Karteikarten, in denen nur das von Hand eingegebene Alter stand, wird es weiterhin angezeigt, mit einem Hinweis, das Datum einzutragen.
+
+**Beim Anlegen einer neuen Person** kann man bei eingetragenem Eintrittsdatum *Gleiche Schichten wie* eine Person aus dem eigenen Team wählen: Ab dem Eintritt bis Jahresende arbeitet sie dieselben Schichten, mit deren Tarifvertrag und Arbeitszeit, und erscheint bereits im Dienstplan. Dafür muss man Arbeitskalender verwalten dürfen. Hat die Person in diesem Jahr schon einen Kalender, wird er in ihrem eigenen geändert.
+
+Der aufklappbare Bereich **Familie und Notfall** speichert den Kontakt für einen Notfall (Name, Beziehung und Telefon), ob die Person einen pflegebedürftigen älteren Angehörigen betreut, sowie ihre minderjährigen Kinder oder volljährigen Kinder mit einer gerichtlichen Unterstützungsmaßnahme, mit Geburtsdatum. Die Angaben zu ihrer *üblichen Kabine* erscheinen nur bei Personen, die im Terminkalender stehen.
+
+**Ein- und Austritte, Vertrag.** Mit dem Modul Arbeitsrecht speichert die Schaltfläche *Ein- und Austritte, Vertrag* in der Karteikarte jeden Beschäftigungszeitraum der Person: Geht sie und kommt Jahre später wieder, sieht man alle. Jeder Austritt hat seinen **Grund** (Vertragsende, vom Unternehmen nicht verlängert, freiwillige Kündigung, Entlassung, Probezeit nicht bestanden, Ende des Abrufs, Ruhestand, Tod oder Sonstiges) und eine Notiz zu den Umständen.
+
+**Alter und Geschlecht der Belegschaft.** Der Knopf *Alter und Geschlecht* in der Mitarbeiterliste zählt die aktive Belegschaft nach Altersgruppen (in Jahrzehnten) und nach Geschlecht, wie es die jährliche Beschäftigungsstatistik und der Gleichstellungsplan verlangen. Man kann nach Geschlecht, Alter oder Geburtsdatum filtern, und *Liste herunterladen* lädt die Personen, die den Filtern entsprechen, in eine Datei für Excel herunter.
+
 **Deaktivieren löscht nicht.** Die Fachkraft verschwindet aus dem Terminkalender, aber ihre Termine, Besuche und klinischen Fälle zeigen sie weiterhin an, und durch Bearbeiten lässt sie sich wieder aktivieren. Hat sie ab heute Termine, fragt Turnera, welche Fachkraft sie übernimmt, und überträgt sie alle auf einmal; überschneidet sich eine mit einem Termin, den die übernehmende Person schon hat, meldet es das, damit man sie danach neu einplanen kann. Die Liste zeigt nur aktive Mitarbeiter: Wenn man *Nur aktive* abwählt, erscheinen auch die ausgeschiedenen.
 
 #### Datenschutz der Fachkraft
@@ -3349,6 +3367,14 @@ Auf demselben Bildschirm bereitet **Rechnungen des Monats** die Rechnungen der A
 - Eine vollständige Rechnung braucht die Steuernummer des Zahlers: fehlt sie, sagt es der Entwurf, und er lässt sich erst ausstellen, wenn sie in der Akte steht.
 - Erneutes Vorbereiten verdoppelt nichts: es ergänzt nur, was fehlt.
 
+#### Extras des Monats
+
+Was für einen Bewohner zusätzlich zum Platz gemacht wird (Friseur, Podologie, Kleidungsreparaturen und Namensetiketten…), wird erfasst in **Extras des Monats**, auf demselben Bildschirm: der Tag, der Bewohner, die **Leistung** aus dem Katalog (mit Preis und MwSt.) oder ein freier Text, die Menge und der Preis. Tag und Leistung bleiben nach jedem Eintrag stehen, damit man das Friseur- oder Podologieblatt vieler Bewohner zügig übertragen kann. Was erfasst, aber nicht berechnet wird, wird markiert mit **Nicht berechnen**.
+
+- Beim **Vorbereiten der Monatsrechnungen** gehen die offenen Extras bis zum **Stichtag** in die Rechnung jedes Bewohners ein: in seinen Entwurf des Monats, falls vorhanden, sonst in eine eigene Rechnung. Der Stichtag wird festgelegt in *Stichtag und Begleitungen* (zum Beispiel der 25.: Es gehen die Extras vom 26. des Vormonats bis zum 25. ein); leer: der Kalendermonat. Was nach dem Stichtag erfasst wird, geht in den nächsten Monat.
+- Die **Begleitungen** ergeben sich automatisch aus den Transfers mit Begleitung und Rückkehrzeit: Sie werden nach Stunden berechnet, **auf die Viertelstunde abgerundet** (5 Std. 10 Min. sind 5 Stunden; 3 Std. 40 Min. 3,5), zum Stundenpreis, der festgelegt wird in *Stichtag und Begleitungen*. Ohne Preis werden sie nicht berechnet. Bei C8-Plätzen werden sie nie berechnet, und in der Karte eines Bewohners kann man ankreuzen: *Begleitungen werden nicht berechnet*.
+- Ein Extra, das bereits in einem Entwurf oder einer Rechnung steht, wird weder geändert noch storniert: Der Entwurf wird verworfen (und das Extra ist wieder offen) oder die Rechnung gutgeschrieben.
+
 ### Qualität und Angehörigenportal
 
 **Aufenthalte → Qualität** ist das Register der **Lob, Vorschlägen, Beschwerden und Abweichungen**. Jeder Eintrag sagt, woher er kommt (Familie, die Einrichtung selbst oder eine Inspektion), wen er betrifft (eine Person oder die ganze Einrichtung), wer ihn meldet und was passiert ist. Offene stehen zuerst, vom ältesten zum neuesten; geschlossen werden sie mit **was getan wurde**, was bei einer Beschwerde oder einer Abweichung Pflicht ist. Nichts wird gelöscht. Das amtliche Beschwerdeformular bleibt getrennt: dies dient dazu, rechtzeitig davon zu erfahren und festzuhalten, was getan wird.
@@ -3433,6 +3459,10 @@ Schauen Sie zuerst auf die Zahlungen, die auf mehrere Zahlungsarten aufgeteilt w
 ### „Ich habe versehentlich einen Termin storniert“
 
 Er lässt sich nicht wiederherstellen: Sie müssen ihn mit denselben Daten neu anlegen.
+
+### «Ein Termin ist aus dem Kalender verschwunden»
+
+Meist wurde er storniert, und im Kalender ist Folgendes aktiviert: *Abgesagte ausblenden*, was sich jeder Arbeitsplatz merkt. Um sicherzugehen, öffnen Sie den Stornierungsbericht mit einem Zeitraum, der den Tag des Termins enthält, und geben Sie den Namen des Kunden ein: Wurde er storniert, sieht man wann, aus welchem Grund und mit welchem Benutzer. Meldet sich jede Person mit ihrem eigenen Benutzer an, weiß man außerdem, wer es war.
 
 ## 14. Die native App der Mitarbeitenden (Android)
 

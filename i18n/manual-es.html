@@ -864,11 +864,21 @@ footer{
   <p id="menu-favoritos">
     <strong>Favoritos.</strong> Cada usuario puede poner arriba del todo las pantallas que más usa. Al abrir una
     pantalla del menú, junto a su título hay una <strong>estrella</strong>: se pulsa y la pantalla pasa al apartado
-    <strong>Favoritos</strong>, el primero del menú; la estrella queda rellena, y pulsándola otra vez se quita. Los
+    <strong>Favoritos</strong>, el primero del menú, que se queda fijo arriba aunque se baje por el resto del menú;
+    la estrella queda rellena, y pulsándola otra vez se quita. Los
     favoritos se <strong>ordenan arrastrando</strong> uno encima de otro con el ratón; en una tableta o un móvil, con las flechas de subir y
     bajar que salen junto a cada uno. Son de cada usuario y le
     siguen a cualquier ordenador; la pantalla sigue además en su sitio de siempre, y los favoritos no dan acceso a
     nada que los permisos no den.
+  </p>
+  <p id="menu-buscador">
+    <strong>Buscador del menú.</strong> Cuando el menú tiene tantas pantallas que no caben a la vez, aparece
+    debajo del logotipo una casilla <strong>Buscar pantalla…</strong> (con la barra plegada o con el menú entero a la
+    vista no hace falta y no sale). Al escribir quedan sólo las pantallas cuyo nombre contiene lo escrito, sin
+    importar mayúsculas ni tildes; si lo escrito es parte del nombre de un apartado, salen todas las pantallas de ese
+    apartado. Con las flechas <strong>↑</strong> y <strong>↓</strong> se recorren los resultados, <strong>Intro</strong>
+    abre el marcado y <strong>Esc</strong> borra la búsqueda y devuelve el menú completo. Sólo se buscan las
+    pantallas que el usuario ya ve en su menú.
   </p>
   <p>
     En el ordenador el menú se queda fijo a la izquierda aunque se baje por la página, y el botón de abajo lo
@@ -2282,6 +2292,12 @@ footer{
     texto y quién lo escribió. Un ajuste que no cambia las unidades no deja movimiento, así que tampoco
     guarda el motivo.
   </p>
+  <p>
+    En la lista de <strong>Stock</strong>, los productos con algún movimiento con motivo llevan el mismo icono junto
+    al nombre: al pulsarlo se ven sus últimos movimientos con su motivo. Y el diálogo de entrada, salida o ajuste
+    enseña debajo los cinco últimos movimientos del producto, para ver qué se hizo antes y por qué. El motivo no se
+    puede cambiar ni borrar: es el rastro del movimiento.
+  </p>
 
   <h3 id="reposicion">Reposición</h3>
   <span class="ruta">Menú → Catálogo → Reposición</span>
@@ -3209,6 +3225,15 @@ footer{
     se actualiza solo: aparecen las líneas del servicio nuevo y desaparecen las del que se quita.
   </p>
   <p>
+    <strong>Un mismo servicio varias veces.</strong> Hay servicios que se cobran por unidades, como los
+    <em>pulsos</em> del láser: cada disparo es una unidad, con sus propios julios y su propio número de sesión. En la
+    lista de servicios de la cita, pulse el <strong>+</strong> junto al servicio para añadirlo otra vez; cada vez sale
+    como un grupo propio en <em>Aparatología de la sesión</em> («Pulsos láser 1», «Pulsos láser 2»…), con lo de la vez
+    anterior de esa misma posición, y la duración de la cita suma los minutos de cada vez. En el TPV los pulsos se
+    juntan en una sola línea con las unidades y el total. Para quitar uno, doble clic en su línea de la lista de la
+    cita.
+  </p>
+  <p>
     <strong>Lo que se anota no se pierde al salir y volver.</strong> Los valores que ya se habían puesto, y los que se
     han tecleado y todavía no se han guardado, siguen puestos en sus cajas al volver a la cita —por ejemplo después de
     ir a la ficha del cliente y regresar con el <a href="#agenda-volver">icono de volver a la cita</a>—, además de
@@ -3499,10 +3524,17 @@ footer{
     distinción salen como <em>sin indicar</em>. Las <em>creadas por error</em> se cuentan aparte: no son
     anulaciones, pero si ese número crece, conviene saber por qué.
   </p>
+  <p id="informe-anulaciones-lista">
+    Después, <strong>todas las citas anuladas una a una</strong>, con lo último que se anuló arriba: el día, el
+    cliente, el profesional, cuándo se creó, cuándo se anuló, <strong>la causa, quién la anuló y con qué
+    rol</strong> y los comentarios. Para saber qué pasó con la cita de alguien, escriba en <strong>Cliente</strong>
+    su número o parte de su nombre y apellidos y pulse <em>Aplicar</em>: quedan solo sus citas anuladas, y el ranking
+    de abajo deja de salir. Recuerde que el rango es el del <strong>día de la cita</strong>: para una cita de la
+    semana que viene anulada hoy, el rango tiene que llegar a la semana que viene.
+  </p>
   <p>
-    Con el filtro <strong>Causa</strong> el informe deja el ranking y lista una a una las citas anuladas por esa
-    causa: el día, el cliente, el profesional, cuándo se creó, cuándo se anuló, <strong>quién la anuló y con qué
-    rol</strong> y los comentarios. Es la forma de revisar qué se marcó como error.
+    Con el filtro <strong>Causa</strong> la lista se queda solo con las anuladas por esa causa y el ranking deja de
+    salir. Es la forma de revisar qué se marcó como error.
   </p>
   <p>
     Debajo, <strong>qué clientes anulan más</strong>. Aquí solo cuenta lo que anula el propio cliente: si la clase
@@ -5789,6 +5821,34 @@ footer{
     y con ella la ficha muestra su <strong>antigüedad</strong> (por ejemplo, «3 años y 2 meses»).
   </p>
   <p>
+    La <strong>edad</strong> ya no se escribe: sale sola de la <strong>fecha de nacimiento</strong>. En las fichas
+    antiguas que solo tenían la edad escrita a mano se sigue viendo, con un aviso para poner la fecha.
+  </p>
+  <p>
+    <strong>Al dar de alta a alguien</strong>, con la fecha de alta puesta, se puede elegir <em>Mismos turnos
+    que</em> un compañero de su equipo: desde su alta hasta final de año hará sus mismos turnos, con su convenio y su
+    jornada, y ya sale en el cuadrante. Hace falta poder llevar los calendarios laborales. Si la persona ya tiene
+    calendario ese año, se cambia desde el suyo.
+  </p>
+  <p>
+    El apartado plegable <strong>Familia y emergencia</strong> guarda el contacto para un aviso (nombre, relación y
+    teléfono), si tiene a su cargo a un mayor dependiente y sus hijos menores, o mayores con una medida de apoyo
+    judicial, con su fecha de nacimiento. Los datos de su <em>cabina habitual</em> solo salen para quien sale en la
+    agenda.
+  </p>
+  <p>
+    <strong>Altas, bajas y contrato.</strong> Con el módulo Laboral, el botón <em>Altas, bajas y contrato</em> de la
+    ficha guarda cada periodo de alta de la persona: si se va y vuelve años después, se ven todos. Cada baja lleva su
+    <strong>motivo</strong> (fin de contrato, la empresa no renueva, baja voluntaria, despido, no supera el periodo
+    de prueba, fin de llamamiento, jubilación, fallecimiento u otro) y una nota para las circunstancias.
+  </p>
+  <p id="profesionales-edad-genero">
+    <strong>Edad y género de la plantilla.</strong> El botón <em>Edad y género</em> de la lista de profesionales
+    cuenta la plantilla en activo por tramos de edad (por decenas) y por género, que es lo que piden cada año la
+    estadística de empleo y el plan de igualdad. Se filtra por género, por edad o por fecha de nacimiento y
+    <em>Descargar la lista</em> baja las personas que cumplen los filtros en un fichero para Excel.
+  </p>
+  <p>
     <strong>Dar de baja no borra.</strong> El profesional sale de la agenda, pero sus citas, visitas y casos
     clínicos siguen mostrándolo, y se puede volver a activar editándolo. Si tiene citas de hoy en adelante, Turnera
     pide a qué profesional pasan y las pasa todas a la vez; si alguna coincide con otra que ya tiene quien las
@@ -7657,6 +7717,28 @@ footer{
     <li>Preparar otra vez no duplica nada: solo añade lo que falte.</li>
   </ul>
 
+  <h4 id="estancias-extras">Extras del mes</h4>
+  <p>
+    Lo que se le hace a un residente aparte de la plaza (peluquería, podología, arreglos y etiquetas de ropa…) se apunta
+    en <strong>Extras del mes</strong>, en la misma pantalla: el día, el residente, el <strong>servicio</strong> del
+    catálogo (trae su precio y su IVA) o un concepto libre, la cantidad y el precio. El día y el servicio se quedan
+    puestos al apuntar, para pasar seguido la hoja de peluquería o de podología de muchos residentes. Lo que se apunta
+    pero no se cobra se marca <strong>No facturar</strong>.
+  </p>
+  <ul>
+    <li>Al <strong>preparar las facturas del mes</strong>, los extras pendientes hasta el <strong>día de corte</strong>
+      entran en la factura de cada residente: en su borrador del mes si lo tiene o, si no, en una factura aparte. El
+      corte se pone en <em>Corte y acompañamientos</em> (por ejemplo, el 25: entran del 26 del mes anterior al 25);
+      vacío, el mes natural. Lo apuntado después del corte va al mes siguiente.</li>
+    <li>Los <strong>acompañamientos</strong> salen solos de los <a href="#estancias-traslados">traslados</a> con
+      acompañante y hora de vuelta: se cobran por horas, <strong>redondeadas hacia abajo al cuarto</strong> (5 h 10 min
+      son 5 horas; 3 h 40 min, 3,5), al precio de la hora que se pone en <em>Corte y acompañamientos</em>. Sin precio
+      no se cobran. En las plazas C8 no se cobran nunca, y en la ficha de un residente se puede marcar <em>No se le
+      cobran los acompañamientos</em>.</li>
+    <li>Un extra que ya está en un borrador o en una factura no se cambia ni se anula: se descarta el borrador (y el
+      extra vuelve a quedar pendiente) o se abona la factura.</li>
+  </ul>
+
   <h3 id="estancias-calidad">Calidad y portal del familiar</h3>
   <p>
     <strong>Estancias → Calidad</strong> es el registro de <strong>felicitaciones, sugerencias, quejas y no
@@ -7835,6 +7917,14 @@ footer{
 
   <h3>«He anulado una cita sin querer»</h3>
   <p>No se puede recuperar: hay que crearla otra vez con los mismos datos.</p>
+
+  <h3>«Una cita ha desaparecido de la agenda»</h3>
+  <p>
+    Lo más habitual es que esté anulada y que la agenda tenga marcado <em>Ocultar canceladas</em>, que cada puesto
+    recuerda. Para salir de dudas, abra el <a href="#informe-anulaciones-lista">informe de anulaciones</a> con un
+    rango que incluya el día de la cita y escriba el nombre del cliente: si se anuló, sale cuándo, con qué causa y con
+    qué usuario. Si cada persona entra con su propio usuario, se sabe además quién fue.
+  </p>
 </section>
 <section id="app-nativa">
   <h2>14. La aplicación nativa de los profesionales (Android)</h2>

@@ -679,6 +679,7 @@ footer{
   <h2>What's new in Turnera</h2>
   <p>Latest first</p>
   <ol>
+    <li><a href="#2026-11-26">26 November 2026</a></li>
     <li><a href="#2026-11-25">25 November 2026</a></li>
     <li><a href="#2026-11-24">24 November 2026</a></li>
     <li><a href="#2026-11-23">23 November 2026</a></li>
@@ -735,10 +736,52 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Bugs fixed</strong>: what failed, and no longer does.</span></li>
 </ul>
 
+<section id="2026-11-26" class="version">
+  <div class="version__cabecera">
+    <h2>26 November 2026</h2>
+    <span class="version__sello">Latest release</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.18.0-f72b7ab</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Care homes: extras of the month</h4>
+    <ul>
+      <li>In Stays → Billing, «Extras of the month» gathers what is done for each resident apart from the place itself: hairdressing, podiatry, clothing repairs and name labels… You choose a service from the catalogue, which brings its price and VAT, or type a free description. What is not charged is marked «Do not invoice».</li>
+      <li>When preparing the month's invoices, the extras go into each resident's invoice. With a cutoff day (for example, the 25th), what was recorded from the 26th of the previous month to the 25th goes in.</li>
+      <li>Escorts on outings come by themselves from transfers with an escort and a return time, and are charged by the hour, rounded down to the quarter hour. In C8 places they are not charged, and on a resident you can mark that they are not charged.</li>
+    </ul>
+    <h4>Staff record</h4>
+    <ul>
+      <li>Date of birth: the age is no longer typed in, it is calculated automatically.</li>
+      <li>«Family and emergency» section: emergency contact, whether they look after a dependent older person, and their children, with their date of birth.</li>
+      <li>When registering someone you can choose «Same shifts as» a colleague from their team: from their start date until the end of the year they work that person's shifts and already appear on the rota.</li>
+      <li>«Age and gender» in the staff list: the active workforce by age band and by gender, with filters and an Excel download.</li>
+      <li>New reason for leaving: «Not renewed by the company».</li>
+    </ul>
+    <h4>The same service several times in an appointment</h4>
+    <ul>
+      <li>For services charged by units, such as laser pulses: the service can be added several times to the appointment, each time with its joules and its session number, and at the till they appear together in one line with the units.</li>
+    </ul>
+    <h4>Menu</h4>
+    <ul>
+      <li>When the menu does not fit entirely, a search box appears under the logo: type part of the screen name and only the matching ones remain.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Improvements</h3>
+    <ul>
+      <li>The cancellations report shows all cancelled appointments one by one, with their reason and who cancelled them, and you can search by customer to find out what happened to an appointment.</li>
+      <li>Favourites stay fixed at the top of the menu even when you scroll down it.</li>
+      <li>In Stock, products with any movement that has a reason carry an icon that shows their latest movements, and the stock-in, stock-out or adjustment dialog shows the last five.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-25" class="version">
   <div class="version__cabecera">
     <h2>25 November 2026</h2>
-    <span class="version__sello">Latest release</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.18.0-b96eac6</span></p>
 
