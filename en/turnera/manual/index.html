@@ -778,6 +778,7 @@ footer{
     <li><a href="#expediente" class="sub sub">Each professional's file</a></li>
     <li><a href="#comunicados" class="sub sub">Notices to staff</a></li>
     <li><a href="#incidencias-nominas" class="sub sub">Payroll items</a></li>
+    <li><a href="#compensacion-variable" class="sub sub">Variable compensation</a></li>
     <li><a href="#mis-documentos" class="sub sub">My documents</a></li>
     <li><a href="#laboral-configuracion" class="sub sub">Which parts of Labour the centre uses</a></li>
     <li><a href="#historia">11. The clinical record</a></li>
@@ -2836,7 +2837,8 @@ footer{
 
   <p>
     <strong>Preferences is organised in groups that open and close</strong>, in order of use: <em>The centre</em>,
-    <em>Agenda and bookings</em>, <em>Messages to customers</em>, <em>Payments and loyalty</em> and <em>Appearance</em>. Closed, each group says in one line how it stands, so there is no need to open it to check something. If a closed group has changes, it is marked <em>Not saved</em>, and if something is not valid when saving, it opens by itself. At the end, and always closed, the <em>Danger zone</em>: export all data, photos and documents included (see
+    <em>Agenda and bookings</em>, <em>Messages to customers</em>, <em>Payments and loyalty</em> and <em>Appearance</em>. Closed, each group says in one line how it stands, so there is no need to open it to check something. If a closed group has changes, it is marked <em>Not saved</em>. <strong>Each group has its own <em>Save</em></strong>, at the top right, which saves only what is in that group: whatever was changed in the others stays pending, with its
+    <em>Not saved</em>, until that one is saved as well. The button only lights up when the group has changes, and if something is not valid when saving, the group opens by itself and says what needs fixing. At the bottom, always closed, the <em>Danger zone</em>: export all data, photos and documents included (see
     <a href="#irse">Taking the centre's data</a>), and empty the demo. A centre with real staff clock-ins or closed calendar years cannot be emptied: the law requires keeping the working time register, so to close a centre you ask Devel for its deregistration and what has to be kept is kept.
   </p>
 
@@ -4785,7 +4787,7 @@ footer{
   </figure>
   <p>
     <strong>Employment history and contract.</strong> With the Employment module, the button <em>Employment history and contract</em> on the record keeps each period of employment of the person: if they leave and come back years later, you see them all. Each departure has its
-    <strong>reason</strong> (end of contract, not renewed by the company, voluntary resignation, dismissal, did not pass the probation period, end of seasonal call-up, retirement, death or other) and a note for the circumstances.
+    <strong>reason</strong> (end of contract, the company does not renew, voluntary leave, dismissal, probation period not passed, end of call-up, retirement, death or other) and a note for the circumstances. The note is written in its own window, with <strong>Write the note</strong>, and it accepts bold, italics and lists: it lets you set out the reasons calmly, in case the person asks to come back years later. In the table, the green speech bubble next to the reason shows the whole note when you hover over it; on a tablet, when you tap it.
   </p>
   <p id="profesionales-edad-genero">
     <strong>Age and gender of the workforce.</strong> The <em>Age and gender</em> in the staff list counts the active workforce by age band (by decades) and by gender, which is what the yearly employment statistics and the equality plan ask for. You can filter by gender, by age or by date of birth, and
@@ -5563,6 +5565,21 @@ footer{
     What is entered goes in the month's send to the payroll advisor, in its own Excel sheet and its own CSV. If something is entered after the month has been sent, in <a href="#envio-asesoria">Send the hours to the payroll advisor</a> it shows who has changed so that a corrective send can go, carrying only those people.
   </p>
 
+  <h4 id="compensacion-variable">Variable compensation</h4>
+  <span class="ruta">Menu → Staff → Variable compensation</span>
+  <p>
+    For centres that pay a bonus when people are missing and those who are present cover the work. It is switched on in
+    <em>Administration → Preferences → Staff</em>, only with the Employment module, and starts switched off. It has two permissions: “Split the variable compensation”, to set each person's share, and “Configure and close the variable compensation”, for the calculation groups and the month-end closing. Management and HR have them by default.
+  </p>
+  <ul>
+    <li><strong>Calculation groups.</strong> Each group takes a time band from the
+      <a href="#calendario-laboral">minimum coverage</a> and one of its posts: the minimum for that post is the expected staffing. It carries the amount per absence, from which absence there is a pot (with 2, if only one person is missing there is nothing) and the reduced share, 35 % by default.</li>
+    <li><strong>Who was there.</strong> Counted are those who had the whole time band in their roster shift and clocked in that day. The missing are those the staffing expected and who were not there, and the pot is absences × amount. Only days that have already passed are counted.</li>
+    <li><strong>The split.</strong> The pot is divided equally among those who count that day. Clicking a person's share changes it from <em>Full</em> to <em>Reduced</em> and to <em>Does not count</em>. What a person with a reduced share does not receive is not redistributed among the others. With <em>Add</em> you make someone count who was not on the roster, as a reinforcement, with the reduced share.</li>
+    <li><strong>Internal group.</strong> Below, next to what each person receives, you can add the label the centre uses for them in the split (for example “E2-2”). It is only displayed: it does not change any calculation.</li>
+    <li><strong>Close the month.</strong> When the month is over, <em>Close the month</em> moves each person's total to <a href="#incidencias-nominas">Payroll items</a> as “Variable compensation”, and the shares can no longer be changed. It can be reopened as long as the month has not gone to the payroll advisor.</li>
+  </ul>
+
   <h4 id="mis-documentos">My documents</h4>
   <span class="ruta">Menu → My documents</span>
   <p>
@@ -6014,6 +6031,9 @@ footer{
   <h3 id="estancias-medicacion">Medication</h3>
   <p>
     On the resident's record, <strong>Medication</strong> is their medication plan. <strong>Prescribe a medicine</strong> lets you look it up in the catalogue of medicines marketed in Spain (CIMA, from the AEMPS) or type it, and asks for the dose (1 tablet, 5 ml…), the route, the times of the doses (08:00, 14:00, 21:00), who prescribes it and since when, and whether it ends on a date. One given only when needed is marked <em>As needed</em>, with when it is given (if in pain, if feverish…). Before saving it is checked against the recorded <strong>allergies</strong> : if the medicine or its active ingredient matches one, a warning appears and it can only be prescribed with <em>Prescribe anyway</em>, which stays flagged on the prescription. A prescription is not deleted: it is <strong>stopped</strong> with its reason.
+  </p>
+  <p>
+    The <strong>active ingredient</strong> is filled in automatically when you pick the medicine from the search. If it is typed by hand (a magistral preparation, something CIMA does not have), it is worth entering it, because it is what enables the allergy warning. What the centre has already prescribed this way appears next time in the search, above the CIMA results and marked <em>Already prescribed at the centre</em>, with its active ingredient: it is typed once and then found like any other.
   </p>
   <p>
     The <strong>Medication</strong> in the Stays menu is the one for the shift: the day's doses grouped by time, for whom (with their room) and what. Each dose is marked <strong>Given</strong> or <strong>Not given</strong> with the reason (refuses it, not there, fasting, asleep, out of stock, vomits it or other) and a note, and it is recorded in the name of whoever gives it, also from an area's tablet with the PIN. A dose is recorded only once and at most two hours before its time. Anyone who is away that day is flagged. Below are the prescriptions <em>as needed</em> with <strong>Give now</strong>

@@ -778,6 +778,7 @@ footer{
     <li><a href="#expediente" class="sub sub">El expediente de cada profesional</a></li>
     <li><a href="#comunicados" class="sub sub">Comunicados a la plantilla</a></li>
     <li><a href="#incidencias-nominas" class="sub sub">Incidencias para nóminas</a></li>
+    <li><a href="#compensacion-variable" class="sub sub">Compensación variable</a></li>
     <li><a href="#mis-documentos" class="sub sub">Mis documentos</a></li>
     <li><a href="#laboral-configuracion" class="sub sub">Qué partes de Laboral usa el centro</a></li>
     <li><a href="#historia">11. La historia clínica</a></li>
@@ -3637,7 +3638,10 @@ footer{
     <strong>Preferencias va por grupos que se abren y se cierran</strong>, en orden de uso: <em>El centro</em>,
     <em>Agenda y reservas</em>, <em>Avisos a los clientes</em>, <em>Cobros y fidelización</em> y <em>Apariencia</em>.
     Cerrado, cada grupo dice en una línea cómo está, así que para comprobar algo no hace falta abrirlo. Si un grupo
-    cerrado tiene cambios, lo marca con <em>Sin guardar</em>, y si al guardar algo no vale, se abre solo. Al final, y
+    cerrado tiene cambios, lo marca con <em>Sin guardar</em>. <strong>Cada grupo tiene su propio <em>Guardar</em></strong>,
+    arriba a la derecha, que guarda sólo lo de ese grupo: lo que se haya tocado en los demás sigue pendiente, con su
+    <em>Sin guardar</em>, hasta que se guarde también. El botón sólo se enciende cuando el grupo tiene cambios, y si al
+    guardar algo no vale, el grupo se abre solo y dice qué hay que corregir. Al final, y
     siempre cerrada, la <em>Zona delicada</em>: exportar todos los datos, fotos y documentos incluidos (ver
     <a href="#irse">Llevarse los datos del centro</a>), y vaciar la demostración. Un centro con
     fichajes de personal real o con años de calendario cerrados no se puede vaciar: la ley obliga a conservar
@@ -5912,7 +5916,10 @@ footer{
     <strong>Altas, bajas y contrato.</strong> Con el módulo Laboral, el botón <em>Altas, bajas y contrato</em> de la
     ficha guarda cada periodo de alta de la persona: si se va y vuelve años después, se ven todos. Cada baja lleva su
     <strong>motivo</strong> (fin de contrato, la empresa no renueva, baja voluntaria, despido, no supera el periodo
-    de prueba, fin de llamamiento, jubilación, fallecimiento u otro) y una nota para las circunstancias.
+    de prueba, fin de llamamiento, jubilación, fallecimiento u otro) y una nota para las circunstancias. La nota se
+    escribe en su propia ventana, con <strong>Escribir la nota</strong>, y admite negrita, cursiva y listas: sirve para
+    dejar los motivos con calma, por si la persona pide volver años después. En la tabla, el bocadillo verde junto al
+    motivo enseña la nota entera al pasar el ratón por encima; en una tableta, al tocarlo.
   </p>
   <p id="profesionales-edad-genero">
     <strong>Edad y género de la plantilla.</strong> El botón <em>Edad y género</em> de la lista de profesionales
@@ -7025,6 +7032,33 @@ footer{
     para mandar un rectificativo, que lleva solo lo de esas personas.
   </p>
 
+  <h4 id="compensacion-variable">Compensación variable</h4>
+  <span class="ruta">Menú → Personal → Compensación variable</span>
+  <p>
+    Para los centros que pagan un plus cuando falta gente y los que están cubren el trabajo. Se enciende en
+    <em>Administración → Preferencias → Personal</em>, solo con el módulo Laboral, y nace apagada. Tiene dos permisos:
+    «Repartir la compensación variable», para marcar la parte de cada persona, y «Configurar y cerrar la compensación
+    variable», para los grupos de cálculo y el cierre del mes. De fábrica los traen Dirección y RRHH.
+  </p>
+  <ul>
+    <li><strong>Grupos de cálculo.</strong> Cada grupo toma una franja de la
+      <a href="#calendario-laboral">cobertura mínima</a> y uno de sus puestos: el mínimo de ese puesto es la plantilla
+      esperada. Lleva el importe por falta, desde qué falta hay bote (con 2, si falta una sola persona no hay nada) y la
+      parte reducida, un 35 % de serie.</li>
+    <li><strong>Quién estaba.</strong> Cuenta quien tenía la franja entera en su turno del cuadrante y fichó la entrada
+      ese día. Faltan los que esperaba la plantilla y no estaban, y el bote es faltas × importe. Solo se cuentan los
+      días que ya han pasado.</li>
+    <li><strong>El reparto.</strong> El bote se divide a partes iguales entre quienes cuentan ese día. Al pulsar la parte
+      de una persona pasa de <em>Entera</em> a <em>Reducida</em> y a <em>No cuenta</em>. Lo que no cobra quien la tiene
+      reducida no se reparte entre los demás. Con <em>Añadir</em> se hace contar a quien no estaba en el cuadrante, como
+      un refuerzo, con la parte reducida.</li>
+    <li><strong>Grupo interno.</strong> Abajo, junto a lo que cobra cada persona, se le puede poner la etiqueta con que
+      la conoce el centro en el reparto (por ejemplo «E2-2»). Solo se enseña: no cambia ninguna cuenta.</li>
+    <li><strong>Cerrar el mes.</strong> Cuando el mes ha terminado, <em>Cerrar el mes</em> pasa el total de cada persona
+      a <a href="#incidencias-nominas">Incidencias para nóminas</a> como «Compensación variable», y las partes ya no se
+      tocan. Se puede volver a abrir mientras el mes no haya ido a la asesoría.</li>
+  </ul>
+
   <h4 id="mis-documentos">Mis documentos</h4>
   <span class="ruta">Menú → Mis documentos</span>
   <p>
@@ -7690,6 +7724,12 @@ footer{
     con cuándo se da (si dolor, si fiebre…). Antes de guardar se mira contra las <strong>alergias</strong> apuntadas: si
     el medicamento o su principio activo coincide con una, sale el aviso y solo se pauta con <em>Pautar igualmente</em>,
     que queda señalado en la pauta. Una pauta no se borra: se <strong>suspende</strong> con su motivo.
+  </p>
+  <p>
+    El <strong>principio activo</strong> se rellena solo al elegir el medicamento del buscador. Si se escribe a mano (una
+    fórmula magistral, algo que CIMA no tiene), conviene ponerlo, porque es lo que permite el aviso de alergias. Lo que
+    el centro ya ha pautado así sale la vez siguiente en el buscador, encima de lo de CIMA y marcado <em>Ya pautado en el
+    centro</em>, con su principio activo: se escribe una vez y después se encuentra como cualquier otro.
   </p>
   <p>
     La pantalla <strong>Medicación</strong> del menú de Estancias es la del turno: las tomas del día agrupadas por hora,

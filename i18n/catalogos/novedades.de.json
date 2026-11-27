@@ -1544,5 +1544,16 @@
   "t662240a3": "Wenn das Menü nicht ganz hineinpasst, erscheint unter dem Logo ein Suchfeld: Man tippt einen Teil des Bildschirmnamens, und nur die passenden bleiben.",
   "t63b854ab": "Der Stornierungsbericht zeigt alle stornierten Termine einzeln, mit Grund und wer sie storniert hat, und man kann nach Kunde suchen, um herauszufinden, was mit einem Termin passiert ist.",
   "ta7de191d": "Die Favoriten bleiben oben im Menü fest stehen, auch wenn man darin nach unten scrollt.",
-  "tb249db23": "Im Lager tragen Produkte mit mindestens einer Bewegung mit Grund ein Symbol, das ihre letzten Bewegungen zeigt, und der Dialog für Eingang, Ausgang oder Korrektur zeigt die letzten fünf."
+  "tb249db23": "Im Lager tragen Produkte mit mindestens einer Bewegung mit Grund ein Symbol, das ihre letzten Bewegungen zeigt, und der Dialog für Eingang, Ausgang oder Korrektur zeigt die letzten fünf.",
+  "tcbe11882": "28. November 2026",
+  "t29749345": "1.18.0-ee188ef",
+  "t05d54ae0": "Variable Vergütung",
+  "t2a9af47d": "Für Zentren, die einen Zuschlag zahlen, wenn Personal fehlt und die Anwesenden die Arbeit übernehmen: Unter Personal → Variable Vergütung berechnet Turnera jeden Tag, wie viele Personen gegenüber der erwarteten Besetzung fehlen, und verteilt den Topf auf diejenigen, die einspringen – mit vollem Anteil, reduziertem Anteil oder ohne Anteil.",
+  "t823f9b78": "Die Verteilung jedes Tages geht auf den Cent genau auf. Beim Monatsabschluss geht die Summe jeder Person in die Lohnabrechnungsposten über.",
+  "ta080d197": "Sie wird unter Verwaltung → Einstellungen → Personal eingeschaltet, mit dem Modul Arbeitsrecht, und hat zwei eigene Berechtigungen: verteilen sowie konfigurieren und abschließen.",
+  "ta2d6f3eb": "In den Einstellungen hat jeder Bereich sein eigenes „Speichern“, oben rechts, das nur das speichert, was in diesem Bereich steht. Was in den anderen geändert wurde, bleibt ausstehend und ist mit „Nicht gespeichert“ markiert.",
+  "tc2ce6fe6": "Bei den Austritten des Personals erlaubt die Notiz zum Austritt Fettdruck, Kursivschrift und Listen, wird in einem eigenen Fenster geschrieben und ist vollständig zu lesen, wenn man mit der Maus über die grüne Sprechblase in der Tabelle fährt.",
+  "t5d39a9f5": "Bei der Medikation wird der Wirkstoff automatisch ausgefüllt, wenn man das Medikament aus der Suche wählt, und lässt sich auch von Hand eingeben, zum Beispiel bei einer Rezeptur. Was das Zentrum auf diese Weise bereits verordnet hat, erscheint beim nächsten Mal in der Suche mit dem Vermerk „Im Zentrum bereits verordnet“.",
+  "t0ced0b8d": "Beim Kassenabschluss lässt sich im Tagesfilter jetzt ein Zeitraum wählen: Zuvor sprang die Auswahl nach dem ersten Tag auf die letzte Woche zurück, und man konnte den Zeitraum nicht vervollständigen.",
+  "tee7357d8": "An der Kasse verliert das Ticket die Terminzuordnung nicht mehr, wenn man im Menü erneut auf „Kasse“ klickt, während man schon darin ist."
 }

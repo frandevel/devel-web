@@ -1,4 +1,4 @@
-<!-- Benutzerhandbuch von Turnera, derselbe Text wie auf der Website, ohne Bildschirmfotos. https://devel.es/de/turnera/manual · 2026-11-26 -->
+<!-- Benutzerhandbuch von Turnera, derselbe Text wie auf der Website, ohne Bildschirmfotos. https://devel.es/de/turnera/manual · 2026-11-27 -->
 
 # Turnera-Handbuch
 
@@ -1139,7 +1139,7 @@ Menü → Verwaltung
 
 Was man einmal einstellt und danach kaum wieder ansieht. Am häufigsten nachgeschlagen wird:
 
-**Die Einstellungen sind in auf- und zuklappbare Gruppen gegliedert**, nach Häufigkeit der Nutzung: *Das Zentrum*, *Kalender und Buchungen*, *Nachrichten an Kunden*, *Zahlungen und Kundenbindung* und *Erscheinungsbild*. Zugeklappt zeigt jede Gruppe in einer Zeile ihren Stand, man muss sie also nicht öffnen, um etwas zu prüfen. Hat eine geschlossene Gruppe Änderungen, trägt sie den Hinweis *Nicht gespeichert*, und ist beim Speichern etwas ungültig, öffnet sie sich von selbst. Ganz unten, und immer geschlossen, der *Gefahrenbereich*: alle Daten exportieren, Fotos und Dokumente inbegriffen (siehe Die Daten des Zentrums mitnehmen), und die Demo leeren. Ein Zentrum mit echten Stempelungen des Personals oder abgeschlossenen Kalenderjahren kann nicht geleert werden: Das Gesetz verlangt, die Arbeitszeiterfassung aufzubewahren. Um ein Zentrum zu schließen, beantragt man bei Devel seine Abmeldung, und was aufbewahrt werden muss, wird aufbewahrt.
+**Die Einstellungen sind in auf- und zuklappbare Gruppen gegliedert**, nach Häufigkeit der Nutzung: *Das Zentrum*, *Kalender und Buchungen*, *Nachrichten an Kunden*, *Zahlungen und Kundenbindung* und *Erscheinungsbild*. Zugeklappt zeigt jede Gruppe in einer Zeile ihren Stand, man muss sie also nicht öffnen, um etwas zu prüfen. Hat eine geschlossene Gruppe Änderungen, trägt sie den Hinweis *Nicht gespeichert*. **Jede Gruppe hat ihr eigenes *Speichern***, oben rechts, der nur das speichert, was in dieser Gruppe steht: Was in den anderen geändert wurde, bleibt ausstehend, mit seinem *Nicht gespeichert*, bis auch diese gespeichert wird. Die Schaltfläche leuchtet nur auf, wenn die Gruppe Änderungen hat, und wenn beim Speichern etwas nicht stimmt, öffnet sich die Gruppe von selbst und sagt, was zu korrigieren ist. Ganz unten, immer geschlossen, der Bereich *Gefahrenbereich*: alle Daten exportieren, Fotos und Dokumente inbegriffen (siehe Die Daten des Zentrums mitnehmen), und die Demo leeren. Ein Zentrum mit echten Stempelungen des Personals oder abgeschlossenen Kalenderjahren kann nicht geleert werden: Das Gesetz verlangt, die Arbeitszeiterfassung aufzubewahren. Um ein Zentrum zu schließen, beantragt man bei Devel seine Abmeldung, und was aufbewahrt werden muss, wird aufbewahrt.
 
 ### Der Terminkalender
 
@@ -2618,7 +2618,7 @@ Der aufklappbare Bereich **Familie und Notfall** speichert den Kontakt für eine
 
 *[Captura] Der Bereich «Familie und Notfall» der Karteikarte: Notfallkontakt, betreuter pflegebedürftiger Angehöriger und Kinder.*
 
-**Ein- und Austritte, Vertrag.** Mit dem Modul Arbeitsrecht speichert die Schaltfläche *Ein- und Austritte, Vertrag* in der Karteikarte jeden Beschäftigungszeitraum der Person: Geht sie und kommt Jahre später wieder, sieht man alle. Jeder Austritt hat seinen **Grund** (Vertragsende, vom Unternehmen nicht verlängert, freiwillige Kündigung, Entlassung, Probezeit nicht bestanden, Ende des Abrufs, Ruhestand, Tod oder Sonstiges) und eine Notiz zu den Umständen.
+**Ein- und Austritte, Vertrag.** Mit dem Modul Arbeitsrecht speichert die Schaltfläche *Ein- und Austritte, Vertrag* in der Karteikarte jeden Beschäftigungszeitraum der Person: Geht sie und kommt Jahre später wieder, sieht man alle. Jeder Austritt hat seinen **Grund** (Vertragsende, das Unternehmen verlängert nicht, freiwilliger Austritt, Kündigung, Probezeit nicht bestanden, Ende der Abrufbeschäftigung, Ruhestand, Todesfall oder Sonstiges) und eine Notiz zu den Umständen. Die Notiz wird in einem eigenen Fenster geschrieben, mit **Notiz schreiben**, und sie erlaubt Fettdruck, Kursivschrift und Listen: So lassen sich die Gründe in Ruhe festhalten, falls die Person Jahre später zurückkommen möchte. In der Tabelle zeigt die grüne Sprechblase neben dem Grund die ganze Notiz, wenn man mit der Maus darüberfährt; auf einem Tablet, wenn man sie antippt.
 
 **Alter und Geschlecht der Belegschaft.** Der Knopf *Alter und Geschlecht* in der Mitarbeiterliste zählt die aktive Belegschaft nach Altersgruppen (in Jahrzehnten) und nach Geschlecht, wie es die jährliche Beschäftigungsstatistik und der Gleichstellungsplan verlangen. Man kann nach Geschlecht, Alter oder Geburtsdatum filtern, und *Liste herunterladen* lädt die Personen, die den Filtern entsprechen, in eine Datei für Excel herunter.
 
@@ -3059,6 +3059,18 @@ Der Monat jeder Person so, wie er beim Lohnbüro ankommt, um ihn vor dem Senden 
 
 Das Eingetragene geht mit der Monatssendung ans Lohnbüro, in einem eigenen Excel-Blatt und einer eigenen CSV-Datei. Wird etwas nach dem Senden des Monats eingetragen, zeigt Die Stunden ans Lohnbüro schicken an, wer sich geändert hat, um eine Korrektursendung zu schicken, die nur diese Personen enthält.
 
+#### Variable Vergütung
+
+Menü → Personal → Variable Vergütung
+
+Für Zentren, die einen Zuschlag zahlen, wenn Personal fehlt und die Anwesenden die Arbeit übernehmen. Sie wird eingeschaltet unter *Verwaltung → Einstellungen → Personal*, nur mit dem Modul Arbeitsrecht, und ist zunächst ausgeschaltet. Sie hat zwei Berechtigungen: „Variable Vergütung verteilen“, um den Anteil jeder Person festzulegen, und „Variable Vergütung konfigurieren und abschließen“, für die Berechnungsgruppen und den Monatsabschluss. Werkseitig haben sie Leitung und Personalabteilung.
+
+- **Berechnungsgruppen.** Jede Gruppe nimmt ein Zeitfenster aus der Mindestbesetzung und eine ihrer Stellen: Das Minimum dieser Stelle ist die erwartete Besetzung. Dazu gehören der Betrag pro Fehlende, ab welcher fehlenden Person es einen Topf gibt (bei 2 gibt es nichts, wenn nur eine Person fehlt) und der reduzierte Anteil, standardmäßig 35 %.
+- **Wer da war.** Es zählt, wer das gesamte Zeitfenster in seiner Dienstplanschicht hatte und an dem Tag eingestempelt hat. Es fehlen diejenigen, die die Besetzung erwartete und die nicht da waren, und der Topf ist Fehlende × Betrag. Nur vergangene Tage werden gezählt.
+- **Die Verteilung.** Der Topf wird zu gleichen Teilen auf alle verteilt, die an diesem Tag zählen. Ein Klick auf den Anteil einer Person wechselt von *Voll* zu *Reduziert* und zu *Zählt nicht*. Was jemand mit reduziertem Anteil nicht bekommt, wird nicht auf die anderen verteilt. Mit *Hinzufügen* lässt man jemanden zählen, der nicht im Dienstplan stand, als Verstärkung, mit dem reduzierten Anteil.
+- **Interne Gruppe.** Unten, neben dem, was jede Person erhält, kann man die Bezeichnung eintragen, unter der das Zentrum sie in der Verteilung kennt (zum Beispiel „E2-2“). Sie wird nur angezeigt: Sie ändert keine Berechnung.
+- **Monat abschließen.** Wenn der Monat vorbei ist, *Monat abschließen* überträgt die Summe jeder Person nach Lohnabrechnungsposten als „Variable Vergütung“, und die Anteile lassen sich nicht mehr ändern. Er lässt sich wieder öffnen, solange der Monat noch nicht ans Lohnbüro gegangen ist.
+
 #### Meine Dokumente
 
 Menü → Meine Dokumente
@@ -3337,6 +3349,8 @@ Eine **Einschätzung** misst etwas an der Person mit einer anerkannten Skala und
 ### Medikation
 
 In der Akte der Person ist **Medikation** ihr Medikationsplan. **Ein Medikament verordnen** lässt das Medikament im Katalog der in Spanien zugelassenen Arzneimittel (CIMA der AEMPS) suchen oder eingeben und fragt nach Dosis (1 Tablette, 5 ml…), Verabreichungsweg, den Uhrzeiten der Gaben (08:00, 14:00, 21:00), wer es verordnet und seit wann und ob es an einem Datum endet. Eines, das nur bei Bedarf gegeben wird, wird markiert als *Bei Bedarf*, mit wann es gegeben wird (bei Schmerzen, bei Fieber…). Vor dem Speichern wird es mit den erfassten **Allergien** abgeglichen: stimmt das Medikament oder sein Wirkstoff mit einer überein, erscheint ein Hinweis und es lässt sich nur verordnen mit *Trotzdem verordnen*, was in der Verordnung markiert bleibt. Eine Verordnung wird nicht gelöscht: sie wird **abgesetzt** mit Begründung.
+
+Der **Wirkstoff** wird automatisch ausgefüllt, wenn man das Medikament aus der Suche wählt. Wird es von Hand eingegeben (eine Rezeptur, etwas, das CIMA nicht hat), sollte man ihn eintragen, denn nur so funktioniert der Allergiehinweis. Was das Zentrum auf diese Weise bereits verordnet hat, erscheint beim nächsten Mal in der Suche, oberhalb der CIMA-Treffer und markiert als *Im Zentrum bereits verordnet*, mit seinem Wirkstoff: Es wird einmal eingegeben und danach wie jedes andere gefunden.
 
 Die Seite **Medikation** im Menü Aufenthalte ist die der Schicht: die Gaben des Tages nach Uhrzeit gruppiert, für wen (mit Zimmer) und was. Jede Gabe wird markiert als **Gegeben** oder **Nicht gegeben** mit Grund (lehnt ab, nicht da, nüchtern, schläft, nicht vorrätig, erbricht oder anderes) und einer Notiz und steht auf den Namen dessen, der sie gibt, auch vom Tablet eines Bereichs mit der PIN. Eine Gabe wird nur einmal erfasst und höchstens zwei Stunden vor ihrer Uhrzeit. Wer an dem Tag abwesend ist, ist markiert. Darunter stehen die Verordnungen *bei Bedarf* mit **Jetzt geben** und was schon so gegeben wurde. Frühere Tage lassen sich abrufen. Wer nur seinen Bereich sieht, sieht nur die Gaben seines Bereichs. Sie nutzt, wer den Alltag erfasst oder die Gesundheitsberechtigung hat; verordnen und absetzen nur Letztere.
 

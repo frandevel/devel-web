@@ -1544,5 +1544,16 @@
   "t662240a3": "Quando o menu não cabe inteiro, aparece uma pesquisa por baixo do logótipo: escreve-se parte do nome do ecrã e ficam só os que coincidem.",
   "t63b854ab": "O relatório de anulações mostra todas as marcações anuladas uma a uma, com a causa e quem as anulou, e pode pesquisar-se por cliente para saber o que aconteceu a uma marcação.",
   "ta7de191d": "Os favoritos ficam fixos no topo do menu mesmo quando se desce por ele.",
-  "tb249db23": "Em Stock, os produtos com algum movimento com motivo levam um ícone que mostra os seus últimos movimentos, e o diálogo de entrada, saída ou acerto mostra os cinco últimos."
+  "tb249db23": "Em Stock, os produtos com algum movimento com motivo levam um ícone que mostra os seus últimos movimentos, e o diálogo de entrada, saída ou acerto mostra os cinco últimos.",
+  "tcbe11882": "28 de novembro de 2026",
+  "t29749345": "1.18.0-ee188ef",
+  "t05d54ae0": "Compensação variável",
+  "t2a9af47d": "Para os centros que pagam um suplemento quando falta gente e os que lá estão cobrem o trabalho: em Pessoal → Compensação variável, o Turnera calcula cada dia quantas pessoas faltam em relação à equipa esperada e reparte a bolsa por quem cobre, com a parte inteira, reduzida ou sem ela.",
+  "t823f9b78": "A repartição de cada dia bate certo ao cêntimo. Ao fechar o mês, o total de cada pessoa passa para as incidências para salários.",
+  "ta080d197": "Liga-se em Administração → Preferências → Pessoal, com o módulo Laboral, e tem duas permissões próprias: repartir, e configurar e fechar.",
+  "ta2d6f3eb": "Nas Preferências, cada secção tem o seu próprio «Guardar», no canto superior direito, que guarda só o que está nessa secção. O que se tenha alterado nas outras continua pendente, marcado como «Sem guardar».",
+  "tc2ce6fe6": "Nas saídas de pessoal, a nota da saída admite negrito, itálico e listas, escreve-se na sua própria janela e vê-se inteira ao passar o rato por cima do balão verde da tabela.",
+  "t5d39a9f5": "Na medicação, o princípio ativo preenche-se sozinho ao escolher o medicamento da pesquisa e também se pode escrever à mão, por exemplo numa fórmula magistral. O que o centro já prescreveu assim aparece da vez seguinte na pesquisa, marcado «Já prescrito no centro».",
+  "t0ced0b8d": "No Fecho de caixa, o filtro de dias já permite escolher um intervalo: antes, ao marcar o primeiro dia, o seletor voltava à última semana e não havia forma de o completar.",
+  "tee7357d8": "No TPV, voltar a premir «TPV» no menu estando lá dentro já não solta a marcação do talão."
 }

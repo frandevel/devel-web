@@ -778,6 +778,7 @@ footer{
     <li><a href="#expediente" class="sub sub">O processo de cada profissional</a></li>
     <li><a href="#comunicados" class="sub sub">Comunicados à equipa</a></li>
     <li><a href="#incidencias-nominas" class="sub sub">Incidências para salários</a></li>
+    <li><a href="#compensacion-variable" class="sub sub">Compensação variável</a></li>
     <li><a href="#mis-documentos" class="sub sub">Os meus documentos</a></li>
     <li><a href="#laboral-configuracion" class="sub sub">Que partes de Laboral o centro usa</a></li>
     <li><a href="#historia">11. O processo clínico</a></li>
@@ -3121,8 +3122,8 @@ footer{
     <strong>As Preferências organizam-se por grupos que se abrem e se fecham</strong>, por ordem de utilização: <em>O centro</em>,
     <em>Agenda e reservas</em>, <em>Avisos aos clientes</em>, <em>Cobranças e fidelização</em> e <em>Aparência</em>.
     Fechado, cada grupo diz numa linha como está, por isso para verificar algo não é preciso abri-lo. Se um grupo
-    fechado tiver alterações, marca-o com <em>Sem guardar</em>, e se ao guardar algo não for válido, abre-se sozinho. No fim, e
-    sempre fechada, a <em>Zona delicada</em>: exportar todos os dados, fotografias e documentos incluídos (ver
+    fechado tiver alterações, marca-o com <em>Sem guardar</em>. <strong>Cada grupo tem o seu próprio <em>Guardar</em></strong>, no canto superior direito, que guarda só o que está nesse grupo: o que se tenha alterado nos outros continua pendente, com o seu
+    <em>Sem guardar</em>, até que esse também seja guardado. O botão só se acende quando o grupo tem alterações e, se ao guardar algo não for válido, o grupo abre-se sozinho e diz o que é preciso corrigir. No fim, e sempre fechada, a <em>Zona delicada</em>: exportar todos os dados, fotografias e documentos incluídos (ver
     <a href="#irse">Levar os dados do centro</a>), e esvaziar a demonstração. Um centro com picagens de ponto de pessoal reais ou com anos de calendário fechados não se pode esvaziar: a lei obriga a conservar o registo de jornada, por isso para encerrar um centro pede-se a sua desativação à Devel e guarda-se o que houver a guardar.
   </p>
 
@@ -5213,7 +5214,7 @@ footer{
   </figure>
   <p>
     <strong>Admissões, saídas e contrato.</strong> Com o módulo Laboral, o botão <em>Admissões, saídas e contrato</em> da ficha guarda cada período de admissão da pessoa: se sai e volta anos depois, veem-se todos. Cada saída leva o seu
-    <strong>motivo</strong> (fim de contrato, a empresa não renova, saída voluntária, despedimento, não passa o período experimental, fim de chamamento, reforma, falecimento ou outro) e uma nota para as circunstâncias.
+    <strong>motivo</strong> (fim de contrato, a empresa não renova, saída voluntária, despedimento, não passa o período experimental, fim de chamamento, reforma, falecimento ou outro) e uma nota para as circunstâncias. A nota escreve-se na sua própria janela, com <strong>Escrever a nota</strong>, e admite negrito, itálico e listas: serve para deixar os motivos com calma, caso a pessoa peça para voltar anos depois. Na tabela, o balão verde junto ao motivo mostra a nota inteira ao passar o rato por cima; num tablet, ao tocar-lhe.
   </p>
   <p id="profesionales-edad-genero">
     <strong>Idade e género do pessoal.</strong> O botão <em>Idade e género</em> da lista de profissionais conta o pessoal no ativo por escalões de idade (por décadas) e por género, que é o que pedem todos os anos a estatística de emprego e o plano de igualdade. Filtra-se por género, por idade ou por data de nascimento e
@@ -6110,6 +6111,21 @@ footer{
     O registado vai no envio do mês ao gabinete de salários, numa folha própria do Excel e no seu próprio CSV. Se se registar algo depois de enviar o mês, em <a href="#envio-asesoria">Enviar as horas ao gabinete de salários</a> aparece quem mudou para enviar uma retificação, que leva só o dessas pessoas.
   </p>
 
+  <h4 id="compensacion-variable">Compensação variável</h4>
+  <span class="ruta">Menu → Pessoal → Compensação variável</span>
+  <p>
+    Para os centros que pagam um suplemento quando falta gente e os que lá estão cobrem o trabalho. Liga-se em
+    <em>Administração → Preferências → Pessoal</em>, só com o módulo Laboral, e nasce desligada. Tem duas permissões: «Repartir a compensação variável», para marcar a parte de cada pessoa, e «Configurar e fechar a compensação variável», para os grupos de cálculo e o fecho do mês. De origem trazem-nas a Direção e os RH.
+  </p>
+  <ul>
+    <li><strong>Grupos de cálculo.</strong> Cada grupo toma uma faixa horária da
+      <a href="#calendario-laboral">cobertura mínima</a> e um dos seus postos: o mínimo desse posto é a equipa esperada. Tem o valor por falta, a partir de que falta há bolsa (com 2, se falta uma só pessoa não há nada) e a parte reduzida, 35 % de origem.</li>
+    <li><strong>Quem estava.</strong> Conta quem tinha a faixa inteira no seu turno da escala e picou o ponto à entrada nesse dia. Faltam os que a equipa esperava e não estavam, e a bolsa é faltas × valor. Só se contam os dias que já passaram.</li>
+    <li><strong>A repartição.</strong> A bolsa divide-se em partes iguais por quem conta nesse dia. Ao clicar na parte de uma pessoa, passa de <em>Inteira</em> a <em>Reduzida</em> e a <em>Não conta</em>. O que não recebe quem a tem reduzida não se reparte pelos outros. Com <em>Adicionar</em> faz-se contar quem não estava na escala, como reforço, com a parte reduzida.</li>
+    <li><strong>Grupo interno.</strong> Em baixo, junto ao que recebe cada pessoa, pode pôr-se a etiqueta com que o centro a conhece na repartição (por exemplo «E2-2»). Só se mostra: não altera nenhuma conta.</li>
+    <li><strong>Fechar o mês.</strong> Quando o mês terminou, <em>Fechar o mês</em> passa o total de cada pessoa para <a href="#incidencias-nominas">Incidências para salários</a> como «Compensação variável», e as partes já não se alteram. Pode voltar a abrir-se enquanto o mês não tiver ido para o gabinete de salários.</li>
+  </ul>
+
   <h4 id="mis-documentos">Os meus documentos</h4>
   <span class="ruta">Menu → Os meus documentos</span>
   <p>
@@ -6611,6 +6627,9 @@ footer{
   <h3 id="estancias-medicacion">Medicação</h3>
   <p>
     Na ficha da pessoa alojada, <strong>Medicação</strong> é o seu plano farmacológico. <strong>Prescrever um medicamento</strong> permite procurá-lo no catálogo de medicamentos comercializados em Espanha (CIMA, da AEMPS) ou escrevê-lo, e pede a dose (1 comprimido, 5 ml…), a via, as horas das tomas (08:00, 14:00, 21:00), quem o prescreve e desde quando, e se termina numa data. Um que só se dá quando é preciso marca-se <em>Em SOS</em>, com quando se dá (se dor, se febre…). Antes de guardar confronta-se com as <strong>alergias</strong> registadas: se o medicamento ou o seu princípio ativo coincidir com uma, aparece o aviso e só se prescreve com <em>Prescrever mesmo assim</em>, que fica assinalado na prescrição. Uma prescrição não se apaga: <strong>suspende-se</strong> com o motivo.
+  </p>
+  <p>
+    O <strong>princípio ativo</strong> preenche-se sozinho ao escolher o medicamento da pesquisa. Se se escrever à mão (uma fórmula magistral, algo que o CIMA não tem), convém indicá-lo, porque é o que permite o aviso de alergias. O que o centro já prescreveu assim aparece da vez seguinte na pesquisa, acima do que vem do CIMA e marcado como <em>Já prescrito no centro</em>, com o seu princípio ativo: escreve-se uma vez e depois encontra-se como qualquer outro.
   </p>
   <p>
     O ecrã <strong>Medicação</strong> do menu Estadias é a do turno: as tomas do dia agrupadas por hora, de quem (com o quarto) e o quê. Cada toma marca-se <strong>Dada</strong> ou <strong>Não dada</strong> com o motivo (recusa, não está, em jejum, a dormir, não há, vomita ou outro) e uma nota, e fica em nome de quem a dá, também a partir do tablet de uma zona com o PIN. Uma toma regista-se uma única vez e no máximo duas horas antes da sua hora. Quem está fora nesse dia aparece assinalado. Por baixo estão as prescrições <em>em SOS</em> com <strong>Dar agora</strong>

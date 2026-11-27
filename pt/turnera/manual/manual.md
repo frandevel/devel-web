@@ -1,4 +1,4 @@
-<!-- Manual do utilizador do Turnera, o mesmo texto da página web, sem capturas de ecrã. https://devel.es/pt/turnera/manual · 2026-11-26 -->
+<!-- Manual do utilizador do Turnera, o mesmo texto da página web, sem capturas de ecrã. https://devel.es/pt/turnera/manual · 2026-11-27 -->
 
 # Manual do Turnera
 
@@ -1139,7 +1139,7 @@ Menu → Administração
 
 O que se mexe uma vez e quase não se volta a ver. O mais consultado:
 
-**As Preferências organizam-se por grupos que se abrem e se fecham**, por ordem de utilização: *O centro*, *Agenda e reservas*, *Avisos aos clientes*, *Cobranças e fidelização* e *Aparência*. Fechado, cada grupo diz numa linha como está, por isso para verificar algo não é preciso abri-lo. Se um grupo fechado tiver alterações, marca-o com *Sem guardar*, e se ao guardar algo não for válido, abre-se sozinho. No fim, e sempre fechada, a *Zona delicada*: exportar todos os dados, fotografias e documentos incluídos (ver Levar os dados do centro), e esvaziar a demonstração. Um centro com picagens de ponto de pessoal reais ou com anos de calendário fechados não se pode esvaziar: a lei obriga a conservar o registo de jornada, por isso para encerrar um centro pede-se a sua desativação à Devel e guarda-se o que houver a guardar.
+**As Preferências organizam-se por grupos que se abrem e se fecham**, por ordem de utilização: *O centro*, *Agenda e reservas*, *Avisos aos clientes*, *Cobranças e fidelização* e *Aparência*. Fechado, cada grupo diz numa linha como está, por isso para verificar algo não é preciso abri-lo. Se um grupo fechado tiver alterações, marca-o com *Sem guardar*. **Cada grupo tem o seu próprio *Guardar***, no canto superior direito, que guarda só o que está nesse grupo: o que se tenha alterado nos outros continua pendente, com o seu *Sem guardar*, até que esse também seja guardado. O botão só se acende quando o grupo tem alterações e, se ao guardar algo não for válido, o grupo abre-se sozinho e diz o que é preciso corrigir. No fim, e sempre fechada, a *Zona delicada*: exportar todos os dados, fotografias e documentos incluídos (ver Levar os dados do centro), e esvaziar a demonstração. Um centro com picagens de ponto de pessoal reais ou com anos de calendário fechados não se pode esvaziar: a lei obriga a conservar o registo de jornada, por isso para encerrar um centro pede-se a sua desativação à Devel e guarda-se o que houver a guardar.
 
 ### A agenda
 
@@ -2618,7 +2618,7 @@ A secção recolhível **Família e emergência** guarda o contacto para um avis
 
 *[Captura] A secção «Família e emergência» da ficha: contacto para um aviso, idoso dependente a cargo e filhos.*
 
-**Admissões, saídas e contrato.** Com o módulo Laboral, o botão *Admissões, saídas e contrato* da ficha guarda cada período de admissão da pessoa: se sai e volta anos depois, veem-se todos. Cada saída leva o seu **motivo** (fim de contrato, a empresa não renova, saída voluntária, despedimento, não passa o período experimental, fim de chamamento, reforma, falecimento ou outro) e uma nota para as circunstâncias.
+**Admissões, saídas e contrato.** Com o módulo Laboral, o botão *Admissões, saídas e contrato* da ficha guarda cada período de admissão da pessoa: se sai e volta anos depois, veem-se todos. Cada saída leva o seu **motivo** (fim de contrato, a empresa não renova, saída voluntária, despedimento, não passa o período experimental, fim de chamamento, reforma, falecimento ou outro) e uma nota para as circunstâncias. A nota escreve-se na sua própria janela, com **Escrever a nota**, e admite negrito, itálico e listas: serve para deixar os motivos com calma, caso a pessoa peça para voltar anos depois. Na tabela, o balão verde junto ao motivo mostra a nota inteira ao passar o rato por cima; num tablet, ao tocar-lhe.
 
 **Idade e género do pessoal.** O botão *Idade e género* da lista de profissionais conta o pessoal no ativo por escalões de idade (por décadas) e por género, que é o que pedem todos os anos a estatística de emprego e o plano de igualdade. Filtra-se por género, por idade ou por data de nascimento e *Descarregar a lista* descarrega as pessoas que cumprem os filtros num ficheiro para Excel.
 
@@ -3059,6 +3059,18 @@ O mês de cada pessoa tal como chega ao gabinete de salários, para o rever ante
 
 O registado vai no envio do mês ao gabinete de salários, numa folha própria do Excel e no seu próprio CSV. Se se registar algo depois de enviar o mês, em Enviar as horas ao gabinete de salários aparece quem mudou para enviar uma retificação, que leva só o dessas pessoas.
 
+#### Compensação variável
+
+Menu → Pessoal → Compensação variável
+
+Para os centros que pagam um suplemento quando falta gente e os que lá estão cobrem o trabalho. Liga-se em *Administração → Preferências → Pessoal*, só com o módulo Laboral, e nasce desligada. Tem duas permissões: «Repartir a compensação variável», para marcar a parte de cada pessoa, e «Configurar e fechar a compensação variável», para os grupos de cálculo e o fecho do mês. De origem trazem-nas a Direção e os RH.
+
+- **Grupos de cálculo.** Cada grupo toma uma faixa horária da cobertura mínima e um dos seus postos: o mínimo desse posto é a equipa esperada. Tem o valor por falta, a partir de que falta há bolsa (com 2, se falta uma só pessoa não há nada) e a parte reduzida, 35 % de origem.
+- **Quem estava.** Conta quem tinha a faixa inteira no seu turno da escala e picou o ponto à entrada nesse dia. Faltam os que a equipa esperava e não estavam, e a bolsa é faltas × valor. Só se contam os dias que já passaram.
+- **A repartição.** A bolsa divide-se em partes iguais por quem conta nesse dia. Ao clicar na parte de uma pessoa, passa de *Inteira* a *Reduzida* e a *Não conta*. O que não recebe quem a tem reduzida não se reparte pelos outros. Com *Adicionar* faz-se contar quem não estava na escala, como reforço, com a parte reduzida.
+- **Grupo interno.** Em baixo, junto ao que recebe cada pessoa, pode pôr-se a etiqueta com que o centro a conhece na repartição (por exemplo «E2-2»). Só se mostra: não altera nenhuma conta.
+- **Fechar o mês.** Quando o mês terminou, *Fechar o mês* passa o total de cada pessoa para Incidências para salários como «Compensação variável», e as partes já não se alteram. Pode voltar a abrir-se enquanto o mês não tiver ido para o gabinete de salários.
+
 #### Os meus documentos
 
 Menu → Os meus documentos
@@ -3337,6 +3349,8 @@ Uma **avaliação** mede algo da pessoa com uma escala reconhecida e repete-a de
 ### Medicação
 
 Na ficha da pessoa alojada, **Medicação** é o seu plano farmacológico. **Prescrever um medicamento** permite procurá-lo no catálogo de medicamentos comercializados em Espanha (CIMA, da AEMPS) ou escrevê-lo, e pede a dose (1 comprimido, 5 ml…), a via, as horas das tomas (08:00, 14:00, 21:00), quem o prescreve e desde quando, e se termina numa data. Um que só se dá quando é preciso marca-se *Em SOS*, com quando se dá (se dor, se febre…). Antes de guardar confronta-se com as **alergias** registadas: se o medicamento ou o seu princípio ativo coincidir com uma, aparece o aviso e só se prescreve com *Prescrever mesmo assim*, que fica assinalado na prescrição. Uma prescrição não se apaga: **suspende-se** com o motivo.
+
+O **princípio ativo** preenche-se sozinho ao escolher o medicamento da pesquisa. Se se escrever à mão (uma fórmula magistral, algo que o CIMA não tem), convém indicá-lo, porque é o que permite o aviso de alergias. O que o centro já prescreveu assim aparece da vez seguinte na pesquisa, acima do que vem do CIMA e marcado como *Já prescrito no centro*, com o seu princípio ativo: escreve-se uma vez e depois encontra-se como qualquer outro.
 
 O ecrã **Medicação** do menu Estadias é a do turno: as tomas do dia agrupadas por hora, de quem (com o quarto) e o quê. Cada toma marca-se **Dada** ou **Não dada** com o motivo (recusa, não está, em jejum, a dormir, não há, vomita ou outro) e uma nota, e fica em nome de quem a dá, também a partir do tablet de uma zona com o PIN. Uma toma regista-se uma única vez e no máximo duas horas antes da sua hora. Quem está fora nesse dia aparece assinalado. Por baixo estão as prescrições *em SOS* com **Dar agora** e o que já se deu assim. É possível consultar dias anteriores. Quem só vê a sua zona só vê as tomas da sua zona. Usa-a quem regista o dia a dia ou tem a permissão de saúde; prescrever e suspender, só esta última.
 

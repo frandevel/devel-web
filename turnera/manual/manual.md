@@ -1,4 +1,4 @@
-<!-- Manual de usuario de Turnera, el mismo texto que la web sin capturas de pantalla. https://devel.es/turnera/manual · 2026-11-26 -->
+<!-- Manual de usuario de Turnera, el mismo texto que la web sin capturas de pantalla. https://devel.es/turnera/manual · 2026-11-27 -->
 
 # Manual de Turnera
 
@@ -1139,7 +1139,7 @@ Menú → Administración
 
 Lo que se toca una vez y casi no se vuelve a mirar. Lo que más se consulta:
 
-**Preferencias va por grupos que se abren y se cierran**, en orden de uso: *El centro*, *Agenda y reservas*, *Avisos a los clientes*, *Cobros y fidelización* y *Apariencia*. Cerrado, cada grupo dice en una línea cómo está, así que para comprobar algo no hace falta abrirlo. Si un grupo cerrado tiene cambios, lo marca con *Sin guardar*, y si al guardar algo no vale, se abre solo. Al final, y siempre cerrada, la *Zona delicada*: exportar todos los datos, fotos y documentos incluidos (ver Llevarse los datos del centro), y vaciar la demostración. Un centro con fichajes de personal real o con años de calendario cerrados no se puede vaciar: la ley obliga a conservar el registro de jornada, así que para cerrar un centro se pide su baja a Devel y se guarda lo que haya que guardar.
+**Preferencias va por grupos que se abren y se cierran**, en orden de uso: *El centro*, *Agenda y reservas*, *Avisos a los clientes*, *Cobros y fidelización* y *Apariencia*. Cerrado, cada grupo dice en una línea cómo está, así que para comprobar algo no hace falta abrirlo. Si un grupo cerrado tiene cambios, lo marca con *Sin guardar*. **Cada grupo tiene su propio *Guardar***, arriba a la derecha, que guarda sólo lo de ese grupo: lo que se haya tocado en los demás sigue pendiente, con su *Sin guardar*, hasta que se guarde también. El botón sólo se enciende cuando el grupo tiene cambios, y si al guardar algo no vale, el grupo se abre solo y dice qué hay que corregir. Al final, y siempre cerrada, la *Zona delicada*: exportar todos los datos, fotos y documentos incluidos (ver Llevarse los datos del centro), y vaciar la demostración. Un centro con fichajes de personal real o con años de calendario cerrados no se puede vaciar: la ley obliga a conservar el registro de jornada, así que para cerrar un centro se pide su baja a Devel y se guarda lo que haya que guardar.
 
 ### La agenda
 
@@ -2618,7 +2618,7 @@ El apartado plegable **Familia y emergencia** guarda el contacto para un aviso (
 
 *[Captura] El apartado «Familia y emergencia» de la ficha: contacto para un aviso, mayor dependiente a cargo e hijos.*
 
-**Altas, bajas y contrato.** Con el módulo Laboral, el botón *Altas, bajas y contrato* de la ficha guarda cada periodo de alta de la persona: si se va y vuelve años después, se ven todos. Cada baja lleva su **motivo** (fin de contrato, la empresa no renueva, baja voluntaria, despido, no supera el periodo de prueba, fin de llamamiento, jubilación, fallecimiento u otro) y una nota para las circunstancias.
+**Altas, bajas y contrato.** Con el módulo Laboral, el botón *Altas, bajas y contrato* de la ficha guarda cada periodo de alta de la persona: si se va y vuelve años después, se ven todos. Cada baja lleva su **motivo** (fin de contrato, la empresa no renueva, baja voluntaria, despido, no supera el periodo de prueba, fin de llamamiento, jubilación, fallecimiento u otro) y una nota para las circunstancias. La nota se escribe en su propia ventana, con **Escribir la nota**, y admite negrita, cursiva y listas: sirve para dejar los motivos con calma, por si la persona pide volver años después. En la tabla, el bocadillo verde junto al motivo enseña la nota entera al pasar el ratón por encima; en una tableta, al tocarlo.
 
 **Edad y género de la plantilla.** El botón *Edad y género* de la lista de profesionales cuenta la plantilla en activo por tramos de edad (por decenas) y por género, que es lo que piden cada año la estadística de empleo y el plan de igualdad. Se filtra por género, por edad o por fecha de nacimiento y *Descargar la lista* baja las personas que cumplen los filtros en un fichero para Excel.
 
@@ -3059,6 +3059,18 @@ El mes de cada persona tal como le llega a la asesoría, para revisarlo antes de
 
 Lo apuntado va en el envío a la asesoría del mes, en una hoja propia del Excel y en su propio CSV. Si se apunta algo después de mandar el mes, en Enviar las horas a la asesoría sale quién ha cambiado para mandar un rectificativo, que lleva solo lo de esas personas.
 
+#### Compensación variable
+
+Menú → Personal → Compensación variable
+
+Para los centros que pagan un plus cuando falta gente y los que están cubren el trabajo. Se enciende en *Administración → Preferencias → Personal*, solo con el módulo Laboral, y nace apagada. Tiene dos permisos: «Repartir la compensación variable», para marcar la parte de cada persona, y «Configurar y cerrar la compensación variable», para los grupos de cálculo y el cierre del mes. De fábrica los traen Dirección y RRHH.
+
+- **Grupos de cálculo.** Cada grupo toma una franja de la cobertura mínima y uno de sus puestos: el mínimo de ese puesto es la plantilla esperada. Lleva el importe por falta, desde qué falta hay bote (con 2, si falta una sola persona no hay nada) y la parte reducida, un 35 % de serie.
+- **Quién estaba.** Cuenta quien tenía la franja entera en su turno del cuadrante y fichó la entrada ese día. Faltan los que esperaba la plantilla y no estaban, y el bote es faltas × importe. Solo se cuentan los días que ya han pasado.
+- **El reparto.** El bote se divide a partes iguales entre quienes cuentan ese día. Al pulsar la parte de una persona pasa de *Entera* a *Reducida* y a *No cuenta*. Lo que no cobra quien la tiene reducida no se reparte entre los demás. Con *Añadir* se hace contar a quien no estaba en el cuadrante, como un refuerzo, con la parte reducida.
+- **Grupo interno.** Abajo, junto a lo que cobra cada persona, se le puede poner la etiqueta con que la conoce el centro en el reparto (por ejemplo «E2-2»). Solo se enseña: no cambia ninguna cuenta.
+- **Cerrar el mes.** Cuando el mes ha terminado, *Cerrar el mes* pasa el total de cada persona a Incidencias para nóminas como «Compensación variable», y las partes ya no se tocan. Se puede volver a abrir mientras el mes no haya ido a la asesoría.
+
 #### Mis documentos
 
 Menú → Mis documentos
@@ -3337,6 +3349,8 @@ Una **valoración** mide algo de la persona con una escala reconocida y la repit
 ### Medicación
 
 En la ficha de la persona alojada, **Medicación** es su plan farmacológico. **Pautar un medicamento** deja buscarlo en el catálogo de medicamentos comercializados en España (CIMA, de la AEMPS) o escribirlo, y pide la dosis (1 comprimido, 5 ml…), la vía, las horas de las tomas (08:00, 14:00, 21:00), quién lo prescribe y desde cuándo, y si acaba en una fecha. Uno que se da solo cuando hace falta se marca *Si precisa*, con cuándo se da (si dolor, si fiebre…). Antes de guardar se mira contra las **alergias** apuntadas: si el medicamento o su principio activo coincide con una, sale el aviso y solo se pauta con *Pautar igualmente*, que queda señalado en la pauta. Una pauta no se borra: se **suspende** con su motivo.
+
+El **principio activo** se rellena solo al elegir el medicamento del buscador. Si se escribe a mano (una fórmula magistral, algo que CIMA no tiene), conviene ponerlo, porque es lo que permite el aviso de alergias. Lo que el centro ya ha pautado así sale la vez siguiente en el buscador, encima de lo de CIMA y marcado *Ya pautado en el centro*, con su principio activo: se escribe una vez y después se encuentra como cualquier otro.
 
 La pantalla **Medicación** del menú de Estancias es la del turno: las tomas del día agrupadas por hora, de quién (con su habitación) y qué. Cada toma se marca **Dada** o **No dada** con el motivo (la rechaza, no está, en ayunas, dormida, no hay, la vomita u otro) y una nota, y queda a nombre de quien la da, también desde la tablet de una zona con el PIN. Una toma se apunta una sola vez y como mucho dos horas antes de su hora. Quien está fuera ese día sale marcado. Debajo están las pautas *si precisa* con **Dar ahora** y lo que ya se dio así. Se pueden consultar días anteriores. Quien solo ve su zona, solo ve las tomas de su zona. La usa quien registra el día a día o tiene el permiso de salud; pautar y suspender, solo este último.
 

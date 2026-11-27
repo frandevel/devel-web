@@ -679,6 +679,7 @@ footer{
   <h2>What's new in Turnera</h2>
   <p>Latest first</p>
   <ol>
+    <li><a href="#2026-11-28">November 28, 2026</a></li>
     <li><a href="#2026-11-26">26 November 2026</a></li>
     <li><a href="#2026-11-25">25 November 2026</a></li>
     <li><a href="#2026-11-24">24 November 2026</a></li>
@@ -736,10 +737,44 @@ footer{
   <li class="grupo--arreglo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span><span><strong>Bugs fixed</strong>: what failed, and no longer does.</span></li>
 </ul>
 
+<section id="2026-11-28" class="version">
+  <div class="version__cabecera">
+    <h2>November 28, 2026</h2>
+    <span class="version__sello">Latest release</span>
+  </div>
+  <p class="version__numero">Version <span translate="no">1.18.0-ee188ef</span></p>
+
+  <div class="grupo grupo--nuevo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"></path></svg></span>New features</h3>
+    <h4>Variable compensation</h4>
+    <ul>
+      <li>For centres that pay a bonus when people are missing and those who are present cover the work: in Staff → Variable compensation, Turnera calculates each day how many people are missing compared with the expected staffing and shares the pot among those who cover, with the full share, a reduced one or none.</li>
+      <li>The split for each day adds up to the cent. When the month is closed, each person's total goes to the payroll items.</li>
+      <li>It is switched on in Administration → Preferences → Staff, with the Employment module, and has two permissions of its own: split, and configure and close.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--mejora">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>Improvements</h3>
+    <ul>
+      <li>In Preferences, each section has its own “Save”, at the top right, which saves only what is in that section. Whatever was changed in the others stays pending, marked “Not saved”.</li>
+      <li>In staff leavers, the note on the leaving accepts bold, italics and lists, is written in its own window and can be read in full by hovering over the green bubble in the table.</li>
+      <li>In medication, the active ingredient is filled in automatically when you pick the medicine from the search and can also be typed by hand, for example for a magistral preparation. What the centre has already prescribed this way appears next time in the search, marked “Already prescribed at the centre”.</li>
+    </ul>
+  </div>
+
+  <div class="grupo grupo--arreglo">
+    <h3 class="grupo__titulo"><span class="grupo__icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M9.5 6.5L8 4M14.5 6.5L16 4M12 10v10M3 13h5M16 13h5M4 8l4 2.5M20 8l-4 2.5M4 19l4-2.5M20 19l-4-2.5"></path></svg></span>Bugs fixed</h3>
+    <ul>
+      <li>In Till closing, the day filter now lets you pick a range: before, after choosing the first day the selector went back to the last week and there was no way to complete it.</li>
+      <li>In the till, pressing “Till” in the menu again while already inside it no longer drops the appointment from the ticket.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="2026-11-26" class="version">
   <div class="version__cabecera">
     <h2>26 November 2026</h2>
-    <span class="version__sello">Latest release</span>
   </div>
   <p class="version__numero">Version <span translate="no">1.18.0-f72b7ab</span></p>
 

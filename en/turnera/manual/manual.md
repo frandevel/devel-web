@@ -1,4 +1,4 @@
-<!-- Turnera user manual, the same text as the website without screenshots. https://devel.es/en/turnera/manual · 2026-11-26 -->
+<!-- Turnera user manual, the same text as the website without screenshots. https://devel.es/en/turnera/manual · 2026-11-27 -->
 
 # The Turnera manual
 
@@ -1139,7 +1139,7 @@ Menu → Administration
 
 What you set once and hardly ever look at again. The ones most looked at:
 
-**Preferences is organised in groups that open and close**, in order of use: *The centre*, *Agenda and bookings*, *Messages to customers*, *Payments and loyalty* and *Appearance*. Closed, each group says in one line how it stands, so there is no need to open it to check something. If a closed group has changes, it is marked *Not saved*, and if something is not valid when saving, it opens by itself. At the end, and always closed, the *Danger zone*: export all data, photos and documents included (see Taking the centre's data), and empty the demo. A centre with real staff clock-ins or closed calendar years cannot be emptied: the law requires keeping the working time register, so to close a centre you ask Devel for its deregistration and what has to be kept is kept.
+**Preferences is organised in groups that open and close**, in order of use: *The centre*, *Agenda and bookings*, *Messages to customers*, *Payments and loyalty* and *Appearance*. Closed, each group says in one line how it stands, so there is no need to open it to check something. If a closed group has changes, it is marked *Not saved*. **Each group has its own *Save***, at the top right, which saves only what is in that group: whatever was changed in the others stays pending, with its *Not saved*, until that one is saved as well. The button only lights up when the group has changes, and if something is not valid when saving, the group opens by itself and says what needs fixing. At the bottom, always closed, the *Danger zone*: export all data, photos and documents included (see Taking the centre's data), and empty the demo. A centre with real staff clock-ins or closed calendar years cannot be emptied: the law requires keeping the working time register, so to close a centre you ask Devel for its deregistration and what has to be kept is kept.
 
 ### The agenda
 
@@ -2618,7 +2618,7 @@ The collapsible section **Family and emergency** keeps the contact for an emerge
 
 *[Captura] The «Family and emergency» section of the record: emergency contact, dependent older person in their care, and children.*
 
-**Employment history and contract.** With the Employment module, the button *Employment history and contract* on the record keeps each period of employment of the person: if they leave and come back years later, you see them all. Each departure has its **reason** (end of contract, not renewed by the company, voluntary resignation, dismissal, did not pass the probation period, end of seasonal call-up, retirement, death or other) and a note for the circumstances.
+**Employment history and contract.** With the Employment module, the button *Employment history and contract* on the record keeps each period of employment of the person: if they leave and come back years later, you see them all. Each departure has its **reason** (end of contract, the company does not renew, voluntary leave, dismissal, probation period not passed, end of call-up, retirement, death or other) and a note for the circumstances. The note is written in its own window, with **Write the note**, and it accepts bold, italics and lists: it lets you set out the reasons calmly, in case the person asks to come back years later. In the table, the green speech bubble next to the reason shows the whole note when you hover over it; on a tablet, when you tap it.
 
 **Age and gender of the workforce.** The *Age and gender* in the staff list counts the active workforce by age band (by decades) and by gender, which is what the yearly employment statistics and the equality plan ask for. You can filter by gender, by age or by date of birth, and *Download the list* downloads the people who match the filters into a file for Excel.
 
@@ -3059,6 +3059,18 @@ Each person's month as it reaches the payroll advisor, to review it before sendi
 
 What is entered goes in the month's send to the payroll advisor, in its own Excel sheet and its own CSV. If something is entered after the month has been sent, in Send the hours to the payroll advisor it shows who has changed so that a corrective send can go, carrying only those people.
 
+#### Variable compensation
+
+Menu → Staff → Variable compensation
+
+For centres that pay a bonus when people are missing and those who are present cover the work. It is switched on in *Administration → Preferences → Staff*, only with the Employment module, and starts switched off. It has two permissions: “Split the variable compensation”, to set each person's share, and “Configure and close the variable compensation”, for the calculation groups and the month-end closing. Management and HR have them by default.
+
+- **Calculation groups.** Each group takes a time band from the minimum coverage and one of its posts: the minimum for that post is the expected staffing. It carries the amount per absence, from which absence there is a pot (with 2, if only one person is missing there is nothing) and the reduced share, 35 % by default.
+- **Who was there.** Counted are those who had the whole time band in their roster shift and clocked in that day. The missing are those the staffing expected and who were not there, and the pot is absences × amount. Only days that have already passed are counted.
+- **The split.** The pot is divided equally among those who count that day. Clicking a person's share changes it from *Full* to *Reduced* and to *Does not count*. What a person with a reduced share does not receive is not redistributed among the others. With *Add* you make someone count who was not on the roster, as a reinforcement, with the reduced share.
+- **Internal group.** Below, next to what each person receives, you can add the label the centre uses for them in the split (for example “E2-2”). It is only displayed: it does not change any calculation.
+- **Close the month.** When the month is over, *Close the month* moves each person's total to Payroll items as “Variable compensation”, and the shares can no longer be changed. It can be reopened as long as the month has not gone to the payroll advisor.
+
 #### My documents
 
 Menu → My documents
@@ -3337,6 +3349,8 @@ A **assessment** measures something about the person with a recognised scale and
 ### Medication
 
 On the resident's record, **Medication** is their medication plan. **Prescribe a medicine** lets you look it up in the catalogue of medicines marketed in Spain (CIMA, from the AEMPS) or type it, and asks for the dose (1 tablet, 5 ml…), the route, the times of the doses (08:00, 14:00, 21:00), who prescribes it and since when, and whether it ends on a date. One given only when needed is marked *As needed*, with when it is given (if in pain, if feverish…). Before saving it is checked against the recorded **allergies** : if the medicine or its active ingredient matches one, a warning appears and it can only be prescribed with *Prescribe anyway*, which stays flagged on the prescription. A prescription is not deleted: it is **stopped** with its reason.
+
+The **active ingredient** is filled in automatically when you pick the medicine from the search. If it is typed by hand (a magistral preparation, something CIMA does not have), it is worth entering it, because it is what enables the allergy warning. What the centre has already prescribed this way appears next time in the search, above the CIMA results and marked *Already prescribed at the centre*, with its active ingredient: it is typed once and then found like any other.
 
 The **Medication** in the Stays menu is the one for the shift: the day's doses grouped by time, for whom (with their room) and what. Each dose is marked **Given** or **Not given** with the reason (refuses it, not there, fasting, asleep, out of stock, vomits it or other) and a note, and it is recorded in the name of whoever gives it, also from an area's tablet with the PIN. A dose is recorded only once and at most two hours before its time. Anyone who is away that day is flagged. Below are the prescriptions *as needed* with **Give now** and what has already been given that way. Previous days can be looked up. Whoever only sees their area only sees the doses of their area. It is used by whoever records the day to day or has the health permission; prescribing and stopping, only the latter.
 

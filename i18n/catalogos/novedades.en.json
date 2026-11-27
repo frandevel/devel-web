@@ -1544,5 +1544,16 @@
   "t662240a3": "When the menu does not fit entirely, a search box appears under the logo: type part of the screen name and only the matching ones remain.",
   "t63b854ab": "The cancellations report shows all cancelled appointments one by one, with their reason and who cancelled them, and you can search by customer to find out what happened to an appointment.",
   "ta7de191d": "Favourites stay fixed at the top of the menu even when you scroll down it.",
-  "tb249db23": "In Stock, products with any movement that has a reason carry an icon that shows their latest movements, and the stock-in, stock-out or adjustment dialog shows the last five."
+  "tb249db23": "In Stock, products with any movement that has a reason carry an icon that shows their latest movements, and the stock-in, stock-out or adjustment dialog shows the last five.",
+  "tcbe11882": "November 28, 2026",
+  "t29749345": "1.18.0-ee188ef",
+  "t05d54ae0": "Variable compensation",
+  "t2a9af47d": "For centres that pay a bonus when people are missing and those who are present cover the work: in Staff → Variable compensation, Turnera calculates each day how many people are missing compared with the expected staffing and shares the pot among those who cover, with the full share, a reduced one or none.",
+  "t823f9b78": "The split for each day adds up to the cent. When the month is closed, each person's total goes to the payroll items.",
+  "ta080d197": "It is switched on in Administration → Preferences → Staff, with the Employment module, and has two permissions of its own: split, and configure and close.",
+  "ta2d6f3eb": "In Preferences, each section has its own “Save”, at the top right, which saves only what is in that section. Whatever was changed in the others stays pending, marked “Not saved”.",
+  "tc2ce6fe6": "In staff leavers, the note on the leaving accepts bold, italics and lists, is written in its own window and can be read in full by hovering over the green bubble in the table.",
+  "t5d39a9f5": "In medication, the active ingredient is filled in automatically when you pick the medicine from the search and can also be typed by hand, for example for a magistral preparation. What the centre has already prescribed this way appears next time in the search, marked “Already prescribed at the centre”.",
+  "t0ced0b8d": "In Till closing, the day filter now lets you pick a range: before, after choosing the first day the selector went back to the last week and there was no way to complete it.",
+  "tee7357d8": "In the till, pressing “Till” in the menu again while already inside it no longer drops the appointment from the ticket."
 }
